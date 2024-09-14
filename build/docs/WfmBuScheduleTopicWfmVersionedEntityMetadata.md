@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicWfmVersionedEntityMetadata
----
+# WfmBuScheduleTopicWfmVersionedEntityMetadata
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleTopicWfmVersionedEntityMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBuScheduleTopicWfmVersionedEntityMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Version** | **int?** |  | [optional] |
-| **ModifiedBy** | [**WfmBuScheduleTopicUserReference**](WfmBuScheduleTopicUserReference.html) |  | [optional] |
+| **ModifiedBy** | [**WfmBuScheduleTopicUserReference**](WfmBuScheduleTopicUserReference) |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

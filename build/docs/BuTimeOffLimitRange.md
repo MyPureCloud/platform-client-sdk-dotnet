@@ -1,6 +1,5 @@
----
-title: BuTimeOffLimitRange
----
+# BuTimeOffLimitRange
+
 ## ININ.PureCloudApi.Model.BuTimeOffLimitRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: BuTimeOffLimitRange
 |------------ | ------------- | ------------- | -------------|
 | **StartDate** | **String** | Start date of the range. The end date is determined by the size of &#39;limitMinutesPerDay&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **LimitMinutesPerDay** | **List&lt;int?&gt;** | The list of time-off limit values in minutes per day. If &#39;null&#39; is specified, then the day-specific value is cleared. Such a day will have a value of 0 | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

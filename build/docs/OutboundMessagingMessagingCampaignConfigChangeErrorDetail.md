@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeErrorDetail
----
+# OutboundMessagingMessagingCampaignConfigChangeErrorDetail
+
 ## ININ.PureCloudApi.Model.OutboundMessagingMessagingCampaignConfigChangeErrorDetail
 
 ## Properties
@@ -9,6 +8,7 @@ title: OutboundMessagingMessagingCampaignConfigChangeErrorDetail
 |------------ | ------------- | ------------- | -------------|
 | **Error** | **string** | The name of the error code. | [optional] |
 | **Details** | **string** | The additional information regarding the error message. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

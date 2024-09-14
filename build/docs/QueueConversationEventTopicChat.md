@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicChat
----
+# QueueConversationEventTopicChat
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicChat
 
 ## Properties
@@ -20,11 +19,12 @@ title: QueueConversationEventTopicChat
 | **StartHoldTime** | **DateTime?** | The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. | [optional] |
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
-| **JourneyContext** | [**QueueConversationEventTopicJourneyContext**](QueueConversationEventTopicJourneyContext.html) |  | [optional] |
-| **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **JourneyContext** | [**QueueConversationEventTopicJourneyContext**](QueueConversationEventTopicJourneyContext) |  | [optional] |
+| **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **QueueMediaSettings** | [**QueueConversationEventTopicQueueMediaSettings**](QueueConversationEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
-{: class="table table-striped"}
+| **QueueMediaSettings** | [**QueueConversationEventTopicQueueMediaSettings**](QueueConversationEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

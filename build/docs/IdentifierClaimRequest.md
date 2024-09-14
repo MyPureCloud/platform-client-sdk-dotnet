@@ -1,6 +1,5 @@
----
-title: IdentifierClaimRequest
----
+# IdentifierClaimRequest
+
 ## ININ.PureCloudApi.Model.IdentifierClaimRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: IdentifierClaimRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Operation** | **string** | The operation to perform claim/release | |
-| **Identifier** | [**ContactIdentifier**](ContactIdentifier.html) | The identifier that should be claimed/released from a contact | |
-{: class="table table-striped"}
+| **Identifier** | [**ContactIdentifier**](ContactIdentifier) | The identifier that should be claimed/released from a contact | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

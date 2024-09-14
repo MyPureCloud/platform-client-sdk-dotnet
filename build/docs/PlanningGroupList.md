@@ -1,14 +1,14 @@
----
-title: PlanningGroupList
----
+# PlanningGroupList
+
 ## ININ.PureCloudApi.Model.PlanningGroupList
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;PlanningGroup&gt;**](PlanningGroup.html) |  | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the planning groups | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;PlanningGroup&gt;**](PlanningGroup) |  | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the planning groups | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

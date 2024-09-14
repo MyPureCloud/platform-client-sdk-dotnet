@@ -1,6 +1,5 @@
----
-title: WorkdayPointsTrendItem
----
+# WorkdayPointsTrendItem
+
 ## ININ.PureCloudApi.Model.WorkdayPointsTrendItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkdayPointsTrendItem
 |------------ | ------------- | ------------- | -------------|
 | **DateWorkday** | **String** | workday date for the points trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **Points** | **double?** | workday points for the date | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

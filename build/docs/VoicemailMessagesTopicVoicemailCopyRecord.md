@@ -1,14 +1,14 @@
----
-title: VoicemailMessagesTopicVoicemailCopyRecord
----
+# VoicemailMessagesTopicVoicemailCopyRecord
+
 ## ININ.PureCloudApi.Model.VoicemailMessagesTopicVoicemailCopyRecord
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**VoicemailMessagesTopicOwner**](VoicemailMessagesTopicOwner.html) |  | [optional] |
-| **Group** | [**VoicemailMessagesTopicOwner**](VoicemailMessagesTopicOwner.html) |  | [optional] |
-{: class="table table-striped"}
+| **User** | [**VoicemailMessagesTopicOwner**](VoicemailMessagesTopicOwner) |  | [optional] |
+| **Group** | [**VoicemailMessagesTopicOwner**](VoicemailMessagesTopicOwner) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

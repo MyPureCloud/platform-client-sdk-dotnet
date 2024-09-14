@@ -1,6 +1,5 @@
----
-title: BuScheduleNotificationsSettingsResponse
----
+# BuScheduleNotificationsSettingsResponse
+
 ## ININ.PureCloudApi.Model.BuScheduleNotificationsSettingsResponse
 
 ## Properties
@@ -8,7 +7,8 @@ title: BuScheduleNotificationsSettingsResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EarlyReminderMinutes** | **int?** | The number of minutes prior to the scheduled event to display an early reminder notification | |
-| **ActivityCategorySettings** | [**List&lt;BuScheduleNotificationsCategorySettings&gt;**](BuScheduleNotificationsCategorySettings.html) | List of activity category notification settings | |
-{: class="table table-striped"}
+| **ActivityCategorySettings** | [**List&lt;BuScheduleNotificationsCategorySettings&gt;**](BuScheduleNotificationsCategorySettings) | List of activity category notification settings | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

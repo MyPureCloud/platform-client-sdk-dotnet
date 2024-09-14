@@ -1,6 +1,5 @@
----
-title: ConversationPublicMetadata
----
+# ConversationPublicMetadata
+
 ## ININ.PureCloudApi.Model.ConversationPublicMetadata
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationPublicMetadata
 |------------ | ------------- | ------------- | -------------|
 | **RootId** | **string** | The id of the root public message. | [optional] |
 | **ReplyToId** | **string** | The id of the message this public message is replying to. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

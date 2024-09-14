@@ -1,6 +1,5 @@
----
-title: UpdateBusinessUnitRequest
----
+# UpdateBusinessUnitRequest
+
 ## ININ.PureCloudApi.Model.UpdateBusinessUnitRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: UpdateBusinessUnitRequest
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the business unit | [optional] |
 | **DivisionId** | **string** | The ID of the division to which the business unit should be moved | [optional] |
-| **Settings** | [**UpdateBusinessUnitSettingsRequest**](UpdateBusinessUnitSettingsRequest.html) | Configuration for the business unit | [optional] |
-{: class="table table-striped"}
+| **Settings** | [**UpdateBusinessUnitSettingsRequest**](UpdateBusinessUnitSettingsRequest) | Configuration for the business unit | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

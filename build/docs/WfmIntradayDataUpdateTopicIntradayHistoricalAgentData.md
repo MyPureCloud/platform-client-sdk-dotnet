@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
----
+# WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
+
 ## ININ.PureCloudApi.Model.WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
 |------------ | ------------- | ------------- | -------------|
 | **OnQueueTimeSeconds** | **double?** |  | [optional] |
 | **InteractingTimeSeconds** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

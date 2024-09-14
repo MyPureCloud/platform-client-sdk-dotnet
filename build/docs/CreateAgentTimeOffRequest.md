@@ -1,6 +1,5 @@
----
-title: CreateAgentTimeOffRequest
----
+# CreateAgentTimeOffRequest
+
 ## ININ.PureCloudApi.Model.CreateAgentTimeOffRequest
 
 ## Properties
@@ -14,6 +13,7 @@ title: CreateAgentTimeOffRequest
 | **DailyDurationMinutes** | **int?** | The daily duration of this time off request in minutes | |
 | **DurationMinutes** | **List&lt;int?&gt;** | Daily durations for each day of this time off request in minutes | [optional] |
 | **PayableMinutes** | **List&lt;int?&gt;** | Payable minutes for each day of this time off request | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

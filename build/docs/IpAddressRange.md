@@ -1,6 +1,5 @@
----
-title: IpAddressRange
----
+# IpAddressRange
+
 ## ININ.PureCloudApi.Model.IpAddressRange
 
 ## Properties
@@ -10,6 +9,7 @@ title: IpAddressRange
 | **Cidr** | **string** |  | [optional] |
 | **Service** | **string** |  | [optional] |
 | **Region** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: HelpLink
----
+# HelpLink
+
 ## ININ.PureCloudApi.Model.HelpLink
 
 ## Properties
@@ -10,6 +9,7 @@ title: HelpLink
 | **Uri** | **string** | URI of the help resource | [optional] |
 | **Title** | **string** | Link text of the resource | [optional] |
 | **Description** | **string** | Description of the document or resource | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

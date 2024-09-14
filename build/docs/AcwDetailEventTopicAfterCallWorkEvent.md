@@ -1,6 +1,5 @@
----
-title: AcwDetailEventTopicAfterCallWorkEvent
----
+# AcwDetailEventTopicAfterCallWorkEvent
+
 ## ININ.PureCloudApi.Model.AcwDetailEventTopicAfterCallWorkEvent
 
 ## Properties
@@ -30,6 +29,7 @@ title: AcwDetailEventTopicAfterCallWorkEvent
 | **WrapupDurationMs** | **int?** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,13 @@
----
-title: RoomParticipantsResponse
----
+# RoomParticipantsResponse
+
 ## ININ.PureCloudApi.Model.RoomParticipantsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Participants** | [**List&lt;RoomParticipantResponse&gt;**](RoomParticipantResponse.html) | list of room participants | [optional] |
-{: class="table table-striped"}
+| **Participants** | [**List&lt;RoomParticipantResponse&gt;**](RoomParticipantResponse) | list of room participants | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

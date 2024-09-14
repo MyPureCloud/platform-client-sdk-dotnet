@@ -1,6 +1,5 @@
----
-title: ExternalMetricDataProcessedItem
----
+# ExternalMetricDataProcessedItem
+
 ## ININ.PureCloudApi.Model.ExternalMetricDataProcessedItem
 
 ## Properties
@@ -16,6 +15,7 @@ title: ExternalMetricDataProcessedItem
 | **Type** | **string** | The type of the metric data. The default value is Total. | [optional] |
 | **TotalValue** | **double?** | The total value of the metric data. | [optional] |
 | **TotalCount** | **int?** | The total number of data points. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,13 @@
----
-title: MuRescheduleResultWrapper
----
+# MuRescheduleResultWrapper
+
 ## ININ.PureCloudApi.Model.MuRescheduleResultWrapper
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **AgentSchedules** | [**List&lt;BuAgentScheduleRescheduleResponse&gt;**](BuAgentScheduleRescheduleResponse.html) | The list of agent schedules | [optional] |
-{: class="table table-striped"}
+| **AgentSchedules** | [**List&lt;BuAgentScheduleRescheduleResponse&gt;**](BuAgentScheduleRescheduleResponse) | The list of agent schedules | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

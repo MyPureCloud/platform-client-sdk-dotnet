@@ -1,6 +1,5 @@
----
-title: ScimUserRole
----
+# ScimUserRole
+
 ## ININ.PureCloudApi.Model.ScimUserRole
 
 ## Properties
@@ -8,6 +7,7 @@ title: ScimUserRole
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **string** | The role of the Genesys Cloud user. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

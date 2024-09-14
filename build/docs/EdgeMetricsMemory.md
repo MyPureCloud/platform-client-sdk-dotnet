@@ -1,6 +1,5 @@
----
-title: EdgeMetricsMemory
----
+# EdgeMetricsMemory
+
 ## ININ.PureCloudApi.Model.EdgeMetricsMemory
 
 ## Properties
@@ -10,6 +9,7 @@ title: EdgeMetricsMemory
 | **AvailableBytes** | **double?** | Available memory in bytes. | [optional] |
 | **Type** | **string** | Type of memory. Virtual or physical. | [optional] |
 | **TotalBytes** | **double?** | Total memory in bytes. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyViewChartMetricResult
----
+# JourneyViewChartMetricResult
+
 ## ININ.PureCloudApi.Model.JourneyViewChartMetricResult
 
 ## Properties
@@ -8,7 +7,8 @@ title: JourneyViewChartMetricResult
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Id of the metric | [optional] |
-| **Values** | [**List&lt;JourneyViewChartMetricResultValue&gt;**](JourneyViewChartMetricResultValue.html) | Metric result values | [optional] |
-{: class="table table-striped"}
+| **Values** | [**List&lt;JourneyViewChartMetricResultValue&gt;**](JourneyViewChartMetricResultValue) | Metric result values | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

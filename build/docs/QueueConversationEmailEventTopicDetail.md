@@ -1,6 +1,5 @@
----
-title: QueueConversationEmailEventTopicDetail
----
+# QueueConversationEmailEventTopicDetail
+
 ## ININ.PureCloudApi.Model.QueueConversationEmailEventTopicDetail
 
 ## Properties
@@ -11,6 +10,7 @@ title: QueueConversationEmailEventTopicDetail
 | **FieldName** | **string** |  | [optional] |
 | **EntityId** | **string** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

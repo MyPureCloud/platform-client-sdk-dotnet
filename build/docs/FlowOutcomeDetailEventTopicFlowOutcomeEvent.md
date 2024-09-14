@@ -1,6 +1,5 @@
----
-title: FlowOutcomeDetailEventTopicFlowOutcomeEvent
----
+# FlowOutcomeDetailEventTopicFlowOutcomeEvent
+
 ## ININ.PureCloudApi.Model.FlowOutcomeDetailEventTopicFlowOutcomeEvent
 
 ## Properties
@@ -28,9 +27,10 @@ title: FlowOutcomeDetailEventTopicFlowOutcomeEvent
 | **FlowOutcomeStartTime** | **int?** |  | [optional] |
 | **FlowOutcomeEndTime** | **int?** |  | [optional] |
 | **FlowOutcomeValue** | **string** |  | [optional] |
-| **FlowMilestones** | [**List&lt;FlowOutcomeDetailEventTopicFlowMilestone&gt;**](FlowOutcomeDetailEventTopicFlowMilestone.html) |  | [optional] |
+| **FlowMilestones** | [**List&lt;FlowOutcomeDetailEventTopicFlowMilestone&gt;**](FlowOutcomeDetailEventTopicFlowMilestone) |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

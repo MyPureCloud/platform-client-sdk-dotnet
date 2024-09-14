@@ -1,6 +1,5 @@
----
-title: PhoneEstablishedEvent
----
+# PhoneEstablishedEvent
+
 ## ININ.PureCloudApi.Model.PhoneEstablishedEvent
 
 ## Properties
@@ -14,8 +13,9 @@ title: PhoneEstablishedEvent
 | **PhoneNumber** | **string** | The phone number for this phone. | [optional] |
 | **Ani** | **string** | The automatic number identification if it is available for this conversation. | [optional] |
 | **Dnis** | **string** | The dialed number identification if it is available for this conversation. | [optional] |
-| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

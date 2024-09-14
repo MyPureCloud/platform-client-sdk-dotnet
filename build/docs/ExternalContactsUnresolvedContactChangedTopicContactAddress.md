@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicContactAddress
----
+# ExternalContactsUnresolvedContactChangedTopicContactAddress
+
 ## ININ.PureCloudApi.Model.ExternalContactsUnresolvedContactChangedTopicContactAddress
 
 ## Properties
@@ -13,6 +12,7 @@ title: ExternalContactsUnresolvedContactChangedTopicContactAddress
 | **State** | **string** |  | [optional] |
 | **PostalCode** | **string** |  | [optional] |
 | **CountryCode** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

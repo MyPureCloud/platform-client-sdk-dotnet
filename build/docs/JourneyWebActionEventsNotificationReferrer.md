@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationReferrer
----
+# JourneyWebActionEventsNotificationReferrer
+
 ## ININ.PureCloudApi.Model.JourneyWebActionEventsNotificationReferrer
 
 ## Properties
@@ -16,6 +15,7 @@ title: JourneyWebActionEventsNotificationReferrer
 | **Fragment** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Medium** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

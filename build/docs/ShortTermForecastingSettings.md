@@ -1,6 +1,5 @@
----
-title: ShortTermForecastingSettings
----
+# ShortTermForecastingSettings
+
 ## ININ.PureCloudApi.Model.ShortTermForecastingSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: ShortTermForecastingSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DefaultHistoryWeeks** | **int?** | The number of weeks to consider by default when generating a volume forecast | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

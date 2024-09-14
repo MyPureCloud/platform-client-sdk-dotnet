@@ -1,6 +1,5 @@
----
-title: V2MobiusRulesTopicEntityProperties
----
+# V2MobiusRulesTopicEntityProperties
+
 ## ININ.PureCloudApi.Model.V2MobiusRulesTopicEntityProperties
 
 ## Properties
@@ -8,10 +7,11 @@ title: V2MobiusRulesTopicEntityProperties
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EntityType** | **string** |  | [optional] |
-| **User** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
-| **Group** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
-| **Queue** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
-| **Team** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
-{: class="table table-striped"}
+| **User** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef) |  | [optional] |
+| **Group** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef) |  | [optional] |
+| **Queue** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef) |  | [optional] |
+| **Team** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

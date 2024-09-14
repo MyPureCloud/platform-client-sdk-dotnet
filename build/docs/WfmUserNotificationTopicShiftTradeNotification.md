@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicShiftTradeNotification
----
+# WfmUserNotificationTopicShiftTradeNotification
+
 ## ININ.PureCloudApi.Model.WfmUserNotificationTopicShiftTradeNotification
 
 ## Properties
@@ -11,10 +10,11 @@ title: WfmUserNotificationTopicShiftTradeNotification
 | **TradeId** | **string** |  | [optional] |
 | **OneSided** | **bool?** |  | [optional] |
 | **NewState** | **string** |  | [optional] |
-| **InitiatingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
+| **InitiatingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
 | **InitiatingShiftDate** | **DateTime?** |  | [optional] |
-| **ReceivingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
+| **ReceivingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
 | **ReceivingShiftDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

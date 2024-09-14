@@ -1,6 +1,5 @@
----
-title: ContextIntent
----
+# ContextIntent
+
 ## ININ.PureCloudApi.Model.ContextIntent
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContextIntent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the intent. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

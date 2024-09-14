@@ -1,6 +1,5 @@
----
-title: Facet
----
+# Facet
+
 ## ININ.PureCloudApi.Model.Facet
 
 ## Properties
@@ -9,6 +8,7 @@ title: Facet
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the field on which to facet. | |
 | **Type** | **string** | The type of the facet, DATE or STRING. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

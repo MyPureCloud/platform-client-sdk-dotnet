@@ -1,6 +1,5 @@
----
-title: WorkitemsAttributeChangeList
----
+# WorkitemsAttributeChangeList
+
 ## ININ.PureCloudApi.Model.WorkitemsAttributeChangeList
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemsAttributeChangeList
 |------------ | ------------- | ------------- | -------------|
 | **NewValue** | **List&lt;Object&gt;** | New property value | [optional] |
 | **OldValue** | **List&lt;Object&gt;** | Old property value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

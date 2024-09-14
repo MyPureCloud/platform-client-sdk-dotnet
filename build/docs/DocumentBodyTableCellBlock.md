@@ -1,14 +1,14 @@
----
-title: DocumentBodyTableCellBlock
----
+# DocumentBodyTableCellBlock
+
 ## ININ.PureCloudApi.Model.DocumentBodyTableCellBlock
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Blocks** | [**List&lt;DocumentTableContentBlock&gt;**](DocumentTableContentBlock.html) | The list of content blocks for the table. | |
-| **Properties** | [**DocumentBodyTableCellBlockProperties**](DocumentBodyTableCellBlockProperties.html) | The properties for the table cell. | [optional] |
-{: class="table table-striped"}
+| **Blocks** | [**List&lt;DocumentTableContentBlock&gt;**](DocumentTableContentBlock) | The list of content blocks for the table. | |
+| **Properties** | [**DocumentBodyTableCellBlockProperties**](DocumentBodyTableCellBlockProperties) | The properties for the table cell. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

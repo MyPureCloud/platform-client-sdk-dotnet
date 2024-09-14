@@ -1,6 +1,5 @@
----
-title: BulkResponseResultExternalContactExternalContact
----
+# BulkResponseResultExternalContactExternalContact
+
 ## ININ.PureCloudApi.Model.BulkResponseResultExternalContactExternalContact
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultExternalContactExternalContact
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Success** | **bool?** |  | [optional] |
-| **Entity** | [**ExternalContact**](ExternalContact.html) |  | [optional] |
-| **Error** | [**BulkErrorExternalContact**](BulkErrorExternalContact.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**ExternalContact**](ExternalContact) |  | [optional] |
+| **Error** | [**BulkErrorExternalContact**](BulkErrorExternalContact) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

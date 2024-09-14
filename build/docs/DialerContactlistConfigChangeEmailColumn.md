@@ -1,6 +1,5 @@
----
-title: DialerContactlistConfigChangeEmailColumn
----
+# DialerContactlistConfigChangeEmailColumn
+
 ## ININ.PureCloudApi.Model.DialerContactlistConfigChangeEmailColumn
 
 ## Properties
@@ -10,6 +9,7 @@ title: DialerContactlistConfigChangeEmailColumn
 | **ColumnName** | **string** | The name of the email address column | [optional] |
 | **Type** | **string** | The type of the email address column, for example, &#39;work&#39; or &#39;home&#39; | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

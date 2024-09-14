@@ -1,6 +1,5 @@
----
-title: EdgeMetricsNetwork
----
+# EdgeMetricsNetwork
+
 ## ININ.PureCloudApi.Model.EdgeMetricsNetwork
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeMetricsNetwork
 | **ReceivedBytesPerSec** | **int?** | Number of byes received per second. | [optional] |
 | **BandwidthBitsPerSec** | **double?** | Total bandwidth of the adapter in bits per second. | [optional] |
 | **UtilizationPct** | **double?** | Percent utilization of the network adapter. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

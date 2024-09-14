@@ -325,6 +325,8 @@ docs/AttributeDetailEventTopicCommunication.md
 docs/AttributeFilterItem.md
 docs/AtzmTimeSlot.md
 docs/AtzmTimeSlotWithTimeZone.md
+docs/AudioConnectorIntegration.md
+docs/AudioConnectorIntegrationEntityListing.md
 docs/AudioState.md
 docs/AudioUpdatedEvent.md
 docs/AuditApi.json
@@ -933,6 +935,7 @@ docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
 docs/ConversationContentQuickReplyV2.md
+docs/ConversationContentReaction.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
 docs/ConversationDeletionProtectionQuery.md
@@ -959,6 +962,9 @@ docs/ConversationEmailEventTopicUriReference.md
 docs/ConversationEmailEventTopicWrapup.md
 docs/ConversationEncryptionConfiguration.md
 docs/ConversationEncryptionConfigurationListing.md
+docs/ConversationEnrichment.md
+docs/ConversationEnrichmentLanguage.md
+docs/ConversationEnrichmentSentimentV2.md
 docs/ConversationEntityListing.md
 docs/ConversationEventCoBrowse.md
 docs/ConversationEventPresence.md
@@ -2723,6 +2729,8 @@ docs/GetIntegrationsClientappsUnifiedcommunications-example.txt
 docs/GetIntegrationsCredential-example.txt
 docs/GetIntegrationsCredentials-example.txt
 docs/GetIntegrationsCredentialsTypes-example.txt
+docs/GetIntegrationsSpeechAudioconnector-example.txt
+docs/GetIntegrationsSpeechAudioconnectorIntegrationId-example.txt
 docs/GetIntegrationsSpeechDialogflowAgent-example.txt
 docs/GetIntegrationsSpeechDialogflowAgents-example.txt
 docs/GetIntegrationsSpeechDialogflowcxAgent-example.txt
@@ -7815,6 +7823,8 @@ src/PureCloudPlatform.Client.V2/Model/AttributeDetailEventTopicCommunication.cs
 src/PureCloudPlatform.Client.V2/Model/AttributeFilterItem.cs
 src/PureCloudPlatform.Client.V2/Model/AtzmTimeSlot.cs
 src/PureCloudPlatform.Client.V2/Model/AtzmTimeSlotWithTimeZone.cs
+src/PureCloudPlatform.Client.V2/Model/AudioConnectorIntegration.cs
+src/PureCloudPlatform.Client.V2/Model/AudioConnectorIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AudioState.cs
 src/PureCloudPlatform.Client.V2/Model/AudioUpdatedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/AuditLogMessage.cs
@@ -8409,6 +8419,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationContentLocation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentNotificationTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentQuickReply.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentQuickReplyV2.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentReaction.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentStory.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentText.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationDeletionProtectionQuery.cs
@@ -8435,6 +8446,9 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEncryptionConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEncryptionConfigurationListing.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEnrichment.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEnrichmentLanguage.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEnrichmentSentimentV2.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventCoBrowse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventPresence.cs

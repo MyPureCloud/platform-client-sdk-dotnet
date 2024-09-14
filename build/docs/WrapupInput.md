@@ -1,6 +1,5 @@
----
-title: WrapupInput
----
+# WrapupInput
+
 ## ININ.PureCloudApi.Model.WrapupInput
 
 ## Properties
@@ -15,6 +14,7 @@ title: WrapupInput
 | **EndTime** | **DateTime?** | The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Provisional** | **bool?** | Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. | [optional] |
 | **DisableEndTimeUpdates** | **bool?** | Prevent updates to wrapup end time when set to true. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: HistoricalAdherenceExceptionInfo
----
+# HistoricalAdherenceExceptionInfo
+
 ## ININ.PureCloudApi.Model.HistoricalAdherenceExceptionInfo
 
 ## Properties
@@ -18,6 +17,7 @@ title: HistoricalAdherenceExceptionInfo
 | **RoutingStatus** | **string** | Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue | [optional] |
 | **Impact** | **string** | The impact of the current adherence state for this user | [optional] |
 | **SecondaryPresenceLookupId** | **string** | The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

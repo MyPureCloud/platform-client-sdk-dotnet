@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentSuggestionResult
----
+# KnowledgeDocumentSuggestionResult
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentSuggestionResult
 
 ## Properties
@@ -8,7 +7,8 @@ title: KnowledgeDocumentSuggestionResult
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **MatchedPhrase** | **string** | Matched phrase to the autocomplete suggestions query. | [optional] |
-| **Document** | [**KnowledgeDocumentSuggestionResultDocument**](KnowledgeDocumentSuggestionResultDocument.html) |  | [optional] |
-{: class="table table-striped"}
+| **Document** | [**KnowledgeDocumentSuggestionResultDocument**](KnowledgeDocumentSuggestionResultDocument) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ForecastPlanningGroupResponse
----
+# ForecastPlanningGroupResponse
+
 ## ININ.PureCloudApi.Model.ForecastPlanningGroupResponse
 
 ## Properties
@@ -9,8 +8,9 @@ title: ForecastPlanningGroupResponse
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the planning group | [optional] |
 | **Name** | **string** | The name of the planning group | [optional] |
-| **RoutePaths** | [**List&lt;RoutePathResponse&gt;**](RoutePathResponse.html) | Route path configuration for this planning group | [optional] |
-| **ServiceGoalTemplate** | [**ForecastServiceGoalTemplateResponse**](ForecastServiceGoalTemplateResponse.html) | Service goals for this planning group | [optional] |
-{: class="table table-striped"}
+| **RoutePaths** | [**List&lt;RoutePathResponse&gt;**](RoutePathResponse) | Route path configuration for this planning group | [optional] |
+| **ServiceGoalTemplate** | [**ForecastServiceGoalTemplateResponse**](ForecastServiceGoalTemplateResponse) | Service goals for this planning group | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CopilotAction
----
+# CopilotAction
+
 ## ININ.PureCloudApi.Model.CopilotAction
 
 ## Properties
@@ -9,6 +8,7 @@ title: CopilotAction
 |------------ | ------------- | ------------- | -------------|
 | **ActionType** | **string** | Type of action. | |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | Action specific attributes, if any. Maximum 100 of string key-value pair allowed. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: TransferToAgentRequest
----
+# TransferToAgentRequest
+
 ## ININ.PureCloudApi.Model.TransferToAgentRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: TransferToAgentRequest
 | **UserName** | **string** | The userName (like user’s email) of the internal user. | [optional] |
 | **UserDisplayName** | **string** | The name of the internal user. | [optional] |
 | **Voicemail** | **bool?** | If true, transfer to the voicemail inbox of the participant that is being replaced. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

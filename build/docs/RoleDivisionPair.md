@@ -1,6 +1,5 @@
----
-title: RoleDivisionPair
----
+# RoleDivisionPair
+
 ## ININ.PureCloudApi.Model.RoleDivisionPair
 
 ## Properties
@@ -9,6 +8,7 @@ title: RoleDivisionPair
 |------------ | ------------- | ------------- | -------------|
 | **RoleId** | **string** | The ID of the role | |
 | **DivisionId** | **string** | The ID of the division | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

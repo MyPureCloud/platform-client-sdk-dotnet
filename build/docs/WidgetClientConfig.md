@@ -1,16 +1,16 @@
----
-title: WidgetClientConfig
----
+# WidgetClientConfig
+
 ## ININ.PureCloudApi.Model.WidgetClientConfig
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **V1** | [**WidgetClientConfigV1**](WidgetClientConfigV1.html) |  | [optional] |
+| **V1** | [**WidgetClientConfigV1**](WidgetClientConfigV1) |  | [optional] |
 | **V2** | **Object** |  | [optional] |
-| **V1Http** | [**WidgetClientConfigV1Http**](WidgetClientConfigV1Http.html) |  | [optional] |
+| **V1Http** | [**WidgetClientConfigV1Http**](WidgetClientConfigV1Http) |  | [optional] |
 | **ThirdParty** | **Object** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

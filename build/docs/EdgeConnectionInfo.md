@@ -1,6 +1,5 @@
----
-title: EdgeConnectionInfo
----
+# EdgeConnectionInfo
+
 ## ININ.PureCloudApi.Model.EdgeConnectionInfo
 
 ## Properties
@@ -12,8 +11,9 @@ title: EdgeConnectionInfo
 | **InterfaceName** | **string** | Interface used for the connection on the edge | [optional] |
 | **InterfaceIpAddress** | **string** | IP address of the interface | [optional] |
 | **ConnectionErrors** | **List&lt;string&gt;** | Connection errors | [optional] |
-| **Site** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **Site** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

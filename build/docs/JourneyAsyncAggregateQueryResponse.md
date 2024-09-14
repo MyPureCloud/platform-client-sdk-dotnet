@@ -1,14 +1,14 @@
----
-title: JourneyAsyncAggregateQueryResponse
----
+# JourneyAsyncAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.JourneyAsyncAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;JourneyAggregateDataContainer&gt;**](JourneyAggregateDataContainer.html) |  | [optional] |
+| **Results** | [**List&lt;JourneyAggregateDataContainer&gt;**](JourneyAggregateDataContainer) |  | [optional] |
 | **Cursor** | **string** | Cursor token to retrieve next page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

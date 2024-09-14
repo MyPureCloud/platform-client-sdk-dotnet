@@ -1,14 +1,14 @@
----
-title: OpenInboundNormalizedEvent
----
+# OpenInboundNormalizedEvent
+
 ## ININ.PureCloudApi.Model.OpenInboundNormalizedEvent
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Channel** | [**OpenInboundMessagingChannel**](OpenInboundMessagingChannel.html) | Channel-specific information that describes the message and the message channel/provider. | |
-| **Events** | [**List&lt;OpenEvent&gt;**](OpenEvent.html) | List of event elements. | |
-{: class="table table-striped"}
+| **Channel** | [**OpenInboundMessagingChannel**](OpenInboundMessagingChannel) | Channel-specific information that describes the message and the message channel/provider. | |
+| **Events** | [**List&lt;OpenEvent&gt;**](OpenEvent) | List of event elements. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

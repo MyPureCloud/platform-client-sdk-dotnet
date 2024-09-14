@@ -1,13 +1,13 @@
----
-title: IntegrationConfigurationInfo
----
+# IntegrationConfigurationInfo
+
 ## ININ.PureCloudApi.Model.IntegrationConfigurationInfo
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Current** | [**IntegrationConfiguration**](IntegrationConfiguration.html) | The current, active configuration for the integration. | [optional] |
-{: class="table table-striped"}
+| **Current** | [**IntegrationConfiguration**](IntegrationConfiguration) | The current, active configuration for the integration. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

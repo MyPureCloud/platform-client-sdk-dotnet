@@ -1,6 +1,5 @@
----
-title: ConversationMessageEventTopicMessageMetadataContent
----
+# ConversationMessageEventTopicMessageMetadataContent
+
 ## ININ.PureCloudApi.Model.ConversationMessageEventTopicMessageMetadataContent
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationMessageEventTopicMessageMetadataContent
 |------------ | ------------- | ------------- | -------------|
 | **ContentType** | **string** | Type of this content element. | [optional] |
 | **SubType** | **string** | Content subtype, if any | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

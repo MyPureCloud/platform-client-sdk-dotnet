@@ -1,6 +1,5 @@
----
-title: ActivityPlanAsaImpactOverride
----
+# ActivityPlanAsaImpactOverride
+
 ## ININ.PureCloudApi.Model.ActivityPlanAsaImpactOverride
 
 ## Properties
@@ -8,6 +7,7 @@ title: ActivityPlanAsaImpactOverride
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **IncreaseByPercent** | **double?** | Allowed average speed of answer increase percent, from 0.0 to 100.0 | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

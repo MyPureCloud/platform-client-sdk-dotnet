@@ -1,6 +1,5 @@
----
-title: UserRoutingSkill
----
+# UserRoutingSkill
+
 ## ININ.PureCloudApi.Model.UserRoutingSkill
 
 ## Properties
@@ -13,6 +12,7 @@ title: UserRoutingSkill
 | **State** | **string** | Activate or deactivate this routing skill. | [optional] |
 | **SkillUri** | **string** | URI to the organization skill used by this user skill. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

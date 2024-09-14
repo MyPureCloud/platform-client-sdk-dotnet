@@ -1,6 +1,5 @@
----
-title: SmsAvailablePhoneNumber
----
+# SmsAvailablePhoneNumber
+
 ## ININ.PureCloudApi.Model.SmsAvailablePhoneNumber
 
 ## Properties
@@ -17,6 +16,7 @@ title: SmsAvailablePhoneNumber
 | **PhoneNumberType** | **string** | The type of phone number available for provisioning. | [optional] |
 | **AddressRequirement** | **string** | The address requirement needed for provisioning this number. If there is a requirement, the address must be the residence or place of business of the individual or entity using the phone number. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

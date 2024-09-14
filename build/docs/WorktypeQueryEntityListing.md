@@ -1,18 +1,18 @@
----
-title: WorktypeQueryEntityListing
----
+# WorktypeQueryEntityListing
+
 ## ININ.PureCloudApi.Model.WorktypeQueryEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Worktype&gt;**](Worktype.html) |  | [optional] |
+| **Entities** | [**List&lt;Worktype&gt;**](Worktype) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **After** | **string** |  | [optional] |
 | **Count** | **int?** | Count of items returned by the query. Refer to the \&quot;select\&quot; request parameter for more information. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

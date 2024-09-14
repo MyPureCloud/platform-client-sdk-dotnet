@@ -1,6 +1,5 @@
----
-title: DependencyStatus
----
+# DependencyStatus
+
 ## ININ.PureCloudApi.Model.DependencyStatus
 
 ## Properties
@@ -9,14 +8,15 @@ title: DependencyStatus
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **User** | [**User**](User.html) | User that initiated the build. | [optional] |
-| **Client** | [**DomainEntityRef**](DomainEntityRef.html) | OAuth client that initiated the build. | [optional] |
+| **User** | [**User**](User) | User that initiated the build. | [optional] |
+| **Client** | [**DomainEntityRef**](DomainEntityRef) | OAuth client that initiated the build. | [optional] |
 | **BuildId** | **string** |  | [optional] |
 | **DateStarted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateCompleted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Status** | **string** |  | [optional] |
-| **FailedObjects** | [**List&lt;FailedObject&gt;**](FailedObject.html) |  | [optional] |
+| **FailedObjects** | [**List&lt;FailedObject&gt;**](FailedObject) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

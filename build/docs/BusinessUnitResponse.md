@@ -1,6 +1,5 @@
----
-title: BusinessUnitResponse
----
+# BusinessUnitResponse
+
 ## ININ.PureCloudApi.Model.BusinessUnitResponse
 
 ## Properties
@@ -9,9 +8,10 @@ title: BusinessUnitResponse
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Settings** | [**BusinessUnitSettingsResponse**](BusinessUnitSettingsResponse.html) | Settings for this business unit | [optional] |
-| **Division** | [**DivisionReference**](DivisionReference.html) | The division to which this entity belongs. | [optional] |
+| **Settings** | [**BusinessUnitSettingsResponse**](BusinessUnitSettingsResponse) | Settings for this business unit | [optional] |
+| **Division** | [**DivisionReference**](DivisionReference) | The division to which this entity belongs. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

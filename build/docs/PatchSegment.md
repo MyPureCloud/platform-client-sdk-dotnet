@@ -1,6 +1,5 @@
----
-title: PatchSegment
----
+# PatchSegment
+
 ## ININ.PureCloudApi.Model.PatchSegment
 
 ## Properties
@@ -13,10 +12,11 @@ title: PatchSegment
 | **Description** | **string** | A description of the segment. | [optional] |
 | **Color** | **string** | The hexadecimal color value of the segment. | [optional] |
 | **ShouldDisplayToAgent** | **bool?** | Whether or not the segment should be displayed to agent/supervisor users. | [optional] |
-| **Context** | [**PatchContext**](PatchContext.html) | The context of the segment. | [optional] |
-| **Journey** | [**PatchJourney**](PatchJourney.html) | The pattern of rules defining the segment. | [optional] |
-| **ExternalSegment** | [**PatchExternalSegment**](PatchExternalSegment.html) | Details of an entity corresponding to this segment in an external system. | [optional] |
+| **Context** | [**PatchContext**](PatchContext) | The context of the segment. | [optional] |
+| **Journey** | [**PatchJourney**](PatchJourney) | The pattern of rules defining the segment. | [optional] |
+| **ExternalSegment** | [**PatchExternalSegment**](PatchExternalSegment) | Details of an entity corresponding to this segment in an external system. | [optional] |
 | **AssignmentExpirationDays** | **int?** | Time, in days, from when the segment is assigned until it is automatically unassigned. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

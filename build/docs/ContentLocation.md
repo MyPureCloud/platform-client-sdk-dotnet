@@ -1,6 +1,5 @@
----
-title: ContentLocation
----
+# ContentLocation
+
 ## ININ.PureCloudApi.Model.ContentLocation
 
 ## Properties
@@ -12,6 +11,7 @@ title: ContentLocation
 | **Text** | **string** | Location name. | [optional] |
 | **Latitude** | **double?** | Latitude of the location. | [optional] |
 | **Longitude** | **double?** | Longitude of the location. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

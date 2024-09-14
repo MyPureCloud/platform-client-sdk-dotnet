@@ -1,6 +1,5 @@
----
-title: EmailAttachment
----
+# EmailAttachment
+
 ## ININ.PureCloudApi.Model.EmailAttachment
 
 ## Properties
@@ -12,6 +11,7 @@ title: EmailAttachment
 | **ContentType** | **string** |  | [optional] |
 | **AttachmentId** | **string** |  | [optional] |
 | **ContentLength** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

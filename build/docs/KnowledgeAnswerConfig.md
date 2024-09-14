@@ -1,6 +1,5 @@
----
-title: KnowledgeAnswerConfig
----
+# KnowledgeAnswerConfig
+
 ## ININ.PureCloudApi.Model.KnowledgeAnswerConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: KnowledgeAnswerConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | Knowledge answer is enabled. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

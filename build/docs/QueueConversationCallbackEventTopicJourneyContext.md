@@ -1,15 +1,15 @@
----
-title: QueueConversationCallbackEventTopicJourneyContext
----
+# QueueConversationCallbackEventTopicJourneyContext
+
 ## ININ.PureCloudApi.Model.QueueConversationCallbackEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Customer** | [**QueueConversationCallbackEventTopicJourneyCustomer**](QueueConversationCallbackEventTopicJourneyCustomer.html) |  | [optional] |
-| **CustomerSession** | [**QueueConversationCallbackEventTopicJourneyCustomerSession**](QueueConversationCallbackEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **TriggeringAction** | [**QueueConversationCallbackEventTopicJourneyAction**](QueueConversationCallbackEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Customer** | [**QueueConversationCallbackEventTopicJourneyCustomer**](QueueConversationCallbackEventTopicJourneyCustomer) |  | [optional] |
+| **CustomerSession** | [**QueueConversationCallbackEventTopicJourneyCustomerSession**](QueueConversationCallbackEventTopicJourneyCustomerSession) |  | [optional] |
+| **TriggeringAction** | [**QueueConversationCallbackEventTopicJourneyAction**](QueueConversationCallbackEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

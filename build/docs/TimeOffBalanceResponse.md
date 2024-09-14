@@ -1,6 +1,5 @@
----
-title: TimeOffBalanceResponse
----
+# TimeOffBalanceResponse
+
 ## ININ.PureCloudApi.Model.TimeOffBalanceResponse
 
 ## Properties
@@ -12,6 +11,7 @@ title: TimeOffBalanceResponse
 | **HrisTimeOffTypeSecondaryId** | **string** | The secondary ID of the time off type configured in HRIS integration | [optional] |
 | **StartDate** | **String** | The Start date of the requested date range. The end date is determined by the size of interval list. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **BalanceMinutesPerDay** | **List&lt;int?&gt;** | The list of available time off balance values in minutes for each day | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

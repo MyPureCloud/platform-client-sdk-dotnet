@@ -1,6 +1,5 @@
----
-title: ScrollPercentageEventTrigger
----
+# ScrollPercentageEventTrigger
+
 ## ININ.PureCloudApi.Model.ScrollPercentageEventTrigger
 
 ## Properties
@@ -9,6 +8,7 @@ title: ScrollPercentageEventTrigger
 |------------ | ------------- | ------------- | -------------|
 | **Percentage** | **int?** | Percentage of a webpage at which an event is triggered. | |
 | **EventName** | **string** | Name of event triggered after scrolling to the specified percentage. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

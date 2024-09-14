@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicInstagramScopedId
----
+# ExternalContactsUnresolvedContactChangedTopicInstagramScopedId
+
 ## ININ.PureCloudApi.Model.ExternalContactsUnresolvedContactChangedTopicInstagramScopedId
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExternalContactsUnresolvedContactChangedTopicInstagramScopedId
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ScopedId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

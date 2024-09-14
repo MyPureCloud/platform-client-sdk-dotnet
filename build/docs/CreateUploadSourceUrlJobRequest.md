@@ -1,6 +1,5 @@
----
-title: CreateUploadSourceUrlJobRequest
----
+# CreateUploadSourceUrlJobRequest
+
 ## ININ.PureCloudApi.Model.CreateUploadSourceUrlJobRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CreateUploadSourceUrlJobRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UploadUrl** | **string** | The URL of the content to upload. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

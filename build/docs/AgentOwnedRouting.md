@@ -1,6 +1,5 @@
----
-title: AgentOwnedRouting
----
+# AgentOwnedRouting
+
 ## ININ.PureCloudApi.Model.AgentOwnedRouting
 
 ## Properties
@@ -10,6 +9,7 @@ title: AgentOwnedRouting
 | **EnableAgentOwnedCallbacks** | **bool?** | Indicates if Agent Owned Callbacks are enabled for the queue | [optional] |
 | **MaxOwnedCallbackHours** | **int?** | The max amount of time a callback can be owned (in hours); Allowable range 1 - 168 hour(s) (inclusive) | [optional] |
 | **MaxOwnedCallbackDelayHours** | **int?** | The max amount of time a callback can be scheduled out into the future (in hours); Allowable range 1 - 720 hour(s) (inclusive) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

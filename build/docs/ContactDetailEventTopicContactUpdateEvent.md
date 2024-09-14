@@ -1,6 +1,5 @@
----
-title: ContactDetailEventTopicContactUpdateEvent
----
+# ContactDetailEventTopicContactUpdateEvent
+
 ## ININ.PureCloudApi.Model.ContactDetailEventTopicContactUpdateEvent
 
 ## Properties
@@ -28,6 +27,7 @@ title: ContactDetailEventTopicContactUpdateEvent
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

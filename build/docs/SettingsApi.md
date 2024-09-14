@@ -1,26 +1,25 @@
----
-title: SettingsApi
----
+# SettingsApi
+
 ## PureCloudPlatform.Client.V2.Api.SettingsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsApi.html#deleteusersagentuiagentsautoansweragentidsettings) | **Delete** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Delete agent auto answer settings |
-| [**GetEmailsSettings**](SettingsApi.html#getemailssettings) | **Get** /api/v2/emails/settings | Get email Contact Center settings |
-| [**GetSettingsExecutiondata**](SettingsApi.html#getsettingsexecutiondata) | **Get** /api/v2/settings/executiondata | Get the execution history enabled setting. |
-| [**GetUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsApi.html#getusersagentuiagentsautoansweragentidsettings) | **Get** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Get agent auto answer settings |
-| [**PatchEmailsSettings**](SettingsApi.html#patchemailssettings) | **Patch** /api/v2/emails/settings | Patch email Contact Center settings |
-| [**PatchSettingsExecutiondata**](SettingsApi.html#patchsettingsexecutiondata) | **Patch** /api/v2/settings/executiondata | Edit the execution history on off setting. |
-| [**PatchUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsApi.html#patchusersagentuiagentsautoansweragentidsettings) | **Patch** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Update agent auto answer settings |
-| [**PutUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsApi.html#putusersagentuiagentsautoansweragentidsettings) | **Put** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Set agent auto answer settings |
-{: class="table table-striped"}
+| [**DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](#DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Delete** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Delete agent auto answer settings |
+| [**GetEmailsSettings**](#GetEmailsSettings) | **Get** /api/v2/emails/settings | Get email Contact Center settings |
+| [**GetSettingsExecutiondata**](#GetSettingsExecutiondata) | **Get** /api/v2/settings/executiondata | Get the execution history enabled setting. |
+| [**GetUsersAgentuiAgentsAutoanswerAgentIdSettings**](#GetUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Get** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Get agent auto answer settings |
+| [**PatchEmailsSettings**](#PatchEmailsSettings) | **Patch** /api/v2/emails/settings | Patch email Contact Center settings |
+| [**PatchSettingsExecutiondata**](#PatchSettingsExecutiondata) | **Patch** /api/v2/settings/executiondata | Edit the execution history on off setting. |
+| [**PatchUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PatchUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Patch** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Update agent auto answer settings |
+| [**PutUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PutUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Put** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Set agent auto answer settings |
 
-<a name="deleteusersagentuiagentsautoansweragentidsettings"></a>
 
-## void DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
 
+## DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings
+
+> void DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
 
 
 Delete agent auto answer settings
@@ -73,16 +72,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getemailssettings"></a>
 
-## [**EmailSettings**](EmailSettings.html) GetEmailsSettings ()
+## GetEmailsSettings
 
+> [**EmailSettings**](EmailSettings) GetEmailsSettings ()
 
 
 Get email Contact Center settings
@@ -132,15 +130,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**EmailSettings**](EmailSettings.html)
+[**EmailSettings**](EmailSettings)
 
-<a name="getsettingsexecutiondata"></a>
 
-## [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse.html) GetSettingsExecutiondata ()
+## GetSettingsExecutiondata
 
+> [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse) GetSettingsExecutiondata ()
 
 
 Get the execution history enabled setting.
@@ -192,15 +189,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse.html)
+[**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse)
 
-<a name="getusersagentuiagentsautoansweragentidsettings"></a>
 
-## [**AutoAnswerSettings**](AutoAnswerSettings.html) GetUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
+## GetUsersAgentuiAgentsAutoanswerAgentIdSettings
 
+> [**AutoAnswerSettings**](AutoAnswerSettings) GetUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
 
 
 Get agent auto answer settings
@@ -254,16 +250,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AutoAnswerSettings**](AutoAnswerSettings.html)
+[**AutoAnswerSettings**](AutoAnswerSettings)
 
-<a name="patchemailssettings"></a>
 
-## [**EmailSettings**](EmailSettings.html) PatchEmailsSettings (EmailSettings body = null)
+## PatchEmailsSettings
 
+> [**EmailSettings**](EmailSettings) PatchEmailsSettings (EmailSettings body = null)
 
 
 Patch email Contact Center settings
@@ -316,17 +311,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EmailSettings**](EmailSettings.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**EmailSettings**](EmailSettings)|  | [optional]  |
 
 ### Return type
 
-[**EmailSettings**](EmailSettings.html)
+[**EmailSettings**](EmailSettings)
 
-<a name="patchsettingsexecutiondata"></a>
 
-## [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse.html) PatchSettingsExecutiondata (ExecutionDataSettingsRequest body)
+## PatchSettingsExecutiondata
 
+> [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse) PatchSettingsExecutiondata (ExecutionDataSettingsRequest body)
 
 
 Edit the execution history on off setting.
@@ -381,17 +375,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest.html)| New Execution Data Setting |  |
-{: class="table table-striped"}
+| **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest)| New Execution Data Setting |  |
 
 ### Return type
 
-[**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse.html)
+[**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse)
 
-<a name="patchusersagentuiagentsautoansweragentidsettings"></a>
 
-## [**AutoAnswerSettings**](AutoAnswerSettings.html) PatchUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
+## PatchUsersAgentuiAgentsAutoanswerAgentIdSettings
 
+> [**AutoAnswerSettings**](AutoAnswerSettings) PatchUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
 
 
 Update agent auto answer settings
@@ -446,17 +439,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-| **body** | [**AutoAnswerSettings**](AutoAnswerSettings.html)| AutoAnswerSettings |  |
-{: class="table table-striped"}
+| **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings |  |
 
 ### Return type
 
-[**AutoAnswerSettings**](AutoAnswerSettings.html)
+[**AutoAnswerSettings**](AutoAnswerSettings)
 
-<a name="putusersagentuiagentsautoansweragentidsettings"></a>
 
-## [**AutoAnswerSettings**](AutoAnswerSettings.html) PutUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
+## PutUsersAgentuiAgentsAutoanswerAgentIdSettings
 
+> [**AutoAnswerSettings**](AutoAnswerSettings) PutUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
 
 
 Set agent auto answer settings
@@ -511,10 +503,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-| **body** | [**AutoAnswerSettings**](AutoAnswerSettings.html)| AutoAnswerSettings |  |
-{: class="table table-striped"}
+| **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings |  |
 
 ### Return type
 
-[**AutoAnswerSettings**](AutoAnswerSettings.html)
+[**AutoAnswerSettings**](AutoAnswerSettings)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

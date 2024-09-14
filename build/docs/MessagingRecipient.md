@@ -1,6 +1,5 @@
----
-title: MessagingRecipient
----
+# MessagingRecipient
+
 ## ININ.PureCloudApi.Model.MessagingRecipient
 
 ## Properties
@@ -14,7 +13,8 @@ title: MessagingRecipient
 | **FirstName** | **string** | First name of the recipient. | [optional] |
 | **LastName** | **string** | Last name of the recipient. | [optional] |
 | **Email** | **string** | E-mail address of the recipient. | [optional] |
-| **AdditionalIds** | [**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier.html) | List of recipient additional identifiers | [optional] |
-{: class="table table-striped"}
+| **AdditionalIds** | [**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

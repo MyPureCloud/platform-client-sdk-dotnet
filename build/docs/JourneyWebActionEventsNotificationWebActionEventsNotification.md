@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationWebActionEventsNotification
----
+# JourneyWebActionEventsNotificationWebActionEventsNotification
+
 ## ININ.PureCloudApi.Model.JourneyWebActionEventsNotificationWebActionEventsNotification
 
 ## Properties
@@ -9,14 +8,15 @@ title: JourneyWebActionEventsNotificationWebActionEventsNotification
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **CorrelationId** | **string** |  | [optional] |
-| **ExternalContact** | [**JourneyWebActionEventsNotificationExternalContact**](JourneyWebActionEventsNotificationExternalContact.html) |  | [optional] |
+| **ExternalContact** | [**JourneyWebActionEventsNotificationExternalContact**](JourneyWebActionEventsNotificationExternalContact) |  | [optional] |
 | **CreatedDate** | **DateTime?** |  | [optional] |
 | **CustomerId** | **string** |  | [optional] |
 | **CustomerIdType** | **string** |  | [optional] |
-| **Session** | [**JourneyWebActionEventsNotificationSession**](JourneyWebActionEventsNotificationSession.html) |  | [optional] |
+| **Session** | [**JourneyWebActionEventsNotificationSession**](JourneyWebActionEventsNotificationSession) |  | [optional] |
 | **EventType** | **string** |  | [optional] |
-| **WebActionEvent** | [**JourneyWebActionEventsNotificationWebActionMessage**](JourneyWebActionEventsNotificationWebActionMessage.html) |  | [optional] |
-| **BlockedWebActionOfferEvent** | [**JourneyWebActionEventsNotificationBlockedWebActionOfferMessage**](JourneyWebActionEventsNotificationBlockedWebActionOfferMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **WebActionEvent** | [**JourneyWebActionEventsNotificationWebActionMessage**](JourneyWebActionEventsNotificationWebActionMessage) |  | [optional] |
+| **BlockedWebActionOfferEvent** | [**JourneyWebActionEventsNotificationBlockedWebActionOfferMessage**](JourneyWebActionEventsNotificationBlockedWebActionOfferMessage) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

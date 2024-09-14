@@ -1,6 +1,5 @@
----
-title: CoachingSlot
----
+# CoachingSlot
+
 ## ININ.PureCloudApi.Model.CoachingSlot
 
 ## Properties
@@ -11,7 +10,8 @@ title: CoachingSlot
 | **LengthInMinutes** | **int?** | Length of coaching appointment slot in minutes | [optional] |
 | **StaffingDifference** | **double?** | Difference between scheduled and forecast headcount for this slot after scheduling the coaching appointment | [optional] |
 | **DifferenceRating** | **string** | Rating based on the staffing difference for scheduled slot | [optional] |
-| **WfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference.html) | Workforce Management schedule information associated with the slot | [optional] |
-{: class="table table-striped"}
+| **WfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference) | Workforce Management schedule information associated with the slot | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

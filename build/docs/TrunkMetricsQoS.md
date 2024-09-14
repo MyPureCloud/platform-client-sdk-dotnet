@@ -1,6 +1,5 @@
----
-title: TrunkMetricsQoS
----
+# TrunkMetricsQoS
+
 ## ININ.PureCloudApi.Model.TrunkMetricsQoS
 
 ## Properties
@@ -8,6 +7,7 @@ title: TrunkMetricsQoS
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **MismatchCount** | **int?** | Total number of QoS mismatches over the course of the last 24-hour period (sliding window). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: OrganizationPresenceEntityListing
----
+# OrganizationPresenceEntityListing
+
 ## ININ.PureCloudApi.Model.OrganizationPresenceEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;OrganizationPresence&gt;**](OrganizationPresence.html) |  | [optional] |
+| **Entities** | [**List&lt;OrganizationPresence&gt;**](OrganizationPresence) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: OrganizationPresenceEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

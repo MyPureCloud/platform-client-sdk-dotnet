@@ -1,6 +1,5 @@
----
-title: Activation
----
+# Activation
+
 ## ININ.PureCloudApi.Model.Activation
 
 ## Properties
@@ -9,6 +8,7 @@ title: Activation
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Type of activation. | |
 | **DelayInSeconds** | **int?** | Activation delay time amount. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

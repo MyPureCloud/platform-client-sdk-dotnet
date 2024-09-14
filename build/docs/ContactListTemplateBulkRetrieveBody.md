@@ -1,6 +1,5 @@
----
-title: ContactListTemplateBulkRetrieveBody
----
+# ContactListTemplateBulkRetrieveBody
+
 ## ININ.PureCloudApi.Model.ContactListTemplateBulkRetrieveBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContactListTemplateBulkRetrieveBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Ids** | **List&lt;string&gt;** | The IDs of the Contact List Templates to retrieve. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

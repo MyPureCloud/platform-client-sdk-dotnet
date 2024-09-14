@@ -1,6 +1,5 @@
----
-title: WorkitemsChangeWorkbinDelta
----
+# WorkitemsChangeWorkbinDelta
+
 ## ININ.PureCloudApi.Model.WorkitemsChangeWorkbinDelta
 
 ## Properties
@@ -8,8 +7,9 @@ title: WorkitemsChangeWorkbinDelta
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Version** | **int?** | Version | [optional] |
-| **ModifiedBy** | [**UserReference**](UserReference.html) | modifiedBy | [optional] |
-| **Delta** | [**WorkbinDelta**](WorkbinDelta.html) | The changes that originated this version | [optional] |
-{: class="table table-striped"}
+| **ModifiedBy** | [**UserReference**](UserReference) | modifiedBy | [optional] |
+| **Delta** | [**WorkbinDelta**](WorkbinDelta) | The changes that originated this version | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

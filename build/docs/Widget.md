@@ -1,6 +1,5 @@
----
-title: Widget
----
+# Widget
+
 ## ININ.PureCloudApi.Model.Widget
 
 ## Properties
@@ -27,14 +26,15 @@ title: Widget
 | **IsFullWidth** | **bool?** | Indicates whether a widget should take the full width of a dashboard or be shown only in a single slot. | [optional] |
 | **ShowPercentageChange** | **bool?** | Indicates whether a widget should show the percentage diff between two values. | [optional] |
 | **ShowProfilePicture** | **bool?** | Indicates whether a widget should show the profile picture of an agent. | [optional] |
-| **Filter** | [**ViewFilter**](ViewFilter.html) | The filters to be applied for dashboard widget configuration | [optional] |
+| **Filter** | [**ViewFilter**](ViewFilter) | The filters to be applied for dashboard widget configuration | [optional] |
 | **Periods** | **List&lt;string&gt;** | The list of periods for the dashboard widget configuration | [optional] |
 | **MediaTypes** | **List&lt;string&gt;** | The list of media types for the dashboard widget configuration | [optional] |
-| **Warnings** | [**List&lt;Warning&gt;**](Warning.html) | List of warnings for dashboard widget configuration | [optional] |
+| **Warnings** | [**List&lt;Warning&gt;**](Warning) | List of warnings for dashboard widget configuration | [optional] |
 | **ShowTimeInStatus** | **bool?** | Indicates the show time in status of a widget configuration. | [optional] |
 | **ShowOfflineAgents** | **bool?** | Indicates to show offline agent widget. | [optional] |
 | **SelectedStatuses** | **List&lt;string&gt;** | Indicates the selected statuses used to filter the agent widget in the dashboard. | [optional] |
 | **AgentInteractionSortOrder** | **string** | The sort order of the interactions in the agent status widget. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

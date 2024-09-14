@@ -1,6 +1,5 @@
----
-title: ContentPostback
----
+# ContentPostback
+
 ## ININ.PureCloudApi.Model.ContentPostback
 
 ## Properties
@@ -10,6 +9,7 @@ title: ContentPostback
 | **Id** | **string** | An ID assigned to the button response. | [optional] |
 | **Text** | **string** | The response text from the button click. | [optional] |
 | **Payload** | **string** | The response payload associated with the clicked button. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

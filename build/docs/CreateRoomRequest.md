@@ -1,6 +1,5 @@
----
-title: CreateRoomRequest
----
+# CreateRoomRequest
+
 ## ININ.PureCloudApi.Model.CreateRoomRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: CreateRoomRequest
 | **Description** | **string** | Room&#39;s description | [optional] |
 | **Subject** | **string** | Room&#39;s subject | |
 | **UserIds** | **List&lt;string&gt;** | Users to add to the room | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

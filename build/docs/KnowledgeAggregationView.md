@@ -1,6 +1,5 @@
----
-title: KnowledgeAggregationView
----
+# KnowledgeAggregationView
+
 ## ININ.PureCloudApi.Model.KnowledgeAggregationView
 
 ## Properties
@@ -10,7 +9,8 @@ title: KnowledgeAggregationView
 | **Target** | **string** | Target metric name | |
 | **Name** | **string** | A unique name for this view. Must be distinct from other views and built-in metric names. | |
 | **Function** | **string** | Type of view you wish to create | |
-| **Range** | [**AggregationRange**](AggregationRange.html) | Range of numbers for slicing up data | [optional] |
-{: class="table table-striped"}
+| **Range** | [**AggregationRange**](AggregationRange) | Range of numbers for slicing up data | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

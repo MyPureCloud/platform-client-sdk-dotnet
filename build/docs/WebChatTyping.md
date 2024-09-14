@@ -1,6 +1,5 @@
----
-title: WebChatTyping
----
+# WebChatTyping
+
 ## ININ.PureCloudApi.Model.WebChatTyping
 
 ## Properties
@@ -8,9 +7,10 @@ title: WebChatTyping
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The event identifier of this typing indicator event (useful to guard against event re-delivery | |
-| **Conversation** | [**WebChatConversation**](WebChatConversation.html) | The identifier of the conversation | |
-| **Sender** | [**WebChatMemberInfo**](WebChatMemberInfo.html) | The member who sent the message | |
+| **Conversation** | [**WebChatConversation**](WebChatConversation) | The identifier of the conversation | |
+| **Sender** | [**WebChatMemberInfo**](WebChatMemberInfo) | The member who sent the message | |
 | **Timestamp** | **DateTime?** | The timestamp of the message, in ISO-8601 format | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

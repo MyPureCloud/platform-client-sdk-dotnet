@@ -1,6 +1,5 @@
----
-title: BuIntradayScheduleData
----
+# BuIntradayScheduleData
+
 ## ININ.PureCloudApi.Model.BuIntradayScheduleData
 
 ## Properties
@@ -8,6 +7,7 @@ title: BuIntradayScheduleData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **OnQueueTimeSeconds** | **long?** | The total on-queue time in seconds for all agents in this group | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

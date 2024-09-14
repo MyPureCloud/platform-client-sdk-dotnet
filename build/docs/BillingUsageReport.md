@@ -1,6 +1,5 @@
----
-title: BillingUsageReport
----
+# BillingUsageReport
+
 ## ININ.PureCloudApi.Model.BillingUsageReport
 
 ## Properties
@@ -12,8 +11,9 @@ title: BillingUsageReport
 | **StartDate** | **DateTime?** | The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **EndDate** | **DateTime?** | The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **Status** | **string** | Generation status of report | [optional] |
-| **Usages** | [**List&lt;BillingUsage&gt;**](BillingUsage.html) | The usages for the given period. | |
+| **Usages** | [**List&lt;BillingUsage&gt;**](BillingUsage) | The usages for the given period. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

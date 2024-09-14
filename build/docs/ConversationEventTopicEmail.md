@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicEmail
----
+# ConversationEventTopicEmail
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicEmail
 
 ## Properties
@@ -17,21 +16,22 @@ title: ConversationEventTopicEmail
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **MessagesSent** | **int?** | The number of email messages sent by this participant. | [optional] |
-| **ErrorInfo** | [**ConversationEventTopicErrorDetails**](ConversationEventTopicErrorDetails.html) | Detailed information about an error response. | [optional] |
+| **ErrorInfo** | [**ConversationEventTopicErrorDetails**](ConversationEventTopicErrorDetails) | Detailed information about an error response. | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the email was placed on hold in the cloud clock if the email is currently on hold. | [optional] |
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **MessageId** | **string** | A globally unique identifier for the stored content of this communication. | [optional] |
 | **Direction** | **string** | Whether an email is inbound or outbound. | [optional] |
-| **DraftAttachments** | [**List&lt;ConversationEventTopicAttachment&gt;**](ConversationEventTopicAttachment.html) | A list of uploaded attachments on the email draft. | [optional] |
+| **DraftAttachments** | [**List&lt;ConversationEventTopicAttachment&gt;**](ConversationEventTopicAttachment) | A list of uploaded attachments on the email draft. | [optional] |
 | **Spam** | **bool?** | Indicates if the inbound email was marked as spam. | [optional] |
-| **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **QueueMediaSettings** | [**ConversationEventTopicQueueMediaSettings**](ConversationEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
+| **QueueMediaSettings** | [**ConversationEventTopicQueueMediaSettings**](ConversationEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
 | **ResumeTime** | **DateTime?** | The time when a parked email should resume. | [optional] |
 | **ParkTime** | **DateTime?** | The time when an  parked email was parked. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

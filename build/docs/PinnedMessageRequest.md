@@ -1,6 +1,5 @@
----
-title: PinnedMessageRequest
----
+# PinnedMessageRequest
+
 ## ININ.PureCloudApi.Model.PinnedMessageRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: PinnedMessageRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **PinnedMessageIds** | **List&lt;string&gt;** | Ids of the messages to pin | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

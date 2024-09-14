@@ -1,6 +1,5 @@
----
-title: AttributeFilterItem
----
+# AttributeFilterItem
+
 ## ININ.PureCloudApi.Model.AttributeFilterItem
 
 ## Properties
@@ -10,6 +9,7 @@ title: AttributeFilterItem
 | **Id** | **string** |  | [optional] |
 | **Operator** | **string** |  | [optional] |
 | **Values** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

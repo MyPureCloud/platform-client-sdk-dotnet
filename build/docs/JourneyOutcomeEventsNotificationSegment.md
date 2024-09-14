@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationSegment
----
+# JourneyOutcomeEventsNotificationSegment
+
 ## ININ.PureCloudApi.Model.JourneyOutcomeEventsNotificationSegment
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneyOutcomeEventsNotificationSegment
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **AssignedDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

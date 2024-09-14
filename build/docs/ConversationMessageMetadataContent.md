@@ -1,6 +1,5 @@
----
-title: ConversationMessageMetadataContent
----
+# ConversationMessageMetadataContent
+
 ## ININ.PureCloudApi.Model.ConversationMessageMetadataContent
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationMessageMetadataContent
 |------------ | ------------- | ------------- | -------------|
 | **ContentType** | **string** | Type of this content element. | [optional] |
 | **SubType** | **string** | Content subtype | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

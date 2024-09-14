@@ -1,6 +1,5 @@
----
-title: ConversationVideoEventTopicVideoConversation
----
+# ConversationVideoEventTopicVideoConversation
+
 ## ININ.PureCloudApi.Model.ConversationVideoEventTopicVideoConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationVideoEventTopicVideoConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;ConversationVideoEventTopicVideoMediaParticipant&gt;**](ConversationVideoEventTopicVideoMediaParticipant.html) |  | [optional] |
+| **Participants** | [**List&lt;ConversationVideoEventTopicVideoMediaParticipant&gt;**](ConversationVideoEventTopicVideoMediaParticipant) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

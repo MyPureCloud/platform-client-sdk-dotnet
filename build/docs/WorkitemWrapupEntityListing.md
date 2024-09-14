@@ -1,16 +1,16 @@
----
-title: WorkitemWrapupEntityListing
----
+# WorkitemWrapupEntityListing
+
 ## ININ.PureCloudApi.Model.WorkitemWrapupEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorkitemWrapup&gt;**](WorkitemWrapup.html) |  | [optional] |
+| **Entities** | [**List&lt;WorkitemWrapup&gt;**](WorkitemWrapup) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

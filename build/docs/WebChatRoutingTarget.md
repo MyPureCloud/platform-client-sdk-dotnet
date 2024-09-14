@@ -1,6 +1,5 @@
----
-title: WebChatRoutingTarget
----
+# WebChatRoutingTarget
+
 ## ININ.PureCloudApi.Model.WebChatRoutingTarget
 
 ## Properties
@@ -12,6 +11,7 @@ title: WebChatRoutingTarget
 | **Skills** | **List&lt;string&gt;** | The list of skill names to use for routing. | [optional] |
 | **Language** | **string** | The language name to use for routing. | [optional] |
 | **Priority** | **long?** | The priority to assign to the conversation for routing. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

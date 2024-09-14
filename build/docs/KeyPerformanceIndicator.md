@@ -1,6 +1,5 @@
----
-title: KeyPerformanceIndicator
----
+# KeyPerformanceIndicator
+
 ## ININ.PureCloudApi.Model.KeyPerformanceIndicator
 
 ## Properties
@@ -16,12 +15,13 @@ title: KeyPerformanceIndicator
 | **Description** | **string** | The description of the Key Performance Indicator. | [optional] |
 | **KpiType** | **string** | The type of Key Performance Indicator. | [optional] |
 | **Source** | **string** | Source of values for Key Performance Indicator. | [optional] |
-| **WrapUpCodeConfig** | [**WrapUpCodeConfig**](WrapUpCodeConfig.html) | Defines what wrap up codes are mapped to Key Performance Indicator. | [optional] |
-| **OutcomeConfig** | [**OutcomeConfig**](OutcomeConfig.html) | Defines what outcome ids are mapped to Key Performance Indicator. | [optional] |
+| **WrapUpCodeConfig** | [**WrapUpCodeConfig**](WrapUpCodeConfig) | Defines what wrap up codes are mapped to Key Performance Indicator. | [optional] |
+| **OutcomeConfig** | [**OutcomeConfig**](OutcomeConfig) | Defines what outcome ids are mapped to Key Performance Indicator. | [optional] |
 | **Status** | **string** | The status of the Key Performance Indicator. | [optional] |
 | **KpiGroup** | **string** | The group the Key Performance Indicator belongs to. | [optional] |
 | **Queues** | **List&lt;string&gt;** | Queue IDs on which KPI specification is used. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

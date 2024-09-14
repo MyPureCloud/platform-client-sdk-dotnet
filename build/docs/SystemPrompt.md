@@ -1,6 +1,5 @@
----
-title: SystemPrompt
----
+# SystemPrompt
+
 ## ININ.PureCloudApi.Model.SystemPrompt
 
 ## Properties
@@ -10,8 +9,9 @@ title: SystemPrompt
 | **Id** | **string** | The system prompt identifier | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
-| **Resources** | [**List&lt;SystemPromptAsset&gt;**](SystemPromptAsset.html) |  | [optional] |
+| **Resources** | [**List&lt;SystemPromptAsset&gt;**](SystemPromptAsset) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

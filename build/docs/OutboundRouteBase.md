@@ -1,6 +1,5 @@
----
-title: OutboundRouteBase
----
+# OutboundRouteBase
+
 ## ININ.PureCloudApi.Model.OutboundRouteBase
 
 ## Properties
@@ -9,7 +8,7 @@ title: OutboundRouteBase
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the entity. | |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The resource&#39;s description. | [optional] |
 | **Version** | **int?** | The current version of the resource. | [optional] |
 | **DateCreated** | **DateTime?** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -22,8 +21,9 @@ title: OutboundRouteBase
 | **ClassificationTypes** | **List&lt;string&gt;** | The site associated to the outbound route. | |
 | **Enabled** | **bool?** |  | [optional] |
 | **Distribution** | **string** |  | [optional] |
-| **ExternalTrunkBases** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
+| **ExternalTrunkBases** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

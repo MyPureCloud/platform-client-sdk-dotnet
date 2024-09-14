@@ -1,6 +1,5 @@
----
-title: CampaignRuleParameters
----
+# CampaignRuleParameters
+
 ## ININ.PureCloudApi.Model.CampaignRuleParameters
 
 ## Properties
@@ -15,7 +14,8 @@ title: CampaignRuleParameters
 | **OutboundLineCount** | **int?** | The  number of outbound lines to set a campaign to. Required for the &#39;setCampaignNumberOfLines&#39; action. | [optional] |
 | **RelativeWeight** | **int?** | The relative weight to set a campaign to. Required for the &#39;setCampaignWeight&#39; action. | [optional] |
 | **MaxCallsPerAgent** | **double?** | The maximum number of calls per agent to set a campaign to. Required for the &#39;setCampaignMaxCallsPerAgent&#39; action. | [optional] |
-| **Queue** | [**DomainEntityRef**](DomainEntityRef.html) | The queue a campaign to. Required for the &#39;changeCampaignQueue&#39; action. | [optional] |
-{: class="table table-striped"}
+| **Queue** | [**DomainEntityRef**](DomainEntityRef) | The queue a campaign to. Required for the &#39;changeCampaignQueue&#39; action. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

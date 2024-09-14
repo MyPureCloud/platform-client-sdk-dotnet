@@ -1,13 +1,12 @@
----
-title: UserQueueEntityListing
----
+# UserQueueEntityListing
+
 ## ININ.PureCloudApi.Model.UserQueueEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;UserQueue&gt;**](UserQueue.html) |  | [optional] |
+| **Entities** | [**List&lt;UserQueue&gt;**](UserQueue) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: UserQueueEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

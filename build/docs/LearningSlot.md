@@ -1,6 +1,5 @@
----
-title: LearningSlot
----
+# LearningSlot
+
 ## ININ.PureCloudApi.Model.LearningSlot
 
 ## Properties
@@ -11,6 +10,7 @@ title: LearningSlot
 | **LengthInMinutes** | **int?** | Length of Learning activity slot in minutes | [optional] |
 | **StaffingDifference** | **double?** | Difference between scheduled and forecast headcount for this slot after scheduling the Learning activity | [optional] |
 | **DifferenceRating** | **string** | Rating based on the staffing difference for scheduled slot | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

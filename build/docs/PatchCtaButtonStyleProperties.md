@@ -1,6 +1,5 @@
----
-title: PatchCtaButtonStyleProperties
----
+# PatchCtaButtonStyleProperties
+
 ## ININ.PureCloudApi.Model.PatchCtaButtonStyleProperties
 
 ## Properties
@@ -12,6 +11,7 @@ title: PatchCtaButtonStyleProperties
 | **FontSize** | **string** | Font size of the text. (eg. &#39;12&#39;) | [optional] |
 | **TextAlign** | **string** | Text alignment. | [optional] |
 | **BackgroundColor** | **string** | Background color of the CTA button. (eg. #A04033) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

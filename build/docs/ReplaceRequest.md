@@ -1,6 +1,5 @@
----
-title: ReplaceRequest
----
+# ReplaceRequest
+
 ## ININ.PureCloudApi.Model.ReplaceRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: ReplaceRequest
 | **ChangeNumber** | **int?** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **AuthToken** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WebMessagingAttachment
----
+# WebMessagingAttachment
+
 ## ININ.PureCloudApi.Model.WebMessagingAttachment
 
 ## Properties
@@ -15,6 +14,7 @@ title: WebMessagingAttachment
 | **Sha256** | **string** | Secure hash of the attachment content. | [optional] |
 | **Filename** | **string** | Suggested file name for attachment. | [optional] |
 | **FileSize** | **int?** | The file size associated with the file | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate
----
+# WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate
+
 ## ININ.PureCloudApi.Model.WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate
 
 ## Properties
@@ -16,6 +15,7 @@ title: WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdat
 | **Error** | **string** |  | [optional] |
 | **Active** | **bool?** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

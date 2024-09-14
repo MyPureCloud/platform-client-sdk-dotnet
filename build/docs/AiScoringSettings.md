@@ -1,6 +1,5 @@
----
-title: AiScoringSettings
----
+# AiScoringSettings
+
 ## ININ.PureCloudApi.Model.AiScoringSettings
 
 ## Properties
@@ -8,8 +7,9 @@ title: AiScoringSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **QuestionGroupSettings** | [**List&lt;QuestionGroupSettings&gt;**](QuestionGroupSettings.html) |  | [optional] |
+| **QuestionGroupSettings** | [**List&lt;QuestionGroupSettings&gt;**](QuestionGroupSettings) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

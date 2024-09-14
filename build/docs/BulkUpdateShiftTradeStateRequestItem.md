@@ -1,6 +1,5 @@
----
-title: BulkUpdateShiftTradeStateRequestItem
----
+# BulkUpdateShiftTradeStateRequestItem
+
 ## ININ.PureCloudApi.Model.BulkUpdateShiftTradeStateRequestItem
 
 ## Properties
@@ -9,7 +8,8 @@ title: BulkUpdateShiftTradeStateRequestItem
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **State** | **string** | The new state to set on the shift trade | |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the shift trade | |
-{: class="table table-striped"}
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the shift trade | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

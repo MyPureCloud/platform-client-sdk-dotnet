@@ -1,6 +1,5 @@
----
-title: ResourceConditionValue
----
+# ResourceConditionValue
+
 ## ININ.PureCloudApi.Model.ResourceConditionValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: ResourceConditionValue
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
 | **Value** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

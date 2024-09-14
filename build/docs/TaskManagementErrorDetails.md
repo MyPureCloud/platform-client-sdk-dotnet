@@ -1,6 +1,5 @@
----
-title: TaskManagementErrorDetails
----
+# TaskManagementErrorDetails
+
 ## ININ.PureCloudApi.Model.TaskManagementErrorDetails
 
 ## Properties
@@ -9,6 +8,7 @@ title: TaskManagementErrorDetails
 |------------ | ------------- | ------------- | -------------|
 | **Code** | **string** | System defined error code for the error. | [optional] |
 | **Message** | **string** | Error message. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

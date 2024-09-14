@@ -1,13 +1,12 @@
----
-title: DevelopmentActivityListing
----
+# DevelopmentActivityListing
+
 ## ININ.PureCloudApi.Model.DevelopmentActivityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DevelopmentActivity&gt;**](DevelopmentActivity.html) |  | [optional] |
+| **Entities** | [**List&lt;DevelopmentActivity&gt;**](DevelopmentActivity) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: DevelopmentActivityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

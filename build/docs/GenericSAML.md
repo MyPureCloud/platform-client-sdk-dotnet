@@ -1,6 +1,5 @@
----
-title: GenericSAML
----
+# GenericSAML
+
 ## ININ.PureCloudApi.Model.GenericSAML
 
 ## Properties
@@ -21,6 +20,7 @@ title: GenericSAML
 | **EndpointCompression** | **bool?** |  | [optional] |
 | **NameIdentifierFormat** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

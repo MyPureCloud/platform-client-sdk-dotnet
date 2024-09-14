@@ -1,6 +1,5 @@
----
-title: DialerCampaignScheduleConfigChangeScheduleInterval
----
+# DialerCampaignScheduleConfigChangeScheduleInterval
+
 ## ININ.PureCloudApi.Model.DialerCampaignScheduleConfigChangeScheduleInterval
 
 ## Properties
@@ -10,6 +9,7 @@ title: DialerCampaignScheduleConfigChangeScheduleInterval
 | **Start** | **string** | scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **End** | **string** | scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

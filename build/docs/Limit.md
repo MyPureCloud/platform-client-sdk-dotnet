@@ -1,6 +1,5 @@
----
-title: Limit
----
+# Limit
+
 ## ININ.PureCloudApi.Model.Limit
 
 ## Properties
@@ -10,6 +9,7 @@ title: Limit
 | **Key** | **string** |  | [optional] |
 | **Namespace** | **string** |  | [optional] |
 | **Value** | **long?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

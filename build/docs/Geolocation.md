@@ -1,6 +1,5 @@
----
-title: Geolocation
----
+# Geolocation
+
 ## ININ.PureCloudApi.Model.Geolocation
 
 ## Properties
@@ -16,8 +15,9 @@ title: Geolocation
 | **Country** | **string** |  | [optional] |
 | **Region** | **string** |  | [optional] |
 | **City** | **string** |  | [optional] |
-| **Locations** | [**List&lt;LocationDefinition&gt;**](LocationDefinition.html) |  | [optional] |
+| **Locations** | [**List&lt;LocationDefinition&gt;**](LocationDefinition) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

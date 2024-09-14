@@ -1,6 +1,5 @@
----
-title: ConsultTransferToQueue
----
+# ConsultTransferToQueue
+
 ## ININ.PureCloudApi.Model.ConsultTransferToQueue
 
 ## Properties
@@ -11,6 +10,7 @@ title: ConsultTransferToQueue
 | **ConsultingUserId** | **string** | The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID | [optional] |
 | **QueueId** | **string** | The id of the queue. | [optional] |
 | **QueueName** | **string** | The name of the queue. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

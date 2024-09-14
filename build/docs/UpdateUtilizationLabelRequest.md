@@ -1,6 +1,5 @@
----
-title: UpdateUtilizationLabelRequest
----
+# UpdateUtilizationLabelRequest
+
 ## ININ.PureCloudApi.Model.UpdateUtilizationLabelRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: UpdateUtilizationLabelRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The utilization label name. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: FaxTopicUserData
----
+# FaxTopicUserData
+
 ## ININ.PureCloudApi.Model.FaxTopicUserData
 
 ## Properties
@@ -9,6 +8,7 @@ title: FaxTopicUserData
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

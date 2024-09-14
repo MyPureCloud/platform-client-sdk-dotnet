@@ -1,6 +1,5 @@
----
-title: StreetAddress
----
+# StreetAddress
+
 ## ININ.PureCloudApi.Model.StreetAddress
 
 ## Properties
@@ -15,6 +14,7 @@ title: StreetAddress
 | **LOC** | **string** | extra location info like suite 300 | [optional] |
 | **NAM** | **string** | Name of the customer | [optional] |
 | **PC** | **string** | Postal code | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

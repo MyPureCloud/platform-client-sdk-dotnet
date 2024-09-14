@@ -1,10 +1,11 @@
----
-title: Platform API Client SDK - .NET
----
-[![NuGet Badge](https://buildstats.info/nuget/PureCloudPlatform.Client.V2)](https://www.nuget.org/packages/PureCloudPlatform.Client.V2/)
+Platform API Client SDK - .NET
+
+[![NuGet Badge](https://img.shields.io/nuget/v/PureCloudPlatform.Client.V2)](https://www.nuget.org/packages/PureCloudPlatform.Client.V2/)
 [![Release Notes Badge](https://developer-content.genesys.cloud/images/sdk-release-notes.png)](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/releaseNotes.md)
 
-Documentation can be found at [https://developer.genesys.cloud/devapps/sdk/docexplorer/pureclouddotnet/](https://developer.genesys.cloud/devapps/sdk/docexplorer/pureclouddotnet/)
+Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
+
+Documentation version PureCloudPlatform.Client.V2 215.1.0
 
 ## Install Using nuget
 
@@ -18,9 +19,9 @@ Package info can be found at [https://www.nuget.org/packages/PureCloudPlatform.C
 
 **Warning:** This library is generated using the Genesys Cloud public API swagger definition. Function parameter ordering can change without notice and cause breaking changes. To avoid this, it is recommended to use [named arguments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments) when making API requests.
 
-## Preview API's
+## Preview APIs
 
-**Warning:** Preview API's are included in this SDK. These resources are subject to both breaking and non-breaking changes at any time without notice. This includes, but is not limited to, changing resource names, paths, contracts, documentation, and removing resources entirely. For a full list of the preview API's see [here](https://developer.genesys.cloud/platform/preview-apis)
+**Warning:** Preview APIs are included in this SDK. These resources are subject to both breaking and non-breaking changes at any time without notice. This includes, but is not limited to, changing resource names, paths, contracts, documentation, and removing resources entirely. For a full list of the preview APIs see [here](https://developer.genesys.cloud/platform/preview-apis)
 
 ### Referencing the Library
 

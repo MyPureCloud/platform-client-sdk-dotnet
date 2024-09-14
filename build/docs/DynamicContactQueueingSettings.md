@@ -1,6 +1,5 @@
----
-title: DynamicContactQueueingSettings
----
+# DynamicContactQueueingSettings
+
 ## ININ.PureCloudApi.Model.DynamicContactQueueingSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: DynamicContactQueueingSettings
 |------------ | ------------- | ------------- | -------------|
 | **Sort** | **bool?** | Whether to sort contacts dynamically | [optional] |
 | **Filter** | **bool?** | Whether to filter contacts dynamically | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

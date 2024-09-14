@@ -1,6 +1,5 @@
----
-title: SuggestionEngagement
----
+# SuggestionEngagement
+
 ## ININ.PureCloudApi.Model.SuggestionEngagement
 
 ## Properties
@@ -8,7 +7,8 @@ title: SuggestionEngagement
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EngagementType** | **string** | The type of engagement with the suggestion. | |
-| **Feedback** | [**SuggestionFeedback**](SuggestionFeedback.html) | The given feedback on the suggestion, if any. | [optional] |
-{: class="table table-striped"}
+| **Feedback** | [**SuggestionFeedback**](SuggestionFeedback) | The given feedback on the suggestion, if any. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

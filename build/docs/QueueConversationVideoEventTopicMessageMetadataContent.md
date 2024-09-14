@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicMessageMetadataContent
----
+# QueueConversationVideoEventTopicMessageMetadataContent
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicMessageMetadataContent
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationVideoEventTopicMessageMetadataContent
 |------------ | ------------- | ------------- | -------------|
 | **ContentType** | **string** | Type of this content element. | [optional] |
 | **SubType** | **string** | Content subtype, if any | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationEventAction
----
+# JourneyWebEventsNotificationEventAction
+
 ## ININ.PureCloudApi.Model.JourneyWebEventsNotificationEventAction
 
 ## Properties
@@ -12,6 +11,7 @@ title: JourneyWebEventsNotificationEventAction
 | **State** | **string** |  | [optional] |
 | **MediaType** | **string** |  | [optional] |
 | **Prompt** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

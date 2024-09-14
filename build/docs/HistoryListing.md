@@ -1,6 +1,5 @@
----
-title: HistoryListing
----
+# HistoryListing
+
 ## ININ.PureCloudApi.Model.HistoryListing
 
 ## Properties
@@ -9,11 +8,11 @@ title: HistoryListing
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Complete** | **bool?** |  | [optional] |
-| **User** | [**User**](User.html) |  | [optional] |
-| **Client** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **User** | [**User**](User) |  | [optional] |
+| **Client** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **ErrorMessage** | **string** |  | [optional] |
 | **ErrorCode** | **string** |  | [optional] |
-| **ErrorDetails** | [**List&lt;Detail&gt;**](Detail.html) |  | [optional] |
+| **ErrorDetails** | [**List&lt;Detail&gt;**](Detail) |  | [optional] |
 | **ErrorMessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ActionName** | **string** | Action name | [optional] |
 | **ActionStatus** | **string** | Action status | [optional] |
@@ -25,8 +24,9 @@ title: HistoryListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;HistoryEntry&gt;**](HistoryEntry.html) |  | [optional] |
+| **Entities** | [**List&lt;HistoryEntry&gt;**](HistoryEntry) |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

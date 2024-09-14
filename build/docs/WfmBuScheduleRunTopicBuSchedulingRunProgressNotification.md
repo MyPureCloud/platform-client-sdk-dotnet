@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
----
+# WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
 
 ## Properties
@@ -9,7 +8,8 @@ title: WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** |  | [optional] |
 | **OperationId** | **string** |  | [optional] |
-| **Result** | [**WfmBuScheduleRunTopicBuScheduleRun**](WfmBuScheduleRunTopicBuScheduleRun.html) |  | [optional] |
-{: class="table table-striped"}
+| **Result** | [**WfmBuScheduleRunTopicBuScheduleRun**](WfmBuScheduleRunTopicBuScheduleRun) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

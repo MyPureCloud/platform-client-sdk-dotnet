@@ -1,6 +1,5 @@
----
-title: TwitterId
----
+# TwitterId
+
 ## ININ.PureCloudApi.Model.TwitterId
 
 ## Properties
@@ -12,6 +11,7 @@ title: TwitterId
 | **ScreenName** | **string** | twitter user.screen_name | [optional] |
 | **Verified** | **bool?** | whether this data has been verified using the twitter API | [optional] |
 | **ProfileUrl** | **string** | url of user&#39;s twitter profile | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

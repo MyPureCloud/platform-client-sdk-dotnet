@@ -1,6 +1,5 @@
----
-title: ConversationDisconnectSettings
----
+# ConversationDisconnectSettings
+
 ## ININ.PureCloudApi.Model.ConversationDisconnectSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationDisconnectSettings
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not conversation disconnect setting is enabled | [optional] |
 | **Type** | **string** | Conversation disconnect type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

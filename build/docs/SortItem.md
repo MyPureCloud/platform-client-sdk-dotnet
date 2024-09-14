@@ -1,6 +1,5 @@
----
-title: SortItem
----
+# SortItem
+
 ## ININ.PureCloudApi.Model.SortItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: SortItem
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** |  | [optional] |
 | **Ascending** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

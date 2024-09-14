@@ -1,6 +1,5 @@
----
-title: OutboundDomain
----
+# OutboundDomain
+
 ## ININ.PureCloudApi.Model.OutboundDomain
 
 ## Properties
@@ -9,10 +8,11 @@ title: OutboundDomain
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Unique Id of the domain such as: example.com | |
 | **Name** | **string** |  | [optional] |
-| **CnameVerificationResult** | [**VerificationResult**](VerificationResult.html) | CNAME registration Status | [optional] |
-| **DkimVerificationResult** | [**VerificationResult**](VerificationResult.html) | DKIM registration Status | [optional] |
+| **CnameVerificationResult** | [**VerificationResult**](VerificationResult) | CNAME registration Status | [optional] |
+| **DkimVerificationResult** | [**VerificationResult**](VerificationResult) | DKIM registration Status | [optional] |
 | **SenderType** | **string** | Sender Type | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

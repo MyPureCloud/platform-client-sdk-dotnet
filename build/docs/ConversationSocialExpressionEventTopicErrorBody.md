@@ -1,6 +1,5 @@
----
-title: ConversationSocialExpressionEventTopicErrorBody
----
+# ConversationSocialExpressionEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.ConversationSocialExpressionEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationSocialExpressionEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;ConversationSocialExpressionEventTopicDetail&gt;**](ConversationSocialExpressionEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;ConversationSocialExpressionEventTopicErrorBody&gt;**](ConversationSocialExpressionEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;ConversationSocialExpressionEventTopicDetail&gt;**](ConversationSocialExpressionEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;ConversationSocialExpressionEventTopicErrorBody&gt;**](ConversationSocialExpressionEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

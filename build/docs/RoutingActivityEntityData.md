@@ -1,6 +1,5 @@
----
-title: RoutingActivityEntityData
----
+# RoutingActivityEntityData
+
 ## ININ.PureCloudApi.Model.RoutingActivityEntityData
 
 ## Properties
@@ -17,6 +16,7 @@ title: RoutingActivityEntityData
 | **SystemPresence** | **string** | System presence | [optional] |
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

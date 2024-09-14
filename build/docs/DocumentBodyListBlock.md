@@ -1,6 +1,5 @@
----
-title: DocumentBodyListBlock
----
+# DocumentBodyListBlock
+
 ## ININ.PureCloudApi.Model.DocumentBodyListBlock
 
 ## Properties
@@ -8,8 +7,9 @@ title: DocumentBodyListBlock
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type of the list block. | |
-| **Blocks** | [**List&lt;DocumentListContentBlock&gt;**](DocumentListContentBlock.html) | The list of items for an OrderedList or an UnorderedList. | |
-| **Properties** | [**DocumentBodyListItemProperties**](DocumentBodyListItemProperties.html) | The properties for the list block. | [optional] |
-{: class="table table-striped"}
+| **Blocks** | [**List&lt;DocumentListContentBlock&gt;**](DocumentListContentBlock) | The list of items for an OrderedList or an UnorderedList. | |
+| **Properties** | [**DocumentBodyListItemProperties**](DocumentBodyListItemProperties) | The properties for the list block. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

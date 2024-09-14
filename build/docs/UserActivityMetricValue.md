@@ -1,6 +1,5 @@
----
-title: UserActivityMetricValue
----
+# UserActivityMetricValue
+
 ## ININ.PureCloudApi.Model.UserActivityMetricValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserActivityMetricValue
 |------------ | ------------- | ------------- | -------------|
 | **Metric** | **string** | metric | [optional] |
 | **Count** | **int?** | metric count | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

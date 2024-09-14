@@ -1,6 +1,5 @@
----
-title: ResultCounters
----
+# ResultCounters
+
 ## ININ.PureCloudApi.Model.ResultCounters
 
 ## Properties
@@ -9,6 +8,7 @@ title: ResultCounters
 |------------ | ------------- | ------------- | -------------|
 | **Success** | **int?** |  | [optional] |
 | **Failure** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

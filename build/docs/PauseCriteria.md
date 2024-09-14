@@ -1,6 +1,5 @@
----
-title: PauseCriteria
----
+# PauseCriteria
+
 ## ININ.PureCloudApi.Model.PauseCriteria
 
 ## Properties
@@ -9,6 +8,7 @@ title: PauseCriteria
 |------------ | ------------- | ------------- | -------------|
 | **UrlFragment** | **string** |  | [optional] |
 | **Condition** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

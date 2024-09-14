@@ -1,6 +1,5 @@
----
-title: RegionTimeZone
----
+# RegionTimeZone
+
 ## ININ.PureCloudApi.Model.RegionTimeZone
 
 ## Properties
@@ -11,6 +10,7 @@ title: RegionTimeZone
 | **Name** | **string** |  | [optional] |
 | **Offset** | **long?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

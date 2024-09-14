@@ -1,6 +1,5 @@
----
-title: WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
----
+# WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
+
 ## ININ.PureCloudApi.Model.WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
 
 ## Properties
@@ -8,7 +7,8 @@ title: WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ExceptionType** | **string** |  | [optional] |
-| **Occurrences** | [**List&lt;WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference&gt;**](WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **Occurrences** | [**List&lt;WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference&gt;**](WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

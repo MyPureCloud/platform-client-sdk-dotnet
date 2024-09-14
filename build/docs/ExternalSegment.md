@@ -1,6 +1,5 @@
----
-title: ExternalSegment
----
+# ExternalSegment
+
 ## ININ.PureCloudApi.Model.ExternalSegment
 
 ## Properties
@@ -10,6 +9,7 @@ title: ExternalSegment
 | **Id** | **string** | Identifier for the external segment in the system where it originates from. | |
 | **Name** | **string** | Name for the external segment in the system where it originates from. | |
 | **Source** | **string** | The external system where the segment originates from. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

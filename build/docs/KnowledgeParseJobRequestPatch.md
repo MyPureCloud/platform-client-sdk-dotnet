@@ -1,6 +1,5 @@
----
-title: KnowledgeParseJobRequestPatch
----
+# KnowledgeParseJobRequestPatch
+
 ## ININ.PureCloudApi.Model.KnowledgeParseJobRequestPatch
 
 ## Properties
@@ -8,6 +7,7 @@ title: KnowledgeParseJobRequestPatch
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Hints** | **List&lt;string&gt;** | Hinted titles for the parser. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationCallbackEventTopicCallbackMediaParticipant
----
+# ConversationCallbackEventTopicCallbackMediaParticipant
+
 ## ININ.PureCloudApi.Model.ConversationCallbackEventTopicCallbackMediaParticipant
 
 ## Properties
@@ -22,32 +21,32 @@ title: ConversationCallbackEventTopicCallbackMediaParticipant
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) |  | [optional] |
-| **Queue** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) |  | [optional] |
-| **Team** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) |  | [optional] |
+| **User** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
+| **Queue** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
+| **Team** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ErrorInfo** | [**ConversationCallbackEventTopicErrorBody**](ConversationCallbackEventTopicErrorBody.html) |  | [optional] |
-| **Script** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) |  | [optional] |
+| **ErrorInfo** | [**ConversationCallbackEventTopicErrorBody**](ConversationCallbackEventTopicErrorBody) |  | [optional] |
+| **Script** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **AlertingTimeoutMs** | **int?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference.html) |  | [optional] |
-| **Wrapup** | [**ConversationCallbackEventTopicWrapup**](ConversationCallbackEventTopicWrapup.html) |  | [optional] |
-| **ConversationRoutingData** | [**ConversationCallbackEventTopicConversationRoutingData**](ConversationCallbackEventTopicConversationRoutingData.html) |  | [optional] |
+| **ExternalContact** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
+| **ExternalOrganization** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
+| **Wrapup** | [**ConversationCallbackEventTopicWrapup**](ConversationCallbackEventTopicWrapup) |  | [optional] |
+| **ConversationRoutingData** | [**ConversationCallbackEventTopicConversationRoutingData**](ConversationCallbackEventTopicConversationRoutingData) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |
-| **JourneyContext** | [**ConversationCallbackEventTopicJourneyContext**](ConversationCallbackEventTopicJourneyContext.html) |  | [optional] |
+| **JourneyContext** | [**ConversationCallbackEventTopicJourneyContext**](ConversationCallbackEventTopicJourneyContext) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
 | **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
-| **QueueMediaSettings** | [**ConversationCallbackEventTopicQueueMediaSettings**](ConversationCallbackEventTopicQueueMediaSettings.html) |  | [optional] |
-| **OutboundPreview** | [**ConversationCallbackEventTopicDialerPreview**](ConversationCallbackEventTopicDialerPreview.html) |  | [optional] |
-| **Voicemail** | [**ConversationCallbackEventTopicVoicemail**](ConversationCallbackEventTopicVoicemail.html) |  | [optional] |
+| **QueueMediaSettings** | [**ConversationCallbackEventTopicQueueMediaSettings**](ConversationCallbackEventTopicQueueMediaSettings) |  | [optional] |
+| **OutboundPreview** | [**ConversationCallbackEventTopicDialerPreview**](ConversationCallbackEventTopicDialerPreview) |  | [optional] |
+| **Voicemail** | [**ConversationCallbackEventTopicVoicemail**](ConversationCallbackEventTopicVoicemail) |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
 | **CallbackUserName** | **string** |  | [optional] |
 | **SkipEnabled** | **bool?** |  | [optional] |
@@ -55,6 +54,7 @@ title: ConversationCallbackEventTopicCallbackMediaParticipant
 | **TimeoutSeconds** | **int?** |  | [optional] |
 | **CallbackScheduledTime** | **DateTime?** |  | [optional] |
 | **AutomatedCallbackConfigId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

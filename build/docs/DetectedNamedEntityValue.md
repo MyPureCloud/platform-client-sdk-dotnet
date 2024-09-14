@@ -1,6 +1,5 @@
----
-title: DetectedNamedEntityValue
----
+# DetectedNamedEntityValue
+
 ## ININ.PureCloudApi.Model.DetectedNamedEntityValue
 
 ## Properties
@@ -10,6 +9,7 @@ title: DetectedNamedEntityValue
 | **Raw** | **string** | The raw value of the detected named entity. | [optional] |
 | **Resolved** | **string** | The resolved value of the detected named entity. | [optional] |
 | **Unit** | **string** | The unit of the detected amount of money entity, e.g. EUR, USD. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

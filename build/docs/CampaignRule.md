@@ -1,6 +1,5 @@
----
-title: CampaignRule
----
+# CampaignRule
+
 ## ININ.PureCloudApi.Model.CampaignRule
 
 ## Properties
@@ -12,12 +11,13 @@ title: CampaignRule
 | **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
-| **CampaignRuleEntities** | [**CampaignRuleEntities**](CampaignRuleEntities.html) | The list of entities that this CampaignRule monitors. | |
-| **CampaignRuleConditions** | [**List&lt;CampaignRuleCondition&gt;**](CampaignRuleCondition.html) | The list of conditions that are evaluated on the entities. | |
-| **CampaignRuleActions** | [**List&lt;CampaignRuleAction&gt;**](CampaignRuleAction.html) | The list of actions that are executed if the conditions are satisfied. | |
+| **CampaignRuleEntities** | [**CampaignRuleEntities**](CampaignRuleEntities) | The list of entities that this CampaignRule monitors. | |
+| **CampaignRuleConditions** | [**List&lt;CampaignRuleCondition&gt;**](CampaignRuleCondition) | The list of conditions that are evaluated on the entities. | |
+| **CampaignRuleActions** | [**List&lt;CampaignRuleAction&gt;**](CampaignRuleAction) | The list of actions that are executed if the conditions are satisfied. | |
 | **MatchAnyConditions** | **bool?** |  | [optional] |
 | **Enabled** | **bool?** | Whether or not this CampaignRule is currently enabled. Required on updates. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

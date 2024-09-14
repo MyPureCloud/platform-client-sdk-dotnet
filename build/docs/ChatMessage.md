@@ -1,6 +1,5 @@
----
-title: ChatMessage
----
+# ChatMessage
+
 ## ININ.PureCloudApi.Model.ChatMessage
 
 ## Properties
@@ -18,7 +17,8 @@ title: ChatMessage
 | **BodyType** | **string** | Type of the message body (v2 chats only) | [optional] |
 | **SenderCommunicationId** | **string** | Communication of sender (v2 chats only) | [optional] |
 | **ParticipantPurpose** | **string** | Participant purpose of sender (v2 chats only) | [optional] |
-| **User** | [**ChatMessageUser**](ChatMessageUser.html) | The user information for the sender (if available) | [optional] |
-{: class="table table-striped"}
+| **User** | [**ChatMessageUser**](ChatMessageUser) | The user information for the sender (if available) | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: OutcomePredictor
----
+# OutcomePredictor
+
 ## ININ.PureCloudApi.Model.OutcomePredictor
 
 ## Properties
@@ -8,8 +7,9 @@ title: OutcomePredictor
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Outcome** | [**OutcomeRef**](OutcomeRef.html) | The outcome for which this predictor will provide predictions. | [optional] |
+| **Outcome** | [**OutcomeRef**](OutcomeRef) | The outcome for which this predictor will provide predictions. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

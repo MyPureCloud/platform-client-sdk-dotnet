@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationErrorDetail
----
+# ArchitectPromptNotificationErrorDetail
+
 ## ININ.PureCloudApi.Model.ArchitectPromptNotificationErrorDetail
 
 ## Properties
@@ -11,6 +10,7 @@ title: ArchitectPromptNotificationErrorDetail
 | **EntityId** | **string** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |
 | **FieldName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

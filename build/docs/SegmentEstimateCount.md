@@ -1,6 +1,5 @@
----
-title: SegmentEstimateCount
----
+# SegmentEstimateCount
+
 ## ININ.PureCloudApi.Model.SegmentEstimateCount
 
 ## Properties
@@ -9,6 +8,7 @@ title: SegmentEstimateCount
 |------------ | ------------- | ------------- | -------------|
 | **SegmentId** | **string** | ID of Segment. | [optional] |
 | **Count** | **int?** | Estimate count per segment. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

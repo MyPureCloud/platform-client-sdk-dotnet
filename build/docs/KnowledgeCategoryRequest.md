@@ -1,6 +1,5 @@
----
-title: KnowledgeCategoryRequest
----
+# KnowledgeCategoryRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeCategoryRequest
 
 ## Properties
@@ -10,8 +9,9 @@ title: KnowledgeCategoryRequest
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | Category name | |
 | **Description** | **string** | Category description | [optional] |
-| **Parent** | [**DocumentCategoryInput**](DocumentCategoryInput.html) | Category parent | [optional] |
+| **Parent** | [**DocumentCategoryInput**](DocumentCategoryInput) | Category parent | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

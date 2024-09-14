@@ -1,6 +1,5 @@
----
-title: EdgeChangeTopicEdge
----
+# EdgeChangeTopicEdge
+
 ## ININ.PureCloudApi.Model.EdgeChangeTopicEdge
 
 ## Properties
@@ -9,6 +8,7 @@ title: EdgeChangeTopicEdge
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **OnlineStatus** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: TranscriptionTopicTranscriptAlternative
----
+# TranscriptionTopicTranscriptAlternative
+
 ## ININ.PureCloudApi.Model.TranscriptionTopicTranscriptAlternative
 
 ## Properties
@@ -11,9 +10,10 @@ title: TranscriptionTopicTranscriptAlternative
 | **OffsetMs** | **int?** |  | [optional] |
 | **DurationMs** | **int?** |  | [optional] |
 | **Transcript** | **string** |  | [optional] |
-| **Words** | [**List&lt;TranscriptionTopicTranscriptWord&gt;**](TranscriptionTopicTranscriptWord.html) |  | [optional] |
+| **Words** | [**List&lt;TranscriptionTopicTranscriptWord&gt;**](TranscriptionTopicTranscriptWord) |  | [optional] |
 | **DecoratedTranscript** | **string** |  | [optional] |
-| **DecoratedWords** | [**List&lt;TranscriptionTopicTranscriptWord&gt;**](TranscriptionTopicTranscriptWord.html) |  | [optional] |
-{: class="table table-striped"}
+| **DecoratedWords** | [**List&lt;TranscriptionTopicTranscriptWord&gt;**](TranscriptionTopicTranscriptWord) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

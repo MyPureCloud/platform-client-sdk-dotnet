@@ -1,6 +1,5 @@
----
-title: Edge
----
+# Edge
+
 ## ININ.PureCloudApi.Model.Edge
 
 ## Properties
@@ -9,7 +8,7 @@ title: Edge
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the entity. | |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The resource&#39;s description. | [optional] |
 | **Version** | **int?** | The current version of the resource. | [optional] |
 | **DateCreated** | **DateTime?** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -19,7 +18,7 @@ title: Edge
 | **State** | **string** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
-| **Interfaces** | [**List&lt;EdgeInterface&gt;**](EdgeInterface.html) | The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead | [optional] |
+| **Interfaces** | [**List&lt;EdgeInterface&gt;**](EdgeInterface) | The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead | [optional] |
 | **Make** | **string** |  | [optional] |
 | **Model** | **string** |  | [optional] |
 | **ApiVersion** | **string** |  | [optional] |
@@ -35,9 +34,9 @@ title: Edge
 | **StagedVersion** | **string** |  | [optional] |
 | **Patch** | **string** |  | [optional] |
 | **StatusCode** | **string** | The current status of the Edge. | [optional] |
-| **EdgeGroup** | [**EdgeGroup**](EdgeGroup.html) |  | [optional] |
-| **Site** | [**Site**](Site.html) | The Site to which the Edge is assigned. | [optional] |
-| **SoftwareStatus** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) | Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge. | [optional] |
+| **EdgeGroup** | [**EdgeGroup**](EdgeGroup) |  | [optional] |
+| **Site** | [**Site**](Site) | The Site to which the Edge is assigned. | [optional] |
+| **SoftwareStatus** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto) | Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge. | [optional] |
 | **OnlineStatus** | **string** |  | [optional] |
 | **SerialNumber** | **string** |  | [optional] |
 | **PhysicalEdge** | **bool?** |  | [optional] |
@@ -50,6 +49,7 @@ title: Edge
 | **OfflineConfigCalled** | **bool?** | True if the offline edge configuration endpoint has been called for this edge. | [optional] |
 | **OsName** | **string** | The name provided by the operating system of the Edge. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

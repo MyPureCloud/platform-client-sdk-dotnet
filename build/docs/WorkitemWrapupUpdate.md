@@ -1,6 +1,5 @@
----
-title: WorkitemWrapupUpdate
----
+# WorkitemWrapupUpdate
+
 ## ININ.PureCloudApi.Model.WorkitemWrapupUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemWrapupUpdate
 |------------ | ------------- | ------------- | -------------|
 | **Action** | **string** | Action to be performed for the wrapup code. | |
 | **WrapupCode** | **string** | The wrapup code which will be added/removed. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: UserConversationsEventMediaSummaryDetail
----
+# UserConversationsEventMediaSummaryDetail
+
 ## ININ.PureCloudApi.Model.UserConversationsEventMediaSummaryDetail
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserConversationsEventMediaSummaryDetail
 |------------ | ------------- | ------------- | -------------|
 | **Active** | **int?** |  | [optional] |
 | **Acw** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

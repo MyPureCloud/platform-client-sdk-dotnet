@@ -1,6 +1,5 @@
----
-title: ReplaceResponse
----
+# ReplaceResponse
+
 ## ININ.PureCloudApi.Model.ReplaceResponse
 
 ## Properties
@@ -10,9 +9,10 @@ title: ReplaceResponse
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **ChangeNumber** | **int?** |  | [optional] |
-| **UploadStatus** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **UploadStatus** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **UploadDestinationUri** | **string** |  | [optional] |
 | **UploadMethod** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

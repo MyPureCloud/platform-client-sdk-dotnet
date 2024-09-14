@@ -1,6 +1,5 @@
----
-title: WorkitemsQueueEventsNotificationAssignmentSegment
----
+# WorkitemsQueueEventsNotificationAssignmentSegment
+
 ## ININ.PureCloudApi.Model.WorkitemsQueueEventsNotificationAssignmentSegment
 
 ## Properties
@@ -10,6 +9,7 @@ title: WorkitemsQueueEventsNotificationAssignmentSegment
 | **StartState** | **string** |  | [optional] |
 | **EndState** | **string** |  | [optional] |
 | **DurationMs** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

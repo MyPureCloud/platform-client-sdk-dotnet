@@ -1,6 +1,5 @@
----
-title: TeamActivityQueryClause
----
+# TeamActivityQueryClause
+
 ## ININ.PureCloudApi.Model.TeamActivityQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: TeamActivityQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;TeamActivityQueryPredicate&gt;**](TeamActivityQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;TeamActivityQueryPredicate&gt;**](TeamActivityQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

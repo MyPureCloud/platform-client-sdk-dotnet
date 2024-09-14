@@ -1,14 +1,14 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicExternalId
----
+# ExternalContactsUnresolvedContactChangedTopicExternalId
+
 ## ININ.PureCloudApi.Model.ExternalContactsUnresolvedContactChangedTopicExternalId
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ExternalSource** | [**ExternalContactsUnresolvedContactChangedTopicExternalSource**](ExternalContactsUnresolvedContactChangedTopicExternalSource.html) |  | [optional] |
+| **ExternalSource** | [**ExternalContactsUnresolvedContactChangedTopicExternalSource**](ExternalContactsUnresolvedContactChangedTopicExternalSource) |  | [optional] |
 | **Value** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

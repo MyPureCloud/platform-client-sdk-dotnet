@@ -1,6 +1,5 @@
----
-title: QueueConversationCobrowseEventTopicCobrowseMediaParticipant
----
+# QueueConversationCobrowseEventTopicCobrowseMediaParticipant
+
 ## ININ.PureCloudApi.Model.QueueConversationCobrowseEventTopicCobrowseMediaParticipant
 
 ## Properties
@@ -22,35 +21,36 @@ title: QueueConversationCobrowseEventTopicCobrowseMediaParticipant
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **Queue** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **Team** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
+| **User** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **Queue** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **Team** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ErrorInfo** | [**QueueConversationCobrowseEventTopicErrorBody**](QueueConversationCobrowseEventTopicErrorBody.html) |  | [optional] |
-| **Script** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
+| **ErrorInfo** | [**QueueConversationCobrowseEventTopicErrorBody**](QueueConversationCobrowseEventTopicErrorBody) |  | [optional] |
+| **Script** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **AlertingTimeoutMs** | **int?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **Wrapup** | [**QueueConversationCobrowseEventTopicWrapup**](QueueConversationCobrowseEventTopicWrapup.html) |  | [optional] |
-| **ConversationRoutingData** | [**QueueConversationCobrowseEventTopicConversationRoutingData**](QueueConversationCobrowseEventTopicConversationRoutingData.html) |  | [optional] |
+| **ExternalContact** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **ExternalOrganization** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **Wrapup** | [**QueueConversationCobrowseEventTopicWrapup**](QueueConversationCobrowseEventTopicWrapup) |  | [optional] |
+| **ConversationRoutingData** | [**QueueConversationCobrowseEventTopicConversationRoutingData**](QueueConversationCobrowseEventTopicConversationRoutingData) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |
-| **JourneyContext** | [**QueueConversationCobrowseEventTopicJourneyContext**](QueueConversationCobrowseEventTopicJourneyContext.html) |  | [optional] |
+| **JourneyContext** | [**QueueConversationCobrowseEventTopicJourneyContext**](QueueConversationCobrowseEventTopicJourneyContext) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
 | **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
-| **QueueMediaSettings** | [**QueueConversationCobrowseEventTopicQueueMediaSettings**](QueueConversationCobrowseEventTopicQueueMediaSettings.html) |  | [optional] |
+| **QueueMediaSettings** | [**QueueConversationCobrowseEventTopicQueueMediaSettings**](QueueConversationCobrowseEventTopicQueueMediaSettings) |  | [optional] |
 | **CobrowseSessionId** | **string** |  | [optional] |
 | **CobrowseRole** | **string** |  | [optional] |
 | **ViewerUrl** | **string** |  | [optional] |
 | **ProviderEventTime** | **DateTime?** |  | [optional] |
 | **Controlling** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

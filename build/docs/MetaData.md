@@ -1,6 +1,5 @@
----
-title: MetaData
----
+# MetaData
+
 ## ININ.PureCloudApi.Model.MetaData
 
 ## Properties
@@ -10,6 +9,7 @@ title: MetaData
 | **PairingToken** | **string** |  | [optional] |
 | **PairingTrust** | **List&lt;string&gt;** |  | [optional] |
 | **PairingUrl** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: QueryResponseStats
----
+# QueryResponseStats
+
 ## ININ.PureCloudApi.Model.QueryResponseStats
 
 ## Properties
@@ -8,6 +7,7 @@ title: QueryResponseStats
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Count** | **int?** | The count for this metric | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

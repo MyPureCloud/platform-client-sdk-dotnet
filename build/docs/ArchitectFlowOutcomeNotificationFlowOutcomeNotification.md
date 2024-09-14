@@ -1,6 +1,5 @@
----
-title: ArchitectFlowOutcomeNotificationFlowOutcomeNotification
----
+# ArchitectFlowOutcomeNotificationFlowOutcomeNotification
+
 ## ININ.PureCloudApi.Model.ArchitectFlowOutcomeNotificationFlowOutcomeNotification
 
 ## Properties
@@ -10,7 +9,8 @@ title: ArchitectFlowOutcomeNotificationFlowOutcomeNotification
 | **Id** | **string** | The flow outcome ID | [optional] |
 | **Name** | **string** | The flow outcome name | [optional] |
 | **Description** | **string** | The flow outcome description | [optional] |
-| **CurrentOperation** | [**ArchitectFlowOutcomeNotificationArchitectOperation**](ArchitectFlowOutcomeNotificationArchitectOperation.html) |  | [optional] |
-{: class="table table-striped"}
+| **CurrentOperation** | [**ArchitectFlowOutcomeNotificationArchitectOperation**](ArchitectFlowOutcomeNotificationArchitectOperation) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

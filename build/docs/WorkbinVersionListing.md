@@ -1,17 +1,17 @@
----
-title: WorkbinVersionListing
----
+# WorkbinVersionListing
+
 ## ININ.PureCloudApi.Model.WorkbinVersionListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorkbinVersion&gt;**](WorkbinVersion.html) |  | [optional] |
+| **Entities** | [**List&lt;WorkbinVersion&gt;**](WorkbinVersion) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **After** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: SmsPhoneNumberImport
----
+# SmsPhoneNumberImport
+
 ## ININ.PureCloudApi.Model.SmsPhoneNumberImport
 
 ## Properties
@@ -12,8 +11,9 @@ title: SmsPhoneNumberImport
 | **PhoneNumberType** | **string** | Type of the phone number provisioned. | |
 | **CountryCode** | **string** | The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. | |
 | **IntegrationId** | **string** | The id of the Genesys Cloud integration this phone number belongs to. | |
-| **Compliance** | [**Compliance**](Compliance.html) | Compliance configuration for short codes, including help, stop and opt in. | [optional] |
+| **Compliance** | [**Compliance**](Compliance) | Compliance configuration for short codes, including help, stop and opt in. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

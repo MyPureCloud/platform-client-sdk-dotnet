@@ -1,6 +1,5 @@
----
-title: GreetingAudioFile
----
+# GreetingAudioFile
+
 ## ININ.PureCloudApi.Model.GreetingAudioFile
 
 ## Properties
@@ -10,6 +9,7 @@ title: GreetingAudioFile
 | **DurationMilliseconds** | **long?** |  | [optional] |
 | **SizeBytes** | **long?** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

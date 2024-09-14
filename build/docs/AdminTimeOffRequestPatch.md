@@ -1,6 +1,5 @@
----
-title: AdminTimeOffRequestPatch
----
+# AdminTimeOffRequestPatch
+
 ## ININ.PureCloudApi.Model.AdminTimeOffRequestPatch
 
 ## Properties
@@ -16,7 +15,8 @@ title: AdminTimeOffRequestPatch
 | **DailyDurationMinutes** | **int?** | The daily duration of this time off request in minutes | [optional] |
 | **DurationMinutes** | **List&lt;int?&gt;** | Daily durations for each day of this time off request in minutes | [optional] |
 | **PayableMinutes** | **List&lt;int?&gt;** | Payable minutes for each day of this time off request | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the time off request | |
-{: class="table table-striped"}
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the time off request | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

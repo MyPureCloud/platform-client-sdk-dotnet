@@ -1,6 +1,5 @@
----
-title: QueueConversationChatEventTopicChatMediaParticipant
----
+# QueueConversationChatEventTopicChatMediaParticipant
+
 ## ININ.PureCloudApi.Model.QueueConversationChatEventTopicChatMediaParticipant
 
 ## Properties
@@ -22,32 +21,33 @@ title: QueueConversationChatEventTopicChatMediaParticipant
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) |  | [optional] |
-| **Queue** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) |  | [optional] |
-| **Team** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) |  | [optional] |
+| **User** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
+| **Queue** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
+| **Team** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ErrorInfo** | [**QueueConversationChatEventTopicErrorBody**](QueueConversationChatEventTopicErrorBody.html) |  | [optional] |
-| **Script** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) |  | [optional] |
+| **ErrorInfo** | [**QueueConversationChatEventTopicErrorBody**](QueueConversationChatEventTopicErrorBody) |  | [optional] |
+| **Script** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **AlertingTimeoutMs** | **int?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference.html) |  | [optional] |
-| **Wrapup** | [**QueueConversationChatEventTopicWrapup**](QueueConversationChatEventTopicWrapup.html) |  | [optional] |
-| **ConversationRoutingData** | [**QueueConversationChatEventTopicConversationRoutingData**](QueueConversationChatEventTopicConversationRoutingData.html) |  | [optional] |
+| **ExternalContact** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
+| **ExternalOrganization** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
+| **Wrapup** | [**QueueConversationChatEventTopicWrapup**](QueueConversationChatEventTopicWrapup) |  | [optional] |
+| **ConversationRoutingData** | [**QueueConversationChatEventTopicConversationRoutingData**](QueueConversationChatEventTopicConversationRoutingData) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |
-| **JourneyContext** | [**QueueConversationChatEventTopicJourneyContext**](QueueConversationChatEventTopicJourneyContext.html) |  | [optional] |
+| **JourneyContext** | [**QueueConversationChatEventTopicJourneyContext**](QueueConversationChatEventTopicJourneyContext) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
 | **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
-| **QueueMediaSettings** | [**QueueConversationChatEventTopicQueueMediaSettings**](QueueConversationChatEventTopicQueueMediaSettings.html) |  | [optional] |
+| **QueueMediaSettings** | [**QueueConversationChatEventTopicQueueMediaSettings**](QueueConversationChatEventTopicQueueMediaSettings) |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
 | **AvatarImageUrl** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

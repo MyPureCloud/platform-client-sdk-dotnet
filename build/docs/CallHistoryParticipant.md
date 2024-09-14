@@ -1,6 +1,5 @@
----
-title: CallHistoryParticipant
----
+# CallHistoryParticipant
+
 ## ININ.PureCloudApi.Model.CallHistoryParticipant
 
 ## Properties
@@ -16,16 +15,17 @@ title: CallHistoryParticipant
 | **Direction** | **string** | The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39; | [optional] |
 | **Ani** | **string** | The call ANI. | [optional] |
 | **Dnis** | **string** | The call DNIS. | [optional] |
-| **User** | [**User**](User.html) | The PureCloud user for this participant. | [optional] |
-| **Queue** | [**Queue**](Queue.html) | The PureCloud queue for this participant. | [optional] |
-| **Group** | [**Group**](Group.html) | The group involved in the group ring call. | [optional] |
+| **User** | [**User**](User) | The PureCloud user for this participant. | [optional] |
+| **Queue** | [**Queue**](Queue) | The PureCloud queue for this participant. | [optional] |
+| **Group** | [**Group**](Group) | The group involved in the group ring call. | [optional] |
 | **DisconnectType** | **string** | The reason the participant was disconnected from the conversation. | [optional] |
-| **ExternalContact** | [**ExternalContact**](ExternalContact.html) | The PureCloud external contact | [optional] |
-| **ExternalOrganization** | [**ExternalOrganization**](ExternalOrganization.html) | The PureCloud external organization | [optional] |
+| **ExternalContact** | [**ExternalContact**](ExternalContact) | The PureCloud external contact | [optional] |
+| **ExternalOrganization** | [**ExternalOrganization**](ExternalOrganization) | The PureCloud external organization | [optional] |
 | **DidInteract** | **bool?** | Indicates whether the contact ever connected | [optional] |
 | **SipResponseCodes** | **List&lt;long?&gt;** | Indicates SIP Response codes associated with the participant | [optional] |
 | **FlaggedReason** | **string** | The reason specifying why participant flagged the conversation. | [optional] |
-| **OutboundCampaign** | [**Campaign**](Campaign.html) | The outbound campaign associated with the participant | [optional] |
-{: class="table table-striped"}
+| **OutboundCampaign** | [**Campaign**](Campaign) | The outbound campaign associated with the participant | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

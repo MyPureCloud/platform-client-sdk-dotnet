@@ -1,13 +1,12 @@
----
-title: MessagingCampaignDivisionViewEntityListing
----
+# MessagingCampaignDivisionViewEntityListing
+
 ## ININ.PureCloudApi.Model.MessagingCampaignDivisionViewEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;MessagingCampaignDivisionView&gt;**](MessagingCampaignDivisionView.html) |  | [optional] |
+| **Entities** | [**List&lt;MessagingCampaignDivisionView&gt;**](MessagingCampaignDivisionView) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: MessagingCampaignDivisionViewEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Criteria
----
+# Criteria
+
 ## ININ.PureCloudApi.Model.Criteria
 
 ## Properties
@@ -11,6 +10,7 @@ title: Criteria
 | **Values** | **List&lt;string&gt;** | The criteria values. | |
 | **ShouldIgnoreCase** | **bool?** | Should criteria be case insensitive. | |
 | **Operator** | **string** | The comparison operator. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,13 @@
----
-title: SMSAvailablePhoneNumberEntityListing
----
+# SMSAvailablePhoneNumberEntityListing
+
 ## ININ.PureCloudApi.Model.SMSAvailablePhoneNumberEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;SmsAvailablePhoneNumber&gt;**](SmsAvailablePhoneNumber.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;SmsAvailablePhoneNumber&gt;**](SmsAvailablePhoneNumber) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

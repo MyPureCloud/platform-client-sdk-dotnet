@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestSessionApp
----
+# KnowledgeGuestSessionApp
+
 ## ININ.PureCloudApi.Model.KnowledgeGuestSessionApp
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeGuestSessionApp
 |------------ | ------------- | ------------- | -------------|
 | **DeploymentId** | **string** | App deployment ID. | |
 | **Type** | **string** | App type. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

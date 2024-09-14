@@ -1,6 +1,5 @@
----
-title: JsonCursorSearchResponse
----
+# JsonCursorSearchResponse
+
 ## ININ.PureCloudApi.Model.JsonCursorSearchResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: JsonCursorSearchResponse
 | **Results** | **Object** | Search results | |
 | **Aggregations** | **Object** |  | [optional] |
 | **Cursor** | **string** | The page cursor | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

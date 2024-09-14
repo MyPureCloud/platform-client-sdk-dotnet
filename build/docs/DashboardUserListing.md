@@ -1,13 +1,12 @@
----
-title: DashboardUserListing
----
+# DashboardUserListing
+
 ## ININ.PureCloudApi.Model.DashboardUserListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DashboardUser&gt;**](DashboardUser.html) |  | [optional] |
+| **Entities** | [**List&lt;DashboardUser&gt;**](DashboardUser) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: DashboardUserListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

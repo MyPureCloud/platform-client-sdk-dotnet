@@ -1,6 +1,5 @@
----
-title: RateLimitAggregateQueryClause
----
+# RateLimitAggregateQueryClause
+
 ## ININ.PureCloudApi.Model.RateLimitAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: RateLimitAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;RateLimitAggregateQueryPredicate&gt;**](RateLimitAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;RateLimitAggregateQueryPredicate&gt;**](RateLimitAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

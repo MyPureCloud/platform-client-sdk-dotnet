@@ -1,6 +1,5 @@
----
-title: InitiateScreenRecording
----
+# InitiateScreenRecording
+
 ## ININ.PureCloudApi.Model.InitiateScreenRecording
 
 ## Properties
@@ -8,8 +7,9 @@ title: InitiateScreenRecording
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **RecordACW** | **bool?** |  | [optional] |
-| **ArchiveRetention** | [**ArchiveRetention**](ArchiveRetention.html) |  | [optional] |
-| **DeleteRetention** | [**DeleteRetention**](DeleteRetention.html) |  | [optional] |
-{: class="table table-striped"}
+| **ArchiveRetention** | [**ArchiveRetention**](ArchiveRetention) |  | [optional] |
+| **DeleteRetention** | [**DeleteRetention**](DeleteRetention) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

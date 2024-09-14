@@ -1,6 +1,5 @@
----
-title: LimitChangeRequestDetails
----
+# LimitChangeRequestDetails
+
 ## ININ.PureCloudApi.Model.LimitChangeRequestDetails
 
 ## Properties
@@ -16,11 +15,12 @@ title: LimitChangeRequestDetails
 | **Status** | **string** | Current status of the limit change request | [optional] |
 | **CurrentValue** | **double?** | Current limit value for a given key | [optional] |
 | **DateCreated** | **DateTime?** | The date of the limit change request creation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **StatusHistory** | [**List&lt;StatusChange&gt;**](StatusChange.html) | List of statuses that a limit change request has gone through | [optional] |
+| **StatusHistory** | [**List&lt;StatusChange&gt;**](StatusChange) | List of statuses that a limit change request has gone through | [optional] |
 | **DateCompleted** | **DateTime?** | The date of the limit change request completion (ChangeImplemented, Rejected, or RollbackImplemented. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **RejectReason** | **string** | The reason for rejecting the limit override request | [optional] |
-| **ApprovalNamespaces** | [**List&lt;ApprovalNamespace&gt;**](ApprovalNamespace.html) | The approval breakdown for this override request. | [optional] |
+| **ApprovalNamespaces** | [**List&lt;ApprovalNamespace&gt;**](ApprovalNamespace) | The approval breakdown for this override request. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

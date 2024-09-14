@@ -1,6 +1,5 @@
----
-title: ChatSendMessageResponse
----
+# ChatSendMessageResponse
+
 ## ININ.PureCloudApi.Model.ChatSendMessageResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChatSendMessageResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The id of the created message | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

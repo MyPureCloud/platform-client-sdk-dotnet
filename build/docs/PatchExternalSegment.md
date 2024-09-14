@@ -1,6 +1,5 @@
----
-title: PatchExternalSegment
----
+# PatchExternalSegment
+
 ## ININ.PureCloudApi.Model.PatchExternalSegment
 
 ## Properties
@@ -8,6 +7,7 @@ title: PatchExternalSegment
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Name for the external segment in the system where it originates from. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

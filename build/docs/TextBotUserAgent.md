@@ -1,6 +1,5 @@
----
-title: TextBotUserAgent
----
+# TextBotUserAgent
+
 ## ININ.PureCloudApi.Model.TextBotUserAgent
 
 ## Properties
@@ -8,6 +7,7 @@ title: TextBotUserAgent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the user agent. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

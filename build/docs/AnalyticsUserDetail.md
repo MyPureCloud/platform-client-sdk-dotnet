@@ -1,6 +1,5 @@
----
-title: AnalyticsUserDetail
----
+# AnalyticsUserDetail
+
 ## ININ.PureCloudApi.Model.AnalyticsUserDetail
 
 ## Properties
@@ -8,8 +7,9 @@ title: AnalyticsUserDetail
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UserId** | **string** | The identifier for the user | [optional] |
-| **PrimaryPresence** | [**List&lt;AnalyticsUserPresenceRecord&gt;**](AnalyticsUserPresenceRecord.html) | The presence records for the user | [optional] |
-| **RoutingStatus** | [**List&lt;AnalyticsRoutingStatusRecord&gt;**](AnalyticsRoutingStatusRecord.html) | The ACD routing status records for the user | [optional] |
-{: class="table table-striped"}
+| **PrimaryPresence** | [**List&lt;AnalyticsUserPresenceRecord&gt;**](AnalyticsUserPresenceRecord) | The presence records for the user | [optional] |
+| **RoutingStatus** | [**List&lt;AnalyticsRoutingStatusRecord&gt;**](AnalyticsRoutingStatusRecord) | The ACD routing status records for the user | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

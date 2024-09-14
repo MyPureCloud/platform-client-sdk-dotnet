@@ -1,6 +1,5 @@
----
-title: SupportCenterImageSource
----
+# SupportCenterImageSource
+
 ## ININ.PureCloudApi.Model.SupportCenterImageSource
 
 ## Properties
@@ -8,6 +7,7 @@ title: SupportCenterImageSource
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DefaultUrl** | **string** | Default URL for image | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

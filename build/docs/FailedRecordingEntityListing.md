@@ -1,13 +1,12 @@
----
-title: FailedRecordingEntityListing
----
+# FailedRecordingEntityListing
+
 ## ININ.PureCloudApi.Model.FailedRecordingEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;RecordingJobFailedRecording&gt;**](RecordingJobFailedRecording.html) |  | [optional] |
+| **Entities** | [**List&lt;RecordingJobFailedRecording&gt;**](RecordingJobFailedRecording) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: FailedRecordingEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

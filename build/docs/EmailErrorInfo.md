@@ -1,6 +1,5 @@
----
-title: EmailErrorInfo
----
+# EmailErrorInfo
+
 ## ININ.PureCloudApi.Model.EmailErrorInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: EmailErrorInfo
 |------------ | ------------- | ------------- | -------------|
 | **Message** | **string** | Error Message | [optional] |
 | **Code** | **string** | Error Code | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

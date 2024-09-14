@@ -1,6 +1,5 @@
----
-title: PresenceDefinition
----
+# PresenceDefinition
+
 ## ININ.PureCloudApi.Model.PresenceDefinition
 
 ## Properties
@@ -10,6 +9,7 @@ title: PresenceDefinition
 | **Id** | **string** | description | [optional] |
 | **SystemPresence** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

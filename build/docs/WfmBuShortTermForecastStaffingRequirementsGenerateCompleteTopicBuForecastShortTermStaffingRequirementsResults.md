@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults
----
+# WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecast
 | **WeekNumber** | **int?** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
 | **DownloadUrlExpirationDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

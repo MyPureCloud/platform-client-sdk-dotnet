@@ -1,14 +1,14 @@
----
-title: EdgeVersionReport
----
+# EdgeVersionReport
+
 ## ININ.PureCloudApi.Model.EdgeVersionReport
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **OldestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation.html) |  | [optional] |
-| **NewestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation.html) |  | [optional] |
-{: class="table table-striped"}
+| **OldestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation) |  | [optional] |
+| **NewestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

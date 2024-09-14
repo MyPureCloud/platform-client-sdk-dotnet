@@ -1,6 +1,5 @@
----
-title: DocumentFaq
----
+# DocumentFaq
+
 ## ININ.PureCloudApi.Model.DocumentFaq
 
 ## Properties
@@ -10,6 +9,7 @@ title: DocumentFaq
 | **Question** | **string** | The question for this FAQ | |
 | **Answer** | **string** | The answer for this FAQ | |
 | **Alternatives** | **List&lt;string&gt;** | List of Alternative questions related to the answer which helps in improving the likelihood of a match to user query | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

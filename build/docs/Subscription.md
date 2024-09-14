@@ -1,6 +1,5 @@
----
-title: Subscription
----
+# Subscription
+
 ## ININ.PureCloudApi.Model.Subscription
 
 ## Properties
@@ -9,6 +8,7 @@ title: Subscription
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The subscription id | [optional] |
 | **Topic** | **string** | Notification topic | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicDialerPreview
----
+# QueueConversationVideoEventTopicDialerPreview
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicDialerPreview
 
 ## Properties
@@ -11,7 +10,8 @@ title: QueueConversationVideoEventTopicDialerPreview
 | **ContactId** | **string** | The contact associated with this preview data pop | [optional] |
 | **ContactListId** | **string** | The contactList associated with this preview data pop. | [optional] |
 | **CampaignId** | **string** | The campaignId associated with this preview data pop. | [optional] |
-| **PhoneNumberColumns** | [**List&lt;QueueConversationVideoEventTopicPhoneNumberColumn&gt;**](QueueConversationVideoEventTopicPhoneNumberColumn.html) | The phone number columns associated with this campaign | [optional] |
-{: class="table table-striped"}
+| **PhoneNumberColumns** | [**List&lt;QueueConversationVideoEventTopicPhoneNumberColumn&gt;**](QueueConversationVideoEventTopicPhoneNumberColumn) | The phone number columns associated with this campaign | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

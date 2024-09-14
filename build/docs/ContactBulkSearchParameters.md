@@ -1,6 +1,5 @@
----
-title: ContactBulkSearchParameters
----
+# ContactBulkSearchParameters
+
 ## ININ.PureCloudApi.Model.ContactBulkSearchParameters
 
 ## Properties
@@ -8,7 +7,8 @@ title: ContactBulkSearchParameters
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ContactListFilterId** | **string** | Contact List Filter ID. Either this property or criteria is required. | [optional] |
-| **Criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria.html) | Criteria to filter the contacts by. Either this property or contactListFilterId is required. | [optional] |
-{: class="table table-striped"}
+| **Criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria) | Criteria to filter the contacts by. Either this property or contactListFilterId is required. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationCallEventTopicFaxStatus
----
+# ConversationCallEventTopicFaxStatus
+
 ## ININ.PureCloudApi.Model.ConversationCallEventTopicFaxStatus
 
 ## Properties
@@ -15,6 +14,7 @@ title: ConversationCallEventTopicFaxStatus
 | **DataRate** | **int?** |  | [optional] |
 | **PageErrors** | **int?** |  | [optional] |
 | **LineErrors** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

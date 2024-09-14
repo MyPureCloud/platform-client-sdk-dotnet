@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateRequestCurrentStep
----
+# LearningModulePreviewUpdateRequestCurrentStep
+
 ## ININ.PureCloudApi.Model.LearningModulePreviewUpdateRequestCurrentStep
 
 ## Properties
@@ -9,7 +8,8 @@ title: LearningModulePreviewUpdateRequestCurrentStep
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The id of this step | [optional] |
 | **CompletionPercentage** | **float?** | The completion percentage for this step | [optional] |
-| **ShareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject.html) | The SCO (Shareable Content Object) data | [optional] |
-{: class="table table-striped"}
+| **ShareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject) | The SCO (Shareable Content Object) data | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

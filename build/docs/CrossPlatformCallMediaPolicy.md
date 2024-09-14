@@ -1,14 +1,14 @@
----
-title: CrossPlatformCallMediaPolicy
----
+# CrossPlatformCallMediaPolicy
+
 ## ININ.PureCloudApi.Model.CrossPlatformCallMediaPolicy
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Actions** | [**CrossPlatformPolicyActions**](CrossPlatformPolicyActions.html) | Actions applied when specified conditions are met | [optional] |
-| **Conditions** | [**CallMediaPolicyConditions**](CallMediaPolicyConditions.html) | Conditions for when actions should be applied | [optional] |
-{: class="table table-striped"}
+| **Actions** | [**CrossPlatformPolicyActions**](CrossPlatformPolicyActions) | Actions applied when specified conditions are met | [optional] |
+| **Conditions** | [**CallMediaPolicyConditions**](CallMediaPolicyConditions) | Conditions for when actions should be applied | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

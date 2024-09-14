@@ -1,6 +1,5 @@
----
-title: ExternalMetricDefinitionCreateRequest
----
+# ExternalMetricDefinitionCreateRequest
+
 ## ININ.PureCloudApi.Model.ExternalMetricDefinitionCreateRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: ExternalMetricDefinitionCreateRequest
 | **Precision** | **int?** | The decimal precision of the External Metric Definition. Must be at least 0 and at most 5 | |
 | **DefaultObjectiveType** | **string** | The default objective type of the External Metric Definition | |
 | **Enabled** | **bool?** | True if the External Metric Definition is enabled | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

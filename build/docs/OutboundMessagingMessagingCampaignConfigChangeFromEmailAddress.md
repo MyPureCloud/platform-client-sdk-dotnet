@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
----
+# OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
+
 ## ININ.PureCloudApi.Model.OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
 
 ## Properties
@@ -9,7 +8,8 @@ title: OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
 |------------ | ------------- | ------------- | -------------|
 | **FriendlyName** | **string** | The friendly name of the email address. | [optional] |
 | **LocalPart** | **string** | The local part of the email address. | [optional] |
-| **Domain** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
-{: class="table table-striped"}
+| **Domain** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference) | A UriReference for a resource | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,16 +1,16 @@
----
-title: CategoryListing
----
+# CategoryListing
+
 ## ININ.PureCloudApi.Model.CategoryListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;KnowledgeCategory&gt;**](KnowledgeCategory.html) |  | [optional] |
+| **Entities** | [**List&lt;KnowledgeCategory&gt;**](KnowledgeCategory) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

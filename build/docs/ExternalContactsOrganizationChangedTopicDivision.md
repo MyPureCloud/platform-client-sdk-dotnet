@@ -1,6 +1,5 @@
----
-title: ExternalContactsOrganizationChangedTopicDivision
----
+# ExternalContactsOrganizationChangedTopicDivision
+
 ## ININ.PureCloudApi.Model.ExternalContactsOrganizationChangedTopicDivision
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExternalContactsOrganizationChangedTopicDivision
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

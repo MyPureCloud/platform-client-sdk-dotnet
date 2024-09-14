@@ -1,6 +1,5 @@
----
-title: ConversationAppSettings
----
+# ConversationAppSettings
+
 ## ININ.PureCloudApi.Model.ConversationAppSettings
 
 ## Properties
@@ -10,12 +9,13 @@ title: ConversationAppSettings
 | **Enabled** | **bool?** | The toggle to enable or disable conversations | [optional] |
 | **ShowAgentTypingIndicator** | **bool?** | The toggle to enable or disable typing indicator for messenger | [optional] |
 | **ShowUserTypingIndicator** | **bool?** | The toggle to enable or disable typing indicator for messenger | [optional] |
-| **AutoStart** | [**AutoStart**](AutoStart.html) | The auto start for the messenger conversation | [optional] |
-| **Markdown** | [**Markdown**](Markdown.html) | The markdown for the messenger app | [optional] |
-| **ConversationDisconnect** | [**ConversationDisconnectSettings**](ConversationDisconnectSettings.html) | The conversation disconnect settings for the messenger app | [optional] |
-| **ConversationClear** | [**ConversationClearSettings**](ConversationClearSettings.html) | The conversation clear settings for the messenger app | [optional] |
-| **Humanize** | [**Humanize**](Humanize.html) | The humanize conversations settings for the messenger app | [optional] |
-| **Notifications** | [**NotificationsSettings**](NotificationsSettings.html) | The notification settings for messenger apps | [optional] |
-{: class="table table-striped"}
+| **AutoStart** | [**AutoStart**](AutoStart) | The auto start for the messenger conversation | [optional] |
+| **Markdown** | [**Markdown**](Markdown) | The markdown for the messenger app | [optional] |
+| **ConversationDisconnect** | [**ConversationDisconnectSettings**](ConversationDisconnectSettings) | The conversation disconnect settings for the messenger app | [optional] |
+| **ConversationClear** | [**ConversationClearSettings**](ConversationClearSettings) | The conversation clear settings for the messenger app | [optional] |
+| **Humanize** | [**Humanize**](Humanize) | The humanize conversations settings for the messenger app | [optional] |
+| **Notifications** | [**NotificationsSettings**](NotificationsSettings) | The notification settings for messenger apps | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: FileSpecificationTemplateEntityListing
----
+# FileSpecificationTemplateEntityListing
+
 ## ININ.PureCloudApi.Model.FileSpecificationTemplateEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;FileSpecificationTemplate&gt;**](FileSpecificationTemplate.html) |  | [optional] |
+| **Entities** | [**List&lt;FileSpecificationTemplate&gt;**](FileSpecificationTemplate) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: FileSpecificationTemplateEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,14 +1,14 @@
----
-title: DocumentBodyTable
----
+# DocumentBodyTable
+
 ## ININ.PureCloudApi.Model.DocumentBodyTable
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Rows** | [**List&lt;DocumentBodyTableRowBlock&gt;**](DocumentBodyTableRowBlock.html) | The list of rows for the table. | |
-| **Properties** | [**DocumentBodyTableProperties**](DocumentBodyTableProperties.html) | The properties for the table. | [optional] |
-{: class="table table-striped"}
+| **Rows** | [**List&lt;DocumentBodyTableRowBlock&gt;**](DocumentBodyTableRowBlock) | The list of rows for the table. | |
+| **Properties** | [**DocumentBodyTableProperties**](DocumentBodyTableProperties) | The properties for the table. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

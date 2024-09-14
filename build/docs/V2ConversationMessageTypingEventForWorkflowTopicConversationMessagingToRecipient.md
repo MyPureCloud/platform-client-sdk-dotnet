@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient
----
+# V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient
+
 ## ININ.PureCloudApi.Model.V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient
 
 ## Properties
@@ -14,7 +13,8 @@ title: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRe
 | **FirstName** | **string** |  | [optional] |
 | **LastName** | **string** |  | [optional] |
 | **Email** | **string** |  | [optional] |
-| **AdditionalIds** | [**List&lt;V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier&gt;**](V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.html) |  | [optional] |
-{: class="table table-striped"}
+| **AdditionalIds** | [**List&lt;V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier&gt;**](V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

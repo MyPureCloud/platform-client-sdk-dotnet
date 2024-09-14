@@ -1,6 +1,5 @@
----
-title: AssessmentScoringSet
----
+# AssessmentScoringSet
+
 ## ININ.PureCloudApi.Model.AssessmentScoringSet
 
 ## Properties
@@ -10,11 +9,12 @@ title: AssessmentScoringSet
 | **TotalScore** | **float?** | The total score of the answers | [optional] |
 | **TotalCriticalScore** | **float?** | The total score for the critical questions | [optional] |
 | **TotalNonCriticalScore** | **float?** | The total score for the non-critical questions | [optional] |
-| **QuestionGroupScores** | [**List&lt;AssessmentQuestionGroupScore&gt;**](AssessmentQuestionGroupScore.html) | The individual scores for each question group | |
+| **QuestionGroupScores** | [**List&lt;AssessmentQuestionGroupScore&gt;**](AssessmentQuestionGroupScore) | The individual scores for each question group | |
 | **FailureReasons** | **List&lt;string&gt;** | If the assessment was not passed, the reasons for failure. | [optional] |
 | **Comments** | **string** | Comments provided for these answers. | [optional] |
 | **AgentComments** | **string** | Comments provided by agent. | [optional] |
 | **IsPassed** | **bool?** | True if the assessment was passed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

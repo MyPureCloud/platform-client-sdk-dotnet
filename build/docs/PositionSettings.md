@@ -1,6 +1,5 @@
----
-title: PositionSettings
----
+# PositionSettings
+
 ## ININ.PureCloudApi.Model.PositionSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: PositionSettings
 | **Alignment** | **string** | The alignment for position | [optional] |
 | **SideSpace** | **int?** | The sidespace value for position | [optional] |
 | **BottomSpace** | **int?** | The bottomspace value for position | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

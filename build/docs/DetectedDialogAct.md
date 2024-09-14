@@ -1,6 +1,5 @@
----
-title: DetectedDialogAct
----
+# DetectedDialogAct
+
 ## ININ.PureCloudApi.Model.DetectedDialogAct
 
 ## Properties
@@ -9,6 +8,7 @@ title: DetectedDialogAct
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the detected dialog act. | [optional] |
 | **Probability** | **double?** | The probability of the detected dialog act. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

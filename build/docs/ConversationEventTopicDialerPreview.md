@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicDialerPreview
----
+# ConversationEventTopicDialerPreview
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicDialerPreview
 
 ## Properties
@@ -11,7 +10,8 @@ title: ConversationEventTopicDialerPreview
 | **ContactId** | **string** | The contact associated with this preview data pop | [optional] |
 | **ContactListId** | **string** | The contactList associated with this preview data pop. | [optional] |
 | **CampaignId** | **string** | The campaignId associated with this preview data pop. | [optional] |
-| **PhoneNumberColumns** | [**List&lt;ConversationEventTopicPhoneNumberColumn&gt;**](ConversationEventTopicPhoneNumberColumn.html) | The phone number columns associated with this campaign | [optional] |
-{: class="table table-striped"}
+| **PhoneNumberColumns** | [**List&lt;ConversationEventTopicPhoneNumberColumn&gt;**](ConversationEventTopicPhoneNumberColumn) | The phone number columns associated with this campaign | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: EmailUserEstablishedEvent
----
+# EmailUserEstablishedEvent
+
 ## ININ.PureCloudApi.Model.EmailUserEstablishedEvent
 
 ## Properties
@@ -14,8 +13,9 @@ title: EmailUserEstablishedEvent
 | **UserId** | **string** | A unique Id (V4 UUID) identifying the user this communication belongs to. | |
 | **QueueId** | **string** | A unique Id (V4 UUID) identifying the queue that the user is emailing on behalf of. Applies to outbound emails only. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates whether or not this user will be required to complete after call work. | [optional] |
-| **InitialConfiguration** | [**EmailInitialConfiguration**](EmailInitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**EmailInitialConfiguration**](EmailInitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PureEngage
----
+# PureEngage
+
 ## ININ.PureCloudApi.Model.PureEngage
 
 ## Properties
@@ -19,6 +18,7 @@ title: PureEngage
 | **Certificates** | **List&lt;string&gt;** |  | [optional] |
 | **AutoProvisionUsers** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ProgramMappingsRequest
----
+# ProgramMappingsRequest
+
 ## ININ.PureCloudApi.Model.ProgramMappingsRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: ProgramMappingsRequest
 |------------ | ------------- | ------------- | -------------|
 | **QueueIds** | **List&lt;string&gt;** | The program queues | |
 | **FlowIds** | **List&lt;string&gt;** | The program flows | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

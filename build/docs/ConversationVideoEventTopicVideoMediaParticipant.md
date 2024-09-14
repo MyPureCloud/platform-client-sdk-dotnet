@@ -1,6 +1,5 @@
----
-title: ConversationVideoEventTopicVideoMediaParticipant
----
+# ConversationVideoEventTopicVideoMediaParticipant
+
 ## ININ.PureCloudApi.Model.ConversationVideoEventTopicVideoMediaParticipant
 
 ## Properties
@@ -22,36 +21,37 @@ title: ConversationVideoEventTopicVideoMediaParticipant
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
-| **Queue** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
-| **Team** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
+| **User** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
+| **Queue** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
+| **Team** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ErrorInfo** | [**ConversationVideoEventTopicErrorBody**](ConversationVideoEventTopicErrorBody.html) |  | [optional] |
-| **Script** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
+| **ErrorInfo** | [**ConversationVideoEventTopicErrorBody**](ConversationVideoEventTopicErrorBody) |  | [optional] |
+| **Script** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **AlertingTimeoutMs** | **int?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
-| **Wrapup** | [**ConversationVideoEventTopicWrapup**](ConversationVideoEventTopicWrapup.html) |  | [optional] |
-| **ConversationRoutingData** | [**ConversationVideoEventTopicConversationRoutingData**](ConversationVideoEventTopicConversationRoutingData.html) |  | [optional] |
+| **ExternalContact** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
+| **ExternalOrganization** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
+| **Wrapup** | [**ConversationVideoEventTopicWrapup**](ConversationVideoEventTopicWrapup) |  | [optional] |
+| **ConversationRoutingData** | [**ConversationVideoEventTopicConversationRoutingData**](ConversationVideoEventTopicConversationRoutingData) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |
-| **JourneyContext** | [**ConversationVideoEventTopicJourneyContext**](ConversationVideoEventTopicJourneyContext.html) |  | [optional] |
+| **JourneyContext** | [**ConversationVideoEventTopicJourneyContext**](ConversationVideoEventTopicJourneyContext) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
 | **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
-| **QueueMediaSettings** | [**ConversationVideoEventTopicQueueMediaSettings**](ConversationVideoEventTopicQueueMediaSettings.html) |  | [optional] |
+| **QueueMediaSettings** | [**ConversationVideoEventTopicQueueMediaSettings**](ConversationVideoEventTopicQueueMediaSettings) |  | [optional] |
 | **AudioMuted** | **bool?** |  | [optional] |
 | **VideoMuted** | **bool?** |  | [optional] |
 | **SharingScreen** | **bool?** |  | [optional] |
 | **PeerCount** | **int?** |  | [optional] |
 | **Context** | **string** |  | [optional] |
 | **Msids** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

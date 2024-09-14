@@ -1,6 +1,5 @@
----
-title: FaxDocument
----
+# FaxDocument
+
 ## ININ.PureCloudApi.Model.FaxDocument
 
 ## Properties
@@ -12,8 +11,8 @@ title: FaxDocument
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ContentUri** | **string** |  | [optional] |
-| **Workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **Workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **SharingUri** | **string** |  | [optional] |
 | **ContentType** | **string** |  | [optional] |
 | **ContentLength** | **long?** |  | [optional] |
@@ -22,9 +21,10 @@ title: FaxDocument
 | **PageCount** | **long?** |  | [optional] |
 | **CallerAddress** | **string** |  | [optional] |
 | **ReceiverAddress** | **string** |  | [optional] |
-| **Thumbnails** | [**List&lt;DocumentThumbnail&gt;**](DocumentThumbnail.html) |  | [optional] |
+| **Thumbnails** | [**List&lt;DocumentThumbnail&gt;**](DocumentThumbnail) |  | [optional] |
 | **DownloadSharingUri** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

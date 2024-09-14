@@ -1,6 +1,5 @@
----
-title: ExternalContactsOrganizationNoteChangedTopicNote
----
+# ExternalContactsOrganizationNoteChangedTopicNote
+
 ## ININ.PureCloudApi.Model.ExternalContactsOrganizationNoteChangedTopicNote
 
 ## Properties
@@ -8,13 +7,14 @@ title: ExternalContactsOrganizationNoteChangedTopicNote
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Division** | [**ExternalContactsOrganizationNoteChangedTopicDivision**](ExternalContactsOrganizationNoteChangedTopicDivision.html) |  | [optional] |
+| **Division** | [**ExternalContactsOrganizationNoteChangedTopicDivision**](ExternalContactsOrganizationNoteChangedTopicDivision) |  | [optional] |
 | **EntityId** | **string** |  | [optional] |
 | **EntityType** | **string** |  | [optional] |
 | **NoteText** | **string** |  | [optional] |
-| **CreatedBy** | [**ExternalContactsOrganizationNoteChangedTopicUser**](ExternalContactsOrganizationNoteChangedTopicUser.html) |  | [optional] |
+| **CreatedBy** | [**ExternalContactsOrganizationNoteChangedTopicUser**](ExternalContactsOrganizationNoteChangedTopicUser) |  | [optional] |
 | **CreateDate** | **DateTime?** |  | [optional] |
 | **ModifyDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

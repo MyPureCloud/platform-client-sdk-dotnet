@@ -1,23 +1,22 @@
----
-title: MobileDevicesApi
----
+# MobileDevicesApi
+
 ## PureCloudPlatform.Client.V2.Api.MobileDevicesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteMobiledevice**](MobileDevicesApi.html#deletemobiledevice) | **Delete** /api/v2/mobiledevices/{deviceId} | Delete device |
-| [**GetMobiledevice**](MobileDevicesApi.html#getmobiledevice) | **Get** /api/v2/mobiledevices/{deviceId} | Get device |
-| [**GetMobiledevices**](MobileDevicesApi.html#getmobiledevices) | **Get** /api/v2/mobiledevices | Get a list of all devices. |
-| [**PostMobiledevices**](MobileDevicesApi.html#postmobiledevices) | **Post** /api/v2/mobiledevices | Create User device |
-| [**PutMobiledevice**](MobileDevicesApi.html#putmobiledevice) | **Put** /api/v2/mobiledevices/{deviceId} | Update device |
-{: class="table table-striped"}
+| [**DeleteMobiledevice**](#DeleteMobiledevice) | **Delete** /api/v2/mobiledevices/{deviceId} | Delete device |
+| [**GetMobiledevice**](#GetMobiledevice) | **Get** /api/v2/mobiledevices/{deviceId} | Get device |
+| [**GetMobiledevices**](#GetMobiledevices) | **Get** /api/v2/mobiledevices | Get a list of all devices. |
+| [**PostMobiledevices**](#PostMobiledevices) | **Post** /api/v2/mobiledevices | Create User device |
+| [**PutMobiledevice**](#PutMobiledevice) | **Put** /api/v2/mobiledevices/{deviceId} | Update device |
 
-<a name="deletemobiledevice"></a>
 
-## void DeleteMobiledevice (string deviceId)
 
+## DeleteMobiledevice
+
+> void DeleteMobiledevice (string deviceId)
 
 
 Delete device
@@ -69,16 +68,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deviceId** | **string**| Device ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getmobiledevice"></a>
 
-## [**UserDevice**](UserDevice.html) GetMobiledevice (string deviceId)
+## GetMobiledevice
 
+> [**UserDevice**](UserDevice) GetMobiledevice (string deviceId)
 
 
 Get device
@@ -131,16 +129,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deviceId** | **string**| Device ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UserDevice**](UserDevice.html)
+[**UserDevice**](UserDevice)
 
-<a name="getmobiledevices"></a>
 
-## [**DirectoryUserDevicesListing**](DirectoryUserDevicesListing.html) GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## GetMobiledevices
 
+> [**DirectoryUserDevicesListing**](DirectoryUserDevicesListing) GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 
 Get a list of all devices.
@@ -197,16 +194,15 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DirectoryUserDevicesListing**](DirectoryUserDevicesListing.html)
+[**DirectoryUserDevicesListing**](DirectoryUserDevicesListing)
 
-<a name="postmobiledevices"></a>
 
-## [**UserDevice**](UserDevice.html) PostMobiledevices (UserDevice body)
+## PostMobiledevices
 
+> [**UserDevice**](UserDevice) PostMobiledevices (UserDevice body)
 
 
 Create User device
@@ -258,17 +254,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**UserDevice**](UserDevice.html)| Device |  |
-{: class="table table-striped"}
+| **body** | [**UserDevice**](UserDevice)| Device |  |
 
 ### Return type
 
-[**UserDevice**](UserDevice.html)
+[**UserDevice**](UserDevice)
 
-<a name="putmobiledevice"></a>
 
-## [**UserDevice**](UserDevice.html) PutMobiledevice (string deviceId, UserDevice body = null)
+## PutMobiledevice
 
+> [**UserDevice**](UserDevice) PutMobiledevice (string deviceId, UserDevice body = null)
 
 
 Update device
@@ -322,10 +317,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deviceId** | **string**| Device ID |  |
-| **body** | [**UserDevice**](UserDevice.html)| Device | [optional]  |
-{: class="table table-striped"}
+| **body** | [**UserDevice**](UserDevice)| Device | [optional]  |
 
 ### Return type
 
-[**UserDevice**](UserDevice.html)
+[**UserDevice**](UserDevice)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

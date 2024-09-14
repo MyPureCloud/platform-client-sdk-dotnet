@@ -1,14 +1,14 @@
----
-title: ScoredAgent
----
+# ScoredAgent
+
 ## ININ.PureCloudApi.Model.ScoredAgent
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Agent** | [**DomainEntityRef**](DomainEntityRef.html) | The agent | [optional] |
+| **Agent** | [**DomainEntityRef**](DomainEntityRef) | The agent | [optional] |
 | **Score** | **int?** | Agent&#39;s score for the current conversation, from 0 - 100, higher being better | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

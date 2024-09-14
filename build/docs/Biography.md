@@ -1,6 +1,5 @@
----
-title: Biography
----
+# Biography
+
 ## ININ.PureCloudApi.Model.Biography
 
 ## Properties
@@ -11,7 +10,8 @@ title: Biography
 | **Interests** | **List&lt;string&gt;** |  | [optional] |
 | **Hobbies** | **List&lt;string&gt;** |  | [optional] |
 | **Spouse** | **string** |  | [optional] |
-| **Education** | [**List&lt;Education&gt;**](Education.html) | User education details | [optional] |
-{: class="table table-striped"}
+| **Education** | [**List&lt;Education&gt;**](Education) | User education details | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

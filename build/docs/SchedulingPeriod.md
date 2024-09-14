@@ -1,6 +1,5 @@
----
-title: SchedulingPeriod
----
+# SchedulingPeriod
+
 ## ININ.PureCloudApi.Model.SchedulingPeriod
 
 ## Properties
@@ -9,6 +8,7 @@ title: SchedulingPeriod
 |------------ | ------------- | ------------- | -------------|
 | **EarliestStartDate** | **String** | The earliest date the associated activity plan can begin, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **LatestEndDate** | **String** | The latest date the associated activity plan can end, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

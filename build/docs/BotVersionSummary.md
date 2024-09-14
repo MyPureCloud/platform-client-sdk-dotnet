@@ -1,6 +1,5 @@
----
-title: BotVersionSummary
----
+# BotVersionSummary
+
 ## ININ.PureCloudApi.Model.BotVersionSummary
 
 ## Properties
@@ -12,6 +11,7 @@ title: BotVersionSummary
 | **Description** | **string** | An optional description of the bot. | [optional] |
 | **BotCompositeTag** | **string** | A system-generated string that contains metadata about this bot. | [optional] |
 | **Version** | **string** | The name of the version. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

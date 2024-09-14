@@ -1,13 +1,13 @@
----
-title: BatchUserRoutingStatusEventRequest
----
+# BatchUserRoutingStatusEventRequest
+
 ## ININ.PureCloudApi.Model.BatchUserRoutingStatusEventRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **UserRoutingStatusEvents** | [**List&lt;UserRoutingStatusEvent&gt;**](UserRoutingStatusEvent.html) | UserRoutingStatus events for this batch | [optional] |
-{: class="table table-striped"}
+| **UserRoutingStatusEvents** | [**List&lt;UserRoutingStatusEvent&gt;**](UserRoutingStatusEvent) | UserRoutingStatus events for this batch | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

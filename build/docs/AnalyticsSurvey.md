@@ -1,6 +1,5 @@
----
-title: AnalyticsSurvey
----
+# AnalyticsSurvey
+
 ## ININ.PureCloudApi.Model.AnalyticsSurvey
 
 ## Properties
@@ -20,6 +19,7 @@ title: AnalyticsSurvey
 | **SurveyType** | **string** | The type of the survey | [optional] |
 | **UserId** | **string** | ID of the agent the survey was performed against | [optional] |
 | **OSurveyTotalScore** | **long?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

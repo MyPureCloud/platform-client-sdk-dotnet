@@ -1,6 +1,5 @@
----
-title: Video
----
+# Video
+
 ## ININ.PureCloudApi.Model.Video
 
 ## Properties
@@ -22,10 +21,11 @@ title: Video
 | **Provider** | **string** | The source provider for the video. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **Msids** | **List&lt;string&gt;** | List of media stream ids | [optional] |
-| **Self** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |
-| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
+| **Self** | [**Address**](Address) | Address and name data for a call endpoint. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

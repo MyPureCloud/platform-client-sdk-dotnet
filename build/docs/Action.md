@@ -1,6 +1,5 @@
----
-title: Action
----
+# Action
+
 ## ININ.PureCloudApi.Model.Action
 
 ## Properties
@@ -11,11 +10,12 @@ title: Action
 | **Name** | **string** |  | [optional] |
 | **IntegrationId** | **string** | The ID of the integration for which this action is associated | [optional] |
 | **Category** | **string** | Category of Action | [optional] |
-| **Contract** | [**ActionContract**](ActionContract.html) | Action contract | [optional] |
+| **Contract** | [**ActionContract**](ActionContract) | Action contract | [optional] |
 | **Version** | **int?** | Version of this action | [optional] |
 | **Secure** | **bool?** | Indication of whether or not the action is designed to accept sensitive data | [optional] |
-| **Config** | [**ActionConfig**](ActionConfig.html) | Configuration to support request and response processing | [optional] |
+| **Config** | [**ActionConfig**](ActionConfig) | Configuration to support request and response processing | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

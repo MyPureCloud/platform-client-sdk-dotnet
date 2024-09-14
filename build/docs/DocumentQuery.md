@@ -1,14 +1,14 @@
----
-title: DocumentQuery
----
+# DocumentQuery
+
 ## ININ.PureCloudApi.Model.DocumentQuery
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Clauses** | [**List&lt;DocumentQueryClause&gt;**](DocumentQueryClause.html) | Documents filter clauses/criteria. Limit of 20 clauses. | |
+| **Clauses** | [**List&lt;DocumentQueryClause&gt;**](DocumentQueryClause) | Documents filter clauses/criteria. Limit of 20 clauses. | |
 | **Operator** | **string** | Specifies how the filter clauses will be applied together. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

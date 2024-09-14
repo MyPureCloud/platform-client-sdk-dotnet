@@ -1,6 +1,5 @@
----
-title: WebChatDeployment
----
+# WebChatDeployment
+
 ## ININ.PureCloudApi.Model.WebChatDeployment
 
 ## Properties
@@ -13,10 +12,11 @@ title: WebChatDeployment
 | **AuthenticationRequired** | **bool?** |  | [optional] |
 | **AuthenticationUrl** | **string** | URL for third party service authenticating web chat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples | [optional] |
 | **Disabled** | **bool?** |  | [optional] |
-| **WebChatConfig** | [**WebChatConfig**](WebChatConfig.html) |  | [optional] |
+| **WebChatConfig** | [**WebChatConfig**](WebChatConfig) |  | [optional] |
 | **AllowedDomains** | **List&lt;string&gt;** |  | [optional] |
-| **Flow** | [**DomainEntityRef**](DomainEntityRef.html) | The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment. | [optional] |
+| **Flow** | [**DomainEntityRef**](DomainEntityRef) | The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

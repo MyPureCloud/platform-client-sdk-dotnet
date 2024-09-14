@@ -1,6 +1,5 @@
----
-title: V2MobiusRulesTopicRule
----
+# V2MobiusRulesTopicRule
+
 ## ININ.PureCloudApi.Model.V2MobiusRulesTopicRule
 
 ## Properties
@@ -11,14 +10,15 @@ title: V2MobiusRulesTopicRule
 | **UserId** | **Guid?** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **Notifications** | [**List&lt;V2MobiusRulesTopicAlertNotification&gt;**](V2MobiusRulesTopicAlertNotification.html) |  | [optional] |
-| **Conditions** | [**V2MobiusRulesTopicCondition**](V2MobiusRulesTopicCondition.html) |  | [optional] |
+| **Notifications** | [**List&lt;V2MobiusRulesTopicAlertNotification&gt;**](V2MobiusRulesTopicAlertNotification) |  | [optional] |
+| **Conditions** | [**V2MobiusRulesTopicCondition**](V2MobiusRulesTopicCondition) |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
 | **InAlarm** | **bool?** |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **SendExitingAlarmNotification** | **bool?** |  | [optional] |
 | **WaitBetweenNotificationMs** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

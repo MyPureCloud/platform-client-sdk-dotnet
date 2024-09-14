@@ -1,6 +1,5 @@
----
-title: Reaction
----
+# Reaction
+
 ## ININ.PureCloudApi.Model.Reaction
 
 ## Properties
@@ -10,6 +9,7 @@ title: Reaction
 | **Data** | **string** | Parameter for this reaction. For transfer_flow, this would be the outbound flow id. | [optional] |
 | **Name** | **string** | Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name. | [optional] |
 | **ReactionType** | **string** | The reaction to take for a given call analysis result. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

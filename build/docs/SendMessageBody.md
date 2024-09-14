@@ -1,6 +1,5 @@
----
-title: SendMessageBody
----
+# SendMessageBody
+
 ## ININ.PureCloudApi.Model.SendMessageBody
 
 ## Properties
@@ -10,6 +9,7 @@ title: SendMessageBody
 | **Message** | **string** | The body of the message | |
 | **Mentions** | **List&lt;string&gt;** | user ids to be notified | [optional] |
 | **ThreadId** | **string** | The thread id of the message | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

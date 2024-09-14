@@ -1,6 +1,5 @@
----
-title: ForecastServiceLevelResponse
----
+# ForecastServiceLevelResponse
+
 ## ININ.PureCloudApi.Model.ForecastServiceLevelResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: ForecastServiceLevelResponse
 |------------ | ------------- | ------------- | -------------|
 | **Percent** | **int?** | The percent of calls to answer in the number of seconds defined | [optional] |
 | **Seconds** | **int?** | The number of seconds to define for the percent of calls to be answered | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

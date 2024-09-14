@@ -1,6 +1,5 @@
----
-title: UserAgentInfo
----
+# UserAgentInfo
+
 ## ININ.PureCloudApi.Model.UserAgentInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: UserAgentInfo
 | **FirmwareVersion** | **string** | The firmware version of the phone. | [optional] |
 | **Manufacturer** | **string** | The manufacturer of the phone. | [optional] |
 | **Model** | **string** | The model of the phone. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

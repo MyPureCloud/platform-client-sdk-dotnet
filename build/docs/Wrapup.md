@@ -1,6 +1,5 @@
----
-title: Wrapup
----
+# Wrapup
+
 ## ININ.PureCloudApi.Model.Wrapup
 
 ## Properties
@@ -14,6 +13,7 @@ title: Wrapup
 | **DurationSeconds** | **int?** | The length of time in seconds that the agent spent doing after call work. | [optional] |
 | **EndTime** | **DateTime?** | The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Provisional** | **bool?** | Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

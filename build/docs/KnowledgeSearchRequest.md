@@ -1,6 +1,5 @@
----
-title: KnowledgeSearchRequest
----
+# KnowledgeSearchRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeSearchRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: KnowledgeSearchRequest
 | **DocumentType** | **string** | Document type to be used while searching | [optional] |
 | **LanguageCode** | **string** | query search for specific languageCode | |
 | **SearchOnDraftDocuments** | **bool?** | If true the search query will be executed on draft documents, else it will be on active documents | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

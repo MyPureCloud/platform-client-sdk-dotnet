@@ -1,6 +1,5 @@
----
-title: ExternalContactsRelationshipChangedTopicTwitterId
----
+# ExternalContactsRelationshipChangedTopicTwitterId
+
 ## ININ.PureCloudApi.Model.ExternalContactsRelationshipChangedTopicTwitterId
 
 ## Properties
@@ -12,6 +11,7 @@ title: ExternalContactsRelationshipChangedTopicTwitterId
 | **ScreenName** | **string** |  | [optional] |
 | **Verified** | **bool?** |  | [optional] |
 | **ProfileUrl** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

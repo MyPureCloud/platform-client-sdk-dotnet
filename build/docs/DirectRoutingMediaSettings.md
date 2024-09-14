@@ -1,6 +1,5 @@
----
-title: DirectRoutingMediaSettings
----
+# DirectRoutingMediaSettings
+
 ## ININ.PureCloudApi.Model.DirectRoutingMediaSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: DirectRoutingMediaSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UseAgentAddressOutbound** | **bool?** | Toggle that enables using an agent&#39;s Direct Routing address outbound on behalf of queue for this media type. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

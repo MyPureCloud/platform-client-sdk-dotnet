@@ -1,6 +1,5 @@
----
-title: ActionMapScheduleGroup
----
+# ActionMapScheduleGroup
+
 ## ININ.PureCloudApi.Model.ActionMapScheduleGroup
 
 ## Properties
@@ -8,6 +7,7 @@ title: ActionMapScheduleGroup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the action maps&#39;s associated schedule group. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

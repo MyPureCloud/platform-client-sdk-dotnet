@@ -1,6 +1,5 @@
----
-title: DurationCondition
----
+# DurationCondition
+
 ## ININ.PureCloudApi.Model.DurationCondition
 
 ## Properties
@@ -11,6 +10,7 @@ title: DurationCondition
 | **DurationOperator** | **string** |  | [optional] |
 | **DurationRange** | **string** |  | [optional] |
 | **DurationMode** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

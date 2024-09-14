@@ -1,6 +1,5 @@
----
-title: CampaignLinesUtilization
----
+# CampaignLinesUtilization
+
 ## ININ.PureCloudApi.Model.CampaignLinesUtilization
 
 ## Properties
@@ -9,6 +8,7 @@ title: CampaignLinesUtilization
 |------------ | ------------- | ------------- | -------------|
 | **AssignedOutboundLines** | **int?** | Number of outbound lines assigned to the campaign | [optional] |
 | **TotalAvailableOutboundLines** | **int?** | Total number of available outbound lines in Campaign&#39;s Edge Group or Site | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DataTableRowEntityListing
----
+# DataTableRowEntityListing
+
 ## ININ.PureCloudApi.Model.DataTableRowEntityListing
 
 ## Properties
@@ -17,6 +16,7 @@ title: DataTableRowEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

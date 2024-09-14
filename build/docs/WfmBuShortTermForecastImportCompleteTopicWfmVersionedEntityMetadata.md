@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata
----
+# WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Version** | **int?** |  | [optional] |
-| **ModifiedBy** | [**WfmBuShortTermForecastImportCompleteTopicUserReference**](WfmBuShortTermForecastImportCompleteTopicUserReference.html) |  | [optional] |
+| **ModifiedBy** | [**WfmBuShortTermForecastImportCompleteTopicUserReference**](WfmBuShortTermForecastImportCompleteTopicUserReference) |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,16 +1,16 @@
----
-title: MediaPolicies
----
+# MediaPolicies
+
 ## ININ.PureCloudApi.Model.MediaPolicies
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **CallPolicy** | [**CallMediaPolicy**](CallMediaPolicy.html) | Conditions and actions for calls | [optional] |
-| **ChatPolicy** | [**ChatMediaPolicy**](ChatMediaPolicy.html) | Conditions and actions for chats | [optional] |
-| **EmailPolicy** | [**EmailMediaPolicy**](EmailMediaPolicy.html) | Conditions and actions for emails | [optional] |
-| **MessagePolicy** | [**MessageMediaPolicy**](MessageMediaPolicy.html) | Conditions and actions for messages | [optional] |
-{: class="table table-striped"}
+| **CallPolicy** | [**CallMediaPolicy**](CallMediaPolicy) | Conditions and actions for calls | [optional] |
+| **ChatPolicy** | [**ChatMediaPolicy**](ChatMediaPolicy) | Conditions and actions for chats | [optional] |
+| **EmailPolicy** | [**EmailMediaPolicy**](EmailMediaPolicy) | Conditions and actions for emails | [optional] |
+| **MessagePolicy** | [**MessageMediaPolicy**](MessageMediaPolicy) | Conditions and actions for messages | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DevelopmentActivityAggregateQueryRequestClause
----
+# DevelopmentActivityAggregateQueryRequestClause
+
 ## ININ.PureCloudApi.Model.DevelopmentActivityAggregateQueryRequestClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: DevelopmentActivityAggregateQueryRequestClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The logic used to combine the predicates | |
-| **Predicates** | [**List&lt;DevelopmentActivityAggregateQueryRequestPredicate&gt;**](DevelopmentActivityAggregateQueryRequestPredicate.html) | The list of predicates used to filter the data | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;DevelopmentActivityAggregateQueryRequestPredicate&gt;**](DevelopmentActivityAggregateQueryRequestPredicate) | The list of predicates used to filter the data | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationContentLocation
----
+# ConversationContentLocation
+
 ## ININ.PureCloudApi.Model.ConversationContentLocation
 
 ## Properties
@@ -12,6 +11,7 @@ title: ConversationContentLocation
 | **Text** | **string** | Location name. | [optional] |
 | **Latitude** | **double?** | Latitude of the location. | [optional] |
 | **Longitude** | **double?** | Longitude of the location. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

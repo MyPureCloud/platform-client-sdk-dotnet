@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicDisconnectReason
----
+# ConversationEventTopicDisconnectReason
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicDisconnectReason
 
 ## Properties
@@ -10,6 +9,7 @@ title: ConversationEventTopicDisconnectReason
 | **Type** | **string** | Disconnect reason protocol type. | [optional] |
 | **Code** | **int?** | Protocol specific reason code. See the Q.850 and SIP specs. | [optional] |
 | **Phrase** | **string** | Human readable English description of the disconnect reason. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

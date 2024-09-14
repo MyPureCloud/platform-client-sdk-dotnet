@@ -1,6 +1,5 @@
----
-title: JourneyViewElementFilterNumberPredicate
----
+# JourneyViewElementFilterNumberPredicate
+
 ## ININ.PureCloudApi.Model.JourneyViewElementFilterNumberPredicate
 
 ## Properties
@@ -10,7 +9,8 @@ title: JourneyViewElementFilterNumberPredicate
 | **Dimension** | **string** | the element&#39;s attribute being filtered on | |
 | **Operator** | **string** | Optional operator, default is Matches. Valid values: Matches | [optional] |
 | **NoValue** | **bool?** | set this to true if no specific value to be considered | [optional] |
-| **Range** | [**JourneyViewElementFilterRange**](JourneyViewElementFilterRange.html) | the range of comparators to filter on | |
-{: class="table table-striped"}
+| **Range** | [**JourneyViewElementFilterRange**](JourneyViewElementFilterRange) | the range of comparators to filter on | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

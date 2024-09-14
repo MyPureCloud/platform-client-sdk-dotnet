@@ -1,13 +1,12 @@
----
-title: DomainEdgeSoftwareUpdateDto
----
+# DomainEdgeSoftwareUpdateDto
+
 ## ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Version** | [**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html) | Version | |
+| **Version** | [**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto) | Version | |
 | **MaxDownloadRate** | **int?** |  | [optional] |
 | **DownloadStartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ExecuteStartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -17,6 +16,7 @@ title: DomainEdgeSoftwareUpdateDto
 | **EdgeUri** | **string** |  | [optional] |
 | **CallDrainingWaitTimeSeconds** | **long?** |  | [optional] |
 | **Current** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

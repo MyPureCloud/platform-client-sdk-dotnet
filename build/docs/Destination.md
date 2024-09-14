@@ -1,6 +1,5 @@
----
-title: Destination
----
+# Destination
+
 ## ININ.PureCloudApi.Model.Destination
 
 ## Properties
@@ -11,6 +10,7 @@ title: Destination
 | **Name** | **string** |  | [optional] |
 | **UserId** | **string** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

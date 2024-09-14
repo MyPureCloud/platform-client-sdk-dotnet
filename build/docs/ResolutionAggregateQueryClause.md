@@ -1,6 +1,5 @@
----
-title: ResolutionAggregateQueryClause
----
+# ResolutionAggregateQueryClause
+
 ## ININ.PureCloudApi.Model.ResolutionAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: ResolutionAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;ResolutionAggregateQueryPredicate&gt;**](ResolutionAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;ResolutionAggregateQueryPredicate&gt;**](ResolutionAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

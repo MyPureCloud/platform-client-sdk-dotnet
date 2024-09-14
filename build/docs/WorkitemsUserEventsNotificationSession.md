@@ -1,6 +1,5 @@
----
-title: WorkitemsUserEventsNotificationSession
----
+# WorkitemsUserEventsNotificationSession
+
 ## ININ.PureCloudApi.Model.WorkitemsUserEventsNotificationSession
 
 ## Properties
@@ -12,7 +11,8 @@ title: WorkitemsUserEventsNotificationSession
 | **Status** | **string** |  | [optional] |
 | **DateSessionStart** | **string** |  | [optional] |
 | **DateSessionEnd** | **string** |  | [optional] |
-| **AssignmentSegments** | [**List&lt;WorkitemsUserEventsNotificationAssignmentSegment&gt;**](WorkitemsUserEventsNotificationAssignmentSegment.html) |  | [optional] |
-{: class="table table-striped"}
+| **AssignmentSegments** | [**List&lt;WorkitemsUserEventsNotificationAssignmentSegment&gt;**](WorkitemsUserEventsNotificationAssignmentSegment) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

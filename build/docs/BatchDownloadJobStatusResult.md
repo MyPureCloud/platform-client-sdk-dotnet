@@ -1,6 +1,5 @@
----
-title: BatchDownloadJobStatusResult
----
+# BatchDownloadJobStatusResult
+
 ## ININ.PureCloudApi.Model.BatchDownloadJobStatusResult
 
 ## Properties
@@ -12,8 +11,9 @@ title: BatchDownloadJobStatusResult
 | **ExpectedResultCount** | **int?** | Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed. | [optional] |
 | **ResultCount** | **int?** | Current number of results available, this includes both success and error results. | [optional] |
 | **ErrorCount** | **int?** | Current number of error results. | [optional] |
-| **Results** | [**List&lt;BatchDownloadJobResult&gt;**](BatchDownloadJobResult.html) | Current set of results for the job. | [optional] |
+| **Results** | [**List&lt;BatchDownloadJobResult&gt;**](BatchDownloadJobResult) | Current set of results for the job. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

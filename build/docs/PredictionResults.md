@@ -1,6 +1,5 @@
----
-title: PredictionResults
----
+# PredictionResults
+
 ## ININ.PureCloudApi.Model.PredictionResults
 
 ## Properties
@@ -10,6 +9,7 @@ title: PredictionResults
 | **Intent** | **string** | Indicates the media type scope of this estimated wait time | [optional] |
 | **Formula** | **string** | Indicates the estimated wait time Formula | |
 | **EstimatedWaitTimeSeconds** | **int?** | Estimated wait time in seconds | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

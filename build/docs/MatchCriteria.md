@@ -1,6 +1,5 @@
----
-title: MatchCriteria
----
+# MatchCriteria
+
 ## ININ.PureCloudApi.Model.MatchCriteria
 
 ## Properties
@@ -11,6 +10,7 @@ title: MatchCriteria
 | **Operator** | **string** | The type of operation to perform for matching check | [optional] |
 | **Value** | **Object** | The value to match on. Only one of value and values can be included | [optional] |
 | **Values** | **List&lt;Object&gt;** | The list of values to match on. Only one of value and values can be included | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemQueryJobError
----
+# WorkitemQueryJobError
+
 ## ININ.PureCloudApi.Model.WorkitemQueryJobError
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemQueryJobError
 |------------ | ------------- | ------------- | -------------|
 | **Code** | **string** | System defined error code for the error. | [optional] |
 | **Message** | **string** | Error message for the failed job. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

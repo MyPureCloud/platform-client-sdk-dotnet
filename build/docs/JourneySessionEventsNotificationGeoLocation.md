@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationGeoLocation
----
+# JourneySessionEventsNotificationGeoLocation
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationGeoLocation
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneySessionEventsNotificationGeoLocation
 | **RegionName** | **string** |  | [optional] |
 | **Timezone** | **string** |  | [optional] |
 | **Source** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

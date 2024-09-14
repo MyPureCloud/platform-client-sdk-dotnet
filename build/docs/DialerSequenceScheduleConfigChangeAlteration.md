@@ -1,6 +1,5 @@
----
-title: DialerSequenceScheduleConfigChangeAlteration
----
+# DialerSequenceScheduleConfigChangeAlteration
+
 ## ININ.PureCloudApi.Model.DialerSequenceScheduleConfigChangeAlteration
 
 ## Properties
@@ -11,6 +10,7 @@ title: DialerSequenceScheduleConfigChangeAlteration
 | **Start** | **string** | the end date of an alteration range as an ISO-8601 string | [optional] |
 | **End** | **string** | the end date of an alteration range as an ISO-8601 string | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

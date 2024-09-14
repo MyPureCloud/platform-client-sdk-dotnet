@@ -1,6 +1,5 @@
----
-title: WfmIntegrationResponse
----
+# WfmIntegrationResponse
+
 ## ININ.PureCloudApi.Model.WfmIntegrationResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: WfmIntegrationResponse
 | **Name** | **string** |  | [optional] |
 | **Active** | **bool?** | Whether integration state is active | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

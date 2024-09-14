@@ -1,20 +1,19 @@
----
-title: AgentCopilotApi
----
+# AgentCopilotApi
+
 ## PureCloudPlatform.Client.V2.Api.AgentCopilotApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetAssistantCopilot**](AgentCopilotApi.html#getassistantcopilot) | **Get** /api/v2/assistants/{assistantId}/copilot | Get copilot configuration of an assistant. |
-| [**PutAssistantCopilot**](AgentCopilotApi.html#putassistantcopilot) | **Put** /api/v2/assistants/{assistantId}/copilot | Update agent copilot configuration |
-{: class="table table-striped"}
+| [**GetAssistantCopilot**](#GetAssistantCopilot) | **Get** /api/v2/assistants/{assistantId}/copilot | Get copilot configuration of an assistant. |
+| [**PutAssistantCopilot**](#PutAssistantCopilot) | **Put** /api/v2/assistants/{assistantId}/copilot | Update agent copilot configuration |
 
-<a name="getassistantcopilot"></a>
 
-## [**Copilot**](Copilot.html) GetAssistantCopilot (string assistantId)
 
+## GetAssistantCopilot
+
+> [**Copilot**](Copilot) GetAssistantCopilot (string assistantId)
 
 
 Get copilot configuration of an assistant.
@@ -68,16 +67,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Copilot**](Copilot.html)
+[**Copilot**](Copilot)
 
-<a name="putassistantcopilot"></a>
 
-## [**Copilot**](Copilot.html) PutAssistantCopilot (string assistantId, Copilot body)
+## PutAssistantCopilot
 
+> [**Copilot**](Copilot) PutAssistantCopilot (string assistantId, Copilot body)
 
 
 Update agent copilot configuration
@@ -132,10 +130,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
-| **body** | [**Copilot**](Copilot.html)|  |  |
-{: class="table table-striped"}
+| **body** | [**Copilot**](Copilot)|  |  |
 
 ### Return type
 
-[**Copilot**](Copilot.html)
+[**Copilot**](Copilot)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

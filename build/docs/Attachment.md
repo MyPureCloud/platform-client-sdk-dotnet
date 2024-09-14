@@ -1,6 +1,5 @@
----
-title: Attachment
----
+# Attachment
+
 ## ININ.PureCloudApi.Model.Attachment
 
 ## Properties
@@ -13,6 +12,7 @@ title: Attachment
 | **ContentType** | **string** | The type of file the attachment is. | [optional] |
 | **ContentLength** | **int?** | The length of the attachment file. | [optional] |
 | **InlineImage** | **bool?** | Whether or not the attachment was attached inline., | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

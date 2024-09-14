@@ -1,13 +1,12 @@
----
-title: ScheduleEntityListing
----
+# ScheduleEntityListing
+
 ## ININ.PureCloudApi.Model.ScheduleEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Schedule&gt;**](Schedule.html) |  | [optional] |
+| **Entities** | [**List&lt;Schedule&gt;**](Schedule) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: ScheduleEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

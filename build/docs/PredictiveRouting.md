@@ -1,6 +1,5 @@
----
-title: PredictiveRouting
----
+# PredictiveRouting
+
 ## ININ.PureCloudApi.Model.PredictiveRouting
 
 ## Properties
@@ -9,6 +8,7 @@ title: PredictiveRouting
 |------------ | ------------- | ------------- | -------------|
 | **RespectSkills** | **bool?** | A switch used to determine if agent skills will be considered. | [optional] |
 | **EnableConversationScoreBiasing** | **bool?** | A switch used to determine if conversations are weighted by conversation score when the system attempts to assign an agent a new conversation. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

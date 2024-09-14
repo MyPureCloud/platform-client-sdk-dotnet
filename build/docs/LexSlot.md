@@ -1,6 +1,5 @@
----
-title: LexSlot
----
+# LexSlot
+
 ## ININ.PureCloudApi.Model.LexSlot
 
 ## Properties
@@ -11,6 +10,7 @@ title: LexSlot
 | **Description** | **string** | The slot description | [optional] |
 | **Type** | **string** | The slot type | |
 | **Priority** | **int?** | The priority of the slot | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

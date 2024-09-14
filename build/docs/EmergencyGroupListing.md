@@ -1,13 +1,12 @@
----
-title: EmergencyGroupListing
----
+# EmergencyGroupListing
+
 ## ININ.PureCloudApi.Model.EmergencyGroupListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;EmergencyGroup&gt;**](EmergencyGroup.html) |  | [optional] |
+| **Entities** | [**List&lt;EmergencyGroup&gt;**](EmergencyGroup) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: EmergencyGroupListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

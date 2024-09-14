@@ -1,6 +1,5 @@
----
-title: KnowledgeBase
----
+# KnowledgeBase
+
 ## ININ.PureCloudApi.Model.KnowledgeBase
 
 ## Properties
@@ -18,6 +17,7 @@ title: KnowledgeBase
 | **ArticleCount** | **int?** | The count representing the number of documents of type Article in the KnowledgeBase | [optional] |
 | **Published** | **bool?** | Flag that indicates the knowledge base is published | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: QualityAuditQueryFilter
----
+# QualityAuditQueryFilter
+
 ## ININ.PureCloudApi.Model.QualityAuditQueryFilter
 
 ## Properties
@@ -9,6 +8,7 @@ title: QualityAuditQueryFilter
 |------------ | ------------- | ------------- | -------------|
 | **Property** | **string** | Name of the property to filter. | |
 | **Value** | **string** | Value of the property to filter. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

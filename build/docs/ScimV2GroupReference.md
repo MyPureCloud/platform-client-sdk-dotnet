@@ -1,6 +1,5 @@
----
-title: ScimV2GroupReference
----
+# ScimV2GroupReference
+
 ## ININ.PureCloudApi.Model.ScimV2GroupReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: ScimV2GroupReference
 | **Type** | **string** | The type of SCIM resource. | [optional] |
 | **Value** | **string** | The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;. | [optional] |
 | **Ref** | **string** | The reference URI of the SCIM resource. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

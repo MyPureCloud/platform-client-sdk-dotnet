@@ -1,6 +1,5 @@
----
-title: ActivityPlanJobException
----
+# ActivityPlanJobException
+
 ## ININ.PureCloudApi.Model.ActivityPlanJobException
 
 ## Properties
@@ -8,7 +7,8 @@ title: ActivityPlanJobException
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ExceptionType** | **string** | The type of error | |
-| **Occurrences** | [**List&lt;ActivityPlanOccurrenceReference&gt;**](ActivityPlanOccurrenceReference.html) | The occurrences in which this error occurred | |
-{: class="table table-striped"}
+| **Occurrences** | [**List&lt;ActivityPlanOccurrenceReference&gt;**](ActivityPlanOccurrenceReference) | The occurrences in which this error occurred | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

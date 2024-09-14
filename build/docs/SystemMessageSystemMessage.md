@@ -1,6 +1,5 @@
----
-title: SystemMessageSystemMessage
----
+# SystemMessageSystemMessage
+
 ## ININ.PureCloudApi.Model.SystemMessageSystemMessage
 
 ## Properties
@@ -16,6 +15,7 @@ title: SystemMessageSystemMessage
 | **Reason** | **string** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **Data** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Settings
----
+# Settings
+
 ## ININ.PureCloudApi.Model.Settings
 
 ## Properties
@@ -13,6 +12,7 @@ title: Settings
 | **CallbacksInheritRoutingFromInboundCall** | **bool?** | Inherit callback routing data from inbound calls | [optional] |
 | **CompleteAcwWhenAgentTransitionsOffline** | **bool?** | Complete ACW When Agent Transitions Offline | [optional] |
 | **TotalActiveCallback** | **bool?** | Exclude the &#39;interacting&#39; duration from the handle calculations of callbacks | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

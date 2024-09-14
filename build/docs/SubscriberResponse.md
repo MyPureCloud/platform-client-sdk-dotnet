@@ -1,6 +1,5 @@
----
-title: SubscriberResponse
----
+# SubscriberResponse
+
 ## ININ.PureCloudApi.Model.SubscriberResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: SubscriberResponse
 |------------ | ------------- | ------------- | -------------|
 | **MessageReturned** | **List&lt;string&gt;** | Suggested valid addresses | [optional] |
 | **Status** | **string** | http status | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

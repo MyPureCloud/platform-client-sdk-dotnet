@@ -1,6 +1,5 @@
----
-title: ActionAggregateQueryClause
----
+# ActionAggregateQueryClause
+
 ## ININ.PureCloudApi.Model.ActionAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: ActionAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;ActionAggregateQueryPredicate&gt;**](ActionAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;ActionAggregateQueryPredicate&gt;**](ActionAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

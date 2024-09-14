@@ -1,13 +1,12 @@
----
-title: AcceleratorList
----
+# AcceleratorList
+
 ## ININ.PureCloudApi.Model.AcceleratorList
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;AcceleratorMetadata&gt;**](AcceleratorMetadata.html) |  | [optional] |
+| **Entities** | [**List&lt;AcceleratorMetadata&gt;**](AcceleratorMetadata) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: AcceleratorList
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

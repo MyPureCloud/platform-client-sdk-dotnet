@@ -1,6 +1,5 @@
----
-title: DocumentElementLength
----
+# DocumentElementLength
+
 ## ININ.PureCloudApi.Model.DocumentElementLength
 
 ## Properties
@@ -9,6 +8,7 @@ title: DocumentElementLength
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **float?** | The length value of the element in the selected unit. | |
 | **Unit** | **string** | The unit of length. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

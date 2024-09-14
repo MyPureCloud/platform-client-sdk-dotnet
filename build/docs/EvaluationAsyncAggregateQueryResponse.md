@@ -1,14 +1,14 @@
----
-title: EvaluationAsyncAggregateQueryResponse
----
+# EvaluationAsyncAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.EvaluationAsyncAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;EvaluationAggregateDataContainer&gt;**](EvaluationAggregateDataContainer.html) |  | [optional] |
+| **Results** | [**List&lt;EvaluationAggregateDataContainer&gt;**](EvaluationAggregateDataContainer) |  | [optional] |
 | **Cursor** | **string** | Cursor token to retrieve next page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

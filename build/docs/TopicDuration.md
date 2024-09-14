@@ -1,6 +1,5 @@
----
-title: TopicDuration
----
+# TopicDuration
+
 ## ININ.PureCloudApi.Model.TopicDuration
 
 ## Properties
@@ -8,6 +7,7 @@ title: TopicDuration
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **TotalMilliseconds** | **long?** | The total duration of the topic phrase within the conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

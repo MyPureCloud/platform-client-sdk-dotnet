@@ -1,6 +1,5 @@
----
-title: EmailExternalEstablishedEvent
----
+# EmailExternalEstablishedEvent
+
 ## ININ.PureCloudApi.Model.EmailExternalEstablishedEvent
 
 ## Properties
@@ -13,8 +12,9 @@ title: EmailExternalEstablishedEvent
 | **CommunicationId** | **string** | A unique Id (V4 UUID) identifying this communication. | |
 | **DisplayName** | **string** | A name for the participant if it is available for this conversation. | [optional] |
 | **IncludeMessage** | **bool?** | Indicates that established communication has an initial email. If true, the initial messagesSent value will be initialized to 1. | [optional] |
-| **InitialConfiguration** | [**EmailInitialConfiguration**](EmailInitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**EmailInitialConfiguration**](EmailInitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

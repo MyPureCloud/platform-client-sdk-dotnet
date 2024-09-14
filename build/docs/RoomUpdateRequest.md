@@ -1,6 +1,5 @@
----
-title: RoomUpdateRequest
----
+# RoomUpdateRequest
+
 ## ININ.PureCloudApi.Model.RoomUpdateRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: RoomUpdateRequest
 | **Subject** | **string** | Room&#39;s subject | [optional] |
 | **PinnedMessageIds** | **List&lt;string&gt;** | Room&#39;s pinned messages | [optional] |
 | **OwnerIds** | **List&lt;string&gt;** | Room&#39;s owners | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

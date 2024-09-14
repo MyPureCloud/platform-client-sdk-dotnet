@@ -1,6 +1,5 @@
----
-title: DialerContactlistfilterConfigChangeFilterClause
----
+# DialerContactlistfilterConfigChangeFilterClause
+
 ## ININ.PureCloudApi.Model.DialerContactlistfilterConfigChangeFilterClause
 
 ## Properties
@@ -8,8 +7,9 @@ title: DialerContactlistfilterConfigChangeFilterClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **FilterType** | **string** | Contact list filter type | [optional] |
-| **Predicates** | [**List&lt;DialerContactlistfilterConfigChangeFilterPredicate&gt;**](DialerContactlistfilterConfigChangeFilterPredicate.html) | The list of predicates in that clause | [optional] |
+| **Predicates** | [**List&lt;DialerContactlistfilterConfigChangeFilterPredicate&gt;**](DialerContactlistfilterConfigChangeFilterPredicate) | The list of predicates in that clause | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

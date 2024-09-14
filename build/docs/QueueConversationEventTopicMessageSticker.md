@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicMessageSticker
----
+# QueueConversationEventTopicMessageSticker
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicMessageSticker
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationEventTopicMessageSticker
 |------------ | ------------- | ------------- | -------------|
 | **Url** | **string** | The location of the sticker, useful for retrieving it | [optional] |
 | **Id** | **string** | The unique id of the the sticker object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

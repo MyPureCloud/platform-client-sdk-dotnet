@@ -1,6 +1,5 @@
----
-title: ParticipantMetrics
----
+# ParticipantMetrics
+
 ## ININ.PureCloudApi.Model.ParticipantMetrics
 
 ## Properties
@@ -15,6 +14,7 @@ title: ParticipantMetrics
 | **OvertalkDurationPercentage** | **double?** | Percentage of Overtalk duration in the conversation | [optional] |
 | **OtherDurationPercentage** | **double?** | Percentage of Other events duration in the conversation | [optional] |
 | **OvertalkCount** | **int?** | Number of Overtalks in the conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: SchedulingTestingOptionsRequest
----
+# SchedulingTestingOptionsRequest
+
 ## ININ.PureCloudApi.Model.SchedulingTestingOptionsRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: SchedulingTestingOptionsRequest
 | **FailScheduling** | **bool?** | Whether to force scheduling to fail | [optional] |
 | **PopulateWarnings** | **bool?** | Whether to populate warnings in the generated schedule | [optional] |
 | **PopulateDeprecatedWarnings** | **bool?** | Whether to populate deprecated warnings in the generated schedule | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

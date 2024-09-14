@@ -1,6 +1,5 @@
----
-title: ContentList
----
+# ContentList
+
 ## ININ.PureCloudApi.Model.ContentList
 
 ## Properties
@@ -12,8 +11,9 @@ title: ContentList
 | **Title** | **string** | Text to show in the title. | [optional] |
 | **Description** | **string** | Text to show in the description. | [optional] |
 | **SubmitLabel** | **string** | Label for Submit button. | [optional] |
-| **Actions** | [**ContentActions**](ContentActions.html) | The list actions (Deprecated). | [optional] |
-| **Components** | [**List&lt;ListItemComponent&gt;**](ListItemComponent.html) | An array of component objects. | [optional] |
-{: class="table table-striped"}
+| **Actions** | [**ContentActions**](ContentActions) | The list actions (Deprecated). | [optional] |
+| **Components** | [**List&lt;ListItemComponent&gt;**](ListItemComponent) | An array of component objects. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

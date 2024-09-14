@@ -1,6 +1,5 @@
----
-title: DependencyType
----
+# DependencyType
+
 ## ININ.PureCloudApi.Model.DependencyType
 
 ## Properties
@@ -11,6 +10,7 @@ title: DependencyType
 | **Name** | **string** |  | [optional] |
 | **Versioned** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

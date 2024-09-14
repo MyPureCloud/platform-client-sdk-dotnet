@@ -1,6 +1,5 @@
----
-title: ScorableSurvey
----
+# ScorableSurvey
+
 ## ININ.PureCloudApi.Model.ScorableSurvey
 
 ## Properties
@@ -9,10 +8,11 @@ title: ScorableSurvey
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **SurveyForm** | [**SurveyForm**](SurveyForm.html) | Survey form used for this survey. | [optional] |
+| **SurveyForm** | [**SurveyForm**](SurveyForm) | Survey form used for this survey. | [optional] |
 | **Status** | **string** |  | [optional] |
-| **Answers** | [**SurveyScoringSet**](SurveyScoringSet.html) |  | [optional] |
+| **Answers** | [**SurveyScoringSet**](SurveyScoringSet) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

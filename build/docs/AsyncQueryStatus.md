@@ -1,6 +1,5 @@
----
-title: AsyncQueryStatus
----
+# AsyncQueryStatus
+
 ## ININ.PureCloudApi.Model.AsyncQueryStatus
 
 ## Properties
@@ -12,6 +11,7 @@ title: AsyncQueryStatus
 | **ExpirationDate** | **DateTime?** | The time at which results for this query will expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SubmissionDate** | **DateTime?** | The time at which the query was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CompletionDate** | **DateTime?** | The time at which the query completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

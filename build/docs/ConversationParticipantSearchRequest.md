@@ -1,6 +1,5 @@
----
-title: ConversationParticipantSearchRequest
----
+# ConversationParticipantSearchRequest
+
 ## ININ.PureCloudApi.Model.ConversationParticipantSearchRequest
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationParticipantSearchRequest
 |------------ | ------------- | ------------- | -------------|
 | **SortOrder** | **string** | The sort order for results | [optional] |
 | **SortBy** | **string** | The field in the resource that you want to sort the results by | [optional] |
-| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort.html) | Multi-value sort order, list of multiple sort values | [optional] |
+| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
 | **ReturnFields** | **List&lt;string&gt;** |  | [optional] |
-| **Query** | [**List&lt;ConversationParticipantSearchCriteria&gt;**](ConversationParticipantSearchCriteria.html) |  | [optional] |
+| **Query** | [**List&lt;ConversationParticipantSearchCriteria&gt;**](ConversationParticipantSearchCriteria) |  | [optional] |
 | **Cursor** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

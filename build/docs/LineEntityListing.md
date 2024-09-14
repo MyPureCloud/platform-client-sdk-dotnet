@@ -1,13 +1,12 @@
----
-title: LineEntityListing
----
+# LineEntityListing
+
 ## ININ.PureCloudApi.Model.LineEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Line&gt;**](Line.html) |  | [optional] |
+| **Entities** | [**List&lt;Line&gt;**](Line) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: LineEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

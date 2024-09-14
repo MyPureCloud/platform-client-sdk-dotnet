@@ -1,6 +1,5 @@
----
-title: OpenMessageEvent
----
+# OpenMessageEvent
+
 ## ININ.PureCloudApi.Model.OpenMessageEvent
 
 ## Properties
@@ -8,7 +7,8 @@ title: OpenMessageEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EventType** | **string** | Type of this event element | |
-| **Typing** | [**ConversationEventTyping**](ConversationEventTyping.html) | Typing event. | [optional] |
-{: class="table table-striped"}
+| **Typing** | [**ConversationEventTyping**](ConversationEventTyping) | Typing event. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicConversation
----
+# QueueConversationVideoEventTopicConversation
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicConversation
 
 ## Properties
@@ -9,13 +8,14 @@ title: QueueConversationVideoEventTopicConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **MaxParticipants** | **int?** |  | [optional] |
-| **Participants** | [**List&lt;QueueConversationVideoEventTopicParticipant&gt;**](QueueConversationVideoEventTopicParticipant.html) |  | [optional] |
-| **RecentTransfers** | [**List&lt;QueueConversationVideoEventTopicRecentTransfer&gt;**](QueueConversationVideoEventTopicRecentTransfer.html) |  | [optional] |
+| **Participants** | [**List&lt;QueueConversationVideoEventTopicParticipant&gt;**](QueueConversationVideoEventTopicParticipant) |  | [optional] |
+| **RecentTransfers** | [**List&lt;QueueConversationVideoEventTopicRecentTransfer&gt;**](QueueConversationVideoEventTopicRecentTransfer) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

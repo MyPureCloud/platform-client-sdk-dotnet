@@ -1,6 +1,5 @@
----
-title: QueueConversationCallbackEventTopicPhoneNumberColumn
----
+# QueueConversationCallbackEventTopicPhoneNumberColumn
+
 ## ININ.PureCloudApi.Model.QueueConversationCallbackEventTopicPhoneNumberColumn
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationCallbackEventTopicPhoneNumberColumn
 |------------ | ------------- | ------------- | -------------|
 | **ColumnName** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

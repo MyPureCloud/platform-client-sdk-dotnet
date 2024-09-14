@@ -1,6 +1,5 @@
----
-title: KnowledgeParseJobRequest
----
+# KnowledgeParseJobRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeParseJobRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeParseJobRequest
 |------------ | ------------- | ------------- | -------------|
 | **UploadKey** | **string** | Upload key | |
 | **Hints** | **List&lt;string&gt;** | Hinted titles for the parser. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

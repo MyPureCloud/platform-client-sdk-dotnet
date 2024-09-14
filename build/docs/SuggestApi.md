@@ -1,22 +1,21 @@
----
-title: SuggestApi
----
+# SuggestApi
+
 ## PureCloudPlatform.Client.V2.Api.SuggestApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetSearch**](SuggestApi.html#getsearch) | **Get** /api/v2/search | Search using the q64 value returned from a previous search. |
-| [**GetSearchSuggest**](SuggestApi.html#getsearchsuggest) | **Get** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
-| [**PostSearch**](SuggestApi.html#postsearch) | **Post** /api/v2/search | Search resources. |
-| [**PostSearchSuggest**](SuggestApi.html#postsearchsuggest) | **Post** /api/v2/search/suggest | Suggest resources. |
-{: class="table table-striped"}
+| [**GetSearch**](#GetSearch) | **Get** /api/v2/search | Search using the q64 value returned from a previous search. |
+| [**GetSearchSuggest**](#GetSearchSuggest) | **Get** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**PostSearch**](#PostSearch) | **Post** /api/v2/search | Search resources. |
+| [**PostSearchSuggest**](#PostSearchSuggest) | **Post** /api/v2/search/suggest | Suggest resources. |
 
-<a name="getsearch"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch (string q64, List<string> expand = null, bool? profile = null)
 
+## GetSearch
+
+> [**JsonNodeSearchResponse**](JsonNodeSearchResponse) GetSearch (string q64, List<string> expand = null, bool? profile = null)
 
 
 Search using the q64 value returned from a previous search.
@@ -72,18 +71,17 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
-<a name="getsearchsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
+## GetSearchSuggest
 
+> [**JsonNodeSearchResponse**](JsonNodeSearchResponse) GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
 
 
 Suggest resources using the q64 value returned from a previous suggest query.
@@ -139,18 +137,17 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
-<a name="postsearch"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch (SearchRequest body, bool? profile = null)
+## PostSearch
 
+> [**JsonNodeSearchResponse**](JsonNodeSearchResponse) PostSearch (SearchRequest body, bool? profile = null)
 
 
 Search resources.
@@ -204,18 +201,17 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options |  |
+| **body** | [**SearchRequest**](SearchRequest)| Search request options |  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
-<a name="postsearchsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
+## PostSearchSuggest
 
+> [**JsonNodeSearchResponse**](JsonNodeSearchResponse) PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
 
 
 Suggest resources.
@@ -269,11 +265,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options |  |
+| **body** | [**SuggestSearchRequest**](SuggestSearchRequest)| Search request options |  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

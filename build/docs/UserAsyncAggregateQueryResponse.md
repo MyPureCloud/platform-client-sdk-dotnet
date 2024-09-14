@@ -1,6 +1,5 @@
----
-title: UserAsyncAggregateQueryResponse
----
+# UserAsyncAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.UserAsyncAggregateQueryResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: UserAsyncAggregateQueryResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **SystemToOrganizationMappings** | **Dictionary&lt;string, List&lt;string&gt;&gt;** | A mapping from system presence to a list of organization presence ids | [optional] |
-| **Results** | [**List&lt;UserAggregateDataContainer&gt;**](UserAggregateDataContainer.html) |  | [optional] |
+| **Results** | [**List&lt;UserAggregateDataContainer&gt;**](UserAggregateDataContainer) |  | [optional] |
 | **Cursor** | **string** | Cursor token to retrieve next page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

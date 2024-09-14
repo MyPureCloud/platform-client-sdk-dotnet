@@ -1,6 +1,5 @@
----
-title: CommonAlertBulkUpdateRequest
----
+# CommonAlertBulkUpdateRequest
+
 ## ININ.PureCloudApi.Model.CommonAlertBulkUpdateRequest
 
 ## Properties
@@ -9,8 +8,9 @@ title: CommonAlertBulkUpdateRequest
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The action to take | |
 | **AlertIds** | **List&lt;string&gt;** | The user supplied alert ids to be muted | |
-| **MuteSnooze** | [**MuteSnoozeFields**](MuteSnoozeFields.html) | The fields need for a mute or snooze requests | [optional] |
-| **Unread** | [**UnreadFields**](UnreadFields.html) | The fields need for an unread update requests | [optional] |
-{: class="table table-striped"}
+| **MuteSnooze** | [**MuteSnoozeFields**](MuteSnoozeFields) | The fields need for a mute or snooze requests | [optional] |
+| **Unread** | [**UnreadFields**](UnreadFields) | The fields need for an unread update requests | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

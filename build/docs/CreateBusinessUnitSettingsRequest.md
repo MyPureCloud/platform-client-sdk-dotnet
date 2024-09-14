@@ -1,6 +1,5 @@
----
-title: CreateBusinessUnitSettingsRequest
----
+# CreateBusinessUnitSettingsRequest
+
 ## ININ.PureCloudApi.Model.CreateBusinessUnitSettingsRequest
 
 ## Properties
@@ -9,8 +8,9 @@ title: CreateBusinessUnitSettingsRequest
 |------------ | ------------- | ------------- | -------------|
 | **StartDayOfWeek** | **string** | The start day of week for this business unit | |
 | **TimeZone** | **string** | The time zone for this business unit, using the Olsen tz database format | |
-| **ShortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings.html) | Short term forecasting settings | [optional] |
-| **Scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest.html) | Scheduling settings | [optional] |
-{: class="table table-striped"}
+| **ShortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings) | Short term forecasting settings | [optional] |
+| **Scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest) | Scheduling settings | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNotification
----
+# WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNotification
+
 ## ININ.PureCloudApi.Model.WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNotification
 
 ## Properties
@@ -9,8 +8,9 @@ title: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNot
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** |  | [optional] |
 | **OperationId** | **string** |  | [optional] |
-| **Result** | [**WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing**](WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing.html) |  | [optional] |
+| **Result** | [**WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing**](WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing) |  | [optional] |
 | **WeekDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: BuShortTermForecastListItem
----
+# BuShortTermForecastListItem
+
 ## ININ.PureCloudApi.Model.BuShortTermForecastListItem
 
 ## Properties
@@ -13,9 +12,10 @@ title: BuShortTermForecastListItem
 | **CreationMethod** | **string** | The method by which this forecast was created | [optional] |
 | **Description** | **string** | The description of this forecast | [optional] |
 | **Legacy** | **bool?** | Whether this forecast contains modifications on legacy metrics | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Metadata for this forecast | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Metadata for this forecast | [optional] |
 | **CanUseForScheduling** | **bool?** | Whether this forecast can be used for scheduling | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

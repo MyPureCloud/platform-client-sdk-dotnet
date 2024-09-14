@@ -1,6 +1,5 @@
----
-title: WhatsAppEmbeddedSignupIntegrationActivationRequest
----
+# WhatsAppEmbeddedSignupIntegrationActivationRequest
+
 ## ININ.PureCloudApi.Model.WhatsAppEmbeddedSignupIntegrationActivationRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: WhatsAppEmbeddedSignupIntegrationActivationRequest
 | **PhoneNumber** | **string** | Phone number to associate with the WhatsApp integration | |
 | **Pin** | **string** | Specify the two-step verification PIN for that phone number | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

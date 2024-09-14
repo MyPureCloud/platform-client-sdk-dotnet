@@ -1,6 +1,5 @@
----
-title: GenesysBotConnector
----
+# GenesysBotConnector
+
 ## ININ.PureCloudApi.Model.GenesysBotConnector
 
 ## Properties
@@ -8,6 +7,7 @@ title: GenesysBotConnector
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **QueryParameters** | **Dictionary&lt;string, string&gt;** | User defined name/value parameters passed to the BotConnector bot. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

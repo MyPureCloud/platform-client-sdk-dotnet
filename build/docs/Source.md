@@ -1,6 +1,5 @@
----
-title: Source
----
+# Source
+
 ## ININ.PureCloudApi.Model.Source
 
 ## Properties
@@ -13,6 +12,7 @@ title: Source
 | **Type** | **string** | The type of source | [optional] |
 | **Deactivated** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

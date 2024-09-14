@@ -1,6 +1,5 @@
----
-title: ExternalOrganizationTrustorLink
----
+# ExternalOrganizationTrustorLink
+
 ## ININ.PureCloudApi.Model.ExternalOrganizationTrustorLink
 
 ## Properties
@@ -13,6 +12,7 @@ title: ExternalOrganizationTrustorLink
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ExternalOrganizationUri** | **string** | The URI for the External Organization that is linked to the trustor org | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

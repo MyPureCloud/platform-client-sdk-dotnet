@@ -1,13 +1,13 @@
----
-title: KnowledgeAggregateQueryResponse
----
+# KnowledgeAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.KnowledgeAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;KnowledgeAggregateDataContainer&gt;**](KnowledgeAggregateDataContainer.html) |  | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;KnowledgeAggregateDataContainer&gt;**](KnowledgeAggregateDataContainer) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

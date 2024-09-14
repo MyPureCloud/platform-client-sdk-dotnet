@@ -1,6 +1,5 @@
----
-title: MessageMediaData
----
+# MessageMediaData
+
 ## ININ.PureCloudApi.Model.MessageMediaData
 
 ## Properties
@@ -15,6 +14,7 @@ title: MessageMediaData
 | **UploadUrl** | **string** | The URL returned to upload an attachment | [optional] |
 | **Status** | **string** | The status of the media, indicates if the media is in the process of uploading. If the upload fails, the media becomes invalid | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: UpdateAdherenceExplanationStatusRequest
----
+# UpdateAdherenceExplanationStatusRequest
+
 ## ININ.PureCloudApi.Model.UpdateAdherenceExplanationStatusRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: UpdateAdherenceExplanationStatusRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** | The status of the adherence explanation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

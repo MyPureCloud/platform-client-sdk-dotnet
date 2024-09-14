@@ -1,6 +1,5 @@
----
-title: AssessmentFormQuestionGroup
----
+# AssessmentFormQuestionGroup
+
 ## ININ.PureCloudApi.Model.AssessmentFormQuestionGroup
 
 ## Properties
@@ -15,9 +14,10 @@ title: AssessmentFormQuestionGroup
 | **NaEnabled** | **bool?** |  | [optional] |
 | **Weight** | **float?** |  | [optional] |
 | **ManualWeight** | **bool?** |  | [optional] |
-| **Questions** | [**List&lt;AssessmentFormQuestion&gt;**](AssessmentFormQuestion.html) | The list of questions for this question group | |
-| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
+| **Questions** | [**List&lt;AssessmentFormQuestion&gt;**](AssessmentFormQuestion) | The list of questions for this question group | |
+| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

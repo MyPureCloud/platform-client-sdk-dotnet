@@ -1,6 +1,5 @@
----
-title: AnalyticsResolution
----
+# AnalyticsResolution
+
 ## ININ.PureCloudApi.Model.AnalyticsResolution
 
 ## Properties
@@ -11,6 +10,7 @@ title: AnalyticsResolution
 | **QueueId** | **string** | The ID of the last queue on which the conversation was handled. | [optional] |
 | **UserId** | **string** | The ID of the last user who handled the conversation. | [optional] |
 | **NNextContactAvoided** | **long?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

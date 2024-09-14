@@ -1,6 +1,5 @@
----
-title: TransferRequest
----
+# TransferRequest
+
 ## ININ.PureCloudApi.Model.TransferRequest
 
 ## Properties
@@ -14,6 +13,7 @@ title: TransferRequest
 | **UserName** | **string** | The user name of the transfer target. | [optional] |
 | **QueueId** | **string** | The queue ID of the transfer target. | [optional] |
 | **Voicemail** | **bool?** | If true, transfer to the voicemail inbox of the participant that is being replaced. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

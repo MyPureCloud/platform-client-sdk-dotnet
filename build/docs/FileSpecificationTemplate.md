@@ -1,6 +1,5 @@
----
-title: FileSpecificationTemplate
----
+# FileSpecificationTemplate
+
 ## ININ.PureCloudApi.Model.FileSpecificationTemplate
 
 ## Properties
@@ -19,9 +18,10 @@ title: FileSpecificationTemplate
 | **Header** | **bool?** | If true indicates that delimited file has a header row, which can provide column names | [optional] |
 | **Delimiter** | **string** | Kind of delimiter | [optional] |
 | **DelimiterValue** | **string** | Delimiter character, used only when delimiter&#x3D;\&quot;Custom\&quot; | [optional] |
-| **ColumnInformation** | [**List&lt;Column&gt;**](Column.html) | Columns specification | [optional] |
-| **PreprocessingRules** | [**List&lt;PreprocessingRule&gt;**](PreprocessingRule.html) | Preprocessing rules | [optional] |
+| **ColumnInformation** | [**List&lt;Column&gt;**](Column) | Columns specification | [optional] |
+| **PreprocessingRules** | [**List&lt;PreprocessingRule&gt;**](PreprocessingRule) | Preprocessing rules | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

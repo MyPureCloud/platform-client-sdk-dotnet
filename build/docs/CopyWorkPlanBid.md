@@ -1,6 +1,5 @@
----
-title: CopyWorkPlanBid
----
+# CopyWorkPlanBid
+
 ## ININ.PureCloudApi.Model.CopyWorkPlanBid
 
 ## Properties
@@ -8,6 +7,7 @@ title: CopyWorkPlanBid
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the new work plan bid | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

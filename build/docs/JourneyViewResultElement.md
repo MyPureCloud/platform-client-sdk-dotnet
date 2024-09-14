@@ -1,6 +1,5 @@
----
-title: JourneyViewResultElement
----
+# JourneyViewResultElement
+
 ## ININ.PureCloudApi.Model.JourneyViewResultElement
 
 ## Properties
@@ -8,9 +7,10 @@ title: JourneyViewResultElement
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Metrics** | [**JourneyViewResultMetrics**](JourneyViewResultMetrics.html) | the metrics of the current element | [optional] |
-| **FollowedBy** | [**List&lt;JourneyViewResultLink&gt;**](JourneyViewResultLink.html) | the list of links following the current element in the journey | [optional] |
+| **Metrics** | [**JourneyViewResultMetrics**](JourneyViewResultMetrics) | the metrics of the current element | [optional] |
+| **FollowedBy** | [**List&lt;JourneyViewResultLink&gt;**](JourneyViewResultLink) | the list of links following the current element in the journey | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

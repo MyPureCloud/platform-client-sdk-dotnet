@@ -1,6 +1,5 @@
----
-title: DomainOrganizationRoleUpdate
----
+# DomainOrganizationRoleUpdate
+
 ## ININ.PureCloudApi.Model.DomainOrganizationRoleUpdate
 
 ## Properties
@@ -13,12 +12,13 @@ title: DomainOrganizationRoleUpdate
 | **DefaultRoleId** | **string** |  | [optional] |
 | **Permissions** | **List&lt;string&gt;** |  | [optional] |
 | **UnusedPermissions** | **List&lt;string&gt;** | A collection of the permissions the role is not using | [optional] |
-| **PermissionPolicies** | [**List&lt;DomainPermissionPolicy&gt;**](DomainPermissionPolicy.html) |  | [optional] |
+| **PermissionPolicies** | [**List&lt;DomainPermissionPolicy&gt;**](DomainPermissionPolicy) |  | [optional] |
 | **UserCount** | **int?** |  | [optional] |
 | **RoleNeedsUpdate** | **bool?** | Optional unless patch operation. | [optional] |
 | **Base** | **bool?** |  | [optional] |
 | **Default** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

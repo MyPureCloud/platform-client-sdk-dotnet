@@ -1,15 +1,15 @@
----
-title: FieldConfigs
----
+# FieldConfigs
+
 ## ININ.PureCloudApi.Model.FieldConfigs
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Org** | [**FieldConfig**](FieldConfig.html) |  | [optional] |
-| **Person** | [**FieldConfig**](FieldConfig.html) |  | [optional] |
-| **Group** | [**FieldConfig**](FieldConfig.html) |  | [optional] |
-{: class="table table-striped"}
+| **Org** | [**FieldConfig**](FieldConfig) |  | [optional] |
+| **Person** | [**FieldConfig**](FieldConfig) |  | [optional] |
+| **Group** | [**FieldConfig**](FieldConfig) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

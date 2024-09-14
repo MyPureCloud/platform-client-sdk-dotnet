@@ -1,6 +1,5 @@
----
-title: PatchActionProperties
----
+# PatchActionProperties
+
 ## ININ.PureCloudApi.Model.PatchActionProperties
 
 ## Properties
@@ -11,7 +10,8 @@ title: PatchActionProperties
 | **WebchatTitleText** | **string** | Title shown to the user, used for webchat type action. | [optional] |
 | **WebchatAcceptText** | **string** | Accept button text shown to user, used for webchat type action. | [optional] |
 | **WebchatDeclineText** | **string** | Decline button text shown to user, used for webchat type action. | [optional] |
-| **WebchatSurvey** | [**PatchActionSurvey**](PatchActionSurvey.html) | Survey provided to the user, used for webchat type action. | [optional] |
-{: class="table table-striped"}
+| **WebchatSurvey** | [**PatchActionSurvey**](PatchActionSurvey) | Survey provided to the user, used for webchat type action. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

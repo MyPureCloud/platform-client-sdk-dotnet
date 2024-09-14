@@ -1,6 +1,5 @@
----
-title: ExternalContactsRelationshipChangedTopicPhoneNumber
----
+# ExternalContactsRelationshipChangedTopicPhoneNumber
+
 ## ININ.PureCloudApi.Model.ExternalContactsRelationshipChangedTopicPhoneNumber
 
 ## Properties
@@ -14,6 +13,7 @@ title: ExternalContactsRelationshipChangedTopicPhoneNumber
 | **E164** | **string** |  | [optional] |
 | **CountryCode** | **string** |  | [optional] |
 | **NormalizationCountryCode** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

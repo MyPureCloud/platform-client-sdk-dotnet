@@ -1,6 +1,5 @@
----
-title: AnalyticsFlow
----
+# AnalyticsFlow
+
 ## ININ.PureCloudApi.Model.AnalyticsFlow
 
 ## Properties
@@ -21,7 +20,8 @@ title: AnalyticsFlow
 | **TransferTargetAddress** | **string** | The address of a flow transfer target, e.g. a phone number, an email address, or a queueId | [optional] |
 | **TransferTargetName** | **string** | The name of a flow transfer target | [optional] |
 | **TransferType** | **string** | The type of transfer for flows that ended with a transfer | [optional] |
-| **Outcomes** | [**List&lt;AnalyticsFlowOutcome&gt;**](AnalyticsFlowOutcome.html) | Flow outcomes | [optional] |
-{: class="table table-striped"}
+| **Outcomes** | [**List&lt;AnalyticsFlowOutcome&gt;**](AnalyticsFlowOutcome) | Flow outcomes | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

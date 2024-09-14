@@ -1,6 +1,5 @@
----
-title: MaxParticipants
----
+# MaxParticipants
+
 ## ININ.PureCloudApi.Model.MaxParticipants
 
 ## Properties
@@ -8,6 +7,7 @@ title: MaxParticipants
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_MaxParticipants** | **int?** | The maximum number of participants that are allowed on a conversation. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CachedMediaItem
----
+# CachedMediaItem
+
 ## ININ.PureCloudApi.Model.CachedMediaItem
 
 ## Properties
@@ -15,6 +14,7 @@ title: CachedMediaItem
 | **DateCreated** | **DateTime?** | The date the cached item was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateExpires** | **DateTime?** | The date the cached item expires and will be removed from the cache. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

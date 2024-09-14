@@ -1,6 +1,5 @@
----
-title: BulkErrorExternalOrganization
----
+# BulkErrorExternalOrganization
+
 ## ININ.PureCloudApi.Model.BulkErrorExternalOrganization
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorExternalOrganization
 | **Message** | **string** |  | [optional] |
 | **Status** | **int?** |  | [optional] |
 | **Retryable** | **bool?** |  | [optional] |
-| **Entity** | [**ExternalOrganization**](ExternalOrganization.html) |  | [optional] |
-| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**ExternalOrganization**](ExternalOrganization) |  | [optional] |
+| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

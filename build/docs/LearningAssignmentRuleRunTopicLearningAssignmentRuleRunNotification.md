@@ -1,14 +1,14 @@
----
-title: LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification
----
+# LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification
+
 ## ININ.PureCloudApi.Model.LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;LearningAssignmentRuleRunTopicLearningAssignmentsCreated&gt;**](LearningAssignmentRuleRunTopicLearningAssignmentsCreated.html) |  | [optional] |
+| **Entities** | [**List&lt;LearningAssignmentRuleRunTopicLearningAssignmentsCreated&gt;**](LearningAssignmentRuleRunTopicLearningAssignmentsCreated) |  | [optional] |
 | **Total** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

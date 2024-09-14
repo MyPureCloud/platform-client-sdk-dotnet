@@ -1,6 +1,5 @@
----
-title: ConversationReason
----
+# ConversationReason
+
 ## ININ.PureCloudApi.Model.ConversationReason
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationReason
 |------------ | ------------- | ------------- | -------------|
 | **Code** | **string** | The reason code for the failed message receipt. | [optional] |
 | **Message** | **string** | Description of the reason for the failed message receipt. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

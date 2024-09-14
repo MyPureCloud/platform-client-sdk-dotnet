@@ -1,6 +1,5 @@
----
-title: DictionaryFeedback
----
+# DictionaryFeedback
+
 ## ININ.PureCloudApi.Model.DictionaryFeedback
 
 ## Properties
@@ -13,12 +12,13 @@ title: DictionaryFeedback
 | **BoostValue** | **float?** | A weighted value assigned to a phrase. The higher the value, the higher the likelihood that the system will choose the word or phrase from the possible alternatives. Boost range is from 1.0 to 10.0. Default is 2.0 | [optional] |
 | **Source** | **string** | The source of the given dictionary feedback | [optional] |
 | **DateCreated** | **DateTime?** | The Timestamp when dictionary feedback created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **CreatedBy** | [**UserReference**](UserReference.html) | The Id of the user who created the dictionary feedback | [optional] |
+| **CreatedBy** | [**UserReference**](UserReference) | The Id of the user who created the dictionary feedback | [optional] |
 | **DateModified** | **DateTime?** | The Timestamp when dictionary feedback modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ModifiedBy** | [**UserReference**](UserReference.html) | The Id of the user who modified the dictionary feedback | [optional] |
-| **ExamplePhrases** | [**List&lt;DictionaryFeedbackExamplePhrase&gt;**](DictionaryFeedbackExamplePhrase.html) | A list of at least 3 and up to 20 unique phrases that are example usage of the term | |
+| **ModifiedBy** | [**UserReference**](UserReference) | The Id of the user who modified the dictionary feedback | [optional] |
+| **ExamplePhrases** | [**List&lt;DictionaryFeedbackExamplePhrase&gt;**](DictionaryFeedbackExamplePhrase) | A list of at least 3 and up to 20 unique phrases that are example usage of the term | |
 | **SoundsLike** | **List&lt;string&gt;** | A list of up to 10 terms that give examples of how the term sounds | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

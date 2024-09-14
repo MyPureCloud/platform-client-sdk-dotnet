@@ -1,6 +1,5 @@
----
-title: ReplacementTerm
----
+# ReplacementTerm
+
 ## ININ.PureCloudApi.Model.ReplacementTerm
 
 ## Properties
@@ -10,6 +9,7 @@ title: ReplacementTerm
 | **Type** | **string** |  | [optional] |
 | **ExistingValue** | **string** |  | [optional] |
 | **UpdatedValue** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

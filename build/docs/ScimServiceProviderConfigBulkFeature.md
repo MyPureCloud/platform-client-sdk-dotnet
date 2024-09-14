@@ -1,6 +1,5 @@
----
-title: ScimServiceProviderConfigBulkFeature
----
+# ScimServiceProviderConfigBulkFeature
+
 ## ININ.PureCloudApi.Model.ScimServiceProviderConfigBulkFeature
 
 ## Properties
@@ -10,6 +9,7 @@ title: ScimServiceProviderConfigBulkFeature
 | **Supported** | **bool?** | Indicates whether configuration options are supported. | [optional] |
 | **MaxOperations** | **int?** | The maximum number of operations for each bulk request. | [optional] |
 | **MaxPayloadSize** | **int?** | The maximum payload size. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

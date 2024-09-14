@@ -1,13 +1,13 @@
----
-title: RequestJourney
----
+# RequestJourney
+
 ## ININ.PureCloudApi.Model.RequestJourney
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Patterns** | [**List&lt;RequestJourneyPattern&gt;**](RequestJourneyPattern.html) | A list of zero or more patterns to match. | [optional] |
-{: class="table table-striped"}
+| **Patterns** | [**List&lt;RequestJourneyPattern&gt;**](RequestJourneyPattern) | A list of zero or more patterns to match. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

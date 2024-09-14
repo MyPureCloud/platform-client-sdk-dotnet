@@ -1,101 +1,102 @@
----
-title: IntegrationsApi
----
+# IntegrationsApi
+
 ## PureCloudPlatform.Client.V2.Api.IntegrationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteIntegration**](IntegrationsApi.html#deleteintegration) | **Delete** /api/v2/integrations/{integrationId} | Delete integration. |
-| [**DeleteIntegrationsAction**](IntegrationsApi.html#deleteintegrationsaction) | **Delete** /api/v2/integrations/actions/{actionId} | Delete an Action |
-| [**DeleteIntegrationsActionDraft**](IntegrationsApi.html#deleteintegrationsactiondraft) | **Delete** /api/v2/integrations/actions/{actionId}/draft | Delete a Draft |
-| [**DeleteIntegrationsCredential**](IntegrationsApi.html#deleteintegrationscredential) | **Delete** /api/v2/integrations/credentials/{credentialId} | Delete a set of credentials |
-| [**GetIntegration**](IntegrationsApi.html#getintegration) | **Get** /api/v2/integrations/{integrationId} | Get integration. |
-| [**GetIntegrationConfigCurrent**](IntegrationsApi.html#getintegrationconfigcurrent) | **Get** /api/v2/integrations/{integrationId}/config/current | Get integration configuration. |
-| [**GetIntegrations**](IntegrationsApi.html#getintegrations) | **Get** /api/v2/integrations | List integrations |
-| [**GetIntegrationsAction**](IntegrationsApi.html#getintegrationsaction) | **Get** /api/v2/integrations/actions/{actionId} | Retrieves a single Action matching id. |
-| [**GetIntegrationsActionDraft**](IntegrationsApi.html#getintegrationsactiondraft) | **Get** /api/v2/integrations/actions/{actionId}/draft | Retrieve a Draft |
-| [**GetIntegrationsActionDraftFunction**](IntegrationsApi.html#getintegrationsactiondraftfunction) | **Get** /api/v2/integrations/actions/{actionId}/draft/function | Get draft function settings for Action |
-| [**GetIntegrationsActionDraftSchema**](IntegrationsApi.html#getintegrationsactiondraftschema) | **Get** /api/v2/integrations/actions/{actionId}/draft/schemas/{fileName} | Retrieve schema for a Draft based on filename. |
-| [**GetIntegrationsActionDraftTemplate**](IntegrationsApi.html#getintegrationsactiondrafttemplate) | **Get** /api/v2/integrations/actions/{actionId}/draft/templates/{fileName} | Retrieve templates for a Draft based on filename. |
-| [**GetIntegrationsActionDraftValidation**](IntegrationsApi.html#getintegrationsactiondraftvalidation) | **Get** /api/v2/integrations/actions/{actionId}/draft/validation | Validate current Draft configuration. |
-| [**GetIntegrationsActionFunction**](IntegrationsApi.html#getintegrationsactionfunction) | **Get** /api/v2/integrations/actions/{actionId}/function | Get published function settings for Action |
-| [**GetIntegrationsActionSchema**](IntegrationsApi.html#getintegrationsactionschema) | **Get** /api/v2/integrations/actions/{actionId}/schemas/{fileName} | Retrieve schema for an action based on filename. |
-| [**GetIntegrationsActionTemplate**](IntegrationsApi.html#getintegrationsactiontemplate) | **Get** /api/v2/integrations/actions/{actionId}/templates/{fileName} | Retrieve text of templates for an action based on filename. |
-| [**GetIntegrationsActions**](IntegrationsApi.html#getintegrationsactions) | **Get** /api/v2/integrations/actions | Retrieves all actions associated with filters passed in via query param. |
-| [**GetIntegrationsActionsCategories**](IntegrationsApi.html#getintegrationsactionscategories) | **Get** /api/v2/integrations/actions/categories | Retrieves all categories of available Actions |
-| [**GetIntegrationsActionsCertificates**](IntegrationsApi.html#getintegrationsactionscertificates) | **Get** /api/v2/integrations/actions/certificates | Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. |
-| [**GetIntegrationsActionsCertificatesTruststore**](IntegrationsApi.html#getintegrationsactionscertificatestruststore) | **Get** /api/v2/integrations/actions/certificates/truststore | Retrieves basic info about trusted root CA certificates |
-| [**GetIntegrationsActionsDrafts**](IntegrationsApi.html#getintegrationsactionsdrafts) | **Get** /api/v2/integrations/actions/drafts | Retrieves all action drafts associated with the filters passed in via query param. |
-| [**GetIntegrationsActionsFunctionsRuntimes**](IntegrationsApi.html#getintegrationsactionsfunctionsruntimes) | **Get** /api/v2/integrations/actions/functions/runtimes | Get action function settings for Action |
-| [**GetIntegrationsBotconnectorIntegrationIdBot**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbot) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId} | Get a specific botConnector bot, plus versions, for this integration |
-| [**GetIntegrationsBotconnectorIntegrationIdBotVersions**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbotversions) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions | Get a list of bot versions for a bot |
-| [**GetIntegrationsBotconnectorIntegrationIdBots**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbots) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots | Get a list of botConnector bots for this integration |
-| [**GetIntegrationsBotconnectorIntegrationIdBotsSummaries**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbotssummaries) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/summaries | Get a summary list of botConnector bots for this integration |
-| [**GetIntegrationsClientapps**](IntegrationsApi.html#getintegrationsclientapps) | **Get** /api/v2/integrations/clientapps | List permitted client app integrations for the logged in user |
-| [**GetIntegrationsClientappsUnifiedcommunications**](IntegrationsApi.html#getintegrationsclientappsunifiedcommunications) | **Get** /api/v2/integrations/clientapps/unifiedcommunications | UC integration client application configuration. |
-| [**GetIntegrationsCredential**](IntegrationsApi.html#getintegrationscredential) | **Get** /api/v2/integrations/credentials/{credentialId} | Get a single credential with sensitive fields redacted |
-| [**GetIntegrationsCredentials**](IntegrationsApi.html#getintegrationscredentials) | **Get** /api/v2/integrations/credentials | List multiple sets of credentials |
-| [**GetIntegrationsCredentialsTypes**](IntegrationsApi.html#getintegrationscredentialstypes) | **Get** /api/v2/integrations/credentials/types | List all credential types |
-| [**GetIntegrationsSpeechDialogflowAgent**](IntegrationsApi.html#getintegrationsspeechdialogflowagent) | **Get** /api/v2/integrations/speech/dialogflow/agents/{agentId} | Get details about a Dialogflow agent |
-| [**GetIntegrationsSpeechDialogflowAgents**](IntegrationsApi.html#getintegrationsspeechdialogflowagents) | **Get** /api/v2/integrations/speech/dialogflow/agents | Get a list of Dialogflow agents in the customers&#39; Google accounts |
-| [**GetIntegrationsSpeechDialogflowcxAgent**](IntegrationsApi.html#getintegrationsspeechdialogflowcxagent) | **Get** /api/v2/integrations/speech/dialogflowcx/agents/{agentId} | Get details about a Dialogflow CX agent |
-| [**GetIntegrationsSpeechDialogflowcxAgents**](IntegrationsApi.html#getintegrationsspeechdialogflowcxagents) | **Get** /api/v2/integrations/speech/dialogflowcx/agents | Get a list of Dialogflow CX agents in the customers&#39; Google accounts |
-| [**GetIntegrationsSpeechLexBotAlias**](IntegrationsApi.html#getintegrationsspeechlexbotalias) | **Get** /api/v2/integrations/speech/lex/bot/alias/{aliasId} | Get details about a Lex bot alias |
-| [**GetIntegrationsSpeechLexBotBotIdAliases**](IntegrationsApi.html#getintegrationsspeechlexbotbotidaliases) | **Get** /api/v2/integrations/speech/lex/bot/{botId}/aliases | Get a list of aliases for a bot in the customer&#39;s AWS accounts |
-| [**GetIntegrationsSpeechLexBots**](IntegrationsApi.html#getintegrationsspeechlexbots) | **Get** /api/v2/integrations/speech/lex/bots | Get a list of Lex bots in the customers&#39; AWS accounts |
-| [**GetIntegrationsSpeechLexv2BotAlias**](IntegrationsApi.html#getintegrationsspeechlexv2botalias) | **Get** /api/v2/integrations/speech/lexv2/bot/alias/{aliasId} | Get details about a Lex V2 bot alias |
-| [**GetIntegrationsSpeechLexv2BotBotIdAliases**](IntegrationsApi.html#getintegrationsspeechlexv2botbotidaliases) | **Get** /api/v2/integrations/speech/lexv2/bot/{botId}/aliases | Get a list of aliases for a Lex V2 bot |
-| [**GetIntegrationsSpeechLexv2Bots**](IntegrationsApi.html#getintegrationsspeechlexv2bots) | **Get** /api/v2/integrations/speech/lexv2/bots | Get a list of Lex V2 bots |
-| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBot**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbot) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId} | Get a Nuance bot in the specified Integration |
-| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotjob) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId} | Get the status of an asynchronous Nuance bot GET job |
-| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotjobresults) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results | Get the result of an asynchronous Nuance bot GET job |
-| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBots**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbots) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots | Get a list of Nuance bots available in the specified Integration |
-| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotsjob) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId} | Get the status of an asynchronous Nuance bots GET job |
-| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotsjobresults) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results | Get the result of an asynchronous Nuance bots GET job |
-| [**GetIntegrationsSpeechSttEngine**](IntegrationsApi.html#getintegrationsspeechsttengine) | **Get** /api/v2/integrations/speech/stt/engines/{engineId} | Get details about a STT engine |
-| [**GetIntegrationsSpeechSttEngines**](IntegrationsApi.html#getintegrationsspeechsttengines) | **Get** /api/v2/integrations/speech/stt/engines | Get a list of STT engines enabled for org |
-| [**GetIntegrationsSpeechTtsEngine**](IntegrationsApi.html#getintegrationsspeechttsengine) | **Get** /api/v2/integrations/speech/tts/engines/{engineId} | Get details about a TTS engine |
-| [**GetIntegrationsSpeechTtsEngineVoice**](IntegrationsApi.html#getintegrationsspeechttsenginevoice) | **Get** /api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId} | Get details about a specific voice for a TTS engine |
-| [**GetIntegrationsSpeechTtsEngineVoices**](IntegrationsApi.html#getintegrationsspeechttsenginevoices) | **Get** /api/v2/integrations/speech/tts/engines/{engineId}/voices | Get a list of voices for a TTS engine |
-| [**GetIntegrationsSpeechTtsEngines**](IntegrationsApi.html#getintegrationsspeechttsengines) | **Get** /api/v2/integrations/speech/tts/engines | Get a list of TTS engines enabled for org |
-| [**GetIntegrationsSpeechTtsSettings**](IntegrationsApi.html#getintegrationsspeechttssettings) | **Get** /api/v2/integrations/speech/tts/settings | Get TTS settings for an org |
-| [**GetIntegrationsType**](IntegrationsApi.html#getintegrationstype) | **Get** /api/v2/integrations/types/{typeId} | Get integration type. |
-| [**GetIntegrationsTypeConfigschema**](IntegrationsApi.html#getintegrationstypeconfigschema) | **Get** /api/v2/integrations/types/{typeId}/configschemas/{configType} | Get properties config schema for an integration type. |
-| [**GetIntegrationsTypes**](IntegrationsApi.html#getintegrationstypes) | **Get** /api/v2/integrations/types | List integration types |
-| [**GetIntegrationsUnifiedcommunicationsClientapp**](IntegrationsApi.html#getintegrationsunifiedcommunicationsclientapp) | **Get** /api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId} | UC integration client application configuration. |
-| [**GetIntegrationsUnifiedcommunicationsClientapps**](IntegrationsApi.html#getintegrationsunifiedcommunicationsclientapps) | **Get** /api/v2/integrations/unifiedcommunications/clientapps | List UC integration client application configurations. |
-| [**GetIntegrationsUserapps**](IntegrationsApi.html#getintegrationsuserapps) | **Get** /api/v2/integrations/userapps | List permitted user app integrations for the logged in user |
-| [**PatchIntegration**](IntegrationsApi.html#patchintegration) | **Patch** /api/v2/integrations/{integrationId} | Update an integration. |
-| [**PatchIntegrationsAction**](IntegrationsApi.html#patchintegrationsaction) | **Patch** /api/v2/integrations/actions/{actionId} | Patch an Action |
-| [**PatchIntegrationsActionDraft**](IntegrationsApi.html#patchintegrationsactiondraft) | **Patch** /api/v2/integrations/actions/{actionId}/draft | Update an existing Draft |
-| [**PostIntegrations**](IntegrationsApi.html#postintegrations) | **Post** /api/v2/integrations | Create an integration. |
-| [**PostIntegrationsActionDraft**](IntegrationsApi.html#postintegrationsactiondraft) | **Post** /api/v2/integrations/actions/{actionId}/draft | Create a new Draft from existing Action |
-| [**PostIntegrationsActionDraftFunctionUpload**](IntegrationsApi.html#postintegrationsactiondraftfunctionupload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
-| [**PostIntegrationsActionDraftPublish**](IntegrationsApi.html#postintegrationsactiondraftpublish) | **Post** /api/v2/integrations/actions/{actionId}/draft/publish | Publish a Draft and make it the active Action configuration |
-| [**PostIntegrationsActionDraftTest**](IntegrationsApi.html#postintegrationsactiondrafttest) | **Post** /api/v2/integrations/actions/{actionId}/draft/test | Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. |
-| [**PostIntegrationsActionExecute**](IntegrationsApi.html#postintegrationsactionexecute) | **Post** /api/v2/integrations/actions/{actionId}/execute | Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. |
-| [**PostIntegrationsActionTest**](IntegrationsApi.html#postintegrationsactiontest) | **Post** /api/v2/integrations/actions/{actionId}/test | Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. |
-| [**PostIntegrationsActions**](IntegrationsApi.html#postintegrationsactions) | **Post** /api/v2/integrations/actions | Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. |
-| [**PostIntegrationsActionsDrafts**](IntegrationsApi.html#postintegrationsactionsdrafts) | **Post** /api/v2/integrations/actions/drafts | Create a new Draft |
-| [**PostIntegrationsCredentials**](IntegrationsApi.html#postintegrationscredentials) | **Post** /api/v2/integrations/credentials | Create a set of credentials |
-| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotjobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs | Get a Nuance bot in the specified Integration asynchronously |
-| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotsjobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs | Get a list of Nuance bots in the specified Integration asynchronously |
-| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotslaunchvalidate) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate | Try out a single credential for a Nuance bot to know if the secret is correct |
-| [**PutIntegrationConfigCurrent**](IntegrationsApi.html#putintegrationconfigcurrent) | **Put** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
-| [**PutIntegrationsActionDraftFunction**](IntegrationsApi.html#putintegrationsactiondraftfunction) | **Put** /api/v2/integrations/actions/{actionId}/draft/function | Update draft function settings. |
-| [**PutIntegrationsBotconnectorIntegrationIdBots**](IntegrationsApi.html#putintegrationsbotconnectorintegrationidbots) | **Put** /api/v2/integrations/botconnector/{integrationId}/bots | Set a list of botConnector bots plus versions for this integration |
-| [**PutIntegrationsCredential**](IntegrationsApi.html#putintegrationscredential) | **Put** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
-| [**PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](IntegrationsApi.html#putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings) | **Put** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
-| [**PutIntegrationsSpeechTtsSettings**](IntegrationsApi.html#putintegrationsspeechttssettings) | **Put** /api/v2/integrations/speech/tts/settings | Update TTS settings for an org |
-| [**PutIntegrationsUnifiedcommunicationThirdpartypresences**](IntegrationsApi.html#putintegrationsunifiedcommunicationthirdpartypresences) | **Put** /api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences | Bulk integration presence ingestion |
-{: class="table table-striped"}
+| [**DeleteIntegration**](#DeleteIntegration) | **Delete** /api/v2/integrations/{integrationId} | Delete integration. |
+| [**DeleteIntegrationsAction**](#DeleteIntegrationsAction) | **Delete** /api/v2/integrations/actions/{actionId} | Delete an Action |
+| [**DeleteIntegrationsActionDraft**](#DeleteIntegrationsActionDraft) | **Delete** /api/v2/integrations/actions/{actionId}/draft | Delete a Draft |
+| [**DeleteIntegrationsCredential**](#DeleteIntegrationsCredential) | **Delete** /api/v2/integrations/credentials/{credentialId} | Delete a set of credentials |
+| [**GetIntegration**](#GetIntegration) | **Get** /api/v2/integrations/{integrationId} | Get integration. |
+| [**GetIntegrationConfigCurrent**](#GetIntegrationConfigCurrent) | **Get** /api/v2/integrations/{integrationId}/config/current | Get integration configuration. |
+| [**GetIntegrations**](#GetIntegrations) | **Get** /api/v2/integrations | List integrations |
+| [**GetIntegrationsAction**](#GetIntegrationsAction) | **Get** /api/v2/integrations/actions/{actionId} | Retrieves a single Action matching id. |
+| [**GetIntegrationsActionDraft**](#GetIntegrationsActionDraft) | **Get** /api/v2/integrations/actions/{actionId}/draft | Retrieve a Draft |
+| [**GetIntegrationsActionDraftFunction**](#GetIntegrationsActionDraftFunction) | **Get** /api/v2/integrations/actions/{actionId}/draft/function | Get draft function settings for Action |
+| [**GetIntegrationsActionDraftSchema**](#GetIntegrationsActionDraftSchema) | **Get** /api/v2/integrations/actions/{actionId}/draft/schemas/{fileName} | Retrieve schema for a Draft based on filename. |
+| [**GetIntegrationsActionDraftTemplate**](#GetIntegrationsActionDraftTemplate) | **Get** /api/v2/integrations/actions/{actionId}/draft/templates/{fileName} | Retrieve templates for a Draft based on filename. |
+| [**GetIntegrationsActionDraftValidation**](#GetIntegrationsActionDraftValidation) | **Get** /api/v2/integrations/actions/{actionId}/draft/validation | Validate current Draft configuration. |
+| [**GetIntegrationsActionFunction**](#GetIntegrationsActionFunction) | **Get** /api/v2/integrations/actions/{actionId}/function | Get published function settings for Action |
+| [**GetIntegrationsActionSchema**](#GetIntegrationsActionSchema) | **Get** /api/v2/integrations/actions/{actionId}/schemas/{fileName} | Retrieve schema for an action based on filename. |
+| [**GetIntegrationsActionTemplate**](#GetIntegrationsActionTemplate) | **Get** /api/v2/integrations/actions/{actionId}/templates/{fileName} | Retrieve text of templates for an action based on filename. |
+| [**GetIntegrationsActions**](#GetIntegrationsActions) | **Get** /api/v2/integrations/actions | Retrieves all actions associated with filters passed in via query param. |
+| [**GetIntegrationsActionsCategories**](#GetIntegrationsActionsCategories) | **Get** /api/v2/integrations/actions/categories | Retrieves all categories of available Actions |
+| [**GetIntegrationsActionsCertificates**](#GetIntegrationsActionsCertificates) | **Get** /api/v2/integrations/actions/certificates | Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. |
+| [**GetIntegrationsActionsCertificatesTruststore**](#GetIntegrationsActionsCertificatesTruststore) | **Get** /api/v2/integrations/actions/certificates/truststore | Retrieves basic info about trusted root CA certificates |
+| [**GetIntegrationsActionsDrafts**](#GetIntegrationsActionsDrafts) | **Get** /api/v2/integrations/actions/drafts | Retrieves all action drafts associated with the filters passed in via query param. |
+| [**GetIntegrationsActionsFunctionsRuntimes**](#GetIntegrationsActionsFunctionsRuntimes) | **Get** /api/v2/integrations/actions/functions/runtimes | Get action function settings for Action |
+| [**GetIntegrationsBotconnectorIntegrationIdBot**](#GetIntegrationsBotconnectorIntegrationIdBot) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId} | Get a specific botConnector bot, plus versions, for this integration |
+| [**GetIntegrationsBotconnectorIntegrationIdBotVersions**](#GetIntegrationsBotconnectorIntegrationIdBotVersions) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions | Get a list of bot versions for a bot |
+| [**GetIntegrationsBotconnectorIntegrationIdBots**](#GetIntegrationsBotconnectorIntegrationIdBots) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots | Get a list of botConnector bots for this integration |
+| [**GetIntegrationsBotconnectorIntegrationIdBotsSummaries**](#GetIntegrationsBotconnectorIntegrationIdBotsSummaries) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/summaries | Get a summary list of botConnector bots for this integration |
+| [**GetIntegrationsClientapps**](#GetIntegrationsClientapps) | **Get** /api/v2/integrations/clientapps | List permitted client app integrations for the logged in user |
+| [**GetIntegrationsClientappsUnifiedcommunications**](#GetIntegrationsClientappsUnifiedcommunications) | **Get** /api/v2/integrations/clientapps/unifiedcommunications | UC integration client application configuration. |
+| [**GetIntegrationsCredential**](#GetIntegrationsCredential) | **Get** /api/v2/integrations/credentials/{credentialId} | Get a single credential with sensitive fields redacted |
+| [**GetIntegrationsCredentials**](#GetIntegrationsCredentials) | **Get** /api/v2/integrations/credentials | List multiple sets of credentials |
+| [**GetIntegrationsCredentialsTypes**](#GetIntegrationsCredentialsTypes) | **Get** /api/v2/integrations/credentials/types | List all credential types |
+| [**GetIntegrationsSpeechAudioconnector**](#GetIntegrationsSpeechAudioconnector) | **Get** /api/v2/integrations/speech/audioconnector | Get a list of Audio Connector integrations |
+| [**GetIntegrationsSpeechAudioconnectorIntegrationId**](#GetIntegrationsSpeechAudioconnectorIntegrationId) | **Get** /api/v2/integrations/speech/audioconnector/{integrationId} | Get an Audio Connector integration |
+| [**GetIntegrationsSpeechDialogflowAgent**](#GetIntegrationsSpeechDialogflowAgent) | **Get** /api/v2/integrations/speech/dialogflow/agents/{agentId} | Get details about a Dialogflow agent |
+| [**GetIntegrationsSpeechDialogflowAgents**](#GetIntegrationsSpeechDialogflowAgents) | **Get** /api/v2/integrations/speech/dialogflow/agents | Get a list of Dialogflow agents in the customers&#39; Google accounts |
+| [**GetIntegrationsSpeechDialogflowcxAgent**](#GetIntegrationsSpeechDialogflowcxAgent) | **Get** /api/v2/integrations/speech/dialogflowcx/agents/{agentId} | Get details about a Dialogflow CX agent |
+| [**GetIntegrationsSpeechDialogflowcxAgents**](#GetIntegrationsSpeechDialogflowcxAgents) | **Get** /api/v2/integrations/speech/dialogflowcx/agents | Get a list of Dialogflow CX agents in the customers&#39; Google accounts |
+| [**GetIntegrationsSpeechLexBotAlias**](#GetIntegrationsSpeechLexBotAlias) | **Get** /api/v2/integrations/speech/lex/bot/alias/{aliasId} | Get details about a Lex bot alias |
+| [**GetIntegrationsSpeechLexBotBotIdAliases**](#GetIntegrationsSpeechLexBotBotIdAliases) | **Get** /api/v2/integrations/speech/lex/bot/{botId}/aliases | Get a list of aliases for a bot in the customer&#39;s AWS accounts |
+| [**GetIntegrationsSpeechLexBots**](#GetIntegrationsSpeechLexBots) | **Get** /api/v2/integrations/speech/lex/bots | Get a list of Lex bots in the customers&#39; AWS accounts |
+| [**GetIntegrationsSpeechLexv2BotAlias**](#GetIntegrationsSpeechLexv2BotAlias) | **Get** /api/v2/integrations/speech/lexv2/bot/alias/{aliasId} | Get details about a Lex V2 bot alias |
+| [**GetIntegrationsSpeechLexv2BotBotIdAliases**](#GetIntegrationsSpeechLexv2BotBotIdAliases) | **Get** /api/v2/integrations/speech/lexv2/bot/{botId}/aliases | Get a list of aliases for a Lex V2 bot |
+| [**GetIntegrationsSpeechLexv2Bots**](#GetIntegrationsSpeechLexv2Bots) | **Get** /api/v2/integrations/speech/lexv2/bots | Get a list of Lex V2 bots |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBot**](#GetIntegrationsSpeechNuanceNuanceIntegrationIdBot) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId} | Get a Nuance bot in the specified Integration |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob**](#GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId} | Get the status of an asynchronous Nuance bot GET job |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults**](#GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results | Get the result of an asynchronous Nuance bot GET job |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBots**](#GetIntegrationsSpeechNuanceNuanceIntegrationIdBots) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots | Get a list of Nuance bots available in the specified Integration |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob**](#GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId} | Get the status of an asynchronous Nuance bots GET job |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults**](#GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results | Get the result of an asynchronous Nuance bots GET job |
+| [**GetIntegrationsSpeechSttEngine**](#GetIntegrationsSpeechSttEngine) | **Get** /api/v2/integrations/speech/stt/engines/{engineId} | Get details about a STT engine |
+| [**GetIntegrationsSpeechSttEngines**](#GetIntegrationsSpeechSttEngines) | **Get** /api/v2/integrations/speech/stt/engines | Get a list of STT engines enabled for org |
+| [**GetIntegrationsSpeechTtsEngine**](#GetIntegrationsSpeechTtsEngine) | **Get** /api/v2/integrations/speech/tts/engines/{engineId} | Get details about a TTS engine |
+| [**GetIntegrationsSpeechTtsEngineVoice**](#GetIntegrationsSpeechTtsEngineVoice) | **Get** /api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId} | Get details about a specific voice for a TTS engine |
+| [**GetIntegrationsSpeechTtsEngineVoices**](#GetIntegrationsSpeechTtsEngineVoices) | **Get** /api/v2/integrations/speech/tts/engines/{engineId}/voices | Get a list of voices for a TTS engine |
+| [**GetIntegrationsSpeechTtsEngines**](#GetIntegrationsSpeechTtsEngines) | **Get** /api/v2/integrations/speech/tts/engines | Get a list of TTS engines enabled for org |
+| [**GetIntegrationsSpeechTtsSettings**](#GetIntegrationsSpeechTtsSettings) | **Get** /api/v2/integrations/speech/tts/settings | Get TTS settings for an org |
+| [**GetIntegrationsType**](#GetIntegrationsType) | **Get** /api/v2/integrations/types/{typeId} | Get integration type. |
+| [**GetIntegrationsTypeConfigschema**](#GetIntegrationsTypeConfigschema) | **Get** /api/v2/integrations/types/{typeId}/configschemas/{configType} | Get properties config schema for an integration type. |
+| [**GetIntegrationsTypes**](#GetIntegrationsTypes) | **Get** /api/v2/integrations/types | List integration types |
+| [**GetIntegrationsUnifiedcommunicationsClientapp**](#GetIntegrationsUnifiedcommunicationsClientapp) | **Get** /api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId} | UC integration client application configuration. |
+| [**GetIntegrationsUnifiedcommunicationsClientapps**](#GetIntegrationsUnifiedcommunicationsClientapps) | **Get** /api/v2/integrations/unifiedcommunications/clientapps | List UC integration client application configurations. |
+| [**GetIntegrationsUserapps**](#GetIntegrationsUserapps) | **Get** /api/v2/integrations/userapps | List permitted user app integrations for the logged in user |
+| [**PatchIntegration**](#PatchIntegration) | **Patch** /api/v2/integrations/{integrationId} | Update an integration. |
+| [**PatchIntegrationsAction**](#PatchIntegrationsAction) | **Patch** /api/v2/integrations/actions/{actionId} | Patch an Action |
+| [**PatchIntegrationsActionDraft**](#PatchIntegrationsActionDraft) | **Patch** /api/v2/integrations/actions/{actionId}/draft | Update an existing Draft |
+| [**PostIntegrations**](#PostIntegrations) | **Post** /api/v2/integrations | Create an integration. |
+| [**PostIntegrationsActionDraft**](#PostIntegrationsActionDraft) | **Post** /api/v2/integrations/actions/{actionId}/draft | Create a new Draft from existing Action |
+| [**PostIntegrationsActionDraftFunctionUpload**](#PostIntegrationsActionDraftFunctionUpload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
+| [**PostIntegrationsActionDraftPublish**](#PostIntegrationsActionDraftPublish) | **Post** /api/v2/integrations/actions/{actionId}/draft/publish | Publish a Draft and make it the active Action configuration |
+| [**PostIntegrationsActionDraftTest**](#PostIntegrationsActionDraftTest) | **Post** /api/v2/integrations/actions/{actionId}/draft/test | Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. |
+| [**PostIntegrationsActionExecute**](#PostIntegrationsActionExecute) | **Post** /api/v2/integrations/actions/{actionId}/execute | Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. |
+| [**PostIntegrationsActionTest**](#PostIntegrationsActionTest) | **Post** /api/v2/integrations/actions/{actionId}/test | Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. |
+| [**PostIntegrationsActions**](#PostIntegrationsActions) | **Post** /api/v2/integrations/actions | Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. |
+| [**PostIntegrationsActionsDrafts**](#PostIntegrationsActionsDrafts) | **Post** /api/v2/integrations/actions/drafts | Create a new Draft |
+| [**PostIntegrationsCredentials**](#PostIntegrationsCredentials) | **Post** /api/v2/integrations/credentials | Create a set of credentials |
+| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs | Get a Nuance bot in the specified Integration asynchronously |
+| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs | Get a list of Nuance bots in the specified Integration asynchronously |
+| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate | Try out a single credential for a Nuance bot to know if the secret is correct |
+| [**PutIntegrationConfigCurrent**](#PutIntegrationConfigCurrent) | **Put** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
+| [**PutIntegrationsActionDraftFunction**](#PutIntegrationsActionDraftFunction) | **Put** /api/v2/integrations/actions/{actionId}/draft/function | Update draft function settings. |
+| [**PutIntegrationsBotconnectorIntegrationIdBots**](#PutIntegrationsBotconnectorIntegrationIdBots) | **Put** /api/v2/integrations/botconnector/{integrationId}/bots | Set a list of botConnector bots plus versions for this integration |
+| [**PutIntegrationsCredential**](#PutIntegrationsCredential) | **Put** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
+| [**PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](#PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings) | **Put** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
+| [**PutIntegrationsSpeechTtsSettings**](#PutIntegrationsSpeechTtsSettings) | **Put** /api/v2/integrations/speech/tts/settings | Update TTS settings for an org |
+| [**PutIntegrationsUnifiedcommunicationThirdpartypresences**](#PutIntegrationsUnifiedcommunicationThirdpartypresences) | **Put** /api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences | Bulk integration presence ingestion |
 
-<a name="deleteintegration"></a>
 
-## [**Integration**](Integration.html) DeleteIntegration (string integrationId)
 
+## DeleteIntegration
+
+> [**Integration**](Integration) DeleteIntegration (string integrationId)
 
 
 Delete integration.
@@ -149,16 +150,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Integration**](Integration.html)
+[**Integration**](Integration)
 
-<a name="deleteintegrationsaction"></a>
 
-## void DeleteIntegrationsAction (string actionId)
+## DeleteIntegrationsAction
 
+> void DeleteIntegrationsAction (string actionId)
 
 
 Delete an Action
@@ -211,16 +211,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteintegrationsactiondraft"></a>
 
-## void DeleteIntegrationsActionDraft (string actionId)
+## DeleteIntegrationsActionDraft
 
+> void DeleteIntegrationsActionDraft (string actionId)
 
 
 Delete a Draft
@@ -273,16 +272,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteintegrationscredential"></a>
 
-## void DeleteIntegrationsCredential (string credentialId)
+## DeleteIntegrationsCredential
 
+> void DeleteIntegrationsCredential (string credentialId)
 
 
 Delete a set of credentials
@@ -335,16 +333,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **credentialId** | **string**| Credential ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getintegration"></a>
 
-## [**Integration**](Integration.html) GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## GetIntegration
 
+> [**Integration**](Integration) GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 
 Get integration.
@@ -407,19 +404,18 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Integration**](Integration.html)
+[**Integration**](Integration)
 
-<a name="getintegrationconfigcurrent"></a>
 
-## [**IntegrationConfiguration**](IntegrationConfiguration.html) GetIntegrationConfigCurrent (string integrationId)
+## GetIntegrationConfigCurrent
 
+> [**IntegrationConfiguration**](IntegrationConfiguration) GetIntegrationConfigCurrent (string integrationId)
 
 
 Get integration configuration.
@@ -473,16 +469,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**IntegrationConfiguration**](IntegrationConfiguration.html)
+[**IntegrationConfiguration**](IntegrationConfiguration)
 
-<a name="getintegrations"></a>
 
-## [**IntegrationEntityListing**](IntegrationEntityListing.html) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## GetIntegrations
 
+> [**IntegrationEntityListing**](IntegrationEntityListing) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 
 List integrations
@@ -543,19 +538,18 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**IntegrationEntityListing**](IntegrationEntityListing.html)
+[**IntegrationEntityListing**](IntegrationEntityListing)
 
-<a name="getintegrationsaction"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
+## GetIntegrationsAction
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
 
 
 Retrieves a single Action matching id.
@@ -614,16 +608,15 @@ namespace Example
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
 | **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="getintegrationsactiondraft"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
+## GetIntegrationsActionDraft
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
 
 
 Retrieve a Draft
@@ -682,16 +675,15 @@ namespace Example
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
 | **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="getintegrationsactiondraftfunction"></a>
 
-## [**FunctionConfig**](FunctionConfig.html) GetIntegrationsActionDraftFunction (string actionId)
+## GetIntegrationsActionDraftFunction
 
+> [**FunctionConfig**](FunctionConfig) GetIntegrationsActionDraftFunction (string actionId)
 
 
 Get draft function settings for Action
@@ -747,16 +739,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**FunctionConfig**](FunctionConfig.html)
+[**FunctionConfig**](FunctionConfig)
 
-<a name="getintegrationsactiondraftschema"></a>
 
-## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsActionDraftSchema (string actionId, string fileName)
+## GetIntegrationsActionDraftSchema
 
+> [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionDraftSchema (string actionId, string fileName)
 
 
 Retrieve schema for a Draft based on filename.
@@ -813,16 +804,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of schema file to be retrieved for this draft. |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**JsonSchemaDocument**](JsonSchemaDocument)
 
-<a name="getintegrationsactiondrafttemplate"></a>
 
-## **string** GetIntegrationsActionDraftTemplate (string actionId, string fileName)
+## GetIntegrationsActionDraftTemplate
 
+> **string** GetIntegrationsActionDraftTemplate (string actionId, string fileName)
 
 
 Retrieve templates for a Draft based on filename.
@@ -879,16 +869,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of template file to be retrieved for this action draft. |  |
-{: class="table table-striped"}
 
 ### Return type
 
 **string**
 
-<a name="getintegrationsactiondraftvalidation"></a>
 
-## [**DraftValidationResult**](DraftValidationResult.html) GetIntegrationsActionDraftValidation (string actionId)
+## GetIntegrationsActionDraftValidation
 
+> [**DraftValidationResult**](DraftValidationResult) GetIntegrationsActionDraftValidation (string actionId)
 
 
 Validate current Draft configuration.
@@ -942,16 +931,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DraftValidationResult**](DraftValidationResult.html)
+[**DraftValidationResult**](DraftValidationResult)
 
-<a name="getintegrationsactionfunction"></a>
 
-## [**FunctionConfig**](FunctionConfig.html) GetIntegrationsActionFunction (string actionId)
+## GetIntegrationsActionFunction
 
+> [**FunctionConfig**](FunctionConfig) GetIntegrationsActionFunction (string actionId)
 
 
 Get published function settings for Action
@@ -1007,16 +995,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**FunctionConfig**](FunctionConfig.html)
+[**FunctionConfig**](FunctionConfig)
 
-<a name="getintegrationsactionschema"></a>
 
-## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsActionSchema (string actionId, string fileName)
+## GetIntegrationsActionSchema
 
+> [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionSchema (string actionId, string fileName)
 
 
 Retrieve schema for an action based on filename.
@@ -1073,16 +1060,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of schema file to be retrieved for this action. |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**JsonSchemaDocument**](JsonSchemaDocument)
 
-<a name="getintegrationsactiontemplate"></a>
 
-## **string** GetIntegrationsActionTemplate (string actionId, string fileName)
+## GetIntegrationsActionTemplate
 
+> **string** GetIntegrationsActionTemplate (string actionId, string fileName)
 
 
 Retrieve text of templates for an action based on filename.
@@ -1139,16 +1125,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of template file to be retrieved for this action. |  |
-{: class="table table-striped"}
 
 ### Return type
 
 **string**
 
-<a name="getintegrationsactions"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
+## GetIntegrationsActions
 
+> [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
 
 
 Retrieves all actions associated with filters passed in via query param.
@@ -1223,16 +1208,15 @@ namespace Example
 | **ids** | **string**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional]  |
 | **secure** | **string**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 | **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ActionEntityListing**](ActionEntityListing.html)
+[**ActionEntityListing**](ActionEntityListing)
 
-<a name="getintegrationsactionscategories"></a>
 
-## [**CategoryEntityListing**](CategoryEntityListing.html) GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
+## GetIntegrationsActionsCategories
 
+> [**CategoryEntityListing**](CategoryEntityListing) GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
 
 
 Retrieves all categories of available Actions
@@ -1299,16 +1283,15 @@ namespace Example
 | **sortBy** | **string**| Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. | [optional]  |
 | **sortOrder** | **string**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
 | **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CategoryEntityListing**](CategoryEntityListing.html)
+[**CategoryEntityListing**](CategoryEntityListing)
 
-<a name="getintegrationsactionscertificates"></a>
 
-## [**ActionCertificateListing**](ActionCertificateListing.html) GetIntegrationsActionsCertificates (string status = null, string type = null)
+## GetIntegrationsActionsCertificates
 
+> [**ActionCertificateListing**](ActionCertificateListing) GetIntegrationsActionsCertificates (string status = null, string type = null)
 
 
 Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
@@ -1364,16 +1347,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **status** | **string**| Indicates the validity of the certificate in question. | [optional] <br />**Values**: Current, Upcoming |
 | **type** | **string**| Indicates the type of the certificate. | [optional] <br />**Values**: Client |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ActionCertificateListing**](ActionCertificateListing.html)
+[**ActionCertificateListing**](ActionCertificateListing)
 
-<a name="getintegrationsactionscertificatestruststore"></a>
 
-## [**TrustedCertificates**](TrustedCertificates.html) GetIntegrationsActionsCertificatesTruststore ()
+## GetIntegrationsActionsCertificatesTruststore
 
+> [**TrustedCertificates**](TrustedCertificates) GetIntegrationsActionsCertificatesTruststore ()
 
 
 Retrieves basic info about trusted root CA certificates
@@ -1423,15 +1405,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**TrustedCertificates**](TrustedCertificates.html)
+[**TrustedCertificates**](TrustedCertificates)
 
-<a name="getintegrationsactionsdrafts"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
+## GetIntegrationsActionsDrafts
 
+> [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
 
 
 Retrieves all action drafts associated with the filters passed in via query param.
@@ -1506,16 +1487,15 @@ namespace Example
 | **ids** | **string**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional]  |
 | **secure** | **string**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 | **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ActionEntityListing**](ActionEntityListing.html)
+[**ActionEntityListing**](ActionEntityListing)
 
-<a name="getintegrationsactionsfunctionsruntimes"></a>
 
-## [**List&lt;FunctionRuntime&gt;**](FunctionRuntime.html) GetIntegrationsActionsFunctionsRuntimes ()
+## GetIntegrationsActionsFunctionsRuntimes
 
+> [**List&lt;FunctionRuntime&gt;**](FunctionRuntime) GetIntegrationsActionsFunctionsRuntimes ()
 
 
 Get action function settings for Action
@@ -1567,15 +1547,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**List<FunctionRuntime>**](FunctionRuntime.html)
+[**List<FunctionRuntime>**](FunctionRuntime)
 
-<a name="getintegrationsbotconnectorintegrationidbot"></a>
 
-## [**BotConnectorBot**](BotConnectorBot.html) GetIntegrationsBotconnectorIntegrationIdBot (string integrationId, string botId, string version = null)
+## GetIntegrationsBotconnectorIntegrationIdBot
 
+> [**BotConnectorBot**](BotConnectorBot) GetIntegrationsBotconnectorIntegrationIdBot (string integrationId, string botId, string version = null)
 
 
 Get a specific botConnector bot, plus versions, for this integration
@@ -1633,16 +1612,15 @@ namespace Example
 | **integrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The botID for this bot |  |
 | **version** | **string**| Specific Version | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**BotConnectorBot**](BotConnectorBot.html)
+[**BotConnectorBot**](BotConnectorBot)
 
-<a name="getintegrationsbotconnectorintegrationidbotversions"></a>
 
-## [**BotConnectorBotVersionSummaryEntityListing**](BotConnectorBotVersionSummaryEntityListing.html) GetIntegrationsBotconnectorIntegrationIdBotVersions (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
+## GetIntegrationsBotconnectorIntegrationIdBotVersions
 
+> [**BotConnectorBotVersionSummaryEntityListing**](BotConnectorBotVersionSummaryEntityListing) GetIntegrationsBotconnectorIntegrationIdBotVersions (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
 
 
 Get a list of bot versions for a bot
@@ -1702,16 +1680,15 @@ namespace Example
 | **botId** | **string**| The botID for this bot |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**BotConnectorBotVersionSummaryEntityListing**](BotConnectorBotVersionSummaryEntityListing.html)
+[**BotConnectorBotVersionSummaryEntityListing**](BotConnectorBotVersionSummaryEntityListing)
 
-<a name="getintegrationsbotconnectorintegrationidbots"></a>
 
-## [**BotList**](BotList.html) GetIntegrationsBotconnectorIntegrationIdBots (string integrationId)
+## GetIntegrationsBotconnectorIntegrationIdBots
 
+> [**BotList**](BotList) GetIntegrationsBotconnectorIntegrationIdBots (string integrationId)
 
 
 Get a list of botConnector bots for this integration
@@ -1765,16 +1742,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| The integration ID for this group of bots |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**BotList**](BotList.html)
+[**BotList**](BotList)
 
-<a name="getintegrationsbotconnectorintegrationidbotssummaries"></a>
 
-## [**BotConnectorBotSummaryEntityListing**](BotConnectorBotSummaryEntityListing.html) GetIntegrationsBotconnectorIntegrationIdBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null)
+## GetIntegrationsBotconnectorIntegrationIdBotsSummaries
 
+> [**BotConnectorBotSummaryEntityListing**](BotConnectorBotSummaryEntityListing) GetIntegrationsBotconnectorIntegrationIdBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null)
 
 
 Get a summary list of botConnector bots for this integration
@@ -1832,16 +1808,15 @@ namespace Example
 | **integrationId** | **string**| The integration ID for this group of bots |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**BotConnectorBotSummaryEntityListing**](BotConnectorBotSummaryEntityListing.html)
+[**BotConnectorBotSummaryEntityListing**](BotConnectorBotSummaryEntityListing)
 
-<a name="getintegrationsclientapps"></a>
 
-## [**ClientAppEntityListing**](ClientAppEntityListing.html) GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## GetIntegrationsClientapps
 
+> [**ClientAppEntityListing**](ClientAppEntityListing) GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 
 List permitted client app integrations for the logged in user
@@ -1901,20 +1876,22 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ClientAppEntityListing**](ClientAppEntityListing.html)
+[**ClientAppEntityListing**](ClientAppEntityListing)
 
-<a name="getintegrationsclientappsunifiedcommunications"></a>
 
-## [**UCIntegrationListing**](UCIntegrationListing.html) GetIntegrationsClientappsUnifiedcommunications (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## GetIntegrationsClientappsUnifiedcommunications
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**UCIntegrationListing**](UCIntegrationListing) GetIntegrationsClientappsUnifiedcommunications (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 UC integration client application configuration.
 
@@ -1976,19 +1953,18 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UCIntegrationListing**](UCIntegrationListing.html)
+[**UCIntegrationListing**](UCIntegrationListing)
 
-<a name="getintegrationscredential"></a>
 
-## [**Credential**](Credential.html) GetIntegrationsCredential (string credentialId)
+## GetIntegrationsCredential
 
+> [**Credential**](Credential) GetIntegrationsCredential (string credentialId)
 
 
 Get a single credential with sensitive fields redacted
@@ -2042,16 +2018,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **credentialId** | **string**| Credential ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Credential**](Credential.html)
+[**Credential**](Credential)
 
-<a name="getintegrationscredentials"></a>
 
-## [**CredentialInfoListing**](CredentialInfoListing.html) GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
+## GetIntegrationsCredentials
 
+> [**CredentialInfoListing**](CredentialInfoListing) GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
 
 
 List multiple sets of credentials
@@ -2107,16 +2082,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CredentialInfoListing**](CredentialInfoListing.html)
+[**CredentialInfoListing**](CredentialInfoListing)
 
-<a name="getintegrationscredentialstypes"></a>
 
-## [**CredentialTypeListing**](CredentialTypeListing.html) GetIntegrationsCredentialsTypes ()
+## GetIntegrationsCredentialsTypes
 
+> [**CredentialTypeListing**](CredentialTypeListing) GetIntegrationsCredentialsTypes ()
 
 
 List all credential types
@@ -2166,15 +2140,140 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
+### Return type
+
+[**CredentialTypeListing**](CredentialTypeListing)
+
+
+## GetIntegrationsSpeechAudioconnector
+
+> [**AudioConnectorIntegrationEntityListing**](AudioConnectorIntegrationEntityListing) GetIntegrationsSpeechAudioconnector (int? pageNumber = null, int? pageSize = null)
+
+
+Get a list of Audio Connector integrations
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechAudioconnectorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get a list of Audio Connector integrations
+                AudioConnectorIntegrationEntityListing result = apiInstance.GetIntegrationsSpeechAudioconnector(pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechAudioconnector: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 
 ### Return type
 
-[**CredentialTypeListing**](CredentialTypeListing.html)
+[**AudioConnectorIntegrationEntityListing**](AudioConnectorIntegrationEntityListing)
 
-<a name="getintegrationsspeechdialogflowagent"></a>
 
-## [**DialogflowAgent**](DialogflowAgent.html) GetIntegrationsSpeechDialogflowAgent (string agentId)
+## GetIntegrationsSpeechAudioconnectorIntegrationId
 
+> [**AudioConnectorIntegration**](AudioConnectorIntegration) GetIntegrationsSpeechAudioconnectorIntegrationId (string integrationId)
+
+
+Get an Audio Connector integration
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechAudioconnectorIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var integrationId = integrationId_example;  // string | The integration ID
+
+            try
+            { 
+                // Get an Audio Connector integration
+                AudioConnectorIntegration result = apiInstance.GetIntegrationsSpeechAudioconnectorIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechAudioconnectorIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| The integration ID |  |
+
+### Return type
+
+[**AudioConnectorIntegration**](AudioConnectorIntegration)
+
+
+## GetIntegrationsSpeechDialogflowAgent
+
+> [**DialogflowAgent**](DialogflowAgent) GetIntegrationsSpeechDialogflowAgent (string agentId)
 
 
 Get details about a Dialogflow agent
@@ -2228,16 +2327,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DialogflowAgent**](DialogflowAgent.html)
+[**DialogflowAgent**](DialogflowAgent)
 
-<a name="getintegrationsspeechdialogflowagents"></a>
 
-## [**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html) GetIntegrationsSpeechDialogflowAgents (int? pageNumber = null, int? pageSize = null, string name = null)
+## GetIntegrationsSpeechDialogflowAgents
 
+> [**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing) GetIntegrationsSpeechDialogflowAgents (int? pageNumber = null, int? pageSize = null, string name = null)
 
 
 Get a list of Dialogflow agents in the customers' Google accounts
@@ -2295,16 +2393,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on agent name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html)
+[**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing)
 
-<a name="getintegrationsspeechdialogflowcxagent"></a>
 
-## [**DialogflowCXAgent**](DialogflowCXAgent.html) GetIntegrationsSpeechDialogflowcxAgent (string agentId)
+## GetIntegrationsSpeechDialogflowcxAgent
 
+> [**DialogflowCXAgent**](DialogflowCXAgent) GetIntegrationsSpeechDialogflowcxAgent (string agentId)
 
 
 Get details about a Dialogflow CX agent
@@ -2358,16 +2455,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DialogflowCXAgent**](DialogflowCXAgent.html)
+[**DialogflowCXAgent**](DialogflowCXAgent)
 
-<a name="getintegrationsspeechdialogflowcxagents"></a>
 
-## [**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing.html) GetIntegrationsSpeechDialogflowcxAgents (int? pageNumber = null, int? pageSize = null, string name = null)
+## GetIntegrationsSpeechDialogflowcxAgents
 
+> [**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing) GetIntegrationsSpeechDialogflowcxAgents (int? pageNumber = null, int? pageSize = null, string name = null)
 
 
 Get a list of Dialogflow CX agents in the customers' Google accounts
@@ -2425,16 +2521,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on agent name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing.html)
+[**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing)
 
-<a name="getintegrationsspeechlexbotalias"></a>
 
-## [**LexBotAlias**](LexBotAlias.html) GetIntegrationsSpeechLexBotAlias (string aliasId)
+## GetIntegrationsSpeechLexBotAlias
 
+> [**LexBotAlias**](LexBotAlias) GetIntegrationsSpeechLexBotAlias (string aliasId)
 
 
 Get details about a Lex bot alias
@@ -2488,16 +2583,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **aliasId** | **string**| The alias ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LexBotAlias**](LexBotAlias.html)
+[**LexBotAlias**](LexBotAlias)
 
-<a name="getintegrationsspeechlexbotbotidaliases"></a>
 
-## [**LexBotAliasEntityListing**](LexBotAliasEntityListing.html) GetIntegrationsSpeechLexBotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+## GetIntegrationsSpeechLexBotBotIdAliases
 
+> [**LexBotAliasEntityListing**](LexBotAliasEntityListing) GetIntegrationsSpeechLexBotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
 
 
 Get a list of aliases for a bot in the customer's AWS accounts
@@ -2559,16 +2653,15 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **status** | **string**| Filter on alias status | [optional] <br />**Values**: READY, FAILED, BUILDING, NOT_BUILT |
 | **name** | **string**| Filter on alias name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LexBotAliasEntityListing**](LexBotAliasEntityListing.html)
+[**LexBotAliasEntityListing**](LexBotAliasEntityListing)
 
-<a name="getintegrationsspeechlexbots"></a>
 
-## [**LexBotEntityListing**](LexBotEntityListing.html) GetIntegrationsSpeechLexBots (int? pageNumber = null, int? pageSize = null, string name = null)
+## GetIntegrationsSpeechLexBots
 
+> [**LexBotEntityListing**](LexBotEntityListing) GetIntegrationsSpeechLexBots (int? pageNumber = null, int? pageSize = null, string name = null)
 
 
 Get a list of Lex bots in the customers' AWS accounts
@@ -2626,16 +2719,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on bot name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LexBotEntityListing**](LexBotEntityListing.html)
+[**LexBotEntityListing**](LexBotEntityListing)
 
-<a name="getintegrationsspeechlexv2botalias"></a>
 
-## [**LexV2BotAlias**](LexV2BotAlias.html) GetIntegrationsSpeechLexv2BotAlias (string aliasId)
+## GetIntegrationsSpeechLexv2BotAlias
 
+> [**LexV2BotAlias**](LexV2BotAlias) GetIntegrationsSpeechLexv2BotAlias (string aliasId)
 
 
 Get details about a Lex V2 bot alias
@@ -2689,16 +2781,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **aliasId** | **string**| The Alias ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LexV2BotAlias**](LexV2BotAlias.html)
+[**LexV2BotAlias**](LexV2BotAlias)
 
-<a name="getintegrationsspeechlexv2botbotidaliases"></a>
 
-## [**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing.html) GetIntegrationsSpeechLexv2BotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+## GetIntegrationsSpeechLexv2BotBotIdAliases
 
+> [**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing) GetIntegrationsSpeechLexv2BotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
 
 
 Get a list of aliases for a Lex V2 bot
@@ -2760,16 +2851,15 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **status** | **string**| Filter on alias status | [optional] <br />**Values**: Creating, Available, Deleting, Failed |
 | **name** | **string**| Filter on alias name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing.html)
+[**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing)
 
-<a name="getintegrationsspeechlexv2bots"></a>
 
-## [**LexV2BotEntityListing**](LexV2BotEntityListing.html) GetIntegrationsSpeechLexv2Bots (int? pageNumber = null, int? pageSize = null, string name = null)
+## GetIntegrationsSpeechLexv2Bots
 
+> [**LexV2BotEntityListing**](LexV2BotEntityListing) GetIntegrationsSpeechLexv2Bots (int? pageNumber = null, int? pageSize = null, string name = null)
 
 
 Get a list of Lex V2 bots
@@ -2827,16 +2917,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on bot name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LexV2BotEntityListing**](LexV2BotEntityListing.html)
+[**LexV2BotEntityListing**](LexV2BotEntityListing)
 
-<a name="getintegrationsspeechnuancenuanceintegrationidbot"></a>
 
-## [**NuanceBot**](NuanceBot.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBot (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
+## GetIntegrationsSpeechNuanceNuanceIntegrationIdBot
 
+> [**NuanceBot**](NuanceBot) GetIntegrationsSpeechNuanceNuanceIntegrationIdBot (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
 
 
 Get a Nuance bot in the specified Integration
@@ -2894,18 +2983,17 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The Nuance bot ID to get |  |
-| **expand** | [**List<string>**](string.html)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
+| **expand** | [**List<string>**](string)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
 | **targetChannel** | **string**| targetChannel | [optional] <br />**Values**: digital, voice |
-{: class="table table-striped"}
 
 ### Return type
 
-[**NuanceBot**](NuanceBot.html)
+[**NuanceBot**](NuanceBot)
 
-<a name="getintegrationsspeechnuancenuanceintegrationidbotjob"></a>
 
-## [**AsyncJob**](AsyncJob.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob (string nuanceIntegrationId, string botId, string jobId)
+## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob
 
+> [**AsyncJob**](AsyncJob) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob (string nuanceIntegrationId, string botId, string jobId)
 
 
 Get the status of an asynchronous Nuance bot GET job
@@ -2963,16 +3051,15 @@ namespace Example
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The Nuance bot ID |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncJob**](AsyncJob.html)
+[**AsyncJob**](AsyncJob)
 
-<a name="getintegrationsspeechnuancenuanceintegrationidbotjobresults"></a>
 
-## [**NuanceBot**](NuanceBot.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults (string nuanceIntegrationId, string botId, string jobId)
+## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults
 
+> [**NuanceBot**](NuanceBot) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults (string nuanceIntegrationId, string botId, string jobId)
 
 
 Get the result of an asynchronous Nuance bot GET job
@@ -3030,16 +3117,15 @@ namespace Example
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The Nuance bot ID |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**NuanceBot**](NuanceBot.html)
+[**NuanceBot**](NuanceBot)
 
-<a name="getintegrationsspeechnuancenuanceintegrationidbots"></a>
 
-## [**NuanceBotEntityListing**](NuanceBotEntityListing.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBots (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
+## GetIntegrationsSpeechNuanceNuanceIntegrationIdBots
 
+> [**NuanceBotEntityListing**](NuanceBotEntityListing) GetIntegrationsSpeechNuanceNuanceIntegrationIdBots (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
 
 
 Get a list of Nuance bots available in the specified Integration
@@ -3101,16 +3187,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **onlyRegisteredBots** | **bool?**| Limit bots to the ones configured for Genesys Cloud usage | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**NuanceBotEntityListing**](NuanceBotEntityListing.html)
+[**NuanceBotEntityListing**](NuanceBotEntityListing)
 
-<a name="getintegrationsspeechnuancenuanceintegrationidbotsjob"></a>
 
-## [**AsyncJob**](AsyncJob.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob (string nuanceIntegrationId, string jobId)
+## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob
 
+> [**AsyncJob**](AsyncJob) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob (string nuanceIntegrationId, string jobId)
 
 
 Get the status of an asynchronous Nuance bots GET job
@@ -3166,16 +3251,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncJob**](AsyncJob.html)
+[**AsyncJob**](AsyncJob)
 
-<a name="getintegrationsspeechnuancenuanceintegrationidbotsjobresults"></a>
 
-## [**NuanceBotEntityListing**](NuanceBotEntityListing.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults (string nuanceIntegrationId, string jobId)
+## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults
 
+> [**NuanceBotEntityListing**](NuanceBotEntityListing) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults (string nuanceIntegrationId, string jobId)
 
 
 Get the result of an asynchronous Nuance bots GET job
@@ -3231,16 +3315,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**NuanceBotEntityListing**](NuanceBotEntityListing.html)
+[**NuanceBotEntityListing**](NuanceBotEntityListing)
 
-<a name="getintegrationsspeechsttengine"></a>
 
-## [**SttEngineEntity**](SttEngineEntity.html) GetIntegrationsSpeechSttEngine (string engineId)
+## GetIntegrationsSpeechSttEngine
 
+> [**SttEngineEntity**](SttEngineEntity) GetIntegrationsSpeechSttEngine (string engineId)
 
 
 Get details about a STT engine
@@ -3294,16 +3377,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **engineId** | **string**| The engine ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SttEngineEntity**](SttEngineEntity.html)
+[**SttEngineEntity**](SttEngineEntity)
 
-<a name="getintegrationsspeechsttengines"></a>
 
-## [**SttEngineEntityListing**](SttEngineEntityListing.html) GetIntegrationsSpeechSttEngines (int? pageNumber = null, int? pageSize = null, string name = null)
+## GetIntegrationsSpeechSttEngines
 
+> [**SttEngineEntityListing**](SttEngineEntityListing) GetIntegrationsSpeechSttEngines (int? pageNumber = null, int? pageSize = null, string name = null)
 
 
 Get a list of STT engines enabled for org
@@ -3361,16 +3443,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on engine name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SttEngineEntityListing**](SttEngineEntityListing.html)
+[**SttEngineEntityListing**](SttEngineEntityListing)
 
-<a name="getintegrationsspeechttsengine"></a>
 
-## [**TtsEngineEntity**](TtsEngineEntity.html) GetIntegrationsSpeechTtsEngine (string engineId, bool? includeVoices = null)
+## GetIntegrationsSpeechTtsEngine
 
+> [**TtsEngineEntity**](TtsEngineEntity) GetIntegrationsSpeechTtsEngine (string engineId, bool? includeVoices = null)
 
 
 Get details about a TTS engine
@@ -3426,16 +3507,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **engineId** | **string**| The engine ID |  |
 | **includeVoices** | **bool?**| Include voices for the engine | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TtsEngineEntity**](TtsEngineEntity.html)
+[**TtsEngineEntity**](TtsEngineEntity)
 
-<a name="getintegrationsspeechttsenginevoice"></a>
 
-## [**TtsVoiceEntity**](TtsVoiceEntity.html) GetIntegrationsSpeechTtsEngineVoice (string engineId, string voiceId)
+## GetIntegrationsSpeechTtsEngineVoice
 
+> [**TtsVoiceEntity**](TtsVoiceEntity) GetIntegrationsSpeechTtsEngineVoice (string engineId, string voiceId)
 
 
 Get details about a specific voice for a TTS engine
@@ -3491,16 +3571,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **engineId** | **string**| The engine ID |  |
 | **voiceId** | **string**| The voice ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TtsVoiceEntity**](TtsVoiceEntity.html)
+[**TtsVoiceEntity**](TtsVoiceEntity)
 
-<a name="getintegrationsspeechttsenginevoices"></a>
 
-## [**TtsVoiceEntityListing**](TtsVoiceEntityListing.html) GetIntegrationsSpeechTtsEngineVoices (string engineId, int? pageNumber = null, int? pageSize = null)
+## GetIntegrationsSpeechTtsEngineVoices
 
+> [**TtsVoiceEntityListing**](TtsVoiceEntityListing) GetIntegrationsSpeechTtsEngineVoices (string engineId, int? pageNumber = null, int? pageSize = null)
 
 
 Get a list of voices for a TTS engine
@@ -3558,16 +3637,15 @@ namespace Example
 | **engineId** | **string**| The engine ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TtsVoiceEntityListing**](TtsVoiceEntityListing.html)
+[**TtsVoiceEntityListing**](TtsVoiceEntityListing)
 
-<a name="getintegrationsspeechttsengines"></a>
 
-## [**TtsEngineEntityListing**](TtsEngineEntityListing.html) GetIntegrationsSpeechTtsEngines (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
+## GetIntegrationsSpeechTtsEngines
 
+> [**TtsEngineEntityListing**](TtsEngineEntityListing) GetIntegrationsSpeechTtsEngines (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
 
 
 Get a list of TTS engines enabled for org
@@ -3629,16 +3707,15 @@ namespace Example
 | **includeVoices** | **bool?**| Include voices for the engine | [optional] [default to false] |
 | **name** | **string**| Filter on engine name | [optional]  |
 | **language** | **string**| Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TtsEngineEntityListing**](TtsEngineEntityListing.html)
+[**TtsEngineEntityListing**](TtsEngineEntityListing)
 
-<a name="getintegrationsspeechttssettings"></a>
 
-## [**TtsSettings**](TtsSettings.html) GetIntegrationsSpeechTtsSettings ()
+## GetIntegrationsSpeechTtsSettings
 
+> [**TtsSettings**](TtsSettings) GetIntegrationsSpeechTtsSettings ()
 
 
 Get TTS settings for an org
@@ -3688,15 +3765,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**TtsSettings**](TtsSettings.html)
+[**TtsSettings**](TtsSettings)
 
-<a name="getintegrationstype"></a>
 
-## [**IntegrationType**](IntegrationType.html) GetIntegrationsType (string typeId)
+## GetIntegrationsType
 
+> [**IntegrationType**](IntegrationType) GetIntegrationsType (string typeId)
 
 
 Get integration type.
@@ -3750,16 +3826,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **typeId** | **string**| Integration Type Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**IntegrationType**](IntegrationType.html)
+[**IntegrationType**](IntegrationType)
 
-<a name="getintegrationstypeconfigschema"></a>
 
-## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsTypeConfigschema (string typeId, string configType)
+## GetIntegrationsTypeConfigschema
 
+> [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsTypeConfigschema (string typeId, string configType)
 
 
 Get properties config schema for an integration type.
@@ -3815,16 +3890,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **typeId** | **string**| Integration Type Id |  |
 | **configType** | **string**| Config schema type | <br />**Values**: properties, advanced |
-{: class="table table-striped"}
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**JsonSchemaDocument**](JsonSchemaDocument)
 
-<a name="getintegrationstypes"></a>
 
-## [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## GetIntegrationsTypes
 
+> [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing) GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 
 List integration types
@@ -3885,19 +3959,18 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+[**IntegrationTypeEntityListing**](IntegrationTypeEntityListing)
 
-<a name="getintegrationsunifiedcommunicationsclientapp"></a>
 
-## [**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration.html) GetIntegrationsUnifiedcommunicationsClientapp (string ucIntegrationId)
+## GetIntegrationsUnifiedcommunicationsClientapp
 
+> [**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration) GetIntegrationsUnifiedcommunicationsClientapp (string ucIntegrationId)
 
 
 UC integration client application configuration.
@@ -3953,16 +4026,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ucIntegrationId** | **string**| 3rd Party Service Type |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration.html)
+[**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration)
 
-<a name="getintegrationsunifiedcommunicationsclientapps"></a>
 
-## [**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing.html) GetIntegrationsUnifiedcommunicationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## GetIntegrationsUnifiedcommunicationsClientapps
 
+> [**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing) GetIntegrationsUnifiedcommunicationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 
 List UC integration client application configurations.
@@ -4025,19 +4097,18 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing.html)
+[**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing)
 
-<a name="getintegrationsuserapps"></a>
 
-## [**UserAppEntityListing**](UserAppEntityListing.html) GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
+## GetIntegrationsUserapps
 
+> [**UserAppEntityListing**](UserAppEntityListing) GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
 
 
 List permitted user app integrations for the logged in user
@@ -4098,20 +4169,19 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **appHost** | **string**| The type of UserApp to filter by | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UserAppEntityListing**](UserAppEntityListing.html)
+[**UserAppEntityListing**](UserAppEntityListing)
 
-<a name="patchintegration"></a>
 
-## [**Integration**](Integration.html) PatchIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
+## PatchIntegration
 
+> [**Integration**](Integration) PatchIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
 
 
 Update an integration.
@@ -4175,20 +4245,19 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **body** | [**Integration**](Integration.html)| Integration Update | [optional]  |
-{: class="table table-striped"}
+| **body** | [**Integration**](Integration)| Integration Update | [optional]  |
 
 ### Return type
 
-[**Integration**](Integration.html)
+[**Integration**](Integration)
 
-<a name="patchintegrationsaction"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PatchIntegrationsAction (string actionId, UpdateActionInput body)
+## PatchIntegrationsAction
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PatchIntegrationsAction (string actionId, UpdateActionInput body)
 
 
 Patch an Action
@@ -4243,17 +4312,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**UpdateActionInput**](UpdateActionInput.html)| Input used to patch the Action. |  |
-{: class="table table-striped"}
+| **body** | [**UpdateActionInput**](UpdateActionInput)| Input used to patch the Action. |  |
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="patchintegrationsactiondraft"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body)
+## PatchIntegrationsActionDraft
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body)
 
 
 Update an existing Draft
@@ -4308,17 +4376,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**UpdateDraftInput**](UpdateDraftInput.html)| Input used to patch the Action Draft. |  |
-{: class="table table-striped"}
+| **body** | [**UpdateDraftInput**](UpdateDraftInput)| Input used to patch the Action Draft. |  |
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="postintegrations"></a>
 
-## [**Integration**](Integration.html) PostIntegrations (CreateIntegrationRequest body = null)
+## PostIntegrations
 
+> [**Integration**](Integration) PostIntegrations (CreateIntegrationRequest body = null)
 
 
 Create an integration.
@@ -4371,17 +4438,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateIntegrationRequest**](CreateIntegrationRequest.html)| Integration | [optional]  |
-{: class="table table-striped"}
+| **body** | [**CreateIntegrationRequest**](CreateIntegrationRequest)| Integration | [optional]  |
 
 ### Return type
 
-[**Integration**](Integration.html)
+[**Integration**](Integration)
 
-<a name="postintegrationsactiondraft"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActionDraft (string actionId)
+## PostIntegrationsActionDraft
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActionDraft (string actionId)
 
 
 Create a new Draft from existing Action
@@ -4435,16 +4501,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="postintegrationsactiondraftfunctionupload"></a>
 
-## [**FunctionUploadResponse**](FunctionUploadResponse.html) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
+## PostIntegrationsActionDraftFunctionUpload
 
+> [**FunctionUploadResponse**](FunctionUploadResponse) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
 
 
 Create upload presigned URL for draft function package file.
@@ -4501,17 +4566,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**FunctionUploadRequest**](FunctionUploadRequest.html)| Input used to request URL upload. |  |
-{: class="table table-striped"}
+| **body** | [**FunctionUploadRequest**](FunctionUploadRequest)| Input used to request URL upload. |  |
 
 ### Return type
 
-[**FunctionUploadResponse**](FunctionUploadResponse.html)
+[**FunctionUploadResponse**](FunctionUploadResponse)
 
-<a name="postintegrationsactiondraftpublish"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
+## PostIntegrationsActionDraftPublish
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
 
 
 Publish a Draft and make it the active Action configuration
@@ -4566,17 +4630,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**PublishDraftInput**](PublishDraftInput.html)| Input used to patch the Action. |  |
-{: class="table table-striped"}
+| **body** | [**PublishDraftInput**](PublishDraftInput)| Input used to patch the Action. |  |
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="postintegrationsactiondrafttest"></a>
 
-## [**TestExecutionResult**](TestExecutionResult.html) PostIntegrationsActionDraftTest (string actionId, Object body)
+## PostIntegrationsActionDraftTest
 
+> [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionDraftTest (string actionId, Object body)
 
 
 Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4631,17 +4694,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**Object**](Object.html)| Map of parameters used for variable substitution. |  |
-{: class="table table-striped"}
+| **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
 
 ### Return type
 
-[**TestExecutionResult**](TestExecutionResult.html)
+[**TestExecutionResult**](TestExecutionResult)
 
-<a name="postintegrationsactionexecute"></a>
 
-## **Object** PostIntegrationsActionExecute (string actionId, Object body)
+## PostIntegrationsActionExecute
 
+> **Object** PostIntegrationsActionExecute (string actionId, Object body)
 
 
 Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
@@ -4697,17 +4759,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**Object**](Object.html)| Map of parameters used for variable substitution. |  |
-{: class="table table-striped"}
+| **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
 
 ### Return type
 
 **Object**
 
-<a name="postintegrationsactiontest"></a>
 
-## [**TestExecutionResult**](TestExecutionResult.html) PostIntegrationsActionTest (string actionId, Object body)
+## PostIntegrationsActionTest
 
+> [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionTest (string actionId, Object body)
 
 
 Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4763,17 +4824,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**Object**](Object.html)| Map of parameters used for variable substitution. |  |
-{: class="table table-striped"}
+| **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
 
 ### Return type
 
-[**TestExecutionResult**](TestExecutionResult.html)
+[**TestExecutionResult**](TestExecutionResult)
 
-<a name="postintegrationsactions"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActions (PostActionInput body)
+## PostIntegrationsActions
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActions (PostActionInput body)
 
 
 Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
@@ -4826,17 +4886,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PostActionInput**](PostActionInput.html)| Input used to create Action. |  |
-{: class="table table-striped"}
+| **body** | [**PostActionInput**](PostActionInput)| Input used to create Action. |  |
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="postintegrationsactionsdrafts"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActionsDrafts (PostActionInput body)
+## PostIntegrationsActionsDrafts
 
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActionsDrafts (PostActionInput body)
 
 
 Create a new Draft
@@ -4889,17 +4948,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PostActionInput**](PostActionInput.html)| Input used to create Action Draft. |  |
-{: class="table table-striped"}
+| **body** | [**PostActionInput**](PostActionInput)| Input used to create Action Draft. |  |
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
-<a name="postintegrationscredentials"></a>
 
-## [**CredentialInfo**](CredentialInfo.html) PostIntegrationsCredentials (Credential body = null)
+## PostIntegrationsCredentials
 
+> [**CredentialInfo**](CredentialInfo) PostIntegrationsCredentials (Credential body = null)
 
 
 Create a set of credentials
@@ -4952,17 +5010,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Credential**](Credential.html)| Credential | [optional]  |
-{: class="table table-striped"}
+| **body** | [**Credential**](Credential)| Credential | [optional]  |
 
 ### Return type
 
-[**CredentialInfo**](CredentialInfo.html)
+[**CredentialInfo**](CredentialInfo)
 
-<a name="postintegrationsspeechnuancenuanceintegrationidbotjobs"></a>
 
-## [**AsyncJob**](AsyncJob.html) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
+## PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs
 
+> [**AsyncJob**](AsyncJob) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
 
 
 Get a Nuance bot in the specified Integration asynchronously
@@ -5020,18 +5077,17 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The Nuance bot ID |  |
-| **expand** | [**List<string>**](string.html)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
+| **expand** | [**List<string>**](string)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
 | **body** | **string**| targetChannel | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncJob**](AsyncJob.html)
+[**AsyncJob**](AsyncJob)
 
-<a name="postintegrationsspeechnuancenuanceintegrationidbotsjobs"></a>
 
-## [**AsyncJob**](AsyncJob.html) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
+## PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs
 
+> [**AsyncJob**](AsyncJob) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
 
 
 Get a list of Nuance bots in the specified Integration asynchronously
@@ -5091,16 +5147,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **onlyRegisteredBots** | **bool?**| Limit bots to the ones configured for Genesys Cloud usage | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncJob**](AsyncJob.html)
+[**AsyncJob**](AsyncJob)
 
-<a name="postintegrationsspeechnuancenuanceintegrationidbotslaunchvalidate"></a>
 
-## void PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate (string nuanceIntegrationId, BotExecutionConfiguration settings)
+## PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate
 
+> void PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate (string nuanceIntegrationId, BotExecutionConfiguration settings)
 
 
 Try out a single credential for a Nuance bot to know if the secret is correct
@@ -5154,17 +5209,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
-| **settings** | [**BotExecutionConfiguration**](BotExecutionConfiguration.html)|  |  |
-{: class="table table-striped"}
+| **settings** | [**BotExecutionConfiguration**](BotExecutionConfiguration)|  |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="putintegrationconfigcurrent"></a>
 
-## [**IntegrationConfiguration**](IntegrationConfiguration.html) PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
+## PutIntegrationConfigCurrent
 
+> [**IntegrationConfiguration**](IntegrationConfiguration) PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
 
 
 Update integration configuration.
@@ -5219,17 +5273,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
-| **body** | [**IntegrationConfiguration**](IntegrationConfiguration.html)| Integration Configuration | [optional]  |
-{: class="table table-striped"}
+| **body** | [**IntegrationConfiguration**](IntegrationConfiguration)| Integration Configuration | [optional]  |
 
 ### Return type
 
-[**IntegrationConfiguration**](IntegrationConfiguration.html)
+[**IntegrationConfiguration**](IntegrationConfiguration)
 
-<a name="putintegrationsactiondraftfunction"></a>
 
-## [**FunctionConfig**](FunctionConfig.html) PutIntegrationsActionDraftFunction (string actionId, Function body)
+## PutIntegrationsActionDraftFunction
 
+> [**FunctionConfig**](FunctionConfig) PutIntegrationsActionDraftFunction (string actionId, Function body)
 
 
 Update draft function settings.
@@ -5286,17 +5339,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**Function**](Function.html)| Input used to update function settings. |  |
-{: class="table table-striped"}
+| **body** | [**Function**](Function)| Input used to update function settings. |  |
 
 ### Return type
 
-[**FunctionConfig**](FunctionConfig.html)
+[**FunctionConfig**](FunctionConfig)
 
-<a name="putintegrationsbotconnectorintegrationidbots"></a>
 
-## void PutIntegrationsBotconnectorIntegrationIdBots (string integrationId, BotList botList)
+## PutIntegrationsBotconnectorIntegrationIdBots
 
+> void PutIntegrationsBotconnectorIntegrationIdBots (string integrationId, BotList botList)
 
 
 Set a list of botConnector bots plus versions for this integration
@@ -5350,17 +5402,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| The integration ID for this group of bots |  |
-| **botList** | [**BotList**](BotList.html)|  |  |
-{: class="table table-striped"}
+| **botList** | [**BotList**](BotList)|  |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="putintegrationscredential"></a>
 
-## [**CredentialInfo**](CredentialInfo.html) PutIntegrationsCredential (string credentialId, Credential body = null)
+## PutIntegrationsCredential
 
+> [**CredentialInfo**](CredentialInfo) PutIntegrationsCredential (string credentialId, Credential body = null)
 
 
 Update a set of credentials
@@ -5415,17 +5466,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **credentialId** | **string**| Credential ID |  |
-| **body** | [**Credential**](Credential.html)| Credential | [optional]  |
-{: class="table table-striped"}
+| **body** | [**Credential**](Credential)| Credential | [optional]  |
 
 ### Return type
 
-[**CredentialInfo**](CredentialInfo.html)
+[**CredentialInfo**](CredentialInfo)
 
-<a name="putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings"></a>
 
-## void PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
+## PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings
 
+> void PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
 
 
 Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
@@ -5479,17 +5529,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
-| **settings** | [**NuanceBotLaunchSettings**](NuanceBotLaunchSettings.html)|  |  |
-{: class="table table-striped"}
+| **settings** | [**NuanceBotLaunchSettings**](NuanceBotLaunchSettings)|  |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="putintegrationsspeechttssettings"></a>
 
-## [**TtsSettings**](TtsSettings.html) PutIntegrationsSpeechTtsSettings (TtsSettings body)
+## PutIntegrationsSpeechTtsSettings
 
+> [**TtsSettings**](TtsSettings) PutIntegrationsSpeechTtsSettings (TtsSettings body)
 
 
 Update TTS settings for an org
@@ -5542,17 +5591,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**TtsSettings**](TtsSettings.html)| Updated TtsSettings |  |
-{: class="table table-striped"}
+| **body** | [**TtsSettings**](TtsSettings)| Updated TtsSettings |  |
 
 ### Return type
 
-[**TtsSettings**](TtsSettings.html)
+[**TtsSettings**](TtsSettings)
 
-<a name="putintegrationsunifiedcommunicationthirdpartypresences"></a>
 
-## **string** PutIntegrationsUnifiedcommunicationThirdpartypresences (string ucIntegrationId, List<UCThirdPartyPresence> body)
+## PutIntegrationsUnifiedcommunicationThirdpartypresences
 
+> **string** PutIntegrationsUnifiedcommunicationThirdpartypresences (string ucIntegrationId, List<UCThirdPartyPresence> body)
 
 
 Bulk integration presence ingestion
@@ -5609,10 +5657,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ucIntegrationId** | **string**| UC Integration ID |  |
-| **body** | [**List<UCThirdPartyPresence>**](UCThirdPartyPresence.html)| List of User presences |  |
-{: class="table table-striped"}
+| **body** | [**List<UCThirdPartyPresence>**](UCThirdPartyPresence)| List of User presences |  |
 
 ### Return type
 
 **string**
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

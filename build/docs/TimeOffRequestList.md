@@ -1,6 +1,5 @@
----
-title: TimeOffRequestList
----
+# TimeOffRequestList
+
 ## ININ.PureCloudApi.Model.TimeOffRequestList
 
 ## Properties
@@ -9,8 +8,9 @@ title: TimeOffRequestList
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **TimeOffRequests** | [**List&lt;TimeOffRequestResponse&gt;**](TimeOffRequestResponse.html) |  | [optional] |
+| **TimeOffRequests** | [**List&lt;TimeOffRequestResponse&gt;**](TimeOffRequestResponse) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

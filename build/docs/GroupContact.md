@@ -1,6 +1,5 @@
----
-title: GroupContact
----
+# GroupContact
+
 ## ININ.PureCloudApi.Model.GroupContact
 
 ## Properties
@@ -12,6 +11,7 @@ title: GroupContact
 | **Display** | **string** | Formatted version of the address property | [optional] |
 | **Type** | **string** | Contact type of the address | |
 | **MediaType** | **string** | Media type of the address | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

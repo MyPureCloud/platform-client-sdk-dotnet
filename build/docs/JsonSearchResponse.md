@@ -1,6 +1,5 @@
----
-title: JsonSearchResponse
----
+# JsonSearchResponse
+
 ## ININ.PureCloudApi.Model.JsonSearchResponse
 
 ## Properties
@@ -14,6 +13,7 @@ title: JsonSearchResponse
 | **Types** | **List&lt;string&gt;** | Resource types the search was performed against | |
 | **Results** | **Object** | Search results | |
 | **Aggregations** | **Object** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: EdgeInterface
----
+# EdgeInterface
+
 ## ININ.PureCloudApi.Model.EdgeInterface
 
 ## Properties
@@ -12,9 +11,10 @@ title: EdgeInterface
 | **Name** | **string** |  | [optional] |
 | **MacAddress** | **string** |  | [optional] |
 | **IfName** | **string** |  | [optional] |
-| **Endpoints** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef.html) |  | [optional] |
+| **Endpoints** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef) |  | [optional] |
 | **LineTypes** | **List&lt;string&gt;** |  | [optional] |
 | **AddressFamilyId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

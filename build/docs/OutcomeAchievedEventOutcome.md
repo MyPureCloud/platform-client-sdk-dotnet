@@ -1,6 +1,5 @@
----
-title: OutcomeAchievedEventOutcome
----
+# OutcomeAchievedEventOutcome
+
 ## ININ.PureCloudApi.Model.OutcomeAchievedEventOutcome
 
 ## Properties
@@ -11,6 +10,7 @@ title: OutcomeAchievedEventOutcome
 | **SelfUri** | **string** |  | [optional] |
 | **DisplayName** | **string** | The display name of the outcome. | |
 | **Version** | **int?** | The version of the outcome. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DocumentBodyVideo
----
+# DocumentBodyVideo
+
 ## ININ.PureCloudApi.Model.DocumentBodyVideo
 
 ## Properties
@@ -8,7 +7,8 @@ title: DocumentBodyVideo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Url** | **string** | The URL for the video. | |
-| **Properties** | [**DocumentBodyVideoProperties**](DocumentBodyVideoProperties.html) | The properties for the video. | [optional] |
-{: class="table table-striped"}
+| **Properties** | [**DocumentBodyVideoProperties**](DocumentBodyVideoProperties) | The properties for the video. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

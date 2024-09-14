@@ -1,13 +1,12 @@
----
-title: UnifiedCommunicationsIntegrationListing
----
+# UnifiedCommunicationsIntegrationListing
+
 ## ININ.PureCloudApi.Model.UnifiedCommunicationsIntegrationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;UnifiedCommunicationsIntegration&gt;**](UnifiedCommunicationsIntegration.html) |  | [optional] |
+| **Entities** | [**List&lt;UnifiedCommunicationsIntegration&gt;**](UnifiedCommunicationsIntegration) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: UnifiedCommunicationsIntegrationListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification
----
+# WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification
 
 ## Properties
@@ -8,9 +7,10 @@ title: WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastPro
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** |  | [optional] |
-| **Result** | [**WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast**](WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast.html) |  | [optional] |
+| **Result** | [**WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast**](WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast) |  | [optional] |
 | **OperationId** | **string** |  | [optional] |
 | **Progress** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

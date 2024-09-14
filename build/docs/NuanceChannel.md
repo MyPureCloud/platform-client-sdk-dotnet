@@ -1,6 +1,5 @@
----
-title: NuanceChannel
----
+# NuanceChannel
+
 ## ININ.PureCloudApi.Model.NuanceChannel
 
 ## Properties
@@ -11,6 +10,7 @@ title: NuanceChannel
 | **Name** | **string** | The channel name | |
 | **Modes** | **List&lt;string&gt;** | Supported Channel Modes | [optional] |
 | **Color** | **string** | The Channel Color | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

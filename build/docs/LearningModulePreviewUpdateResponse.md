@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateResponse
----
+# LearningModulePreviewUpdateResponse
+
 ## ININ.PureCloudApi.Model.LearningModulePreviewUpdateResponse
 
 ## Properties
@@ -8,7 +7,8 @@ title: LearningModulePreviewUpdateResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The Learning Module id | [optional] |
-| **Assignment** | [**LearningModulePreviewUpdateResponseAssignment**](LearningModulePreviewUpdateResponseAssignment.html) | The Assignment Preview | [optional] |
-{: class="table table-striped"}
+| **Assignment** | [**LearningModulePreviewUpdateResponseAssignment**](LearningModulePreviewUpdateResponseAssignment) | The Assignment Preview | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

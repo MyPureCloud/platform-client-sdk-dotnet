@@ -1,6 +1,5 @@
----
-title: ContactListingRequest
----
+# ContactListingRequest
+
 ## ININ.PureCloudApi.Model.ContactListingRequest
 
 ## Properties
@@ -8,10 +7,11 @@ title: ContactListingRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ContactListFilterId** | **string** | Contact List Filter ID. | [optional] |
-| **Criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria.html) | Criteria to filter the contacts by. | [optional] |
+| **Criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria) | Criteria to filter the contacts by. | [optional] |
 | **PageNumber** | **int?** | Page number. | |
 | **PageSize** | **int?** | Page size. The max that will be returned is 100. | |
-| **ContactSorts** | [**List&lt;ContactSort&gt;**](ContactSort.html) | The order in which to sort contacts. | [optional] |
-{: class="table table-striped"}
+| **ContactSorts** | [**List&lt;ContactSort&gt;**](ContactSort) | The order in which to sort contacts. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

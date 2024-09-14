@@ -1,6 +1,5 @@
----
-title: PunctualityEvent
----
+# PunctualityEvent
+
 ## ININ.PureCloudApi.Model.PunctualityEvent
 
 ## Properties
@@ -18,6 +17,7 @@ title: PunctualityEvent
 | **Points** | **int?** | The points earned for this activity | [optional] |
 | **Delta** | **double?** | Difference between this activity and the last activity in seconds | [optional] |
 | **Bullseye** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

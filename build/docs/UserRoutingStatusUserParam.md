@@ -1,6 +1,5 @@
----
-title: UserRoutingStatusUserParam
----
+# UserRoutingStatusUserParam
+
 ## ININ.PureCloudApi.Model.UserRoutingStatusUserParam
 
 ## Properties
@@ -10,6 +9,7 @@ title: UserRoutingStatusUserParam
 | **Key** | **string** |  | [optional] |
 | **Value** | **string** |  | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemsAttributeChangeInteger
----
+# WorkitemsAttributeChangeInteger
+
 ## ININ.PureCloudApi.Model.WorkitemsAttributeChangeInteger
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemsAttributeChangeInteger
 |------------ | ------------- | ------------- | -------------|
 | **NewValue** | **int?** | New property value | [optional] |
 | **OldValue** | **int?** | Old property value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

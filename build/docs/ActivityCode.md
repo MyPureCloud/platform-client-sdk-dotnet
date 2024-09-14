@@ -1,6 +1,5 @@
----
-title: ActivityCode
----
+# ActivityCode
+
 ## ININ.PureCloudApi.Model.ActivityCode
 
 ## Properties
@@ -17,7 +16,8 @@ title: ActivityCode
 | **CountsAsPaidTime** | **bool?** | Whether an agent is paid while performing this activity | [optional] |
 | **CountsAsWorkTime** | **bool?** | Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints | [optional] |
 | **AgentTimeOffSelectable** | **bool?** | Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off. | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the associated management unit&#39;s list of activity codes | |
-{: class="table table-striped"}
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the associated management unit&#39;s list of activity codes | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

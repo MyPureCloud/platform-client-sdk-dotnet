@@ -1,6 +1,5 @@
----
-title: FacebookScopedId
----
+# FacebookScopedId
+
 ## ININ.PureCloudApi.Model.FacebookScopedId
 
 ## Properties
@@ -8,6 +7,7 @@ title: FacebookScopedId
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ScopedId** | **string** | The unique page/app-specific scopedId for the user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

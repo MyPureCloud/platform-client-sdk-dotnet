@@ -1,6 +1,5 @@
----
-title: CustomProvider
----
+# CustomProvider
+
 ## ININ.PureCloudApi.Model.CustomProvider
 
 ## Properties
@@ -23,6 +22,7 @@ title: CustomProvider
 | **SsoBinding** | **string** |  | [optional] |
 | **SignAuthnRequests** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

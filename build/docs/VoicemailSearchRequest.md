@@ -1,6 +1,5 @@
----
-title: VoicemailSearchRequest
----
+# VoicemailSearchRequest
+
 ## ININ.PureCloudApi.Model.VoicemailSearchRequest
 
 ## Properties
@@ -11,9 +10,10 @@ title: VoicemailSearchRequest
 | **SortBy** | **string** | The field in the resource that you want to sort the results by | [optional] |
 | **PageSize** | **int?** | The number of results per page | [optional] |
 | **PageNumber** | **int?** | The page of resources you want to retrieve | [optional] |
-| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort.html) | Multi-value sort order, list of multiple sort values | [optional] |
+| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
 | **Expand** | **List&lt;string&gt;** | Provides more details about a specified resource | [optional] |
-| **Query** | [**List&lt;VoicemailSearchCriteria&gt;**](VoicemailSearchCriteria.html) |  | [optional] |
-{: class="table table-striped"}
+| **Query** | [**List&lt;VoicemailSearchCriteria&gt;**](VoicemailSearchCriteria) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

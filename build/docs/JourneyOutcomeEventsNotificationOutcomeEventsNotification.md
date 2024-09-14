@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeEventsNotification
----
+# JourneyOutcomeEventsNotificationOutcomeEventsNotification
+
 ## ININ.PureCloudApi.Model.JourneyOutcomeEventsNotificationOutcomeEventsNotification
 
 ## Properties
@@ -9,14 +8,15 @@ title: JourneyOutcomeEventsNotificationOutcomeEventsNotification
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **CorrelationId** | **string** |  | [optional] |
-| **ExternalContact** | [**JourneyOutcomeEventsNotificationExternalContact**](JourneyOutcomeEventsNotificationExternalContact.html) |  | [optional] |
+| **ExternalContact** | [**JourneyOutcomeEventsNotificationExternalContact**](JourneyOutcomeEventsNotificationExternalContact) |  | [optional] |
 | **CreatedDate** | **DateTime?** |  | [optional] |
 | **CustomerId** | **string** |  | [optional] |
 | **CustomerIdType** | **string** |  | [optional] |
-| **Session** | [**JourneyOutcomeEventsNotificationSession**](JourneyOutcomeEventsNotificationSession.html) |  | [optional] |
+| **Session** | [**JourneyOutcomeEventsNotificationSession**](JourneyOutcomeEventsNotificationSession) |  | [optional] |
 | **EventType** | **string** |  | [optional] |
-| **OutcomeAchievedEvent** | [**JourneyOutcomeEventsNotificationOutcomeAchievedMessage**](JourneyOutcomeEventsNotificationOutcomeAchievedMessage.html) |  | [optional] |
-| **OutcomeAttributionEventMessage** | [**JourneyOutcomeEventsNotificationOutcomeAttributionMessage**](JourneyOutcomeEventsNotificationOutcomeAttributionMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **OutcomeAchievedEvent** | [**JourneyOutcomeEventsNotificationOutcomeAchievedMessage**](JourneyOutcomeEventsNotificationOutcomeAchievedMessage) |  | [optional] |
+| **OutcomeAttributionEventMessage** | [**JourneyOutcomeEventsNotificationOutcomeAttributionMessage**](JourneyOutcomeEventsNotificationOutcomeAttributionMessage) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

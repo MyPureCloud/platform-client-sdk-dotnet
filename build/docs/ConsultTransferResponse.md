@@ -1,6 +1,5 @@
----
-title: ConsultTransferResponse
----
+# ConsultTransferResponse
+
 ## ININ.PureCloudApi.Model.ConsultTransferResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConsultTransferResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DestinationParticipantId** | **string** | Participant ID to whom the call is being transferred. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

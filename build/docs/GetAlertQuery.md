@@ -1,6 +1,5 @@
----
-title: GetAlertQuery
----
+# GetAlertQuery
+
 ## ININ.PureCloudApi.Model.GetAlertQuery
 
 ## Properties
@@ -15,6 +14,7 @@ title: GetAlertQuery
 | **PageSize** | **int?** | The number of entities to return of the queried response.  The max is 25 | [optional] |
 | **SortBy** | **string** | The field to sort responses by.  The accepted choices are Name and DateStart | [optional] |
 | **SortOrder** | **string** | The order in which response will be sorted.  The accepted choices are Asc and Desc | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

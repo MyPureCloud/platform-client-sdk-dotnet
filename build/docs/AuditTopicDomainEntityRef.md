@@ -1,6 +1,5 @@
----
-title: AuditTopicDomainEntityRef
----
+# AuditTopicDomainEntityRef
+
 ## ININ.PureCloudApi.Model.AuditTopicDomainEntityRef
 
 ## Properties
@@ -10,6 +9,7 @@ title: AuditTopicDomainEntityRef
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

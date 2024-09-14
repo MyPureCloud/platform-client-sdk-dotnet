@@ -1,6 +1,5 @@
----
-title: CredentialType
----
+# CredentialType
+
 ## ININ.PureCloudApi.Model.CredentialType
 
 ## Properties
@@ -12,6 +11,7 @@ title: CredentialType
 | **Properties** | **Object** | Properties describing credentials of this type. | [optional] |
 | **DisplayOrder** | **List&lt;string&gt;** | Order in which properties should be displayed in the UI. | [optional] |
 | **Required** | **List&lt;string&gt;** | Properties that are required fields. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

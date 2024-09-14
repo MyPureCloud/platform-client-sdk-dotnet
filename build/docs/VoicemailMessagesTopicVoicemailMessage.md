@@ -1,6 +1,5 @@
----
-title: VoicemailMessagesTopicVoicemailMessage
----
+# VoicemailMessagesTopicVoicemailMessage
+
 ## ININ.PureCloudApi.Model.VoicemailMessagesTopicVoicemailMessage
 
 ## Properties
@@ -20,9 +19,10 @@ title: VoicemailMessagesTopicVoicemailMessage
 | **Note** | **string** |  | [optional] |
 | **Deleted** | **bool?** |  | [optional] |
 | **ModifiedByUserId** | **string** |  | [optional] |
-| **CopiedTo** | [**List&lt;VoicemailMessagesTopicVoicemailCopyRecord&gt;**](VoicemailMessagesTopicVoicemailCopyRecord.html) |  | [optional] |
-| **CopiedFrom** | [**VoicemailMessagesTopicVoicemailCopyRecord**](VoicemailMessagesTopicVoicemailCopyRecord.html) |  | [optional] |
+| **CopiedTo** | [**List&lt;VoicemailMessagesTopicVoicemailCopyRecord&gt;**](VoicemailMessagesTopicVoicemailCopyRecord) |  | [optional] |
+| **CopiedFrom** | [**VoicemailMessagesTopicVoicemailCopyRecord**](VoicemailMessagesTopicVoicemailCopyRecord) |  | [optional] |
 | **ModifiedDateString** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

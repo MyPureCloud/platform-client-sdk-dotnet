@@ -1,6 +1,5 @@
----
-title: FlowHealthErrorInfo
----
+# FlowHealthErrorInfo
+
 ## ININ.PureCloudApi.Model.FlowHealthErrorInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: FlowHealthErrorInfo
 | **Code** | **string** |  | [optional] |
 | **MessageWithParams** | **string** | Error message with params included. | [optional] |
 | **MessageParams** | **Dictionary&lt;string, Object&gt;** | Map of variables and params for the error message. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

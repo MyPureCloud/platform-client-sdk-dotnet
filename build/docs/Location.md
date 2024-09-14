@@ -1,6 +1,5 @@
----
-title: Location
----
+# Location
+
 ## ININ.PureCloudApi.Model.Location
 
 ## Properties
@@ -11,7 +10,8 @@ title: Location
 | **FloorplanId** | **string** | Unique identifier for the location floorplan image | [optional] |
 | **Coordinates** | **Dictionary&lt;string, double?&gt;** | Users coordinates on the floorplan. Only used when floorplanImage is set | [optional] |
 | **Notes** | **string** | Optional description on the users location | [optional] |
-| **LocationDefinition** | [**LocationDefinition**](LocationDefinition.html) |  | [optional] |
-{: class="table table-striped"}
+| **LocationDefinition** | [**LocationDefinition**](LocationDefinition) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

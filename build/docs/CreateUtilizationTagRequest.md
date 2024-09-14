@@ -1,6 +1,5 @@
----
-title: CreateUtilizationTagRequest
----
+# CreateUtilizationTagRequest
+
 ## ININ.PureCloudApi.Model.CreateUtilizationTagRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CreateUtilizationTagRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The utilization tag name. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

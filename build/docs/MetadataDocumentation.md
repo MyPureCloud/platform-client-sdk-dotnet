@@ -1,6 +1,5 @@
----
-title: MetadataDocumentation
----
+# MetadataDocumentation
+
 ## ININ.PureCloudApi.Model.MetadataDocumentation
 
 ## Properties
@@ -9,6 +8,7 @@ title: MetadataDocumentation
 |------------ | ------------- | ------------- | -------------|
 | **Description** | **string** | description of the documentation | [optional] |
 | **Location** | **string** | location where the documentation can be accessed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

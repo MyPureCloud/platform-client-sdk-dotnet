@@ -1,6 +1,5 @@
----
-title: UserConversationSummary
----
+# UserConversationSummary
+
 ## ININ.PureCloudApi.Model.UserConversationSummary
 
 ## Properties
@@ -8,13 +7,14 @@ title: UserConversationSummary
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UserId** | **string** |  | [optional] |
-| **Call** | [**MediaSummary**](MediaSummary.html) |  | [optional] |
-| **Callback** | [**MediaSummary**](MediaSummary.html) |  | [optional] |
-| **Email** | [**MediaSummary**](MediaSummary.html) |  | [optional] |
-| **Message** | [**MediaSummary**](MediaSummary.html) |  | [optional] |
-| **Chat** | [**MediaSummary**](MediaSummary.html) |  | [optional] |
-| **SocialExpression** | [**MediaSummary**](MediaSummary.html) |  | [optional] |
-| **Video** | [**MediaSummary**](MediaSummary.html) |  | [optional] |
-{: class="table table-striped"}
+| **Call** | [**MediaSummary**](MediaSummary) |  | [optional] |
+| **Callback** | [**MediaSummary**](MediaSummary) |  | [optional] |
+| **Email** | [**MediaSummary**](MediaSummary) |  | [optional] |
+| **Message** | [**MediaSummary**](MediaSummary) |  | [optional] |
+| **Chat** | [**MediaSummary**](MediaSummary) |  | [optional] |
+| **SocialExpression** | [**MediaSummary**](MediaSummary) |  | [optional] |
+| **Video** | [**MediaSummary**](MediaSummary) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

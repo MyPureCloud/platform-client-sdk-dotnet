@@ -1,6 +1,5 @@
----
-title: UserTrendData
----
+# UserTrendData
+
 ## ININ.PureCloudApi.Model.UserTrendData
 
 ## Properties
@@ -13,6 +12,7 @@ title: UserTrendData
 | **AverageValue** | **double?** | Average metric value | [optional] |
 | **RankTotalPoints** | **int?** | Rank, ordered by total points | [optional] |
 | **RankPercentagePoints** | **int?** | Rank, ordered by percentage of points | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

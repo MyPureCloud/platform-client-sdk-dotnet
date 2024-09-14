@@ -1,6 +1,5 @@
----
-title: ClonedUser
----
+# ClonedUser
+
 ## ININ.PureCloudApi.Model.ClonedUser
 
 ## Properties
@@ -9,8 +8,9 @@ title: ClonedUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Trustor** | [**DomainEntityRef**](DomainEntityRef.html) | The ID of the trustor organization this clone exists in. | [optional] |
+| **Trustor** | [**DomainEntityRef**](DomainEntityRef) | The ID of the trustor organization this clone exists in. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: NuanceApplication
----
+# NuanceApplication
+
 ## ININ.PureCloudApi.Model.NuanceApplication
 
 ## Properties
@@ -10,6 +9,7 @@ title: NuanceApplication
 | **Id** | **string** | The application ID | |
 | **Tag** | **string** | The application Tag | |
 | **Name** | **string** | The application name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

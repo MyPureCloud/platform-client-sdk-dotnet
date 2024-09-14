@@ -1,13 +1,12 @@
----
-title: OperationalEventNotificationTopicOperationalEventNotification
----
+# OperationalEventNotificationTopicOperationalEventNotification
+
 ## ININ.PureCloudApi.Model.OperationalEventNotificationTopicOperationalEventNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EventEntity** | [**OperationalEventNotificationTopicEventEntity**](OperationalEventNotificationTopicEventEntity.html) |  | [optional] |
+| **EventEntity** | [**OperationalEventNotificationTopicEventEntity**](OperationalEventNotificationTopicEventEntity) |  | [optional] |
 | **EntityId** | **string** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |
 | **PreviousValue** | **string** |  | [optional] |
@@ -18,6 +17,7 @@ title: OperationalEventNotificationTopicOperationalEventNotification
 | **EntityType** | **string** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **Timestamp** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

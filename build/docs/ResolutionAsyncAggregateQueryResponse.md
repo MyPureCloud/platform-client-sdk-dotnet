@@ -1,14 +1,14 @@
----
-title: ResolutionAsyncAggregateQueryResponse
----
+# ResolutionAsyncAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.ResolutionAsyncAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;ResolutionAggregateDataContainer&gt;**](ResolutionAggregateDataContainer.html) |  | [optional] |
+| **Results** | [**List&lt;ResolutionAggregateDataContainer&gt;**](ResolutionAggregateDataContainer) |  | [optional] |
 | **Cursor** | **string** | Cursor token to retrieve next page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

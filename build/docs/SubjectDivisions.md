@@ -1,6 +1,5 @@
----
-title: SubjectDivisions
----
+# SubjectDivisions
+
 ## ININ.PureCloudApi.Model.SubjectDivisions
 
 ## Properties
@@ -9,6 +8,7 @@ title: SubjectDivisions
 |------------ | ------------- | ------------- | -------------|
 | **SubjectIds** | **List&lt;string&gt;** | A collection of subject IDs to associate with the given divisions | |
 | **DivisionIds** | **List&lt;string&gt;** | A collection of division IDs to associate with the given subjects | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkPlanConstraintMessage
----
+# WorkPlanConstraintMessage
+
 ## ININ.PureCloudApi.Model.WorkPlanConstraintMessage
 
 ## Properties
@@ -8,7 +7,8 @@ title: WorkPlanConstraintMessage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Type of the work plan constraint in this message | [optional] |
-| **Arguments** | [**List&lt;WorkPlanValidationMessageArgument&gt;**](WorkPlanValidationMessageArgument.html) | Arguments of the message that provide information about the constraint that is being conflicted with, such as the value of the constraint | [optional] |
-{: class="table table-striped"}
+| **Arguments** | [**List&lt;WorkPlanValidationMessageArgument&gt;**](WorkPlanValidationMessageArgument) | Arguments of the message that provide information about the constraint that is being conflicted with, such as the value of the constraint | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

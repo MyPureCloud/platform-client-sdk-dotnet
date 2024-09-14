@@ -1,6 +1,5 @@
----
-title: IntegrationType
----
+# IntegrationType
+
 ## ININ.PureCloudApi.Model.IntegrationType
 
 ## Properties
@@ -12,7 +11,7 @@ title: IntegrationType
 | **Description** | **string** | Description of the integration type. | [optional] |
 | **Provider** | **string** | PureCloud provider of the integration type. | [optional] |
 | **Category** | **string** | Category describing the integration type. | [optional] |
-| **Images** | [**List&lt;UserImage&gt;**](UserImage.html) | Collection of logos. | [optional] |
+| **Images** | [**List&lt;UserImage&gt;**](UserImage) | Collection of logos. | [optional] |
 | **ConfigPropertiesSchemaUri** | **string** | URI of the schema describing the key-value properties needed to configure an integration of this type. | [optional] |
 | **ConfigAdvancedSchemaUri** | **string** | URI of the schema describing the advanced JSON document needed to configure an integration of this type. | [optional] |
 | **HelpUri** | **string** | URI of a page with more information about the integration type | [optional] |
@@ -24,13 +23,14 @@ title: IntegrationType
 | **PrivacyPolicyUri** | **string** | URI of a privacy policy for users of the integration type | [optional] |
 | **SupportContactUri** | **string** | URI for vendor support | [optional] |
 | **SalesContactUri** | **string** | URI for vendor sales information | [optional] |
-| **HelpLinks** | [**List&lt;HelpLink&gt;**](HelpLink.html) | List of links to additional help resources | [optional] |
-| **Credentials** | [**Dictionary&lt;string, CredentialSpecification&gt;**](CredentialSpecification.html) | Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration. | [optional] |
+| **HelpLinks** | [**List&lt;HelpLink&gt;**](HelpLink) | List of links to additional help resources | [optional] |
+| **Credentials** | [**Dictionary&lt;string, CredentialSpecification&gt;**](CredentialSpecification) | Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration. | [optional] |
 | **NonInstallable** | **bool?** | Indicates if the integration type is installable or not. | [optional] |
 | **MaxInstances** | **int?** | The maximum number of integration instances allowable for this integration type | [optional] |
 | **UserPermissions** | **List&lt;string&gt;** | List of permissions required to permit user access to the integration type. | [optional] |
 | **VendorOAuthClientIds** | **List&lt;string&gt;** | List of OAuth Client IDs that must be authorized when the integration is created. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

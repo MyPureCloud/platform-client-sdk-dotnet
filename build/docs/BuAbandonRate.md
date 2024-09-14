@@ -1,6 +1,5 @@
----
-title: BuAbandonRate
----
+# BuAbandonRate
+
 ## ININ.PureCloudApi.Model.BuAbandonRate
 
 ## Properties
@@ -9,6 +8,7 @@ title: BuAbandonRate
 |------------ | ------------- | ------------- | -------------|
 | **Include** | **bool?** | Whether to include abandon rate in the associated configuration | |
 | **Percent** | **int?** | Abandon rate percent goal. Required if include &#x3D;&#x3D; true | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

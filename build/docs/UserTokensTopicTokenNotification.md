@@ -1,19 +1,19 @@
----
-title: UserTokensTopicTokenNotification
----
+# UserTokensTopicTokenNotification
+
 ## ININ.PureCloudApi.Model.UserTokensTopicTokenNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**UserTokensTopicUriReference**](UserTokensTopicUriReference.html) |  | [optional] |
+| **User** | [**UserTokensTopicUriReference**](UserTokensTopicUriReference) |  | [optional] |
 | **IpAddress** | **string** |  | [optional] |
 | **DateCreated** | **string** |  | [optional] |
 | **TokenExpirationDate** | **string** |  | [optional] |
 | **SessionId** | **string** |  | [optional] |
 | **ClientId** | **string** |  | [optional] |
 | **TokenHash** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

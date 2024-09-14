@@ -1,6 +1,5 @@
----
-title: ArchitectFlowOutcomeNotificationClient
----
+# ArchitectFlowOutcomeNotificationClient
+
 ## ININ.PureCloudApi.Model.ArchitectFlowOutcomeNotificationClient
 
 ## Properties
@@ -9,6 +8,7 @@ title: ArchitectFlowOutcomeNotificationClient
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the client. | [optional] |
 | **Name** | **string** | The name of the client, if available. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

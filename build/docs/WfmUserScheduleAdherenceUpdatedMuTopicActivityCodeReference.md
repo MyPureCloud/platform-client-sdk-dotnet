@@ -1,6 +1,5 @@
----
-title: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
----
+# WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
+
 ## ININ.PureCloudApi.Model.WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
 
 ## Properties
@@ -8,7 +7,8 @@ title: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **SecondaryPresences** | [**List&lt;WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference&gt;**](WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **SecondaryPresences** | [**List&lt;WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference&gt;**](WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

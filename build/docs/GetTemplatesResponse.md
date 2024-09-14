@@ -1,6 +1,5 @@
----
-title: GetTemplatesResponse
----
+# GetTemplatesResponse
+
 ## ININ.PureCloudApi.Model.GetTemplatesResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: GetTemplatesResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;ObjectiveTemplate&gt;**](ObjectiveTemplate.html) |  | [optional] |
+| **Entities** | [**List&lt;ObjectiveTemplate&gt;**](ObjectiveTemplate) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

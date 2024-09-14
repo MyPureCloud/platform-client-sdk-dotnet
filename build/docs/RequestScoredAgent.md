@@ -1,6 +1,5 @@
----
-title: RequestScoredAgent
----
+# RequestScoredAgent
+
 ## ININ.PureCloudApi.Model.RequestScoredAgent
 
 ## Properties
@@ -9,6 +8,7 @@ title: RequestScoredAgent
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Agent&#39;s user ID | [optional] |
 | **Score** | **int?** | Agent&#39;s score for the current conversation, from 0 - 100, higher being better | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

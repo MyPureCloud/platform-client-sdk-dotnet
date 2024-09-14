@@ -1,6 +1,5 @@
----
-title: ConversationRecipientAdditionalIdentifier
----
+# ConversationRecipientAdditionalIdentifier
+
 ## ININ.PureCloudApi.Model.ConversationRecipientAdditionalIdentifier
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationRecipientAdditionalIdentifier
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Type of the Identifier | |
 | **Value** | **string** | The Identifier value. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConnectRate
----
+# ConnectRate
+
 ## ININ.PureCloudApi.Model.ConnectRate
 
 ## Properties
@@ -10,6 +9,7 @@ title: ConnectRate
 | **Attempts** | **long?** | Number of call attempts made | [optional] |
 | **Connects** | **long?** | Number of calls with a live voice detected | [optional] |
 | **ConnectRatio** | **double?** | Ratio of connects to attempts | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DialerCampaignScheduleConfigChangeRecurrencePattern
----
+# DialerCampaignScheduleConfigChangeRecurrencePattern
+
 ## ININ.PureCloudApi.Model.DialerCampaignScheduleConfigChangeRecurrencePattern
 
 ## Properties
@@ -11,6 +10,7 @@ title: DialerCampaignScheduleConfigChangeRecurrencePattern
 | **Interval** | **int?** | the amount of time in between occurrences | [optional] |
 | **DaysOfWeek** | **List&lt;string&gt;** | the day(s) of the week the occurrence happens | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

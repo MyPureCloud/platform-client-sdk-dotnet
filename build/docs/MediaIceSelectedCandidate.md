@@ -1,6 +1,5 @@
----
-title: MediaIceSelectedCandidate
----
+# MediaIceSelectedCandidate
+
 ## ININ.PureCloudApi.Model.MediaIceSelectedCandidate
 
 ## Properties
@@ -9,6 +8,7 @@ title: MediaIceSelectedCandidate
 |------------ | ------------- | ------------- | -------------|
 | **Address** | **string** | IP address and port of the candidate | [optional] |
 | **Type** | **string** | Type of the selected candidate | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PhoneBaseSettings
----
+# PhoneBaseSettings
+
 ## ININ.PureCloudApi.Model.PhoneBaseSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: PhoneBaseSettings
 | **Id** | **string** | The globally unique identifier for this phone base settings | |
 | **Name** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

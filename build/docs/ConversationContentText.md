@@ -1,6 +1,5 @@
----
-title: ConversationContentText
----
+# ConversationContentText
+
 ## ININ.PureCloudApi.Model.ConversationContentText
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationContentText
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Type of text content (Deprecated). | [optional] |
 | **Body** | **string** | Text to be shown for this content element. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

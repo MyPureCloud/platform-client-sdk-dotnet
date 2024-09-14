@@ -1,6 +1,5 @@
----
-title: DomainEdgeSoftwareVersionDto
----
+# DomainEdgeSoftwareVersionDto
+
 ## ININ.PureCloudApi.Model.DomainEdgeSoftwareVersionDto
 
 ## Properties
@@ -12,9 +11,10 @@ title: DomainEdgeSoftwareVersionDto
 | **EdgeVersion** | **string** |  | [optional] |
 | **PublishDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EdgeUri** | **string** |  | [optional] |
-| **LatestRelease** | **bool?** |  | [optional] |
 | **Current** | **bool?** |  | [optional] |
+| **LatestRelease** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

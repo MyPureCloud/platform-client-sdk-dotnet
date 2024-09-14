@@ -1,6 +1,5 @@
----
-title: ProgramJobRequest
----
+# ProgramJobRequest
+
 ## ININ.PureCloudApi.Model.ProgramJobRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ProgramJobRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ProgramIds** | **List&lt;string&gt;** | The ids of the programs used for this job | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

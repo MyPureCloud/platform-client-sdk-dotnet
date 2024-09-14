@@ -1,6 +1,5 @@
----
-title: CurrentUserScheduleRequestBody
----
+# CurrentUserScheduleRequestBody
+
 ## ININ.PureCloudApi.Model.CurrentUserScheduleRequestBody
 
 ## Properties
@@ -10,6 +9,7 @@ title: CurrentUserScheduleRequestBody
 | **StartDate** | **DateTime?** | Beginning of the range of schedules to fetch, in ISO-8601 format | |
 | **EndDate** | **DateTime?** | End of the range of schedules to fetch, in ISO-8601 format | |
 | **LoadFullWeeks** | **bool?** | Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DocumentBodyTableCellBlockProperties
----
+# DocumentBodyTableCellBlockProperties
+
 ## ININ.PureCloudApi.Model.DocumentBodyTableCellBlockProperties
 
 ## Properties
@@ -19,6 +18,7 @@ title: DocumentBodyTableCellBlockProperties
 | **Scope** | **string** | The scope for the table cell. | [optional] |
 | **ColSpan** | **int?** | The colSpan for the table cell. | [optional] |
 | **RowSpan** | **int?** | The rowSpan for the table cell. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

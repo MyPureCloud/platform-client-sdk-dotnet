@@ -1,6 +1,5 @@
----
-title: WorkPlanPatternRequest
----
+# WorkPlanPatternRequest
+
 ## ININ.PureCloudApi.Model.WorkPlanPatternRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: WorkPlanPatternRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **WorkPlanIds** | **List&lt;string&gt;** | List of work plan IDs in order of rotation on a weekly basis. Values in the list cannot be null or empty | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,13 @@
----
-title: BuForecastGenerationResult
----
+# BuForecastGenerationResult
+
 ## ININ.PureCloudApi.Model.BuForecastGenerationResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **PlanningGroupResults** | [**List&lt;BuForecastGenerationPlanningGroupResult&gt;**](BuForecastGenerationPlanningGroupResult.html) | Generation results, broken down by planning group | [optional] |
-{: class="table table-striped"}
+| **PlanningGroupResults** | [**List&lt;BuForecastGenerationPlanningGroupResult&gt;**](BuForecastGenerationPlanningGroupResult) | Generation results, broken down by planning group | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

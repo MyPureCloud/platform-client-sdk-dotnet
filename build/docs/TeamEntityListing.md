@@ -1,16 +1,16 @@
----
-title: TeamEntityListing
----
+# TeamEntityListing
+
 ## ININ.PureCloudApi.Model.TeamEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Team&gt;**](Team.html) |  | [optional] |
+| **Entities** | [**List&lt;Team&gt;**](Team) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

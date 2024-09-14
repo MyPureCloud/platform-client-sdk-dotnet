@@ -1,13 +1,12 @@
----
-title: OutcomeListing
----
+# OutcomeListing
+
 ## ININ.PureCloudApi.Model.OutcomeListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Outcome&gt;**](Outcome.html) |  | [optional] |
+| **Entities** | [**List&lt;Outcome&gt;**](Outcome) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: OutcomeListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationNotificationTemplateBody
----
+# ConversationNotificationTemplateBody
+
 ## ININ.PureCloudApi.Model.ConversationNotificationTemplateBody
 
 ## Properties
@@ -8,7 +7,8 @@ title: ConversationNotificationTemplateBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | Body text. For WhatsApp, ignored. | [optional] |
-| **Parameters** | [**List&lt;ConversationNotificationTemplateParameter&gt;**](ConversationNotificationTemplateParameter.html) | Template parameters for placeholders in template. | |
-{: class="table table-striped"}
+| **Parameters** | [**List&lt;ConversationNotificationTemplateParameter&gt;**](ConversationNotificationTemplateParameter) | Template parameters for placeholders in template. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

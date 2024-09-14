@@ -1,6 +1,5 @@
----
-title: WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
----
+# WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
+
 ## ININ.PureCloudApi.Model.WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
 | **ShiftStartDates** | **List&lt;DateTime?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

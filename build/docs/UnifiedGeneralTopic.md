@@ -1,6 +1,5 @@
----
-title: UnifiedGeneralTopic
----
+# UnifiedGeneralTopic
+
 ## ININ.PureCloudApi.Model.UnifiedGeneralTopic
 
 ## Properties
@@ -9,6 +8,7 @@ title: UnifiedGeneralTopic
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

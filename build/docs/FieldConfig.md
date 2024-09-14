@@ -1,6 +1,5 @@
----
-title: FieldConfig
----
+# FieldConfig
+
 ## ININ.PureCloudApi.Model.FieldConfig
 
 ## Properties
@@ -11,10 +10,11 @@ title: FieldConfig
 | **Name** | **string** |  | [optional] |
 | **EntityType** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
-| **Sections** | [**List&lt;Section&gt;**](Section.html) |  | [optional] |
+| **Sections** | [**List&lt;Section&gt;**](Section) |  | [optional] |
 | **Version** | **string** |  | [optional] |
 | **SchemaVersion** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

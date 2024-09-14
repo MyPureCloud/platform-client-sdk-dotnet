@@ -1,6 +1,5 @@
----
-title: Permissions
----
+# Permissions
+
 ## ININ.PureCloudApi.Model.Permissions
 
 ## Properties
@@ -8,6 +7,7 @@ title: Permissions
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Ids** | **List&lt;string&gt;** | List of permission ids. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

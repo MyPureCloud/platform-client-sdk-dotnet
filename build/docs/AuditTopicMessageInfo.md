@@ -1,6 +1,5 @@
----
-title: AuditTopicMessageInfo
----
+# AuditTopicMessageInfo
+
 ## ININ.PureCloudApi.Model.AuditTopicMessageInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: AuditTopicMessageInfo
 | **Message** | **string** |  | [optional] |
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

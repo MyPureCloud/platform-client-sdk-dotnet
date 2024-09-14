@@ -1,14 +1,14 @@
----
-title: PredictorModels
----
+# PredictorModels
+
 ## ININ.PureCloudApi.Model.PredictorModels
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;PredictorModel&gt;**](PredictorModel.html) |  | [optional] |
-| **_PredictorModels** | [**List&lt;PredictorModel&gt;**](PredictorModel.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;PredictorModel&gt;**](PredictorModel) |  | [optional] |
+| **_PredictorModels** | [**List&lt;PredictorModel&gt;**](PredictorModel) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

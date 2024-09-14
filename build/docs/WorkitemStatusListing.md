@@ -1,6 +1,5 @@
----
-title: WorkitemStatusListing
----
+# WorkitemStatusListing
+
 ## ININ.PureCloudApi.Model.WorkitemStatusListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: WorkitemStatusListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;WorkitemStatus&gt;**](WorkitemStatus.html) |  | [optional] |
+| **Entities** | [**List&lt;WorkitemStatus&gt;**](WorkitemStatus) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

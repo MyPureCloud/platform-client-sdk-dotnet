@@ -1,6 +1,5 @@
----
-title: Fallback
----
+# Fallback
+
 ## ININ.PureCloudApi.Model.Fallback
 
 ## Properties
@@ -8,7 +7,8 @@ title: Fallback
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | Fallback actions are enabled. | [optional] |
-| **Actions** | [**List&lt;CopilotFallbackAction&gt;**](CopilotFallbackAction.html) | Fallback actions. | [optional] |
-{: class="table table-striped"}
+| **Actions** | [**List&lt;CopilotFallbackAction&gt;**](CopilotFallbackAction) | Fallback actions. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

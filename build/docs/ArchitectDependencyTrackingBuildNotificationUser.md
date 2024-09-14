@@ -1,6 +1,5 @@
----
-title: ArchitectDependencyTrackingBuildNotificationUser
----
+# ArchitectDependencyTrackingBuildNotificationUser
+
 ## ININ.PureCloudApi.Model.ArchitectDependencyTrackingBuildNotificationUser
 
 ## Properties
@@ -9,7 +8,8 @@ title: ArchitectDependencyTrackingBuildNotificationUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the user. | [optional] |
 | **Name** | **string** | The name of the user, if available. | [optional] |
-| **HomeOrg** | [**ArchitectDependencyTrackingBuildNotificationHomeOrganization**](ArchitectDependencyTrackingBuildNotificationHomeOrganization.html) |  | [optional] |
-{: class="table table-striped"}
+| **HomeOrg** | [**ArchitectDependencyTrackingBuildNotificationHomeOrganization**](ArchitectDependencyTrackingBuildNotificationHomeOrganization) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

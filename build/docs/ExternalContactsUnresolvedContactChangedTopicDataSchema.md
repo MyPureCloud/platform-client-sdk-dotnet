@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicDataSchema
----
+# ExternalContactsUnresolvedContactChangedTopicDataSchema
+
 ## ININ.PureCloudApi.Model.ExternalContactsUnresolvedContactChangedTopicDataSchema
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExternalContactsUnresolvedContactChangedTopicDataSchema
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

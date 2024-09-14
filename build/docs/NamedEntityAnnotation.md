@@ -1,6 +1,5 @@
----
-title: NamedEntityAnnotation
----
+# NamedEntityAnnotation
+
 ## ININ.PureCloudApi.Model.NamedEntityAnnotation
 
 ## Properties
@@ -8,6 +7,7 @@ title: NamedEntityAnnotation
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the annotated named entity. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: QueueConversationCallbackEventTopicCallbackConversation
----
+# QueueConversationCallbackEventTopicCallbackConversation
+
 ## ININ.PureCloudApi.Model.QueueConversationCallbackEventTopicCallbackConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: QueueConversationCallbackEventTopicCallbackConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;QueueConversationCallbackEventTopicCallbackMediaParticipant&gt;**](QueueConversationCallbackEventTopicCallbackMediaParticipant.html) |  | [optional] |
+| **Participants** | [**List&lt;QueueConversationCallbackEventTopicCallbackMediaParticipant&gt;**](QueueConversationCallbackEventTopicCallbackMediaParticipant) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

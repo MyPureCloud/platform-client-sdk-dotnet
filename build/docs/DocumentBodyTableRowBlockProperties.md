@@ -1,6 +1,5 @@
----
-title: DocumentBodyTableRowBlockProperties
----
+# DocumentBodyTableRowBlockProperties
+
 ## ININ.PureCloudApi.Model.DocumentBodyTableRowBlockProperties
 
 ## Properties
@@ -13,6 +12,7 @@ title: DocumentBodyTableRowBlockProperties
 | **BorderStyle** | **string** | The border style for the table row. | [optional] |
 | **BorderColor** | **string** | The border color for the table row. For example black color - #000000 | [optional] |
 | **BackgroundColor** | **string** | The background color for the table row. For example black color - #000000 | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

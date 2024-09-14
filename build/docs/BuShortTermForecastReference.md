@@ -1,6 +1,5 @@
----
-title: BuShortTermForecastReference
----
+# BuShortTermForecastReference
+
 ## ININ.PureCloudApi.Model.BuShortTermForecastReference
 
 ## Properties
@@ -11,6 +10,7 @@ title: BuShortTermForecastReference
 | **WeekDate** | **String** | The weekDate of the short term forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **Description** | **string** | The description of the short term forecast | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

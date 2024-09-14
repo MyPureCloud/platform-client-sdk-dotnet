@@ -1,13 +1,12 @@
----
-title: ManagementUnitListing
----
+# ManagementUnitListing
+
 ## ININ.PureCloudApi.Model.ManagementUnitListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ManagementUnit&gt;**](ManagementUnit.html) |  | [optional] |
+| **Entities** | [**List&lt;ManagementUnit&gt;**](ManagementUnit) |  | [optional] |
 | **PageSize** | **int?** | Deprecated, paging is not supported | [optional] |
 | **PageNumber** | **int?** | Deprecated, paging is not supported | [optional] |
 | **Total** | **long?** | Deprecated, paging is not supported | [optional] |
@@ -17,6 +16,7 @@ title: ManagementUnitListing
 | **PageCount** | **int?** | Deprecated, paging is not supported | [optional] |
 | **PreviousUri** | **string** | Deprecated, paging is not supported | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationEmergencyGroup
----
+# JourneyWebActionEventsNotificationEmergencyGroup
+
 ## ININ.PureCloudApi.Model.JourneyWebActionEventsNotificationEmergencyGroup
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyWebActionEventsNotificationEmergencyGroup
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

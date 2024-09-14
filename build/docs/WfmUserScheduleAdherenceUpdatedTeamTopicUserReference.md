@@ -1,6 +1,5 @@
----
-title: WfmUserScheduleAdherenceUpdatedTeamTopicUserReference
----
+# WfmUserScheduleAdherenceUpdatedTeamTopicUserReference
+
 ## ININ.PureCloudApi.Model.WfmUserScheduleAdherenceUpdatedTeamTopicUserReference
 
 ## Properties
@@ -8,6 +7,7 @@ title: WfmUserScheduleAdherenceUpdatedTeamTopicUserReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

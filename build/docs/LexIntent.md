@@ -1,6 +1,5 @@
----
-title: LexIntent
----
+# LexIntent
+
 ## ININ.PureCloudApi.Model.LexIntent
 
 ## Properties
@@ -9,8 +8,9 @@ title: LexIntent
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The intent name | |
 | **Description** | **string** | A description of the intent | [optional] |
-| **Slots** | [**Dictionary&lt;string, LexSlot&gt;**](LexSlot.html) | An object mapping slot names to Slot objects | |
+| **Slots** | [**Dictionary&lt;string, LexSlot&gt;**](LexSlot) | An object mapping slot names to Slot objects | |
 | **Version** | **string** | The intent version | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

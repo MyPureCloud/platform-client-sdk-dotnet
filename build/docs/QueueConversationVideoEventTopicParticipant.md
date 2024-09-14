@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicParticipant
----
+# QueueConversationVideoEventTopicParticipant
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicParticipant
 
 ## Properties
@@ -24,10 +23,10 @@ title: QueueConversationVideoEventTopicParticipant
 | **WrapupExpected** | **bool?** | True when a participant is expected to enter a wrapup code once the call connects. | [optional] |
 | **WrapupPrompt** | **string** | This field controls how the UI prompts the agent for a wrapup. | [optional] |
 | **WrapupTimeoutMs** | **int?** | Specifies how long a timed ACW session will last. | [optional] |
-| **Wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
+| **Wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup) |  | [optional] |
 | **StartAcwTime** | **DateTime?** | The timestamp when this participant started after-call work. | [optional] |
 | **EndAcwTime** | **DateTime?** | The timestamp when this participant ended after-call work. | [optional] |
-| **ConversationRoutingData** | [**QueueConversationVideoEventTopicConversationRoutingData**](QueueConversationVideoEventTopicConversationRoutingData.html) |  | [optional] |
+| **ConversationRoutingData** | [**QueueConversationVideoEventTopicConversationRoutingData**](QueueConversationVideoEventTopicConversationRoutingData) |  | [optional] |
 | **AlertingTimeoutMs** | **int?** | Specifies how long the agent has to answer an interaction before being marked as not responding. | [optional] |
 | **MonitoredParticipantId** | **string** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
 | **CoachedParticipantId** | **string** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
@@ -36,16 +35,17 @@ title: QueueConversationVideoEventTopicParticipant
 | **ScreenRecordingState** | **string** | The current screen recording state for this participant. | [optional] |
 | **FlaggedReason** | **string** | If this participant has flagged the conversation, the reason code given. | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | Additional participant attributes | [optional] |
-| **Calls** | [**List&lt;QueueConversationVideoEventTopicCall&gt;**](QueueConversationVideoEventTopicCall.html) |  | [optional] |
-| **Callbacks** | [**List&lt;QueueConversationVideoEventTopicCallback&gt;**](QueueConversationVideoEventTopicCallback.html) |  | [optional] |
-| **Chats** | [**List&lt;QueueConversationVideoEventTopicChat&gt;**](QueueConversationVideoEventTopicChat.html) |  | [optional] |
-| **Cobrowsesessions** | [**List&lt;QueueConversationVideoEventTopicCobrowse&gt;**](QueueConversationVideoEventTopicCobrowse.html) |  | [optional] |
-| **Emails** | [**List&lt;QueueConversationVideoEventTopicEmail&gt;**](QueueConversationVideoEventTopicEmail.html) |  | [optional] |
-| **Messages** | [**List&lt;QueueConversationVideoEventTopicMessage&gt;**](QueueConversationVideoEventTopicMessage.html) |  | [optional] |
-| **Screenshares** | [**List&lt;QueueConversationVideoEventTopicScreenshare&gt;**](QueueConversationVideoEventTopicScreenshare.html) |  | [optional] |
-| **SocialExpressions** | [**List&lt;QueueConversationVideoEventTopicSocialExpression&gt;**](QueueConversationVideoEventTopicSocialExpression.html) |  | [optional] |
-| **Videos** | [**List&lt;QueueConversationVideoEventTopicVideo&gt;**](QueueConversationVideoEventTopicVideo.html) |  | [optional] |
-| **Workflow** | [**QueueConversationVideoEventTopicWorkflow**](QueueConversationVideoEventTopicWorkflow.html) |  | [optional] |
-{: class="table table-striped"}
+| **Calls** | [**List&lt;QueueConversationVideoEventTopicCall&gt;**](QueueConversationVideoEventTopicCall) |  | [optional] |
+| **Callbacks** | [**List&lt;QueueConversationVideoEventTopicCallback&gt;**](QueueConversationVideoEventTopicCallback) |  | [optional] |
+| **Chats** | [**List&lt;QueueConversationVideoEventTopicChat&gt;**](QueueConversationVideoEventTopicChat) |  | [optional] |
+| **Cobrowsesessions** | [**List&lt;QueueConversationVideoEventTopicCobrowse&gt;**](QueueConversationVideoEventTopicCobrowse) |  | [optional] |
+| **Emails** | [**List&lt;QueueConversationVideoEventTopicEmail&gt;**](QueueConversationVideoEventTopicEmail) |  | [optional] |
+| **Messages** | [**List&lt;QueueConversationVideoEventTopicMessage&gt;**](QueueConversationVideoEventTopicMessage) |  | [optional] |
+| **Screenshares** | [**List&lt;QueueConversationVideoEventTopicScreenshare&gt;**](QueueConversationVideoEventTopicScreenshare) |  | [optional] |
+| **SocialExpressions** | [**List&lt;QueueConversationVideoEventTopicSocialExpression&gt;**](QueueConversationVideoEventTopicSocialExpression) |  | [optional] |
+| **Videos** | [**List&lt;QueueConversationVideoEventTopicVideo&gt;**](QueueConversationVideoEventTopicVideo) |  | [optional] |
+| **Workflow** | [**QueueConversationVideoEventTopicWorkflow**](QueueConversationVideoEventTopicWorkflow) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

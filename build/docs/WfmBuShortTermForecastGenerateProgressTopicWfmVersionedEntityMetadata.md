@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata
----
+# WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Version** | **int?** |  | [optional] |
-| **ModifiedBy** | [**WfmBuShortTermForecastGenerateProgressTopicUserReference**](WfmBuShortTermForecastGenerateProgressTopicUserReference.html) |  | [optional] |
+| **ModifiedBy** | [**WfmBuShortTermForecastGenerateProgressTopicUserReference**](WfmBuShortTermForecastGenerateProgressTopicUserReference) |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

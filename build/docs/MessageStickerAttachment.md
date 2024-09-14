@@ -1,6 +1,5 @@
----
-title: MessageStickerAttachment
----
+# MessageStickerAttachment
+
 ## ININ.PureCloudApi.Model.MessageStickerAttachment
 
 ## Properties
@@ -9,6 +8,7 @@ title: MessageStickerAttachment
 |------------ | ------------- | ------------- | -------------|
 | **Url** | **string** | The location of the media, useful for retrieving it | [optional] |
 | **Id** | **string** | A globally unique identifier for the media object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AuditQueryExecutionLargeResultsResponse
----
+# AuditQueryExecutionLargeResultsResponse
+
 ## ININ.PureCloudApi.Model.AuditQueryExecutionLargeResultsResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: AuditQueryExecutionLargeResultsResponse
 | **PageSize** | **int?** | Number of results in a page. | [optional] |
 | **Cursor** | **string** | Optional cursor to indicate where to resume the results. | [optional] |
 | **DownloadUrl** | **string** | The presigned url which can be used to download the results. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

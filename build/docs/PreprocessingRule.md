@@ -1,6 +1,5 @@
----
-title: PreprocessingRule
----
+# PreprocessingRule
+
 ## ININ.PureCloudApi.Model.PreprocessingRule
 
 ## Properties
@@ -11,6 +10,7 @@ title: PreprocessingRule
 | **ReplaceWith** | **string** | The string to be substituted for each match. | [optional] |
 | **Global** | **bool?** | Replaces all matching substrings in every line. | [optional] |
 | **IgnoreCase** | **bool?** | Enables case-insensitive matching | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

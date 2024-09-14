@@ -1,6 +1,5 @@
----
-title: MaxLength
----
+# MaxLength
+
 ## ININ.PureCloudApi.Model.MaxLength
 
 ## Properties
@@ -9,6 +8,7 @@ title: MaxLength
 |------------ | ------------- | ------------- | -------------|
 | **Min** | **long?** | A non-negative integer for a text-based schema field denoting the minimum largest length string the field can contain for a schema instance. | |
 | **Max** | **long?** | A non-negative integer for a text-based schema field denoting the maximum largest string the field can contain for a schema instance. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

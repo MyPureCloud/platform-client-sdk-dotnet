@@ -1,6 +1,5 @@
----
-title: UpdateActivityCodeRequest
----
+# UpdateActivityCodeRequest
+
 ## ININ.PureCloudApi.Model.UpdateActivityCodeRequest
 
 ## Properties
@@ -16,8 +15,9 @@ title: UpdateActivityCodeRequest
 | **CountsTowardShrinkage** | **bool?** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
 | **PlannedShrinkage** | **bool?** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
 | **Interruptible** | **bool?** | Whether this activity code is considered interruptible | [optional] |
-| **SecondaryPresences** | [**ListWrapperSecondaryPresence**](ListWrapperSecondaryPresence.html) | The secondary presences of this activity code | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the associated business unit&#39;s list of activity codes | |
-{: class="table table-striped"}
+| **SecondaryPresences** | [**ListWrapperSecondaryPresence**](ListWrapperSecondaryPresence) | The secondary presences of this activity code | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the associated business unit&#39;s list of activity codes | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

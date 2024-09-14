@@ -1,6 +1,5 @@
----
-title: DialerCampaignScheduleConfigChangeScheduleRecurrence
----
+# DialerCampaignScheduleConfigChangeScheduleRecurrence
+
 ## ININ.PureCloudApi.Model.DialerCampaignScheduleConfigChangeScheduleRecurrence
 
 ## Properties
@@ -11,10 +10,11 @@ title: DialerCampaignScheduleConfigChangeScheduleRecurrence
 | **Start** | **string** | scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **End** | **string** | scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **TimeZone** | **string** | the timezone the recurrence will use | [optional] |
-| **Range** | [**DialerCampaignScheduleConfigChangeRecurrenceRange**](DialerCampaignScheduleConfigChangeRecurrenceRange.html) |  | [optional] |
-| **Pattern** | [**DialerCampaignScheduleConfigChangeRecurrencePattern**](DialerCampaignScheduleConfigChangeRecurrencePattern.html) |  | [optional] |
-| **Alterations** | [**List&lt;DialerCampaignScheduleConfigChangeAlteration&gt;**](DialerCampaignScheduleConfigChangeAlteration.html) | modifications to the original recurrence schedule | [optional] |
+| **Range** | [**DialerCampaignScheduleConfigChangeRecurrenceRange**](DialerCampaignScheduleConfigChangeRecurrenceRange) |  | [optional] |
+| **Pattern** | [**DialerCampaignScheduleConfigChangeRecurrencePattern**](DialerCampaignScheduleConfigChangeRecurrencePattern) |  | [optional] |
+| **Alterations** | [**List&lt;DialerCampaignScheduleConfigChangeAlteration&gt;**](DialerCampaignScheduleConfigChangeAlteration) | modifications to the original recurrence schedule | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

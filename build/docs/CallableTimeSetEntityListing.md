@@ -1,13 +1,12 @@
----
-title: CallableTimeSetEntityListing
----
+# CallableTimeSetEntityListing
+
 ## ININ.PureCloudApi.Model.CallableTimeSetEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;CallableTimeSet&gt;**](CallableTimeSet.html) |  | [optional] |
+| **Entities** | [**List&lt;CallableTimeSet&gt;**](CallableTimeSet) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: CallableTimeSetEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

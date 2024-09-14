@@ -1,6 +1,5 @@
----
-title: EventSession
----
+# EventSession
+
 ## ININ.PureCloudApi.Model.EventSession
 
 ## Properties
@@ -10,6 +9,7 @@ title: EventSession
 | **Id** | **string** | The ID of the session. | |
 | **SelfUri** | **string** |  | [optional] |
 | **Type** | **string** | Session types indicate the type or category of sessions (e.g. web, app). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

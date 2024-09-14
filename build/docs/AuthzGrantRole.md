@@ -1,6 +1,5 @@
----
-title: AuthzGrantRole
----
+# AuthzGrantRole
+
 ## ININ.PureCloudApi.Model.AuthzGrantRole
 
 ## Properties
@@ -10,9 +9,10 @@ title: AuthzGrantRole
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
-| **Policies** | [**List&lt;AuthzGrantPolicy&gt;**](AuthzGrantPolicy.html) |  | [optional] |
+| **Policies** | [**List&lt;AuthzGrantPolicy&gt;**](AuthzGrantPolicy) |  | [optional] |
 | **Default** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

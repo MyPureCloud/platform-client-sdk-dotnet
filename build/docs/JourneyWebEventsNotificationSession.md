@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationSession
----
+# JourneyWebEventsNotificationSession
+
 ## ININ.PureCloudApi.Model.JourneyWebEventsNotificationSession
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneyWebEventsNotificationSession
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

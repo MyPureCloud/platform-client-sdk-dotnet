@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentAlternative
----
+# KnowledgeDocumentAlternative
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentAlternative
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeDocumentAlternative
 |------------ | ------------- | ------------- | -------------|
 | **Phrase** | **string** | Alternate phrasing to the document title, having a limit of 500 words. | |
 | **Autocomplete** | **bool?** | Autocomplete enabled for the alternate phrase. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

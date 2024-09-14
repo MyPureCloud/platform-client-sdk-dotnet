@@ -1,6 +1,5 @@
----
-title: LimitCount
----
+# LimitCount
+
 ## ININ.PureCloudApi.Model.LimitCount
 
 ## Properties
@@ -12,6 +11,7 @@ title: LimitCount
 | **Max** | **long?** | The maximum value of the limit. | [optional] |
 | **EntityId** | **string** | The entity which makes this count unique. The context of what the entity is would be dependant on the limit. May not be applicable for all limits. | [optional] |
 | **UserId** | **string** | The user which makes this count unique. May not be applicable for all limits. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

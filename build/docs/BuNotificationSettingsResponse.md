@@ -1,13 +1,13 @@
----
-title: BuNotificationSettingsResponse
----
+# BuNotificationSettingsResponse
+
 ## ININ.PureCloudApi.Model.BuNotificationSettingsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Scheduling** | [**BuScheduleNotificationsSettingsResponse**](BuScheduleNotificationsSettingsResponse.html) | Schedule notification settings | [optional] |
-{: class="table table-striped"}
+| **Scheduling** | [**BuScheduleNotificationsSettingsResponse**](BuScheduleNotificationsSettingsResponse) | Schedule notification settings | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

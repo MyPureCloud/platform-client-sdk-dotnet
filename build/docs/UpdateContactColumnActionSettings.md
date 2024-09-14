@@ -1,6 +1,5 @@
----
-title: UpdateContactColumnActionSettings
----
+# UpdateContactColumnActionSettings
+
 ## ININ.PureCloudApi.Model.UpdateContactColumnActionSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: UpdateContactColumnActionSettings
 |------------ | ------------- | ------------- | -------------|
 | **Properties** | **Dictionary&lt;string, string&gt;** | A mapping of contact columns to their new values. | |
 | **UpdateOption** | **string** | The type of update to make to the specified contact column(s). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

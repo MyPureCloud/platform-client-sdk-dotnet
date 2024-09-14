@@ -1,6 +1,5 @@
----
-title: AddAdherenceExplanationAgentRequest
----
+# AddAdherenceExplanationAgentRequest
+
 ## ININ.PureCloudApi.Model.AddAdherenceExplanationAgentRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: AddAdherenceExplanationAgentRequest
 | **StartDate** | **DateTime?** | The start timestamp of the adherence explanation in ISO-8601 format | |
 | **LengthMinutes** | **int?** | The length of the adherence explanation in minutes | |
 | **Notes** | **string** | Notes about the adherence explanation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestSession
----
+# KnowledgeGuestSession
+
 ## ININ.PureCloudApi.Model.KnowledgeGuestSession
 
 ## Properties
@@ -8,10 +7,11 @@ title: KnowledgeGuestSession
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Session ID. | [optional] |
-| **App** | [**KnowledgeGuestSessionApp**](KnowledgeGuestSessionApp.html) | The app where the session is started. | |
+| **App** | [**KnowledgeGuestSessionApp**](KnowledgeGuestSessionApp) | The app where the session is started. | |
 | **CustomerId** | **string** | An arbitrary ID for the customer starting the session. Used to track multiple sessions started by the same customer. | |
 | **PageUrl** | **string** | URL of the page where the session is started. | [optional] |
-| **Contexts** | [**List&lt;KnowledgeGuestSessionContext&gt;**](KnowledgeGuestSessionContext.html) | The session contexts. | [optional] |
-{: class="table table-striped"}
+| **Contexts** | [**List&lt;KnowledgeGuestSessionContext&gt;**](KnowledgeGuestSessionContext) | The session contexts. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

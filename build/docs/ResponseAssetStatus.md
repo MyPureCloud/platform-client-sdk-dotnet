@@ -1,6 +1,5 @@
----
-title: ResponseAssetStatus
----
+# ResponseAssetStatus
+
 ## ININ.PureCloudApi.Model.ResponseAssetStatus
 
 ## Properties
@@ -11,6 +10,7 @@ title: ResponseAssetStatus
 | **Status** | **string** | Upload status of the asset | [optional] |
 | **ErrorCode** | **string** | Error code. Used for localization | [optional] |
 | **ErrorMessage** | **string** | Error message that explains upload failure status  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

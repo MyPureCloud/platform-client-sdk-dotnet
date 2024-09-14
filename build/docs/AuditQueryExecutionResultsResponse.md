@@ -1,6 +1,5 @@
----
-title: AuditQueryExecutionResultsResponse
----
+# AuditQueryExecutionResultsResponse
+
 ## ININ.PureCloudApi.Model.AuditQueryExecutionResultsResponse
 
 ## Properties
@@ -10,7 +9,8 @@ title: AuditQueryExecutionResultsResponse
 | **Id** | **string** | Id of the audit query execution request. | [optional] |
 | **PageSize** | **int?** | Number of results in a page. | [optional] |
 | **Cursor** | **string** | Optional cursor to indicate where to resume the results. | [optional] |
-| **Entities** | [**List&lt;AuditLogMessage&gt;**](AuditLogMessage.html) | List of audit messages. | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;AuditLogMessage&gt;**](AuditLogMessage) | List of audit messages. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

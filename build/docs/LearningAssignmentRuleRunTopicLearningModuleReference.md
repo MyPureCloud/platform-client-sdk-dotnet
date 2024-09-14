@@ -1,6 +1,5 @@
----
-title: LearningAssignmentRuleRunTopicLearningModuleReference
----
+# LearningAssignmentRuleRunTopicLearningModuleReference
+
 ## ININ.PureCloudApi.Model.LearningAssignmentRuleRunTopicLearningModuleReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: LearningAssignmentRuleRunTopicLearningModuleReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

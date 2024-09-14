@@ -1,6 +1,5 @@
----
-title: UserScheduleActivity
----
+# UserScheduleActivity
+
 ## ININ.PureCloudApi.Model.UserScheduleActivity
 
 ## Properties
@@ -14,6 +13,7 @@ title: UserScheduleActivity
 | **CountsAsPaidTime** | **bool?** | Whether this activity is paid | [optional] |
 | **IsDstFallback** | **bool?** | Whether this activity spans a DST fallback | [optional] |
 | **TimeOffRequestId** | **string** | Time off request id of this activity | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

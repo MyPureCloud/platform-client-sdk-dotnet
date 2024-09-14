@@ -1,6 +1,5 @@
----
-title: ExternalContactsOrganizationChangedTopicContactAddress
----
+# ExternalContactsOrganizationChangedTopicContactAddress
+
 ## ININ.PureCloudApi.Model.ExternalContactsOrganizationChangedTopicContactAddress
 
 ## Properties
@@ -13,6 +12,7 @@ title: ExternalContactsOrganizationChangedTopicContactAddress
 | **State** | **string** |  | [optional] |
 | **PostalCode** | **string** |  | [optional] |
 | **CountryCode** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

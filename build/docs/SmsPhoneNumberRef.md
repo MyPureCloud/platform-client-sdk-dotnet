@@ -1,6 +1,5 @@
----
-title: SmsPhoneNumberRef
----
+# SmsPhoneNumberRef
+
 ## ININ.PureCloudApi.Model.SmsPhoneNumberRef
 
 ## Properties
@@ -9,6 +8,7 @@ title: SmsPhoneNumberRef
 |------------ | ------------- | ------------- | -------------|
 | **PhoneNumber** | **string** | A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234 | |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

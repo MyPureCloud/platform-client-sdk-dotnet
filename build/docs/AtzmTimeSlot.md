@@ -1,6 +1,5 @@
----
-title: AtzmTimeSlot
----
+# AtzmTimeSlot
+
 ## ININ.PureCloudApi.Model.AtzmTimeSlot
 
 ## Properties
@@ -9,6 +8,7 @@ title: AtzmTimeSlot
 |------------ | ------------- | ------------- | -------------|
 | **EarliestCallableTime** | **string** | The earliest time to dial a contact. Valid format is HH:mm | [optional] |
 | **LatestCallableTime** | **string** | The latest time to dial a contact. Valid format is HH:mm | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

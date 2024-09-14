@@ -1,6 +1,5 @@
----
-title: QueryRequestPredicate
----
+# QueryRequestPredicate
+
 ## ININ.PureCloudApi.Model.QueryRequestPredicate
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueryRequestPredicate
 |------------ | ------------- | ------------- | -------------|
 | **Dimension** | **string** | The dimension to be filtered | |
 | **Value** | **string** | The value to filter by | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

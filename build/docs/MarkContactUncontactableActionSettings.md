@@ -1,6 +1,5 @@
----
-title: MarkContactUncontactableActionSettings
----
+# MarkContactUncontactableActionSettings
+
 ## ININ.PureCloudApi.Model.MarkContactUncontactableActionSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: MarkContactUncontactableActionSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **MediaTypes** | **List&lt;string&gt;** | A list of media types to evaluate. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

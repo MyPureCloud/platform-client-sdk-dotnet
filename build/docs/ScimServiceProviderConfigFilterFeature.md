@@ -1,6 +1,5 @@
----
-title: ScimServiceProviderConfigFilterFeature
----
+# ScimServiceProviderConfigFilterFeature
+
 ## ININ.PureCloudApi.Model.ScimServiceProviderConfigFilterFeature
 
 ## Properties
@@ -9,6 +8,7 @@ title: ScimServiceProviderConfigFilterFeature
 |------------ | ------------- | ------------- | -------------|
 | **Supported** | **bool?** | Indicates whether configuration options are supported. | [optional] |
 | **MaxResults** | **int?** | The maximum number of results returned from a filtered query. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WemCoachingUserNotificationTopicCoachingUserNotification
----
+# WemCoachingUserNotificationTopicCoachingUserNotification
+
 ## ININ.PureCloudApi.Model.WemCoachingUserNotificationTopicCoachingUserNotification
 
 ## Properties
@@ -12,10 +11,11 @@ title: WemCoachingUserNotificationTopicCoachingUserNotification
 | **MarkedAsRead** | **bool?** |  | [optional] |
 | **ActionType** | **string** |  | [optional] |
 | **Relationship** | **string** |  | [optional] |
-| **Appointment** | [**WemCoachingUserNotificationTopicCoachingAppointmentReference**](WemCoachingUserNotificationTopicCoachingAppointmentReference.html) |  | [optional] |
+| **Appointment** | [**WemCoachingUserNotificationTopicCoachingAppointmentReference**](WemCoachingUserNotificationTopicCoachingAppointmentReference) |  | [optional] |
 | **DateStart** | **DateTime?** |  | [optional] |
 | **LengthInMinutes** | **int?** |  | [optional] |
 | **Status** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

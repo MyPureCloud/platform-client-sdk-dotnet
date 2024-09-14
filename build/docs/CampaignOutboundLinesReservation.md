@@ -1,14 +1,14 @@
----
-title: CampaignOutboundLinesReservation
----
+# CampaignOutboundLinesReservation
+
 ## ININ.PureCloudApi.Model.CampaignOutboundLinesReservation
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Campaign** | [**DomainEntityRef**](DomainEntityRef.html) | The Campaign | [optional] |
+| **Campaign** | [**DomainEntityRef**](DomainEntityRef) | The Campaign | [optional] |
 | **LinesReserved** | **int?** | The number of lines reserved for the campaign | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

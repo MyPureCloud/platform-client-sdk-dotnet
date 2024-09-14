@@ -1,6 +1,5 @@
----
-title: ConversationClearSettings
----
+# ConversationClearSettings
+
 ## ININ.PureCloudApi.Model.ConversationClearSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationClearSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not conversation clear setting is enabled | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

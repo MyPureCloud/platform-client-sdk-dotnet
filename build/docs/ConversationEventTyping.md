@@ -1,6 +1,5 @@
----
-title: ConversationEventTyping
----
+# ConversationEventTyping
+
 ## ININ.PureCloudApi.Model.ConversationEventTyping
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationEventTyping
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Describes the type of Typing event. | |
 | **Duration** | **long?** | The duration of the Typing event in milliseconds. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

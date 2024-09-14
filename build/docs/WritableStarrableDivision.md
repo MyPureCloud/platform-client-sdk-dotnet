@@ -1,6 +1,5 @@
----
-title: WritableStarrableDivision
----
+# WritableStarrableDivision
+
 ## ININ.PureCloudApi.Model.WritableStarrableDivision
 
 ## Properties
@@ -10,6 +9,7 @@ title: WritableStarrableDivision
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

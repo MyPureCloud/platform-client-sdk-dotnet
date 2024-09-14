@@ -1,6 +1,5 @@
----
-title: ShiftTradeActivityPreviewResponse
----
+# ShiftTradeActivityPreviewResponse
+
 ## ININ.PureCloudApi.Model.ShiftTradeActivityPreviewResponse
 
 ## Properties
@@ -12,6 +11,7 @@ title: ShiftTradeActivityPreviewResponse
 | **ActivityCodeId** | **string** | The ID of the activity code for this activity | [optional] |
 | **CountsAsPaidTime** | **bool?** | Whether this activity counts as paid time | [optional] |
 | **PayableMinutes** | **int?** | Payable minutes for this activity | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: StatEventWrapUpCodeTopicStatsNotification
----
+# StatEventWrapUpCodeTopicStatsNotification
+
 ## ININ.PureCloudApi.Model.StatEventWrapUpCodeTopicStatsNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventWrapUpCodeTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **Data** | [**List&lt;StatEventWrapUpCodeTopicIntervalMetrics&gt;**](StatEventWrapUpCodeTopicIntervalMetrics.html) |  | [optional] |
-{: class="table table-striped"}
+| **Data** | [**List&lt;StatEventWrapUpCodeTopicIntervalMetrics&gt;**](StatEventWrapUpCodeTopicIntervalMetrics) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

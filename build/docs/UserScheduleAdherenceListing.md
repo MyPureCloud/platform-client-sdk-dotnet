@@ -1,14 +1,14 @@
----
-title: UserScheduleAdherenceListing
----
+# UserScheduleAdherenceListing
+
 ## ININ.PureCloudApi.Model.UserScheduleAdherenceListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;UserScheduleAdherence&gt;**](UserScheduleAdherence.html) |  | [optional] |
+| **Entities** | [**List&lt;UserScheduleAdherence&gt;**](UserScheduleAdherence) |  | [optional] |
 | **DownloadUrl** | **string** | The downloadUrl if the response is too large to send directly via http response | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

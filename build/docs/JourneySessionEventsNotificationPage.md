@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationPage
----
+# JourneySessionEventsNotificationPage
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationPage
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneySessionEventsNotificationPage
 | **Pathname** | **string** |  | [optional] |
 | **QueryString** | **string** |  | [optional] |
 | **Breadcrumb** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

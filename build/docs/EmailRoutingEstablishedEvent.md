@@ -1,6 +1,5 @@
----
-title: EmailRoutingEstablishedEvent
----
+# EmailRoutingEstablishedEvent
+
 ## ININ.PureCloudApi.Model.EmailRoutingEstablishedEvent
 
 ## Properties
@@ -15,8 +14,9 @@ title: EmailRoutingEstablishedEvent
 | **SkillIds** | **List&lt;string&gt;** | The unique identifiers for the skills that should be used to determine the destination for the conversation. | [optional] |
 | **LanguageId** | **string** | The unique identifier for the language that should be used to determine the destination for the conversation. | [optional] |
 | **Label** | **string** | An optional label that categorizes the conversation. Max-utilization settings can be configured at a per-label level. | [optional] |
-| **InitialConfiguration** | [**EmailInitialConfiguration**](EmailInitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**EmailInitialConfiguration**](EmailInitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

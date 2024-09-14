@@ -1,13 +1,12 @@
----
-title: DigitalRuleSetEntityListing
----
+# DigitalRuleSetEntityListing
+
 ## ININ.PureCloudApi.Model.DigitalRuleSetEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DigitalRuleSet&gt;**](DigitalRuleSet.html) |  | [optional] |
+| **Entities** | [**List&lt;DigitalRuleSet&gt;**](DigitalRuleSet) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: DigitalRuleSetEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: RequestMapping
----
+# RequestMapping
+
 ## ININ.PureCloudApi.Model.RequestMapping
 
 ## Properties
@@ -11,6 +10,7 @@ title: RequestMapping
 | **AttributeType** | **string** | Type of the value supplied | [optional] |
 | **MappingType** | **string** | Method of finding value to use with Attribute | [optional] |
 | **Value** | **string** | Value to supply for the specified Attribute | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

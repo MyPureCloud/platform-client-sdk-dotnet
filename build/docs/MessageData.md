@@ -1,6 +1,5 @@
----
-title: MessageData
----
+# MessageData
+
 ## ININ.PureCloudApi.Model.MessageData
 
 ## Properties
@@ -17,13 +16,14 @@ title: MessageData
 | **MessengerType** | **string** | Type of text messenger. | [optional] |
 | **TextBody** | **string** | The body of the text message. (Deprecated - Instead use normalizedMessage.text) | |
 | **Status** | **string** | The status of the message. | |
-| **Media** | [**List&lt;MessageMedia&gt;**](MessageMedia.html) | The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment) | [optional] |
-| **Stickers** | [**List&lt;MessageSticker&gt;**](MessageSticker.html) | The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment | [optional] |
-| **NormalizedMessage** | [**ConversationNormalizedMessage**](ConversationNormalizedMessage.html) | The message into normalized format | [optional] |
-| **NormalizedReceipts** | [**List&lt;ConversationNormalizedMessage&gt;**](ConversationNormalizedMessage.html) | The delivery event associated with this message in normalized format, if the message direction was outbound | [optional] |
-| **CreatedBy** | [**User**](User.html) | User who sent this message. | [optional] |
+| **Media** | [**List&lt;MessageMedia&gt;**](MessageMedia) | The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment) | [optional] |
+| **Stickers** | [**List&lt;MessageSticker&gt;**](MessageSticker) | The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment | [optional] |
+| **NormalizedMessage** | [**ConversationNormalizedMessage**](ConversationNormalizedMessage) | The message into normalized format | [optional] |
+| **NormalizedReceipts** | [**List&lt;ConversationNormalizedMessage&gt;**](ConversationNormalizedMessage) | The delivery event associated with this message in normalized format, if the message direction was outbound | [optional] |
+| **CreatedBy** | [**User**](User) | User who sent this message. | [optional] |
 | **ConversationId** | **string** | The id of the conversation of this message. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

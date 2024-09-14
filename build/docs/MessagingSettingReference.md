@@ -1,6 +1,5 @@
----
-title: MessagingSettingReference
----
+# MessagingSettingReference
+
 ## ININ.PureCloudApi.Model.MessagingSettingReference
 
 ## Properties
@@ -13,10 +12,11 @@ title: MessagingSettingReference
 | **DateCreated** | **DateTime?** | Date this messaging Setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Date this messaging Setting was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Version** | **string** | Version number | [optional] |
-| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef.html) | User reference that created this Setting | [optional] |
-| **UpdatedBy** | [**DomainEntityRef**](DomainEntityRef.html) | User reference that modified this Setting | [optional] |
-| **Content** | [**ContentSetting**](ContentSetting.html) | Settings relating to message contents | [optional] |
-| **Event** | [**EventSetting**](EventSetting.html) | Settings relating to events which may occur | [optional] |
-{: class="table table-striped"}
+| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef) | User reference that created this Setting | [optional] |
+| **UpdatedBy** | [**DomainEntityRef**](DomainEntityRef) | User reference that modified this Setting | [optional] |
+| **Content** | [**ContentSetting**](ContentSetting) | Settings relating to message contents | [optional] |
+| **Event** | [**EventSetting**](EventSetting) | Settings relating to events which may occur | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CreateAlternativeShiftTradeRequest
----
+# CreateAlternativeShiftTradeRequest
+
 ## ININ.PureCloudApi.Model.CreateAlternativeShiftTradeRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: CreateAlternativeShiftTradeRequest
 | **PickupShiftReferenceKeys** | **List&lt;string&gt;** | A list of offered shift reference keys an agent wants to pick up | [optional] |
 | **AlternativeShiftTradeGranularity** | **string** | The granularity of alternative shifts to be traded | |
 | **ExpirationDate** | **DateTime?** | The date when the trade will expire in ISO-8601 format. The trade cannot be approved after expiration | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

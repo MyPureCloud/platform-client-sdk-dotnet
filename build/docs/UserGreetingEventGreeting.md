@@ -1,6 +1,5 @@
----
-title: UserGreetingEventGreeting
----
+# UserGreetingEventGreeting
+
 ## ININ.PureCloudApi.Model.UserGreetingEventGreeting
 
 ## Properties
@@ -11,9 +10,10 @@ title: UserGreetingEventGreeting
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **OwnerType** | **string** |  | [optional] |
-| **Owner** | [**UserGreetingEventGreetingOwner**](UserGreetingEventGreetingOwner.html) |  | [optional] |
-| **GreetingAudioFile** | [**UserGreetingEventGreetingAudioFile**](UserGreetingEventGreetingAudioFile.html) |  | [optional] |
+| **Owner** | [**UserGreetingEventGreetingOwner**](UserGreetingEventGreetingOwner) |  | [optional] |
+| **GreetingAudioFile** | [**UserGreetingEventGreetingAudioFile**](UserGreetingEventGreetingAudioFile) |  | [optional] |
 | **AudioTTS** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

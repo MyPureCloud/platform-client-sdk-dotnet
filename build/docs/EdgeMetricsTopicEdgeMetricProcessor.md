@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricProcessor
----
+# EdgeMetricsTopicEdgeMetricProcessor
+
 ## ININ.PureCloudApi.Model.EdgeMetricsTopicEdgeMetricProcessor
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeMetricsTopicEdgeMetricProcessor
 | **ActiveTimePct** | **int?** |  | [optional] |
 | **PrivilegedTimePct** | **int?** |  | [optional] |
 | **UserTimePct** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

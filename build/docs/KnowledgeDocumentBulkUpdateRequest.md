@@ -1,13 +1,13 @@
----
-title: KnowledgeDocumentBulkUpdateRequest
----
+# KnowledgeDocumentBulkUpdateRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentBulkUpdateRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;KnowledgeDocumentBulkUpdateEntity&gt;**](KnowledgeDocumentBulkUpdateEntity.html) | List of unique identifiers referencing documents that are to be updated | |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;KnowledgeDocumentBulkUpdateEntity&gt;**](KnowledgeDocumentBulkUpdateEntity) | List of unique identifiers referencing documents that are to be updated | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

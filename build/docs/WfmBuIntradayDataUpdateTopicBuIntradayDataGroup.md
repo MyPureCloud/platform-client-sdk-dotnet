@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
----
+# WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
+
 ## ININ.PureCloudApi.Model.WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
 
 ## Properties
@@ -8,12 +7,13 @@ title: WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **MediaType** | **string** |  | [optional] |
-| **ForecastDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayForecastData**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData.html) |  | [optional] |
-| **ForecastDataPerInterval** | [**List&lt;WfmBuIntradayDataUpdateTopicBuIntradayForecastData&gt;**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData.html) |  | [optional] |
-| **ScheduleDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayScheduleData**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData.html) |  | [optional] |
-| **ScheduleDataPerInterval** | [**List&lt;WfmBuIntradayDataUpdateTopicBuIntradayScheduleData&gt;**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData.html) |  | [optional] |
-| **PerformancePredictionDataSummary** | [**WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData.html) |  | [optional] |
-| **PerformancePredictionDataPerInterval** | [**List&lt;WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData&gt;**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData.html) |  | [optional] |
-{: class="table table-striped"}
+| **ForecastDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayForecastData**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData) |  | [optional] |
+| **ForecastDataPerInterval** | [**List&lt;WfmBuIntradayDataUpdateTopicBuIntradayForecastData&gt;**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData) |  | [optional] |
+| **ScheduleDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayScheduleData**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData) |  | [optional] |
+| **ScheduleDataPerInterval** | [**List&lt;WfmBuIntradayDataUpdateTopicBuIntradayScheduleData&gt;**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData) |  | [optional] |
+| **PerformancePredictionDataSummary** | [**WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData) |  | [optional] |
+| **PerformancePredictionDataPerInterval** | [**List&lt;WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData&gt;**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Member
----
+# Member
+
 ## ININ.PureCloudApi.Model.Member
 
 ## Properties
@@ -9,6 +8,7 @@ title: Member
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The user&#39;s id | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

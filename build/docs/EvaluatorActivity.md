@@ -1,6 +1,5 @@
----
-title: EvaluatorActivity
----
+# EvaluatorActivity
+
 ## ININ.PureCloudApi.Model.EvaluatorActivity
 
 ## Properties
@@ -9,7 +8,7 @@ title: EvaluatorActivity
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Evaluator** | [**User**](User.html) |  | [optional] |
+| **Evaluator** | [**User**](User) |  | [optional] |
 | **NumEvaluationsAssigned** | **int?** |  | [optional] |
 | **NumEvaluationsStarted** | **int?** |  | [optional] |
 | **NumEvaluationsCompleted** | **int?** |  | [optional] |
@@ -18,6 +17,7 @@ title: EvaluatorActivity
 | **NumCalibrationsCompleted** | **int?** |  | [optional] |
 | **NumEvaluationsWithoutViewPermission** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

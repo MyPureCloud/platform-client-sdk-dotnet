@@ -1,6 +1,5 @@
----
-title: DialerCampaignRuleConfigChangeCampaignRuleAction
----
+# DialerCampaignRuleConfigChangeCampaignRuleAction
+
 ## ININ.PureCloudApi.Model.DialerCampaignRuleConfigChangeCampaignRuleAction
 
 ## Properties
@@ -10,8 +9,9 @@ title: DialerCampaignRuleConfigChangeCampaignRuleAction
 | **Id** | **string** | The globally unique identifier for the action | [optional] |
 | **Parameters** | **Dictionary&lt;string, string&gt;** | The parameters to match this action | [optional] |
 | **ActionType** | **string** | The type of this action | [optional] |
-| **CampaignRuleActionEntities** | [**DialerCampaignRuleConfigChangeCampaignRuleActionEntities**](DialerCampaignRuleConfigChangeCampaignRuleActionEntities.html) |  | [optional] |
+| **CampaignRuleActionEntities** | [**DialerCampaignRuleConfigChangeCampaignRuleActionEntities**](DialerCampaignRuleConfigChangeCampaignRuleActionEntities) |  | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

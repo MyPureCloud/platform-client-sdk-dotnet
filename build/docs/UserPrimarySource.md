@@ -1,6 +1,5 @@
----
-title: UserPrimarySource
----
+# UserPrimarySource
+
 ## ININ.PureCloudApi.Model.UserPrimarySource
 
 ## Properties
@@ -12,6 +11,7 @@ title: UserPrimarySource
 | **SourceId** | **string** | The id of the source | [optional] |
 | **Registered** | **bool?** | Whether or not the source is registered | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

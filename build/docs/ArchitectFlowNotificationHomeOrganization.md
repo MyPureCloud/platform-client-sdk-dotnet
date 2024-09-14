@@ -1,6 +1,5 @@
----
-title: ArchitectFlowNotificationHomeOrganization
----
+# ArchitectFlowNotificationHomeOrganization
+
 ## ININ.PureCloudApi.Model.ArchitectFlowNotificationHomeOrganization
 
 ## Properties
@@ -10,6 +9,7 @@ title: ArchitectFlowNotificationHomeOrganization
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **ThirdPartyOrgName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

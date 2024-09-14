@@ -1,6 +1,5 @@
----
-title: ExternalEstablishedEvent
----
+# ExternalEstablishedEvent
+
 ## ININ.PureCloudApi.Model.ExternalEstablishedEvent
 
 ## Properties
@@ -15,8 +14,9 @@ title: ExternalEstablishedEvent
 | **AniName** | **string** | The automatic number identification name if it is available for this conversation. | [optional] |
 | **Dnis** | **string** | The dialed number identification if it is available for this conversation. | [optional] |
 | **DnisName** | **string** | The dialed number identification name if it is available for this conversation. | [optional] |
-| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

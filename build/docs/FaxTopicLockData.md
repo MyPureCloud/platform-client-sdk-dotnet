@@ -1,15 +1,15 @@
----
-title: FaxTopicLockData
----
+# FaxTopicLockData
+
 ## ININ.PureCloudApi.Model.FaxTopicLockData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **LockedBy** | [**FaxTopicUserData**](FaxTopicUserData.html) |  | [optional] |
+| **LockedBy** | [**FaxTopicUserData**](FaxTopicUserData) |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateExpires** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

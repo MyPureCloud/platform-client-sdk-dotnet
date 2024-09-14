@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationConversationUserDisposition
----
+# JourneySessionEventsNotificationConversationUserDisposition
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationConversationUserDisposition
 
 ## Properties
@@ -9,7 +8,8 @@ title: JourneySessionEventsNotificationConversationUserDisposition
 |------------ | ------------- | ------------- | -------------|
 | **Code** | **string** |  | [optional] |
 | **Notes** | **string** |  | [optional] |
-| **User** | [**JourneySessionEventsNotificationUser**](JourneySessionEventsNotificationUser.html) |  | [optional] |
-{: class="table table-striped"}
+| **User** | [**JourneySessionEventsNotificationUser**](JourneySessionEventsNotificationUser) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

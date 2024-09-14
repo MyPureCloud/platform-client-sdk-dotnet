@@ -1,6 +1,5 @@
----
-title: AssignUsers
----
+# AssignUsers
+
 ## ININ.PureCloudApi.Model.AssignUsers
 
 ## Properties
@@ -9,6 +8,7 @@ title: AssignUsers
 |------------ | ------------- | ------------- | -------------|
 | **MembersToAssign** | **List&lt;string&gt;** | List of user ids to assign to a performance profile | |
 | **MembersToRemove** | **List&lt;string&gt;** | List of user ids to remove from a performance profile | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

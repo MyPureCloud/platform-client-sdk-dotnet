@@ -1,6 +1,5 @@
----
-title: VoicemailMediaInfo
----
+# VoicemailMediaInfo
+
 ## ININ.PureCloudApi.Model.VoicemailMediaInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: VoicemailMediaInfo
 | **MediaFileUri** | **string** |  | [optional] |
 | **MediaImageUri** | **string** |  | [optional] |
 | **WaveformData** | **List&lt;float?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

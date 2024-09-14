@@ -1,6 +1,5 @@
----
-title: WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedNotification
----
+# WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedNotification
+
 ## ININ.PureCloudApi.Model.WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedNotification
 
 ## Properties
@@ -8,16 +7,17 @@ title: WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedN
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Agent** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference.html) |  | [optional] |
-| **ManagementUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit**](WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit.html) |  | [optional] |
-| **BusinessUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit**](WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit.html) |  | [optional] |
+| **Agent** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference) |  | [optional] |
+| **ManagementUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit**](WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit) |  | [optional] |
+| **BusinessUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit**](WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit) |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **LengthMinutes** | **int?** |  | [optional] |
 | **Notes** | **string** |  | [optional] |
-| **ReviewedBy** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference.html) |  | [optional] |
+| **ReviewedBy** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference) |  | [optional] |
 | **ReviewedDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

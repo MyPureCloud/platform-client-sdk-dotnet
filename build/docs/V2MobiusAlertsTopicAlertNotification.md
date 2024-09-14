@@ -1,15 +1,15 @@
----
-title: V2MobiusAlertsTopicAlertNotification
----
+# V2MobiusAlertsTopicAlertNotification
+
 ## ININ.PureCloudApi.Model.V2MobiusAlertsTopicAlertNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Recipient** | [**V2MobiusAlertsTopicAlertNotificationRecipient**](V2MobiusAlertsTopicAlertNotificationRecipient.html) |  | [optional] |
+| **Recipient** | [**V2MobiusAlertsTopicAlertNotificationRecipient**](V2MobiusAlertsTopicAlertNotificationRecipient) |  | [optional] |
 | **NotificationTypes** | **List&lt;string&gt;** |  | [optional] |
 | **Locale** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

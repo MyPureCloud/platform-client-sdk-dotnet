@@ -1,6 +1,5 @@
----
-title: CreateBenefitAssessmentJobRequest
----
+# CreateBenefitAssessmentJobRequest
+
 ## ININ.PureCloudApi.Model.CreateBenefitAssessmentJobRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CreateBenefitAssessmentJobRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DivisionIds** | **List&lt;string&gt;** | The list of division ids for routing queues that are to be assessed for Predictive Routing benefit. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

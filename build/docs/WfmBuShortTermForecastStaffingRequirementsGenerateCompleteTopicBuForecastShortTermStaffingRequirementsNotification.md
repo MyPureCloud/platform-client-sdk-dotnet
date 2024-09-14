@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsNotification
----
+# WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsNotification
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsNotification
 
 ## Properties
@@ -9,11 +8,12 @@ title: WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecast
 |------------ | ------------- | ------------- | -------------|
 | **BusinessUnitId** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
-| **Forecast** | [**WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference**](WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference.html) |  | [optional] |
+| **Forecast** | [**WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference**](WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference) |  | [optional] |
 | **WeekCount** | **int?** |  | [optional] |
 | **IntervalLengthMinutes** | **int?** |  | [optional] |
 | **ReferenceStartDate** | **DateTime?** |  | [optional] |
-| **Results** | [**List&lt;WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults&gt;**](WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults.html) |  | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults&gt;**](WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

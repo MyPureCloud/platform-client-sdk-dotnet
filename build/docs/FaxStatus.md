@@ -1,6 +1,5 @@
----
-title: FaxStatus
----
+# FaxStatus
+
 ## ININ.PureCloudApi.Model.FaxStatus
 
 ## Properties
@@ -15,6 +14,7 @@ title: FaxStatus
 | **BaudRate** | **long?** | Current signaling rate of transmission, baud rate. | [optional] |
 | **PageErrors** | **long?** | Number of page errors. | [optional] |
 | **LineErrors** | **long?** | Number of line errors. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

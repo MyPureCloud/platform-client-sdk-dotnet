@@ -1,6 +1,5 @@
----
-title: ComplexVariableInfo
----
+# ComplexVariableInfo
+
 ## ININ.PureCloudApi.Model.ComplexVariableInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: ComplexVariableInfo
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The variable type ID | |
 | **Name** | **string** | The variable type display name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

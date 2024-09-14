@@ -1,6 +1,5 @@
----
-title: EmailsSettings
----
+# EmailsSettings
+
 ## ININ.PureCloudApi.Model.EmailsSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: EmailsSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **SendingSizeLimit** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

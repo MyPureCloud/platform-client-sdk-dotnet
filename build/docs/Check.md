@@ -1,6 +1,5 @@
----
-title: Check
----
+# Check
+
 ## ININ.PureCloudApi.Model.Check
 
 ## Properties
@@ -9,6 +8,7 @@ title: Check
 |------------ | ------------- | ------------- | -------------|
 | **Result** | **string** | The result of a check executed. This indicates if the check was successful or not. | [optional] |
 | **Type** | **string** | The type of check executed. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

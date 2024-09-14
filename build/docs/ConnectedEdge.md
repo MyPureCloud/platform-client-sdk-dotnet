@@ -1,6 +1,5 @@
----
-title: ConnectedEdge
----
+# ConnectedEdge
+
 ## ININ.PureCloudApi.Model.ConnectedEdge
 
 ## Properties
@@ -11,8 +10,9 @@ title: ConnectedEdge
 | **Name** | **string** |  | [optional] |
 | **InterfaceName** | **string** | Edge interface name used for the connection | [optional] |
 | **InterfaceIpAddress** | **string** | Edge interface IP address | [optional] |
-| **EdgeConnectionList** | [**List&lt;EdgeConnectionInfo&gt;**](EdgeConnectionInfo.html) |  | [optional] |
+| **EdgeConnectionList** | [**List&lt;EdgeConnectionInfo&gt;**](EdgeConnectionInfo) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

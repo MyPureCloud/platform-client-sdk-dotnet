@@ -1,14 +1,14 @@
----
-title: ReplyToEmailAddress
----
+# ReplyToEmailAddress
+
 ## ININ.PureCloudApi.Model.ReplyToEmailAddress
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Domain** | [**DomainEntityRef**](DomainEntityRef.html) | The InboundDomain used for the email address. | |
-| **Route** | [**DomainEntityRef**](DomainEntityRef.html) | The InboundRoute used for the email address. | |
-{: class="table table-striped"}
+| **Domain** | [**DomainEntityRef**](DomainEntityRef) | The InboundDomain used for the email address. | |
+| **Route** | [**DomainEntityRef**](DomainEntityRef) | The InboundRoute used for the email address. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

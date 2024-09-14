@@ -1,17 +1,17 @@
----
-title: CoachingAppointmentStatusResponseList
----
+# CoachingAppointmentStatusResponseList
+
 ## ININ.PureCloudApi.Model.CoachingAppointmentStatusResponseList
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;CoachingAppointmentStatusResponse&gt;**](CoachingAppointmentStatusResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;CoachingAppointmentStatusResponse&gt;**](CoachingAppointmentStatusResponse) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

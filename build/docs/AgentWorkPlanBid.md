@@ -1,6 +1,5 @@
----
-title: AgentWorkPlanBid
----
+# AgentWorkPlanBid
+
 ## ININ.PureCloudApi.Model.AgentWorkPlanBid
 
 ## Properties
@@ -15,6 +14,7 @@ title: AgentWorkPlanBid
 | **Status** | **string** | The state of the bid | |
 | **WorkPlanFieldsVisibleToAgents** | **List&lt;string&gt;** | The work plan fields visible to agents whenever work plan preferences are made | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

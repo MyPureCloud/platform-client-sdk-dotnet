@@ -1,6 +1,5 @@
----
-title: EstimateAvailableFullDayTimeOffResponse
----
+# EstimateAvailableFullDayTimeOffResponse
+
 ## ININ.PureCloudApi.Model.EstimateAvailableFullDayTimeOffResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: EstimateAvailableFullDayTimeOffResponse
 | **DurationMinutes** | **int?** | An estimation of time off request length in minutes | |
 | **PayableMinutes** | **int?** | An estimation of payable part of time off request in minutes | |
 | **Flexible** | **bool?** | Whether there is flexibility for a user to choose different hours than the system estimated | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

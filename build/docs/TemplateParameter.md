@@ -1,6 +1,5 @@
----
-title: TemplateParameter
----
+# TemplateParameter
+
 ## ININ.PureCloudApi.Model.TemplateParameter
 
 ## Properties
@@ -9,6 +8,7 @@ title: TemplateParameter
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Response substitution identifier | [optional] |
 | **Value** | **string** | Response substitution value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

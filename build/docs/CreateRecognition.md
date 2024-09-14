@@ -1,6 +1,5 @@
----
-title: CreateRecognition
----
+# CreateRecognition
+
 ## ININ.PureCloudApi.Model.CreateRecognition
 
 ## Properties
@@ -13,6 +12,7 @@ title: CreateRecognition
 | **Note** | **string** | The note of the recognition. Max length of 800 characters (optional) | [optional] |
 | **ContextType** | **string** | The context type (optional) | [optional] |
 | **ContextId** | **string** | The context id (optional) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

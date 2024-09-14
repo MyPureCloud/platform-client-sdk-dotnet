@@ -1,6 +1,5 @@
----
-title: WebChatMemberInfo
----
+# WebChatMemberInfo
+
 ## ININ.PureCloudApi.Model.WebChatMemberInfo
 
 ## Properties
@@ -20,6 +19,7 @@ title: WebChatMemberInfo
 | **AuthenticatedGuest** | **bool?** | If true, the guest member is an authenticated guest. | [optional] |
 | **CustomFields** | **Dictionary&lt;string, string&gt;** | Any custom fields of information pertaining to this member. | [optional] |
 | **State** | **string** | The connection state of this member. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

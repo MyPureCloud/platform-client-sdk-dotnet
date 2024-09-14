@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunk
----
+# TrunkInstanceTopicTrunk
+
 ## ININ.PureCloudApi.Model.TrunkInstanceTopicTrunk
 
 ## Properties
@@ -8,10 +7,11 @@ title: TrunkInstanceTopicTrunk
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **ConnectedStatus** | [**TrunkInstanceTopicTrunkConnectedStatus**](TrunkInstanceTopicTrunkConnectedStatus.html) |  | [optional] |
-| **OptionsStatus** | [**List&lt;TrunkInstanceTopicTrunkMetricsOptions&gt;**](TrunkInstanceTopicTrunkMetricsOptions.html) |  | [optional] |
-| **RegistersStatus** | [**List&lt;TrunkInstanceTopicTrunkMetricsRegisters&gt;**](TrunkInstanceTopicTrunkMetricsRegisters.html) |  | [optional] |
-| **IpStatus** | [**TrunkInstanceTopicTrunkMetricsNetworkTypeIp**](TrunkInstanceTopicTrunkMetricsNetworkTypeIp.html) |  | [optional] |
-{: class="table table-striped"}
+| **ConnectedStatus** | [**TrunkInstanceTopicTrunkConnectedStatus**](TrunkInstanceTopicTrunkConnectedStatus) |  | [optional] |
+| **OptionsStatus** | [**List&lt;TrunkInstanceTopicTrunkMetricsOptions&gt;**](TrunkInstanceTopicTrunkMetricsOptions) |  | [optional] |
+| **RegistersStatus** | [**List&lt;TrunkInstanceTopicTrunkMetricsRegisters&gt;**](TrunkInstanceTopicTrunkMetricsRegisters) |  | [optional] |
+| **IpStatus** | [**TrunkInstanceTopicTrunkMetricsNetworkTypeIp**](TrunkInstanceTopicTrunkMetricsNetworkTypeIp) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

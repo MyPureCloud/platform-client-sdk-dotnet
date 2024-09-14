@@ -1,14 +1,14 @@
----
-title: DocumentAttribute
----
+# DocumentAttribute
+
 ## ININ.PureCloudApi.Model.DocumentAttribute
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Attribute** | [**PureCloudPlatform.Client.V2.Model.Attribute**](PureCloudPlatform.Client.V2.Model.Attribute.html) |  | [optional] |
+| **Attribute** | [**PureCloudPlatform.Client.V2.Model.Attribute**](PureCloudPlatform.Client.V2.Model.Attribute) |  | [optional] |
 | **Values** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

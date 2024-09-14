@@ -1,15 +1,15 @@
----
-title: QueueConversationScreenShareEventTopicJourneyContext
----
+# QueueConversationScreenShareEventTopicJourneyContext
+
 ## ININ.PureCloudApi.Model.QueueConversationScreenShareEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Customer** | [**QueueConversationScreenShareEventTopicJourneyCustomer**](QueueConversationScreenShareEventTopicJourneyCustomer.html) |  | [optional] |
-| **CustomerSession** | [**QueueConversationScreenShareEventTopicJourneyCustomerSession**](QueueConversationScreenShareEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **TriggeringAction** | [**QueueConversationScreenShareEventTopicJourneyAction**](QueueConversationScreenShareEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Customer** | [**QueueConversationScreenShareEventTopicJourneyCustomer**](QueueConversationScreenShareEventTopicJourneyCustomer) |  | [optional] |
+| **CustomerSession** | [**QueueConversationScreenShareEventTopicJourneyCustomerSession**](QueueConversationScreenShareEventTopicJourneyCustomerSession) |  | [optional] |
+| **TriggeringAction** | [**QueueConversationScreenShareEventTopicJourneyAction**](QueueConversationScreenShareEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ArchitectPromptResourceNotificationPromptResourceNotification
----
+# ArchitectPromptResourceNotificationPromptResourceNotification
+
 ## ININ.PureCloudApi.Model.ArchitectPromptResourceNotificationPromptResourceNotification
 
 ## Properties
@@ -13,6 +12,7 @@ title: ArchitectPromptResourceNotificationPromptResourceNotification
 | **MediaUri** | **string** | Uri to the file for this prompt resource. | [optional] |
 | **UploadStatus** | **string** | Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed). | [optional] |
 | **DurationSeconds** | **double?** | Duration (in seconds) for the transcoded audio file. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

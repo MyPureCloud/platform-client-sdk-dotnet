@@ -1,6 +1,5 @@
----
-title: MessagingProgressTransferEvent
----
+# MessagingProgressTransferEvent
+
 ## ININ.PureCloudApi.Model.MessagingProgressTransferEvent
 
 ## Properties
@@ -13,6 +12,7 @@ title: MessagingProgressTransferEvent
 | **CommandId** | **string** | The id (V4 UUID) used to identify the transfer already started by the external platform. | |
 | **ObjectCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred. | |
 | **DestinationCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred to. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

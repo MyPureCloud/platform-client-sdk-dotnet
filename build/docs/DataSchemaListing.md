@@ -1,6 +1,5 @@
----
-title: DataSchemaListing
----
+# DataSchemaListing
+
 ## ININ.PureCloudApi.Model.DataSchemaListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: DataSchemaListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;DataSchema&gt;**](DataSchema.html) |  | [optional] |
+| **Entities** | [**List&lt;DataSchema&gt;**](DataSchema) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: TransferToQueueRequest
----
+# TransferToQueueRequest
+
 ## ININ.PureCloudApi.Model.TransferToQueueRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: TransferToQueueRequest
 | **KeepInternalMessageAlive** | **bool?** | If true, the digital internal message will NOT be terminated. | [optional] |
 | **QueueId** | **string** | The id of the queue. | [optional] |
 | **QueueName** | **string** | The name of the queue. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

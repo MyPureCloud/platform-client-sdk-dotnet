@@ -1,17 +1,16 @@
----
-title: WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate
----
+# WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate
+
 ## ININ.PureCloudApi.Model.WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**WfmUserScheduleAdherenceUpdatedMuTopicUserReference**](WfmUserScheduleAdherenceUpdatedMuTopicUserReference.html) |  | [optional] |
+| **User** | [**WfmUserScheduleAdherenceUpdatedMuTopicUserReference**](WfmUserScheduleAdherenceUpdatedMuTopicUserReference) |  | [optional] |
 | **ManagementUnitId** | **string** |  | [optional] |
-| **Team** | [**WfmUserScheduleAdherenceUpdatedMuTopicUriReference**](WfmUserScheduleAdherenceUpdatedMuTopicUriReference.html) |  | [optional] |
+| **Team** | [**WfmUserScheduleAdherenceUpdatedMuTopicUriReference**](WfmUserScheduleAdherenceUpdatedMuTopicUriReference) |  | [optional] |
 | **ScheduledActivityCategory** | **string** |  | [optional] |
-| **ScheduledActivityCode** | [**WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference**](WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference.html) |  | [optional] |
+| **ScheduledActivityCode** | [**WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference**](WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference) |  | [optional] |
 | **SystemPresence** | **string** |  | [optional] |
 | **OrganizationSecondaryPresenceId** | **string** |  | [optional] |
 | **RoutingStatus** | **string** |  | [optional] |
@@ -19,12 +18,13 @@ title: WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate
 | **IsOutOfOffice** | **bool?** |  | [optional] |
 | **AdherenceState** | **string** |  | [optional] |
 | **Impact** | **string** |  | [optional] |
-| **AdherenceExplanation** | [**WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation**](WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation.html) |  | [optional] |
+| **AdherenceExplanation** | [**WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation**](WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation) |  | [optional] |
 | **AdherenceChangeTime** | **DateTime?** |  | [optional] |
 | **PresenceUpdateTime** | **DateTime?** |  | [optional] |
-| **ActiveQueues** | [**List&lt;WfmUserScheduleAdherenceUpdatedMuTopicQueueReference&gt;**](WfmUserScheduleAdherenceUpdatedMuTopicQueueReference.html) |  | [optional] |
+| **ActiveQueues** | [**List&lt;WfmUserScheduleAdherenceUpdatedMuTopicQueueReference&gt;**](WfmUserScheduleAdherenceUpdatedMuTopicQueueReference) |  | [optional] |
 | **ActiveQueuesModifiedTime** | **DateTime?** |  | [optional] |
 | **RemovedFromManagementUnit** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

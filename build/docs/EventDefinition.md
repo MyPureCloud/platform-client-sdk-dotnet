@@ -1,6 +1,5 @@
----
-title: EventDefinition
----
+# EventDefinition
+
 ## ININ.PureCloudApi.Model.EventDefinition
 
 ## Properties
@@ -10,6 +9,7 @@ title: EventDefinition
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the object. | [optional] |
 | **Description** | **string** | description | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

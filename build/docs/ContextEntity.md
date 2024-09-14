@@ -1,6 +1,5 @@
----
-title: ContextEntity
----
+# ContextEntity
+
 ## ININ.PureCloudApi.Model.ContextEntity
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContextEntity
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the entity. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

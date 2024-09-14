@@ -1,13 +1,13 @@
----
-title: CallForwardingEventCall
----
+# CallForwardingEventCall
+
 ## ININ.PureCloudApi.Model.CallForwardingEventCall
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Targets** | [**List&lt;CallForwardingEventTarget&gt;**](CallForwardingEventTarget.html) |  | [optional] |
-{: class="table table-striped"}
+| **Targets** | [**List&lt;CallForwardingEventTarget&gt;**](CallForwardingEventTarget) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

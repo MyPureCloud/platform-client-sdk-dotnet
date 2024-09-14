@@ -1,6 +1,5 @@
----
-title: JourneyAggregateQueryClause
----
+# JourneyAggregateQueryClause
+
 ## ININ.PureCloudApi.Model.JourneyAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: JourneyAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;JourneyAggregateQueryPredicate&gt;**](JourneyAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;JourneyAggregateQueryPredicate&gt;**](JourneyAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

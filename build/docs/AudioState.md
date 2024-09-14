@@ -1,6 +1,5 @@
----
-title: AudioState
----
+# AudioState
+
 ## ININ.PureCloudApi.Model.AudioState
 
 ## Properties
@@ -9,6 +8,7 @@ title: AudioState
 |------------ | ------------- | ------------- | -------------|
 | **CanHear** | **bool?** | Indicates that this communication&#39;s audio allows its participant to hear others. | [optional] |
 | **CanSpeak** | **bool?** | Indicates that this communication&#39;s audio allows others to hear this participant. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

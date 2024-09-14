@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicLineStatus
----
+# PhoneChangeTopicLineStatus
+
 ## ININ.PureCloudApi.Model.PhoneChangeTopicLineStatus
 
 ## Properties
@@ -12,6 +11,7 @@ title: PhoneChangeTopicLineStatus
 | **AddressOfRecord** | **string** |  | [optional] |
 | **ContactAddresses** | **List&lt;string&gt;** |  | [optional] |
 | **ReachableStateTime** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

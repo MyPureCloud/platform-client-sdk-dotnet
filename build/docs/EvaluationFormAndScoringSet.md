@@ -1,14 +1,14 @@
----
-title: EvaluationFormAndScoringSet
----
+# EvaluationFormAndScoringSet
+
 ## ININ.PureCloudApi.Model.EvaluationFormAndScoringSet
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EvaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
-| **Answers** | [**EvaluationScoringSet**](EvaluationScoringSet.html) |  | [optional] |
-{: class="table table-striped"}
+| **EvaluationForm** | [**EvaluationForm**](EvaluationForm) |  | [optional] |
+| **Answers** | [**EvaluationScoringSet**](EvaluationScoringSet) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

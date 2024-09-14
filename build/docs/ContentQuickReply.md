@@ -1,6 +1,5 @@
----
-title: ContentQuickReply
----
+# ContentQuickReply
+
 ## ININ.PureCloudApi.Model.ContentQuickReply
 
 ## Properties
@@ -12,6 +11,7 @@ title: ContentQuickReply
 | **Payload** | **string** | Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response. | |
 | **Image** | **string** | URL of an image associated with the quick reply. | [optional] |
 | **Action** | **string** | Specifies the type of action that is triggered upon clicking the quick reply. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

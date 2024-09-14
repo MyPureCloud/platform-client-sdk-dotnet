@@ -1,6 +1,5 @@
----
-title: JourneyViewChartResult
----
+# JourneyViewChartResult
+
 ## ININ.PureCloudApi.Model.JourneyViewChartResult
 
 ## Properties
@@ -9,8 +8,9 @@ title: JourneyViewChartResult
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Version** | **int?** | Version of the chart | [optional] |
-| **Metrics** | [**List&lt;JourneyViewChartMetricResult&gt;**](JourneyViewChartMetricResult.html) | Metric results for this chart | [optional] |
+| **Metrics** | [**List&lt;JourneyViewChartMetricResult&gt;**](JourneyViewChartMetricResult) | Metric results for this chart | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

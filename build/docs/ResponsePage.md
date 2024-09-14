@@ -1,6 +1,5 @@
----
-title: ResponsePage
----
+# ResponsePage
+
 ## ININ.PureCloudApi.Model.ResponsePage
 
 ## Properties
@@ -16,6 +15,7 @@ title: ResponsePage
 | **Lang** | **string** | ISO 639-1 language code for the page as defined in the &lt;html&gt; tag. | [optional] |
 | **Pathname** | **string** | Path name of the page for the event. | |
 | **QueryString** | **string** | Query string that is passed to the page in the current event. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

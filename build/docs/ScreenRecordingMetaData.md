@@ -1,6 +1,5 @@
----
-title: ScreenRecordingMetaData
----
+# ScreenRecordingMetaData
+
 ## ININ.PureCloudApi.Model.ScreenRecordingMetaData
 
 ## Properties
@@ -14,6 +13,7 @@ title: ScreenRecordingMetaData
 | **OriginY** | **int?** |  | [optional] |
 | **Primary** | **bool?** |  | [optional] |
 | **Main** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

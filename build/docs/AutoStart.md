@@ -1,6 +1,5 @@
----
-title: AutoStart
----
+# AutoStart
+
 ## ININ.PureCloudApi.Model.AutoStart
 
 ## Properties
@@ -8,6 +7,7 @@ title: AutoStart
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not auto start is enabled | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

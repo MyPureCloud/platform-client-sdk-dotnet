@@ -1,15 +1,15 @@
----
-title: TimeAllowed
----
+# TimeAllowed
+
 ## ININ.PureCloudApi.Model.TimeAllowed
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **TimeSlots** | [**List&lt;TimeSlot&gt;**](TimeSlot.html) |  | [optional] |
+| **TimeSlots** | [**List&lt;TimeSlot&gt;**](TimeSlot) |  | [optional] |
 | **TimeZoneId** | **string** |  | [optional] |
 | **Empty** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

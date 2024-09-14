@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
----
+# WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
+
 ## ININ.PureCloudApi.Model.WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
 
 ## Properties
@@ -15,6 +14,7 @@ title: WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
 | **AverageAfterCallWorkSeconds** | **double?** |  | [optional] |
 | **ServiceLevelPercent** | **double?** |  | [optional] |
 | **AverageSpeedOfAnswerSeconds** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

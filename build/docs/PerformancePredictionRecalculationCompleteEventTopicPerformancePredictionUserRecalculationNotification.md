@@ -1,6 +1,5 @@
----
-title: PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification
----
+# PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification
+
 ## ININ.PureCloudApi.Model.PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification
 
 ## Properties
@@ -10,7 +9,8 @@ title: PerformancePredictionRecalculationCompleteEventTopicPerformancePrediction
 | **OperationId** | **string** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
-| **Error** | [**PerformancePredictionRecalculationCompleteEventTopicErrorBody**](PerformancePredictionRecalculationCompleteEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Error** | [**PerformancePredictionRecalculationCompleteEventTopicErrorBody**](PerformancePredictionRecalculationCompleteEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

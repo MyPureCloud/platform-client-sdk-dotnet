@@ -1,6 +1,5 @@
----
-title: OverallBestPointsItem
----
+# OverallBestPointsItem
+
 ## ININ.PureCloudApi.Model.OverallBestPointsItem
 
 ## Properties
@@ -8,11 +7,12 @@ title: OverallBestPointsItem
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **GranularityType** | **string** | Best points aggregation interval granularity | [optional] |
-| **Users** | [**List&lt;UserReference&gt;**](UserReference.html) | List of associated users with the equal points. | [optional] |
+| **Users** | [**List&lt;UserReference&gt;**](UserReference) | List of associated users with the equal points. | [optional] |
 | **Count** | **int?** | The count of the user IDs in the list | [optional] |
 | **Points** | **int?** | Gamification points | [optional] |
 | **DateStartWorkday** | **String** | Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **DateEndWorkday** | **String** | End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CoachingAnnotationCreateRequest
----
+# CoachingAnnotationCreateRequest
+
 ## ININ.PureCloudApi.Model.CoachingAnnotationCreateRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: CoachingAnnotationCreateRequest
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | The text of the annotation. | |
 | **AccessType** | **string** | Determines the permissions required to view this item. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

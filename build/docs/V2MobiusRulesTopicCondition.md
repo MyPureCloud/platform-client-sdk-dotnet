@@ -1,6 +1,5 @@
----
-title: V2MobiusRulesTopicCondition
----
+# V2MobiusRulesTopicCondition
+
 ## ININ.PureCloudApi.Model.V2MobiusRulesTopicCondition
 
 ## Properties
@@ -8,9 +7,10 @@ title: V2MobiusRulesTopicCondition
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **Guid?** |  | [optional] |
-| **Conditions** | [**List&lt;V2MobiusRulesTopicCondition&gt;**](V2MobiusRulesTopicCondition.html) |  | [optional] |
-| **Predicates** | [**List&lt;V2MobiusRulesTopicConditionRulePredicate&gt;**](V2MobiusRulesTopicConditionRulePredicate.html) |  | [optional] |
+| **Conditions** | [**List&lt;V2MobiusRulesTopicCondition&gt;**](V2MobiusRulesTopicCondition) |  | [optional] |
+| **Predicates** | [**List&lt;V2MobiusRulesTopicConditionRulePredicate&gt;**](V2MobiusRulesTopicConditionRulePredicate) |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

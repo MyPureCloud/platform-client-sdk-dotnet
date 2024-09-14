@@ -1,6 +1,5 @@
----
-title: FormsTrackTrigger
----
+# FormsTrackTrigger
+
 ## ININ.PureCloudApi.Model.FormsTrackTrigger
 
 ## Properties
@@ -11,6 +10,7 @@ title: FormsTrackTrigger
 | **FormName** | **string** | Prefix for the form submitted or abandoned event name. | |
 | **CaptureDataOnFormAbandon** | **bool?** | Whether to capture the form data in the form abandoned event. | |
 | **CaptureDataOnFormSubmit** | **bool?** | Whether to capture the form data in the form submitted event. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

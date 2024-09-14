@@ -24,11 +24,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxSimultaneousStreams">Maximum number of simultaneous screen recording streams.</param>
         /// <param name="MaxConfigurableScreenRecordingStreams">Upper limit that maxSimultaneousStreams can be configured.</param>
         /// <param name="RegionalRecordingStorageEnabled">Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region.</param>
-        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null)
+        /// <param name="RecordingPlaybackUrlTtl">The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
+        /// <param name="RecordingBatchDownloadUrlTtl">TThe duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
+        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null, int? RecordingPlaybackUrlTtl = null, int? RecordingBatchDownloadUrlTtl = null)
         {
             this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             this.MaxConfigurableScreenRecordingStreams = MaxConfigurableScreenRecordingStreams;
             this.RegionalRecordingStorageEnabled = RegionalRecordingStorageEnabled;
+            this.RecordingPlaybackUrlTtl = RecordingPlaybackUrlTtl;
+            this.RecordingBatchDownloadUrlTtl = RecordingBatchDownloadUrlTtl;
             
         }
         
@@ -60,6 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? RegionalRecordingStorageEnabled { get; set; }
 
 
+
+        /// <summary>
+        /// The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.
+        /// </summary>
+        /// <value>The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.</value>
+        [DataMember(Name="recordingPlaybackUrlTtl", EmitDefaultValue=false)]
+        public int? RecordingPlaybackUrlTtl { get; set; }
+
+
+
+        /// <summary>
+        /// TThe duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.
+        /// </summary>
+        /// <value>TThe duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.</value>
+        [DataMember(Name="recordingBatchDownloadUrlTtl", EmitDefaultValue=false)]
+        public int? RecordingBatchDownloadUrlTtl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
             sb.Append("  MaxConfigurableScreenRecordingStreams: ").Append(MaxConfigurableScreenRecordingStreams).Append("\n");
             sb.Append("  RegionalRecordingStorageEnabled: ").Append(RegionalRecordingStorageEnabled).Append("\n");
+            sb.Append("  RecordingPlaybackUrlTtl: ").Append(RecordingPlaybackUrlTtl).Append("\n");
+            sb.Append("  RecordingBatchDownloadUrlTtl: ").Append(RecordingBatchDownloadUrlTtl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +150,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RegionalRecordingStorageEnabled == other.RegionalRecordingStorageEnabled ||
                     this.RegionalRecordingStorageEnabled != null &&
                     this.RegionalRecordingStorageEnabled.Equals(other.RegionalRecordingStorageEnabled)
+                ) &&
+                (
+                    this.RecordingPlaybackUrlTtl == other.RecordingPlaybackUrlTtl ||
+                    this.RecordingPlaybackUrlTtl != null &&
+                    this.RecordingPlaybackUrlTtl.Equals(other.RecordingPlaybackUrlTtl)
+                ) &&
+                (
+                    this.RecordingBatchDownloadUrlTtl == other.RecordingBatchDownloadUrlTtl ||
+                    this.RecordingBatchDownloadUrlTtl != null &&
+                    this.RecordingBatchDownloadUrlTtl.Equals(other.RecordingBatchDownloadUrlTtl)
                 );
         }
 
@@ -148,6 +182,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RegionalRecordingStorageEnabled != null)
                     hash = hash * 59 + this.RegionalRecordingStorageEnabled.GetHashCode();
+
+                if (this.RecordingPlaybackUrlTtl != null)
+                    hash = hash * 59 + this.RecordingPlaybackUrlTtl.GetHashCode();
+
+                if (this.RecordingBatchDownloadUrlTtl != null)
+                    hash = hash * 59 + this.RecordingBatchDownloadUrlTtl.GetHashCode();
 
                 return hash;
             }

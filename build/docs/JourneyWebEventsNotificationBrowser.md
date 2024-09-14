@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationBrowser
----
+# JourneyWebEventsNotificationBrowser
+
 ## ININ.PureCloudApi.Model.JourneyWebEventsNotificationBrowser
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyWebEventsNotificationBrowser
 | **FeaturesJava** | **bool?** |  | [optional] |
 | **FeaturesPdf** | **bool?** |  | [optional] |
 | **FeaturesWebrtc** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

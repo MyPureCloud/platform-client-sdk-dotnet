@@ -1,6 +1,5 @@
----
-title: HistoricalImportDeleteJobResponse
----
+# HistoricalImportDeleteJobResponse
+
 ## ININ.PureCloudApi.Model.HistoricalImportDeleteJobResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: HistoricalImportDeleteJobResponse
 | **Name** | **string** |  | [optional] |
 | **Status** | **string** | Property denoting the status of the delete. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

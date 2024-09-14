@@ -1,16 +1,16 @@
----
-title: KnowledgeGuestDocumentResponseListing
----
+# KnowledgeGuestDocumentResponseListing
+
 ## ININ.PureCloudApi.Model.KnowledgeGuestDocumentResponseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;KnowledgeGuestDocumentResponse&gt;**](KnowledgeGuestDocumentResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;KnowledgeGuestDocumentResponse&gt;**](KnowledgeGuestDocumentResponse) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

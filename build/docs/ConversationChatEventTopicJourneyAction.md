@@ -1,6 +1,5 @@
----
-title: ConversationChatEventTopicJourneyAction
----
+# ConversationChatEventTopicJourneyAction
+
 ## ININ.PureCloudApi.Model.ConversationChatEventTopicJourneyAction
 
 ## Properties
@@ -8,7 +7,8 @@ title: ConversationChatEventTopicJourneyAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of an action from the Journey System (an action is spawned from an actionMap) | [optional] |
-| **ActionMap** | [**ConversationChatEventTopicJourneyActionMap**](ConversationChatEventTopicJourneyActionMap.html) |  | [optional] |
-{: class="table table-striped"}
+| **ActionMap** | [**ConversationChatEventTopicJourneyActionMap**](ConversationChatEventTopicJourneyActionMap) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

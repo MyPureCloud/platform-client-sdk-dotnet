@@ -1,6 +1,5 @@
----
-title: LocationEmergencyNumber
----
+# LocationEmergencyNumber
+
 ## ININ.PureCloudApi.Model.LocationEmergencyNumber
 
 ## Properties
@@ -10,6 +9,7 @@ title: LocationEmergencyNumber
 | **E164** | **string** |  | [optional] |
 | **Number** | **string** |  | [optional] |
 | **Type** | **string** | The type of emergency number. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

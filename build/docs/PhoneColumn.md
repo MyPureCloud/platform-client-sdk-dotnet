@@ -1,6 +1,5 @@
----
-title: PhoneColumn
----
+# PhoneColumn
+
 ## ININ.PureCloudApi.Model.PhoneColumn
 
 ## Properties
@@ -9,6 +8,7 @@ title: PhoneColumn
 |------------ | ------------- | ------------- | -------------|
 | **ColumnName** | **string** | The name of the phone column. | |
 | **Type** | **string** | The type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

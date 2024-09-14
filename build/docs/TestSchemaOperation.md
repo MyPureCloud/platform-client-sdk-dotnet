@@ -1,6 +1,5 @@
----
-title: TestSchemaOperation
----
+# TestSchemaOperation
+
 ## ININ.PureCloudApi.Model.TestSchemaOperation
 
 ## Properties
@@ -11,6 +10,7 @@ title: TestSchemaOperation
 | **Step** | **int?** | The number of the processing step | [optional] |
 | **Matches** | **bool?** | Whether or not the operation matches expectations | [optional] |
 | **Details** | **List&lt;string&gt;** | Details about why the operation did or did not succeed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

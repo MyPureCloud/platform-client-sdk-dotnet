@@ -1,6 +1,5 @@
----
-title: DashboardUser
----
+# DashboardUser
+
 ## ININ.PureCloudApi.Model.DashboardUser
 
 ## Properties
@@ -13,6 +12,7 @@ title: DashboardUser
 | **PublicDashboardCount** | **int?** | The count of public dashboards for the user | [optional] |
 | **State** | **string** | The state of the user | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

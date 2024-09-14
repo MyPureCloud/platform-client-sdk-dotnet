@@ -1,6 +1,5 @@
----
-title: NamespaceDocs
----
+# NamespaceDocs
+
 ## ININ.PureCloudApi.Model.NamespaceDocs
 
 ## Properties
@@ -8,7 +7,8 @@ title: NamespaceDocs
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **FriendlyName** | **string** |  | [optional] |
-| **Limits** | [**List&lt;LimitDocs&gt;**](LimitDocs.html) |  | [optional] |
-{: class="table table-striped"}
+| **Limits** | [**List&lt;LimitDocs&gt;**](LimitDocs) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

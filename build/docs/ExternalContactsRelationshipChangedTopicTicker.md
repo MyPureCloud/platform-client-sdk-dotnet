@@ -1,6 +1,5 @@
----
-title: ExternalContactsRelationshipChangedTopicTicker
----
+# ExternalContactsRelationshipChangedTopicTicker
+
 ## ININ.PureCloudApi.Model.ExternalContactsRelationshipChangedTopicTicker
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExternalContactsRelationshipChangedTopicTicker
 |------------ | ------------- | ------------- | -------------|
 | **Symbol** | **string** |  | [optional] |
 | **Exchange** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

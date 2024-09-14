@@ -1,13 +1,13 @@
----
-title: Context
----
+# Context
+
 ## ININ.PureCloudApi.Model.Context
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Patterns** | [**List&lt;ContextPattern&gt;**](ContextPattern.html) | A list of one or more patterns to match. | |
-{: class="table table-striped"}
+| **Patterns** | [**List&lt;ContextPattern&gt;**](ContextPattern) | A list of one or more patterns to match. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: EdgeVersionInformation
----
+# EdgeVersionInformation
+
 ## ININ.PureCloudApi.Model.EdgeVersionInformation
 
 ## Properties
@@ -8,6 +7,7 @@ title: EdgeVersionInformation
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **SoftwareVersion** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

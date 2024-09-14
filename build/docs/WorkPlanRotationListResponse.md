@@ -1,13 +1,13 @@
----
-title: WorkPlanRotationListResponse
----
+# WorkPlanRotationListResponse
+
 ## ININ.PureCloudApi.Model.WorkPlanRotationListResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorkPlanRotationResponse&gt;**](WorkPlanRotationResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;WorkPlanRotationResponse&gt;**](WorkPlanRotationResponse) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Annotation
----
+# Annotation
+
 ## ININ.PureCloudApi.Model.Annotation
 
 ## Properties
@@ -16,12 +15,13 @@ title: Annotation
 | **AbsoluteDurationMs** | **long?** | Duration of annotation (milliseconds). | [optional] |
 | **RecordingLocation** | **long?** | Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts | [optional] |
 | **RecordingDurationMs** | **long?** | Duration of annotation (milliseconds), adjusted for any recording cuts. | [optional] |
-| **User** | [**User**](User.html) | User that created this annotation (if any). | [optional] |
+| **User** | [**User**](User) | User that created this annotation (if any). | [optional] |
 | **Description** | **string** | Text of annotation. Maximum character limit is 500. | [optional] |
 | **Reason** | **string** | Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue | [optional] |
-| **Annotations** | [**List&lt;Annotation&gt;**](Annotation.html) | List of annotations | [optional] |
+| **Annotations** | [**List&lt;Annotation&gt;**](Annotation) | List of annotations | [optional] |
 | **RealtimeLocation** | **long?** | Offset of annotation (milliseconds) from start of the recording before removing the cumulative duration of all pauses before this annotation | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Category
----
+# Category
+
 ## ININ.PureCloudApi.Model.Category
 
 ## Properties
@@ -8,6 +7,7 @@ title: Category
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Category name | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

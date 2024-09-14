@@ -1,14 +1,14 @@
----
-title: AddConversationResponse
----
+# AddConversationResponse
+
 ## ININ.PureCloudApi.Model.AddConversationResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Conversation** | [**ConversationReference**](ConversationReference.html) | The conversation reference | [optional] |
-| **Appointment** | [**CoachingAppointmentReference**](CoachingAppointmentReference.html) | The appointment reference | [optional] |
-{: class="table table-striped"}
+| **Conversation** | [**ConversationReference**](ConversationReference) | The conversation reference | [optional] |
+| **Appointment** | [**CoachingAppointmentReference**](CoachingAppointmentReference) | The appointment reference | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

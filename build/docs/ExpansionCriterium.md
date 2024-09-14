@@ -1,6 +1,5 @@
----
-title: ExpansionCriterium
----
+# ExpansionCriterium
+
 ## ININ.PureCloudApi.Model.ExpansionCriterium
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExpansionCriterium
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
 | **Threshold** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

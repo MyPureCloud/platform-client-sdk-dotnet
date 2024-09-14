@@ -1,6 +1,5 @@
----
-title: AcceleratorInput
----
+# AcceleratorInput
+
 ## ININ.PureCloudApi.Model.AcceleratorInput
 
 ## Properties
@@ -9,7 +8,8 @@ title: AcceleratorInput
 |------------ | ------------- | ------------- | -------------|
 | **DryRun** | **bool?** | Set this true to test the job without making any changes. Defaults to false. | [optional] |
 | **AcceleratorId** | **string** | Accelerator ID | |
-| **Parameters** | [**List&lt;AcceleratorParameter&gt;**](AcceleratorParameter.html) | Parameters required for this accelerator | [optional] |
-{: class="table table-striped"}
+| **Parameters** | [**List&lt;AcceleratorParameter&gt;**](AcceleratorParameter) | Parameters required for this accelerator | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

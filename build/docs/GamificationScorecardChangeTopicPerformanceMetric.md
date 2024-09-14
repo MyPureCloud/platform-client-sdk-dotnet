@@ -1,17 +1,17 @@
----
-title: GamificationScorecardChangeTopicPerformanceMetric
----
+# GamificationScorecardChangeTopicPerformanceMetric
+
 ## ININ.PureCloudApi.Model.GamificationScorecardChangeTopicPerformanceMetric
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Metric** | [**GamificationScorecardChangeTopicMetric**](GamificationScorecardChangeTopicMetric.html) |  | [optional] |
+| **Metric** | [**GamificationScorecardChangeTopicMetric**](GamificationScorecardChangeTopicMetric) |  | [optional] |
 | **Points** | **int?** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
-| **PunctualityEvents** | [**List&lt;GamificationScorecardChangeTopicPunctualityEvent&gt;**](GamificationScorecardChangeTopicPunctualityEvent.html) |  | [optional] |
-| **EvaluationDetails** | [**List&lt;GamificationScorecardChangeTopicEvaluationDetail&gt;**](GamificationScorecardChangeTopicEvaluationDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **PunctualityEvents** | [**List&lt;GamificationScorecardChangeTopicPunctualityEvent&gt;**](GamificationScorecardChangeTopicPunctualityEvent) |  | [optional] |
+| **EvaluationDetails** | [**List&lt;GamificationScorecardChangeTopicEvaluationDetail&gt;**](GamificationScorecardChangeTopicEvaluationDetail) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: TextBotOutputPrompts
----
+# TextBotOutputPrompts
+
 ## ININ.PureCloudApi.Model.TextBotOutputPrompts
 
 ## Properties
@@ -8,7 +7,8 @@ title: TextBotOutputPrompts
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **OutputLanguage** | **string** | The ISO code of the output language for this prompt item. | |
-| **TextPrompts** | [**TextBotModeOutputPrompts**](TextBotModeOutputPrompts.html) | Text output prompts, if any. | [optional] |
-{: class="table table-striped"}
+| **TextPrompts** | [**TextBotModeOutputPrompts**](TextBotModeOutputPrompts) | Text output prompts, if any. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

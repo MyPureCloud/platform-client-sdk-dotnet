@@ -1,6 +1,5 @@
----
-title: EntityChange
----
+# EntityChange
+
 ## ININ.PureCloudApi.Model.EntityChange
 
 ## Properties
@@ -12,6 +11,7 @@ title: EntityChange
 | **EntityType** | **string** | Type of the entity that was changed | [optional] |
 | **OldValues** | **List&lt;string&gt;** | Previous values for the entity. | [optional] |
 | **NewValues** | **List&lt;string&gt;** | New values for the entity. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

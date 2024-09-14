@@ -1,15 +1,15 @@
----
-title: AdhocRecordingTopicLockData
----
+# AdhocRecordingTopicLockData
+
 ## ININ.PureCloudApi.Model.AdhocRecordingTopicLockData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **LockedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData.html) |  | [optional] |
+| **LockedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData) |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateExpires** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

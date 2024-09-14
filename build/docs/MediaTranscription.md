@@ -1,6 +1,5 @@
----
-title: MediaTranscription
----
+# MediaTranscription
+
 ## ININ.PureCloudApi.Model.MediaTranscription
 
 ## Properties
@@ -10,6 +9,7 @@ title: MediaTranscription
 | **DisplayName** | **string** |  | [optional] |
 | **TranscriptionProvider** | **string** |  | [optional] |
 | **IntegrationId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

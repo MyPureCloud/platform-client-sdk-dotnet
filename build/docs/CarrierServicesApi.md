@@ -1,20 +1,19 @@
----
-title: CarrierServicesApi
----
+# CarrierServicesApi
+
 ## PureCloudPlatform.Client.V2.Api.CarrierServicesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesApi.html#getcarrierservicesintegrationsemergencylocationsme) | **Get** /api/v2/carrierservices/integrations/emergencylocations/me | Get location for the logged in user |
-| [**PostCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesApi.html#postcarrierservicesintegrationsemergencylocationsme) | **Post** /api/v2/carrierservices/integrations/emergencylocations/me | Set current location for the logged in user |
-{: class="table table-striped"}
+| [**GetCarrierservicesIntegrationsEmergencylocationsMe**](#GetCarrierservicesIntegrationsEmergencylocationsMe) | **Get** /api/v2/carrierservices/integrations/emergencylocations/me | Get location for the logged in user |
+| [**PostCarrierservicesIntegrationsEmergencylocationsMe**](#PostCarrierservicesIntegrationsEmergencylocationsMe) | **Post** /api/v2/carrierservices/integrations/emergencylocations/me | Set current location for the logged in user |
 
-<a name="getcarrierservicesintegrationsemergencylocationsme"></a>
 
-## [**EmergencyLocation**](EmergencyLocation.html) GetCarrierservicesIntegrationsEmergencylocationsMe (string phoneNumber)
 
+## GetCarrierservicesIntegrationsEmergencylocationsMe
+
+> [**EmergencyLocation**](EmergencyLocation) GetCarrierservicesIntegrationsEmergencylocationsMe (string phoneNumber)
 
 
 Get location for the logged in user
@@ -67,16 +66,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **phoneNumber** | **string**| Phone number in E164 format |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EmergencyLocation**](EmergencyLocation.html)
+[**EmergencyLocation**](EmergencyLocation)
 
-<a name="postcarrierservicesintegrationsemergencylocationsme"></a>
 
-## [**EmergencyLocation**](EmergencyLocation.html) PostCarrierservicesIntegrationsEmergencylocationsMe (EmergencyLocation body = null)
+## PostCarrierservicesIntegrationsEmergencylocationsMe
 
+> [**EmergencyLocation**](EmergencyLocation) PostCarrierservicesIntegrationsEmergencylocationsMe (EmergencyLocation body = null)
 
 
 Set current location for the logged in user
@@ -128,10 +126,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EmergencyLocation**](EmergencyLocation.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**EmergencyLocation**](EmergencyLocation)|  | [optional]  |
 
 ### Return type
 
-[**EmergencyLocation**](EmergencyLocation.html)
+[**EmergencyLocation**](EmergencyLocation)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

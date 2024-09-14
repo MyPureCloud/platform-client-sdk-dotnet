@@ -1,6 +1,5 @@
----
-title: RecordingArchiveRestoreTopicRecording
----
+# RecordingArchiveRestoreTopicRecording
+
 ## ININ.PureCloudApi.Model.RecordingArchiveRestoreTopicRecording
 
 ## Properties
@@ -10,9 +9,10 @@ title: RecordingArchiveRestoreTopicRecording
 | **Id** | **string** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **FileState** | **string** |  | [optional] |
-| **MediaUris** | [**List&lt;RecordingArchiveRestoreTopicMediaResult&gt;**](RecordingArchiveRestoreTopicMediaResult.html) |  | [optional] |
+| **MediaUris** | [**List&lt;RecordingArchiveRestoreTopicMediaResult&gt;**](RecordingArchiveRestoreTopicMediaResult) |  | [optional] |
 | **EstimatedTranscodeTimeMs** | **int?** |  | [optional] |
 | **ActualTranscodeTimeMs** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

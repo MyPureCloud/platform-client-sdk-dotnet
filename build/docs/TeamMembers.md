@@ -1,6 +1,5 @@
----
-title: TeamMembers
----
+# TeamMembers
+
 ## ININ.PureCloudApi.Model.TeamMembers
 
 ## Properties
@@ -8,6 +7,7 @@ title: TeamMembers
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **MemberIds** | **List&lt;string&gt;** | A list of the ids of the members to add or remove | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

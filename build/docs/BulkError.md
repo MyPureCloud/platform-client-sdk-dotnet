@@ -1,6 +1,5 @@
----
-title: BulkError
----
+# BulkError
+
 ## ININ.PureCloudApi.Model.BulkError
 
 ## Properties
@@ -9,6 +8,7 @@ title: BulkError
 |------------ | ------------- | ------------- | -------------|
 | **Message** | **string** | Error message of the bulk operation result. | [optional] |
 | **Code** | **string** | Error code of the bulk operation result. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

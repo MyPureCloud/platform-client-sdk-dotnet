@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayDataUpdate
----
+# WfmIntradayDataUpdateTopicIntradayDataUpdate
+
 ## ININ.PureCloudApi.Model.WfmIntradayDataUpdateTopicIntradayDataUpdate
 
 ## Properties
@@ -11,9 +10,10 @@ title: WfmIntradayDataUpdateTopicIntradayDataUpdate
 | **EndDate** | **DateTime?** |  | [optional] |
 | **IntervalLengthMinutes** | **int?** |  | [optional] |
 | **NumberOfIntervals** | **int?** |  | [optional] |
-| **Metrics** | [**List&lt;WfmIntradayDataUpdateTopicIntradayMetric&gt;**](WfmIntradayDataUpdateTopicIntradayMetric.html) |  | [optional] |
+| **Metrics** | [**List&lt;WfmIntradayDataUpdateTopicIntradayMetric&gt;**](WfmIntradayDataUpdateTopicIntradayMetric) |  | [optional] |
 | **QueueIds** | **List&lt;string&gt;** |  | [optional] |
-| **IntradayDataGroupings** | [**List&lt;WfmIntradayDataUpdateTopicIntradayDataGroup&gt;**](WfmIntradayDataUpdateTopicIntradayDataGroup.html) |  | [optional] |
-{: class="table table-striped"}
+| **IntradayDataGroupings** | [**List&lt;WfmIntradayDataUpdateTopicIntradayDataGroup&gt;**](WfmIntradayDataUpdateTopicIntradayDataGroup) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

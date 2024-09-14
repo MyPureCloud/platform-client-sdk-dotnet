@@ -1,13 +1,12 @@
----
-title: TimeZoneMappingPreview
----
+# TimeZoneMappingPreview
+
 ## ININ.PureCloudApi.Model.TimeZoneMappingPreview
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ContactList** | [**DomainEntityRef**](DomainEntityRef.html) | The associated ContactList | [optional] |
+| **ContactList** | [**DomainEntityRef**](DomainEntityRef) | The associated ContactList | [optional] |
 | **ContactsPerTimeZone** | **Dictionary&lt;string, long?&gt;** | The number of contacts per time zone that mapped to only that time zone | [optional] |
 | **ContactsMappedUsingZipCode** | **Dictionary&lt;string, long?&gt;** | The number of contacts per time zone that mapped to only that time zone and were mapped using the zip code column | [optional] |
 | **ContactsMappedToASingleZone** | **long?** | The total number of contacts that mapped to a single time zone | [optional] |
@@ -16,6 +15,7 @@ title: TimeZoneMappingPreview
 | **ContactsMappedToMultipleZonesUsingZipCode** | **long?** | The total number of contacts that mapped to multiple time zones and were mapped using the zip code column | [optional] |
 | **ContactsInDefaultWindow** | **long?** | The total number of contacts that will be dialed during the default window | [optional] |
 | **ContactListSize** | **long?** | The total number of contacts in the contact list | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationMktCampaign
----
+# JourneySessionEventsNotificationMktCampaign
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationMktCampaign
 
 ## Properties
@@ -14,6 +13,7 @@ title: JourneySessionEventsNotificationMktCampaign
 | **Term** | **string** |  | [optional] |
 | **ClickId** | **string** |  | [optional] |
 | **Network** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

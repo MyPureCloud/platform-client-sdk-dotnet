@@ -1,6 +1,5 @@
----
-title: SearchSort
----
+# SearchSort
+
 ## ININ.PureCloudApi.Model.SearchSort
 
 ## Properties
@@ -9,6 +8,7 @@ title: SearchSort
 |------------ | ------------- | ------------- | -------------|
 | **SortOrder** | **string** | The sort order for results | [optional] |
 | **SortBy** | **string** | The field in the resource that you want to sort the results by | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

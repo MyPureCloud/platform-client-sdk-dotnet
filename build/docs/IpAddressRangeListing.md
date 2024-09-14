@@ -1,13 +1,13 @@
----
-title: IpAddressRangeListing
----
+# IpAddressRangeListing
+
 ## ININ.PureCloudApi.Model.IpAddressRangeListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;IpAddressRange&gt;**](IpAddressRange.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;IpAddressRange&gt;**](IpAddressRange) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

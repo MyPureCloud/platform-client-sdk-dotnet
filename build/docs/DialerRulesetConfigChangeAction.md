@@ -1,6 +1,5 @@
----
-title: DialerRulesetConfigChangeAction
----
+# DialerRulesetConfigChangeAction
+
 ## ININ.PureCloudApi.Model.DialerRulesetConfigChangeAction
 
 ## Properties
@@ -12,6 +11,7 @@ title: DialerRulesetConfigChangeAction
 | **UpdateOption** | **string** | Indicator of the type of update action (applicable only to certain types of actions) | [optional] |
 | **Properties** | **Dictionary&lt;string, string&gt;** | Map of key-value pairs pertinent to the action (different actions require different properties) | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

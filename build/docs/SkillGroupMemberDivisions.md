@@ -1,6 +1,5 @@
----
-title: SkillGroupMemberDivisions
----
+# SkillGroupMemberDivisions
+
 ## ININ.PureCloudApi.Model.SkillGroupMemberDivisions
 
 ## Properties
@@ -9,6 +8,7 @@ title: SkillGroupMemberDivisions
 |------------ | ------------- | ------------- | -------------|
 | **AddDivisionIds** | **List&lt;string&gt;** |  | [optional] |
 | **RemoveDivisionIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

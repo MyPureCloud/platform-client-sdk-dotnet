@@ -1,6 +1,5 @@
----
-title: AuthzDivision
----
+# AuthzDivision
+
 ## ININ.PureCloudApi.Model.AuthzDivision
 
 ## Properties
@@ -13,6 +12,7 @@ title: AuthzDivision
 | **HomeDivision** | **bool?** | A flag indicating whether this division is the \&quot;Home\&quot; (default) division. Cannot be modified and any supplied value will be ignored on create or update. | [optional] |
 | **ObjectCounts** | **Dictionary&lt;string, long?&gt;** | A count of objects in this division, grouped by type. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

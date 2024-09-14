@@ -1,6 +1,5 @@
----
-title: QueueConversationCallbackEventTopicErrorBody
----
+# QueueConversationCallbackEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.QueueConversationCallbackEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: QueueConversationCallbackEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;QueueConversationCallbackEventTopicDetail&gt;**](QueueConversationCallbackEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;QueueConversationCallbackEventTopicErrorBody&gt;**](QueueConversationCallbackEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;QueueConversationCallbackEventTopicDetail&gt;**](QueueConversationCallbackEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;QueueConversationCallbackEventTopicErrorBody&gt;**](QueueConversationCallbackEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

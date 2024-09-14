@@ -1,6 +1,5 @@
----
-title: OpenMessageContent
----
+# OpenMessageContent
+
 ## ININ.PureCloudApi.Model.OpenMessageContent
 
 ## Properties
@@ -8,7 +7,8 @@ title: OpenMessageContent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ContentType** | **string** | Type of this content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed. | |
-| **Attachment** | [**ConversationContentAttachment**](ConversationContentAttachment.html) | Attachment content. | [optional] |
-{: class="table table-striped"}
+| **Attachment** | [**ConversationContentAttachment**](ConversationContentAttachment) | Attachment content. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: LibraryBatchRequest
----
+# LibraryBatchRequest
+
 ## ININ.PureCloudApi.Model.LibraryBatchRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: LibraryBatchRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **LibraryIds** | **List&lt;string&gt;** | List of Library IDs | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

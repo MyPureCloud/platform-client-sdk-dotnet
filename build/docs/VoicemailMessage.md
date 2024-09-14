@@ -1,6 +1,5 @@
----
-title: VoicemailMessage
----
+# VoicemailMessage
+
 ## ININ.PureCloudApi.Model.VoicemailMessage
 
 ## Properties
@@ -8,7 +7,7 @@ title: VoicemailMessage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Conversation** | [**Conversation**](Conversation.html) | The conversation that the voicemail message is associated with | [optional] |
+| **Conversation** | [**Conversation**](Conversation) | The conversation that the voicemail message is associated with | [optional] |
 | **Read** | **bool?** | Whether the voicemail message is marked as read | [optional] |
 | **AudioRecordingDurationSeconds** | **int?** | The voicemail message&#39;s audio recording duration in seconds | [optional] |
 | **AudioRecordingSizeBytes** | **long?** | The voicemail message&#39;s audio recording size in bytes | [optional] |
@@ -18,16 +17,17 @@ title: VoicemailMessage
 | **DeletedDate** | **DateTime?** | The date the voicemail message deleted property was set to true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CallerAddress** | **string** | The caller address | [optional] |
 | **CallerName** | **string** | Optionally the name of the caller that left the voicemail message if the caller was a known user | [optional] |
-| **CallerUser** | [**User**](User.html) | Optionally the user that left the voicemail message if the caller was a known user | [optional] |
+| **CallerUser** | [**User**](User) | Optionally the user that left the voicemail message if the caller was a known user | [optional] |
 | **Deleted** | **bool?** | Whether the voicemail message has been marked as deleted | [optional] |
 | **Note** | **string** | An optional note | [optional] |
-| **User** | [**User**](User.html) | The user that the voicemail message belongs to or null which means the voicemail message belongs to a group or queue | [optional] |
-| **Group** | [**Group**](Group.html) | The group that the voicemail message belongs to or null which means the voicemail message belongs to a user or queue | [optional] |
-| **Queue** | [**Queue**](Queue.html) | The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group | [optional] |
-| **CopiedFrom** | [**VoicemailCopyRecord**](VoicemailCopyRecord.html) | Represents where this voicemail message was copied from | [optional] |
-| **CopiedTo** | [**List&lt;VoicemailCopyRecord&gt;**](VoicemailCopyRecord.html) | Represents where this voicemail has been copied to | [optional] |
-| **DeleteRetentionPolicy** | [**VoicemailRetentionPolicy**](VoicemailRetentionPolicy.html) | The retention policy for this voicemail when deleted is set to true | [optional] |
+| **User** | [**User**](User) | The user that the voicemail message belongs to or null which means the voicemail message belongs to a group or queue | [optional] |
+| **Group** | [**Group**](Group) | The group that the voicemail message belongs to or null which means the voicemail message belongs to a user or queue | [optional] |
+| **Queue** | [**Queue**](Queue) | The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group | [optional] |
+| **CopiedFrom** | [**VoicemailCopyRecord**](VoicemailCopyRecord) | Represents where this voicemail message was copied from | [optional] |
+| **CopiedTo** | [**List&lt;VoicemailCopyRecord&gt;**](VoicemailCopyRecord) | Represents where this voicemail has been copied to | [optional] |
+| **DeleteRetentionPolicy** | [**VoicemailRetentionPolicy**](VoicemailRetentionPolicy) | The retention policy for this voicemail when deleted is set to true | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

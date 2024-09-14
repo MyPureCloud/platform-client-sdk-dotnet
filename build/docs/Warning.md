@@ -1,6 +1,5 @@
----
-title: Warning
----
+# Warning
+
 ## ININ.PureCloudApi.Model.Warning
 
 ## Properties
@@ -10,6 +9,7 @@ title: Warning
 | **Value** | **int?** | The value for the warning configuration. | [optional] |
 | **RangeType** | **string** | The range type for the warning configuration. | [optional] |
 | **Color** | **string** | The color for the warning configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red). | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

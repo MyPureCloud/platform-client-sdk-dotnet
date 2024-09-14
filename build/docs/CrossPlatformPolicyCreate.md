@@ -1,6 +1,5 @@
----
-title: CrossPlatformPolicyCreate
----
+# CrossPlatformPolicyCreate
+
 ## ININ.PureCloudApi.Model.CrossPlatformPolicyCreate
 
 ## Properties
@@ -14,11 +13,12 @@ title: CrossPlatformPolicyCreate
 | **Order** | **int?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
-| **MediaPolicies** | [**CrossPlatformMediaPolicies**](CrossPlatformMediaPolicies.html) | Conditions and actions per media type | [optional] |
-| **Conditions** | [**PolicyConditions**](PolicyConditions.html) | Conditions | [optional] |
-| **Actions** | [**CrossPlatformPolicyActions**](CrossPlatformPolicyActions.html) | Actions | [optional] |
-| **PolicyErrors** | [**PolicyErrors**](PolicyErrors.html) |  | [optional] |
+| **MediaPolicies** | [**CrossPlatformMediaPolicies**](CrossPlatformMediaPolicies) | Conditions and actions per media type | [optional] |
+| **Conditions** | [**PolicyConditions**](PolicyConditions) | Conditions | [optional] |
+| **Actions** | [**CrossPlatformPolicyActions**](CrossPlatformPolicyActions) | Actions | [optional] |
+| **PolicyErrors** | [**PolicyErrors**](PolicyErrors) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkspaceMember
----
+# WorkspaceMember
+
 ## ININ.PureCloudApi.Model.WorkspaceMember
 
 ## Properties
@@ -9,13 +8,14 @@ title: WorkspaceMember
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **Workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **MemberType** | **string** | The workspace member type. | |
-| **Member** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **User** | [**User**](User.html) |  | [optional] |
-| **Group** | [**Group**](Group.html) |  | [optional] |
-| **SecurityProfile** | [**SecurityProfile**](SecurityProfile.html) |  | [optional] |
+| **Member** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **User** | [**User**](User) |  | [optional] |
+| **Group** | [**Group**](Group) |  | [optional] |
+| **SecurityProfile** | [**SecurityProfile**](SecurityProfile) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

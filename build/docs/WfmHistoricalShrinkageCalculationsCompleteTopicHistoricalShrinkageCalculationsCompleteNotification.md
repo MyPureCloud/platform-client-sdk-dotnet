@@ -1,6 +1,5 @@
----
-title: WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification
----
+# WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification
+
 ## ININ.PureCloudApi.Model.WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalcula
 | **OperationId** | **string** |  | [optional] |
 | **DownloadUrls** | **List&lt;string&gt;** |  | [optional] |
 | **State** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

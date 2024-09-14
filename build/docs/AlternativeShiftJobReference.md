@@ -1,6 +1,5 @@
----
-title: AlternativeShiftJobReference
----
+# AlternativeShiftJobReference
+
 ## ININ.PureCloudApi.Model.AlternativeShiftJobReference
 
 ## Properties
@@ -11,6 +10,7 @@ title: AlternativeShiftJobReference
 | **Status** | **string** | The status of the alternative shift job | |
 | **Type** | **string** | The type of alternative shift asynchronous job | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

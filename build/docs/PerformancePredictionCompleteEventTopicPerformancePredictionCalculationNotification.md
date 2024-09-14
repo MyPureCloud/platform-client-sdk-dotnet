@@ -1,6 +1,5 @@
----
-title: PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification
----
+# PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification
+
 ## ININ.PureCloudApi.Model.PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification
 
 ## Properties
@@ -11,7 +10,8 @@ title: PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNo
 | **WeekDate** | **string** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
-| **Error** | [**PerformancePredictionCompleteEventTopicErrorBody**](PerformancePredictionCompleteEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Error** | [**PerformancePredictionCompleteEventTopicErrorBody**](PerformancePredictionCompleteEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

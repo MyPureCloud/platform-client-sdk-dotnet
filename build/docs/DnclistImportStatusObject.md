@@ -1,12 +1,12 @@
----
-title: DnclistImportStatusObject
----
+# DnclistImportStatusObject
+
 ## ININ.PureCloudApi.Model.DnclistImportStatusObject
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

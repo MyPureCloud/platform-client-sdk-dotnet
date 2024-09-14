@@ -1,6 +1,5 @@
----
-title: TextBotFlowLaunchResponse
----
+# TextBotFlowLaunchResponse
+
 ## ININ.PureCloudApi.Model.TextBotFlowLaunchResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: TextBotFlowLaunchResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The session ID of the bot flow, used to send to subsequent turn requests | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

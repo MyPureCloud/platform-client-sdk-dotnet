@@ -1,6 +1,5 @@
----
-title: Term
----
+# Term
+
 ## ININ.PureCloudApi.Model.Term
 
 ## Properties
@@ -9,6 +8,7 @@ title: Term
 |------------ | ------------- | ------------- | -------------|
 | **Word** | **string** | Find term in interaction | |
 | **ParticipantType** | **string** | Dictates if term operand must come from the internal, external or both participants | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

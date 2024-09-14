@@ -1,6 +1,5 @@
----
-title: PhoneBase
----
+# PhoneBase
+
 ## ININ.PureCloudApi.Model.PhoneBase
 
 ## Properties
@@ -9,7 +8,7 @@ title: PhoneBase
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the entity. | |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The resource&#39;s description. | [optional] |
 | **Version** | **int?** | The current version of the resource. | [optional] |
 | **DateCreated** | **DateTime?** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -19,11 +18,12 @@ title: PhoneBase
 | **State** | **string** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
-| **PhoneMetaBase** | [**DomainEntityRef**](DomainEntityRef.html) | A phone metabase is essentially a database for storing phone configuration settings, which simplifies the configuration process. | |
-| **Lines** | [**List&lt;LineBase&gt;**](LineBase.html) | The list of linebases associated with the phone base. | |
+| **PhoneMetaBase** | [**DomainEntityRef**](DomainEntityRef) | A phone metabase is essentially a database for storing phone configuration settings, which simplifies the configuration process. | |
+| **Lines** | [**List&lt;LineBase&gt;**](LineBase) | The list of linebases associated with the phone base. | |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **Capabilities** | [**PhoneCapabilities**](PhoneCapabilities.html) |  | [optional] |
+| **Capabilities** | [**PhoneCapabilities**](PhoneCapabilities) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyViewResultLink
----
+# JourneyViewResultLink
+
 ## ININ.PureCloudApi.Model.JourneyViewResultLink
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneyViewResultLink
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **ConnectionCount** | **int?** | the number of connections for the journey view link | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

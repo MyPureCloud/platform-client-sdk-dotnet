@@ -1,6 +1,5 @@
----
-title: OutcomeConfig
----
+# OutcomeConfig
+
 ## ININ.PureCloudApi.Model.OutcomeConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: OutcomeConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** | A set of valid Outcome UUIDs used to optimize a KPI. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

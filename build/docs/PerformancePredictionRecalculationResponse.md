@@ -1,6 +1,5 @@
----
-title: PerformancePredictionRecalculationResponse
----
+# PerformancePredictionRecalculationResponse
+
 ## ININ.PureCloudApi.Model.PerformancePredictionRecalculationResponse
 
 ## Properties
@@ -9,8 +8,9 @@ title: PerformancePredictionRecalculationResponse
 |------------ | ------------- | ------------- | -------------|
 | **OperationId** | **string** | The operationId for which to listen | |
 | **DownloadUrl** | **string** | The url to GET the results of the performance prediction. This field is populated only if query state is &#39;Complete&#39; | [optional] |
-| **DownloadResult** | [**PerformancePredictionOutputs**](PerformancePredictionOutputs.html) | Result will always come via downloadUrls; however the schema is included for documentation | [optional] |
+| **DownloadResult** | [**PerformancePredictionOutputs**](PerformancePredictionOutputs) | Result will always come via downloadUrls; however the schema is included for documentation | [optional] |
 | **State** | **string** | The state of the performance prediction | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WebMessagingContent
----
+# WebMessagingContent
+
 ## ININ.PureCloudApi.Model.WebMessagingContent
 
 ## Properties
@@ -8,12 +7,13 @@ title: WebMessagingContent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ContentType** | **string** | Type of this content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed. | [optional] |
-| **Attachment** | [**WebMessagingAttachment**](WebMessagingAttachment.html) | Attachment content. | [optional] |
-| **QuickReply** | [**WebMessagingQuickReply**](WebMessagingQuickReply.html) | Quick reply content. | [optional] |
-| **ButtonResponse** | [**WebMessagingButtonResponse**](WebMessagingButtonResponse.html) | Button response content. | [optional] |
-| **Generic** | [**WebMessagingGeneric**](WebMessagingGeneric.html) | Generic content (Deprecated). | [optional] |
-| **Card** | [**ContentCard**](ContentCard.html) | Card content | [optional] |
-| **Carousel** | [**ContentCarousel**](ContentCarousel.html) | Carousel content | [optional] |
-{: class="table table-striped"}
+| **Attachment** | [**WebMessagingAttachment**](WebMessagingAttachment) | Attachment content. | [optional] |
+| **QuickReply** | [**WebMessagingQuickReply**](WebMessagingQuickReply) | Quick reply content. | [optional] |
+| **ButtonResponse** | [**WebMessagingButtonResponse**](WebMessagingButtonResponse) | Button response content. | [optional] |
+| **Generic** | [**WebMessagingGeneric**](WebMessagingGeneric) | Generic content (Deprecated). | [optional] |
+| **Card** | [**ContentCard**](ContentCard) | Card content | [optional] |
+| **Carousel** | [**ContentCarousel**](ContentCarousel) | Carousel content | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

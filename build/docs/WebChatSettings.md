@@ -1,6 +1,5 @@
----
-title: WebChatSettings
----
+# WebChatSettings
+
 ## ININ.PureCloudApi.Model.WebChatSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: WebChatSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **RequireDeployment** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

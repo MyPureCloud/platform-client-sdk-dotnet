@@ -1,16 +1,16 @@
----
-title: EventListing
----
+# EventListing
+
 ## ININ.PureCloudApi.Model.EventListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Event&gt;**](Event.html) |  | [optional] |
+| **Entities** | [**List&lt;Event&gt;**](Event) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

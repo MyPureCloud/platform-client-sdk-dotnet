@@ -1,6 +1,5 @@
----
-title: RecordingButtonComponent
----
+# RecordingButtonComponent
+
 ## ININ.PureCloudApi.Model.RecordingButtonComponent
 
 ## Properties
@@ -8,8 +7,9 @@ title: RecordingButtonComponent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Title** | **string** |  | [optional] |
-| **Actions** | [**RecordingContentActions**](RecordingContentActions.html) |  | [optional] |
+| **Actions** | [**RecordingContentActions**](RecordingContentActions) |  | [optional] |
 | **IsSelected** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

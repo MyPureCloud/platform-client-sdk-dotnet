@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForUserTopicMessageData
----
+# V2ConversationMessageTypingEventForUserTopicMessageData
+
 ## ININ.PureCloudApi.Model.V2ConversationMessageTypingEventForUserTopicMessageData
 
 ## Properties
@@ -8,7 +7,8 @@ title: V2ConversationMessageTypingEventForUserTopicMessageData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ConversationId** | **string** |  | [optional] |
-| **NormalizedMessage** | [**V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage**](V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **NormalizedMessage** | [**V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage**](V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

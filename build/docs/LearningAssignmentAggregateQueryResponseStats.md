@@ -1,6 +1,5 @@
----
-title: LearningAssignmentAggregateQueryResponseStats
----
+# LearningAssignmentAggregateQueryResponseStats
+
 ## ININ.PureCloudApi.Model.LearningAssignmentAggregateQueryResponseStats
 
 ## Properties
@@ -11,6 +10,7 @@ title: LearningAssignmentAggregateQueryResponseStats
 | **Min** | **double?** | The minimum value in this metric | [optional] |
 | **Max** | **double?** | The maximum value in this metric | [optional] |
 | **Sum** | **double?** | The total of the values for this metric | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

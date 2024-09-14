@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
----
+# V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
+
 ## ININ.PureCloudApi.Model.V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
 
 ## Properties
@@ -9,9 +8,10 @@ title: V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Platform** | **string** |  | [optional] |
-| **To** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient.html) |  | [optional] |
-| **From** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient.html) |  | [optional] |
+| **To** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient) |  | [optional] |
+| **From** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient) |  | [optional] |
 | **Time** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

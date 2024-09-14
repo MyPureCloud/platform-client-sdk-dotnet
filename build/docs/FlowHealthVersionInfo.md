@@ -1,14 +1,14 @@
----
-title: FlowHealthVersionInfo
----
+# FlowHealthVersionInfo
+
 ## ININ.PureCloudApi.Model.FlowHealthVersionInfo
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **FlowVersion** | [**AddressableEntityRef**](AddressableEntityRef.html) | Given flow&#39;s Version Info. | [optional] |
-| **NluDomain** | [**AddressableEntityRef**](AddressableEntityRef.html) | NLU Domain Info for this flow version. | [optional] |
-{: class="table table-striped"}
+| **FlowVersion** | [**AddressableEntityRef**](AddressableEntityRef) | Given flow&#39;s Version Info. | [optional] |
+| **NluDomain** | [**AddressableEntityRef**](AddressableEntityRef) | NLU Domain Info for this flow version. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

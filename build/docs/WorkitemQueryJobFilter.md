@@ -1,6 +1,5 @@
----
-title: WorkitemQueryJobFilter
----
+# WorkitemQueryJobFilter
+
 ## ININ.PureCloudApi.Model.WorkitemQueryJobFilter
 
 ## Properties
@@ -10,6 +9,7 @@ title: WorkitemQueryJobFilter
 | **Name** | **string** | Attribute name. | |
 | **Operator** | **string** | Filter operator. | |
 | **Values** | **List&lt;string&gt;** | List of values to be used in the filter. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

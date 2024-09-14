@@ -1,6 +1,5 @@
----
-title: EventLog
----
+# EventLog
+
 ## ININ.PureCloudApi.Model.EventLog
 
 ## Properties
@@ -9,14 +8,15 @@ title: EventLog
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **ErrorEntity** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **RelatedEntity** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **ErrorEntity** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **RelatedEntity** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **Timestamp** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Level** | **string** |  | [optional] |
 | **Category** | **string** |  | [optional] |
 | **CorrelationId** | **string** |  | [optional] |
-| **EventMessage** | [**EventMessage**](EventMessage.html) |  | [optional] |
+| **EventMessage** | [**EventMessage**](EventMessage) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

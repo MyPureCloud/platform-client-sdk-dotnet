@@ -1,6 +1,5 @@
----
-title: ScimV2SchemaAttribute
----
+# ScimV2SchemaAttribute
+
 ## ININ.PureCloudApi.Model.ScimV2SchemaAttribute
 
 ## Properties
@@ -9,7 +8,7 @@ title: ScimV2SchemaAttribute
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the attribute. | [optional] |
 | **Type** | **string** | The data type of the attribute. | [optional] |
-| **SubAttributes** | [**List&lt;ScimV2SchemaAttribute&gt;**](ScimV2SchemaAttribute.html) | The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;. | [optional] |
+| **SubAttributes** | [**List&lt;ScimV2SchemaAttribute&gt;**](ScimV2SchemaAttribute) | The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;. | [optional] |
 | **MultiValued** | **bool?** | Indicates whether an attribute contains multiple values. | [optional] |
 | **Description** | **string** | The description of the attribute. | [optional] |
 | **Required** | **bool?** | Indicates whether an attribute is required. | [optional] |
@@ -19,6 +18,7 @@ title: ScimV2SchemaAttribute
 | **Returned** | **string** | The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request. | [optional] |
 | **Uniqueness** | **string** | The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \&quot;uniqueness\&quot; set to \&quot;none\&quot;. | [optional] |
 | **ReferenceTypes** | **List&lt;string&gt;** | The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

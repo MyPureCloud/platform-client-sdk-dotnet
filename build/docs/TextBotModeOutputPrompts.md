@@ -1,13 +1,13 @@
----
-title: TextBotModeOutputPrompts
----
+# TextBotModeOutputPrompts
+
 ## ININ.PureCloudApi.Model.TextBotModeOutputPrompts
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Segments** | [**List&lt;TextBotPromptSegment&gt;**](TextBotPromptSegment.html) | The list of prompt segments. | |
-{: class="table table-striped"}
+| **Segments** | [**List&lt;TextBotPromptSegment&gt;**](TextBotPromptSegment) | The list of prompt segments. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

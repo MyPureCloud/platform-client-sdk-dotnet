@@ -1,6 +1,5 @@
----
-title: LimitDocumentation
----
+# LimitDocumentation
+
 ## ININ.PureCloudApi.Model.LimitDocumentation
 
 ## Properties
@@ -8,7 +7,8 @@ title: LimitDocumentation
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Url** | **string** |  | [optional] |
-| **Namespaces** | [**List&lt;NamespaceDocs&gt;**](NamespaceDocs.html) |  | [optional] |
-{: class="table table-striped"}
+| **Namespaces** | [**List&lt;NamespaceDocs&gt;**](NamespaceDocs) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

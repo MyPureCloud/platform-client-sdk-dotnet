@@ -1,6 +1,5 @@
----
-title: RuleConfig
----
+# RuleConfig
+
 ## ININ.PureCloudApi.Model.RuleConfig
 
 ## Properties
@@ -9,7 +8,8 @@ title: RuleConfig
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Rule ID. | [optional] |
 | **Enabled** | **bool?** | Rule enabled. | |
-| **Rule** | [**CopilotRule**](CopilotRule.html) | Rule configuration. | |
-{: class="table table-striped"}
+| **Rule** | [**CopilotRule**](CopilotRule) | Rule configuration. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

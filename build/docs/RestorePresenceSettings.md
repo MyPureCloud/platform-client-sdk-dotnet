@@ -1,6 +1,5 @@
----
-title: RestorePresenceSettings
----
+# RestorePresenceSettings
+
 ## ININ.PureCloudApi.Model.RestorePresenceSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: RestorePresenceSettings
 | **Enabled** | **bool?** | Whether the restore presence feature is enabled | |
 | **RestoreTimeMilliseconds** | **long?** | How many milliseconds the presence will be restored within | |
 | **RestoreOnQueueEnabled** | **bool?** | Whether the ON_QUEUE presence will be restored | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ImportError
----
+# ImportError
+
 ## ININ.PureCloudApi.Model.ImportError
 
 ## Properties
@@ -9,6 +8,7 @@ title: ImportError
 |------------ | ------------- | ------------- | -------------|
 | **Message** | **string** |  | [optional] |
 | **Line** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AlertNotification
----
+# AlertNotification
+
 ## ININ.PureCloudApi.Model.AlertNotification
 
 ## Properties
@@ -10,6 +9,7 @@ title: AlertNotification
 | **Recipient** | **string** | The entity to receive the notification. | |
 | **NotificationTypes** | **List&lt;string&gt;** | The notification types the user will receive. | |
 | **Locale** | **string** | The locale whose language will be used when sending alerts.  Locale should be in theformat language_COUNTRY where language is always lower case and country is always upper case. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

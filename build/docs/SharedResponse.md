@@ -1,6 +1,5 @@
----
-title: SharedResponse
----
+# SharedResponse
+
 ## ININ.PureCloudApi.Model.SharedResponse
 
 ## Properties
@@ -10,8 +9,9 @@ title: SharedResponse
 | **Id** | **string** |  | [optional] |
 | **DownloadUri** | **string** |  | [optional] |
 | **ViewUri** | **string** |  | [optional] |
-| **Document** | [**Document**](Document.html) |  | [optional] |
-| **Share** | [**Share**](Share.html) |  | [optional] |
-{: class="table table-striped"}
+| **Document** | [**Document**](Document) |  | [optional] |
+| **Share** | [**Share**](Share) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

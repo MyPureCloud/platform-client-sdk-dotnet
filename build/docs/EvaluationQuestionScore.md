@@ -1,6 +1,5 @@
----
-title: EvaluationQuestionScore
----
+# EvaluationQuestionScore
+
 ## ININ.PureCloudApi.Model.EvaluationQuestionScore
 
 ## Properties
@@ -15,6 +14,7 @@ title: EvaluationQuestionScore
 | **AssistedAnswerId** | **string** | AnswerId found with evaluation assistance conditions | [optional] |
 | **FailedKillQuestion** | **bool?** | Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question | [optional] |
 | **Comments** | **string** | Comments from the evaluator specific to this question | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

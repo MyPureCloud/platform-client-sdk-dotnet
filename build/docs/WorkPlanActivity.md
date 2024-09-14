@@ -1,6 +1,5 @@
----
-title: WorkPlanActivity
----
+# WorkPlanActivity
+
 ## ININ.PureCloudApi.Model.WorkPlanActivity
 
 ## Properties
@@ -23,6 +22,7 @@ title: WorkPlanActivity
 | **Id** | **string** | ID of the activity. This is required only for the case of updating an existing activity | [optional] |
 | **Delete** | **bool?** | If marked true for updating an existing activity, the activity will be permanently deleted | [optional] |
 | **ValidationId** | **string** | ID of the activity in the context of work plan validation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

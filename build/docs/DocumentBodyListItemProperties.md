@@ -1,6 +1,5 @@
----
-title: DocumentBodyListItemProperties
----
+# DocumentBodyListItemProperties
+
 ## ININ.PureCloudApi.Model.DocumentBodyListItemProperties
 
 ## Properties
@@ -15,6 +14,7 @@ title: DocumentBodyListItemProperties
 | **TextColor** | **string** | The text color for the list item. The valid values in hex color code representation. For example black color - #000000 | [optional] |
 | **UnorderedType** | **string** | The type of icon for the unordered list. | [optional] |
 | **OrderedType** | **string** | The type of icon for the ordered list. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

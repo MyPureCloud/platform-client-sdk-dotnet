@@ -1,6 +1,5 @@
----
-title: FlowActivityQueryFilter
----
+# FlowActivityQueryFilter
+
 ## ININ.PureCloudApi.Model.FlowActivityQueryFilter
 
 ## Properties
@@ -8,8 +7,9 @@ title: FlowActivityQueryFilter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates and clauses | |
-| **Clauses** | [**List&lt;FlowActivityQueryClause&gt;**](FlowActivityQueryClause.html) | Boolean &#39;and/or&#39; logic with up to two-levels of nesting | [optional] |
-| **Predicates** | [**List&lt;FlowActivityQueryPredicate&gt;**](FlowActivityQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | [optional] |
-{: class="table table-striped"}
+| **Clauses** | [**List&lt;FlowActivityQueryClause&gt;**](FlowActivityQueryClause) | Boolean &#39;and/or&#39; logic with up to two-levels of nesting | [optional] |
+| **Predicates** | [**List&lt;FlowActivityQueryPredicate&gt;**](FlowActivityQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

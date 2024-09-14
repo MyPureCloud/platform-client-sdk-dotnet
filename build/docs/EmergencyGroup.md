@@ -1,6 +1,5 @@
----
-title: EmergencyGroup
----
+# EmergencyGroup
+
 ## ININ.PureCloudApi.Model.EmergencyGroup
 
 ## Properties
@@ -9,7 +8,7 @@ title: EmergencyGroup
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the entity. | |
-| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The resource&#39;s description. | [optional] |
 | **Version** | **int?** | The current version of the resource. | [optional] |
 | **DateCreated** | **DateTime?** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -20,8 +19,9 @@ title: EmergencyGroup
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **Enabled** | **bool?** | True if an emergency is occurring and the associated emergency call flow(s) should be used.  False otherwise. | [optional] |
-| **EmergencyCallFlows** | [**List&lt;EmergencyCallFlow&gt;**](EmergencyCallFlow.html) | The emergency call flow(s) to use during an emergency. | [optional] |
+| **EmergencyCallFlows** | [**List&lt;EmergencyCallFlow&gt;**](EmergencyCallFlow) | The emergency call flow(s) to use during an emergency. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

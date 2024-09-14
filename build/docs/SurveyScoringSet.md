@@ -1,6 +1,5 @@
----
-title: SurveyScoringSet
----
+# SurveyScoringSet
+
 ## ININ.PureCloudApi.Model.SurveyScoringSet
 
 ## Properties
@@ -9,7 +8,8 @@ title: SurveyScoringSet
 |------------ | ------------- | ------------- | -------------|
 | **TotalScore** | **float?** |  | [optional] |
 | **NpsScore** | **int?** |  | [optional] |
-| **QuestionGroupScores** | [**List&lt;SurveyQuestionGroupScore&gt;**](SurveyQuestionGroupScore.html) |  | [optional] |
-{: class="table table-striped"}
+| **QuestionGroupScores** | [**List&lt;SurveyQuestionGroupScore&gt;**](SurveyQuestionGroupScore) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

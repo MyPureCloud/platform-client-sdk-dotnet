@@ -1,15 +1,15 @@
----
-title: BulkNotesResponse
----
+# BulkNotesResponse
+
 ## ININ.PureCloudApi.Model.BulkNotesResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;BulkResponseResultNoteNote&gt;**](BulkResponseResultNoteNote.html) |  | [optional] |
+| **Results** | [**List&lt;BulkResponseResultNoteNote&gt;**](BulkResponseResultNoteNote) |  | [optional] |
 | **ErrorCount** | **int?** |  | [optional] |
 | **ErrorIndexes** | **List&lt;int?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

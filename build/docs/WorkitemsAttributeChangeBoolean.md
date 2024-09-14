@@ -1,6 +1,5 @@
----
-title: WorkitemsAttributeChangeBoolean
----
+# WorkitemsAttributeChangeBoolean
+
 ## ININ.PureCloudApi.Model.WorkitemsAttributeChangeBoolean
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemsAttributeChangeBoolean
 |------------ | ------------- | ------------- | -------------|
 | **NewValue** | **bool?** | New property value | [optional] |
 | **OldValue** | **bool?** | Old property value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

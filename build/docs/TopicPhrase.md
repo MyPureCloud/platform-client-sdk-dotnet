@@ -1,6 +1,5 @@
----
-title: TopicPhrase
----
+# TopicPhrase
+
 ## ININ.PureCloudApi.Model.TopicPhrase
 
 ## Properties
@@ -10,6 +9,7 @@ title: TopicPhrase
 | **Id** | **string** |  | [optional] |
 | **Text** | **string** |  | [optional] |
 | **UtteranceCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

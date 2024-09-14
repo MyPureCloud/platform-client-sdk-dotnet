@@ -1,6 +1,5 @@
----
-title: ContentOffer
----
+# ContentOffer
+
 ## ININ.PureCloudApi.Model.ContentOffer
 
 ## Properties
@@ -13,8 +12,9 @@ title: ContentOffer
 | **Title** | **string** | Title used in the header of the content offer. | [optional] |
 | **Headline** | **string** | Headline displayed above the body text of the content offer. | [optional] |
 | **Body** | **string** | Body text of the content offer. | [optional] |
-| **CallToAction** | [**CallToAction**](CallToAction.html) | Properties customizing the call to action button on the content offer. | [optional] |
-| **Style** | [**ContentOfferStylingConfiguration**](ContentOfferStylingConfiguration.html) | Properties customizing the styling of the content offer. | [optional] |
-{: class="table table-striped"}
+| **CallToAction** | [**CallToAction**](CallToAction) | Properties customizing the call to action button on the content offer. | [optional] |
+| **Style** | [**ContentOfferStylingConfiguration**](ContentOfferStylingConfiguration) | Properties customizing the styling of the content offer. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

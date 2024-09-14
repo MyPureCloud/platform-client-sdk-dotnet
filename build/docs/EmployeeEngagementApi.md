@@ -1,23 +1,22 @@
----
-title: EmployeeEngagementApi
----
+# EmployeeEngagementApi
+
 ## PureCloudPlatform.Client.V2.Api.EmployeeEngagementApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteEmployeeengagementCelebration**](EmployeeEngagementApi.html#deleteemployeeengagementcelebration) | **Delete** /api/v2/employeeengagement/celebrations/{celebrationId} | Deletes a celebration |
-| [**GetEmployeeengagementCelebrations**](EmployeeEngagementApi.html#getemployeeengagementcelebrations) | **Get** /api/v2/employeeengagement/celebrations | Get all celebrations |
-| [**GetEmployeeengagementRecognition**](EmployeeEngagementApi.html#getemployeeengagementrecognition) | **Get** /api/v2/employeeengagement/recognitions/{recognitionId} | Gets a single recognition |
-| [**PatchEmployeeengagementCelebration**](EmployeeEngagementApi.html#patchemployeeengagementcelebration) | **Patch** /api/v2/employeeengagement/celebrations/{celebrationId} | Set a state for a celebration |
-| [**PostEmployeeengagementRecognitions**](EmployeeEngagementApi.html#postemployeeengagementrecognitions) | **Post** /api/v2/employeeengagement/recognitions | Creates a recognition |
-{: class="table table-striped"}
+| [**DeleteEmployeeengagementCelebration**](#DeleteEmployeeengagementCelebration) | **Delete** /api/v2/employeeengagement/celebrations/{celebrationId} | Deletes a celebration |
+| [**GetEmployeeengagementCelebrations**](#GetEmployeeengagementCelebrations) | **Get** /api/v2/employeeengagement/celebrations | Get all celebrations |
+| [**GetEmployeeengagementRecognition**](#GetEmployeeengagementRecognition) | **Get** /api/v2/employeeengagement/recognitions/{recognitionId} | Gets a single recognition |
+| [**PatchEmployeeengagementCelebration**](#PatchEmployeeengagementCelebration) | **Patch** /api/v2/employeeengagement/celebrations/{celebrationId} | Set a state for a celebration |
+| [**PostEmployeeengagementRecognitions**](#PostEmployeeengagementRecognitions) | **Post** /api/v2/employeeengagement/recognitions | Creates a recognition |
 
-<a name="deleteemployeeengagementcelebration"></a>
 
-## void DeleteEmployeeengagementCelebration (string celebrationId)
 
+## DeleteEmployeeengagementCelebration
+
+> void DeleteEmployeeengagementCelebration (string celebrationId)
 
 
 Deletes a celebration
@@ -70,16 +69,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **celebrationId** | **string**| The ID of the celebration |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getemployeeengagementcelebrations"></a>
 
-## [**GetCelebrationListing**](GetCelebrationListing.html) GetEmployeeengagementCelebrations (int? pageNumber = null, int? pageSize = null)
+## GetEmployeeengagementCelebrations
 
+> [**GetCelebrationListing**](GetCelebrationListing) GetEmployeeengagementCelebrations (int? pageNumber = null, int? pageSize = null)
 
 
 Get all celebrations
@@ -135,16 +133,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**|  | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**GetCelebrationListing**](GetCelebrationListing.html)
+[**GetCelebrationListing**](GetCelebrationListing)
 
-<a name="getemployeeengagementrecognition"></a>
 
-## [**Recognition**](Recognition.html) GetEmployeeengagementRecognition (string recognitionId)
+## GetEmployeeengagementRecognition
 
+> [**Recognition**](Recognition) GetEmployeeengagementRecognition (string recognitionId)
 
 
 Gets a single recognition
@@ -198,16 +195,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recognitionId** | **string**| The Recognition ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Recognition**](Recognition.html)
+[**Recognition**](Recognition)
 
-<a name="patchemployeeengagementcelebration"></a>
 
-## void PatchEmployeeengagementCelebration (string celebrationId, CelebrationStateParam body)
+## PatchEmployeeengagementCelebration
 
+> void PatchEmployeeengagementCelebration (string celebrationId, CelebrationStateParam body)
 
 
 Set a state for a celebration
@@ -261,17 +257,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **celebrationId** | **string**| The ID of the celebration |  |
-| **body** | [**CelebrationStateParam**](CelebrationStateParam.html)| Patch Celebration state |  |
-{: class="table table-striped"}
+| **body** | [**CelebrationStateParam**](CelebrationStateParam)| Patch Celebration state |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postemployeeengagementrecognitions"></a>
 
-## [**RecognitionBase**](RecognitionBase.html) PostEmployeeengagementRecognitions (CreateRecognition body)
+## PostEmployeeengagementRecognitions
 
+> [**RecognitionBase**](RecognitionBase) PostEmployeeengagementRecognitions (CreateRecognition body)
 
 
 Creates a recognition
@@ -324,10 +319,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateRecognition**](CreateRecognition.html)| Create Recognition |  |
-{: class="table table-striped"}
+| **body** | [**CreateRecognition**](CreateRecognition)| Create Recognition |  |
 
 ### Return type
 
-[**RecognitionBase**](RecognitionBase.html)
+[**RecognitionBase**](RecognitionBase)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

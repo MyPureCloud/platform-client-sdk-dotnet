@@ -1,13 +1,13 @@
----
-title: AlternativeShiftBulkUpdateTradesResponseTemplate
----
+# AlternativeShiftBulkUpdateTradesResponseTemplate
+
 ## ININ.PureCloudApi.Model.AlternativeShiftBulkUpdateTradesResponseTemplate
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;AlternativeShiftTradeBulkUpdateTemplateItem&gt;**](AlternativeShiftTradeBulkUpdateTemplateItem.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;AlternativeShiftTradeBulkUpdateTemplateItem&gt;**](AlternativeShiftTradeBulkUpdateTemplateItem) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

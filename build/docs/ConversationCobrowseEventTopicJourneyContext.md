@@ -1,15 +1,15 @@
----
-title: ConversationCobrowseEventTopicJourneyContext
----
+# ConversationCobrowseEventTopicJourneyContext
+
 ## ININ.PureCloudApi.Model.ConversationCobrowseEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Customer** | [**ConversationCobrowseEventTopicJourneyCustomer**](ConversationCobrowseEventTopicJourneyCustomer.html) |  | [optional] |
-| **CustomerSession** | [**ConversationCobrowseEventTopicJourneyCustomerSession**](ConversationCobrowseEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **TriggeringAction** | [**ConversationCobrowseEventTopicJourneyAction**](ConversationCobrowseEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Customer** | [**ConversationCobrowseEventTopicJourneyCustomer**](ConversationCobrowseEventTopicJourneyCustomer) |  | [optional] |
+| **CustomerSession** | [**ConversationCobrowseEventTopicJourneyCustomerSession**](ConversationCobrowseEventTopicJourneyCustomerSession) |  | [optional] |
+| **TriggeringAction** | [**ConversationCobrowseEventTopicJourneyAction**](ConversationCobrowseEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Salesforce
----
+# Salesforce
+
 ## ININ.PureCloudApi.Model.Salesforce
 
 ## Properties
@@ -18,6 +17,7 @@ title: Salesforce
 | **Certificate** | **string** |  | [optional] |
 | **Certificates** | **List&lt;string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

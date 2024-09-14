@@ -1,6 +1,5 @@
----
-title: UserStationChangeTopicUserStation
----
+# UserStationChangeTopicUserStation
+
 ## ININ.PureCloudApi.Model.UserStationChangeTopicUserStation
 
 ## Properties
@@ -9,7 +8,8 @@ title: UserStationChangeTopicUserStation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **AssociatedUser** | [**UserStationChangeTopicUser**](UserStationChangeTopicUser.html) |  | [optional] |
-{: class="table table-striped"}
+| **AssociatedUser** | [**UserStationChangeTopicUser**](UserStationChangeTopicUser) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

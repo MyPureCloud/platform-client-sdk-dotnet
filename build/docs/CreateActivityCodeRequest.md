@@ -1,6 +1,5 @@
----
-title: CreateActivityCodeRequest
----
+# CreateActivityCodeRequest
+
 ## ININ.PureCloudApi.Model.CreateActivityCodeRequest
 
 ## Properties
@@ -16,7 +15,8 @@ title: CreateActivityCodeRequest
 | **CountsTowardShrinkage** | **bool?** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
 | **PlannedShrinkage** | **bool?** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
 | **Interruptible** | **bool?** | Whether this activity code is considered interruptible | [optional] |
-| **SecondaryPresences** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence.html) | The secondary presences of this activity code | [optional] |
-{: class="table table-striped"}
+| **SecondaryPresences** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence) | The secondary presences of this activity code | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

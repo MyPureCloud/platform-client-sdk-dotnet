@@ -1,6 +1,5 @@
----
-title: ScimV2SchemaListResponse
----
+# ScimV2SchemaListResponse
+
 ## ININ.PureCloudApi.Model.ScimV2SchemaListResponse
 
 ## Properties
@@ -11,7 +10,8 @@ title: ScimV2SchemaListResponse
 | **TotalResults** | **long?** | The total number of results. | [optional] |
 | **StartIndex** | **long?** | The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results. | [optional] |
 | **ItemsPerPage** | **long?** | The number of resources returned per page. | [optional] |
-| **Resources** | [**List&lt;ScimV2SchemaDefinition&gt;**](ScimV2SchemaDefinition.html) | The list of requested resources. | [optional] |
-{: class="table table-striped"}
+| **Resources** | [**List&lt;ScimV2SchemaDefinition&gt;**](ScimV2SchemaDefinition) | The list of requested resources. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

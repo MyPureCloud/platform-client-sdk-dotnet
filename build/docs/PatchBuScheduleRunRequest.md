@@ -1,13 +1,13 @@
----
-title: PatchBuScheduleRunRequest
----
+# PatchBuScheduleRunRequest
+
 ## ININ.PureCloudApi.Model.PatchBuScheduleRunRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ReschedulingOptions** | [**PatchBuReschedulingOptionsRequest**](PatchBuReschedulingOptionsRequest.html) | The rescheduling options to update | [optional] |
-{: class="table table-striped"}
+| **ReschedulingOptions** | [**PatchBuReschedulingOptionsRequest**](PatchBuReschedulingOptionsRequest) | The rescheduling options to update | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

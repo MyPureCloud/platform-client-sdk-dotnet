@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicJourneyAction
----
+# QueueConversationVideoEventTopicJourneyAction
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicJourneyAction
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueueConversationVideoEventTopicJourneyAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of an action from the Journey System (an action is spawned from an actionMap) | [optional] |
-| **ActionMap** | [**QueueConversationVideoEventTopicJourneyActionMap**](QueueConversationVideoEventTopicJourneyActionMap.html) |  | [optional] |
-{: class="table table-striped"}
+| **ActionMap** | [**QueueConversationVideoEventTopicJourneyActionMap**](QueueConversationVideoEventTopicJourneyActionMap) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

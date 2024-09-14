@@ -1,6 +1,5 @@
----
-title: AnswerGenerationDocument
----
+# AnswerGenerationDocument
+
 ## ININ.PureCloudApi.Model.AnswerGenerationDocument
 
 ## Properties
@@ -10,6 +9,7 @@ title: AnswerGenerationDocument
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Title** | **string** | The document title. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

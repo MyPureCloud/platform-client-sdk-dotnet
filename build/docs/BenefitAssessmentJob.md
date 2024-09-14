@@ -1,6 +1,5 @@
----
-title: BenefitAssessmentJob
----
+# BenefitAssessmentJob
+
 ## ININ.PureCloudApi.Model.BenefitAssessmentJob
 
 ## Properties
@@ -12,6 +11,7 @@ title: BenefitAssessmentJob
 | **DateCreated** | **DateTime?** | Creation Date of the benefit assessment job. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Modified Date of the benefit assessment job. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

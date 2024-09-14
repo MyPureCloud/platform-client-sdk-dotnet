@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
----
+# WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
+
 ## ININ.PureCloudApi.Model.WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
 | **ServiceLevelPercent** | **double?** |  | [optional] |
 | **AverageSpeedOfAnswerSeconds** | **double?** |  | [optional] |
 | **OccupancyPercent** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

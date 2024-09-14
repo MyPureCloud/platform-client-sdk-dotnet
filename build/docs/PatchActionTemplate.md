@@ -1,6 +1,5 @@
----
-title: PatchActionTemplate
----
+# PatchActionTemplate
+
 ## ININ.PureCloudApi.Model.PatchActionTemplate
 
 ## Properties
@@ -12,7 +11,8 @@ title: PatchActionTemplate
 | **Version** | **int?** | The version of the action template. | [optional] |
 | **MediaType** | **string** | Media type of action described by the action template. | [optional] |
 | **State** | **string** | Whether the action template is currently active, inactive or deleted. | [optional] |
-| **ContentOffer** | [**PatchContentOffer**](PatchContentOffer.html) | Properties used to configure an action of type content offer | [optional] |
-{: class="table table-striped"}
+| **ContentOffer** | [**PatchContentOffer**](PatchContentOffer) | Properties used to configure an action of type content offer | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

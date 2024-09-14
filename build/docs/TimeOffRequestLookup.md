@@ -1,6 +1,5 @@
----
-title: TimeOffRequestLookup
----
+# TimeOffRequestLookup
+
 ## ININ.PureCloudApi.Model.TimeOffRequestLookup
 
 ## Properties
@@ -9,6 +8,7 @@ title: TimeOffRequestLookup
 |------------ | ------------- | ------------- | -------------|
 | **TimeOffRequestId** | **string** | The ID of the time off request | |
 | **UserId** | **string** | The ID of the user to whom the time off request belongs | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

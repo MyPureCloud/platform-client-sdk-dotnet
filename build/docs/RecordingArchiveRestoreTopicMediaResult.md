@@ -1,6 +1,5 @@
----
-title: RecordingArchiveRestoreTopicMediaResult
----
+# RecordingArchiveRestoreTopicMediaResult
+
 ## ININ.PureCloudApi.Model.RecordingArchiveRestoreTopicMediaResult
 
 ## Properties
@@ -11,6 +10,7 @@ title: RecordingArchiveRestoreTopicMediaResult
 | **WaveUri** | **string** |  | [optional] |
 | **MediaUri** | **string** |  | [optional] |
 | **WaveformData** | **List&lt;double?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

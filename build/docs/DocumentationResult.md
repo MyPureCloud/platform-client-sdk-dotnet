@@ -1,6 +1,5 @@
----
-title: DocumentationResult
----
+# DocumentationResult
+
 ## ININ.PureCloudApi.Model.DocumentationResult
 
 ## Properties
@@ -27,6 +26,7 @@ title: DocumentationResult
 | **ReleasenoteTag** | **List&lt;int?&gt;** | The releasenote tag of the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **ServiceArea** | **List&lt;int?&gt;** | The service area of the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **VideoCategories** | **List&lt;int?&gt;** | The video categories of the documentation entity. Will be returned in responses for certain entities. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

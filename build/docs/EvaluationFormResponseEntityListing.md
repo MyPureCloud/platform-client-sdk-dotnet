@@ -1,13 +1,12 @@
----
-title: EvaluationFormResponseEntityListing
----
+# EvaluationFormResponseEntityListing
+
 ## ININ.PureCloudApi.Model.EvaluationFormResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;EvaluationFormResponse&gt;**](EvaluationFormResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;EvaluationFormResponse&gt;**](EvaluationFormResponse) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: EvaluationFormResponseEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeParseRecord
----
+# KnowledgeParseRecord
+
 ## ININ.PureCloudApi.Model.KnowledgeParseRecord
 
 ## Properties
@@ -9,7 +8,8 @@ title: KnowledgeParseRecord
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Unique id for the parsed data. | [optional] |
 | **Title** | **string** | Parsed article title. | [optional] |
-| **Body** | [**DocumentBody**](DocumentBody.html) | Parsed article content. | [optional] |
-{: class="table table-striped"}
+| **Body** | [**DocumentBody**](DocumentBody) | Parsed article content. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

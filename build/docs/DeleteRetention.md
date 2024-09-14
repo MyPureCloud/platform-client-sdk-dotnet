@@ -1,6 +1,5 @@
----
-title: DeleteRetention
----
+# DeleteRetention
+
 ## ININ.PureCloudApi.Model.DeleteRetention
 
 ## Properties
@@ -8,6 +7,7 @@ title: DeleteRetention
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Days** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CreatePlanningGroupRequest
----
+# CreatePlanningGroupRequest
+
 ## ININ.PureCloudApi.Model.CreatePlanningGroupRequest
 
 ## Properties
@@ -8,8 +7,9 @@ title: CreatePlanningGroupRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the planning group | |
-| **RoutePaths** | [**List&lt;RoutePathRequest&gt;**](RoutePathRequest.html) | Set of route paths to associate with the planning group | |
+| **RoutePaths** | [**List&lt;RoutePathRequest&gt;**](RoutePathRequest) | Set of route paths to associate with the planning group | |
 | **ServiceGoalTemplateId** | **string** | The ID of the service goal template to associate with this planning group | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

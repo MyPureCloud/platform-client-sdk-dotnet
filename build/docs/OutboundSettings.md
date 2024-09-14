@@ -1,6 +1,5 @@
----
-title: OutboundSettings
----
+# OutboundSettings
+
 ## ININ.PureCloudApi.Model.OutboundSettings
 
 ## Properties
@@ -17,9 +16,10 @@ title: OutboundSettings
 | **MaxLineUtilization** | **double?** | The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0] | [optional] |
 | **AbandonSeconds** | **double?** | The number of seconds used to determine if a call is abandoned | [optional] |
 | **ComplianceAbandonRateDenominator** | **string** | The denominator to be used in determining the compliance abandon rate | [optional] |
-| **AutomaticTimeZoneMapping** | [**AutomaticTimeZoneMappingSettings**](AutomaticTimeZoneMappingSettings.html) | The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns. | [optional] |
+| **AutomaticTimeZoneMapping** | [**AutomaticTimeZoneMappingSettings**](AutomaticTimeZoneMappingSettings) | The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns. | [optional] |
 | **RescheduleTimeZoneSkippedContacts** | **bool?** | Whether or not to reschedule time-zone blocked contacts | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

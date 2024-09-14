@@ -1,13 +1,12 @@
----
-title: CobrowseConversationEntityListing
----
+# CobrowseConversationEntityListing
+
 ## ININ.PureCloudApi.Model.CobrowseConversationEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;CobrowseConversation&gt;**](CobrowseConversation.html) |  | [optional] |
+| **Entities** | [**List&lt;CobrowseConversation&gt;**](CobrowseConversation) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: CobrowseConversationEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

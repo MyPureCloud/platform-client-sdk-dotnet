@@ -1,6 +1,5 @@
----
-title: CallbackDisconnectIdentifier
----
+# CallbackDisconnectIdentifier
+
 ## ININ.PureCloudApi.Model.CallbackDisconnectIdentifier
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallbackDisconnectIdentifier
 |------------ | ------------- | ------------- | -------------|
 | **ConversationId** | **string** | The Conversation Id. | |
 | **CallbackId** | **string** | The callback id. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

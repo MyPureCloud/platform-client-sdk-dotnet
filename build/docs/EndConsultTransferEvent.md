@@ -1,6 +1,5 @@
----
-title: EndConsultTransferEvent
----
+# EndConsultTransferEvent
+
 ## ININ.PureCloudApi.Model.EndConsultTransferEvent
 
 ## Properties
@@ -10,6 +9,7 @@ title: EndConsultTransferEvent
 | **EventId** | **string** | A unique (V4 UUID) eventId for this event | |
 | **EventDateTime** | **DateTime?** | A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **ConversationId** | **string** | A unique Id (V4 UUID) identifying this conversation | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

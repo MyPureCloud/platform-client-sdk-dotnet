@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationAppMessage
----
+# JourneyAppEventsNotificationAppMessage
+
 ## ININ.PureCloudApi.Model.JourneyAppEventsNotificationAppMessage
 
 ## Properties
@@ -9,17 +8,18 @@ title: JourneyAppEventsNotificationAppMessage
 |------------ | ------------- | ------------- | -------------|
 | **EventName** | **string** |  | [optional] |
 | **ScreenName** | **string** |  | [optional] |
-| **App** | [**JourneyAppEventsNotificationApp**](JourneyAppEventsNotificationApp.html) |  | [optional] |
-| **Device** | [**JourneyAppEventsNotificationDevice**](JourneyAppEventsNotificationDevice.html) |  | [optional] |
+| **App** | [**JourneyAppEventsNotificationApp**](JourneyAppEventsNotificationApp) |  | [optional] |
+| **Device** | [**JourneyAppEventsNotificationDevice**](JourneyAppEventsNotificationDevice) |  | [optional] |
 | **IpAddress** | **string** |  | [optional] |
 | **IpOrganization** | **string** |  | [optional] |
-| **Geolocation** | [**JourneyAppEventsNotificationGeoLocation**](JourneyAppEventsNotificationGeoLocation.html) |  | [optional] |
-| **SdkLibrary** | [**JourneyAppEventsNotificationSdkLibrary**](JourneyAppEventsNotificationSdkLibrary.html) |  | [optional] |
-| **NetworkConnectivity** | [**JourneyAppEventsNotificationNetworkConnectivity**](JourneyAppEventsNotificationNetworkConnectivity.html) |  | [optional] |
-| **MktCampaign** | [**JourneyAppEventsNotificationMktCampaign**](JourneyAppEventsNotificationMktCampaign.html) |  | [optional] |
+| **Geolocation** | [**JourneyAppEventsNotificationGeoLocation**](JourneyAppEventsNotificationGeoLocation) |  | [optional] |
+| **SdkLibrary** | [**JourneyAppEventsNotificationSdkLibrary**](JourneyAppEventsNotificationSdkLibrary) |  | [optional] |
+| **NetworkConnectivity** | [**JourneyAppEventsNotificationNetworkConnectivity**](JourneyAppEventsNotificationNetworkConnectivity) |  | [optional] |
+| **MktCampaign** | [**JourneyAppEventsNotificationMktCampaign**](JourneyAppEventsNotificationMktCampaign) |  | [optional] |
 | **SearchQuery** | **string** |  | [optional] |
-| **Attributes** | [**Dictionary&lt;string, JourneyAppEventsNotificationCustomEventAttribute&gt;**](JourneyAppEventsNotificationCustomEventAttribute.html) |  | [optional] |
-| **Traits** | [**Dictionary&lt;string, JourneyAppEventsNotificationCustomEventAttribute&gt;**](JourneyAppEventsNotificationCustomEventAttribute.html) |  | [optional] |
-{: class="table table-striped"}
+| **Attributes** | [**Dictionary&lt;string, JourneyAppEventsNotificationCustomEventAttribute&gt;**](JourneyAppEventsNotificationCustomEventAttribute) |  | [optional] |
+| **Traits** | [**Dictionary&lt;string, JourneyAppEventsNotificationCustomEventAttribute&gt;**](JourneyAppEventsNotificationCustomEventAttribute) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

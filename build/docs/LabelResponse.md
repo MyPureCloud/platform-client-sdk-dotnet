@@ -1,6 +1,5 @@
----
-title: LabelResponse
----
+# LabelResponse
+
 ## ININ.PureCloudApi.Model.LabelResponse
 
 ## Properties
@@ -15,6 +14,7 @@ title: LabelResponse
 | **DocumentCount** | **int?** | Number of documents assigned to this label. | [optional] |
 | **ExternalId** | **string** | The external id associated with the label. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

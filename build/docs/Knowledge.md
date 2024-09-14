@@ -1,6 +1,5 @@
----
-title: Knowledge
----
+# Knowledge
+
 ## ININ.PureCloudApi.Model.Knowledge
 
 ## Properties
@@ -8,7 +7,8 @@ title: Knowledge
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not knowledge base is enabled | [optional] |
-| **KnowledgeBase** | [**AddressableEntityRef**](AddressableEntityRef.html) | The knowledge base for messenger | [optional] |
-{: class="table table-striped"}
+| **KnowledgeBase** | [**AddressableEntityRef**](AddressableEntityRef) | The knowledge base for messenger | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

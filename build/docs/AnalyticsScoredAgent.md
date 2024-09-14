@@ -1,6 +1,5 @@
----
-title: AnalyticsScoredAgent
----
+# AnalyticsScoredAgent
+
 ## ININ.PureCloudApi.Model.AnalyticsScoredAgent
 
 ## Properties
@@ -9,6 +8,7 @@ title: AnalyticsScoredAgent
 |------------ | ------------- | ------------- | -------------|
 | **AgentScore** | **int?** | Assigned agent score for this conversation (0 - 100, higher being better) | [optional] |
 | **ScoredAgentId** | **string** | Unique identifier for the agent that was scored for this conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

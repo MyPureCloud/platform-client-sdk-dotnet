@@ -1,6 +1,5 @@
----
-title: Utterance
----
+# Utterance
+
 ## ININ.PureCloudApi.Model.Utterance
 
 ## Properties
@@ -8,6 +7,7 @@ title: Utterance
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UtteranceText** | **string** | Utterance text | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConfusionIntentDetails
----
+# ConfusionIntentDetails
+
 ## ININ.PureCloudApi.Model.ConfusionIntentDetails
 
 ## Properties
@@ -10,8 +9,9 @@ title: ConfusionIntentDetails
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **UtteranceCount** | **int?** | Number of utterances in this intent which are similar to parent utterance. | [optional] |
-| **Utterances** | [**List&lt;ConfusionUtterance&gt;**](ConfusionUtterance.html) | List of utterance which are similar to parent utterance. | [optional] |
+| **Utterances** | [**List&lt;ConfusionUtterance&gt;**](ConfusionUtterance) | List of utterance which are similar to parent utterance. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: RecordingAnnotationQueue
----
+# RecordingAnnotationQueue
+
 ## ININ.PureCloudApi.Model.RecordingAnnotationQueue
 
 ## Properties
@@ -9,6 +8,7 @@ title: RecordingAnnotationQueue
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The queue name | |
 | **Id** | **string** | The queue Id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ProgramRequest
----
+# ProgramRequest
+
 ## ININ.PureCloudApi.Model.ProgramRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: ProgramRequest
 | **Description** | **string** | The program description | [optional] |
 | **TopicIds** | **List&lt;string&gt;** | The ids of topics associated to the program | [optional] |
 | **Tags** | **List&lt;string&gt;** | The program tags | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

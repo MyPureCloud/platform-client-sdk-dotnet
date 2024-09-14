@@ -1,16 +1,16 @@
----
-title: KnowledgeBaseListing
----
+# KnowledgeBaseListing
+
 ## ININ.PureCloudApi.Model.KnowledgeBaseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;KnowledgeBase&gt;**](KnowledgeBase.html) |  | [optional] |
+| **Entities** | [**List&lt;KnowledgeBase&gt;**](KnowledgeBase) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DependencyObject
----
+# DependencyObject
+
 ## ININ.PureCloudApi.Model.DependencyObject
 
 ## Properties
@@ -14,9 +13,10 @@ title: DependencyObject
 | **Deleted** | **bool?** |  | [optional] |
 | **Updated** | **bool?** |  | [optional] |
 | **StateUnknown** | **bool?** |  | [optional] |
-| **ConsumedResources** | [**List&lt;Dependency&gt;**](Dependency.html) |  | [optional] |
-| **ConsumingResources** | [**List&lt;Dependency&gt;**](Dependency.html) |  | [optional] |
+| **ConsumedResources** | [**List&lt;Dependency&gt;**](Dependency) |  | [optional] |
+| **ConsumingResources** | [**List&lt;Dependency&gt;**](Dependency) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

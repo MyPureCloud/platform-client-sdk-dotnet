@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationConversationChannel
----
+# JourneySessionEventsNotificationConversationChannel
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationConversationChannel
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneySessionEventsNotificationConversationChannel
 | **Type** | **string** |  | [optional] |
 | **MessageType** | **string** |  | [optional] |
 | **Platform** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

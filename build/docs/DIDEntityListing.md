@@ -1,13 +1,12 @@
----
-title: DIDEntityListing
----
+# DIDEntityListing
+
 ## ININ.PureCloudApi.Model.DIDEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DID&gt;**](DID.html) |  | [optional] |
+| **Entities** | [**List&lt;DID&gt;**](DID) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: DIDEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

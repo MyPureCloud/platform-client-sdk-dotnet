@@ -1,6 +1,5 @@
----
-title: FacetStatistics
----
+# FacetStatistics
+
 ## ININ.PureCloudApi.Model.FacetStatistics
 
 ## Properties
@@ -14,6 +13,7 @@ title: FacetStatistics
 | **StdDeviation** | **double?** |  | [optional] |
 | **DateMin** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateMax** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

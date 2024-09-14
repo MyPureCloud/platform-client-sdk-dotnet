@@ -1,6 +1,5 @@
----
-title: WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification
----
+# WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification
+
 ## ININ.PureCloudApi.Model.WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherence
 | **Id** | **string** |  | [optional] |
 | **DownloadUrls** | **List&lt;string&gt;** |  | [optional] |
 | **QueryState** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

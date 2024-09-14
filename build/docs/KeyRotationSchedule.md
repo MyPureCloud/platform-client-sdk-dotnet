@@ -1,6 +1,5 @@
----
-title: KeyRotationSchedule
----
+# KeyRotationSchedule
+
 ## ININ.PureCloudApi.Model.KeyRotationSchedule
 
 ## Properties
@@ -11,6 +10,7 @@ title: KeyRotationSchedule
 | **Name** | **string** |  | [optional] |
 | **Period** | **string** | Value to set schedule to | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

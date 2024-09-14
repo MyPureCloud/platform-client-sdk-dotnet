@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer
----
+# WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer
 
 ## Properties
@@ -12,6 +11,7 @@ title: WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer
 | **Date** | **string** |  | [optional] |
 | **FileName** | **string** |  | [optional] |
 | **DataKey** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

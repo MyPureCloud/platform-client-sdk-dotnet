@@ -1,6 +1,5 @@
----
-title: WorkbinCreate
----
+# WorkbinCreate
+
 ## ININ.PureCloudApi.Model.WorkbinCreate
 
 ## Properties
@@ -10,6 +9,7 @@ title: WorkbinCreate
 | **Name** | **string** | Workbin name. Valid length between 3 and 256 characters. | |
 | **Description** | **string** | Workbin description. Maximum length of 512 characters. | [optional] |
 | **DivisionId** | **string** | The ID of the division the Workbin belongs to. Defaults to home division ID. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

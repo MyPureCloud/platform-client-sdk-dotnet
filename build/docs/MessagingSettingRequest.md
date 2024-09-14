@@ -1,6 +1,5 @@
----
-title: MessagingSettingRequest
----
+# MessagingSettingRequest
+
 ## ININ.PureCloudApi.Model.MessagingSettingRequest
 
 ## Properties
@@ -9,9 +8,10 @@ title: MessagingSettingRequest
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The messaging Setting profile name | |
-| **Content** | [**ContentSetting**](ContentSetting.html) | Settings relating to message contents | [optional] |
-| **Event** | [**EventSetting**](EventSetting.html) | Settings relating to events which may occur | [optional] |
+| **Content** | [**ContentSetting**](ContentSetting) | Settings relating to message contents | [optional] |
+| **Event** | [**EventSetting**](EventSetting) | Settings relating to events which may occur | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationDevice
----
+# JourneyAppEventsNotificationDevice
+
 ## ININ.PureCloudApi.Model.JourneyAppEventsNotificationDevice
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyAppEventsNotificationDevice
 | **OsVersion** | **string** |  | [optional] |
 | **Category** | **string** |  | [optional] |
 | **Manufacturer** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

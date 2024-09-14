@@ -1,6 +1,5 @@
----
-title: ConversationTagsUpdate
----
+# ConversationTagsUpdate
+
 ## ININ.PureCloudApi.Model.ConversationTagsUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationTagsUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ExternalTag** | **string** | The external tag associated with the conversation. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

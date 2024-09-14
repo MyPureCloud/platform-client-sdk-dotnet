@@ -1,6 +1,5 @@
----
-title: FacebookAppCredentials
----
+# FacebookAppCredentials
+
 ## ININ.PureCloudApi.Model.FacebookAppCredentials
 
 ## Properties
@@ -8,6 +7,7 @@ title: FacebookAppCredentials
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Genesys Cloud Facebook App Id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

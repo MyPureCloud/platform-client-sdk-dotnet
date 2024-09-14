@@ -1,6 +1,5 @@
----
-title: TrunkMetricsNetworkTypeIp
----
+# TrunkMetricsNetworkTypeIp
+
 ## ININ.PureCloudApi.Model.TrunkMetricsNetworkTypeIp
 
 ## Properties
@@ -8,7 +7,8 @@ title: TrunkMetricsNetworkTypeIp
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Address** | **string** | Assigned IP Address for the interface | [optional] |
-| **ErrorInfo** | [**TrunkErrorInfo**](TrunkErrorInfo.html) | Information about the error. | [optional] |
-{: class="table table-striped"}
+| **ErrorInfo** | [**TrunkErrorInfo**](TrunkErrorInfo) | Information about the error. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

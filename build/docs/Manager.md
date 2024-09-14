@@ -1,6 +1,5 @@
----
-title: Manager
----
+# Manager
+
 ## ININ.PureCloudApi.Model.Manager
 
 ## Properties
@@ -9,6 +8,7 @@ title: Manager
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **string** | The ID of the manager. | [optional] |
 | **Ref** | **string** | The reference URI of the manager&#39;s user record. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

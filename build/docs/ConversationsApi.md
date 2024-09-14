@@ -1,255 +1,254 @@
----
-title: ConversationsApi
----
+# ConversationsApi
+
 ## PureCloudPlatform.Client.V2.Api.ConversationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAnalyticsConversationsDetailsJob**](ConversationsApi.html#deleteanalyticsconversationsdetailsjob) | **Delete** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async details job |
-| [**DeleteConversationParticipantCode**](ConversationsApi.html#deleteconversationparticipantcode) | **Delete** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
-| [**DeleteConversationParticipantFlaggedreason**](ConversationsApi.html#deleteconversationparticipantflaggedreason) | **Delete** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Remove flagged reason from conversation participant. |
-| [**DeleteConversationsCallParticipantConsult**](ConversationsApi.html#deleteconversationscallparticipantconsult) | **Delete** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
-| [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **Delete** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
-| [**DeleteConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsApi.html#deleteconversationsmessagescachedmediacachedmediaitemid) | **Delete** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Remove a cached media item asychronously |
-| [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsfacebookintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
-| [**DeleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsinstagramintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Delete Instagram messaging integration |
-| [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsopenintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
-| [**DeleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationswhatsappintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Delete a WhatsApp messaging integration |
-| [**DeleteConversationsMessagingSetting**](ConversationsApi.html#deleteconversationsmessagingsetting) | **Delete** /api/v2/conversations/messaging/settings/{messageSettingId} | Delete a messaging setting |
-| [**DeleteConversationsMessagingSettingsDefault**](ConversationsApi.html#deleteconversationsmessagingsettingsdefault) | **Delete** /api/v2/conversations/messaging/settings/default | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
-| [**DeleteConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#deleteconversationsmessagingsupportedcontentsupportedcontentid) | **Delete** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
-| [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **Get** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
-| [**GetAnalyticsConversationsAggregatesJob**](ConversationsApi.html#getanalyticsconversationsaggregatesjob) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Get status for async query for conversation aggregates |
-| [**GetAnalyticsConversationsAggregatesJobResults**](ConversationsApi.html#getanalyticsconversationsaggregatesjobresults) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsConversationsDetails**](ConversationsApi.html#getanalyticsconversationsdetails) | **Get** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
-| [**GetAnalyticsConversationsDetailsJob**](ConversationsApi.html#getanalyticsconversationsdetailsjob) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
-| [**GetAnalyticsConversationsDetailsJobResults**](ConversationsApi.html#getanalyticsconversationsdetailsjobresults) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
-| [**GetAnalyticsConversationsDetailsJobsAvailability**](ConversationsApi.html#getanalyticsconversationsdetailsjobsavailability) | **Get** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
-| [**GetConversation**](ConversationsApi.html#getconversation) | **Get** /api/v2/conversations/{conversationId} | Get conversation |
-| [**GetConversationParticipantSecureivrsession**](ConversationsApi.html#getconversationparticipantsecureivrsession) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId} | Fetch info on a secure session |
-| [**GetConversationParticipantSecureivrsessions**](ConversationsApi.html#getconversationparticipantsecureivrsessions) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Get a list of secure sessions for this participant. |
-| [**GetConversationParticipantWrapup**](ConversationsApi.html#getconversationparticipantwrapup) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationParticipantWrapupcodes**](ConversationsApi.html#getconversationparticipantwrapupcodes) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationSecureattributes**](ConversationsApi.html#getconversationsecureattributes) | **Get** /api/v2/conversations/{conversationId}/secureattributes | Get the secure attributes on a conversation. |
-| [**GetConversationSuggestion**](ConversationsApi.html#getconversationsuggestion) | **Get** /api/v2/conversations/{conversationId}/suggestions/{suggestionId} | Get Suggestion. |
-| [**GetConversationSuggestions**](ConversationsApi.html#getconversationsuggestions) | **Get** /api/v2/conversations/{conversationId}/suggestions | Get all suggestions for a conversation. |
-| [**GetConversations**](ConversationsApi.html#getconversations) | **Get** /api/v2/conversations | Get active conversations for the logged in user |
-| [**GetConversationsCall**](ConversationsApi.html#getconversationscall) | **Get** /api/v2/conversations/calls/{conversationId} | Get call conversation |
-| [**GetConversationsCallParticipantCommunicationWrapup**](ConversationsApi.html#getconversationscallparticipantcommunicationwrapup) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsCallParticipantWrapup**](ConversationsApi.html#getconversationscallparticipantwrapup) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsCallParticipantWrapupcodes**](ConversationsApi.html#getconversationscallparticipantwrapupcodes) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsCallback**](ConversationsApi.html#getconversationscallback) | **Get** /api/v2/conversations/callbacks/{conversationId} | Get callback conversation |
-| [**GetConversationsCallbackParticipantCommunicationWrapup**](ConversationsApi.html#getconversationscallbackparticipantcommunicationwrapup) | **Get** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsCallbackParticipantWrapup**](ConversationsApi.html#getconversationscallbackparticipantwrapup) | **Get** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsCallbackParticipantWrapupcodes**](ConversationsApi.html#getconversationscallbackparticipantwrapupcodes) | **Get** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsCallbacks**](ConversationsApi.html#getconversationscallbacks) | **Get** /api/v2/conversations/callbacks | Get active callback conversations for the logged in user |
-| [**GetConversationsCalls**](ConversationsApi.html#getconversationscalls) | **Get** /api/v2/conversations/calls | Get active call conversations for the logged in user |
-| [**GetConversationsCallsHistory**](ConversationsApi.html#getconversationscallshistory) | **Get** /api/v2/conversations/calls/history | Get call history |
-| [**GetConversationsCallsMaximumconferenceparties**](ConversationsApi.html#getconversationscallsmaximumconferenceparties) | **Get** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
-| [**GetConversationsChat**](ConversationsApi.html#getconversationschat) | **Get** /api/v2/conversations/chats/{conversationId} | Get chat conversation |
-| [**GetConversationsChatMessage**](ConversationsApi.html#getconversationschatmessage) | **Get** /api/v2/conversations/chats/{conversationId}/messages/{messageId} | Get a web chat conversation message |
-| [**GetConversationsChatMessages**](ConversationsApi.html#getconversationschatmessages) | **Get** /api/v2/conversations/chats/{conversationId}/messages | Get the messages of a chat conversation. |
-| [**GetConversationsChatParticipantCommunicationWrapup**](ConversationsApi.html#getconversationschatparticipantcommunicationwrapup) | **Get** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsChatParticipantWrapup**](ConversationsApi.html#getconversationschatparticipantwrapup) | **Get** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsChatParticipantWrapupcodes**](ConversationsApi.html#getconversationschatparticipantwrapupcodes) | **Get** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsChats**](ConversationsApi.html#getconversationschats) | **Get** /api/v2/conversations/chats | Get active chat conversations for the logged in user |
-| [**GetConversationsCobrowsesession**](ConversationsApi.html#getconversationscobrowsesession) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId} | Get cobrowse conversation |
-| [**GetConversationsCobrowsesessionParticipantCommunicationWrapup**](ConversationsApi.html#getconversationscobrowsesessionparticipantcommunicationwrapup) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsCobrowsesessionParticipantWrapup**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapup) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsCobrowsesessionParticipantWrapupcodes**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapupcodes) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsCobrowsesessions**](ConversationsApi.html#getconversationscobrowsesessions) | **Get** /api/v2/conversations/cobrowsesessions | Get active cobrowse conversations for the logged in user |
-| [**GetConversationsEmail**](ConversationsApi.html#getconversationsemail) | **Get** /api/v2/conversations/emails/{conversationId} | Get email conversation |
-| [**GetConversationsEmailMessage**](ConversationsApi.html#getconversationsemailmessage) | **Get** /api/v2/conversations/emails/{conversationId}/messages/{messageId} | Get conversation message |
-| [**GetConversationsEmailMessages**](ConversationsApi.html#getconversationsemailmessages) | **Get** /api/v2/conversations/emails/{conversationId}/messages | Get conversation messages |
-| [**GetConversationsEmailMessagesDraft**](ConversationsApi.html#getconversationsemailmessagesdraft) | **Get** /api/v2/conversations/emails/{conversationId}/messages/draft | Get conversation draft reply |
-| [**GetConversationsEmailParticipantCommunicationWrapup**](ConversationsApi.html#getconversationsemailparticipantcommunicationwrapup) | **Get** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsEmailParticipantWrapup**](ConversationsApi.html#getconversationsemailparticipantwrapup) | **Get** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsEmailParticipantWrapupcodes**](ConversationsApi.html#getconversationsemailparticipantwrapupcodes) | **Get** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsEmailSettings**](ConversationsApi.html#getconversationsemailsettings) | **Get** /api/v2/conversations/emails/{conversationId}/settings | Get emails settings for a given conversation |
-| [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **Get** /api/v2/conversations/emails | Get active email conversations for the logged in user |
-| [**GetConversationsKeyconfiguration**](ConversationsApi.html#getconversationskeyconfiguration) | **Get** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Get the encryption key configurations |
-| [**GetConversationsKeyconfigurations**](ConversationsApi.html#getconversationskeyconfigurations) | **Get** /api/v2/conversations/keyconfigurations | Get a list of key configurations data |
-| [**GetConversationsMessage**](ConversationsApi.html#getconversationsmessage) | **Get** /api/v2/conversations/messages/{conversationId} | Get message conversation |
-| [**GetConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsApi.html#getconversationsmessagecommunicationmessagesmediamediaid) | **Get** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} | Get media |
-| [**GetConversationsMessageDetails**](ConversationsApi.html#getconversationsmessagedetails) | **Get** /api/v2/conversations/messages/{messageId}/details | Get message |
-| [**GetConversationsMessageMessage**](ConversationsApi.html#getconversationsmessagemessage) | **Get** /api/v2/conversations/messages/{conversationId}/messages/{messageId} | Get conversation message |
-| [**GetConversationsMessageParticipantCommunicationWrapup**](ConversationsApi.html#getconversationsmessageparticipantcommunicationwrapup) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsMessageParticipantWrapup**](ConversationsApi.html#getconversationsmessageparticipantwrapup) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsMessageParticipantWrapupcodes**](ConversationsApi.html#getconversationsmessageparticipantwrapupcodes) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsMessages**](ConversationsApi.html#getconversationsmessages) | **Get** /api/v2/conversations/messages | Get active message conversations for the logged in user |
-| [**GetConversationsMessagesCachedmedia**](ConversationsApi.html#getconversationsmessagescachedmedia) | **Get** /api/v2/conversations/messages/cachedmedia | Get a list of cached media items |
-| [**GetConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsApi.html#getconversationsmessagescachedmediacachedmediaitemid) | **Get** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Get a cached media item |
-| [**GetConversationsMessagingFacebookApp**](ConversationsApi.html#getconversationsmessagingfacebookapp) | **Get** /api/v2/conversations/messaging/facebook/app | Get Genesys Facebook App Id |
-| [**GetConversationsMessagingFacebookPermissions**](ConversationsApi.html#getconversationsmessagingfacebookpermissions) | **Get** /api/v2/conversations/messaging/facebook/permissions | Get a list of Facebook Permissions |
-| [**GetConversationsMessagingIntegrations**](ConversationsApi.html#getconversationsmessagingintegrations) | **Get** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
-| [**GetConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#getconversationsmessagingintegrationsfacebook) | **Get** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
-| [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsfacebookintegrationid) | **Get** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
-| [**GetConversationsMessagingIntegrationsInstagram**](ConversationsApi.html#getconversationsmessagingintegrationsinstagram) | **Get** /api/v2/conversations/messaging/integrations/instagram | Get a list of Instagram Integrations |
-| [**GetConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsinstagramintegrationid) | **Get** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Get Instagram messaging integration |
-| [**GetConversationsMessagingIntegrationsOpen**](ConversationsApi.html#getconversationsmessagingintegrationsopen) | **Get** /api/v2/conversations/messaging/integrations/open | Get a list of Open messaging integrations |
-| [**GetConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsopenintegrationid) | **Get** /api/v2/conversations/messaging/integrations/open/{integrationId} | Get an Open messaging integration |
-| [**GetConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#getconversationsmessagingintegrationswhatsapp) | **Get** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
-| [**GetConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationswhatsappintegrationid) | **Get** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Get a WhatsApp messaging integration |
-| [**GetConversationsMessagingSetting**](ConversationsApi.html#getconversationsmessagingsetting) | **Get** /api/v2/conversations/messaging/settings/{messageSettingId} | Get a messaging setting |
-| [**GetConversationsMessagingSettings**](ConversationsApi.html#getconversationsmessagingsettings) | **Get** /api/v2/conversations/messaging/settings | Get a list of messaging settings |
-| [**GetConversationsMessagingSettingsDefault**](ConversationsApi.html#getconversationsmessagingsettingsdefault) | **Get** /api/v2/conversations/messaging/settings/default | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
-| [**GetConversationsMessagingSupportedcontent**](ConversationsApi.html#getconversationsmessagingsupportedcontent) | **Get** /api/v2/conversations/messaging/supportedcontent | Get a list of Supported Content profiles |
-| [**GetConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#getconversationsmessagingsupportedcontentdefault) | **Get** /api/v2/conversations/messaging/supportedcontent/default | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
-| [**GetConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#getconversationsmessagingsupportedcontentsupportedcontentid) | **Get** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
-| [**GetConversationsMessagingThreadingtimeline**](ConversationsApi.html#getconversationsmessagingthreadingtimeline) | **Get** /api/v2/conversations/messaging/threadingtimeline | Get conversation threading window timeline for each messaging type |
-| [**GetConversationsScreenshareParticipantCommunicationWrapup**](ConversationsApi.html#getconversationsscreenshareparticipantcommunicationwrapup) | **Get** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsSettings**](ConversationsApi.html#getconversationssettings) | **Get** /api/v2/conversations/settings | Get Settings |
-| [**GetConversationsSocialParticipantCommunicationWrapup**](ConversationsApi.html#getconversationssocialparticipantcommunicationwrapup) | **Get** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsVideoDetails**](ConversationsApi.html#getconversationsvideodetails) | **Get** /api/v2/conversations/videos/{conferenceId}/details | Get video conference details (e.g. the current number of active participants). |
-| [**GetConversationsVideoParticipantCommunicationWrapup**](ConversationsApi.html#getconversationsvideoparticipantcommunicationwrapup) | **Get** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
-| [**GetConversationsVideosMeeting**](ConversationsApi.html#getconversationsvideosmeeting) | **Get** /api/v2/conversations/videos/meetings/{meetingId} | Gets a record for a given meetingId |
-| [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
-| [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationSecureattributes**](ConversationsApi.html#patchconversationsecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
-| [**PatchConversationUtilizationlabel**](ConversationsApi.html#patchconversationutilizationlabel) | **Patch** /api/v2/conversations/{conversationId}/utilizationlabel | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
-| [**PatchConversationsAftercallworkConversationIdParticipantCommunication**](ConversationsApi.html#patchconversationsaftercallworkconversationidparticipantcommunication) | **Patch** /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId} | Update after-call work for this conversation communication. |
-| [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **Patch** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
-| [**PatchConversationsCallParticipant**](ConversationsApi.html#patchconversationscallparticipant) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsCallParticipantAttributes**](ConversationsApi.html#patchconversationscallparticipantattributes) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCallParticipantCommunication**](ConversationsApi.html#patchconversationscallparticipantcommunication) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsCallParticipantConsult**](ConversationsApi.html#patchconversationscallparticipantconsult) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Change who can speak |
-| [**PatchConversationsCallback**](ConversationsApi.html#patchconversationscallback) | **Patch** /api/v2/conversations/callbacks/{conversationId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsCallbackParticipant**](ConversationsApi.html#patchconversationscallbackparticipant) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsCallbackParticipantAttributes**](ConversationsApi.html#patchconversationscallbackparticipantattributes) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCallbackParticipantCommunication**](ConversationsApi.html#patchconversationscallbackparticipantcommunication) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsCallbacks**](ConversationsApi.html#patchconversationscallbacks) | **Patch** /api/v2/conversations/callbacks | Update a scheduled callback |
-| [**PatchConversationsChat**](ConversationsApi.html#patchconversationschat) | **Patch** /api/v2/conversations/chats/{conversationId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsChatParticipant**](ConversationsApi.html#patchconversationschatparticipant) | **Patch** /api/v2/conversations/chats/{conversationId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsChatParticipantAttributes**](ConversationsApi.html#patchconversationschatparticipantattributes) | **Patch** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsChatParticipantCommunication**](ConversationsApi.html#patchconversationschatparticipantcommunication) | **Patch** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsCobrowsesession**](ConversationsApi.html#patchconversationscobrowsesession) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsCobrowsesessionParticipant**](ConversationsApi.html#patchconversationscobrowsesessionparticipant) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsCobrowsesessionParticipantAttributes**](ConversationsApi.html#patchconversationscobrowsesessionparticipantattributes) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCobrowsesessionParticipantCommunication**](ConversationsApi.html#patchconversationscobrowsesessionparticipantcommunication) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsEmail**](ConversationsApi.html#patchconversationsemail) | **Patch** /api/v2/conversations/emails/{conversationId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsEmailMessagesDraft**](ConversationsApi.html#patchconversationsemailmessagesdraft) | **Patch** /api/v2/conversations/emails/{conversationId}/messages/draft | Reset conversation draft to its initial state and/or auto-fill draft content |
-| [**PatchConversationsEmailParticipant**](ConversationsApi.html#patchconversationsemailparticipant) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsEmailParticipantAttributes**](ConversationsApi.html#patchconversationsemailparticipantattributes) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsEmailParticipantCommunication**](ConversationsApi.html#patchconversationsemailparticipantcommunication) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsEmailParticipantParkingstate**](ConversationsApi.html#patchconversationsemailparticipantparkingstate) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/parkingstate | Update conversation by setting its parking state |
-| [**PatchConversationsMessage**](ConversationsApi.html#patchconversationsmessage) | **Patch** /api/v2/conversations/messages/{conversationId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsMessageParticipant**](ConversationsApi.html#patchconversationsmessageparticipant) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsMessageParticipantAttributes**](ConversationsApi.html#patchconversationsmessageparticipantattributes) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsMessageParticipantCommunication**](ConversationsApi.html#patchconversationsmessageparticipantcommunication) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsfacebookintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
-| [**PatchConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsinstagramintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Update Instagram messaging integration |
-| [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsopenintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
-| [**PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappembeddedsignupintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId} | Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow |
-| [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update a WhatsApp messaging integration |
-| [**PatchConversationsMessagingSetting**](ConversationsApi.html#patchconversationsmessagingsetting) | **Patch** /api/v2/conversations/messaging/settings/{messageSettingId} | Update a messaging setting |
-| [**PatchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#patchconversationsmessagingsupportedcontentsupportedcontentid) | **Patch** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
-| [**PatchConversationsSettings**](ConversationsApi.html#patchconversationssettings) | **Patch** /api/v2/conversations/settings | Update Settings |
-| [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **Post** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
-| [**PostAnalyticsConversationsActivityQuery**](ConversationsApi.html#postanalyticsconversationsactivityquery) | **Post** /api/v2/analytics/conversations/activity/query | Query for conversation activity observations |
-| [**PostAnalyticsConversationsAggregatesJobs**](ConversationsApi.html#postanalyticsconversationsaggregatesjobs) | **Post** /api/v2/analytics/conversations/aggregates/jobs | Query for conversation aggregates asynchronously |
-| [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **Post** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
-| [**PostAnalyticsConversationsDetailsJobs**](ConversationsApi.html#postanalyticsconversationsdetailsjobs) | **Post** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
-| [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **Post** /api/v2/analytics/conversations/details/query | Query for conversation details |
-| [**PostConversationAssign**](ConversationsApi.html#postconversationassign) | **Post** /api/v2/conversations/{conversationId}/assign | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
-| [**PostConversationBarge**](ConversationsApi.html#postconversationbarge) | **Post** /api/v2/conversations/{conversationId}/barge | Barge a conversation creating a barged in conference of connected participants. |
-| [**PostConversationCobrowse**](ConversationsApi.html#postconversationcobrowse) | **Post** /api/v2/conversations/{conversationId}/cobrowse | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
-| [**PostConversationDisconnect**](ConversationsApi.html#postconversationdisconnect) | **Post** /api/v2/conversations/{conversationId}/disconnect | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
-| [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
-| [**PostConversationParticipantDigits**](ConversationsApi.html#postconversationparticipantdigits) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
-| [**PostConversationParticipantReplace**](ConversationsApi.html#postconversationparticipantreplace) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationParticipantReplaceAgent**](ConversationsApi.html#postconversationparticipantreplaceagent) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent | Replace this participant with the specified agent |
-| [**PostConversationParticipantReplaceExternal**](ConversationsApi.html#postconversationparticipantreplaceexternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact |
-| [**PostConversationParticipantReplaceQueue**](ConversationsApi.html#postconversationparticipantreplacequeue) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
-| [**PostConversationParticipantSecureivrsessions**](ConversationsApi.html#postconversationparticipantsecureivrsessions) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
-| [**PostConversationSuggestionEngagement**](ConversationsApi.html#postconversationsuggestionengagement) | **Post** /api/v2/conversations/{conversationId}/suggestions/{suggestionId}/engagement | Save an engagement on the suggestion. |
-| [**PostConversationSuggestionsFeedback**](ConversationsApi.html#postconversationsuggestionsfeedback) | **Post** /api/v2/conversations/{conversationId}/suggestions/feedback | Suggestion feedback. |
-| [**PostConversationSummaryFeedback**](ConversationsApi.html#postconversationsummaryfeedback) | **Post** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Submit feedback for the summary. |
-| [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **Post** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
-| [**PostConversationsCallParticipantBarge**](ConversationsApi.html#postconversationscallparticipantbarge) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
-| [**PostConversationsCallParticipantCoach**](ConversationsApi.html#postconversationscallparticipantcoach) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
-| [**PostConversationsCallParticipantCommunicationWrapup**](ConversationsApi.html#postconversationscallparticipantcommunicationwrapup) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
-| [**PostConversationsCallParticipantConsultAgent**](ConversationsApi.html#postconversationscallparticipantconsultagent) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent | Initiate a consult transfer to an agent |
-| [**PostConversationsCallParticipantConsultExternal**](ConversationsApi.html#postconversationscallparticipantconsultexternal) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external | Initiate a consult transfer to an external contact |
-| [**PostConversationsCallParticipantConsultQueue**](ConversationsApi.html#postconversationscallparticipantconsultqueue) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue | Initiate a consult transfer to a queue |
-| [**PostConversationsCallParticipantMonitor**](ConversationsApi.html#postconversationscallparticipantmonitor) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
-| [**PostConversationsCallParticipantReplace**](ConversationsApi.html#postconversationscallparticipantreplace) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsCallParticipants**](ConversationsApi.html#postconversationscallparticipants) | **Post** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
-| [**PostConversationsCallbackParticipantCommunicationWrapup**](ConversationsApi.html#postconversationscallbackparticipantcommunicationwrapup) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsCallbackParticipantReplace**](ConversationsApi.html#postconversationscallbackparticipantreplace) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsCallbacks**](ConversationsApi.html#postconversationscallbacks) | **Post** /api/v2/conversations/callbacks | Create a Callback |
-| [**PostConversationsCallbacksBulkDisconnect**](ConversationsApi.html#postconversationscallbacksbulkdisconnect) | **Post** /api/v2/conversations/callbacks/bulk/disconnect | Disconnect multiple scheduled callbacks |
-| [**PostConversationsCallbacksBulkUpdate**](ConversationsApi.html#postconversationscallbacksbulkupdate) | **Post** /api/v2/conversations/callbacks/bulk/update | Update multiple scheduled callbacks |
-| [**PostConversationsCalls**](ConversationsApi.html#postconversationscalls) | **Post** /api/v2/conversations/calls | Create a call conversation |
-| [**PostConversationsChatCommunicationMessages**](ConversationsApi.html#postconversationschatcommunicationmessages) | **Post** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages | Send a message on behalf of a communication in a chat conversation. |
-| [**PostConversationsChatCommunicationTyping**](ConversationsApi.html#postconversationschatcommunicationtyping) | **Post** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing | Send a typing-indicator on behalf of a communication in a chat conversation. |
-| [**PostConversationsChatParticipantCommunicationWrapup**](ConversationsApi.html#postconversationschatparticipantcommunicationwrapup) | **Post** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsChatParticipantReplace**](ConversationsApi.html#postconversationschatparticipantreplace) | **Post** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsChats**](ConversationsApi.html#postconversationschats) | **Post** /api/v2/conversations/chats | Create a web chat conversation |
-| [**PostConversationsCobrowsesessionParticipantCommunicationWrapup**](ConversationsApi.html#postconversationscobrowsesessionparticipantcommunicationwrapup) | **Post** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsCobrowsesessionParticipantReplace**](ConversationsApi.html#postconversationscobrowsesessionparticipantreplace) | **Post** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsEmailInboundmessages**](ConversationsApi.html#postconversationsemailinboundmessages) | **Post** /api/v2/conversations/emails/{conversationId}/inboundmessages | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
-| [**PostConversationsEmailMessages**](ConversationsApi.html#postconversationsemailmessages) | **Post** /api/v2/conversations/emails/{conversationId}/messages | Send an email reply |
-| [**PostConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsApi.html#postconversationsemailmessagesdraftattachmentscopy) | **Post** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy | Copy attachments from an email message to the current draft. |
-| [**PostConversationsEmailParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsemailparticipantcommunicationwrapup) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsEmailReconnect**](ConversationsApi.html#postconversationsemailreconnect) | **Post** /api/v2/conversations/emails/{conversationId}/reconnect | Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation |
-| [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **Post** /api/v2/conversations/emails | Create an email conversation |
-| [**PostConversationsEmailsAgentless**](ConversationsApi.html#postconversationsemailsagentless) | **Post** /api/v2/conversations/emails/agentless | Create an email conversation, per API |
-| [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **Post** /api/v2/conversations/faxes | Create Fax Conversation |
-| [**PostConversationsKeyconfigurations**](ConversationsApi.html#postconversationskeyconfigurations) | **Post** /api/v2/conversations/keyconfigurations | Setup configurations for encryption key creation |
-| [**PostConversationsKeyconfigurationsValidate**](ConversationsApi.html#postconversationskeyconfigurationsvalidate) | **Post** /api/v2/conversations/keyconfigurations/validate | Validate encryption key configurations without saving it |
-| [**PostConversationsMessageCommunicationMessages**](ConversationsApi.html#postconversationsmessagecommunicationmessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
-| [**PostConversationsMessageCommunicationMessagesMedia**](ConversationsApi.html#postconversationsmessagecommunicationmessagesmedia) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
-| [**PostConversationsMessageCommunicationTyping**](ConversationsApi.html#postconversationsmessagecommunicationtyping) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
-| [**PostConversationsMessageInboundOpenEvent**](ConversationsApi.html#postconversationsmessageinboundopenevent) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/event | Send an inbound Open Event Message |
-| [**PostConversationsMessageInboundOpenMessage**](ConversationsApi.html#postconversationsmessageinboundopenmessage) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/message | Send inbound Open Message |
-| [**PostConversationsMessageInboundOpenReceipt**](ConversationsApi.html#postconversationsmessageinboundopenreceipt) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/receipt | Send an inbound Open Receipt Message |
-| [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **Post** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
-| [**PostConversationsMessageParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsmessageparticipantcommunicationwrapup) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsMessageParticipantMonitor**](ConversationsApi.html#postconversationsmessageparticipantmonitor) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
-| [**PostConversationsMessageParticipantReplace**](ConversationsApi.html#postconversationsmessageparticipantreplace) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsMessages**](ConversationsApi.html#postconversationsmessages) | **Post** /api/v2/conversations/messages | Create an outbound messaging conversation. |
-| [**PostConversationsMessagesAgentless**](ConversationsApi.html#postconversationsmessagesagentless) | **Post** /api/v2/conversations/messages/agentless | Send an agentless outbound message |
-| [**PostConversationsMessagesInboundOpen**](ConversationsApi.html#postconversationsmessagesinboundopen) | **Post** /api/v2/conversations/messages/inbound/open | Send an inbound Open Message |
-| [**PostConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#postconversationsmessagingintegrationsfacebook) | **Post** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
-| [**PostConversationsMessagingIntegrationsInstagram**](ConversationsApi.html#postconversationsmessagingintegrationsinstagram) | **Post** /api/v2/conversations/messaging/integrations/instagram | Create Instagram Integration |
-| [**PostConversationsMessagingIntegrationsOpen**](ConversationsApi.html#postconversationsmessagingintegrationsopen) | **Post** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
-| [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **Post** /api/v2/conversations/messaging/integrations/whatsapp | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
-| [**PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup**](ConversationsApi.html#postconversationsmessagingintegrationswhatsappembeddedsignup) | **Post** /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup | Create a WhatsApp Integration using the WhatsApp embedded signup flow |
-| [**PostConversationsMessagingSettings**](ConversationsApi.html#postconversationsmessagingsettings) | **Post** /api/v2/conversations/messaging/settings | Create a messaging setting |
-| [**PostConversationsMessagingSupportedcontent**](ConversationsApi.html#postconversationsmessagingsupportedcontent) | **Post** /api/v2/conversations/messaging/supportedcontent | Create a Supported Content profile |
-| [**PostConversationsParticipantsAttributesSearch**](ConversationsApi.html#postconversationsparticipantsattributessearch) | **Post** /api/v2/conversations/participants/attributes/search | Search conversations |
-| [**PostConversationsScreenshareParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsscreenshareparticipantcommunicationwrapup) | **Post** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsSocialParticipantCommunicationWrapup**](ConversationsApi.html#postconversationssocialparticipantcommunicationwrapup) | **Post** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsVideoParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsvideoparticipantcommunicationwrapup) | **Post** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsVideosMeetings**](ConversationsApi.html#postconversationsvideosmeetings) | **Post** /api/v2/conversations/videos/meetings | Generate a meetingId for a given conferenceId |
-| [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **Put** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
-| [**PutConversationSecureattributes**](ConversationsApi.html#putconversationsecureattributes) | **Put** /api/v2/conversations/{conversationId}/secureattributes | Set the secure attributes on a conversation. |
-| [**PutConversationTags**](ConversationsApi.html#putconversationtags) | **Put** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
-| [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **Put** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
-| [**PutConversationsCallRecordingstate**](ConversationsApi.html#putconversationscallrecordingstate) | **Put** /api/v2/conversations/calls/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsCallbackRecordingstate**](ConversationsApi.html#putconversationscallbackrecordingstate) | **Put** /api/v2/conversations/callbacks/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsChatRecordingstate**](ConversationsApi.html#putconversationschatrecordingstate) | **Put** /api/v2/conversations/chats/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsCobrowsesessionRecordingstate**](ConversationsApi.html#putconversationscobrowsesessionrecordingstate) | **Put** /api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **Put** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
-| [**PutConversationsEmailRecordingstate**](ConversationsApi.html#putconversationsemailrecordingstate) | **Put** /api/v2/conversations/emails/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsKeyconfiguration**](ConversationsApi.html#putconversationskeyconfiguration) | **Put** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Update the encryption key configurations |
-| [**PutConversationsMessageRecordingstate**](ConversationsApi.html#putconversationsmessagerecordingstate) | **Put** /api/v2/conversations/messages/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsMessagingSettingsDefault**](ConversationsApi.html#putconversationsmessagingsettingsdefault) | **Put** /api/v2/conversations/messaging/settings/default | Set the organization&#39;s default setting that may be applied to to integrations without settings |
-| [**PutConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#putconversationsmessagingsupportedcontentdefault) | **Put** /api/v2/conversations/messaging/supportedcontent/default | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
-| [**PutConversationsMessagingThreadingtimeline**](ConversationsApi.html#putconversationsmessagingthreadingtimeline) | **Put** /api/v2/conversations/messaging/threadingtimeline | Update conversation threading window timeline for each messaging type |
-| [**PutConversationsScreenshareRecordingstate**](ConversationsApi.html#putconversationsscreensharerecordingstate) | **Put** /api/v2/conversations/screenshares/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsSocialRecordingstate**](ConversationsApi.html#putconversationssocialrecordingstate) | **Put** /api/v2/conversations/socials/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-| [**PutConversationsVideoRecordingstate**](ConversationsApi.html#putconversationsvideorecordingstate) | **Put** /api/v2/conversations/videos/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-{: class="table table-striped"}
+| [**DeleteAnalyticsConversationsDetailsJob**](#DeleteAnalyticsConversationsDetailsJob) | **Delete** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async details job |
+| [**DeleteConversationParticipantCode**](#DeleteConversationParticipantCode) | **Delete** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
+| [**DeleteConversationParticipantFlaggedreason**](#DeleteConversationParticipantFlaggedreason) | **Delete** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Remove flagged reason from conversation participant. |
+| [**DeleteConversationsCallParticipantConsult**](#DeleteConversationsCallParticipantConsult) | **Delete** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
+| [**DeleteConversationsEmailMessagesDraftAttachment**](#DeleteConversationsEmailMessagesDraftAttachment) | **Delete** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
+| [**DeleteConversationsMessagesCachedmediaCachedMediaItemId**](#DeleteConversationsMessagesCachedmediaCachedMediaItemId) | **Delete** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Remove a cached media item asychronously |
+| [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](#DeleteConversationsMessagingIntegrationsFacebookIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
+| [**DeleteConversationsMessagingIntegrationsInstagramIntegrationId**](#DeleteConversationsMessagingIntegrationsInstagramIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Delete Instagram messaging integration |
+| [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](#DeleteConversationsMessagingIntegrationsOpenIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
+| [**DeleteConversationsMessagingIntegrationsWhatsappIntegrationId**](#DeleteConversationsMessagingIntegrationsWhatsappIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Delete a WhatsApp messaging integration |
+| [**DeleteConversationsMessagingSetting**](#DeleteConversationsMessagingSetting) | **Delete** /api/v2/conversations/messaging/settings/{messageSettingId} | Delete a messaging setting |
+| [**DeleteConversationsMessagingSettingsDefault**](#DeleteConversationsMessagingSettingsDefault) | **Delete** /api/v2/conversations/messaging/settings/default | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
+| [**DeleteConversationsMessagingSupportedcontentSupportedContentId**](#DeleteConversationsMessagingSupportedcontentSupportedContentId) | **Delete** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
+| [**GetAnalyticsConversationDetails**](#GetAnalyticsConversationDetails) | **Get** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
+| [**GetAnalyticsConversationsAggregatesJob**](#GetAnalyticsConversationsAggregatesJob) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Get status for async query for conversation aggregates |
+| [**GetAnalyticsConversationsAggregatesJobResults**](#GetAnalyticsConversationsAggregatesJobResults) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsConversationsDetails**](#GetAnalyticsConversationsDetails) | **Get** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
+| [**GetAnalyticsConversationsDetailsJob**](#GetAnalyticsConversationsDetailsJob) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
+| [**GetAnalyticsConversationsDetailsJobResults**](#GetAnalyticsConversationsDetailsJobResults) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
+| [**GetAnalyticsConversationsDetailsJobsAvailability**](#GetAnalyticsConversationsDetailsJobsAvailability) | **Get** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
+| [**GetConversation**](#GetConversation) | **Get** /api/v2/conversations/{conversationId} | Get conversation |
+| [**GetConversationParticipantSecureivrsession**](#GetConversationParticipantSecureivrsession) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId} | Fetch info on a secure session |
+| [**GetConversationParticipantSecureivrsessions**](#GetConversationParticipantSecureivrsessions) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Get a list of secure sessions for this participant. |
+| [**GetConversationParticipantWrapup**](#GetConversationParticipantWrapup) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationParticipantWrapupcodes**](#GetConversationParticipantWrapupcodes) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationSecureattributes**](#GetConversationSecureattributes) | **Get** /api/v2/conversations/{conversationId}/secureattributes | Get the secure attributes on a conversation. |
+| [**GetConversationSuggestion**](#GetConversationSuggestion) | **Get** /api/v2/conversations/{conversationId}/suggestions/{suggestionId} | Get Suggestion. |
+| [**GetConversationSuggestions**](#GetConversationSuggestions) | **Get** /api/v2/conversations/{conversationId}/suggestions | Get all suggestions for a conversation. |
+| [**GetConversations**](#GetConversations) | **Get** /api/v2/conversations | Get active conversations for the logged in user |
+| [**GetConversationsCall**](#GetConversationsCall) | **Get** /api/v2/conversations/calls/{conversationId} | Get call conversation |
+| [**GetConversationsCallParticipantCommunicationWrapup**](#GetConversationsCallParticipantCommunicationWrapup) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsCallParticipantWrapup**](#GetConversationsCallParticipantWrapup) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsCallParticipantWrapupcodes**](#GetConversationsCallParticipantWrapupcodes) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsCallback**](#GetConversationsCallback) | **Get** /api/v2/conversations/callbacks/{conversationId} | Get callback conversation |
+| [**GetConversationsCallbackParticipantCommunicationWrapup**](#GetConversationsCallbackParticipantCommunicationWrapup) | **Get** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsCallbackParticipantWrapup**](#GetConversationsCallbackParticipantWrapup) | **Get** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsCallbackParticipantWrapupcodes**](#GetConversationsCallbackParticipantWrapupcodes) | **Get** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsCallbacks**](#GetConversationsCallbacks) | **Get** /api/v2/conversations/callbacks | Get active callback conversations for the logged in user |
+| [**GetConversationsCalls**](#GetConversationsCalls) | **Get** /api/v2/conversations/calls | Get active call conversations for the logged in user |
+| [**GetConversationsCallsHistory**](#GetConversationsCallsHistory) | **Get** /api/v2/conversations/calls/history | Get call history |
+| [**GetConversationsCallsMaximumconferenceparties**](#GetConversationsCallsMaximumconferenceparties) | **Get** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
+| [**GetConversationsChat**](#GetConversationsChat) | **Get** /api/v2/conversations/chats/{conversationId} | Get chat conversation |
+| [**GetConversationsChatMessage**](#GetConversationsChatMessage) | **Get** /api/v2/conversations/chats/{conversationId}/messages/{messageId} | Get a web chat conversation message |
+| [**GetConversationsChatMessages**](#GetConversationsChatMessages) | **Get** /api/v2/conversations/chats/{conversationId}/messages | Get the messages of a chat conversation. |
+| [**GetConversationsChatParticipantCommunicationWrapup**](#GetConversationsChatParticipantCommunicationWrapup) | **Get** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsChatParticipantWrapup**](#GetConversationsChatParticipantWrapup) | **Get** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsChatParticipantWrapupcodes**](#GetConversationsChatParticipantWrapupcodes) | **Get** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsChats**](#GetConversationsChats) | **Get** /api/v2/conversations/chats | Get active chat conversations for the logged in user |
+| [**GetConversationsCobrowsesession**](#GetConversationsCobrowsesession) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId} | Get cobrowse conversation |
+| [**GetConversationsCobrowsesessionParticipantCommunicationWrapup**](#GetConversationsCobrowsesessionParticipantCommunicationWrapup) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsCobrowsesessionParticipantWrapup**](#GetConversationsCobrowsesessionParticipantWrapup) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsCobrowsesessionParticipantWrapupcodes**](#GetConversationsCobrowsesessionParticipantWrapupcodes) | **Get** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsCobrowsesessions**](#GetConversationsCobrowsesessions) | **Get** /api/v2/conversations/cobrowsesessions | Get active cobrowse conversations for the logged in user |
+| [**GetConversationsEmail**](#GetConversationsEmail) | **Get** /api/v2/conversations/emails/{conversationId} | Get email conversation |
+| [**GetConversationsEmailMessage**](#GetConversationsEmailMessage) | **Get** /api/v2/conversations/emails/{conversationId}/messages/{messageId} | Get conversation message |
+| [**GetConversationsEmailMessages**](#GetConversationsEmailMessages) | **Get** /api/v2/conversations/emails/{conversationId}/messages | Get conversation messages |
+| [**GetConversationsEmailMessagesDraft**](#GetConversationsEmailMessagesDraft) | **Get** /api/v2/conversations/emails/{conversationId}/messages/draft | Get conversation draft reply |
+| [**GetConversationsEmailParticipantCommunicationWrapup**](#GetConversationsEmailParticipantCommunicationWrapup) | **Get** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsEmailParticipantWrapup**](#GetConversationsEmailParticipantWrapup) | **Get** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsEmailParticipantWrapupcodes**](#GetConversationsEmailParticipantWrapupcodes) | **Get** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsEmailSettings**](#GetConversationsEmailSettings) | **Get** /api/v2/conversations/emails/{conversationId}/settings | Get emails settings for a given conversation |
+| [**GetConversationsEmails**](#GetConversationsEmails) | **Get** /api/v2/conversations/emails | Get active email conversations for the logged in user |
+| [**GetConversationsKeyconfiguration**](#GetConversationsKeyconfiguration) | **Get** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Get the encryption key configurations |
+| [**GetConversationsKeyconfigurations**](#GetConversationsKeyconfigurations) | **Get** /api/v2/conversations/keyconfigurations | Get a list of key configurations data |
+| [**GetConversationsMessage**](#GetConversationsMessage) | **Get** /api/v2/conversations/messages/{conversationId} | Get message conversation |
+| [**GetConversationsMessageCommunicationMessagesMediaMediaId**](#GetConversationsMessageCommunicationMessagesMediaMediaId) | **Get** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} | Get media |
+| [**GetConversationsMessageDetails**](#GetConversationsMessageDetails) | **Get** /api/v2/conversations/messages/{messageId}/details | Get message |
+| [**GetConversationsMessageMessage**](#GetConversationsMessageMessage) | **Get** /api/v2/conversations/messages/{conversationId}/messages/{messageId} | Get conversation message |
+| [**GetConversationsMessageParticipantCommunicationWrapup**](#GetConversationsMessageParticipantCommunicationWrapup) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsMessageParticipantWrapup**](#GetConversationsMessageParticipantWrapup) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsMessageParticipantWrapupcodes**](#GetConversationsMessageParticipantWrapupcodes) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsMessages**](#GetConversationsMessages) | **Get** /api/v2/conversations/messages | Get active message conversations for the logged in user |
+| [**GetConversationsMessagesCachedmedia**](#GetConversationsMessagesCachedmedia) | **Get** /api/v2/conversations/messages/cachedmedia | Get a list of cached media items |
+| [**GetConversationsMessagesCachedmediaCachedMediaItemId**](#GetConversationsMessagesCachedmediaCachedMediaItemId) | **Get** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Get a cached media item |
+| [**GetConversationsMessagingFacebookApp**](#GetConversationsMessagingFacebookApp) | **Get** /api/v2/conversations/messaging/facebook/app | Get Genesys Facebook App Id |
+| [**GetConversationsMessagingFacebookPermissions**](#GetConversationsMessagingFacebookPermissions) | **Get** /api/v2/conversations/messaging/facebook/permissions | Get a list of Facebook Permissions |
+| [**GetConversationsMessagingIntegrations**](#GetConversationsMessagingIntegrations) | **Get** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
+| [**GetConversationsMessagingIntegrationsFacebook**](#GetConversationsMessagingIntegrationsFacebook) | **Get** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
+| [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](#GetConversationsMessagingIntegrationsFacebookIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
+| [**GetConversationsMessagingIntegrationsInstagram**](#GetConversationsMessagingIntegrationsInstagram) | **Get** /api/v2/conversations/messaging/integrations/instagram | Get a list of Instagram Integrations |
+| [**GetConversationsMessagingIntegrationsInstagramIntegrationId**](#GetConversationsMessagingIntegrationsInstagramIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Get Instagram messaging integration |
+| [**GetConversationsMessagingIntegrationsOpen**](#GetConversationsMessagingIntegrationsOpen) | **Get** /api/v2/conversations/messaging/integrations/open | Get a list of Open messaging integrations |
+| [**GetConversationsMessagingIntegrationsOpenIntegrationId**](#GetConversationsMessagingIntegrationsOpenIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/open/{integrationId} | Get an Open messaging integration |
+| [**GetConversationsMessagingIntegrationsWhatsapp**](#GetConversationsMessagingIntegrationsWhatsapp) | **Get** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
+| [**GetConversationsMessagingIntegrationsWhatsappIntegrationId**](#GetConversationsMessagingIntegrationsWhatsappIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Get a WhatsApp messaging integration |
+| [**GetConversationsMessagingSetting**](#GetConversationsMessagingSetting) | **Get** /api/v2/conversations/messaging/settings/{messageSettingId} | Get a messaging setting |
+| [**GetConversationsMessagingSettings**](#GetConversationsMessagingSettings) | **Get** /api/v2/conversations/messaging/settings | Get a list of messaging settings |
+| [**GetConversationsMessagingSettingsDefault**](#GetConversationsMessagingSettingsDefault) | **Get** /api/v2/conversations/messaging/settings/default | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
+| [**GetConversationsMessagingSupportedcontent**](#GetConversationsMessagingSupportedcontent) | **Get** /api/v2/conversations/messaging/supportedcontent | Get a list of Supported Content profiles |
+| [**GetConversationsMessagingSupportedcontentDefault**](#GetConversationsMessagingSupportedcontentDefault) | **Get** /api/v2/conversations/messaging/supportedcontent/default | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
+| [**GetConversationsMessagingSupportedcontentSupportedContentId**](#GetConversationsMessagingSupportedcontentSupportedContentId) | **Get** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
+| [**GetConversationsMessagingThreadingtimeline**](#GetConversationsMessagingThreadingtimeline) | **Get** /api/v2/conversations/messaging/threadingtimeline | Get conversation threading window timeline for each messaging type |
+| [**GetConversationsScreenshareParticipantCommunicationWrapup**](#GetConversationsScreenshareParticipantCommunicationWrapup) | **Get** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsSettings**](#GetConversationsSettings) | **Get** /api/v2/conversations/settings | Get Settings |
+| [**GetConversationsSocialParticipantCommunicationWrapup**](#GetConversationsSocialParticipantCommunicationWrapup) | **Get** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsVideoDetails**](#GetConversationsVideoDetails) | **Get** /api/v2/conversations/videos/{conferenceId}/details | Get video conference details (e.g. the current number of active participants). |
+| [**GetConversationsVideoParticipantCommunicationWrapup**](#GetConversationsVideoParticipantCommunicationWrapup) | **Get** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsVideosMeeting**](#GetConversationsVideosMeeting) | **Get** /api/v2/conversations/videos/meetings/{meetingId} | Gets a record for a given meetingId |
+| [**PatchConversationParticipant**](#PatchConversationParticipant) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
+| [**PatchConversationParticipantAttributes**](#PatchConversationParticipantAttributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationSecureattributes**](#PatchConversationSecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
+| [**PatchConversationUtilizationlabel**](#PatchConversationUtilizationlabel) | **Patch** /api/v2/conversations/{conversationId}/utilizationlabel | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
+| [**PatchConversationsAftercallworkConversationIdParticipantCommunication**](#PatchConversationsAftercallworkConversationIdParticipantCommunication) | **Patch** /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId} | Update after-call work for this conversation communication. |
+| [**PatchConversationsCall**](#PatchConversationsCall) | **Patch** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
+| [**PatchConversationsCallParticipant**](#PatchConversationsCallParticipant) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsCallParticipantAttributes**](#PatchConversationsCallParticipantAttributes) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsCallParticipantCommunication**](#PatchConversationsCallParticipantCommunication) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsCallParticipantConsult**](#PatchConversationsCallParticipantConsult) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Change who can speak |
+| [**PatchConversationsCallback**](#PatchConversationsCallback) | **Patch** /api/v2/conversations/callbacks/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsCallbackParticipant**](#PatchConversationsCallbackParticipant) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsCallbackParticipantAttributes**](#PatchConversationsCallbackParticipantAttributes) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsCallbackParticipantCommunication**](#PatchConversationsCallbackParticipantCommunication) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsCallbacks**](#PatchConversationsCallbacks) | **Patch** /api/v2/conversations/callbacks | Update a scheduled callback |
+| [**PatchConversationsChat**](#PatchConversationsChat) | **Patch** /api/v2/conversations/chats/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsChatParticipant**](#PatchConversationsChatParticipant) | **Patch** /api/v2/conversations/chats/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsChatParticipantAttributes**](#PatchConversationsChatParticipantAttributes) | **Patch** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsChatParticipantCommunication**](#PatchConversationsChatParticipantCommunication) | **Patch** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsCobrowsesession**](#PatchConversationsCobrowsesession) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsCobrowsesessionParticipant**](#PatchConversationsCobrowsesessionParticipant) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsCobrowsesessionParticipantAttributes**](#PatchConversationsCobrowsesessionParticipantAttributes) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsCobrowsesessionParticipantCommunication**](#PatchConversationsCobrowsesessionParticipantCommunication) | **Patch** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsEmail**](#PatchConversationsEmail) | **Patch** /api/v2/conversations/emails/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsEmailMessagesDraft**](#PatchConversationsEmailMessagesDraft) | **Patch** /api/v2/conversations/emails/{conversationId}/messages/draft | Reset conversation draft to its initial state and/or auto-fill draft content |
+| [**PatchConversationsEmailParticipant**](#PatchConversationsEmailParticipant) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsEmailParticipantAttributes**](#PatchConversationsEmailParticipantAttributes) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsEmailParticipantCommunication**](#PatchConversationsEmailParticipantCommunication) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsEmailParticipantParkingstate**](#PatchConversationsEmailParticipantParkingstate) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/parkingstate | Update conversation by setting its parking state |
+| [**PatchConversationsMessage**](#PatchConversationsMessage) | **Patch** /api/v2/conversations/messages/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsMessageParticipant**](#PatchConversationsMessageParticipant) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsMessageParticipantAttributes**](#PatchConversationsMessageParticipantAttributes) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsMessageParticipantCommunication**](#PatchConversationsMessageParticipantCommunication) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](#PatchConversationsMessagingIntegrationsFacebookIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
+| [**PatchConversationsMessagingIntegrationsInstagramIntegrationId**](#PatchConversationsMessagingIntegrationsInstagramIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Update Instagram messaging integration |
+| [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](#PatchConversationsMessagingIntegrationsOpenIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
+| [**PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**](#PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId} | Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow |
+| [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](#PatchConversationsMessagingIntegrationsWhatsappIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update a WhatsApp messaging integration |
+| [**PatchConversationsMessagingSetting**](#PatchConversationsMessagingSetting) | **Patch** /api/v2/conversations/messaging/settings/{messageSettingId} | Update a messaging setting |
+| [**PatchConversationsMessagingSupportedcontentSupportedContentId**](#PatchConversationsMessagingSupportedcontentSupportedContentId) | **Patch** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
+| [**PatchConversationsSettings**](#PatchConversationsSettings) | **Patch** /api/v2/conversations/settings | Update Settings |
+| [**PostAnalyticsConversationDetailsProperties**](#PostAnalyticsConversationDetailsProperties) | **Post** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
+| [**PostAnalyticsConversationsActivityQuery**](#PostAnalyticsConversationsActivityQuery) | **Post** /api/v2/analytics/conversations/activity/query | Query for conversation activity observations |
+| [**PostAnalyticsConversationsAggregatesJobs**](#PostAnalyticsConversationsAggregatesJobs) | **Post** /api/v2/analytics/conversations/aggregates/jobs | Query for conversation aggregates asynchronously |
+| [**PostAnalyticsConversationsAggregatesQuery**](#PostAnalyticsConversationsAggregatesQuery) | **Post** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
+| [**PostAnalyticsConversationsDetailsJobs**](#PostAnalyticsConversationsDetailsJobs) | **Post** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
+| [**PostAnalyticsConversationsDetailsQuery**](#PostAnalyticsConversationsDetailsQuery) | **Post** /api/v2/analytics/conversations/details/query | Query for conversation details |
+| [**PostConversationAssign**](#PostConversationAssign) | **Post** /api/v2/conversations/{conversationId}/assign | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
+| [**PostConversationBarge**](#PostConversationBarge) | **Post** /api/v2/conversations/{conversationId}/barge | Barge a conversation creating a barged in conference of connected participants. |
+| [**PostConversationCobrowse**](#PostConversationCobrowse) | **Post** /api/v2/conversations/{conversationId}/cobrowse | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
+| [**PostConversationDisconnect**](#PostConversationDisconnect) | **Post** /api/v2/conversations/{conversationId}/disconnect | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
+| [**PostConversationParticipantCallbacks**](#PostConversationParticipantCallbacks) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
+| [**PostConversationParticipantDigits**](#PostConversationParticipantDigits) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
+| [**PostConversationParticipantReplace**](#PostConversationParticipantReplace) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationParticipantReplaceAgent**](#PostConversationParticipantReplaceAgent) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent | Replace this participant with the specified agent |
+| [**PostConversationParticipantReplaceExternal**](#PostConversationParticipantReplaceExternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact |
+| [**PostConversationParticipantReplaceQueue**](#PostConversationParticipantReplaceQueue) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
+| [**PostConversationParticipantSecureivrsessions**](#PostConversationParticipantSecureivrsessions) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
+| [**PostConversationSuggestionEngagement**](#PostConversationSuggestionEngagement) | **Post** /api/v2/conversations/{conversationId}/suggestions/{suggestionId}/engagement | Save an engagement on the suggestion. |
+| [**PostConversationSuggestionsFeedback**](#PostConversationSuggestionsFeedback) | **Post** /api/v2/conversations/{conversationId}/suggestions/feedback | Suggestion feedback. |
+| [**PostConversationSummaryFeedback**](#PostConversationSummaryFeedback) | **Post** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Submit feedback for the summary. |
+| [**PostConversationsCall**](#PostConversationsCall) | **Post** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
+| [**PostConversationsCallParticipantBarge**](#PostConversationsCallParticipantBarge) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
+| [**PostConversationsCallParticipantCoach**](#PostConversationsCallParticipantCoach) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
+| [**PostConversationsCallParticipantCommunicationWrapup**](#PostConversationsCallParticipantCommunicationWrapup) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsCallParticipantConsult**](#PostConversationsCallParticipantConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
+| [**PostConversationsCallParticipantConsultAgent**](#PostConversationsCallParticipantConsultAgent) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent | Initiate a consult transfer to an agent |
+| [**PostConversationsCallParticipantConsultExternal**](#PostConversationsCallParticipantConsultExternal) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external | Initiate a consult transfer to an external contact |
+| [**PostConversationsCallParticipantConsultQueue**](#PostConversationsCallParticipantConsultQueue) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue | Initiate a consult transfer to a queue |
+| [**PostConversationsCallParticipantMonitor**](#PostConversationsCallParticipantMonitor) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
+| [**PostConversationsCallParticipantReplace**](#PostConversationsCallParticipantReplace) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsCallParticipants**](#PostConversationsCallParticipants) | **Post** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
+| [**PostConversationsCallbackParticipantCommunicationWrapup**](#PostConversationsCallbackParticipantCommunicationWrapup) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsCallbackParticipantReplace**](#PostConversationsCallbackParticipantReplace) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsCallbacks**](#PostConversationsCallbacks) | **Post** /api/v2/conversations/callbacks | Create a Callback |
+| [**PostConversationsCallbacksBulkDisconnect**](#PostConversationsCallbacksBulkDisconnect) | **Post** /api/v2/conversations/callbacks/bulk/disconnect | Disconnect multiple scheduled callbacks |
+| [**PostConversationsCallbacksBulkUpdate**](#PostConversationsCallbacksBulkUpdate) | **Post** /api/v2/conversations/callbacks/bulk/update | Update multiple scheduled callbacks |
+| [**PostConversationsCalls**](#PostConversationsCalls) | **Post** /api/v2/conversations/calls | Create a call conversation |
+| [**PostConversationsChatCommunicationMessages**](#PostConversationsChatCommunicationMessages) | **Post** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages | Send a message on behalf of a communication in a chat conversation. |
+| [**PostConversationsChatCommunicationTyping**](#PostConversationsChatCommunicationTyping) | **Post** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing | Send a typing-indicator on behalf of a communication in a chat conversation. |
+| [**PostConversationsChatParticipantCommunicationWrapup**](#PostConversationsChatParticipantCommunicationWrapup) | **Post** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsChatParticipantReplace**](#PostConversationsChatParticipantReplace) | **Post** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsChats**](#PostConversationsChats) | **Post** /api/v2/conversations/chats | Create a web chat conversation |
+| [**PostConversationsCobrowsesessionParticipantCommunicationWrapup**](#PostConversationsCobrowsesessionParticipantCommunicationWrapup) | **Post** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsCobrowsesessionParticipantReplace**](#PostConversationsCobrowsesessionParticipantReplace) | **Post** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsEmailInboundmessages**](#PostConversationsEmailInboundmessages) | **Post** /api/v2/conversations/emails/{conversationId}/inboundmessages | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
+| [**PostConversationsEmailMessages**](#PostConversationsEmailMessages) | **Post** /api/v2/conversations/emails/{conversationId}/messages | Send an email reply |
+| [**PostConversationsEmailMessagesDraftAttachmentsCopy**](#PostConversationsEmailMessagesDraftAttachmentsCopy) | **Post** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy | Copy attachments from an email message to the current draft. |
+| [**PostConversationsEmailParticipantCommunicationWrapup**](#PostConversationsEmailParticipantCommunicationWrapup) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsEmailParticipantReplace**](#PostConversationsEmailParticipantReplace) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsEmailReconnect**](#PostConversationsEmailReconnect) | **Post** /api/v2/conversations/emails/{conversationId}/reconnect | Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation |
+| [**PostConversationsEmails**](#PostConversationsEmails) | **Post** /api/v2/conversations/emails | Create an email conversation |
+| [**PostConversationsEmailsAgentless**](#PostConversationsEmailsAgentless) | **Post** /api/v2/conversations/emails/agentless | Create an email conversation, per API |
+| [**PostConversationsFaxes**](#PostConversationsFaxes) | **Post** /api/v2/conversations/faxes | Create Fax Conversation |
+| [**PostConversationsKeyconfigurations**](#PostConversationsKeyconfigurations) | **Post** /api/v2/conversations/keyconfigurations | Setup configurations for encryption key creation |
+| [**PostConversationsKeyconfigurationsValidate**](#PostConversationsKeyconfigurationsValidate) | **Post** /api/v2/conversations/keyconfigurations/validate | Validate encryption key configurations without saving it |
+| [**PostConversationsMessageCommunicationMessages**](#PostConversationsMessageCommunicationMessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
+| [**PostConversationsMessageCommunicationMessagesMedia**](#PostConversationsMessageCommunicationMessagesMedia) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
+| [**PostConversationsMessageCommunicationTyping**](#PostConversationsMessageCommunicationTyping) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
+| [**PostConversationsMessageInboundOpenEvent**](#PostConversationsMessageInboundOpenEvent) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/event | Send an inbound Open Event Message |
+| [**PostConversationsMessageInboundOpenMessage**](#PostConversationsMessageInboundOpenMessage) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/message | Send inbound Open Message |
+| [**PostConversationsMessageInboundOpenReceipt**](#PostConversationsMessageInboundOpenReceipt) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/receipt | Send an inbound Open Receipt Message |
+| [**PostConversationsMessageMessagesBulk**](#PostConversationsMessageMessagesBulk) | **Post** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
+| [**PostConversationsMessageParticipantCommunicationWrapup**](#PostConversationsMessageParticipantCommunicationWrapup) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsMessageParticipantMonitor**](#PostConversationsMessageParticipantMonitor) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
+| [**PostConversationsMessageParticipantReplace**](#PostConversationsMessageParticipantReplace) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsMessages**](#PostConversationsMessages) | **Post** /api/v2/conversations/messages | Create an outbound messaging conversation. |
+| [**PostConversationsMessagesAgentless**](#PostConversationsMessagesAgentless) | **Post** /api/v2/conversations/messages/agentless | Send an agentless outbound message |
+| [**PostConversationsMessagesInboundOpen**](#PostConversationsMessagesInboundOpen) | **Post** /api/v2/conversations/messages/inbound/open | Send an inbound Open Message |
+| [**PostConversationsMessagingIntegrationsFacebook**](#PostConversationsMessagingIntegrationsFacebook) | **Post** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
+| [**PostConversationsMessagingIntegrationsInstagram**](#PostConversationsMessagingIntegrationsInstagram) | **Post** /api/v2/conversations/messaging/integrations/instagram | Create Instagram Integration |
+| [**PostConversationsMessagingIntegrationsOpen**](#PostConversationsMessagingIntegrationsOpen) | **Post** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
+| [**PostConversationsMessagingIntegrationsWhatsapp**](#PostConversationsMessagingIntegrationsWhatsapp) | **Post** /api/v2/conversations/messaging/integrations/whatsapp | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
+| [**PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup**](#PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup) | **Post** /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup | Create a WhatsApp Integration using the WhatsApp embedded signup flow |
+| [**PostConversationsMessagingSettings**](#PostConversationsMessagingSettings) | **Post** /api/v2/conversations/messaging/settings | Create a messaging setting |
+| [**PostConversationsMessagingSupportedcontent**](#PostConversationsMessagingSupportedcontent) | **Post** /api/v2/conversations/messaging/supportedcontent | Create a Supported Content profile |
+| [**PostConversationsParticipantsAttributesSearch**](#PostConversationsParticipantsAttributesSearch) | **Post** /api/v2/conversations/participants/attributes/search | Search conversations |
+| [**PostConversationsScreenshareParticipantCommunicationWrapup**](#PostConversationsScreenshareParticipantCommunicationWrapup) | **Post** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsSocialParticipantCommunicationWrapup**](#PostConversationsSocialParticipantCommunicationWrapup) | **Post** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsVideoParticipantCommunicationWrapup**](#PostConversationsVideoParticipantCommunicationWrapup) | **Post** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsVideosMeetings**](#PostConversationsVideosMeetings) | **Post** /api/v2/conversations/videos/meetings | Generate a meetingId for a given conferenceId |
+| [**PutConversationParticipantFlaggedreason**](#PutConversationParticipantFlaggedreason) | **Put** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
+| [**PutConversationSecureattributes**](#PutConversationSecureattributes) | **Put** /api/v2/conversations/{conversationId}/secureattributes | Set the secure attributes on a conversation. |
+| [**PutConversationTags**](#PutConversationTags) | **Put** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
+| [**PutConversationsCallParticipantCommunicationUuidata**](#PutConversationsCallParticipantCommunicationUuidata) | **Put** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
+| [**PutConversationsCallRecordingstate**](#PutConversationsCallRecordingstate) | **Put** /api/v2/conversations/calls/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsCallbackRecordingstate**](#PutConversationsCallbackRecordingstate) | **Put** /api/v2/conversations/callbacks/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsChatRecordingstate**](#PutConversationsChatRecordingstate) | **Put** /api/v2/conversations/chats/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsCobrowsesessionRecordingstate**](#PutConversationsCobrowsesessionRecordingstate) | **Put** /api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsEmailMessagesDraft**](#PutConversationsEmailMessagesDraft) | **Put** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
+| [**PutConversationsEmailRecordingstate**](#PutConversationsEmailRecordingstate) | **Put** /api/v2/conversations/emails/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsKeyconfiguration**](#PutConversationsKeyconfiguration) | **Put** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Update the encryption key configurations |
+| [**PutConversationsMessageRecordingstate**](#PutConversationsMessageRecordingstate) | **Put** /api/v2/conversations/messages/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsMessagingSettingsDefault**](#PutConversationsMessagingSettingsDefault) | **Put** /api/v2/conversations/messaging/settings/default | Set the organization&#39;s default setting that may be applied to to integrations without settings |
+| [**PutConversationsMessagingSupportedcontentDefault**](#PutConversationsMessagingSupportedcontentDefault) | **Put** /api/v2/conversations/messaging/supportedcontent/default | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
+| [**PutConversationsMessagingThreadingtimeline**](#PutConversationsMessagingThreadingtimeline) | **Put** /api/v2/conversations/messaging/threadingtimeline | Update conversation threading window timeline for each messaging type |
+| [**PutConversationsScreenshareRecordingstate**](#PutConversationsScreenshareRecordingstate) | **Put** /api/v2/conversations/screenshares/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsSocialRecordingstate**](#PutConversationsSocialRecordingstate) | **Put** /api/v2/conversations/socials/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsVideoRecordingstate**](#PutConversationsVideoRecordingstate) | **Put** /api/v2/conversations/videos/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 
-<a name="deleteanalyticsconversationsdetailsjob"></a>
 
-## void DeleteAnalyticsConversationsDetailsJob (string jobId)
 
+## DeleteAnalyticsConversationsDetailsJob
+
+> void DeleteAnalyticsConversationsDetailsJob (string jobId)
 
 
 Delete/cancel an async details job
@@ -303,16 +302,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationparticipantcode"></a>
 
-## void DeleteConversationParticipantCode (string conversationId, string participantId, string addCommunicationCode)
+## DeleteConversationParticipantCode
 
+> void DeleteConversationParticipantCode (string conversationId, string participantId, string addCommunicationCode)
 
 
 Delete a code used to add a communication to this participant
@@ -368,16 +366,15 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **addCommunicationCode** | **string**| addCommunicationCode |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationparticipantflaggedreason"></a>
 
-## void DeleteConversationParticipantFlaggedreason (string conversationId, string participantId)
+## DeleteConversationParticipantFlaggedreason
 
+> void DeleteConversationParticipantFlaggedreason (string conversationId, string participantId)
 
 
 Remove flagged reason from conversation participant.
@@ -431,16 +428,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationscallparticipantconsult"></a>
 
-## void DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
+## DeleteConversationsCallParticipantConsult
 
+> void DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
 
 
 Cancel the transfer
@@ -494,16 +490,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsemailmessagesdraftattachment"></a>
 
-## void DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
+## DeleteConversationsEmailMessagesDraftAttachment
 
+> void DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
 
 
 Delete attachment from draft
@@ -557,16 +552,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **attachmentId** | **string**| attachmentId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsmessagescachedmediacachedmediaitemid"></a>
 
-## void DeleteConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
+## DeleteConversationsMessagesCachedmediaCachedMediaItemId
 
+> void DeleteConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
 
 
 Remove a cached media item asychronously
@@ -619,16 +613,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **cachedMediaItemId** | **string**| cachedMediaItemId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsmessagingintegrationsfacebookintegrationid"></a>
 
-## void DeleteConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId)
+## DeleteConversationsMessagingIntegrationsFacebookIntegrationId
 
+> void DeleteConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId)
 
 
 Delete a Facebook messaging integration
@@ -681,16 +674,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsmessagingintegrationsinstagramintegrationid"></a>
 
-## void DeleteConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId)
+## DeleteConversationsMessagingIntegrationsInstagramIntegrationId
 
+> void DeleteConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId)
 
 
 Delete Instagram messaging integration
@@ -743,16 +735,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsmessagingintegrationsopenintegrationid"></a>
 
-## void DeleteConversationsMessagingIntegrationsOpenIntegrationId (string integrationId)
+## DeleteConversationsMessagingIntegrationsOpenIntegrationId
 
+> void DeleteConversationsMessagingIntegrationsOpenIntegrationId (string integrationId)
 
 
 Delete an Open messaging integration
@@ -807,16 +798,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsmessagingintegrationswhatsappintegrationid"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) DeleteConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId)
+## DeleteConversationsMessagingIntegrationsWhatsappIntegrationId
 
+> [**WhatsAppIntegration**](WhatsAppIntegration) DeleteConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId)
 
 
 Delete a WhatsApp messaging integration
@@ -870,16 +860,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WhatsAppIntegration**](WhatsAppIntegration.html)
+[**WhatsAppIntegration**](WhatsAppIntegration)
 
-<a name="deleteconversationsmessagingsetting"></a>
 
-## void DeleteConversationsMessagingSetting (string messageSettingId)
+## DeleteConversationsMessagingSetting
 
+> void DeleteConversationsMessagingSetting (string messageSettingId)
 
 
 Delete a messaging setting
@@ -932,16 +921,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Setting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsmessagingsettingsdefault"></a>
 
-## void DeleteConversationsMessagingSettingsDefault ()
+## DeleteConversationsMessagingSettingsDefault
 
+> void DeleteConversationsMessagingSettingsDefault ()
 
 
 Delete the organization's default setting, a global default will be applied to integrations without settings
@@ -992,15 +980,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
 
-<a name="deleteconversationsmessagingsupportedcontentsupportedcontentid"></a>
 
-## void DeleteConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
+## DeleteConversationsMessagingSupportedcontentSupportedContentId
 
+> void DeleteConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
 
 
 Delete a supported content profile
@@ -1053,16 +1040,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getanalyticsconversationdetails"></a>
 
-## [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html) GetAnalyticsConversationDetails (string conversationId)
+## GetAnalyticsConversationDetails
 
+> [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes) GetAnalyticsConversationDetails (string conversationId)
 
 
 Get a conversation by id
@@ -1117,16 +1103,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html)
+[**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes)
 
-<a name="getanalyticsconversationsaggregatesjob"></a>
 
-## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsConversationsAggregatesJob (string jobId)
+## GetAnalyticsConversationsAggregatesJob
 
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsConversationsAggregatesJob (string jobId)
 
 
 Get status for async query for conversation aggregates
@@ -1182,16 +1167,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncQueryStatus**](AsyncQueryStatus.html)
+[**AsyncQueryStatus**](AsyncQueryStatus)
 
-<a name="getanalyticsconversationsaggregatesjobresults"></a>
 
-## [**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse.html) GetAnalyticsConversationsAggregatesJobResults (string jobId, string cursor = null)
+## GetAnalyticsConversationsAggregatesJobResults
 
+> [**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse) GetAnalyticsConversationsAggregatesJobResults (string jobId, string cursor = null)
 
 
 Fetch a page of results for an async aggregates query
@@ -1249,16 +1233,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse.html)
+[**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse)
 
-<a name="getanalyticsconversationsdetails"></a>
 
-## [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html) GetAnalyticsConversationsDetails (List<string> id = null)
+## GetAnalyticsConversationsDetails
 
+> [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse) GetAnalyticsConversationsDetails (List<string> id = null)
 
 
 Gets multiple conversations by id
@@ -1312,17 +1295,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**List<string>**](string.html)| Comma-separated conversation ids | [optional]  |
-{: class="table table-striped"}
+| **id** | [**List<string>**](string)| Comma-separated conversation ids | [optional]  |
 
 ### Return type
 
-[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
+[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse)
 
-<a name="getanalyticsconversationsdetailsjob"></a>
 
-## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsConversationsDetailsJob (string jobId)
+## GetAnalyticsConversationsDetailsJob
 
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsConversationsDetailsJob (string jobId)
 
 
 Get status for async query for conversation details
@@ -1377,16 +1359,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncQueryStatus**](AsyncQueryStatus.html)
+[**AsyncQueryStatus**](AsyncQueryStatus)
 
-<a name="getanalyticsconversationsdetailsjobresults"></a>
 
-## [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html) GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
+## GetAnalyticsConversationsDetailsJobResults
 
+> [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse) GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
 
 
 Fetch a page of results for an async details job
@@ -1445,16 +1426,15 @@ namespace Example
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| The desired maximum number of results | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html)
+[**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse)
 
-<a name="getanalyticsconversationsdetailsjobsavailability"></a>
 
-## [**DataAvailabilityResponse**](DataAvailabilityResponse.html) GetAnalyticsConversationsDetailsJobsAvailability ()
+## GetAnalyticsConversationsDetailsJobsAvailability
 
+> [**DataAvailabilityResponse**](DataAvailabilityResponse) GetAnalyticsConversationsDetailsJobsAvailability ()
 
 
 Lookup the datalake availability date and time
@@ -1504,15 +1484,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**DataAvailabilityResponse**](DataAvailabilityResponse.html)
+[**DataAvailabilityResponse**](DataAvailabilityResponse)
 
-<a name="getconversation"></a>
 
-## [**Conversation**](Conversation.html) GetConversation (string conversationId)
+## GetConversation
 
+> [**Conversation**](Conversation) GetConversation (string conversationId)
 
 
 Get conversation
@@ -1566,16 +1545,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="getconversationparticipantsecureivrsession"></a>
 
-## [**SecureSession**](SecureSession.html) GetConversationParticipantSecureivrsession (string conversationId, string participantId, string secureSessionId)
+## GetConversationParticipantSecureivrsession
 
+> [**SecureSession**](SecureSession) GetConversationParticipantSecureivrsession (string conversationId, string participantId, string secureSessionId)
 
 
 Fetch info on a secure session
@@ -1632,16 +1610,15 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **secureSessionId** | **string**| secure IVR session ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SecureSession**](SecureSession.html)
+[**SecureSession**](SecureSession)
 
-<a name="getconversationparticipantsecureivrsessions"></a>
 
-## [**SecureSessionEntityListing**](SecureSessionEntityListing.html) GetConversationParticipantSecureivrsessions (string conversationId, string participantId)
+## GetConversationParticipantSecureivrsessions
 
+> [**SecureSessionEntityListing**](SecureSessionEntityListing) GetConversationParticipantSecureivrsessions (string conversationId, string participantId)
 
 
 Get a list of secure sessions for this participant.
@@ -1696,16 +1673,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SecureSessionEntityListing**](SecureSessionEntityListing.html)
+[**SecureSessionEntityListing**](SecureSessionEntityListing)
 
-<a name="getconversationparticipantwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## GetConversationParticipantWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation participant. 
@@ -1762,16 +1738,15 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationParticipantWrapupcodes (string conversationId, string participantId)
+## GetConversationParticipantWrapupcodes
 
+> [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationParticipantWrapupcodes (string conversationId, string participantId)
 
 
 Get list of wrapup codes for this conversation participant
@@ -1826,16 +1801,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<WrapupCode>**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode)
 
-<a name="getconversationsecureattributes"></a>
 
-## [**ConversationSecureAttributes**](ConversationSecureAttributes.html) GetConversationSecureattributes (string conversationId)
+## GetConversationSecureattributes
 
+> [**ConversationSecureAttributes**](ConversationSecureAttributes) GetConversationSecureattributes (string conversationId)
 
 
 Get the secure attributes on a conversation.
@@ -1889,16 +1863,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ConversationSecureAttributes**](ConversationSecureAttributes.html)
+[**ConversationSecureAttributes**](ConversationSecureAttributes)
 
-<a name="getconversationsuggestion"></a>
 
-## [**Suggestion**](Suggestion.html) GetConversationSuggestion (string conversationId, string suggestionId)
+## GetConversationSuggestion
 
+> [**Suggestion**](Suggestion) GetConversationSuggestion (string conversationId, string suggestionId)
 
 
 Get Suggestion.
@@ -1954,16 +1927,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **suggestionId** | **string**| Suggestion ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Suggestion**](Suggestion.html)
+[**Suggestion**](Suggestion)
 
-<a name="getconversationsuggestions"></a>
 
-## [**SuggestionListing**](SuggestionListing.html) GetConversationSuggestions (string conversationId, string before = null, string after = null, string pageSize = null, string type = null, string state = null)
+## GetConversationSuggestions
 
+> [**SuggestionListing**](SuggestionListing) GetConversationSuggestions (string conversationId, string before = null, string after = null, string pageSize = null, string type = null, string state = null)
 
 
 Get all suggestions for a conversation.
@@ -2027,16 +1999,15 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **type** | **string**| Suggestion type to filter by. | [optional] <br />**Values**: Faq, Article, KnowledgeArticle, KnowledgeSearch, CannedResponse, Script |
 | **state** | **string**| Suggestion state to filter Copilot suggestions. | [optional] <br />**Values**: Suggested, Accepted, Dismissed, Failed, Rated |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SuggestionListing**](SuggestionListing.html)
+[**SuggestionListing**](SuggestionListing)
 
-<a name="getconversations"></a>
 
-## [**ConversationEntityListing**](ConversationEntityListing.html) GetConversations (string communicationType = null)
+## GetConversations
 
+> [**ConversationEntityListing**](ConversationEntityListing) GetConversations (string communicationType = null)
 
 
 Get active conversations for the logged in user
@@ -2089,16 +2060,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **communicationType** | **string**| Call or Chat communication filtering | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ConversationEntityListing**](ConversationEntityListing.html)
+[**ConversationEntityListing**](ConversationEntityListing)
 
-<a name="getconversationscall"></a>
 
-## [**CallConversation**](CallConversation.html) GetConversationsCall (string conversationId)
+## GetConversationsCall
 
+> [**CallConversation**](CallConversation) GetConversationsCall (string conversationId)
 
 
 Get call conversation
@@ -2151,16 +2121,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CallConversation**](CallConversation.html)
+[**CallConversation**](CallConversation)
 
-<a name="getconversationscallparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsCallParticipantCommunicationWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation communication. 
@@ -2219,16 +2188,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationscallparticipantwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## GetConversationsCallParticipantWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation participant. 
@@ -2285,16 +2253,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationscallparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallParticipantWrapupcodes (string conversationId, string participantId)
+## GetConversationsCallParticipantWrapupcodes
 
+> [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsCallParticipantWrapupcodes (string conversationId, string participantId)
 
 
 Get list of wrapup codes for this conversation participant
@@ -2349,16 +2316,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<WrapupCode>**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode)
 
-<a name="getconversationscallback"></a>
 
-## [**CallbackConversation**](CallbackConversation.html) GetConversationsCallback (string conversationId)
+## GetConversationsCallback
 
+> [**CallbackConversation**](CallbackConversation) GetConversationsCallback (string conversationId)
 
 
 Get callback conversation
@@ -2411,16 +2377,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CallbackConversation**](CallbackConversation.html)
+[**CallbackConversation**](CallbackConversation)
 
-<a name="getconversationscallbackparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsCallbackParticipantCommunicationWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation communication. 
@@ -2479,16 +2444,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationscallbackparticipantwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## GetConversationsCallbackParticipantWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation participant. 
@@ -2545,16 +2509,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationscallbackparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallbackParticipantWrapupcodes (string conversationId, string participantId)
+## GetConversationsCallbackParticipantWrapupcodes
 
+> [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsCallbackParticipantWrapupcodes (string conversationId, string participantId)
 
 
 Get list of wrapup codes for this conversation participant
@@ -2609,16 +2572,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<WrapupCode>**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode)
 
-<a name="getconversationscallbacks"></a>
 
-## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) GetConversationsCallbacks ()
+## GetConversationsCallbacks
 
+> [**CallbackConversationEntityListing**](CallbackConversationEntityListing) GetConversationsCallbacks ()
 
 
 Get active callback conversations for the logged in user
@@ -2667,15 +2629,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**CallbackConversationEntityListing**](CallbackConversationEntityListing.html)
+[**CallbackConversationEntityListing**](CallbackConversationEntityListing)
 
-<a name="getconversationscalls"></a>
 
-## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetConversationsCalls ()
+## GetConversationsCalls
 
+> [**CallConversationEntityListing**](CallConversationEntityListing) GetConversationsCalls ()
 
 
 Get active call conversations for the logged in user
@@ -2724,15 +2685,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**CallConversationEntityListing**](CallConversationEntityListing.html)
+[**CallConversationEntityListing**](CallConversationEntityListing)
 
-<a name="getconversationscallshistory"></a>
 
-## [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
+## GetConversationsCallsHistory
 
+> [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
 
 
 Get call history
@@ -2790,17 +2750,16 @@ namespace Example
 | **pageSize** | **int?**| Page size, maximum 50 | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **interval** | **string**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: externalorganization, externalcontact, user, queue, group |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: externalorganization, externalcontact, user, queue, group |
 
 ### Return type
 
-[**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html)
+[**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing)
 
-<a name="getconversationscallsmaximumconferenceparties"></a>
 
-## [**MaxParticipants**](MaxParticipants.html) GetConversationsCallsMaximumconferenceparties ()
+## GetConversationsCallsMaximumconferenceparties
 
+> [**MaxParticipants**](MaxParticipants) GetConversationsCallsMaximumconferenceparties ()
 
 
 Get the maximum number of participants that this user can have on a conference
@@ -2849,15 +2808,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**MaxParticipants**](MaxParticipants.html)
+[**MaxParticipants**](MaxParticipants)
 
-<a name="getconversationschat"></a>
 
-## [**ChatConversation**](ChatConversation.html) GetConversationsChat (string conversationId)
+## GetConversationsChat
 
+> [**ChatConversation**](ChatConversation) GetConversationsChat (string conversationId)
 
 
 Get chat conversation
@@ -2910,16 +2868,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ChatConversation**](ChatConversation.html)
+[**ChatConversation**](ChatConversation)
 
-<a name="getconversationschatmessage"></a>
 
-## [**WebChatMessage**](WebChatMessage.html) GetConversationsChatMessage (string conversationId, string messageId)
+## GetConversationsChatMessage
 
+> [**WebChatMessage**](WebChatMessage) GetConversationsChatMessage (string conversationId, string messageId)
 
 
 Get a web chat conversation message
@@ -2976,16 +2933,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebChatMessage**](WebChatMessage.html)
+[**WebChatMessage**](WebChatMessage)
 
-<a name="getconversationschatmessages"></a>
 
-## [**WebChatMessageEntityList**](WebChatMessageEntityList.html) GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
+## GetConversationsChatMessages
 
+> [**WebChatMessageEntityList**](WebChatMessageEntityList) GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
 
 
 Get the messages of a chat conversation.
@@ -3048,16 +3004,15 @@ namespace Example
 | **before** | **string**| If specified, get the messages chronologically before the id of this message | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **maxResults** | **int?**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebChatMessageEntityList**](WebChatMessageEntityList.html)
+[**WebChatMessageEntityList**](WebChatMessageEntityList)
 
-<a name="getconversationschatparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsChatParticipantCommunicationWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation communication. 
@@ -3116,16 +3071,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationschatparticipantwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## GetConversationsChatParticipantWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation participant. 
@@ -3182,16 +3136,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationschatparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId)
+## GetConversationsChatParticipantWrapupcodes
 
+> [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId)
 
 
 Get list of wrapup codes for this conversation participant
@@ -3246,16 +3199,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<WrapupCode>**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode)
 
-<a name="getconversationschats"></a>
 
-## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetConversationsChats ()
+## GetConversationsChats
 
+> [**ChatConversationEntityListing**](ChatConversationEntityListing) GetConversationsChats ()
 
 
 Get active chat conversations for the logged in user
@@ -3304,15 +3256,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**ChatConversationEntityListing**](ChatConversationEntityListing.html)
+[**ChatConversationEntityListing**](ChatConversationEntityListing)
 
-<a name="getconversationscobrowsesession"></a>
 
-## [**CobrowseConversation**](CobrowseConversation.html) GetConversationsCobrowsesession (string conversationId)
+## GetConversationsCobrowsesession
 
+> [**CobrowseConversation**](CobrowseConversation) GetConversationsCobrowsesession (string conversationId)
 
 
 Get cobrowse conversation
@@ -3365,17 +3316,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CobrowseConversation**](CobrowseConversation.html)
+[**CobrowseConversation**](CobrowseConversation)
 
-<a name="getconversationscobrowsesessionparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsCobrowsesessionParticipantCommunicationWrapup
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation communication. 
 
@@ -3435,17 +3388,19 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationscobrowsesessionparticipantwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## GetConversationsCobrowsesessionParticipantWrapup
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation participant. 
 
@@ -3503,17 +3458,19 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationscobrowsesessionparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCobrowsesessionParticipantWrapupcodes (string conversationId, string participantId)
+## GetConversationsCobrowsesessionParticipantWrapupcodes
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsCobrowsesessionParticipantWrapupcodes (string conversationId, string participantId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get list of wrapup codes for this conversation participant
 
@@ -3569,16 +3526,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<WrapupCode>**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode)
 
-<a name="getconversationscobrowsesessions"></a>
 
-## [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) GetConversationsCobrowsesessions ()
+## GetConversationsCobrowsesessions
 
+> [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing) GetConversationsCobrowsesessions ()
 
 
 Get active cobrowse conversations for the logged in user
@@ -3627,15 +3583,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html)
+[**CobrowseConversationEntityListing**](CobrowseConversationEntityListing)
 
-<a name="getconversationsemail"></a>
 
-## [**EmailConversation**](EmailConversation.html) GetConversationsEmail (string conversationId)
+## GetConversationsEmail
 
+> [**EmailConversation**](EmailConversation) GetConversationsEmail (string conversationId)
 
 
 Get email conversation
@@ -3688,16 +3643,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EmailConversation**](EmailConversation.html)
+[**EmailConversation**](EmailConversation)
 
-<a name="getconversationsemailmessage"></a>
 
-## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessage (string conversationId, string messageId)
+## GetConversationsEmailMessage
 
+> [**EmailMessage**](EmailMessage) GetConversationsEmailMessage (string conversationId, string messageId)
 
 
 Get conversation message
@@ -3752,16 +3706,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.html)
+[**EmailMessage**](EmailMessage)
 
-<a name="getconversationsemailmessages"></a>
 
-## [**EmailMessagePreviewListing**](EmailMessagePreviewListing.html) GetConversationsEmailMessages (string conversationId)
+## GetConversationsEmailMessages
 
+> [**EmailMessagePreviewListing**](EmailMessagePreviewListing) GetConversationsEmailMessages (string conversationId)
 
 
 Get conversation messages
@@ -3814,16 +3767,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EmailMessagePreviewListing**](EmailMessagePreviewListing.html)
+[**EmailMessagePreviewListing**](EmailMessagePreviewListing)
 
-<a name="getconversationsemailmessagesdraft"></a>
 
-## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessagesDraft (string conversationId)
+## GetConversationsEmailMessagesDraft
 
+> [**EmailMessage**](EmailMessage) GetConversationsEmailMessagesDraft (string conversationId)
 
 
 Get conversation draft reply
@@ -3876,16 +3828,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.html)
+[**EmailMessage**](EmailMessage)
 
-<a name="getconversationsemailparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsEmailParticipantCommunicationWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation communication. 
@@ -3944,16 +3895,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationsemailparticipantwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## GetConversationsEmailParticipantWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation participant. 
@@ -4010,16 +3960,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationsemailparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsEmailParticipantWrapupcodes (string conversationId, string participantId)
+## GetConversationsEmailParticipantWrapupcodes
 
+> [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsEmailParticipantWrapupcodes (string conversationId, string participantId)
 
 
 Get list of wrapup codes for this conversation participant
@@ -4074,16 +4023,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<WrapupCode>**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode)
 
-<a name="getconversationsemailsettings"></a>
 
-## [**EmailsSettings**](EmailsSettings.html) GetConversationsEmailSettings (string conversationId)
+## GetConversationsEmailSettings
 
+> [**EmailsSettings**](EmailsSettings) GetConversationsEmailSettings (string conversationId)
 
 
 Get emails settings for a given conversation
@@ -4136,16 +4084,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EmailsSettings**](EmailsSettings.html)
+[**EmailsSettings**](EmailsSettings)
 
-<a name="getconversationsemails"></a>
 
-## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) GetConversationsEmails ()
+## GetConversationsEmails
 
+> [**EmailConversationEntityListing**](EmailConversationEntityListing) GetConversationsEmails ()
 
 
 Get active email conversations for the logged in user
@@ -4194,15 +4141,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**EmailConversationEntityListing**](EmailConversationEntityListing.html)
+[**EmailConversationEntityListing**](EmailConversationEntityListing)
 
-<a name="getconversationskeyconfiguration"></a>
 
-## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) GetConversationsKeyconfiguration (string keyconfigurationsId)
+## GetConversationsKeyconfiguration
 
+> [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) GetConversationsKeyconfiguration (string keyconfigurationsId)
 
 
 Get the encryption key configurations
@@ -4256,16 +4202,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **keyconfigurationsId** | **string**| Key Configurations Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)
 
-<a name="getconversationskeyconfigurations"></a>
 
-## [**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing.html) GetConversationsKeyconfigurations ()
+## GetConversationsKeyconfigurations
 
+> [**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing) GetConversationsKeyconfigurations ()
 
 
 Get a list of key configurations data
@@ -4315,15 +4260,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing.html)
+[**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing)
 
-<a name="getconversationsmessage"></a>
 
-## [**MessageConversation**](MessageConversation.html) GetConversationsMessage (string conversationId)
+## GetConversationsMessage
 
+> [**MessageConversation**](MessageConversation) GetConversationsMessage (string conversationId)
 
 
 Get message conversation
@@ -4376,16 +4320,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessageConversation**](MessageConversation.html)
+[**MessageConversation**](MessageConversation)
 
-<a name="getconversationsmessagecommunicationmessagesmediamediaid"></a>
 
-## [**MessageMediaData**](MessageMediaData.html) GetConversationsMessageCommunicationMessagesMediaMediaId (string conversationId, string communicationId, string mediaId)
+## GetConversationsMessageCommunicationMessagesMediaMediaId
 
+> [**MessageMediaData**](MessageMediaData) GetConversationsMessageCommunicationMessagesMediaMediaId (string conversationId, string communicationId, string mediaId)
 
 
 Get media
@@ -4446,16 +4389,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
 | **mediaId** | **string**| mediaId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessageMediaData**](MessageMediaData.html)
+[**MessageMediaData**](MessageMediaData)
 
-<a name="getconversationsmessagedetails"></a>
 
-## [**MessageData**](MessageData.html) GetConversationsMessageDetails (string messageId, bool? useNormalizedMessage = null)
+## GetConversationsMessageDetails
 
+> [**MessageData**](MessageData) GetConversationsMessageDetails (string messageId, bool? useNormalizedMessage = null)
 
 
 Get message
@@ -4512,16 +4454,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| messageId |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessageData**](MessageData.html)
+[**MessageData**](MessageData)
 
-<a name="getconversationsmessagemessage"></a>
 
-## [**MessageData**](MessageData.html) GetConversationsMessageMessage (string conversationId, string messageId, bool? useNormalizedMessage = null)
+## GetConversationsMessageMessage
 
+> [**MessageData**](MessageData) GetConversationsMessageMessage (string conversationId, string messageId, bool? useNormalizedMessage = null)
 
 
 Get conversation message
@@ -4580,16 +4521,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessageData**](MessageData.html)
+[**MessageData**](MessageData)
 
-<a name="getconversationsmessageparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsMessageParticipantCommunicationWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation communication. 
@@ -4648,16 +4588,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationsmessageparticipantwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## GetConversationsMessageParticipantWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation participant. 
@@ -4714,16 +4653,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationsmessageparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsMessageParticipantWrapupcodes (string conversationId, string participantId)
+## GetConversationsMessageParticipantWrapupcodes
 
+> [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsMessageParticipantWrapupcodes (string conversationId, string participantId)
 
 
 Get list of wrapup codes for this conversation participant
@@ -4778,16 +4716,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<WrapupCode>**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode)
 
-<a name="getconversationsmessages"></a>
 
-## [**MessageConversationEntityListing**](MessageConversationEntityListing.html) GetConversationsMessages ()
+## GetConversationsMessages
 
+> [**MessageConversationEntityListing**](MessageConversationEntityListing) GetConversationsMessages ()
 
 
 Get active message conversations for the logged in user
@@ -4836,15 +4773,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**MessageConversationEntityListing**](MessageConversationEntityListing.html)
+[**MessageConversationEntityListing**](MessageConversationEntityListing)
 
-<a name="getconversationsmessagescachedmedia"></a>
 
-## [**CachedMediaItemEntityListing**](CachedMediaItemEntityListing.html) GetConversationsMessagesCachedmedia (int? pageSize = null, int? pageNumber = null, string url = null)
+## GetConversationsMessagesCachedmedia
 
+> [**CachedMediaItemEntityListing**](CachedMediaItemEntityListing) GetConversationsMessagesCachedmedia (int? pageSize = null, int? pageNumber = null, string url = null)
 
 
 Get a list of cached media items
@@ -4902,16 +4838,15 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **url** | **string**| URL to search for | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CachedMediaItemEntityListing**](CachedMediaItemEntityListing.html)
+[**CachedMediaItemEntityListing**](CachedMediaItemEntityListing)
 
-<a name="getconversationsmessagescachedmediacachedmediaitemid"></a>
 
-## [**CachedMediaItem**](CachedMediaItem.html) GetConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
+## GetConversationsMessagesCachedmediaCachedMediaItemId
 
+> [**CachedMediaItem**](CachedMediaItem) GetConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
 
 
 Get a cached media item
@@ -4965,16 +4900,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **cachedMediaItemId** | **string**| cachedMediaItemId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CachedMediaItem**](CachedMediaItem.html)
+[**CachedMediaItem**](CachedMediaItem)
 
-<a name="getconversationsmessagingfacebookapp"></a>
 
-## [**FacebookAppCredentials**](FacebookAppCredentials.html) GetConversationsMessagingFacebookApp ()
+## GetConversationsMessagingFacebookApp
 
+> [**FacebookAppCredentials**](FacebookAppCredentials) GetConversationsMessagingFacebookApp ()
 
 
 Get Genesys Facebook App Id
@@ -5024,15 +4958,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**FacebookAppCredentials**](FacebookAppCredentials.html)
+[**FacebookAppCredentials**](FacebookAppCredentials)
 
-<a name="getconversationsmessagingfacebookpermissions"></a>
 
-## [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing.html) GetConversationsMessagingFacebookPermissions ()
+## GetConversationsMessagingFacebookPermissions
 
+> [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing) GetConversationsMessagingFacebookPermissions ()
 
 
 Get a list of Facebook Permissions
@@ -5084,15 +5017,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**FacebookPermissionEntityListing**](FacebookPermissionEntityListing.html)
+[**FacebookPermissionEntityListing**](FacebookPermissionEntityListing)
 
-<a name="getconversationsmessagingintegrations"></a>
 
-## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null)
+## GetConversationsMessagingIntegrations
 
+> [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 Get a list of Integrations
@@ -5151,19 +5083,18 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | [**List<string>**](string.html)| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | [**List<string>**](string)| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html)
+[**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing)
 
-<a name="getconversationsmessagingintegrationsfacebook"></a>
 
-## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+## GetConversationsMessagingIntegrationsFacebook
 
+> [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 Get a list of Facebook Integrations
@@ -5225,16 +5156,15 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html)
+[**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing)
 
-<a name="getconversationsmessagingintegrationsfacebookintegrationid"></a>
 
-## [**FacebookIntegration**](FacebookIntegration.html) GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, string expand = null)
+## GetConversationsMessagingIntegrationsFacebookIntegrationId
 
+> [**FacebookIntegration**](FacebookIntegration) GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, string expand = null)
 
 
 Get a Facebook messaging integration
@@ -5290,16 +5220,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
-[**FacebookIntegration**](FacebookIntegration.html)
+[**FacebookIntegration**](FacebookIntegration)
 
-<a name="getconversationsmessagingintegrationsinstagram"></a>
 
-## [**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing.html) GetConversationsMessagingIntegrationsInstagram (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+## GetConversationsMessagingIntegrationsInstagram
 
+> [**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing) GetConversationsMessagingIntegrationsInstagram (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 Get a list of Instagram Integrations
@@ -5361,16 +5290,15 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing.html)
+[**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing)
 
-<a name="getconversationsmessagingintegrationsinstagramintegrationid"></a>
 
-## [**InstagramIntegration**](InstagramIntegration.html) GetConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, string expand = null)
+## GetConversationsMessagingIntegrationsInstagramIntegrationId
 
+> [**InstagramIntegration**](InstagramIntegration) GetConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, string expand = null)
 
 
 Get Instagram messaging integration
@@ -5426,16 +5354,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
-[**InstagramIntegration**](InstagramIntegration.html)
+[**InstagramIntegration**](InstagramIntegration)
 
-<a name="getconversationsmessagingintegrationsopen"></a>
 
-## [**OpenIntegrationEntityListing**](OpenIntegrationEntityListing.html) GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+## GetConversationsMessagingIntegrationsOpen
 
+> [**OpenIntegrationEntityListing**](OpenIntegrationEntityListing) GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 Get a list of Open messaging integrations
@@ -5499,16 +5426,15 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OpenIntegrationEntityListing**](OpenIntegrationEntityListing.html)
+[**OpenIntegrationEntityListing**](OpenIntegrationEntityListing)
 
-<a name="getconversationsmessagingintegrationsopenintegrationid"></a>
 
-## [**OpenIntegration**](OpenIntegration.html) GetConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, string expand = null)
+## GetConversationsMessagingIntegrationsOpenIntegrationId
 
+> [**OpenIntegration**](OpenIntegration) GetConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, string expand = null)
 
 
 Get an Open messaging integration
@@ -5566,16 +5492,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OpenIntegration**](OpenIntegration.html)
+[**OpenIntegration**](OpenIntegration)
 
-<a name="getconversationsmessagingintegrationswhatsapp"></a>
 
-## [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+## GetConversationsMessagingIntegrationsWhatsapp
 
+> [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 Get a list of WhatsApp Integrations
@@ -5637,16 +5562,15 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html)
+[**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing)
 
-<a name="getconversationsmessagingintegrationswhatsappintegrationid"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, string expand = null)
+## GetConversationsMessagingIntegrationsWhatsappIntegrationId
 
+> [**WhatsAppIntegration**](WhatsAppIntegration) GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, string expand = null)
 
 
 Get a WhatsApp messaging integration
@@ -5702,16 +5626,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WhatsAppIntegration**](WhatsAppIntegration.html)
+[**WhatsAppIntegration**](WhatsAppIntegration)
 
-<a name="getconversationsmessagingsetting"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) GetConversationsMessagingSetting (string messageSettingId)
+## GetConversationsMessagingSetting
 
+> [**MessagingSetting**](MessagingSetting) GetConversationsMessagingSetting (string messageSettingId)
 
 
 Get a messaging setting
@@ -5765,16 +5688,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Setting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="getconversationsmessagingsettings"></a>
 
-## [**MessagingConfigListing**](MessagingConfigListing.html) GetConversationsMessagingSettings (int? pageSize = null, int? pageNumber = null)
+## GetConversationsMessagingSettings
 
+> [**MessagingConfigListing**](MessagingConfigListing) GetConversationsMessagingSettings (int? pageSize = null, int? pageNumber = null)
 
 
 Get a list of messaging settings
@@ -5830,16 +5752,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessagingConfigListing**](MessagingConfigListing.html)
+[**MessagingConfigListing**](MessagingConfigListing)
 
-<a name="getconversationsmessagingsettingsdefault"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) GetConversationsMessagingSettingsDefault ()
+## GetConversationsMessagingSettingsDefault
 
+> [**MessagingSetting**](MessagingSetting) GetConversationsMessagingSettingsDefault ()
 
 
 Get the organization's default settings that will be used as the default when creating an integration.
@@ -5891,15 +5812,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="getconversationsmessagingsupportedcontent"></a>
 
-## [**SupportedContentListing**](SupportedContentListing.html) GetConversationsMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
+## GetConversationsMessagingSupportedcontent
 
+> [**SupportedContentListing**](SupportedContentListing) GetConversationsMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
 
 
 Get a list of Supported Content profiles
@@ -5955,16 +5875,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SupportedContentListing**](SupportedContentListing.html)
+[**SupportedContentListing**](SupportedContentListing)
 
-<a name="getconversationsmessagingsupportedcontentdefault"></a>
 
-## [**SupportedContent**](SupportedContent.html) GetConversationsMessagingSupportedcontentDefault ()
+## GetConversationsMessagingSupportedcontentDefault
 
+> [**SupportedContent**](SupportedContent) GetConversationsMessagingSupportedcontentDefault ()
 
 
 Get the organization's default supported content profile that will be used as the default when creating an integration.
@@ -6016,15 +5935,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="getconversationsmessagingsupportedcontentsupportedcontentid"></a>
 
-## [**SupportedContent**](SupportedContent.html) GetConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
+## GetConversationsMessagingSupportedcontentSupportedContentId
 
+> [**SupportedContent**](SupportedContent) GetConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
 
 
 Get a supported content profile
@@ -6078,16 +5996,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="getconversationsmessagingthreadingtimeline"></a>
 
-## [**ConversationThreadingWindow**](ConversationThreadingWindow.html) GetConversationsMessagingThreadingtimeline ()
+## GetConversationsMessagingThreadingtimeline
 
+> [**ConversationThreadingWindow**](ConversationThreadingWindow) GetConversationsMessagingThreadingtimeline ()
 
 
 Get conversation threading window timeline for each messaging type
@@ -6139,16 +6056,18 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**ConversationThreadingWindow**](ConversationThreadingWindow.html)
+[**ConversationThreadingWindow**](ConversationThreadingWindow)
 
-<a name="getconversationsscreenshareparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsScreenshareParticipantCommunicationWrapup
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation communication. 
 
@@ -6208,16 +6127,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationssettings"></a>
 
-## [**Settings**](Settings.html) GetConversationsSettings ()
+## GetConversationsSettings
 
+> [**Settings**](Settings) GetConversationsSettings ()
 
 
 Get Settings
@@ -6267,15 +6185,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**Settings**](Settings.html)
+[**Settings**](Settings)
 
-<a name="getconversationssocialparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsSocialParticipantCommunicationWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation communication. 
@@ -6334,16 +6251,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationsvideodetails"></a>
 
-## [**VideoConferenceDetails**](VideoConferenceDetails.html) GetConversationsVideoDetails (string conferenceId)
+## GetConversationsVideoDetails
 
+> [**VideoConferenceDetails**](VideoConferenceDetails) GetConversationsVideoDetails (string conferenceId)
 
 
 Get video conference details (e.g. the current number of active participants).
@@ -6399,16 +6315,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conferenceId** | **string**| conferenceId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**VideoConferenceDetails**](VideoConferenceDetails.html)
+[**VideoConferenceDetails**](VideoConferenceDetails)
 
-<a name="getconversationsvideoparticipantcommunicationwrapup"></a>
 
-## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
+## GetConversationsVideoParticipantCommunicationWrapup
 
+> [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
 
 Get the wrap-up for this conversation communication. 
@@ -6467,16 +6382,15 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssignedWrapupCode**](AssignedWrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode)
 
-<a name="getconversationsvideosmeeting"></a>
 
-## [**MeetingIdRecord**](MeetingIdRecord.html) GetConversationsVideosMeeting (string meetingId)
+## GetConversationsVideosMeeting
 
+> [**MeetingIdRecord**](MeetingIdRecord) GetConversationsVideosMeeting (string meetingId)
 
 
 Gets a record for a given meetingId
@@ -6532,16 +6446,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **meetingId** | **string**| meetingId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MeetingIdRecord**](MeetingIdRecord.html)
+[**MeetingIdRecord**](MeetingIdRecord)
 
-<a name="patchconversationparticipant"></a>
 
-## void PatchConversationParticipant (string conversationId, string participantId, MediaParticipantRequest body)
+## PatchConversationParticipant
 
+> void PatchConversationParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 
 Update a participant.
@@ -6599,17 +6512,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Update request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationparticipantattributes"></a>
 
-## void PatchConversationParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## PatchConversationParticipantAttributes
 
+> void PatchConversationParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 Update the attributes on a conversation participant.
@@ -6664,17 +6576,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
-{: class="table table-striped"}
+| **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationsecureattributes"></a>
 
-## **string** PatchConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
+## PatchConversationSecureattributes
 
+> **string** PatchConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
 
 
 Update the secure attributes on a conversation.
@@ -6729,22 +6640,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes.html)| Conversation Secure Attributes |  |
-{: class="table table-striped"}
+| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes)| Conversation Secure Attributes |  |
 
 ### Return type
 
 **string**
 
-<a name="patchconversationutilizationlabel"></a>
 
-## **string** PatchConversationUtilizationlabel (string conversationId, ConversationUtilizationLabelUpdate body)
+## PatchConversationUtilizationlabel
 
+> **string** PatchConversationUtilizationlabel (string conversationId, ConversationUtilizationLabelUpdate body)
 
 
 Update the utilization label on a conversation. When there is no value provided, the system default label is applied
-
-PatchConversationUtilizationlabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6796,17 +6704,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-| **body** | [**ConversationUtilizationLabelUpdate**](ConversationUtilizationLabelUpdate.html)| Conversation Utilization Label |  |
-{: class="table table-striped"}
+| **body** | [**ConversationUtilizationLabelUpdate**](ConversationUtilizationLabelUpdate)| Conversation Utilization Label |  |
 
 ### Return type
 
 **string**
 
-<a name="patchconversationsaftercallworkconversationidparticipantcommunication"></a>
 
-## [**AfterCallWorkUpdate**](AfterCallWorkUpdate.html) PatchConversationsAftercallworkConversationIdParticipantCommunication (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
+## PatchConversationsAftercallworkConversationIdParticipantCommunication
 
+> [**AfterCallWorkUpdate**](AfterCallWorkUpdate) PatchConversationsAftercallworkConversationIdParticipantCommunication (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
 
 
 Update after-call work for this conversation communication.
@@ -6865,17 +6772,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**AfterCallWorkUpdate**](AfterCallWorkUpdate.html)| AfterCallWorkUpdate |  |
-{: class="table table-striped"}
+| **body** | [**AfterCallWorkUpdate**](AfterCallWorkUpdate)| AfterCallWorkUpdate |  |
 
 ### Return type
 
-[**AfterCallWorkUpdate**](AfterCallWorkUpdate.html)
+[**AfterCallWorkUpdate**](AfterCallWorkUpdate)
 
-<a name="patchconversationscall"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsCall (string conversationId, Conversation body)
+## PatchConversationsCall
 
+> [**Conversation**](Conversation) PatchConversationsCall (string conversationId, Conversation body)
 
 
 Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
@@ -6930,17 +6836,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**Conversation**](Conversation)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="patchconversationscallparticipant"></a>
 
-## void PatchConversationsCallParticipant (string conversationId, string participantId, MediaParticipantRequest body)
+## PatchConversationsCallParticipant
 
+> void PatchConversationsCallParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 
 Update conversation participant
@@ -6996,17 +6901,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant request |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationscallparticipantattributes"></a>
 
-## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## PatchConversationsCallParticipantAttributes
 
+> [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 Update the attributes on a conversation participant.
@@ -7062,17 +6966,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
-{: class="table table-striped"}
+| **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
 
 ### Return type
 
-[**ParticipantAttributes**](ParticipantAttributes.html)
+[**ParticipantAttributes**](ParticipantAttributes)
 
-<a name="patchconversationscallparticipantcommunication"></a>
 
-## **Object** PatchConversationsCallParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## PatchConversationsCallParticipantCommunication
 
+> **Object** PatchConversationsCallParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 Update conversation participant's communication by disconnecting it.
@@ -7130,17 +7033,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
 
 ### Return type
 
 **Object**
 
-<a name="patchconversationscallparticipantconsult"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransferUpdate body)
+## PatchConversationsCallParticipantConsult
 
+> [**ConsultTransferResponse**](ConsultTransferResponse) PatchConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransferUpdate body)
 
 
 Change who can speak
@@ -7196,17 +7098,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to |  |
-{: class="table table-striped"}
+| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate)| new speak to |  |
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
+[**ConsultTransferResponse**](ConsultTransferResponse)
 
-<a name="patchconversationscallback"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsCallback (string conversationId, Conversation body)
+## PatchConversationsCallback
 
+> [**Conversation**](Conversation) PatchConversationsCallback (string conversationId, Conversation body)
 
 
 Update a conversation by disconnecting all of the participants
@@ -7261,17 +7162,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**Conversation**](Conversation)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="patchconversationscallbackparticipant"></a>
 
-## void PatchConversationsCallbackParticipant (string conversationId, string participantId, MediaParticipantRequest body)
+## PatchConversationsCallbackParticipant
 
+> void PatchConversationsCallbackParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 
 Update conversation participant
@@ -7327,17 +7227,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationscallbackparticipantattributes"></a>
 
-## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## PatchConversationsCallbackParticipantAttributes
 
+> [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 Update the attributes on a conversation participant.
@@ -7393,17 +7292,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Attributes |  |
-{: class="table table-striped"}
+| **body** | [**ParticipantAttributes**](ParticipantAttributes)| Attributes |  |
 
 ### Return type
 
-[**ParticipantAttributes**](ParticipantAttributes.html)
+[**ParticipantAttributes**](ParticipantAttributes)
 
-<a name="patchconversationscallbackparticipantcommunication"></a>
 
-## **Object** PatchConversationsCallbackParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## PatchConversationsCallbackParticipantCommunication
 
+> **Object** PatchConversationsCallbackParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 Update conversation participant's communication by disconnecting it.
@@ -7461,17 +7359,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
 
 ### Return type
 
 **Object**
 
-<a name="patchconversationscallbacks"></a>
 
-## [**PatchCallbackResponse**](PatchCallbackResponse.html) PatchConversationsCallbacks (PatchCallbackRequest body)
+## PatchConversationsCallbacks
 
+> [**PatchCallbackResponse**](PatchCallbackResponse) PatchConversationsCallbacks (PatchCallbackRequest body)
 
 
 Update a scheduled callback
@@ -7524,17 +7421,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PatchCallbackRequest**](PatchCallbackRequest.html)| PatchCallbackRequest |  |
-{: class="table table-striped"}
+| **body** | [**PatchCallbackRequest**](PatchCallbackRequest)| PatchCallbackRequest |  |
 
 ### Return type
 
-[**PatchCallbackResponse**](PatchCallbackResponse.html)
+[**PatchCallbackResponse**](PatchCallbackResponse)
 
-<a name="patchconversationschat"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsChat (string conversationId, Conversation body)
+## PatchConversationsChat
 
+> [**Conversation**](Conversation) PatchConversationsChat (string conversationId, Conversation body)
 
 
 Update a conversation by disconnecting all of the participants
@@ -7589,17 +7485,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**Conversation**](Conversation)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="patchconversationschatparticipant"></a>
 
-## void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body)
+## PatchConversationsChatParticipant
 
+> void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 
 Update conversation participant
@@ -7655,17 +7550,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Update request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationschatparticipantattributes"></a>
 
-## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## PatchConversationsChatParticipantAttributes
 
+> [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 Update the attributes on a conversation participant.
@@ -7721,17 +7615,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
-{: class="table table-striped"}
+| **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
 
 ### Return type
 
-[**ParticipantAttributes**](ParticipantAttributes.html)
+[**ParticipantAttributes**](ParticipantAttributes)
 
-<a name="patchconversationschatparticipantcommunication"></a>
 
-## **Object** PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## PatchConversationsChatParticipantCommunication
 
+> **Object** PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 Update conversation participant's communication by disconnecting it.
@@ -7789,18 +7682,20 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
 
 ### Return type
 
 **Object**
 
-<a name="patchconversationscobrowsesession"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsCobrowsesession (string conversationId, Conversation body)
+## PatchConversationsCobrowsesession
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**Conversation**](Conversation) PatchConversationsCobrowsesession (string conversationId, Conversation body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a conversation by disconnecting all of the participants
 
@@ -7856,18 +7751,20 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**Conversation**](Conversation)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="patchconversationscobrowsesessionparticipant"></a>
 
-## void PatchConversationsCobrowsesessionParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
+## PatchConversationsCobrowsesessionParticipant
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void PatchConversationsCobrowsesessionParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update conversation participant
 
@@ -7924,18 +7821,20 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)|  | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationscobrowsesessionparticipantattributes"></a>
 
-## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+## PatchConversationsCobrowsesessionParticipantAttributes
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update the attributes on a conversation participant.
 
@@ -7992,18 +7891,20 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**ParticipantAttributes**](ParticipantAttributes)|  | [optional]  |
 
 ### Return type
 
-[**ParticipantAttributes**](ParticipantAttributes.html)
+[**ParticipantAttributes**](ParticipantAttributes)
 
-<a name="patchconversationscobrowsesessionparticipantcommunication"></a>
 
-## **Object** PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## PatchConversationsCobrowsesessionParticipantCommunication
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> **Object** PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update conversation participant's communication by disconnecting it.
 
@@ -8062,17 +7963,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
 
 ### Return type
 
 **Object**
 
-<a name="patchconversationsemail"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsEmail (string conversationId, Conversation body)
+## PatchConversationsEmail
 
+> [**Conversation**](Conversation) PatchConversationsEmail (string conversationId, Conversation body)
 
 
 Update a conversation by disconnecting all of the participants
@@ -8127,17 +8027,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**Conversation**](Conversation)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="patchconversationsemailmessagesdraft"></a>
 
-## [**EmailMessage**](EmailMessage.html) PatchConversationsEmailMessagesDraft (string conversationId, bool? autoFill = null, bool? discard = null, DraftManipulationRequest body = null)
+## PatchConversationsEmailMessagesDraft
 
+> [**EmailMessage**](EmailMessage) PatchConversationsEmailMessagesDraft (string conversationId, bool? autoFill = null, bool? discard = null, DraftManipulationRequest body = null)
 
 
 Reset conversation draft to its initial state and/or auto-fill draft content
@@ -8195,17 +8094,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **autoFill** | **bool?**| autoFill | [optional]  |
 | **discard** | **bool?**| discard | [optional]  |
-| **body** | [**DraftManipulationRequest**](DraftManipulationRequest.html)| Draft Manipulation Request | [optional]  |
-{: class="table table-striped"}
+| **body** | [**DraftManipulationRequest**](DraftManipulationRequest)| Draft Manipulation Request | [optional]  |
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.html)
+[**EmailMessage**](EmailMessage)
 
-<a name="patchconversationsemailparticipant"></a>
 
-## void PatchConversationsEmailParticipant (string conversationId, string participantId, MediaParticipantRequest body)
+## PatchConversationsEmailParticipant
 
+> void PatchConversationsEmailParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 
 Update conversation participant
@@ -8261,17 +8159,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Update request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationsemailparticipantattributes"></a>
 
-## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## PatchConversationsEmailParticipantAttributes
 
+> [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 Update the attributes on a conversation participant.
@@ -8327,17 +8224,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
-{: class="table table-striped"}
+| **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
 
 ### Return type
 
-[**ParticipantAttributes**](ParticipantAttributes.html)
+[**ParticipantAttributes**](ParticipantAttributes)
 
-<a name="patchconversationsemailparticipantcommunication"></a>
 
-## **Object** PatchConversationsEmailParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## PatchConversationsEmailParticipantCommunication
 
+> **Object** PatchConversationsEmailParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 Update conversation participant's communication by disconnecting it.
@@ -8395,17 +8291,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
 
 ### Return type
 
 **Object**
 
-<a name="patchconversationsemailparticipantparkingstate"></a>
 
-## void PatchConversationsEmailParticipantParkingstate (string conversationId, string participantId, ParkingStateRequest body)
+## PatchConversationsEmailParticipantParkingstate
 
+> void PatchConversationsEmailParticipantParkingstate (string conversationId, string participantId, ParkingStateRequest body)
 
 
 Update conversation by setting its parking state
@@ -8463,17 +8358,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ParkingStateRequest**](ParkingStateRequest.html)| Parking update request |  |
-{: class="table table-striped"}
+| **body** | [**ParkingStateRequest**](ParkingStateRequest)| Parking update request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationsmessage"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsMessage (string conversationId, Conversation body)
+## PatchConversationsMessage
 
+> [**Conversation**](Conversation) PatchConversationsMessage (string conversationId, Conversation body)
 
 
 Update a conversation by disconnecting all of the participants
@@ -8528,17 +8422,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**Conversation**](Conversation)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="patchconversationsmessageparticipant"></a>
 
-## void PatchConversationsMessageParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
+## PatchConversationsMessageParticipant
 
+> void PatchConversationsMessageParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
 
 
 Update conversation participant
@@ -8594,17 +8487,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)|  | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="patchconversationsmessageparticipantattributes"></a>
 
-## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+## PatchConversationsMessageParticipantAttributes
 
+> [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
 
 Update the attributes on a conversation participant.
@@ -8660,17 +8552,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**ParticipantAttributes**](ParticipantAttributes)|  | [optional]  |
 
 ### Return type
 
-[**ParticipantAttributes**](ParticipantAttributes.html)
+[**ParticipantAttributes**](ParticipantAttributes)
 
-<a name="patchconversationsmessageparticipantcommunication"></a>
 
-## **Object** PatchConversationsMessageParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## PatchConversationsMessageParticipantCommunication
 
+> **Object** PatchConversationsMessageParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 Update conversation participant's communication by disconnecting it.
@@ -8728,17 +8619,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
 
 ### Return type
 
 **Object**
 
-<a name="patchconversationsmessagingintegrationsfacebookintegrationid"></a>
 
-## [**FacebookIntegration**](FacebookIntegration.html) PatchConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, FacebookIntegrationUpdateRequest body)
+## PatchConversationsMessagingIntegrationsFacebookIntegrationId
 
+> [**FacebookIntegration**](FacebookIntegration) PatchConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, FacebookIntegrationUpdateRequest body)
 
 
 Update Facebook messaging integration
@@ -8793,17 +8683,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**FacebookIntegrationUpdateRequest**](FacebookIntegrationUpdateRequest.html)| FacebookIntegrationUpdateRequest |  |
-{: class="table table-striped"}
+| **body** | [**FacebookIntegrationUpdateRequest**](FacebookIntegrationUpdateRequest)| FacebookIntegrationUpdateRequest |  |
 
 ### Return type
 
-[**FacebookIntegration**](FacebookIntegration.html)
+[**FacebookIntegration**](FacebookIntegration)
 
-<a name="patchconversationsmessagingintegrationsinstagramintegrationid"></a>
 
-## [**InstagramIntegration**](InstagramIntegration.html) PatchConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, InstagramIntegrationUpdateRequest body)
+## PatchConversationsMessagingIntegrationsInstagramIntegrationId
 
+> [**InstagramIntegration**](InstagramIntegration) PatchConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, InstagramIntegrationUpdateRequest body)
 
 
 Update Instagram messaging integration
@@ -8858,17 +8747,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**InstagramIntegrationUpdateRequest**](InstagramIntegrationUpdateRequest.html)| InstagramIntegrationUpdateRequest |  |
-{: class="table table-striped"}
+| **body** | [**InstagramIntegrationUpdateRequest**](InstagramIntegrationUpdateRequest)| InstagramIntegrationUpdateRequest |  |
 
 ### Return type
 
-[**InstagramIntegration**](InstagramIntegration.html)
+[**InstagramIntegration**](InstagramIntegration)
 
-<a name="patchconversationsmessagingintegrationsopenintegrationid"></a>
 
-## [**OpenIntegration**](OpenIntegration.html) PatchConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, OpenIntegrationUpdateRequest body)
+## PatchConversationsMessagingIntegrationsOpenIntegrationId
 
+> [**OpenIntegration**](OpenIntegration) PatchConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, OpenIntegrationUpdateRequest body)
 
 
 Update an Open messaging integration
@@ -8925,17 +8813,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**OpenIntegrationUpdateRequest**](OpenIntegrationUpdateRequest.html)| OpenIntegrationUpdateRequest |  |
-{: class="table table-striped"}
+| **body** | [**OpenIntegrationUpdateRequest**](OpenIntegrationUpdateRequest)| OpenIntegrationUpdateRequest |  |
 
 ### Return type
 
-[**OpenIntegration**](OpenIntegration.html)
+[**OpenIntegration**](OpenIntegration)
 
-<a name="patchconversationsmessagingintegrationswhatsappembeddedsignupintegrationid"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId (string integrationId, WhatsAppEmbeddedSignupIntegrationActivationRequest body)
+## PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId
 
+> [**WhatsAppIntegration**](WhatsAppIntegration) PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId (string integrationId, WhatsAppEmbeddedSignupIntegrationActivationRequest body)
 
 
 Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow
@@ -8992,17 +8879,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**WhatsAppEmbeddedSignupIntegrationActivationRequest**](WhatsAppEmbeddedSignupIntegrationActivationRequest.html)| WhatsAppEmbeddedSignupIntegrationActivationRequest |  |
-{: class="table table-striped"}
+| **body** | [**WhatsAppEmbeddedSignupIntegrationActivationRequest**](WhatsAppEmbeddedSignupIntegrationActivationRequest)| WhatsAppEmbeddedSignupIntegrationActivationRequest |  |
 
 ### Return type
 
-[**WhatsAppIntegration**](WhatsAppIntegration.html)
+[**WhatsAppIntegration**](WhatsAppIntegration)
 
-<a name="patchconversationsmessagingintegrationswhatsappintegrationid"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) PatchConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIntegrationUpdateRequest body)
+## PatchConversationsMessagingIntegrationsWhatsappIntegrationId
 
+> [**WhatsAppIntegration**](WhatsAppIntegration) PatchConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIntegrationUpdateRequest body)
 
 
 Update a WhatsApp messaging integration
@@ -9057,17 +8943,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**WhatsAppIntegrationUpdateRequest**](WhatsAppIntegrationUpdateRequest.html)| WhatsAppIntegrationUpdateRequest |  |
-{: class="table table-striped"}
+| **body** | [**WhatsAppIntegrationUpdateRequest**](WhatsAppIntegrationUpdateRequest)| WhatsAppIntegrationUpdateRequest |  |
 
 ### Return type
 
-[**WhatsAppIntegration**](WhatsAppIntegration.html)
+[**WhatsAppIntegration**](WhatsAppIntegration)
 
-<a name="patchconversationsmessagingsetting"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) PatchConversationsMessagingSetting (string messageSettingId, MessagingSettingPatchRequest body)
+## PatchConversationsMessagingSetting
 
+> [**MessagingSetting**](MessagingSetting) PatchConversationsMessagingSetting (string messageSettingId, MessagingSettingPatchRequest body)
 
 
 Update a messaging setting
@@ -9122,17 +9007,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Setting ID |  |
-| **body** | [**MessagingSettingPatchRequest**](MessagingSettingPatchRequest.html)| MessagingSetting |  |
-{: class="table table-striped"}
+| **body** | [**MessagingSettingPatchRequest**](MessagingSettingPatchRequest)| MessagingSetting |  |
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="patchconversationsmessagingsupportedcontentsupportedcontentid"></a>
 
-## [**SupportedContent**](SupportedContent.html) PatchConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
+## PatchConversationsMessagingSupportedcontentSupportedContentId
 
+> [**SupportedContent**](SupportedContent) PatchConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
 
 
 Update a supported content profile
@@ -9187,17 +9071,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent |  |
-{: class="table table-striped"}
+| **body** | [**SupportedContent**](SupportedContent)| SupportedContent |  |
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="patchconversationssettings"></a>
 
-## void PatchConversationsSettings (Settings body)
+## PatchConversationsSettings
 
+> void PatchConversationsSettings (Settings body)
 
 
 Update Settings
@@ -9249,17 +9132,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Settings**](Settings.html)| Settings |  |
-{: class="table table-striped"}
+| **body** | [**Settings**](Settings)| Settings |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postanalyticsconversationdetailsproperties"></a>
 
-## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
+## PostAnalyticsConversationDetailsProperties
 
+> [**PropertyIndexRequest**](PropertyIndexRequest) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
 
 
 Index conversation properties
@@ -9314,17 +9196,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
-{: class="table table-striped"}
+| **body** | [**PropertyIndexRequest**](PropertyIndexRequest)| request |  |
 
 ### Return type
 
-[**PropertyIndexRequest**](PropertyIndexRequest.html)
+[**PropertyIndexRequest**](PropertyIndexRequest)
 
-<a name="postanalyticsconversationsactivityquery"></a>
 
-## [**ConversationActivityResponse**](ConversationActivityResponse.html) PostAnalyticsConversationsActivityQuery (ConversationActivityQuery body, int? pageSize = null, int? pageNumber = null)
+## PostAnalyticsConversationsActivityQuery
 
+> [**ConversationActivityResponse**](ConversationActivityResponse) PostAnalyticsConversationsActivityQuery (ConversationActivityQuery body, int? pageSize = null, int? pageNumber = null)
 
 
 Query for conversation activity observations
@@ -9379,19 +9260,18 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationActivityQuery**](ConversationActivityQuery.html)| query |  |
+| **body** | [**ConversationActivityQuery**](ConversationActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ConversationActivityResponse**](ConversationActivityResponse.html)
+[**ConversationActivityResponse**](ConversationActivityResponse)
 
-<a name="postanalyticsconversationsaggregatesjobs"></a>
 
-## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsConversationsAggregatesJobs (ConversationAsyncAggregationQuery body)
+## PostAnalyticsConversationsAggregatesJobs
 
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsConversationsAggregatesJobs (ConversationAsyncAggregationQuery body)
 
 
 Query for conversation aggregates asynchronously
@@ -9446,17 +9326,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationAsyncAggregationQuery**](ConversationAsyncAggregationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**ConversationAsyncAggregationQuery**](ConversationAsyncAggregationQuery)| query |  |
 
 ### Return type
 
-[**AsyncQueryResponse**](AsyncQueryResponse.html)
+[**AsyncQueryResponse**](AsyncQueryResponse)
 
-<a name="postanalyticsconversationsaggregatesquery"></a>
 
-## [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html) PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
+## PostAnalyticsConversationsAggregatesQuery
 
+> [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse) PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
 
 
 Query for conversation aggregates
@@ -9509,17 +9388,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery)| query |  |
 
 ### Return type
 
-[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html)
+[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse)
 
-<a name="postanalyticsconversationsdetailsjobs"></a>
 
-## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsConversationsDetailsJobs (AsyncConversationQuery body)
+## PostAnalyticsConversationsDetailsJobs
 
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsConversationsDetailsJobs (AsyncConversationQuery body)
 
 
 Query for conversation details asynchronously
@@ -9573,17 +9451,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AsyncConversationQuery**](AsyncConversationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**AsyncConversationQuery**](AsyncConversationQuery)| query |  |
 
 ### Return type
 
-[**AsyncQueryResponse**](AsyncQueryResponse.html)
+[**AsyncQueryResponse**](AsyncQueryResponse)
 
-<a name="postanalyticsconversationsdetailsquery"></a>
 
-## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostAnalyticsConversationsDetailsQuery (ConversationQuery body)
+## PostAnalyticsConversationsDetailsQuery
 
+> [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse) PostAnalyticsConversationsDetailsQuery (ConversationQuery body)
 
 
 Query for conversation details
@@ -9637,17 +9514,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationQuery**](ConversationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**ConversationQuery**](ConversationQuery)| query |  |
 
 ### Return type
 
-[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html)
+[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse)
 
-<a name="postconversationassign"></a>
 
-## **string** PostConversationAssign (string conversationId, ConversationUser body)
+## PostConversationAssign
 
+> **string** PostConversationAssign (string conversationId, ConversationUser body)
 
 
 Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.
@@ -9711,17 +9587,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-| **body** | [**ConversationUser**](ConversationUser.html)| Targeted user |  |
-{: class="table table-striped"}
+| **body** | [**ConversationUser**](ConversationUser)| Targeted user |  |
 
 ### Return type
 
 **string**
 
-<a name="postconversationbarge"></a>
 
-## void PostConversationBarge (string conversationId)
+## PostConversationBarge
 
+> void PostConversationBarge (string conversationId)
 
 
 Barge a conversation creating a barged in conference of connected participants.
@@ -9774,16 +9649,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationcobrowse"></a>
 
-## [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html) PostConversationCobrowse (string conversationId)
+## PostConversationCobrowse
 
+> [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession) PostConversationCobrowse (string conversationId)
 
 
 Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
@@ -9838,16 +9712,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html)
+[**CobrowseWebMessagingSession**](CobrowseWebMessagingSession)
 
-<a name="postconversationdisconnect"></a>
 
-## **string** PostConversationDisconnect (string conversationId)
+## PostConversationDisconnect
 
+> **string** PostConversationDisconnect (string conversationId)
 
 
 Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
@@ -9901,16 +9774,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 **string**
 
-<a name="postconversationparticipantcallbacks"></a>
 
-## void PostConversationParticipantCallbacks (string conversationId, string participantId, CreateCallbackOnConversationCommand body = null)
+## PostConversationParticipantCallbacks
 
+> void PostConversationParticipantCallbacks (string conversationId, string participantId, CreateCallbackOnConversationCommand body = null)
 
 
 Create a new callback for the specified participant on the conversation.
@@ -9966,17 +9838,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**CreateCallbackOnConversationCommand**](CreateCallbackOnConversationCommand.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**CreateCallbackOnConversationCommand**](CreateCallbackOnConversationCommand)|  | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationparticipantdigits"></a>
 
-## void PostConversationParticipantDigits (string conversationId, string participantId, Digits body = null)
+## PostConversationParticipantDigits
 
+> void PostConversationParticipantDigits (string conversationId, string participantId, Digits body = null)
 
 
 Sends DTMF to the participant
@@ -10031,17 +9902,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**Digits**](Digits.html)| Digits | [optional]  |
-{: class="table table-striped"}
+| **body** | [**Digits**](Digits)| Digits | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationparticipantreplace"></a>
 
-## void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
+## PostConversationParticipantReplace
 
+> void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 
 Replace this participant with the specified user and/or address
@@ -10097,17 +9967,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationparticipantreplaceagent"></a>
 
-## void PostConversationParticipantReplaceAgent (string conversationId, string participantId, TransferToAgentRequest body)
+## PostConversationParticipantReplaceAgent
 
+> void PostConversationParticipantReplaceAgent (string conversationId, string participantId, TransferToAgentRequest body)
 
 
 Replace this participant with the specified agent
@@ -10164,17 +10033,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**TransferToAgentRequest**](TransferToAgentRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferToAgentRequest**](TransferToAgentRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationparticipantreplaceexternal"></a>
 
-## void PostConversationParticipantReplaceExternal (string conversationId, string participantId, TransferToExternalRequest body)
+## PostConversationParticipantReplaceExternal
 
+> void PostConversationParticipantReplaceExternal (string conversationId, string participantId, TransferToExternalRequest body)
 
 
 Replace this participant with the an external contact
@@ -10231,17 +10099,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**TransferToExternalRequest**](TransferToExternalRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferToExternalRequest**](TransferToExternalRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationparticipantreplacequeue"></a>
 
-## void PostConversationParticipantReplaceQueue (string conversationId, string participantId, TransferToQueueRequest body)
+## PostConversationParticipantReplaceQueue
 
+> void PostConversationParticipantReplaceQueue (string conversationId, string participantId, TransferToQueueRequest body)
 
 
 Replace this participant with the specified queue
@@ -10298,17 +10165,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**TransferToQueueRequest**](TransferToQueueRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferToQueueRequest**](TransferToQueueRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationparticipantsecureivrsessions"></a>
 
-## [**SecureSession**](SecureSession.html) PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null)
+## PostConversationParticipantSecureivrsessions
 
+> [**SecureSession**](SecureSession) PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null)
 
 
 Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
@@ -10364,17 +10230,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**CreateSecureSession**](CreateSecureSession.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**CreateSecureSession**](CreateSecureSession)|  | [optional]  |
 
 ### Return type
 
-[**SecureSession**](SecureSession.html)
+[**SecureSession**](SecureSession)
 
-<a name="postconversationsuggestionengagement"></a>
 
-## [**SuggestionEngagement**](SuggestionEngagement.html) PostConversationSuggestionEngagement (string conversationId, string suggestionId, SuggestionEngagement body)
+## PostConversationSuggestionEngagement
 
+> [**SuggestionEngagement**](SuggestionEngagement) PostConversationSuggestionEngagement (string conversationId, string suggestionId, SuggestionEngagement body)
 
 
 Save an engagement on the suggestion.
@@ -10431,17 +10296,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **suggestionId** | **string**| Suggestion ID |  |
-| **body** | [**SuggestionEngagement**](SuggestionEngagement.html)|  |  |
-{: class="table table-striped"}
+| **body** | [**SuggestionEngagement**](SuggestionEngagement)|  |  |
 
 ### Return type
 
-[**SuggestionEngagement**](SuggestionEngagement.html)
+[**SuggestionEngagement**](SuggestionEngagement)
 
-<a name="postconversationsuggestionsfeedback"></a>
 
-## void PostConversationSuggestionsFeedback (string conversationId, Feedback body)
+## PostConversationSuggestionsFeedback
 
+> void PostConversationSuggestionsFeedback (string conversationId, Feedback body)
 
 
 Suggestion feedback.
@@ -10495,17 +10359,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **body** | [**Feedback**](Feedback.html)| SuggestionFeedback |  |
-{: class="table table-striped"}
+| **body** | [**Feedback**](Feedback)| SuggestionFeedback |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsummaryfeedback"></a>
 
-## void PostConversationSummaryFeedback (string conversationId, string summaryId, FeedbackAddRequest body = null)
+## PostConversationSummaryFeedback
 
+> void PostConversationSummaryFeedback (string conversationId, string summaryId, FeedbackAddRequest body = null)
 
 
 Submit feedback for the summary.
@@ -10561,17 +10424,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **summaryId** | **string**| Summary ID |  |
-| **body** | [**FeedbackAddRequest**](FeedbackAddRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**FeedbackAddRequest**](FeedbackAddRequest)|  | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscall"></a>
 
-## [**Conversation**](Conversation.html) PostConversationsCall (string conversationId, CallCommand body)
+## PostConversationsCall
 
+> [**Conversation**](Conversation) PostConversationsCall (string conversationId, CallCommand body)
 
 
 Place a new call as part of a callback conversation.
@@ -10625,17 +10487,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**CallCommand**](CallCommand.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**CallCommand**](CallCommand)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="postconversationscallparticipantbarge"></a>
 
-## void PostConversationsCallParticipantBarge (string conversationId, string participantId)
+## PostConversationsCallParticipantBarge
 
+> void PostConversationsCallParticipantBarge (string conversationId, string participantId)
 
 
 Barge a given participant's call creating a barged in conference of connected participants.
@@ -10690,16 +10551,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallparticipantcoach"></a>
 
-## void PostConversationsCallParticipantCoach (string conversationId, string participantId)
+## PostConversationsCallParticipantCoach
 
+> void PostConversationsCallParticipantCoach (string conversationId, string participantId)
 
 
 Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.
@@ -10754,16 +10614,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallparticipantcommunicationwrapup"></a>
 
-## void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsCallParticipantCommunicationWrapup
 
+> void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 Apply wrap-up for this conversation communication
@@ -10821,17 +10680,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallparticipantconsult"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
+## PostConversationsCallParticipantConsult
 
+> [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
 
 
 Initiate and update consult transfer
@@ -10888,17 +10746,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to |  |
-{: class="table table-striped"}
+| **body** | [**ConsultTransfer**](ConsultTransfer)| Destination address &amp; initial speak to |  |
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
+[**ConsultTransferResponse**](ConsultTransferResponse)
 
-<a name="postconversationscallparticipantconsultagent"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsultAgent (string conversationId, string participantId, ConsultTransferToAgent body)
+## PostConversationsCallParticipantConsultAgent
 
+> [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultAgent (string conversationId, string participantId, ConsultTransferToAgent body)
 
 
 Initiate a consult transfer to an agent
@@ -10956,17 +10813,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ConsultTransferToAgent**](ConsultTransferToAgent.html)| Destination agent &amp; initial speak to |  |
-{: class="table table-striped"}
+| **body** | [**ConsultTransferToAgent**](ConsultTransferToAgent)| Destination agent &amp; initial speak to |  |
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
+[**ConsultTransferResponse**](ConsultTransferResponse)
 
-<a name="postconversationscallparticipantconsultexternal"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsultExternal (string conversationId, string participantId, ConsultTransferToExternal body)
+## PostConversationsCallParticipantConsultExternal
 
+> [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultExternal (string conversationId, string participantId, ConsultTransferToExternal body)
 
 
 Initiate a consult transfer to an external contact
@@ -11024,17 +10880,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ConsultTransferToExternal**](ConsultTransferToExternal.html)| Destination address &amp; initial speak to |  |
-{: class="table table-striped"}
+| **body** | [**ConsultTransferToExternal**](ConsultTransferToExternal)| Destination address &amp; initial speak to |  |
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
+[**ConsultTransferResponse**](ConsultTransferResponse)
 
-<a name="postconversationscallparticipantconsultqueue"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsultQueue (string conversationId, string participantId, ConsultTransferToQueue body)
+## PostConversationsCallParticipantConsultQueue
 
+> [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultQueue (string conversationId, string participantId, ConsultTransferToQueue body)
 
 
 Initiate a consult transfer to a queue
@@ -11092,17 +10947,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**ConsultTransferToQueue**](ConsultTransferToQueue.html)| Destination queue &amp; initial speak to |  |
-{: class="table table-striped"}
+| **body** | [**ConsultTransferToQueue**](ConsultTransferToQueue)| Destination queue &amp; initial speak to |  |
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
+[**ConsultTransferResponse**](ConsultTransferResponse)
 
-<a name="postconversationscallparticipantmonitor"></a>
 
-## void PostConversationsCallParticipantMonitor (string conversationId, string participantId)
+## PostConversationsCallParticipantMonitor
 
+> void PostConversationsCallParticipantMonitor (string conversationId, string participantId)
 
 
 Listen in on the conversation from the point of view of a given participant.
@@ -11157,16 +11011,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallparticipantreplace"></a>
 
-## void PostConversationsCallParticipantReplace (string conversationId, string participantId, TransferRequest body)
+## PostConversationsCallParticipantReplace
 
+> void PostConversationsCallParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 
 Replace this participant with the specified user and/or address
@@ -11222,17 +11075,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallparticipants"></a>
 
-## [**Conversation**](Conversation.html) PostConversationsCallParticipants (string conversationId, Conversation body)
+## PostConversationsCallParticipants
 
+> [**Conversation**](Conversation) PostConversationsCallParticipants (string conversationId, Conversation body)
 
 
 Add participants to a conversation
@@ -11286,17 +11138,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
+| **body** | [**Conversation**](Conversation)| Conversation |  |
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**Conversation**](Conversation)
 
-<a name="postconversationscallbackparticipantcommunicationwrapup"></a>
 
-## void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsCallbackParticipantCommunicationWrapup
 
+> void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 Apply wrap-up for this conversation communication
@@ -11354,17 +11205,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallbackparticipantreplace"></a>
 
-## void PostConversationsCallbackParticipantReplace (string conversationId, string participantId, TransferRequest body)
+## PostConversationsCallbackParticipantReplace
 
+> void PostConversationsCallbackParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 
 Replace this participant with the specified user and/or address
@@ -11420,17 +11270,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallbacks"></a>
 
-## [**CreateCallbackResponse**](CreateCallbackResponse.html) PostConversationsCallbacks (CreateCallbackCommand body)
+## PostConversationsCallbacks
 
+> [**CreateCallbackResponse**](CreateCallbackResponse) PostConversationsCallbacks (CreateCallbackCommand body)
 
 
 Create a Callback
@@ -11483,17 +11332,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateCallbackCommand**](CreateCallbackCommand.html)| Callback |  |
-{: class="table table-striped"}
+| **body** | [**CreateCallbackCommand**](CreateCallbackCommand)| Callback |  |
 
 ### Return type
 
-[**CreateCallbackResponse**](CreateCallbackResponse.html)
+[**CreateCallbackResponse**](CreateCallbackResponse)
 
-<a name="postconversationscallbacksbulkdisconnect"></a>
 
-## void PostConversationsCallbacksBulkDisconnect (BulkCallbackDisconnectRequest body)
+## PostConversationsCallbacksBulkDisconnect
 
+> void PostConversationsCallbacksBulkDisconnect (BulkCallbackDisconnectRequest body)
 
 
 Disconnect multiple scheduled callbacks
@@ -11545,17 +11393,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**BulkCallbackDisconnectRequest**](BulkCallbackDisconnectRequest.html)| BulkCallbackDisconnectRequest |  |
-{: class="table table-striped"}
+| **body** | [**BulkCallbackDisconnectRequest**](BulkCallbackDisconnectRequest)| BulkCallbackDisconnectRequest |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscallbacksbulkupdate"></a>
 
-## [**BulkCallbackPatchResponse**](BulkCallbackPatchResponse.html) PostConversationsCallbacksBulkUpdate (BulkCallbackPatchRequest body)
+## PostConversationsCallbacksBulkUpdate
 
+> [**BulkCallbackPatchResponse**](BulkCallbackPatchResponse) PostConversationsCallbacksBulkUpdate (BulkCallbackPatchRequest body)
 
 
 Update multiple scheduled callbacks
@@ -11608,17 +11455,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**BulkCallbackPatchRequest**](BulkCallbackPatchRequest.html)| BulkCallbackPatchRequest |  |
-{: class="table table-striped"}
+| **body** | [**BulkCallbackPatchRequest**](BulkCallbackPatchRequest)| BulkCallbackPatchRequest |  |
 
 ### Return type
 
-[**BulkCallbackPatchResponse**](BulkCallbackPatchResponse.html)
+[**BulkCallbackPatchResponse**](BulkCallbackPatchResponse)
 
-<a name="postconversationscalls"></a>
 
-## [**CreateCallResponse**](CreateCallResponse.html) PostConversationsCalls (CreateCallRequest body)
+## PostConversationsCalls
 
+> [**CreateCallResponse**](CreateCallResponse) PostConversationsCalls (CreateCallRequest body)
 
 
 Create a call conversation
@@ -11671,17 +11517,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateCallRequest**](CreateCallRequest.html)| Call request |  |
-{: class="table table-striped"}
+| **body** | [**CreateCallRequest**](CreateCallRequest)| Call request |  |
 
 ### Return type
 
-[**CreateCallResponse**](CreateCallResponse.html)
+[**CreateCallResponse**](CreateCallResponse)
 
-<a name="postconversationschatcommunicationmessages"></a>
 
-## [**WebChatMessage**](WebChatMessage.html) PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body)
+## PostConversationsChatCommunicationMessages
 
+> [**WebChatMessage**](WebChatMessage) PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body)
 
 
 Send a message on behalf of a communication in a chat conversation.
@@ -11737,17 +11582,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest.html)| Message |  |
-{: class="table table-striped"}
+| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest)| Message |  |
 
 ### Return type
 
-[**WebChatMessage**](WebChatMessage.html)
+[**WebChatMessage**](WebChatMessage)
 
-<a name="postconversationschatcommunicationtyping"></a>
 
-## [**WebChatTyping**](WebChatTyping.html) PostConversationsChatCommunicationTyping (string conversationId, string communicationId)
+## PostConversationsChatCommunicationTyping
 
+> [**WebChatTyping**](WebChatTyping) PostConversationsChatCommunicationTyping (string conversationId, string communicationId)
 
 
 Send a typing-indicator on behalf of a communication in a chat conversation.
@@ -11802,16 +11646,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebChatTyping**](WebChatTyping.html)
+[**WebChatTyping**](WebChatTyping)
 
-<a name="postconversationschatparticipantcommunicationwrapup"></a>
 
-## void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsChatParticipantCommunicationWrapup
 
+> void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 Apply wrap-up for this conversation communication
@@ -11869,17 +11712,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationschatparticipantreplace"></a>
 
-## void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
+## PostConversationsChatParticipantReplace
 
+> void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 
 Replace this participant with the specified user and/or address
@@ -11935,17 +11777,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationschats"></a>
 
-## [**ChatConversation**](ChatConversation.html) PostConversationsChats (CreateWebChatRequest body)
+## PostConversationsChats
 
+> [**ChatConversation**](ChatConversation) PostConversationsChats (CreateWebChatRequest body)
 
 
 Create a web chat conversation
@@ -11998,18 +11839,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateWebChatRequest**](CreateWebChatRequest.html)| Create web chat request |  |
-{: class="table table-striped"}
+| **body** | [**CreateWebChatRequest**](CreateWebChatRequest)| Create web chat request |  |
 
 ### Return type
 
-[**ChatConversation**](ChatConversation.html)
+[**ChatConversation**](ChatConversation)
 
-<a name="postconversationscobrowsesessionparticipantcommunicationwrapup"></a>
 
-## void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsCobrowsesessionParticipantCommunicationWrapup
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Apply wrap-up for this conversation communication
 
@@ -12068,18 +11911,20 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationscobrowsesessionparticipantreplace"></a>
 
-## void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
+## PostConversationsCobrowsesessionParticipantReplace
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Replace this participant with the specified user and/or address
 
@@ -12136,17 +11981,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**TransferRequest**](TransferRequest)|  | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsemailinboundmessages"></a>
 
-## [**EmailConversation**](EmailConversation.html) PostConversationsEmailInboundmessages (string conversationId, InboundMessageRequest body)
+## PostConversationsEmailInboundmessages
 
+> [**EmailConversation**](EmailConversation) PostConversationsEmailInboundmessages (string conversationId, InboundMessageRequest body)
 
 
 Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
@@ -12200,17 +12044,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**InboundMessageRequest**](InboundMessageRequest.html)| Send external email reply |  |
-{: class="table table-striped"}
+| **body** | [**InboundMessageRequest**](InboundMessageRequest)| Send external email reply |  |
 
 ### Return type
 
-[**EmailConversation**](EmailConversation.html)
+[**EmailConversation**](EmailConversation)
 
-<a name="postconversationsemailmessages"></a>
 
-## [**EmailMessageReply**](EmailMessageReply.html) PostConversationsEmailMessages (string conversationId, EmailMessage body)
+## PostConversationsEmailMessages
 
+> [**EmailMessageReply**](EmailMessageReply) PostConversationsEmailMessages (string conversationId, EmailMessage body)
 
 
 Send an email reply
@@ -12264,17 +12107,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**EmailMessage**](EmailMessage.html)| Reply |  |
-{: class="table table-striped"}
+| **body** | [**EmailMessage**](EmailMessage)| Reply |  |
 
 ### Return type
 
-[**EmailMessageReply**](EmailMessageReply.html)
+[**EmailMessageReply**](EmailMessageReply)
 
-<a name="postconversationsemailmessagesdraftattachmentscopy"></a>
 
-## [**EmailMessage**](EmailMessage.html) PostConversationsEmailMessagesDraftAttachmentsCopy (string conversationId, CopyAttachmentsRequest body)
+## PostConversationsEmailMessagesDraftAttachmentsCopy
 
+> [**EmailMessage**](EmailMessage) PostConversationsEmailMessagesDraftAttachmentsCopy (string conversationId, CopyAttachmentsRequest body)
 
 
 Copy attachments from an email message to the current draft.
@@ -12328,17 +12170,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**CopyAttachmentsRequest**](CopyAttachmentsRequest.html)| Copy Attachment Request |  |
-{: class="table table-striped"}
+| **body** | [**CopyAttachmentsRequest**](CopyAttachmentsRequest)| Copy Attachment Request |  |
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.html)
+[**EmailMessage**](EmailMessage)
 
-<a name="postconversationsemailparticipantcommunicationwrapup"></a>
 
-## void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsEmailParticipantCommunicationWrapup
 
+> void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 Apply wrap-up for this conversation communication
@@ -12396,17 +12237,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsemailparticipantreplace"></a>
 
-## void PostConversationsEmailParticipantReplace (string conversationId, string participantId, TransferRequest body)
+## PostConversationsEmailParticipantReplace
 
+> void PostConversationsEmailParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 
 Replace this participant with the specified user and/or address
@@ -12462,17 +12302,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsemailreconnect"></a>
 
-## void PostConversationsEmailReconnect (string conversationId)
+## PostConversationsEmailReconnect
 
+> void PostConversationsEmailReconnect (string conversationId)
 
 
 Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
@@ -12525,16 +12364,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsemails"></a>
 
-## [**EmailConversation**](EmailConversation.html) PostConversationsEmails (CreateEmailRequest body)
+## PostConversationsEmails
 
+> [**EmailConversation**](EmailConversation) PostConversationsEmails (CreateEmailRequest body)
 
 
 Create an email conversation
@@ -12589,17 +12427,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateEmailRequest**](CreateEmailRequest.html)| Create email request |  |
-{: class="table table-striped"}
+| **body** | [**CreateEmailRequest**](CreateEmailRequest)| Create email request |  |
 
 ### Return type
 
-[**EmailConversation**](EmailConversation.html)
+[**EmailConversation**](EmailConversation)
 
-<a name="postconversationsemailsagentless"></a>
 
-## [**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto.html) PostConversationsEmailsAgentless (AgentlessEmailSendRequestDto body)
+## PostConversationsEmailsAgentless
 
+> [**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto) PostConversationsEmailsAgentless (AgentlessEmailSendRequestDto body)
 
 
 Create an email conversation, per API
@@ -12653,17 +12490,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AgentlessEmailSendRequestDto**](AgentlessEmailSendRequestDto.html)| Create agentless email request |  |
-{: class="table table-striped"}
+| **body** | [**AgentlessEmailSendRequestDto**](AgentlessEmailSendRequestDto)| Create agentless email request |  |
 
 ### Return type
 
-[**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto.html)
+[**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto)
 
-<a name="postconversationsfaxes"></a>
 
-## [**FaxSendResponse**](FaxSendResponse.html) PostConversationsFaxes (FaxSendRequest body)
+## PostConversationsFaxes
 
+> [**FaxSendResponse**](FaxSendResponse) PostConversationsFaxes (FaxSendRequest body)
 
 
 Create Fax Conversation
@@ -12715,17 +12551,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**FaxSendRequest**](FaxSendRequest.html)| Fax |  |
-{: class="table table-striped"}
+| **body** | [**FaxSendRequest**](FaxSendRequest)| Fax |  |
 
 ### Return type
 
-[**FaxSendResponse**](FaxSendResponse.html)
+[**FaxSendResponse**](FaxSendResponse)
 
-<a name="postconversationskeyconfigurations"></a>
 
-## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) PostConversationsKeyconfigurations (ConversationEncryptionConfiguration body)
+## PostConversationsKeyconfigurations
 
+> [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) PostConversationsKeyconfigurations (ConversationEncryptionConfiguration body)
 
 
 Setup configurations for encryption key creation
@@ -12778,17 +12613,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption Configuration |  |
-{: class="table table-striped"}
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)| Encryption Configuration |  |
 
 ### Return type
 
-[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)
 
-<a name="postconversationskeyconfigurationsvalidate"></a>
 
-## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) PostConversationsKeyconfigurationsValidate (ConversationEncryptionConfiguration body)
+## PostConversationsKeyconfigurationsValidate
 
+> [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) PostConversationsKeyconfigurationsValidate (ConversationEncryptionConfiguration body)
 
 
 Validate encryption key configurations without saving it
@@ -12841,17 +12675,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption Configuration |  |
-{: class="table table-striped"}
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)| Encryption Configuration |  |
 
 ### Return type
 
-[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)
 
-<a name="postconversationsmessagecommunicationmessages"></a>
 
-## [**MessageData**](MessageData.html) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
+## PostConversationsMessageCommunicationMessages
 
+> [**MessageData**](MessageData) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
 
 
 Send message
@@ -12912,18 +12745,17 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**AdditionalMessage**](AdditionalMessage.html)| Message |  |
+| **body** | [**AdditionalMessage**](AdditionalMessage)| Message |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessageData**](MessageData.html)
+[**MessageData**](MessageData)
 
-<a name="postconversationsmessagecommunicationmessagesmedia"></a>
 
-## [**MessageMediaData**](MessageMediaData.html) PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId)
+## PostConversationsMessageCommunicationMessagesMedia
 
+> [**MessageMediaData**](MessageMediaData) PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId)
 
 
 Create media
@@ -12983,16 +12815,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessageMediaData**](MessageMediaData.html)
+[**MessageMediaData**](MessageMediaData)
 
-<a name="postconversationsmessagecommunicationtyping"></a>
 
-## void PostConversationsMessageCommunicationTyping (string conversationId, string communicationId, MessageTypingEventRequest body)
+## PostConversationsMessageCommunicationTyping
 
+> void PostConversationsMessageCommunicationTyping (string conversationId, string communicationId, MessageTypingEventRequest body)
 
 
 Send message typing event
@@ -13051,17 +12882,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**MessageTypingEventRequest**](MessageTypingEventRequest.html)| MessageTypingEvent |  |
-{: class="table table-striped"}
+| **body** | [**MessageTypingEventRequest**](MessageTypingEventRequest)| MessageTypingEvent |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsmessageinboundopenevent"></a>
 
-## [**OpenEventNormalizedMessage**](OpenEventNormalizedMessage.html) PostConversationsMessageInboundOpenEvent (string integrationId, OpenInboundNormalizedEvent body)
+## PostConversationsMessageInboundOpenEvent
 
+> [**OpenEventNormalizedMessage**](OpenEventNormalizedMessage) PostConversationsMessageInboundOpenEvent (string integrationId, OpenInboundNormalizedEvent body)
 
 
 Send an inbound Open Event Message
@@ -13118,17 +12948,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| integrationId |  |
-| **body** | [**OpenInboundNormalizedEvent**](OpenInboundNormalizedEvent.html)| NormalizedMessage |  |
-{: class="table table-striped"}
+| **body** | [**OpenInboundNormalizedEvent**](OpenInboundNormalizedEvent)| NormalizedMessage |  |
 
 ### Return type
 
-[**OpenEventNormalizedMessage**](OpenEventNormalizedMessage.html)
+[**OpenEventNormalizedMessage**](OpenEventNormalizedMessage)
 
-<a name="postconversationsmessageinboundopenmessage"></a>
 
-## [**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage.html) PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body)
+## PostConversationsMessageInboundOpenMessage
 
+> [**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage) PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body)
 
 
 Send inbound Open Message
@@ -13185,17 +13014,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| integrationId |  |
-| **body** | [**OpenInboundNormalizedMessage**](OpenInboundNormalizedMessage.html)| NormalizedMessage |  |
-{: class="table table-striped"}
+| **body** | [**OpenInboundNormalizedMessage**](OpenInboundNormalizedMessage)| NormalizedMessage |  |
 
 ### Return type
 
-[**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage.html)
+[**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage)
 
-<a name="postconversationsmessageinboundopenreceipt"></a>
 
-## [**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage.html) PostConversationsMessageInboundOpenReceipt (string integrationId, OpenInboundNormalizedReceipt body)
+## PostConversationsMessageInboundOpenReceipt
 
+> [**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage) PostConversationsMessageInboundOpenReceipt (string integrationId, OpenInboundNormalizedReceipt body)
 
 
 Send an inbound Open Receipt Message
@@ -13252,17 +13080,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| integrationId |  |
-| **body** | [**OpenInboundNormalizedReceipt**](OpenInboundNormalizedReceipt.html)| NormalizedMessage |  |
-{: class="table table-striped"}
+| **body** | [**OpenInboundNormalizedReceipt**](OpenInboundNormalizedReceipt)| NormalizedMessage |  |
 
 ### Return type
 
-[**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage.html)
+[**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage)
 
-<a name="postconversationsmessagemessagesbulk"></a>
 
-## [**TextMessageListing**](TextMessageListing.html) PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
+## PostConversationsMessageMessagesBulk
 
+> [**TextMessageListing**](TextMessageListing) PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
 
 
 Get messages in batch
@@ -13322,17 +13149,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
-| **body** | [**List<string>**](string.html)| messageIds | [optional]  |
-{: class="table table-striped"}
+| **body** | [**List<string>**](string)| messageIds | [optional]  |
 
 ### Return type
 
-[**TextMessageListing**](TextMessageListing.html)
+[**TextMessageListing**](TextMessageListing)
 
-<a name="postconversationsmessageparticipantcommunicationwrapup"></a>
 
-## void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsMessageParticipantCommunicationWrapup
 
+> void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 Apply wrap-up for this conversation communication
@@ -13390,17 +13216,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsmessageparticipantmonitor"></a>
 
-## void PostConversationsMessageParticipantMonitor (string conversationId, string participantId)
+## PostConversationsMessageParticipantMonitor
 
+> void PostConversationsMessageParticipantMonitor (string conversationId, string participantId)
 
 
 Listen in on the conversation from the point of view of a given participant.
@@ -13455,16 +13280,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsmessageparticipantreplace"></a>
 
-## void PostConversationsMessageParticipantReplace (string conversationId, string participantId, TransferRequest body)
+## PostConversationsMessageParticipantReplace
 
+> void PostConversationsMessageParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 
 Replace this participant with the specified user and/or address
@@ -13520,17 +13344,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
-{: class="table table-striped"}
+| **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsmessages"></a>
 
-## [**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse.html) PostConversationsMessages (CreateOutboundMessagingConversationRequest body)
+## PostConversationsMessages
 
+> [**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse) PostConversationsMessages (CreateOutboundMessagingConversationRequest body)
 
 
 Create an outbound messaging conversation.
@@ -13585,17 +13408,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateOutboundMessagingConversationRequest**](CreateOutboundMessagingConversationRequest.html)| Create outbound messaging conversation |  |
-{: class="table table-striped"}
+| **body** | [**CreateOutboundMessagingConversationRequest**](CreateOutboundMessagingConversationRequest)| Create outbound messaging conversation |  |
 
 ### Return type
 
-[**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse.html)
+[**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse)
 
-<a name="postconversationsmessagesagentless"></a>
 
-## [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse.html) PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body)
+## PostConversationsMessagesAgentless
 
+> [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse) PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body)
 
 
 Send an agentless outbound message
@@ -13650,18 +13472,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest.html)| Create agentless outbound messaging request |  |
-{: class="table table-striped"}
+| **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest)| Create agentless outbound messaging request |  |
 
 ### Return type
 
-[**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse.html)
+[**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse)
 
-<a name="postconversationsmessagesinboundopen"></a>
 
-## [**OpenNormalizedMessage**](OpenNormalizedMessage.html) PostConversationsMessagesInboundOpen (OpenNormalizedMessage body)
+## PostConversationsMessagesInboundOpen
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**OpenNormalizedMessage**](OpenNormalizedMessage) PostConversationsMessagesInboundOpen (OpenNormalizedMessage body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Send an inbound Open Message
 
@@ -13715,17 +13539,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OpenNormalizedMessage**](OpenNormalizedMessage.html)| NormalizedMessage |  |
-{: class="table table-striped"}
+| **body** | [**OpenNormalizedMessage**](OpenNormalizedMessage)| NormalizedMessage |  |
 
 ### Return type
 
-[**OpenNormalizedMessage**](OpenNormalizedMessage.html)
+[**OpenNormalizedMessage**](OpenNormalizedMessage)
 
-<a name="postconversationsmessagingintegrationsfacebook"></a>
 
-## [**FacebookIntegration**](FacebookIntegration.html) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
+## PostConversationsMessagingIntegrationsFacebook
 
+> [**FacebookIntegration**](FacebookIntegration) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
 
 
 Create a Facebook Integration
@@ -13778,17 +13601,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**FacebookIntegrationRequest**](FacebookIntegrationRequest.html)| FacebookIntegrationRequest |  |
-{: class="table table-striped"}
+| **body** | [**FacebookIntegrationRequest**](FacebookIntegrationRequest)| FacebookIntegrationRequest |  |
 
 ### Return type
 
-[**FacebookIntegration**](FacebookIntegration.html)
+[**FacebookIntegration**](FacebookIntegration)
 
-<a name="postconversationsmessagingintegrationsinstagram"></a>
 
-## [**InstagramIntegration**](InstagramIntegration.html) PostConversationsMessagingIntegrationsInstagram (InstagramIntegrationRequest body)
+## PostConversationsMessagingIntegrationsInstagram
 
+> [**InstagramIntegration**](InstagramIntegration) PostConversationsMessagingIntegrationsInstagram (InstagramIntegrationRequest body)
 
 
 Create Instagram Integration
@@ -13841,17 +13663,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**InstagramIntegrationRequest**](InstagramIntegrationRequest.html)| InstagramIntegrationRequest |  |
-{: class="table table-striped"}
+| **body** | [**InstagramIntegrationRequest**](InstagramIntegrationRequest)| InstagramIntegrationRequest |  |
 
 ### Return type
 
-[**InstagramIntegration**](InstagramIntegration.html)
+[**InstagramIntegration**](InstagramIntegration)
 
-<a name="postconversationsmessagingintegrationsopen"></a>
 
-## [**OpenIntegration**](OpenIntegration.html) PostConversationsMessagingIntegrationsOpen (OpenIntegrationRequest body)
+## PostConversationsMessagingIntegrationsOpen
 
+> [**OpenIntegration**](OpenIntegration) PostConversationsMessagingIntegrationsOpen (OpenIntegrationRequest body)
 
 
 Create an Open messaging integration
@@ -13906,18 +13727,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OpenIntegrationRequest**](OpenIntegrationRequest.html)| OpenIntegrationRequest |  |
-{: class="table table-striped"}
+| **body** | [**OpenIntegrationRequest**](OpenIntegrationRequest)| OpenIntegrationRequest |  |
 
 ### Return type
 
-[**OpenIntegration**](OpenIntegration.html)
+[**OpenIntegration**](OpenIntegration)
 
-<a name="postconversationsmessagingintegrationswhatsapp"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body)
+## PostConversationsMessagingIntegrationsWhatsapp
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**WhatsAppIntegration**](WhatsAppIntegration) PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
 
@@ -13971,17 +13794,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest.html)| WhatsAppIntegrationRequest |  |
-{: class="table table-striped"}
+| **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest)| WhatsAppIntegrationRequest |  |
 
 ### Return type
 
-[**WhatsAppIntegration**](WhatsAppIntegration.html)
+[**WhatsAppIntegration**](WhatsAppIntegration)
 
-<a name="postconversationsmessagingintegrationswhatsappembeddedsignup"></a>
 
-## [**WhatsAppIntegration**](WhatsAppIntegration.html) PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup (WhatsAppEmbeddedSignupIntegrationRequest body)
+## PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup
 
+> [**WhatsAppIntegration**](WhatsAppIntegration) PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup (WhatsAppEmbeddedSignupIntegrationRequest body)
 
 
 Create a WhatsApp Integration using the WhatsApp embedded signup flow
@@ -14036,17 +13858,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WhatsAppEmbeddedSignupIntegrationRequest**](WhatsAppEmbeddedSignupIntegrationRequest.html)| WhatsAppEmbeddedSignupIntegrationRequest |  |
-{: class="table table-striped"}
+| **body** | [**WhatsAppEmbeddedSignupIntegrationRequest**](WhatsAppEmbeddedSignupIntegrationRequest)| WhatsAppEmbeddedSignupIntegrationRequest |  |
 
 ### Return type
 
-[**WhatsAppIntegration**](WhatsAppIntegration.html)
+[**WhatsAppIntegration**](WhatsAppIntegration)
 
-<a name="postconversationsmessagingsettings"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) PostConversationsMessagingSettings (MessagingSettingRequest body)
+## PostConversationsMessagingSettings
 
+> [**MessagingSetting**](MessagingSetting) PostConversationsMessagingSettings (MessagingSettingRequest body)
 
 
 Create a messaging setting
@@ -14099,17 +13920,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting |  |
-{: class="table table-striped"}
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest)| MessagingSetting |  |
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="postconversationsmessagingsupportedcontent"></a>
 
-## [**SupportedContent**](SupportedContent.html) PostConversationsMessagingSupportedcontent (SupportedContent body)
+## PostConversationsMessagingSupportedcontent
 
+> [**SupportedContent**](SupportedContent) PostConversationsMessagingSupportedcontent (SupportedContent body)
 
 
 Create a Supported Content profile
@@ -14162,17 +13982,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent |  |
-{: class="table table-striped"}
+| **body** | [**SupportedContent**](SupportedContent)| SupportedContent |  |
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="postconversationsparticipantsattributessearch"></a>
 
-## [**JsonCursorSearchResponse**](JsonCursorSearchResponse.html) PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
+## PostConversationsParticipantsAttributesSearch
 
+> [**JsonCursorSearchResponse**](JsonCursorSearchResponse) PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
 
 
 Search conversations
@@ -14225,18 +14044,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest.html)| Search request options |  |
-{: class="table table-striped"}
+| **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest)| Search request options |  |
 
 ### Return type
 
-[**JsonCursorSearchResponse**](JsonCursorSearchResponse.html)
+[**JsonCursorSearchResponse**](JsonCursorSearchResponse)
 
-<a name="postconversationsscreenshareparticipantcommunicationwrapup"></a>
 
-## void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsScreenshareParticipantCommunicationWrapup
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Apply wrap-up for this conversation communication
 
@@ -14295,17 +14116,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationssocialparticipantcommunicationwrapup"></a>
 
-## void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsSocialParticipantCommunicationWrapup
 
+> void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 Apply wrap-up for this conversation communication
@@ -14363,17 +14183,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsvideoparticipantcommunicationwrapup"></a>
 
-## void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
+## PostConversationsVideoParticipantCommunicationWrapup
 
+> void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 Apply wrap-up for this conversation communication
@@ -14431,17 +14250,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationsvideosmeetings"></a>
 
-## [**MeetingIdRecord**](MeetingIdRecord.html) PostConversationsVideosMeetings (GenerateMeetingIdRequest body)
+## PostConversationsVideosMeetings
 
+> [**MeetingIdRecord**](MeetingIdRecord) PostConversationsVideosMeetings (GenerateMeetingIdRequest body)
 
 
 Generate a meetingId for a given conferenceId
@@ -14496,17 +14314,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**GenerateMeetingIdRequest**](GenerateMeetingIdRequest.html)| MeetingIdRequest |  |
-{: class="table table-striped"}
+| **body** | [**GenerateMeetingIdRequest**](GenerateMeetingIdRequest)| MeetingIdRequest |  |
 
 ### Return type
 
-[**MeetingIdRecord**](MeetingIdRecord.html)
+[**MeetingIdRecord**](MeetingIdRecord)
 
-<a name="putconversationparticipantflaggedreason"></a>
 
-## void PutConversationParticipantFlaggedreason (string conversationId, string participantId)
+## PutConversationParticipantFlaggedreason
 
+> void PutConversationParticipantFlaggedreason (string conversationId, string participantId)
 
 
 Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -14560,16 +14377,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="putconversationsecureattributes"></a>
 
-## **string** PutConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
+## PutConversationSecureattributes
 
+> **string** PutConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
 
 
 Set the secure attributes on a conversation.
@@ -14624,17 +14440,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes.html)| Conversation Secure Attributes |  |
-{: class="table table-striped"}
+| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes)| Conversation Secure Attributes |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationtags"></a>
 
-## **string** PutConversationTags (string conversationId, ConversationTagsUpdate body)
+## PutConversationTags
 
+> **string** PutConversationTags (string conversationId, ConversationTagsUpdate body)
 
 
 Update the tags on a conversation.
@@ -14689,17 +14504,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-| **body** | [**ConversationTagsUpdate**](ConversationTagsUpdate.html)| Conversation Tags |  |
-{: class="table table-striped"}
+| **body** | [**ConversationTagsUpdate**](ConversationTagsUpdate)| Conversation Tags |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationscallparticipantcommunicationuuidata"></a>
 
-## **Object** PutConversationsCallParticipantCommunicationUuidata (string conversationId, string participantId, string communicationId, SetUuiDataRequest body)
+## PutConversationsCallParticipantCommunicationUuidata
 
+> **Object** PutConversationsCallParticipantCommunicationUuidata (string conversationId, string participantId, string communicationId, SetUuiDataRequest body)
 
 
 Set uuiData to be sent on future commands.
@@ -14757,17 +14571,16 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**SetUuiDataRequest**](SetUuiDataRequest.html)| UUIData Request |  |
-{: class="table table-striped"}
+| **body** | [**SetUuiDataRequest**](SetUuiDataRequest)| UUIData Request |  |
 
 ### Return type
 
 **Object**
 
-<a name="putconversationscallrecordingstate"></a>
 
-## **string** PutConversationsCallRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsCallRecordingstate
 
+> **string** PutConversationsCallRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -14822,17 +14635,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationscallbackrecordingstate"></a>
 
-## **string** PutConversationsCallbackRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsCallbackRecordingstate
 
+> **string** PutConversationsCallbackRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -14887,17 +14699,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationschatrecordingstate"></a>
 
-## **string** PutConversationsChatRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsChatRecordingstate
 
+> **string** PutConversationsChatRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -14952,17 +14763,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationscobrowsesessionrecordingstate"></a>
 
-## **string** PutConversationsCobrowsesessionRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsCobrowsesessionRecordingstate
 
+> **string** PutConversationsCobrowsesessionRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -15017,17 +14827,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationsemailmessagesdraft"></a>
 
-## [**EmailMessage**](EmailMessage.html) PutConversationsEmailMessagesDraft (string conversationId, EmailMessage body)
+## PutConversationsEmailMessagesDraft
 
+> [**EmailMessage**](EmailMessage) PutConversationsEmailMessagesDraft (string conversationId, EmailMessage body)
 
 
 Update conversation draft reply
@@ -15081,17 +14890,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**EmailMessage**](EmailMessage.html)| Draft |  |
-{: class="table table-striped"}
+| **body** | [**EmailMessage**](EmailMessage)| Draft |  |
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.html)
+[**EmailMessage**](EmailMessage)
 
-<a name="putconversationsemailrecordingstate"></a>
 
-## **string** PutConversationsEmailRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsEmailRecordingstate
 
+> **string** PutConversationsEmailRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -15146,17 +14954,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationskeyconfiguration"></a>
 
-## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) PutConversationsKeyconfiguration (string keyconfigurationsId, ConversationEncryptionConfiguration body)
+## PutConversationsKeyconfiguration
 
+> [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) PutConversationsKeyconfiguration (string keyconfigurationsId, ConversationEncryptionConfiguration body)
 
 
 Update the encryption key configurations
@@ -15211,17 +15018,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **keyconfigurationsId** | **string**| Key Configurations Id |  |
-| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption key configuration metadata |  |
-{: class="table table-striped"}
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)| Encryption key configuration metadata |  |
 
 ### Return type
 
-[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)
 
-<a name="putconversationsmessagerecordingstate"></a>
 
-## **string** PutConversationsMessageRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsMessageRecordingstate
 
+> **string** PutConversationsMessageRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -15276,17 +15082,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationsmessagingsettingsdefault"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) PutConversationsMessagingSettingsDefault (MessagingSettingDefaultRequest body)
+## PutConversationsMessagingSettingsDefault
 
+> [**MessagingSetting**](MessagingSetting) PutConversationsMessagingSettingsDefault (MessagingSettingDefaultRequest body)
 
 
 Set the organization's default setting that may be applied to to integrations without settings
@@ -15341,17 +15146,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest.html)| MessagingSetting |  |
-{: class="table table-striped"}
+| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest)| MessagingSetting |  |
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="putconversationsmessagingsupportedcontentdefault"></a>
 
-## [**SupportedContent**](SupportedContent.html) PutConversationsMessagingSupportedcontentDefault (SupportedContentReference body)
+## PutConversationsMessagingSupportedcontentDefault
 
+> [**SupportedContent**](SupportedContent) PutConversationsMessagingSupportedcontentDefault (SupportedContentReference body)
 
 
 Set the organization's default supported content profile that may be assigned to an integration when it is created.
@@ -15406,17 +15210,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SupportedContentReference**](SupportedContentReference.html)| SupportedContent |  |
-{: class="table table-striped"}
+| **body** | [**SupportedContentReference**](SupportedContentReference)| SupportedContent |  |
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="putconversationsmessagingthreadingtimeline"></a>
 
-## [**ConversationThreadingWindow**](ConversationThreadingWindow.html) PutConversationsMessagingThreadingtimeline (ConversationThreadingWindow body)
+## PutConversationsMessagingThreadingtimeline
 
+> [**ConversationThreadingWindow**](ConversationThreadingWindow) PutConversationsMessagingThreadingtimeline (ConversationThreadingWindow body)
 
 
 Update conversation threading window timeline for each messaging type
@@ -15471,18 +15274,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationThreadingWindow**](ConversationThreadingWindow.html)| ConversationThreadingWindowRequest |  |
-{: class="table table-striped"}
+| **body** | [**ConversationThreadingWindow**](ConversationThreadingWindow)| ConversationThreadingWindowRequest |  |
 
 ### Return type
 
-[**ConversationThreadingWindow**](ConversationThreadingWindow.html)
+[**ConversationThreadingWindow**](ConversationThreadingWindow)
 
-<a name="putconversationsscreensharerecordingstate"></a>
 
-## **string** PutConversationsScreenshareRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsScreenshareRecordingstate
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> **string** PutConversationsScreenshareRecordingstate (string conversationId, SetRecordingState body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a conversation by setting its recording state
 
@@ -15538,17 +15343,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationssocialrecordingstate"></a>
 
-## **string** PutConversationsSocialRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsSocialRecordingstate
 
+> **string** PutConversationsSocialRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -15603,17 +15407,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
-<a name="putconversationsvideorecordingstate"></a>
 
-## **string** PutConversationsVideoRecordingstate (string conversationId, SetRecordingState body)
+## PutConversationsVideoRecordingstate
 
+> **string** PutConversationsVideoRecordingstate (string conversationId, SetRecordingState body)
 
 
 Update a conversation by setting its recording state
@@ -15668,10 +15471,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
-{: class="table table-striped"}
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
 
 ### Return type
 
 **string**
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

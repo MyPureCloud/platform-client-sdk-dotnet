@@ -1,6 +1,5 @@
----
-title: WorkitemsEventsNotificationDelta
----
+# WorkitemsEventsNotificationDelta
+
 ## ININ.PureCloudApi.Model.WorkitemsEventsNotificationDelta
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemsEventsNotificationDelta
 | **Field** | **string** |  | [optional] |
 | **OldValue** | **string** |  | [optional] |
 | **NewValue** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

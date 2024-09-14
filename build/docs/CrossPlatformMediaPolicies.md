@@ -1,16 +1,16 @@
----
-title: CrossPlatformMediaPolicies
----
+# CrossPlatformMediaPolicies
+
 ## ININ.PureCloudApi.Model.CrossPlatformMediaPolicies
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **CallPolicy** | [**CrossPlatformCallMediaPolicy**](CrossPlatformCallMediaPolicy.html) | Conditions and actions for calls | [optional] |
-| **ChatPolicy** | [**CrossPlatformChatMediaPolicy**](CrossPlatformChatMediaPolicy.html) | Conditions and actions for chats | [optional] |
-| **EmailPolicy** | [**CrossPlatformEmailMediaPolicy**](CrossPlatformEmailMediaPolicy.html) | Conditions and actions for emails | [optional] |
-| **MessagePolicy** | [**CrossPlatformMessageMediaPolicy**](CrossPlatformMessageMediaPolicy.html) | Conditions and actions for messages | [optional] |
-{: class="table table-striped"}
+| **CallPolicy** | [**CrossPlatformCallMediaPolicy**](CrossPlatformCallMediaPolicy) | Conditions and actions for calls | [optional] |
+| **ChatPolicy** | [**CrossPlatformChatMediaPolicy**](CrossPlatformChatMediaPolicy) | Conditions and actions for chats | [optional] |
+| **EmailPolicy** | [**CrossPlatformEmailMediaPolicy**](CrossPlatformEmailMediaPolicy) | Conditions and actions for emails | [optional] |
+| **MessagePolicy** | [**CrossPlatformMessageMediaPolicy**](CrossPlatformMessageMediaPolicy) | Conditions and actions for messages | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

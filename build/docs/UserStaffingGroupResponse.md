@@ -1,14 +1,14 @@
----
-title: UserStaffingGroupResponse
----
+# UserStaffingGroupResponse
+
 ## ININ.PureCloudApi.Model.UserStaffingGroupResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**UserReference**](UserReference.html) | The user associated with the staffing group | [optional] |
-| **StaffingGroup** | [**StaffingGroupReference**](StaffingGroupReference.html) | The staffing group | [optional] |
-{: class="table table-striped"}
+| **User** | [**UserReference**](UserReference) | The user associated with the staffing group | [optional] |
+| **StaffingGroup** | [**StaffingGroupReference**](StaffingGroupReference) | The staffing group | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AcdEndDetailEventTopicAcdEndEvent
----
+# AcdEndDetailEventTopicAcdEndEvent
+
 ## ININ.PureCloudApi.Model.AcdEndDetailEventTopicAcdEndEvent
 
 ## Properties
@@ -39,6 +38,7 @@ title: AcdEndDetailEventTopicAcdEndEvent
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **UtilizationLabel** | **string** |  | [optional] |
 | **FlowType** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

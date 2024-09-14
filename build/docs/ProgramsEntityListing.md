@@ -1,17 +1,17 @@
----
-title: ProgramsEntityListing
----
+# ProgramsEntityListing
+
 ## ININ.PureCloudApi.Model.ProgramsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ListedProgram&gt;**](ListedProgram.html) |  | [optional] |
+| **Entities** | [**List&lt;ListedProgram&gt;**](ListedProgram) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

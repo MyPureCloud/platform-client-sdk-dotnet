@@ -1,6 +1,5 @@
----
-title: CategoryUpdateRequest
----
+# CategoryUpdateRequest
+
 ## ININ.PureCloudApi.Model.CategoryUpdateRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: CategoryUpdateRequest
 | **Description** | **string** |  | [optional] |
 | **ExternalId** | **string** | The external id associated with the category. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

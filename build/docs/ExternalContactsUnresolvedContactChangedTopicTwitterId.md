@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicTwitterId
----
+# ExternalContactsUnresolvedContactChangedTopicTwitterId
+
 ## ININ.PureCloudApi.Model.ExternalContactsUnresolvedContactChangedTopicTwitterId
 
 ## Properties
@@ -12,6 +11,7 @@ title: ExternalContactsUnresolvedContactChangedTopicTwitterId
 | **ScreenName** | **string** |  | [optional] |
 | **Verified** | **bool?** |  | [optional] |
 | **ProfileUrl** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

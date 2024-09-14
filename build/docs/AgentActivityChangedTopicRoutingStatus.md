@@ -1,6 +1,5 @@
----
-title: AgentActivityChangedTopicRoutingStatus
----
+# AgentActivityChangedTopicRoutingStatus
+
 ## ININ.PureCloudApi.Model.AgentActivityChangedTopicRoutingStatus
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentActivityChangedTopicRoutingStatus
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** | Indicates the Routing State of the agent. | [optional] |
 | **StartTime** | **DateTime?** | The timestamp when the agent went into this state. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: NuanceBotEntityListing
----
+# NuanceBotEntityListing
+
 ## ININ.PureCloudApi.Model.NuanceBotEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;NuanceBot&gt;**](NuanceBot.html) |  | [optional] |
+| **Entities** | [**List&lt;NuanceBot&gt;**](NuanceBot) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: NuanceBotEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping
----
+# V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping
+
 ## ININ.PureCloudApi.Model.V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping
 
 ## Properties
@@ -9,6 +8,7 @@ title: V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
 | **Duration** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,19 +1,19 @@
----
-title: QueueMemberEntityListing
----
+# QueueMemberEntityListing
+
 ## ININ.PureCloudApi.Model.QueueMemberEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;QueueMember&gt;**](QueueMember.html) |  | [optional] |
+| **Entities** | [**List&lt;QueueMember&gt;**](QueueMember) |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

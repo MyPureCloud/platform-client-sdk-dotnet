@@ -1,21 +1,20 @@
----
-title: EventsApi
----
+# EventsApi
+
 ## PureCloudPlatform.Client.V2.Api.EventsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**PostEventsConversations**](EventsApi.html#posteventsconversations) | **Post** /api/v2/events/conversations | Publish Conversation Batch Events |
-| [**PostEventsUsersPresence**](EventsApi.html#posteventsuserspresence) | **Post** /api/v2/events/users/presence | Publish User Presence Status Batch Events |
-| [**PostEventsUsersRoutingstatus**](EventsApi.html#posteventsusersroutingstatus) | **Post** /api/v2/events/users/routingstatus | Publish Agent Routing Status Batch Events |
-{: class="table table-striped"}
+| [**PostEventsConversations**](#PostEventsConversations) | **Post** /api/v2/events/conversations | Publish Conversation Batch Events |
+| [**PostEventsUsersPresence**](#PostEventsUsersPresence) | **Post** /api/v2/events/users/presence | Publish User Presence Status Batch Events |
+| [**PostEventsUsersRoutingstatus**](#PostEventsUsersRoutingstatus) | **Post** /api/v2/events/users/routingstatus | Publish Agent Routing Status Batch Events |
 
-<a name="posteventsconversations"></a>
 
-## [**BatchEventResponse**](BatchEventResponse.html) PostEventsConversations (BatchConversationEventRequest body)
 
+## PostEventsConversations
+
+> [**BatchEventResponse**](BatchEventResponse) PostEventsConversations (BatchConversationEventRequest body)
 
 
 Publish Conversation Batch Events
@@ -68,17 +67,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**BatchConversationEventRequest**](BatchConversationEventRequest.html)| batchRequest |  |
-{: class="table table-striped"}
+| **body** | [**BatchConversationEventRequest**](BatchConversationEventRequest)| batchRequest |  |
 
 ### Return type
 
-[**BatchEventResponse**](BatchEventResponse.html)
+[**BatchEventResponse**](BatchEventResponse)
 
-<a name="posteventsuserspresence"></a>
 
-## [**BatchEventResponse**](BatchEventResponse.html) PostEventsUsersPresence (BatchUserPresenceEventRequest body)
+## PostEventsUsersPresence
 
+> [**BatchEventResponse**](BatchEventResponse) PostEventsUsersPresence (BatchUserPresenceEventRequest body)
 
 
 Publish User Presence Status Batch Events
@@ -131,17 +129,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**BatchUserPresenceEventRequest**](BatchUserPresenceEventRequest.html)| batchRequest |  |
-{: class="table table-striped"}
+| **body** | [**BatchUserPresenceEventRequest**](BatchUserPresenceEventRequest)| batchRequest |  |
 
 ### Return type
 
-[**BatchEventResponse**](BatchEventResponse.html)
+[**BatchEventResponse**](BatchEventResponse)
 
-<a name="posteventsusersroutingstatus"></a>
 
-## [**BatchEventResponse**](BatchEventResponse.html) PostEventsUsersRoutingstatus (BatchUserRoutingStatusEventRequest body)
+## PostEventsUsersRoutingstatus
 
+> [**BatchEventResponse**](BatchEventResponse) PostEventsUsersRoutingstatus (BatchUserRoutingStatusEventRequest body)
 
 
 Publish Agent Routing Status Batch Events
@@ -194,10 +191,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**BatchUserRoutingStatusEventRequest**](BatchUserRoutingStatusEventRequest.html)| batchRequest |  |
-{: class="table table-striped"}
+| **body** | [**BatchUserRoutingStatusEventRequest**](BatchUserRoutingStatusEventRequest)| batchRequest |  |
 
 ### Return type
 
-[**BatchEventResponse**](BatchEventResponse.html)
+[**BatchEventResponse**](BatchEventResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

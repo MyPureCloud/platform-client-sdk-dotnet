@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
----
+# WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
 | **OperationId** | **string** |  | [optional] |
 | **BusinessUnitId** | **string** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

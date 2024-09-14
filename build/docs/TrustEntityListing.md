@@ -1,13 +1,12 @@
----
-title: TrustEntityListing
----
+# TrustEntityListing
+
 ## ININ.PureCloudApi.Model.TrustEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Trustee&gt;**](Trustee.html) |  | [optional] |
+| **Entities** | [**List&lt;Trustee&gt;**](Trustee) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: TrustEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

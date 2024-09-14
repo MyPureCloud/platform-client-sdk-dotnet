@@ -1,6 +1,5 @@
----
-title: PolicyErrorMessage
----
+# PolicyErrorMessage
+
 ## ININ.PureCloudApi.Model.PolicyErrorMessage
 
 ## Properties
@@ -12,8 +11,9 @@ title: PolicyErrorMessage
 | **UserParamsMessage** | **string** |  | [optional] |
 | **ErrorCode** | **string** |  | [optional] |
 | **CorrelationId** | **string** |  | [optional] |
-| **UserParams** | [**List&lt;UserParam&gt;**](UserParam.html) |  | [optional] |
+| **UserParams** | [**List&lt;UserParam&gt;**](UserParam) |  | [optional] |
 | **InsertDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

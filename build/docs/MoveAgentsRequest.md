@@ -1,6 +1,5 @@
----
-title: MoveAgentsRequest
----
+# MoveAgentsRequest
+
 ## ININ.PureCloudApi.Model.MoveAgentsRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: MoveAgentsRequest
 |------------ | ------------- | ------------- | -------------|
 | **UserIds** | **List&lt;string&gt;** | The list of user ids to move | |
 | **DestinationManagementUnitId** | **string** | The id of the management unit for which the move will be performed. To remove users from their management unit this should be set to null. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

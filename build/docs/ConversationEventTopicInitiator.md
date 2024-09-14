@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicInitiator
----
+# ConversationEventTopicInitiator
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicInitiator
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationEventTopicInitiator
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UserId** | **string** | The id of the user who initiated the command if it was initiated by a user. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

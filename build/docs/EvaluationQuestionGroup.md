@@ -1,6 +1,5 @@
----
-title: EvaluationQuestionGroup
----
+# EvaluationQuestionGroup
+
 ## ININ.PureCloudApi.Model.EvaluationQuestionGroup
 
 ## Properties
@@ -15,8 +14,9 @@ title: EvaluationQuestionGroup
 | **NaEnabled** | **bool?** |  | [optional] |
 | **Weight** | **float?** |  | [optional] |
 | **ManualWeight** | **bool?** |  | [optional] |
-| **Questions** | [**List&lt;EvaluationQuestion&gt;**](EvaluationQuestion.html) |  | [optional] |
-| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
-{: class="table table-striped"}
+| **Questions** | [**List&lt;EvaluationQuestion&gt;**](EvaluationQuestion) |  | [optional] |
+| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: MessagingSettingDefaultRequest
----
+# MessagingSettingDefaultRequest
+
 ## ININ.PureCloudApi.Model.MessagingSettingDefaultRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: MessagingSettingDefaultRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **SettingId** | **string** | Messaging Setting ID to be used as the default for this Organization. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

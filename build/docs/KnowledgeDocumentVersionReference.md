@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentVersionReference
----
+# KnowledgeDocumentVersionReference
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentVersionReference
 
 ## Properties
@@ -8,9 +7,10 @@ title: KnowledgeDocumentVersionReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the document. | [optional] |
-| **KnowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference.html) | The knowledge base that the document belongs to. | |
+| **KnowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference) | The knowledge base that the document belongs to. | |
 | **VersionId** | **string** | The globally unique identifier for the version of the document. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

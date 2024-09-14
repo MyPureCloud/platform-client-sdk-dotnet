@@ -1,6 +1,5 @@
----
-title: QueueConversationMessageEventTopicMessageMetadata
----
+# QueueConversationMessageEventTopicMessageMetadata
+
 ## ININ.PureCloudApi.Model.QueueConversationMessageEventTopicMessageMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: QueueConversationMessageEventTopicMessageMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Message type. | [optional] |
-| **Events** | [**List&lt;QueueConversationMessageEventTopicMessageMetadataEvent&gt;**](QueueConversationMessageEventTopicMessageMetadataEvent.html) | List of message events, if any | [optional] |
-| **Content** | [**List&lt;QueueConversationMessageEventTopicMessageMetadataContent&gt;**](QueueConversationMessageEventTopicMessageMetadataContent.html) | List of message content, if any | [optional] |
-{: class="table table-striped"}
+| **Events** | [**List&lt;QueueConversationMessageEventTopicMessageMetadataEvent&gt;**](QueueConversationMessageEventTopicMessageMetadataEvent) | List of message events, if any | [optional] |
+| **Content** | [**List&lt;QueueConversationMessageEventTopicMessageMetadataContent&gt;**](QueueConversationMessageEventTopicMessageMetadataContent) | List of message content, if any | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

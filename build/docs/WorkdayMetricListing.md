@@ -1,13 +1,13 @@
----
-title: WorkdayMetricListing
----
+# WorkdayMetricListing
+
 ## ININ.PureCloudApi.Model.WorkdayMetricListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorkdayMetric&gt;**](WorkdayMetric.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;WorkdayMetric&gt;**](WorkdayMetric) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

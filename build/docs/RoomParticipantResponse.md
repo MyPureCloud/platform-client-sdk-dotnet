@@ -1,6 +1,5 @@
----
-title: RoomParticipantResponse
----
+# RoomParticipantResponse
+
 ## ININ.PureCloudApi.Model.RoomParticipantResponse
 
 ## Properties
@@ -8,7 +7,8 @@ title: RoomParticipantResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Jid** | **string** | jid of the participant | [optional] |
-| **User** | [**AddressableEntityRef**](AddressableEntityRef.html) | User id of the participant | [optional] |
-{: class="table table-striped"}
+| **User** | [**AddressableEntityRef**](AddressableEntityRef) | User id of the participant | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

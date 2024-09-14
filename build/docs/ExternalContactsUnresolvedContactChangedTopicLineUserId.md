@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicLineUserId
----
+# ExternalContactsUnresolvedContactChangedTopicLineUserId
+
 ## ININ.PureCloudApi.Model.ExternalContactsUnresolvedContactChangedTopicLineUserId
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExternalContactsUnresolvedContactChangedTopicLineUserId
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UserId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

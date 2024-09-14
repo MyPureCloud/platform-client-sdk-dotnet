@@ -1,6 +1,5 @@
----
-title: ImportStatus
----
+# ImportStatus
+
 ## ININ.PureCloudApi.Model.ImportStatus
 
 ## Properties
@@ -14,6 +13,7 @@ title: ImportStatus
 | **FailureReason** | **string** | if the import has failed, the reason for the failure | [optional] |
 | **TargetContactListIds** | **List&lt;string&gt;** | The contact list Ids for target contact lists. | [optional] |
 | **ListNamePrefix** | **string** | The prefix for the contact list name | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

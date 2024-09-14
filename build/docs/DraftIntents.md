@@ -1,6 +1,5 @@
----
-title: DraftIntents
----
+# DraftIntents
+
 ## ININ.PureCloudApi.Model.DraftIntents
 
 ## Properties
@@ -11,6 +10,7 @@ title: DraftIntents
 | **Name** | **string** | Name/Label for an intent. | |
 | **Utterances** | **List&lt;string&gt;** | The utterances that are extracted for an Intent. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

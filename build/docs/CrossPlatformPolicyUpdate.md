@@ -1,6 +1,5 @@
----
-title: CrossPlatformPolicyUpdate
----
+# CrossPlatformPolicyUpdate
+
 ## ININ.PureCloudApi.Model.CrossPlatformPolicyUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: CrossPlatformPolicyUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

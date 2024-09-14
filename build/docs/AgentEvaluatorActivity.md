@@ -1,6 +1,5 @@
----
-title: AgentEvaluatorActivity
----
+# AgentEvaluatorActivity
+
 ## ININ.PureCloudApi.Model.AgentEvaluatorActivity
 
 ## Properties
@@ -9,12 +8,13 @@ title: AgentEvaluatorActivity
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Agent** | [**User**](User.html) |  | [optional] |
-| **Evaluator** | [**User**](User.html) |  | [optional] |
+| **Agent** | [**User**](User) |  | [optional] |
+| **Evaluator** | [**User**](User) |  | [optional] |
 | **NumEvaluations** | **int?** |  | [optional] |
 | **AverageEvaluationScore** | **int?** |  | [optional] |
 | **NumEvaluationsWithoutViewPermission** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

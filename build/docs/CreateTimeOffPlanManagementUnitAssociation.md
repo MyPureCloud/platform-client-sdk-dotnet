@@ -1,6 +1,5 @@
----
-title: CreateTimeOffPlanManagementUnitAssociation
----
+# CreateTimeOffPlanManagementUnitAssociation
+
 ## ININ.PureCloudApi.Model.CreateTimeOffPlanManagementUnitAssociation
 
 ## Properties
@@ -9,6 +8,7 @@ title: CreateTimeOffPlanManagementUnitAssociation
 |------------ | ------------- | ------------- | -------------|
 | **ManagementUnitId** | **string** | The ID of the management unit to which this time-off plan belongs | |
 | **StaffingGroupIds** | **List&lt;string&gt;** | A IDs of staffing groups to which this time-off plan applies. If not defined, the plan is applied to the management unit | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

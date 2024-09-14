@@ -1,6 +1,5 @@
----
-title: AuditQueryEntity
----
+# AuditQueryEntity
+
 ## ININ.PureCloudApi.Model.AuditQueryEntity
 
 ## Properties
@@ -9,6 +8,7 @@ title: AuditQueryEntity
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Name of the Entity | [optional] |
 | **Actions** | **List&lt;string&gt;** | List of Actions | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

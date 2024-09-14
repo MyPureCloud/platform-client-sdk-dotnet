@@ -1,6 +1,5 @@
----
-title: MemberGroup
----
+# MemberGroup
+
 ## ININ.PureCloudApi.Model.MemberGroup
 
 ## Properties
@@ -9,10 +8,11 @@ title: MemberGroup
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **Type** | **string** | The group type | [optional] |
 | **MemberCount** | **int?** | The number of members in this group | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,16 +1,16 @@
----
-title: KnowledgeDocumentVersionListing
----
+# KnowledgeDocumentVersionListing
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentVersionListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;KnowledgeDocumentVersion&gt;**](KnowledgeDocumentVersion.html) |  | [optional] |
+| **Entities** | [**List&lt;KnowledgeDocumentVersion&gt;**](KnowledgeDocumentVersion) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemManualAssign
----
+# WorkitemManualAssign
+
 ## ININ.PureCloudApi.Model.WorkitemManualAssign
 
 ## Properties
@@ -8,6 +7,7 @@ title: WorkitemManualAssign
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for this user. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

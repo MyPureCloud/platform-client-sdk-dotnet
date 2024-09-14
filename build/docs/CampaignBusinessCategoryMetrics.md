@@ -1,6 +1,5 @@
----
-title: CampaignBusinessCategoryMetrics
----
+# CampaignBusinessCategoryMetrics
+
 ## ININ.PureCloudApi.Model.CampaignBusinessCategoryMetrics
 
 ## Properties
@@ -10,6 +9,7 @@ title: CampaignBusinessCategoryMetrics
 | **SuccessCount** | **int?** | Number of calls categorized as business success | [optional] |
 | **NeutralCount** | **int?** | Number of calls categorized as business neutral | [optional] |
 | **FailureCount** | **int?** | Number of calls categorized as business failure | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

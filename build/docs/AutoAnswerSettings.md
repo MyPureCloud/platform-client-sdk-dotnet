@@ -1,13 +1,13 @@
----
-title: AutoAnswerSettings
----
+# AutoAnswerSettings
+
 ## ININ.PureCloudApi.Model.AutoAnswerSettings
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Settings** | [**Dictionary&lt;string, AutoAnswerSetting&gt;**](AutoAnswerSetting.html) | Map of conversation media type enabled status. | |
-{: class="table table-striped"}
+| **Settings** | [**Dictionary&lt;string, AutoAnswerSetting&gt;**](AutoAnswerSetting) | Map of conversation media type enabled status. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

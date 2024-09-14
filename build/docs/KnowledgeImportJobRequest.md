@@ -1,6 +1,5 @@
----
-title: KnowledgeImportJobRequest
----
+# KnowledgeImportJobRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeImportJobRequest
 
 ## Properties
@@ -9,8 +8,9 @@ title: KnowledgeImportJobRequest
 |------------ | ------------- | ------------- | -------------|
 | **UploadKey** | **string** | Upload key | |
 | **FileType** | **string** | File type of the document | |
-| **Settings** | [**KnowledgeImportJobSettings**](KnowledgeImportJobSettings.html) | Additional optional settings | [optional] |
+| **Settings** | [**KnowledgeImportJobSettings**](KnowledgeImportJobSettings) | Additional optional settings | [optional] |
 | **SkipConfirmationStep** | **bool?** | If enabled pre-validation step will be skipped. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

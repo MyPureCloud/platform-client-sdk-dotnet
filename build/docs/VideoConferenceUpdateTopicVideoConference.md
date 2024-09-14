@@ -1,6 +1,5 @@
----
-title: VideoConferenceUpdateTopicVideoConference
----
+# VideoConferenceUpdateTopicVideoConference
+
 ## ININ.PureCloudApi.Model.VideoConferenceUpdateTopicVideoConference
 
 ## Properties
@@ -9,7 +8,8 @@ title: VideoConferenceUpdateTopicVideoConference
 |------------ | ------------- | ------------- | -------------|
 | **ConversationId** | **string** |  | [optional] |
 | **ConferenceId** | **string** |  | [optional] |
-| **ParticipantInfo** | [**VideoConferenceUpdateTopicParticipantInfo**](VideoConferenceUpdateTopicParticipantInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **ParticipantInfo** | [**VideoConferenceUpdateTopicParticipantInfo**](VideoConferenceUpdateTopicParticipantInfo) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

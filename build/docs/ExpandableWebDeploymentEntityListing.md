@@ -1,6 +1,5 @@
----
-title: ExpandableWebDeploymentEntityListing
----
+# ExpandableWebDeploymentEntityListing
+
 ## ININ.PureCloudApi.Model.ExpandableWebDeploymentEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: ExpandableWebDeploymentEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;ExpandableWebDeployment&gt;**](ExpandableWebDeployment.html) |  | [optional] |
+| **Entities** | [**List&lt;ExpandableWebDeployment&gt;**](ExpandableWebDeployment) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

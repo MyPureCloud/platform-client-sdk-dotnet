@@ -1,6 +1,5 @@
----
-title: DomainRole
----
+# DomainRole
+
 ## ININ.PureCloudApi.Model.DomainRole
 
 ## Properties
@@ -9,6 +8,7 @@ title: DomainRole
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the role | [optional] |
 | **Name** | **string** | The name of the role | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

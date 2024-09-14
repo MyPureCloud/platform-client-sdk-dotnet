@@ -1,6 +1,5 @@
----
-title: SchedulerMessageArgument
----
+# SchedulerMessageArgument
+
 ## ININ.PureCloudApi.Model.SchedulerMessageArgument
 
 ## Properties
@@ -9,6 +8,7 @@ title: SchedulerMessageArgument
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type of this message parameter | [optional] |
 | **Value** | **string** | The value of this message parameter | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

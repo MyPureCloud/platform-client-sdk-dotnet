@@ -1,6 +1,5 @@
----
-title: CreateWebChatRequest
----
+# CreateWebChatRequest
+
 ## ININ.PureCloudApi.Model.CreateWebChatRequest
 
 ## Properties
@@ -14,6 +13,7 @@ title: CreateWebChatRequest
 | **Priority** | **long?** | The priority to assign to the conversation for routing. | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | The list of attributes to associate with the customer participant. | [optional] |
 | **CustomerName** | **string** | The name of the customer participating in the web chat. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,17 +1,17 @@
----
-title: UnpublishedProgramsEntityListing
----
+# UnpublishedProgramsEntityListing
+
 ## ININ.PureCloudApi.Model.UnpublishedProgramsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Program&gt;**](Program.html) |  | [optional] |
+| **Entities** | [**List&lt;Program&gt;**](Program) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

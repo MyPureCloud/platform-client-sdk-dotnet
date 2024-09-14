@@ -1,6 +1,5 @@
----
-title: WorkdayPeriod
----
+# WorkdayPeriod
+
 ## ININ.PureCloudApi.Model.WorkdayPeriod
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkdayPeriod
 |------------ | ------------- | ------------- | -------------|
 | **DateStartWorkday** | **String** | Start workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **DateEndWorkday** | **String** | End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

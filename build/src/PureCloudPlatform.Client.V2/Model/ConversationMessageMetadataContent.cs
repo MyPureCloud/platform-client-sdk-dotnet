@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Reactions for "Reactions"
+            /// </summary>
+            [EnumMember(Value = "Reactions")]
+            Reactions,
+            
+            /// <summary>
             /// Enum Attachment for "Attachment"
             /// </summary>
             [EnumMember(Value = "Attachment")]

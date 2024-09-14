@@ -1,6 +1,5 @@
----
-title: BulkErrorRelationship
----
+# BulkErrorRelationship
+
 ## ININ.PureCloudApi.Model.BulkErrorRelationship
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorRelationship
 | **Message** | **string** |  | [optional] |
 | **Status** | **int?** |  | [optional] |
 | **Retryable** | **bool?** |  | [optional] |
-| **Entity** | [**Relationship**](Relationship.html) |  | [optional] |
-| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**Relationship**](Relationship) |  | [optional] |
+| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

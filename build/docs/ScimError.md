@@ -1,6 +1,5 @@
----
-title: ScimError
----
+# ScimError
+
 ## ININ.PureCloudApi.Model.ScimError
 
 ## Properties
@@ -11,6 +10,7 @@ title: ScimError
 | **Status** | **string** | The HTTP status code returned for the SCIM error. | [optional] |
 | **ScimType** | **string** | The type of SCIM error when httpStatus is a \&quot;400\&quot; error. | [optional] |
 | **Detail** | **string** | The detailed description of the SCIM error. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

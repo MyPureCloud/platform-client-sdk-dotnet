@@ -1,6 +1,5 @@
----
-title: ResponseAssetSearchResults
----
+# ResponseAssetSearchResults
+
 ## ININ.PureCloudApi.Model.ResponseAssetSearchResults
 
 ## Properties
@@ -11,7 +10,8 @@ title: ResponseAssetSearchResults
 | **PageCount** | **int?** | The total number of pages | [optional] |
 | **PageSize** | **int?** | The current page size | [optional] |
 | **PageNumber** | **int?** | The current page number | [optional] |
-| **Results** | [**List&lt;ResponseAsset&gt;**](ResponseAsset.html) | Search results | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;ResponseAsset&gt;**](ResponseAsset) | Search results | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

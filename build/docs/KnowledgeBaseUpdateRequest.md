@@ -1,6 +1,5 @@
----
-title: KnowledgeBaseUpdateRequest
----
+# KnowledgeBaseUpdateRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeBaseUpdateRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeBaseUpdateRequest
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Knowledge base name | [optional] |
 | **Description** | **string** | Knowledge base description | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: LearningModulesDomainEntityListing
----
+# LearningModulesDomainEntityListing
+
 ## ININ.PureCloudApi.Model.LearningModulesDomainEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;LearningModule&gt;**](LearningModule.html) |  | [optional] |
+| **Entities** | [**List&lt;LearningModule&gt;**](LearningModule) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: LearningModulesDomainEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

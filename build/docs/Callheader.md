@@ -1,6 +1,5 @@
----
-title: Callheader
----
+# Callheader
+
 ## ININ.PureCloudApi.Model.Callheader
 
 ## Properties
@@ -11,6 +10,7 @@ title: Callheader
 | **Name** | **string** |  | [optional] |
 | **Headers** | **Dictionary&lt;string, List&lt;string&gt;&gt;** | parsed SIP headers | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

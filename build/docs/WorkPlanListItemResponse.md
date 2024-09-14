@@ -1,6 +1,5 @@
----
-title: WorkPlanListItemResponse
----
+# WorkPlanListItemResponse
+
 ## ININ.PureCloudApi.Model.WorkPlanListItemResponse
 
 ## Properties
@@ -32,14 +31,15 @@ title: WorkPlanListItemResponse
 | **MaximumDaysOffPerPlanningPeriod** | **int?** | Maximum days off in the planning period | [optional] |
 | **MinimumPaidMinutesPerPlanningPeriod** | **int?** | Minimum paid minutes in the planning period | [optional] |
 | **MaximumPaidMinutesPerPlanningPeriod** | **int?** | Maximum paid minutes in the planning period | [optional] |
-| **OptionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek.html) | Optional days to schedule for this work plan. Populate with expand&#x3D;details | [optional] |
+| **OptionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Optional days to schedule for this work plan. Populate with expand&#x3D;details | [optional] |
 | **ShiftStartVarianceType** | **string** | This constraint ensures that an agent starts each workday within a user-defined time threshold | [optional] |
-| **ShiftStartVariances** | [**ListWrapperShiftStartVariance**](ListWrapperShiftStartVariance.html) | Variance in minutes among start times of shifts in this work plan. Populate with expand&#x3D;details | [optional] |
-| **Shifts** | [**List&lt;WorkPlanShift&gt;**](WorkPlanShift.html) | Shifts in this work plan. Populate with expand&#x3D;details (defaults to empty list) | [optional] |
-| **Agents** | [**List&lt;DeletableUserReference&gt;**](DeletableUserReference.html) | Agents in this work plan. Populate with expand&#x3D;details (defaults to empty list) | [optional] |
+| **ShiftStartVariances** | [**ListWrapperShiftStartVariance**](ListWrapperShiftStartVariance) | Variance in minutes among start times of shifts in this work plan. Populate with expand&#x3D;details | [optional] |
+| **Shifts** | [**List&lt;WorkPlanShift&gt;**](WorkPlanShift) | Shifts in this work plan. Populate with expand&#x3D;details (defaults to empty list) | [optional] |
+| **Agents** | [**List&lt;DeletableUserReference&gt;**](DeletableUserReference) | Agents in this work plan. Populate with expand&#x3D;details (defaults to empty list) | [optional] |
 | **AgentCount** | **int?** | Number of agents in this work plan.  Populate with expand&#x3D;agentCount | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this work plan | |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this work plan | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ParticipantInfo
----
+# ParticipantInfo
+
 ## ININ.PureCloudApi.Model.ParticipantInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: ParticipantInfo
 |------------ | ------------- | ------------- | -------------|
 | **ActiveParticipantCount** | **int?** | The number of active participants in the video conference. | [optional] |
 | **Version** | **int?** | The version of the participant count. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: EstimateAvailablePartialDayTimeOffRequest
----
+# EstimateAvailablePartialDayTimeOffRequest
+
 ## ININ.PureCloudApi.Model.EstimateAvailablePartialDayTimeOffRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: EstimateAvailablePartialDayTimeOffRequest
 |------------ | ------------- | ------------- | -------------|
 | **Date** | **DateTime?** | Start date-time in ISO-8601 format for partial day request | |
 | **RequestedDurationMinutes** | **int?** | A requested length of time off request in minutes. If the value is null, then the system will use activity code length setting | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

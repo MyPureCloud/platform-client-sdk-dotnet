@@ -1,13 +1,13 @@
----
-title: SelectedAnswer
----
+# SelectedAnswer
+
 ## ININ.PureCloudApi.Model.SelectedAnswer
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Document** | [**AddressableEntityRef**](AddressableEntityRef.html) | The search result document chosen as the answer. | |
-{: class="table table-striped"}
+| **Document** | [**AddressableEntityRef**](AddressableEntityRef) | The search result document chosen as the answer. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

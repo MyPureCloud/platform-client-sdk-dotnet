@@ -1,6 +1,5 @@
----
-title: AvailabilityRange
----
+# AvailabilityRange
+
 ## ININ.PureCloudApi.Model.AvailabilityRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: AvailabilityRange
 |------------ | ------------- | ------------- | -------------|
 | **EarliestStartMinutesFromMidnight** | **int?** | The earliest time of day the activity can be scheduled to begin, in minutes from midnight in the configured time zone of the business unit | |
 | **LatestEndMinutesFromMidnight** | **int?** | The latest time of day the activity can be scheduled to end, in minutes from midnight in the configured time zone of the business unit | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

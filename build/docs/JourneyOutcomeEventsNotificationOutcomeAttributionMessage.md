@@ -1,16 +1,16 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeAttributionMessage
----
+# JourneyOutcomeEventsNotificationOutcomeAttributionMessage
+
 ## ININ.PureCloudApi.Model.JourneyOutcomeEventsNotificationOutcomeAttributionMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Outcome** | [**JourneyOutcomeEventsNotificationOutcome**](JourneyOutcomeEventsNotificationOutcome.html) |  | [optional] |
-| **OutcomeTouchpoints** | [**List&lt;JourneyOutcomeEventsNotificationOutcomeTouchpoint&gt;**](JourneyOutcomeEventsNotificationOutcomeTouchpoint.html) |  | [optional] |
-| **SegmentAssignments** | [**List&lt;JourneyOutcomeEventsNotificationSegment&gt;**](JourneyOutcomeEventsNotificationSegment.html) |  | [optional] |
-| **AssociatedValue** | [**JourneyOutcomeEventsNotificationAssociatedValue**](JourneyOutcomeEventsNotificationAssociatedValue.html) |  | [optional] |
-{: class="table table-striped"}
+| **Outcome** | [**JourneyOutcomeEventsNotificationOutcome**](JourneyOutcomeEventsNotificationOutcome) |  | [optional] |
+| **OutcomeTouchpoints** | [**List&lt;JourneyOutcomeEventsNotificationOutcomeTouchpoint&gt;**](JourneyOutcomeEventsNotificationOutcomeTouchpoint) |  | [optional] |
+| **SegmentAssignments** | [**List&lt;JourneyOutcomeEventsNotificationSegment&gt;**](JourneyOutcomeEventsNotificationSegment) |  | [optional] |
+| **AssociatedValue** | [**JourneyOutcomeEventsNotificationAssociatedValue**](JourneyOutcomeEventsNotificationAssociatedValue) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

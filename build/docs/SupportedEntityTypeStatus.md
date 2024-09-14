@@ -1,6 +1,5 @@
----
-title: SupportedEntityTypeStatus
----
+# SupportedEntityTypeStatus
+
 ## ININ.PureCloudApi.Model.SupportedEntityTypeStatus
 
 ## Properties
@@ -8,6 +7,7 @@ title: SupportedEntityTypeStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ListSlotType** | **string** | The configuration status of restricted lists | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

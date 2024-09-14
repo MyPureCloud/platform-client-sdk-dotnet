@@ -1,6 +1,5 @@
----
-title: TextBotUserInputEvent
----
+# TextBotUserInputEvent
+
 ## ININ.PureCloudApi.Model.TextBotUserInputEvent
 
 ## Properties
@@ -8,7 +7,8 @@ title: TextBotUserInputEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Mode** | **string** | The input mode. | |
-| **Alternatives** | [**List&lt;TextBotUserInputAlternative&gt;**](TextBotUserInputAlternative.html) | The input alternatives. | |
-{: class="table table-striped"}
+| **Alternatives** | [**List&lt;TextBotUserInputAlternative&gt;**](TextBotUserInputAlternative) | The input alternatives. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

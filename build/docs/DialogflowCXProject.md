@@ -1,6 +1,5 @@
----
-title: DialogflowCXProject
----
+# DialogflowCXProject
+
 ## ININ.PureCloudApi.Model.DialogflowCXProject
 
 ## Properties
@@ -9,6 +8,7 @@ title: DialogflowCXProject
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

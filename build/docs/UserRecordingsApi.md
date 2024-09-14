@@ -1,25 +1,24 @@
----
-title: UserRecordingsApi
----
+# UserRecordingsApi
+
 ## PureCloudPlatform.Client.V2.Api.UserRecordingsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteUserrecording**](UserRecordingsApi.html#deleteuserrecording) | **Delete** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
-| [**GetUserrecording**](UserRecordingsApi.html#getuserrecording) | **Get** /api/v2/userrecordings/{recordingId} | Get a user recording. |
-| [**GetUserrecordingMedia**](UserRecordingsApi.html#getuserrecordingmedia) | **Get** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
-| [**GetUserrecordingTranscoding**](UserRecordingsApi.html#getuserrecordingtranscoding) | **Get** /api/v2/userrecordings/{recordingId}/transcoding | Download a user recording. |
-| [**GetUserrecordings**](UserRecordingsApi.html#getuserrecordings) | **Get** /api/v2/userrecordings | Get a list of user recordings. |
-| [**GetUserrecordingsSummary**](UserRecordingsApi.html#getuserrecordingssummary) | **Get** /api/v2/userrecordings/summary | Get user recording summary |
-| [**PutUserrecording**](UserRecordingsApi.html#putuserrecording) | **Put** /api/v2/userrecordings/{recordingId} | Update a user recording. |
-{: class="table table-striped"}
+| [**DeleteUserrecording**](#DeleteUserrecording) | **Delete** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
+| [**GetUserrecording**](#GetUserrecording) | **Get** /api/v2/userrecordings/{recordingId} | Get a user recording. |
+| [**GetUserrecordingMedia**](#GetUserrecordingMedia) | **Get** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
+| [**GetUserrecordingTranscoding**](#GetUserrecordingTranscoding) | **Get** /api/v2/userrecordings/{recordingId}/transcoding | Download a user recording. |
+| [**GetUserrecordings**](#GetUserrecordings) | **Get** /api/v2/userrecordings | Get a list of user recordings. |
+| [**GetUserrecordingsSummary**](#GetUserrecordingsSummary) | **Get** /api/v2/userrecordings/summary | Get user recording summary |
+| [**PutUserrecording**](#PutUserrecording) | **Put** /api/v2/userrecordings/{recordingId} | Update a user recording. |
 
-<a name="deleteuserrecording"></a>
 
-## void DeleteUserrecording (string recordingId)
 
+## DeleteUserrecording
+
+> void DeleteUserrecording (string recordingId)
 
 
 Delete a user recording.
@@ -71,16 +70,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getuserrecording"></a>
 
-## [**UserRecording**](UserRecording.html) GetUserrecording (string recordingId, List<string> expand = null)
+## GetUserrecording
 
+> [**UserRecording**](UserRecording) GetUserrecording (string recordingId, List<string> expand = null)
 
 
 Get a user recording.
@@ -134,18 +132,20 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
 
 ### Return type
 
-[**UserRecording**](UserRecording.html)
+[**UserRecording**](UserRecording)
 
-<a name="getuserrecordingmedia"></a>
 
-## [**DownloadResponse**](DownloadResponse.html) GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
+## GetUserrecordingMedia
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**DownloadResponse**](DownloadResponse) GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Download a user recording.
 
@@ -203,16 +203,15 @@ namespace Example
 | **recordingId** | **string**| User Recording ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 | **async** | **bool?**| When set to true, api will return 202 response until the recording is ready for download | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
+[**DownloadResponse**](DownloadResponse)
 
-<a name="getuserrecordingtranscoding"></a>
 
-## [**DownloadResponse**](DownloadResponse.html) GetUserrecordingTranscoding (string recordingId, string formatId = null)
+## GetUserrecordingTranscoding
 
+> [**DownloadResponse**](DownloadResponse) GetUserrecordingTranscoding (string recordingId, string formatId = null)
 
 
 Download a user recording.
@@ -268,16 +267,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
+[**DownloadResponse**](DownloadResponse)
 
-<a name="getuserrecordings"></a>
 
-## [**UserRecordingEntityListing**](UserRecordingEntityListing.html) GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
+## GetUserrecordings
 
+> [**UserRecordingEntityListing**](UserRecordingEntityListing) GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
 
 Get a list of user recordings.
@@ -333,17 +331,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
 
 ### Return type
 
-[**UserRecordingEntityListing**](UserRecordingEntityListing.html)
+[**UserRecordingEntityListing**](UserRecordingEntityListing)
 
-<a name="getuserrecordingssummary"></a>
 
-## [**FaxSummary**](FaxSummary.html) GetUserrecordingsSummary ()
+## GetUserrecordingsSummary
 
+> [**FaxSummary**](FaxSummary) GetUserrecordingsSummary ()
 
 
 Get user recording summary
@@ -392,15 +389,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**FaxSummary**](FaxSummary.html)
+[**FaxSummary**](FaxSummary)
 
-<a name="putuserrecording"></a>
 
-## [**UserRecording**](UserRecording.html) PutUserrecording (string recordingId, UserRecording body, List<string> expand = null)
+## PutUserrecording
 
+> [**UserRecording**](UserRecording) PutUserrecording (string recordingId, UserRecording body, List<string> expand = null)
 
 
 Update a user recording.
@@ -455,11 +451,12 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-| **body** | [**UserRecording**](UserRecording.html)| UserRecording |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
-{: class="table table-striped"}
+| **body** | [**UserRecording**](UserRecording)| UserRecording |  |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
 
 ### Return type
 
-[**UserRecording**](UserRecording.html)
+[**UserRecording**](UserRecording)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

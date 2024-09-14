@@ -1,6 +1,5 @@
----
-title: EvaluationQuestionGroupScore
----
+# EvaluationQuestionGroupScore
+
 ## ININ.PureCloudApi.Model.EvaluationQuestionGroupScore
 
 ## Properties
@@ -22,7 +21,8 @@ title: EvaluationQuestionGroupScore
 | **MaxTotalCriticalScoreUnweighted** | **float?** | Maximum possible unweighted score of only the critical questions in the group | [optional] |
 | **TotalNonCriticalScoreUnweighted** | **float?** | Unweighted score of only the non critical questions in the group | [optional] |
 | **MaxTotalNonCriticalScoreUnweighted** | **float?** | Maximum possible unweighted score of only the non critical questions in the group | [optional] |
-| **QuestionScores** | [**List&lt;EvaluationQuestionScore&gt;**](EvaluationQuestionScore.html) |  | [optional] |
-{: class="table table-striped"}
+| **QuestionScores** | [**List&lt;EvaluationQuestionScore&gt;**](EvaluationQuestionScore) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

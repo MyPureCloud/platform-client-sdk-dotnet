@@ -1,6 +1,5 @@
----
-title: ContentPositionProperties
----
+# ContentPositionProperties
+
 ## ININ.PureCloudApi.Model.ContentPositionProperties
 
 ## Properties
@@ -11,6 +10,7 @@ title: ContentPositionProperties
 | **Bottom** | **string** | Bottom positioning offset. | [optional] |
 | **Left** | **string** | Left positioning offset. | [optional] |
 | **Right** | **string** | Right positioning offset. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

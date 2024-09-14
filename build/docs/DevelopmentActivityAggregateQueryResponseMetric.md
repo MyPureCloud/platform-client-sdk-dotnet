@@ -1,6 +1,5 @@
----
-title: DevelopmentActivityAggregateQueryResponseMetric
----
+# DevelopmentActivityAggregateQueryResponseMetric
+
 ## ININ.PureCloudApi.Model.DevelopmentActivityAggregateQueryResponseMetric
 
 ## Properties
@@ -8,7 +7,8 @@ title: DevelopmentActivityAggregateQueryResponseMetric
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Metric** | **string** | The metric this applies to | [optional] |
-| **Stats** | [**DevelopmentActivityAggregateQueryResponseStatistics**](DevelopmentActivityAggregateQueryResponseStatistics.html) | The aggregated values for this metric | [optional] |
-{: class="table table-striped"}
+| **Stats** | [**DevelopmentActivityAggregateQueryResponseStatistics**](DevelopmentActivityAggregateQueryResponseStatistics) | The aggregated values for this metric | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,13 @@
----
-title: ContextPattern
----
+# ContextPattern
+
 ## ININ.PureCloudApi.Model.ContextPattern
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Criteria** | [**List&lt;EntityTypeCriteria&gt;**](EntityTypeCriteria.html) | A list of one or more criteria to satisfy. | |
-{: class="table table-striped"}
+| **Criteria** | [**List&lt;EntityTypeCriteria&gt;**](EntityTypeCriteria) | A list of one or more criteria to satisfy. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

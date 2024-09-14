@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicMessageMetadata
----
+# QueueConversationVideoEventTopicMessageMetadata
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicMessageMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: QueueConversationVideoEventTopicMessageMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Message type. | [optional] |
-| **Events** | [**List&lt;QueueConversationVideoEventTopicMessageMetadataEvent&gt;**](QueueConversationVideoEventTopicMessageMetadataEvent.html) | List of message events, if any | [optional] |
-| **Content** | [**List&lt;QueueConversationVideoEventTopicMessageMetadataContent&gt;**](QueueConversationVideoEventTopicMessageMetadataContent.html) | List of message content, if any | [optional] |
-{: class="table table-striped"}
+| **Events** | [**List&lt;QueueConversationVideoEventTopicMessageMetadataEvent&gt;**](QueueConversationVideoEventTopicMessageMetadataEvent) | List of message events, if any | [optional] |
+| **Content** | [**List&lt;QueueConversationVideoEventTopicMessageMetadataContent&gt;**](QueueConversationVideoEventTopicMessageMetadataContent) | List of message content, if any | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

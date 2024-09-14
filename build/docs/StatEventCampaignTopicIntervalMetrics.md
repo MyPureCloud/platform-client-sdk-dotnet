@@ -1,6 +1,5 @@
----
-title: StatEventCampaignTopicIntervalMetrics
----
+# StatEventCampaignTopicIntervalMetrics
+
 ## ININ.PureCloudApi.Model.StatEventCampaignTopicIntervalMetrics
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventCampaignTopicIntervalMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Interval** | **string** |  | [optional] |
-| **Metrics** | [**List&lt;StatEventCampaignTopicMetricStats&gt;**](StatEventCampaignTopicMetricStats.html) |  | [optional] |
-{: class="table table-striped"}
+| **Metrics** | [**List&lt;StatEventCampaignTopicMetricStats&gt;**](StatEventCampaignTopicMetricStats) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,14 +1,14 @@
----
-title: SetTimeOffLimitValuesRequest
----
+# SetTimeOffLimitValuesRequest
+
 ## ININ.PureCloudApi.Model.SetTimeOffLimitValuesRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Values** | [**List&lt;TimeOffLimitRange&gt;**](TimeOffLimitRange.html) |  | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the time off limit | |
-{: class="table table-striped"}
+| **Values** | [**List&lt;TimeOffLimitRange&gt;**](TimeOffLimitRange) |  | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the time off limit | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicConversation
----
+# ConversationEventTopicConversation
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicConversation
 
 ## Properties
@@ -9,13 +8,14 @@ title: ConversationEventTopicConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **MaxParticipants** | **int?** |  | [optional] |
-| **Participants** | [**List&lt;ConversationEventTopicParticipant&gt;**](ConversationEventTopicParticipant.html) |  | [optional] |
-| **RecentTransfers** | [**List&lt;ConversationEventTopicRecentTransfer&gt;**](ConversationEventTopicRecentTransfer.html) |  | [optional] |
+| **Participants** | [**List&lt;ConversationEventTopicParticipant&gt;**](ConversationEventTopicParticipant) |  | [optional] |
+| **RecentTransfers** | [**List&lt;ConversationEventTopicRecentTransfer&gt;**](ConversationEventTopicRecentTransfer) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

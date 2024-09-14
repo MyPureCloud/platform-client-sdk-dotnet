@@ -1,6 +1,5 @@
----
-title: EvaluationAggregateQueryClause
----
+# EvaluationAggregateQueryClause
+
 ## ININ.PureCloudApi.Model.EvaluationAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: EvaluationAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;EvaluationAggregateQueryPredicate&gt;**](EvaluationAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;EvaluationAggregateQueryPredicate&gt;**](EvaluationAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: LauncherButtonSettings
----
+# LauncherButtonSettings
+
 ## ININ.PureCloudApi.Model.LauncherButtonSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: LauncherButtonSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Visibility** | **string** | The visibility settings for the button | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ReportingTurnAction
----
+# ReportingTurnAction
+
 ## ININ.PureCloudApi.Model.ReportingTurnAction
 
 ## Properties
@@ -11,6 +10,7 @@ title: ReportingTurnAction
 | **ActionName** | **string** | The name of the action in the bot flow. | [optional] |
 | **ActionNumber** | **int?** | The number of the action in the bot flow. | [optional] |
 | **ActionType** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

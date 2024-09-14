@@ -1,6 +1,5 @@
----
-title: PresenceSettings
----
+# PresenceSettings
+
 ## ININ.PureCloudApi.Model.PresenceSettings
 
 ## Properties
@@ -9,8 +8,9 @@ title: PresenceSettings
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **RestorePresenceSettings** | [**RestorePresenceSettings**](RestorePresenceSettings.html) | The settings for the restore presence feature | [optional] |
+| **RestorePresenceSettings** | [**RestorePresenceSettings**](RestorePresenceSettings) | The settings for the restore presence feature | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ContentManagementWorkspaceDocumentsTopicUserData
----
+# ContentManagementWorkspaceDocumentsTopicUserData
+
 ## ININ.PureCloudApi.Model.ContentManagementWorkspaceDocumentsTopicUserData
 
 ## Properties
@@ -9,6 +8,7 @@ title: ContentManagementWorkspaceDocumentsTopicUserData
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

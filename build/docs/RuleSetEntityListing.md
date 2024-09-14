@@ -1,13 +1,12 @@
----
-title: RuleSetEntityListing
----
+# RuleSetEntityListing
+
 ## ININ.PureCloudApi.Model.RuleSetEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;RuleSet&gt;**](RuleSet.html) |  | [optional] |
+| **Entities** | [**List&lt;RuleSet&gt;**](RuleSet) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: RuleSetEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ModifiableRuleProperties
----
+# ModifiableRuleProperties
+
 ## ININ.PureCloudApi.Model.ModifiableRuleProperties
 
 ## Properties
@@ -11,11 +10,12 @@ title: ModifiableRuleProperties
 | **Name** | **string** | Name of the rule | |
 | **Description** | **string** | The description of the rule. | [optional] |
 | **Enabled** | **bool?** | Indicates if the rule is enabled. | [optional] |
-| **Notifications** | [**List&lt;AlertNotification&gt;**](AlertNotification.html) | The alert notification types to trigger when alarm state changes as well as the users they will be sent to. | [optional] |
+| **Notifications** | [**List&lt;AlertNotification&gt;**](AlertNotification) | The alert notification types to trigger when alarm state changes as well as the users they will be sent to. | [optional] |
 | **SendExitingAlarmNotifications** | **bool?** | Indicates if the alert will send a notification when it is closed. | [optional] |
 | **WaitBetweenNotificationMs** | **long?** | The amount of time in milliseconds to wait between notification. | [optional] |
-| **Conditions** | [**CommonRuleConditions**](CommonRuleConditions.html) | The set of metric conditions that would trigger an alert. | [optional] |
+| **Conditions** | [**CommonRuleConditions**](CommonRuleConditions) | The set of metric conditions that would trigger an alert. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

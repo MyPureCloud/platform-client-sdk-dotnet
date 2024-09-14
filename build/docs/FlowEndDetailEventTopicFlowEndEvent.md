@@ -1,6 +1,5 @@
----
-title: FlowEndDetailEventTopicFlowEndEvent
----
+# FlowEndDetailEventTopicFlowEndEvent
+
 ## ININ.PureCloudApi.Model.FlowEndDetailEventTopicFlowEndEvent
 
 ## Properties
@@ -30,6 +29,7 @@ title: FlowEndDetailEventTopicFlowEndEvent
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **ExitReason** | **string** |  | [optional] |
 | **TransferType** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

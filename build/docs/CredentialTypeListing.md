@@ -1,13 +1,12 @@
----
-title: CredentialTypeListing
----
+# CredentialTypeListing
+
 ## ININ.PureCloudApi.Model.CredentialTypeListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;CredentialType&gt;**](CredentialType.html) |  | [optional] |
+| **Entities** | [**List&lt;CredentialType&gt;**](CredentialType) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: CredentialTypeListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

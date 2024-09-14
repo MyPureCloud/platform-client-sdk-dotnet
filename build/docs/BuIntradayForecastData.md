@@ -1,6 +1,5 @@
----
-title: BuIntradayForecastData
----
+# BuIntradayForecastData
+
 ## ININ.PureCloudApi.Model.BuIntradayForecastData
 
 ## Properties
@@ -9,6 +8,7 @@ title: BuIntradayForecastData
 |------------ | ------------- | ------------- | -------------|
 | **Offered** | **double?** | The number of interactions routed into the queues in the selected planning groups for the given media type for an agent to answer | [optional] |
 | **AverageHandleTimeSeconds** | **double?** | The average handle time in seconds an agent spent handling interactions | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

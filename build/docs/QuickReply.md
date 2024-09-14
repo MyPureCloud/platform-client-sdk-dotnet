@@ -1,6 +1,5 @@
----
-title: QuickReply
----
+# QuickReply
+
 ## ININ.PureCloudApi.Model.QuickReply
 
 ## Properties
@@ -12,6 +11,7 @@ title: QuickReply
 | **Url** | **string** | The location of the image file associated with quick reply | [optional] |
 | **Action** | **string** | Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text. | [optional] |
 | **IsSelected** | **bool?** | Indicates if the quick reply option is selected by end customer | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

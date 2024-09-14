@@ -1,6 +1,5 @@
----
-title: Screenshare
----
+# Screenshare
+
 ## ININ.PureCloudApi.Model.Screenshare
 
 ## Properties
@@ -19,10 +18,11 @@ title: Screenshare
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Provider** | **string** | The source provider for the screen share. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
-| **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
-| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
+| **Segments** | [**List&lt;Segment&gt;**](Segment) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

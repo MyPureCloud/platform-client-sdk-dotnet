@@ -1,6 +1,5 @@
----
-title: DomainPermissionCollection
----
+# DomainPermissionCollection
+
 ## ININ.PureCloudApi.Model.DomainPermissionCollection
 
 ## Properties
@@ -12,6 +11,7 @@ title: DomainPermissionCollection
 | **Domain** | **string** |  | [optional] |
 | **PermissionMap** | **Dictionary&lt;string, List&lt;DomainPermission&gt;&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,13 @@
----
-title: ExternalMetricDataWriteRequest
----
+# ExternalMetricDataWriteRequest
+
 ## ININ.PureCloudApi.Model.ExternalMetricDataWriteRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Items** | [**List&lt;ExternalMetricDataItem&gt;**](ExternalMetricDataItem.html) | A list of external metric data items. A maximum of 100 items are allowed. | |
-{: class="table table-striped"}
+| **Items** | [**List&lt;ExternalMetricDataItem&gt;**](ExternalMetricDataItem) | A list of external metric data items. A maximum of 100 items are allowed. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

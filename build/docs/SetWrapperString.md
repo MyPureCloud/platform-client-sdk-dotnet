@@ -1,6 +1,5 @@
----
-title: SetWrapperString
----
+# SetWrapperString
+
 ## ININ.PureCloudApi.Model.SetWrapperString
 
 ## Properties
@@ -8,6 +7,7 @@ title: SetWrapperString
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

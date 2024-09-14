@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuActivitySettingsRequest" /> class.
         /// </summary>
-        /// <param name="DefaultActivityCodeId">Default Activity Code ID settings.</param>
+        /// <param name="DefaultActivityCodeId">The ID of the activity code. This is the activity code that will be used by default for agent development activities added to the schedule.</param>
         public BuActivitySettingsRequest(string DefaultActivityCodeId = null)
         {
             this.DefaultActivityCodeId = DefaultActivityCodeId;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Default Activity Code ID settings
+        /// The ID of the activity code. This is the activity code that will be used by default for agent development activities added to the schedule
         /// </summary>
-        /// <value>Default Activity Code ID settings</value>
+        /// <value>The ID of the activity code. This is the activity code that will be used by default for agent development activities added to the schedule</value>
         [DataMember(Name="defaultActivityCodeId", EmitDefaultValue=false)]
         public string DefaultActivityCodeId { get; set; }
 

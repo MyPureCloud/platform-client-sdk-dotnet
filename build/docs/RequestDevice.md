@@ -1,6 +1,5 @@
----
-title: RequestDevice
----
+# RequestDevice
+
 ## ININ.PureCloudApi.Model.RequestDevice
 
 ## Properties
@@ -17,6 +16,7 @@ title: RequestDevice
 | **OsFamily** | **string** | Operating system family. | |
 | **OsVersion** | **string** | Operating system version. | |
 | **Manufacturer** | **string** | Manufacturer of the device. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

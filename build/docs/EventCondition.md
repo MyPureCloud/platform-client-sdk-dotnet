@@ -1,6 +1,5 @@
----
-title: EventCondition
----
+# EventCondition
+
 ## ININ.PureCloudApi.Model.EventCondition
 
 ## Properties
@@ -13,6 +12,7 @@ title: EventCondition
 | **StreamType** | **string** | The stream type for which this condition can be satisfied. | |
 | **SessionType** | **string** | The session type for which this condition can be satisfied. | |
 | **EventName** | **string** | The name of the event for which this condition can be satisfied. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

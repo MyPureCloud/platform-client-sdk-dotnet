@@ -1,6 +1,5 @@
----
-title: LearningModuleCoverArtRequest
----
+# LearningModuleCoverArtRequest
+
 ## ININ.PureCloudApi.Model.LearningModuleCoverArtRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: LearningModuleCoverArtRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The key identifier for the cover art | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

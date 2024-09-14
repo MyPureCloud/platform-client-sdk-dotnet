@@ -1,6 +1,5 @@
----
-title: AgentActivity
----
+# AgentActivity
+
 ## ININ.PureCloudApi.Model.AgentActivity
 
 ## Properties
@@ -9,7 +8,7 @@ title: AgentActivity
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Agent** | [**User**](User.html) |  | [optional] |
+| **Agent** | [**User**](User) |  | [optional] |
 | **NumEvaluations** | **int?** |  | [optional] |
 | **AverageEvaluationScore** | **int?** |  | [optional] |
 | **NumCriticalEvaluations** | **int?** |  | [optional] |
@@ -18,9 +17,10 @@ title: AgentActivity
 | **LowestEvaluationScore** | **float?** |  | [optional] |
 | **HighestCriticalScore** | **float?** |  | [optional] |
 | **LowestCriticalScore** | **float?** |  | [optional] |
-| **AgentEvaluatorActivityList** | [**List&lt;AgentEvaluatorActivity&gt;**](AgentEvaluatorActivity.html) |  | [optional] |
+| **AgentEvaluatorActivityList** | [**List&lt;AgentEvaluatorActivity&gt;**](AgentEvaluatorActivity) |  | [optional] |
 | **NumEvaluationsWithoutViewPermission** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

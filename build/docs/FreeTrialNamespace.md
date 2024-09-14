@@ -1,6 +1,5 @@
----
-title: FreeTrialNamespace
----
+# FreeTrialNamespace
+
 ## ININ.PureCloudApi.Model.FreeTrialNamespace
 
 ## Properties
@@ -8,7 +7,8 @@ title: FreeTrialNamespace
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **FriendlyName** | **string** |  | [optional] |
-| **Limits** | [**List&lt;FreeTrialLimit&gt;**](FreeTrialLimit.html) |  | [optional] |
-{: class="table table-striped"}
+| **Limits** | [**List&lt;FreeTrialLimit&gt;**](FreeTrialLimit) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

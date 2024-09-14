@@ -1,6 +1,5 @@
----
-title: CreateActivityPlanRequest
----
+# CreateActivityPlanRequest
+
 ## ININ.PureCloudApi.Model.CreateActivityPlanRequest
 
 ## Properties
@@ -13,18 +12,19 @@ title: CreateActivityPlanRequest
 | **ActivityCodeId** | **string** | The activity code associated with the activity plan | |
 | **Type** | **string** | The type of the activity plan | |
 | **LengthMinutes** | **int?** | The length in minutes of the activity plan | |
-| **InitialSchedulePeriod** | [**SchedulingPeriod**](SchedulingPeriod.html) | The initial scheduling period for the activity plan | |
-| **GroupSettings** | [**GroupSettings**](GroupSettings.html) | Group settings for the activity plan | [optional] |
-| **RecurrenceSettings** | [**RecurrenceSettings**](RecurrenceSettings.html) | Settings controlling recurrence for the activity plan. If not set the activity plan will only occur once | [optional] |
-| **AttendeesSearchRule** | [**UserSearchRule**](UserSearchRule.html) | Attendee search rule for this activity plan | [optional] |
+| **InitialSchedulePeriod** | [**SchedulingPeriod**](SchedulingPeriod) | The initial scheduling period for the activity plan | |
+| **GroupSettings** | [**GroupSettings**](GroupSettings) | Group settings for the activity plan | [optional] |
+| **RecurrenceSettings** | [**RecurrenceSettings**](RecurrenceSettings) | Settings controlling recurrence for the activity plan. If not set the activity plan will only occur once | [optional] |
+| **AttendeesSearchRule** | [**UserSearchRule**](UserSearchRule) | Attendee search rule for this activity plan | [optional] |
 | **Facilitated** | **bool?** | Whether the sessions created by this activity plan should be facilitated | [optional] |
-| **FacilitatorsSearchRule** | [**UserSearchRule**](UserSearchRule.html) | Facilitator search rule for this activity plan | [optional] |
+| **FacilitatorsSearchRule** | [**UserSearchRule**](UserSearchRule) | Facilitator search rule for this activity plan | [optional] |
 | **TransitionTimeMinutes** | **int?** | Transition time in minutes between facilitated sessions | |
-| **ServiceGoalImpactOverrides** | [**ActivityPlanServiceGoalImpactOverrides**](ActivityPlanServiceGoalImpactOverrides.html) | Allowable service goal impact override settings for this activity plan. If not set the business unit setting will be used | [optional] |
+| **ServiceGoalImpactOverrides** | [**ActivityPlanServiceGoalImpactOverrides**](ActivityPlanServiceGoalImpactOverrides) | Allowable service goal impact override settings for this activity plan. If not set the business unit setting will be used | [optional] |
 | **OptimizationObjective** | **string** | The optimization objective of this activity plan | |
 | **State** | **string** | The state of this activity plan | |
 | **CountsAsPaidTime** | **bool?** | Whether the activity should count as paid time | |
-| **FixedAvailability** | [**List&lt;FixedAvailability&gt;**](FixedAvailability.html) | Fixed availability configuration for the activity plan | [optional] |
-{: class="table table-striped"}
+| **FixedAvailability** | [**List&lt;FixedAvailability&gt;**](FixedAvailability) | Fixed availability configuration for the activity plan | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

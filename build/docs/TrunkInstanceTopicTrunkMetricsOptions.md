@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunkMetricsOptions
----
+# TrunkInstanceTopicTrunkMetricsOptions
+
 ## ININ.PureCloudApi.Model.TrunkInstanceTopicTrunkMetricsOptions
 
 ## Properties
@@ -10,7 +9,8 @@ title: TrunkInstanceTopicTrunkMetricsOptions
 | **ProxyAddress** | **string** |  | [optional] |
 | **OptionState** | **bool?** |  | [optional] |
 | **OptionStateTime** | **DateTime?** |  | [optional] |
-| **ErrorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **ErrorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

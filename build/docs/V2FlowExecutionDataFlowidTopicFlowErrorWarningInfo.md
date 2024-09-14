@@ -1,6 +1,5 @@
----
-title: V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo
----
+# V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo
+
 ## ININ.PureCloudApi.Model.V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo
 | **Reason** | **string** | The reason a executionItem encountered an error or warning. | [optional] |
 | **ExecutionId** | **string** | If applicable, the executionId for the executionItem that invoked the error or warning. | [optional] |
 | **ObjectId** | **string** | If applicable, the objectId for the executionItem that invoked the error or warning. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

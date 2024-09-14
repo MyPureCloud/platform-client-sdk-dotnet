@@ -1,15 +1,15 @@
----
-title: QueueMessagingAddresses
----
+# QueueMessagingAddresses
+
 ## ININ.PureCloudApi.Model.QueueMessagingAddresses
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **SmsAddress** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **OpenMessagingRecipient** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **WhatsAppRecipient** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-{: class="table table-striped"}
+| **SmsAddress** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **OpenMessagingRecipient** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **WhatsAppRecipient** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

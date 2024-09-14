@@ -1,15 +1,15 @@
----
-title: AnalyticsConversationQueryResponse
----
+# AnalyticsConversationQueryResponse
+
 ## ININ.PureCloudApi.Model.AnalyticsConversationQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Conversations** | [**List&lt;AnalyticsConversationWithoutAttributes&gt;**](AnalyticsConversationWithoutAttributes.html) |  | [optional] |
-| **Aggregations** | [**List&lt;AggregationResult&gt;**](AggregationResult.html) |  | [optional] |
+| **Conversations** | [**List&lt;AnalyticsConversationWithoutAttributes&gt;**](AnalyticsConversationWithoutAttributes) |  | [optional] |
+| **Aggregations** | [**List&lt;AggregationResult&gt;**](AggregationResult) |  | [optional] |
 | **TotalHits** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

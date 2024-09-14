@@ -1,6 +1,5 @@
----
-title: WebMessagingRecipient
----
+# WebMessagingRecipient
+
 ## ININ.PureCloudApi.Model.WebMessagingRecipient
 
 ## Properties
@@ -11,7 +10,8 @@ title: WebMessagingRecipient
 | **LastName** | **string** | Last name of the recipient. | [optional] |
 | **Nickname** | **string** | Nickname or display name of the recipient. | [optional] |
 | **Image** | **string** | URL of an image that represents the recipient. | [optional] |
-| **AdditionalIds** | [**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier.html) | List of recipient additional identifiers | [optional] |
-{: class="table table-striped"}
+| **AdditionalIds** | [**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

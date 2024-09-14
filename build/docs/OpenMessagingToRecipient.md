@@ -1,6 +1,5 @@
----
-title: OpenMessagingToRecipient
----
+# OpenMessagingToRecipient
+
 ## ININ.PureCloudApi.Model.OpenMessagingToRecipient
 
 ## Properties
@@ -14,6 +13,7 @@ title: OpenMessagingToRecipient
 | **LastName** | **string** | Last name of the recipient. | [optional] |
 | **Image** | **string** | URL of an image that represents the recipient. | [optional] |
 | **Email** | **string** | E-mail address of the recipient. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

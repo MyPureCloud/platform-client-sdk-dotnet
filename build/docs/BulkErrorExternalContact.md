@@ -1,6 +1,5 @@
----
-title: BulkErrorExternalContact
----
+# BulkErrorExternalContact
+
 ## ININ.PureCloudApi.Model.BulkErrorExternalContact
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorExternalContact
 | **Message** | **string** |  | [optional] |
 | **Status** | **int?** |  | [optional] |
 | **Retryable** | **bool?** |  | [optional] |
-| **Entity** | [**ExternalContact**](ExternalContact.html) |  | [optional] |
-| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**ExternalContact**](ExternalContact) |  | [optional] |
+| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

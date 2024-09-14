@@ -1,6 +1,5 @@
----
-title: WorkPlanConstraintConflictMessage
----
+# WorkPlanConstraintConflictMessage
+
 ## ININ.PureCloudApi.Model.WorkPlanConstraintConflictMessage
 
 ## Properties
@@ -8,7 +7,8 @@ title: WorkPlanConstraintConflictMessage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Type of constraint conflict that can be resolved by clients in order to generate agent schedules | [optional] |
-| **Arguments** | [**List&lt;WorkPlanValidationMessageArgument&gt;**](WorkPlanValidationMessageArgument.html) | The arguments to the type of the message that can help clients resolve validation issues | [optional] |
-{: class="table table-striped"}
+| **Arguments** | [**List&lt;WorkPlanValidationMessageArgument&gt;**](WorkPlanValidationMessageArgument) | The arguments to the type of the message that can help clients resolve validation issues | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

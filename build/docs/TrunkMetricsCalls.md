@@ -1,6 +1,5 @@
----
-title: TrunkMetricsCalls
----
+# TrunkMetricsCalls
+
 ## ININ.PureCloudApi.Model.TrunkMetricsCalls
 
 ## Properties
@@ -9,6 +8,7 @@ title: TrunkMetricsCalls
 |------------ | ------------- | ------------- | -------------|
 | **InboundCallCount** | **int?** |  | [optional] |
 | **OutboundCallCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

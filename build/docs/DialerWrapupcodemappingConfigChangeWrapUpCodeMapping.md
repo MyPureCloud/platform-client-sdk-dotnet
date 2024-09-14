@@ -1,6 +1,5 @@
----
-title: DialerWrapupcodemappingConfigChangeWrapUpCodeMapping
----
+# DialerWrapupcodemappingConfigChangeWrapUpCodeMapping
+
 ## ININ.PureCloudApi.Model.DialerWrapupcodemappingConfigChangeWrapUpCodeMapping
 
 ## Properties
@@ -14,6 +13,7 @@ title: DialerWrapupcodemappingConfigChangeWrapUpCodeMapping
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 | **DefaultSet** | **List&lt;string&gt;** |  | [optional] |
 | **Mapping** | **Dictionary&lt;string, List&lt;string&gt;&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

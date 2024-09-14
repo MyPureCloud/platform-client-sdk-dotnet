@@ -1,80 +1,79 @@
----
-title: QualityApi
----
+# QualityApi
+
 ## PureCloudPlatform.Client.V2.Api.QualityApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteQualityCalibration**](QualityApi.html#deletequalitycalibration) | **Delete** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
-| [**DeleteQualityConversationEvaluation**](QualityApi.html#deletequalityconversationevaluation) | **Delete** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
-| [**DeleteQualityForm**](QualityApi.html#deletequalityform) | **Delete** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
-| [**DeleteQualityFormsEvaluation**](QualityApi.html#deletequalityformsevaluation) | **Delete** /api/v2/quality/forms/evaluations/{formId} | Delete an evaluation form. |
-| [**DeleteQualityFormsSurvey**](QualityApi.html#deletequalityformssurvey) | **Delete** /api/v2/quality/forms/surveys/{formId} | Delete a survey form. |
-| [**GetAnalyticsEvaluationsAggregatesJob**](QualityApi.html#getanalyticsevaluationsaggregatesjob) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Get status for async query for evaluation aggregates |
-| [**GetAnalyticsEvaluationsAggregatesJobResults**](QualityApi.html#getanalyticsevaluationsaggregatesjobresults) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsSurveysAggregatesJob**](QualityApi.html#getanalyticssurveysaggregatesjob) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
-| [**GetAnalyticsSurveysAggregatesJobResults**](QualityApi.html#getanalyticssurveysaggregatesjobresults) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetQualityAgentsActivity**](QualityApi.html#getqualityagentsactivity) | **Get** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
-| [**GetQualityCalibration**](QualityApi.html#getqualitycalibration) | **Get** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id.  Requires either calibrator id or conversation id |
-| [**GetQualityCalibrations**](QualityApi.html#getqualitycalibrations) | **Get** /api/v2/quality/calibrations | Get the list of calibrations |
-| [**GetQualityConversationEvaluation**](QualityApi.html#getqualityconversationevaluation) | **Get** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
-| [**GetQualityConversationSurveys**](QualityApi.html#getqualityconversationsurveys) | **Get** /api/v2/quality/conversations/{conversationId}/surveys | Get the surveys for a conversation |
-| [**GetQualityConversationsAuditsQueryTransactionId**](QualityApi.html#getqualityconversationsauditsquerytransactionid) | **Get** /api/v2/quality/conversations/audits/query/{transactionId} | Get status of audit query execution |
-| [**GetQualityConversationsAuditsQueryTransactionIdResults**](QualityApi.html#getqualityconversationsauditsquerytransactionidresults) | **Get** /api/v2/quality/conversations/audits/query/{transactionId}/results | Get results of audit query |
-| [**GetQualityEvaluationsQuery**](QualityApi.html#getqualityevaluationsquery) | **Get** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
-| [**GetQualityEvaluatorsActivity**](QualityApi.html#getqualityevaluatorsactivity) | **Get** /api/v2/quality/evaluators/activity | Get an evaluator activity |
-| [**GetQualityForm**](QualityApi.html#getqualityform) | **Get** /api/v2/quality/forms/{formId} | Get an evaluation form |
-| [**GetQualityFormVersions**](QualityApi.html#getqualityformversions) | **Get** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
-| [**GetQualityForms**](QualityApi.html#getqualityforms) | **Get** /api/v2/quality/forms | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
-| [**GetQualityFormsEvaluation**](QualityApi.html#getqualityformsevaluation) | **Get** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
-| [**GetQualityFormsEvaluationVersions**](QualityApi.html#getqualityformsevaluationversions) | **Get** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
-| [**GetQualityFormsEvaluations**](QualityApi.html#getqualityformsevaluations) | **Get** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
-| [**GetQualityFormsEvaluationsBulkContexts**](QualityApi.html#getqualityformsevaluationsbulkcontexts) | **Get** /api/v2/quality/forms/evaluations/bulk/contexts | Retrieve a list of the latest published evaluation form versions by context ids |
-| [**GetQualityFormsSurvey**](QualityApi.html#getqualityformssurvey) | **Get** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
-| [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **Get** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
-| [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **Get** /api/v2/quality/forms/surveys | Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form. |
-| [**GetQualityFormsSurveysBulk**](QualityApi.html#getqualityformssurveysbulk) | **Get** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
-| [**GetQualityFormsSurveysBulkContexts**](QualityApi.html#getqualityformssurveysbulkcontexts) | **Get** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
-| [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **Get** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
-| [**GetQualityPublishedforms**](QualityApi.html#getqualitypublishedforms) | **Get** /api/v2/quality/publishedforms | Get the published evaluation forms. |
-| [**GetQualityPublishedformsEvaluation**](QualityApi.html#getqualitypublishedformsevaluation) | **Get** /api/v2/quality/publishedforms/evaluations/{formId} | Get the most recent published version of an evaluation form. |
-| [**GetQualityPublishedformsEvaluations**](QualityApi.html#getqualitypublishedformsevaluations) | **Get** /api/v2/quality/publishedforms/evaluations | Get the published evaluation forms. |
-| [**GetQualityPublishedformsSurvey**](QualityApi.html#getqualitypublishedformssurvey) | **Get** /api/v2/quality/publishedforms/surveys/{formId} | Get the most recent published version of a survey form. |
-| [**GetQualityPublishedformsSurveys**](QualityApi.html#getqualitypublishedformssurveys) | **Get** /api/v2/quality/publishedforms/surveys | Get the published survey forms. |
-| [**GetQualitySurvey**](QualityApi.html#getqualitysurvey) | **Get** /api/v2/quality/surveys/{surveyId} | Get a survey for a conversation |
-| [**GetQualitySurveysScorable**](QualityApi.html#getqualitysurveysscorable) | **Get** /api/v2/quality/surveys/scorable | Get a survey as an end-customer, for the purposes of scoring it. |
-| [**PatchQualityFormsSurvey**](QualityApi.html#patchqualityformssurvey) | **Patch** /api/v2/quality/forms/surveys/{formId} | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
-| [**PostAnalyticsEvaluationsAggregatesJobs**](QualityApi.html#postanalyticsevaluationsaggregatesjobs) | **Post** /api/v2/analytics/evaluations/aggregates/jobs | Query for evaluation aggregates asynchronously |
-| [**PostAnalyticsEvaluationsAggregatesQuery**](QualityApi.html#postanalyticsevaluationsaggregatesquery) | **Post** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
-| [**PostAnalyticsSurveysAggregatesJobs**](QualityApi.html#postanalyticssurveysaggregatesjobs) | **Post** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
-| [**PostAnalyticsSurveysAggregatesQuery**](QualityApi.html#postanalyticssurveysaggregatesquery) | **Post** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
-| [**PostQualityCalibrations**](QualityApi.html#postqualitycalibrations) | **Post** /api/v2/quality/calibrations | Create a calibration |
-| [**PostQualityConversationEvaluations**](QualityApi.html#postqualityconversationevaluations) | **Post** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
-| [**PostQualityConversationsAuditsQuery**](QualityApi.html#postqualityconversationsauditsquery) | **Post** /api/v2/quality/conversations/audits/query | Create audit query execution |
-| [**PostQualityEvaluationsAggregatesQueryMe**](QualityApi.html#postqualityevaluationsaggregatesqueryme) | **Post** /api/v2/quality/evaluations/aggregates/query/me | Query for evaluation aggregates for the current user |
-| [**PostQualityEvaluationsScoring**](QualityApi.html#postqualityevaluationsscoring) | **Post** /api/v2/quality/evaluations/scoring | Score evaluation |
-| [**PostQualityForms**](QualityApi.html#postqualityforms) | **Post** /api/v2/quality/forms | Create an evaluation form. |
-| [**PostQualityFormsEvaluations**](QualityApi.html#postqualityformsevaluations) | **Post** /api/v2/quality/forms/evaluations | Create an evaluation form. |
-| [**PostQualityFormsSurveys**](QualityApi.html#postqualityformssurveys) | **Post** /api/v2/quality/forms/surveys | Create a survey form. |
-| [**PostQualityPublishedforms**](QualityApi.html#postqualitypublishedforms) | **Post** /api/v2/quality/publishedforms | Publish an evaluation form. |
-| [**PostQualityPublishedformsEvaluations**](QualityApi.html#postqualitypublishedformsevaluations) | **Post** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
-| [**PostQualityPublishedformsSurveys**](QualityApi.html#postqualitypublishedformssurveys) | **Post** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
-| [**PostQualitySurveysScoring**](QualityApi.html#postqualitysurveysscoring) | **Post** /api/v2/quality/surveys/scoring | Score survey |
-| [**PutQualityCalibration**](QualityApi.html#putqualitycalibration) | **Put** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
-| [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **Put** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
-| [**PutQualityForm**](QualityApi.html#putqualityform) | **Put** /api/v2/quality/forms/{formId} | Update an evaluation form. |
-| [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **Put** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
-| [**PutQualityFormsEvaluationAiscoringSettings**](QualityApi.html#putqualityformsevaluationaiscoringsettings) | **Put** /api/v2/quality/forms/evaluations/{formId}/aiscoring/settings | Update the AI Scoring settings of an evaluation form. |
-| [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **Put** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
-| [**PutQualitySurveysScorable**](QualityApi.html#putqualitysurveysscorable) | **Put** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
-{: class="table table-striped"}
+| [**DeleteQualityCalibration**](#DeleteQualityCalibration) | **Delete** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
+| [**DeleteQualityConversationEvaluation**](#DeleteQualityConversationEvaluation) | **Delete** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
+| [**DeleteQualityForm**](#DeleteQualityForm) | **Delete** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
+| [**DeleteQualityFormsEvaluation**](#DeleteQualityFormsEvaluation) | **Delete** /api/v2/quality/forms/evaluations/{formId} | Delete an evaluation form. |
+| [**DeleteQualityFormsSurvey**](#DeleteQualityFormsSurvey) | **Delete** /api/v2/quality/forms/surveys/{formId} | Delete a survey form. |
+| [**GetAnalyticsEvaluationsAggregatesJob**](#GetAnalyticsEvaluationsAggregatesJob) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Get status for async query for evaluation aggregates |
+| [**GetAnalyticsEvaluationsAggregatesJobResults**](#GetAnalyticsEvaluationsAggregatesJobResults) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsSurveysAggregatesJob**](#GetAnalyticsSurveysAggregatesJob) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
+| [**GetAnalyticsSurveysAggregatesJobResults**](#GetAnalyticsSurveysAggregatesJobResults) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetQualityAgentsActivity**](#GetQualityAgentsActivity) | **Get** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
+| [**GetQualityCalibration**](#GetQualityCalibration) | **Get** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id.  Requires either calibrator id or conversation id |
+| [**GetQualityCalibrations**](#GetQualityCalibrations) | **Get** /api/v2/quality/calibrations | Get the list of calibrations |
+| [**GetQualityConversationEvaluation**](#GetQualityConversationEvaluation) | **Get** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
+| [**GetQualityConversationSurveys**](#GetQualityConversationSurveys) | **Get** /api/v2/quality/conversations/{conversationId}/surveys | Get the surveys for a conversation |
+| [**GetQualityConversationsAuditsQueryTransactionId**](#GetQualityConversationsAuditsQueryTransactionId) | **Get** /api/v2/quality/conversations/audits/query/{transactionId} | Get status of audit query execution |
+| [**GetQualityConversationsAuditsQueryTransactionIdResults**](#GetQualityConversationsAuditsQueryTransactionIdResults) | **Get** /api/v2/quality/conversations/audits/query/{transactionId}/results | Get results of audit query |
+| [**GetQualityEvaluationsQuery**](#GetQualityEvaluationsQuery) | **Get** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
+| [**GetQualityEvaluatorsActivity**](#GetQualityEvaluatorsActivity) | **Get** /api/v2/quality/evaluators/activity | Get an evaluator activity |
+| [**GetQualityForm**](#GetQualityForm) | **Get** /api/v2/quality/forms/{formId} | Get an evaluation form |
+| [**GetQualityFormVersions**](#GetQualityFormVersions) | **Get** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
+| [**GetQualityForms**](#GetQualityForms) | **Get** /api/v2/quality/forms | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
+| [**GetQualityFormsEvaluation**](#GetQualityFormsEvaluation) | **Get** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
+| [**GetQualityFormsEvaluationVersions**](#GetQualityFormsEvaluationVersions) | **Get** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
+| [**GetQualityFormsEvaluations**](#GetQualityFormsEvaluations) | **Get** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
+| [**GetQualityFormsEvaluationsBulkContexts**](#GetQualityFormsEvaluationsBulkContexts) | **Get** /api/v2/quality/forms/evaluations/bulk/contexts | Retrieve a list of the latest published evaluation form versions by context ids |
+| [**GetQualityFormsSurvey**](#GetQualityFormsSurvey) | **Get** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
+| [**GetQualityFormsSurveyVersions**](#GetQualityFormsSurveyVersions) | **Get** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
+| [**GetQualityFormsSurveys**](#GetQualityFormsSurveys) | **Get** /api/v2/quality/forms/surveys | Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form. |
+| [**GetQualityFormsSurveysBulk**](#GetQualityFormsSurveysBulk) | **Get** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
+| [**GetQualityFormsSurveysBulkContexts**](#GetQualityFormsSurveysBulkContexts) | **Get** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
+| [**GetQualityPublishedform**](#GetQualityPublishedform) | **Get** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
+| [**GetQualityPublishedforms**](#GetQualityPublishedforms) | **Get** /api/v2/quality/publishedforms | Get the published evaluation forms. |
+| [**GetQualityPublishedformsEvaluation**](#GetQualityPublishedformsEvaluation) | **Get** /api/v2/quality/publishedforms/evaluations/{formId} | Get the most recent published version of an evaluation form. |
+| [**GetQualityPublishedformsEvaluations**](#GetQualityPublishedformsEvaluations) | **Get** /api/v2/quality/publishedforms/evaluations | Get the published evaluation forms. |
+| [**GetQualityPublishedformsSurvey**](#GetQualityPublishedformsSurvey) | **Get** /api/v2/quality/publishedforms/surveys/{formId} | Get the most recent published version of a survey form. |
+| [**GetQualityPublishedformsSurveys**](#GetQualityPublishedformsSurveys) | **Get** /api/v2/quality/publishedforms/surveys | Get the published survey forms. |
+| [**GetQualitySurvey**](#GetQualitySurvey) | **Get** /api/v2/quality/surveys/{surveyId} | Get a survey for a conversation |
+| [**GetQualitySurveysScorable**](#GetQualitySurveysScorable) | **Get** /api/v2/quality/surveys/scorable | Get a survey as an end-customer, for the purposes of scoring it. |
+| [**PatchQualityFormsSurvey**](#PatchQualityFormsSurvey) | **Patch** /api/v2/quality/forms/surveys/{formId} | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
+| [**PostAnalyticsEvaluationsAggregatesJobs**](#PostAnalyticsEvaluationsAggregatesJobs) | **Post** /api/v2/analytics/evaluations/aggregates/jobs | Query for evaluation aggregates asynchronously |
+| [**PostAnalyticsEvaluationsAggregatesQuery**](#PostAnalyticsEvaluationsAggregatesQuery) | **Post** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
+| [**PostAnalyticsSurveysAggregatesJobs**](#PostAnalyticsSurveysAggregatesJobs) | **Post** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
+| [**PostAnalyticsSurveysAggregatesQuery**](#PostAnalyticsSurveysAggregatesQuery) | **Post** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
+| [**PostQualityCalibrations**](#PostQualityCalibrations) | **Post** /api/v2/quality/calibrations | Create a calibration |
+| [**PostQualityConversationEvaluations**](#PostQualityConversationEvaluations) | **Post** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
+| [**PostQualityConversationsAuditsQuery**](#PostQualityConversationsAuditsQuery) | **Post** /api/v2/quality/conversations/audits/query | Create audit query execution |
+| [**PostQualityEvaluationsAggregatesQueryMe**](#PostQualityEvaluationsAggregatesQueryMe) | **Post** /api/v2/quality/evaluations/aggregates/query/me | Query for evaluation aggregates for the current user |
+| [**PostQualityEvaluationsScoring**](#PostQualityEvaluationsScoring) | **Post** /api/v2/quality/evaluations/scoring | Score evaluation |
+| [**PostQualityForms**](#PostQualityForms) | **Post** /api/v2/quality/forms | Create an evaluation form. |
+| [**PostQualityFormsEvaluations**](#PostQualityFormsEvaluations) | **Post** /api/v2/quality/forms/evaluations | Create an evaluation form. |
+| [**PostQualityFormsSurveys**](#PostQualityFormsSurveys) | **Post** /api/v2/quality/forms/surveys | Create a survey form. |
+| [**PostQualityPublishedforms**](#PostQualityPublishedforms) | **Post** /api/v2/quality/publishedforms | Publish an evaluation form. |
+| [**PostQualityPublishedformsEvaluations**](#PostQualityPublishedformsEvaluations) | **Post** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
+| [**PostQualityPublishedformsSurveys**](#PostQualityPublishedformsSurveys) | **Post** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
+| [**PostQualitySurveysScoring**](#PostQualitySurveysScoring) | **Post** /api/v2/quality/surveys/scoring | Score survey |
+| [**PutQualityCalibration**](#PutQualityCalibration) | **Put** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
+| [**PutQualityConversationEvaluation**](#PutQualityConversationEvaluation) | **Put** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
+| [**PutQualityForm**](#PutQualityForm) | **Put** /api/v2/quality/forms/{formId} | Update an evaluation form. |
+| [**PutQualityFormsEvaluation**](#PutQualityFormsEvaluation) | **Put** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
+| [**PutQualityFormsEvaluationAiscoringSettings**](#PutQualityFormsEvaluationAiscoringSettings) | **Put** /api/v2/quality/forms/evaluations/{formId}/aiscoring/settings | Update the AI Scoring settings of an evaluation form. |
+| [**PutQualityFormsSurvey**](#PutQualityFormsSurvey) | **Put** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
+| [**PutQualitySurveysScorable**](#PutQualitySurveysScorable) | **Put** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
 
-<a name="deletequalitycalibration"></a>
 
-## [**Calibration**](Calibration.html) DeleteQualityCalibration (string calibrationId, string calibratorId)
 
+## DeleteQualityCalibration
+
+> [**Calibration**](Calibration) DeleteQualityCalibration (string calibrationId, string calibratorId)
 
 
 Delete a calibration by id.
@@ -130,16 +129,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **calibrationId** | **string**| Calibration ID |  |
 | **calibratorId** | **string**| calibratorId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Calibration**](Calibration.html)
+[**Calibration**](Calibration)
 
-<a name="deletequalityconversationevaluation"></a>
 
-## [**EvaluationResponse**](EvaluationResponse.html) DeleteQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+## DeleteQualityConversationEvaluation
 
+> [**EvaluationResponse**](EvaluationResponse) DeleteQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
 
 
 Delete an evaluation
@@ -197,17 +195,19 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
 | **expand** | **string**| evaluatorId, evaluationForm | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationResponse**](EvaluationResponse.html)
+[**EvaluationResponse**](EvaluationResponse)
 
-<a name="deletequalityform"></a>
 
-## void DeleteQualityForm (string formId)
+## DeleteQualityForm
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void DeleteQualityForm (string formId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete an evaluation form.
 
@@ -259,16 +259,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletequalityformsevaluation"></a>
 
-## void DeleteQualityFormsEvaluation (string formId)
+## DeleteQualityFormsEvaluation
 
+> void DeleteQualityFormsEvaluation (string formId)
 
 
 Delete an evaluation form.
@@ -321,16 +320,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletequalityformssurvey"></a>
 
-## void DeleteQualityFormsSurvey (string formId)
+## DeleteQualityFormsSurvey
 
+> void DeleteQualityFormsSurvey (string formId)
 
 
 Delete a survey form.
@@ -383,16 +381,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getanalyticsevaluationsaggregatesjob"></a>
 
-## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsEvaluationsAggregatesJob (string jobId)
+## GetAnalyticsEvaluationsAggregatesJob
 
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsEvaluationsAggregatesJob (string jobId)
 
 
 Get status for async query for evaluation aggregates
@@ -448,16 +445,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncQueryStatus**](AsyncQueryStatus.html)
+[**AsyncQueryStatus**](AsyncQueryStatus)
 
-<a name="getanalyticsevaluationsaggregatesjobresults"></a>
 
-## [**EvaluationAsyncAggregateQueryResponse**](EvaluationAsyncAggregateQueryResponse.html) GetAnalyticsEvaluationsAggregatesJobResults (string jobId, string cursor = null)
+## GetAnalyticsEvaluationsAggregatesJobResults
 
+> [**EvaluationAsyncAggregateQueryResponse**](EvaluationAsyncAggregateQueryResponse) GetAnalyticsEvaluationsAggregatesJobResults (string jobId, string cursor = null)
 
 
 Fetch a page of results for an async aggregates query
@@ -515,16 +511,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationAsyncAggregateQueryResponse**](EvaluationAsyncAggregateQueryResponse.html)
+[**EvaluationAsyncAggregateQueryResponse**](EvaluationAsyncAggregateQueryResponse)
 
-<a name="getanalyticssurveysaggregatesjob"></a>
 
-## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsSurveysAggregatesJob (string jobId)
+## GetAnalyticsSurveysAggregatesJob
 
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsSurveysAggregatesJob (string jobId)
 
 
 Get status for async query for survey aggregates
@@ -580,16 +575,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AsyncQueryStatus**](AsyncQueryStatus.html)
+[**AsyncQueryStatus**](AsyncQueryStatus)
 
-<a name="getanalyticssurveysaggregatesjobresults"></a>
 
-## [**SurveyAsyncAggregateQueryResponse**](SurveyAsyncAggregateQueryResponse.html) GetAnalyticsSurveysAggregatesJobResults (string jobId, string cursor = null)
+## GetAnalyticsSurveysAggregatesJobResults
 
+> [**SurveyAsyncAggregateQueryResponse**](SurveyAsyncAggregateQueryResponse) GetAnalyticsSurveysAggregatesJobResults (string jobId, string cursor = null)
 
 
 Fetch a page of results for an async aggregates query
@@ -647,16 +641,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SurveyAsyncAggregateQueryResponse**](SurveyAsyncAggregateQueryResponse.html)
+[**SurveyAsyncAggregateQueryResponse**](SurveyAsyncAggregateQueryResponse)
 
-<a name="getqualityagentsactivity"></a>
 
-## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
+## GetQualityAgentsActivity
 
+> [**AgentActivityEntityListing**](AgentActivityEntityListing) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
 
 
 Gets a list of Agent Activities
@@ -727,27 +720,26 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **startTime** | **DateTime?**| Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
 | **endTime** | **DateTime?**| End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
-| **agentUserId** | [**List<string>**](string.html)| user id of agent requested | [optional]  |
+| **agentUserId** | [**List<string>**](string)| user id of agent requested | [optional]  |
 | **evaluatorUserId** | **string**| user id of the evaluator | [optional]  |
 | **name** | **string**| name | [optional]  |
 | **group** | **string**| group id | [optional]  |
 | **agentTeamId** | **string**| team id of agents requested | [optional]  |
 | **formContextId** | **string**| shared id between form versions | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AgentActivityEntityListing**](AgentActivityEntityListing.html)
+[**AgentActivityEntityListing**](AgentActivityEntityListing)
 
-<a name="getqualitycalibration"></a>
 
-## [**Calibration**](Calibration.html) GetQualityCalibration (string calibrationId, string calibratorId = null, string conversationId = null)
+## GetQualityCalibration
 
+> [**Calibration**](Calibration) GetQualityCalibration (string calibrationId, string calibratorId = null, string conversationId = null)
 
 
 Get a calibration by id.  Requires either calibrator id or conversation id
@@ -805,16 +797,15 @@ namespace Example
 | **calibrationId** | **string**| Calibration ID |  |
 | **calibratorId** | **string**| calibratorId | [optional]  |
 | **conversationId** | **string**| conversationId | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Calibration**](Calibration.html)
+[**Calibration**](Calibration)
 
-<a name="getqualitycalibrations"></a>
 
-## [**CalibrationEntityListing**](CalibrationEntityListing.html) GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+## GetQualityCalibrations
 
+> [**CalibrationEntityListing**](CalibrationEntityListing) GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
 
 
 Get the list of calibrations
@@ -882,22 +873,21 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversation id | [optional]  |
 | **startTime** | **DateTime?**| Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
 | **endTime** | **DateTime?**| end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CalibrationEntityListing**](CalibrationEntityListing.html)
+[**CalibrationEntityListing**](CalibrationEntityListing)
 
-<a name="getqualityconversationevaluation"></a>
 
-## [**EvaluationResponse**](EvaluationResponse.html) GetQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+## GetQualityConversationEvaluation
 
+> [**EvaluationResponse**](EvaluationResponse) GetQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
 
 
 Get an evaluation
@@ -957,16 +947,15 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
 | **expand** | **string**| agent, assignee, evaluator, evaluationForm | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationResponse**](EvaluationResponse.html)
+[**EvaluationResponse**](EvaluationResponse)
 
-<a name="getqualityconversationsurveys"></a>
 
-## [**List&lt;Survey&gt;**](Survey.html) GetQualityConversationSurveys (string conversationId)
+## GetQualityConversationSurveys
 
+> [**List&lt;Survey&gt;**](Survey) GetQualityConversationSurveys (string conversationId)
 
 
 Get the surveys for a conversation
@@ -1020,16 +1009,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<Survey>**](Survey.html)
+[**List<Survey>**](Survey)
 
-<a name="getqualityconversationsauditsquerytransactionid"></a>
 
-## [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html) GetQualityConversationsAuditsQueryTransactionId (string transactionId)
+## GetQualityConversationsAuditsQueryTransactionId
 
+> [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse) GetQualityConversationsAuditsQueryTransactionId (string transactionId)
 
 
 Get status of audit query execution
@@ -1083,16 +1071,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **transactionId** | **string**| Transaction ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse)
 
-<a name="getqualityconversationsauditsquerytransactionidresults"></a>
 
-## [**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse.html) GetQualityConversationsAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+## GetQualityConversationsAuditsQueryTransactionIdResults
 
+> [**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse) GetQualityConversationsAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
 
 
 Get results of audit query
@@ -1151,17 +1138,16 @@ namespace Example
 | **transactionId** | **string**| Transaction ID |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user |
 
 ### Return type
 
-[**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse.html)
+[**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse)
 
-<a name="getqualityevaluationsquery"></a>
 
-## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+## GetQualityEvaluationsQuery
 
+> [**EvaluationEntityListing**](EvaluationEntityListing) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
 
 
 Queries Evaluations and returns a paged list
@@ -1236,7 +1222,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversationId specified | [optional]  |
 | **agentUserId** | **string**| user id of the agent | [optional]  |
@@ -1247,22 +1233,21 @@ namespace Example
 | **startTime** | **string**| start time of the evaluation query | [optional]  |
 | **endTime** | **string**| end time of the evaluation query | [optional]  |
 | **formContextId** | **string**| shared id between form versions | [optional]  |
-| **evaluationState** | [**List<string>**](string.html)|  | [optional]  |
+| **evaluationState** | [**List<string>**](string)|  | [optional]  |
 | **isReleased** | **bool?**| the evaluation has been released | [optional]  |
 | **agentHasRead** | **bool?**| agent has the evaluation | [optional]  |
 | **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. | [optional]  |
 | **maximum** | **int?**| the maximum number of results to return | [optional]  |
 | **sortOrder** | **string**| NOTE: Does not work when conversationId is supplied. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationEntityListing**](EvaluationEntityListing.html)
+[**EvaluationEntityListing**](EvaluationEntityListing)
 
-<a name="getqualityevaluatorsactivity"></a>
 
-## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null, string agentTeamId = null)
+## GetQualityEvaluatorsActivity
 
+> [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null, string agentTeamId = null)
 
 
 Get an evaluator activity
@@ -1329,26 +1314,28 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **startTime** | **DateTime?**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
 | **endTime** | **DateTime?**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
 | **name** | **string**| Evaluator name | [optional]  |
-| **permission** | [**List<string>**](string.html)| permission strings | [optional]  |
+| **permission** | [**List<string>**](string)| permission strings | [optional]  |
 | **group** | **string**| group id | [optional]  |
 | **agentTeamId** | **string**| team id of agents to be considered | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html)
+[**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing)
 
-<a name="getqualityform"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityForm (string formId)
+## GetQualityForm
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponse**](EvaluationFormResponse) GetQualityForm (string formId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get an evaluation form
 
@@ -1401,17 +1388,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="getqualityformversions"></a>
 
-## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+## GetQualityFormVersions
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Gets all the revisions for a specific evaluation.
 
@@ -1468,17 +1457,19 @@ namespace Example
 | **formId** | **string**| Form ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
-<a name="getqualityforms"></a>
 
-## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+## GetQualityForms
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
 
@@ -1545,16 +1536,15 @@ namespace Example
 | **expand** | **string**| If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions | [optional] <br />**Values**: publishHistory |
 | **name** | **string**| Name | [optional]  |
 | **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
-<a name="getqualityformsevaluation"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityFormsEvaluation (string formId)
+## GetQualityFormsEvaluation
 
+> [**EvaluationFormResponse**](EvaluationFormResponse) GetQualityFormsEvaluation (string formId)
 
 
 Get an evaluation form
@@ -1608,16 +1598,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="getqualityformsevaluationversions"></a>
 
-## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## GetQualityFormsEvaluationVersions
 
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 
 Gets all the revisions for a specific evaluation.
@@ -1677,16 +1666,15 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
-<a name="getqualityformsevaluations"></a>
 
-## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+## GetQualityFormsEvaluations
 
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 
 
 Get the list of evaluation forms
@@ -1756,16 +1744,15 @@ namespace Example
 | **expand** | **string**| If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions | [optional] <br />**Values**: publishHistory |
 | **name** | **string**| Name | [optional]  |
 | **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
-<a name="getqualityformsevaluationsbulkcontexts"></a>
 
-## [**List&lt;EvaluationFormResponse&gt;**](EvaluationFormResponse.html) GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
+## GetQualityFormsEvaluationsBulkContexts
 
+> [**List&lt;EvaluationFormResponse&gt;**](EvaluationFormResponse) GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
 
 
 Retrieve a list of the latest published evaluation form versions by context ids
@@ -1818,17 +1805,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contextId** | [**List<string>**](string.html)| A comma-delimited list of valid evaluation form context ids |  |
-{: class="table table-striped"}
+| **contextId** | [**List<string>**](string)| A comma-delimited list of valid evaluation form context ids |  |
 
 ### Return type
 
-[**List<EvaluationFormResponse>**](EvaluationFormResponse.html)
+[**List<EvaluationFormResponse>**](EvaluationFormResponse)
 
-<a name="getqualityformssurvey"></a>
 
-## [**SurveyForm**](SurveyForm.html) GetQualityFormsSurvey (string formId)
+## GetQualityFormsSurvey
 
+> [**SurveyForm**](SurveyForm) GetQualityFormsSurvey (string formId)
 
 
 Get a survey form
@@ -1882,16 +1868,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
+[**SurveyForm**](SurveyForm)
 
-<a name="getqualityformssurveyversions"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveyVersions (string formId, int? pageSize = null, int? pageNumber = null)
+## GetQualityFormsSurveyVersions
 
+> [**SurveyFormEntityListing**](SurveyFormEntityListing) GetQualityFormsSurveyVersions (string formId, int? pageSize = null, int? pageNumber = null)
 
 
 Gets all the revisions for a specific survey.
@@ -1949,16 +1934,15 @@ namespace Example
 | **formId** | **string**| Form ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
-<a name="getqualityformssurveys"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+## GetQualityFormsSurveys
 
+> [**SurveyFormEntityListing**](SurveyFormEntityListing) GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 
 
 Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
@@ -2026,16 +2010,15 @@ namespace Example
 | **expand** | **string**| If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions | [optional] <br />**Values**: publishHistory |
 | **name** | **string**| Name | [optional]  |
 | **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
-<a name="getqualityformssurveysbulk"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveysBulk (List<string> id)
+## GetQualityFormsSurveysBulk
 
+> [**SurveyFormEntityListing**](SurveyFormEntityListing) GetQualityFormsSurveysBulk (List<string> id)
 
 
 Retrieve a list of survey forms by their ids
@@ -2088,17 +2071,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**List<string>**](string.html)| A comma-delimited list of valid survey form ids |  |
-{: class="table table-striped"}
+| **id** | [**List<string>**](string)| A comma-delimited list of valid survey form ids |  |
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
-<a name="getqualityformssurveysbulkcontexts"></a>
 
-## [**List&lt;SurveyForm&gt;**](SurveyForm.html) GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
+## GetQualityFormsSurveysBulkContexts
 
+> [**List&lt;SurveyForm&gt;**](SurveyForm) GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
 
 
 Retrieve a list of the latest form versions by context ids
@@ -2152,19 +2134,21 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contextId** | [**List<string>**](string.html)| A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. |  |
+| **contextId** | [**List<string>**](string)| A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. |  |
 | **published** | **bool?**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<SurveyForm>**](SurveyForm.html)
+[**List<SurveyForm>**](SurveyForm)
 
-<a name="getqualitypublishedform"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityPublishedform (string formId)
+## GetQualityPublishedform
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponse**](EvaluationFormResponse) GetQualityPublishedform (string formId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the published evaluation forms.
 
@@ -2217,17 +2201,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="getqualitypublishedforms"></a>
 
-## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+## GetQualityPublishedforms
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the published evaluation forms.
 
@@ -2286,16 +2272,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
 | **onlyLatestPerContext** | **bool?**| onlyLatestPerContext | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
-<a name="getqualitypublishedformsevaluation"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityPublishedformsEvaluation (string formId)
+## GetQualityPublishedformsEvaluation
 
+> [**EvaluationFormResponse**](EvaluationFormResponse) GetQualityPublishedformsEvaluation (string formId)
 
 
 Get the most recent published version of an evaluation form.
@@ -2349,16 +2334,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="getqualitypublishedformsevaluations"></a>
 
-## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+## GetQualityPublishedformsEvaluations
 
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 
 
 Get the published evaluation forms.
@@ -2418,16 +2402,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
 | **onlyLatestPerContext** | **bool?**| onlyLatestPerContext | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
-<a name="getqualitypublishedformssurvey"></a>
 
-## [**SurveyForm**](SurveyForm.html) GetQualityPublishedformsSurvey (string formId)
+## GetQualityPublishedformsSurvey
 
+> [**SurveyForm**](SurveyForm) GetQualityPublishedformsSurvey (string formId)
 
 
 Get the most recent published version of a survey form.
@@ -2481,16 +2464,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
+[**SurveyForm**](SurveyForm)
 
-<a name="getqualitypublishedformssurveys"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
+## GetQualityPublishedformsSurveys
 
+> [**SurveyFormEntityListing**](SurveyFormEntityListing) GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
 
 
 Get the published survey forms.
@@ -2550,16 +2532,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
 | **onlyLatestEnabledPerContext** | **bool?**| onlyLatestEnabledPerContext | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
-<a name="getqualitysurvey"></a>
 
-## [**Survey**](Survey.html) GetQualitySurvey (string surveyId)
+## GetQualitySurvey
 
+> [**Survey**](Survey) GetQualitySurvey (string surveyId)
 
 
 Get a survey for a conversation
@@ -2613,16 +2594,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **surveyId** | **string**| surveyId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Survey**](Survey.html)
+[**Survey**](Survey)
 
-<a name="getqualitysurveysscorable"></a>
 
-## [**ScorableSurvey**](ScorableSurvey.html) GetQualitySurveysScorable (string customerSurveyUrl)
+## GetQualitySurveysScorable
 
+> [**ScorableSurvey**](ScorableSurvey) GetQualitySurveysScorable (string customerSurveyUrl)
 
 
 Get a survey as an end-customer, for the purposes of scoring it.
@@ -2669,16 +2649,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customerSurveyUrl** | **string**| customerSurveyUrl |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ScorableSurvey**](ScorableSurvey.html)
+[**ScorableSurvey**](ScorableSurvey)
 
-<a name="patchqualityformssurvey"></a>
 
-## [**SurveyForm**](SurveyForm.html) PatchQualityFormsSurvey (string formId, SurveyForm body)
+## PatchQualityFormsSurvey
 
+> [**SurveyForm**](SurveyForm) PatchQualityFormsSurvey (string formId, SurveyForm body)
 
 
 Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
@@ -2733,17 +2712,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
-{: class="table table-striped"}
+| **body** | [**SurveyForm**](SurveyForm)| Survey form |  |
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
+[**SurveyForm**](SurveyForm)
 
-<a name="postanalyticsevaluationsaggregatesjobs"></a>
 
-## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsEvaluationsAggregatesJobs (EvaluationAsyncAggregationQuery body)
+## PostAnalyticsEvaluationsAggregatesJobs
 
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsEvaluationsAggregatesJobs (EvaluationAsyncAggregationQuery body)
 
 
 Query for evaluation aggregates asynchronously
@@ -2798,17 +2776,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationAsyncAggregationQuery**](EvaluationAsyncAggregationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationAsyncAggregationQuery**](EvaluationAsyncAggregationQuery)| query |  |
 
 ### Return type
 
-[**AsyncQueryResponse**](AsyncQueryResponse.html)
+[**AsyncQueryResponse**](AsyncQueryResponse)
 
-<a name="postanalyticsevaluationsaggregatesquery"></a>
 
-## [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html) PostAnalyticsEvaluationsAggregatesQuery (EvaluationAggregationQuery body)
+## PostAnalyticsEvaluationsAggregatesQuery
 
+> [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse) PostAnalyticsEvaluationsAggregatesQuery (EvaluationAggregationQuery body)
 
 
 Query for evaluation aggregates
@@ -2861,17 +2838,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery)| query |  |
 
 ### Return type
 
-[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse)
 
-<a name="postanalyticssurveysaggregatesjobs"></a>
 
-## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsSurveysAggregatesJobs (SurveyAsyncAggregationQuery body)
+## PostAnalyticsSurveysAggregatesJobs
 
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsSurveysAggregatesJobs (SurveyAsyncAggregationQuery body)
 
 
 Query for survey aggregates asynchronously
@@ -2926,17 +2902,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SurveyAsyncAggregationQuery**](SurveyAsyncAggregationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**SurveyAsyncAggregationQuery**](SurveyAsyncAggregationQuery)| query |  |
 
 ### Return type
 
-[**AsyncQueryResponse**](AsyncQueryResponse.html)
+[**AsyncQueryResponse**](AsyncQueryResponse)
 
-<a name="postanalyticssurveysaggregatesquery"></a>
 
-## [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html) PostAnalyticsSurveysAggregatesQuery (SurveyAggregationQuery body)
+## PostAnalyticsSurveysAggregatesQuery
 
+> [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse) PostAnalyticsSurveysAggregatesQuery (SurveyAggregationQuery body)
 
 
 Query for survey aggregates
@@ -2989,17 +2964,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery)| query |  |
 
 ### Return type
 
-[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse)
 
-<a name="postqualitycalibrations"></a>
 
-## [**Calibration**](Calibration.html) PostQualityCalibrations (CalibrationCreate body, string expand = null)
+## PostQualityCalibrations
 
+> [**Calibration**](Calibration) PostQualityCalibrations (CalibrationCreate body, string expand = null)
 
 
 Create a calibration
@@ -3053,18 +3027,17 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CalibrationCreate**](CalibrationCreate.html)| calibration |  |
+| **body** | [**CalibrationCreate**](CalibrationCreate)| calibration |  |
 | **expand** | **string**| calibratorId | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Calibration**](Calibration.html)
+[**Calibration**](Calibration)
 
-<a name="postqualityconversationevaluations"></a>
 
-## [**Evaluation**](Evaluation.html) PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null)
+## PostQualityConversationEvaluations
 
+> [**Evaluation**](Evaluation) PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null)
 
 
 Create an evaluation
@@ -3120,18 +3093,17 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**EvaluationCreateBody**](EvaluationCreateBody.html)| evaluation |  |
+| **body** | [**EvaluationCreateBody**](EvaluationCreateBody)| evaluation |  |
 | **expand** | **string**| evaluatorId | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
+[**Evaluation**](Evaluation)
 
-<a name="postqualityconversationsauditsquery"></a>
 
-## [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html) PostQualityConversationsAuditsQuery (QMAuditQueryRequest body)
+## PostQualityConversationsAuditsQuery
 
+> [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse) PostQualityConversationsAuditsQuery (QMAuditQueryRequest body)
 
 
 Create audit query execution
@@ -3184,17 +3156,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**QMAuditQueryRequest**](QMAuditQueryRequest.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**QMAuditQueryRequest**](QMAuditQueryRequest)| query |  |
 
 ### Return type
 
-[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse)
 
-<a name="postqualityevaluationsaggregatesqueryme"></a>
 
-## [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html) PostQualityEvaluationsAggregatesQueryMe (EvaluationAggregationQueryMe body)
+## PostQualityEvaluationsAggregatesQueryMe
 
+> [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse) PostQualityEvaluationsAggregatesQueryMe (EvaluationAggregationQueryMe body)
 
 
 Query for evaluation aggregates for the current user
@@ -3246,17 +3217,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationAggregationQueryMe**](EvaluationAggregationQueryMe.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationAggregationQueryMe**](EvaluationAggregationQueryMe)| query |  |
 
 ### Return type
 
-[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse)
 
-<a name="postqualityevaluationsscoring"></a>
 
-## [**EvaluationScoringSet**](EvaluationScoringSet.html) PostQualityEvaluationsScoring (EvaluationFormAndScoringSet body)
+## PostQualityEvaluationsScoring
 
+> [**EvaluationScoringSet**](EvaluationScoringSet) PostQualityEvaluationsScoring (EvaluationFormAndScoringSet body)
 
 
 Score evaluation
@@ -3308,18 +3278,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.html)| evaluationAndScoringSet |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet)| evaluationAndScoringSet |  |
 
 ### Return type
 
-[**EvaluationScoringSet**](EvaluationScoringSet.html)
+[**EvaluationScoringSet**](EvaluationScoringSet)
 
-<a name="postqualityforms"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityForms (EvaluationForm body)
+## PostQualityForms
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponse**](EvaluationFormResponse) PostQualityForms (EvaluationForm body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create an evaluation form.
 
@@ -3371,17 +3343,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form |  |
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="postqualityformsevaluations"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityFormsEvaluations (EvaluationForm body)
+## PostQualityFormsEvaluations
 
+> [**EvaluationFormResponse**](EvaluationFormResponse) PostQualityFormsEvaluations (EvaluationForm body)
 
 
 Create an evaluation form.
@@ -3434,17 +3405,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form |  |
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="postqualityformssurveys"></a>
 
-## [**SurveyForm**](SurveyForm.html) PostQualityFormsSurveys (SurveyForm body)
+## PostQualityFormsSurveys
 
+> [**SurveyForm**](SurveyForm) PostQualityFormsSurveys (SurveyForm body)
 
 
 Create a survey form.
@@ -3497,18 +3467,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
-{: class="table table-striped"}
+| **body** | [**SurveyForm**](SurveyForm)| Survey form |  |
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
+[**SurveyForm**](SurveyForm)
 
-<a name="postqualitypublishedforms"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityPublishedforms (PublishForm body)
+## PostQualityPublishedforms
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponse**](EvaluationFormResponse) PostQualityPublishedforms (PublishForm body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Publish an evaluation form.
 
@@ -3560,17 +3532,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish |  |
-{: class="table table-striped"}
+| **body** | [**PublishForm**](PublishForm)| Publish request containing id of form to publish |  |
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="postqualitypublishedformsevaluations"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityPublishedformsEvaluations (PublishForm body)
+## PostQualityPublishedformsEvaluations
 
+> [**EvaluationFormResponse**](EvaluationFormResponse) PostQualityPublishedformsEvaluations (PublishForm body)
 
 
 Publish an evaluation form.
@@ -3623,17 +3594,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish |  |
-{: class="table table-striped"}
+| **body** | [**PublishForm**](PublishForm)| Publish request containing id of form to publish |  |
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="postqualitypublishedformssurveys"></a>
 
-## [**SurveyForm**](SurveyForm.html) PostQualityPublishedformsSurveys (PublishForm body)
+## PostQualityPublishedformsSurveys
 
+> [**SurveyForm**](SurveyForm) PostQualityPublishedformsSurveys (PublishForm body)
 
 
 Publish a survey form.
@@ -3686,17 +3656,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PublishForm**](PublishForm.html)| Survey form |  |
-{: class="table table-striped"}
+| **body** | [**PublishForm**](PublishForm)| Survey form |  |
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
+[**SurveyForm**](SurveyForm)
 
-<a name="postqualitysurveysscoring"></a>
 
-## [**SurveyScoringSet**](SurveyScoringSet.html) PostQualitySurveysScoring (SurveyFormAndScoringSet body)
+## PostQualitySurveysScoring
 
+> [**SurveyScoringSet**](SurveyScoringSet) PostQualitySurveysScoring (SurveyFormAndScoringSet body)
 
 
 Score survey
@@ -3748,17 +3717,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SurveyFormAndScoringSet**](SurveyFormAndScoringSet.html)| surveyAndScoringSet |  |
-{: class="table table-striped"}
+| **body** | [**SurveyFormAndScoringSet**](SurveyFormAndScoringSet)| surveyAndScoringSet |  |
 
 ### Return type
 
-[**SurveyScoringSet**](SurveyScoringSet.html)
+[**SurveyScoringSet**](SurveyScoringSet)
 
-<a name="putqualitycalibration"></a>
 
-## [**Calibration**](Calibration.html) PutQualityCalibration (string calibrationId, Calibration body)
+## PutQualityCalibration
 
+> [**Calibration**](Calibration) PutQualityCalibration (string calibrationId, Calibration body)
 
 
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -3813,17 +3781,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **calibrationId** | **string**| Calibration ID |  |
-| **body** | [**Calibration**](Calibration.html)| Calibration |  |
-{: class="table table-striped"}
+| **body** | [**Calibration**](Calibration)| Calibration |  |
 
 ### Return type
 
-[**Calibration**](Calibration.html)
+[**Calibration**](Calibration)
 
-<a name="putqualityconversationevaluation"></a>
 
-## [**EvaluationResponse**](EvaluationResponse.html) PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
+## PutQualityConversationEvaluation
 
+> [**EvaluationResponse**](EvaluationResponse) PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
 
 
 Update an evaluation
@@ -3885,19 +3852,21 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
-| **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
+| **body** | [**Evaluation**](Evaluation)| evaluation |  |
 | **expand** | **string**| evaluatorId, evaluationForm, assignee, evaluator | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationResponse**](EvaluationResponse.html)
+[**EvaluationResponse**](EvaluationResponse)
 
-<a name="putqualityform"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) PutQualityForm (string formId, EvaluationForm body)
+## PutQualityForm
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**EvaluationFormResponse**](EvaluationFormResponse) PutQualityForm (string formId, EvaluationForm body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update an evaluation form.
 
@@ -3951,17 +3920,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form |  |
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="putqualityformsevaluation"></a>
 
-## [**EvaluationFormResponse**](EvaluationFormResponse.html) PutQualityFormsEvaluation (string formId, EvaluationForm body)
+## PutQualityFormsEvaluation
 
+> [**EvaluationFormResponse**](EvaluationFormResponse) PutQualityFormsEvaluation (string formId, EvaluationForm body)
 
 
 Update an evaluation form.
@@ -4016,17 +3984,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
-{: class="table table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form |  |
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
-<a name="putqualityformsevaluationaiscoringsettings"></a>
 
-## [**AiScoringSettings**](AiScoringSettings.html) PutQualityFormsEvaluationAiscoringSettings (string formId, AiScoringSettings body)
+## PutQualityFormsEvaluationAiscoringSettings
 
+> [**AiScoringSettings**](AiScoringSettings) PutQualityFormsEvaluationAiscoringSettings (string formId, AiScoringSettings body)
 
 
 Update the AI Scoring settings of an evaluation form.
@@ -4083,17 +4050,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**AiScoringSettings**](AiScoringSettings.html)| AI Scoring Settings |  |
-{: class="table table-striped"}
+| **body** | [**AiScoringSettings**](AiScoringSettings)| AI Scoring Settings |  |
 
 ### Return type
 
-[**AiScoringSettings**](AiScoringSettings.html)
+[**AiScoringSettings**](AiScoringSettings)
 
-<a name="putqualityformssurvey"></a>
 
-## [**SurveyForm**](SurveyForm.html) PutQualityFormsSurvey (string formId, SurveyForm body)
+## PutQualityFormsSurvey
 
+> [**SurveyForm**](SurveyForm) PutQualityFormsSurvey (string formId, SurveyForm body)
 
 
 Update a survey form.
@@ -4148,17 +4114,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
-{: class="table table-striped"}
+| **body** | [**SurveyForm**](SurveyForm)| Survey form |  |
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
+[**SurveyForm**](SurveyForm)
 
-<a name="putqualitysurveysscorable"></a>
 
-## [**ScorableSurvey**](ScorableSurvey.html) PutQualitySurveysScorable (string customerSurveyUrl, ScorableSurvey body)
+## PutQualitySurveysScorable
 
+> [**ScorableSurvey**](ScorableSurvey) PutQualitySurveysScorable (string customerSurveyUrl, ScorableSurvey body)
 
 
 Update a survey as an end-customer, for the purposes of scoring it.
@@ -4206,10 +4171,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customerSurveyUrl** | **string**| customerSurveyUrl |  |
-| **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey |  |
-{: class="table table-striped"}
+| **body** | [**ScorableSurvey**](ScorableSurvey)| survey |  |
 
 ### Return type
 
-[**ScorableSurvey**](ScorableSurvey.html)
+[**ScorableSurvey**](ScorableSurvey)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

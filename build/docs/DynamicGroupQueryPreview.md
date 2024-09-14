@@ -1,6 +1,5 @@
----
-title: DynamicGroupQueryPreview
----
+# DynamicGroupQueryPreview
+
 ## ININ.PureCloudApi.Model.DynamicGroupQueryPreview
 
 ## Properties
@@ -8,6 +7,7 @@ title: DynamicGroupQueryPreview
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UserCount** | **int?** | Number of Users that match the DynamicGroupQuery | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

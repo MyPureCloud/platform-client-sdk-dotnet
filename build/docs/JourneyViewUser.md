@@ -1,6 +1,5 @@
----
-title: JourneyViewUser
----
+# JourneyViewUser
+
 ## ININ.PureCloudApi.Model.JourneyViewUser
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneyViewUser
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **EmailAddress** | **string** | Email address of the user | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

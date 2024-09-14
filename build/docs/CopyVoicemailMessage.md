@@ -1,6 +1,5 @@
----
-title: CopyVoicemailMessage
----
+# CopyVoicemailMessage
+
 ## ININ.PureCloudApi.Model.CopyVoicemailMessage
 
 ## Properties
@@ -10,6 +9,7 @@ title: CopyVoicemailMessage
 | **VoicemailMessageId** | **string** | The id of the VoicemailMessage to copy | |
 | **UserId** | **string** | The id of the User to copy the VoicemailMessage to | [optional] |
 | **GroupId** | **string** | The id of the Group to copy the VoicemailMessage to | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

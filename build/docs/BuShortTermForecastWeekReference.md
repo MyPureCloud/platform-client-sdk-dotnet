@@ -1,6 +1,5 @@
----
-title: BuShortTermForecastWeekReference
----
+# BuShortTermForecastWeekReference
+
 ## ININ.PureCloudApi.Model.BuShortTermForecastWeekReference
 
 ## Properties
@@ -12,6 +11,7 @@ title: BuShortTermForecastWeekReference
 | **Description** | **string** | The description of the short term forecast | [optional] |
 | **WeekNumber** | **int?** | The week number used for this bid. First week starts with number 1 | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

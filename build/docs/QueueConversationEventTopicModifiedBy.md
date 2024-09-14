@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicModifiedBy
----
+# QueueConversationEventTopicModifiedBy
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicModifiedBy
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationEventTopicModifiedBy
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The id of the user if the updater is an internal user. | [optional] |
 | **SelfUri** | **string** | The URI for the user if the updater is an internal user. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

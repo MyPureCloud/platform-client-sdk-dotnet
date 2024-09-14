@@ -1,15 +1,15 @@
----
-title: AgentActivityChangedTopicPresence
----
+# AgentActivityChangedTopicPresence
+
 ## ININ.PureCloudApi.Model.AgentActivityChangedTopicPresence
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **PresenceDefinition** | [**AgentActivityChangedTopicOrganizationPresence**](AgentActivityChangedTopicOrganizationPresence.html) |  | [optional] |
+| **PresenceDefinition** | [**AgentActivityChangedTopicOrganizationPresence**](AgentActivityChangedTopicOrganizationPresence) |  | [optional] |
 | **PresenceMessage** | **string** |  | [optional] |
 | **ModifiedDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,14 +1,14 @@
----
-title: AgentCopilotAsyncAggregateQueryResponse
----
+# AgentCopilotAsyncAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.AgentCopilotAsyncAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;AgentCopilotAggregateDataContainer&gt;**](AgentCopilotAggregateDataContainer.html) |  | [optional] |
+| **Results** | [**List&lt;AgentCopilotAggregateDataContainer&gt;**](AgentCopilotAggregateDataContainer) |  | [optional] |
 | **Cursor** | **string** | Cursor token to retrieve next page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ReportingTurnIntentSlot
----
+# ReportingTurnIntentSlot
+
 ## ININ.PureCloudApi.Model.ReportingTurnIntentSlot
 
 ## Properties
@@ -11,6 +10,7 @@ title: ReportingTurnIntentSlot
 | **Value** | **string** | The value of the slot. | [optional] |
 | **Type** | **string** | The NLU entity type of the slot (either builtin or user defined) | [optional] |
 | **Confidence** | **double?** | The confidence score this slot received during detection. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

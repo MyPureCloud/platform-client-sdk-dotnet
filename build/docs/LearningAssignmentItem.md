@@ -1,6 +1,5 @@
----
-title: LearningAssignmentItem
----
+# LearningAssignmentItem
+
 ## ININ.PureCloudApi.Model.LearningAssignmentItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: LearningAssignmentItem
 |------------ | ------------- | ------------- | -------------|
 | **ModuleId** | **string** | The Learning Module ID associated with this assignment | |
 | **UserId** | **string** | The User ID associated with this assignment | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

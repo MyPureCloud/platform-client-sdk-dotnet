@@ -1,13 +1,12 @@
----
-title: DncListDivisionViewListing
----
+# DncListDivisionViewListing
+
 ## ININ.PureCloudApi.Model.DncListDivisionViewListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DncListDivisionView&gt;**](DncListDivisionView.html) |  | [optional] |
+| **Entities** | [**List&lt;DncListDivisionView&gt;**](DncListDivisionView) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: DncListDivisionViewListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

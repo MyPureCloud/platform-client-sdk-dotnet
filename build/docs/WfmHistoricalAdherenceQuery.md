@@ -1,6 +1,5 @@
----
-title: WfmHistoricalAdherenceQuery
----
+# WfmHistoricalAdherenceQuery
+
 ## ININ.PureCloudApi.Model.WfmHistoricalAdherenceQuery
 
 ## Properties
@@ -13,6 +12,7 @@ title: WfmHistoricalAdherenceQuery
 | **UserIds** | **List&lt;string&gt;** | The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds | [optional] |
 | **IncludeExceptions** | **bool?** | Whether user exceptions should be returned as part of the results | [optional] |
 | **TeamIds** | **List&lt;string&gt;** | The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

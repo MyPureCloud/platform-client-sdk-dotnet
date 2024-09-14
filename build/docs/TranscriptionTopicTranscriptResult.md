@@ -1,6 +1,5 @@
----
-title: TranscriptionTopicTranscriptResult
----
+# TranscriptionTopicTranscriptResult
+
 ## ININ.PureCloudApi.Model.TranscriptionTopicTranscriptResult
 
 ## Properties
@@ -10,7 +9,7 @@ title: TranscriptionTopicTranscriptResult
 | **UtteranceId** | **string** |  | [optional] |
 | **IsFinal** | **bool?** |  | [optional] |
 | **Channel** | **string** |  | [optional] |
-| **Alternatives** | [**List&lt;TranscriptionTopicTranscriptAlternative&gt;**](TranscriptionTopicTranscriptAlternative.html) |  | [optional] |
+| **Alternatives** | [**List&lt;TranscriptionTopicTranscriptAlternative&gt;**](TranscriptionTopicTranscriptAlternative) |  | [optional] |
 | **AgentAssistantId** | **string** |  | [optional] |
 | **EngineProvider** | **string** |  | [optional] |
 | **EngineId** | **string** |  | [optional] |
@@ -19,6 +18,7 @@ title: TranscriptionTopicTranscriptResult
 | **SpeechTextAnalyticsProgramId** | **string** |  | [optional] |
 | **AgentAssistEnabled** | **bool?** |  | [optional] |
 | **VoiceTranscriptionEnabled** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

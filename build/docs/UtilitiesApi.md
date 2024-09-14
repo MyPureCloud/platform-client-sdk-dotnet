@@ -1,22 +1,21 @@
----
-title: UtilitiesApi
----
+# UtilitiesApi
+
 ## PureCloudPlatform.Client.V2.Api.UtilitiesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDate**](UtilitiesApi.html#getdate) | **Get** /api/v2/date | Get the current system date/time |
-| [**GetIpranges**](UtilitiesApi.html#getipranges) | **Get** /api/v2/ipranges | Get public ip address ranges for Genesys Cloud |
-| [**GetTimezones**](UtilitiesApi.html#gettimezones) | **Get** /api/v2/timezones | Get time zones list |
-| [**PostCertificateDetails**](UtilitiesApi.html#postcertificatedetails) | **Post** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
-{: class="table table-striped"}
+| [**GetDate**](#GetDate) | **Get** /api/v2/date | Get the current system date/time |
+| [**GetIpranges**](#GetIpranges) | **Get** /api/v2/ipranges | Get public ip address ranges for Genesys Cloud |
+| [**GetTimezones**](#GetTimezones) | **Get** /api/v2/timezones | Get time zones list |
+| [**PostCertificateDetails**](#PostCertificateDetails) | **Post** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 
-<a name="getdate"></a>
 
-## [**ServerDate**](ServerDate.html) GetDate ()
 
+## GetDate
+
+> [**ServerDate**](ServerDate) GetDate ()
 
 
 Get the current system date/time
@@ -65,15 +64,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**ServerDate**](ServerDate.html)
+[**ServerDate**](ServerDate)
 
-<a name="getipranges"></a>
 
-## [**IpAddressRangeListing**](IpAddressRangeListing.html) GetIpranges ()
+## GetIpranges
 
+> [**IpAddressRangeListing**](IpAddressRangeListing) GetIpranges ()
 
 
 Get public ip address ranges for Genesys Cloud
@@ -122,15 +120,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**IpAddressRangeListing**](IpAddressRangeListing.html)
+[**IpAddressRangeListing**](IpAddressRangeListing)
 
-<a name="gettimezones"></a>
 
-## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) GetTimezones (int? pageSize = null, int? pageNumber = null)
+## GetTimezones
 
+> [**TimeZoneEntityListing**](TimeZoneEntityListing) GetTimezones (int? pageSize = null, int? pageNumber = null)
 
 
 Get time zones list
@@ -185,16 +182,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TimeZoneEntityListing**](TimeZoneEntityListing.html)
+[**TimeZoneEntityListing**](TimeZoneEntityListing)
 
-<a name="postcertificatedetails"></a>
 
-## [**ParsedCertificate**](ParsedCertificate.html) PostCertificateDetails (Certificate body)
+## PostCertificateDetails
 
+> [**ParsedCertificate**](ParsedCertificate) PostCertificateDetails (Certificate body)
 
 
 Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -246,10 +242,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Certificate**](Certificate.html)| Certificate |  |
-{: class="table table-striped"}
+| **body** | [**Certificate**](Certificate)| Certificate |  |
 
 ### Return type
 
-[**ParsedCertificate**](ParsedCertificate.html)
+[**ParsedCertificate**](ParsedCertificate)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

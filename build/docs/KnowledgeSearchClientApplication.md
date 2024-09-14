@@ -1,6 +1,5 @@
----
-title: KnowledgeSearchClientApplication
----
+# KnowledgeSearchClientApplication
+
 ## ININ.PureCloudApi.Model.KnowledgeSearchClientApplication
 
 ## Properties
@@ -8,9 +7,10 @@ title: KnowledgeSearchClientApplication
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Application type. | |
-| **Deployment** | [**AddressableEntityRef**](AddressableEntityRef.html) | Application details when type is MessengerKnowledgeApp or SupportCenter. | [optional] |
-| **BotFlow** | [**AddressableEntityRef**](AddressableEntityRef.html) | Application details when type is BotFlow. | [optional] |
-| **Assistant** | [**AddressableEntityRef**](AddressableEntityRef.html) | Application details when type is Assistant. | [optional] |
-{: class="table table-striped"}
+| **Deployment** | [**AddressableEntityRef**](AddressableEntityRef) | Application details when type is MessengerKnowledgeApp or SupportCenter. | [optional] |
+| **BotFlow** | [**AddressableEntityRef**](AddressableEntityRef) | Application details when type is BotFlow. | [optional] |
+| **Assistant** | [**AddressableEntityRef**](AddressableEntityRef) | Application details when type is Assistant. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CopilotNluDomainVersion
----
+# CopilotNluDomainVersion
+
 ## ININ.PureCloudApi.Model.CopilotNluDomainVersion
 
 ## Properties
@@ -9,6 +8,7 @@ title: CopilotNluDomainVersion
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Id of the NLU v3 domain version. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

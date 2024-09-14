@@ -1,6 +1,5 @@
----
-title: CalendarUrlResponse
----
+# CalendarUrlResponse
+
 ## ININ.PureCloudApi.Model.CalendarUrlResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: CalendarUrlResponse
 |------------ | ------------- | ------------- | -------------|
 | **CalendarUrl** | **string** | The calendar url for the user to subscribe with supported clients | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: BaseMediaSettings
----
+# BaseMediaSettings
+
 ## ININ.PureCloudApi.Model.BaseMediaSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: BaseMediaSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EnableAutoAnswer** | **bool?** | Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AdherenceExplanationJobReference
----
+# AdherenceExplanationJobReference
+
 ## ININ.PureCloudApi.Model.AdherenceExplanationJobReference
 
 ## Properties
@@ -11,6 +10,7 @@ title: AdherenceExplanationJobReference
 | **Type** | **string** | The type of the adherence explanation job | [optional] |
 | **Status** | **string** | The status of the adherence explanation job | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

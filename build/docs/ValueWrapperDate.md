@@ -1,6 +1,5 @@
----
-title: ValueWrapperDate
----
+# ValueWrapperDate
+
 ## ININ.PureCloudApi.Model.ValueWrapperDate
 
 ## Properties
@@ -8,6 +7,7 @@ title: ValueWrapperDate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **DateTime?** | The value for the associated field. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

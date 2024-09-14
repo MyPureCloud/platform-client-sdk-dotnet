@@ -1,13 +1,13 @@
----
-title: SkillGroupMemberDivisionList
----
+# SkillGroupMemberDivisionList
+
 ## ININ.PureCloudApi.Model.SkillGroupMemberDivisionList
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Division&gt;**](Division.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;Division&gt;**](Division) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

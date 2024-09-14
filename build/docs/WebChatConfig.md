@@ -1,6 +1,5 @@
----
-title: WebChatConfig
----
+# WebChatConfig
+
 ## ININ.PureCloudApi.Model.WebChatConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: WebChatConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **WebChatSkin** | **string** | css class to be applied to the web chat widget. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

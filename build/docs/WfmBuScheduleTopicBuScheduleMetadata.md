@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicBuScheduleMetadata
----
+# WfmBuScheduleTopicBuScheduleMetadata
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleTopicBuScheduleMetadata
 
 ## Properties
@@ -12,10 +11,11 @@ title: WfmBuScheduleTopicBuScheduleMetadata
 | **WeekCount** | **int?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Published** | **bool?** |  | [optional] |
-| **ShortTermForecast** | [**WfmBuScheduleTopicBuShortTermForecastReference**](WfmBuScheduleTopicBuShortTermForecastReference.html) |  | [optional] |
-| **ManagementUnits** | [**List&lt;WfmBuScheduleTopicBuManagementUnitScheduleSummary&gt;**](WfmBuScheduleTopicBuManagementUnitScheduleSummary.html) |  | [optional] |
-| **GenerationResults** | [**WfmBuScheduleTopicBuScheduleGenerationResultSummary**](WfmBuScheduleTopicBuScheduleGenerationResultSummary.html) |  | [optional] |
-| **Metadata** | [**WfmBuScheduleTopicWfmVersionedEntityMetadata**](WfmBuScheduleTopicWfmVersionedEntityMetadata.html) |  | [optional] |
-{: class="table table-striped"}
+| **ShortTermForecast** | [**WfmBuScheduleTopicBuShortTermForecastReference**](WfmBuScheduleTopicBuShortTermForecastReference) |  | [optional] |
+| **ManagementUnits** | [**List&lt;WfmBuScheduleTopicBuManagementUnitScheduleSummary&gt;**](WfmBuScheduleTopicBuManagementUnitScheduleSummary) |  | [optional] |
+| **GenerationResults** | [**WfmBuScheduleTopicBuScheduleGenerationResultSummary**](WfmBuScheduleTopicBuScheduleGenerationResultSummary) |  | [optional] |
+| **Metadata** | [**WfmBuScheduleTopicWfmVersionedEntityMetadata**](WfmBuScheduleTopicWfmVersionedEntityMetadata) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

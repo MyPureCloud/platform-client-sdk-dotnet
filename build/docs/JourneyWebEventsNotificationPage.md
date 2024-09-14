@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationPage
----
+# JourneyWebEventsNotificationPage
+
 ## ININ.PureCloudApi.Model.JourneyWebEventsNotificationPage
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyWebEventsNotificationPage
 | **Pathname** | **string** |  | [optional] |
 | **QueryString** | **string** |  | [optional] |
 | **Breadcrumb** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

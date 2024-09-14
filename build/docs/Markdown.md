@@ -1,6 +1,5 @@
----
-title: Markdown
----
+# Markdown
+
 ## ININ.PureCloudApi.Model.Markdown
 
 ## Properties
@@ -8,6 +7,7 @@ title: Markdown
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not markdown is enabled | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

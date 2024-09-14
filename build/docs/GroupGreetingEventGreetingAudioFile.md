@@ -1,6 +1,5 @@
----
-title: GroupGreetingEventGreetingAudioFile
----
+# GroupGreetingEventGreetingAudioFile
+
 ## ININ.PureCloudApi.Model.GroupGreetingEventGreetingAudioFile
 
 ## Properties
@@ -9,6 +8,7 @@ title: GroupGreetingEventGreetingAudioFile
 |------------ | ------------- | ------------- | -------------|
 | **DurationMilliseconds** | **int?** |  | [optional] |
 | **SizeBytes** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

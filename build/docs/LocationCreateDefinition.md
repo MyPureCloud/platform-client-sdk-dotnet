@@ -1,6 +1,5 @@
----
-title: LocationCreateDefinition
----
+# LocationCreateDefinition
+
 ## ININ.PureCloudApi.Model.LocationCreateDefinition
 
 ## Properties
@@ -13,8 +12,9 @@ title: LocationCreateDefinition
 | **Path** | **List&lt;string&gt;** | A list of ancestor ids | [optional] |
 | **Notes** | **string** | Notes for the location | [optional] |
 | **ContactUser** | **string** | The user id of the location contact | [optional] |
-| **EmergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) | Emergency number for the location | [optional] |
-| **Address** | [**LocationAddress**](LocationAddress.html) | Address of the location | [optional] |
-{: class="table table-striped"}
+| **EmergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber) | Emergency number for the location | [optional] |
+| **Address** | [**LocationAddress**](LocationAddress) | Address of the location | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

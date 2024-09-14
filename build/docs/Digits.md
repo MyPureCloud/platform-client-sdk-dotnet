@@ -1,6 +1,5 @@
----
-title: Digits
----
+# Digits
+
 ## ININ.PureCloudApi.Model.Digits
 
 ## Properties
@@ -8,6 +7,7 @@ title: Digits
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_Digits** | **string** | A string representing the digits pressed on phone. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

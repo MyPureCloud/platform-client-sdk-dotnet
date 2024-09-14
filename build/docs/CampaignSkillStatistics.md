@@ -1,6 +1,5 @@
----
-title: CampaignSkillStatistics
----
+# CampaignSkillStatistics
+
 ## ININ.PureCloudApi.Model.CampaignSkillStatistics
 
 ## Properties
@@ -9,6 +8,7 @@ title: CampaignSkillStatistics
 |------------ | ------------- | ------------- | -------------|
 | **SkillCombinations** | **int?** | Number of available skill combinations for the campaign | [optional] |
 | **EligibleSkilledAgents** | **int?** | Number of eligible agents with skills for campaign | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

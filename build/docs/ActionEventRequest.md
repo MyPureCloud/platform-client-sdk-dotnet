@@ -1,6 +1,5 @@
----
-title: ActionEventRequest
----
+# ActionEventRequest
+
 ## ININ.PureCloudApi.Model.ActionEventRequest
 
 ## Properties
@@ -14,6 +13,7 @@ title: ActionEventRequest
 | **ErrorCode** | **string** | Client defined error code (when state transitions to errored) | [optional] |
 | **ErrorMessage** | **string** | Message of the error returned when the action fails (when state transitions to errored) | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

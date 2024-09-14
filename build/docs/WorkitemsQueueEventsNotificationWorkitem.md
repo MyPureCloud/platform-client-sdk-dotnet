@@ -1,6 +1,5 @@
----
-title: WorkitemsQueueEventsNotificationWorkitem
----
+# WorkitemsQueueEventsNotificationWorkitem
+
 ## ININ.PureCloudApi.Model.WorkitemsQueueEventsNotificationWorkitem
 
 ## Properties
@@ -31,15 +30,16 @@ title: WorkitemsQueueEventsNotificationWorkitem
 | **WrapupId** | **string** |  | [optional] |
 | **ModifiedBy** | **string** |  | [optional] |
 | **Operation** | **string** |  | [optional] |
-| **Changes** | [**List&lt;WorkitemsQueueEventsNotificationDelta&gt;**](WorkitemsQueueEventsNotificationDelta.html) |  | [optional] |
+| **Changes** | [**List&lt;WorkitemsQueueEventsNotificationDelta&gt;**](WorkitemsQueueEventsNotificationDelta) |  | [optional] |
 | **AssignmentState** | **string** |  | [optional] |
 | **AssignmentId** | **string** |  | [optional] |
 | **AlertTimeoutSeconds** | **int?** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
-| **CustomFields** | [**Dictionary&lt;string, WorkitemsQueueEventsNotificationCustomAttribute&gt;**](WorkitemsQueueEventsNotificationCustomAttribute.html) |  | [optional] |
-| **Wrapup** | [**WorkitemsQueueEventsNotificationWrapup**](WorkitemsQueueEventsNotificationWrapup.html) |  | [optional] |
-| **Sessions** | [**List&lt;WorkitemsQueueEventsNotificationSession&gt;**](WorkitemsQueueEventsNotificationSession.html) |  | [optional] |
+| **CustomFields** | [**Dictionary&lt;string, WorkitemsQueueEventsNotificationCustomAttribute&gt;**](WorkitemsQueueEventsNotificationCustomAttribute) |  | [optional] |
+| **Wrapup** | [**WorkitemsQueueEventsNotificationWrapup**](WorkitemsQueueEventsNotificationWrapup) |  | [optional] |
+| **Sessions** | [**List&lt;WorkitemsQueueEventsNotificationSession&gt;**](WorkitemsQueueEventsNotificationSession) |  | [optional] |
 | **SkillIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

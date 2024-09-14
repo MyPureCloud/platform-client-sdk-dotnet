@@ -1,13 +1,13 @@
----
-title: KnowledgeDocumentBulkRemoveRequest
----
+# KnowledgeDocumentBulkRemoveRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentBulkRemoveRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WritableEntity&gt;**](WritableEntity.html) | List of unique identifiers referencing documents that are to be deleted | |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;WritableEntity&gt;**](WritableEntity) | List of unique identifiers referencing documents that are to be deleted | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

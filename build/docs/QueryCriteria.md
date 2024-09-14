@@ -1,6 +1,5 @@
----
-title: QueryCriteria
----
+# QueryCriteria
+
 ## ININ.PureCloudApi.Model.QueryCriteria
 
 ## Properties
@@ -12,7 +11,8 @@ title: QueryCriteria
 | **Description** | **string** | The is the description of the criteria. | [optional] |
 | **Operators** | **List&lt;string&gt;** | A list of operators that can be used on this criteria. | [optional] |
 | **DataType** | **string** | The type of data for the criteria (string, int, etc). | [optional] |
-| **CategoryInfo** | [**CriteriaCategoryInfo**](CriteriaCategoryInfo.html) | A logical grouping and display order for this item. | [optional] |
-{: class="table table-striped"}
+| **CategoryInfo** | [**CriteriaCategoryInfo**](CriteriaCategoryInfo) | A logical grouping and display order for this item. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

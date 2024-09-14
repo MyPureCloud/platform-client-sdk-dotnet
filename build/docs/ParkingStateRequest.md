@@ -1,6 +1,5 @@
----
-title: ParkingStateRequest
----
+# ParkingStateRequest
+
 ## ININ.PureCloudApi.Model.ParkingStateRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ParkingStateRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** | State to set the participant. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

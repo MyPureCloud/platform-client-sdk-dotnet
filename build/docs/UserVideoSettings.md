@@ -1,6 +1,5 @@
----
-title: UserVideoSettings
----
+# UserVideoSettings
+
 ## ININ.PureCloudApi.Model.UserVideoSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserVideoSettings
 |------------ | ------------- | ------------- | -------------|
 | **AllowCamera** | **bool?** | whether or not user camera is allowed | [optional] |
 | **AllowScreenShare** | **bool?** | whether or not user screen share is allowed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

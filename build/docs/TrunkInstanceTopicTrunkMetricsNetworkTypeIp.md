@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunkMetricsNetworkTypeIp
----
+# TrunkInstanceTopicTrunkMetricsNetworkTypeIp
+
 ## ININ.PureCloudApi.Model.TrunkInstanceTopicTrunkMetricsNetworkTypeIp
 
 ## Properties
@@ -8,7 +7,8 @@ title: TrunkInstanceTopicTrunkMetricsNetworkTypeIp
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Address** | **string** |  | [optional] |
-| **ErrorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **ErrorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

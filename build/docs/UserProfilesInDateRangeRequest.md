@@ -1,6 +1,5 @@
----
-title: UserProfilesInDateRangeRequest
----
+# UserProfilesInDateRangeRequest
+
 ## ININ.PureCloudApi.Model.UserProfilesInDateRangeRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserProfilesInDateRangeRequest
 |------------ | ------------- | ------------- | -------------|
 | **StartWorkday** | **string** | Start work day in ISO-8601 format used in the date range. | |
 | **EndWorkday** | **string** | End work day in ISO-8601 format used in the date range. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

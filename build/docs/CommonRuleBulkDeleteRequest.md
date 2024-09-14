@@ -1,6 +1,5 @@
----
-title: CommonRuleBulkDeleteRequest
----
+# CommonRuleBulkDeleteRequest
+
 ## ININ.PureCloudApi.Model.CommonRuleBulkDeleteRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CommonRuleBulkDeleteRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **RuleIds** | **List&lt;string&gt;** | The user supplied rule ids to be deleted | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ActionEventActionMap
----
+# ActionEventActionMap
+
 ## ININ.PureCloudApi.Model.ActionEventActionMap
 
 ## Properties
@@ -11,6 +10,7 @@ title: ActionEventActionMap
 | **SelfUri** | **string** |  | [optional] |
 | **Version** | **int?** | The version of the action map. | |
 | **DisplayName** | **string** | Display name of the action map. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

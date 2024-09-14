@@ -1,6 +1,5 @@
----
-title: WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification
----
+# WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification
+
 ## ININ.PureCloudApi.Model.WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification
 
 ## Properties
@@ -8,9 +7,10 @@ title: WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Entities** | [**List&lt;WfmTimeOffBalanceJobTopicTimeOffBalance&gt;**](WfmTimeOffBalanceJobTopicTimeOffBalance.html) |  | [optional] |
+| **Entities** | [**List&lt;WfmTimeOffBalanceJobTopicTimeOffBalance&gt;**](WfmTimeOffBalanceJobTopicTimeOffBalance) |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **Error** | [**WfmTimeOffBalanceJobTopicErrorBody**](WfmTimeOffBalanceJobTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Error** | [**WfmTimeOffBalanceJobTopicErrorBody**](WfmTimeOffBalanceJobTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ServiceGoalTemplateImpactOverride
----
+# ServiceGoalTemplateImpactOverride
+
 ## ININ.PureCloudApi.Model.ServiceGoalTemplateImpactOverride
 
 ## Properties
@@ -8,7 +7,8 @@ title: ServiceGoalTemplateImpactOverride
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | Whether service goal overrides are enabled for this service goal template | |
-| **Impact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings.html) | Settings controlling max percent increase and decrease of service goals for this service goal template | |
-{: class="table table-striped"}
+| **Impact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings) | Settings controlling max percent increase and decrease of service goals for this service goal template | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

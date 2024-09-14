@@ -1,6 +1,5 @@
----
-title: AuditQuerySort
----
+# AuditQuerySort
+
 ## ININ.PureCloudApi.Model.AuditQuerySort
 
 ## Properties
@@ -9,6 +8,7 @@ title: AuditQuerySort
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Name of the property to sort. | |
 | **SortOrder** | **string** | Sort Order | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,77 +1,76 @@
----
-title: RecordingApi
----
+# RecordingApi
+
 ## PureCloudPlatform.Client.V2.Api.RecordingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteConversationRecordingAnnotation**](RecordingApi.html#deleteconversationrecordingannotation) | **Delete** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
-| [**DeleteOrphanrecording**](RecordingApi.html#deleteorphanrecording) | **Delete** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
-| [**DeleteRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicies) | **Delete** /api/v2/recording/crossplatform/mediaretentionpolicies | Delete media retention policies |
-| [**DeleteRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicy) | **Delete** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**DeleteRecordingJob**](RecordingApi.html#deleterecordingjob) | **Delete** /api/v2/recording/jobs/{jobId} | Delete the recording bulk job |
-| [**DeleteRecordingMediaretentionpolicies**](RecordingApi.html#deleterecordingmediaretentionpolicies) | **Delete** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
-| [**DeleteRecordingMediaretentionpolicy**](RecordingApi.html#deleterecordingmediaretentionpolicy) | **Delete** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**GetConversationRecording**](RecordingApi.html#getconversationrecording) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
-| [**GetConversationRecordingAnnotation**](RecordingApi.html#getconversationrecordingannotation) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
-| [**GetConversationRecordingAnnotations**](RecordingApi.html#getconversationrecordingannotations) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
-| [**GetConversationRecordingmetadata**](RecordingApi.html#getconversationrecordingmetadata) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. |
-| [**GetConversationRecordingmetadataRecordingId**](RecordingApi.html#getconversationrecordingmetadatarecordingid) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} | Get metadata for a specific recording. Does not return playable media. |
-| [**GetConversationRecordings**](RecordingApi.html#getconversationrecordings) | **Get** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
-| [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **Get** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
-| [**GetOrphanrecordingMedia**](RecordingApi.html#getorphanrecordingmedia) | **Get** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
-| [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **Get** /api/v2/orphanrecordings | Gets all orphan recordings |
-| [**GetRecordingBatchrequest**](RecordingApi.html#getrecordingbatchrequest) | **Get** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. |
-| [**GetRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicies) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
-| [**GetRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicy) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
-| [**GetRecordingJob**](RecordingApi.html#getrecordingjob) | **Get** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
-| [**GetRecordingJobFailedrecordings**](RecordingApi.html#getrecordingjobfailedrecordings) | **Get** /api/v2/recording/jobs/{jobId}/failedrecordings | Get IDs of recordings that the bulk job failed for |
-| [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **Get** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
-| [**GetRecordingKeyconfiguration**](RecordingApi.html#getrecordingkeyconfiguration) | **Get** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Get the encryption key configurations |
-| [**GetRecordingKeyconfigurations**](RecordingApi.html#getrecordingkeyconfigurations) | **Get** /api/v2/recording/keyconfigurations | Get a list of key configurations data |
-| [**GetRecordingMediaretentionpolicies**](RecordingApi.html#getrecordingmediaretentionpolicies) | **Get** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
-| [**GetRecordingMediaretentionpolicy**](RecordingApi.html#getrecordingmediaretentionpolicy) | **Get** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
-| [**GetRecordingRecordingkeys**](RecordingApi.html#getrecordingrecordingkeys) | **Get** /api/v2/recording/recordingkeys | Get encryption key list |
-| [**GetRecordingRecordingkeysRotationschedule**](RecordingApi.html#getrecordingrecordingkeysrotationschedule) | **Get** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
-| [**GetRecordingSettings**](RecordingApi.html#getrecordingsettings) | **Get** /api/v2/recording/settings | Get the Recording Settings for the Organization |
-| [**GetRecordingUploadsReport**](RecordingApi.html#getrecordinguploadsreport) | **Get** /api/v2/recording/uploads/reports/{reportId} | Get the status of a recording upload status report |
-| [**GetRecordingsRetentionQuery**](RecordingApi.html#getrecordingsretentionquery) | **Get** /api/v2/recordings/retention/query | Query for recording retention data |
-| [**GetRecordingsScreensessions**](RecordingApi.html#getrecordingsscreensessions) | **Get** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
-| [**GetRecordingsScreensessionsDetails**](RecordingApi.html#getrecordingsscreensessionsdetails) | **Get** /api/v2/recordings/screensessions/details | Retrieves an object containing the total number of concurrent active screen recordings |
-| [**PatchRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#patchrecordingcrossplatformmediaretentionpolicy) | **Patch** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **Patch** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PatchRecordingsScreensession**](RecordingApi.html#patchrecordingsscreensession) | **Patch** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
-| [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **Post** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
-| [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **Post** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
-| [**PostRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#postrecordingcrossplatformmediaretentionpolicies) | **Post** /api/v2/recording/crossplatform/mediaretentionpolicies | Create media retention policy |
-| [**PostRecordingJobs**](RecordingApi.html#postrecordingjobs) | **Post** /api/v2/recording/jobs | Create a recording bulk job. |
-| [**PostRecordingKeyconfigurations**](RecordingApi.html#postrecordingkeyconfigurations) | **Post** /api/v2/recording/keyconfigurations | Setup configurations for encryption key creation |
-| [**PostRecordingKeyconfigurationsValidate**](RecordingApi.html#postrecordingkeyconfigurationsvalidate) | **Post** /api/v2/recording/keyconfigurations/validate | Validate encryption key configurations without saving it |
-| [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **Post** /api/v2/recording/localkeys | create a local key management recording key |
-| [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **Post** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
-| [**PostRecordingRecordingkeys**](RecordingApi.html#postrecordingrecordingkeys) | **Post** /api/v2/recording/recordingkeys | Create encryption key |
-| [**PostRecordingUploadsReports**](RecordingApi.html#postrecordinguploadsreports) | **Post** /api/v2/recording/uploads/reports | Creates a recording upload status report |
-| [**PostRecordingsDeletionprotection**](RecordingApi.html#postrecordingsdeletionprotection) | **Post** /api/v2/recordings/deletionprotection | Get a list of conversations with protected recordings |
-| [**PostRecordingsScreensessionsAcknowledge**](RecordingApi.html#postrecordingsscreensessionsacknowledge) | **Post** /api/v2/recordings/screensessions/acknowledge | Acknowledge a screen recording. |
-| [**PostRecordingsScreensessionsMetadata**](RecordingApi.html#postrecordingsscreensessionsmetadata) | **Post** /api/v2/recordings/screensessions/metadata | Provide meta-data a screen recording. |
-| [**PutConversationRecording**](RecordingApi.html#putconversationrecording) | **Put** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
-| [**PutConversationRecordingAnnotation**](RecordingApi.html#putconversationrecordingannotation) | **Put** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
-| [**PutOrphanrecording**](RecordingApi.html#putorphanrecording) | **Put** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
-| [**PutRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#putrecordingcrossplatformmediaretentionpolicy) | **Put** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
-| [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **Put** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
-| [**PutRecordingKeyconfiguration**](RecordingApi.html#putrecordingkeyconfiguration) | **Put** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Update the encryption key configurations |
-| [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **Put** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
-| [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **Put** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
-| [**PutRecordingSettings**](RecordingApi.html#putrecordingsettings) | **Put** /api/v2/recording/settings | Update the Recording Settings for the Organization |
-| [**PutRecordingsDeletionprotection**](RecordingApi.html#putrecordingsdeletionprotection) | **Put** /api/v2/recordings/deletionprotection | Apply or revoke recording protection for conversations |
-{: class="table table-striped"}
+| [**DeleteConversationRecordingAnnotation**](#DeleteConversationRecordingAnnotation) | **Delete** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
+| [**DeleteOrphanrecording**](#DeleteOrphanrecording) | **Delete** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
+| [**DeleteRecordingCrossplatformMediaretentionpolicies**](#DeleteRecordingCrossplatformMediaretentionpolicies) | **Delete** /api/v2/recording/crossplatform/mediaretentionpolicies | Delete media retention policies |
+| [**DeleteRecordingCrossplatformMediaretentionpolicy**](#DeleteRecordingCrossplatformMediaretentionpolicy) | **Delete** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Delete a media retention policy |
+| [**DeleteRecordingJob**](#DeleteRecordingJob) | **Delete** /api/v2/recording/jobs/{jobId} | Delete the recording bulk job |
+| [**DeleteRecordingMediaretentionpolicies**](#DeleteRecordingMediaretentionpolicies) | **Delete** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
+| [**DeleteRecordingMediaretentionpolicy**](#DeleteRecordingMediaretentionpolicy) | **Delete** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
+| [**GetConversationRecording**](#GetConversationRecording) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
+| [**GetConversationRecordingAnnotation**](#GetConversationRecordingAnnotation) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
+| [**GetConversationRecordingAnnotations**](#GetConversationRecordingAnnotations) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
+| [**GetConversationRecordingmetadata**](#GetConversationRecordingmetadata) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. |
+| [**GetConversationRecordingmetadataRecordingId**](#GetConversationRecordingmetadataRecordingId) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} | Get metadata for a specific recording. Does not return playable media. |
+| [**GetConversationRecordings**](#GetConversationRecordings) | **Get** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
+| [**GetOrphanrecording**](#GetOrphanrecording) | **Get** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
+| [**GetOrphanrecordingMedia**](#GetOrphanrecordingMedia) | **Get** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
+| [**GetOrphanrecordings**](#GetOrphanrecordings) | **Get** /api/v2/orphanrecordings | Gets all orphan recordings |
+| [**GetRecordingBatchrequest**](#GetRecordingBatchrequest) | **Get** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. |
+| [**GetRecordingCrossplatformMediaretentionpolicies**](#GetRecordingCrossplatformMediaretentionpolicies) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
+| [**GetRecordingCrossplatformMediaretentionpolicy**](#GetRecordingCrossplatformMediaretentionpolicy) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
+| [**GetRecordingJob**](#GetRecordingJob) | **Get** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
+| [**GetRecordingJobFailedrecordings**](#GetRecordingJobFailedrecordings) | **Get** /api/v2/recording/jobs/{jobId}/failedrecordings | Get IDs of recordings that the bulk job failed for |
+| [**GetRecordingJobs**](#GetRecordingJobs) | **Get** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
+| [**GetRecordingKeyconfiguration**](#GetRecordingKeyconfiguration) | **Get** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Get the encryption key configurations |
+| [**GetRecordingKeyconfigurations**](#GetRecordingKeyconfigurations) | **Get** /api/v2/recording/keyconfigurations | Get a list of key configurations data |
+| [**GetRecordingMediaretentionpolicies**](#GetRecordingMediaretentionpolicies) | **Get** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
+| [**GetRecordingMediaretentionpolicy**](#GetRecordingMediaretentionpolicy) | **Get** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
+| [**GetRecordingRecordingkeys**](#GetRecordingRecordingkeys) | **Get** /api/v2/recording/recordingkeys | Get encryption key list |
+| [**GetRecordingRecordingkeysRotationschedule**](#GetRecordingRecordingkeysRotationschedule) | **Get** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
+| [**GetRecordingSettings**](#GetRecordingSettings) | **Get** /api/v2/recording/settings | Get the Recording Settings for the Organization |
+| [**GetRecordingUploadsReport**](#GetRecordingUploadsReport) | **Get** /api/v2/recording/uploads/reports/{reportId} | Get the status of a recording upload status report |
+| [**GetRecordingsRetentionQuery**](#GetRecordingsRetentionQuery) | **Get** /api/v2/recordings/retention/query | Query for recording retention data |
+| [**GetRecordingsScreensessions**](#GetRecordingsScreensessions) | **Get** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
+| [**GetRecordingsScreensessionsDetails**](#GetRecordingsScreensessionsDetails) | **Get** /api/v2/recordings/screensessions/details | Retrieves an object containing the total number of concurrent active screen recordings |
+| [**PatchRecordingCrossplatformMediaretentionpolicy**](#PatchRecordingCrossplatformMediaretentionpolicy) | **Patch** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
+| [**PatchRecordingMediaretentionpolicy**](#PatchRecordingMediaretentionpolicy) | **Patch** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
+| [**PatchRecordingsScreensession**](#PatchRecordingsScreensession) | **Patch** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
+| [**PostConversationRecordingAnnotations**](#PostConversationRecordingAnnotations) | **Post** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
+| [**PostRecordingBatchrequests**](#PostRecordingBatchrequests) | **Post** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
+| [**PostRecordingCrossplatformMediaretentionpolicies**](#PostRecordingCrossplatformMediaretentionpolicies) | **Post** /api/v2/recording/crossplatform/mediaretentionpolicies | Create media retention policy |
+| [**PostRecordingJobs**](#PostRecordingJobs) | **Post** /api/v2/recording/jobs | Create a recording bulk job. |
+| [**PostRecordingKeyconfigurations**](#PostRecordingKeyconfigurations) | **Post** /api/v2/recording/keyconfigurations | Setup configurations for encryption key creation |
+| [**PostRecordingKeyconfigurationsValidate**](#PostRecordingKeyconfigurationsValidate) | **Post** /api/v2/recording/keyconfigurations/validate | Validate encryption key configurations without saving it |
+| [**PostRecordingLocalkeys**](#PostRecordingLocalkeys) | **Post** /api/v2/recording/localkeys | create a local key management recording key |
+| [**PostRecordingMediaretentionpolicies**](#PostRecordingMediaretentionpolicies) | **Post** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
+| [**PostRecordingRecordingkeys**](#PostRecordingRecordingkeys) | **Post** /api/v2/recording/recordingkeys | Create encryption key |
+| [**PostRecordingUploadsReports**](#PostRecordingUploadsReports) | **Post** /api/v2/recording/uploads/reports | Creates a recording upload status report |
+| [**PostRecordingsDeletionprotection**](#PostRecordingsDeletionprotection) | **Post** /api/v2/recordings/deletionprotection | Get a list of conversations with protected recordings |
+| [**PostRecordingsScreensessionsAcknowledge**](#PostRecordingsScreensessionsAcknowledge) | **Post** /api/v2/recordings/screensessions/acknowledge | Acknowledge a screen recording. |
+| [**PostRecordingsScreensessionsMetadata**](#PostRecordingsScreensessionsMetadata) | **Post** /api/v2/recordings/screensessions/metadata | Provide meta-data a screen recording. |
+| [**PutConversationRecording**](#PutConversationRecording) | **Put** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
+| [**PutConversationRecordingAnnotation**](#PutConversationRecordingAnnotation) | **Put** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
+| [**PutOrphanrecording**](#PutOrphanrecording) | **Put** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
+| [**PutRecordingCrossplatformMediaretentionpolicy**](#PutRecordingCrossplatformMediaretentionpolicy) | **Put** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutRecordingJob**](#PutRecordingJob) | **Put** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
+| [**PutRecordingKeyconfiguration**](#PutRecordingKeyconfiguration) | **Put** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Update the encryption key configurations |
+| [**PutRecordingMediaretentionpolicy**](#PutRecordingMediaretentionpolicy) | **Put** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutRecordingRecordingkeysRotationschedule**](#PutRecordingRecordingkeysRotationschedule) | **Put** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
+| [**PutRecordingSettings**](#PutRecordingSettings) | **Put** /api/v2/recording/settings | Update the Recording Settings for the Organization |
+| [**PutRecordingsDeletionprotection**](#PutRecordingsDeletionprotection) | **Put** /api/v2/recordings/deletionprotection | Apply or revoke recording protection for conversations |
 
-<a name="deleteconversationrecordingannotation"></a>
 
-## void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
 
+## DeleteConversationRecordingAnnotation
+
+> void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
 
 
 Delete annotation
@@ -128,16 +127,15 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteorphanrecording"></a>
 
-## [**OrphanRecording**](OrphanRecording.html) DeleteOrphanrecording (string orphanId)
+## DeleteOrphanrecording
 
+> [**OrphanRecording**](OrphanRecording) DeleteOrphanrecording (string orphanId)
 
 
 Deletes a single orphan recording
@@ -191,16 +189,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **orphanId** | **string**| Orphan ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OrphanRecording**](OrphanRecording.html)
+[**OrphanRecording**](OrphanRecording)
 
-<a name="deleterecordingcrossplatformmediaretentionpolicies"></a>
 
-## void DeleteRecordingCrossplatformMediaretentionpolicies (string ids)
+## DeleteRecordingCrossplatformMediaretentionpolicies
 
+> void DeleteRecordingCrossplatformMediaretentionpolicies (string ids)
 
 
 Delete media retention policies
@@ -255,16 +252,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ids** | **string**|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleterecordingcrossplatformmediaretentionpolicy"></a>
 
-## void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId)
+## DeleteRecordingCrossplatformMediaretentionpolicy
 
+> void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId)
 
 
 Delete a media retention policy
@@ -317,16 +313,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleterecordingjob"></a>
 
-## void DeleteRecordingJob (string jobId)
+## DeleteRecordingJob
 
+> void DeleteRecordingJob (string jobId)
 
 
 Delete the recording bulk job
@@ -379,16 +374,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleterecordingmediaretentionpolicies"></a>
 
-## void DeleteRecordingMediaretentionpolicies (string ids)
+## DeleteRecordingMediaretentionpolicies
 
+> void DeleteRecordingMediaretentionpolicies (string ids)
 
 
 Delete media retention policies
@@ -443,16 +437,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ids** | **string**|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleterecordingmediaretentionpolicy"></a>
 
-## void DeleteRecordingMediaretentionpolicy (string policyId)
+## DeleteRecordingMediaretentionpolicy
 
+> void DeleteRecordingMediaretentionpolicy (string policyId)
 
 
 Delete a media retention policy
@@ -505,16 +498,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getconversationrecording"></a>
 
-## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
+## GetConversationRecording
 
+> [**Recording**](Recording) GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
 
 
 Gets a specific recording.
@@ -586,17 +578,16 @@ namespace Example
 | **download** | **bool?**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false]<br />**Values**: true, false |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
-| **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
-{: class="table table-striped"}
+| **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
 
 ### Return type
 
-[**Recording**](Recording.html)
+[**Recording**](Recording)
 
-<a name="getconversationrecordingannotation"></a>
 
-## [**Annotation**](Annotation.html) GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
+## GetConversationRecordingAnnotation
 
+> [**Annotation**](Annotation) GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
 
 
 Get annotation
@@ -654,16 +645,15 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Annotation**](Annotation.html)
+[**Annotation**](Annotation)
 
-<a name="getconversationrecordingannotations"></a>
 
-## [**List&lt;Annotation&gt;**](Annotation.html) GetConversationRecordingAnnotations (string conversationId, string recordingId)
+## GetConversationRecordingAnnotations
 
+> [**List&lt;Annotation&gt;**](Annotation) GetConversationRecordingAnnotations (string conversationId, string recordingId)
 
 
 Get annotations for recording
@@ -719,16 +709,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<Annotation>**](Annotation.html)
+[**List<Annotation>**](Annotation)
 
-<a name="getconversationrecordingmetadata"></a>
 
-## [**List&lt;RecordingMetadata&gt;**](RecordingMetadata.html) GetConversationRecordingmetadata (string conversationId)
+## GetConversationRecordingmetadata
 
+> [**List&lt;RecordingMetadata&gt;**](RecordingMetadata) GetConversationRecordingmetadata (string conversationId)
 
 
 Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
@@ -783,16 +772,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**List<RecordingMetadata>**](RecordingMetadata.html)
+[**List<RecordingMetadata>**](RecordingMetadata)
 
-<a name="getconversationrecordingmetadatarecordingid"></a>
 
-## [**RecordingMetadata**](RecordingMetadata.html) GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
+## GetConversationRecordingmetadataRecordingId
 
+> [**RecordingMetadata**](RecordingMetadata) GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
 
 
 Get metadata for a specific recording. Does not return playable media.
@@ -849,16 +837,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**RecordingMetadata**](RecordingMetadata.html)
+[**RecordingMetadata**](RecordingMetadata)
 
-<a name="getconversationrecordings"></a>
 
-## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
+## GetConversationRecordings
 
+> [**List&lt;Recording&gt;**](Recording) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
 
 
 Get all of a Conversation's Recordings.
@@ -918,17 +905,16 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
 | **formatId** | **string**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
-| **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional]  |
-{: class="table table-striped"}
+| **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional]  |
 
 ### Return type
 
-[**List<Recording>**](Recording.html)
+[**List<Recording>**](Recording)
 
-<a name="getorphanrecording"></a>
 
-## [**OrphanRecording**](OrphanRecording.html) GetOrphanrecording (string orphanId)
+## GetOrphanrecording
 
+> [**OrphanRecording**](OrphanRecording) GetOrphanrecording (string orphanId)
 
 
 Gets a single orphan recording
@@ -982,16 +968,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **orphanId** | **string**| Orphan ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OrphanRecording**](OrphanRecording.html)
+[**OrphanRecording**](OrphanRecording)
 
-<a name="getorphanrecordingmedia"></a>
 
-## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
+## GetOrphanrecordingMedia
 
+> [**Recording**](Recording) GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
 
 
 Gets the media of a single orphan recording
@@ -1062,17 +1047,16 @@ namespace Example
 | **download** | **bool?**| requesting a download format of the recording | [optional] [default to false]<br />**Values**: true, false |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
-| **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
-{: class="table table-striped"}
+| **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
 
 ### Return type
 
-[**Recording**](Recording.html)
+[**Recording**](Recording)
 
-<a name="getorphanrecordings"></a>
 
-## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
+## GetOrphanrecordings
 
+> [**OrphanRecordingListing**](OrphanRecordingListing) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
 
 
 Gets all orphan recordings
@@ -1135,21 +1119,20 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
 | **media** | **string**| Filter resulting orphans based on their media type | [optional] <br />**Values**: Call, Screen |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OrphanRecordingListing**](OrphanRecordingListing.html)
+[**OrphanRecordingListing**](OrphanRecordingListing)
 
-<a name="getrecordingbatchrequest"></a>
 
-## [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html) GetRecordingBatchrequest (string jobId)
+## GetRecordingBatchrequest
 
+> [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult) GetRecordingBatchrequest (string jobId)
 
 
 Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
@@ -1202,16 +1185,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html)
+[**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult)
 
-<a name="getrecordingcrossplatformmediaretentionpolicies"></a>
 
-## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
+## GetRecordingCrossplatformMediaretentionpolicies
 
+> [**PolicyEntityListing**](PolicyEntityListing) GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
 
 
 Gets media retention policy list with query options to filter on name and enabled.
@@ -1279,7 +1261,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the policy name - used for filtering results in searches. | [optional]  |
@@ -1287,16 +1269,15 @@ namespace Example
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
 | **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**PolicyEntityListing**](PolicyEntityListing.html)
+[**PolicyEntityListing**](PolicyEntityListing)
 
-<a name="getrecordingcrossplatformmediaretentionpolicy"></a>
 
-## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) GetRecordingCrossplatformMediaretentionpolicy (string policyId)
+## GetRecordingCrossplatformMediaretentionpolicy
 
+> [**CrossPlatformPolicy**](CrossPlatformPolicy) GetRecordingCrossplatformMediaretentionpolicy (string policyId)
 
 
 Get a media retention policy
@@ -1350,16 +1331,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+[**CrossPlatformPolicy**](CrossPlatformPolicy)
 
-<a name="getrecordingjob"></a>
 
-## [**RecordingJob**](RecordingJob.html) GetRecordingJob (string jobId)
+## GetRecordingJob
 
+> [**RecordingJob**](RecordingJob) GetRecordingJob (string jobId)
 
 
 Get the status of the job associated with the job id.
@@ -1413,16 +1393,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**RecordingJob**](RecordingJob.html)
+[**RecordingJob**](RecordingJob)
 
-<a name="getrecordingjobfailedrecordings"></a>
 
-## [**FailedRecordingEntityListing**](FailedRecordingEntityListing.html) GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
+## GetRecordingJobFailedrecordings
 
+> [**FailedRecordingEntityListing**](FailedRecordingEntityListing) GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
 
 
 Get IDs of recordings that the bulk job failed for
@@ -1484,16 +1463,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**FailedRecordingEntityListing**](FailedRecordingEntityListing.html)
+[**FailedRecordingEntityListing**](FailedRecordingEntityListing)
 
-<a name="getrecordingjobs"></a>
 
-## [**RecordingJobEntityListing**](RecordingJobEntityListing.html) GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
+## GetRecordingJobs
 
+> [**RecordingJobEntityListing**](RecordingJobEntityListing) GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
 
 
 Get the status of all jobs within the user's organization
@@ -1561,16 +1539,15 @@ namespace Example
 | **jobType** | **string**| Job Type (Can be left empty for both) | [optional] <br />**Values**: ARCHIVE, DELETE, EXPORT |
 | **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**RecordingJobEntityListing**](RecordingJobEntityListing.html)
+[**RecordingJobEntityListing**](RecordingJobEntityListing)
 
-<a name="getrecordingkeyconfiguration"></a>
 
-## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) GetRecordingKeyconfiguration (string keyConfigurationId)
+## GetRecordingKeyconfiguration
 
+> [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) GetRecordingKeyconfiguration (string keyConfigurationId)
 
 
 Get the encryption key configurations
@@ -1624,16 +1601,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **keyConfigurationId** | **string**| Key Configurations Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)
 
-<a name="getrecordingkeyconfigurations"></a>
 
-## [**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing.html) GetRecordingKeyconfigurations ()
+## GetRecordingKeyconfigurations
 
+> [**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing) GetRecordingKeyconfigurations ()
 
 
 Get a list of key configurations data
@@ -1683,15 +1659,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing.html)
+[**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing)
 
-<a name="getrecordingmediaretentionpolicies"></a>
 
-## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
+## GetRecordingMediaretentionpolicies
 
+> [**PolicyEntityListing**](PolicyEntityListing) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
 
 
 Gets media retention policy list with query options to filter on name and enabled.
@@ -1759,7 +1734,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the policy name - used for filtering results in searches. | [optional]  |
@@ -1767,16 +1742,15 @@ namespace Example
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
 | **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**PolicyEntityListing**](PolicyEntityListing.html)
+[**PolicyEntityListing**](PolicyEntityListing)
 
-<a name="getrecordingmediaretentionpolicy"></a>
 
-## [**Policy**](Policy.html) GetRecordingMediaretentionpolicy (string policyId)
+## GetRecordingMediaretentionpolicy
 
+> [**Policy**](Policy) GetRecordingMediaretentionpolicy (string policyId)
 
 
 Get a media retention policy
@@ -1830,16 +1804,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Policy**](Policy.html)
+[**Policy**](Policy)
 
-<a name="getrecordingrecordingkeys"></a>
 
-## [**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html) GetRecordingRecordingkeys (int? pageSize = null, int? pageNumber = null)
+## GetRecordingRecordingkeys
 
+> [**EncryptionKeyEntityListing**](EncryptionKeyEntityListing) GetRecordingRecordingkeys (int? pageSize = null, int? pageNumber = null)
 
 
 Get encryption key list
@@ -1895,16 +1868,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html)
+[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing)
 
-<a name="getrecordingrecordingkeysrotationschedule"></a>
 
-## [**KeyRotationSchedule**](KeyRotationSchedule.html) GetRecordingRecordingkeysRotationschedule ()
+## GetRecordingRecordingkeysRotationschedule
 
+> [**KeyRotationSchedule**](KeyRotationSchedule) GetRecordingRecordingkeysRotationschedule ()
 
 
 Get key rotation schedule
@@ -1954,15 +1926,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**KeyRotationSchedule**](KeyRotationSchedule.html)
+[**KeyRotationSchedule**](KeyRotationSchedule)
 
-<a name="getrecordingsettings"></a>
 
-## [**RecordingSettings**](RecordingSettings.html) GetRecordingSettings (bool? createDefault = null)
+## GetRecordingSettings
 
+> [**RecordingSettings**](RecordingSettings) GetRecordingSettings (bool? createDefault = null)
 
 
 Get the Recording Settings for the Organization
@@ -2017,16 +1988,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **createDefault** | **bool?**| If no settings are found, a new one is created with default values | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**RecordingSettings**](RecordingSettings.html)
+[**RecordingSettings**](RecordingSettings)
 
-<a name="getrecordinguploadsreport"></a>
 
-## [**RecordingUploadReport**](RecordingUploadReport.html) GetRecordingUploadsReport (string reportId)
+## GetRecordingUploadsReport
 
+> [**RecordingUploadReport**](RecordingUploadReport) GetRecordingUploadsReport (string reportId)
 
 
 Get the status of a recording upload status report
@@ -2080,16 +2050,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **reportId** | **string**| reportId |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**RecordingUploadReport**](RecordingUploadReport.html)
+[**RecordingUploadReport**](RecordingUploadReport)
 
-<a name="getrecordingsretentionquery"></a>
 
-## [**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing.html) GetRecordingsRetentionQuery (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
+## GetRecordingsRetentionQuery
 
+> [**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing) GetRecordingsRetentionQuery (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
 
 
 Query for recording retention data
@@ -2147,17 +2116,19 @@ namespace Example
 | **retentionThresholdDays** | **int?**| Fetch retention data for recordings retained for more days than the provided value. |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| Page size. Maximum is 500. | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing.html)
+[**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing)
 
-<a name="getrecordingsscreensessions"></a>
 
-## [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html) GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
+## GetRecordingsScreensessions
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing) GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Retrieves a paged listing of screen recording sessions
 
@@ -2214,16 +2185,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
+[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing)
 
-<a name="getrecordingsscreensessionsdetails"></a>
 
-## [**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions.html) GetRecordingsScreensessionsDetails ()
+## GetRecordingsScreensessionsDetails
 
+> [**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions) GetRecordingsScreensessionsDetails ()
 
 
 Retrieves an object containing the total number of concurrent active screen recordings
@@ -2273,15 +2243,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions.html)
+[**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions)
 
-<a name="patchrecordingcrossplatformmediaretentionpolicy"></a>
 
-## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body)
+## PatchRecordingCrossplatformMediaretentionpolicy
 
+> [**CrossPlatformPolicy**](CrossPlatformPolicy) PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body)
 
 
 Patch a media retention policy
@@ -2336,17 +2305,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**CrossPlatformPolicyUpdate**](CrossPlatformPolicyUpdate.html)| Policy |  |
-{: class="table table-striped"}
+| **body** | [**CrossPlatformPolicyUpdate**](CrossPlatformPolicyUpdate)| Policy |  |
 
 ### Return type
 
-[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+[**CrossPlatformPolicy**](CrossPlatformPolicy)
 
-<a name="patchrecordingmediaretentionpolicy"></a>
 
-## [**Policy**](Policy.html) PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body)
+## PatchRecordingMediaretentionpolicy
 
+> [**Policy**](Policy) PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body)
 
 
 Patch a media retention policy
@@ -2401,18 +2369,20 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**PolicyUpdate**](PolicyUpdate.html)| Policy |  |
-{: class="table table-striped"}
+| **body** | [**PolicyUpdate**](PolicyUpdate)| Policy |  |
 
 ### Return type
 
-[**Policy**](Policy.html)
+[**Policy**](Policy)
 
-<a name="patchrecordingsscreensession"></a>
 
-## void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null)
+## PatchRecordingsScreensession
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a screen recording session
 
@@ -2467,17 +2437,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingSessionId** | **string**| Screen recording session ID |  |
-| **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest)|  | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postconversationrecordingannotations"></a>
 
-## [**Annotation**](Annotation.html) PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
+## PostConversationRecordingAnnotations
 
+> [**Annotation**](Annotation) PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
 
 
 Create annotation
@@ -2534,17 +2503,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-| **body** | [**Annotation**](Annotation.html)| annotation |  |
-{: class="table table-striped"}
+| **body** | [**Annotation**](Annotation)| annotation |  |
 
 ### Return type
 
-[**Annotation**](Annotation.html)
+[**Annotation**](Annotation)
 
-<a name="postrecordingbatchrequests"></a>
 
-## [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) PostRecordingBatchrequests (BatchDownloadJobSubmission body)
+## PostRecordingBatchrequests
 
+> [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult) PostRecordingBatchrequests (BatchDownloadJobSubmission body)
 
 
 Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
@@ -2598,17 +2566,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**BatchDownloadJobSubmission**](BatchDownloadJobSubmission.html)| Job submission criteria |  |
-{: class="table table-striped"}
+| **body** | [**BatchDownloadJobSubmission**](BatchDownloadJobSubmission)| Job submission criteria |  |
 
 ### Return type
 
-[**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html)
+[**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult)
 
-<a name="postrecordingcrossplatformmediaretentionpolicies"></a>
 
-## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body)
+## PostRecordingCrossplatformMediaretentionpolicies
 
+> [**CrossPlatformPolicy**](CrossPlatformPolicy) PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body)
 
 
 Create media retention policy
@@ -2663,17 +2630,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CrossPlatformPolicyCreate**](CrossPlatformPolicyCreate.html)| Policy |  |
-{: class="table table-striped"}
+| **body** | [**CrossPlatformPolicyCreate**](CrossPlatformPolicyCreate)| Policy |  |
 
 ### Return type
 
-[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+[**CrossPlatformPolicy**](CrossPlatformPolicy)
 
-<a name="postrecordingjobs"></a>
 
-## [**RecordingJob**](RecordingJob.html) PostRecordingJobs (RecordingJobsQuery body)
+## PostRecordingJobs
 
+> [**RecordingJob**](RecordingJob) PostRecordingJobs (RecordingJobsQuery body)
 
 
 Create a recording bulk job.
@@ -2728,17 +2694,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RecordingJobsQuery**](RecordingJobsQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**RecordingJobsQuery**](RecordingJobsQuery)| query |  |
 
 ### Return type
 
-[**RecordingJob**](RecordingJob.html)
+[**RecordingJob**](RecordingJob)
 
-<a name="postrecordingkeyconfigurations"></a>
 
-## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body)
+## PostRecordingKeyconfigurations
 
+> [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body)
 
 
 Setup configurations for encryption key creation
@@ -2791,17 +2756,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)| Encryption Configuration |  |
-{: class="table table-striped"}
+| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)| Encryption Configuration |  |
 
 ### Return type
 
-[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)
 
-<a name="postrecordingkeyconfigurationsvalidate"></a>
 
-## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body)
+## PostRecordingKeyconfigurationsValidate
 
+> [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body)
 
 
 Validate encryption key configurations without saving it
@@ -2854,17 +2818,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)| Encryption Configuration |  |
-{: class="table table-striped"}
+| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)| Encryption Configuration |  |
 
 ### Return type
 
-[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)
 
-<a name="postrecordinglocalkeys"></a>
 
-## [**EncryptionKey**](EncryptionKey.html) PostRecordingLocalkeys (LocalEncryptionKeyRequest body)
+## PostRecordingLocalkeys
 
+> [**EncryptionKey**](EncryptionKey) PostRecordingLocalkeys (LocalEncryptionKeyRequest body)
 
 
 create a local key management recording key
@@ -2917,17 +2880,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LocalEncryptionKeyRequest**](LocalEncryptionKeyRequest.html)| Local Encryption body |  |
-{: class="table table-striped"}
+| **body** | [**LocalEncryptionKeyRequest**](LocalEncryptionKeyRequest)| Local Encryption body |  |
 
 ### Return type
 
-[**EncryptionKey**](EncryptionKey.html)
+[**EncryptionKey**](EncryptionKey)
 
-<a name="postrecordingmediaretentionpolicies"></a>
 
-## [**Policy**](Policy.html) PostRecordingMediaretentionpolicies (PolicyCreate body)
+## PostRecordingMediaretentionpolicies
 
+> [**Policy**](Policy) PostRecordingMediaretentionpolicies (PolicyCreate body)
 
 
 Create media retention policy
@@ -2982,17 +2944,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PolicyCreate**](PolicyCreate.html)| Policy |  |
-{: class="table table-striped"}
+| **body** | [**PolicyCreate**](PolicyCreate)| Policy |  |
 
 ### Return type
 
-[**Policy**](Policy.html)
+[**Policy**](Policy)
 
-<a name="postrecordingrecordingkeys"></a>
 
-## [**EncryptionKey**](EncryptionKey.html) PostRecordingRecordingkeys ()
+## PostRecordingRecordingkeys
 
+> [**EncryptionKey**](EncryptionKey) PostRecordingRecordingkeys ()
 
 
 Create encryption key
@@ -3042,15 +3003,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**EncryptionKey**](EncryptionKey.html)
+[**EncryptionKey**](EncryptionKey)
 
-<a name="postrecordinguploadsreports"></a>
 
-## [**RecordingUploadReport**](RecordingUploadReport.html) PostRecordingUploadsReports (RecordingUploadReportRequest body)
+## PostRecordingUploadsReports
 
+> [**RecordingUploadReport**](RecordingUploadReport) PostRecordingUploadsReports (RecordingUploadReportRequest body)
 
 
 Creates a recording upload status report
@@ -3103,17 +3063,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RecordingUploadReportRequest**](RecordingUploadReportRequest.html)| Report parameters |  |
-{: class="table table-striped"}
+| **body** | [**RecordingUploadReportRequest**](RecordingUploadReportRequest)| Report parameters |  |
 
 ### Return type
 
-[**RecordingUploadReport**](RecordingUploadReport.html)
+[**RecordingUploadReport**](RecordingUploadReport)
 
-<a name="postrecordingsdeletionprotection"></a>
 
-## [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) PostRecordingsDeletionprotection (ConversationDeletionProtectionQuery body)
+## PostRecordingsDeletionprotection
 
+> [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef) PostRecordingsDeletionprotection (ConversationDeletionProtectionQuery body)
 
 
 Get a list of conversations with protected recordings
@@ -3165,17 +3124,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)| conversationIds |  |
-{: class="table table-striped"}
+| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery)| conversationIds |  |
 
 ### Return type
 
-[**List<AddressableEntityRef>**](AddressableEntityRef.html)
+[**List<AddressableEntityRef>**](AddressableEntityRef)
 
-<a name="postrecordingsscreensessionsacknowledge"></a>
 
-## void PostRecordingsScreensessionsAcknowledge (AcknowledgeScreenRecordingRequest body)
+## PostRecordingsScreensessionsAcknowledge
 
+> void PostRecordingsScreensessionsAcknowledge (AcknowledgeScreenRecordingRequest body)
 
 
 Acknowledge a screen recording.
@@ -3226,17 +3184,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AcknowledgeScreenRecordingRequest**](AcknowledgeScreenRecordingRequest.html)| AcknowledgeScreenRecordingRequest |  |
-{: class="table table-striped"}
+| **body** | [**AcknowledgeScreenRecordingRequest**](AcknowledgeScreenRecordingRequest)| AcknowledgeScreenRecordingRequest |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="postrecordingsscreensessionsmetadata"></a>
 
-## void PostRecordingsScreensessionsMetadata (ScreenRecordingMetaDataRequest body)
+## PostRecordingsScreensessionsMetadata
 
+> void PostRecordingsScreensessionsMetadata (ScreenRecordingMetaDataRequest body)
 
 
 Provide meta-data a screen recording.
@@ -3287,17 +3244,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ScreenRecordingMetaDataRequest**](ScreenRecordingMetaDataRequest.html)| ScreenRecordingMetaDataRequest |  |
-{: class="table table-striped"}
+| **body** | [**ScreenRecordingMetaDataRequest**](ScreenRecordingMetaDataRequest)| ScreenRecordingMetaDataRequest |  |
 
 ### Return type
 
 void (empty response body)
 
-<a name="putconversationrecording"></a>
 
-## [**Recording**](Recording.html) PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null)
+## PutConversationRecording
 
+> [**Recording**](Recording) PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null)
 
 
 Updates the retention records on a recording.
@@ -3359,18 +3315,17 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-| **body** | [**Recording**](Recording.html)| recording |  |
+| **body** | [**Recording**](Recording)| recording |  |
 | **clearExport** | **bool?**| Whether to clear the pending export for the recording | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Recording**](Recording.html)
+[**Recording**](Recording)
 
-<a name="putconversationrecordingannotation"></a>
 
-## [**Annotation**](Annotation.html) PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body)
+## PutConversationRecordingAnnotation
 
+> [**Annotation**](Annotation) PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body)
 
 
 Update annotation
@@ -3431,17 +3386,16 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
-| **body** | [**Annotation**](Annotation.html)| annotation |  |
-{: class="table table-striped"}
+| **body** | [**Annotation**](Annotation)| annotation |  |
 
 ### Return type
 
-[**Annotation**](Annotation.html)
+[**Annotation**](Annotation)
 
-<a name="putorphanrecording"></a>
 
-## [**Recording**](Recording.html) PutOrphanrecording (string orphanId, OrphanUpdateRequest body = null)
+## PutOrphanrecording
 
+> [**Recording**](Recording) PutOrphanrecording (string orphanId, OrphanUpdateRequest body = null)
 
 
 Updates an orphan recording to a regular recording with retention values
@@ -3498,17 +3452,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **orphanId** | **string**| Orphan ID |  |
-| **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest)|  | [optional]  |
 
 ### Return type
 
-[**Recording**](Recording.html)
+[**Recording**](Recording)
 
-<a name="putrecordingcrossplatformmediaretentionpolicy"></a>
 
-## [**CrossPlatformPolicy**](CrossPlatformPolicy.html) PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
+## PutRecordingCrossplatformMediaretentionpolicy
 
+> [**CrossPlatformPolicy**](CrossPlatformPolicy) PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
 
 
 Update a media retention policy
@@ -3565,17 +3518,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy.html)| Policy |  |
-{: class="table table-striped"}
+| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy)| Policy |  |
 
 ### Return type
 
-[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+[**CrossPlatformPolicy**](CrossPlatformPolicy)
 
-<a name="putrecordingjob"></a>
 
-## [**RecordingJob**](RecordingJob.html) PutRecordingJob (string jobId, ExecuteRecordingJobsQuery body)
+## PutRecordingJob
 
+> [**RecordingJob**](RecordingJob) PutRecordingJob (string jobId, ExecuteRecordingJobsQuery body)
 
 
 Execute the recording bulk job.
@@ -3634,17 +3586,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-| **body** | [**ExecuteRecordingJobsQuery**](ExecuteRecordingJobsQuery.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**ExecuteRecordingJobsQuery**](ExecuteRecordingJobsQuery)| query |  |
 
 ### Return type
 
-[**RecordingJob**](RecordingJob.html)
+[**RecordingJob**](RecordingJob)
 
-<a name="putrecordingkeyconfiguration"></a>
 
-## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body)
+## PutRecordingKeyconfiguration
 
+> [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body)
 
 
 Update the encryption key configurations
@@ -3699,17 +3650,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **keyConfigurationId** | **string**| Key Configurations Id |  |
-| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)| Encryption key configuration metadata |  |
-{: class="table table-striped"}
+| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)| Encryption key configuration metadata |  |
 
 ### Return type
 
-[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)
 
-<a name="putrecordingmediaretentionpolicy"></a>
 
-## [**Policy**](Policy.html) PutRecordingMediaretentionpolicy (string policyId, Policy body)
+## PutRecordingMediaretentionpolicy
 
+> [**Policy**](Policy) PutRecordingMediaretentionpolicy (string policyId, Policy body)
 
 
 Update a media retention policy
@@ -3766,17 +3716,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**Policy**](Policy.html)| Policy |  |
-{: class="table table-striped"}
+| **body** | [**Policy**](Policy)| Policy |  |
 
 ### Return type
 
-[**Policy**](Policy.html)
+[**Policy**](Policy)
 
-<a name="putrecordingrecordingkeysrotationschedule"></a>
 
-## [**KeyRotationSchedule**](KeyRotationSchedule.html) PutRecordingRecordingkeysRotationschedule (KeyRotationSchedule body)
+## PutRecordingRecordingkeysRotationschedule
 
+> [**KeyRotationSchedule**](KeyRotationSchedule) PutRecordingRecordingkeysRotationschedule (KeyRotationSchedule body)
 
 
 Update key rotation schedule
@@ -3829,17 +3778,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule |  |
-{: class="table table-striped"}
+| **body** | [**KeyRotationSchedule**](KeyRotationSchedule)| KeyRotationSchedule |  |
 
 ### Return type
 
-[**KeyRotationSchedule**](KeyRotationSchedule.html)
+[**KeyRotationSchedule**](KeyRotationSchedule)
 
-<a name="putrecordingsettings"></a>
 
-## [**RecordingSettings**](RecordingSettings.html) PutRecordingSettings (RecordingSettings body)
+## PutRecordingSettings
 
+> [**RecordingSettings**](RecordingSettings) PutRecordingSettings (RecordingSettings body)
 
 
 Update the Recording Settings for the Organization
@@ -3892,17 +3840,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RecordingSettings**](RecordingSettings.html)| Recording settings |  |
-{: class="table table-striped"}
+| **body** | [**RecordingSettings**](RecordingSettings)| Recording settings |  |
 
 ### Return type
 
-[**RecordingSettings**](RecordingSettings.html)
+[**RecordingSettings**](RecordingSettings)
 
-<a name="putrecordingsdeletionprotection"></a>
 
-## void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
+## PutRecordingsDeletionprotection
 
+> void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
 
 
 Apply or revoke recording protection for conversations
@@ -3957,10 +3904,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **protect** | **bool?**| Check for apply, uncheck for revoke (each action requires the respective permission) | [optional] [default to true] |
-| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery)|  | [optional]  |
 
 ### Return type
 
 void (empty response body)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

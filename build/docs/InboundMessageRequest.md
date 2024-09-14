@@ -1,6 +1,5 @@
----
-title: InboundMessageRequest
----
+# InboundMessageRequest
+
 ## ININ.PureCloudApi.Model.InboundMessageRequest
 
 ## Properties
@@ -19,6 +18,7 @@ title: InboundMessageRequest
 | **FromAddress** | **string** | The email address of the sender of the email. | [optional] |
 | **FromName** | **string** | The name of the sender of the email. | [optional] |
 | **Subject** | **string** | The subject of the email | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

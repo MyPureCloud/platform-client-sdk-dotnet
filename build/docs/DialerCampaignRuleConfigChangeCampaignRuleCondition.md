@@ -1,6 +1,5 @@
----
-title: DialerCampaignRuleConfigChangeCampaignRuleCondition
----
+# DialerCampaignRuleConfigChangeCampaignRuleCondition
+
 ## ININ.PureCloudApi.Model.DialerCampaignRuleConfigChangeCampaignRuleCondition
 
 ## Properties
@@ -11,6 +10,7 @@ title: DialerCampaignRuleConfigChangeCampaignRuleCondition
 | **Parameters** | **Dictionary&lt;string, string&gt;** | The parameters to match this condition | [optional] |
 | **ConditionType** | **string** | The type of this condition | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

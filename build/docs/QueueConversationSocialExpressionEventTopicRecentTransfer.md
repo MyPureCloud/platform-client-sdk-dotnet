@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicRecentTransfer
----
+# QueueConversationSocialExpressionEventTopicRecentTransfer
+
 ## ININ.PureCloudApi.Model.QueueConversationSocialExpressionEventTopicRecentTransfer
 
 ## Properties
@@ -10,10 +9,11 @@ title: QueueConversationSocialExpressionEventTopicRecentTransfer
 | **Id** | **string** | The id of the command. | [optional] |
 | **State** | **string** |  | [optional] |
 | **DateIssued** | **DateTime?** | The date/time that this command was issued. | [optional] |
-| **Initiator** | [**QueueConversationSocialExpressionEventTopicInitiator**](QueueConversationSocialExpressionEventTopicInitiator.html) |  | [optional] |
-| **ModifiedBy** | [**QueueConversationSocialExpressionEventTopicModifiedBy**](QueueConversationSocialExpressionEventTopicModifiedBy.html) |  | [optional] |
-| **Destination** | [**QueueConversationSocialExpressionEventTopicDestination**](QueueConversationSocialExpressionEventTopicDestination.html) |  | [optional] |
+| **Initiator** | [**QueueConversationSocialExpressionEventTopicInitiator**](QueueConversationSocialExpressionEventTopicInitiator) |  | [optional] |
+| **ModifiedBy** | [**QueueConversationSocialExpressionEventTopicModifiedBy**](QueueConversationSocialExpressionEventTopicModifiedBy) |  | [optional] |
+| **Destination** | [**QueueConversationSocialExpressionEventTopicDestination**](QueueConversationSocialExpressionEventTopicDestination) |  | [optional] |
 | **TransferType** | **string** | The type of transfer to perform. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

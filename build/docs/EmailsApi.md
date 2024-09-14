@@ -1,20 +1,19 @@
----
-title: EmailsApi
----
+# EmailsApi
+
 ## PureCloudPlatform.Client.V2.Api.EmailsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetEmailsSettings**](EmailsApi.html#getemailssettings) | **Get** /api/v2/emails/settings | Get email Contact Center settings |
-| [**PatchEmailsSettings**](EmailsApi.html#patchemailssettings) | **Patch** /api/v2/emails/settings | Patch email Contact Center settings |
-{: class="table table-striped"}
+| [**GetEmailsSettings**](#GetEmailsSettings) | **Get** /api/v2/emails/settings | Get email Contact Center settings |
+| [**PatchEmailsSettings**](#PatchEmailsSettings) | **Patch** /api/v2/emails/settings | Patch email Contact Center settings |
 
-<a name="getemailssettings"></a>
 
-## [**EmailSettings**](EmailSettings.html) GetEmailsSettings ()
 
+## GetEmailsSettings
+
+> [**EmailSettings**](EmailSettings) GetEmailsSettings ()
 
 
 Get email Contact Center settings
@@ -64,15 +63,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**EmailSettings**](EmailSettings.html)
+[**EmailSettings**](EmailSettings)
 
-<a name="patchemailssettings"></a>
 
-## [**EmailSettings**](EmailSettings.html) PatchEmailsSettings (EmailSettings body = null)
+## PatchEmailsSettings
 
+> [**EmailSettings**](EmailSettings) PatchEmailsSettings (EmailSettings body = null)
 
 
 Patch email Contact Center settings
@@ -125,10 +123,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EmailSettings**](EmailSettings.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**EmailSettings**](EmailSettings)|  | [optional]  |
 
 ### Return type
 
-[**EmailSettings**](EmailSettings.html)
+[**EmailSettings**](EmailSettings)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

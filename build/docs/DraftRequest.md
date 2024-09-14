@@ -1,14 +1,14 @@
----
-title: DraftRequest
----
+# DraftRequest
+
 ## ININ.PureCloudApi.Model.DraftRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Intents** | [**List&lt;DraftIntents&gt;**](DraftIntents.html) | Draft intent object. | [optional] |
-| **Topics** | [**List&lt;DraftTopicRequest&gt;**](DraftTopicRequest.html) | Draft topic object. | [optional] |
-{: class="table table-striped"}
+| **Intents** | [**List&lt;DraftIntents&gt;**](DraftIntents) | Draft intent object. | [optional] |
+| **Topics** | [**List&lt;DraftTopicRequest&gt;**](DraftTopicRequest) | Draft topic object. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

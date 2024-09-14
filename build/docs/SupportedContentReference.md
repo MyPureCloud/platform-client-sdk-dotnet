@@ -1,6 +1,5 @@
----
-title: SupportedContentReference
----
+# SupportedContentReference
+
 ## ININ.PureCloudApi.Model.SupportedContentReference
 
 ## Properties
@@ -10,7 +9,8 @@ title: SupportedContentReference
 | **Id** | **string** | The SupportedContent unique identifier associated with this integration | |
 | **Name** | **string** | The SupportedContent profile name | [optional] |
 | **SelfUri** | **string** | The SupportedContent profile URI | [optional] |
-| **MediaTypes** | [**MediaTypes**](MediaTypes.html) | Media types definition for the supported content | [optional] |
-{: class="table table-striped"}
+| **MediaTypes** | [**MediaTypes**](MediaTypes) | Media types definition for the supported content | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

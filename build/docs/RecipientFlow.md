@@ -1,6 +1,5 @@
----
-title: RecipientFlow
----
+# RecipientFlow
+
 ## ININ.PureCloudApi.Model.RecipientFlow
 
 ## Properties
@@ -8,6 +7,7 @@ title: RecipientFlow
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The flow identifier | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

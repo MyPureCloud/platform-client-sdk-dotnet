@@ -1,6 +1,5 @@
----
-title: UserDevice
----
+# UserDevice
+
 ## ININ.PureCloudApi.Model.UserDevice
 
 ## Properties
@@ -17,6 +16,7 @@ title: UserDevice
 | **Type** | **string** | type of the device; ios or android | |
 | **SessionHash** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

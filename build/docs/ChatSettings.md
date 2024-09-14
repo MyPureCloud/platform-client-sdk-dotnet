@@ -1,6 +1,5 @@
----
-title: ChatSettings
----
+# ChatSettings
+
 ## ININ.PureCloudApi.Model.ChatSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChatSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **MessageRetentionPeriodDays** | **int?** | Retention time for messages in days, expressed as int in the range [10,3650] | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

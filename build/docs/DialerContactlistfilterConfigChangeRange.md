@@ -1,6 +1,5 @@
----
-title: DialerContactlistfilterConfigChangeRange
----
+# DialerContactlistfilterConfigChangeRange
+
 ## ININ.PureCloudApi.Model.DialerContactlistfilterConfigChangeRange
 
 ## Properties
@@ -13,6 +12,7 @@ title: DialerContactlistfilterConfigChangeRange
 | **MaxInclusive** | **bool?** | Whether or not to include the maximum in the range | [optional] |
 | **InSet** | **List&lt;string&gt;** | Elements that apply to the IN operator | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: SpeechTextAnalyticsSettingsRequest
----
+# SpeechTextAnalyticsSettingsRequest
+
 ## ININ.PureCloudApi.Model.SpeechTextAnalyticsSettingsRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: SpeechTextAnalyticsSettingsRequest
 | **ExpectedDialects** | **List&lt;string&gt;** | Setting to choose expected dialects | [optional] |
 | **TextAnalyticsEnabled** | **bool?** | Setting to enable/disable text analytics | [optional] |
 | **AgentEmpathyEnabled** | **bool?** | Setting to enable/disable Agent Empathy setting | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

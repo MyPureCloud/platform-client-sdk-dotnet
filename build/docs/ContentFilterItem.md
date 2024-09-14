@@ -1,6 +1,5 @@
----
-title: ContentFilterItem
----
+# ContentFilterItem
+
 ## ININ.PureCloudApi.Model.ContentFilterItem
 
 ## Properties
@@ -11,6 +10,7 @@ title: ContentFilterItem
 | **Type** | **string** |  | [optional] |
 | **Operator** | **string** |  | [optional] |
 | **Values** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

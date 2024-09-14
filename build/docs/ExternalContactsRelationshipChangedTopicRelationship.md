@@ -1,6 +1,5 @@
----
-title: ExternalContactsRelationshipChangedTopicRelationship
----
+# ExternalContactsRelationshipChangedTopicRelationship
+
 ## ININ.PureCloudApi.Model.ExternalContactsRelationshipChangedTopicRelationship
 
 ## Properties
@@ -8,12 +7,13 @@ title: ExternalContactsRelationshipChangedTopicRelationship
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Division** | [**ExternalContactsRelationshipChangedTopicDivision**](ExternalContactsRelationshipChangedTopicDivision.html) |  | [optional] |
-| **User** | [**ExternalContactsRelationshipChangedTopicUser**](ExternalContactsRelationshipChangedTopicUser.html) |  | [optional] |
-| **ExternalOrganization** | [**ExternalContactsRelationshipChangedTopicExternalOrganization**](ExternalContactsRelationshipChangedTopicExternalOrganization.html) |  | [optional] |
+| **Division** | [**ExternalContactsRelationshipChangedTopicDivision**](ExternalContactsRelationshipChangedTopicDivision) |  | [optional] |
+| **User** | [**ExternalContactsRelationshipChangedTopicUser**](ExternalContactsRelationshipChangedTopicUser) |  | [optional] |
+| **ExternalOrganization** | [**ExternalContactsRelationshipChangedTopicExternalOrganization**](ExternalContactsRelationshipChangedTopicExternalOrganization) |  | [optional] |
 | **Relationship** | **string** |  | [optional] |
 | **CreateDate** | **DateTime?** |  | [optional] |
 | **ModifyDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

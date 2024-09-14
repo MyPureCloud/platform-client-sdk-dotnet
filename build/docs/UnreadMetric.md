@@ -1,6 +1,5 @@
----
-title: UnreadMetric
----
+# UnreadMetric
+
 ## ININ.PureCloudApi.Model.UnreadMetric
 
 ## Properties
@@ -8,6 +7,7 @@ title: UnreadMetric
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Count** | **int?** | The count of unread alerts for a specific rule type. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

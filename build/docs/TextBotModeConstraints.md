@@ -1,13 +1,13 @@
----
-title: TextBotModeConstraints
----
+# TextBotModeConstraints
+
 ## ININ.PureCloudApi.Model.TextBotModeConstraints
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Text** | [**TextBotTextModeConstraints**](TextBotTextModeConstraints.html) | Mode constraints that apply to text scenarios. | [optional] |
-{: class="table table-striped"}
+| **Text** | [**TextBotTextModeConstraints**](TextBotTextModeConstraints) | Mode constraints that apply to text scenarios. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

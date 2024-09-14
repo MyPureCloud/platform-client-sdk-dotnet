@@ -1,6 +1,5 @@
----
-title: BuAsyncScheduleResponse
----
+# BuAsyncScheduleResponse
+
 ## ININ.PureCloudApi.Model.BuAsyncScheduleResponse
 
 ## Properties
@@ -9,7 +8,8 @@ title: BuAsyncScheduleResponse
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** | The status of the operation | [optional] |
 | **OperationId** | **string** | The ID for the operation | [optional] |
-| **Result** | [**BuScheduleMetadata**](BuScheduleMetadata.html) | The result of the operation.  Null unless status &#x3D;&#x3D; Complete | [optional] |
-{: class="table table-striped"}
+| **Result** | [**BuScheduleMetadata**](BuScheduleMetadata) | The result of the operation.  Null unless status &#x3D;&#x3D; Complete | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

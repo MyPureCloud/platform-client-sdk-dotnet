@@ -1,22 +1,21 @@
----
-title: GeolocationApi
----
+# GeolocationApi
+
 ## PureCloudPlatform.Client.V2.Api.GeolocationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetGeolocationsSettings**](GeolocationApi.html#getgeolocationssettings) | **Get** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
-| [**GetUserGeolocation**](GeolocationApi.html#getusergeolocation) | **Get** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
-| [**PatchGeolocationsSettings**](GeolocationApi.html#patchgeolocationssettings) | **Patch** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
-| [**PatchUserGeolocation**](GeolocationApi.html#patchusergeolocation) | **Patch** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
-{: class="table table-striped"}
+| [**GetGeolocationsSettings**](#GetGeolocationsSettings) | **Get** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
+| [**GetUserGeolocation**](#GetUserGeolocation) | **Get** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
+| [**PatchGeolocationsSettings**](#PatchGeolocationsSettings) | **Patch** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
+| [**PatchUserGeolocation**](#PatchUserGeolocation) | **Patch** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
 
-<a name="getgeolocationssettings"></a>
 
-## [**GeolocationSettings**](GeolocationSettings.html) GetGeolocationsSettings ()
 
+## GetGeolocationsSettings
+
+> [**GeolocationSettings**](GeolocationSettings) GetGeolocationsSettings ()
 
 
 Get a organization's GeolocationSettings
@@ -65,15 +64,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**GeolocationSettings**](GeolocationSettings.html)
+[**GeolocationSettings**](GeolocationSettings)
 
-<a name="getusergeolocation"></a>
 
-## [**Geolocation**](Geolocation.html) GetUserGeolocation (string userId, string clientId)
+## GetUserGeolocation
 
+> [**Geolocation**](Geolocation) GetUserGeolocation (string userId, string clientId)
 
 
 Get a user's Geolocation
@@ -128,16 +126,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Geolocation**](Geolocation.html)
+[**Geolocation**](Geolocation)
 
-<a name="patchgeolocationssettings"></a>
 
-## [**GeolocationSettings**](GeolocationSettings.html) PatchGeolocationsSettings (GeolocationSettings body)
+## PatchGeolocationsSettings
 
+> [**GeolocationSettings**](GeolocationSettings) PatchGeolocationsSettings (GeolocationSettings body)
 
 
 Patch a organization's GeolocationSettings
@@ -190,17 +187,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**GeolocationSettings**](GeolocationSettings.html)| Geolocation settings |  |
-{: class="table table-striped"}
+| **body** | [**GeolocationSettings**](GeolocationSettings)| Geolocation settings |  |
 
 ### Return type
 
-[**GeolocationSettings**](GeolocationSettings.html)
+[**GeolocationSettings**](GeolocationSettings)
 
-<a name="patchusergeolocation"></a>
 
-## [**Geolocation**](Geolocation.html) PatchUserGeolocation (string userId, string clientId, Geolocation body)
+## PatchUserGeolocation
 
+> [**Geolocation**](Geolocation) PatchUserGeolocation (string userId, string clientId, Geolocation body)
 
 
 Patch a user's Geolocation
@@ -258,10 +254,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
-| **body** | [**Geolocation**](Geolocation.html)| Geolocation |  |
-{: class="table table-striped"}
+| **body** | [**Geolocation**](Geolocation)| Geolocation |  |
 
 ### Return type
 
-[**Geolocation**](Geolocation.html)
+[**Geolocation**](Geolocation)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

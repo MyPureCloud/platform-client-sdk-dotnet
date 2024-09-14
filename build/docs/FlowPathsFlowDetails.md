@@ -1,6 +1,5 @@
----
-title: FlowPathsFlowDetails
----
+# FlowPathsFlowDetails
+
 ## ININ.PureCloudApi.Model.FlowPathsFlowDetails
 
 ## Properties
@@ -10,7 +9,8 @@ title: FlowPathsFlowDetails
 | **Version** | **string** | The version of the flow. | |
 | **Type** | **string** | The type of the flow. | |
 | **Count** | **int?** | Count of all journeys that include this element in the given flow. | |
-| **Flow** | [**AddressableEntityRef**](AddressableEntityRef.html) | The identifier of the flow. | |
-{: class="table table-striped"}
+| **Flow** | [**AddressableEntityRef**](AddressableEntityRef) | The identifier of the flow. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

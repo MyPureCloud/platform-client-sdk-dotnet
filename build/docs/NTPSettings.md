@@ -1,6 +1,5 @@
----
-title: NTPSettings
----
+# NTPSettings
+
 ## ININ.PureCloudApi.Model.NTPSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: NTPSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Servers** | **List&lt;string&gt;** | List of NTP servers, in priority order | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PublishDraftInput
----
+# PublishDraftInput
+
 ## ININ.PureCloudApi.Model.PublishDraftInput
 
 ## Properties
@@ -8,6 +7,7 @@ title: PublishDraftInput
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Version** | **int?** | The current draft version. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

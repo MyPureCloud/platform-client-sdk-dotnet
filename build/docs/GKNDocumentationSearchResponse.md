@@ -1,6 +1,5 @@
----
-title: GKNDocumentationSearchResponse
----
+# GKNDocumentationSearchResponse
+
 ## ININ.PureCloudApi.Model.GKNDocumentationSearchResponse
 
 ## Properties
@@ -15,7 +14,8 @@ title: GKNDocumentationSearchResponse
 | **CurrentPage** | **string** | Q64 value for the current page of results | [optional] |
 | **NextPage** | **string** | Q64 value for the next page of results | [optional] |
 | **Types** | **List&lt;string&gt;** | Resource types the search was performed against | |
-| **Results** | [**List&lt;GKNDocumentationResult&gt;**](GKNDocumentationResult.html) | Search results | |
-{: class="table table-striped"}
+| **Results** | [**List&lt;GKNDocumentationResult&gt;**](GKNDocumentationResult) | Search results | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: OrphanRecording
----
+# OrphanRecording
+
 ## ININ.PureCloudApi.Model.OrphanRecording
 
 ## Properties
@@ -17,12 +16,13 @@ title: OrphanRecording
 | **MediaSubtype** | **string** |  | [optional] |
 | **MediaSubject** | **string** |  | [optional] |
 | **FileState** | **string** |  | [optional] |
-| **ProviderEndpoint** | [**Endpoint**](Endpoint.html) |  | [optional] |
-| **Recording** | [**Recording**](Recording.html) |  | [optional] |
+| **ProviderEndpoint** | [**Endpoint**](Endpoint) |  | [optional] |
+| **Recording** | [**Recording**](Recording) |  | [optional] |
 | **OrphanStatus** | **string** | The status of the orphaned recording&#39;s conversation. | [optional] |
 | **SourceOrphaningId** | **string** | An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with | [optional] |
 | **Region** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

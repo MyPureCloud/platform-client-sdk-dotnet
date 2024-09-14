@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData
----
+# WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData
+
 ## ININ.PureCloudApi.Model.WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData
 | **ServiceLevelPercent** | **double?** |  | [optional] |
 | **AverageSpeedOfAnswerSeconds** | **double?** |  | [optional] |
 | **NumberOfInteractions** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

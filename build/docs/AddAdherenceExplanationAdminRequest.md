@@ -1,6 +1,5 @@
----
-title: AddAdherenceExplanationAdminRequest
----
+# AddAdherenceExplanationAdminRequest
+
 ## ININ.PureCloudApi.Model.AddAdherenceExplanationAdminRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: AddAdherenceExplanationAdminRequest
 | **LengthMinutes** | **int?** | The length of the adherence explanation in minutes | |
 | **Notes** | **string** | Notes about the adherence explanation | [optional] |
 | **Status** | **string** | The status of the adherence explanation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

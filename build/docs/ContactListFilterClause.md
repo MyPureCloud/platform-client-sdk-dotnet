@@ -1,6 +1,5 @@
----
-title: ContactListFilterClause
----
+# ContactListFilterClause
+
 ## ININ.PureCloudApi.Model.ContactListFilterClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: ContactListFilterClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **FilterType** | **string** | How to join predicates together. | [optional] |
-| **Predicates** | [**List&lt;ContactListFilterPredicate&gt;**](ContactListFilterPredicate.html) | Conditions to filter the contacts by. | [optional] |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;ContactListFilterPredicate&gt;**](ContactListFilterPredicate) | Conditions to filter the contacts by. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

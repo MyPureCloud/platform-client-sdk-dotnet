@@ -1,6 +1,5 @@
----
-title: BulkResponseResultExternalOrganizationEntity
----
+# BulkResponseResultExternalOrganizationEntity
+
 ## ININ.PureCloudApi.Model.BulkResponseResultExternalOrganizationEntity
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultExternalOrganizationEntity
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Success** | **bool?** |  | [optional] |
-| **Entity** | [**ExternalOrganization**](ExternalOrganization.html) |  | [optional] |
-| **Error** | [**BulkErrorEntity**](BulkErrorEntity.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**ExternalOrganization**](ExternalOrganization) |  | [optional] |
+| **Error** | [**BulkErrorEntity**](BulkErrorEntity) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

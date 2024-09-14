@@ -1,6 +1,5 @@
----
-title: MergeRequest
----
+# MergeRequest
+
 ## ININ.PureCloudApi.Model.MergeRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: MergeRequest
 |------------ | ------------- | ------------- | -------------|
 | **SourceContactId** | **string** | The ID of the source contact for the merge operation | |
 | **TargetContactId** | **string** | The ID of the target contact for the merge operation | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

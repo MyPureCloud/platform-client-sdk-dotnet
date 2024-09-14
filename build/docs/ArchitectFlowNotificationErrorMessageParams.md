@@ -1,6 +1,5 @@
----
-title: ArchitectFlowNotificationErrorMessageParams
----
+# ArchitectFlowNotificationErrorMessageParams
+
 ## ININ.PureCloudApi.Model.ArchitectFlowNotificationErrorMessageParams
 
 ## Properties
@@ -8,6 +7,7 @@ title: ArchitectFlowNotificationErrorMessageParams
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **AdditionalProperties** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

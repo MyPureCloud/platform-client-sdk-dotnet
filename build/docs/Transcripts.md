@@ -1,6 +1,5 @@
----
-title: Transcripts
----
+# Transcripts
+
 ## ININ.PureCloudApi.Model.Transcripts
 
 ## Properties
@@ -10,6 +9,7 @@ title: Transcripts
 | **ExactMatch** | **List&lt;string&gt;** | List of transcript contents which needs to satisfy exact match criteria | [optional] |
 | **Contains** | **List&lt;string&gt;** | List of transcript contents which needs to satisfy contains criteria | [optional] |
 | **DoesNotContain** | **List&lt;string&gt;** | List of transcript contents which needs to satisfy does not contain criteria | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

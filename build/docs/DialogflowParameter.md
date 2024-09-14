@@ -1,6 +1,5 @@
----
-title: DialogflowParameter
----
+# DialogflowParameter
+
 ## ININ.PureCloudApi.Model.DialogflowParameter
 
 ## Properties
@@ -9,6 +8,7 @@ title: DialogflowParameter
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The parameter name | |
 | **Type** | **string** | The parameter type | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

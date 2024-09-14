@@ -1,6 +1,5 @@
----
-title: LicenseUpdateStatus
----
+# LicenseUpdateStatus
+
 ## ININ.PureCloudApi.Model.LicenseUpdateStatus
 
 ## Properties
@@ -10,6 +9,7 @@ title: LicenseUpdateStatus
 | **UserId** | **string** |  | [optional] |
 | **LicenseId** | **string** |  | [optional] |
 | **Result** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

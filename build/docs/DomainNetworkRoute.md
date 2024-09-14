@@ -1,6 +1,5 @@
----
-title: DomainNetworkRoute
----
+# DomainNetworkRoute
+
 ## ININ.PureCloudApi.Model.DomainNetworkRoute
 
 ## Properties
@@ -12,6 +11,7 @@ title: DomainNetworkRoute
 | **Persistent** | **bool?** | True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false. | [optional] |
 | **Metric** | **int?** | The metric being used for route. Lower values will have a higher priority. | [optional] |
 | **Family** | **int?** | The address family for this route. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

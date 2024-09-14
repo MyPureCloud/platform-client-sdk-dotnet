@@ -1,6 +1,5 @@
----
-title: PatchContentOffer
----
+# PatchContentOffer
+
 ## ININ.PureCloudApi.Model.PatchContentOffer
 
 ## Properties
@@ -13,8 +12,9 @@ title: PatchContentOffer
 | **Title** | **string** | Title used in the header of the content offer. | [optional] |
 | **Headline** | **string** | Headline displayed above the body text of the content offer. | [optional] |
 | **Body** | **string** | Body text of the content offer. | [optional] |
-| **CallToAction** | [**PatchCallToAction**](PatchCallToAction.html) | Properties customizing the call to action button on the content offer. | [optional] |
-| **Style** | [**PatchContentOfferStylingConfiguration**](PatchContentOfferStylingConfiguration.html) | Properties customizing the styling of the content offer. | [optional] |
-{: class="table table-striped"}
+| **CallToAction** | [**PatchCallToAction**](PatchCallToAction) | Properties customizing the call to action button on the content offer. | [optional] |
+| **Style** | [**PatchContentOfferStylingConfiguration**](PatchContentOfferStylingConfiguration) | Properties customizing the styling of the content offer. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

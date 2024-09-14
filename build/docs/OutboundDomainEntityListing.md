@@ -1,13 +1,12 @@
----
-title: OutboundDomainEntityListing
----
+# OutboundDomainEntityListing
+
 ## ININ.PureCloudApi.Model.OutboundDomainEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;OutboundDomain&gt;**](OutboundDomain.html) |  | [optional] |
+| **Entities** | [**List&lt;OutboundDomain&gt;**](OutboundDomain) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: OutboundDomainEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

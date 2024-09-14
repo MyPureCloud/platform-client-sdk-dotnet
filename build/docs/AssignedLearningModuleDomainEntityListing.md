@@ -1,13 +1,12 @@
----
-title: AssignedLearningModuleDomainEntityListing
----
+# AssignedLearningModuleDomainEntityListing
+
 ## ININ.PureCloudApi.Model.AssignedLearningModuleDomainEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;AssignedLearningModule&gt;**](AssignedLearningModule.html) |  | [optional] |
+| **Entities** | [**List&lt;AssignedLearningModule&gt;**](AssignedLearningModule) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: AssignedLearningModuleDomainEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

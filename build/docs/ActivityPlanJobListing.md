@@ -1,13 +1,13 @@
----
-title: ActivityPlanJobListing
----
+# ActivityPlanJobListing
+
 ## ININ.PureCloudApi.Model.ActivityPlanJobListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ActivityPlanJobResponse&gt;**](ActivityPlanJobResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;ActivityPlanJobResponse&gt;**](ActivityPlanJobResponse) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

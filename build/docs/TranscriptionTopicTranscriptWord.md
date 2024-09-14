@@ -1,6 +1,5 @@
----
-title: TranscriptionTopicTranscriptWord
----
+# TranscriptionTopicTranscriptWord
+
 ## ININ.PureCloudApi.Model.TranscriptionTopicTranscriptWord
 
 ## Properties
@@ -12,6 +11,7 @@ title: TranscriptionTopicTranscriptWord
 | **OffsetMs** | **int?** |  | [optional] |
 | **DurationMs** | **int?** |  | [optional] |
 | **Word** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: GenericTemplate
----
+# GenericTemplate
+
 ## ININ.PureCloudApi.Model.GenericTemplate
 
 ## Properties
@@ -10,8 +9,9 @@ title: GenericTemplate
 | **Title** | **string** | Text to show in the title. | [optional] |
 | **Description** | **string** | Text to show in the description. | [optional] |
 | **Url** | **string** | URL of an image. | [optional] |
-| **Components** | [**List&lt;RecordingButtonComponent&gt;**](RecordingButtonComponent.html) | List of button components offered with this message content. | [optional] |
-| **Actions** | [**RecordingContentActions**](RecordingContentActions.html) | Actions to be taken. | [optional] |
-{: class="table table-striped"}
+| **Components** | [**List&lt;RecordingButtonComponent&gt;**](RecordingButtonComponent) | List of button components offered with this message content. | [optional] |
+| **Actions** | [**RecordingContentActions**](RecordingContentActions) | Actions to be taken. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyCampaign
----
+# JourneyCampaign
+
 ## ININ.PureCloudApi.Model.JourneyCampaign
 
 ## Properties
@@ -14,6 +13,7 @@ title: JourneyCampaign
 | **Term** | **string** | Note the keywords for this ad (e.g. running+shoes). | [optional] |
 | **ClickId** | **string** | The click ID (unique number that is generated when a potential customer clicks on an affiliate link). | [optional] |
 | **Network** | **string** | The ad network to which the click ID belongs. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

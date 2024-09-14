@@ -1,6 +1,5 @@
----
-title: QuestionSettings
----
+# QuestionSettings
+
 ## ININ.PureCloudApi.Model.QuestionSettings
 
 ## Properties
@@ -9,7 +8,8 @@ title: QuestionSettings
 |------------ | ------------- | ------------- | -------------|
 | **QuestionIndex** | **int?** | This field represents the location of the Question in the form. Note: Indexes are zero-based | [optional] |
 | **QuestionContextId** | **string** | The context id of the question in the group | [optional] |
-| **Settings** | [**AiScoringSetting**](AiScoringSetting.html) |  | [optional] |
-{: class="table table-striped"}
+| **Settings** | [**AiScoringSetting**](AiScoringSetting) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

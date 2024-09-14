@@ -1,6 +1,5 @@
----
-title: HistoricalAdherenceQueryResult
----
+# HistoricalAdherenceQueryResult
+
 ## ININ.PureCloudApi.Model.HistoricalAdherenceQueryResult
 
 ## Properties
@@ -14,10 +13,11 @@ title: HistoricalAdherenceQueryResult
 | **AdherencePercentage** | **double?** | Adherence percentage for this user, in the scale of 0 - 100 | [optional] |
 | **ConformancePercentage** | **double?** | Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period. | [optional] |
 | **Impact** | **string** | The impact of the current adherence state for this user | [optional] |
-| **ExceptionInfo** | [**List&lt;HistoricalAdherenceExceptionInfo&gt;**](HistoricalAdherenceExceptionInfo.html) | List of adherence exceptions for this user | [optional] |
-| **DayMetrics** | [**List&lt;HistoricalAdherenceDayMetrics&gt;**](HistoricalAdherenceDayMetrics.html) | Adherence and conformance metrics for days in query range | [optional] |
+| **ExceptionInfo** | [**List&lt;HistoricalAdherenceExceptionInfo&gt;**](HistoricalAdherenceExceptionInfo) | List of adherence exceptions for this user | [optional] |
+| **DayMetrics** | [**List&lt;HistoricalAdherenceDayMetrics&gt;**](HistoricalAdherenceDayMetrics) | Adherence and conformance metrics for days in query range | [optional] |
 | **ActualsEndDate** | **DateTime?** | The end date of the actual activities in ISO-8601 format. | [optional] |
-| **Actuals** | [**List&lt;HistoricalAdherenceActuals&gt;**](HistoricalAdherenceActuals.html) | List of actual activity with offset for this user | [optional] |
-{: class="table table-striped"}
+| **Actuals** | [**List&lt;HistoricalAdherenceActuals&gt;**](HistoricalAdherenceActuals) | List of actual activity with offset for this user | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

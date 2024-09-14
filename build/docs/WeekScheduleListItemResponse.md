@@ -1,6 +1,5 @@
----
-title: WeekScheduleListItemResponse
----
+# WeekScheduleListItemResponse
+
 ## ININ.PureCloudApi.Model.WeekScheduleListItemResponse
 
 ## Properties
@@ -12,9 +11,10 @@ title: WeekScheduleListItemResponse
 | **WeekDate** | **string** | First day of this week schedule in yyyy-MM-dd format | [optional] |
 | **Description** | **string** | Description of the week schedule | [optional] |
 | **Published** | **bool?** | Whether the week schedule is published | [optional] |
-| **GenerationResults** | [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html) | Summary of the results from the schedule run | [optional] |
-| **ShortTermForecast** | [**ShortTermForecastReference**](ShortTermForecastReference.html) | Short term forecast associated with this schedule | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this work plan | [optional] |
-{: class="table table-striped"}
+| **GenerationResults** | [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult) | Summary of the results from the schedule run | [optional] |
+| **ShortTermForecast** | [**ShortTermForecastReference**](ShortTermForecastReference) | Short term forecast associated with this schedule | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this work plan | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

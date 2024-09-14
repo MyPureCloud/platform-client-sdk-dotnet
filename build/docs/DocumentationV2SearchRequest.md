@@ -1,6 +1,5 @@
----
-title: DocumentationV2SearchRequest
----
+# DocumentationV2SearchRequest
+
 ## ININ.PureCloudApi.Model.DocumentationV2SearchRequest
 
 ## Properties
@@ -11,10 +10,11 @@ title: DocumentationV2SearchRequest
 | **SortBy** | **string** | The field in the resource that you want to sort the results by | [optional] |
 | **PageSize** | **int?** | The number of results per page | [optional] |
 | **PageNumber** | **int?** | The page of resources you want to retrieve | [optional] |
-| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort.html) | Multi-value sort order, list of multiple sort values | [optional] |
+| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
 | **Types** | **List&lt;string&gt;** | Resource domain type to search | |
-| **Query** | [**List&lt;DocumentationV2SearchCriteria&gt;**](DocumentationV2SearchCriteria.html) | The search criteria | [optional] |
-| **Aggregations** | [**List&lt;DocumentationV2SearchAggregation&gt;**](DocumentationV2SearchAggregation.html) | Aggregation criteria | [optional] |
-{: class="table table-striped"}
+| **Query** | [**List&lt;DocumentationV2SearchCriteria&gt;**](DocumentationV2SearchCriteria) | The search criteria | [optional] |
+| **Aggregations** | [**List&lt;DocumentationV2SearchAggregation&gt;**](DocumentationV2SearchAggregation) | Aggregation criteria | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

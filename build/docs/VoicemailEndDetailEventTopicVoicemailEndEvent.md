@@ -1,6 +1,5 @@
----
-title: VoicemailEndDetailEventTopicVoicemailEndEvent
----
+# VoicemailEndDetailEventTopicVoicemailEndEvent
+
 ## ININ.PureCloudApi.Model.VoicemailEndDetailEventTopicVoicemailEndEvent
 
 ## Properties
@@ -23,6 +22,7 @@ title: VoicemailEndDetailEventTopicVoicemailEndEvent
 | **VoicemailDurationMs** | **int?** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

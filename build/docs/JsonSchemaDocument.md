@@ -1,6 +1,5 @@
----
-title: JsonSchemaDocument
----
+# JsonSchemaDocument
+
 ## ININ.PureCloudApi.Model.JsonSchemaDocument
 
 ## Properties
@@ -15,6 +14,7 @@ title: JsonSchemaDocument
 | **Required** | **List&lt;string&gt;** |  | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

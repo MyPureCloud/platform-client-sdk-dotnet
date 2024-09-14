@@ -1,6 +1,5 @@
----
-title: OAuthAuthorizationListing
----
+# OAuthAuthorizationListing
+
 ## ININ.PureCloudApi.Model.OAuthAuthorizationListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: OAuthAuthorizationListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;OAuthAuthorization&gt;**](OAuthAuthorization.html) |  | [optional] |
+| **Entities** | [**List&lt;OAuthAuthorization&gt;**](OAuthAuthorization) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

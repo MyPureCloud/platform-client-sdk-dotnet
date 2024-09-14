@@ -1,18 +1,18 @@
----
-title: ValidationLimits
----
+# ValidationLimits
+
 ## ININ.PureCloudApi.Model.ValidationLimits
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MinLength** | [**MinLength**](MinLength.html) |  | [optional] |
-| **MaxLength** | [**MaxLength**](MaxLength.html) |  | [optional] |
-| **MinItems** | [**MinLength**](MinLength.html) |  | [optional] |
-| **MaxItems** | [**MaxLength**](MaxLength.html) |  | [optional] |
-| **Minimum** | [**MinLength**](MinLength.html) |  | [optional] |
-| **Maximum** | [**MaxLength**](MaxLength.html) |  | [optional] |
-{: class="table table-striped"}
+| **MinLength** | [**MinLength**](MinLength) |  | [optional] |
+| **MaxLength** | [**MaxLength**](MaxLength) |  | [optional] |
+| **MinItems** | [**MinLength**](MinLength) |  | [optional] |
+| **MaxItems** | [**MaxLength**](MaxLength) |  | [optional] |
+| **Minimum** | [**MinLength**](MinLength) |  | [optional] |
+| **Maximum** | [**MaxLength**](MaxLength) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

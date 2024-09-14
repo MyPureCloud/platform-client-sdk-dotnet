@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentGuestSearchRequest
----
+# KnowledgeDocumentGuestSearchRequest
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentGuestSearchRequest
 
 ## Properties
@@ -17,6 +16,7 @@ title: KnowledgeDocumentGuestSearchRequest
 | **SessionId** | **string** | Session ID of the search. | [optional] |
 | **AnswerHighlightTopResults** | **int?** | The number of articles to be sent for answer-highlighting. Can range from 1-5. | [optional] |
 | **IncludeDraftDocuments** | **bool?** | Indicates whether the search results would also include draft documents. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

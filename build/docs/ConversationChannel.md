@@ -1,6 +1,5 @@
----
-title: ConversationChannel
----
+# ConversationChannel
+
 ## ININ.PureCloudApi.Model.ConversationChannel
 
 ## Properties
@@ -10,6 +9,7 @@ title: ConversationChannel
 | **Type** | **string** | The type or category of this channel. | |
 | **MessageType** | **string** | Message type for messaging conversations. | [optional] |
 | **Platform** | **string** | The source provider for the conversation (e.g. Edge, PureCloud Messaging, PureCloud Email). | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

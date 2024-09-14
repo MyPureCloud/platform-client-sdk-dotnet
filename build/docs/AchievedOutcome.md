@@ -1,6 +1,5 @@
----
-title: AchievedOutcome
----
+# AchievedOutcome
+
 ## ININ.PureCloudApi.Model.AchievedOutcome
 
 ## Properties
@@ -9,6 +8,7 @@ title: AchievedOutcome
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the outcome achieved. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

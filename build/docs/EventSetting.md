@@ -1,13 +1,13 @@
----
-title: EventSetting
----
+# EventSetting
+
 ## ININ.PureCloudApi.Model.EventSetting
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Typing** | [**TypingSetting**](TypingSetting.html) | Settings regarding typing events | [optional] |
-{: class="table table-striped"}
+| **Typing** | [**TypingSetting**](TypingSetting) | Settings regarding typing events | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

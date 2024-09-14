@@ -1,6 +1,5 @@
----
-title: Grammar
----
+# Grammar
+
 ## ININ.PureCloudApi.Model.Grammar
 
 ## Properties
@@ -10,8 +9,9 @@ title: Grammar
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
-| **Languages** | [**List&lt;GrammarLanguage&gt;**](GrammarLanguage.html) | List of languages configured for this grammar | [optional] |
+| **Languages** | [**List&lt;GrammarLanguage&gt;**](GrammarLanguage) | List of languages configured for this grammar | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

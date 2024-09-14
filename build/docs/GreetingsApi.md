@@ -1,34 +1,33 @@
----
-title: GreetingsApi
----
+# GreetingsApi
+
 ## PureCloudPlatform.Client.V2.Api.GreetingsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteGreeting**](GreetingsApi.html#deletegreeting) | **Delete** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
-| [**GetGreeting**](GreetingsApi.html#getgreeting) | **Get** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
-| [**GetGreetingMedia**](GreetingsApi.html#getgreetingmedia) | **Get** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
-| [**GetGreetings**](GreetingsApi.html#getgreetings) | **Get** /api/v2/greetings | Gets an Organization&#39;s Greetings |
-| [**GetGreetingsDefaults**](GreetingsApi.html#getgreetingsdefaults) | **Get** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
-| [**GetGroupGreetings**](GreetingsApi.html#getgroupgreetings) | **Get** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
-| [**GetGroupGreetingsDefaults**](GreetingsApi.html#getgroupgreetingsdefaults) | **Get** /api/v2/groups/{groupId}/greetings/defaults | Grabs the list of Default Greetings given a Group&#39;s ID |
-| [**GetUserGreetings**](GreetingsApi.html#getusergreetings) | **Get** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
-| [**GetUserGreetingsDefaults**](GreetingsApi.html#getusergreetingsdefaults) | **Get** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
-| [**PostGreetings**](GreetingsApi.html#postgreetings) | **Post** /api/v2/greetings | Create a Greeting for an Organization |
-| [**PostGroupGreetings**](GreetingsApi.html#postgroupgreetings) | **Post** /api/v2/groups/{groupId}/greetings | Creates a Greeting for a Group |
-| [**PostUserGreetings**](GreetingsApi.html#postusergreetings) | **Post** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
-| [**PutGreeting**](GreetingsApi.html#putgreeting) | **Put** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
-| [**PutGreetingsDefaults**](GreetingsApi.html#putgreetingsdefaults) | **Put** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
-| [**PutGroupGreetingsDefaults**](GreetingsApi.html#putgroupgreetingsdefaults) | **Put** /api/v2/groups/{groupId}/greetings/defaults | Updates the DefaultGreetingList of the specified Group |
-| [**PutUserGreetingsDefaults**](GreetingsApi.html#putusergreetingsdefaults) | **Put** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
-{: class="table table-striped"}
+| [**DeleteGreeting**](#DeleteGreeting) | **Delete** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
+| [**GetGreeting**](#GetGreeting) | **Get** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
+| [**GetGreetingMedia**](#GetGreetingMedia) | **Get** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
+| [**GetGreetings**](#GetGreetings) | **Get** /api/v2/greetings | Gets an Organization&#39;s Greetings |
+| [**GetGreetingsDefaults**](#GetGreetingsDefaults) | **Get** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
+| [**GetGroupGreetings**](#GetGroupGreetings) | **Get** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
+| [**GetGroupGreetingsDefaults**](#GetGroupGreetingsDefaults) | **Get** /api/v2/groups/{groupId}/greetings/defaults | Grabs the list of Default Greetings given a Group&#39;s ID |
+| [**GetUserGreetings**](#GetUserGreetings) | **Get** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
+| [**GetUserGreetingsDefaults**](#GetUserGreetingsDefaults) | **Get** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
+| [**PostGreetings**](#PostGreetings) | **Post** /api/v2/greetings | Create a Greeting for an Organization |
+| [**PostGroupGreetings**](#PostGroupGreetings) | **Post** /api/v2/groups/{groupId}/greetings | Creates a Greeting for a Group |
+| [**PostUserGreetings**](#PostUserGreetings) | **Post** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
+| [**PutGreeting**](#PutGreeting) | **Put** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
+| [**PutGreetingsDefaults**](#PutGreetingsDefaults) | **Put** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
+| [**PutGroupGreetingsDefaults**](#PutGroupGreetingsDefaults) | **Put** /api/v2/groups/{groupId}/greetings/defaults | Updates the DefaultGreetingList of the specified Group |
+| [**PutUserGreetingsDefaults**](#PutUserGreetingsDefaults) | **Put** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
 
-<a name="deletegreeting"></a>
 
-## void DeleteGreeting (string greetingId)
 
+## DeleteGreeting
+
+> void DeleteGreeting (string greetingId)
 
 
 Deletes a Greeting with the given GreetingId
@@ -80,16 +79,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getgreeting"></a>
 
-## [**Greeting**](Greeting.html) GetGreeting (string greetingId)
+## GetGreeting
 
+> [**Greeting**](Greeting) GetGreeting (string greetingId)
 
 
 Get a Greeting with the given GreetingId
@@ -142,16 +140,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Greeting**](Greeting.html)
+[**Greeting**](Greeting)
 
-<a name="getgreetingmedia"></a>
 
-## [**GreetingMediaInfo**](GreetingMediaInfo.html) GetGreetingMedia (string greetingId, string formatId = null)
+## GetGreetingMedia
 
+> [**GreetingMediaInfo**](GreetingMediaInfo) GetGreetingMedia (string greetingId, string formatId = null)
 
 
 Get media playback URI for this greeting
@@ -206,16 +203,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
-{: class="table table-striped"}
 
 ### Return type
 
-[**GreetingMediaInfo**](GreetingMediaInfo.html)
+[**GreetingMediaInfo**](GreetingMediaInfo)
 
-<a name="getgreetings"></a>
 
-## [**DomainEntityListing**](DomainEntityListing.html) GetGreetings (int? pageSize = null, int? pageNumber = null)
+## GetGreetings
 
+> [**DomainEntityListing**](DomainEntityListing) GetGreetings (int? pageSize = null, int? pageNumber = null)
 
 
 Gets an Organization's Greetings
@@ -270,16 +266,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DomainEntityListing**](DomainEntityListing.html)
+[**DomainEntityListing**](DomainEntityListing)
 
-<a name="getgreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) GetGreetingsDefaults ()
+## GetGreetingsDefaults
 
+> [**DefaultGreetingList**](DefaultGreetingList) GetGreetingsDefaults ()
 
 
 Get an Organization's DefaultGreetingList
@@ -328,15 +323,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**DefaultGreetingList**](DefaultGreetingList)
 
-<a name="getgroupgreetings"></a>
 
-## [**GreetingListing**](GreetingListing.html) GetGroupGreetings (string groupId, int? pageSize = null, int? pageNumber = null)
+## GetGroupGreetings
 
+> [**GreetingListing**](GreetingListing) GetGroupGreetings (string groupId, int? pageSize = null, int? pageNumber = null)
 
 
 Get a list of the Group's Greetings
@@ -393,16 +387,15 @@ namespace Example
 | **groupId** | **string**| Group ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**GreetingListing**](GreetingListing.html)
+[**GreetingListing**](GreetingListing)
 
-<a name="getgroupgreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) GetGroupGreetingsDefaults (string groupId)
+## GetGroupGreetingsDefaults
 
+> [**DefaultGreetingList**](DefaultGreetingList) GetGroupGreetingsDefaults (string groupId)
 
 
 Grabs the list of Default Greetings given a Group's ID
@@ -455,16 +448,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**DefaultGreetingList**](DefaultGreetingList)
 
-<a name="getusergreetings"></a>
 
-## [**DomainEntityListing**](DomainEntityListing.html) GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null)
+## GetUserGreetings
 
+> [**DomainEntityListing**](DomainEntityListing) GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null)
 
 
 Get a list of the User's Greetings
@@ -521,16 +513,15 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DomainEntityListing**](DomainEntityListing.html)
+[**DomainEntityListing**](DomainEntityListing)
 
-<a name="getusergreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) GetUserGreetingsDefaults (string userId)
+## GetUserGreetingsDefaults
 
+> [**DefaultGreetingList**](DefaultGreetingList) GetUserGreetingsDefaults (string userId)
 
 
 Grabs the list of Default Greetings given a User's ID
@@ -583,16 +574,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**DefaultGreetingList**](DefaultGreetingList)
 
-<a name="postgreetings"></a>
 
-## [**Greeting**](Greeting.html) PostGreetings (Greeting body)
+## PostGreetings
 
+> [**Greeting**](Greeting) PostGreetings (Greeting body)
 
 
 Create a Greeting for an Organization
@@ -644,17 +634,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Greeting**](Greeting.html)| The Greeting to create |  |
-{: class="table table-striped"}
+| **body** | [**Greeting**](Greeting)| The Greeting to create |  |
 
 ### Return type
 
-[**Greeting**](Greeting.html)
+[**Greeting**](Greeting)
 
-<a name="postgroupgreetings"></a>
 
-## [**Greeting**](Greeting.html) PostGroupGreetings (string groupId, Greeting body)
+## PostGroupGreetings
 
+> [**Greeting**](Greeting) PostGroupGreetings (string groupId, Greeting body)
 
 
 Creates a Greeting for a Group
@@ -708,17 +697,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-| **body** | [**Greeting**](Greeting.html)| The Greeting to create |  |
-{: class="table table-striped"}
+| **body** | [**Greeting**](Greeting)| The Greeting to create |  |
 
 ### Return type
 
-[**Greeting**](Greeting.html)
+[**Greeting**](Greeting)
 
-<a name="postusergreetings"></a>
 
-## [**Greeting**](Greeting.html) PostUserGreetings (string userId, Greeting body)
+## PostUserGreetings
 
+> [**Greeting**](Greeting) PostUserGreetings (string userId, Greeting body)
 
 
 Creates a Greeting for a User
@@ -772,17 +760,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**Greeting**](Greeting.html)| The Greeting to create |  |
-{: class="table table-striped"}
+| **body** | [**Greeting**](Greeting)| The Greeting to create |  |
 
 ### Return type
 
-[**Greeting**](Greeting.html)
+[**Greeting**](Greeting)
 
-<a name="putgreeting"></a>
 
-## [**Greeting**](Greeting.html) PutGreeting (string greetingId, Greeting body)
+## PutGreeting
 
+> [**Greeting**](Greeting) PutGreeting (string greetingId, Greeting body)
 
 
 Updates the Greeting with the given GreetingId
@@ -836,17 +823,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
-| **body** | [**Greeting**](Greeting.html)| The updated Greeting |  |
-{: class="table table-striped"}
+| **body** | [**Greeting**](Greeting)| The updated Greeting |  |
 
 ### Return type
 
-[**Greeting**](Greeting.html)
+[**Greeting**](Greeting)
 
-<a name="putgreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) PutGreetingsDefaults (DefaultGreetingList body)
+## PutGreetingsDefaults
 
+> [**DefaultGreetingList**](DefaultGreetingList) PutGreetingsDefaults (DefaultGreetingList body)
 
 
 Update an Organization's DefaultGreetingList
@@ -898,17 +884,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList |  |
-{: class="table table-striped"}
+| **body** | [**DefaultGreetingList**](DefaultGreetingList)| The updated defaultGreetingList |  |
 
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**DefaultGreetingList**](DefaultGreetingList)
 
-<a name="putgroupgreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) PutGroupGreetingsDefaults (string groupId, DefaultGreetingList body)
+## PutGroupGreetingsDefaults
 
+> [**DefaultGreetingList**](DefaultGreetingList) PutGroupGreetingsDefaults (string groupId, DefaultGreetingList body)
 
 
 Updates the DefaultGreetingList of the specified Group
@@ -962,17 +947,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-| **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList |  |
-{: class="table table-striped"}
+| **body** | [**DefaultGreetingList**](DefaultGreetingList)| The updated defaultGreetingList |  |
 
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**DefaultGreetingList**](DefaultGreetingList)
 
-<a name="putusergreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
+## PutUserGreetingsDefaults
 
+> [**DefaultGreetingList**](DefaultGreetingList) PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
 
 
 Updates the DefaultGreetingList of the specified User
@@ -1026,10 +1010,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList |  |
-{: class="table table-striped"}
+| **body** | [**DefaultGreetingList**](DefaultGreetingList)| The updated defaultGreetingList |  |
 
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**DefaultGreetingList**](DefaultGreetingList)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

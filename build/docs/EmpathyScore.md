@@ -1,6 +1,5 @@
----
-title: EmpathyScore
----
+# EmpathyScore
+
 ## ININ.PureCloudApi.Model.EmpathyScore
 
 ## Properties
@@ -9,6 +8,7 @@ title: EmpathyScore
 |------------ | ------------- | ------------- | -------------|
 | **Score** | **double?** | Empathy score of the agent involved in the conversation | [optional] |
 | **UserId** | **string** | UserId of the agent involved in the conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

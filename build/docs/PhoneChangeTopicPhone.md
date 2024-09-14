@@ -1,16 +1,16 @@
----
-title: PhoneChangeTopicPhone
----
+# PhoneChangeTopicPhone
+
 ## ININ.PureCloudApi.Model.PhoneChangeTopicPhone
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **UserAgentInfo** | [**PhoneChangeTopicUserAgentInfo**](PhoneChangeTopicUserAgentInfo.html) |  | [optional] |
+| **UserAgentInfo** | [**PhoneChangeTopicUserAgentInfo**](PhoneChangeTopicUserAgentInfo) |  | [optional] |
 | **Id** | **string** |  | [optional] |
-| **Status** | [**PhoneChangeTopicPhoneStatus**](PhoneChangeTopicPhoneStatus.html) |  | [optional] |
-| **SecondaryStatus** | [**PhoneChangeTopicPhoneStatus**](PhoneChangeTopicPhoneStatus.html) |  | [optional] |
-{: class="table table-striped"}
+| **Status** | [**PhoneChangeTopicPhoneStatus**](PhoneChangeTopicPhoneStatus) |  | [optional] |
+| **SecondaryStatus** | [**PhoneChangeTopicPhoneStatus**](PhoneChangeTopicPhoneStatus) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

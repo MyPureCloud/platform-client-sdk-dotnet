@@ -1,6 +1,5 @@
----
-title: WfmTimeOffBalanceJobTopicTimeOffBalance
----
+# WfmTimeOffBalanceJobTopicTimeOffBalance
+
 ## ININ.PureCloudApi.Model.WfmTimeOffBalanceJobTopicTimeOffBalance
 
 ## Properties
@@ -12,6 +11,7 @@ title: WfmTimeOffBalanceJobTopicTimeOffBalance
 | **HrisTimeOffTypeSecondaryId** | **string** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **BalanceMinutesPerDay** | **List&lt;int?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DialerOutboundSettingsConfigChangeAtzmTimeSlot
----
+# DialerOutboundSettingsConfigChangeAtzmTimeSlot
+
 ## ININ.PureCloudApi.Model.DialerOutboundSettingsConfigChangeAtzmTimeSlot
 
 ## Properties
@@ -9,6 +8,7 @@ title: DialerOutboundSettingsConfigChangeAtzmTimeSlot
 |------------ | ------------- | ------------- | -------------|
 | **EarliestCallableTime** | **string** | The earliest time to dial a contact | [optional] |
 | **LatestCallableTime** | **string** | The latest time to dial a contact | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: FlowHealthIntentInfo
----
+# FlowHealthIntentInfo
+
 ## ININ.PureCloudApi.Model.FlowHealthIntentInfo
 
 ## Properties
@@ -9,8 +8,9 @@ title: FlowHealthIntentInfo
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **LanguageHealth** | [**Dictionary&lt;string, LocaleHealth&gt;**](LocaleHealth.html) | Health computation info for each language. | [optional] |
+| **LanguageHealth** | [**Dictionary&lt;string, LocaleHealth&gt;**](LocaleHealth) | Health computation info for each language. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: TtsEngineEntity
----
+# TtsEngineEntity
+
 ## ININ.PureCloudApi.Model.TtsEngineEntity
 
 ## Properties
@@ -11,10 +10,11 @@ title: TtsEngineEntity
 | **Name** | **string** |  | [optional] |
 | **Languages** | **List&lt;string&gt;** | The set of languages the TTS engine supports | |
 | **OutputFormats** | **List&lt;string&gt;** | The set of output formats the TTS engine can produce | |
-| **Voices** | [**List&lt;TtsVoiceEntity&gt;**](TtsVoiceEntity.html) | The set of voices the TTS engine supports | [optional] |
+| **Voices** | [**List&lt;TtsVoiceEntity&gt;**](TtsVoiceEntity) | The set of voices the TTS engine supports | [optional] |
 | **IsDefault** | **bool?** | The TTS engine is the global default engine | [optional] |
 | **IsSecure** | **bool?** | The TTS engine can be used in a secure call flow | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

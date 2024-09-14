@@ -1,6 +1,5 @@
----
-title: KnowledgeParseImportResult
----
+# KnowledgeParseImportResult
+
 ## ININ.PureCloudApi.Model.KnowledgeParseImportResult
 
 ## Properties
@@ -9,7 +8,8 @@ title: KnowledgeParseImportResult
 |------------ | ------------- | ------------- | -------------|
 | **Success** | **int?** | Number of imported articles. | |
 | **Failure** | **int?** | Number of articles failed to import. | |
-| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody.html) | Error information about the failures. | [optional] |
-{: class="table table-striped"}
+| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody) | Error information about the failures. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

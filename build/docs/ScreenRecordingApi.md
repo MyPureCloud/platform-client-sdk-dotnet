@@ -1,19 +1,18 @@
----
-title: ScreenRecordingApi
----
+# ScreenRecordingApi
+
 ## PureCloudPlatform.Client.V2.Api.ScreenRecordingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**PostScreenrecordingToken**](ScreenRecordingApi.html#postscreenrecordingtoken) | **Post** /api/v2/screenrecording/token | Sign identifying information for screen recording |
-{: class="table table-striped"}
+| [**PostScreenrecordingToken**](#PostScreenrecordingToken) | **Post** /api/v2/screenrecording/token | Sign identifying information for screen recording |
 
-<a name="postscreenrecordingtoken"></a>
 
-## [**SignedData**](SignedData.html) PostScreenrecordingToken (ScreenRecordingUserAuthenticatedInfo body = null)
 
+## PostScreenrecordingToken
+
+> [**SignedData**](SignedData) PostScreenrecordingToken (ScreenRecordingUserAuthenticatedInfo body = null)
 
 
 Sign identifying information for screen recording
@@ -65,10 +64,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ScreenRecordingUserAuthenticatedInfo**](ScreenRecordingUserAuthenticatedInfo.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**ScreenRecordingUserAuthenticatedInfo**](ScreenRecordingUserAuthenticatedInfo)|  | [optional]  |
 
 ### Return type
 
-[**SignedData**](SignedData.html)
+[**SignedData**](SignedData)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: FaxTopicFaxDataV2
----
+# FaxTopicFaxDataV2
+
 ## ININ.PureCloudApi.Model.FaxTopicFaxDataV2
 
 ## Properties
@@ -11,19 +10,20 @@ title: FaxTopicFaxDataV2
 | **Name** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-| **Workspace** | [**FaxTopicWorkspaceData**](FaxTopicWorkspaceData.html) |  | [optional] |
-| **CreatedBy** | [**FaxTopicUserData**](FaxTopicUserData.html) |  | [optional] |
+| **Workspace** | [**FaxTopicWorkspaceData**](FaxTopicWorkspaceData) |  | [optional] |
+| **CreatedBy** | [**FaxTopicUserData**](FaxTopicUserData) |  | [optional] |
 | **ContentType** | **string** |  | [optional] |
 | **ContentLength** | **int?** |  | [optional] |
 | **Filename** | **string** |  | [optional] |
 | **ChangeNumber** | **int?** |  | [optional] |
 | **DateUploaded** | **DateTime?** |  | [optional] |
-| **UploadedBy** | [**FaxTopicUserData**](FaxTopicUserData.html) |  | [optional] |
-| **LockInfo** | [**FaxTopicLockData**](FaxTopicLockData.html) |  | [optional] |
+| **UploadedBy** | [**FaxTopicUserData**](FaxTopicUserData) |  | [optional] |
+| **LockInfo** | [**FaxTopicLockData**](FaxTopicLockData) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **CallerAddress** | **string** |  | [optional] |
 | **ReceiverAddress** | **string** |  | [optional] |
 | **Read** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

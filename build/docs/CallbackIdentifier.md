@@ -1,6 +1,5 @@
----
-title: CallbackIdentifier
----
+# CallbackIdentifier
+
 ## ININ.PureCloudApi.Model.CallbackIdentifier
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallbackIdentifier
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type of the associated callback participant | |
 | **Id** | **string** | The identifier of the callback | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

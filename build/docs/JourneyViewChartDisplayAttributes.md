@@ -1,6 +1,5 @@
----
-title: JourneyViewChartDisplayAttributes
----
+# JourneyViewChartDisplayAttributes
+
 ## ININ.PureCloudApi.Model.JourneyViewChartDisplayAttributes
 
 ## Properties
@@ -11,6 +10,7 @@ title: JourneyViewChartDisplayAttributes
 | **GroupByTitle** | **string** | A title for the grouped by attributes (aka the x axis) | [optional] |
 | **MetricsTitle** | **string** | A title for the metrics (aka the y axis) | [optional] |
 | **ShowLegend** | **bool?** | Whether to show a legend | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

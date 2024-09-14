@@ -1,6 +1,5 @@
----
-title: AgentCountRange
----
+# AgentCountRange
+
 ## ININ.PureCloudApi.Model.AgentCountRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentCountRange
 |------------ | ------------- | ------------- | -------------|
 | **Minimum** | **int?** | The minimum value of agent count per work plan | |
 | **Maximum** | **int?** | The maximum value of agent count per work plan | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

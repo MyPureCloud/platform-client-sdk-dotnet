@@ -1,6 +1,5 @@
----
-title: ContactListFilterBulkRetrieveBody
----
+# ContactListFilterBulkRetrieveBody
+
 ## ININ.PureCloudApi.Model.ContactListFilterBulkRetrieveBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContactListFilterBulkRetrieveBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Ids** | **List&lt;string&gt;** | The IDs of the Contact List Filters to retrieve. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

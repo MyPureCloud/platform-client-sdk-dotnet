@@ -1,6 +1,5 @@
----
-title: ExternalContactsContactChangedTopicMergeOperation
----
+# ExternalContactsContactChangedTopicMergeOperation
+
 ## ININ.PureCloudApi.Model.ExternalContactsContactChangedTopicMergeOperation
 
 ## Properties
@@ -10,6 +9,7 @@ title: ExternalContactsContactChangedTopicMergeOperation
 | **SourceContactId** | **string** |  | [optional] |
 | **TargetContactId** | **string** |  | [optional] |
 | **ResultingContactId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateResponseAssignment
----
+# LearningModulePreviewUpdateResponseAssignment
+
 ## ININ.PureCloudApi.Model.LearningModulePreviewUpdateResponseAssignment
 
 ## Properties
@@ -13,8 +12,9 @@ title: LearningModulePreviewUpdateResponseAssignment
 | **AssessmentPercentageScore** | **float?** | The user&#39;s percentage score for this assignment&#39;s assessment | [optional] |
 | **AssessmentCompletionPercentage** | **float?** | The assessment completion percentage of assignment | [optional] |
 | **IsPassed** | **bool?** | True if the assessment was passed | [optional] |
-| **CurrentStep** | [**LearningModulePreviewUpdateResponseCurrentStep**](LearningModulePreviewUpdateResponseCurrentStep.html) | The next assignment step | [optional] |
-| **Steps** | [**List&lt;LearningModulePreviewUpdateStep&gt;**](LearningModulePreviewUpdateStep.html) | List of assignment steps | [optional] |
-{: class="table table-striped"}
+| **CurrentStep** | [**LearningModulePreviewUpdateResponseCurrentStep**](LearningModulePreviewUpdateResponseCurrentStep) | The next assignment step | [optional] |
+| **Steps** | [**List&lt;LearningModulePreviewUpdateStep&gt;**](LearningModulePreviewUpdateStep) | List of assignment steps | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

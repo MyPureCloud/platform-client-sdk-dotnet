@@ -1,6 +1,5 @@
----
-title: ConversationSecureAttributes
----
+# ConversationSecureAttributes
+
 ## ININ.PureCloudApi.Model.ConversationSecureAttributes
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationSecureAttributes
 |------------ | ------------- | ------------- | -------------|
 | **Attributes** | **Dictionary&lt;string, string&gt;** | The map of attribute keys to values. | [optional] |
 | **Version** | **int?** | The version used to detect conflicting updates when using PUT. Not used for PATCH. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

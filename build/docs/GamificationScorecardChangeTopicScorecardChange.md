@@ -1,6 +1,5 @@
----
-title: GamificationScorecardChangeTopicScorecardChange
----
+# GamificationScorecardChangeTopicScorecardChange
+
 ## ININ.PureCloudApi.Model.GamificationScorecardChangeTopicScorecardChange
 
 ## Properties
@@ -12,7 +11,8 @@ title: GamificationScorecardChangeTopicScorecardChange
 | **TeamId** | **string** |  | [optional] |
 | **PerformanceProfileId** | **string** |  | [optional] |
 | **UserId** | **string** |  | [optional] |
-| **PerformanceMetrics** | [**List&lt;GamificationScorecardChangeTopicPerformanceMetric&gt;**](GamificationScorecardChangeTopicPerformanceMetric.html) |  | [optional] |
-{: class="table table-striped"}
+| **PerformanceMetrics** | [**List&lt;GamificationScorecardChangeTopicPerformanceMetric&gt;**](GamificationScorecardChangeTopicPerformanceMetric) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

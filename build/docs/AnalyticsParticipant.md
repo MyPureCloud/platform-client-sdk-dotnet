@@ -1,6 +1,5 @@
----
-title: AnalyticsParticipant
----
+# AnalyticsParticipant
+
 ## ININ.PureCloudApi.Model.AnalyticsParticipant
 
 ## Properties
@@ -16,8 +15,9 @@ title: AnalyticsParticipant
 | **ScreenRecording** | **bool?** | Flag determining if a screen recording was started or not | [optional] |
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
-| **Sessions** | [**List&lt;AnalyticsSession&gt;**](AnalyticsSession.html) | List of sessions associated to this participant | [optional] |
+| **Sessions** | [**List&lt;AnalyticsSession&gt;**](AnalyticsSession) | List of sessions associated to this participant | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | List of attributes associated to this participant | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

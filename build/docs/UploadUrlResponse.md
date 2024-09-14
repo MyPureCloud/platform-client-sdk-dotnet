@@ -1,6 +1,5 @@
----
-title: UploadUrlResponse
----
+# UploadUrlResponse
+
 ## ININ.PureCloudApi.Model.UploadUrlResponse
 
 ## Properties
@@ -10,6 +9,7 @@ title: UploadUrlResponse
 | **Url** | **string** | Presigned URL to PUT the file to | [optional] |
 | **UploadKey** | **string** | Key that identifies the file in the storage including the file name | [optional] |
 | **Headers** | **Dictionary&lt;string, string&gt;** | Required headers when uploading a file through PUT request to the URL | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

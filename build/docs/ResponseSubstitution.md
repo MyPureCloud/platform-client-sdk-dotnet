@@ -1,6 +1,5 @@
----
-title: ResponseSubstitution
----
+# ResponseSubstitution
+
 ## ININ.PureCloudApi.Model.ResponseSubstitution
 
 ## Properties
@@ -10,6 +9,7 @@ title: ResponseSubstitution
 | **Id** | **string** | Response substitution identifier. | |
 | **Description** | **string** | Response substitution description. | [optional] |
 | **DefaultValue** | **string** | Response substitution default value. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

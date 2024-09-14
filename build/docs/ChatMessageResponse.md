@@ -1,6 +1,5 @@
----
-title: ChatMessageResponse
----
+# ChatMessageResponse
+
 ## ININ.PureCloudApi.Model.ChatMessageResponse
 
 ## Properties
@@ -17,11 +16,12 @@ title: ChatMessageResponse
 | **Edited** | **bool?** | If message was edited | [optional] |
 | **AttachmentDeleted** | **bool?** | If message&#39;s attachment was deleted | [optional] |
 | **FileUri** | **string** | URI of file attachment | [optional] |
-| **Thread** | [**Entity**](Entity.html) | The id for a thread this message corresponds to | |
-| **ParentThread** | [**Entity**](Entity.html) | Parent thread id for thread replies | [optional] |
-| **User** | [**AddressableEntityRef**](AddressableEntityRef.html) | The user who sent the message | [optional] |
-| **ToUser** | [**AddressableEntityRef**](AddressableEntityRef.html) | The receiving user of the message | [optional] |
-| **Reactions** | [**List&lt;ChatReaction&gt;**](ChatReaction.html) | The emoji reactions to this message | [optional] |
-{: class="table table-striped"}
+| **Thread** | [**Entity**](Entity) | The id for a thread this message corresponds to | |
+| **ParentThread** | [**Entity**](Entity) | Parent thread id for thread replies | [optional] |
+| **User** | [**AddressableEntityRef**](AddressableEntityRef) | The user who sent the message | [optional] |
+| **ToUser** | [**AddressableEntityRef**](AddressableEntityRef) | The receiving user of the message | [optional] |
+| **Reactions** | [**List&lt;ChatReaction&gt;**](ChatReaction) | The emoji reactions to this message | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

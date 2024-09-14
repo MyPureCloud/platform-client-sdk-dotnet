@@ -1,30 +1,29 @@
----
-title: AgentAssistantsApi
----
+# AgentAssistantsApi
+
 ## PureCloudPlatform.Client.V2.Api.AgentAssistantsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAssistant**](AgentAssistantsApi.html#deleteassistant) | **Delete** /api/v2/assistants/{assistantId} | Delete an assistant. |
-| [**DeleteAssistantQueue**](AgentAssistantsApi.html#deleteassistantqueue) | **Delete** /api/v2/assistants/{assistantId}/queues/{queueId} | Disassociate a queue from an assistant. |
-| [**DeleteAssistantQueues**](AgentAssistantsApi.html#deleteassistantqueues) | **Delete** /api/v2/assistants/{assistantId}/queues | Disassociate the queues from an assistant for the given assistant ID and queue IDs. |
-| [**GetAssistant**](AgentAssistantsApi.html#getassistant) | **Get** /api/v2/assistants/{assistantId} | Get an assistant. |
-| [**GetAssistantQueue**](AgentAssistantsApi.html#getassistantqueue) | **Get** /api/v2/assistants/{assistantId}/queues/{queueId} | Get queue Information for an assistant. |
-| [**GetAssistantQueues**](AgentAssistantsApi.html#getassistantqueues) | **Get** /api/v2/assistants/{assistantId}/queues | Get all the queues associated with an assistant. |
-| [**GetAssistants**](AgentAssistantsApi.html#getassistants) | **Get** /api/v2/assistants | Get all assistants. |
-| [**GetAssistantsQueues**](AgentAssistantsApi.html#getassistantsqueues) | **Get** /api/v2/assistants/queues | Get all queues assigned to any assistant. |
-| [**PatchAssistant**](AgentAssistantsApi.html#patchassistant) | **Patch** /api/v2/assistants/{assistantId} | Update an assistant. |
-| [**PatchAssistantQueues**](AgentAssistantsApi.html#patchassistantqueues) | **Patch** /api/v2/assistants/{assistantId}/queues | Update Queues for an Assistant. |
-| [**PostAssistants**](AgentAssistantsApi.html#postassistants) | **Post** /api/v2/assistants | Create an Assistant. |
-| [**PutAssistantQueue**](AgentAssistantsApi.html#putassistantqueue) | **Put** /api/v2/assistants/{assistantId}/queues/{queueId} | Create a queue assistant association. |
-{: class="table table-striped"}
+| [**DeleteAssistant**](#DeleteAssistant) | **Delete** /api/v2/assistants/{assistantId} | Delete an assistant. |
+| [**DeleteAssistantQueue**](#DeleteAssistantQueue) | **Delete** /api/v2/assistants/{assistantId}/queues/{queueId} | Disassociate a queue from an assistant. |
+| [**DeleteAssistantQueues**](#DeleteAssistantQueues) | **Delete** /api/v2/assistants/{assistantId}/queues | Disassociate the queues from an assistant for the given assistant ID and queue IDs. |
+| [**GetAssistant**](#GetAssistant) | **Get** /api/v2/assistants/{assistantId} | Get an assistant. |
+| [**GetAssistantQueue**](#GetAssistantQueue) | **Get** /api/v2/assistants/{assistantId}/queues/{queueId} | Get queue Information for an assistant. |
+| [**GetAssistantQueues**](#GetAssistantQueues) | **Get** /api/v2/assistants/{assistantId}/queues | Get all the queues associated with an assistant. |
+| [**GetAssistants**](#GetAssistants) | **Get** /api/v2/assistants | Get all assistants. |
+| [**GetAssistantsQueues**](#GetAssistantsQueues) | **Get** /api/v2/assistants/queues | Get all queues assigned to any assistant. |
+| [**PatchAssistant**](#PatchAssistant) | **Patch** /api/v2/assistants/{assistantId} | Update an assistant. |
+| [**PatchAssistantQueues**](#PatchAssistantQueues) | **Patch** /api/v2/assistants/{assistantId}/queues | Update Queues for an Assistant. |
+| [**PostAssistants**](#PostAssistants) | **Post** /api/v2/assistants | Create an Assistant. |
+| [**PutAssistantQueue**](#PutAssistantQueue) | **Put** /api/v2/assistants/{assistantId}/queues/{queueId} | Create a queue assistant association. |
 
-<a name="deleteassistant"></a>
 
-## void DeleteAssistant (string assistantId)
 
+## DeleteAssistant
+
+> void DeleteAssistant (string assistantId)
 
 
 Delete an assistant.
@@ -77,16 +76,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteassistantqueue"></a>
 
-## void DeleteAssistantQueue (string assistantId, string queueId)
+## DeleteAssistantQueue
 
+> void DeleteAssistantQueue (string assistantId, string queueId)
 
 
 Disassociate a queue from an assistant.
@@ -141,16 +139,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
 | **queueId** | **string**| Queue ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteassistantqueues"></a>
 
-## void DeleteAssistantQueues (string assistantId, string queueIds = null)
+## DeleteAssistantQueues
 
+> void DeleteAssistantQueues (string assistantId, string queueIds = null)
 
 
 Disassociate the queues from an assistant for the given assistant ID and queue IDs.
@@ -205,16 +202,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
 | **queueIds** | **string**| Comma-separated identifiers of the queues that need to be deleted. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getassistant"></a>
 
-## [**Assistant**](Assistant.html) GetAssistant (string assistantId, string expand = null)
+## GetAssistant
 
+> [**Assistant**](Assistant) GetAssistant (string assistantId, string expand = null)
 
 
 Get an assistant.
@@ -270,16 +266,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
 | **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: copilot |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Assistant**](Assistant.html)
+[**Assistant**](Assistant)
 
-<a name="getassistantqueue"></a>
 
-## [**AssistantQueue**](AssistantQueue.html) GetAssistantQueue (string assistantId, string queueId, string expand = null)
+## GetAssistantQueue
 
+> [**AssistantQueue**](AssistantQueue) GetAssistantQueue (string assistantId, string queueId, string expand = null)
 
 
 Get queue Information for an assistant.
@@ -337,16 +332,15 @@ namespace Example
 | **assistantId** | **string**| Assistant ID |  |
 | **queueId** | **string**| Queue ID |  |
 | **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: assistant |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssistantQueue**](AssistantQueue.html)
+[**AssistantQueue**](AssistantQueue)
 
-<a name="getassistantqueues"></a>
 
-## [**AssistantQueueListing**](AssistantQueueListing.html) GetAssistantQueues (string assistantId, string before = null, string after = null, string pageSize = null, string expand = null)
+## GetAssistantQueues
 
+> [**AssistantQueueListing**](AssistantQueueListing) GetAssistantQueues (string assistantId, string before = null, string after = null, string pageSize = null, string expand = null)
 
 
 Get all the queues associated with an assistant.
@@ -408,16 +402,15 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: assistant |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssistantQueueListing**](AssistantQueueListing.html)
+[**AssistantQueueListing**](AssistantQueueListing)
 
-<a name="getassistants"></a>
 
-## [**AssistantListing**](AssistantListing.html) GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
+## GetAssistants
 
+> [**AssistantListing**](AssistantListing) GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
 
 
 Get all assistants.
@@ -479,16 +472,15 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Return the assistant by the given name. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssistantListing**](AssistantListing.html)
+[**AssistantListing**](AssistantListing)
 
-<a name="getassistantsqueues"></a>
 
-## [**AssistantQueueListing**](AssistantQueueListing.html) GetAssistantsQueues (string before = null, string after = null, string pageSize = null, string queueIds = null, string expand = null)
+## GetAssistantsQueues
 
+> [**AssistantQueueListing**](AssistantQueueListing) GetAssistantsQueues (string before = null, string after = null, string pageSize = null, string queueIds = null, string expand = null)
 
 
 Get all queues assigned to any assistant.
@@ -550,16 +542,15 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **queueIds** | **string**| Comma-separated identifiers of the queues that need to be retrieved. | [optional]  |
 | **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: assistant |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AssistantQueueListing**](AssistantQueueListing.html)
+[**AssistantQueueListing**](AssistantQueueListing)
 
-<a name="patchassistant"></a>
 
-## [**Assistant**](Assistant.html) PatchAssistant (string assistantId, Assistant body)
+## PatchAssistant
 
+> [**Assistant**](Assistant) PatchAssistant (string assistantId, Assistant body)
 
 
 Update an assistant.
@@ -614,17 +605,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
-| **body** | [**Assistant**](Assistant.html)|  |  |
-{: class="table table-striped"}
+| **body** | [**Assistant**](Assistant)|  |  |
 
 ### Return type
 
-[**Assistant**](Assistant.html)
+[**Assistant**](Assistant)
 
-<a name="patchassistantqueues"></a>
 
-## [**AssistantQueueListing**](AssistantQueueListing.html) PatchAssistantQueues (string assistantId, List<AssistantQueue> body)
+## PatchAssistantQueues
 
+> [**AssistantQueueListing**](AssistantQueueListing) PatchAssistantQueues (string assistantId, List<AssistantQueue> body)
 
 
 Update Queues for an Assistant.
@@ -679,17 +669,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
-| **body** | [**List<AssistantQueue>**](AssistantQueue.html)|  |  |
-{: class="table table-striped"}
+| **body** | [**List<AssistantQueue>**](AssistantQueue)|  |  |
 
 ### Return type
 
-[**AssistantQueueListing**](AssistantQueueListing.html)
+[**AssistantQueueListing**](AssistantQueueListing)
 
-<a name="postassistants"></a>
 
-## [**Assistant**](Assistant.html) PostAssistants (Assistant body)
+## PostAssistants
 
+> [**Assistant**](Assistant) PostAssistants (Assistant body)
 
 
 Create an Assistant.
@@ -742,17 +731,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Assistant**](Assistant.html)|  |  |
-{: class="table table-striped"}
+| **body** | [**Assistant**](Assistant)|  |  |
 
 ### Return type
 
-[**Assistant**](Assistant.html)
+[**Assistant**](Assistant)
 
-<a name="putassistantqueue"></a>
 
-## [**AssistantQueue**](AssistantQueue.html) PutAssistantQueue (string assistantId, string queueId, AssistantQueue body)
+## PutAssistantQueue
 
+> [**AssistantQueue**](AssistantQueue) PutAssistantQueue (string assistantId, string queueId, AssistantQueue body)
 
 
 Create a queue assistant association.
@@ -809,10 +797,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**AssistantQueue**](AssistantQueue.html)|  |  |
-{: class="table table-striped"}
+| **body** | [**AssistantQueue**](AssistantQueue)|  |  |
 
 ### Return type
 
-[**AssistantQueue**](AssistantQueue.html)
+[**AssistantQueue**](AssistantQueue)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

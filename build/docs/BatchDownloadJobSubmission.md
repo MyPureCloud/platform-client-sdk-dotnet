@@ -1,13 +1,13 @@
----
-title: BatchDownloadJobSubmission
----
+# BatchDownloadJobSubmission
+
 ## ININ.PureCloudApi.Model.BatchDownloadJobSubmission
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **BatchDownloadRequestList** | [**List&lt;BatchDownloadRequest&gt;**](BatchDownloadRequest.html) | List of up to 100 items requested | |
-{: class="table table-striped"}
+| **BatchDownloadRequestList** | [**List&lt;BatchDownloadRequest&gt;**](BatchDownloadRequest) | List of up to 100 items requested | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

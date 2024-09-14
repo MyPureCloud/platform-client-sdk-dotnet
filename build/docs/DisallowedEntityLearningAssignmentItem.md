@@ -1,6 +1,5 @@
----
-title: DisallowedEntityLearningAssignmentItem
----
+# DisallowedEntityLearningAssignmentItem
+
 ## ININ.PureCloudApi.Model.DisallowedEntityLearningAssignmentItem
 
 ## Properties
@@ -8,7 +7,8 @@ title: DisallowedEntityLearningAssignmentItem
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ErrorCode** | **string** | The error code associated with this disallowed entity | [optional] |
-| **Entity** | [**LearningAssignmentItem**](LearningAssignmentItem.html) | The entity that was disallowed | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**LearningAssignmentItem**](LearningAssignmentItem) | The entity that was disallowed | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

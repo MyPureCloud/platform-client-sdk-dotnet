@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentContentUpload
----
+# KnowledgeDocumentContentUpload
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentContentUpload
 
 ## Properties
@@ -14,9 +13,10 @@ title: KnowledgeDocumentContentUpload
 | **UploadKey** | **string** | Key that identifies the file in the storage including the file name | [optional] |
 | **Url** | **string** | Presigned URL to PUT the file to | [optional] |
 | **Headers** | **Dictionary&lt;string, string&gt;** | Required headers when uploading a file through PUT request to the URL | [optional] |
-| **Document** | [**AddressableEntityRef**](AddressableEntityRef.html) | ID of the document for which article content is to be uploaded | [optional] |
+| **Document** | [**AddressableEntityRef**](AddressableEntityRef) | ID of the document for which article content is to be uploaded | [optional] |
 | **ErrorMessage** | **string** | Error message when upload fails | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

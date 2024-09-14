@@ -1,6 +1,5 @@
----
-title: SupportCenterDetailedCategoryModuleTemplate
----
+# SupportCenterDetailedCategoryModuleTemplate
+
 ## ININ.PureCloudApi.Model.SupportCenterDetailedCategoryModuleTemplate
 
 ## Properties
@@ -8,7 +7,8 @@ title: SupportCenterDetailedCategoryModuleTemplate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Active** | **bool?** | Whether this template is active or not | |
-| **Sidebar** | [**SupportCenterDetailedCategoryModuleSidebar**](SupportCenterDetailedCategoryModuleSidebar.html) | Sidebar settings for the template | |
-{: class="table table-striped"}
+| **Sidebar** | [**SupportCenterDetailedCategoryModuleSidebar**](SupportCenterDetailedCategoryModuleSidebar) | Sidebar settings for the template | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

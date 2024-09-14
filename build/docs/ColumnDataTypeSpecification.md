@@ -1,6 +1,5 @@
----
-title: ColumnDataTypeSpecification
----
+# ColumnDataTypeSpecification
+
 ## ININ.PureCloudApi.Model.ColumnDataTypeSpecification
 
 ## Properties
@@ -12,6 +11,7 @@ title: ColumnDataTypeSpecification
 | **Min** | **int?** | The minimum length of the numeric column selected for dynamic queueing | [optional] |
 | **Max** | **int?** | The maximum length of the numeric column selected for dynamic queueing | [optional] |
 | **MaxLength** | **int?** | The maximum length of the text column selected for dynamic queueing | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

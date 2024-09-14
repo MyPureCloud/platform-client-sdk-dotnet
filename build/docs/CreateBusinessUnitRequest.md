@@ -1,6 +1,5 @@
----
-title: CreateBusinessUnitRequest
----
+# CreateBusinessUnitRequest
+
 ## ININ.PureCloudApi.Model.CreateBusinessUnitRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: CreateBusinessUnitRequest
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the business unit | |
 | **DivisionId** | **string** | The ID of the division to which the business unit should be added | |
-| **Settings** | [**CreateBusinessUnitSettingsRequest**](CreateBusinessUnitSettingsRequest.html) | Configuration for the business unit | |
-{: class="table table-striped"}
+| **Settings** | [**CreateBusinessUnitSettingsRequest**](CreateBusinessUnitSettingsRequest) | Configuration for the business unit | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

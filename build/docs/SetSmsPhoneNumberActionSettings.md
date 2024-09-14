@@ -1,6 +1,5 @@
----
-title: SetSmsPhoneNumberActionSettings
----
+# SetSmsPhoneNumberActionSettings
+
 ## ININ.PureCloudApi.Model.SetSmsPhoneNumberActionSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: SetSmsPhoneNumberActionSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **SenderSmsPhoneNumber** | **string** | The string address for the sms phone number. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

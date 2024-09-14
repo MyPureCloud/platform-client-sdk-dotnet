@@ -1,6 +1,5 @@
----
-title: ClonedUserEntityListing
----
+# ClonedUserEntityListing
+
 ## ININ.PureCloudApi.Model.ClonedUserEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: ClonedUserEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;ClonedUser&gt;**](ClonedUser.html) |  | [optional] |
+| **Entities** | [**List&lt;ClonedUser&gt;**](ClonedUser) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

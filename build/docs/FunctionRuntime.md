@@ -1,6 +1,5 @@
----
-title: FunctionRuntime
----
+# FunctionRuntime
+
 ## ININ.PureCloudApi.Model.FunctionRuntime
 
 ## Properties
@@ -11,6 +10,7 @@ title: FunctionRuntime
 | **Description** | **string** | Description of function runtime. | [optional] |
 | **Status** | **string** | Availability status of runtime | [optional] |
 | **DateEndOfLife** | **String** | Optional end of life date. Present if the status is Deprecated. Date represents when support for runtime can no longer be guaranteed. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

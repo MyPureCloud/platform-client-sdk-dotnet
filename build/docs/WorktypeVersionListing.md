@@ -1,17 +1,17 @@
----
-title: WorktypeVersionListing
----
+# WorktypeVersionListing
+
 ## ININ.PureCloudApi.Model.WorktypeVersionListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorktypeVersion&gt;**](WorktypeVersion.html) |  | [optional] |
+| **Entities** | [**List&lt;WorktypeVersion&gt;**](WorktypeVersion) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **After** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

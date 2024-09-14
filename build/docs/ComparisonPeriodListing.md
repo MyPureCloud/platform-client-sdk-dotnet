@@ -1,6 +1,5 @@
----
-title: ComparisonPeriodListing
----
+# ComparisonPeriodListing
+
 ## ININ.PureCloudApi.Model.ComparisonPeriodListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: ComparisonPeriodListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;ComparisonPeriod&gt;**](ComparisonPeriod.html) |  | [optional] |
+| **Entities** | [**List&lt;ComparisonPeriod&gt;**](ComparisonPeriod) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

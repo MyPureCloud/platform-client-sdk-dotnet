@@ -1,6 +1,5 @@
----
-title: SourceEntityListing
----
+# SourceEntityListing
+
 ## ININ.PureCloudApi.Model.SourceEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: SourceEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;Source&gt;**](Source.html) |  | [optional] |
+| **Entities** | [**List&lt;Source&gt;**](Source) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: MessagingExternalEstablishedEvent
----
+# MessagingExternalEstablishedEvent
+
 ## ININ.PureCloudApi.Model.MessagingExternalEstablishedEvent
 
 ## Properties
@@ -12,8 +11,9 @@ title: MessagingExternalEstablishedEvent
 | **ConversationId** | **string** | A unique Id (V4 UUID) identifying this conversation | |
 | **CommunicationId** | **string** | A unique Id (V4 UUID) identifying this communication. | |
 | **DisplayName** | **string** | A name for the participant if it is available for this conversation. | [optional] |
-| **InitialConfiguration** | [**MessagingInitialConfiguration**](MessagingInitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**MessagingInitialConfiguration**](MessagingInitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CoachingSlotsRequest
----
+# CoachingSlotsRequest
+
 ## ININ.PureCloudApi.Model.CoachingSlotsRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: CoachingSlotsRequest
 | **AttendeeIds** | **List&lt;string&gt;** | List of attendees to determine coaching appointment slots | |
 | **FacilitatorIds** | **List&lt;string&gt;** | List of facilitators to determine coaching appointment slots | [optional] |
 | **InterruptibleAppointmentIds** | **List&lt;string&gt;** | List of appointment ids to exclude from consideration when determining blocked slots | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemsUserEventsNotificationAssignmentSegment
----
+# WorkitemsUserEventsNotificationAssignmentSegment
+
 ## ININ.PureCloudApi.Model.WorkitemsUserEventsNotificationAssignmentSegment
 
 ## Properties
@@ -10,6 +9,7 @@ title: WorkitemsUserEventsNotificationAssignmentSegment
 | **StartState** | **string** |  | [optional] |
 | **EndState** | **string** |  | [optional] |
 | **DurationMs** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

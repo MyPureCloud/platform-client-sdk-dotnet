@@ -1,13 +1,12 @@
----
-title: UserSkillEntityListing
----
+# UserSkillEntityListing
+
 ## ININ.PureCloudApi.Model.UserSkillEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;UserRoutingSkill&gt;**](UserRoutingSkill.html) |  | [optional] |
+| **Entities** | [**List&lt;UserRoutingSkill&gt;**](UserRoutingSkill) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: UserSkillEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

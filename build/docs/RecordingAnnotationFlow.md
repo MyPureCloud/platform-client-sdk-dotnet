@@ -1,6 +1,5 @@
----
-title: RecordingAnnotationFlow
----
+# RecordingAnnotationFlow
+
 ## ININ.PureCloudApi.Model.RecordingAnnotationFlow
 
 ## Properties
@@ -9,6 +8,7 @@ title: RecordingAnnotationFlow
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The flow name | |
 | **Id** | **string** | The flow Id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

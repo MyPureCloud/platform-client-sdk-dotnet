@@ -1,6 +1,5 @@
----
-title: Evaluation
----
+# Evaluation
+
 ## ININ.PureCloudApi.Model.Evaluation
 
 ## Properties
@@ -9,21 +8,21 @@ title: Evaluation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Conversation** | [**ConversationReference**](ConversationReference.html) |  | [optional] |
-| **EvaluationForm** | [**EvaluationForm**](EvaluationForm.html) | Evaluation form used for evaluation. | [optional] |
-| **Evaluator** | [**User**](User.html) |  | [optional] |
-| **Agent** | [**User**](User.html) |  | [optional] |
-| **Calibration** | [**Calibration**](Calibration.html) |  | [optional] |
+| **Conversation** | [**ConversationReference**](ConversationReference) |  | [optional] |
+| **EvaluationForm** | [**EvaluationForm**](EvaluationForm) | Evaluation form used for evaluation. | [optional] |
+| **Evaluator** | [**User**](User) |  | [optional] |
+| **Agent** | [**User**](User) |  | [optional] |
+| **Calibration** | [**Calibration**](Calibration) |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **Answers** | [**EvaluationScoringSet**](EvaluationScoringSet.html) |  | [optional] |
+| **Answers** | [**EvaluationScoringSet**](EvaluationScoringSet) |  | [optional] |
 | **AgentHasRead** | **bool?** |  | [optional] |
-| **Assignee** | [**User**](User.html) |  | [optional] |
+| **Assignee** | [**User**](User) |  | [optional] |
 | **AssigneeApplicable** | **bool?** | Indicates whether an assignee is applicable for the evaluation. Set to false when assignee is not applicable. | [optional] |
 | **ReleaseDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **AssignedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ChangedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **RevisionCreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **Queue** | [**Queue**](Queue.html) |  | [optional] |
+| **Queue** | [**Queue**](Queue) |  | [optional] |
 | **MediaType** | **List&lt;string&gt;** | List of different communication types used in conversation. | [optional] |
 | **Rescore** | **bool?** | Is only true when evaluation is re-scored. | [optional] |
 | **ConversationDate** | **DateTime?** | Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -34,12 +33,13 @@ title: Evaluation
 | **ResourceId** | **string** | Only used for email evaluations. Will be null for all other evaluations. | [optional] |
 | **ResourceType** | **string** | The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. | [optional] |
 | **Redacted** | **bool?** | Is only true when the user making the request does not have sufficient permissions to see evaluation | [optional] |
-| **AgentTeam** | [**Team**](Team.html) | Team of the evaluation agent | [optional] |
+| **AgentTeam** | [**Team**](Team) | Team of the evaluation agent | [optional] |
 | **IsScoringIndex** | **bool?** |  | [optional] |
 | **AuthorizedActions** | **List&lt;string&gt;** | List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit | [optional] |
 | **HasAssistanceFailed** | **bool?** | Is true when evaluation assistance didn&#39;t execute successfully | [optional] |
-| **EvaluationSource** | [**EvaluationSource**](EvaluationSource.html) | The source that created the evaluation. | [optional] |
+| **EvaluationSource** | [**EvaluationSource**](EvaluationSource) | The source that created the evaluation. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

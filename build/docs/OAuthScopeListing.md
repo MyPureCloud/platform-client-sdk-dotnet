@@ -1,6 +1,5 @@
----
-title: OAuthScopeListing
----
+# OAuthScopeListing
+
 ## ININ.PureCloudApi.Model.OAuthScopeListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: OAuthScopeListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;OAuthScope&gt;**](OAuthScope.html) |  | [optional] |
+| **Entities** | [**List&lt;OAuthScope&gt;**](OAuthScope) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

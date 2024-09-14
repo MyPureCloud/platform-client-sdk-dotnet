@@ -1,6 +1,5 @@
----
-title: RecordingMetadata
----
+# RecordingMetadata
+
 ## ININ.PureCloudApi.Model.RecordingMetadata
 
 ## Properties
@@ -16,7 +15,7 @@ title: RecordingMetadata
 | **Media** | **string** | The type of media that the recording is. At the moment that could be audio, chat, email, or message. | [optional] |
 | **MediaSubtype** | **string** | The recording media subtype. | [optional] |
 | **MediaSubject** | **string** | The recording media subject. | [optional] |
-| **Annotations** | [**List&lt;Annotation&gt;**](Annotation.html) | Annotations that belong to the recording. Populated when recording filestate is AVAILABLE. | [optional] |
+| **Annotations** | [**List&lt;Annotation&gt;**](Annotation) | Annotations that belong to the recording. Populated when recording filestate is AVAILABLE. | [optional] |
 | **FileState** | **string** | Represents the current file state for a recording. Examples: Uploading, Archived, etc | [optional] |
 | **RestoreExpirationTime** | **DateTime?** | The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ArchiveDate** | **DateTime?** | The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -28,6 +27,7 @@ title: RecordingMetadata
 | **RemainingRestorationsAllowedForOrg** | **int?** | The remaining archive restorations the organization has. | [optional] |
 | **SessionId** | **string** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,15 +1,15 @@
----
-title: InsightsSummaryOverallItem
----
+# InsightsSummaryOverallItem
+
 ## ININ.PureCloudApi.Model.InsightsSummaryOverallItem
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ComparativePeriod** | [**InsightsSummaryOverallPeriodPoints**](InsightsSummaryOverallPeriodPoints.html) | Insights data in the comparative period | [optional] |
-| **PrimaryPeriod** | [**InsightsSummaryOverallPeriodPoints**](InsightsSummaryOverallPeriodPoints.html) | Insights data in the primary period | [optional] |
+| **ComparativePeriod** | [**InsightsSummaryOverallPeriodPoints**](InsightsSummaryOverallPeriodPoints) | Insights data in the comparative period | [optional] |
+| **PrimaryPeriod** | [**InsightsSummaryOverallPeriodPoints**](InsightsSummaryOverallPeriodPoints) | Insights data in the primary period | [optional] |
 | **PercentOfGoalChange** | **double?** | Percent of goal change | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

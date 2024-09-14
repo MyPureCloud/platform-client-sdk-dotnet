@@ -1,6 +1,5 @@
----
-title: DigitalRuleSet
----
+# DigitalRuleSet
+
 ## ININ.PureCloudApi.Model.DigitalRuleSet
 
 ## Properties
@@ -12,9 +11,10 @@ title: DigitalRuleSet
 | **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
-| **ContactList** | [**DomainEntityRef**](DomainEntityRef.html) | A ContactList to provide suggestions for contact columns on relevant conditions and actions. | [optional] |
-| **Rules** | [**List&lt;DigitalRule&gt;**](DigitalRule.html) | The list of rules. | |
+| **ContactList** | [**DomainEntityRef**](DomainEntityRef) | A ContactList to provide suggestions for contact columns on relevant conditions and actions. | [optional] |
+| **Rules** | [**List&lt;DigitalRule&gt;**](DigitalRule) | The list of rules. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

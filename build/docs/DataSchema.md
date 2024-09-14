@@ -1,6 +1,5 @@
----
-title: DataSchema
----
+# DataSchema
+
 ## ININ.PureCloudApi.Model.DataSchema
 
 ## Properties
@@ -12,10 +11,11 @@ title: DataSchema
 | **Version** | **int?** | The schema&#39;s version, a positive integer. Required for updates. | |
 | **AppliesTo** | **List&lt;string&gt;** | One of \&quot;CONTACT\&quot; or \&quot;EXTERNAL_ORGANIZATION\&quot;.  Indicates the built-in entity type to which this schema applies. | [optional] |
 | **Enabled** | **bool?** | The schema&#39;s enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists. | [optional] |
-| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef.html) | The URI of the user that created this schema. | [optional] |
+| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef) | The URI of the user that created this schema. | [optional] |
 | **DateCreated** | **DateTime?** | The date and time this schema was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **JsonSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | A JSON schema defining the extension to the built-in entity type. | |
+| **JsonSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) | A JSON schema defining the extension to the built-in entity type. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

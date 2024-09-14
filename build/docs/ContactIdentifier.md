@@ -1,6 +1,5 @@
----
-title: ContactIdentifier
----
+# ContactIdentifier
+
 ## ININ.PureCloudApi.Model.ContactIdentifier
 
 ## Properties
@@ -12,6 +11,7 @@ title: ContactIdentifier
 | **Value** | **string** | The string value of the identifier. Will vary in syntax by type. | |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

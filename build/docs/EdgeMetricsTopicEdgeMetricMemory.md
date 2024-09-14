@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricMemory
----
+# EdgeMetricsTopicEdgeMetricMemory
+
 ## ININ.PureCloudApi.Model.EdgeMetricsTopicEdgeMetricMemory
 
 ## Properties
@@ -10,6 +9,7 @@ title: EdgeMetricsTopicEdgeMetricMemory
 | **Type** | **string** |  | [optional] |
 | **AvailableBytes** | **int?** |  | [optional] |
 | **TotalBytes** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

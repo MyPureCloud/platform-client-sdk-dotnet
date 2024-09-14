@@ -1,13 +1,12 @@
----
-title: WorkspaceEntityListing
----
+# WorkspaceEntityListing
+
 ## ININ.PureCloudApi.Model.WorkspaceEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Workspace&gt;**](Workspace.html) |  | [optional] |
+| **Entities** | [**List&lt;Workspace&gt;**](Workspace) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: WorkspaceEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

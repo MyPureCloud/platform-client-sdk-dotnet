@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationSessionLastEvent
----
+# JourneySessionEventsNotificationSessionLastEvent
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationSessionLastEvent
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneySessionEventsNotificationSessionLastEvent
 | **Id** | **string** |  | [optional] |
 | **EventName** | **string** |  | [optional] |
 | **CreatedDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

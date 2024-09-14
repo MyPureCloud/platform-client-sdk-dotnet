@@ -1,6 +1,5 @@
----
-title: LearningAssignmentAggregateQueryRequestFilter
----
+# LearningAssignmentAggregateQueryRequestFilter
+
 ## ININ.PureCloudApi.Model.LearningAssignmentAggregateQueryRequestFilter
 
 ## Properties
@@ -8,7 +7,8 @@ title: LearningAssignmentAggregateQueryRequestFilter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The logic used to combine the clauses | |
-| **Clauses** | [**List&lt;LearningAssignmentAggregateQueryRequestClause&gt;**](LearningAssignmentAggregateQueryRequestClause.html) | The list of clauses used to filter the data. Note that clauses must filter by attendeeId and a maximum of 100 user IDs are allowed | |
-{: class="table table-striped"}
+| **Clauses** | [**List&lt;LearningAssignmentAggregateQueryRequestClause&gt;**](LearningAssignmentAggregateQueryRequestClause) | The list of clauses used to filter the data. Note that clauses must filter by attendeeId and a maximum of 100 user IDs are allowed | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

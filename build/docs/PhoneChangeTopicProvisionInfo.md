@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicProvisionInfo
----
+# PhoneChangeTopicProvisionInfo
+
 ## ININ.PureCloudApi.Model.PhoneChangeTopicProvisionInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: PhoneChangeTopicProvisionInfo
 | **Time** | **DateTime?** |  | [optional] |
 | **Source** | **string** |  | [optional] |
 | **ErrorInfo** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

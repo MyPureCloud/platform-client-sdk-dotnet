@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationActionMapPageUrlCondition
----
+# JourneyWebActionEventsNotificationActionMapPageUrlCondition
+
 ## ININ.PureCloudApi.Model.JourneyWebActionEventsNotificationActionMapPageUrlCondition
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyWebActionEventsNotificationActionMapPageUrlCondition
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** |  | [optional] |
 | **Operator** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

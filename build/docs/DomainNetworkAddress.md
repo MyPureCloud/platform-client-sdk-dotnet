@@ -1,6 +1,5 @@
----
-title: DomainNetworkAddress
----
+# DomainNetworkAddress
+
 ## ININ.PureCloudApi.Model.DomainNetworkAddress
 
 ## Properties
@@ -11,6 +10,7 @@ title: DomainNetworkAddress
 | **Address** | **string** | An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask. | [optional] |
 | **Persistent** | **bool?** | True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false. | [optional] |
 | **Family** | **int?** | The address family for this address. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

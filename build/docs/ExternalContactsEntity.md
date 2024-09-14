@@ -1,6 +1,5 @@
----
-title: ExternalContactsEntity
----
+# ExternalContactsEntity
+
 ## ININ.PureCloudApi.Model.ExternalContactsEntity
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExternalContactsEntity
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

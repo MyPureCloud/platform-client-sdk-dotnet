@@ -1,6 +1,5 @@
----
-title: ChatMessageUser
----
+# ChatMessageUser
+
 ## ININ.PureCloudApi.Model.ChatMessageUser
 
 ## Properties
@@ -11,7 +10,8 @@ title: ChatMessageUser
 | **Name** | **string** |  | [optional] |
 | **DisplayName** | **string** |  | [optional] |
 | **Username** | **string** |  | [optional] |
-| **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
-{: class="table table-striped"}
+| **Images** | [**List&lt;UserImage&gt;**](UserImage) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

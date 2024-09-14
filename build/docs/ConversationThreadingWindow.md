@@ -1,6 +1,5 @@
----
-title: ConversationThreadingWindow
----
+# ConversationThreadingWindow
+
 ## ININ.PureCloudApi.Model.ConversationThreadingWindow
 
 ## Properties
@@ -8,8 +7,9 @@ title: ConversationThreadingWindow
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Settings** | [**List&lt;ConversationThreadingWindowSetting&gt;**](ConversationThreadingWindowSetting.html) | The conversation threading window timeout (Minutes) for each messaging type | |
+| **Settings** | [**List&lt;ConversationThreadingWindowSetting&gt;**](ConversationThreadingWindowSetting) | The conversation threading window timeout (Minutes) for each messaging type | |
 | **DefaultTimeoutMinutes** | **long?** | The default conversation threading window timeout (Minutes) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

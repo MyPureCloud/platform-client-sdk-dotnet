@@ -1,6 +1,5 @@
----
-title: FlowActivityEntityData
----
+# FlowActivityEntityData
+
 ## ININ.PureCloudApi.Model.FlowActivityEntityData
 
 ## Properties
@@ -31,7 +30,8 @@ title: FlowActivityEntityData
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
 | **UsedRouting** | **string** | Complete routing method | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
-| **ScoredAgents** | [**List&lt;FlowActivityScoredAgent&gt;**](FlowActivityScoredAgent.html) | Scored agents | [optional] |
-{: class="table table-striped"}
+| **ScoredAgents** | [**List&lt;FlowActivityScoredAgent&gt;**](FlowActivityScoredAgent) | Scored agents | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

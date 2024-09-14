@@ -1,6 +1,5 @@
----
-title: FlowHealthIntentUtterance
----
+# FlowHealthIntentUtterance
+
 ## ININ.PureCloudApi.Model.FlowHealthIntentUtterance
 
 ## Properties
@@ -11,8 +10,9 @@ title: FlowHealthIntentUtterance
 | **Text** | **string** | Utterance Text. | [optional] |
 | **IssueCount** | **long?** | Number of issues found for this utterance. | [optional] |
 | **StaticValidationResults** | **List&lt;string&gt;** | Validation results for this utterance. | [optional] |
-| **OutlierInfo** | [**OutlierInfo**](OutlierInfo.html) | Details about this utterance being an outlier or not. | [optional] |
-| **ConfusionInfo** | [**ConfusionInfo**](ConfusionInfo.html) | Confusion details with other utterances. | [optional] |
-{: class="table table-striped"}
+| **OutlierInfo** | [**OutlierInfo**](OutlierInfo) | Details about this utterance being an outlier or not. | [optional] |
+| **ConfusionInfo** | [**ConfusionInfo**](ConfusionInfo) | Confusion details with other utterances. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

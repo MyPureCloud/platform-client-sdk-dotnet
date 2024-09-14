@@ -1,6 +1,5 @@
----
-title: SupportCenterModuleSetting
----
+# SupportCenterModuleSetting
+
 ## ININ.PureCloudApi.Model.SupportCenterModuleSetting
 
 ## Properties
@@ -9,8 +8,9 @@ title: SupportCenterModuleSetting
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Screen module type | |
 | **Enabled** | **bool?** | Whether or not knowledge portal (previously support center) screen module is enabled | |
-| **CompactCategoryModuleTemplate** | [**SupportCenterCompactCategoryModuleTemplate**](SupportCenterCompactCategoryModuleTemplate.html) | Compact category module template | [optional] |
-| **DetailedCategoryModuleTemplate** | [**SupportCenterDetailedCategoryModuleTemplate**](SupportCenterDetailedCategoryModuleTemplate.html) | Detailed category module template | [optional] |
-{: class="table table-striped"}
+| **CompactCategoryModuleTemplate** | [**SupportCenterCompactCategoryModuleTemplate**](SupportCenterCompactCategoryModuleTemplate) | Compact category module template | [optional] |
+| **DetailedCategoryModuleTemplate** | [**SupportCenterDetailedCategoryModuleTemplate**](SupportCenterDetailedCategoryModuleTemplate) | Detailed category module template | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

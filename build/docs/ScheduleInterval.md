@@ -1,6 +1,5 @@
----
-title: ScheduleInterval
----
+# ScheduleInterval
+
 ## ININ.PureCloudApi.Model.ScheduleInterval
 
 ## Properties
@@ -9,6 +8,7 @@ title: ScheduleInterval
 |------------ | ------------- | ------------- | -------------|
 | **Start** | **string** | The scheduled start time as an ISO-8601 string, i.e yyyy-MM-ddTHH:mm:ss.SSSZ | |
 | **End** | **string** | The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

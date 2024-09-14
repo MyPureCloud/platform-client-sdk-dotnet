@@ -1,6 +1,5 @@
----
-title: OrganizationPresence
----
+# OrganizationPresence
+
 ## ININ.PureCloudApi.Model.OrganizationPresence
 
 ## Properties
@@ -13,11 +12,12 @@ title: OrganizationPresence
 | **SystemPresence** | **string** |  | [optional] |
 | **Deactivated** | **bool?** |  | [optional] |
 | **Primary** | **bool?** |  | [optional] |
-| **CreatedBy** | [**User**](User.html) |  | [optional] |
+| **CreatedBy** | [**User**](User) |  | [optional] |
 | **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ModifiedBy** | [**User**](User.html) |  | [optional] |
+| **ModifiedBy** | [**User**](User) |  | [optional] |
 | **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

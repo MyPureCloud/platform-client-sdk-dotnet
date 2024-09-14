@@ -1,6 +1,5 @@
----
-title: V2MobiusAlertsTopicCondition
----
+# V2MobiusAlertsTopicCondition
+
 ## ININ.PureCloudApi.Model.V2MobiusAlertsTopicCondition
 
 ## Properties
@@ -8,9 +7,10 @@ title: V2MobiusAlertsTopicCondition
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **Guid?** |  | [optional] |
-| **Conditions** | [**List&lt;V2MobiusAlertsTopicCondition&gt;**](V2MobiusAlertsTopicCondition.html) |  | [optional] |
-| **Predicates** | [**List&lt;V2MobiusAlertsTopicConditionRulePredicate&gt;**](V2MobiusAlertsTopicConditionRulePredicate.html) |  | [optional] |
+| **Conditions** | [**List&lt;V2MobiusAlertsTopicCondition&gt;**](V2MobiusAlertsTopicCondition) |  | [optional] |
+| **Predicates** | [**List&lt;V2MobiusAlertsTopicConditionRulePredicate&gt;**](V2MobiusAlertsTopicConditionRulePredicate) |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

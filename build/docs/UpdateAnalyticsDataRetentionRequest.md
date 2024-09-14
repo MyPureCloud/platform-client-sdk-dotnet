@@ -1,6 +1,5 @@
----
-title: UpdateAnalyticsDataRetentionRequest
----
+# UpdateAnalyticsDataRetentionRequest
+
 ## ININ.PureCloudApi.Model.UpdateAnalyticsDataRetentionRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: UpdateAnalyticsDataRetentionRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **RetentionDays** | **int?** | Analytics data retention period in days to set for the organization. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

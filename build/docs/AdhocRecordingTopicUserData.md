@@ -1,6 +1,5 @@
----
-title: AdhocRecordingTopicUserData
----
+# AdhocRecordingTopicUserData
+
 ## ININ.PureCloudApi.Model.AdhocRecordingTopicUserData
 
 ## Properties
@@ -9,6 +8,7 @@ title: AdhocRecordingTopicUserData
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

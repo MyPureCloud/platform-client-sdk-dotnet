@@ -1,6 +1,5 @@
----
-title: ConversationActivityQueryClause
----
+# ConversationActivityQueryClause
+
 ## ININ.PureCloudApi.Model.ConversationActivityQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: ConversationActivityQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;ConversationActivityQueryPredicate&gt;**](ConversationActivityQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;ConversationActivityQueryPredicate&gt;**](ConversationActivityQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

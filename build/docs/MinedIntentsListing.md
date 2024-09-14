@@ -1,16 +1,16 @@
----
-title: MinedIntentsListing
----
+# MinedIntentsListing
+
 ## ININ.PureCloudApi.Model.MinedIntentsListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;MinerIntent&gt;**](MinerIntent.html) |  | [optional] |
+| **Entities** | [**List&lt;MinerIntent&gt;**](MinerIntent) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ContentManagementWorkspaceDocumentsTopicDocumentDataV2
----
+# ContentManagementWorkspaceDocumentsTopicDocumentDataV2
+
 ## ININ.PureCloudApi.Model.ContentManagementWorkspaceDocumentsTopicDocumentDataV2
 
 ## Properties
@@ -11,16 +10,17 @@ title: ContentManagementWorkspaceDocumentsTopicDocumentDataV2
 | **Name** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-| **Workspace** | [**ContentManagementWorkspaceDocumentsTopicWorkspaceData**](ContentManagementWorkspaceDocumentsTopicWorkspaceData.html) |  | [optional] |
-| **CreatedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData.html) |  | [optional] |
+| **Workspace** | [**ContentManagementWorkspaceDocumentsTopicWorkspaceData**](ContentManagementWorkspaceDocumentsTopicWorkspaceData) |  | [optional] |
+| **CreatedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData) |  | [optional] |
 | **ContentType** | **string** |  | [optional] |
 | **ContentLength** | **int?** |  | [optional] |
 | **Filename** | **string** |  | [optional] |
 | **ChangeNumber** | **int?** |  | [optional] |
 | **DateUploaded** | **DateTime?** |  | [optional] |
-| **UploadedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData.html) |  | [optional] |
-| **LockInfo** | [**ContentManagementWorkspaceDocumentsTopicLockData**](ContentManagementWorkspaceDocumentsTopicLockData.html) |  | [optional] |
+| **UploadedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData) |  | [optional] |
+| **LockInfo** | [**ContentManagementWorkspaceDocumentsTopicLockData**](ContentManagementWorkspaceDocumentsTopicLockData) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

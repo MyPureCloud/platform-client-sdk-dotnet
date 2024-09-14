@@ -1,13 +1,13 @@
----
-title: WorkPlanBidListResponse
----
+# WorkPlanBidListResponse
+
 ## ININ.PureCloudApi.Model.WorkPlanBidListResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorkPlanBid&gt;**](WorkPlanBid.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;WorkPlanBid&gt;**](WorkPlanBid) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

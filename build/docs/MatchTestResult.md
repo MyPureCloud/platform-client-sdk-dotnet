@@ -1,6 +1,5 @@
----
-title: MatchTestResult
----
+# MatchTestResult
+
 ## ININ.PureCloudApi.Model.MatchTestResult
 
 ## Properties
@@ -9,6 +8,7 @@ title: MatchTestResult
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **Object** | The value of the field being matched | [optional] |
 | **Path** | **string** | The json path to the json node being matched on. ex: $[&#39;things&#39;][1] | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

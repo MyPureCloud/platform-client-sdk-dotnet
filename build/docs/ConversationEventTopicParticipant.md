@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicParticipant
----
+# ConversationEventTopicParticipant
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicParticipant
 
 ## Properties
@@ -24,10 +23,10 @@ title: ConversationEventTopicParticipant
 | **WrapupExpected** | **bool?** | True when a participant is expected to enter a wrapup code once the call connects. | [optional] |
 | **WrapupPrompt** | **string** | This field controls how the UI prompts the agent for a wrapup. | [optional] |
 | **WrapupTimeoutMs** | **int?** | Specifies how long a timed ACW session will last. | [optional] |
-| **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
+| **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup) |  | [optional] |
 | **StartAcwTime** | **DateTime?** | The timestamp when this participant started after-call work. | [optional] |
 | **EndAcwTime** | **DateTime?** | The timestamp when this participant ended after-call work. | [optional] |
-| **ConversationRoutingData** | [**ConversationEventTopicConversationRoutingData**](ConversationEventTopicConversationRoutingData.html) |  | [optional] |
+| **ConversationRoutingData** | [**ConversationEventTopicConversationRoutingData**](ConversationEventTopicConversationRoutingData) |  | [optional] |
 | **AlertingTimeoutMs** | **int?** | Specifies how long the agent has to answer an interaction before being marked as not responding. | [optional] |
 | **MonitoredParticipantId** | **string** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
 | **CoachedParticipantId** | **string** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
@@ -36,16 +35,17 @@ title: ConversationEventTopicParticipant
 | **ScreenRecordingState** | **string** | The current screen recording state for this participant. | [optional] |
 | **FlaggedReason** | **string** | If this participant has flagged the conversation, the reason code given. | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | Additional participant attributes | [optional] |
-| **Calls** | [**List&lt;ConversationEventTopicCall&gt;**](ConversationEventTopicCall.html) |  | [optional] |
-| **Callbacks** | [**List&lt;ConversationEventTopicCallback&gt;**](ConversationEventTopicCallback.html) |  | [optional] |
-| **Chats** | [**List&lt;ConversationEventTopicChat&gt;**](ConversationEventTopicChat.html) |  | [optional] |
-| **Cobrowsesessions** | [**List&lt;ConversationEventTopicCobrowse&gt;**](ConversationEventTopicCobrowse.html) |  | [optional] |
-| **Emails** | [**List&lt;ConversationEventTopicEmail&gt;**](ConversationEventTopicEmail.html) |  | [optional] |
-| **Messages** | [**List&lt;ConversationEventTopicMessage&gt;**](ConversationEventTopicMessage.html) |  | [optional] |
-| **Screenshares** | [**List&lt;ConversationEventTopicScreenshare&gt;**](ConversationEventTopicScreenshare.html) |  | [optional] |
-| **SocialExpressions** | [**List&lt;ConversationEventTopicSocialExpression&gt;**](ConversationEventTopicSocialExpression.html) |  | [optional] |
-| **Videos** | [**List&lt;ConversationEventTopicVideo&gt;**](ConversationEventTopicVideo.html) |  | [optional] |
-| **Workflow** | [**ConversationEventTopicWorkflow**](ConversationEventTopicWorkflow.html) |  | [optional] |
-{: class="table table-striped"}
+| **Calls** | [**List&lt;ConversationEventTopicCall&gt;**](ConversationEventTopicCall) |  | [optional] |
+| **Callbacks** | [**List&lt;ConversationEventTopicCallback&gt;**](ConversationEventTopicCallback) |  | [optional] |
+| **Chats** | [**List&lt;ConversationEventTopicChat&gt;**](ConversationEventTopicChat) |  | [optional] |
+| **Cobrowsesessions** | [**List&lt;ConversationEventTopicCobrowse&gt;**](ConversationEventTopicCobrowse) |  | [optional] |
+| **Emails** | [**List&lt;ConversationEventTopicEmail&gt;**](ConversationEventTopicEmail) |  | [optional] |
+| **Messages** | [**List&lt;ConversationEventTopicMessage&gt;**](ConversationEventTopicMessage) |  | [optional] |
+| **Screenshares** | [**List&lt;ConversationEventTopicScreenshare&gt;**](ConversationEventTopicScreenshare) |  | [optional] |
+| **SocialExpressions** | [**List&lt;ConversationEventTopicSocialExpression&gt;**](ConversationEventTopicSocialExpression) |  | [optional] |
+| **Videos** | [**List&lt;ConversationEventTopicVideo&gt;**](ConversationEventTopicVideo) |  | [optional] |
+| **Workflow** | [**ConversationEventTopicWorkflow**](ConversationEventTopicWorkflow) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

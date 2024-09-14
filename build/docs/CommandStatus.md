@@ -1,6 +1,5 @@
----
-title: CommandStatus
----
+# CommandStatus
+
 ## ININ.PureCloudApi.Model.CommandStatus
 
 ## Properties
@@ -13,8 +12,9 @@ title: CommandStatus
 | **UserId** | **string** |  | [optional] |
 | **StatusCode** | **string** |  | [optional] |
 | **CommandType** | **string** |  | [optional] |
-| **Document** | [**Document**](Document.html) |  | [optional] |
+| **Document** | [**Document**](Document) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

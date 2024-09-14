@@ -1,6 +1,5 @@
----
-title: PatchUser
----
+# PatchUser
+
 ## ININ.PureCloudApi.Model.PatchUser
 
 ## Properties
@@ -10,6 +9,7 @@ title: PatchUser
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **PreferredName** | **string** | Preferred full name of agent | [optional] |
 | **AcdAutoAnswer** | **bool?** | The value that denotes if acdAutoAnswer is set on the user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

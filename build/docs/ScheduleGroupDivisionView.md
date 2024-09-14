@@ -1,6 +1,5 @@
----
-title: ScheduleGroupDivisionView
----
+# ScheduleGroupDivisionView
+
 ## ININ.PureCloudApi.Model.ScheduleGroupDivisionView
 
 ## Properties
@@ -9,8 +8,9 @@ title: ScheduleGroupDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The schedule group identifier | [optional] |
 | **Name** | **string** | The schedule group name | |
-| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

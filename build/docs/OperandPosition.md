@@ -1,6 +1,5 @@
----
-title: OperandPosition
----
+# OperandPosition
+
 ## ININ.PureCloudApi.Model.OperandPosition
 
 ## Properties
@@ -11,6 +10,7 @@ title: OperandPosition
 | **StartingPositionDirection** | **string** | Dictates starting position directionality | [optional] |
 | **EndingPositionValue** | **int?** | Defines ending point of a position range - number of seconds or words from the start or from the end of the interaction | [optional] |
 | **EndingPositionDirection** | **string** | Dictates ending position directionality | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: FlowOutcomeDetailEventTopicFlowMilestone
----
+# FlowOutcomeDetailEventTopicFlowMilestone
+
 ## ININ.PureCloudApi.Model.FlowOutcomeDetailEventTopicFlowMilestone
 
 ## Properties
@@ -9,6 +8,7 @@ title: FlowOutcomeDetailEventTopicFlowMilestone
 |------------ | ------------- | ------------- | -------------|
 | **MilestoneId** | **string** |  | [optional] |
 | **MilestoneTime** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

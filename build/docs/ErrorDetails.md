@@ -1,6 +1,5 @@
----
-title: ErrorDetails
----
+# ErrorDetails
+
 ## ININ.PureCloudApi.Model.ErrorDetails
 
 ## Properties
@@ -13,8 +12,9 @@ title: ErrorDetails
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **Code** | **string** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Nested** | [**ErrorDetails**](ErrorDetails.html) |  | [optional] |
+| **Nested** | [**ErrorDetails**](ErrorDetails) |  | [optional] |
 | **Details** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

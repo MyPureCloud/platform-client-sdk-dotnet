@@ -1,6 +1,5 @@
----
-title: EdgeLogicalInterfacesChangeTopicErrorInfo
----
+# EdgeLogicalInterfacesChangeTopicErrorInfo
+
 ## ININ.PureCloudApi.Model.EdgeLogicalInterfacesChangeTopicErrorInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: EdgeLogicalInterfacesChangeTopicErrorInfo
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **Code** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

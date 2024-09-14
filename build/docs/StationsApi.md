@@ -1,21 +1,20 @@
----
-title: StationsApi
----
+# StationsApi
+
 ## PureCloudPlatform.Client.V2.Api.StationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteStationAssociateduser**](StationsApi.html#deletestationassociateduser) | **Delete** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
-| [**GetStation**](StationsApi.html#getstation) | **Get** /api/v2/stations/{stationId} | Get station. |
-| [**GetStations**](StationsApi.html#getstations) | **Get** /api/v2/stations | Get the list of available stations. |
-{: class="table table-striped"}
+| [**DeleteStationAssociateduser**](#DeleteStationAssociateduser) | **Delete** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
+| [**GetStation**](#GetStation) | **Get** /api/v2/stations/{stationId} | Get station. |
+| [**GetStations**](#GetStations) | **Get** /api/v2/stations | Get the list of available stations. |
 
-<a name="deletestationassociateduser"></a>
 
-## void DeleteStationAssociateduser (string stationId)
 
+## DeleteStationAssociateduser
+
+> void DeleteStationAssociateduser (string stationId)
 
 
 Unassigns the user assigned to this station
@@ -67,16 +66,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **stationId** | **string**| Station ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getstation"></a>
 
-## [**Station**](Station.html) GetStation (string stationId)
+## GetStation
 
+> [**Station**](Station) GetStation (string stationId)
 
 
 Get station.
@@ -129,16 +127,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **stationId** | **string**| Station ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Station**](Station.html)
+[**Station**](Station)
 
-<a name="getstations"></a>
 
-## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
+## GetStations
 
+> [**StationEntityListing**](StationEntityListing) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
 
 
 Get the list of available stations.
@@ -205,9 +202,10 @@ namespace Example
 | **webRtcUserId** | **string**| Filter for the webRtc station of the webRtcUserId | [optional]  |
 | **id** | **string**| Comma separated list of stationIds | [optional]  |
 | **lineAppearanceId** | **string**| lineAppearanceId | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**StationEntityListing**](StationEntityListing.html)
+[**StationEntityListing**](StationEntityListing)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

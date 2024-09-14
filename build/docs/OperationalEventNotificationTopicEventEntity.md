@@ -1,6 +1,5 @@
----
-title: OperationalEventNotificationTopicEventEntity
----
+# OperationalEventNotificationTopicEventEntity
+
 ## ININ.PureCloudApi.Model.OperationalEventNotificationTopicEventEntity
 
 ## Properties
@@ -10,6 +9,7 @@ title: OperationalEventNotificationTopicEventEntity
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

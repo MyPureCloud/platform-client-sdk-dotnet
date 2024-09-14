@@ -1,6 +1,5 @@
----
-title: OrganizationFeatures
----
+# OrganizationFeatures
+
 ## ININ.PureCloudApi.Model.OrganizationFeatures
 
 ## Properties
@@ -20,6 +19,7 @@ title: OrganizationFeatures
 | **ContactCenter** | **bool?** |  | [optional] |
 | **UnifiedCommunications** | **bool?** |  | [optional] |
 | **Custserv** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

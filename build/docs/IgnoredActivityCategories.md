@@ -1,6 +1,5 @@
----
-title: IgnoredActivityCategories
----
+# IgnoredActivityCategories
+
 ## ININ.PureCloudApi.Model.IgnoredActivityCategories
 
 ## Properties
@@ -8,6 +7,7 @@ title: IgnoredActivityCategories
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** | Activity categories list | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

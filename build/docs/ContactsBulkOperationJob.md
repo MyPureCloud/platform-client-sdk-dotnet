@@ -1,6 +1,5 @@
----
-title: ContactsBulkOperationJob
----
+# ContactsBulkOperationJob
+
 ## ININ.PureCloudApi.Model.ContactsBulkOperationJob
 
 ## Properties
@@ -13,9 +12,10 @@ title: ContactsBulkOperationJob
 | **TotalRecords** | **long?** | Total records that will be impacted by the bulk operation. | [optional] |
 | **CompletedRecords** | **long?** | Amount of records that have been impacted by the bulk operation. | [optional] |
 | **PercentComplete** | **int?** | Percentage of records that have been impacted by the bulk operation. | [optional] |
-| **FailureReason** | [**ErrorInfo**](ErrorInfo.html) | Information on failure reason. | [optional] |
+| **FailureReason** | [**ErrorInfo**](ErrorInfo) | Information on failure reason. | [optional] |
 | **DownloadURI** | **string** | URI to download the original backup contacts. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,14 +1,14 @@
----
-title: WfmMoveAgentsCompleteTopicWfmMoveAgentData
----
+# WfmMoveAgentsCompleteTopicWfmMoveAgentData
+
 ## ININ.PureCloudApi.Model.WfmMoveAgentsCompleteTopicWfmMoveAgentData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**WfmMoveAgentsCompleteTopicUserReference**](WfmMoveAgentsCompleteTopicUserReference.html) |  | [optional] |
+| **User** | [**WfmMoveAgentsCompleteTopicUserReference**](WfmMoveAgentsCompleteTopicUserReference) |  | [optional] |
 | **Result** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

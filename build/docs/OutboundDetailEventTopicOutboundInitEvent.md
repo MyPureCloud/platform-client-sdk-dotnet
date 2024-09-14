@@ -1,6 +1,5 @@
----
-title: OutboundDetailEventTopicOutboundInitEvent
----
+# OutboundDetailEventTopicOutboundInitEvent
+
 ## ININ.PureCloudApi.Model.OutboundDetailEventTopicOutboundInitEvent
 
 ## Properties
@@ -26,6 +25,7 @@ title: OutboundDetailEventTopicOutboundInitEvent
 | **OutboundContactId** | **string** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

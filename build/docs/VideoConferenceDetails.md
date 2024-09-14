@@ -1,6 +1,5 @@
----
-title: VideoConferenceDetails
----
+# VideoConferenceDetails
+
 ## ININ.PureCloudApi.Model.VideoConferenceDetails
 
 ## Properties
@@ -9,7 +8,8 @@ title: VideoConferenceDetails
 |------------ | ------------- | ------------- | -------------|
 | **ConferenceId** | **string** | The conferenceId. | [optional] |
 | **ConversationId** | **string** | The conversationId of the video conference. | [optional] |
-| **ParticipantInfo** | [**ParticipantInfo**](ParticipantInfo.html) | Information about the participants of the video conference. | [optional] |
-{: class="table table-striped"}
+| **ParticipantInfo** | [**ParticipantInfo**](ParticipantInfo) | Information about the participants of the video conference. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

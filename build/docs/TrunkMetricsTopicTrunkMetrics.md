@@ -1,16 +1,16 @@
----
-title: TrunkMetricsTopicTrunkMetrics
----
+# TrunkMetricsTopicTrunkMetrics
+
 ## ININ.PureCloudApi.Model.TrunkMetricsTopicTrunkMetrics
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Calls** | [**TrunkMetricsTopicTrunkMetricsCalls**](TrunkMetricsTopicTrunkMetricsCalls.html) |  | [optional] |
+| **Calls** | [**TrunkMetricsTopicTrunkMetricsCalls**](TrunkMetricsTopicTrunkMetricsCalls) |  | [optional] |
 | **EventTime** | **DateTime?** |  | [optional] |
-| **Qos** | [**TrunkMetricsTopicTrunkMetricsQoS**](TrunkMetricsTopicTrunkMetricsQoS.html) |  | [optional] |
-| **Trunk** | [**TrunkMetricsTopicUriReference**](TrunkMetricsTopicUriReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **Qos** | [**TrunkMetricsTopicTrunkMetricsQoS**](TrunkMetricsTopicTrunkMetricsQoS) |  | [optional] |
+| **Trunk** | [**TrunkMetricsTopicUriReference**](TrunkMetricsTopicUriReference) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationExternalContact
----
+# JourneyWebActionEventsNotificationExternalContact
+
 ## ININ.PureCloudApi.Model.JourneyWebActionEventsNotificationExternalContact
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyWebActionEventsNotificationExternalContact
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

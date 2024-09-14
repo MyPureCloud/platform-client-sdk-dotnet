@@ -1,6 +1,5 @@
----
-title: SourcePlanningGroupRequest
----
+# SourcePlanningGroupRequest
+
 ## ININ.PureCloudApi.Model.SourcePlanningGroupRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: SourcePlanningGroupRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the planning group | |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the planning group | |
-{: class="table table-striped"}
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the planning group | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

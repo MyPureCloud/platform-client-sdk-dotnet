@@ -1,6 +1,5 @@
----
-title: SessionLastEvent
----
+# SessionLastEvent
+
 ## ININ.PureCloudApi.Model.SessionLastEvent
 
 ## Properties
@@ -10,6 +9,7 @@ title: SessionLastEvent
 | **Id** | **string** | The ID of the last event. | |
 | **EventName** | **string** | The name of the event. | |
 | **CreatedDate** | **DateTime?** | Timestamp indicating when the event was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ExportScriptRequest
----
+# ExportScriptRequest
+
 ## ININ.PureCloudApi.Model.ExportScriptRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExportScriptRequest
 |------------ | ------------- | ------------- | -------------|
 | **FileName** | **string** | The final file name (no extension) of the script download: &lt;fileName&gt;.script | [optional] |
 | **VersionId** | **string** | The UUID version of the script to be exported.  Defaults to the current editable version. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

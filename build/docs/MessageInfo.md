@@ -1,6 +1,5 @@
----
-title: MessageInfo
----
+# MessageInfo
+
 ## ININ.PureCloudApi.Model.MessageInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: MessageInfo
 | **Message** | **string** | Description of the message. | [optional] |
 | **MessageWithParams** | **string** | Message with template fields for variable replacement. | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** | Map with fields for variable replacement. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

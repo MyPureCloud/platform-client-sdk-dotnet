@@ -1,6 +1,5 @@
----
-title: TextBotErrorInputEvent
----
+# TextBotErrorInputEvent
+
 ## ININ.PureCloudApi.Model.TextBotErrorInputEvent
 
 ## Properties
@@ -9,6 +8,7 @@ title: TextBotErrorInputEvent
 |------------ | ------------- | ------------- | -------------|
 | **Code** | **string** | The error code. | |
 | **Message** | **string** | The error message. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

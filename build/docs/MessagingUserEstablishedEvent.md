@@ -1,6 +1,5 @@
----
-title: MessagingUserEstablishedEvent
----
+# MessagingUserEstablishedEvent
+
 ## ININ.PureCloudApi.Model.MessagingUserEstablishedEvent
 
 ## Properties
@@ -14,8 +13,9 @@ title: MessagingUserEstablishedEvent
 | **UserId** | **string** | A unique Id (V4 UUID) identifying the user this communication belongs to. | |
 | **QueueId** | **string** | A unique Id (V4 UUID) identifying the queue that the user is messaging on behalf of. Applies to outbound messages only. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates whether or not this user will be required to complete after call work. | [optional] |
-| **InitialConfiguration** | [**MessagingInitialConfiguration**](MessagingInitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**MessagingInitialConfiguration**](MessagingInitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

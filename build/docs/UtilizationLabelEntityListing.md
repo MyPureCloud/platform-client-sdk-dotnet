@@ -1,13 +1,12 @@
----
-title: UtilizationLabelEntityListing
----
+# UtilizationLabelEntityListing
+
 ## ININ.PureCloudApi.Model.UtilizationLabelEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;UtilizationLabel&gt;**](UtilizationLabel.html) |  | [optional] |
+| **Entities** | [**List&lt;UtilizationLabel&gt;**](UtilizationLabel) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: UtilizationLabelEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

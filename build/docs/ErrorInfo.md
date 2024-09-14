@@ -1,6 +1,5 @@
----
-title: ErrorInfo
----
+# ErrorInfo
+
 ## ININ.PureCloudApi.Model.ErrorInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: ErrorInfo
 |------------ | ------------- | ------------- | -------------|
 | **Message** | **string** |  | [optional] |
 | **Code** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

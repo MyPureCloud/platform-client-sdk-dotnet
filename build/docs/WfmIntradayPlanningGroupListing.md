@@ -1,14 +1,14 @@
----
-title: WfmIntradayPlanningGroupListing
----
+# WfmIntradayPlanningGroupListing
+
 ## ININ.PureCloudApi.Model.WfmIntradayPlanningGroupListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ForecastPlanningGroupResponse&gt;**](ForecastPlanningGroupResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;ForecastPlanningGroupResponse&gt;**](ForecastPlanningGroupResponse) |  | [optional] |
 | **NoDataReason** | **string** | The reason there was no data for the request | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

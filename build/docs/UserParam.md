@@ -1,6 +1,5 @@
----
-title: UserParam
----
+# UserParam
+
 ## ININ.PureCloudApi.Model.UserParam
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserParam
 |------------ | ------------- | ------------- | -------------|
 | **Key** | **string** |  | [optional] |
 | **Value** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

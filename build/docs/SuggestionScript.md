@@ -1,15 +1,15 @@
----
-title: SuggestionScript
----
+# SuggestionScript
+
 ## ININ.PureCloudApi.Model.SuggestionScript
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Script** | [**AddressableEntityRef**](AddressableEntityRef.html) | The suggested script. | [optional] |
-| **Page** | [**AddressableEntityRef**](AddressableEntityRef.html) | The page of the script. | [optional] |
+| **Script** | [**AddressableEntityRef**](AddressableEntityRef) | The suggested script. | [optional] |
+| **Page** | [**AddressableEntityRef**](AddressableEntityRef) | The page of the script. | [optional] |
 | **Data** | **Dictionary&lt;string, string&gt;** | The payload for the script. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

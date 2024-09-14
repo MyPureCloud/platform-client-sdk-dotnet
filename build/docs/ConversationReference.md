@@ -1,6 +1,5 @@
----
-title: ConversationReference
----
+# ConversationReference
+
 ## ININ.PureCloudApi.Model.ConversationReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

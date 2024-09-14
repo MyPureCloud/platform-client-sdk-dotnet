@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentGuestSearch
----
+# KnowledgeDocumentGuestSearch
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentGuestSearch
 
 ## Properties
@@ -15,7 +14,8 @@ title: KnowledgeDocumentGuestSearch
 | **PageCount** | **int?** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **QueryType** | **string** | The type of the query that initiates the search. | [optional] |
 | **SessionId** | **string** | Session ID of the search. | [optional] |
-| **Results** | [**List&lt;KnowledgeDocumentGuestSearchResult&gt;**](KnowledgeDocumentGuestSearchResult.html) | Documents that matched the search query. | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;KnowledgeDocumentGuestSearchResult&gt;**](KnowledgeDocumentGuestSearchResult) | Documents that matched the search query. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

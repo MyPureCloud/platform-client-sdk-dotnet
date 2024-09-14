@@ -1,16 +1,16 @@
----
-title: DomainResourceConditionValue
----
+# DomainResourceConditionValue
+
 ## ININ.PureCloudApi.Model.DomainResourceConditionValue
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**User**](User.html) |  | [optional] |
-| **Queue** | [**Queue**](Queue.html) |  | [optional] |
+| **User** | [**User**](User) |  | [optional] |
+| **Queue** | [**Queue**](Queue) |  | [optional] |
 | **Value** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

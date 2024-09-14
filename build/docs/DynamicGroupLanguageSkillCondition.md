@@ -1,6 +1,5 @@
----
-title: DynamicGroupLanguageSkillCondition
----
+# DynamicGroupLanguageSkillCondition
+
 ## ININ.PureCloudApi.Model.DynamicGroupLanguageSkillCondition
 
 ## Properties
@@ -10,7 +9,8 @@ title: DynamicGroupLanguageSkillCondition
 | **LanguageSkill** | **string** | The language skill to be used in the skill condition query | |
 | **Comparator** | **string** | Comparator that will be applied to the proficiency | |
 | **Proficiency** | **int?** | The skill proficiency that will be used for the language skill. Integer range 0-5 | |
-| **ChildConditions** | [**List&lt;DynamicGroupSkillCondition&gt;**](DynamicGroupSkillCondition.html) | Nested conditions to be applied to this skill condition | [optional] |
-{: class="table table-striped"}
+| **ChildConditions** | [**List&lt;DynamicGroupSkillCondition&gt;**](DynamicGroupSkillCondition) | Nested conditions to be applied to this skill condition | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

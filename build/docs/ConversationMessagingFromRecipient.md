@@ -1,6 +1,5 @@
----
-title: ConversationMessagingFromRecipient
----
+# ConversationMessagingFromRecipient
+
 ## ININ.PureCloudApi.Model.ConversationMessagingFromRecipient
 
 ## Properties
@@ -14,7 +13,8 @@ title: ConversationMessagingFromRecipient
 | **FirstName** | **string** | First name of the recipient. | [optional] |
 | **LastName** | **string** | Last name of the recipient. | [optional] |
 | **Email** | **string** | E-mail address of the recipient. | [optional] |
-| **AdditionalIds** | [**List&lt;ConversationRecipientAdditionalIdentifier&gt;**](ConversationRecipientAdditionalIdentifier.html) | List of recipient additional identifiers | [optional] |
-{: class="table table-striped"}
+| **AdditionalIds** | [**List&lt;ConversationRecipientAdditionalIdentifier&gt;**](ConversationRecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

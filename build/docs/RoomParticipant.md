@@ -1,6 +1,5 @@
----
-title: RoomParticipant
----
+# RoomParticipant
+
 ## ININ.PureCloudApi.Model.RoomParticipant
 
 ## Properties
@@ -8,6 +7,7 @@ title: RoomParticipant
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ParticipantJid** | **string** | participantJid | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

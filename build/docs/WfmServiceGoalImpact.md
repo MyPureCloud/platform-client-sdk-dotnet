@@ -1,6 +1,5 @@
----
-title: WfmServiceGoalImpact
----
+# WfmServiceGoalImpact
+
 ## ININ.PureCloudApi.Model.WfmServiceGoalImpact
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmServiceGoalImpact
 |------------ | ------------- | ------------- | -------------|
 | **IncreaseByPercent** | **double?** | The maximum allowed percent increase from the configured goal | |
 | **DecreaseByPercent** | **double?** | The maximum allowed percent decrease from the configured goal | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

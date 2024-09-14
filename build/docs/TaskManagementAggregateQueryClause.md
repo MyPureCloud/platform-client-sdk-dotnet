@@ -1,6 +1,5 @@
----
-title: TaskManagementAggregateQueryClause
----
+# TaskManagementAggregateQueryClause
+
 ## ININ.PureCloudApi.Model.TaskManagementAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: TaskManagementAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates | |
-| **Predicates** | [**List&lt;TaskManagementAggregateQueryPredicate&gt;**](TaskManagementAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;TaskManagementAggregateQueryPredicate&gt;**](TaskManagementAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

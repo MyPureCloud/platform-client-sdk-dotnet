@@ -1,6 +1,5 @@
----
-title: FreeTrialLimit
----
+# FreeTrialLimit
+
 ## ININ.PureCloudApi.Model.FreeTrialLimit
 
 ## Properties
@@ -11,6 +10,7 @@ title: FreeTrialLimit
 | **DefaultValue** | **long?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Resource** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

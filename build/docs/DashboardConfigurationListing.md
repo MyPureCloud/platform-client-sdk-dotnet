@@ -1,13 +1,12 @@
----
-title: DashboardConfigurationListing
----
+# DashboardConfigurationListing
+
 ## ININ.PureCloudApi.Model.DashboardConfigurationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DashboardConfiguration&gt;**](DashboardConfiguration.html) |  | [optional] |
+| **Entities** | [**List&lt;DashboardConfiguration&gt;**](DashboardConfiguration) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: DashboardConfigurationListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

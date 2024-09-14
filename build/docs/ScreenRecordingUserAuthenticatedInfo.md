@@ -1,6 +1,5 @@
----
-title: ScreenRecordingUserAuthenticatedInfo
----
+# ScreenRecordingUserAuthenticatedInfo
+
 ## ININ.PureCloudApi.Model.ScreenRecordingUserAuthenticatedInfo
 
 ## Properties
@@ -8,6 +7,7 @@ title: ScreenRecordingUserAuthenticatedInfo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **BackgroundAssistantId** | **string** | Id of Genesys Cloud Background Assistant | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

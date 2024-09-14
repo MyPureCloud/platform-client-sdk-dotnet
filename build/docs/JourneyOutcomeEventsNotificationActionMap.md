@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationActionMap
----
+# JourneyOutcomeEventsNotificationActionMap
+
 ## ININ.PureCloudApi.Model.JourneyOutcomeEventsNotificationActionMap
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyOutcomeEventsNotificationActionMap
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

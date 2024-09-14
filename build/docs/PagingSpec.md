@@ -1,6 +1,5 @@
----
-title: PagingSpec
----
+# PagingSpec
+
 ## ININ.PureCloudApi.Model.PagingSpec
 
 ## Properties
@@ -9,6 +8,7 @@ title: PagingSpec
 |------------ | ------------- | ------------- | -------------|
 | **PageSize** | **int?** | How many results per page | |
 | **PageNumber** | **int?** | How many pages in | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

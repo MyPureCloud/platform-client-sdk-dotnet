@@ -1,6 +1,5 @@
----
-title: CustomerStartDetailEventTopicCustomerStartEvent
----
+# CustomerStartDetailEventTopicCustomerStartEvent
+
 ## ININ.PureCloudApi.Model.CustomerStartDetailEventTopicCustomerStartEvent
 
 ## Properties
@@ -27,8 +26,9 @@ title: CustomerStartDetailEventTopicCustomerStartEvent
 | **MessageType** | **string** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-| **JourneyContext** | [**CustomerStartDetailEventTopicJourneyContext**](CustomerStartDetailEventTopicJourneyContext.html) |  | [optional] |
+| **JourneyContext** | [**CustomerStartDetailEventTopicJourneyContext**](CustomerStartDetailEventTopicJourneyContext) |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

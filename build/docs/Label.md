@@ -1,6 +1,5 @@
----
-title: Label
----
+# Label
+
 ## ININ.PureCloudApi.Model.Label
 
 ## Properties
@@ -10,6 +9,7 @@ title: Label
 | **Name** | **string** | Name of the label | |
 | **Value** | **string** | Value of the label | |
 | **Encoded** | **bool?** | Whether the label is encoded or not | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

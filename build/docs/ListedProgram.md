@@ -1,6 +1,5 @@
----
-title: ListedProgram
----
+# ListedProgram
+
 ## ININ.PureCloudApi.Model.ListedProgram
 
 ## Properties
@@ -13,9 +12,10 @@ title: ListedProgram
 | **Published** | **bool?** |  | [optional] |
 | **TopicsCount** | **int?** |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
-| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentBulkUpdateEntity
----
+# KnowledgeDocumentBulkUpdateEntity
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentBulkUpdateEntity
 
 ## Properties
@@ -10,6 +9,7 @@ title: KnowledgeDocumentBulkUpdateEntity
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **CategoryId** | **string** | The category associated with the document. | [optional] |
 | **LabelIds** | **List&lt;string&gt;** | The ids of labels associated with the document. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

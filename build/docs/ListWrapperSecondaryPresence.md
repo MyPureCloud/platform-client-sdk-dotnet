@@ -1,13 +1,13 @@
----
-title: ListWrapperSecondaryPresence
----
+# ListWrapperSecondaryPresence
+
 ## ININ.PureCloudApi.Model.ListWrapperSecondaryPresence
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Values** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence.html) |  | [optional] |
-{: class="table table-striped"}
+| **Values** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

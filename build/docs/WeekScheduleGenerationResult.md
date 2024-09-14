@@ -1,6 +1,5 @@
----
-title: WeekScheduleGenerationResult
----
+# WeekScheduleGenerationResult
+
 ## ININ.PureCloudApi.Model.WeekScheduleGenerationResult
 
 ## Properties
@@ -9,8 +8,9 @@ title: WeekScheduleGenerationResult
 |------------ | ------------- | ------------- | -------------|
 | **Failed** | **bool?** | Whether the schedule generation failed | [optional] |
 | **RunId** | **string** | ID of the schedule run | [optional] |
-| **AgentWarnings** | [**List&lt;ScheduleGenerationWarning&gt;**](ScheduleGenerationWarning.html) | Warning messages from the schedule run. This will be available only when requesting information for a single week schedule | [optional] |
+| **AgentWarnings** | [**List&lt;ScheduleGenerationWarning&gt;**](ScheduleGenerationWarning) | Warning messages from the schedule run. This will be available only when requesting information for a single week schedule | [optional] |
 | **AgentWarningCount** | **int?** | Count of warning messages from the schedule run. This will be available only when requesting multiple week schedules | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

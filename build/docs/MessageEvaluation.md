@@ -1,6 +1,5 @@
----
-title: MessageEvaluation
----
+# MessageEvaluation
+
 ## ININ.PureCloudApi.Model.MessageEvaluation
 
 ## Properties
@@ -12,6 +11,7 @@ title: MessageEvaluation
 | **MessageType** | **string** | The type of message sent | [optional] |
 | **WrapupCodeId** | **string** | The id of the wrap-up code | [optional] |
 | **Timestamp** | **DateTime?** | The time that the wrap-up was applied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

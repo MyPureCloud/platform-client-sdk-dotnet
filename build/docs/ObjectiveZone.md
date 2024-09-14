@@ -1,6 +1,5 @@
----
-title: ObjectiveZone
----
+# ObjectiveZone
+
 ## ININ.PureCloudApi.Model.ObjectiveZone
 
 ## Properties
@@ -14,6 +13,7 @@ title: ObjectiveZone
 | **LowerLimitPoints** | **int?** | lower limit points | |
 | **UpperLimitValue** | **int?** | upper limit value | [optional] |
 | **LowerLimitValue** | **int?** | lower limit value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

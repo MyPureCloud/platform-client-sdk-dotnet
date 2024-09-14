@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricSubsystem
----
+# EdgeMetricsTopicEdgeMetricSubsystem
+
 ## ININ.PureCloudApi.Model.EdgeMetricsTopicEdgeMetricSubsystem
 
 ## Properties
@@ -9,7 +8,8 @@ title: EdgeMetricsTopicEdgeMetricSubsystem
 |------------ | ------------- | ------------- | -------------|
 | **ProcessName** | **string** |  | [optional] |
 | **DelayMs** | **int?** |  | [optional] |
-| **MediaSubsystem** | [**EdgeMetricsTopicEdgeMetricSubsystemMedia**](EdgeMetricsTopicEdgeMetricSubsystemMedia.html) |  | [optional] |
-{: class="table table-striped"}
+| **MediaSubsystem** | [**EdgeMetricsTopicEdgeMetricSubsystemMedia**](EdgeMetricsTopicEdgeMetricSubsystemMedia) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

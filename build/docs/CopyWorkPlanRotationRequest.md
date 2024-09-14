@@ -1,6 +1,5 @@
----
-title: CopyWorkPlanRotationRequest
----
+# CopyWorkPlanRotationRequest
+
 ## ININ.PureCloudApi.Model.CopyWorkPlanRotationRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CopyWorkPlanRotationRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Name to apply to the new copy of the work plan rotation | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

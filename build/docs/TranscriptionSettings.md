@@ -1,6 +1,5 @@
----
-title: TranscriptionSettings
----
+# TranscriptionSettings
+
 ## ININ.PureCloudApi.Model.TranscriptionSettings
 
 ## Properties
@@ -13,6 +12,7 @@ title: TranscriptionSettings
 | **ContentSearchEnabled** | **bool?** | Setting to enable/disable content search | [optional] |
 | **PciDssRedactionEnabled** | **bool?** | Setting to enable/disable PCI DSS Redaction | [optional] |
 | **PiiRedactionEnabled** | **bool?** | Setting to enable/disable PII Redaction | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

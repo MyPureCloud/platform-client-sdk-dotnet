@@ -1,6 +1,5 @@
----
-title: ContentQuickReplyV2
----
+# ContentQuickReplyV2
+
 ## ININ.PureCloudApi.Model.ContentQuickReplyV2
 
 ## Properties
@@ -8,7 +7,8 @@ title: ContentQuickReplyV2
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Title** | **string** | Text to show as the title of the quick reply. | |
-| **Actions** | [**List&lt;ContentQuickReply&gt;**](ContentQuickReply.html) | An array of quick reply objects. | |
-{: class="table table-striped"}
+| **Actions** | [**List&lt;ContentQuickReply&gt;**](ContentQuickReply) | An array of quick reply objects. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

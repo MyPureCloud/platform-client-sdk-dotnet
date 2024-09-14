@@ -1,6 +1,5 @@
----
-title: ForecastSourceDayPointer
----
+# ForecastSourceDayPointer
+
 ## ININ.PureCloudApi.Model.ForecastSourceDayPointer
 
 ## Properties
@@ -12,6 +11,7 @@ title: ForecastSourceDayPointer
 | **Date** | **string** | The date this source data represents, in yyyy-MM-dd format | [optional] |
 | **FileName** | **string** | The name of the source file this data came from if it originated from a data import | [optional] |
 | **DataKey** | **string** | The key to look up the forecast source data for this source day | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

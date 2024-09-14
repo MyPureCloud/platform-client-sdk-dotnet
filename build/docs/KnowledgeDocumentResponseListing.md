@@ -1,16 +1,16 @@
----
-title: KnowledgeDocumentResponseListing
----
+# KnowledgeDocumentResponseListing
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentResponseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;KnowledgeDocumentResponse&gt;**](KnowledgeDocumentResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;KnowledgeDocumentResponse&gt;**](KnowledgeDocumentResponse) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

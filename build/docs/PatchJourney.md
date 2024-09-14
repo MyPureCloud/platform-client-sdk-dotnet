@@ -1,13 +1,13 @@
----
-title: PatchJourney
----
+# PatchJourney
+
 ## ININ.PureCloudApi.Model.PatchJourney
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Patterns** | [**List&lt;PatchJourneyPattern&gt;**](PatchJourneyPattern.html) | A list of zero or more patterns to match. | [optional] |
-{: class="table table-striped"}
+| **Patterns** | [**List&lt;PatchJourneyPattern&gt;**](PatchJourneyPattern) | A list of zero or more patterns to match. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: UserRoutingStatusUserRoutingStatus
----
+# UserRoutingStatusUserRoutingStatus
+
 ## ININ.PureCloudApi.Model.UserRoutingStatusUserRoutingStatus
 
 ## Properties
@@ -8,8 +7,9 @@ title: UserRoutingStatusUserRoutingStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The unique identifier of the user. | [optional] |
-| **RoutingStatus** | [**UserRoutingStatusRoutingStatus**](UserRoutingStatusRoutingStatus.html) |  | [optional] |
-| **ErrorInfo** | [**UserRoutingStatusErrorInfo**](UserRoutingStatusErrorInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **RoutingStatus** | [**UserRoutingStatusRoutingStatus**](UserRoutingStatusRoutingStatus) |  | [optional] |
+| **ErrorInfo** | [**UserRoutingStatusErrorInfo**](UserRoutingStatusErrorInfo) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

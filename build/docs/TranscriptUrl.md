@@ -1,6 +1,5 @@
----
-title: TranscriptUrl
----
+# TranscriptUrl
+
 ## ININ.PureCloudApi.Model.TranscriptUrl
 
 ## Properties
@@ -8,6 +7,7 @@ title: TranscriptUrl
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Url** | **string** | The pre-signed S3 URL of the transcript | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

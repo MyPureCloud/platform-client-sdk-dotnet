@@ -327,6 +327,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Originatingdirection,
             
             /// <summary>
+            /// Enum Originatingsocialmediapublic for "originatingSocialMediaPublic"
+            /// </summary>
+            [EnumMember(Value = "originatingSocialMediaPublic")]
+            Originatingsocialmediapublic,
+            
+            /// <summary>
             /// Enum Outboundcampaignid for "outboundCampaignId"
             /// </summary>
             [EnumMember(Value = "outboundCampaignId")]

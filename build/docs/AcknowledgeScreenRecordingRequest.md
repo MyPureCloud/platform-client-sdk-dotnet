@@ -1,6 +1,5 @@
----
-title: AcknowledgeScreenRecordingRequest
----
+# AcknowledgeScreenRecordingRequest
+
 ## ININ.PureCloudApi.Model.AcknowledgeScreenRecordingRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: AcknowledgeScreenRecordingRequest
 | **ParticipantJid** | **string** |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

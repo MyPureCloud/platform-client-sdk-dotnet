@@ -1,14 +1,14 @@
----
-title: GrammarLanguageUpdate
----
+# GrammarLanguageUpdate
+
 ## ININ.PureCloudApi.Model.GrammarLanguageUpdate
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **VoiceFileMetadata** | [**GrammarLanguageFileMetadata**](GrammarLanguageFileMetadata.html) | Additional information about the associated voice file | [optional] |
-| **DtmfFileMetadata** | [**GrammarLanguageFileMetadata**](GrammarLanguageFileMetadata.html) | Additional information about the associated dtmf file | [optional] |
-{: class="table table-striped"}
+| **VoiceFileMetadata** | [**GrammarLanguageFileMetadata**](GrammarLanguageFileMetadata) | Additional information about the associated voice file | [optional] |
+| **DtmfFileMetadata** | [**GrammarLanguageFileMetadata**](GrammarLanguageFileMetadata) | Additional information about the associated dtmf file | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

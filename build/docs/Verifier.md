@@ -1,6 +1,5 @@
----
-title: Verifier
----
+# Verifier
+
 ## ININ.PureCloudApi.Model.Verifier
 
 ## Properties
@@ -12,6 +11,7 @@ title: Verifier
 | **Enabled** | **bool?** | Indicates whether this verifier is enabled. | [optional] |
 | **Default** | **bool?** | Indicates whether this is the default verifier. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

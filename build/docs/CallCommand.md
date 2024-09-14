@@ -1,6 +1,5 @@
----
-title: CallCommand
----
+# CallCommand
+
 ## ININ.PureCloudApi.Model.CallCommand
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallCommand
 |------------ | ------------- | ------------- | -------------|
 | **CallNumber** | **string** | The phone number to dial for this call. | |
 | **PhoneColumn** | **string** | For a dialer preview or scheduled callback, the phone column associated with the phone number | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

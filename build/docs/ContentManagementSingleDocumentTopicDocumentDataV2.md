@@ -1,6 +1,5 @@
----
-title: ContentManagementSingleDocumentTopicDocumentDataV2
----
+# ContentManagementSingleDocumentTopicDocumentDataV2
+
 ## ININ.PureCloudApi.Model.ContentManagementSingleDocumentTopicDocumentDataV2
 
 ## Properties
@@ -11,16 +10,17 @@ title: ContentManagementSingleDocumentTopicDocumentDataV2
 | **Name** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-| **Workspace** | [**ContentManagementSingleDocumentTopicWorkspaceData**](ContentManagementSingleDocumentTopicWorkspaceData.html) |  | [optional] |
-| **CreatedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData.html) |  | [optional] |
+| **Workspace** | [**ContentManagementSingleDocumentTopicWorkspaceData**](ContentManagementSingleDocumentTopicWorkspaceData) |  | [optional] |
+| **CreatedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData) |  | [optional] |
 | **ContentType** | **string** |  | [optional] |
 | **ContentLength** | **int?** |  | [optional] |
 | **Filename** | **string** |  | [optional] |
 | **ChangeNumber** | **int?** |  | [optional] |
 | **DateUploaded** | **DateTime?** |  | [optional] |
-| **UploadedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData.html) |  | [optional] |
-| **LockInfo** | [**ContentManagementSingleDocumentTopicLockData**](ContentManagementSingleDocumentTopicLockData.html) |  | [optional] |
+| **UploadedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData) |  | [optional] |
+| **LockInfo** | [**ContentManagementSingleDocumentTopicLockData**](ContentManagementSingleDocumentTopicLockData) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

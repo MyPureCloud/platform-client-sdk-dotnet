@@ -1,6 +1,5 @@
----
-title: ReportingTurnKnowledgeDocument
----
+# ReportingTurnKnowledgeDocument
+
 ## ININ.PureCloudApi.Model.ReportingTurnKnowledgeDocument
 
 ## Properties
@@ -11,6 +10,7 @@ title: ReportingTurnKnowledgeDocument
 | **Question** | **string** | The the question that was used to match against the search query. | [optional] |
 | **Answer** | **string** | The corresponding answer to the question. | [optional] |
 | **Confidence** | **double?** | The confidence score of how well the question matched the search query. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

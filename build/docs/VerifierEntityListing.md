@@ -1,6 +1,5 @@
----
-title: VerifierEntityListing
----
+# VerifierEntityListing
+
 ## ININ.PureCloudApi.Model.VerifierEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: VerifierEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;Verifier&gt;**](Verifier.html) |  | [optional] |
+| **Entities** | [**List&lt;Verifier&gt;**](Verifier) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

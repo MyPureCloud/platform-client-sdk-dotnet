@@ -1,6 +1,5 @@
----
-title: LearningScheduleSlotsQueryRequest
----
+# LearningScheduleSlotsQueryRequest
+
 ## ININ.PureCloudApi.Model.LearningScheduleSlotsQueryRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: LearningScheduleSlotsQueryRequest
 | **LengthInMinutes** | **int?** | The duration of coaching appointment to schedule in 15 minutes granularity | |
 | **UserIds** | **List&lt;string&gt;** | The user IDs for which to fetch schedules. Must be only 1. | |
 | **InterruptibleAssignmentId** | **string** | Assignment ID to exclude from consideration when determining blocked slots | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

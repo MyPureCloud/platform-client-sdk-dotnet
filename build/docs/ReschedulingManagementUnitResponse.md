@@ -1,14 +1,14 @@
----
-title: ReschedulingManagementUnitResponse
----
+# ReschedulingManagementUnitResponse
+
 ## ININ.PureCloudApi.Model.ReschedulingManagementUnitResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ManagementUnit** | [**ManagementUnitReference**](ManagementUnitReference.html) | The management unit | [optional] |
+| **ManagementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit | [optional] |
 | **Applied** | **bool?** | Whether the rescheduling run is applied for the given management unit | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

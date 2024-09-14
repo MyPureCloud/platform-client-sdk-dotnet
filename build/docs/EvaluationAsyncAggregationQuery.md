@@ -1,6 +1,5 @@
----
-title: EvaluationAsyncAggregationQuery
----
+# EvaluationAsyncAggregationQuery
+
 ## ININ.PureCloudApi.Model.EvaluationAsyncAggregationQuery
 
 ## Properties
@@ -11,12 +10,13 @@ title: EvaluationAsyncAggregationQuery
 | **Granularity** | **string** | Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H | [optional] |
 | **TimeZone** | **string** | Time zone context used to calculate response intervals (this allows resolving DST changes). The interval offset is used even when timeZone is specified. Default is UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London | [optional] |
 | **GroupBy** | **List&lt;string&gt;** | Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group. | [optional] |
-| **Filter** | [**EvaluationAggregateQueryFilter**](EvaluationAggregateQueryFilter.html) | Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters | [optional] |
+| **Filter** | [**EvaluationAggregateQueryFilter**](EvaluationAggregateQueryFilter) | Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters | [optional] |
 | **Metrics** | **List&lt;string&gt;** | Behaves like a SQL SELECT clause. Only named metrics will be retrieved. | |
 | **FlattenMultivaluedDimensions** | **bool?** | Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) | [optional] |
-| **Views** | [**List&lt;EvaluationAggregationView&gt;**](EvaluationAggregationView.html) | Custom derived metric views | [optional] |
+| **Views** | [**List&lt;EvaluationAggregationView&gt;**](EvaluationAggregationView) | Custom derived metric views | [optional] |
 | **AlternateTimeDimension** | **string** | Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. | [optional] |
 | **PageSize** | **int?** | The number of results per page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

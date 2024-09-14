@@ -1,6 +1,5 @@
----
-title: TestExecutionOperationResult
----
+# TestExecutionOperationResult
+
 ## ININ.PureCloudApi.Model.TestExecutionOperationResult
 
 ## Properties
@@ -11,7 +10,8 @@ title: TestExecutionOperationResult
 | **Name** | **string** | Name of the operation performed | [optional] |
 | **Success** | **bool?** | Indicated whether or not the operation was successful | [optional] |
 | **Result** | **Object** | The result of the operation | [optional] |
-| **Error** | [**ErrorBody**](ErrorBody.html) | Error that occurred during the operation | [optional] |
-{: class="table table-striped"}
+| **Error** | [**ErrorBody**](ErrorBody) | Error that occurred during the operation | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

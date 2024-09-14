@@ -1,6 +1,5 @@
----
-title: WebDeploymentsOAuthExchangeRequest
----
+# WebDeploymentsOAuthExchangeRequest
+
 ## ININ.PureCloudApi.Model.WebDeploymentsOAuthExchangeRequest
 
 ## Properties
@@ -8,8 +7,9 @@ title: WebDeploymentsOAuthExchangeRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DeploymentId** | **string** | The WebDeployment ID | |
-| **JourneyContext** | [**WebDeploymentsJourneyContext**](WebDeploymentsJourneyContext.html) | A Customer journey context. | [optional] |
-| **Oauth** | [**WebDeploymentsOAuthRequestParameters**](WebDeploymentsOAuthRequestParameters.html) |  | [optional] |
-{: class="table table-striped"}
+| **JourneyContext** | [**WebDeploymentsJourneyContext**](WebDeploymentsJourneyContext) | A Customer journey context. | [optional] |
+| **Oauth** | [**WebDeploymentsOAuthRequestParameters**](WebDeploymentsOAuthRequestParameters) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ScimV2PatchRequest
----
+# ScimV2PatchRequest
+
 ## ININ.PureCloudApi.Model.ScimV2PatchRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: ScimV2PatchRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Schemas** | **List&lt;string&gt;** | The list of schemas used in the PATCH request. | |
-| **Operations** | [**List&lt;ScimV2PatchOperation&gt;**](ScimV2PatchOperation.html) | The list of operations to perform for the PATCH request. | [optional] |
-{: class="table table-striped"}
+| **Operations** | [**List&lt;ScimV2PatchOperation&gt;**](ScimV2PatchOperation) | The list of operations to perform for the PATCH request. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: TimeOffRequestResponse
----
+# TimeOffRequestResponse
+
 ## ININ.PureCloudApi.Model.TimeOffRequestResponse
 
 ## Properties
@@ -8,7 +7,7 @@ title: TimeOffRequestResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **User** | [**UserReference**](UserReference.html) | The user associated with this time off request | [optional] |
+| **User** | [**UserReference**](UserReference) | The user associated with this time off request | [optional] |
 | **IsFullDayRequest** | **bool?** | Whether this is a full day request (false means partial day) | [optional] |
 | **MarkedAsRead** | **bool?** | Whether this request has been marked as read by the agent | [optional] |
 | **ActivityCodeId** | **string** | The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category | [optional] |
@@ -21,15 +20,16 @@ title: TimeOffRequestResponse
 | **DurationMinutes** | **List&lt;int?&gt;** | Daily durations for each day of this time off request in minutes | [optional] |
 | **PayableMinutes** | **List&lt;int?&gt;** | Payable minutes for each day of this time off request | [optional] |
 | **Notes** | **string** | Notes about the time off request | [optional] |
-| **SubmittedBy** | [**UserReference**](UserReference.html) | The user who submitted this time off request | [optional] |
+| **SubmittedBy** | [**UserReference**](UserReference) | The user who submitted this time off request | [optional] |
 | **SubmittedDate** | **DateTime?** | The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ReviewedBy** | [**UserReference**](UserReference.html) | The user who reviewed this time off request | [optional] |
+| **ReviewedBy** | [**UserReference**](UserReference) | The user who reviewed this time off request | [optional] |
 | **ReviewedDate** | **DateTime?** | The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ModifiedBy** | [**UserReference**](UserReference.html) | The user who last modified this TimeOffRequestResponse | [optional] |
+| **ModifiedBy** | [**UserReference**](UserReference) | The user who last modified this TimeOffRequestResponse | [optional] |
 | **ModifiedDate** | **DateTime?** | The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SyncVersion** | **int?** | The sync version of this time off request for which the scheduled activity is associated | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | The version metadata of the time off request | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | The version metadata of the time off request | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

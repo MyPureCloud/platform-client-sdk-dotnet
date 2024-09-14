@@ -1,6 +1,5 @@
----
-title: ShiftTradeActivityRule
----
+# ShiftTradeActivityRule
+
 ## ININ.PureCloudApi.Model.ShiftTradeActivityRule
 
 ## Properties
@@ -10,6 +9,7 @@ title: ShiftTradeActivityRule
 | **ActivityCategory** | **string** | The activity category to which to apply this rule | |
 | **Action** | **string** | The action this rule invokes | |
 | **ActivityCodeIdReplacement** | **string** | The activity code ID with which to replace activities belonging to the original category if applicable (required if action &#x3D;&#x3D; Replace, must be a default activity code ID) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

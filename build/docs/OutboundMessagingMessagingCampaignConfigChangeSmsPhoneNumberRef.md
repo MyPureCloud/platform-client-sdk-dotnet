@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
----
+# OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
+
 ## ININ.PureCloudApi.Model.OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
 
 ## Properties
@@ -8,6 +7,7 @@ title: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **PhoneNumber** | **string** | The unique phone number | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

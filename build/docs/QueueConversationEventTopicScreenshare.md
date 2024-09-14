@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicScreenshare
----
+# QueueConversationEventTopicScreenshare
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicScreenshare
 
 ## Properties
@@ -9,7 +8,7 @@ title: QueueConversationEventTopicScreenshare
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** |  | [optional] |
 | **InitialState** | **string** |  | [optional] |
-| **Self** | [**QueueConversationEventTopicAddress**](QueueConversationEventTopicAddress.html) | Address and name data for a call endpoint. | [optional] |
+| **Self** | [**QueueConversationEventTopicAddress**](QueueConversationEventTopicAddress) | Address and name data for a call endpoint. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **Context** | **string** | The room id context (xmpp jid) for the conference session. | [optional] |
 | **Sharing** | **bool?** | Indicates whether this participant is sharing their screen to the session. | [optional] |
@@ -20,10 +19,11 @@ title: QueueConversationEventTopicScreenshare
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
-| **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **QueueMediaSettings** | [**QueueConversationEventTopicQueueMediaSettings**](QueueConversationEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
-{: class="table table-striped"}
+| **QueueMediaSettings** | [**QueueConversationEventTopicQueueMediaSettings**](QueueConversationEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

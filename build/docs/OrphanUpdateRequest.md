@@ -1,6 +1,5 @@
----
-title: OrphanUpdateRequest
----
+# OrphanUpdateRequest
+
 ## ININ.PureCloudApi.Model.OrphanUpdateRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: OrphanUpdateRequest
 | **ExportDate** | **DateTime?** | The orphan recording&#39;s export date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **IntegrationId** | **string** | IntegrationId to access AWS S3 bucket for export. This field is required if exportDate is set. | [optional] |
 | **ConversationId** | **string** | A conversation Id that this orphan&#39;s recording is to be attached to. If not present, the conversationId will be deduced from the recording media. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

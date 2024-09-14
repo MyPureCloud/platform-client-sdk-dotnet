@@ -1,6 +1,5 @@
----
-title: NotificationTemplateBody
----
+# NotificationTemplateBody
+
 ## ININ.PureCloudApi.Model.NotificationTemplateBody
 
 ## Properties
@@ -8,7 +7,8 @@ title: NotificationTemplateBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | Body text. For WhatsApp, ignored. | [optional] |
-| **Parameters** | [**List&lt;NotificationTemplateParameter&gt;**](NotificationTemplateParameter.html) | Template parameters for placeholders in template. | |
-{: class="table table-striped"}
+| **Parameters** | [**List&lt;NotificationTemplateParameter&gt;**](NotificationTemplateParameter) | Template parameters for placeholders in template. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: TargetPerformanceProfile
----
+# TargetPerformanceProfile
+
 ## ININ.PureCloudApi.Model.TargetPerformanceProfile
 
 ## Properties
@@ -8,6 +7,7 @@ title: TargetPerformanceProfile
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **TargetPerformanceProfileId** | **string** | The target destination performanceProfileId for the linked metric. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ButtonResponse
----
+# ButtonResponse
+
 ## ININ.PureCloudApi.Model.ButtonResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: ButtonResponse
 | **Text** | **string** | Text to show inside the Button reply. This is also used as the response text after clicking on the Button. | [optional] |
 | **Payload** | **string** | Content of the textback payload after clicking a button | [optional] |
 | **MessageType** | **string** | Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

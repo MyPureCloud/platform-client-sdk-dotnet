@@ -1,6 +1,5 @@
----
-title: TtsSettings
----
+# TtsSettings
+
 ## ININ.PureCloudApi.Model.TtsSettings
 
 ## Properties
@@ -8,7 +7,8 @@ title: TtsSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DefaultEngine** | **string** | ID of the global default TTS engine | |
-| **LanguageOverrides** | [**List&lt;LanguageOverride&gt;**](LanguageOverride.html) | The list of default overrides for specific languages | |
-{: class="table table-striped"}
+| **LanguageOverrides** | [**List&lt;LanguageOverride&gt;**](LanguageOverride) | The list of default overrides for specific languages | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

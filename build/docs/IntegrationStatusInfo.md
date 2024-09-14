@@ -1,6 +1,5 @@
----
-title: IntegrationStatusInfo
----
+# IntegrationStatusInfo
+
 ## ININ.PureCloudApi.Model.IntegrationStatusInfo
 
 ## Properties
@@ -9,8 +8,9 @@ title: IntegrationStatusInfo
 |------------ | ------------- | ------------- | -------------|
 | **Code** | **string** | Machine-readable status as reported by the integration. | [optional] |
 | **Effective** | **string** | Localized, human-readable, effective status of the integration. | [optional] |
-| **Detail** | [**MessageInfo**](MessageInfo.html) | Localizable status details for the integration. | [optional] |
+| **Detail** | [**MessageInfo**](MessageInfo) | Localizable status details for the integration. | [optional] |
 | **LastUpdated** | **DateTime?** | Date and time (in UTC) when the integration status (i.e. the code field) was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

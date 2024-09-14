@@ -1,6 +1,5 @@
----
-title: ProgramTranscriptionEngine
----
+# ProgramTranscriptionEngine
+
 ## ININ.PureCloudApi.Model.ProgramTranscriptionEngine
 
 ## Properties
@@ -9,7 +8,8 @@ title: ProgramTranscriptionEngine
 |------------ | ------------- | ------------- | -------------|
 | **Engine** | **string** |  | [optional] |
 | **Dialects** | **List&lt;string&gt;** |  | [optional] |
-| **EngineIntegration** | [**EngineIntegration**](EngineIntegration.html) |  | [optional] |
-{: class="table table-striped"}
+| **EngineIntegration** | [**EngineIntegration**](EngineIntegration) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationNotificationTemplateParameter
----
+# ConversationNotificationTemplateParameter
+
 ## ININ.PureCloudApi.Model.ConversationNotificationTemplateParameter
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationNotificationTemplateParameter
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Parameter name. | [optional] |
 | **Text** | **string** | Parameter text value. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

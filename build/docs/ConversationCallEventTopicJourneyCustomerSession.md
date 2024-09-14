@@ -1,6 +1,5 @@
----
-title: ConversationCallEventTopicJourneyCustomerSession
----
+# ConversationCallEventTopicJourneyCustomerSession
+
 ## ININ.PureCloudApi.Model.ConversationCallEventTopicJourneyCustomerSession
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationCallEventTopicJourneyCustomerSession
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | An ID of a Customer/User&#39;s session within the Journey System at a point-in-time | [optional] |
 | **Type** | **string** | The type of the Customer/User&#39;s session within the Journey System (e.g. web, app) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,17 +1,17 @@
----
-title: NluInfo
----
+# NluInfo
+
 ## ININ.PureCloudApi.Model.NluInfo
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Domain** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
-| **Version** | [**NluDomainVersion**](NluDomainVersion.html) |  | [optional] |
-| **Intents** | [**List&lt;Intent&gt;**](Intent.html) |  | [optional] |
+| **Domain** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
+| **Version** | [**NluDomainVersion**](NluDomainVersion) |  | [optional] |
+| **Intents** | [**List&lt;Intent&gt;**](Intent) |  | [optional] |
 | **EngineVersion** | **string** |  | [optional] |
-| **NluData** | [**NluDomainVersion**](NluDomainVersion.html) |  | [optional] |
-{: class="table table-striped"}
+| **NluData** | [**NluDomainVersion**](NluDomainVersion) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

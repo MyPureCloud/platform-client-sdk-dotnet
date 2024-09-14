@@ -1,6 +1,5 @@
----
-title: WebChatMessageEntityList
----
+# WebChatMessageEntityList
+
 ## ININ.PureCloudApi.Model.WebChatMessageEntityList
 
 ## Properties
@@ -8,10 +7,11 @@ title: WebChatMessageEntityList
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **PageSize** | **int?** |  | [optional] |
-| **Entities** | [**List&lt;WebChatMessage&gt;**](WebChatMessage.html) |  | [optional] |
+| **Entities** | [**List&lt;WebChatMessage&gt;**](WebChatMessage) |  | [optional] |
 | **PreviousPage** | **string** |  | [optional] |
 | **Next** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

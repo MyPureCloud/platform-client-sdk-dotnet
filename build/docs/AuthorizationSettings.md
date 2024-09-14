@@ -1,6 +1,5 @@
----
-title: AuthorizationSettings
----
+# AuthorizationSettings
+
 ## ININ.PureCloudApi.Model.AuthorizationSettings
 
 ## Properties
@@ -13,6 +12,7 @@ title: AuthorizationSettings
 | **DateLastCalculated** | **DateTime?** | The date and time of the most recent unused role calculation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateLastActive** | **String** | The date of the most recent org activity used for analysis. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: AlertListing
----
+# AlertListing
+
 ## ININ.PureCloudApi.Model.AlertListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;CommonAlert&gt;**](CommonAlert.html) |  | [optional] |
+| **Entities** | [**List&lt;CommonAlert&gt;**](CommonAlert) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: AlertListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

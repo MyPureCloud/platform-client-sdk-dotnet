@@ -1,6 +1,5 @@
----
-title: ConversationMetricsTopicConversationProposedAgent
----
+# ConversationMetricsTopicConversationProposedAgent
+
 ## ININ.PureCloudApi.Model.ConversationMetricsTopicConversationProposedAgent
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationMetricsTopicConversationProposedAgent
 |------------ | ------------- | ------------- | -------------|
 | **AgentRank** | **int?** | Proposed agent rank for this conversation from predictive routing (lower is better) | [optional] |
 | **ProposedAgentId** | **string** | Unique identifier for the agent that was proposed by predictive routing | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

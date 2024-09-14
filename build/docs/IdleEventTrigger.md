@@ -1,6 +1,5 @@
----
-title: IdleEventTrigger
----
+# IdleEventTrigger
+
 ## ININ.PureCloudApi.Model.IdleEventTrigger
 
 ## Properties
@@ -9,6 +8,7 @@ title: IdleEventTrigger
 |------------ | ------------- | ------------- | -------------|
 | **EventName** | **string** | Name of event triggered after period of inactivity. | |
 | **IdleAfterSeconds** | **long?** | Number of seconds of inactivity before an event is triggered. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

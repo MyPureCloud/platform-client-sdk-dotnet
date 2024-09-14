@@ -1,6 +1,5 @@
----
-title: OpenContentAttachment
----
+# OpenContentAttachment
+
 ## ININ.PureCloudApi.Model.OpenContentAttachment
 
 ## Properties
@@ -14,6 +13,7 @@ title: OpenContentAttachment
 | **Text** | **string** | Text associated with attachment such as an image caption. | [optional] |
 | **Sha256** | **string** | Secure hash of the attachment content. | [optional] |
 | **Filename** | **string** | Suggested file name for attachment. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

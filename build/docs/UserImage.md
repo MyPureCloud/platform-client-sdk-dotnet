@@ -1,6 +1,5 @@
----
-title: UserImage
----
+# UserImage
+
 ## ININ.PureCloudApi.Model.UserImage
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserImage
 |------------ | ------------- | ------------- | -------------|
 | **Resolution** | **string** | Height and/or width of image. ex: 640x480 or x128 | [optional] |
 | **ImageUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

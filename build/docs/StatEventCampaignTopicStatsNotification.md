@@ -1,6 +1,5 @@
----
-title: StatEventCampaignTopicStatsNotification
----
+# StatEventCampaignTopicStatsNotification
+
 ## ININ.PureCloudApi.Model.StatEventCampaignTopicStatsNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventCampaignTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **Data** | [**List&lt;StatEventCampaignTopicIntervalMetrics&gt;**](StatEventCampaignTopicIntervalMetrics.html) |  | [optional] |
-{: class="table table-striped"}
+| **Data** | [**List&lt;StatEventCampaignTopicIntervalMetrics&gt;**](StatEventCampaignTopicIntervalMetrics) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

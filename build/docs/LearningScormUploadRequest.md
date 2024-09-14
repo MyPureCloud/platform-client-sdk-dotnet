@@ -1,6 +1,5 @@
----
-title: LearningScormUploadRequest
----
+# LearningScormUploadRequest
+
 ## ININ.PureCloudApi.Model.LearningScormUploadRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: LearningScormUploadRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ContentMd5** | **string** | The MD5 content of the SCORM package | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

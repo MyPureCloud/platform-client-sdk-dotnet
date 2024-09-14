@@ -1,16 +1,16 @@
----
-title: AssessmentListing
----
+# AssessmentListing
+
 ## ININ.PureCloudApi.Model.AssessmentListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;BenefitAssessment&gt;**](BenefitAssessment.html) |  | [optional] |
+| **Entities** | [**List&lt;BenefitAssessment&gt;**](BenefitAssessment) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationProfile
----
+# ConversationProfile
+
 ## ININ.PureCloudApi.Model.ConversationProfile
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationProfile
 |------------ | ------------- | ------------- | -------------|
 | **LanguageCode** | **string** | The language code supported by the conversation profile belonging to a particular project for Dialogflow. | |
 | **Name** | **string** | The name of the conversation profile belonging to a particular project for Dialogflow | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

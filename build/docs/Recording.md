@@ -1,6 +1,5 @@
----
-title: Recording
----
+# Recording
+
 ## ININ.PureCloudApi.Model.Recording
 
 ## Properties
@@ -16,13 +15,13 @@ title: Recording
 | **Media** | **string** | The media type of the recording. This could be audio, chat, messaging, email, or screen. | [optional] |
 | **MediaSubtype** | **string** | The media subtype of the recording. | [optional] |
 | **MediaSubject** | **string** | The media subject of the recording. | [optional] |
-| **Annotations** | [**List&lt;Annotation&gt;**](Annotation.html) | Annotations that belong to the recording. | [optional] |
-| **Transcript** | [**List&lt;ChatMessage&gt;**](ChatMessage.html) | Represents a chat transcript | [optional] |
-| **EmailTranscript** | [**List&lt;RecordingEmailMessage&gt;**](RecordingEmailMessage.html) | Represents an email transcript | [optional] |
-| **MessagingTranscript** | [**List&lt;RecordingMessagingMessage&gt;**](RecordingMessagingMessage.html) | Represents a messaging transcript | [optional] |
+| **Annotations** | [**List&lt;Annotation&gt;**](Annotation) | Annotations that belong to the recording. | [optional] |
+| **Transcript** | [**List&lt;ChatMessage&gt;**](ChatMessage) | Represents a chat transcript | [optional] |
+| **EmailTranscript** | [**List&lt;RecordingEmailMessage&gt;**](RecordingEmailMessage) | Represents an email transcript | [optional] |
+| **MessagingTranscript** | [**List&lt;RecordingMessagingMessage&gt;**](RecordingMessagingMessage) | Represents a messaging transcript | [optional] |
 | **FileState** | **string** | Represents the current file state for a recording. Examples: Uploading, Archived, etc | [optional] |
 | **RestoreExpirationTime** | **DateTime?** | The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **MediaUris** | [**Dictionary&lt;string, MediaResult&gt;**](MediaResult.html) | The different mediaUris for the recording. Null when there is no playable media. | [optional] |
+| **MediaUris** | [**Dictionary&lt;string, MediaResult&gt;**](MediaResult) | The different mediaUris for the recording. Null when there is no playable media. | [optional] |
 | **EstimatedTranscodeTimeMs** | **long?** |  | [optional] |
 | **ActualTranscodeTimeMs** | **long?** |  | [optional] |
 | **ArchiveDate** | **DateTime?** | The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -35,12 +34,13 @@ title: Recording
 | **MaxAllowedRestorationsForOrg** | **int?** | How many archive restorations the organization is allowed to have. | [optional] |
 | **RemainingRestorationsAllowedForOrg** | **int?** | The remaining archive restorations the organization has. | [optional] |
 | **SessionId** | **string** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
-| **Users** | [**List&lt;User&gt;**](User.html) | The users participating in the conversation | [optional] |
+| **Users** | [**List&lt;User&gt;**](User) | The users participating in the conversation | [optional] |
 | **RecordingFileRole** | **string** | Role of the file recording. It can be either customer_experience or adhoc. | [optional] |
 | **RecordingErrorStatus** | **string** | Status of a recording that cannot be returned because of an error | [optional] |
 | **OriginalRecordingStartTime** | **DateTime?** | The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreationTime** | **DateTime?** | The creation time of the recording. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

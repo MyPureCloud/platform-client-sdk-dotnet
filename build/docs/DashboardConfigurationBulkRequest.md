@@ -1,6 +1,5 @@
----
-title: DashboardConfigurationBulkRequest
----
+# DashboardConfigurationBulkRequest
+
 ## ININ.PureCloudApi.Model.DashboardConfigurationBulkRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: DashboardConfigurationBulkRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DashboardConfigurationIds** | **List&lt;string&gt;** | The user supplied dashboard configuration ids | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData
----
+# WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData
+
 ## ININ.PureCloudApi.Model.WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData
 
 ## Properties
@@ -8,6 +7,7 @@ title: WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **InteractingTimeSeconds** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

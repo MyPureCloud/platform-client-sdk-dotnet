@@ -1,18 +1,18 @@
----
-title: WorkitemPostQueryEntityListing
----
+# WorkitemPostQueryEntityListing
+
 ## ININ.PureCloudApi.Model.WorkitemPostQueryEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Workitem&gt;**](Workitem.html) |  | [optional] |
+| **Entities** | [**List&lt;Workitem&gt;**](Workitem) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **After** | **string** |  | [optional] |
 | **Count** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

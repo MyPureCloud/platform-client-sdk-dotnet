@@ -1,6 +1,5 @@
----
-title: EvaluationSource
----
+# EvaluationSource
+
 ## ININ.PureCloudApi.Model.EvaluationSource
 
 ## Properties
@@ -11,6 +10,7 @@ title: EvaluationSource
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** | Type of the evaluation source. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,13 @@
----
-title: ValueWrapperHrisTimeOffType
----
+# ValueWrapperHrisTimeOffType
+
 ## ININ.PureCloudApi.Model.ValueWrapperHrisTimeOffType
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | [**HrisTimeOffType**](HrisTimeOffType.html) | The value for the associated field | [optional] |
-{: class="table table-striped"}
+| **Value** | [**HrisTimeOffType**](HrisTimeOffType) | The value for the associated field | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

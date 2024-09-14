@@ -1,6 +1,5 @@
----
-title: ExternalDataSource
----
+# ExternalDataSource
+
 ## ININ.PureCloudApi.Model.ExternalDataSource
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExternalDataSource
 |------------ | ------------- | ------------- | -------------|
 | **Platform** | **string** | The platform that was the source of the data.  Example: a CRM like SALESFORCE. | [optional] |
 | **Url** | **string** | An URL that links to the source record that contributed data to the associated entity. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

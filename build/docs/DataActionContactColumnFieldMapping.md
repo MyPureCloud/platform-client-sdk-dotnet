@@ -1,6 +1,5 @@
----
-title: DataActionContactColumnFieldMapping
----
+# DataActionContactColumnFieldMapping
+
 ## ININ.PureCloudApi.Model.DataActionContactColumnFieldMapping
 
 ## Properties
@@ -9,6 +8,7 @@ title: DataActionContactColumnFieldMapping
 |------------ | ------------- | ------------- | -------------|
 | **ContactColumnName** | **string** | The name of a contact column whose data will be passed to the data action | |
 | **DataActionField** | **string** | The name of an input field from the data action that the contact column data will be passed to | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

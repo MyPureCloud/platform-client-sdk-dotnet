@@ -1,6 +1,5 @@
----
-title: WorkflowTargetSettings
----
+# WorkflowTargetSettings
+
 ## ININ.PureCloudApi.Model.WorkflowTargetSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: WorkflowTargetSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DataFormat** | **string** | The data format to use when invoking target. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

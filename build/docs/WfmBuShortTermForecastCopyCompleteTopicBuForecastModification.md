@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastCopyCompleteTopicBuForecastModification
----
+# WfmBuShortTermForecastCopyCompleteTopicBuForecastModification
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastCopyCompleteTopicBuForecastModification
 
 ## Properties
@@ -13,13 +12,14 @@ title: WfmBuShortTermForecastCopyCompleteTopicBuForecastModification
 | **Metric** | **string** |  | [optional] |
 | **LegacyMetric** | **string** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
-| **Values** | [**List&lt;WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue.html) |  | [optional] |
-| **SecondaryValues** | [**List&lt;WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue.html) |  | [optional] |
+| **Values** | [**List&lt;WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
+| **SecondaryValues** | [**List&lt;WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
 | **Granularity** | **string** |  | [optional] |
 | **SecondaryGranularity** | **string** |  | [optional] |
 | **DisplayGranularity** | **string** |  | [optional] |
 | **PlanningGroupIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

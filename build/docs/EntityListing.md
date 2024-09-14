@@ -1,6 +1,5 @@
----
-title: EntityListing
----
+# EntityListing
+
 ## ININ.PureCloudApi.Model.EntityListing
 
 ## Properties
@@ -8,6 +7,7 @@ title: EntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Entities** | **List&lt;Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

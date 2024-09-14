@@ -1,6 +1,5 @@
----
-title: AnalyticsFlowOutcome
----
+# AnalyticsFlowOutcome
+
 ## ININ.PureCloudApi.Model.AnalyticsFlowOutcome
 
 ## Properties
@@ -12,6 +11,7 @@ title: AnalyticsFlowOutcome
 | **FlowOutcomeId** | **string** | Unique identifier of a flow outcome | [optional] |
 | **FlowOutcomeStartTimestamp** | **DateTime?** | The outcome starting timestamp in ISO 8601 format | [optional] |
 | **FlowOutcomeValue** | **string** | Flow outcome value, e.g. SUCCESS | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

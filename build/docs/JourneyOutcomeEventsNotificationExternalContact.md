@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationExternalContact
----
+# JourneyOutcomeEventsNotificationExternalContact
+
 ## ININ.PureCloudApi.Model.JourneyOutcomeEventsNotificationExternalContact
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyOutcomeEventsNotificationExternalContact
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

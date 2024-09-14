@@ -1,14 +1,14 @@
----
-title: QueryResults
----
+# QueryResults
+
 ## ININ.PureCloudApi.Model.QueryResults
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**DomainEntityListingQueryResult**](DomainEntityListingQueryResult.html) |  | [optional] |
-| **FacetInfo** | [**QueryFacetInfo**](QueryFacetInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **Results** | [**DomainEntityListingQueryResult**](DomainEntityListingQueryResult) |  | [optional] |
+| **FacetInfo** | [**QueryFacetInfo**](QueryFacetInfo) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

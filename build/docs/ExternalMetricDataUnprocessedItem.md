@@ -1,6 +1,5 @@
----
-title: ExternalMetricDataUnprocessedItem
----
+# ExternalMetricDataUnprocessedItem
+
 ## ININ.PureCloudApi.Model.ExternalMetricDataUnprocessedItem
 
 ## Properties
@@ -16,6 +15,7 @@ title: ExternalMetricDataUnprocessedItem
 | **Type** | **string** | The type of the metric data. The default value is Total. | [optional] |
 | **Message** | **string** | The error message | [optional] |
 | **Code** | **string** | The error code | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: StatusChange
----
+# StatusChange
+
 ## ININ.PureCloudApi.Model.StatusChange
 
 ## Properties
@@ -13,6 +12,7 @@ title: StatusChange
 | **Namespace** | **string** | The namespace for the status change | [optional] |
 | **Message** | **string** | A short message describing the status change | [optional] |
 | **RejectReason** | **string** | The reason for rejecting the limit override request | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

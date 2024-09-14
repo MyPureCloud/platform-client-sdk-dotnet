@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayScheduleData
----
+# WfmIntradayDataUpdateTopicIntradayScheduleData
+
 ## ININ.PureCloudApi.Model.WfmIntradayDataUpdateTopicIntradayScheduleData
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmIntradayDataUpdateTopicIntradayScheduleData
 |------------ | ------------- | ------------- | -------------|
 | **OnQueueTimeSeconds** | **int?** |  | [optional] |
 | **ScheduledTimeSeconds** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

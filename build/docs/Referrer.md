@@ -1,6 +1,5 @@
----
-title: Referrer
----
+# Referrer
+
 ## ININ.PureCloudApi.Model.Referrer
 
 ## Properties
@@ -16,6 +15,7 @@ title: Referrer
 | **Fragment** | **string** | Referrer URL fragment. | [optional] |
 | **Name** | **string** | Name of referrer (e.g. Yahoo!, Google, InfoSpace). | [optional] |
 | **Medium** | **string** | Type of referrer (e.g. search, social). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

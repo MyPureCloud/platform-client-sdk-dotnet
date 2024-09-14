@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicBuScheduleReference
----
+# WfmBuIntradayDataUpdateTopicBuScheduleReference
+
 ## ININ.PureCloudApi.Model.WfmBuIntradayDataUpdateTopicBuScheduleReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmBuIntradayDataUpdateTopicBuScheduleReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **WeekDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

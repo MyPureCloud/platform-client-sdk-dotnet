@@ -1,6 +1,5 @@
----
-title: RoleDivision
----
+# RoleDivision
+
 ## ININ.PureCloudApi.Model.RoleDivision
 
 ## Properties
@@ -9,6 +8,7 @@ title: RoleDivision
 |------------ | ------------- | ------------- | -------------|
 | **RoleId** | **string** | Role to be associated with the given division which forms a grant | |
 | **DivisionId** | **string** | Division associated with the given role which forms a grant | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

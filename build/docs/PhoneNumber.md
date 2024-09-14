@@ -1,6 +1,5 @@
----
-title: PhoneNumber
----
+# PhoneNumber
+
 ## ININ.PureCloudApi.Model.PhoneNumber
 
 ## Properties
@@ -14,6 +13,7 @@ title: PhoneNumber
 | **UserInput** | **string** | The user-inputted phone number string that was provided to the display field on write. This field is not user-writeable and will always be set by the system. | [optional] |
 | **E164** | **string** | The E164-formatted form of the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. | [optional] |
 | **CountryCode** | **string** | The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

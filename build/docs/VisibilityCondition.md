@@ -1,6 +1,5 @@
----
-title: VisibilityCondition
----
+# VisibilityCondition
+
 ## ININ.PureCloudApi.Model.VisibilityCondition
 
 ## Properties
@@ -9,6 +8,7 @@ title: VisibilityCondition
 |------------ | ------------- | ------------- | -------------|
 | **CombiningOperation** | **string** |  | [optional] |
 | **Predicates** | **List&lt;Object&gt;** | A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \&quot;/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\&quot; or, to assume the current question group, \&quot;../question/{questionIndex}/answer/{answerIndex}\&quot;. Note: Indexes are zero-based | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

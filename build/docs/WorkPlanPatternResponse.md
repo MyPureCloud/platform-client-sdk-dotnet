@@ -1,13 +1,13 @@
----
-title: WorkPlanPatternResponse
----
+# WorkPlanPatternResponse
+
 ## ININ.PureCloudApi.Model.WorkPlanPatternResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **WorkPlans** | [**List&lt;WorkPlanReference&gt;**](WorkPlanReference.html) | List of work plans in order of rotation on a weekly basis | [optional] |
-{: class="table table-striped"}
+| **WorkPlans** | [**List&lt;WorkPlanReference&gt;**](WorkPlanReference) | List of work plans in order of rotation on a weekly basis | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

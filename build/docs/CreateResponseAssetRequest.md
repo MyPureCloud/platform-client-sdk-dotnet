@@ -1,6 +1,5 @@
----
-title: CreateResponseAssetRequest
----
+# CreateResponseAssetRequest
+
 ## ININ.PureCloudApi.Model.CreateResponseAssetRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: CreateResponseAssetRequest
 | **Name** | **string** | Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#| | |
 | **DivisionId** | **string** | Division to associate to this asset. Can only be used with this division. | [optional] |
 | **ContentMd5** | **string** | Content MD-5 of the file to upload | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

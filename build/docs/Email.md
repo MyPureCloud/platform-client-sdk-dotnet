@@ -1,6 +1,5 @@
----
-title: Email
----
+# Email
+
 ## ININ.PureCloudApi.Model.Email
 
 ## Properties
@@ -13,10 +12,10 @@ title: Email
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **Subject** | **string** | The subject for the initial email that started this conversation. | [optional] |
 | **MessagesSent** | **int?** | The number of email messages sent by this participant. | [optional] |
-| **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s email, divided into activity segments. | [optional] |
+| **Segments** | [**List&lt;Segment&gt;**](Segment) | The time line of the participant&#39;s email, divided into activity segments. | [optional] |
 | **Direction** | **string** | The direction of the email | [optional] |
 | **RecordingId** | **string** | A globally unique identifier for the recording associated with this call. | [optional] |
-| **ErrorInfo** | [**ErrorBody**](ErrorBody.html) |  | [optional] |
+| **ErrorInfo** | [**ErrorBody**](ErrorBody) |  | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the email was placed on hold in the cloud clock if the email is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **StartAlertingTime** | **DateTime?** | The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -27,13 +26,14 @@ title: Email
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **MessageId** | **string** | A globally unique identifier for the stored content of this communication. | [optional] |
-| **DraftAttachments** | [**List&lt;Attachment&gt;**](Attachment.html) | A list of uploaded attachments on the email draft. | [optional] |
+| **DraftAttachments** | [**List&lt;Attachment&gt;**](Attachment) | A list of uploaded attachments on the email draft. | [optional] |
 | **Spam** | **bool?** | Indicates if the inbound email was marked as spam. | [optional] |
-| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings.html) | Represents the queue settings for this media type. | [optional] |
+| **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings) | Represents the queue settings for this media type. | [optional] |
 | **ParkTime** | **DateTime?** | Represents the time when an email was put into parked state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

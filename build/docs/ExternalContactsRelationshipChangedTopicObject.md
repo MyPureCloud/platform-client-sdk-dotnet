@@ -1,12 +1,12 @@
----
-title: ExternalContactsRelationshipChangedTopicObject
----
+# ExternalContactsRelationshipChangedTopicObject
+
 ## ININ.PureCloudApi.Model.ExternalContactsRelationshipChangedTopicObject
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

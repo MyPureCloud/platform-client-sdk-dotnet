@@ -45,7 +45,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -58,7 +57,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -71,7 +69,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -85,7 +82,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -99,7 +95,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -113,7 +108,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -127,7 +121,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -141,7 +134,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -905,7 +897,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -919,7 +910,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -933,7 +923,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -947,7 +936,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -961,7 +949,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -982,7 +969,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -2697,7 +2683,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -2711,7 +2696,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -2725,7 +2709,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2740,7 +2723,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2825,7 +2807,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2840,7 +2821,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2855,7 +2835,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2870,7 +2849,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2885,7 +2863,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2899,7 +2876,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -2913,7 +2889,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2926,7 +2901,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -4035,7 +4009,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -4048,7 +4021,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -4061,7 +4033,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4075,7 +4046,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4089,7 +4059,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4103,7 +4072,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4117,7 +4085,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4131,7 +4098,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4895,7 +4861,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -4909,7 +4874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -4923,7 +4887,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4937,7 +4900,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -4951,7 +4913,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4972,7 +4933,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -6687,7 +6647,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -6701,7 +6660,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -6715,7 +6673,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6730,7 +6687,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6815,7 +6771,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6830,7 +6785,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6845,7 +6799,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6860,7 +6813,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6875,7 +6827,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6889,7 +6840,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -6903,7 +6853,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -6916,7 +6865,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -8298,7 +8246,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a grammar. 
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -8313,7 +8260,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a grammar. 
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -8405,7 +8351,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a grammar. 
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -8421,7 +8366,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a grammar. 
         /// 
-        /// DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -8515,7 +8459,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete specified grammar language 
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8530,7 +8473,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete specified grammar language 
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8627,7 +8569,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete specified grammar language 
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8643,7 +8584,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete specified grammar language 
         /// 
-        /// DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8743,7 +8683,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the DTMF mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8758,7 +8697,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the DTMF mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8855,7 +8793,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the DTMF mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8871,7 +8808,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the DTMF mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8971,7 +8907,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the voice mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -8986,7 +8921,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the voice mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -9083,7 +9017,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the voice mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -9099,7 +9032,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Clear the voice mode file for the grammar language if there is one 
         /// 
-        /// DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -15232,7 +15164,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar 
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -15248,7 +15179,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar 
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -15342,7 +15272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar 
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -15359,7 +15288,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar 
         /// Returns a specified grammar
-        /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -15455,7 +15383,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar language. 
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -15471,7 +15398,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar language. 
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -15568,7 +15494,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar language. 
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -15585,7 +15510,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a grammar language. 
         /// 
-        /// GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -15685,7 +15609,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of grammars, filtered by query parameters 
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -15708,7 +15631,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of grammars, filtered by query parameters 
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -15813,7 +15735,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of grammars, filtered by query parameters 
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -15837,7 +15758,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of grammars, filtered by query parameters 
         /// Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-        /// GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -28759,7 +28679,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar 
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -28775,7 +28694,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar 
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -28874,7 +28792,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar 
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -28891,7 +28808,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar 
         /// 
-        /// PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">grammar ID</param>
@@ -28992,7 +28908,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar language 
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -29009,7 +28924,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar language 
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -29113,7 +29027,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar language 
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -29131,7 +29044,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates a grammar language 
         /// 
-        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -29882,7 +29794,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar DTMF mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -29899,7 +29810,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar DTMF mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30006,7 +29916,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar DTMF mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30024,7 +29933,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar DTMF mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30135,7 +30043,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar voice mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30152,7 +30059,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar voice mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30259,7 +30165,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar voice mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30277,7 +30182,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a grammar voice mode file 
         /// 
-        /// PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30388,7 +30292,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new language for a given grammar 
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30404,7 +30307,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new language for a given grammar 
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30506,7 +30408,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new language for a given grammar 
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30523,7 +30424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new language for a given grammar 
         /// 
-        /// PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grammarId">Grammar ID</param>
@@ -30628,7 +30528,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new grammar 
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -30643,7 +30542,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new grammar 
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -30740,7 +30638,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new grammar 
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -30756,7 +30653,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new grammar 
         /// 
-        /// PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>

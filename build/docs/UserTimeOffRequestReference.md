@@ -1,6 +1,5 @@
----
-title: UserTimeOffRequestReference
----
+# UserTimeOffRequestReference
+
 ## ININ.PureCloudApi.Model.UserTimeOffRequestReference
 
 ## Properties
@@ -8,8 +7,9 @@ title: UserTimeOffRequestReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The id of the time off request | [optional] |
-| **User** | [**UserReference**](UserReference.html) | The ID of the user to whom the time off request applies | |
+| **User** | [**UserReference**](UserReference) | The ID of the user to whom the time off request applies | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

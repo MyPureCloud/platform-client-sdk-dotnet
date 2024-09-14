@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicConversation
----
+# QueueConversationSocialExpressionEventTopicConversation
+
 ## ININ.PureCloudApi.Model.QueueConversationSocialExpressionEventTopicConversation
 
 ## Properties
@@ -9,13 +8,14 @@ title: QueueConversationSocialExpressionEventTopicConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **MaxParticipants** | **int?** |  | [optional] |
-| **Participants** | [**List&lt;QueueConversationSocialExpressionEventTopicParticipant&gt;**](QueueConversationSocialExpressionEventTopicParticipant.html) |  | [optional] |
-| **RecentTransfers** | [**List&lt;QueueConversationSocialExpressionEventTopicRecentTransfer&gt;**](QueueConversationSocialExpressionEventTopicRecentTransfer.html) |  | [optional] |
+| **Participants** | [**List&lt;QueueConversationSocialExpressionEventTopicParticipant&gt;**](QueueConversationSocialExpressionEventTopicParticipant) |  | [optional] |
+| **RecentTransfers** | [**List&lt;QueueConversationSocialExpressionEventTopicRecentTransfer&gt;**](QueueConversationSocialExpressionEventTopicRecentTransfer) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

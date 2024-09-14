@@ -1,15 +1,15 @@
----
-title: ConversationChatEventTopicJourneyContext
----
+# ConversationChatEventTopicJourneyContext
+
 ## ININ.PureCloudApi.Model.ConversationChatEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Customer** | [**ConversationChatEventTopicJourneyCustomer**](ConversationChatEventTopicJourneyCustomer.html) |  | [optional] |
-| **CustomerSession** | [**ConversationChatEventTopicJourneyCustomerSession**](ConversationChatEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **TriggeringAction** | [**ConversationChatEventTopicJourneyAction**](ConversationChatEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Customer** | [**ConversationChatEventTopicJourneyCustomer**](ConversationChatEventTopicJourneyCustomer) |  | [optional] |
+| **CustomerSession** | [**ConversationChatEventTopicJourneyCustomerSession**](ConversationChatEventTopicJourneyCustomerSession) |  | [optional] |
+| **TriggeringAction** | [**ConversationChatEventTopicJourneyAction**](ConversationChatEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

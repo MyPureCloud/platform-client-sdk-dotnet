@@ -1,6 +1,5 @@
----
-title: KlaxonInteractionStatsAlertsTopicNotificationUser
----
+# KlaxonInteractionStatsAlertsTopicNotificationUser
+
 ## ININ.PureCloudApi.Model.KlaxonInteractionStatsAlertsTopicNotificationUser
 
 ## Properties
@@ -9,6 +8,7 @@ title: KlaxonInteractionStatsAlertsTopicNotificationUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **DisplayName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

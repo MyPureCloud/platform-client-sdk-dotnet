@@ -1,20 +1,19 @@
----
-title: OperationalEventsApi
----
+# OperationalEventsApi
+
 ## PureCloudPlatform.Client.V2.Api.OperationalEventsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetUsageEventsDefinition**](OperationalEventsApi.html#getusageeventsdefinition) | **Get** /api/v2/usage/events/definitions/{eventDefinitionId} | Get an operational event definition by its id |
-| [**GetUsageEventsDefinitions**](OperationalEventsApi.html#getusageeventsdefinitions) | **Get** /api/v2/usage/events/definitions | Get all operational event definitions |
-{: class="table table-striped"}
+| [**GetUsageEventsDefinition**](#GetUsageEventsDefinition) | **Get** /api/v2/usage/events/definitions/{eventDefinitionId} | Get an operational event definition by its id |
+| [**GetUsageEventsDefinitions**](#GetUsageEventsDefinitions) | **Get** /api/v2/usage/events/definitions | Get all operational event definitions |
 
-<a name="getusageeventsdefinition"></a>
 
-## [**EventDefinition**](EventDefinition.html) GetUsageEventsDefinition (string eventDefinitionId)
 
+## GetUsageEventsDefinition
+
+> [**EventDefinition**](EventDefinition) GetUsageEventsDefinition (string eventDefinitionId)
 
 
 Get an operational event definition by its id
@@ -68,16 +67,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eventDefinitionId** | **string**| EventDefinition id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**EventDefinition**](EventDefinition.html)
+[**EventDefinition**](EventDefinition)
 
-<a name="getusageeventsdefinitions"></a>
 
-## [**EventDefinitionListing**](EventDefinitionListing.html) GetUsageEventsDefinitions ()
+## GetUsageEventsDefinitions
 
+> [**EventDefinitionListing**](EventDefinitionListing) GetUsageEventsDefinitions ()
 
 
 Get all operational event definitions
@@ -127,8 +125,9 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**EventDefinitionListing**](EventDefinitionListing.html)
+[**EventDefinitionListing**](EventDefinitionListing)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

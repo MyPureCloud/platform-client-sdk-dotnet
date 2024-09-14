@@ -1,6 +1,5 @@
----
-title: ChatReactionUpdate
----
+# ChatReactionUpdate
+
 ## ININ.PureCloudApi.Model.ChatReactionUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChatReactionUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Reactions** | **List&lt;string&gt;** | Reactions to update | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

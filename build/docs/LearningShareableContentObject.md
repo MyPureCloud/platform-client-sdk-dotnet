@@ -1,6 +1,5 @@
----
-title: LearningShareableContentObject
----
+# LearningShareableContentObject
+
 ## ININ.PureCloudApi.Model.LearningShareableContentObject
 
 ## Properties
@@ -23,6 +22,7 @@ title: LearningShareableContentObject
 | **Href** | **string** | The href from the course manifest for this SCO. | [optional] |
 | **Parameters** | **string** | The parameters from the course manifest for this SCO. | [optional] |
 | **LaunchData** | **string** | The launch data from the course manifest for this SCO. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,22 +1,21 @@
----
-title: TextbotsApi
----
+# TextbotsApi
+
 ## PureCloudPlatform.Client.V2.Api.TextbotsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetTextbotsBotsSearch**](TextbotsApi.html#gettextbotsbotssearch) | **Get** /api/v2/textbots/bots/search | Find bots using the currently configured friendly name or ID. |
-| [**PostTextbotsBotflowsSessionTurns**](TextbotsApi.html#posttextbotsbotflowssessionturns) | **Post** /api/v2/textbots/botflows/sessions/{sessionId}/turns | Issue a bot flow turn event |
-| [**PostTextbotsBotflowsSessions**](TextbotsApi.html#posttextbotsbotflowssessions) | **Post** /api/v2/textbots/botflows/sessions | Create an execution instance of a bot flow definition. |
-| [**PostTextbotsBotsExecute**](TextbotsApi.html#posttextbotsbotsexecute) | **Post** /api/v2/textbots/bots/execute | Send an intent to a bot to start a dialog/interact with it via text |
-{: class="table table-striped"}
+| [**GetTextbotsBotsSearch**](#GetTextbotsBotsSearch) | **Get** /api/v2/textbots/bots/search | Find bots using the currently configured friendly name or ID. |
+| [**PostTextbotsBotflowsSessionTurns**](#PostTextbotsBotflowsSessionTurns) | **Post** /api/v2/textbots/botflows/sessions/{sessionId}/turns | Issue a bot flow turn event |
+| [**PostTextbotsBotflowsSessions**](#PostTextbotsBotflowsSessions) | **Post** /api/v2/textbots/botflows/sessions | Create an execution instance of a bot flow definition. |
+| [**PostTextbotsBotsExecute**](#PostTextbotsBotsExecute) | **Post** /api/v2/textbots/bots/execute | Send an intent to a bot to start a dialog/interact with it via text |
 
-<a name="gettextbotsbotssearch"></a>
 
-## [**BotSearchResponseEntityListing**](BotSearchResponseEntityListing.html) GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
 
+## GetTextbotsBotsSearch
+
+> [**BotSearchResponseEntityListing**](BotSearchResponseEntityListing) GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
 
 
 Find bots using the currently configured friendly name or ID.
@@ -74,20 +73,19 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **botType** | [**List<string>**](string.html)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow, GenesysDigitalBotFlow, GenesysVoiceSurveyFlow |
+| **botType** | [**List<string>**](string)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow, GenesysDigitalBotFlow, GenesysVoiceSurveyFlow |
 | **botName** | **string**| Bot name | [optional]  |
-| **botId** | [**List<string>**](string.html)| Bot IDs | [optional]  |
+| **botId** | [**List<string>**](string)| Bot IDs | [optional]  |
 | **pageSize** | **int?**| The maximum results to return | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**BotSearchResponseEntityListing**](BotSearchResponseEntityListing.html)
+[**BotSearchResponseEntityListing**](BotSearchResponseEntityListing)
 
-<a name="posttextbotsbotflowssessionturns"></a>
 
-## [**TextBotFlowTurnResponse**](TextBotFlowTurnResponse.html) PostTextbotsBotflowsSessionTurns (string sessionId, TextBotFlowTurnRequest turnRequest)
+## PostTextbotsBotflowsSessionTurns
 
+> [**TextBotFlowTurnResponse**](TextBotFlowTurnResponse) PostTextbotsBotflowsSessionTurns (string sessionId, TextBotFlowTurnRequest turnRequest)
 
 
 Issue a bot flow turn event
@@ -144,17 +142,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39; |  |
-| **turnRequest** | [**TextBotFlowTurnRequest**](TextBotFlowTurnRequest.html)|  |  |
-{: class="table table-striped"}
+| **turnRequest** | [**TextBotFlowTurnRequest**](TextBotFlowTurnRequest)|  |  |
 
 ### Return type
 
-[**TextBotFlowTurnResponse**](TextBotFlowTurnResponse.html)
+[**TextBotFlowTurnResponse**](TextBotFlowTurnResponse)
 
-<a name="posttextbotsbotflowssessions"></a>
 
-## [**TextBotFlowLaunchResponse**](TextBotFlowLaunchResponse.html) PostTextbotsBotflowsSessions (TextBotFlowLaunchRequest launchRequest)
+## PostTextbotsBotflowsSessions
 
+> [**TextBotFlowLaunchResponse**](TextBotFlowLaunchResponse) PostTextbotsBotflowsSessions (TextBotFlowLaunchRequest launchRequest)
 
 
 Create an execution instance of a bot flow definition.
@@ -209,17 +206,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **launchRequest** | [**TextBotFlowLaunchRequest**](TextBotFlowLaunchRequest.html)|  |  |
-{: class="table table-striped"}
+| **launchRequest** | [**TextBotFlowLaunchRequest**](TextBotFlowLaunchRequest)|  |  |
 
 ### Return type
 
-[**TextBotFlowLaunchResponse**](TextBotFlowLaunchResponse.html)
+[**TextBotFlowLaunchResponse**](TextBotFlowLaunchResponse)
 
-<a name="posttextbotsbotsexecute"></a>
 
-## [**PostTextResponse**](PostTextResponse.html) PostTextbotsBotsExecute (PostTextRequest postTextRequest)
+## PostTextbotsBotsExecute
 
+> [**PostTextResponse**](PostTextResponse) PostTextbotsBotsExecute (PostTextRequest postTextRequest)
 
 
 Send an intent to a bot to start a dialog/interact with it via text
@@ -274,10 +270,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **postTextRequest** | [**PostTextRequest**](PostTextRequest.html)|  |  |
-{: class="table table-striped"}
+| **postTextRequest** | [**PostTextRequest**](PostTextRequest)|  |  |
 
 ### Return type
 
-[**PostTextResponse**](PostTextResponse.html)
+[**PostTextResponse**](PostTextResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

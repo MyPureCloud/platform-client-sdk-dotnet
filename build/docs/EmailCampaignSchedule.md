@@ -1,6 +1,5 @@
----
-title: EmailCampaignSchedule
----
+# EmailCampaignSchedule
+
 ## ININ.PureCloudApi.Model.EmailCampaignSchedule
 
 ## Properties
@@ -12,10 +11,11 @@ title: EmailCampaignSchedule
 | **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
-| **Intervals** | [**List&lt;ScheduleInterval&gt;**](ScheduleInterval.html) | A list of intervals during which to run the associated Campaign. | |
+| **Intervals** | [**List&lt;ScheduleInterval&gt;**](ScheduleInterval) | A list of intervals during which to run the associated Campaign. | |
 | **TimeZone** | **string** | The time zone for this email campaign schedule. | [optional] |
-| **EmailCampaign** | [**DomainEntityRef**](DomainEntityRef.html) | The Campaign that this email campaign schedule is for. | |
+| **EmailCampaign** | [**DomainEntityRef**](DomainEntityRef) | The Campaign that this email campaign schedule is for. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

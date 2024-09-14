@@ -1,6 +1,5 @@
----
-title: ContactSort
----
+# ContactSort
+
 ## ININ.PureCloudApi.Model.ContactSort
 
 ## Properties
@@ -10,6 +9,7 @@ title: ContactSort
 | **FieldName** | **string** |  | [optional] |
 | **Direction** | **string** | The direction in which to sort contacts. | [optional] |
 | **Numeric** | **bool?** | Whether or not the column contains numeric data. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

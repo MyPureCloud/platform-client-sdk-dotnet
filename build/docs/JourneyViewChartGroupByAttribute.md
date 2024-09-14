@@ -1,6 +1,5 @@
----
-title: JourneyViewChartGroupByAttribute
----
+# JourneyViewChartGroupByAttribute
+
 ## ININ.PureCloudApi.Model.JourneyViewChartGroupByAttribute
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyViewChartGroupByAttribute
 |------------ | ------------- | ------------- | -------------|
 | **ElementId** | **string** | The element in the list of elements which is being grouped by | |
 | **Attribute** | **string** | The attribute of the element being grouped by | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

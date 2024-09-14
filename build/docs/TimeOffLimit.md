@@ -1,6 +1,5 @@
----
-title: TimeOffLimit
----
+# TimeOffLimit
+
 ## ININ.PureCloudApi.Model.TimeOffLimit
 
 ## Properties
@@ -10,8 +9,9 @@ title: TimeOffLimit
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Granularity** | **string** | Granularity choice for the time off limit | [optional] |
 | **DefaultLimitMinutes** | **int?** | The default time off limit value in minutes per granularity interval | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the time off limit | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the time off limit | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

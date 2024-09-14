@@ -1,6 +1,5 @@
----
-title: WebDeploymentsRefreshJWTRequest
----
+# WebDeploymentsRefreshJWTRequest
+
 ## ININ.PureCloudApi.Model.WebDeploymentsRefreshJWTRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: WebDeploymentsRefreshJWTRequest
 |------------ | ------------- | ------------- | -------------|
 | **RefreshToken** | **string** | Refresh token used to issue a new JWT. | |
 | **DeploymentId** | **string** | The WebDeployment ID | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

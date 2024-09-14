@@ -1,6 +1,5 @@
----
-title: Certificate
----
+# Certificate
+
 ## ININ.PureCloudApi.Model.Certificate
 
 ## Properties
@@ -8,6 +7,7 @@ title: Certificate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_Certificate** | **string** | The certificate to parse. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

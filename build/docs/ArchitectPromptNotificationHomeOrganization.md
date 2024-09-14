@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationHomeOrganization
----
+# ArchitectPromptNotificationHomeOrganization
+
 ## ININ.PureCloudApi.Model.ArchitectPromptNotificationHomeOrganization
 
 ## Properties
@@ -10,6 +9,7 @@ title: ArchitectPromptNotificationHomeOrganization
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **ThirdPartyOrgName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

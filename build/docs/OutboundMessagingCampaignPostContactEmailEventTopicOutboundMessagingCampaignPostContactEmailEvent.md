@@ -1,6 +1,5 @@
----
-title: OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent
----
+# OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent
+
 ## ININ.PureCloudApi.Model.OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent
 
 ## Properties
@@ -10,7 +9,7 @@ title: OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampa
 | **EventTime** | **int?** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **OutboundCampaignType** | **string** |  | [optional] |
-| **EmailAttributes** | [**OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes**](OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.html) |  | [optional] |
+| **EmailAttributes** | [**OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes**](OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes) |  | [optional] |
 | **WrapupCode** | **string** |  | [optional] |
 | **OutboundCampaignId** | **string** |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
@@ -18,6 +17,7 @@ title: OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampa
 | **OutboundContactListId** | **string** |  | [optional] |
 | **OutboundContactId** | **string** |  | [optional] |
 | **IsCampaignAlwaysRunning** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

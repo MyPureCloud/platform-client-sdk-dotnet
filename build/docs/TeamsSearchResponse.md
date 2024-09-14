@@ -1,6 +1,5 @@
----
-title: TeamsSearchResponse
----
+# TeamsSearchResponse
+
 ## ININ.PureCloudApi.Model.TeamsSearchResponse
 
 ## Properties
@@ -15,7 +14,8 @@ title: TeamsSearchResponse
 | **CurrentPage** | **string** | Q64 value for the current page of results | [optional] |
 | **NextPage** | **string** | Q64 value for the next page of results | [optional] |
 | **Types** | **List&lt;string&gt;** | Resource types the search was performed against | |
-| **Results** | [**List&lt;Team&gt;**](Team.html) | Search results | |
-{: class="table table-striped"}
+| **Results** | [**List&lt;Team&gt;**](Team) | Search results | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

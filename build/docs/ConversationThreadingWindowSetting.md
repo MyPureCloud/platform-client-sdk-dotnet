@@ -1,6 +1,5 @@
----
-title: ConversationThreadingWindowSetting
----
+# ConversationThreadingWindowSetting
+
 ## ININ.PureCloudApi.Model.ConversationThreadingWindowSetting
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationThreadingWindowSetting
 |------------ | ------------- | ------------- | -------------|
 | **MessengerType** | **string** | The type of messenger | |
 | **TimeoutInMinutes** | **long?** | The conversation threading window timeout (Minutes) of specified messenger type | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

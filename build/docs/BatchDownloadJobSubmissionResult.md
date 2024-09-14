@@ -1,6 +1,5 @@
----
-title: BatchDownloadJobSubmissionResult
----
+# BatchDownloadJobSubmissionResult
+
 ## ININ.PureCloudApi.Model.BatchDownloadJobSubmissionResult
 
 ## Properties
@@ -9,6 +8,7 @@ title: BatchDownloadJobSubmissionResult
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

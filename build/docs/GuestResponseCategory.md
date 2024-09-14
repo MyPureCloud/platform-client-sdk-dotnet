@@ -1,6 +1,5 @@
----
-title: GuestResponseCategory
----
+# GuestResponseCategory
+
 ## ININ.PureCloudApi.Model.GuestResponseCategory
 
 ## Properties
@@ -13,8 +12,9 @@ title: GuestResponseCategory
 | **ExternalId** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ParentCategory** | [**GuestCategoryReference**](GuestCategoryReference.html) | The reference to category to which this category belongs. | [optional] |
+| **ParentCategory** | [**GuestCategoryReference**](GuestCategoryReference) | The reference to category to which this category belongs. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

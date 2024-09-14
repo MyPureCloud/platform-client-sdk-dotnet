@@ -1,6 +1,5 @@
----
-title: WorkitemSchema
----
+# WorkitemSchema
+
 ## ININ.PureCloudApi.Model.WorkitemSchema
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemSchema
 | **Name** | **string** |  | [optional] |
 | **Version** | **int?** | The version of the Workitem custom attribute schema. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: SmsProvisioningStatus
----
+# SmsProvisioningStatus
+
 ## ININ.PureCloudApi.Model.SmsProvisioningStatus
 
 ## Properties
@@ -9,8 +8,9 @@ title: SmsProvisioningStatus
 |------------ | ------------- | ------------- | -------------|
 | **Action** | **string** | Provisioning action | [optional] |
 | **State** | **string** | Provisioning state | [optional] |
-| **Error** | [**ErrorBody**](ErrorBody.html) | Any error associated with a Failed state | [optional] |
+| **Error** | [**ErrorBody**](ErrorBody) | Any error associated with a Failed state | [optional] |
 | **Version** | **long?** | The phone number version associated with the provisioning action | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

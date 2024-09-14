@@ -1,6 +1,5 @@
----
-title: SetContentTemplateActionSettings
----
+# SetContentTemplateActionSettings
+
 ## ININ.PureCloudApi.Model.SetContentTemplateActionSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: SetContentTemplateActionSettings
 |------------ | ------------- | ------------- | -------------|
 | **SmsContentTemplateId** | **string** | A string of sms contentTemplateId. | |
 | **EmailContentTemplateId** | **string** | A string of email contentTemplateId. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

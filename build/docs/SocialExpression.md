@@ -1,6 +1,5 @@
----
-title: SocialExpression
----
+# SocialExpression
+
 ## ININ.PureCloudApi.Model.SocialExpression
 
 ## Properties
@@ -14,7 +13,7 @@ title: SocialExpression
 | **SocialUserName** | **string** | The user name for the communication. | [optional] |
 | **PreviewText** | **string** | The text preview of the communication contents | [optional] |
 | **RecordingId** | **string** | A globally unique identifier for the recording associated with this chat. | [optional] |
-| **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s chat, divided into activity segments. | [optional] |
+| **Segments** | [**List&lt;Segment&gt;**](Segment) | The time line of the participant&#39;s chat, divided into activity segments. | [optional] |
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -24,9 +23,10 @@ title: SocialExpression
 | **Provider** | **string** | The source provider for the social expression. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
-| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

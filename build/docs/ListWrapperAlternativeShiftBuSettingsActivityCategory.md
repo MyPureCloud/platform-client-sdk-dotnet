@@ -1,6 +1,5 @@
----
-title: ListWrapperAlternativeShiftBuSettingsActivityCategory
----
+# ListWrapperAlternativeShiftBuSettingsActivityCategory
+
 ## ININ.PureCloudApi.Model.ListWrapperAlternativeShiftBuSettingsActivityCategory
 
 ## Properties
@@ -8,6 +7,7 @@ title: ListWrapperAlternativeShiftBuSettingsActivityCategory
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

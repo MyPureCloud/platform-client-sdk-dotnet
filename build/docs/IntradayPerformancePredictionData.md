@@ -1,6 +1,5 @@
----
-title: IntradayPerformancePredictionData
----
+# IntradayPerformancePredictionData
+
 ## ININ.PureCloudApi.Model.IntradayPerformancePredictionData
 
 ## Properties
@@ -10,6 +9,7 @@ title: IntradayPerformancePredictionData
 | **ServiceLevelPercent** | **double?** | Percentage of interactions that meets service level target as defined in the matching service goal templates | [optional] |
 | **AverageSpeedOfAnswerSeconds** | **double?** | Predicted average time in seconds it takes to answer an interaction once the interaction becomes available to be routed | [optional] |
 | **OccupancyPercent** | **double?** | Percentage of on-queue time for all agents in this group that are occupied handling interactions | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

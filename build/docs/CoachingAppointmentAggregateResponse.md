@@ -1,13 +1,13 @@
----
-title: CoachingAppointmentAggregateResponse
----
+# CoachingAppointmentAggregateResponse
+
 ## ININ.PureCloudApi.Model.CoachingAppointmentAggregateResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;QueryResponseGroupedData&gt;**](QueryResponseGroupedData.html) | The results of the query | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;QueryResponseGroupedData&gt;**](QueryResponseGroupedData) | The results of the query | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

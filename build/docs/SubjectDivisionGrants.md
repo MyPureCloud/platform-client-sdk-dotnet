@@ -1,6 +1,5 @@
----
-title: SubjectDivisionGrants
----
+# SubjectDivisionGrants
+
 ## ININ.PureCloudApi.Model.SubjectDivisionGrants
 
 ## Properties
@@ -9,9 +8,10 @@ title: SubjectDivisionGrants
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Divisions** | [**List&lt;Division&gt;**](Division.html) |  | [optional] |
+| **Divisions** | [**List&lt;Division&gt;**](Division) |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

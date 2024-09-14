@@ -1,6 +1,5 @@
----
-title: ExternalMetricDataItem
----
+# ExternalMetricDataItem
+
 ## ININ.PureCloudApi.Model.ExternalMetricDataItem
 
 ## Properties
@@ -14,6 +13,7 @@ title: ExternalMetricDataItem
 | **Value** | **double?** | The value of the metric data. When value is null, the metric data will be deleted. | |
 | **Count** | **int?** | The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted. | [optional] |
 | **Type** | **string** | The type of the metric data. The default value is Total. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

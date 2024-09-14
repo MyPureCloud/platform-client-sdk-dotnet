@@ -1,6 +1,5 @@
----
-title: SystemPromptAsset
----
+# SystemPromptAsset
+
 ## ININ.PureCloudApi.Model.SystemPromptAsset
 
 ## Properties
@@ -21,6 +20,7 @@ title: SystemPromptAsset
 | **LanguageDefault** | **bool?** |  | [optional] |
 | **Tags** | **Dictionary&lt;string, List&lt;string&gt;&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

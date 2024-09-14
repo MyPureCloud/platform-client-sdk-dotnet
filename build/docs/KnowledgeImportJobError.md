@@ -1,6 +1,5 @@
----
-title: KnowledgeImportJobError
----
+# KnowledgeImportJobError
+
 ## ININ.PureCloudApi.Model.KnowledgeImportJobError
 
 ## Properties
@@ -15,10 +14,11 @@ title: KnowledgeImportJobError
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;Detail&gt;**](Detail.html) |  | [optional] |
-| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody.html) |  | [optional] |
-| **Limit** | [**Limit**](Limit.html) |  | [optional] |
+| **Details** | [**List&lt;Detail&gt;**](Detail) |  | [optional] |
+| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody) |  | [optional] |
+| **Limit** | [**Limit**](Limit) |  | [optional] |
 | **DocumentIndex** | **int?** | Index of the faulty document. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

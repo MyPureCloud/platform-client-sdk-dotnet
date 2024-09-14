@@ -1,6 +1,5 @@
----
-title: EdgeNetworkDiagnosticResponse
----
+# EdgeNetworkDiagnosticResponse
+
 ## ININ.PureCloudApi.Model.EdgeNetworkDiagnosticResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: EdgeNetworkDiagnosticResponse
 |------------ | ------------- | ------------- | -------------|
 | **CommandCorrelationId** | **string** | UUID of each executed command on edge | [optional] |
 | **Diagnostics** | **string** | Response string of executed command from edge | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

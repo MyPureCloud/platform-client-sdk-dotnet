@@ -1,6 +1,5 @@
----
-title: GreetingMediaInfo
----
+# GreetingMediaInfo
+
 ## ININ.PureCloudApi.Model.GreetingMediaInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: GreetingMediaInfo
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **MediaFileUri** | **string** |  | [optional] |
 | **MediaImageUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

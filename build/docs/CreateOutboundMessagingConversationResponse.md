@@ -1,6 +1,5 @@
----
-title: CreateOutboundMessagingConversationResponse
----
+# CreateOutboundMessagingConversationResponse
+
 ## ININ.PureCloudApi.Model.CreateOutboundMessagingConversationResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: CreateOutboundMessagingConversationResponse
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The created outbound messaging conversation ID. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

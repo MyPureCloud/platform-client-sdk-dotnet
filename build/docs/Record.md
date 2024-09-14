@@ -1,6 +1,5 @@
----
-title: Record
----
+# Record
+
 ## ININ.PureCloudApi.Model.Record
 
 ## Properties
@@ -10,6 +9,7 @@ title: Record
 | **Name** | **string** | The name of the record. | |
 | **Type** | **string** | The type of the record. (Example values:  MX, TXT, CNAME) | |
 | **Value** | **string** | The value of the record. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

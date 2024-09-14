@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeResponseRef
----
+# OutboundMessagingMessagingCampaignConfigChangeResponseRef
+
 ## ININ.PureCloudApi.Model.OutboundMessagingMessagingCampaignConfigChangeResponseRef
 
 ## Properties
@@ -8,6 +7,7 @@ title: OutboundMessagingMessagingCampaignConfigChangeResponseRef
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The unique response id | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

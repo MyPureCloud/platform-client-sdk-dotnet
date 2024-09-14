@@ -1,6 +1,5 @@
----
-title: AnalyticsEvaluation
----
+# AnalyticsEvaluation
+
 ## ININ.PureCloudApi.Model.AnalyticsEvaluation
 
 ## Properties
@@ -24,6 +23,7 @@ title: AnalyticsEvaluation
 | **UserId** | **string** | ID of the agent the evaluation was performed against | [optional] |
 | **OTotalCriticalScore** | **long?** |  | [optional] |
 | **OTotalScore** | **long?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

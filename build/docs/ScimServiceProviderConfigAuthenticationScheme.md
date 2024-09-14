@@ -1,6 +1,5 @@
----
-title: ScimServiceProviderConfigAuthenticationScheme
----
+# ScimServiceProviderConfigAuthenticationScheme
+
 ## ININ.PureCloudApi.Model.ScimServiceProviderConfigAuthenticationScheme
 
 ## Properties
@@ -13,6 +12,7 @@ title: ScimServiceProviderConfigAuthenticationScheme
 | **DocumentationUri** | **string** | The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation. | [optional] |
 | **Type** | **string** | The type of authentication scheme. | |
 | **Primary** | **bool?** | Indicates whether this authentication scheme is the primary method of authentication. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

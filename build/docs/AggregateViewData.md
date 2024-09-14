@@ -1,6 +1,5 @@
----
-title: AggregateViewData
----
+# AggregateViewData
+
 ## ININ.PureCloudApi.Model.AggregateViewData
 
 ## Properties
@@ -8,7 +7,8 @@ title: AggregateViewData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** |  | [optional] |
-| **Stats** | [**StatisticalSummary**](StatisticalSummary.html) |  | [optional] |
-{: class="table table-striped"}
+| **Stats** | [**StatisticalSummary**](StatisticalSummary) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

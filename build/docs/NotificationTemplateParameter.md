@@ -1,6 +1,5 @@
----
-title: NotificationTemplateParameter
----
+# NotificationTemplateParameter
+
 ## ININ.PureCloudApi.Model.NotificationTemplateParameter
 
 ## Properties
@@ -9,6 +8,7 @@ title: NotificationTemplateParameter
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Parameter name. | [optional] |
 | **Text** | **string** | Parameter text value. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

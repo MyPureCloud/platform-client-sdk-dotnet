@@ -1,6 +1,5 @@
----
-title: QueueConversationMessageEventTopicMessageMedia
----
+# QueueConversationMessageEventTopicMessageMedia
+
 ## ININ.PureCloudApi.Model.QueueConversationMessageEventTopicMessageMedia
 
 ## Properties
@@ -12,6 +11,7 @@ title: QueueConversationMessageEventTopicMessageMedia
 | **ContentLengthBytes** | **int?** | The optional content length of the the media object, in bytes. | [optional] |
 | **Name** | **string** | The optional name of the the media object. | [optional] |
 | **Id** | **string** | The optional id of the the media object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

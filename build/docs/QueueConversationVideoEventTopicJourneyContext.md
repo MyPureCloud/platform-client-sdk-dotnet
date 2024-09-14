@@ -1,15 +1,15 @@
----
-title: QueueConversationVideoEventTopicJourneyContext
----
+# QueueConversationVideoEventTopicJourneyContext
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Customer** | [**QueueConversationVideoEventTopicJourneyCustomer**](QueueConversationVideoEventTopicJourneyCustomer.html) |  | [optional] |
-| **CustomerSession** | [**QueueConversationVideoEventTopicJourneyCustomerSession**](QueueConversationVideoEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **TriggeringAction** | [**QueueConversationVideoEventTopicJourneyAction**](QueueConversationVideoEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Customer** | [**QueueConversationVideoEventTopicJourneyCustomer**](QueueConversationVideoEventTopicJourneyCustomer) |  | [optional] |
+| **CustomerSession** | [**QueueConversationVideoEventTopicJourneyCustomerSession**](QueueConversationVideoEventTopicJourneyCustomerSession) |  | [optional] |
+| **TriggeringAction** | [**QueueConversationVideoEventTopicJourneyAction**](QueueConversationVideoEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

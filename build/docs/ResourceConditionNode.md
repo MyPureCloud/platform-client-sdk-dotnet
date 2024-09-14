@@ -1,6 +1,5 @@
----
-title: ResourceConditionNode
----
+# ResourceConditionNode
+
 ## ININ.PureCloudApi.Model.ResourceConditionNode
 
 ## Properties
@@ -10,8 +9,9 @@ title: ResourceConditionNode
 | **VariableName** | **string** |  | [optional] |
 | **Conjunction** | **string** |  | [optional] |
 | **Operator** | **string** |  | [optional] |
-| **Operands** | [**List&lt;ResourceConditionValue&gt;**](ResourceConditionValue.html) |  | [optional] |
-| **Terms** | [**List&lt;ResourceConditionNode&gt;**](ResourceConditionNode.html) |  | [optional] |
-{: class="table table-striped"}
+| **Operands** | [**List&lt;ResourceConditionValue&gt;**](ResourceConditionValue) |  | [optional] |
+| **Terms** | [**List&lt;ResourceConditionNode&gt;**](ResourceConditionNode) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemsAttributeChangeMap
----
+# WorkitemsAttributeChangeMap
+
 ## ININ.PureCloudApi.Model.WorkitemsAttributeChangeMap
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemsAttributeChangeMap
 |------------ | ------------- | ------------- | -------------|
 | **NewValue** | **Dictionary&lt;string, Object&gt;** | New property value | [optional] |
 | **OldValue** | **Dictionary&lt;string, Object&gt;** | Old property value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

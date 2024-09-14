@@ -1,6 +1,5 @@
----
-title: FlowObservationDataContainer
----
+# FlowObservationDataContainer
+
 ## ININ.PureCloudApi.Model.FlowObservationDataContainer
 
 ## Properties
@@ -8,7 +7,8 @@ title: FlowObservationDataContainer
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** | A mapping from dimension to value | [optional] |
-| **Data** | [**List&lt;ObservationMetricData&gt;**](ObservationMetricData.html) |  | [optional] |
-{: class="table table-striped"}
+| **Data** | [**List&lt;ObservationMetricData&gt;**](ObservationMetricData) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

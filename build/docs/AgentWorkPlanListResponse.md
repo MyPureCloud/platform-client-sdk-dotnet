@@ -1,14 +1,14 @@
----
-title: AgentWorkPlanListResponse
----
+# AgentWorkPlanListResponse
+
 ## ININ.PureCloudApi.Model.AgentWorkPlanListResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;AgentWorkPlan&gt;**](AgentWorkPlan.html) |  | [optional] |
-| **ManagementUnit** | [**ManagementUnitReference**](ManagementUnitReference.html) | The management unit of the work plans | |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;AgentWorkPlan&gt;**](AgentWorkPlan) |  | [optional] |
+| **ManagementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit of the work plans | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

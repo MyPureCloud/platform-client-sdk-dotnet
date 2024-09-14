@@ -1,6 +1,5 @@
----
-title: FaxConfig
----
+# FaxConfig
+
 ## ININ.PureCloudApi.Model.FaxConfig
 
 ## Properties
@@ -9,6 +8,7 @@ title: FaxConfig
 |------------ | ------------- | ------------- | -------------|
 | **SendEmailNotifications** | **bool?** | Whether to enable email notifications for this organization | |
 | **DisableEmailPii** | **bool?** | Whether to disable PII for email notifications | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

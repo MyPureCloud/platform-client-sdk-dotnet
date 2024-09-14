@@ -1,13 +1,12 @@
----
-title: EdgeEntityListing
----
+# EdgeEntityListing
+
 ## ININ.PureCloudApi.Model.EdgeEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Edge&gt;**](Edge.html) |  | [optional] |
+| **Entities** | [**List&lt;Edge&gt;**](Edge) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: EdgeEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

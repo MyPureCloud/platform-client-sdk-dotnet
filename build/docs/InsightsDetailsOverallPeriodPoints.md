@@ -1,6 +1,5 @@
----
-title: InsightsDetailsOverallPeriodPoints
----
+# InsightsDetailsOverallPeriodPoints
+
 ## ININ.PureCloudApi.Model.InsightsDetailsOverallPeriodPoints
 
 ## Properties
@@ -13,6 +12,7 @@ title: InsightsDetailsOverallPeriodPoints
 | **PercentOfGoal** | **double?** | Percentage of the goal | [optional] |
 | **RankTotalPoints** | **int?** | The agent&#39;s rank in leader board for points on this metric | [optional] |
 | **RankPercentagePoints** | **int?** | The agent&#39;s rank in leader board for percentage on this metric | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

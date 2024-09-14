@@ -1,6 +1,5 @@
----
-title: JourneyActionMap
----
+# JourneyActionMap
+
 ## ININ.PureCloudApi.Model.JourneyActionMap
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyActionMap
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the actionMap in the Journey System which triggered this action | |
 | **Version** | **int?** | The version number of the actionMap in the Journey System at the time this action was triggered | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

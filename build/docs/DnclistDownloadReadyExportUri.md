@@ -1,6 +1,5 @@
----
-title: DnclistDownloadReadyExportUri
----
+# DnclistDownloadReadyExportUri
+
 ## ININ.PureCloudApi.Model.DnclistDownloadReadyExportUri
 
 ## Properties
@@ -10,6 +9,7 @@ title: DnclistDownloadReadyExportUri
 | **Uri** | **string** |  | [optional] |
 | **ExportTimestamp** | **string** |  | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

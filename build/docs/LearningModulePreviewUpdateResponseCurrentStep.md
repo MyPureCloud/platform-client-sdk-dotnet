@@ -1,13 +1,13 @@
----
-title: LearningModulePreviewUpdateResponseCurrentStep
----
+# LearningModulePreviewUpdateResponseCurrentStep
+
 ## ININ.PureCloudApi.Model.LearningModulePreviewUpdateResponseCurrentStep
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ShareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject.html) | The SCO (Shareable Content Object) data | [optional] |
-{: class="table table-striped"}
+| **ShareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject) | The SCO (Shareable Content Object) data | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: FieldList
----
+# FieldList
+
 ## ININ.PureCloudApi.Model.FieldList
 
 ## Properties
@@ -17,6 +16,7 @@ title: FieldList
 | **Type** | **string** |  | [optional] |
 | **Required** | **bool?** |  | [optional] |
 | **Gdpr** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

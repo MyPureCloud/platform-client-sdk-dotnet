@@ -1,6 +1,5 @@
----
-title: ContactColumnConditionSettings
----
+# ContactColumnConditionSettings
+
 ## ININ.PureCloudApi.Model.ContactColumnConditionSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: ContactColumnConditionSettings
 | **Operator** | **string** | The operator to use when comparing values. | |
 | **Value** | **string** | The value to compare against the contact&#39;s data. | |
 | **ValueType** | **string** | The data type the value should be treated as. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

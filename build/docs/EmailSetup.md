@@ -1,6 +1,5 @@
----
-title: EmailSetup
----
+# EmailSetup
+
 ## ININ.PureCloudApi.Model.EmailSetup
 
 ## Properties
@@ -8,6 +7,7 @@ title: EmailSetup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **RootDomain** | **string** | The root PureCloud domain that all sub-domains are created from. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

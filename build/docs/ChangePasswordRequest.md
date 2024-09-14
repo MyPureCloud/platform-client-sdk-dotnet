@@ -1,6 +1,5 @@
----
-title: ChangePasswordRequest
----
+# ChangePasswordRequest
+
 ## ININ.PureCloudApi.Model.ChangePasswordRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChangePasswordRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **NewPassword** | **string** | The new password | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

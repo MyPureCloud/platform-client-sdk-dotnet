@@ -1,6 +1,5 @@
----
-title: QueueConversationMessageEventTopicMessageConversation
----
+# QueueConversationMessageEventTopicMessageConversation
+
 ## ININ.PureCloudApi.Model.QueueConversationMessageEventTopicMessageConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: QueueConversationMessageEventTopicMessageConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;QueueConversationMessageEventTopicMessageMediaParticipant&gt;**](QueueConversationMessageEventTopicMessageMediaParticipant.html) |  | [optional] |
+| **Participants** | [**List&lt;QueueConversationMessageEventTopicMessageMediaParticipant&gt;**](QueueConversationMessageEventTopicMessageMediaParticipant) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

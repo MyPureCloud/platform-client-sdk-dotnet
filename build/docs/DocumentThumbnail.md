@@ -1,6 +1,5 @@
----
-title: DocumentThumbnail
----
+# DocumentThumbnail
+
 ## ININ.PureCloudApi.Model.DocumentThumbnail
 
 ## Properties
@@ -11,6 +10,7 @@ title: DocumentThumbnail
 | **ImageUri** | **string** |  | [optional] |
 | **Height** | **int?** |  | [optional] |
 | **Width** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

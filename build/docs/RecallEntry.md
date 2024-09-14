@@ -1,6 +1,5 @@
----
-title: RecallEntry
----
+# RecallEntry
+
 ## ININ.PureCloudApi.Model.RecallEntry
 
 ## Properties
@@ -9,6 +8,7 @@ title: RecallEntry
 |------------ | ------------- | ------------- | -------------|
 | **NbrAttempts** | **int?** |  | [optional] |
 | **MinutesBetweenAttempts** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

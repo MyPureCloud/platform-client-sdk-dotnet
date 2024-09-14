@@ -1,6 +1,5 @@
----
-title: StatEventQueueTopicIntervalMetrics
----
+# StatEventQueueTopicIntervalMetrics
+
 ## ININ.PureCloudApi.Model.StatEventQueueTopicIntervalMetrics
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventQueueTopicIntervalMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Interval** | **string** |  | [optional] |
-| **Metrics** | [**List&lt;StatEventQueueTopicMetricStats&gt;**](StatEventQueueTopicMetricStats.html) |  | [optional] |
-{: class="table table-striped"}
+| **Metrics** | [**List&lt;StatEventQueueTopicMetricStats&gt;**](StatEventQueueTopicMetricStats) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

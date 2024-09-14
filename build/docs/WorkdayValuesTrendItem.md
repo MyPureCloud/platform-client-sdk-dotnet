@@ -1,6 +1,5 @@
----
-title: WorkdayValuesTrendItem
----
+# WorkdayValuesTrendItem
+
 ## ININ.PureCloudApi.Model.WorkdayValuesTrendItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkdayValuesTrendItem
 |------------ | ------------- | ------------- | -------------|
 | **DateWorkday** | **String** | The workday for the metric value. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **Value** | **double?** | The metric value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

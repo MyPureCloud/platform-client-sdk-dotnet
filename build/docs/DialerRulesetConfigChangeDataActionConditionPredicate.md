@@ -1,6 +1,5 @@
----
-title: DialerRulesetConfigChangeDataActionConditionPredicate
----
+# DialerRulesetConfigChangeDataActionConditionPredicate
+
 ## ININ.PureCloudApi.Model.DialerRulesetConfigChangeDataActionConditionPredicate
 
 ## Properties
@@ -13,6 +12,7 @@ title: DialerRulesetConfigChangeDataActionConditionPredicate
 | **OutputFieldMissingResolution** | **bool?** | The result of this predicate if the requested output field is missing from the data action&#39;s result | [optional] |
 | **Inverted** | **bool?** | If true, inverts the result of evaluating this Predicate. Default is false. | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

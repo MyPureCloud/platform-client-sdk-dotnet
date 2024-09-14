@@ -1,6 +1,5 @@
----
-title: PatchIntegrationAction
----
+# PatchIntegrationAction
+
 ## ININ.PureCloudApi.Model.PatchIntegrationAction
 
 ## Properties
@@ -8,6 +7,7 @@ title: PatchIntegrationAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | ID of the integration action to be invoked. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

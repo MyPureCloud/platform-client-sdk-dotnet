@@ -1,6 +1,5 @@
----
-title: LastResultOverallConditionSettings
----
+# LastResultOverallConditionSettings
+
 ## ININ.PureCloudApi.Model.LastResultOverallConditionSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: LastResultOverallConditionSettings
 |------------ | ------------- | ------------- | -------------|
 | **EmailWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for Email. | [optional] |
 | **SmsWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for SMS. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

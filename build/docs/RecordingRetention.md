@@ -1,6 +1,5 @@
----
-title: RecordingRetention
----
+# RecordingRetention
+
 ## ININ.PureCloudApi.Model.RecordingRetention
 
 ## Properties
@@ -15,6 +14,7 @@ title: RecordingRetention
 | **ExportDate** | **DateTime?** | The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ExportedDate** | **DateTime?** | The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreationTime** | **DateTime?** | The creation time of the recording. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

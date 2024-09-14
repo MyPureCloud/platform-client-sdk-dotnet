@@ -1,13 +1,13 @@
----
-title: JourneyViewResult
----
+# JourneyViewResult
+
 ## ININ.PureCloudApi.Model.JourneyViewResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Elements** | [**List&lt;JourneyViewResultElement&gt;**](JourneyViewResultElement.html) | The elements within the journey view result | [optional] |
-{: class="table table-striped"}
+| **Elements** | [**List&lt;JourneyViewResultElement&gt;**](JourneyViewResultElement) | The elements within the journey view result | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

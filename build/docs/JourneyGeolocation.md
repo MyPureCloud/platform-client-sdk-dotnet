@@ -1,6 +1,5 @@
----
-title: JourneyGeolocation
----
+# JourneyGeolocation
+
 ## ININ.PureCloudApi.Model.JourneyGeolocation
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyGeolocation
 | **RegionName** | **string** | Geolocation&#39;s region name. | [optional] |
 | **Source** | **string** | The source that was used to determine the geolocation information. | [optional] |
 | **Timezone** | **string** | Geolocation&#39;s timezone. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

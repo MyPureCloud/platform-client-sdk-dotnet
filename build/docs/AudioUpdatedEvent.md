@@ -1,6 +1,5 @@
----
-title: AudioUpdatedEvent
----
+# AudioUpdatedEvent
+
 ## ININ.PureCloudApi.Model.AudioUpdatedEvent
 
 ## Properties
@@ -11,7 +10,8 @@ title: AudioUpdatedEvent
 | **EventDateTime** | **DateTime?** | A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **ConversationId** | **string** | A unique Id (V4 UUID) identifying this conversation | |
 | **CommunicationId** | **string** | A unique Id (V4 UUID) identifying this communication | |
-| **AudioState** | [**AudioState**](AudioState.html) | The updated audioState for the target communication. | |
-{: class="table table-striped"}
+| **AudioState** | [**AudioState**](AudioState) | The updated audioState for the target communication. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

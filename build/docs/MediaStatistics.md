@@ -1,6 +1,5 @@
----
-title: MediaStatistics
----
+# MediaStatistics
+
 ## ININ.PureCloudApi.Model.MediaStatistics
 
 ## Properties
@@ -12,7 +11,8 @@ title: MediaStatistics
 | **CreationMilliseconds** | **long?** | Relative milliseconds to create media session | [optional] |
 | **PreferredRegion** | **string** | Preferred media region | [optional] |
 | **EffectiveRegion** | **string** | Actual media region | [optional] |
-| **_MediaStatistics** | [**List&lt;MediaEndpointStatistics&gt;**](MediaEndpointStatistics.html) | Media statistics for each media endpoint | [optional] |
-{: class="table table-striped"}
+| **_MediaStatistics** | [**List&lt;MediaEndpointStatistics&gt;**](MediaEndpointStatistics) | Media statistics for each media endpoint | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: MetadataAttribute
----
+# MetadataAttribute
+
 ## ININ.PureCloudApi.Model.MetadataAttribute
 
 ## Properties
@@ -8,6 +7,7 @@ title: MetadataAttribute
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **string** | The value of the metadata attribute. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

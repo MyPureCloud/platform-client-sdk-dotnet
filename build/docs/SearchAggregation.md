@@ -1,6 +1,5 @@
----
-title: SearchAggregation
----
+# SearchAggregation
+
 ## ININ.PureCloudApi.Model.SearchAggregation
 
 ## Properties
@@ -13,6 +12,7 @@ title: SearchAggregation
 | **Value** | **string** | A value to use for aggregation | [optional] |
 | **Size** | **int?** | The number aggregations results to return out of the entire result set | [optional] |
 | **Order** | **List&lt;string&gt;** | The order in which aggregation results are sorted | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

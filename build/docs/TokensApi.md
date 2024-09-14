@@ -1,24 +1,23 @@
----
-title: TokensApi
----
+# TokensApi
+
 ## PureCloudPlatform.Client.V2.Api.TokensApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteToken**](TokensApi.html#deletetoken) | **Delete** /api/v2/tokens/{userId} | Delete all auth tokens for the specified user. |
-| [**DeleteTokensMe**](TokensApi.html#deletetokensme) | **Delete** /api/v2/tokens/me | Delete auth token used to make the request. |
-| [**GetTokensMe**](TokensApi.html#gettokensme) | **Get** /api/v2/tokens/me | Fetch information about the current token |
-| [**GetTokensTimeout**](TokensApi.html#gettokenstimeout) | **Get** /api/v2/tokens/timeout | Get the current Idle Token Timeout Value |
-| [**HeadTokensMe**](TokensApi.html#headtokensme) | **Head** /api/v2/tokens/me | Verify user token |
-| [**PutTokensTimeout**](TokensApi.html#puttokenstimeout) | **Put** /api/v2/tokens/timeout | Update or Enable/Disable the Idle Token Timeout |
-{: class="table table-striped"}
+| [**DeleteToken**](#DeleteToken) | **Delete** /api/v2/tokens/{userId} | Delete all auth tokens for the specified user. |
+| [**DeleteTokensMe**](#DeleteTokensMe) | **Delete** /api/v2/tokens/me | Delete auth token used to make the request. |
+| [**GetTokensMe**](#GetTokensMe) | **Get** /api/v2/tokens/me | Fetch information about the current token |
+| [**GetTokensTimeout**](#GetTokensTimeout) | **Get** /api/v2/tokens/timeout | Get the current Idle Token Timeout Value |
+| [**HeadTokensMe**](#HeadTokensMe) | **Head** /api/v2/tokens/me | Verify user token |
+| [**PutTokensTimeout**](#PutTokensTimeout) | **Put** /api/v2/tokens/timeout | Update or Enable/Disable the Idle Token Timeout |
 
-<a name="deletetoken"></a>
 
-## void DeleteToken (string userId)
 
+## DeleteToken
+
+> void DeleteToken (string userId)
 
 
 Delete all auth tokens for the specified user.
@@ -71,16 +70,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletetokensme"></a>
 
-## void DeleteTokensMe ()
+## DeleteTokensMe
 
+> void DeleteTokensMe ()
 
 
 Delete auth token used to make the request.
@@ -128,15 +126,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
 
-<a name="gettokensme"></a>
 
-## [**TokenInfo**](TokenInfo.html) GetTokensMe (bool? preserveIdleTTL = null)
+## GetTokensMe
 
+> [**TokenInfo**](TokenInfo) GetTokensMe (bool? preserveIdleTTL = null)
 
 
 Fetch information about the current token
@@ -189,16 +186,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **preserveIdleTTL** | **bool?**| preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TokenInfo**](TokenInfo.html)
+[**TokenInfo**](TokenInfo)
 
-<a name="gettokenstimeout"></a>
 
-## [**IdleTokenTimeout**](IdleTokenTimeout.html) GetTokensTimeout ()
+## GetTokensTimeout
 
+> [**IdleTokenTimeout**](IdleTokenTimeout) GetTokensTimeout ()
 
 
 Get the current Idle Token Timeout Value
@@ -248,15 +244,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**IdleTokenTimeout**](IdleTokenTimeout.html)
+[**IdleTokenTimeout**](IdleTokenTimeout)
 
-<a name="headtokensme"></a>
 
-## void HeadTokensMe ()
+## HeadTokensMe
 
+> void HeadTokensMe ()
 
 
 Verify user token
@@ -304,15 +299,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
 
-<a name="puttokenstimeout"></a>
 
-## [**IdleTokenTimeout**](IdleTokenTimeout.html) PutTokensTimeout (IdleTokenTimeout body = null)
+## PutTokensTimeout
 
+> [**IdleTokenTimeout**](IdleTokenTimeout) PutTokensTimeout (IdleTokenTimeout body = null)
 
 
 Update or Enable/Disable the Idle Token Timeout
@@ -365,10 +359,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**IdleTokenTimeout**](IdleTokenTimeout.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**IdleTokenTimeout**](IdleTokenTimeout)|  | [optional]  |
 
 ### Return type
 
-[**IdleTokenTimeout**](IdleTokenTimeout.html)
+[**IdleTokenTimeout**](IdleTokenTimeout)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

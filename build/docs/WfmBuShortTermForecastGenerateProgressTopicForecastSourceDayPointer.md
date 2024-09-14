@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
----
+# WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
 
 ## Properties
@@ -12,6 +11,7 @@ title: WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
 | **Date** | **string** |  | [optional] |
 | **FileName** | **string** |  | [optional] |
 | **DataKey** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

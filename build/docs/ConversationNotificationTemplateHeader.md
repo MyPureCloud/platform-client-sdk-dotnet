@@ -1,6 +1,5 @@
----
-title: ConversationNotificationTemplateHeader
----
+# ConversationNotificationTemplateHeader
+
 ## ININ.PureCloudApi.Model.ConversationNotificationTemplateHeader
 
 ## Properties
@@ -9,8 +8,9 @@ title: ConversationNotificationTemplateHeader
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Template header type. | |
 | **Text** | **string** | Header text. For WhatsApp, ignored. | [optional] |
-| **Media** | [**ConversationContentAttachment**](ConversationContentAttachment.html) | Media template header image. | [optional] |
-| **Parameters** | [**List&lt;ConversationNotificationTemplateParameter&gt;**](ConversationNotificationTemplateParameter.html) | Template parameters for placeholders in template. | [optional] |
-{: class="table table-striped"}
+| **Media** | [**ConversationContentAttachment**](ConversationContentAttachment) | Media template header image. | [optional] |
+| **Parameters** | [**List&lt;ConversationNotificationTemplateParameter&gt;**](ConversationNotificationTemplateParameter) | Template parameters for placeholders in template. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

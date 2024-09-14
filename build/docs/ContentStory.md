@@ -1,6 +1,5 @@
----
-title: ContentStory
----
+# ContentStory
+
 ## ININ.PureCloudApi.Model.ContentStory
 
 ## Properties
@@ -10,6 +9,7 @@ title: ContentStory
 | **Type** | **string** | Type of ephemeral story attachment. | |
 | **Url** | **string** | URL to the ephemeral story. | |
 | **ReplyToId** | **string** | ID of the ephemeral story being replied to. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

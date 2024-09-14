@@ -1,6 +1,5 @@
----
-title: DialerSequenceConfigChangeUriReference
----
+# DialerSequenceConfigChangeUriReference
+
 ## ININ.PureCloudApi.Model.DialerSequenceConfigChangeUriReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: DialerSequenceConfigChangeUriReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the resource | [optional] |
 | **Name** | **string** | The name of the resource | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: UserSearchRulePart
----
+# UserSearchRulePart
+
 ## ININ.PureCloudApi.Model.UserSearchRulePart
 
 ## Properties
@@ -10,6 +9,7 @@ title: UserSearchRulePart
 | **Operation** | **string** | The operation for this part | |
 | **Selector** | **string** | The type of item being selected by this part | |
 | **Ids** | **List&lt;string&gt;** | The ids for the selector; the results of these are ORed together | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

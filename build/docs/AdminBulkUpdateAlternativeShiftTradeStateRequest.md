@@ -1,14 +1,14 @@
----
-title: AdminBulkUpdateAlternativeShiftTradeStateRequest
----
+# AdminBulkUpdateAlternativeShiftTradeStateRequest
+
 ## ININ.PureCloudApi.Model.AdminBulkUpdateAlternativeShiftTradeStateRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;AdminBulkUpdateAlternativeShiftTradeState&gt;**](AdminBulkUpdateAlternativeShiftTradeState.html) |  | [optional] |
+| **Entities** | [**List&lt;AdminBulkUpdateAlternativeShiftTradeState&gt;**](AdminBulkUpdateAlternativeShiftTradeState) |  | [optional] |
 | **ManagementUnitId** | **string** | The ID of the management unit for this alternative shift bulk trade update | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

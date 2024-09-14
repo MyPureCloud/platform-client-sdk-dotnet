@@ -1,6 +1,5 @@
----
-title: AdhocRecordingTopicRecordingDataV2
----
+# AdhocRecordingTopicRecordingDataV2
+
 ## ININ.PureCloudApi.Model.AdhocRecordingTopicRecordingDataV2
 
 ## Properties
@@ -11,19 +10,20 @@ title: AdhocRecordingTopicRecordingDataV2
 | **Name** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-| **Workspace** | [**AdhocRecordingTopicWorkspaceData**](AdhocRecordingTopicWorkspaceData.html) |  | [optional] |
-| **CreatedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData.html) |  | [optional] |
+| **Workspace** | [**AdhocRecordingTopicWorkspaceData**](AdhocRecordingTopicWorkspaceData) |  | [optional] |
+| **CreatedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData) |  | [optional] |
 | **ContentType** | **string** |  | [optional] |
 | **ContentLength** | **int?** |  | [optional] |
 | **Filename** | **string** |  | [optional] |
 | **ChangeNumber** | **int?** |  | [optional] |
 | **DateUploaded** | **DateTime?** |  | [optional] |
-| **UploadedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData.html) |  | [optional] |
-| **LockInfo** | [**AdhocRecordingTopicLockData**](AdhocRecordingTopicLockData.html) |  | [optional] |
+| **UploadedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData) |  | [optional] |
+| **LockInfo** | [**AdhocRecordingTopicLockData**](AdhocRecordingTopicLockData) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **DurationMillieconds** | **int?** |  | [optional] |
-| **Conversation** | [**AdhocRecordingTopicConversationData**](AdhocRecordingTopicConversationData.html) |  | [optional] |
+| **Conversation** | [**AdhocRecordingTopicConversationData**](AdhocRecordingTopicConversationData) |  | [optional] |
 | **Read** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

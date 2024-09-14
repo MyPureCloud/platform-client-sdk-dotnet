@@ -1,25 +1,24 @@
----
-title: LogCaptureApi
----
+# LogCaptureApi
+
 ## PureCloudPlatform.Client.V2.Api.LogCaptureApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteDiagnosticsLogcaptureBrowserUser**](LogCaptureApi.html#deletediagnosticslogcapturebrowseruser) | **Delete** /api/v2/diagnostics/logcapture/browser/users/{userId} | Disable browser log capture for the user |
-| [**GetDiagnosticsLogcaptureBrowserEntriesDownloadJob**](LogCaptureApi.html#getdiagnosticslogcapturebrowserentriesdownloadjob) | **Get** /api/v2/diagnostics/logcapture/browser/entries/download/jobs/{jobId} | Gets status of async download execution |
-| [**GetDiagnosticsLogcaptureBrowserUser**](LogCaptureApi.html#getdiagnosticslogcapturebrowseruser) | **Get** /api/v2/diagnostics/logcapture/browser/users/{userId} | Get log capture configuration for the user |
-| [**GetDiagnosticsLogcaptureBrowserUsers**](LogCaptureApi.html#getdiagnosticslogcapturebrowserusers) | **Get** /api/v2/diagnostics/logcapture/browser/users | Get all log capture enabled users for an org |
-| [**PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs**](LogCaptureApi.html#postdiagnosticslogcapturebrowserentriesdownloadjobs) | **Post** /api/v2/diagnostics/logcapture/browser/entries/download/jobs | Creates an async download execution |
-| [**PostDiagnosticsLogcaptureBrowserEntriesQuery**](LogCaptureApi.html#postdiagnosticslogcapturebrowserentriesquery) | **Post** /api/v2/diagnostics/logcapture/browser/entries/query | Query collected log entries. It returns a limited amount of records, to get all records use download endpoint. |
-| [**PostDiagnosticsLogcaptureBrowserUser**](LogCaptureApi.html#postdiagnosticslogcapturebrowseruser) | **Post** /api/v2/diagnostics/logcapture/browser/users/{userId} | Enable log capture for a user or update expiration |
-{: class="table table-striped"}
+| [**DeleteDiagnosticsLogcaptureBrowserUser**](#DeleteDiagnosticsLogcaptureBrowserUser) | **Delete** /api/v2/diagnostics/logcapture/browser/users/{userId} | Disable browser log capture for the user |
+| [**GetDiagnosticsLogcaptureBrowserEntriesDownloadJob**](#GetDiagnosticsLogcaptureBrowserEntriesDownloadJob) | **Get** /api/v2/diagnostics/logcapture/browser/entries/download/jobs/{jobId} | Gets status of async download execution |
+| [**GetDiagnosticsLogcaptureBrowserUser**](#GetDiagnosticsLogcaptureBrowserUser) | **Get** /api/v2/diagnostics/logcapture/browser/users/{userId} | Get log capture configuration for the user |
+| [**GetDiagnosticsLogcaptureBrowserUsers**](#GetDiagnosticsLogcaptureBrowserUsers) | **Get** /api/v2/diagnostics/logcapture/browser/users | Get all log capture enabled users for an org |
+| [**PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs**](#PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs) | **Post** /api/v2/diagnostics/logcapture/browser/entries/download/jobs | Creates an async download execution |
+| [**PostDiagnosticsLogcaptureBrowserEntriesQuery**](#PostDiagnosticsLogcaptureBrowserEntriesQuery) | **Post** /api/v2/diagnostics/logcapture/browser/entries/query | Query collected log entries. It returns a limited amount of records, to get all records use download endpoint. |
+| [**PostDiagnosticsLogcaptureBrowserUser**](#PostDiagnosticsLogcaptureBrowserUser) | **Post** /api/v2/diagnostics/logcapture/browser/users/{userId} | Enable log capture for a user or update expiration |
 
-<a name="deletediagnosticslogcapturebrowseruser"></a>
 
-## void DeleteDiagnosticsLogcaptureBrowserUser (string userId)
 
+## DeleteDiagnosticsLogcaptureBrowserUser
+
+> void DeleteDiagnosticsLogcaptureBrowserUser (string userId)
 
 
 Disable browser log capture for the user
@@ -72,16 +71,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The id of the user to disable browser log capture |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getdiagnosticslogcapturebrowserentriesdownloadjob"></a>
 
-## [**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse.html) GetDiagnosticsLogcaptureBrowserEntriesDownloadJob (string jobId)
+## GetDiagnosticsLogcaptureBrowserEntriesDownloadJob
 
+> [**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse) GetDiagnosticsLogcaptureBrowserEntriesDownloadJob (string jobId)
 
 
 Gets status of async download execution
@@ -135,16 +133,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| Job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse.html)
+[**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse)
 
-<a name="getdiagnosticslogcapturebrowseruser"></a>
 
-## [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration.html) GetDiagnosticsLogcaptureBrowserUser (string userId)
+## GetDiagnosticsLogcaptureBrowserUser
 
+> [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration) GetDiagnosticsLogcaptureBrowserUser (string userId)
 
 
 Get log capture configuration for the user
@@ -198,16 +195,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The id of the user to get browser log capture configuration |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LogCaptureUserConfiguration**](LogCaptureUserConfiguration.html)
+[**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)
 
-<a name="getdiagnosticslogcapturebrowserusers"></a>
 
-## [**PagelessEntityListing**](PagelessEntityListing.html) GetDiagnosticsLogcaptureBrowserUsers (bool? includeExpired = null)
+## GetDiagnosticsLogcaptureBrowserUsers
 
+> [**PagelessEntityListing**](PagelessEntityListing) GetDiagnosticsLogcaptureBrowserUsers (bool? includeExpired = null)
 
 
 Get all log capture enabled users for an org
@@ -261,16 +257,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **includeExpired** | **bool?**| Include expired users with log captures still available for search or download | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**PagelessEntityListing**](PagelessEntityListing.html)
+[**PagelessEntityListing**](PagelessEntityListing)
 
-<a name="postdiagnosticslogcapturebrowserentriesdownloadjobs"></a>
 
-## [**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse.html) PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs (LogCaptureQueryRequest body = null)
+## PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs
 
+> [**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse) PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs (LogCaptureQueryRequest body = null)
 
 
 Creates an async download execution
@@ -323,17 +318,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LogCaptureQueryRequest**](LogCaptureQueryRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**LogCaptureQueryRequest**](LogCaptureQueryRequest)|  | [optional]  |
 
 ### Return type
 
-[**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse.html)
+[**LogCaptureDownloadExecutionResponse**](LogCaptureDownloadExecutionResponse)
 
-<a name="postdiagnosticslogcapturebrowserentriesquery"></a>
 
-## [**LogCaptureQueryResponse**](LogCaptureQueryResponse.html) PostDiagnosticsLogcaptureBrowserEntriesQuery (string before = null, string after = null, string pageSize = null, LogCaptureQueryRequest body = null)
+## PostDiagnosticsLogcaptureBrowserEntriesQuery
 
+> [**LogCaptureQueryResponse**](LogCaptureQueryResponse) PostDiagnosticsLogcaptureBrowserEntriesQuery (string before = null, string after = null, string pageSize = null, LogCaptureQueryRequest body = null)
 
 
 Query collected log entries. It returns a limited amount of records, to get all records use download endpoint.
@@ -392,17 +386,16 @@ namespace Example
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **body** | [**LogCaptureQueryRequest**](LogCaptureQueryRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**LogCaptureQueryRequest**](LogCaptureQueryRequest)|  | [optional]  |
 
 ### Return type
 
-[**LogCaptureQueryResponse**](LogCaptureQueryResponse.html)
+[**LogCaptureQueryResponse**](LogCaptureQueryResponse)
 
-<a name="postdiagnosticslogcapturebrowseruser"></a>
 
-## [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration.html) PostDiagnosticsLogcaptureBrowserUser (string userId, LogCaptureUserConfiguration body = null)
+## PostDiagnosticsLogcaptureBrowserUser
 
+> [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration) PostDiagnosticsLogcaptureBrowserUser (string userId, LogCaptureUserConfiguration body = null)
 
 
 Enable log capture for a user or update expiration
@@ -457,10 +450,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The id of the user to enable browser log capture |  |
-| **body** | [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)|  | [optional]  |
 
 ### Return type
 
-[**LogCaptureUserConfiguration**](LogCaptureUserConfiguration.html)
+[**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

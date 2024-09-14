@@ -1,14 +1,14 @@
----
-title: ActionContract
----
+# ActionContract
+
 ## ININ.PureCloudApi.Model.ActionContract
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Output** | [**ActionOutput**](ActionOutput.html) | The output to expect when executing this action. | [optional] |
-| **Input** | [**ActionInput**](ActionInput.html) | The input required when executing this action. | [optional] |
-{: class="table table-striped"}
+| **Output** | [**ActionOutput**](ActionOutput) | The output to expect when executing this action. | [optional] |
+| **Input** | [**ActionInput**](ActionInput) | The input required when executing this action. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DocumentUpload
----
+# DocumentUpload
+
 ## ININ.PureCloudApi.Model.DocumentUpload
 
 ## Properties
@@ -8,9 +7,10 @@ title: DocumentUpload
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the document | |
-| **Workspace** | [**DomainEntityRef**](DomainEntityRef.html) | The workspace the document will be uploaded to | |
+| **Workspace** | [**DomainEntityRef**](DomainEntityRef) | The workspace the document will be uploaded to | |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
 | **TagIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

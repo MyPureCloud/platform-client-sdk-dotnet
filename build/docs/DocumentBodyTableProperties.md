@@ -1,6 +1,5 @@
----
-title: DocumentBodyTableProperties
----
+# DocumentBodyTableProperties
+
 ## ININ.PureCloudApi.Model.DocumentBodyTableProperties
 
 ## Properties
@@ -16,7 +15,8 @@ title: DocumentBodyTableProperties
 | **BorderStyle** | **string** | The border style for the table. | [optional] |
 | **BorderColor** | **string** | The border color for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
 | **BackgroundColor** | **string** | The background color for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
-| **Caption** | [**DocumentBodyTableCaptionBlock**](DocumentBodyTableCaptionBlock.html) | The caption for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
-{: class="table table-striped"}
+| **Caption** | [**DocumentBodyTableCaptionBlock**](DocumentBodyTableCaptionBlock) | The caption for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

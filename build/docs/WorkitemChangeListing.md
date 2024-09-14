@@ -1,17 +1,17 @@
----
-title: WorkitemChangeListing
----
+# WorkitemChangeListing
+
 ## ININ.PureCloudApi.Model.WorkitemChangeListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorkitemsChangeWorkitemDelta&gt;**](WorkitemsChangeWorkitemDelta.html) |  | [optional] |
+| **Entities** | [**List&lt;WorkitemsChangeWorkitemDelta&gt;**](WorkitemsChangeWorkitemDelta) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **After** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

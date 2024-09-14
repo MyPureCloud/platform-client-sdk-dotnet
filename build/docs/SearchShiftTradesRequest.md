@@ -1,6 +1,5 @@
----
-title: SearchShiftTradesRequest
----
+# SearchShiftTradesRequest
+
 ## ININ.PureCloudApi.Model.SearchShiftTradesRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: SearchShiftTradesRequest
 |------------ | ------------- | ------------- | -------------|
 | **ReceivingScheduleId** | **string** | The ID of the schedule for which to search for available shift trades | |
 | **ReceivingShiftIds** | **List&lt;string&gt;** | The IDs of shifts that the receiving user would potentially be willing to trade. If empty, only returns one sided trades (pick up a shift) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

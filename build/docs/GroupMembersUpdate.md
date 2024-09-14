@@ -1,6 +1,5 @@
----
-title: GroupMembersUpdate
----
+# GroupMembersUpdate
+
 ## ININ.PureCloudApi.Model.GroupMembersUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: GroupMembersUpdate
 |------------ | ------------- | ------------- | -------------|
 | **MemberIds** | **List&lt;string&gt;** | A list of the ids of the members to add. | |
 | **Version** | **int?** | The current group version. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

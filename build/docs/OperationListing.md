@@ -1,16 +1,16 @@
----
-title: OperationListing
----
+# OperationListing
+
 ## ININ.PureCloudApi.Model.OperationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;OperationResponse&gt;**](OperationResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;OperationResponse&gt;**](OperationResponse) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Credential
----
+# Credential
+
 ## ININ.PureCloudApi.Model.Credential
 
 ## Properties
@@ -9,9 +8,10 @@ title: Credential
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Type** | [**CredentialType**](CredentialType.html) | The type of credential. | |
+| **Type** | [**CredentialType**](CredentialType) | The type of credential. | |
 | **CredentialFields** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

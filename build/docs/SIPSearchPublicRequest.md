@@ -1,6 +1,5 @@
----
-title: SIPSearchPublicRequest
----
+# SIPSearchPublicRequest
+
 ## ININ.PureCloudApi.Model.SIPSearchPublicRequest
 
 ## Properties
@@ -17,6 +16,7 @@ title: SIPSearchPublicRequest
 | **DateStart** | **DateTime?** | Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **DateEnd** | **DateTime?** | End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

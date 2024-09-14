@@ -1,6 +1,5 @@
----
-title: LearningModuleRuleParts
----
+# LearningModuleRuleParts
+
 ## ININ.PureCloudApi.Model.LearningModuleRuleParts
 
 ## Properties
@@ -11,6 +10,7 @@ title: LearningModuleRuleParts
 | **Selector** | **string** | The learning module rule selector | |
 | **Value** | **List&lt;string&gt;** | The value of rules | |
 | **Order** | **int?** | The order of rules in learning module rule | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleRunTopicUserReference
----
+# WfmBuScheduleRunTopicUserReference
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleRunTopicUserReference
 
 ## Properties
@@ -8,6 +7,7 @@ title: WfmBuScheduleRunTopicUserReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

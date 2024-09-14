@@ -1,6 +1,5 @@
----
-title: AnalyticsQueryAggregation
----
+# AnalyticsQueryAggregation
+
 ## ININ.PureCloudApi.Model.AnalyticsQueryAggregation
 
 ## Properties
@@ -11,7 +10,8 @@ title: AnalyticsQueryAggregation
 | **Dimension** | **string** | For use with termFrequency aggregations | [optional] |
 | **Metric** | **string** | For use with numericRange aggregations | [optional] |
 | **Size** | **int?** | For use with termFrequency aggregations | [optional] |
-| **Ranges** | [**List&lt;AggregationRange&gt;**](AggregationRange.html) | For use with numericRange aggregations | [optional] |
-{: class="table table-striped"}
+| **Ranges** | [**List&lt;AggregationRange&gt;**](AggregationRange) | For use with numericRange aggregations | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

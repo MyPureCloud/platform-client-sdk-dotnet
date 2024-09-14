@@ -1,6 +1,5 @@
----
-title: SupportCenterCustomMessage
----
+# SupportCenterCustomMessage
+
 ## ININ.PureCloudApi.Model.SupportCenterCustomMessage
 
 ## Properties
@@ -9,6 +8,7 @@ title: SupportCenterCustomMessage
 |------------ | ------------- | ------------- | -------------|
 | **DefaultValue** | **string** | Default value for the message | |
 | **Type** | **string** | Type of the message | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PhoneTransferEvent
----
+# PhoneTransferEvent
+
 ## ININ.PureCloudApi.Model.PhoneTransferEvent
 
 ## Properties
@@ -16,6 +15,7 @@ title: PhoneTransferEvent
 | **TargetCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the &#x60;initiatingCommunicationId&#x60;. | |
 | **ObjectCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred. | |
 | **DestinationPhoneNumber** | **string** | The desired destination phone number that the object communication should be transferred to. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

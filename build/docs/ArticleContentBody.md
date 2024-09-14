@@ -1,6 +1,5 @@
----
-title: ArticleContentBody
----
+# ArticleContentBody
+
 ## ININ.PureCloudApi.Model.ArticleContentBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: ArticleContentBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **LocationUrl** | **string** | Presigned URL to retrieve the document content. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

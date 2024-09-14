@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestSearchClientApplication
----
+# KnowledgeGuestSearchClientApplication
+
 ## ININ.PureCloudApi.Model.KnowledgeGuestSearchClientApplication
 
 ## Properties
@@ -8,9 +7,10 @@ title: KnowledgeGuestSearchClientApplication
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Application type. | |
-| **Deployment** | [**EntityReference**](EntityReference.html) | Application details when type is MessengerKnowledgeApp or SupportCenter. | [optional] |
-| **BotFlow** | [**EntityReference**](EntityReference.html) | Application details when type is BotFlow. | [optional] |
-| **Assistant** | [**EntityReference**](EntityReference.html) | Application details when type is Assistant. | [optional] |
-{: class="table table-striped"}
+| **Deployment** | [**EntityReference**](EntityReference) | Application details when type is MessengerKnowledgeApp or SupportCenter. | [optional] |
+| **BotFlow** | [**EntityReference**](EntityReference) | Application details when type is BotFlow. | [optional] |
+| **Assistant** | [**EntityReference**](EntityReference) | Application details when type is Assistant. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AnalyticsConversation
----
+# AnalyticsConversation
+
 ## ININ.PureCloudApi.Model.AnalyticsConversation
 
 ## Properties
@@ -20,10 +19,11 @@ title: AnalyticsConversation
 | **MediaStatsMinConversationRFactor** | **double?** | The lowest R-factor value among all of the audio streams belonging to this conversation | [optional] |
 | **OriginatingDirection** | **string** | The original direction of the conversation | [optional] |
 | **SelfServed** | **bool?** | Indicates whether all flow sessions were self serviced | [optional] |
-| **Evaluations** | [**List&lt;AnalyticsEvaluation&gt;**](AnalyticsEvaluation.html) | Evaluations associated with this conversation | [optional] |
-| **Surveys** | [**List&lt;AnalyticsSurvey&gt;**](AnalyticsSurvey.html) | Surveys associated with this conversation | [optional] |
-| **Resolutions** | [**List&lt;AnalyticsResolution&gt;**](AnalyticsResolution.html) | Resolutions associated with this conversation | [optional] |
-| **Participants** | [**List&lt;AnalyticsParticipant&gt;**](AnalyticsParticipant.html) | Participants in the conversation | [optional] |
-{: class="table table-striped"}
+| **Evaluations** | [**List&lt;AnalyticsEvaluation&gt;**](AnalyticsEvaluation) | Evaluations associated with this conversation | [optional] |
+| **Surveys** | [**List&lt;AnalyticsSurvey&gt;**](AnalyticsSurvey) | Surveys associated with this conversation | [optional] |
+| **Resolutions** | [**List&lt;AnalyticsResolution&gt;**](AnalyticsResolution) | Resolutions associated with this conversation | [optional] |
+| **Participants** | [**List&lt;AnalyticsParticipant&gt;**](AnalyticsParticipant) | Participants in the conversation | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

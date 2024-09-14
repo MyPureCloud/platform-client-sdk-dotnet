@@ -1,6 +1,5 @@
----
-title: SuggestionFeedback
----
+# SuggestionFeedback
+
 ## ININ.PureCloudApi.Model.SuggestionFeedback
 
 ## Properties
@@ -8,6 +7,7 @@ title: SuggestionFeedback
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Rating** | **string** | The rating value of the suggestion feedback. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

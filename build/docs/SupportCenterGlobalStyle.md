@@ -1,6 +1,5 @@
----
-title: SupportCenterGlobalStyle
----
+# SupportCenterGlobalStyle
+
 ## ININ.PureCloudApi.Model.SupportCenterGlobalStyle
 
 ## Properties
@@ -13,6 +12,7 @@ title: SupportCenterGlobalStyle
 | **PrimaryColorLight** | **string** | Global light primary color, in hexadecimal format, eg #ffffff | |
 | **TextColor** | **string** | Global text color, in hexadecimal format, eg #ffffff | |
 | **FontFamily** | **string** | Global font family | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

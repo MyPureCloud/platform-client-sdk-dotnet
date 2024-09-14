@@ -1,6 +1,5 @@
----
-title: LicenseDefinition
----
+# LicenseDefinition
+
 ## ININ.PureCloudApi.Model.LicenseDefinition
 
 ## Properties
@@ -9,10 +8,11 @@ title: LicenseDefinition
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Description** | **string** |  | [optional] |
-| **Permissions** | [**Permissions**](Permissions.html) |  | [optional] |
-| **Prerequisites** | [**List&lt;AddressableLicenseDefinition&gt;**](AddressableLicenseDefinition.html) |  | [optional] |
-| **Comprises** | [**List&lt;LicenseDefinition&gt;**](LicenseDefinition.html) |  | [optional] |
+| **Permissions** | [**Permissions**](Permissions) |  | [optional] |
+| **Prerequisites** | [**List&lt;AddressableLicenseDefinition&gt;**](AddressableLicenseDefinition) |  | [optional] |
+| **Comprises** | [**List&lt;LicenseDefinition&gt;**](LicenseDefinition) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ScimGenesysUserExternalId
----
+# ScimGenesysUserExternalId
+
 ## ININ.PureCloudApi.Model.ScimGenesysUserExternalId
 
 ## Properties
@@ -9,6 +8,7 @@ title: ScimGenesysUserExternalId
 |------------ | ------------- | ------------- | -------------|
 | **Authority** | **string** | Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier. | |
 | **Value** | **string** | Identifier of the user in an external system. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

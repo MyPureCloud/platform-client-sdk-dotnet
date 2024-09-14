@@ -1,6 +1,5 @@
----
-title: ConversationEmailEventTopicErrorBody
----
+# ConversationEmailEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.ConversationEmailEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationEmailEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;ConversationEmailEventTopicDetail&gt;**](ConversationEmailEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;ConversationEmailEventTopicErrorBody&gt;**](ConversationEmailEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;ConversationEmailEventTopicDetail&gt;**](ConversationEmailEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;ConversationEmailEventTopicErrorBody&gt;**](ConversationEmailEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

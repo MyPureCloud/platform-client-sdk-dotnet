@@ -1,13 +1,12 @@
----
-title: AgentWorkPlanShift
----
+# AgentWorkPlanShift
+
 ## ININ.PureCloudApi.Model.AgentWorkPlanShift
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Days** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek.html) | Days of the week applicable for this shift | |
+| **Days** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Days of the week applicable for this shift | |
 | **FlexibleStartTime** | **bool?** | Whether the start time of the shift is flexible | |
 | **ExactStartTimeMinutesFromMidnight** | **int?** | Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; false | |
 | **EarliestStartTimeMinutesFromMidnight** | **int?** | Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true | |
@@ -19,7 +18,8 @@ title: AgentWorkPlanShift
 | **ExactPaidTimeMinutes** | **int?** | Exact paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; false | |
 | **MinimumPaidTimeMinutes** | **int?** | Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true | |
 | **MaximumPaidTimeMinutes** | **int?** | Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true | |
-| **Activities** | [**List&lt;AgentWorkPlanActivity&gt;**](AgentWorkPlanActivity.html) | Activities configured for this shift | |
-{: class="table table-striped"}
+| **Activities** | [**List&lt;AgentWorkPlanActivity&gt;**](AgentWorkPlanActivity) | Activities configured for this shift | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

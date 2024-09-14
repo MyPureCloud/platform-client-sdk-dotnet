@@ -1,6 +1,5 @@
----
-title: JourneyAction
----
+# JourneyAction
+
 ## ININ.PureCloudApi.Model.JourneyAction
 
 ## Properties
@@ -8,7 +7,8 @@ title: JourneyAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of an action from the Journey System (an action is spawned from an actionMap) | |
-| **ActionMap** | [**JourneyActionMap**](JourneyActionMap.html) | Details about the action map from the Journey System which triggered this action | |
-{: class="table table-striped"}
+| **ActionMap** | [**JourneyActionMap**](JourneyActionMap) | Details about the action map from the Journey System which triggered this action | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

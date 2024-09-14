@@ -1,6 +1,5 @@
----
-title: VoicemailGroupPolicy
----
+# VoicemailGroupPolicy
+
 ## ININ.PureCloudApi.Model.VoicemailGroupPolicy
 
 ## Properties
@@ -8,7 +7,7 @@ title: VoicemailGroupPolicy
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** |  | [optional] |
-| **Group** | [**Group**](Group.html) | The group associated with the policy | [optional] |
+| **Group** | [**Group**](Group) | The group associated with the policy | [optional] |
 | **Enabled** | **bool?** | Whether voicemail is enabled for the group | [optional] |
 | **SendEmailNotifications** | **bool?** | Whether email notifications are sent to group members when a new voicemail is received | [optional] |
 | **DisableEmailPii** | **bool?** | Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization. | [optional] |
@@ -20,6 +19,7 @@ title: VoicemailGroupPolicy
 | **GroupAlertType** | **string** | Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin. | [optional] |
 | **InteractiveResponsePromptId** | **string** | The prompt to use when connecting a user to a Group Ring call | [optional] |
 | **InteractiveResponseRequired** | **bool?** | Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

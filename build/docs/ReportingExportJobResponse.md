@@ -1,6 +1,5 @@
----
-title: ReportingExportJobResponse
----
+# ReportingExportJobResponse
+
 ## ININ.PureCloudApi.Model.ReportingExportJobResponse
 
 ## Properties
@@ -18,7 +17,7 @@ title: ReportingExportJobResponse
 | **ViewType** | **string** | The type of view export job to be created | |
 | **ExportErrorMessagesType** | **string** | The error message in case the export request failed | [optional] |
 | **Period** | **string** | The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H | |
-| **Filter** | [**ViewFilter**](ViewFilter.html) | Filters to apply to create the view | |
+| **Filter** | [**ViewFilter**](ViewFilter) | Filters to apply to create the view | |
 | **Read** | **bool?** | Indicates if the request has been marked as read | |
 | **CreatedDateTime** | **DateTime?** | The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **ModifiedDateTime** | **DateTime?** | The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
@@ -30,7 +29,7 @@ title: ReportingExportJobResponse
 | **HasSplitByMedia** | **bool?** | Indicates if media type will be split in aggregate detail exports | [optional] |
 | **HasSummaryRow** | **bool?** | Indicates if summary row needs to be present in exports | [optional] |
 | **CsvDelimiter** | **string** | The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request | [optional] |
-| **SelectedColumns** | [**List&lt;SelectedColumns&gt;**](SelectedColumns.html) | The list of ordered selected columns from the export view by the user | [optional] |
+| **SelectedColumns** | [**List&lt;SelectedColumns&gt;**](SelectedColumns) | The list of ordered selected columns from the export view by the user | [optional] |
 | **HasCustomParticipantAttributes** | **bool?** | Indicates if custom participant attributes will be exported | [optional] |
 | **RecipientEmails** | **List&lt;string&gt;** | The list of email recipients for the exports | [optional] |
 | **EmailStatuses** | **Dictionary&lt;string, string&gt;** | The status of individual email addresses as a map | [optional] |
@@ -40,6 +39,7 @@ title: ReportingExportJobResponse
 | **ExportAllowedToRerun** | **bool?** | Indicates whether the export run is allowed to rerun | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

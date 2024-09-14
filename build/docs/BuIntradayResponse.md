@@ -1,6 +1,5 @@
----
-title: BuIntradayResponse
----
+# BuIntradayResponse
+
 ## ININ.PureCloudApi.Model.BuIntradayResponse
 
 ## Properties
@@ -12,9 +11,10 @@ title: BuIntradayResponse
 | **IntervalLengthMinutes** | **int?** | The aggregation period in minutes, which determines the interval duration of the returned data | [optional] |
 | **NoDataReason** | **string** | If not null, the reason there was no data for the request | [optional] |
 | **Categories** | **List&lt;string&gt;** | The categories to which this data corresponds | [optional] |
-| **ShortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference.html) | Short term forecast reference | [optional] |
-| **Schedule** | [**BuScheduleReference**](BuScheduleReference.html) | Schedule reference | [optional] |
-| **IntradayDataGroupings** | [**List&lt;BuIntradayDataGroup&gt;**](BuIntradayDataGroup.html) | Intraday data grouped by a single media type and set of planning group IDs | [optional] |
-{: class="table table-striped"}
+| **ShortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | Short term forecast reference | [optional] |
+| **Schedule** | [**BuScheduleReference**](BuScheduleReference) | Schedule reference | [optional] |
+| **IntradayDataGroupings** | [**List&lt;BuIntradayDataGroup&gt;**](BuIntradayDataGroup) | Intraday data grouped by a single media type and set of planning group IDs | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

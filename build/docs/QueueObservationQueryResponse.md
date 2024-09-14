@@ -1,6 +1,5 @@
----
-title: QueueObservationQueryResponse
----
+# QueueObservationQueryResponse
+
 ## ININ.PureCloudApi.Model.QueueObservationQueryResponse
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueueObservationQueryResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **SystemToOrganizationMappings** | **Dictionary&lt;string, List&lt;string&gt;&gt;** | A mapping from system presence to a list of organization presence ids | [optional] |
-| **Results** | [**List&lt;QueueObservationDataContainer&gt;**](QueueObservationDataContainer.html) |  | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;QueueObservationDataContainer&gt;**](QueueObservationDataContainer) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

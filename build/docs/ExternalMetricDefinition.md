@@ -1,6 +1,5 @@
----
-title: ExternalMetricDefinition
----
+# ExternalMetricDefinition
+
 ## ININ.PureCloudApi.Model.ExternalMetricDefinition
 
 ## Properties
@@ -18,6 +17,7 @@ title: ExternalMetricDefinition
 | **InUse** | **bool?** | True if the External Metric Definition is in use | [optional] |
 | **DateLastRefreshed** | **DateTime?** | The last date and time that the metric data was refreshed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

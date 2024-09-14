@@ -1,6 +1,5 @@
----
-title: TextBotFlowLocation
----
+# TextBotFlowLocation
+
 ## ININ.PureCloudApi.Model.TextBotFlowLocation
 
 ## Properties
@@ -10,6 +9,7 @@ title: TextBotFlowLocation
 | **ActionName** | **string** | The name of the action that was active when the event of interest happened. | |
 | **ActionNumber** | **int?** | The number of the action that was active when the event of interest happened. | |
 | **SequenceName** | **string** | The name of the state or task which was active when the event of interest happened. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

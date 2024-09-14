@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleRunTopicBuScheduleRun
----
+# WfmBuScheduleRunTopicBuScheduleRun
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleRunTopicBuScheduleRun
 
 ## Properties
@@ -12,11 +11,12 @@ title: WfmBuScheduleRunTopicBuScheduleRun
 | **IntradayRescheduling** | **bool?** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **WeekCount** | **int?** |  | [optional] |
-| **Schedule** | [**WfmBuScheduleRunTopicBuScheduleReference**](WfmBuScheduleRunTopicBuScheduleReference.html) |  | [optional] |
-| **SchedulingCanceledBy** | [**WfmBuScheduleRunTopicUserReference**](WfmBuScheduleRunTopicUserReference.html) |  | [optional] |
+| **Schedule** | [**WfmBuScheduleRunTopicBuScheduleReference**](WfmBuScheduleRunTopicBuScheduleReference) |  | [optional] |
+| **SchedulingCanceledBy** | [**WfmBuScheduleRunTopicUserReference**](WfmBuScheduleRunTopicUserReference) |  | [optional] |
 | **SchedulingCompletedTime** | **string** |  | [optional] |
 | **MessageCount** | **int?** |  | [optional] |
-| **MessageSeverityCounts** | [**List&lt;WfmBuScheduleRunTopicSchedulerMessageSeverityCount&gt;**](WfmBuScheduleRunTopicSchedulerMessageSeverityCount.html) |  | [optional] |
-{: class="table table-striped"}
+| **MessageSeverityCounts** | [**List&lt;WfmBuScheduleRunTopicSchedulerMessageSeverityCount&gt;**](WfmBuScheduleRunTopicSchedulerMessageSeverityCount) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

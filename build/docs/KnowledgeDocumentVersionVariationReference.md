@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentVersionVariationReference
----
+# KnowledgeDocumentVersionVariationReference
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentVersionVariationReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: KnowledgeDocumentVersionVariationReference
 | **DocumentId** | **string** | The ID of the document. | |
 | **DocumentVariationId** | **string** | The variation of the document. | |
 | **DocumentVersionId** | **string** | The version of the document. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

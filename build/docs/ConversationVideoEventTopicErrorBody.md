@@ -1,6 +1,5 @@
----
-title: ConversationVideoEventTopicErrorBody
----
+# ConversationVideoEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.ConversationVideoEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationVideoEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;ConversationVideoEventTopicDetail&gt;**](ConversationVideoEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;ConversationVideoEventTopicErrorBody&gt;**](ConversationVideoEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;ConversationVideoEventTopicDetail&gt;**](ConversationVideoEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;ConversationVideoEventTopicErrorBody&gt;**](ConversationVideoEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: SupportCenterCompactCategoryModuleTemplate
----
+# SupportCenterCompactCategoryModuleTemplate
+
 ## ININ.PureCloudApi.Model.SupportCenterCompactCategoryModuleTemplate
 
 ## Properties
@@ -8,6 +7,7 @@ title: SupportCenterCompactCategoryModuleTemplate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Active** | **bool?** | Whether this template is active or not | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

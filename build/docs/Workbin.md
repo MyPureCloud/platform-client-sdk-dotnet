@@ -1,6 +1,5 @@
----
-title: Workbin
----
+# Workbin
+
 ## ININ.PureCloudApi.Model.Workbin
 
 ## Properties
@@ -9,12 +8,13 @@ title: Workbin
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | Workbin name | [optional] |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | Workbin description | [optional] |
 | **DateCreated** | **DateTime?** | The creation date of the Workbin. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | The modified date of the Workbin. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ModifiedBy** | [**UserReference**](UserReference.html) | The id of the User who modified the Workbin. | [optional] |
+| **ModifiedBy** | [**UserReference**](UserReference) | The id of the User who modified the Workbin. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

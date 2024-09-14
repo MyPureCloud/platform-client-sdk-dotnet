@@ -1,6 +1,5 @@
----
-title: Column
----
+# Column
+
 ## ININ.PureCloudApi.Model.Column
 
 ## Properties
@@ -11,6 +10,7 @@ title: Column
 | **ColumnNumber** | **int?** | 0 based column number in delimited file format | [optional] |
 | **StartPosition** | **int?** | Zero-based position of the first column&#39;s character. Mandatory for Fixed position/length file format. | [optional] |
 | **Length** | **int?** | Column width. Mandatory for Fixed position/length file format. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

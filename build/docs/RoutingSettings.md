@@ -1,6 +1,5 @@
----
-title: RoutingSettings
----
+# RoutingSettings
+
 ## ININ.PureCloudApi.Model.RoutingSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: RoutingSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ResetAgentScoreOnPresenceChange** | **bool?** | Reset agent score when agent presence changes from off-queue to on-queue | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

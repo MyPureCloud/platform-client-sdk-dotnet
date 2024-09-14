@@ -1,6 +1,5 @@
----
-title: ConsultTransferUpdate
----
+# ConsultTransferUpdate
+
 ## ININ.PureCloudApi.Model.ConsultTransferUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConsultTransferUpdate
 |------------ | ------------- | ------------- | -------------|
 | **SpeakTo** | **string** | Determines to whom the initiating participant is speaking. | |
 | **ConsultingUserId** | **string** | The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

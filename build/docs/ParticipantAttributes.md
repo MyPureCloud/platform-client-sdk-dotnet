@@ -1,6 +1,5 @@
----
-title: ParticipantAttributes
----
+# ParticipantAttributes
+
 ## ININ.PureCloudApi.Model.ParticipantAttributes
 
 ## Properties
@@ -8,6 +7,7 @@ title: ParticipantAttributes
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Attributes** | **Dictionary&lt;string, string&gt;** | The map of attribute keys to values. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

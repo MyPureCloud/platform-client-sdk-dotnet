@@ -1,6 +1,5 @@
----
-title: MessagingCampaignDivisionView
----
+# MessagingCampaignDivisionView
+
 ## ININ.PureCloudApi.Model.MessagingCampaignDivisionView
 
 ## Properties
@@ -9,8 +8,9 @@ title: MessagingCampaignDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicPhoneStatus
----
+# PhoneChangeTopicPhoneStatus
+
 ## ININ.PureCloudApi.Model.PhoneChangeTopicPhoneStatus
 
 ## Properties
@@ -9,10 +8,11 @@ title: PhoneChangeTopicPhoneStatus
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **OperationalStatus** | **string** |  | [optional] |
-| **Edge** | [**PhoneChangeTopicEdgeReference**](PhoneChangeTopicEdgeReference.html) |  | [optional] |
-| **Provision** | [**PhoneChangeTopicProvisionInfo**](PhoneChangeTopicProvisionInfo.html) |  | [optional] |
-| **LineStatuses** | [**List&lt;PhoneChangeTopicLineStatus&gt;**](PhoneChangeTopicLineStatus.html) |  | [optional] |
+| **Edge** | [**PhoneChangeTopicEdgeReference**](PhoneChangeTopicEdgeReference) |  | [optional] |
+| **Provision** | [**PhoneChangeTopicProvisionInfo**](PhoneChangeTopicProvisionInfo) |  | [optional] |
+| **LineStatuses** | [**List&lt;PhoneChangeTopicLineStatus&gt;**](PhoneChangeTopicLineStatus) |  | [optional] |
 | **EventCreationTime** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

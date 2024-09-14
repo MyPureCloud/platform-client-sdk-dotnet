@@ -1,6 +1,5 @@
----
-title: DocumentUpdate
----
+# DocumentUpdate
+
 ## ININ.PureCloudApi.Model.DocumentUpdate
 
 ## Properties
@@ -14,8 +13,9 @@ title: DocumentUpdate
 | **RemoveTags** | **List&lt;string&gt;** |  | [optional] |
 | **AddTagIds** | **List&lt;string&gt;** |  | [optional] |
 | **RemoveTagIds** | **List&lt;string&gt;** |  | [optional] |
-| **UpdateAttributes** | [**List&lt;DocumentAttribute&gt;**](DocumentAttribute.html) |  | [optional] |
+| **UpdateAttributes** | [**List&lt;DocumentAttribute&gt;**](DocumentAttribute) |  | [optional] |
 | **RemoveAttributes** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: MinerExecuteRequest
----
+# MinerExecuteRequest
+
 ## ININ.PureCloudApi.Model.MinerExecuteRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: MinerExecuteRequest
 | **MediaType** | **string** | Media type for filtering conversations. | [optional] |
 | **ParticipantType** | **string** | Type of the participant, either agent, customer or both. | [optional] |
 | **QueueIds** | **List&lt;string&gt;** | List of queue IDs for filtering conversations. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

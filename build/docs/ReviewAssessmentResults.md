@@ -1,6 +1,5 @@
----
-title: ReviewAssessmentResults
----
+# ReviewAssessmentResults
+
 ## ININ.PureCloudApi.Model.ReviewAssessmentResults
 
 ## Properties
@@ -9,6 +8,7 @@ title: ReviewAssessmentResults
 |------------ | ------------- | ------------- | -------------|
 | **ByAssignees** | **bool?** | If true, learning assignment results can be seen in detail by assignees | [optional] |
 | **ByViewers** | **bool?** | If true, learning assignment results can be seen in detail by people who are eligible to view | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

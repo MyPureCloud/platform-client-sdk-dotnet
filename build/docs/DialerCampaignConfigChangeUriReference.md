@@ -1,6 +1,5 @@
----
-title: DialerCampaignConfigChangeUriReference
----
+# DialerCampaignConfigChangeUriReference
+
 ## ININ.PureCloudApi.Model.DialerCampaignConfigChangeUriReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: DialerCampaignConfigChangeUriReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the resource | [optional] |
 | **Name** | **string** | The name of the resource | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

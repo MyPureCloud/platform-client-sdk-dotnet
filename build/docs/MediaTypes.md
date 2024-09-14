@@ -1,13 +1,13 @@
----
-title: MediaTypes
----
+# MediaTypes
+
 ## ININ.PureCloudApi.Model.MediaTypes
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Allow** | [**MediaTypeAccess**](MediaTypeAccess.html) | Specify allowed media types for inbound and outbound messages. If this field is empty, all inbound and outbound media will be blocked. | [optional] |
-{: class="table table-striped"}
+| **Allow** | [**MediaTypeAccess**](MediaTypeAccess) | Specify allowed media types for inbound and outbound messages. If this field is empty, all inbound and outbound media will be blocked. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

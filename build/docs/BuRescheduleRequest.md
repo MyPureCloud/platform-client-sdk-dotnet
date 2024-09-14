@@ -1,6 +1,5 @@
----
-title: BuRescheduleRequest
----
+# BuRescheduleRequest
+
 ## ININ.PureCloudApi.Model.BuRescheduleRequest
 
 ## Properties
@@ -16,6 +15,7 @@ title: BuRescheduleRequest
 | **DoNotChangeDailyPaidTime** | **bool?** | Instructs the scheduler whether it is allowed to change daily paid time | |
 | **DoNotChangeShiftStartTimes** | **bool?** | Instructs the scheduler whether it is allowed to change shift start times | |
 | **DoNotChangeManuallyEditedShifts** | **bool?** | Instructs the scheduler whether it is allowed to change manually edited shifts | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

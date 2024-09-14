@@ -1,6 +1,5 @@
----
-title: UserEndDetailEventTopicUserEndEvent
----
+# UserEndDetailEventTopicUserEndEvent
+
 ## ININ.PureCloudApi.Model.UserEndDetailEventTopicUserEndEvent
 
 ## Properties
@@ -35,6 +34,7 @@ title: UserEndDetailEventTopicUserEndEvent
 | **CallbackDurationMs** | **int?** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

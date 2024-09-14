@@ -1,6 +1,5 @@
----
-title: NotificationsSettings
----
+# NotificationsSettings
+
 ## ININ.PureCloudApi.Model.NotificationsSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: NotificationsSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | The toggle to enable or disable notifications | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

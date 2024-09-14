@@ -1,6 +1,5 @@
----
-title: AvailableTranslations
----
+# AvailableTranslations
+
 ## ININ.PureCloudApi.Model.AvailableTranslations
 
 ## Properties
@@ -9,6 +8,7 @@ title: AvailableTranslations
 |------------ | ------------- | ------------- | -------------|
 | **OrgSpecific** | **List&lt;string&gt;** |  | [optional] |
 | **Builtin** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

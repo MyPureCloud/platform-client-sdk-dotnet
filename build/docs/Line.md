@@ -1,6 +1,5 @@
----
-title: Line
----
+# Line
+
 ## ININ.PureCloudApi.Model.Line
 
 ## Properties
@@ -9,7 +8,7 @@ title: Line
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the entity. | |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The resource&#39;s description. | [optional] |
 | **Version** | **int?** | The current version of the resource. | [optional] |
 | **DateCreated** | **DateTime?** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -20,15 +19,16 @@ title: Line
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **EdgeGroup** | [**DomainEntityRef**](DomainEntityRef.html) | The edge group associated with the line. (Deprecated) | [optional] |
-| **Template** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **Site** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **LineBaseSettings** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **PrimaryEdge** | [**Edge**](Edge.html) | The primary edge associated to the line. (Deprecated) | [optional] |
-| **SecondaryEdge** | [**Edge**](Edge.html) | The secondary edge associated to the line. (Deprecated) | [optional] |
-| **LoggedInUser** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **DefaultForUser** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **EdgeGroup** | [**DomainEntityRef**](DomainEntityRef) | The edge group associated with the line. (Deprecated) | [optional] |
+| **Template** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **Site** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **LineBaseSettings** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **PrimaryEdge** | [**Edge**](Edge) | The primary edge associated to the line. (Deprecated) | [optional] |
+| **SecondaryEdge** | [**Edge**](Edge) | The secondary edge associated to the line. (Deprecated) | [optional] |
+| **LoggedInUser** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **DefaultForUser** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

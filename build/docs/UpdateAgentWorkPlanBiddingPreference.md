@@ -1,6 +1,5 @@
----
-title: UpdateAgentWorkPlanBiddingPreference
----
+# UpdateAgentWorkPlanBiddingPreference
+
 ## ININ.PureCloudApi.Model.UpdateAgentWorkPlanBiddingPreference
 
 ## Properties
@@ -8,7 +7,8 @@ title: UpdateAgentWorkPlanBiddingPreference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Submitted** | **bool?** | Whether the preference is submitted | |
-| **AgentWorkPlanBidPreferences** | [**List&lt;AgentWorkPlanBiddingPreferenceRequest&gt;**](AgentWorkPlanBiddingPreferenceRequest.html) | The list of work plan bidding preferences | |
-{: class="table table-striped"}
+| **AgentWorkPlanBidPreferences** | [**List&lt;AgentWorkPlanBiddingPreferenceRequest&gt;**](AgentWorkPlanBiddingPreferenceRequest) | The list of work plan bidding preferences | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

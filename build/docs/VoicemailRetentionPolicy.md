@@ -1,6 +1,5 @@
----
-title: VoicemailRetentionPolicy
----
+# VoicemailRetentionPolicy
+
 ## ININ.PureCloudApi.Model.VoicemailRetentionPolicy
 
 ## Properties
@@ -9,6 +8,7 @@ title: VoicemailRetentionPolicy
 |------------ | ------------- | ------------- | -------------|
 | **VoicemailRetentionPolicyType** | **string** | The retention policy type | [optional] |
 | **NumberOfDays** | **int?** | If retentionPolicyType &#x3D;&#x3D; RETAIN_WITH_TTL, then this value represents the number of days for the TTL | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

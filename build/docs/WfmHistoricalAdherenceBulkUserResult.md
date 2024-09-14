@@ -1,6 +1,5 @@
----
-title: WfmHistoricalAdherenceBulkUserResult
----
+# WfmHistoricalAdherenceBulkUserResult
+
 ## ININ.PureCloudApi.Model.WfmHistoricalAdherenceBulkUserResult
 
 ## Properties
@@ -11,9 +10,10 @@ title: WfmHistoricalAdherenceBulkUserResult
 | **AdherencePercentage** | **double?** | Adherence percentage for this user, in the scale of 0 - 100 | [optional] |
 | **ConformancePercentage** | **double?** | Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period. | [optional] |
 | **Impact** | **string** | The impact of the current adherence state for this user | [optional] |
-| **ExceptionInfo** | [**List&lt;HistoricalAdherenceExceptionInfo&gt;**](HistoricalAdherenceExceptionInfo.html) | List of adherence exceptions for this user | [optional] |
-| **Actuals** | [**List&lt;HistoricalAdherenceActuals&gt;**](HistoricalAdherenceActuals.html) | List of adherence actuals for this user | [optional] |
-| **DayMetrics** | [**List&lt;WfmHistoricalAdherenceBulkUserDayMetrics&gt;**](WfmHistoricalAdherenceBulkUserDayMetrics.html) | Adherence and conformance metrics for days in query range | [optional] |
-{: class="table table-striped"}
+| **ExceptionInfo** | [**List&lt;HistoricalAdherenceExceptionInfo&gt;**](HistoricalAdherenceExceptionInfo) | List of adherence exceptions for this user | [optional] |
+| **Actuals** | [**List&lt;HistoricalAdherenceActuals&gt;**](HistoricalAdherenceActuals) | List of adherence actuals for this user | [optional] |
+| **DayMetrics** | [**List&lt;WfmHistoricalAdherenceBulkUserDayMetrics&gt;**](WfmHistoricalAdherenceBulkUserDayMetrics) | Adherence and conformance metrics for days in query range | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

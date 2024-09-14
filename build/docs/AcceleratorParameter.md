@@ -1,6 +1,5 @@
----
-title: AcceleratorParameter
----
+# AcceleratorParameter
+
 ## ININ.PureCloudApi.Model.AcceleratorParameter
 
 ## Properties
@@ -9,6 +8,7 @@ title: AcceleratorParameter
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Parameter Name | |
 | **Value** | **string** | Parameter Value | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

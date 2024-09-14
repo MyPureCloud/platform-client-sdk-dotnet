@@ -1,6 +1,5 @@
----
-title: AttemptLimits
----
+# AttemptLimits
+
 ## ININ.PureCloudApi.Model.AttemptLimits
 
 ## Properties
@@ -16,8 +15,9 @@ title: AttemptLimits
 | **MaxAttemptsPerNumber** | **int?** | The maximum number of times a phone number can be called within the resetPeriod. Required if maxAttemptsPerContact is not defined. | [optional] |
 | **TimeZoneId** | **string** | If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY. | [optional] |
 | **ResetPeriod** | **string** | After how long the number of attempts will be set back to 0. Defaults to NEVER. | [optional] |
-| **RecallEntries** | [**Dictionary&lt;string, RecallEntry&gt;**](RecallEntry.html) | Configuration for recall attempts. | [optional] |
+| **RecallEntries** | [**Dictionary&lt;string, RecallEntry&gt;**](RecallEntry) | Configuration for recall attempts. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

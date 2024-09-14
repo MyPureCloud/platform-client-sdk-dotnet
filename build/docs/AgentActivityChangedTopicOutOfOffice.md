@@ -1,6 +1,5 @@
----
-title: AgentActivityChangedTopicOutOfOffice
----
+# AgentActivityChangedTopicOutOfOffice
+
 ## ININ.PureCloudApi.Model.AgentActivityChangedTopicOutOfOffice
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentActivityChangedTopicOutOfOffice
 |------------ | ------------- | ------------- | -------------|
 | **Active** | **bool?** |  | [optional] |
 | **ModifiedDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes
----
+# OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes
+
 ## ININ.PureCloudApi.Model.OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes
 
 ## Properties
@@ -12,6 +11,7 @@ title: OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes
 | **ContactEmailAddress** | **string** |  | [optional] |
 | **ReplyToAddress** | **string** |  | [optional] |
 | **ContactEmailColumnName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

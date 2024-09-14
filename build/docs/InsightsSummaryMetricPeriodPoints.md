@@ -1,6 +1,5 @@
----
-title: InsightsSummaryMetricPeriodPoints
----
+# InsightsSummaryMetricPeriodPoints
+
 ## ININ.PureCloudApi.Model.InsightsSummaryMetricPeriodPoints
 
 ## Properties
@@ -12,6 +11,7 @@ title: InsightsSummaryMetricPeriodPoints
 | **DataPointCount** | **int?** | Number of data points | [optional] |
 | **PercentOfGoal** | **double?** | Percentage of the goal | [optional] |
 | **Value** | **double?** | Average value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

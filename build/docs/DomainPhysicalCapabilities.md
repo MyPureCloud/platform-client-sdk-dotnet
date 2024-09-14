@@ -1,6 +1,5 @@
----
-title: DomainPhysicalCapabilities
----
+# DomainPhysicalCapabilities
+
 ## ININ.PureCloudApi.Model.DomainPhysicalCapabilities
 
 ## Properties
@@ -9,6 +8,7 @@ title: DomainPhysicalCapabilities
 |------------ | ------------- | ------------- | -------------|
 | **Vlan** | **bool?** |  | [optional] |
 | **Team** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PermissionDetails
----
+# PermissionDetails
+
 ## ININ.PureCloudApi.Model.PermissionDetails
 
 ## Properties
@@ -11,6 +10,7 @@ title: PermissionDetails
 | **Permissions** | **List&lt;string&gt;** | List of required permissions | [optional] |
 | **AllowsCurrentUser** | **bool?** | Whether the current user can subscribe, when division permissions are otherwise required | [optional] |
 | **Enforced** | **bool?** | Whether or not this permission requirement is enforced | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

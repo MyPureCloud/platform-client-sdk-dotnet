@@ -1,6 +1,5 @@
----
-title: ConversationCallbackEventTopicErrorBody
----
+# ConversationCallbackEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.ConversationCallbackEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationCallbackEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;ConversationCallbackEventTopicDetail&gt;**](ConversationCallbackEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;ConversationCallbackEventTopicErrorBody&gt;**](ConversationCallbackEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;ConversationCallbackEventTopicDetail&gt;**](ConversationCallbackEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;ConversationCallbackEventTopicErrorBody&gt;**](ConversationCallbackEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

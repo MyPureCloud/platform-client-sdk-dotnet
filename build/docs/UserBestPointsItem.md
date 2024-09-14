@@ -1,6 +1,5 @@
----
-title: UserBestPointsItem
----
+# UserBestPointsItem
+
 ## ININ.PureCloudApi.Model.UserBestPointsItem
 
 ## Properties
@@ -12,6 +11,7 @@ title: UserBestPointsItem
 | **DateStartWorkday** | **String** | Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **DateEndWorkday** | **String** | End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **Rank** | **int?** | The rank of this user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

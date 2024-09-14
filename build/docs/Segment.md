@@ -1,6 +1,5 @@
----
-title: Segment
----
+# Segment
+
 ## ININ.PureCloudApi.Model.Segment
 
 ## Properties
@@ -12,6 +11,7 @@ title: Segment
 | **Type** | **string** | The activity taking place for the participant in the segment. | [optional] |
 | **HowEnded** | **string** | A description of the event that ended the segment. | [optional] |
 | **DisconnectType** | **string** | A description of the event that disconnected the segment | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,15 +1,15 @@
----
-title: QueueConversationChatEventTopicJourneyContext
----
+# QueueConversationChatEventTopicJourneyContext
+
 ## ININ.PureCloudApi.Model.QueueConversationChatEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Customer** | [**QueueConversationChatEventTopicJourneyCustomer**](QueueConversationChatEventTopicJourneyCustomer.html) |  | [optional] |
-| **CustomerSession** | [**QueueConversationChatEventTopicJourneyCustomerSession**](QueueConversationChatEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **TriggeringAction** | [**QueueConversationChatEventTopicJourneyAction**](QueueConversationChatEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Customer** | [**QueueConversationChatEventTopicJourneyCustomer**](QueueConversationChatEventTopicJourneyCustomer) |  | [optional] |
+| **CustomerSession** | [**QueueConversationChatEventTopicJourneyCustomerSession**](QueueConversationChatEventTopicJourneyCustomerSession) |  | [optional] |
+| **TriggeringAction** | [**QueueConversationChatEventTopicJourneyAction**](QueueConversationChatEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

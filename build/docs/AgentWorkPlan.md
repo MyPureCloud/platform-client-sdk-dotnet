@@ -1,6 +1,5 @@
----
-title: AgentWorkPlan
----
+# AgentWorkPlan
+
 ## ININ.PureCloudApi.Model.AgentWorkPlan
 
 ## Properties
@@ -14,9 +13,10 @@ title: AgentWorkPlan
 | **WeeklyExactPaidMinutes** | **int?** | Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false | |
 | **WeeklyMinimumPaidMinutes** | **int?** | Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | |
 | **WeeklyMaximumPaidMinutes** | **int?** | Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | |
-| **OptionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek.html) | Optional days to schedule for this work plan | [optional] |
-| **Shifts** | [**List&lt;AgentWorkPlanShift&gt;**](AgentWorkPlanShift.html) | Shifts in this work plan | |
+| **OptionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Optional days to schedule for this work plan | [optional] |
+| **Shifts** | [**List&lt;AgentWorkPlanShift&gt;**](AgentWorkPlanShift) | Shifts in this work plan | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

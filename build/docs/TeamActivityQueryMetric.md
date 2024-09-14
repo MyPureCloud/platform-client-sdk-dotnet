@@ -1,6 +1,5 @@
----
-title: TeamActivityQueryMetric
----
+# TeamActivityQueryMetric
+
 ## ININ.PureCloudApi.Model.TeamActivityQueryMetric
 
 ## Properties
@@ -9,6 +8,7 @@ title: TeamActivityQueryMetric
 |------------ | ------------- | ------------- | -------------|
 | **Metric** | **string** | The requested metric | |
 | **Details** | **bool?** | Flag for including observation details for this metric in the response | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

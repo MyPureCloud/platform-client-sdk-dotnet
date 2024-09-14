@@ -1,6 +1,5 @@
----
-title: TrunkRecordingEnabledCount
----
+# TrunkRecordingEnabledCount
+
 ## ININ.PureCloudApi.Model.TrunkRecordingEnabledCount
 
 ## Properties
@@ -9,6 +8,7 @@ title: TrunkRecordingEnabledCount
 |------------ | ------------- | ------------- | -------------|
 | **EnabledCount** | **int?** | The amount of trunks that have recording enabled | [optional] |
 | **DisabledCount** | **int?** | The amount of trunks that do not have recording enabled | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

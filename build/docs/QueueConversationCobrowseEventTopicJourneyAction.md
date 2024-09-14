@@ -1,6 +1,5 @@
----
-title: QueueConversationCobrowseEventTopicJourneyAction
----
+# QueueConversationCobrowseEventTopicJourneyAction
+
 ## ININ.PureCloudApi.Model.QueueConversationCobrowseEventTopicJourneyAction
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueueConversationCobrowseEventTopicJourneyAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of an action from the Journey System (an action is spawned from an actionMap) | [optional] |
-| **ActionMap** | [**QueueConversationCobrowseEventTopicJourneyActionMap**](QueueConversationCobrowseEventTopicJourneyActionMap.html) |  | [optional] |
-{: class="table table-striped"}
+| **ActionMap** | [**QueueConversationCobrowseEventTopicJourneyActionMap**](QueueConversationCobrowseEventTopicJourneyActionMap) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

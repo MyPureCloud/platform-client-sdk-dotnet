@@ -1,17 +1,17 @@
----
-title: WfmBuScheduleTopicBuManagementUnitScheduleSummary
----
+# WfmBuScheduleTopicBuManagementUnitScheduleSummary
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleTopicBuManagementUnitScheduleSummary
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ManagementUnit** | [**WfmBuScheduleTopicManagementUnit**](WfmBuScheduleTopicManagementUnit.html) |  | [optional] |
+| **ManagementUnit** | [**WfmBuScheduleTopicManagementUnit**](WfmBuScheduleTopicManagementUnit) |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
-| **Agents** | [**List&lt;WfmBuScheduleTopicUserReference&gt;**](WfmBuScheduleTopicUserReference.html) |  | [optional] |
+| **Agents** | [**List&lt;WfmBuScheduleTopicUserReference&gt;**](WfmBuScheduleTopicUserReference) |  | [optional] |
 | **AgentCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

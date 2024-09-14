@@ -1,6 +1,5 @@
----
-title: AvailableTime
----
+# AvailableTime
+
 ## ININ.PureCloudApi.Model.AvailableTime
 
 ## Properties
@@ -11,7 +10,8 @@ title: AvailableTime
 | **LengthInMinutes** | **int?** | Length of availability period in minutes | [optional] |
 | **IsPaid** | **bool?** | Indicates if this availability period is paid in Workforce Management schedule | [optional] |
 | **ActivityCategory** | **string** | Workforce Management activity category for this availability period | [optional] |
-| **WfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference.html) | Workforce Management schedule information associated with the available time | [optional] |
-{: class="table table-striped"}
+| **WfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference) | Workforce Management schedule information associated with the available time | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

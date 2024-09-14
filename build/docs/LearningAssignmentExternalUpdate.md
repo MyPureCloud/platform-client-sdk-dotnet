@@ -1,6 +1,5 @@
----
-title: LearningAssignmentExternalUpdate
----
+# LearningAssignmentExternalUpdate
+
 ## ININ.PureCloudApi.Model.LearningAssignmentExternalUpdate
 
 ## Properties
@@ -10,6 +9,7 @@ title: LearningAssignmentExternalUpdate
 | **State** | **string** | The Learning Assignment state | [optional] |
 | **PercentageScore** | **float?** | The score | [optional] |
 | **IsPassed** | **bool?** | Was the assignment marked as passed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

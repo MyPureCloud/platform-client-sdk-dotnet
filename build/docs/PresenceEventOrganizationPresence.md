@@ -1,6 +1,5 @@
----
-title: PresenceEventOrganizationPresence
----
+# PresenceEventOrganizationPresence
+
 ## ININ.PureCloudApi.Model.PresenceEventOrganizationPresence
 
 ## Properties
@@ -9,6 +8,7 @@ title: PresenceEventOrganizationPresence
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **SystemPresence** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

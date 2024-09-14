@@ -1,6 +1,5 @@
----
-title: AssessmentJobListing
----
+# AssessmentJobListing
+
 ## ININ.PureCloudApi.Model.AssessmentJobListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: AssessmentJobListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;BenefitAssessmentJob&gt;**](BenefitAssessmentJob.html) |  | [optional] |
+| **Entities** | [**List&lt;BenefitAssessmentJob&gt;**](BenefitAssessmentJob) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: UserRoutingStatusEvent
----
+# UserRoutingStatusEvent
+
 ## ININ.PureCloudApi.Model.UserRoutingStatusEvent
 
 ## Properties
@@ -12,6 +11,7 @@ title: UserRoutingStatusEvent
 | **AgentId** | **string** | Unique identifier of the agent. | |
 | **Status** | **string** | The agent&#39;s current routing status. | |
 | **SourceId** | **string** | The agent&#39;s source platform Id. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

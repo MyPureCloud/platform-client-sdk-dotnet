@@ -1,6 +1,5 @@
----
-title: RecordingTranscodeCompleteTopicRecording
----
+# RecordingTranscodeCompleteTopicRecording
+
 ## ININ.PureCloudApi.Model.RecordingTranscodeCompleteTopicRecording
 
 ## Properties
@@ -10,9 +9,10 @@ title: RecordingTranscodeCompleteTopicRecording
 | **Id** | **string** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **FileState** | **string** |  | [optional] |
-| **MediaUris** | [**List&lt;RecordingTranscodeCompleteTopicMediaResult&gt;**](RecordingTranscodeCompleteTopicMediaResult.html) |  | [optional] |
+| **MediaUris** | [**List&lt;RecordingTranscodeCompleteTopicMediaResult&gt;**](RecordingTranscodeCompleteTopicMediaResult) |  | [optional] |
 | **EstimatedTranscodeTimeMs** | **int?** |  | [optional] |
 | **ActualTranscodeTimeMs** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

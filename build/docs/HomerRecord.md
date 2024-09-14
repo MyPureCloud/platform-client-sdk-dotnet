@@ -1,6 +1,5 @@
----
-title: HomerRecord
----
+# HomerRecord
+
 ## ININ.PureCloudApi.Model.HomerRecord
 
 ## Properties
@@ -58,6 +57,7 @@ title: HomerRecord
 | **ConversationId** | **string** | metadata associated to the SIP calls | [optional] |
 | **ParticipantId** | **string** | metadata associated to the SIP calls | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

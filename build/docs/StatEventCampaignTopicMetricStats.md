@@ -1,6 +1,5 @@
----
-title: StatEventCampaignTopicMetricStats
----
+# StatEventCampaignTopicMetricStats
+
 ## ININ.PureCloudApi.Model.StatEventCampaignTopicMetricStats
 
 ## Properties
@@ -10,6 +9,7 @@ title: StatEventCampaignTopicMetricStats
 | **Metric** | **string** |  | [optional] |
 | **Qualifier** | **string** |  | [optional] |
 | **Stats** | **Dictionary&lt;string, double?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

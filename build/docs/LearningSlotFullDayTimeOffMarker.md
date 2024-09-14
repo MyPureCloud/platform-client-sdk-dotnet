@@ -1,6 +1,5 @@
----
-title: LearningSlotFullDayTimeOffMarker
----
+# LearningSlotFullDayTimeOffMarker
+
 ## ININ.PureCloudApi.Model.LearningSlotFullDayTimeOffMarker
 
 ## Properties
@@ -13,6 +12,7 @@ title: LearningSlotFullDayTimeOffMarker
 | **ActivityCodeId** | **string** | The ID of the activity code associated with the time off marker | [optional] |
 | **Paid** | **bool?** | Whether the time off marker is paid | [optional] |
 | **TimeOffRequestId** | **string** | The ID of the time off request | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

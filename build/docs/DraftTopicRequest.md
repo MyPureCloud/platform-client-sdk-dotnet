@@ -1,6 +1,5 @@
----
-title: DraftTopicRequest
----
+# DraftTopicRequest
+
 ## ININ.PureCloudApi.Model.DraftTopicRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: DraftTopicRequest
 | **Name** | **string** | Name/Label for a topic. | |
 | **Phrases** | **List&lt;string&gt;** | The phrases that are extracted for a topic. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WebChatConversation
----
+# WebChatConversation
+
 ## ININ.PureCloudApi.Model.WebChatConversation
 
 ## Properties
@@ -9,8 +8,9 @@ title: WebChatConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Member** | [**WebChatMemberInfo**](WebChatMemberInfo.html) | Chat Member | [optional] |
+| **Member** | [**WebChatMemberInfo**](WebChatMemberInfo) | Chat Member | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

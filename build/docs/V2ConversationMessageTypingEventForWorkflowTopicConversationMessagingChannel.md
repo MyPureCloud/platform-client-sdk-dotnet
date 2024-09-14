@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel
----
+# V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel
+
 ## ININ.PureCloudApi.Model.V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel
 
 ## Properties
@@ -9,9 +8,10 @@ title: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChan
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Platform** | **string** |  | [optional] |
-| **To** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient.html) |  | [optional] |
-| **From** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient.html) |  | [optional] |
+| **To** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient) |  | [optional] |
+| **From** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient) |  | [optional] |
 | **Time** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

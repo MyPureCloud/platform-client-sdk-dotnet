@@ -1,6 +1,5 @@
----
-title: OpenEvent
----
+# OpenEvent
+
 ## ININ.PureCloudApi.Model.OpenEvent
 
 ## Properties
@@ -8,6 +7,7 @@ title: OpenEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EventType** | **string** | Type of this event element | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

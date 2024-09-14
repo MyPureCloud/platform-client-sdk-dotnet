@@ -1,6 +1,5 @@
----
-title: HrisTimeOffType
----
+# HrisTimeOffType
+
 ## ININ.PureCloudApi.Model.HrisTimeOffType
 
 ## Properties
@@ -11,6 +10,7 @@ title: HrisTimeOffType
 | **Name** | **string** | The name of the time off type configured in integration. | |
 | **HrisIntegrationId** | **string** | The ID of the integration. | |
 | **SecondaryId** | **string** | Secondary ID of the time off type, if configured in integration. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

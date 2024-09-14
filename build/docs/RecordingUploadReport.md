@@ -1,6 +1,5 @@
----
-title: RecordingUploadReport
----
+# RecordingUploadReport
+
 ## ININ.PureCloudApi.Model.RecordingUploadReport
 
 ## Properties
@@ -12,6 +11,7 @@ title: RecordingUploadReport
 | **State** | **string** | The current status of the upload report. | [optional] |
 | **SignedUrl** | **string** | For COMPLETED tasks, the signed url to download the report. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

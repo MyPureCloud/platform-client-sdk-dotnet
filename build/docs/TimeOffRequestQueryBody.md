@@ -1,6 +1,5 @@
----
-title: TimeOffRequestQueryBody
----
+# TimeOffRequestQueryBody
+
 ## ININ.PureCloudApi.Model.TimeOffRequestQueryBody
 
 ## Properties
@@ -11,7 +10,8 @@ title: TimeOffRequestQueryBody
 | **UserIds** | **List&lt;string&gt;** | The set of user ids to filter time off requests | [optional] |
 | **Statuses** | **List&lt;string&gt;** | The set of statuses to filter time off requests | [optional] |
 | **Substatuses** | **List&lt;string&gt;** | The set of substatuses to filter time off requests | [optional] |
-| **DateRange** | [**DateRange**](DateRange.html) | The inclusive range of dates to filter time off requests | [optional] |
-{: class="table table-striped"}
+| **DateRange** | [**DateRange**](DateRange) | The inclusive range of dates to filter time off requests | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

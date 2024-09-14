@@ -1,6 +1,5 @@
----
-title: WhatsAppDefinition
----
+# WhatsAppDefinition
+
 ## ININ.PureCloudApi.Model.WhatsAppDefinition
 
 ## Properties
@@ -10,6 +9,7 @@ title: WhatsAppDefinition
 | **Name** | **string** | The messaging template name. | |
 | **Namespace** | **string** | The messaging template namespace. | |
 | **Language** | **string** | The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39; | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: UpdateActionInput
----
+# UpdateActionInput
+
 ## ININ.PureCloudApi.Model.UpdateActionInput
 
 ## Properties
@@ -9,8 +8,9 @@ title: UpdateActionInput
 |------------ | ------------- | ------------- | -------------|
 | **Category** | **string** | Category of action, Can be up to 256 characters long | [optional] |
 | **Name** | **string** | Name of action, Can be up to 256 characters long | [optional] |
-| **Config** | [**ActionConfig**](ActionConfig.html) | Configuration to support request and response processing | [optional] |
+| **Config** | [**ActionConfig**](ActionConfig) | Configuration to support request and response processing | [optional] |
 | **Version** | **int?** | Version of this action | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

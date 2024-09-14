@@ -1,6 +1,5 @@
----
-title: ContactColumnTimeZone
----
+# ContactColumnTimeZone
+
 ## ININ.PureCloudApi.Model.ContactColumnTimeZone
 
 ## Properties
@@ -9,6 +8,7 @@ title: ContactColumnTimeZone
 |------------ | ------------- | ------------- | -------------|
 | **TimeZone** | **string** | Time zone that the column matched to. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London | [optional] |
 | **ColumnType** | **string** | Column Type will be either PHONE or ZIP | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

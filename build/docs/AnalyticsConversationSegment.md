@@ -1,6 +1,5 @@
----
-title: AnalyticsConversationSegment
----
+# AnalyticsConversationSegment
+
 ## ININ.PureCloudApi.Model.AnalyticsConversationSegment
 
 ## Properties
@@ -30,8 +29,9 @@ title: AnalyticsConversationSegment
 | **WrapUpCode** | **string** | Wrap up code | [optional] |
 | **WrapUpNote** | **string** | Note entered by an agent during after-call work | [optional] |
 | **WrapUpTags** | **List&lt;string&gt;** | Tag(s) assigned during after-call work | [optional] |
-| **ScoredAgents** | [**List&lt;AnalyticsScoredAgent&gt;**](AnalyticsScoredAgent.html) | Scored agents | [optional] |
-| **Properties** | [**List&lt;AnalyticsProperty&gt;**](AnalyticsProperty.html) | Additional segment properties | [optional] |
-{: class="table table-striped"}
+| **ScoredAgents** | [**List&lt;AnalyticsScoredAgent&gt;**](AnalyticsScoredAgent) | Scored agents | [optional] |
+| **Properties** | [**List&lt;AnalyticsProperty&gt;**](AnalyticsProperty) | Additional segment properties | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

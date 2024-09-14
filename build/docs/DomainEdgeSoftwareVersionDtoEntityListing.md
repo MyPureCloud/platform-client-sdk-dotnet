@@ -1,13 +1,12 @@
----
-title: DomainEdgeSoftwareVersionDtoEntityListing
----
+# DomainEdgeSoftwareVersionDtoEntityListing
+
 ## ININ.PureCloudApi.Model.DomainEdgeSoftwareVersionDtoEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DomainEdgeSoftwareVersionDto&gt;**](DomainEdgeSoftwareVersionDto.html) |  | [optional] |
+| **Entities** | [**List&lt;DomainEdgeSoftwareVersionDto&gt;**](DomainEdgeSoftwareVersionDto) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: DomainEdgeSoftwareVersionDtoEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

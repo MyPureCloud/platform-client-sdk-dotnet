@@ -1,19 +1,18 @@
----
-title: DownloadsApi
----
+# DownloadsApi
+
 ## PureCloudPlatform.Client.V2.Api.DownloadsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDownload**](DownloadsApi.html#getdownload) | **Get** /api/v2/downloads/{downloadId} | Issues a redirect to a signed secure download URL for specified download |
-{: class="table table-striped"}
+| [**GetDownload**](#GetDownload) | **Get** /api/v2/downloads/{downloadId} | Issues a redirect to a signed secure download URL for specified download |
 
-<a name="getdownload"></a>
 
-## [**UrlResponse**](UrlResponse.html) GetDownload (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
 
+## GetDownload
+
+> [**UrlResponse**](UrlResponse) GetDownload (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
 
 
 Issues a redirect to a signed secure download URL for specified download
@@ -74,9 +73,10 @@ namespace Example
 | **contentDisposition** | **string**|  | [optional]  |
 | **issueRedirect** | **bool?**|  | [optional] [default to true] |
 | **redirectToAuth** | **bool?**|  | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UrlResponse**](UrlResponse.html)
+[**UrlResponse**](UrlResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

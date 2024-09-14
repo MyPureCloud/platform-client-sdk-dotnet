@@ -1,6 +1,5 @@
----
-title: ConversationCobrowseEventTopicCobrowseConversation
----
+# ConversationCobrowseEventTopicCobrowseConversation
+
 ## ININ.PureCloudApi.Model.ConversationCobrowseEventTopicCobrowseConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationCobrowseEventTopicCobrowseConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;ConversationCobrowseEventTopicCobrowseMediaParticipant&gt;**](ConversationCobrowseEventTopicCobrowseMediaParticipant.html) |  | [optional] |
+| **Participants** | [**List&lt;ConversationCobrowseEventTopicCobrowseMediaParticipant&gt;**](ConversationCobrowseEventTopicCobrowseMediaParticipant) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

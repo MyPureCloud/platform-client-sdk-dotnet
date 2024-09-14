@@ -1,6 +1,5 @@
----
-title: ConsultTransfer
----
+# ConsultTransfer
+
 ## ININ.PureCloudApi.Model.ConsultTransfer
 
 ## Properties
@@ -9,7 +8,8 @@ title: ConsultTransfer
 |------------ | ------------- | ------------- | -------------|
 | **SpeakTo** | **string** | Determines to whom the initiating participant is speaking. Defaults to DESTINATION | |
 | **ConsultingUserId** | **string** | The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID | [optional] |
-| **Destination** | [**Destination**](Destination.html) | Destination phone number and name. | |
-{: class="table table-striped"}
+| **Destination** | [**Destination**](Destination) | Destination phone number and name. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

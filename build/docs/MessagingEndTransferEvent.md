@@ -1,6 +1,5 @@
----
-title: MessagingEndTransferEvent
----
+# MessagingEndTransferEvent
+
 ## ININ.PureCloudApi.Model.MessagingEndTransferEvent
 
 ## Properties
@@ -13,6 +12,7 @@ title: MessagingEndTransferEvent
 | **CommandId** | **string** | The id (V4 UUID) used to identify the transfer already started by the external platform. | |
 | **FinalState** | **string** | Indicates whether the transfer completed successfully, was cancelled, or failed for some reason. | |
 | **ObjectCommunicationId** | **string** | The id (V4 UUID) of the communication that was being transferred. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

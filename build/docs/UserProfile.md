@@ -1,6 +1,5 @@
----
-title: UserProfile
----
+# UserProfile
+
 ## ININ.PureCloudApi.Model.UserProfile
 
 ## Properties
@@ -12,8 +11,9 @@ title: UserProfile
 | **State** | **string** | The state of the user resource | [optional] |
 | **DateModified** | **DateTime?** | Datetime of the last modification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Version** | **long?** | The version of the group resource | |
-| **Expands** | [**UserExpands**](UserExpands.html) | User information expansions | [optional] |
+| **Expands** | [**UserExpands**](UserExpands) | User information expansions | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

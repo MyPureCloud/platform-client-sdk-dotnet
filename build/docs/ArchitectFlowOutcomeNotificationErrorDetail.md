@@ -1,6 +1,5 @@
----
-title: ArchitectFlowOutcomeNotificationErrorDetail
----
+# ArchitectFlowOutcomeNotificationErrorDetail
+
 ## ININ.PureCloudApi.Model.ArchitectFlowOutcomeNotificationErrorDetail
 
 ## Properties
@@ -11,6 +10,7 @@ title: ArchitectFlowOutcomeNotificationErrorDetail
 | **EntityId** | **string** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |
 | **FieldName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

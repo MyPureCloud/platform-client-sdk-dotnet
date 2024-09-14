@@ -1,15 +1,15 @@
----
-title: BulkFetchRelationshipsResponse
----
+# BulkFetchRelationshipsResponse
+
 ## ININ.PureCloudApi.Model.BulkFetchRelationshipsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;BulkResponseResultRelationshipEntity&gt;**](BulkResponseResultRelationshipEntity.html) |  | [optional] |
+| **Results** | [**List&lt;BulkResponseResultRelationshipEntity&gt;**](BulkResponseResultRelationshipEntity) |  | [optional] |
 | **ErrorCount** | **int?** |  | [optional] |
 | **ErrorIndexes** | **List&lt;int?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

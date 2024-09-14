@@ -1,6 +1,5 @@
----
-title: ShortTermForecastReference
----
+# ShortTermForecastReference
+
 ## ININ.PureCloudApi.Model.ShortTermForecastReference
 
 ## Properties
@@ -11,6 +10,7 @@ title: ShortTermForecastReference
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **WeekDate** | **string** | The weekDate of the short term forecast in yyyy-MM-dd format | |
 | **Description** | **string** | The description of the short term forecast | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

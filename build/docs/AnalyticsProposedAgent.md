@@ -1,6 +1,5 @@
----
-title: AnalyticsProposedAgent
----
+# AnalyticsProposedAgent
+
 ## ININ.PureCloudApi.Model.AnalyticsProposedAgent
 
 ## Properties
@@ -9,6 +8,7 @@ title: AnalyticsProposedAgent
 |------------ | ------------- | ------------- | -------------|
 | **AgentRank** | **int?** | Proposed agent rank for this conversation from predictive routing (lower is better) | [optional] |
 | **ProposedAgentId** | **string** | Unique identifier for the agent that was proposed by predictive routing | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

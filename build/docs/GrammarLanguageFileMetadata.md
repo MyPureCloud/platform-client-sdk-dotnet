@@ -1,6 +1,5 @@
----
-title: GrammarLanguageFileMetadata
----
+# GrammarLanguageFileMetadata
+
 ## ININ.PureCloudApi.Model.GrammarLanguageFileMetadata
 
 ## Properties
@@ -11,6 +10,7 @@ title: GrammarLanguageFileMetadata
 | **FileSizeBytes** | **int?** | The size of the file in bytes | [optional] |
 | **DateUploaded** | **DateTime?** | The date the file was uploaded. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **FileType** | **string** | The extension of the file | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

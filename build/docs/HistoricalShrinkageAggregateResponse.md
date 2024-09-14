@@ -1,6 +1,5 @@
----
-title: HistoricalShrinkageAggregateResponse
----
+# HistoricalShrinkageAggregateResponse
+
 ## ININ.PureCloudApi.Model.HistoricalShrinkageAggregateResponse
 
 ## Properties
@@ -15,6 +14,7 @@ title: HistoricalShrinkageAggregateResponse
 | **UnpaidShrinkageSeconds** | **int?** | Aggregated shrinkage value in seconds for unpaid activities | [optional] |
 | **PlannedShrinkageSeconds** | **int?** | Aggregated shrinkage value in seconds for planned activities | [optional] |
 | **UnplannedShrinkageSeconds** | **int?** | Aggregated shrinkage value in seconds for unplanned activities | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

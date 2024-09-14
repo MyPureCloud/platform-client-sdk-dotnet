@@ -1,6 +1,5 @@
----
-title: BuShortTermForecast
----
+# BuShortTermForecast
+
 ## ININ.PureCloudApi.Model.BuShortTermForecast
 
 ## Properties
@@ -13,16 +12,17 @@ title: BuShortTermForecast
 | **CreationMethod** | **string** | The method by which this forecast was created | [optional] |
 | **Description** | **string** | The description of this forecast | [optional] |
 | **Legacy** | **bool?** | Whether this forecast contains modifications on legacy metrics | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Metadata for this forecast | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Metadata for this forecast | [optional] |
 | **CanUseForScheduling** | **bool?** | Whether this forecast can be used for scheduling | [optional] |
 | **ReferenceStartDate** | **DateTime?** | The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **SourceDays** | [**List&lt;ForecastSourceDayPointer&gt;**](ForecastSourceDayPointer.html) | The source day pointers for this forecast | [optional] |
-| **Modifications** | [**List&lt;BuForecastModificationResponse&gt;**](BuForecastModificationResponse.html) | Any manual modifications applied to this forecast | [optional] |
-| **GenerationResults** | [**BuForecastGenerationResult**](BuForecastGenerationResult.html) | Generation result metadata | [optional] |
+| **SourceDays** | [**List&lt;ForecastSourceDayPointer&gt;**](ForecastSourceDayPointer) | The source day pointers for this forecast | [optional] |
+| **Modifications** | [**List&lt;BuForecastModificationResponse&gt;**](BuForecastModificationResponse) | Any manual modifications applied to this forecast | [optional] |
+| **GenerationResults** | [**BuForecastGenerationResult**](BuForecastGenerationResult) | Generation result metadata | [optional] |
 | **TimeZone** | **string** | The time zone for this forecast | [optional] |
 | **PlanningGroupsVersion** | **int?** | The version of the planning groups that was used for this forecast | [optional] |
-| **PlanningGroups** | [**ForecastPlanningGroupsResponse**](ForecastPlanningGroupsResponse.html) | A snapshot of the planning groups used for this forecast as of the version number indicated | [optional] |
+| **PlanningGroups** | [**ForecastPlanningGroupsResponse**](ForecastPlanningGroupsResponse) | A snapshot of the planning groups used for this forecast as of the version number indicated | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

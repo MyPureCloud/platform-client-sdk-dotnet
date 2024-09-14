@@ -1,6 +1,5 @@
----
-title: ResponseAssetSearchRequest
----
+# ResponseAssetSearchRequest
+
 ## ININ.PureCloudApi.Model.ResponseAssetSearchRequest
 
 ## Properties
@@ -11,7 +10,8 @@ title: ResponseAssetSearchRequest
 | **PageNumber** | **int?** | The page of resources you want to retrieve | [optional] |
 | **SortOrder** | **string** | The sort order for results | [optional] |
 | **SortBy** | **string** | The field in the resource that you want to sort the results by | [optional] |
-| **Query** | [**List&lt;ResponseAssetFilter&gt;**](ResponseAssetFilter.html) | Filter the query results. | |
-{: class="table table-striped"}
+| **Query** | [**List&lt;ResponseAssetFilter&gt;**](ResponseAssetFilter) | Filter the query results. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

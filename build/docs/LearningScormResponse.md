@@ -1,6 +1,5 @@
----
-title: LearningScormResponse
----
+# LearningScormResponse
+
 ## ININ.PureCloudApi.Model.LearningScormResponse
 
 ## Properties
@@ -13,6 +12,7 @@ title: LearningScormResponse
 | **ErrorMessage** | **string** | The error message associated with the error code | [optional] |
 | **PercentageUnpacked** | **float?** | The percentage of the SCORM package that has been unpacked | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

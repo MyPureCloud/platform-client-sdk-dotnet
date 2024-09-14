@@ -1,6 +1,5 @@
----
-title: SuggestionKnowledgeAnswer
----
+# SuggestionKnowledgeAnswer
+
 ## ININ.PureCloudApi.Model.SuggestionKnowledgeAnswer
 
 ## Properties
@@ -10,6 +9,7 @@ title: SuggestionKnowledgeAnswer
 | **Answer** | **string** | The most relevant answer | [optional] |
 | **StartIndex** | **int?** | The start index of the answer | [optional] |
 | **EndIndex** | **int?** | The end index of the answer | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

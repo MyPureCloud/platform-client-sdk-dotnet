@@ -1,6 +1,5 @@
----
-title: PolicyCreate
----
+# PolicyCreate
+
 ## ININ.PureCloudApi.Model.PolicyCreate
 
 ## Properties
@@ -14,11 +13,12 @@ title: PolicyCreate
 | **Order** | **int?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
-| **MediaPolicies** | [**MediaPolicies**](MediaPolicies.html) | Conditions and actions per media type | [optional] |
-| **Conditions** | [**PolicyConditions**](PolicyConditions.html) | Conditions | [optional] |
-| **Actions** | [**PolicyActions**](PolicyActions.html) | Actions | [optional] |
-| **PolicyErrors** | [**PolicyErrors**](PolicyErrors.html) |  | [optional] |
+| **MediaPolicies** | [**MediaPolicies**](MediaPolicies) | Conditions and actions per media type | [optional] |
+| **Conditions** | [**PolicyConditions**](PolicyConditions) | Conditions | [optional] |
+| **Actions** | [**PolicyActions**](PolicyActions) | Actions | [optional] |
+| **PolicyErrors** | [**PolicyErrors**](PolicyErrors) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

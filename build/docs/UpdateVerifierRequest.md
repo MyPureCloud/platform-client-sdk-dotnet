@@ -1,6 +1,5 @@
----
-title: UpdateVerifierRequest
----
+# UpdateVerifierRequest
+
 ## ININ.PureCloudApi.Model.UpdateVerifierRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: UpdateVerifierRequest
 | **Name** | **string** | The name of the verifier. | [optional] |
 | **Enabled** | **bool?** | Indicates whether this verifier will be enabled. | [optional] |
 | **Default** | **bool?** | Indicates whether this will be the default verifier. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

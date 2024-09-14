@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicWorkflow
----
+# QueueConversationEventTopicWorkflow
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicWorkflow
 
 ## Properties
@@ -8,6 +7,7 @@ title: QueueConversationEventTopicWorkflow
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **WorkflowId** | **string** | The id of the workflow | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

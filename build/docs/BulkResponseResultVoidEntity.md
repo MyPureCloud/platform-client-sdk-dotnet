@@ -1,6 +1,5 @@
----
-title: BulkResponseResultVoidEntity
----
+# BulkResponseResultVoidEntity
+
 ## ININ.PureCloudApi.Model.BulkResponseResultVoidEntity
 
 ## Properties
@@ -10,7 +9,8 @@ title: BulkResponseResultVoidEntity
 | **Id** | **string** |  | [optional] |
 | **Success** | **bool?** |  | [optional] |
 | **Entity** | **Object** |  | [optional] |
-| **Error** | [**BulkErrorEntity**](BulkErrorEntity.html) |  | [optional] |
-{: class="table table-striped"}
+| **Error** | [**BulkErrorEntity**](BulkErrorEntity) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

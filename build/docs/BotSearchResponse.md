@@ -1,6 +1,5 @@
----
-title: BotSearchResponse
----
+# BotSearchResponse
+
 ## ININ.PureCloudApi.Model.BotSearchResponse
 
 ## Properties
@@ -12,6 +11,7 @@ title: BotSearchResponse
 | **BotType** | **string** | The provider of the bot | |
 | **Description** | **string** | The description of the bot | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

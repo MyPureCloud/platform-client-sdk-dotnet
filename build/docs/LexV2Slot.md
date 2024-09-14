@@ -1,6 +1,5 @@
----
-title: LexV2Slot
----
+# LexV2Slot
+
 ## ININ.PureCloudApi.Model.LexV2Slot
 
 ## Properties
@@ -12,6 +11,7 @@ title: LexV2Slot
 | **SlotId** | **string** | The slot id | |
 | **Type** | **string** | The slot type | |
 | **SlotTypeId** | **string** | The slot type id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

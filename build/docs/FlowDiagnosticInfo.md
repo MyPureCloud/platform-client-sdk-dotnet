@@ -1,6 +1,5 @@
----
-title: FlowDiagnosticInfo
----
+# FlowDiagnosticInfo
+
 ## ININ.PureCloudApi.Model.FlowDiagnosticInfo
 
 ## Properties
@@ -8,6 +7,7 @@ title: FlowDiagnosticInfo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **LastActionId** | **int?** | The step number of the survey invite flow where the error occurred. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

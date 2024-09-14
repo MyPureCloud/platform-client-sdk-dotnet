@@ -1,6 +1,5 @@
----
-title: WfmScheduleTopicWfmScheduleNotification
----
+# WfmScheduleTopicWfmScheduleNotification
+
 ## ININ.PureCloudApi.Model.WfmScheduleTopicWfmScheduleNotification
 
 ## Properties
@@ -12,6 +11,7 @@ title: WfmScheduleTopicWfmScheduleNotification
 | **DownloadUrl** | **string** |  | [optional] |
 | **PercentComplete** | **int?** |  | [optional] |
 | **EventType** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

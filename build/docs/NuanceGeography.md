@@ -1,6 +1,5 @@
----
-title: NuanceGeography
----
+# NuanceGeography
+
 ## ININ.PureCloudApi.Model.NuanceGeography
 
 ## Properties
@@ -9,6 +8,7 @@ title: NuanceGeography
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The geography ID | |
 | **Name** | **string** | The geography name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

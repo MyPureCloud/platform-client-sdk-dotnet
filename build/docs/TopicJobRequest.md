@@ -1,6 +1,5 @@
----
-title: TopicJobRequest
----
+# TopicJobRequest
+
 ## ININ.PureCloudApi.Model.TopicJobRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: TopicJobRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **TopicIds** | **List&lt;string&gt;** | The ids of the topics used for this job | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

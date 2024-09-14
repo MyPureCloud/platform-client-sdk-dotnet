@@ -1,6 +1,5 @@
----
-title: BatchDownloadJobResult
----
+# BatchDownloadJobResult
+
 ## ININ.PureCloudApi.Model.BatchDownloadJobResult
 
 ## Properties
@@ -15,6 +14,7 @@ title: BatchDownloadJobResult
 | **ContentType** | **string** | Content type of this result | [optional] |
 | **ErrorMsg** | **string** | An error message, in case of failed processing will indicate the cause of the failure | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

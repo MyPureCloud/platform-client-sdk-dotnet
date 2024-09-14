@@ -1,6 +1,5 @@
----
-title: UserActivityEntityData
----
+# UserActivityEntityData
+
 ## ININ.PureCloudApi.Model.UserActivityEntityData
 
 ## Properties
@@ -17,6 +16,7 @@ title: UserActivityEntityData
 | **SystemPresence** | **string** | System presence | [optional] |
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

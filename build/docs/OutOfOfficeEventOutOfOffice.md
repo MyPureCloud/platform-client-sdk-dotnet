@@ -1,17 +1,17 @@
----
-title: OutOfOfficeEventOutOfOffice
----
+# OutOfOfficeEventOutOfOffice
+
 ## ININ.PureCloudApi.Model.OutOfOfficeEventOutOfOffice
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**OutOfOfficeEventUser**](OutOfOfficeEventUser.html) |  | [optional] |
+| **User** | [**OutOfOfficeEventUser**](OutOfOfficeEventUser) |  | [optional] |
 | **Active** | **bool?** |  | [optional] |
 | **Indefinite** | **bool?** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

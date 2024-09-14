@@ -1,6 +1,5 @@
----
-title: CobrowseWebMessagingSession
----
+# CobrowseWebMessagingSession
+
 ## ININ.PureCloudApi.Model.CobrowseWebMessagingSession
 
 ## Properties
@@ -14,6 +13,7 @@ title: CobrowseWebMessagingSession
 | **DateOfferEnds** | **DateTime?** | Date when Cobrowse Offer Expires. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CommunicationType** | **string** | CommunicationType for Cobrowse Session | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

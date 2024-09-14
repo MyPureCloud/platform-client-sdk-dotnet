@@ -1,6 +1,5 @@
----
-title: QueueMember
----
+# QueueMember
+
 ## ININ.PureCloudApi.Model.QueueMember
 
 ## Properties
@@ -9,12 +8,13 @@ title: QueueMember
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The queue member&#39;s id. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **User** | [**User**](User.html) |  | [optional] |
+| **User** | [**User**](User) |  | [optional] |
 | **RingNumber** | **int?** |  | [optional] |
 | **Joined** | **bool?** |  | [optional] |
 | **MemberBy** | **string** |  | [optional] |
-| **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) |  | [optional] |
+| **RoutingStatus** | [**RoutingStatus**](RoutingStatus) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

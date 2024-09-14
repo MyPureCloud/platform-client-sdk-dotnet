@@ -1,6 +1,5 @@
----
-title: PagelessDomainEntityListingEvaluationVersion
----
+# PagelessDomainEntityListingEvaluationVersion
+
 ## ININ.PureCloudApi.Model.PagelessDomainEntityListingEvaluationVersion
 
 ## Properties
@@ -8,8 +7,9 @@ title: PagelessDomainEntityListingEvaluationVersion
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;EvaluationVersion&gt;**](EvaluationVersion.html) |  | [optional] |
+| **Entities** | [**List&lt;EvaluationVersion&gt;**](EvaluationVersion) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

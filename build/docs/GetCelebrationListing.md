@@ -1,13 +1,12 @@
----
-title: GetCelebrationListing
----
+# GetCelebrationListing
+
 ## ININ.PureCloudApi.Model.GetCelebrationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Celebration&gt;**](Celebration.html) |  | [optional] |
+| **Entities** | [**List&lt;Celebration&gt;**](Celebration) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: GetCelebrationListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

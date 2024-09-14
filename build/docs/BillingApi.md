@@ -1,20 +1,19 @@
----
-title: BillingApi
----
+# BillingApi
+
 ## PureCloudPlatform.Client.V2.Api.BillingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetBillingReportsBillableusage**](BillingApi.html#getbillingreportsbillableusage) | **Get** /api/v2/billing/reports/billableusage | Get a report of the billable license usages |
-| [**GetBillingTrusteebillingoverviewTrustorOrgId**](BillingApi.html#getbillingtrusteebillingoverviewtrustororgid) | **Get** /api/v2/billing/trusteebillingoverview/{trustorOrgId} | Get the billing overview for an organization that is managed by a partner. |
-{: class="table table-striped"}
+| [**GetBillingReportsBillableusage**](#GetBillingReportsBillableusage) | **Get** /api/v2/billing/reports/billableusage | Get a report of the billable license usages |
+| [**GetBillingTrusteebillingoverviewTrustorOrgId**](#GetBillingTrusteebillingoverviewTrustorOrgId) | **Get** /api/v2/billing/trusteebillingoverview/{trustorOrgId} | Get the billing overview for an organization that is managed by a partner. |
 
-<a name="getbillingreportsbillableusage"></a>
 
-## [**BillingUsageReport**](BillingUsageReport.html) GetBillingReportsBillableusage (DateTime? startDate, DateTime? endDate)
 
+## GetBillingReportsBillableusage
+
+> [**BillingUsageReport**](BillingUsageReport) GetBillingReportsBillableusage (DateTime? startDate, DateTime? endDate)
 
 
 Get a report of the billable license usages
@@ -73,16 +72,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **startDate** | **DateTime?**| The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  |
 | **endDate** | **DateTime?**| The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**BillingUsageReport**](BillingUsageReport.html)
+[**BillingUsageReport**](BillingUsageReport)
 
-<a name="getbillingtrusteebillingoverviewtrustororgid"></a>
 
-## [**TrusteeBillingOverview**](TrusteeBillingOverview.html) GetBillingTrusteebillingoverviewTrustorOrgId (string trustorOrgId, int? billingPeriodIndex = null)
+## GetBillingTrusteebillingoverviewTrustorOrgId
 
+> [**TrusteeBillingOverview**](TrusteeBillingOverview) GetBillingTrusteebillingoverviewTrustorOrgId (string trustorOrgId, int? billingPeriodIndex = null)
 
 
 Get the billing overview for an organization that is managed by a partner.
@@ -140,9 +138,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **trustorOrgId** | **string**| The organization ID of the trustor (customer) organization. |  |
 | **billingPeriodIndex** | **int?**| 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. | [optional] [default to 0] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TrusteeBillingOverview**](TrusteeBillingOverview.html)
+[**TrusteeBillingOverview**](TrusteeBillingOverview)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemQueryJobSort
----
+# WorkitemQueryJobSort
+
 ## ININ.PureCloudApi.Model.WorkitemQueryJobSort
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemQueryJobSort
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Specify an attribute for sorting. | [optional] |
 | **Ascending** | **bool?** | Sort Ascending | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

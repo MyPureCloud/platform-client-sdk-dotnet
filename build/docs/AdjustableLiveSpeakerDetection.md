@@ -1,6 +1,5 @@
----
-title: AdjustableLiveSpeakerDetection
----
+# AdjustableLiveSpeakerDetection
+
 ## ININ.PureCloudApi.Model.AdjustableLiveSpeakerDetection
 
 ## Properties
@@ -13,6 +12,7 @@ title: AdjustableLiveSpeakerDetection
 | **IsPersonLikely** | **bool?** | The output of the ALSD detector, evaluating whether there is likely a person on the call based on the above inputs, and if so, a person is detected early (person disposition name and speech.person analyzer result) and the associated action taken (e.g., speech.person postconnect entry in the disposition table has the action to transfer to a queue). | [optional] |
 | **TotalRingbacks** | **int?** | Number of tone.ring.* analyzer events detected during the call (expected mostly during pre-connect but the last ringback tone detection could potentially complete after line connect, which will increment totalRingbacks still). | [optional] |
 | **LineConnected** | **bool?** | Protocol line connect received (answered by a person, machine, busy, fax). | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

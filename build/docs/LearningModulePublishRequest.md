@@ -1,6 +1,5 @@
----
-title: LearningModulePublishRequest
----
+# LearningModulePublishRequest
+
 ## ININ.PureCloudApi.Model.LearningModulePublishRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: LearningModulePublishRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **TermsAndConditionsAccepted** | **bool?** | Whether the terms and conditions were accepted | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

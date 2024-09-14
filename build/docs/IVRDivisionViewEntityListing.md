@@ -1,13 +1,12 @@
----
-title: IVRDivisionViewEntityListing
----
+# IVRDivisionViewEntityListing
+
 ## ININ.PureCloudApi.Model.IVRDivisionViewEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;IVRDivisionView&gt;**](IVRDivisionView.html) |  | [optional] |
+| **Entities** | [**List&lt;IVRDivisionView&gt;**](IVRDivisionView) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: IVRDivisionViewEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

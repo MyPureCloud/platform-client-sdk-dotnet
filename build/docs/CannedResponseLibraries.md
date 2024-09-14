@@ -1,6 +1,5 @@
----
-title: CannedResponseLibraries
----
+# CannedResponseLibraries
+
 ## ININ.PureCloudApi.Model.CannedResponseLibraries
 
 ## Properties
@@ -9,6 +8,7 @@ title: CannedResponseLibraries
 |------------ | ------------- | ------------- | -------------|
 | **LibraryIds** | **List&lt;string&gt;** | Set of canned response library IDs associated with the queue only when mode is SelectedOnly. | [optional] |
 | **Mode** | **string** | The association mode of canned response libraries to queue | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

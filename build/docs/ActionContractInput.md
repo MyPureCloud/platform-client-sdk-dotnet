@@ -1,14 +1,14 @@
----
-title: ActionContractInput
----
+# ActionContractInput
+
 ## ININ.PureCloudApi.Model.ActionContractInput
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Input** | [**PostInputContract**](PostInputContract.html) | Execution input contract | |
-| **Output** | [**PostOutputContract**](PostOutputContract.html) | Execution output contract | |
-{: class="table table-striped"}
+| **Input** | [**PostInputContract**](PostInputContract) | Execution input contract | |
+| **Output** | [**PostOutputContract**](PostOutputContract) | Execution output contract | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

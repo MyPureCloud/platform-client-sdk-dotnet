@@ -1,13 +1,12 @@
----
-title: DIDPoolEntityListing
----
+# DIDPoolEntityListing
+
 ## ININ.PureCloudApi.Model.DIDPoolEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DIDPool&gt;**](DIDPool.html) |  | [optional] |
+| **Entities** | [**List&lt;DIDPool&gt;**](DIDPool) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: DIDPoolEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

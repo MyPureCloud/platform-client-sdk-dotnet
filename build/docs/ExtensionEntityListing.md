@@ -1,13 +1,12 @@
----
-title: ExtensionEntityListing
----
+# ExtensionEntityListing
+
 ## ININ.PureCloudApi.Model.ExtensionEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Extension&gt;**](Extension.html) |  | [optional] |
+| **Entities** | [**List&lt;Extension&gt;**](Extension) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: ExtensionEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

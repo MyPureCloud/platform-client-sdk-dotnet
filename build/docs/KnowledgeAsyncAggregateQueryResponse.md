@@ -1,14 +1,14 @@
----
-title: KnowledgeAsyncAggregateQueryResponse
----
+# KnowledgeAsyncAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.KnowledgeAsyncAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;KnowledgeAggregateDataContainer&gt;**](KnowledgeAggregateDataContainer.html) |  | [optional] |
+| **Results** | [**List&lt;KnowledgeAggregateDataContainer&gt;**](KnowledgeAggregateDataContainer) |  | [optional] |
 | **Cursor** | **string** | Cursor token to retrieve next page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

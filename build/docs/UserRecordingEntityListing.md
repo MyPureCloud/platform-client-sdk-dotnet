@@ -1,13 +1,12 @@
----
-title: UserRecordingEntityListing
----
+# UserRecordingEntityListing
+
 ## ININ.PureCloudApi.Model.UserRecordingEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;UserRecording&gt;**](UserRecording.html) |  | [optional] |
+| **Entities** | [**List&lt;UserRecording&gt;**](UserRecording) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: UserRecordingEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

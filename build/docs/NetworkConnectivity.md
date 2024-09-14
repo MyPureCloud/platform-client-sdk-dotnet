@@ -1,6 +1,5 @@
----
-title: NetworkConnectivity
----
+# NetworkConnectivity
+
 ## ININ.PureCloudApi.Model.NetworkConnectivity
 
 ## Properties
@@ -11,6 +10,7 @@ title: NetworkConnectivity
 | **BluetoothEnabled** | **bool?** | Whether Bluetooth is enabled. | |
 | **CellularEnabled** | **bool?** | Whether Cellular is enabled. | |
 | **WifiEnabled** | **bool?** | Whether Wi-Fi is enabled. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

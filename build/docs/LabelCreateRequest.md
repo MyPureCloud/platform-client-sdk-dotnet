@@ -1,6 +1,5 @@
----
-title: LabelCreateRequest
----
+# LabelCreateRequest
+
 ## ININ.PureCloudApi.Model.LabelCreateRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: LabelCreateRequest
 | **Color** | **string** | The color for the label. | |
 | **ExternalId** | **string** | The external id associated with the label. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

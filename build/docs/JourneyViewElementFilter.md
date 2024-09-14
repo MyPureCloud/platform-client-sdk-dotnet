@@ -1,6 +1,5 @@
----
-title: JourneyViewElementFilter
----
+# JourneyViewElementFilter
+
 ## ININ.PureCloudApi.Model.JourneyViewElementFilter
 
 ## Properties
@@ -8,7 +7,8 @@ title: JourneyViewElementFilter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Boolean operation to apply to the provided predicates and clauses. Valid values: And | |
-| **Predicates** | [**List&lt;JourneyViewElementFilterPredicate&gt;**](JourneyViewElementFilterPredicate.html) | predicates | [optional] |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;JourneyViewElementFilterPredicate&gt;**](JourneyViewElementFilterPredicate) | predicates | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

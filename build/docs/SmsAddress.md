@@ -1,6 +1,5 @@
----
-title: SmsAddress
----
+# SmsAddress
+
 ## ININ.PureCloudApi.Model.SmsAddress
 
 ## Properties
@@ -16,6 +15,7 @@ title: SmsAddress
 | **CountryCode** | **string** | The ISO country code of this address | [optional] |
 | **Validated** | **bool?** | In some countries, addresses are validated to comply with local regulation. In those countries, if the address you provide does not pass validation, it will not be accepted as an Address. This value will be true if the Address has been validated, or false for countries that don&#39;t require validation or if the Address is non-compliant. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

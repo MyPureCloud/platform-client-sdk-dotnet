@@ -1,13 +1,13 @@
----
-title: BulkUpdateShiftTradeStateResult
----
+# BulkUpdateShiftTradeStateResult
+
 ## ININ.PureCloudApi.Model.BulkUpdateShiftTradeStateResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;BulkUpdateShiftTradeStateResultItem&gt;**](BulkUpdateShiftTradeStateResultItem.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;BulkUpdateShiftTradeStateResultItem&gt;**](BulkUpdateShiftTradeStateResultItem) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

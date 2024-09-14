@@ -1,14 +1,14 @@
----
-title: HeadcountForecast
----
+# HeadcountForecast
+
 ## ININ.PureCloudApi.Model.HeadcountForecast
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Required** | [**List&lt;HeadcountInterval&gt;**](HeadcountInterval.html) | Headcount information with shrinkage | |
-| **RequiredWithoutShrinkage** | [**List&lt;HeadcountInterval&gt;**](HeadcountInterval.html) | Headcount information without shrinkage | |
-{: class="table table-striped"}
+| **Required** | [**List&lt;HeadcountInterval&gt;**](HeadcountInterval) | Headcount information with shrinkage | |
+| **RequiredWithoutShrinkage** | [**List&lt;HeadcountInterval&gt;**](HeadcountInterval) | Headcount information without shrinkage | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AssociatedValueField
----
+# AssociatedValueField
+
 ## ININ.PureCloudApi.Model.AssociatedValueField
 
 ## Properties
@@ -9,6 +8,7 @@ title: AssociatedValueField
 |------------ | ------------- | ------------- | -------------|
 | **DataType** | **string** | The data type of the value field. | |
 | **Name** | **string** | The field name for extracting value from event. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

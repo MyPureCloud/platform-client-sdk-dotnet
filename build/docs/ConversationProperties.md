@@ -1,6 +1,5 @@
----
-title: ConversationProperties
----
+# ConversationProperties
+
 ## ININ.PureCloudApi.Model.ConversationProperties
 
 ## Properties
@@ -19,6 +18,7 @@ title: ConversationProperties
 | **IsScreenMonitored** | **bool?** | Indicates filtering for screenMonitored | [optional] |
 | **FilterWrapUpNotes** | **bool?** | Indicates filtering for WrapUpNotes | [optional] |
 | **MatchAll** | **bool?** | Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

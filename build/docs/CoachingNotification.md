@@ -1,6 +1,5 @@
----
-title: CoachingNotification
----
+# CoachingNotification
+
 ## ININ.PureCloudApi.Model.CoachingNotification
 
 ## Properties
@@ -15,9 +14,10 @@ title: CoachingNotification
 | **DateStart** | **DateTime?** | The start time of the appointment relating to this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **LengthInMinutes** | **int?** | The duration of the appointment on this notification | [optional] |
 | **Status** | **string** | The status of the appointment for this notification | [optional] |
-| **User** | [**UserReference**](UserReference.html) | The user of this notification | [optional] |
-| **Appointment** | [**CoachingAppointmentResponse**](CoachingAppointmentResponse.html) | The appointment | [optional] |
+| **User** | [**UserReference**](UserReference) | The user of this notification | [optional] |
+| **Appointment** | [**CoachingAppointmentResponse**](CoachingAppointmentResponse) | The appointment | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

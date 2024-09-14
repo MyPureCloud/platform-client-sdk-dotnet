@@ -1,6 +1,5 @@
----
-title: NamedEntityTypeItem
----
+# NamedEntityTypeItem
+
 ## ININ.PureCloudApi.Model.NamedEntityTypeItem
 
 ## Properties
@@ -9,7 +8,8 @@ title: NamedEntityTypeItem
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **string** | A value for an named entity type definition. | |
 | **Synonyms** | **List&lt;string&gt;** | Synonyms for the given named entity value. | [optional] |
-| **AdditionalLanguages** | [**Dictionary&lt;string, AdditionalLanguagesSynonyms&gt;**](AdditionalLanguagesSynonyms.html) | Additional Language Synonyms for the given named entity value. | [optional] |
-{: class="table table-striped"}
+| **AdditionalLanguages** | [**Dictionary&lt;string, AdditionalLanguagesSynonyms&gt;**](AdditionalLanguagesSynonyms) | Additional Language Synonyms for the given named entity value. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

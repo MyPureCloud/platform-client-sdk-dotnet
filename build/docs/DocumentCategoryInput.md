@@ -1,6 +1,5 @@
----
-title: DocumentCategoryInput
----
+# DocumentCategoryInput
+
 ## ININ.PureCloudApi.Model.DocumentCategoryInput
 
 ## Properties
@@ -8,6 +7,7 @@ title: DocumentCategoryInput
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | KnowledgeBase Category ID | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

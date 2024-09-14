@@ -1,6 +1,5 @@
----
-title: ButtonComponent
----
+# ButtonComponent
+
 ## ININ.PureCloudApi.Model.ButtonComponent
 
 ## Properties
@@ -8,7 +7,8 @@ title: ButtonComponent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Title** | **string** | Text to show inside the button. | [optional] |
-| **Actions** | [**ContentActions**](ContentActions.html) | The button actions (Deprecated). | [optional] |
-{: class="table table-striped"}
+| **Actions** | [**ContentActions**](ContentActions) | The button actions (Deprecated). | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

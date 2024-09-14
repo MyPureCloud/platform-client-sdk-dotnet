@@ -1,6 +1,5 @@
----
-title: DomainPermission
----
+# DomainPermission
+
 ## ININ.PureCloudApi.Model.DomainPermission
 
 ## Properties
@@ -13,6 +12,7 @@ title: DomainPermission
 | **Label** | **string** |  | [optional] |
 | **AllowsConditions** | **bool?** |  | [optional] |
 | **DivisionAware** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

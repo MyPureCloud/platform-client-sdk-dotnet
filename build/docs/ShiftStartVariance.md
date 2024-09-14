@@ -1,6 +1,5 @@
----
-title: ShiftStartVariance
----
+# ShiftStartVariance
+
 ## ININ.PureCloudApi.Model.ShiftStartVariance
 
 ## Properties
@@ -9,6 +8,7 @@ title: ShiftStartVariance
 |------------ | ------------- | ------------- | -------------|
 | **ApplicableDays** | **List&lt;string&gt;** | Days for which shift start variance is configured | |
 | **MaxShiftStartVarianceMinutes** | **int?** | Maximum variance in minutes across shift starts | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

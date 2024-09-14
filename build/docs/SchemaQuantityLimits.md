@@ -1,6 +1,5 @@
----
-title: SchemaQuantityLimits
----
+# SchemaQuantityLimits
+
 ## ININ.PureCloudApi.Model.SchemaQuantityLimits
 
 ## Properties
@@ -21,6 +20,7 @@ title: SchemaQuantityLimits
 | **MaxNumberOfFieldsPerSchema** | **int?** | The maximum number of schema fields allowed per schema. | [optional] |
 | **MaxNumberOfFieldsPerOrg** | **int?** | The maximum number of schema fields allowed per organization across all of their schemas. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

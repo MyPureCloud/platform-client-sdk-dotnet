@@ -1,6 +1,5 @@
----
-title: AlternativeShiftAgentScheduledShift
----
+# AlternativeShiftAgentScheduledShift
+
 ## ININ.PureCloudApi.Model.AlternativeShiftAgentScheduledShift
 
 ## Properties
@@ -11,7 +10,8 @@ title: AlternativeShiftAgentScheduledShift
 | **ReferenceKey** | **string** | A key generated for an offer to help facilitate alternative shift trading | |
 | **StartDate** | **DateTime?** | The start date of this shift in ISO-8601 format | |
 | **LengthMinutes** | **int?** | The length of this shift in minutes | |
-| **Activities** | [**List&lt;BuAgentScheduleActivity&gt;**](BuAgentScheduleActivity.html) | A list of activities in this shift | |
-{: class="table table-striped"}
+| **Activities** | [**List&lt;BuAgentScheduleActivity&gt;**](BuAgentScheduleActivity) | A list of activities in this shift | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

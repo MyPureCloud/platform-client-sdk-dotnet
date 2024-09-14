@@ -1,16 +1,16 @@
----
-title: ImportReport
----
+# ImportReport
+
 ## ININ.PureCloudApi.Model.ImportReport
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Errors** | [**List&lt;ImportError&gt;**](ImportError.html) |  | [optional] |
-| **Validated** | [**ResultCounters**](ResultCounters.html) |  | [optional] |
-| **Imported** | [**ResultCounters**](ResultCounters.html) |  | [optional] |
+| **Errors** | [**List&lt;ImportError&gt;**](ImportError) |  | [optional] |
+| **Validated** | [**ResultCounters**](ResultCounters) |  | [optional] |
+| **Imported** | [**ResultCounters**](ResultCounters) |  | [optional] |
 | **TotalDocuments** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

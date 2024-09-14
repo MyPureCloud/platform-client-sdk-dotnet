@@ -1,13 +1,13 @@
----
-title: ConfusionInfo
----
+# ConfusionInfo
+
 ## ININ.PureCloudApi.Model.ConfusionInfo
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Intents** | [**List&lt;ConfusionIntentInfo&gt;**](ConfusionIntentInfo.html) | Confusion details between this utterance and other intents. | [optional] |
-{: class="table table-striped"}
+| **Intents** | [**List&lt;ConfusionIntentInfo&gt;**](ConfusionIntentInfo) | Confusion details between this utterance and other intents. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

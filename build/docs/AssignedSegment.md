@@ -1,6 +1,5 @@
----
-title: AssignedSegment
----
+# AssignedSegment
+
 ## ININ.PureCloudApi.Model.AssignedSegment
 
 ## Properties
@@ -9,6 +8,7 @@ title: AssignedSegment
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the segment assigned. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

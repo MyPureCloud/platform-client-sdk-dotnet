@@ -1,6 +1,5 @@
----
-title: CallRecord
----
+# CallRecord
+
 ## ININ.PureCloudApi.Model.CallRecord
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallRecord
 |------------ | ------------- | ------------- | -------------|
 | **LastAttempt** | **DateTime?** | Timestamp of the last attempt to reach this number. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **LastResult** | **string** | Result of the last attempt to reach this number | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DomainCapabilities
----
+# DomainCapabilities
+
 ## ININ.PureCloudApi.Model.DomainCapabilities
 
 ## Properties
@@ -13,6 +12,7 @@ title: DomainCapabilities
 | **AutoMetric** | **bool?** | True if the metric is being calculated automatically for the address family on this interface. | [optional] |
 | **SupportsMetric** | **bool?** | True if metric configuration is supported. | [optional] |
 | **PingEnabled** | **bool?** | Set to true to enable this address family on this interface to respond to ping requests. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

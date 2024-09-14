@@ -1,13 +1,12 @@
----
-title: ContactListEntityListing
----
+# ContactListEntityListing
+
 ## ININ.PureCloudApi.Model.ContactListEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ContactList&gt;**](ContactList.html) |  | [optional] |
+| **Entities** | [**List&lt;ContactList&gt;**](ContactList) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: ContactListEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

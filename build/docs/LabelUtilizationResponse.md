@@ -1,6 +1,5 @@
----
-title: LabelUtilizationResponse
----
+# LabelUtilizationResponse
+
 ## ININ.PureCloudApi.Model.LabelUtilizationResponse
 
 ## Properties
@@ -10,6 +9,7 @@ title: LabelUtilizationResponse
 | **MaximumCapacity** | **int?** | Defines the maximum number of interactions with this label that an agent can handle at one time. | [optional] |
 | **InterruptingLabelIds** | **List&lt;string&gt;** | Defines other labels that can interrupt an interaction with this label. | [optional] |
 | **LabelName** | **string** | Name of the label this utilization relates to. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

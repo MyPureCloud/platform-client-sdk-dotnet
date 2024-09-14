@@ -1,6 +1,5 @@
----
-title: ListWrapperString
----
+# ListWrapperString
+
 ## ININ.PureCloudApi.Model.ListWrapperString
 
 ## Properties
@@ -8,6 +7,7 @@ title: ListWrapperString
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

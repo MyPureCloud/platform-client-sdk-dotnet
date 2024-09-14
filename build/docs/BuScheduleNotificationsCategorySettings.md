@@ -1,6 +1,5 @@
----
-title: BuScheduleNotificationsCategorySettings
----
+# BuScheduleNotificationsCategorySettings
+
 ## ININ.PureCloudApi.Model.BuScheduleNotificationsCategorySettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: BuScheduleNotificationsCategorySettings
 | **ActivityCategory** | **string** | The activity category | |
 | **EarlyReminderEnabled** | **bool?** | Indicates if agents should receive early schedule reminder notifications. | |
 | **OnTimeReminderEnabled** | **bool?** | Indicates if agents should receive out of adherence notifications. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

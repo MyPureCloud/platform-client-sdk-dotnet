@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicBuIntradayNotification
----
+# WfmBuIntradayDataUpdateTopicBuIntradayNotification
+
 ## ININ.PureCloudApi.Model.WfmBuIntradayDataUpdateTopicBuIntradayNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: WfmBuIntradayDataUpdateTopicBuIntradayNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **OperationId** | **string** |  | [optional] |
-| **Result** | [**WfmBuIntradayDataUpdateTopicBuIntradayResult**](WfmBuIntradayDataUpdateTopicBuIntradayResult.html) |  | [optional] |
-{: class="table table-striped"}
+| **Result** | [**WfmBuIntradayDataUpdateTopicBuIntradayResult**](WfmBuIntradayDataUpdateTopicBuIntradayResult) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

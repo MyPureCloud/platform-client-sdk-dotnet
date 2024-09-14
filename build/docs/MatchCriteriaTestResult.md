@@ -1,6 +1,5 @@
----
-title: MatchCriteriaTestResult
----
+# MatchCriteriaTestResult
+
 ## ININ.PureCloudApi.Model.MatchCriteriaTestResult
 
 ## Properties
@@ -13,7 +12,8 @@ title: MatchCriteriaTestResult
 | **Values** | **List&lt;Object&gt;** | The list of values to match on. Only one of value and values can be included | [optional] |
 | **GeneratedJsonPathCondition** | **string** | The generated json path condition | [optional] |
 | **Match** | **bool?** | Did the generated json path condition match | [optional] |
-| **JsonPathExtraction** | [**List&lt;MatchTestResult&gt;**](MatchTestResult.html) | The json paths and their values that were compared | [optional] |
-{: class="table table-striped"}
+| **JsonPathExtraction** | [**List&lt;MatchTestResult&gt;**](MatchTestResult) | The json paths and their values that were compared | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestDocumentVersionReference
----
+# KnowledgeGuestDocumentVersionReference
+
 ## ININ.PureCloudApi.Model.KnowledgeGuestDocumentVersionReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeGuestDocumentVersionReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the document. | [optional] |
 | **VersionId** | **string** | The globally unique identifier for the version of the document. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

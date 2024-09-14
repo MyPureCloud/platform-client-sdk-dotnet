@@ -1,6 +1,5 @@
----
-title: WorkitemStatusUpdate
----
+# WorkitemStatusUpdate
+
 ## ININ.PureCloudApi.Model.WorkitemStatusUpdate
 
 ## Properties
@@ -13,6 +12,7 @@ title: WorkitemStatusUpdate
 | **DefaultDestinationStatusId** | **string** | Default destination status to which this Status will transition to if auto status transition enabled. | [optional] |
 | **StatusTransitionDelaySeconds** | **int?** | Delay in seconds for auto status transition. Required if defaultDestinationStatusId is provided. | [optional] |
 | **StatusTransitionTime** | **string** | Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

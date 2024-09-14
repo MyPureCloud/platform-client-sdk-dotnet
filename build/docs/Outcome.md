@@ -1,6 +1,5 @@
----
-title: Outcome
----
+# Outcome
+
 ## ININ.PureCloudApi.Model.Outcome
 
 ## Properties
@@ -13,12 +12,13 @@ title: Outcome
 | **Version** | **int?** | The version of the outcome. | |
 | **Description** | **string** | A description of the outcome. | [optional] |
 | **IsPositive** | **bool?** | Whether or not the outcome is positive. | |
-| **Context** | [**Context**](Context.html) | The context of the outcome. | |
-| **Journey** | [**Journey**](Journey.html) | The pattern of rules defining the filter of the outcome. | |
-| **AssociatedValueField** | [**AssociatedValueField**](AssociatedValueField.html) | The field from the event indicating the associated value. | [optional] |
+| **Context** | [**Context**](Context) | The context of the outcome. | |
+| **Journey** | [**Journey**](Journey) | The pattern of rules defining the filter of the outcome. | |
+| **AssociatedValueField** | [**AssociatedValueField**](AssociatedValueField) | The field from the event indicating the associated value. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **CreatedDate** | **DateTime?** | Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **ModifiedDate** | **DateTime?** | Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

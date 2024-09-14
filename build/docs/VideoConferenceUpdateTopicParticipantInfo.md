@@ -1,6 +1,5 @@
----
-title: VideoConferenceUpdateTopicParticipantInfo
----
+# VideoConferenceUpdateTopicParticipantInfo
+
 ## ININ.PureCloudApi.Model.VideoConferenceUpdateTopicParticipantInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: VideoConferenceUpdateTopicParticipantInfo
 |------------ | ------------- | ------------- | -------------|
 | **ActiveParticipantCount** | **int?** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: VoicemailOrganizationPolicy
----
+# VoicemailOrganizationPolicy
+
 ## ININ.PureCloudApi.Model.VoicemailOrganizationPolicy
 
 ## Properties
@@ -9,7 +8,7 @@ title: VoicemailOrganizationPolicy
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | Whether voicemail is enabled for this organization | [optional] |
 | **AlertTimeoutSeconds** | **int?** | The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transferred to voicemail | [optional] |
-| **PinConfiguration** | [**PINConfiguration**](PINConfiguration.html) | The configuration for user PINs to access their voicemail from a phone | [optional] |
+| **PinConfiguration** | [**PINConfiguration**](PINConfiguration) | The configuration for user PINs to access their voicemail from a phone | [optional] |
 | **VoicemailExtension** | **string** | The extension for voicemail retrieval.  The default value is *86. | [optional] |
 | **PinRequired** | **bool?** | If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone. | [optional] |
 | **InteractiveResponseRequired** | **bool?** | Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call | [optional] |
@@ -18,6 +17,7 @@ title: VoicemailOrganizationPolicy
 | **DisableEmailPii** | **bool?** | Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization. | [optional] |
 | **MaximumRecordingTimeSeconds** | **int?** | Default value for the maximum length of time in seconds of a recorded voicemail | [optional] |
 | **ModifiedDate** | **DateTime?** | The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

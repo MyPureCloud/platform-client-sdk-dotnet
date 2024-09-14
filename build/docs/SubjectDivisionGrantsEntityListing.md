@@ -1,13 +1,12 @@
----
-title: SubjectDivisionGrantsEntityListing
----
+# SubjectDivisionGrantsEntityListing
+
 ## ININ.PureCloudApi.Model.SubjectDivisionGrantsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;SubjectDivisionGrants&gt;**](SubjectDivisionGrants.html) |  | [optional] |
+| **Entities** | [**List&lt;SubjectDivisionGrants&gt;**](SubjectDivisionGrants) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: SubjectDivisionGrantsEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

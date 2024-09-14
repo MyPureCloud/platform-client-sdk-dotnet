@@ -1,14 +1,14 @@
----
-title: UserActivityResponse
----
+# UserActivityResponse
+
 ## ININ.PureCloudApi.Model.UserActivityResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;UserActivityData&gt;**](UserActivityData.html) | Query results | [optional] |
+| **Results** | [**List&lt;UserActivityData&gt;**](UserActivityData) | Query results | [optional] |
 | **EntityIdDimension** | **string** | Dimension that is used as an entityId | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

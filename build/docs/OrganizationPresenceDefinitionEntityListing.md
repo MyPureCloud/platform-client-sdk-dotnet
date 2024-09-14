@@ -1,6 +1,5 @@
----
-title: OrganizationPresenceDefinitionEntityListing
----
+# OrganizationPresenceDefinitionEntityListing
+
 ## ININ.PureCloudApi.Model.OrganizationPresenceDefinitionEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: OrganizationPresenceDefinitionEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;OrganizationPresenceDefinition&gt;**](OrganizationPresenceDefinition.html) |  | [optional] |
+| **Entities** | [**List&lt;OrganizationPresenceDefinition&gt;**](OrganizationPresenceDefinition) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

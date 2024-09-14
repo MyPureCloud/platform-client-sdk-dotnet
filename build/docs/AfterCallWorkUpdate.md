@@ -1,6 +1,5 @@
----
-title: AfterCallWorkUpdate
----
+# AfterCallWorkUpdate
+
 ## ININ.PureCloudApi.Model.AfterCallWorkUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: AfterCallWorkUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **AfterCallWorkRequired** | **bool?** | Indicates whether or not after-call work must be completed for the communication. Can only be updated for connected communications. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PhoneCapabilities
----
+# PhoneCapabilities
+
 ## ININ.PureCloudApi.Model.PhoneCapabilities
 
 ## Properties
@@ -16,6 +15,7 @@ title: PhoneCapabilities
 | **NoCloudProvisioning** | **bool?** |  | [optional] |
 | **MediaCodecs** | **List&lt;string&gt;** |  | [optional] |
 | **Cdm** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

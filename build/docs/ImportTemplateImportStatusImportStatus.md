@@ -1,6 +1,5 @@
----
-title: ImportTemplateImportStatusImportStatus
----
+# ImportTemplateImportStatusImportStatus
+
 ## ININ.PureCloudApi.Model.ImportTemplateImportStatusImportStatus
 
 ## Properties
@@ -15,6 +14,7 @@ title: ImportTemplateImportStatusImportStatus
 | **TargetContactListIds** | **List&lt;string&gt;** | The ids for target contact lists | [optional] |
 | **ListNamePrefix** | **string** | The prefix used for target contact list names | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

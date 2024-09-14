@@ -1,6 +1,5 @@
----
-title: LastAttemptOverallConditionSettings
----
+# LastAttemptOverallConditionSettings
+
 ## ININ.PureCloudApi.Model.LastAttemptOverallConditionSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: LastAttemptOverallConditionSettings
 | **MediaTypes** | **List&lt;string&gt;** | A list of media types to evaluate. | |
 | **Operator** | **string** | The operator to use when comparing values. | |
 | **Value** | **string** | The period value to compare against the contact&#39;s data. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

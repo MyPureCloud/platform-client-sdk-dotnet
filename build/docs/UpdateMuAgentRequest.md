@@ -1,6 +1,5 @@
----
-title: UpdateMuAgentRequest
----
+# UpdateMuAgentRequest
+
 ## ININ.PureCloudApi.Model.UpdateMuAgentRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: UpdateMuAgentRequest
 |------------ | ------------- | ------------- | -------------|
 | **Schedulable** | **bool?** | Whether the agent can be included in schedule generation | [optional] |
 | **UserId** | **string** | User to be updated | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

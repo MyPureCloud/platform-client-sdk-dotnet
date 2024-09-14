@@ -1,6 +1,5 @@
----
-title: WorkitemFilter
----
+# WorkitemFilter
+
 ## ININ.PureCloudApi.Model.WorkitemFilter
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemFilter
 | **Type** | **string** | Attribute type. | |
 | **Operator** | **string** | Filter operator. | |
 | **Values** | **List&lt;string&gt;** | List of values to be used in the filter. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

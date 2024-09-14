@@ -1,6 +1,5 @@
----
-title: LearningAssignmentAggregateQueryResponseGroupedData
----
+# LearningAssignmentAggregateQueryResponseGroupedData
+
 ## ININ.PureCloudApi.Model.LearningAssignmentAggregateQueryResponseGroupedData
 
 ## Properties
@@ -8,7 +7,8 @@ title: LearningAssignmentAggregateQueryResponseGroupedData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** | The group values for this data | [optional] |
-| **Data** | [**List&lt;LearningAssignmentAggregateQueryResponseData&gt;**](LearningAssignmentAggregateQueryResponseData.html) | The metrics in this group | [optional] |
-{: class="table table-striped"}
+| **Data** | [**List&lt;LearningAssignmentAggregateQueryResponseData&gt;**](LearningAssignmentAggregateQueryResponseData) | The metrics in this group | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

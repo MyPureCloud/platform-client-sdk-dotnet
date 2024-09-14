@@ -1,6 +1,5 @@
----
-title: KlaxonHeartBeatAlertsTopicHeartBeatAlert
----
+# KlaxonHeartBeatAlertsTopicHeartBeatAlert
+
 ## ININ.PureCloudApi.Model.KlaxonHeartBeatAlertsTopicHeartBeatAlert
 
 ## Properties
@@ -14,9 +13,10 @@ title: KlaxonHeartBeatAlertsTopicHeartBeatAlert
 | **RuleId** | **string** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
-| **NotificationUsers** | [**List&lt;KlaxonHeartBeatAlertsTopicNotificationUser&gt;**](KlaxonHeartBeatAlertsTopicNotificationUser.html) |  | [optional] |
+| **NotificationUsers** | [**List&lt;KlaxonHeartBeatAlertsTopicNotificationUser&gt;**](KlaxonHeartBeatAlertsTopicNotificationUser) |  | [optional] |
 | **AlertTypes** | **List&lt;string&gt;** |  | [optional] |
 | **RuleType** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

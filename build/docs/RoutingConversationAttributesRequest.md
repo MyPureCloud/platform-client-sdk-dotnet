@@ -1,6 +1,5 @@
----
-title: RoutingConversationAttributesRequest
----
+# RoutingConversationAttributesRequest
+
 ## ININ.PureCloudApi.Model.RoutingConversationAttributesRequest
 
 ## Properties
@@ -11,7 +10,8 @@ title: RoutingConversationAttributesRequest
 | **SkillIds** | **List&lt;string&gt;** | Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. []. | [optional] |
 | **LanguageId** | **string** | Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;. | [optional] |
 | **LabelId** | **string** | Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \&quot;\&quot;. | [optional] |
-| **RequestScoredAgents** | [**List&lt;RequestScoredAgent&gt;**](RequestScoredAgent.html) |  | [optional] |
-{: class="table table-striped"}
+| **RequestScoredAgents** | [**List&lt;RequestScoredAgent&gt;**](RequestScoredAgent) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

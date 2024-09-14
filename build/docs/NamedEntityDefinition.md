@@ -1,6 +1,5 @@
----
-title: NamedEntityDefinition
----
+# NamedEntityDefinition
+
 ## ININ.PureCloudApi.Model.NamedEntityDefinition
 
 ## Properties
@@ -9,6 +8,7 @@ title: NamedEntityDefinition
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the entity. | |
 | **Type** | **string** | The name of the entity type. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

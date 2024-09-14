@@ -1,13 +1,12 @@
----
-title: TrustGroupEntityListing
----
+# TrustGroupEntityListing
+
 ## ININ.PureCloudApi.Model.TrustGroupEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;TrustGroup&gt;**](TrustGroup.html) |  | [optional] |
+| **Entities** | [**List&lt;TrustGroup&gt;**](TrustGroup) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: TrustGroupEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

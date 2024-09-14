@@ -1,6 +1,5 @@
----
-title: PresenceEventUserPresence
----
+# PresenceEventUserPresence
+
 ## ININ.PureCloudApi.Model.PresenceEventUserPresence
 
 ## Properties
@@ -8,10 +7,11 @@ title: PresenceEventUserPresence
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Source** | **string** |  | [optional] |
-| **PresenceDefinition** | [**PresenceEventOrganizationPresence**](PresenceEventOrganizationPresence.html) |  | [optional] |
+| **PresenceDefinition** | [**PresenceEventOrganizationPresence**](PresenceEventOrganizationPresence) |  | [optional] |
 | **Primary** | **bool?** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **ModifiedDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

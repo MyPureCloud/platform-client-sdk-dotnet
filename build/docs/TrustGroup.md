@@ -1,6 +1,5 @@
----
-title: TrustGroup
----
+# TrustGroup
+
 ## ININ.PureCloudApi.Model.TrustGroup
 
 ## Properties
@@ -15,14 +14,15 @@ title: TrustGroup
 | **State** | **string** | Active, inactive, or deleted state. | [optional] |
 | **Version** | **int?** | Current version for this resource. | [optional] |
 | **Type** | **string** | Type of group. | |
-| **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
-| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
+| **Images** | [**List&lt;UserImage&gt;**](UserImage) |  | [optional] |
+| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | |
 | **Visibility** | **string** | Who can view this group | |
 | **RolesEnabled** | **bool?** | Allow roles to be assigned to this group | [optional] |
-| **Owners** | [**List&lt;User&gt;**](User.html) | Owners of the group | [optional] |
+| **Owners** | [**List&lt;User&gt;**](User) | Owners of the group | [optional] |
 | **DateCreated** | **DateTime?** | The date on which the trusted group was added. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **CreatedBy** | [**OrgUser**](OrgUser.html) | The user that added trusted group. | [optional] |
-{: class="table table-striped"}
+| **CreatedBy** | [**OrgUser**](OrgUser) | The user that added trusted group. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

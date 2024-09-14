@@ -1,6 +1,5 @@
----
-title: Agent
----
+# Agent
+
 ## ININ.PureCloudApi.Model.Agent
 
 ## Properties
@@ -8,6 +7,7 @@ title: Agent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Stage** | **string** | The current stage for this agent | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

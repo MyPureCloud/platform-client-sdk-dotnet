@@ -1,6 +1,5 @@
----
-title: AgentTimeOffRequestPatch
----
+# AgentTimeOffRequestPatch
+
 ## ININ.PureCloudApi.Model.AgentTimeOffRequestPatch
 
 ## Properties
@@ -10,6 +9,7 @@ title: AgentTimeOffRequestPatch
 | **MarkedAsRead** | **bool?** | Whether this request has been read by the agent | [optional] |
 | **Status** | **string** | The status of this time off request. Can only be canceled if the requested date has not already passed | [optional] |
 | **Notes** | **string** | Notes about the time off request. Can only be edited while the request is still pending | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

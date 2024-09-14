@@ -1,28 +1,27 @@
----
-title: TeamsApi
----
+# TeamsApi
+
 ## PureCloudPlatform.Client.V2.Api.TeamsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteTeam**](TeamsApi.html#deleteteam) | **Delete** /api/v2/teams/{teamId} | Delete team |
-| [**DeleteTeamMembers**](TeamsApi.html#deleteteammembers) | **Delete** /api/v2/teams/{teamId}/members | Delete team members |
-| [**GetTeam**](TeamsApi.html#getteam) | **Get** /api/v2/teams/{teamId} | Get team |
-| [**GetTeamMembers**](TeamsApi.html#getteammembers) | **Get** /api/v2/teams/{teamId}/members | Get team membership |
-| [**GetTeams**](TeamsApi.html#getteams) | **Get** /api/v2/teams | Get Team listing |
-| [**PatchTeam**](TeamsApi.html#patchteam) | **Patch** /api/v2/teams/{teamId} | Update team |
-| [**PostAnalyticsTeamsActivityQuery**](TeamsApi.html#postanalyticsteamsactivityquery) | **Post** /api/v2/analytics/teams/activity/query | Query for team activity observations |
-| [**PostTeamMembers**](TeamsApi.html#postteammembers) | **Post** /api/v2/teams/{teamId}/members | Add team members |
-| [**PostTeams**](TeamsApi.html#postteams) | **Post** /api/v2/teams | Create a team |
-| [**PostTeamsSearch**](TeamsApi.html#postteamssearch) | **Post** /api/v2/teams/search | Search resources. |
-{: class="table table-striped"}
+| [**DeleteTeam**](#DeleteTeam) | **Delete** /api/v2/teams/{teamId} | Delete team |
+| [**DeleteTeamMembers**](#DeleteTeamMembers) | **Delete** /api/v2/teams/{teamId}/members | Delete team members |
+| [**GetTeam**](#GetTeam) | **Get** /api/v2/teams/{teamId} | Get team |
+| [**GetTeamMembers**](#GetTeamMembers) | **Get** /api/v2/teams/{teamId}/members | Get team membership |
+| [**GetTeams**](#GetTeams) | **Get** /api/v2/teams | Get Team listing |
+| [**PatchTeam**](#PatchTeam) | **Patch** /api/v2/teams/{teamId} | Update team |
+| [**PostAnalyticsTeamsActivityQuery**](#PostAnalyticsTeamsActivityQuery) | **Post** /api/v2/analytics/teams/activity/query | Query for team activity observations |
+| [**PostTeamMembers**](#PostTeamMembers) | **Post** /api/v2/teams/{teamId}/members | Add team members |
+| [**PostTeams**](#PostTeams) | **Post** /api/v2/teams | Create a team |
+| [**PostTeamsSearch**](#PostTeamsSearch) | **Post** /api/v2/teams/search | Search resources. |
 
-<a name="deleteteam"></a>
 
-## void DeleteTeam (string teamId)
 
+## DeleteTeam
+
+> void DeleteTeam (string teamId)
 
 
 Delete team
@@ -75,16 +74,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deleteteammembers"></a>
 
-## void DeleteTeamMembers (string teamId, string id)
+## DeleteTeamMembers
 
+> void DeleteTeamMembers (string teamId, string id)
 
 
 Delete team members
@@ -139,16 +137,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
 | **id** | **string**| Comma separated list of member ids to remove |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getteam"></a>
 
-## [**Team**](Team.html) GetTeam (string teamId)
+## GetTeam
 
+> [**Team**](Team) GetTeam (string teamId)
 
 
 Get team
@@ -202,16 +199,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Team**](Team.html)
+[**Team**](Team)
 
-<a name="getteammembers"></a>
 
-## [**TeamMemberEntityListing**](TeamMemberEntityListing.html) GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
+## GetTeamMembers
 
+> [**TeamMemberEntityListing**](TeamMemberEntityListing) GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
 
 
 Get team membership
@@ -273,16 +269,15 @@ namespace Example
 | **before** | **string**| The cursor that points to the previous item in the complete list of teams | [optional]  |
 | **after** | **string**| The cursor that points to the next item in the complete list of teams | [optional]  |
 | **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TeamMemberEntityListing**](TeamMemberEntityListing.html)
+[**TeamMemberEntityListing**](TeamMemberEntityListing)
 
-<a name="getteams"></a>
 
-## [**TeamEntityListing**](TeamEntityListing.html) GetTeams (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
+## GetTeams
 
+> [**TeamEntityListing**](TeamEntityListing) GetTeams (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
 
 
 Get Team listing
@@ -344,16 +339,15 @@ namespace Example
 | **after** | **string**| The cursor that points to the next item in the complete list of teams | [optional]  |
 | **before** | **string**| The cursor that points to the previous item in the complete list of teams | [optional]  |
 | **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities.division |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TeamEntityListing**](TeamEntityListing.html)
+[**TeamEntityListing**](TeamEntityListing)
 
-<a name="patchteam"></a>
 
-## [**Team**](Team.html) PatchTeam (string teamId, Team body)
+## PatchTeam
 
+> [**Team**](Team) PatchTeam (string teamId, Team body)
 
 
 Update team
@@ -408,17 +402,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
-| **body** | [**Team**](Team.html)| Team |  |
-{: class="table table-striped"}
+| **body** | [**Team**](Team)| Team |  |
 
 ### Return type
 
-[**Team**](Team.html)
+[**Team**](Team)
 
-<a name="postanalyticsteamsactivityquery"></a>
 
-## [**TeamActivityResponse**](TeamActivityResponse.html) PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
+## PostAnalyticsTeamsActivityQuery
 
+> [**TeamActivityResponse**](TeamActivityResponse) PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
 
 
 Query for team activity observations
@@ -473,19 +466,18 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**TeamActivityQuery**](TeamActivityQuery.html)| query |  |
+| **body** | [**TeamActivityQuery**](TeamActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**TeamActivityResponse**](TeamActivityResponse.html)
+[**TeamActivityResponse**](TeamActivityResponse)
 
-<a name="postteammembers"></a>
 
-## [**TeamMemberAddListingResponse**](TeamMemberAddListingResponse.html) PostTeamMembers (string teamId, TeamMembers body)
+## PostTeamMembers
 
+> [**TeamMemberAddListingResponse**](TeamMemberAddListingResponse) PostTeamMembers (string teamId, TeamMembers body)
 
 
 Add team members
@@ -540,17 +532,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
-| **body** | [**TeamMembers**](TeamMembers.html)| TeamMembers |  |
-{: class="table table-striped"}
+| **body** | [**TeamMembers**](TeamMembers)| TeamMembers |  |
 
 ### Return type
 
-[**TeamMemberAddListingResponse**](TeamMemberAddListingResponse.html)
+[**TeamMemberAddListingResponse**](TeamMemberAddListingResponse)
 
-<a name="postteams"></a>
 
-## [**Team**](Team.html) PostTeams (Team body)
+## PostTeams
 
+> [**Team**](Team) PostTeams (Team body)
 
 
 Create a team
@@ -603,17 +594,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Team**](Team.html)| Team |  |
-{: class="table table-striped"}
+| **body** | [**Team**](Team)| Team |  |
 
 ### Return type
 
-[**Team**](Team.html)
+[**Team**](Team)
 
-<a name="postteamssearch"></a>
 
-## [**TeamsSearchResponse**](TeamsSearchResponse.html) PostTeamsSearch (TeamSearchRequest body)
+## PostTeamsSearch
 
+> [**TeamsSearchResponse**](TeamsSearchResponse) PostTeamsSearch (TeamSearchRequest body)
 
 
 Search resources.
@@ -666,10 +656,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**TeamSearchRequest**](TeamSearchRequest.html)| Search request options |  |
-{: class="table table-striped"}
+| **body** | [**TeamSearchRequest**](TeamSearchRequest)| Search request options |  |
 
 ### Return type
 
-[**TeamsSearchResponse**](TeamsSearchResponse.html)
+[**TeamsSearchResponse**](TeamsSearchResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

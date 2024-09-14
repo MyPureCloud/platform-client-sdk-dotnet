@@ -1,6 +1,5 @@
----
-title: QueueConversationCobrowseEventTopicErrorBody
----
+# QueueConversationCobrowseEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.QueueConversationCobrowseEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: QueueConversationCobrowseEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;QueueConversationCobrowseEventTopicDetail&gt;**](QueueConversationCobrowseEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;QueueConversationCobrowseEventTopicErrorBody&gt;**](QueueConversationCobrowseEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;QueueConversationCobrowseEventTopicDetail&gt;**](QueueConversationCobrowseEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;QueueConversationCobrowseEventTopicErrorBody&gt;**](QueueConversationCobrowseEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

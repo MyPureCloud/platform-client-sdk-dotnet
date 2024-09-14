@@ -1,6 +1,5 @@
----
-title: AgentIntegrationAssociationRequest
----
+# AgentIntegrationAssociationRequest
+
 ## ININ.PureCloudApi.Model.AgentIntegrationAssociationRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: AgentIntegrationAssociationRequest
 | **AgentExternalId** | **string** | The ID of the agent in external system | |
 | **IntegrationId** | **string** | The ID of the integration associated with the agent | |
 | **Locked** | **bool?** | Whether agentExternalId should be protected from update by automatic processes | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: GamificationScorecardChangeTopicPunctualityEvent
----
+# GamificationScorecardChangeTopicPunctualityEvent
+
 ## ININ.PureCloudApi.Model.GamificationScorecardChangeTopicPunctualityEvent
 
 ## Properties
@@ -11,6 +10,7 @@ title: GamificationScorecardChangeTopicPunctualityEvent
 | **DateScheduleStart** | **string** |  | [optional] |
 | **ActivityCode** | **string** |  | [optional] |
 | **Points** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

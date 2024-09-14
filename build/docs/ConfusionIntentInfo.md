@@ -1,6 +1,5 @@
----
-title: ConfusionIntentInfo
----
+# ConfusionIntentInfo
+
 ## ININ.PureCloudApi.Model.ConfusionIntentInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: ConfusionIntentInfo
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the object. | [optional] |
 | **UtteranceCount** | **int?** | Number of utterances in this intent which are similar to parent utterance. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

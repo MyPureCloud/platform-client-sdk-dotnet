@@ -1,6 +1,5 @@
----
-title: LearningModuleInformStepRequest
----
+# LearningModuleInformStepRequest
+
 ## ININ.PureCloudApi.Model.LearningModuleInformStepRequest
 
 ## Properties
@@ -15,6 +14,7 @@ title: LearningModuleInformStepRequest
 | **Order** | **int?** | The order of inform step in a learning module | |
 | **DisplayName** | **string** | The display name for the inform step | [optional] |
 | **Description** | **string** | The description for the inform step | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

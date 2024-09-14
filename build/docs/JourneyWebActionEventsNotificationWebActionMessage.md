@@ -1,26 +1,26 @@
----
-title: JourneyWebActionEventsNotificationWebActionMessage
----
+# JourneyWebActionEventsNotificationWebActionMessage
+
 ## ININ.PureCloudApi.Model.JourneyWebActionEventsNotificationWebActionMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Action** | [**JourneyWebActionEventsNotificationEventAction**](JourneyWebActionEventsNotificationEventAction.html) |  | [optional] |
-| **ActionTarget** | [**JourneyWebActionEventsNotificationActionTarget**](JourneyWebActionEventsNotificationActionTarget.html) |  | [optional] |
-| **ActionMap** | [**JourneyWebActionEventsNotificationActionMap**](JourneyWebActionEventsNotificationActionMap.html) |  | [optional] |
+| **Action** | [**JourneyWebActionEventsNotificationEventAction**](JourneyWebActionEventsNotificationEventAction) |  | [optional] |
+| **ActionTarget** | [**JourneyWebActionEventsNotificationActionTarget**](JourneyWebActionEventsNotificationActionTarget) |  | [optional] |
+| **ActionMap** | [**JourneyWebActionEventsNotificationActionMap**](JourneyWebActionEventsNotificationActionMap) |  | [optional] |
 | **ErrorCode** | **string** |  | [optional] |
 | **ErrorMessage** | **string** |  | [optional] |
 | **UserAgentString** | **string** |  | [optional] |
 | **IpAddress** | **string** |  | [optional] |
 | **IpOrganization** | **string** |  | [optional] |
-| **Browser** | [**JourneyWebActionEventsNotificationBrowser**](JourneyWebActionEventsNotificationBrowser.html) |  | [optional] |
-| **Device** | [**JourneyWebActionEventsNotificationDevice**](JourneyWebActionEventsNotificationDevice.html) |  | [optional] |
-| **Geolocation** | [**JourneyWebActionEventsNotificationGeoLocation**](JourneyWebActionEventsNotificationGeoLocation.html) |  | [optional] |
-| **MktCampaign** | [**JourneyWebActionEventsNotificationMktCampaign**](JourneyWebActionEventsNotificationMktCampaign.html) |  | [optional] |
-| **VisitReferrer** | [**JourneyWebActionEventsNotificationReferrer**](JourneyWebActionEventsNotificationReferrer.html) |  | [optional] |
+| **Browser** | [**JourneyWebActionEventsNotificationBrowser**](JourneyWebActionEventsNotificationBrowser) |  | [optional] |
+| **Device** | [**JourneyWebActionEventsNotificationDevice**](JourneyWebActionEventsNotificationDevice) |  | [optional] |
+| **Geolocation** | [**JourneyWebActionEventsNotificationGeoLocation**](JourneyWebActionEventsNotificationGeoLocation) |  | [optional] |
+| **MktCampaign** | [**JourneyWebActionEventsNotificationMktCampaign**](JourneyWebActionEventsNotificationMktCampaign) |  | [optional] |
+| **VisitReferrer** | [**JourneyWebActionEventsNotificationReferrer**](JourneyWebActionEventsNotificationReferrer) |  | [optional] |
 | **TimeToDisposition** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmAdherenceExplanationJobCompleteTopicErrorBody
----
+# WfmAdherenceExplanationJobCompleteTopicErrorBody
+
 ## ININ.PureCloudApi.Model.WfmAdherenceExplanationJobCompleteTopicErrorBody
 
 ## Properties
@@ -11,6 +10,7 @@ title: WfmAdherenceExplanationJobCompleteTopicErrorBody
 | **Code** | **string** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AuditTopicAuditLogMessage
----
+# AuditTopicAuditLogMessage
+
 ## ININ.PureCloudApi.Model.AuditTopicAuditLogMessage
 
 ## Properties
@@ -10,19 +9,20 @@ title: AuditTopicAuditLogMessage
 | **Id** | **string** |  | [optional] |
 | **UserId** | **string** |  | [optional] |
 | **UserHomeOrgId** | **string** |  | [optional] |
-| **Username** | [**AuditTopicDomainEntityRef**](AuditTopicDomainEntityRef.html) |  | [optional] |
+| **Username** | [**AuditTopicDomainEntityRef**](AuditTopicDomainEntityRef) |  | [optional] |
 | **UserDisplay** | **string** |  | [optional] |
-| **ClientId** | [**AuditTopicAddressableEntityRef**](AuditTopicAddressableEntityRef.html) |  | [optional] |
+| **ClientId** | [**AuditTopicAddressableEntityRef**](AuditTopicAddressableEntityRef) |  | [optional] |
 | **RemoteIp** | **List&lt;string&gt;** |  | [optional] |
 | **ServiceName** | **string** |  | [optional] |
 | **Level** | **string** |  | [optional] |
 | **EventTime** | **DateTime?** |  | [optional] |
-| **Message** | [**AuditTopicMessageInfo**](AuditTopicMessageInfo.html) |  | [optional] |
+| **Message** | [**AuditTopicMessageInfo**](AuditTopicMessageInfo) |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **EntityType** | **string** |  | [optional] |
-| **Entity** | [**AuditTopicDomainEntityRef**](AuditTopicDomainEntityRef.html) |  | [optional] |
-| **PropertyChanges** | [**List&lt;AuditTopicPropertyChange&gt;**](AuditTopicPropertyChange.html) |  | [optional] |
+| **Entity** | [**AuditTopicDomainEntityRef**](AuditTopicDomainEntityRef) |  | [optional] |
+| **PropertyChanges** | [**List&lt;AuditTopicPropertyChange&gt;**](AuditTopicPropertyChange) |  | [optional] |
 | **Context** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

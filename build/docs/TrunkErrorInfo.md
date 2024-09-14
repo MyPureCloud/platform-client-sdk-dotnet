@@ -1,6 +1,5 @@
----
-title: TrunkErrorInfo
----
+# TrunkErrorInfo
+
 ## ININ.PureCloudApi.Model.TrunkErrorInfo
 
 ## Properties
@@ -9,7 +8,8 @@ title: TrunkErrorInfo
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** |  | [optional] |
 | **Code** | **string** |  | [optional] |
-| **Details** | [**TrunkErrorInfoDetails**](TrunkErrorInfoDetails.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**TrunkErrorInfoDetails**](TrunkErrorInfoDetails) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

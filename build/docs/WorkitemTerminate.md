@@ -1,6 +1,5 @@
----
-title: WorkitemTerminate
----
+# WorkitemTerminate
+
 ## ININ.PureCloudApi.Model.WorkitemTerminate
 
 ## Properties
@@ -8,6 +7,7 @@ title: WorkitemTerminate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **StatusId** | **string** | The ID of the status the workitem should be updated to when terminating. The status must be a &#39;Closed&#39; category status. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WeekSchedule
----
+# WeekSchedule
+
 ## ININ.PureCloudApi.Model.WeekSchedule
 
 ## Properties
@@ -12,12 +11,13 @@ title: WeekSchedule
 | **WeekDate** | **string** | First day of this week schedule in yyyy-MM-dd format | [optional] |
 | **Description** | **string** | Description of the week schedule | [optional] |
 | **Published** | **bool?** | Whether the week schedule is published | [optional] |
-| **GenerationResults** | [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html) | Summary of the results from the schedule run | [optional] |
-| **ShortTermForecast** | [**ShortTermForecastReference**](ShortTermForecastReference.html) | Short term forecast associated with this schedule | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this work plan | [optional] |
-| **UserSchedules** | [**Dictionary&lt;string, UserSchedule&gt;**](UserSchedule.html) | User schedules in the week | [optional] |
-| **HeadcountForecast** | [**HeadcountForecast**](HeadcountForecast.html) | Headcount information for the week schedule | [optional] |
+| **GenerationResults** | [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult) | Summary of the results from the schedule run | [optional] |
+| **ShortTermForecast** | [**ShortTermForecastReference**](ShortTermForecastReference) | Short term forecast associated with this schedule | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this work plan | [optional] |
+| **UserSchedules** | [**Dictionary&lt;string, UserSchedule&gt;**](UserSchedule) | User schedules in the week | [optional] |
+| **HeadcountForecast** | [**HeadcountForecast**](HeadcountForecast) | Headcount information for the week schedule | [optional] |
 | **AgentSchedulesVersion** | **int?** | Version of agent schedules in the week schedule | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

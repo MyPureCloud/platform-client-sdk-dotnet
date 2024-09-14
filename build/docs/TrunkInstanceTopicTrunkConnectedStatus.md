@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunkConnectedStatus
----
+# TrunkInstanceTopicTrunkConnectedStatus
+
 ## ININ.PureCloudApi.Model.TrunkInstanceTopicTrunkConnectedStatus
 
 ## Properties
@@ -9,6 +8,7 @@ title: TrunkInstanceTopicTrunkConnectedStatus
 |------------ | ------------- | ------------- | -------------|
 | **Connected** | **bool?** |  | [optional] |
 | **ConnectedStateTime** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

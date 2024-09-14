@@ -1,6 +1,5 @@
----
-title: OperatorPosition
----
+# OperatorPosition
+
 ## ININ.PureCloudApi.Model.OperatorPosition
 
 ## Properties
@@ -9,6 +8,7 @@ title: OperatorPosition
 |------------ | ------------- | ------------- | -------------|
 | **VoiceSecondsPosition** | **int?** | Number of seconds (for voice interactions) from operand match | [optional] |
 | **DigitalWordsPosition** | **int?** | Number of words (for digital interactions) from operand match | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

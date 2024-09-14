@@ -1,6 +1,5 @@
----
-title: WorkitemsEventsNotificationCustomAttribute
----
+# WorkitemsEventsNotificationCustomAttribute
+
 ## ININ.PureCloudApi.Model.WorkitemsEventsNotificationCustomAttribute
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemsEventsNotificationCustomAttribute
 |------------ | ------------- | ------------- | -------------|
 | **DataType** | **string** |  | [optional] |
 | **Value** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ImportScriptStatusResponse
----
+# ImportScriptStatusResponse
+
 ## ININ.PureCloudApi.Model.ImportScriptStatusResponse
 
 ## Properties
@@ -10,6 +9,7 @@ title: ImportScriptStatusResponse
 | **Url** | **string** |  | [optional] |
 | **Succeeded** | **bool?** |  | [optional] |
 | **Message** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

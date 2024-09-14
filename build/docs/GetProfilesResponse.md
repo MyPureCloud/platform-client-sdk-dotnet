@@ -1,6 +1,5 @@
----
-title: GetProfilesResponse
----
+# GetProfilesResponse
+
 ## ININ.PureCloudApi.Model.GetProfilesResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: GetProfilesResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;PerformanceProfile&gt;**](PerformanceProfile.html) |  | [optional] |
+| **Entities** | [**List&lt;PerformanceProfile&gt;**](PerformanceProfile) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

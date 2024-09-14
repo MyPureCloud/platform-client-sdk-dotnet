@@ -1,6 +1,5 @@
----
-title: KnowledgeImportJobStatistics
----
+# KnowledgeImportJobStatistics
+
 ## ININ.PureCloudApi.Model.KnowledgeImportJobStatistics
 
 ## Properties
@@ -24,6 +23,7 @@ title: KnowledgeImportJobStatistics
 | **CountLabelImportSuccess** | **int?** | Number of imported labels. | [optional] |
 | **CountLabelImportFailure** | **int?** | Number of labels failed to import. | [optional] |
 | **MigrationDetected** | **bool?** | Shows whether the import treated as migration or not. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

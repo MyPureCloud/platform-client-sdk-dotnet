@@ -1,14 +1,14 @@
----
-title: SurveyErrorDetails
----
+# SurveyErrorDetails
+
 ## ININ.PureCloudApi.Model.SurveyErrorDetails
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **FlowDiagnosticInfo** | [**FlowDiagnosticInfo**](FlowDiagnosticInfo.html) | Additional information about any errors that occurred in the survey invite flow. | [optional] |
+| **FlowDiagnosticInfo** | [**FlowDiagnosticInfo**](FlowDiagnosticInfo) | Additional information about any errors that occurred in the survey invite flow. | [optional] |
 | **SurveyErrorReason** | **string** | An error code indicating the reason for the survey failure. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

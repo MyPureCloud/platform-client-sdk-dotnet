@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
----
+# JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
+
 ## ININ.PureCloudApi.Model.JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
 
 ## Properties
@@ -8,6 +7,7 @@ title: JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

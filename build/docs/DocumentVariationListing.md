@@ -1,16 +1,16 @@
----
-title: DocumentVariationListing
----
+# DocumentVariationListing
+
 ## ININ.PureCloudApi.Model.DocumentVariationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DocumentVariation&gt;**](DocumentVariation.html) |  | [optional] |
+| **Entities** | [**List&lt;DocumentVariation&gt;**](DocumentVariation) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

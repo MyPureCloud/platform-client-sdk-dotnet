@@ -1,6 +1,5 @@
----
-title: DetectedIntent
----
+# DetectedIntent
+
 ## ININ.PureCloudApi.Model.DetectedIntent
 
 ## Properties
@@ -9,7 +8,8 @@ title: DetectedIntent
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the detected intent. | [optional] |
 | **Probability** | **double?** | The probability of the detected intent. | [optional] |
-| **Entities** | [**List&lt;DetectedNamedEntity&gt;**](DetectedNamedEntity.html) | The collection of named entities detected. | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;DetectedNamedEntity&gt;**](DetectedNamedEntity) | The collection of named entities detected. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

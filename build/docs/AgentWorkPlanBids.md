@@ -1,6 +1,5 @@
----
-title: AgentWorkPlanBids
----
+# AgentWorkPlanBids
+
 ## ININ.PureCloudApi.Model.AgentWorkPlanBids
 
 ## Properties
@@ -8,9 +7,10 @@ title: AgentWorkPlanBids
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **BusinessUnit** | [**BusinessUnitReference**](BusinessUnitReference.html) | The business unit to which the bids belong | [optional] |
-| **_AgentWorkPlanBids** | [**List&lt;AgentWorkPlanBid&gt;**](AgentWorkPlanBid.html) | Work plan bid summaries associated with this agent | |
+| **BusinessUnit** | [**BusinessUnitReference**](BusinessUnitReference) | The business unit to which the bids belong | [optional] |
+| **_AgentWorkPlanBids** | [**List&lt;AgentWorkPlanBid&gt;**](AgentWorkPlanBid) | Work plan bid summaries associated with this agent | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: OutboundRouteEntityListing
----
+# OutboundRouteEntityListing
+
 ## ININ.PureCloudApi.Model.OutboundRouteEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;OutboundRoute&gt;**](OutboundRoute.html) |  | [optional] |
+| **Entities** | [**List&lt;OutboundRoute&gt;**](OutboundRoute) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: OutboundRouteEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

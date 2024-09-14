@@ -1,6 +1,5 @@
----
-title: WorkspaceCreate
----
+# WorkspaceCreate
+
 ## ININ.PureCloudApi.Model.WorkspaceCreate
 
 ## Properties
@@ -10,6 +9,7 @@ title: WorkspaceCreate
 | **Name** | **string** | The workspace name | |
 | **Bucket** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

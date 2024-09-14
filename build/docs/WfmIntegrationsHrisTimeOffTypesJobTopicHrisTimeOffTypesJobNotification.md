@@ -1,6 +1,5 @@
----
-title: WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
----
+# WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
+
 ## ININ.PureCloudApi.Model.WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
 
 ## Properties
@@ -8,9 +7,10 @@ title: WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Entities** | [**List&lt;WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType&gt;**](WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.html) |  | [optional] |
+| **Entities** | [**List&lt;WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType&gt;**](WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType) |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **Error** | [**WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody**](WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Error** | [**WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody**](WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

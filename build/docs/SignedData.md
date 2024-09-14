@@ -1,6 +1,5 @@
----
-title: SignedData
----
+# SignedData
+
 ## ININ.PureCloudApi.Model.SignedData
 
 ## Properties
@@ -8,6 +7,7 @@ title: SignedData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Jwt** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

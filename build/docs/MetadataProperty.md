@@ -1,6 +1,5 @@
----
-title: MetadataProperty
----
+# MetadataProperty
+
 ## ININ.PureCloudApi.Model.MetadataProperty
 
 ## Properties
@@ -14,6 +13,7 @@ title: MetadataProperty
 | **Help** | **string** | optional URL with addition information about the input property | [optional] |
 | **Default** | **string** | optional default value of the input property | [optional] |
 | **Enum** | **List&lt;string&gt;** | set of possible values if the input property is an enumeration | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

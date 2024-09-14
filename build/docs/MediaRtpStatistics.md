@@ -1,6 +1,5 @@
----
-title: MediaRtpStatistics
----
+# MediaRtpStatistics
+
 ## ININ.PureCloudApi.Model.MediaRtpStatistics
 
 ## Properties
@@ -12,6 +11,7 @@ title: MediaRtpStatistics
 | **RtpEventsReceived** | **int?** | Number of RFC#2833 packets received | [optional] |
 | **RtpEventsSent** | **int?** | Number of RFC#2833 packets sent | [optional] |
 | **EstimatedAverageMos** | **double?** | The estimated average MOS score | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

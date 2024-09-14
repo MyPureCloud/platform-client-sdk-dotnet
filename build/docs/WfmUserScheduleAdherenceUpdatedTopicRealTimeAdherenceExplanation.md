@@ -1,6 +1,5 @@
----
-title: WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
----
+# WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
+
 ## ININ.PureCloudApi.Model.WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
 
 ## Properties
@@ -11,6 +10,7 @@ title: WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
 | **StartDate** | **DateTime?** |  | [optional] |
 | **LengthMinutes** | **int?** |  | [optional] |
 | **Status** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

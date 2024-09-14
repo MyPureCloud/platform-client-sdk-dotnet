@@ -1,6 +1,5 @@
----
-title: CriteriaItem
----
+# CriteriaItem
+
 ## ININ.PureCloudApi.Model.CriteriaItem
 
 ## Properties
@@ -10,6 +9,7 @@ title: CriteriaItem
 | **Key** | **string** | The id of the criteria to be checked. | [optional] |
 | **Operator** | **string** | The operator used to check on the criteria id. | [optional] |
 | **Value** | **string** | The target value used to query on. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

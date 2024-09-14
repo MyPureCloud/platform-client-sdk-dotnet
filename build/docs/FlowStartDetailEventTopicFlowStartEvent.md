@@ -1,6 +1,5 @@
----
-title: FlowStartDetailEventTopicFlowStartEvent
----
+# FlowStartDetailEventTopicFlowStartEvent
+
 ## ININ.PureCloudApi.Model.FlowStartDetailEventTopicFlowStartEvent
 
 ## Properties
@@ -26,6 +25,7 @@ title: FlowStartDetailEventTopicFlowStartEvent
 | **FlowVersion** | **string** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

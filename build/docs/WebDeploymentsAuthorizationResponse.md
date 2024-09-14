@@ -1,6 +1,5 @@
----
-title: WebDeploymentsAuthorizationResponse
----
+# WebDeploymentsAuthorizationResponse
+
 ## ININ.PureCloudApi.Model.WebDeploymentsAuthorizationResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: WebDeploymentsAuthorizationResponse
 |------------ | ------------- | ------------- | -------------|
 | **RefreshToken** | **string** | Refresh token used to issue a new JWT. | [optional] |
 | **Jwt** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

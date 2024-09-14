@@ -1,6 +1,5 @@
----
-title: OutcomeRefRequest
----
+# OutcomeRefRequest
+
 ## ININ.PureCloudApi.Model.OutcomeRefRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: OutcomeRefRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | ID of outcome. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

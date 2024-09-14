@@ -1,23 +1,23 @@
----
-title: JourneyAppEventsNotificationOutcomeAchievedMessage
----
+# JourneyAppEventsNotificationOutcomeAchievedMessage
+
 ## ININ.PureCloudApi.Model.JourneyAppEventsNotificationOutcomeAchievedMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Outcome** | [**JourneyAppEventsNotificationOutcome**](JourneyAppEventsNotificationOutcome.html) |  | [optional] |
-| **Browser** | [**JourneyAppEventsNotificationBrowser**](JourneyAppEventsNotificationBrowser.html) |  | [optional] |
+| **Outcome** | [**JourneyAppEventsNotificationOutcome**](JourneyAppEventsNotificationOutcome) |  | [optional] |
+| **Browser** | [**JourneyAppEventsNotificationBrowser**](JourneyAppEventsNotificationBrowser) |  | [optional] |
 | **VisitCreatedDate** | **DateTime?** |  | [optional] |
 | **IpAddress** | **string** |  | [optional] |
 | **IpOrganization** | **string** |  | [optional] |
 | **UserAgentString** | **string** |  | [optional] |
-| **Device** | [**JourneyAppEventsNotificationDevice**](JourneyAppEventsNotificationDevice.html) |  | [optional] |
-| **Geolocation** | [**JourneyAppEventsNotificationGeoLocation**](JourneyAppEventsNotificationGeoLocation.html) |  | [optional] |
-| **MktCampaign** | [**JourneyAppEventsNotificationMktCampaign**](JourneyAppEventsNotificationMktCampaign.html) |  | [optional] |
-| **VisitReferrer** | [**JourneyAppEventsNotificationReferrer**](JourneyAppEventsNotificationReferrer.html) |  | [optional] |
-| **AssociatedValue** | [**JourneyAppEventsNotificationAssociatedValue**](JourneyAppEventsNotificationAssociatedValue.html) |  | [optional] |
-{: class="table table-striped"}
+| **Device** | [**JourneyAppEventsNotificationDevice**](JourneyAppEventsNotificationDevice) |  | [optional] |
+| **Geolocation** | [**JourneyAppEventsNotificationGeoLocation**](JourneyAppEventsNotificationGeoLocation) |  | [optional] |
+| **MktCampaign** | [**JourneyAppEventsNotificationMktCampaign**](JourneyAppEventsNotificationMktCampaign) |  | [optional] |
+| **VisitReferrer** | [**JourneyAppEventsNotificationReferrer**](JourneyAppEventsNotificationReferrer) |  | [optional] |
+| **AssociatedValue** | [**JourneyAppEventsNotificationAssociatedValue**](JourneyAppEventsNotificationAssociatedValue) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

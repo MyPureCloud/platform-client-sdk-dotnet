@@ -1,6 +1,5 @@
----
-title: KeyValue
----
+# KeyValue
+
 ## ININ.PureCloudApi.Model.KeyValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: KeyValue
 |------------ | ------------- | ------------- | -------------|
 | **Key** | **string** | Key for free-form data. | |
 | **Value** | **string** | Value for free-form data. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

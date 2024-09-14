@@ -1,6 +1,5 @@
----
-title: Format
----
+# Format
+
 ## ININ.PureCloudApi.Model.Format
 
 ## Properties
@@ -8,6 +7,7 @@ title: Format
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Flags** | **List&lt;string&gt;** | The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \&quot;format\&quot;: { \&quot;flags\&quot;: [StringPlayChars] } | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

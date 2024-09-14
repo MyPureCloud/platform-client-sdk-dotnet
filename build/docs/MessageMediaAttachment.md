@@ -1,6 +1,5 @@
----
-title: MessageMediaAttachment
----
+# MessageMediaAttachment
+
 ## ININ.PureCloudApi.Model.MessageMediaAttachment
 
 ## Properties
@@ -12,6 +11,7 @@ title: MessageMediaAttachment
 | **ContentLength** | **long?** | The optional content length of the the media object, in bytes. | [optional] |
 | **Name** | **string** | The name of the media object. | [optional] |
 | **Id** | **string** | A globally unique identifier for the media object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

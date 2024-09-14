@@ -1,6 +1,5 @@
----
-title: ConversationCallbackEventTopicDetail
----
+# ConversationCallbackEventTopicDetail
+
 ## ININ.PureCloudApi.Model.ConversationCallbackEventTopicDetail
 
 ## Properties
@@ -11,6 +10,7 @@ title: ConversationCallbackEventTopicDetail
 | **FieldName** | **string** |  | [optional] |
 | **EntityId** | **string** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

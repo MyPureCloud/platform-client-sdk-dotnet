@@ -1,6 +1,5 @@
----
-title: ConversationMetricsTopicConversationMetricRecord
----
+# ConversationMetricsTopicConversationMetricRecord
+
 ## ININ.PureCloudApi.Model.ConversationMetricsTopicConversationMetricRecord
 
 ## Properties
@@ -88,8 +87,9 @@ title: ConversationMetricsTopicConversationMetricRecord
 | **VideoPresent** | **bool?** | Flag indicating if video is present | [optional] |
 | **WaitingInteractionCounts** | **List&lt;int?&gt;** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **WrapUpCode** | **string** | Wrap up code | [optional] |
-| **ProposedAgents** | [**List&lt;ConversationMetricsTopicConversationProposedAgent&gt;**](ConversationMetricsTopicConversationProposedAgent.html) | Proposed agents | [optional] |
-| **ScoredAgents** | [**List&lt;ConversationMetricsTopicConversationScoredAgent&gt;**](ConversationMetricsTopicConversationScoredAgent.html) | Scored agents | [optional] |
-{: class="table table-striped"}
+| **ProposedAgents** | [**List&lt;ConversationMetricsTopicConversationProposedAgent&gt;**](ConversationMetricsTopicConversationProposedAgent) | Proposed agents | [optional] |
+| **ScoredAgents** | [**List&lt;ConversationMetricsTopicConversationScoredAgent&gt;**](ConversationMetricsTopicConversationScoredAgent) | Scored agents | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

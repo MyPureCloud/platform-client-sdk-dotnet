@@ -1,13 +1,12 @@
----
-title: ScheduleGroupEntityListing
----
+# ScheduleGroupEntityListing
+
 ## ININ.PureCloudApi.Model.ScheduleGroupEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ScheduleGroup&gt;**](ScheduleGroup.html) |  | [optional] |
+| **Entities** | [**List&lt;ScheduleGroup&gt;**](ScheduleGroup) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: ScheduleGroupEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

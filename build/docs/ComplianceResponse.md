@@ -1,6 +1,5 @@
----
-title: ComplianceResponse
----
+# ComplianceResponse
+
 ## ININ.PureCloudApi.Model.ComplianceResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ComplianceResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Message** | **string** | Message response | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

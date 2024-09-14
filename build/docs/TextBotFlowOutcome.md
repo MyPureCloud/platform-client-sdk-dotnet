@@ -1,6 +1,5 @@
----
-title: TextBotFlowOutcome
----
+# TextBotFlowOutcome
+
 ## ININ.PureCloudApi.Model.TextBotFlowOutcome
 
 ## Properties
@@ -11,7 +10,8 @@ title: TextBotFlowOutcome
 | **OutcomeValue** | **string** | The value of the FlowOutcome. | [optional] |
 | **DateStart** | **DateTime?** | The timestamp for when the Flow Outcome began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateEnd** | **DateTime?** | The timestamp for when the Flow Outcome finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **Milestones** | [**List&lt;TextBotFlowMilestone&gt;**](TextBotFlowMilestone.html) | The Flow Milestones for the Flow Outcome. | [optional] |
-{: class="table table-striped"}
+| **Milestones** | [**List&lt;TextBotFlowMilestone&gt;**](TextBotFlowMilestone) | The Flow Milestones for the Flow Outcome. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

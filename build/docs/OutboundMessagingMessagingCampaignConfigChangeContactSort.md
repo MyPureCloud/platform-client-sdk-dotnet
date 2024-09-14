@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeContactSort
----
+# OutboundMessagingMessagingCampaignConfigChangeContactSort
+
 ## ININ.PureCloudApi.Model.OutboundMessagingMessagingCampaignConfigChangeContactSort
 
 ## Properties
@@ -11,6 +10,7 @@ title: OutboundMessagingMessagingCampaignConfigChangeContactSort
 | **Direction** | **string** |  | [optional] |
 | **Numeric** | **bool?** | Whether that column contains numeric data | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ServiceLevel
----
+# ServiceLevel
+
 ## ININ.PureCloudApi.Model.ServiceLevel
 
 ## Properties
@@ -9,6 +8,7 @@ title: ServiceLevel
 |------------ | ------------- | ------------- | -------------|
 | **Percentage** | **double?** | The desired Service Level. A value between 0 and 1. | [optional] |
 | **DurationMs** | **long?** | Service Level target in milliseconds. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

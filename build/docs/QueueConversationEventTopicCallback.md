@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicCallback
----
+# QueueConversationEventTopicCallback
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicCallback
 
 ## Properties
@@ -14,8 +13,8 @@ title: QueueConversationEventTopicCallback
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. | [optional] |
-| **DialerPreview** | [**QueueConversationEventTopicDialerPreview**](QueueConversationEventTopicDialerPreview.html) |  | [optional] |
-| **Voicemail** | [**QueueConversationEventTopicVoicemail**](QueueConversationEventTopicVoicemail.html) |  | [optional] |
+| **DialerPreview** | [**QueueConversationEventTopicDialerPreview**](QueueConversationEventTopicDialerPreview) |  | [optional] |
+| **Voicemail** | [**QueueConversationEventTopicVoicemail**](QueueConversationEventTopicVoicemail) |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | The phone number(s) to use to place the callback. | [optional] |
 | **CallbackUserName** | **string** | The name of the user requesting a callback. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
@@ -28,12 +27,13 @@ title: QueueConversationEventTopicCallback
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. | [optional] |
 | **AutomatedCallbackConfigId** | **string** | The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal. | [optional] |
-| **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **Wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **CallerId** | **string** | The phone number displayed to recipients of the phone call. The value should conform to the E164 format. | [optional] |
 | **CallerIdName** | **string** | The name displayed to recipients of the phone call. | [optional] |
-| **QueueMediaSettings** | [**QueueConversationEventTopicQueueMediaSettings**](QueueConversationEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
-{: class="table table-striped"}
+| **QueueMediaSettings** | [**QueueConversationEventTopicQueueMediaSettings**](QueueConversationEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

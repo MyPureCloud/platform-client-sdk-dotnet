@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationAssociatedValue
----
+# JourneyWebEventsNotificationAssociatedValue
+
 ## ININ.PureCloudApi.Model.JourneyWebEventsNotificationAssociatedValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyWebEventsNotificationAssociatedValue
 |------------ | ------------- | ------------- | -------------|
 | **DataType** | **string** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationContentCard
----
+# ConversationContentCard
+
 ## ININ.PureCloudApi.Model.ConversationContentCard
 
 ## Properties
@@ -11,8 +10,9 @@ title: ConversationContentCard
 | **Description** | **string** | Text to show in the description. | [optional] |
 | **Image** | **string** | URL of an image. | [optional] |
 | **Video** | **string** | URL of a video. | [optional] |
-| **DefaultAction** | [**ConversationContentCardAction**](ConversationContentCardAction.html) | The default button action. | [optional] |
-| **Actions** | [**List&lt;ConversationContentCardAction&gt;**](ConversationContentCardAction.html) | An array of action objects. | |
-{: class="table table-striped"}
+| **DefaultAction** | [**ConversationContentCardAction**](ConversationContentCardAction) | The default button action. | [optional] |
+| **Actions** | [**List&lt;ConversationContentCardAction&gt;**](ConversationContentCardAction) | An array of action objects. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

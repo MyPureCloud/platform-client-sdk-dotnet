@@ -1,6 +1,5 @@
----
-title: LearningModuleReassignSummary
----
+# LearningModuleReassignSummary
+
 ## ININ.PureCloudApi.Model.LearningModuleReassignSummary
 
 ## Properties
@@ -12,6 +11,7 @@ title: LearningModuleReassignSummary
 | **InProgressCount** | **int?** | The total number of users who have the assignment in InProgress state | [optional] |
 | **AssignedCount** | **int?** | The total number of users who have the assignment in Assigned state | [optional] |
 | **NotCompletedCount** | **int?** | The total number of users who have their assignment overdue | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

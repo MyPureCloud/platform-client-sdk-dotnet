@@ -1,6 +1,5 @@
----
-title: MessengerStyles
----
+# MessengerStyles
+
 ## ININ.PureCloudApi.Model.MessengerStyles
 
 ## Properties
@@ -8,6 +7,7 @@ title: MessengerStyles
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **PrimaryColor** | **string** | The primary color of messenger in hexadecimal | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: GetMetricsResponse
----
+# GetMetricsResponse
+
 ## ININ.PureCloudApi.Model.GetMetricsResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: GetMetricsResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;Metrics&gt;**](Metrics.html) |  | [optional] |
+| **Entities** | [**List&lt;Metrics&gt;**](Metrics) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

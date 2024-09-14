@@ -1,6 +1,5 @@
----
-title: Attribute
----
+# Attribute
+
 ## ININ.PureCloudApi.Model.Attribute
 
 ## Properties
@@ -11,11 +10,12 @@ title: Attribute
 | **Name** | **string** | The attribute name. | |
 | **Version** | **int?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
-| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **CreatedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ModifiedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **ModifiedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

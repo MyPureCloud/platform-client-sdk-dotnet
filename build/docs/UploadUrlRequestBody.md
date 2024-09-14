@@ -1,6 +1,5 @@
----
-title: UploadUrlRequestBody
----
+# UploadUrlRequestBody
+
 ## ININ.PureCloudApi.Model.UploadUrlRequestBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: UploadUrlRequestBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ContentLengthBytes** | **long?** | The expected content length (in bytes) of the gzip-encoded data that will be PUT to the returned signed URL | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

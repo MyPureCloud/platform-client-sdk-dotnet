@@ -1,6 +1,5 @@
----
-title: SettingDirection
----
+# SettingDirection
+
 ## ININ.PureCloudApi.Model.SettingDirection
 
 ## Properties
@@ -9,6 +8,7 @@ title: SettingDirection
 |------------ | ------------- | ------------- | -------------|
 | **Inbound** | **string** | Status for the Inbound Direction | [optional] |
 | **Outbound** | **string** | Status for the Outbound Direction | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

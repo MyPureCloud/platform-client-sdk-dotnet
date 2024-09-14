@@ -1,6 +1,5 @@
----
-title: QueueConversationEmailEventTopicEmailConversation
----
+# QueueConversationEmailEventTopicEmailConversation
+
 ## ININ.PureCloudApi.Model.QueueConversationEmailEventTopicEmailConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: QueueConversationEmailEventTopicEmailConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;QueueConversationEmailEventTopicEmailMediaParticipant&gt;**](QueueConversationEmailEventTopicEmailMediaParticipant.html) |  | [optional] |
+| **Participants** | [**List&lt;QueueConversationEmailEventTopicEmailMediaParticipant&gt;**](QueueConversationEmailEventTopicEmailMediaParticipant) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

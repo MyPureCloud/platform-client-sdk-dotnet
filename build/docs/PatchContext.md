@@ -1,13 +1,13 @@
----
-title: PatchContext
----
+# PatchContext
+
 ## ININ.PureCloudApi.Model.PatchContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Patterns** | [**List&lt;PatchContextPattern&gt;**](PatchContextPattern.html) | A list of one or more patterns to match. | [optional] |
-{: class="table table-striped"}
+| **Patterns** | [**List&lt;PatchContextPattern&gt;**](PatchContextPattern) | A list of one or more patterns to match. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

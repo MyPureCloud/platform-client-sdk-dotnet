@@ -1,6 +1,5 @@
----
-title: ContactCenterSettings
----
+# ContactCenterSettings
+
 ## ININ.PureCloudApi.Model.ContactCenterSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContactCenterSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **RemoveSkillsFromBlindTransfer** | **bool?** | Strip skills from transfer | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: RoutingTransferEvent
----
+# RoutingTransferEvent
+
 ## ININ.PureCloudApi.Model.RoutingTransferEvent
 
 ## Properties
@@ -18,6 +17,7 @@ title: RoutingTransferEvent
 | **DestinationQueueId** | **string** | The id (V4 UUID) of the desired destination queue that the object communication should be transferred to. | |
 | **LanguageId** | **string** | The unique identifier (V4 UUID) for the language that should be used to determine the destination for the conversation. | [optional] |
 | **SkillIds** | **List&lt;string&gt;** | The unique identifiers (V4 UUID) for the skills that should be used to determine the destination for the conversation. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

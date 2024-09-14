@@ -1,6 +1,5 @@
----
-title: CreateWorkPlan
----
+# CreateWorkPlan
+
 ## ININ.PureCloudApi.Model.CreateWorkPlan
 
 ## Properties
@@ -30,11 +29,12 @@ title: CreateWorkPlan
 | **MaximumDaysOffPerPlanningPeriod** | **int?** | Maximum days off in the planning period | [optional] |
 | **MinimumPaidMinutesPerPlanningPeriod** | **int?** | Minimum paid minutes in the planning period | [optional] |
 | **MaximumPaidMinutesPerPlanningPeriod** | **int?** | Maximum paid minutes in the planning period | [optional] |
-| **OptionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek.html) | Optional days to schedule for this work plan | [optional] |
+| **OptionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Optional days to schedule for this work plan | [optional] |
 | **ShiftStartVarianceType** | **string** | This constraint ensures that an agent starts each workday within a user-defined time threshold | [optional] |
-| **ShiftStartVariances** | [**ListWrapperShiftStartVariance**](ListWrapperShiftStartVariance.html) | Variance in minutes among start times of shifts in this work plan | [optional] |
-| **Shifts** | [**List&lt;CreateWorkPlanShift&gt;**](CreateWorkPlanShift.html) | Shifts in this work plan | [optional] |
-| **Agents** | [**List&lt;UserReference&gt;**](UserReference.html) | Agents in this work plan | [optional] |
-{: class="table table-striped"}
+| **ShiftStartVariances** | [**ListWrapperShiftStartVariance**](ListWrapperShiftStartVariance) | Variance in minutes among start times of shifts in this work plan | [optional] |
+| **Shifts** | [**List&lt;CreateWorkPlanShift&gt;**](CreateWorkPlanShift) | Shifts in this work plan | [optional] |
+| **Agents** | [**List&lt;UserReference&gt;**](UserReference) | Agents in this work plan | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

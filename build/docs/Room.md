@@ -1,6 +1,5 @@
----
-title: Room
----
+# Room
+
 ## ININ.PureCloudApi.Model.Room
 
 ## Properties
@@ -14,10 +13,11 @@ title: Room
 | **Description** | **string** | Room&#39;s description | [optional] |
 | **Subject** | **string** | Room&#39;s subject | [optional] |
 | **ParticipantLimit** | **int?** | Room&#39;s size limit | [optional] |
-| **Owners** | [**List&lt;UserReference&gt;**](UserReference.html) | Room&#39;s owners | [optional] |
-| **PinnedMessages** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) | Room&#39;s pinned messages | [optional] |
+| **Owners** | [**List&lt;UserReference&gt;**](UserReference) | Room&#39;s owners | [optional] |
+| **PinnedMessages** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef) | Room&#39;s pinned messages | [optional] |
 | **Jid** | **string** | The jid of the room | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

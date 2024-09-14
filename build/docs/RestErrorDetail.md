@@ -1,6 +1,5 @@
----
-title: RestErrorDetail
----
+# RestErrorDetail
+
 ## ININ.PureCloudApi.Model.RestErrorDetail
 
 ## Properties
@@ -9,6 +8,7 @@ title: RestErrorDetail
 |------------ | ------------- | ------------- | -------------|
 | **Error** | **string** | name of the error | |
 | **Details** | **string** | additional information regarding the error | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

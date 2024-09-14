@@ -1,6 +1,5 @@
----
-title: WorktypeCreate
----
+# WorktypeCreate
+
 ## ININ.PureCloudApi.Model.WorktypeCreate
 
 ## Properties
@@ -24,6 +23,7 @@ title: WorktypeCreate
 | **DefaultQueueId** | **string** | The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
 | **DefaultLanguageId** | **string** | The ID of the default language for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
 | **DefaultSkillIds** | **List&lt;string&gt;** | The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

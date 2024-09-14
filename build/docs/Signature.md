@@ -1,6 +1,5 @@
----
-title: Signature
----
+# Signature
+
 ## ININ.PureCloudApi.Model.Signature
 
 ## Properties
@@ -11,6 +10,7 @@ title: Signature
 | **CannedResponseId** | **string** | The identifier referring to an email signature canned response. | [optional] |
 | **AlwaysIncluded** | **bool?** | A toggle that defines if a signature is always included or only set on the first email in an email chain. | [optional] |
 | **InclusionType** | **string** | The configuration to indicate when the signature of a conversation has to be included | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

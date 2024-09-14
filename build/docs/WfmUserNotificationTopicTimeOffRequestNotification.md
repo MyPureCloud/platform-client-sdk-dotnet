@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicTimeOffRequestNotification
----
+# WfmUserNotificationTopicTimeOffRequestNotification
+
 ## ININ.PureCloudApi.Model.WfmUserNotificationTopicTimeOffRequestNotification
 
 ## Properties
@@ -8,11 +7,12 @@ title: WfmUserNotificationTopicTimeOffRequestNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **TimeOffRequestId** | **string** |  | [optional] |
-| **User** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
+| **User** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
 | **IsFullDayRequest** | **bool?** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **PartialDayStartDateTimes** | **List&lt;DateTime?&gt;** |  | [optional] |
 | **FullDayManagementUnitDates** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

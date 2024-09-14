@@ -1,6 +1,5 @@
----
-title: SipDownloadResponse
----
+# SipDownloadResponse
+
 ## ININ.PureCloudApi.Model.SipDownloadResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: SipDownloadResponse
 |------------ | ------------- | ------------- | -------------|
 | **DownloadId** | **string** | unique id of the downloaded file | [optional] |
 | **DocumentId** | **string** | Document id of pcap file | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

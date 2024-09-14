@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicBuIntradayResult
----
+# WfmBuIntradayDataUpdateTopicBuIntradayResult
+
 ## ININ.PureCloudApi.Model.WfmBuIntradayDataUpdateTopicBuIntradayResult
 
 ## Properties
@@ -10,11 +9,12 @@ title: WfmBuIntradayDataUpdateTopicBuIntradayResult
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
 | **IntervalLengthMinutes** | **int?** |  | [optional] |
-| **IntradayDataGroupings** | [**List&lt;WfmBuIntradayDataUpdateTopicBuIntradayDataGroup&gt;**](WfmBuIntradayDataUpdateTopicBuIntradayDataGroup.html) |  | [optional] |
+| **IntradayDataGroupings** | [**List&lt;WfmBuIntradayDataUpdateTopicBuIntradayDataGroup&gt;**](WfmBuIntradayDataUpdateTopicBuIntradayDataGroup) |  | [optional] |
 | **Categories** | **List&lt;string&gt;** |  | [optional] |
 | **NoDataReason** | **string** |  | [optional] |
-| **Schedule** | [**WfmBuIntradayDataUpdateTopicBuScheduleReference**](WfmBuIntradayDataUpdateTopicBuScheduleReference.html) |  | [optional] |
-| **ShortTermForecast** | [**WfmBuIntradayDataUpdateTopicBuShortTermForecastReference**](WfmBuIntradayDataUpdateTopicBuShortTermForecastReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **Schedule** | [**WfmBuIntradayDataUpdateTopicBuScheduleReference**](WfmBuIntradayDataUpdateTopicBuScheduleReference) |  | [optional] |
+| **ShortTermForecast** | [**WfmBuIntradayDataUpdateTopicBuShortTermForecastReference**](WfmBuIntradayDataUpdateTopicBuShortTermForecastReference) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

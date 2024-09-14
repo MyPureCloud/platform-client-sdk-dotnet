@@ -1,20 +1,20 @@
----
-title: QueueConversationMessageEventTopicMessageDetails
----
+# QueueConversationMessageEventTopicMessageDetails
+
 ## ININ.PureCloudApi.Model.QueueConversationMessageEventTopicMessageDetails
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Message** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference.html) |  | [optional] |
+| **Message** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference) |  | [optional] |
 | **MessageTime** | **DateTime?** |  | [optional] |
 | **MessageSegmentCount** | **int?** |  | [optional] |
 | **MessageStatus** | **string** |  | [optional] |
-| **Media** | [**List&lt;QueueConversationMessageEventTopicMessageMedia&gt;**](QueueConversationMessageEventTopicMessageMedia.html) |  | [optional] |
-| **Stickers** | [**List&lt;QueueConversationMessageEventTopicMessageSticker&gt;**](QueueConversationMessageEventTopicMessageSticker.html) |  | [optional] |
-| **ErrorInfo** | [**QueueConversationMessageEventTopicErrorDetails**](QueueConversationMessageEventTopicErrorDetails.html) |  | [optional] |
-| **MessageMetadata** | [**QueueConversationMessageEventTopicMessageMetadata**](QueueConversationMessageEventTopicMessageMetadata.html) |  | [optional] |
-{: class="table table-striped"}
+| **Media** | [**List&lt;QueueConversationMessageEventTopicMessageMedia&gt;**](QueueConversationMessageEventTopicMessageMedia) |  | [optional] |
+| **Stickers** | [**List&lt;QueueConversationMessageEventTopicMessageSticker&gt;**](QueueConversationMessageEventTopicMessageSticker) |  | [optional] |
+| **ErrorInfo** | [**QueueConversationMessageEventTopicErrorDetails**](QueueConversationMessageEventTopicErrorDetails) |  | [optional] |
+| **MessageMetadata** | [**QueueConversationMessageEventTopicMessageMetadata**](QueueConversationMessageEventTopicMessageMetadata) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

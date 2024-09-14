@@ -1,6 +1,5 @@
----
-title: QueueConversationMessageEventTopicErrorDetails
----
+# QueueConversationMessageEventTopicErrorDetails
+
 ## ININ.PureCloudApi.Model.QueueConversationMessageEventTopicErrorDetails
 
 ## Properties
@@ -14,6 +13,7 @@ title: QueueConversationMessageEventTopicErrorDetails
 | **MessageParams** | **Dictionary&lt;string, string&gt;** | Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;john.doe&#39; | [optional] |
 | **ContextId** | **string** | The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead. | [optional] |
 | **Uri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

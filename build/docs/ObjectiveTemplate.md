@@ -1,6 +1,5 @@
----
-title: ObjectiveTemplate
----
+# ObjectiveTemplate
+
 ## ININ.PureCloudApi.Model.ObjectiveTemplate
 
 ## Properties
@@ -9,8 +8,9 @@ title: ObjectiveTemplate
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Zones** | [**List&lt;ObjectiveZone&gt;**](ObjectiveZone.html) |  | [optional] |
+| **Zones** | [**List&lt;ObjectiveZone&gt;**](ObjectiveZone) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

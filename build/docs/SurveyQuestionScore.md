@@ -1,6 +1,5 @@
----
-title: SurveyQuestionScore
----
+# SurveyQuestionScore
+
 ## ININ.PureCloudApi.Model.SurveyQuestionScore
 
 ## Properties
@@ -16,6 +15,7 @@ title: SurveyQuestionScore
 | **NpsScore** | **int?** |  | [optional] |
 | **NpsTextAnswer** | **string** |  | [optional] |
 | **FreeTextAnswer** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

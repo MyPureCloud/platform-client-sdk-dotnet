@@ -1,13 +1,13 @@
----
-title: ValueWrapperPlanningPeriodSettings
----
+# ValueWrapperPlanningPeriodSettings
+
 ## ININ.PureCloudApi.Model.ValueWrapperPlanningPeriodSettings
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | [**PlanningPeriodSettings**](PlanningPeriodSettings.html) | The value for the associated field | [optional] |
-{: class="table table-striped"}
+| **Value** | [**PlanningPeriodSettings**](PlanningPeriodSettings) | The value for the associated field | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

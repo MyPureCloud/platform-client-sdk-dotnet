@@ -1,6 +1,5 @@
----
-title: JourneyApp
----
+# JourneyApp
+
 ## ININ.PureCloudApi.Model.JourneyApp
 
 ## Properties
@@ -11,6 +10,7 @@ title: JourneyApp
 | **Namespace** | **string** | Namespace of the application (e.g. com.genesys.bancodinero). | |
 | **Version** | **string** | Version of the application (e.g. 5.9.27). | |
 | **BuildNumber** | **string** | Build number of the application (e.g. 701). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

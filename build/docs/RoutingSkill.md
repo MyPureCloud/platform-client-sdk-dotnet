@@ -1,6 +1,5 @@
----
-title: RoutingSkill
----
+# RoutingSkill
+
 ## ININ.PureCloudApi.Model.RoutingSkill
 
 ## Properties
@@ -13,6 +12,7 @@ title: RoutingSkill
 | **State** | **string** | The current state for this skill. | [optional] |
 | **Version** | **string** | Required when updating. Version must be the current version. Only the system can assign version. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

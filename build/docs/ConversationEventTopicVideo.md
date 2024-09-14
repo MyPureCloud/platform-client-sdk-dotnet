@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicVideo
----
+# ConversationEventTopicVideo
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicVideo
 
 ## Properties
@@ -9,7 +8,7 @@ title: ConversationEventTopicVideo
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** |  | [optional] |
 | **InitialState** | **string** |  | [optional] |
-| **Self** | [**ConversationEventTopicAddress**](ConversationEventTopicAddress.html) | Address and name data for a call endpoint. | [optional] |
+| **Self** | [**ConversationEventTopicAddress**](ConversationEventTopicAddress) | Address and name data for a call endpoint. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **Context** | **string** | The room id context (xmpp jid) for the conference session. | [optional] |
 | **AudioMuted** | **bool?** | Indicates whether this participant has muted their outgoing audio. | [optional] |
@@ -23,10 +22,11 @@ title: ConversationEventTopicVideo
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **Msids** | **List&lt;string&gt;** | List of media stream ids | [optional] |
-| **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **QueueMediaSettings** | [**ConversationEventTopicQueueMediaSettings**](ConversationEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
-{: class="table table-striped"}
+| **QueueMediaSettings** | [**ConversationEventTopicQueueMediaSettings**](ConversationEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

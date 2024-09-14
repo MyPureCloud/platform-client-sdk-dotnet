@@ -1,6 +1,5 @@
----
-title: StatEventFlowOutcomeTopicStatsNotification
----
+# StatEventFlowOutcomeTopicStatsNotification
+
 ## ININ.PureCloudApi.Model.StatEventFlowOutcomeTopicStatsNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventFlowOutcomeTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **Data** | [**List&lt;StatEventFlowOutcomeTopicIntervalMetrics&gt;**](StatEventFlowOutcomeTopicIntervalMetrics.html) |  | [optional] |
-{: class="table table-striped"}
+| **Data** | [**List&lt;StatEventFlowOutcomeTopicIntervalMetrics&gt;**](StatEventFlowOutcomeTopicIntervalMetrics) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

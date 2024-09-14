@@ -1,6 +1,5 @@
----
-title: SurveyQuestionGroup
----
+# SurveyQuestionGroup
+
 ## ININ.PureCloudApi.Model.SurveyQuestionGroup
 
 ## Properties
@@ -11,8 +10,9 @@ title: SurveyQuestionGroup
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **NaEnabled** | **bool?** |  | [optional] |
-| **Questions** | [**List&lt;SurveyQuestion&gt;**](SurveyQuestion.html) |  | [optional] |
-| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
-{: class="table table-striped"}
+| **Questions** | [**List&lt;SurveyQuestion&gt;**](SurveyQuestion) |  | [optional] |
+| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,60 +1,60 @@
----
-title: ContentManagementApi
----
+# ContentManagementApi
+
 ## PureCloudPlatform.Client.V2.Api.ContentManagementApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteContentmanagementDocument**](ContentManagementApi.html#deletecontentmanagementdocument) | **Delete** /api/v2/contentmanagement/documents/{documentId} | Delete a document. |
-| [**DeleteContentmanagementShare**](ContentManagementApi.html#deletecontentmanagementshare) | **Delete** /api/v2/contentmanagement/shares/{shareId} | Deletes an existing share. |
-| [**DeleteContentmanagementStatusStatusId**](ContentManagementApi.html#deletecontentmanagementstatusstatusid) | **Delete** /api/v2/contentmanagement/status/{statusId} | Cancel the command for this status |
-| [**DeleteContentmanagementWorkspace**](ContentManagementApi.html#deletecontentmanagementworkspace) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId} | Delete a workspace |
-| [**DeleteContentmanagementWorkspaceMember**](ContentManagementApi.html#deletecontentmanagementworkspacemember) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Delete a member from a workspace |
-| [**DeleteContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#deletecontentmanagementworkspacetagvalue) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Delete workspace tag |
-| [**GetContentmanagementDocument**](ContentManagementApi.html#getcontentmanagementdocument) | **Get** /api/v2/contentmanagement/documents/{documentId} | Get a document. |
-| [**GetContentmanagementDocumentContent**](ContentManagementApi.html#getcontentmanagementdocumentcontent) | **Get** /api/v2/contentmanagement/documents/{documentId}/content | Download a document. |
-| [**GetContentmanagementDocuments**](ContentManagementApi.html#getcontentmanagementdocuments) | **Get** /api/v2/contentmanagement/documents | Get a list of documents. |
-| [**GetContentmanagementQuery**](ContentManagementApi.html#getcontentmanagementquery) | **Get** /api/v2/contentmanagement/query | Query content |
-| [**GetContentmanagementSecurityprofile**](ContentManagementApi.html#getcontentmanagementsecurityprofile) | **Get** /api/v2/contentmanagement/securityprofiles/{securityProfileId} | Get a Security Profile |
-| [**GetContentmanagementSecurityprofiles**](ContentManagementApi.html#getcontentmanagementsecurityprofiles) | **Get** /api/v2/contentmanagement/securityprofiles | Get a List of Security Profiles |
-| [**GetContentmanagementShare**](ContentManagementApi.html#getcontentmanagementshare) | **Get** /api/v2/contentmanagement/shares/{shareId} | Retrieve details about an existing share. |
-| [**GetContentmanagementSharedSharedId**](ContentManagementApi.html#getcontentmanagementsharedsharedid) | **Get** /api/v2/contentmanagement/shared/{sharedId} | Get shared documents. Securely download a shared document. |
-| [**GetContentmanagementShares**](ContentManagementApi.html#getcontentmanagementshares) | **Get** /api/v2/contentmanagement/shares | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
-| [**GetContentmanagementStatus**](ContentManagementApi.html#getcontentmanagementstatus) | **Get** /api/v2/contentmanagement/status | Get a list of statuses for pending operations |
-| [**GetContentmanagementStatusStatusId**](ContentManagementApi.html#getcontentmanagementstatusstatusid) | **Get** /api/v2/contentmanagement/status/{statusId} | Get a status. |
-| [**GetContentmanagementUsage**](ContentManagementApi.html#getcontentmanagementusage) | **Get** /api/v2/contentmanagement/usage | Get usage details. |
-| [**GetContentmanagementWorkspace**](ContentManagementApi.html#getcontentmanagementworkspace) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId} | Get a workspace. |
-| [**GetContentmanagementWorkspaceDocuments**](ContentManagementApi.html#getcontentmanagementworkspacedocuments) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/documents | Get a list of documents. |
-| [**GetContentmanagementWorkspaceMember**](ContentManagementApi.html#getcontentmanagementworkspacemember) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Get a workspace member |
-| [**GetContentmanagementWorkspaceMembers**](ContentManagementApi.html#getcontentmanagementworkspacemembers) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/members | Get a list workspace members |
-| [**GetContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#getcontentmanagementworkspacetagvalue) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Get a workspace tag |
-| [**GetContentmanagementWorkspaceTagvalues**](ContentManagementApi.html#getcontentmanagementworkspacetagvalues) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Get a list of workspace tags |
-| [**GetContentmanagementWorkspaces**](ContentManagementApi.html#getcontentmanagementworkspaces) | **Get** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
-| [**PostContentmanagementDocument**](ContentManagementApi.html#postcontentmanagementdocument) | **Post** /api/v2/contentmanagement/documents/{documentId} | Update a document. |
-| [**PostContentmanagementDocumentContent**](ContentManagementApi.html#postcontentmanagementdocumentcontent) | **Post** /api/v2/contentmanagement/documents/{documentId}/content | Replace the contents of a document. |
-| [**PostContentmanagementDocuments**](ContentManagementApi.html#postcontentmanagementdocuments) | **Post** /api/v2/contentmanagement/documents | Add a document. |
-| [**PostContentmanagementQuery**](ContentManagementApi.html#postcontentmanagementquery) | **Post** /api/v2/contentmanagement/query | Query content |
-| [**PostContentmanagementShares**](ContentManagementApi.html#postcontentmanagementshares) | **Post** /api/v2/contentmanagement/shares | Creates a new share or updates an existing share if the entity has already been shared |
-| [**PostContentmanagementWorkspaceTagvalues**](ContentManagementApi.html#postcontentmanagementworkspacetagvalues) | **Post** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Create a workspace tag |
-| [**PostContentmanagementWorkspaceTagvaluesQuery**](ContentManagementApi.html#postcontentmanagementworkspacetagvaluesquery) | **Post** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query | Perform a prefix query on tags in the workspace |
-| [**PostContentmanagementWorkspaces**](ContentManagementApi.html#postcontentmanagementworkspaces) | **Post** /api/v2/contentmanagement/workspaces | Create a group workspace |
-| [**PutContentmanagementWorkspace**](ContentManagementApi.html#putcontentmanagementworkspace) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId} | Update a workspace |
-| [**PutContentmanagementWorkspaceMember**](ContentManagementApi.html#putcontentmanagementworkspacemember) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Add a member to a workspace |
-| [**PutContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#putcontentmanagementworkspacetagvalue) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Update a workspace tag. Will update all documents with the new tag value. |
-{: class="table table-striped"}
+| [**DeleteContentmanagementDocument**](#DeleteContentmanagementDocument) | **Delete** /api/v2/contentmanagement/documents/{documentId} | Delete a document. |
+| [**DeleteContentmanagementShare**](#DeleteContentmanagementShare) | **Delete** /api/v2/contentmanagement/shares/{shareId} | Deletes an existing share. |
+| [**DeleteContentmanagementStatusStatusId**](#DeleteContentmanagementStatusStatusId) | **Delete** /api/v2/contentmanagement/status/{statusId} | Cancel the command for this status |
+| [**DeleteContentmanagementWorkspace**](#DeleteContentmanagementWorkspace) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId} | Delete a workspace |
+| [**DeleteContentmanagementWorkspaceMember**](#DeleteContentmanagementWorkspaceMember) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Delete a member from a workspace |
+| [**DeleteContentmanagementWorkspaceTagvalue**](#DeleteContentmanagementWorkspaceTagvalue) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Delete workspace tag |
+| [**GetContentmanagementDocument**](#GetContentmanagementDocument) | **Get** /api/v2/contentmanagement/documents/{documentId} | Get a document. |
+| [**GetContentmanagementDocumentContent**](#GetContentmanagementDocumentContent) | **Get** /api/v2/contentmanagement/documents/{documentId}/content | Download a document. |
+| [**GetContentmanagementDocuments**](#GetContentmanagementDocuments) | **Get** /api/v2/contentmanagement/documents | Get a list of documents. |
+| [**GetContentmanagementQuery**](#GetContentmanagementQuery) | **Get** /api/v2/contentmanagement/query | Query content |
+| [**GetContentmanagementSecurityprofile**](#GetContentmanagementSecurityprofile) | **Get** /api/v2/contentmanagement/securityprofiles/{securityProfileId} | Get a Security Profile |
+| [**GetContentmanagementSecurityprofiles**](#GetContentmanagementSecurityprofiles) | **Get** /api/v2/contentmanagement/securityprofiles | Get a List of Security Profiles |
+| [**GetContentmanagementShare**](#GetContentmanagementShare) | **Get** /api/v2/contentmanagement/shares/{shareId} | Retrieve details about an existing share. |
+| [**GetContentmanagementSharedSharedId**](#GetContentmanagementSharedSharedId) | **Get** /api/v2/contentmanagement/shared/{sharedId} | Get shared documents. Securely download a shared document. |
+| [**GetContentmanagementShares**](#GetContentmanagementShares) | **Get** /api/v2/contentmanagement/shares | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
+| [**GetContentmanagementStatus**](#GetContentmanagementStatus) | **Get** /api/v2/contentmanagement/status | Get a list of statuses for pending operations |
+| [**GetContentmanagementStatusStatusId**](#GetContentmanagementStatusStatusId) | **Get** /api/v2/contentmanagement/status/{statusId} | Get a status. |
+| [**GetContentmanagementUsage**](#GetContentmanagementUsage) | **Get** /api/v2/contentmanagement/usage | Get usage details. |
+| [**GetContentmanagementWorkspace**](#GetContentmanagementWorkspace) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId} | Get a workspace. |
+| [**GetContentmanagementWorkspaceDocuments**](#GetContentmanagementWorkspaceDocuments) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/documents | Get a list of documents. |
+| [**GetContentmanagementWorkspaceMember**](#GetContentmanagementWorkspaceMember) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Get a workspace member |
+| [**GetContentmanagementWorkspaceMembers**](#GetContentmanagementWorkspaceMembers) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/members | Get a list workspace members |
+| [**GetContentmanagementWorkspaceTagvalue**](#GetContentmanagementWorkspaceTagvalue) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Get a workspace tag |
+| [**GetContentmanagementWorkspaceTagvalues**](#GetContentmanagementWorkspaceTagvalues) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Get a list of workspace tags |
+| [**GetContentmanagementWorkspaces**](#GetContentmanagementWorkspaces) | **Get** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
+| [**PostContentmanagementDocument**](#PostContentmanagementDocument) | **Post** /api/v2/contentmanagement/documents/{documentId} | Update a document. |
+| [**PostContentmanagementDocumentContent**](#PostContentmanagementDocumentContent) | **Post** /api/v2/contentmanagement/documents/{documentId}/content | Replace the contents of a document. |
+| [**PostContentmanagementDocuments**](#PostContentmanagementDocuments) | **Post** /api/v2/contentmanagement/documents | Add a document. |
+| [**PostContentmanagementQuery**](#PostContentmanagementQuery) | **Post** /api/v2/contentmanagement/query | Query content |
+| [**PostContentmanagementShares**](#PostContentmanagementShares) | **Post** /api/v2/contentmanagement/shares | Creates a new share or updates an existing share if the entity has already been shared |
+| [**PostContentmanagementWorkspaceTagvalues**](#PostContentmanagementWorkspaceTagvalues) | **Post** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Create a workspace tag |
+| [**PostContentmanagementWorkspaceTagvaluesQuery**](#PostContentmanagementWorkspaceTagvaluesQuery) | **Post** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query | Perform a prefix query on tags in the workspace |
+| [**PostContentmanagementWorkspaces**](#PostContentmanagementWorkspaces) | **Post** /api/v2/contentmanagement/workspaces | Create a group workspace |
+| [**PutContentmanagementWorkspace**](#PutContentmanagementWorkspace) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId} | Update a workspace |
+| [**PutContentmanagementWorkspaceMember**](#PutContentmanagementWorkspaceMember) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Add a member to a workspace |
+| [**PutContentmanagementWorkspaceTagvalue**](#PutContentmanagementWorkspaceTagvalue) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Update a workspace tag. Will update all documents with the new tag value. |
 
-<a name="deletecontentmanagementdocument"></a>
 
-## void DeleteContentmanagementDocument (string documentId, bool? _override = null)
 
+## DeleteContentmanagementDocument
+
+> void DeleteContentmanagementDocument (string documentId, bool? _override = null)
 
 
 Delete a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -102,16 +102,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletecontentmanagementshare"></a>
 
-## void DeleteContentmanagementShare (string shareId)
+## DeleteContentmanagementShare
 
+> void DeleteContentmanagementShare (string shareId)
 
 
 Deletes an existing share.
@@ -165,16 +164,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **shareId** | **string**| Share ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletecontentmanagementstatusstatusid"></a>
 
-## void DeleteContentmanagementStatusStatusId (string statusId)
+## DeleteContentmanagementStatusStatusId
 
+> void DeleteContentmanagementStatusStatusId (string statusId)
 
 
 Cancel the command for this status
@@ -226,16 +224,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **statusId** | **string**| Status ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletecontentmanagementworkspace"></a>
 
-## void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
+## DeleteContentmanagementWorkspace
 
+> void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
 
 
 Delete a workspace
@@ -289,16 +286,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **moveChildrenToWorkspaceId** | **string**| New location for objects in deleted workspace. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletecontentmanagementworkspacemember"></a>
 
-## void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId)
+## DeleteContentmanagementWorkspaceMember
 
+> void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId)
 
 
 Delete a member from a workspace
@@ -352,16 +348,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletecontentmanagementworkspacetagvalue"></a>
 
-## void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId)
+## DeleteContentmanagementWorkspaceTagvalue
 
+> void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId)
 
 
 Delete workspace tag
@@ -417,22 +412,22 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getcontentmanagementdocument"></a>
 
-## [**Document**](Document.html) GetContentmanagementDocument (string documentId, List<string> expand = null)
+## GetContentmanagementDocument
 
+> [**Document**](Document) GetContentmanagementDocument (string documentId, List<string> expand = null)
 
 
 Get a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -480,23 +475,23 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: lockInfo, acl, workspace |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: lockInfo, acl, workspace |
 
 ### Return type
 
-[**Document**](Document.html)
+[**Document**](Document)
 
-<a name="getcontentmanagementdocumentcontent"></a>
 
-## [**DownloadResponse**](DownloadResponse.html) GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null)
+## GetContentmanagementDocumentContent
 
+> [**DownloadResponse**](DownloadResponse) GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null)
 
 
 Download a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -547,17 +542,19 @@ namespace Example
 | **documentId** | **string**| Document ID |  |
 | **disposition** | **string**| Request how the content will be downloaded: a file attachment or inline. Default is attachment. | [optional] <br />**Values**: attachment, inline |
 | **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
+[**DownloadResponse**](DownloadResponse)
 
-<a name="getcontentmanagementdocuments"></a>
 
-## [**DocumentEntityListing**](DocumentEntityListing.html) GetContentmanagementDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## GetContentmanagementDocuments
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**DocumentEntityListing**](DocumentEntityListing) GetContentmanagementDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a list of documents.
 
@@ -616,21 +613,20 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **name** | **string**| Name | [optional]  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional]  |
 | **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DocumentEntityListing**](DocumentEntityListing.html)
+[**DocumentEntityListing**](DocumentEntityListing)
 
-<a name="getcontentmanagementquery"></a>
 
-## [**QueryResults**](QueryResults.html) GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
+## GetContentmanagementQuery
 
+> [**QueryResults**](QueryResults) GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
 
 
 Query content
@@ -692,17 +688,16 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional] [default to "name"] |
 | **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
 
 ### Return type
 
-[**QueryResults**](QueryResults.html)
+[**QueryResults**](QueryResults)
 
-<a name="getcontentmanagementsecurityprofile"></a>
 
-## [**SecurityProfile**](SecurityProfile.html) GetContentmanagementSecurityprofile (string securityProfileId)
+## GetContentmanagementSecurityprofile
 
+> [**SecurityProfile**](SecurityProfile) GetContentmanagementSecurityprofile (string securityProfileId)
 
 
 Get a Security Profile
@@ -755,16 +750,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **securityProfileId** | **string**| Security Profile Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SecurityProfile**](SecurityProfile.html)
+[**SecurityProfile**](SecurityProfile)
 
-<a name="getcontentmanagementsecurityprofiles"></a>
 
-## [**SecurityProfileEntityListing**](SecurityProfileEntityListing.html) GetContentmanagementSecurityprofiles ()
+## GetContentmanagementSecurityprofiles
 
+> [**SecurityProfileEntityListing**](SecurityProfileEntityListing) GetContentmanagementSecurityprofiles ()
 
 
 Get a List of Security Profiles
@@ -813,15 +807,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**SecurityProfileEntityListing**](SecurityProfileEntityListing.html)
+[**SecurityProfileEntityListing**](SecurityProfileEntityListing)
 
-<a name="getcontentmanagementshare"></a>
 
-## [**Share**](Share.html) GetContentmanagementShare (string shareId, List<string> expand = null)
+## GetContentmanagementShare
 
+> [**Share**](Share) GetContentmanagementShare (string shareId, List<string> expand = null)
 
 
 Retrieve details about an existing share.
@@ -875,17 +868,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **shareId** | **string**| Share ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 
 ### Return type
 
-[**Share**](Share.html)
+[**Share**](Share)
 
-<a name="getcontentmanagementsharedsharedid"></a>
 
-## [**SharedResponse**](SharedResponse.html) GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+## GetContentmanagementSharedSharedId
 
+> [**SharedResponse**](SharedResponse) GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
 
 
 Get shared documents. Securely download a shared document.
@@ -948,16 +940,15 @@ namespace Example
 | **disposition** | **string**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional] [default to attachment]<br />**Values**: attachment, inline, none |
 | **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: document.acl |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SharedResponse**](SharedResponse.html)
+[**SharedResponse**](SharedResponse)
 
-<a name="getcontentmanagementshares"></a>
 
-## [**ShareEntityListing**](ShareEntityListing.html) GetContentmanagementShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
+## GetContentmanagementShares
 
+> [**ShareEntityListing**](ShareEntityListing) GetContentmanagementShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
 
 
 Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -1015,19 +1006,18 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **entityId** | **string**| Filters the shares returned to only the entity specified by the value of this parameter. | [optional]  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ShareEntityListing**](ShareEntityListing.html)
+[**ShareEntityListing**](ShareEntityListing)
 
-<a name="getcontentmanagementstatus"></a>
 
-## [**CommandStatusEntityListing**](CommandStatusEntityListing.html) GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null)
+## GetContentmanagementStatus
 
+> [**CommandStatusEntityListing**](CommandStatusEntityListing) GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null)
 
 
 Get a list of statuses for pending operations
@@ -1082,16 +1072,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CommandStatusEntityListing**](CommandStatusEntityListing.html)
+[**CommandStatusEntityListing**](CommandStatusEntityListing)
 
-<a name="getcontentmanagementstatusstatusid"></a>
 
-## [**CommandStatus**](CommandStatus.html) GetContentmanagementStatusStatusId (string statusId)
+## GetContentmanagementStatusStatusId
 
+> [**CommandStatus**](CommandStatus) GetContentmanagementStatusStatusId (string statusId)
 
 
 Get a status.
@@ -1144,16 +1133,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **statusId** | **string**| Status ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CommandStatus**](CommandStatus.html)
+[**CommandStatus**](CommandStatus)
 
-<a name="getcontentmanagementusage"></a>
 
-## [**Usage**](Usage.html) GetContentmanagementUsage ()
+## GetContentmanagementUsage
 
+> [**Usage**](Usage) GetContentmanagementUsage ()
 
 
 Get usage details.
@@ -1202,15 +1190,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**Usage**](Usage.html)
+[**Usage**](Usage)
 
-<a name="getcontentmanagementworkspace"></a>
 
-## [**Workspace**](Workspace.html) GetContentmanagementWorkspace (string workspaceId, List<string> expand = null)
+## GetContentmanagementWorkspace
 
+> [**Workspace**](Workspace) GetContentmanagementWorkspace (string workspaceId, List<string> expand = null)
 
 
 Get a workspace.
@@ -1264,17 +1251,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
 
 ### Return type
 
-[**Workspace**](Workspace.html)
+[**Workspace**](Workspace)
 
-<a name="getcontentmanagementworkspacedocuments"></a>
 
-## [**DocumentEntityListing**](DocumentEntityListing.html) GetContentmanagementWorkspaceDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## GetContentmanagementWorkspaceDocuments
 
+> [**DocumentEntityListing**](DocumentEntityListing) GetContentmanagementWorkspaceDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
 
 Get a list of documents.
@@ -1332,21 +1318,20 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional]  |
 | **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DocumentEntityListing**](DocumentEntityListing.html)
+[**DocumentEntityListing**](DocumentEntityListing)
 
-<a name="getcontentmanagementworkspacemember"></a>
 
-## [**WorkspaceMember**](WorkspaceMember.html) GetContentmanagementWorkspaceMember (string workspaceId, string memberId, List<string> expand = null)
+## GetContentmanagementWorkspaceMember
 
+> [**WorkspaceMember**](WorkspaceMember) GetContentmanagementWorkspaceMember (string workspaceId, string memberId, List<string> expand = null)
 
 
 Get a workspace member
@@ -1402,17 +1387,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 
 ### Return type
 
-[**WorkspaceMember**](WorkspaceMember.html)
+[**WorkspaceMember**](WorkspaceMember)
 
-<a name="getcontentmanagementworkspacemembers"></a>
 
-## [**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html) GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
+## GetContentmanagementWorkspaceMembers
 
+> [**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing) GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
 
 Get a list workspace members
@@ -1470,17 +1454,16 @@ namespace Example
 | **workspaceId** | **string**| Workspace ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 
 ### Return type
 
-[**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html)
+[**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing)
 
-<a name="getcontentmanagementworkspacetagvalue"></a>
 
-## [**TagValue**](TagValue.html) GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, List<string> expand = null)
+## GetContentmanagementWorkspaceTagvalue
 
+> [**TagValue**](TagValue) GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, List<string> expand = null)
 
 
 Get a workspace tag
@@ -1536,17 +1519,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
 
 ### Return type
 
-[**TagValue**](TagValue.html)
+[**TagValue**](TagValue)
 
-<a name="getcontentmanagementworkspacetagvalues"></a>
 
-## [**TagValueEntityListing**](TagValueEntityListing.html) GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
+## GetContentmanagementWorkspaceTagvalues
 
+> [**TagValueEntityListing**](TagValueEntityListing) GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
 
 Get a list of workspace tags
@@ -1606,17 +1588,16 @@ namespace Example
 | **value** | **string**| filter the list of tags returned | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
 
 ### Return type
 
-[**TagValueEntityListing**](TagValueEntityListing.html)
+[**TagValueEntityListing**](TagValueEntityListing)
 
-<a name="getcontentmanagementworkspaces"></a>
 
-## [**WorkspaceEntityListing**](WorkspaceEntityListing.html) GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
+## GetContentmanagementWorkspaces
 
+> [**WorkspaceEntityListing**](WorkspaceEntityListing) GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
 
 
 Get a list of workspaces.
@@ -1675,24 +1656,24 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **access** | [**List<string>**](string.html)| Requested access level. | [optional] <br />**Values**: content, admin, document:create, document:viewContent, document:viewMetadata, document:download, document:delete, document:update, document:share, document:shareView, document:email, document:print, document:auditView, document:replace, document:tag, tag:create, tag:view, tag:update, tag:apply, tag:remove, tag:delete |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
-{: class="table table-striped"}
+| **access** | [**List<string>**](string)| Requested access level. | [optional] <br />**Values**: content, admin, document:create, document:viewContent, document:viewMetadata, document:download, document:delete, document:update, document:share, document:shareView, document:email, document:print, document:auditView, document:replace, document:tag, tag:create, tag:view, tag:update, tag:apply, tag:remove, tag:delete |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
 
 ### Return type
 
-[**WorkspaceEntityListing**](WorkspaceEntityListing.html)
+[**WorkspaceEntityListing**](WorkspaceEntityListing)
 
-<a name="postcontentmanagementdocument"></a>
 
-## [**Document**](Document.html) PostContentmanagementDocument (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
+## PostContentmanagementDocument
 
+> [**Document**](Document) PostContentmanagementDocument (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
 
 
 Update a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -1742,25 +1723,25 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **body** | [**DocumentUpdate**](DocumentUpdate.html)| Document |  |
+| **body** | [**DocumentUpdate**](DocumentUpdate)| Document |  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: acl |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Document**](Document.html)
+[**Document**](Document)
 
-<a name="postcontentmanagementdocumentcontent"></a>
 
-## [**ReplaceResponse**](ReplaceResponse.html) PostContentmanagementDocumentContent (string documentId, ReplaceRequest body, bool? _override = null)
+## PostContentmanagementDocumentContent
 
+> [**ReplaceResponse**](ReplaceResponse) PostContentmanagementDocumentContent (string documentId, ReplaceRequest body, bool? _override = null)
 
 
 Replace the contents of a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -1809,18 +1790,17 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **body** | [**ReplaceRequest**](ReplaceRequest.html)| Replace Request |  |
+| **body** | [**ReplaceRequest**](ReplaceRequest)| Replace Request |  |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ReplaceResponse**](ReplaceResponse.html)
+[**ReplaceResponse**](ReplaceResponse)
 
-<a name="postcontentmanagementdocuments"></a>
 
-## [**Document**](Document.html) PostContentmanagementDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
+## PostContentmanagementDocuments
 
+> [**Document**](Document) PostContentmanagementDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
 
 
 Add a document.
@@ -1875,20 +1855,19 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DocumentUpload**](DocumentUpload.html)| Document |  |
+| **body** | [**DocumentUpload**](DocumentUpload)| Document |  |
 | **copySource** | **string**| Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. | [optional]  |
 | **moveSource** | **string**| Move a document to a new workspace. Provide a document ID as the move source. | [optional]  |
 | **_override** | **bool?**| Override any lock on the source document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Document**](Document.html)
+[**Document**](Document)
 
-<a name="postcontentmanagementquery"></a>
 
-## [**QueryResults**](QueryResults.html) PostContentmanagementQuery (QueryRequest body, string expand = null)
+## PostContentmanagementQuery
 
+> [**QueryResults**](QueryResults) PostContentmanagementQuery (QueryRequest body, string expand = null)
 
 
 Query content
@@ -1941,18 +1920,17 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**QueryRequest**](QueryRequest.html)| Allows for a filtered query returning facet information |  |
+| **body** | [**QueryRequest**](QueryRequest)| Allows for a filtered query returning facet information |  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: acl, workspace |
-{: class="table table-striped"}
 
 ### Return type
 
-[**QueryResults**](QueryResults.html)
+[**QueryResults**](QueryResults)
 
-<a name="postcontentmanagementshares"></a>
 
-## [**CreateShareResponse**](CreateShareResponse.html) PostContentmanagementShares (CreateShareRequest body)
+## PostContentmanagementShares
 
+> [**CreateShareResponse**](CreateShareResponse) PostContentmanagementShares (CreateShareRequest body)
 
 
 Creates a new share or updates an existing share if the entity has already been shared
@@ -2004,17 +1982,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateShareRequest**](CreateShareRequest.html)| CreateShareRequest - entity id and type and a single member or list of members are required |  |
-{: class="table table-striped"}
+| **body** | [**CreateShareRequest**](CreateShareRequest)| CreateShareRequest - entity id and type and a single member or list of members are required |  |
 
 ### Return type
 
-[**CreateShareResponse**](CreateShareResponse.html)
+[**CreateShareResponse**](CreateShareResponse)
 
-<a name="postcontentmanagementworkspacetagvalues"></a>
 
-## [**TagValue**](TagValue.html) PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body)
+## PostContentmanagementWorkspaceTagvalues
 
+> [**TagValue**](TagValue) PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body)
 
 
 Create a workspace tag
@@ -2068,17 +2045,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **body** | [**TagValue**](TagValue.html)| tag |  |
-{: class="table table-striped"}
+| **body** | [**TagValue**](TagValue)| tag |  |
 
 ### Return type
 
-[**TagValue**](TagValue.html)
+[**TagValue**](TagValue)
 
-<a name="postcontentmanagementworkspacetagvaluesquery"></a>
 
-## [**TagValueEntityListing**](TagValueEntityListing.html) PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null)
+## PostContentmanagementWorkspaceTagvaluesQuery
 
+> [**TagValueEntityListing**](TagValueEntityListing) PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null)
 
 
 Perform a prefix query on tags in the workspace
@@ -2133,18 +2109,17 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **body** | [**TagQueryRequest**](TagQueryRequest.html)| query |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
-{: class="table table-striped"}
+| **body** | [**TagQueryRequest**](TagQueryRequest)| query |  |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
 
 ### Return type
 
-[**TagValueEntityListing**](TagValueEntityListing.html)
+[**TagValueEntityListing**](TagValueEntityListing)
 
-<a name="postcontentmanagementworkspaces"></a>
 
-## [**Workspace**](Workspace.html) PostContentmanagementWorkspaces (WorkspaceCreate body)
+## PostContentmanagementWorkspaces
 
+> [**Workspace**](Workspace) PostContentmanagementWorkspaces (WorkspaceCreate body)
 
 
 Create a group workspace
@@ -2196,17 +2171,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WorkspaceCreate**](WorkspaceCreate.html)| Workspace |  |
-{: class="table table-striped"}
+| **body** | [**WorkspaceCreate**](WorkspaceCreate)| Workspace |  |
 
 ### Return type
 
-[**Workspace**](Workspace.html)
+[**Workspace**](Workspace)
 
-<a name="putcontentmanagementworkspace"></a>
 
-## [**Workspace**](Workspace.html) PutContentmanagementWorkspace (string workspaceId, Workspace body)
+## PutContentmanagementWorkspace
 
+> [**Workspace**](Workspace) PutContentmanagementWorkspace (string workspaceId, Workspace body)
 
 
 Update a workspace
@@ -2260,17 +2234,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **body** | [**Workspace**](Workspace.html)| Workspace |  |
-{: class="table table-striped"}
+| **body** | [**Workspace**](Workspace)| Workspace |  |
 
 ### Return type
 
-[**Workspace**](Workspace.html)
+[**Workspace**](Workspace)
 
-<a name="putcontentmanagementworkspacemember"></a>
 
-## [**WorkspaceMember**](WorkspaceMember.html) PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body)
+## PutContentmanagementWorkspaceMember
 
+> [**WorkspaceMember**](WorkspaceMember) PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body)
 
 
 Add a member to a workspace
@@ -2326,17 +2299,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
-| **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace Member |  |
-{: class="table table-striped"}
+| **body** | [**WorkspaceMember**](WorkspaceMember)| Workspace Member |  |
 
 ### Return type
 
-[**WorkspaceMember**](WorkspaceMember.html)
+[**WorkspaceMember**](WorkspaceMember)
 
-<a name="putcontentmanagementworkspacetagvalue"></a>
 
-## [**TagValue**](TagValue.html) PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body)
+## PutContentmanagementWorkspaceTagvalue
 
+> [**TagValue**](TagValue) PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body)
 
 
 Update a workspace tag. Will update all documents with the new tag value.
@@ -2392,10 +2364,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
-| **body** | [**TagValue**](TagValue.html)| Workspace |  |
-{: class="table table-striped"}
+| **body** | [**TagValue**](TagValue)| Workspace |  |
 
 ### Return type
 
-[**TagValue**](TagValue.html)
+[**TagValue**](TagValue)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

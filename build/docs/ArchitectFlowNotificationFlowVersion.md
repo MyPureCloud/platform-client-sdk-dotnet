@@ -1,6 +1,5 @@
----
-title: ArchitectFlowNotificationFlowVersion
----
+# ArchitectFlowNotificationFlowVersion
+
 ## ININ.PureCloudApi.Model.ArchitectFlowNotificationFlowVersion
 
 ## Properties
@@ -8,6 +7,7 @@ title: ArchitectFlowNotificationFlowVersion
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The version ID | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

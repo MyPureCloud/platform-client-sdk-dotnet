@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicDestination
----
+# QueueConversationEventTopicDestination
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicDestination
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationEventTopicDestination
 |------------ | ------------- | ------------- | -------------|
 | **UserId** | **string** | The id of the user if the command destination is a user. | [optional] |
 | **Address** | **string** | The destination address if the command destination is an endpoint. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

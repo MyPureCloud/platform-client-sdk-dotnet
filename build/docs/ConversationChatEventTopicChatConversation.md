@@ -1,6 +1,5 @@
----
-title: ConversationChatEventTopicChatConversation
----
+# ConversationChatEventTopicChatConversation
+
 ## ININ.PureCloudApi.Model.ConversationChatEventTopicChatConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationChatEventTopicChatConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;ConversationChatEventTopicChatMediaParticipant&gt;**](ConversationChatEventTopicChatMediaParticipant.html) |  | [optional] |
+| **Participants** | [**List&lt;ConversationChatEventTopicChatMediaParticipant&gt;**](ConversationChatEventTopicChatMediaParticipant) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

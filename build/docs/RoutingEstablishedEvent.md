@@ -1,6 +1,5 @@
----
-title: RoutingEstablishedEvent
----
+# RoutingEstablishedEvent
+
 ## ININ.PureCloudApi.Model.RoutingEstablishedEvent
 
 ## Properties
@@ -17,8 +16,9 @@ title: RoutingEstablishedEvent
 | **Dnis** | **string** | The dialed number identification if it is available for this conversation. | [optional] |
 | **SkillIds** | **List&lt;string&gt;** | The unique identifiers (V4 UUID) for the skills that should be used to determine the destination for the conversation. | [optional] |
 | **LanguageId** | **string** | The unique identifier (V4 UUID) for the language that should be used to determine the destination for the conversation. | [optional] |
-| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

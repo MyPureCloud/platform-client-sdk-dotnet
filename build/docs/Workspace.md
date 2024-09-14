@@ -1,6 +1,5 @@
----
-title: Workspace
----
+# Workspace
+
 ## ININ.PureCloudApi.Model.Workspace
 
 ## Properties
@@ -11,14 +10,15 @@ title: Workspace
 | **Name** | **string** | The current name of the workspace. | |
 | **Type** | **string** |  | [optional] |
 | **IsCurrentUserWorkspace** | **bool?** |  | [optional] |
-| **User** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **User** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **Bucket** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **Summary** | [**WorkspaceSummary**](WorkspaceSummary.html) |  | [optional] |
+| **Summary** | [**WorkspaceSummary**](WorkspaceSummary) |  | [optional] |
 | **Acl** | **List&lt;string&gt;** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

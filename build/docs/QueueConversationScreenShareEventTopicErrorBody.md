@@ -1,6 +1,5 @@
----
-title: QueueConversationScreenShareEventTopicErrorBody
----
+# QueueConversationScreenShareEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.QueueConversationScreenShareEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: QueueConversationScreenShareEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;QueueConversationScreenShareEventTopicDetail&gt;**](QueueConversationScreenShareEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;QueueConversationScreenShareEventTopicErrorBody&gt;**](QueueConversationScreenShareEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;QueueConversationScreenShareEventTopicDetail&gt;**](QueueConversationScreenShareEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;QueueConversationScreenShareEventTopicErrorBody&gt;**](QueueConversationScreenShareEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

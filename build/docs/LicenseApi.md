@@ -1,27 +1,26 @@
----
-title: LicenseApi
----
+# LicenseApi
+
 ## PureCloudPlatform.Client.V2.Api.LicenseApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetLicenseDefinition**](LicenseApi.html#getlicensedefinition) | **Get** /api/v2/license/definitions/{licenseId} | Get PureCloud license definition. |
-| [**GetLicenseDefinitions**](LicenseApi.html#getlicensedefinitions) | **Get** /api/v2/license/definitions | Get all PureCloud license definitions available for the organization. |
-| [**GetLicenseToggle**](LicenseApi.html#getlicensetoggle) | **Get** /api/v2/license/toggles/{featureName} | Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles |
-| [**GetLicenseUser**](LicenseApi.html#getlicenseuser) | **Get** /api/v2/license/users/{userId} | Get licenses for specified user. |
-| [**GetLicenseUsers**](LicenseApi.html#getlicenseusers) | **Get** /api/v2/license/users | Get a page of users and their licenses |
-| [**PostLicenseInfer**](LicenseApi.html#postlicenseinfer) | **Post** /api/v2/license/infer | Get a list of licenses inferred based on a list of roleIds |
-| [**PostLicenseOrganization**](LicenseApi.html#postlicenseorganization) | **Post** /api/v2/license/organization | Update the organization&#39;s license assignments in a batch. |
-| [**PostLicenseToggle**](LicenseApi.html#postlicensetoggle) | **Post** /api/v2/license/toggles/{featureName} | Deprecated. No alternative required - this endpoint has no effect |
-| [**PostLicenseUsers**](LicenseApi.html#postlicenseusers) | **Post** /api/v2/license/users | Fetch user licenses in a batch. |
-{: class="table table-striped"}
+| [**GetLicenseDefinition**](#GetLicenseDefinition) | **Get** /api/v2/license/definitions/{licenseId} | Get PureCloud license definition. |
+| [**GetLicenseDefinitions**](#GetLicenseDefinitions) | **Get** /api/v2/license/definitions | Get all PureCloud license definitions available for the organization. |
+| [**GetLicenseToggle**](#GetLicenseToggle) | **Get** /api/v2/license/toggles/{featureName} | Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles |
+| [**GetLicenseUser**](#GetLicenseUser) | **Get** /api/v2/license/users/{userId} | Get licenses for specified user. |
+| [**GetLicenseUsers**](#GetLicenseUsers) | **Get** /api/v2/license/users | Get a page of users and their licenses |
+| [**PostLicenseInfer**](#PostLicenseInfer) | **Post** /api/v2/license/infer | Get a list of licenses inferred based on a list of roleIds |
+| [**PostLicenseOrganization**](#PostLicenseOrganization) | **Post** /api/v2/license/organization | Update the organization&#39;s license assignments in a batch. |
+| [**PostLicenseToggle**](#PostLicenseToggle) | **Post** /api/v2/license/toggles/{featureName} | Deprecated. No alternative required - this endpoint has no effect |
+| [**PostLicenseUsers**](#PostLicenseUsers) | **Post** /api/v2/license/users | Fetch user licenses in a batch. |
 
-<a name="getlicensedefinition"></a>
 
-## [**LicenseDefinition**](LicenseDefinition.html) GetLicenseDefinition (string licenseId)
 
+## GetLicenseDefinition
+
+> [**LicenseDefinition**](LicenseDefinition) GetLicenseDefinition (string licenseId)
 
 
 Get PureCloud license definition.
@@ -76,16 +75,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **licenseId** | **string**| ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LicenseDefinition**](LicenseDefinition.html)
+[**LicenseDefinition**](LicenseDefinition)
 
-<a name="getlicensedefinitions"></a>
 
-## [**List&lt;LicenseDefinition&gt;**](LicenseDefinition.html) GetLicenseDefinitions ()
+## GetLicenseDefinitions
 
+> [**List&lt;LicenseDefinition&gt;**](LicenseDefinition) GetLicenseDefinitions ()
 
 
 Get all PureCloud license definitions available for the organization.
@@ -136,15 +134,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**List<LicenseDefinition>**](LicenseDefinition.html)
+[**List<LicenseDefinition>**](LicenseDefinition)
 
-<a name="getlicensetoggle"></a>
 
-## [**LicenseOrgToggle**](LicenseOrgToggle.html) GetLicenseToggle (string featureName)
+## GetLicenseToggle
 
+> [**LicenseOrgToggle**](LicenseOrgToggle) GetLicenseToggle (string featureName)
 
 
 Deprecated - no alternative required. This operation will always return 'true' for requested toggles
@@ -197,16 +194,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **featureName** | **string**| featureName |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LicenseOrgToggle**](LicenseOrgToggle.html)
+[**LicenseOrgToggle**](LicenseOrgToggle)
 
-<a name="getlicenseuser"></a>
 
-## [**LicenseUser**](LicenseUser.html) GetLicenseUser (string userId)
+## GetLicenseUser
 
+> [**LicenseUser**](LicenseUser) GetLicenseUser (string userId)
 
 
 Get licenses for specified user.
@@ -261,16 +257,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LicenseUser**](LicenseUser.html)
+[**LicenseUser**](LicenseUser)
 
-<a name="getlicenseusers"></a>
 
-## [**UserLicensesEntityListing**](UserLicensesEntityListing.html) GetLicenseUsers (int? pageSize = null, int? pageNumber = null)
+## GetLicenseUsers
 
+> [**UserLicensesEntityListing**](UserLicensesEntityListing) GetLicenseUsers (int? pageSize = null, int? pageNumber = null)
 
 
 Get a page of users and their licenses
@@ -327,16 +322,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UserLicensesEntityListing**](UserLicensesEntityListing.html)
+[**UserLicensesEntityListing**](UserLicensesEntityListing)
 
-<a name="postlicenseinfer"></a>
 
-## **List&lt;string&gt;** PostLicenseInfer (List<string> body = null)
+## PostLicenseInfer
 
+> **List&lt;string&gt;** PostLicenseInfer (List<string> body = null)
 
 
 Get a list of licenses inferred based on a list of roleIds
@@ -388,17 +382,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List<string>**](string.html)| The roleIds to use while inferring licenses | [optional]  |
-{: class="table table-striped"}
+| **body** | [**List<string>**](string)| The roleIds to use while inferring licenses | [optional]  |
 
 ### Return type
 
 **List<string>**
 
-<a name="postlicenseorganization"></a>
 
-## [**List&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html) PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
+## PostLicenseOrganization
 
+> [**List&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus) PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
 
 
 Update the organization's license assignments in a batch.
@@ -451,17 +444,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LicenseBatchAssignmentRequest**](LicenseBatchAssignmentRequest.html)| The license assignments to update. | [optional]  |
-{: class="table table-striped"}
+| **body** | [**LicenseBatchAssignmentRequest**](LicenseBatchAssignmentRequest)| The license assignments to update. | [optional]  |
 
 ### Return type
 
-[**List<LicenseUpdateStatus>**](LicenseUpdateStatus.html)
+[**List<LicenseUpdateStatus>**](LicenseUpdateStatus)
 
-<a name="postlicensetoggle"></a>
 
-## [**LicenseOrgToggle**](LicenseOrgToggle.html) PostLicenseToggle (string featureName)
+## PostLicenseToggle
 
+> [**LicenseOrgToggle**](LicenseOrgToggle) PostLicenseToggle (string featureName)
 
 
 Deprecated. No alternative required - this endpoint has no effect
@@ -514,16 +506,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **featureName** | **string**| featureName |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LicenseOrgToggle**](LicenseOrgToggle.html)
+[**LicenseOrgToggle**](LicenseOrgToggle)
 
-<a name="postlicenseusers"></a>
 
-## **Dictionary&lt;string, Object&gt;** PostLicenseUsers (List<string> body = null)
+## PostLicenseUsers
 
+> **Dictionary&lt;string, Object&gt;** PostLicenseUsers (List<string> body = null)
 
 
 Fetch user licenses in a batch.
@@ -577,10 +568,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List<string>**](string.html)| The user IDs to fetch. | [optional]  |
-{: class="table table-striped"}
+| **body** | [**List<string>**](string)| The user IDs to fetch. | [optional]  |
 
 ### Return type
 
 **Dictionary<string, Object>**
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

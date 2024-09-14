@@ -1,6 +1,5 @@
----
-title: OrgWhitelistSettings
----
+# OrgWhitelistSettings
+
 ## ININ.PureCloudApi.Model.OrgWhitelistSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: OrgWhitelistSettings
 |------------ | ------------- | ------------- | -------------|
 | **EnableWhitelist** | **bool?** |  | [optional] |
 | **DomainWhitelist** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

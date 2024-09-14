@@ -1,16 +1,16 @@
----
-title: ForecastServiceGoalTemplateResponse
----
+# ForecastServiceGoalTemplateResponse
+
 ## ININ.PureCloudApi.Model.ForecastServiceGoalTemplateResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ServiceLevel** | [**ForecastServiceLevelResponse**](ForecastServiceLevelResponse.html) | The service level goal for this forecast | [optional] |
-| **AverageSpeedOfAnswer** | [**ForecastAverageSpeedOfAnswerResponse**](ForecastAverageSpeedOfAnswerResponse.html) | The average speed of answer goal for this forecast | [optional] |
-| **AbandonRate** | [**ForecastAbandonRateResponse**](ForecastAbandonRateResponse.html) | The abandon rate goal for this forecast | [optional] |
-| **ImpactOverride** | [**ForecastServiceGoalTemplateImpactOverrideResponse**](ForecastServiceGoalTemplateImpactOverrideResponse.html) | The service goal impact overrides for this forecast | [optional] |
-{: class="table table-striped"}
+| **ServiceLevel** | [**ForecastServiceLevelResponse**](ForecastServiceLevelResponse) | The service level goal for this forecast | [optional] |
+| **AverageSpeedOfAnswer** | [**ForecastAverageSpeedOfAnswerResponse**](ForecastAverageSpeedOfAnswerResponse) | The average speed of answer goal for this forecast | [optional] |
+| **AbandonRate** | [**ForecastAbandonRateResponse**](ForecastAbandonRateResponse) | The abandon rate goal for this forecast | [optional] |
+| **ImpactOverride** | [**ForecastServiceGoalTemplateImpactOverrideResponse**](ForecastServiceGoalTemplateImpactOverrideResponse) | The service goal impact overrides for this forecast | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

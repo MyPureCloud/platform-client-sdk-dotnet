@@ -1,6 +1,5 @@
----
-title: DialerCampaignConfigChangeRestErrorDetail
----
+# DialerCampaignConfigChangeRestErrorDetail
+
 ## ININ.PureCloudApi.Model.DialerCampaignConfigChangeRestErrorDetail
 
 ## Properties
@@ -10,6 +9,7 @@ title: DialerCampaignConfigChangeRestErrorDetail
 | **Error** | **string** | name of the error | [optional] |
 | **Details** | **string** | additional information regarding the error | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

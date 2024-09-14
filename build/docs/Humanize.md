@@ -1,6 +1,5 @@
----
-title: Humanize
----
+# Humanize
+
 ## ININ.PureCloudApi.Model.Humanize
 
 ## Properties
@@ -8,7 +7,8 @@ title: Humanize
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | Whether or not humanize conversations setting is enabled | [optional] |
-| **Bot** | [**BotMessengerProfile**](BotMessengerProfile.html) | Bot messenger profile setting | [optional] |
-{: class="table table-striped"}
+| **Bot** | [**BotMessengerProfile**](BotMessengerProfile) | Bot messenger profile setting | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

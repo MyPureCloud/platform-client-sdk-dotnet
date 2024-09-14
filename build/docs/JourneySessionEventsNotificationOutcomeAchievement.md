@@ -1,14 +1,14 @@
----
-title: JourneySessionEventsNotificationOutcomeAchievement
----
+# JourneySessionEventsNotificationOutcomeAchievement
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationOutcomeAchievement
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Outcome** | [**JourneySessionEventsNotificationOutcome**](JourneySessionEventsNotificationOutcome.html) |  | [optional] |
+| **Outcome** | [**JourneySessionEventsNotificationOutcome**](JourneySessionEventsNotificationOutcome) |  | [optional] |
 | **AchievedDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

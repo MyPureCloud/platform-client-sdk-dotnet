@@ -1,6 +1,5 @@
----
-title: TrendData
----
+# TrendData
+
 ## ININ.PureCloudApi.Model.TrendData
 
 ## Properties
@@ -11,6 +10,7 @@ title: TrendData
 | **DateEndWorkday** | **String** | End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **PercentOfGoal** | **double?** | Percent of goal | [optional] |
 | **AverageValue** | **double?** | Average metric value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

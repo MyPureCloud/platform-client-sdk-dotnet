@@ -1,6 +1,5 @@
----
-title: GroupGreetingEventGreeting
----
+# GroupGreetingEventGreeting
+
 ## ININ.PureCloudApi.Model.GroupGreetingEventGreeting
 
 ## Properties
@@ -11,9 +10,10 @@ title: GroupGreetingEventGreeting
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **OwnerType** | **string** |  | [optional] |
-| **Owner** | [**GroupGreetingEventGreetingOwner**](GroupGreetingEventGreetingOwner.html) |  | [optional] |
-| **GreetingAudioFile** | [**GroupGreetingEventGreetingAudioFile**](GroupGreetingEventGreetingAudioFile.html) |  | [optional] |
+| **Owner** | [**GroupGreetingEventGreetingOwner**](GroupGreetingEventGreetingOwner) |  | [optional] |
+| **GreetingAudioFile** | [**GroupGreetingEventGreetingAudioFile**](GroupGreetingEventGreetingAudioFile) |  | [optional] |
 | **AudioTTS** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

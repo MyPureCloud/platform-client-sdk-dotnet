@@ -1,6 +1,5 @@
----
-title: Copilot
----
+# Copilot
+
 ## ININ.PureCloudApi.Model.Copilot
 
 ## Properties
@@ -10,14 +9,15 @@ title: Copilot
 | **Enabled** | **bool?** | Copilot is enabled. | [optional] |
 | **LiveOnQueue** | **bool?** | Copilot is live on selected queue. | |
 | **DefaultLanguage** | **string** | Copilot default language, e.g. [en-US, es-US, es-ES]. Once set, it can not be modified. | |
-| **KnowledgeAnswerConfig** | [**KnowledgeAnswerConfig**](KnowledgeAnswerConfig.html) | Knowledge answer configuration. | [optional] |
-| **SummaryGenerationConfig** | [**SummaryGenerationConfig**](SummaryGenerationConfig.html) | Copilot generated summary configuration. | [optional] |
-| **WrapupCodePredictionConfig** | [**WrapupCodePredictionConfig**](WrapupCodePredictionConfig.html) | Copilot generated wrapup code prediction configuration. | [optional] |
-| **AnswerGenerationConfig** | [**AnswerGenerationConfig**](AnswerGenerationConfig.html) | Answer generation configuration. | [optional] |
+| **KnowledgeAnswerConfig** | [**KnowledgeAnswerConfig**](KnowledgeAnswerConfig) | Knowledge answer configuration. | [optional] |
+| **SummaryGenerationConfig** | [**SummaryGenerationConfig**](SummaryGenerationConfig) | Copilot generated summary configuration. | [optional] |
+| **WrapupCodePredictionConfig** | [**WrapupCodePredictionConfig**](WrapupCodePredictionConfig) | Copilot generated wrapup code prediction configuration. | [optional] |
+| **AnswerGenerationConfig** | [**AnswerGenerationConfig**](AnswerGenerationConfig) | Answer generation configuration. | [optional] |
 | **NluEngineType** | **string** | Language understanding engine type. | [optional] |
-| **NluConfig** | [**NluConfig**](NluConfig.html) | NLU configuration. | [optional] |
-| **RuleEngineConfig** | [**RuleEngineConfig**](RuleEngineConfig.html) | Rule engine configuration. | [optional] |
+| **NluConfig** | [**NluConfig**](NluConfig) | NLU configuration. | [optional] |
+| **RuleEngineConfig** | [**RuleEngineConfig**](RuleEngineConfig) | Rule engine configuration. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

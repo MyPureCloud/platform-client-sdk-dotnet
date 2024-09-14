@@ -1,6 +1,5 @@
----
-title: IntradayPlanningGroupRequest
----
+# IntradayPlanningGroupRequest
+
 ## ININ.PureCloudApi.Model.IntradayPlanningGroupRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: IntradayPlanningGroupRequest
 | **Categories** | **List&lt;string&gt;** | The metric categories | |
 | **PlanningGroupIds** | **List&lt;string&gt;** | The IDs of the planning groups for which to fetch data.  Omitting or passing an empty list will return all available planning groups | [optional] |
 | **IntervalLengthMinutes** | **int?** | The period/interval in minutes for which to aggregate the data. Required, defaults to 15 | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

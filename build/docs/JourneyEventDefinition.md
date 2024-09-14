@@ -1,6 +1,5 @@
----
-title: JourneyEventDefinition
----
+# JourneyEventDefinition
+
 ## ININ.PureCloudApi.Model.JourneyEventDefinition
 
 ## Properties
@@ -11,8 +10,9 @@ title: JourneyEventDefinition
 | **Name** | **string** | The name of the event definition | |
 | **Source** | **string** | The source of the event definition | |
 | **Description** | **string** | The description of this event definition | |
-| **JsonSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | The JSON schema of this event definition | |
+| **JsonSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) | The JSON schema of this event definition | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

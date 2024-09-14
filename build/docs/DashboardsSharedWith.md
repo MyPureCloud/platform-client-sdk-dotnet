@@ -1,6 +1,5 @@
----
-title: DashboardsSharedWith
----
+# DashboardsSharedWith
+
 ## ININ.PureCloudApi.Model.DashboardsSharedWith
 
 ## Properties
@@ -9,6 +8,7 @@ title: DashboardsSharedWith
 |------------ | ------------- | ------------- | -------------|
 | **UserIds** | **List&lt;string&gt;** | The list of user ids to share the dashboard with | [optional] |
 | **TeamIds** | **List&lt;string&gt;** | The list of team ids to share the dashboard with | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

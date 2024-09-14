@@ -1,6 +1,5 @@
----
-title: JourneyViewElementFilterPredicate
----
+# JourneyViewElementFilterPredicate
+
 ## ININ.PureCloudApi.Model.JourneyViewElementFilterPredicate
 
 ## Properties
@@ -11,6 +10,7 @@ title: JourneyViewElementFilterPredicate
 | **Values** | **List&lt;string&gt;** | the values of the attribute to filter on | |
 | **Operator** | **string** | Optional operator, default is Matches. Valid values: Matches | [optional] |
 | **NoValue** | **bool?** | set this to true if no specific value to be considered | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

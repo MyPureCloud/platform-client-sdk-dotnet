@@ -1,6 +1,5 @@
----
-title: QualityEvaluationScoreItem
----
+# QualityEvaluationScoreItem
+
 ## ININ.PureCloudApi.Model.QualityEvaluationScoreItem
 
 ## Properties
@@ -16,6 +15,7 @@ title: QualityEvaluationScoreItem
 | **EvaluationScore** | **double?** | The quality score of evaluation as a percentage | [optional] |
 | **MaxPoints** | **int?** | The maximum Gamification points a user may earn for this metric | [optional] |
 | **MediaTypes** | **List&lt;string&gt;** | A list of media types for the metric | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

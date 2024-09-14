@@ -1,6 +1,5 @@
----
-title: V2MobiusAlertsTopicAlertRuleProperties
----
+# V2MobiusAlertsTopicAlertRuleProperties
+
 ## ININ.PureCloudApi.Model.V2MobiusAlertsTopicAlertRuleProperties
 
 ## Properties
@@ -10,6 +9,7 @@ title: V2MobiusAlertsTopicAlertRuleProperties
 | **Id** | **Guid?** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

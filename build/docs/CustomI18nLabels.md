@@ -1,6 +1,5 @@
----
-title: CustomI18nLabels
----
+# CustomI18nLabels
+
 ## ININ.PureCloudApi.Model.CustomI18nLabels
 
 ## Properties
@@ -8,7 +7,8 @@ title: CustomI18nLabels
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Language** | **string** | Language of localized labels in homescreen app (eg. en-us, de-de) | [optional] |
-| **LocalizedLabels** | [**List&lt;LocalizedLabels&gt;**](LocalizedLabels.html) | Contains localized labels used in homescreen app | [optional] |
-{: class="table table-striped"}
+| **LocalizedLabels** | [**List&lt;LocalizedLabels&gt;**](LocalizedLabels) | Contains localized labels used in homescreen app | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

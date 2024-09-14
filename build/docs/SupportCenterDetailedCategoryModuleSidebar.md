@@ -1,6 +1,5 @@
----
-title: SupportCenterDetailedCategoryModuleSidebar
----
+# SupportCenterDetailedCategoryModuleSidebar
+
 ## ININ.PureCloudApi.Model.SupportCenterDetailedCategoryModuleSidebar
 
 ## Properties
@@ -8,6 +7,7 @@ title: SupportCenterDetailedCategoryModuleSidebar
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | Whether sidebar is enabled or not | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: LearningScormUploadResponse
----
+# LearningScormUploadResponse
+
 ## ININ.PureCloudApi.Model.LearningScormUploadResponse
 
 ## Properties
@@ -12,6 +11,7 @@ title: LearningScormUploadResponse
 | **UploadUrl** | **string** | The pre-signed URL. Use it with headers below to upload file to S3 | [optional] |
 | **Headers** | **Dictionary&lt;string, string&gt;** | The additional headers that need to be included in the upload request | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

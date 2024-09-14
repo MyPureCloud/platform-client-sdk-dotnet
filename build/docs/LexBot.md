@@ -1,6 +1,5 @@
----
-title: LexBot
----
+# LexBot
+
 ## ININ.PureCloudApi.Model.LexBot
 
 ## Properties
@@ -11,6 +10,7 @@ title: LexBot
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** | A description of the Lex bot | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

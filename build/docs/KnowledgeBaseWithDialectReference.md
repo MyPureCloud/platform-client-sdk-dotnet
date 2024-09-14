@@ -1,6 +1,5 @@
----
-title: KnowledgeBaseWithDialectReference
----
+# KnowledgeBaseWithDialectReference
+
 ## ININ.PureCloudApi.Model.KnowledgeBaseWithDialectReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: KnowledgeBaseWithDialectReference
 | **Id** | **string** | The globally unique identifier for the knowledge base. | |
 | **LanguageCode** | **string** | The dialect for the knowledge base. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

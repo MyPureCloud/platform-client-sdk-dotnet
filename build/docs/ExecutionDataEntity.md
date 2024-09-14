@@ -1,6 +1,5 @@
----
-title: ExecutionDataEntity
----
+# ExecutionDataEntity
+
 ## ININ.PureCloudApi.Model.ExecutionDataEntity
 
 ## Properties
@@ -11,6 +10,7 @@ title: ExecutionDataEntity
 | **DownloadUri** | **string** | A downloadable link to the execution data file. | [optional] |
 | **Failed** | **bool?** | If the retrieval failed (not found, no permission, etc;), this will be set true. | [optional] |
 | **StatusCode** | **string** | This will contain the http status code for the failure | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

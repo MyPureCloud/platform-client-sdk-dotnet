@@ -1,6 +1,5 @@
----
-title: WorkbinUpdate
----
+# WorkbinUpdate
+
 ## ININ.PureCloudApi.Model.WorkbinUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkbinUpdate
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Workbin name. Valid length between 3 and 256 characters. | [optional] |
 | **Description** | **string** | Workbin description. Maximum length of 512 characters. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: StatisticalSummary
----
+# StatisticalSummary
+
 ## ININ.PureCloudApi.Model.StatisticalSummary
 
 ## Properties
@@ -20,6 +19,7 @@ title: StatisticalSummary
 | **Target** | **double?** |  | [optional] |
 | **P95** | **long?** |  | [optional] |
 | **P99** | **long?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

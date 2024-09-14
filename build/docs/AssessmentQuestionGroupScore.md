@@ -1,6 +1,5 @@
----
-title: AssessmentQuestionGroupScore
----
+# AssessmentQuestionGroupScore
+
 ## ININ.PureCloudApi.Model.AssessmentQuestionGroupScore
 
 ## Properties
@@ -22,7 +21,8 @@ title: AssessmentQuestionGroupScore
 | **MaxTotalCriticalScoreUnweighted** | **float?** | The maximum unweighted total score for the critical questions | [optional] |
 | **TotalNonCriticalScoreUnweighted** | **float?** | The total unweighted score for the non-critical questions | [optional] |
 | **MaxTotalNonCriticalScoreUnweighted** | **float?** | The maximum unweighted total score for the non-critical questions | [optional] |
-| **QuestionScores** | [**List&lt;AssessmentQuestionScore&gt;**](AssessmentQuestionScore.html) | The individual question scores | [optional] |
-{: class="table table-striped"}
+| **QuestionScores** | [**List&lt;AssessmentQuestionScore&gt;**](AssessmentQuestionScore) | The individual question scores | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

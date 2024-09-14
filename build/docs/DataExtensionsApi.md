@@ -1,21 +1,20 @@
----
-title: DataExtensionsApi
----
+# DataExtensionsApi
+
 ## PureCloudPlatform.Client.V2.Api.DataExtensionsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDataextensionsCoretype**](DataExtensionsApi.html#getdataextensionscoretype) | **Get** /api/v2/dataextensions/coretypes/{coretypeName} | Get a specific named core type. |
-| [**GetDataextensionsCoretypes**](DataExtensionsApi.html#getdataextensionscoretypes) | **Get** /api/v2/dataextensions/coretypes | Get the core types from which all schemas are built. |
-| [**GetDataextensionsLimits**](DataExtensionsApi.html#getdataextensionslimits) | **Get** /api/v2/dataextensions/limits | Get quantitative limits on schemas |
-{: class="table table-striped"}
+| [**GetDataextensionsCoretype**](#GetDataextensionsCoretype) | **Get** /api/v2/dataextensions/coretypes/{coretypeName} | Get a specific named core type. |
+| [**GetDataextensionsCoretypes**](#GetDataextensionsCoretypes) | **Get** /api/v2/dataextensions/coretypes | Get the core types from which all schemas are built. |
+| [**GetDataextensionsLimits**](#GetDataextensionsLimits) | **Get** /api/v2/dataextensions/limits | Get quantitative limits on schemas |
 
-<a name="getdataextensionscoretype"></a>
 
-## [**Coretype**](Coretype.html) GetDataextensionsCoretype (string coretypeName)
 
+## GetDataextensionsCoretype
+
+> [**Coretype**](Coretype) GetDataextensionsCoretype (string coretypeName)
 
 
 Get a specific named core type.
@@ -69,16 +68,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **coretypeName** | **string**| The core type&#39;s name | <br />**Values**: text, longtext, url, identifier, enum, date, datetime, integer, number, checkbox, tag |
-{: class="table table-striped"}
 
 ### Return type
 
-[**Coretype**](Coretype.html)
+[**Coretype**](Coretype)
 
-<a name="getdataextensionscoretypes"></a>
 
-## [**CoretypeListing**](CoretypeListing.html) GetDataextensionsCoretypes ()
+## GetDataextensionsCoretypes
 
+> [**CoretypeListing**](CoretypeListing) GetDataextensionsCoretypes ()
 
 
 Get the core types from which all schemas are built.
@@ -128,15 +126,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**CoretypeListing**](CoretypeListing.html)
+[**CoretypeListing**](CoretypeListing)
 
-<a name="getdataextensionslimits"></a>
 
-## [**SchemaQuantityLimits**](SchemaQuantityLimits.html) GetDataextensionsLimits ()
+## GetDataextensionsLimits
 
+> [**SchemaQuantityLimits**](SchemaQuantityLimits) GetDataextensionsLimits ()
 
 
 Get quantitative limits on schemas
@@ -186,8 +183,9 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**SchemaQuantityLimits**](SchemaQuantityLimits.html)
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,12 +1,12 @@
----
-title: QueueUserEventTopicObject
----
+# QueueUserEventTopicObject
+
 ## ININ.PureCloudApi.Model.QueueUserEventTopicObject
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

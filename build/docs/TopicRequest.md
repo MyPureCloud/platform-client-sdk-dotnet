@@ -1,6 +1,5 @@
----
-title: TopicRequest
----
+# TopicRequest
+
 ## ININ.PureCloudApi.Model.TopicRequest
 
 ## Properties
@@ -14,7 +13,8 @@ title: TopicRequest
 | **Tags** | **List&lt;string&gt;** | The topic tags | [optional] |
 | **Dialect** | **string** | The topic dialect | |
 | **Participants** | **string** | The topic participants, default value is All | [optional] |
-| **Phrases** | [**List&lt;Phrase&gt;**](Phrase.html) | The topic phrases | [optional] |
-{: class="table table-striped"}
+| **Phrases** | [**List&lt;Phrase&gt;**](Phrase) | The topic phrases | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

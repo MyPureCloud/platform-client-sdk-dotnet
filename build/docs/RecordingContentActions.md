@@ -1,6 +1,5 @@
----
-title: RecordingContentActions
----
+# RecordingContentActions
+
 ## ININ.PureCloudApi.Model.RecordingContentActions
 
 ## Properties
@@ -10,6 +9,7 @@ title: RecordingContentActions
 | **Url** | **string** | A URL of a web page to direct the user to. | [optional] |
 | **UrlTarget** | **string** | The target window in which to open the URL. If empty will open a blank page or tab. | [optional] |
 | **Textback** | **string** | Text to be sent back in reply when the item is selected. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

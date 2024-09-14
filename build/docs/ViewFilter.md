@@ -1,6 +1,5 @@
----
-title: ViewFilter
----
+# ViewFilter
+
 ## ININ.PureCloudApi.Model.ViewFilter
 
 ## Properties
@@ -30,15 +29,15 @@ title: ViewFilter
 | **ExternalContactIds** | **List&lt;string&gt;** | The external contact ids are used to filter the view | [optional] |
 | **ExternalOrgIds** | **List&lt;string&gt;** | The external org ids are used to filter the view | [optional] |
 | **AniList** | **List&lt;string&gt;** | The ani list ids are used to filter the view | [optional] |
-| **DurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The durations in milliseconds used to filter the view | [optional] |
-| **AcdDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The acd durations in milliseconds used to filter the view | [optional] |
-| **TalkDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The talk durations in milliseconds used to filter the view | [optional] |
-| **AcwDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The acw durations in milliseconds used to filter the view | [optional] |
-| **HandleDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The handle durations in milliseconds used to filter the view | [optional] |
-| **HoldDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The hold durations in milliseconds used to filter the view | [optional] |
-| **AbandonDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The abandon durations in milliseconds used to filter the view | [optional] |
-| **EvaluationScore** | [**NumericRange**](NumericRange.html) | The evaluationScore is used to filter the view | [optional] |
-| **EvaluationCriticalScore** | [**NumericRange**](NumericRange.html) | The evaluationCriticalScore is used to filter the view | [optional] |
+| **DurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The durations in milliseconds used to filter the view | [optional] |
+| **AcdDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The acd durations in milliseconds used to filter the view | [optional] |
+| **TalkDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The talk durations in milliseconds used to filter the view | [optional] |
+| **AcwDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The acw durations in milliseconds used to filter the view | [optional] |
+| **HandleDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The handle durations in milliseconds used to filter the view | [optional] |
+| **HoldDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The hold durations in milliseconds used to filter the view | [optional] |
+| **AbandonDurationsMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The abandon durations in milliseconds used to filter the view | [optional] |
+| **EvaluationScore** | [**NumericRange**](NumericRange) | The evaluationScore is used to filter the view | [optional] |
+| **EvaluationCriticalScore** | [**NumericRange**](NumericRange) | The evaluationCriticalScore is used to filter the view | [optional] |
 | **EvaluationFormIds** | **List&lt;string&gt;** | The evaluation form ids are used to filter the view | [optional] |
 | **EvaluatedAgentIds** | **List&lt;string&gt;** | The evaluated agent ids are used to filter the view | [optional] |
 | **EvaluatorIds** | **List&lt;string&gt;** | The evaluator ids are used to filter the view | [optional] |
@@ -48,21 +47,21 @@ title: ViewFilter
 | **MessageTypes** | **List&lt;string&gt;** | The message media types used to filter the view | [optional] |
 | **DivisionIds** | **List&lt;string&gt;** | The divison Ids used to filter the view | [optional] |
 | **SurveyFormIds** | **List&lt;string&gt;** | The survey form ids used to filter the view | [optional] |
-| **SurveyTotalScore** | [**NumericRange**](NumericRange.html) | The survey total score used to filter the view | [optional] |
-| **SurveyNpsScore** | [**NumericRange**](NumericRange.html) | The survey NPS score used to filter the view | [optional] |
-| **Mos** | [**NumericRange**](NumericRange.html) | The desired range for mos values | [optional] |
-| **SurveyQuestionGroupScore** | [**NumericRange**](NumericRange.html) | The survey question group score used to filter the view | [optional] |
-| **SurveyPromoterScore** | [**NumericRange**](NumericRange.html) | The survey promoter score used to filter the view | [optional] |
+| **SurveyTotalScore** | [**NumericRange**](NumericRange) | The survey total score used to filter the view | [optional] |
+| **SurveyNpsScore** | [**NumericRange**](NumericRange) | The survey NPS score used to filter the view | [optional] |
+| **Mos** | [**NumericRange**](NumericRange) | The desired range for mos values | [optional] |
+| **SurveyQuestionGroupScore** | [**NumericRange**](NumericRange) | The survey question group score used to filter the view | [optional] |
+| **SurveyPromoterScore** | [**NumericRange**](NumericRange) | The survey promoter score used to filter the view | [optional] |
 | **SurveyFormContextIds** | **List&lt;string&gt;** | The list of survey form context ids used to filter the view | [optional] |
 | **ConversationIds** | **List&lt;string&gt;** | The list of conversation ids used to filter the view | [optional] |
 | **SipCallIds** | **List&lt;string&gt;** | The list of SIP call ids used to filter the view | [optional] |
 | **IsEnded** | **bool?** | Indicates filtering for ended | [optional] |
 | **IsSurveyed** | **bool?** | Indicates filtering for survey | [optional] |
-| **SurveyScores** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The list of survey score ranges used to filter the view | [optional] |
-| **PromoterScores** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The list of promoter score ranges used to filter the view | [optional] |
+| **SurveyScores** | [**List&lt;NumericRange&gt;**](NumericRange) | The list of survey score ranges used to filter the view | [optional] |
+| **PromoterScores** | [**List&lt;NumericRange&gt;**](NumericRange) | The list of promoter score ranges used to filter the view | [optional] |
 | **IsCampaign** | **bool?** | Indicates filtering for campaign | [optional] |
 | **SurveyStatuses** | **List&lt;string&gt;** | The list of survey statuses used to filter the view | [optional] |
-| **ConversationProperties** | [**ConversationProperties**](ConversationProperties.html) | A grouping of conversation level filters | [optional] |
+| **ConversationProperties** | [**ConversationProperties**](ConversationProperties) | A grouping of conversation level filters | [optional] |
 | **IsBlindTransferred** | **bool?** | Indicates filtering for blind transferred | [optional] |
 | **IsConsulted** | **bool?** | Indicates filtering for consulted | [optional] |
 | **IsConsultTransferred** | **bool?** | Indicates filtering for consult transferred | [optional] |
@@ -91,7 +90,7 @@ title: ViewFilter
 | **UsedRoutingTypes** | **List&lt;string&gt;** | A list of routing types used | [optional] |
 | **RequestedRoutingTypes** | **List&lt;string&gt;** | A list of routing types requested | [optional] |
 | **HasAgentAssistId** | **bool?** | Indicates filtering for agent assist id | [optional] |
-| **Transcripts** | [**List&lt;Transcripts&gt;**](Transcripts.html) | A list of transcript contents requested | [optional] |
+| **Transcripts** | [**List&lt;Transcripts&gt;**](Transcripts) | A list of transcript contents requested | [optional] |
 | **TranscriptLanguages** | **List&lt;string&gt;** | A list of transcript languages requested | [optional] |
 | **ParticipantPurposes** | **List&lt;string&gt;** | A list of participant purpose requested | [optional] |
 | **ShowFirstQueue** | **bool?** | Indicates filtering for first queue data | [optional] |
@@ -106,8 +105,8 @@ title: ViewFilter
 | **DevelopmentStatusList** | **List&lt;string&gt;** | The list of development status used to filter agent development view | [optional] |
 | **DevelopmentModuleIds** | **List&lt;string&gt;** | The list of development moduleIds used to filter agent development view | [optional] |
 | **DevelopmentActivityOverdue** | **bool?** | Indicates filtering for development activities | [optional] |
-| **CustomerSentimentScore** | [**NumericRange**](NumericRange.html) | The customer sentiment score used to filter the view | [optional] |
-| **CustomerSentimentTrend** | [**NumericRange**](NumericRange.html) | The customer sentiment trend used to filter the view | [optional] |
+| **CustomerSentimentScore** | [**NumericRange**](NumericRange) | The customer sentiment score used to filter the view | [optional] |
+| **CustomerSentimentTrend** | [**NumericRange**](NumericRange) | The customer sentiment trend used to filter the view | [optional] |
 | **FlowTransferTargets** | **List&lt;string&gt;** | The list of transfer targets used to filter flow data | [optional] |
 | **DevelopmentName** | **string** | Filter for development name | [optional] |
 | **TopicIds** | **List&lt;string&gt;** | Represents the topics detected in the transcript | [optional] |
@@ -131,7 +130,7 @@ title: ViewFilter
 | **EmailDeliveryStatusList** | **List&lt;string&gt;** | The list of email delivery statuses used to filter views | [optional] |
 | **IsAgentOwnedCallback** | **bool?** | Indicates filtering for agent owned callback interactions | [optional] |
 | **AgentCallbackOwnerIds** | **List&lt;string&gt;** | The list of callback owners used to filter interactions | [optional] |
-| **TranscriptTopics** | [**List&lt;TranscriptTopics&gt;**](TranscriptTopics.html) | The list of transcript topics requested in filter | [optional] |
+| **TranscriptTopics** | [**List&lt;TranscriptTopics&gt;**](TranscriptTopics) | The list of transcript topics requested in filter | [optional] |
 | **JourneyFrequencyCapReasons** | **List&lt;string&gt;** | The list of frequency cap reasons to filter offer constraints | [optional] |
 | **JourneyBlockingActionMapIds** | **List&lt;string&gt;** | The list of blocking action maps to filter offer constraints | [optional] |
 | **JourneyActionTargetIds** | **List&lt;string&gt;** | The list of action targets to filter offer constraints | [optional] |
@@ -180,29 +179,30 @@ title: ViewFilter
 | **AssistantIds** | **List&lt;string&gt;** | The assistant ids that are used to filter the view. | [optional] |
 | **KnowledgeBaseIds** | **List&lt;string&gt;** | The knowledge base ids that are used to filter the view. | [optional] |
 | **IsParked** | **bool?** | Filter to indicate if the interactions are parked. | [optional] |
-| **AgentEmpathyScore** | [**NumericRange**](NumericRange.html) | The agentEmpathyScore is used to filter the view | [optional] |
+| **AgentEmpathyScore** | [**NumericRange**](NumericRange) | The agentEmpathyScore is used to filter the view | [optional] |
 | **SurveyTypes** | **List&lt;string&gt;** | The surveyTypes is used to filter the view | [optional] |
 | **SurveyResponseStatuses** | **List&lt;string&gt;** | The list of Survey Response Status | [optional] |
 | **BotFlowTypes** | **List&lt;string&gt;** | The botFlowTypes is used to filter the view | [optional] |
-| **AgentTalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The agent talk durations in milliseconds used to filter the view | [optional] |
-| **CustomerTalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The customer talk durations in milliseconds used to filter the view | [optional] |
-| **OvertalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The overtalk durations in milliseconds used to filter the view | [optional] |
-| **SilenceDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The silence durations in milliseconds used to filter the view | [optional] |
-| **AcdDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The acd durations in milliseconds used to filter the view | [optional] |
-| **IvrDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The ivr durations in milliseconds used to filter the view | [optional] |
-| **OtherDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The other (hold/music) durations in milliseconds used to filter the view | [optional] |
-| **AgentTalkPercentage** | [**NumericRange**](NumericRange.html) | The agent talk percentage used to filter the view | [optional] |
-| **CustomerTalkPercentage** | [**NumericRange**](NumericRange.html) | The customer talk percentage used to filter the view | [optional] |
-| **OvertalkPercentage** | [**NumericRange**](NumericRange.html) | The overtalk percentage used to filter the view | [optional] |
-| **SilencePercentage** | [**NumericRange**](NumericRange.html) | The silence percentage used to filter the view | [optional] |
-| **AcdPercentage** | [**NumericRange**](NumericRange.html) | The acd percentage used to filter the view | [optional] |
-| **IvrPercentage** | [**NumericRange**](NumericRange.html) | The ivr percentage used to filter the view | [optional] |
-| **OtherPercentage** | [**NumericRange**](NumericRange.html) | The other (hold/music percentage used to filter the view | [optional] |
-| **OvertalkInstances** | [**NumericRange**](NumericRange.html) | The overtalk instance range used to filter the view | [optional] |
+| **AgentTalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The agent talk durations in milliseconds used to filter the view | [optional] |
+| **CustomerTalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The customer talk durations in milliseconds used to filter the view | [optional] |
+| **OvertalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The overtalk durations in milliseconds used to filter the view | [optional] |
+| **SilenceDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The silence durations in milliseconds used to filter the view | [optional] |
+| **AcdDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The acd durations in milliseconds used to filter the view | [optional] |
+| **IvrDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The ivr durations in milliseconds used to filter the view | [optional] |
+| **OtherDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The other (hold/music) durations in milliseconds used to filter the view | [optional] |
+| **AgentTalkPercentage** | [**NumericRange**](NumericRange) | The agent talk percentage used to filter the view | [optional] |
+| **CustomerTalkPercentage** | [**NumericRange**](NumericRange) | The customer talk percentage used to filter the view | [optional] |
+| **OvertalkPercentage** | [**NumericRange**](NumericRange) | The overtalk percentage used to filter the view | [optional] |
+| **SilencePercentage** | [**NumericRange**](NumericRange) | The silence percentage used to filter the view | [optional] |
+| **AcdPercentage** | [**NumericRange**](NumericRange) | The acd percentage used to filter the view | [optional] |
+| **IvrPercentage** | [**NumericRange**](NumericRange) | The ivr percentage used to filter the view | [optional] |
+| **OtherPercentage** | [**NumericRange**](NumericRange) | The other (hold/music percentage used to filter the view | [optional] |
+| **OvertalkInstances** | [**NumericRange**](NumericRange) | The overtalk instance range used to filter the view | [optional] |
 | **IsScreenRecorded** | **bool?** | Filter to indicate if the screen is recorded | [optional] |
 | **ScreenMonitorUserIds** | **List&lt;string&gt;** | The list of Screen Monitor User Ids | [optional] |
 | **DashboardType** | **string** | The type of dashboard being filtered | [optional] |
 | **DashboardAccessFilter** | **string** | The type of dashboard access being filtered | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

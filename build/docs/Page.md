@@ -1,6 +1,5 @@
----
-title: Page
----
+# Page
+
 ## ININ.PureCloudApi.Model.Page
 
 ## Properties
@@ -15,6 +14,7 @@ title: Page
 | **RootContainer** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

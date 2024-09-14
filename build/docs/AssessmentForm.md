@@ -1,6 +1,5 @@
----
-title: AssessmentForm
----
+# AssessmentForm
+
 ## ININ.PureCloudApi.Model.AssessmentForm
 
 ## Properties
@@ -13,7 +12,8 @@ title: AssessmentForm
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **Published** | **bool?** | If true, assessment form is published | [optional] |
 | **PassPercent** | **int?** | The pass percent for the assessment form | |
-| **QuestionGroups** | [**List&lt;AssessmentFormQuestionGroup&gt;**](AssessmentFormQuestionGroup.html) | A list of question groups | |
-{: class="table table-striped"}
+| **QuestionGroups** | [**List&lt;AssessmentFormQuestionGroup&gt;**](AssessmentFormQuestionGroup) | A list of question groups | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

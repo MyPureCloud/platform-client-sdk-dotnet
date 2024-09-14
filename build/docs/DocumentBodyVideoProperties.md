@@ -1,6 +1,5 @@
----
-title: DocumentBodyVideoProperties
----
+# DocumentBodyVideoProperties
+
 ## ININ.PureCloudApi.Model.DocumentBodyVideoProperties
 
 ## Properties
@@ -10,6 +9,7 @@ title: DocumentBodyVideoProperties
 | **BackgroundColor** | **string** | The background color for the video. The valid values in hex color code representation. For example black color - #000000 | [optional] |
 | **Align** | **string** | The align type for the video. | [optional] |
 | **Indentation** | **float?** | The indentation for the video. The valid values in &#39;em&#39;. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

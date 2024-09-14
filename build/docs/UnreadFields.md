@@ -1,6 +1,5 @@
----
-title: UnreadFields
----
+# UnreadFields
+
 ## ININ.PureCloudApi.Model.UnreadFields
 
 ## Properties
@@ -8,6 +7,7 @@ title: UnreadFields
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **State** | **bool?** | The new unread state of the alert | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

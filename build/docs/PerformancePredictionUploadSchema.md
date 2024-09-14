@@ -1,6 +1,5 @@
----
-title: PerformancePredictionUploadSchema
----
+# PerformancePredictionUploadSchema
+
 ## ININ.PureCloudApi.Model.PerformancePredictionUploadSchema
 
 ## Properties
@@ -8,7 +7,8 @@ title: PerformancePredictionUploadSchema
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **CalculationStartDate** | **DateTime?** | Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results | |
-| **OnQueueTimes** | [**List&lt;MuAgentQueueTimeRequest&gt;**](MuAgentQueueTimeRequest.html) | List of agent on queue times by management unit | |
-{: class="table table-striped"}
+| **OnQueueTimes** | [**List&lt;MuAgentQueueTimeRequest&gt;**](MuAgentQueueTimeRequest) | List of agent on queue times by management unit | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

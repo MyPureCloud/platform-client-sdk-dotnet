@@ -1,6 +1,5 @@
----
-title: LearningCoverArtUploadUrlRequest
----
+# LearningCoverArtUploadUrlRequest
+
 ## ININ.PureCloudApi.Model.LearningCoverArtUploadUrlRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: LearningCoverArtUploadUrlRequest
 | **SignedUrlTimeoutSeconds** | **int?** | The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds | [optional] |
 | **ContentType** | **string** | The content type of the file to upload. | |
 | **ServerSideEncryption** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

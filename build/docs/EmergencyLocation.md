@@ -1,6 +1,5 @@
----
-title: EmergencyLocation
----
+# EmergencyLocation
+
 ## ININ.PureCloudApi.Model.EmergencyLocation
 
 ## Properties
@@ -9,10 +8,11 @@ title: EmergencyLocation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Address** | [**LocationAddress**](LocationAddress.html) | Emergency address | |
+| **Address** | [**LocationAddress**](LocationAddress) | Emergency address | |
 | **Did** | **string** | Phone number in E164 format | |
 | **Source** | **string** | source | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AssessmentQuestionScore
----
+# AssessmentQuestionScore
+
 ## ININ.PureCloudApi.Model.AssessmentQuestionScore
 
 ## Properties
@@ -15,6 +14,7 @@ title: AssessmentQuestionScore
 | **MarkedNA** | **bool?** | True if this question was marked as NA | [optional] |
 | **SystemMarkedNA** | **bool?** | If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false. | [optional] |
 | **FreeTextAnswer** | **string** | Answer for free text answer type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

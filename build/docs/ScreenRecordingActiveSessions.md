@@ -1,6 +1,5 @@
----
-title: ScreenRecordingActiveSessions
----
+# ScreenRecordingActiveSessions
+
 ## ININ.PureCloudApi.Model.ScreenRecordingActiveSessions
 
 ## Properties
@@ -8,6 +7,7 @@ title: ScreenRecordingActiveSessions
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Count** | **int?** | Current concurrent active screen recordings count for organization | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

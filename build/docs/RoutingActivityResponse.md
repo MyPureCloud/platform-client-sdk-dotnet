@@ -1,14 +1,14 @@
----
-title: RoutingActivityResponse
----
+# RoutingActivityResponse
+
 ## ININ.PureCloudApi.Model.RoutingActivityResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;RoutingActivityData&gt;**](RoutingActivityData.html) | Query results | [optional] |
+| **Results** | [**List&lt;RoutingActivityData&gt;**](RoutingActivityData) | Query results | [optional] |
 | **EntityIdDimension** | **string** | Dimension that is used as an entityId | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

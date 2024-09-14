@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationPromptNotification
----
+# ArchitectPromptNotificationPromptNotification
+
 ## ININ.PureCloudApi.Model.ArchitectPromptNotificationPromptNotification
 
 ## Properties
@@ -10,7 +9,8 @@ title: ArchitectPromptNotificationPromptNotification
 | **Id** | **string** | The prompt ID | [optional] |
 | **Name** | **string** | The prompt name | [optional] |
 | **Description** | **string** | The prompt description | [optional] |
-| **CurrentOperation** | [**ArchitectPromptNotificationArchitectOperation**](ArchitectPromptNotificationArchitectOperation.html) |  | [optional] |
-{: class="table table-striped"}
+| **CurrentOperation** | [**ArchitectPromptNotificationArchitectOperation**](ArchitectPromptNotificationArchitectOperation) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

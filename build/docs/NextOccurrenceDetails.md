@@ -1,14 +1,14 @@
----
-title: NextOccurrenceDetails
----
+# NextOccurrenceDetails
+
 ## ININ.PureCloudApi.Model.NextOccurrenceDetails
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **StartOccurrenceDetails** | [**OccurrenceDetails**](OccurrenceDetails.html) | The details for the next start occurrence for the recurrence. | [optional] |
-| **EndOccurrenceDetails** | [**OccurrenceDetails**](OccurrenceDetails.html) | The details for the next end occurrence for the recurrence. | [optional] |
-{: class="table table-striped"}
+| **StartOccurrenceDetails** | [**OccurrenceDetails**](OccurrenceDetails) | The details for the next start occurrence for the recurrence. | [optional] |
+| **EndOccurrenceDetails** | [**OccurrenceDetails**](OccurrenceDetails) | The details for the next end occurrence for the recurrence. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

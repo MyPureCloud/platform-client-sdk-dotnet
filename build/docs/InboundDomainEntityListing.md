@@ -1,13 +1,12 @@
----
-title: InboundDomainEntityListing
----
+# InboundDomainEntityListing
+
 ## ININ.PureCloudApi.Model.InboundDomainEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;InboundDomain&gt;**](InboundDomain.html) |  | [optional] |
+| **Entities** | [**List&lt;InboundDomain&gt;**](InboundDomain) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: InboundDomainEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

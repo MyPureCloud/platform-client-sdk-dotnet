@@ -1,6 +1,5 @@
----
-title: DocumentQueryClause
----
+# DocumentQueryClause
+
 ## ININ.PureCloudApi.Model.DocumentQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: DocumentQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Operator** | **string** | Specifies how the predicates will be applied together. | |
-| **Predicates** | [**List&lt;DocumentQueryPredicate&gt;**](DocumentQueryPredicate.html) | To apply multiple conditions. Limit of 10 predicates across all clauses. | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;DocumentQueryPredicate&gt;**](DocumentQueryPredicate) | To apply multiple conditions. Limit of 10 predicates across all clauses. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,17 +1,17 @@
----
-title: WorkitemVersionListing
----
+# WorkitemVersionListing
+
 ## ININ.PureCloudApi.Model.WorkitemVersionListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WorkitemVersion&gt;**](WorkitemVersion.html) |  | [optional] |
+| **Entities** | [**List&lt;WorkitemVersion&gt;**](WorkitemVersion) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **After** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

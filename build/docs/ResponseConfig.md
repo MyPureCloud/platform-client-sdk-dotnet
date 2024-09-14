@@ -1,6 +1,5 @@
----
-title: ResponseConfig
----
+# ResponseConfig
+
 ## ININ.PureCloudApi.Model.ResponseConfig
 
 ## Properties
@@ -11,6 +10,7 @@ title: ResponseConfig
 | **TranslationMapDefaults** | **Dictionary&lt;string, string&gt;** | Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key. | [optional] |
 | **SuccessTemplate** | **string** | Velocity template to build response to return from Action. | [optional] |
 | **SuccessTemplateUri** | **string** | URI to retrieve success template. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

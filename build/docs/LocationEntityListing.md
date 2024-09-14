@@ -1,13 +1,12 @@
----
-title: LocationEntityListing
----
+# LocationEntityListing
+
 ## ININ.PureCloudApi.Model.LocationEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;LocationDefinition&gt;**](LocationDefinition.html) |  | [optional] |
+| **Entities** | [**List&lt;LocationDefinition&gt;**](LocationDefinition) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: LocationEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

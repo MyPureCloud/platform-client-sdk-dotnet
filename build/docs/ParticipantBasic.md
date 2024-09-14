@@ -1,6 +1,5 @@
----
-title: ParticipantBasic
----
+# ParticipantBasic
+
 ## ININ.PureCloudApi.Model.ParticipantBasic
 
 ## Properties
@@ -32,28 +31,29 @@ title: ParticipantBasic
 | **WrapupPrompt** | **string** | This field controls how the UI prompts the agent for a wrapup. | [optional] |
 | **WrapupTimeoutMs** | **int?** | Specifies how long a timed ACW session will last. | [optional] |
 | **WrapupSkipped** | **bool?** | The UI sets this field when the agent chooses to skip entering a wrapup for this participant. | [optional] |
-| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** | List of roles this participant&#39;s media has had on the conversation, ie monitor, coach, etc. | [optional] |
-| **ConversationRoutingData** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
+| **ConversationRoutingData** | [**ConversationRoutingData**](ConversationRoutingData) | Information on how a communication should be routed to an agent. | [optional] |
 | **AlertingTimeoutMs** | **int?** | Specifies how long the agent has to answer an interaction before being marked as not responding. | [optional] |
 | **MonitoredParticipantId** | **string** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
 | **CoachedParticipantId** | **string** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | Additional participant attributes | [optional] |
-| **Calls** | [**List&lt;CallBasic&gt;**](CallBasic.html) |  | [optional] |
-| **Callbacks** | [**List&lt;CallbackBasic&gt;**](CallbackBasic.html) |  | [optional] |
-| **Chats** | [**List&lt;ConversationChat&gt;**](ConversationChat.html) |  | [optional] |
-| **Cobrowsesessions** | [**List&lt;Cobrowsesession&gt;**](Cobrowsesession.html) |  | [optional] |
-| **Emails** | [**List&lt;Email&gt;**](Email.html) |  | [optional] |
-| **Messages** | [**List&lt;Message&gt;**](Message.html) |  | [optional] |
-| **Screenshares** | [**List&lt;Screenshare&gt;**](Screenshare.html) |  | [optional] |
-| **SocialExpressions** | [**List&lt;SocialExpression&gt;**](SocialExpression.html) |  | [optional] |
-| **Videos** | [**List&lt;Video&gt;**](Video.html) |  | [optional] |
-| **Evaluations** | [**List&lt;Evaluation&gt;**](Evaluation.html) |  | [optional] |
+| **Calls** | [**List&lt;CallBasic&gt;**](CallBasic) |  | [optional] |
+| **Callbacks** | [**List&lt;CallbackBasic&gt;**](CallbackBasic) |  | [optional] |
+| **Chats** | [**List&lt;ConversationChat&gt;**](ConversationChat) |  | [optional] |
+| **Cobrowsesessions** | [**List&lt;Cobrowsesession&gt;**](Cobrowsesession) |  | [optional] |
+| **Emails** | [**List&lt;Email&gt;**](Email) |  | [optional] |
+| **Messages** | [**List&lt;Message&gt;**](Message) |  | [optional] |
+| **Screenshares** | [**List&lt;Screenshare&gt;**](Screenshare) |  | [optional] |
+| **SocialExpressions** | [**List&lt;SocialExpression&gt;**](SocialExpression) |  | [optional] |
+| **Videos** | [**List&lt;Video&gt;**](Video) |  | [optional] |
+| **Evaluations** | [**List&lt;Evaluation&gt;**](Evaluation) |  | [optional] |
 | **ScreenRecordingState** | **string** | The current screen recording state for this participant. | [optional] |
 | **FlaggedReason** | **string** | The reason specifying why participant flagged the conversation. | [optional] |
 | **StartAcwTime** | **DateTime?** | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EndAcwTime** | **DateTime?** | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **BargedParticipantId** | **string** | If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

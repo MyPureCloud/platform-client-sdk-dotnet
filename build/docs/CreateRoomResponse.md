@@ -1,6 +1,5 @@
----
-title: CreateRoomResponse
----
+# CreateRoomResponse
+
 ## ININ.PureCloudApi.Model.CreateRoomResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: CreateRoomResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Jid** | **string** | The jid of the room | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

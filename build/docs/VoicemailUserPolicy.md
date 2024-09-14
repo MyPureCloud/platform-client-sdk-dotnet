@@ -1,6 +1,5 @@
----
-title: VoicemailUserPolicy
----
+# VoicemailUserPolicy
+
 ## ININ.PureCloudApi.Model.VoicemailUserPolicy
 
 ## Properties
@@ -12,6 +11,7 @@ title: VoicemailUserPolicy
 | **Pin** | **string** | The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security | [optional] |
 | **ModifiedDate** | **DateTime?** | The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SendEmailNotifications** | **bool?** | Whether email notifications are sent to the user when a new voicemail is received | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

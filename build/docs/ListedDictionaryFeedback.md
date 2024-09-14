@@ -1,6 +1,5 @@
----
-title: ListedDictionaryFeedback
----
+# ListedDictionaryFeedback
+
 ## ININ.PureCloudApi.Model.ListedDictionaryFeedback
 
 ## Properties
@@ -13,10 +12,11 @@ title: ListedDictionaryFeedback
 | **BoostValue** | **float?** | A weighted value assigned to a phrase. The higher the value, the higher the likelihood that the system will choose the word or phrase from the possible alternatives. Boost range is from 1.0 to 10.0. Default is 2.0 | [optional] |
 | **Source** | **string** | The source of the given dictionary feedback | [optional] |
 | **DateCreated** | **DateTime?** | The Timestamp when dictionary feedback created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **CreatedBy** | [**UserReference**](UserReference.html) | The Id of the user who created the dictionary feedback | [optional] |
+| **CreatedBy** | [**UserReference**](UserReference) | The Id of the user who created the dictionary feedback | [optional] |
 | **DateModified** | **DateTime?** | The Timestamp when dictionary feedback modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ModifiedBy** | [**UserReference**](UserReference.html) | The Id of the user who modified the dictionary feedback | [optional] |
+| **ModifiedBy** | [**UserReference**](UserReference) | The Id of the user who modified the dictionary feedback | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

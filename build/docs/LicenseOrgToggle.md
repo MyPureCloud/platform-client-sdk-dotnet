@@ -1,6 +1,5 @@
----
-title: LicenseOrgToggle
----
+# LicenseOrgToggle
+
 ## ININ.PureCloudApi.Model.LicenseOrgToggle
 
 ## Properties
@@ -9,6 +8,7 @@ title: LicenseOrgToggle
 |------------ | ------------- | ------------- | -------------|
 | **FeatureName** | **string** |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

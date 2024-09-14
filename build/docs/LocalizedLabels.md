@@ -1,6 +1,5 @@
----
-title: LocalizedLabels
----
+# LocalizedLabels
+
 ## ININ.PureCloudApi.Model.LocalizedLabels
 
 ## Properties
@@ -9,6 +8,7 @@ title: LocalizedLabels
 |------------ | ------------- | ------------- | -------------|
 | **Key** | **string** | Contains localized label key used in messenger homescreen | [optional] |
 | **Value** | **string** | Contains localized label value used in messenger homescreen | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: SchedulerMessageTypeSeverity
----
+# SchedulerMessageTypeSeverity
+
 ## ININ.PureCloudApi.Model.SchedulerMessageTypeSeverity
 
 ## Properties
@@ -9,6 +8,7 @@ title: SchedulerMessageTypeSeverity
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type of the message | [optional] |
 | **Severity** | **string** | The severity of the message | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

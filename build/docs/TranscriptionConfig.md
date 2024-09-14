@@ -1,6 +1,5 @@
----
-title: TranscriptionConfig
----
+# TranscriptionConfig
+
 ## ININ.PureCloudApi.Model.TranscriptionConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: TranscriptionConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **VendorName** | **string** | The name of the vendor used for speech transcription. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,26 +1,25 @@
----
-title: FaxApi
----
+# FaxApi
+
 ## PureCloudPlatform.Client.V2.Api.FaxApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteFaxDocument**](FaxApi.html#deletefaxdocument) | **Delete** /api/v2/fax/documents/{documentId} | Delete a fax document. |
-| [**GetFaxDocument**](FaxApi.html#getfaxdocument) | **Get** /api/v2/fax/documents/{documentId} | Get a document. |
-| [**GetFaxDocumentContent**](FaxApi.html#getfaxdocumentcontent) | **Get** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
-| [**GetFaxDocuments**](FaxApi.html#getfaxdocuments) | **Get** /api/v2/fax/documents | Get a list of fax documents. |
-| [**GetFaxSettings**](FaxApi.html#getfaxsettings) | **Get** /api/v2/fax/settings | Get organization config for given organization |
-| [**GetFaxSummary**](FaxApi.html#getfaxsummary) | **Get** /api/v2/fax/summary | Get fax summary |
-| [**PutFaxDocument**](FaxApi.html#putfaxdocument) | **Put** /api/v2/fax/documents/{documentId} | Update a fax document. |
-| [**PutFaxSettings**](FaxApi.html#putfaxsettings) | **Put** /api/v2/fax/settings | Update/write organization config for given organization |
-{: class="table table-striped"}
+| [**DeleteFaxDocument**](#DeleteFaxDocument) | **Delete** /api/v2/fax/documents/{documentId} | Delete a fax document. |
+| [**GetFaxDocument**](#GetFaxDocument) | **Get** /api/v2/fax/documents/{documentId} | Get a document. |
+| [**GetFaxDocumentContent**](#GetFaxDocumentContent) | **Get** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
+| [**GetFaxDocuments**](#GetFaxDocuments) | **Get** /api/v2/fax/documents | Get a list of fax documents. |
+| [**GetFaxSettings**](#GetFaxSettings) | **Get** /api/v2/fax/settings | Get organization config for given organization |
+| [**GetFaxSummary**](#GetFaxSummary) | **Get** /api/v2/fax/summary | Get fax summary |
+| [**PutFaxDocument**](#PutFaxDocument) | **Put** /api/v2/fax/documents/{documentId} | Update a fax document. |
+| [**PutFaxSettings**](#PutFaxSettings) | **Put** /api/v2/fax/settings | Update/write organization config for given organization |
 
-<a name="deletefaxdocument"></a>
 
-## void DeleteFaxDocument (string documentId)
 
+## DeleteFaxDocument
+
+> void DeleteFaxDocument (string documentId)
 
 
 Delete a fax document.
@@ -72,16 +71,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getfaxdocument"></a>
 
-## [**FaxDocument**](FaxDocument.html) GetFaxDocument (string documentId)
+## GetFaxDocument
 
+> [**FaxDocument**](FaxDocument) GetFaxDocument (string documentId)
 
 
 Get a document.
@@ -134,16 +132,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**FaxDocument**](FaxDocument.html)
+[**FaxDocument**](FaxDocument)
 
-<a name="getfaxdocumentcontent"></a>
 
-## [**DownloadResponse**](DownloadResponse.html) GetFaxDocumentContent (string documentId)
+## GetFaxDocumentContent
 
+> [**DownloadResponse**](DownloadResponse) GetFaxDocumentContent (string documentId)
 
 
 Download a fax document.
@@ -196,16 +193,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
+[**DownloadResponse**](DownloadResponse)
 
-<a name="getfaxdocuments"></a>
 
-## [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) GetFaxDocuments (int? pageSize = null, int? pageNumber = null)
+## GetFaxDocuments
 
+> [**FaxDocumentEntityListing**](FaxDocumentEntityListing) GetFaxDocuments (int? pageSize = null, int? pageNumber = null)
 
 
 Get a list of fax documents.
@@ -260,16 +256,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**FaxDocumentEntityListing**](FaxDocumentEntityListing.html)
+[**FaxDocumentEntityListing**](FaxDocumentEntityListing)
 
-<a name="getfaxsettings"></a>
 
-## [**FaxConfig**](FaxConfig.html) GetFaxSettings ()
+## GetFaxSettings
 
+> [**FaxConfig**](FaxConfig) GetFaxSettings ()
 
 
 Get organization config for given organization
@@ -318,15 +313,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**FaxConfig**](FaxConfig.html)
+[**FaxConfig**](FaxConfig)
 
-<a name="getfaxsummary"></a>
 
-## [**FaxSummary**](FaxSummary.html) GetFaxSummary ()
+## GetFaxSummary
 
+> [**FaxSummary**](FaxSummary) GetFaxSummary ()
 
 
 Get fax summary
@@ -375,15 +369,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**FaxSummary**](FaxSummary.html)
+[**FaxSummary**](FaxSummary)
 
-<a name="putfaxdocument"></a>
 
-## [**FaxDocument**](FaxDocument.html) PutFaxDocument (string documentId, FaxDocument body)
+## PutFaxDocument
 
+> [**FaxDocument**](FaxDocument) PutFaxDocument (string documentId, FaxDocument body)
 
 
 Update a fax document.
@@ -437,17 +430,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **body** | [**FaxDocument**](FaxDocument.html)| Document |  |
-{: class="table table-striped"}
+| **body** | [**FaxDocument**](FaxDocument)| Document |  |
 
 ### Return type
 
-[**FaxDocument**](FaxDocument.html)
+[**FaxDocument**](FaxDocument)
 
-<a name="putfaxsettings"></a>
 
-## [**FaxConfig**](FaxConfig.html) PutFaxSettings (FaxConfig body = null)
+## PutFaxSettings
 
+> [**FaxConfig**](FaxConfig) PutFaxSettings (FaxConfig body = null)
 
 
 Update/write organization config for given organization
@@ -500,10 +492,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**FaxConfig**](FaxConfig.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**FaxConfig**](FaxConfig)|  | [optional]  |
 
 ### Return type
 
-[**FaxConfig**](FaxConfig.html)
+[**FaxConfig**](FaxConfig)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,14 +1,14 @@
----
-title: KnowledgeGuestDocumentVariationContext
----
+# KnowledgeGuestDocumentVariationContext
+
 ## ININ.PureCloudApi.Model.KnowledgeGuestDocumentVariationContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Context** | [**AddressableEntityRef**](AddressableEntityRef.html) | The knowledge context associated with the variation. | |
-| **Values** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) | The list of knowledge context values associated with the variation. | |
-{: class="table table-striped"}
+| **Context** | [**AddressableEntityRef**](AddressableEntityRef) | The knowledge context associated with the variation. | |
+| **Values** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef) | The list of knowledge context values associated with the variation. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

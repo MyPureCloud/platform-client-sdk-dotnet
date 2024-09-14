@@ -1,15 +1,15 @@
----
-title: BulkContactsResponse
----
+# BulkContactsResponse
+
 ## ININ.PureCloudApi.Model.BulkContactsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;BulkResponseResultExternalContactExternalContact&gt;**](BulkResponseResultExternalContactExternalContact.html) |  | [optional] |
+| **Results** | [**List&lt;BulkResponseResultExternalContactExternalContact&gt;**](BulkResponseResultExternalContactExternalContact) |  | [optional] |
 | **ErrorCount** | **int?** |  | [optional] |
 | **ErrorIndexes** | **List&lt;int?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

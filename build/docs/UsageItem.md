@@ -1,6 +1,5 @@
----
-title: UsageItem
----
+# UsageItem
+
 ## ININ.PureCloudApi.Model.UsageItem
 
 ## Properties
@@ -10,6 +9,7 @@ title: UsageItem
 | **Type** | **string** |  | [optional] |
 | **TotalDocumentByteCount** | **long?** |  | [optional] |
 | **TotalDocumentCount** | **long?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

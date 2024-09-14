@@ -1,6 +1,5 @@
----
-title: OccurrenceDetails
----
+# OccurrenceDetails
+
 ## ININ.PureCloudApi.Model.OccurrenceDetails
 
 ## Properties
@@ -9,6 +8,7 @@ title: OccurrenceDetails
 |------------ | ------------- | ------------- | -------------|
 | **DateOfNextOccurrence** | **DateTime?** | The date of the next start or end occurrence for the recurrence as an ISO-8601 string | [optional] |
 | **NumberOfOccurrences** | **int?** | The number of start or end occurrences that have been processed for the recurrence. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

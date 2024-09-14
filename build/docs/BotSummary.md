@@ -1,6 +1,5 @@
----
-title: BotSummary
----
+# BotSummary
+
 ## ININ.PureCloudApi.Model.BotSummary
 
 ## Properties
@@ -11,6 +10,7 @@ title: BotSummary
 | **Id** | **string** | The id of the bot. | |
 | **Description** | **string** | An optional description of the bot. | [optional] |
 | **BotCompositeTag** | **string** | A system-generated string that contains metadata about this bot. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

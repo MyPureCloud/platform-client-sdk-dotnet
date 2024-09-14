@@ -1,6 +1,5 @@
----
-title: NuanceBotVariable
----
+# NuanceBotVariable
+
 ## ININ.PureCloudApi.Model.NuanceBotVariable
 
 ## Properties
@@ -12,7 +11,8 @@ title: NuanceBotVariable
 | **Description** | **string** | The variable description | [optional] |
 | **Reserved** | **bool?** | True if the variable is a reserved variable | [optional] |
 | **SimpleVariableInfo** | **string** | The type information for this variable | [optional] |
-| **ComplexGenericVariableInfo** | [**ComplexVariableInfo**](ComplexVariableInfo.html) | The type information for this variable | [optional] |
-{: class="table table-striped"}
+| **ComplexGenericVariableInfo** | [**ComplexVariableInfo**](ComplexVariableInfo) | The type information for this variable | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

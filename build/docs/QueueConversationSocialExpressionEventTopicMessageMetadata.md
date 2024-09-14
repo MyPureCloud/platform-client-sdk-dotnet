@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicMessageMetadata
----
+# QueueConversationSocialExpressionEventTopicMessageMetadata
+
 ## ININ.PureCloudApi.Model.QueueConversationSocialExpressionEventTopicMessageMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: QueueConversationSocialExpressionEventTopicMessageMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Message type. | [optional] |
-| **Events** | [**List&lt;QueueConversationSocialExpressionEventTopicMessageMetadataEvent&gt;**](QueueConversationSocialExpressionEventTopicMessageMetadataEvent.html) | List of message events, if any | [optional] |
-| **Content** | [**List&lt;QueueConversationSocialExpressionEventTopicMessageMetadataContent&gt;**](QueueConversationSocialExpressionEventTopicMessageMetadataContent.html) | List of message content, if any | [optional] |
-{: class="table table-striped"}
+| **Events** | [**List&lt;QueueConversationSocialExpressionEventTopicMessageMetadataEvent&gt;**](QueueConversationSocialExpressionEventTopicMessageMetadataEvent) | List of message events, if any | [optional] |
+| **Content** | [**List&lt;QueueConversationSocialExpressionEventTopicMessageMetadataContent&gt;**](QueueConversationSocialExpressionEventTopicMessageMetadataContent) | List of message content, if any | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

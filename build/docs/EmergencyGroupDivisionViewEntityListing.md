@@ -1,13 +1,12 @@
----
-title: EmergencyGroupDivisionViewEntityListing
----
+# EmergencyGroupDivisionViewEntityListing
+
 ## ININ.PureCloudApi.Model.EmergencyGroupDivisionViewEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;EmergencyGroupDivisionView&gt;**](EmergencyGroupDivisionView.html) |  | [optional] |
+| **Entities** | [**List&lt;EmergencyGroupDivisionView&gt;**](EmergencyGroupDivisionView) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: EmergencyGroupDivisionViewEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

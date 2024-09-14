@@ -1,6 +1,5 @@
----
-title: ScreenRecordingMetaDataRequest
----
+# ScreenRecordingMetaDataRequest
+
 ## ININ.PureCloudApi.Model.ScreenRecordingMetaDataRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: ScreenRecordingMetaDataRequest
 |------------ | ------------- | ------------- | -------------|
 | **ParticipantJid** | **string** |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
-| **MetaData** | [**List&lt;ScreenRecordingMetaData&gt;**](ScreenRecordingMetaData.html) |  | [optional] |
-{: class="table table-striped"}
+| **MetaData** | [**List&lt;ScreenRecordingMetaData&gt;**](ScreenRecordingMetaData) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

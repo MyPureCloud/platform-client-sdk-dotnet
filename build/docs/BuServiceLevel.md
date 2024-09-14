@@ -1,6 +1,5 @@
----
-title: BuServiceLevel
----
+# BuServiceLevel
+
 ## ININ.PureCloudApi.Model.BuServiceLevel
 
 ## Properties
@@ -10,6 +9,7 @@ title: BuServiceLevel
 | **Include** | **bool?** | Whether to include service level targets in the associated configuration | |
 | **Percent** | **int?** | Service level target percent answered. Required if include &#x3D;&#x3D; true | [optional] |
 | **Seconds** | **int?** | Service level target answer time. Required if include &#x3D;&#x3D; true | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentReq
----
+# KnowledgeDocumentReq
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentReq
 
 ## Properties
@@ -10,11 +9,12 @@ title: KnowledgeDocumentReq
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Title** | **string** | Document title. | |
 | **Visible** | **bool?** | Indicates if the knowledge document should be included in search results. | [optional] |
-| **Alternatives** | [**List&lt;KnowledgeDocumentAlternative&gt;**](KnowledgeDocumentAlternative.html) | List of alternate phrases related to the title which improves search results. | [optional] |
+| **Alternatives** | [**List&lt;KnowledgeDocumentAlternative&gt;**](KnowledgeDocumentAlternative) | List of alternate phrases related to the title which improves search results. | [optional] |
 | **CategoryId** | **string** | The category associated with the document. | [optional] |
 | **LabelIds** | **List&lt;string&gt;** | The ids of labels associated with the document. | [optional] |
 | **ExternalId** | **string** | The external id associated with the document. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: RecordingEncryptionConfigurationListing
----
+# RecordingEncryptionConfigurationListing
+
 ## ININ.PureCloudApi.Model.RecordingEncryptionConfigurationListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: RecordingEncryptionConfigurationListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;RecordingEncryptionConfiguration&gt;**](RecordingEncryptionConfiguration.html) |  | [optional] |
+| **Entities** | [**List&lt;RecordingEncryptionConfiguration&gt;**](RecordingEncryptionConfiguration) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

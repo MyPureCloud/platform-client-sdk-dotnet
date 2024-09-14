@@ -1,6 +1,5 @@
----
-title: NuanceOrganization
----
+# NuanceOrganization
+
 ## ININ.PureCloudApi.Model.NuanceOrganization
 
 ## Properties
@@ -9,6 +8,7 @@ title: NuanceOrganization
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The organization ID | |
 | **Name** | **string** | The organization name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

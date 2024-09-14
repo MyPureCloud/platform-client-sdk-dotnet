@@ -1,6 +1,5 @@
----
-title: PhraseAssociations
----
+# PhraseAssociations
+
 ## ININ.PureCloudApi.Model.PhraseAssociations
 
 ## Properties
@@ -9,6 +8,7 @@ title: PhraseAssociations
 |------------ | ------------- | ------------- | -------------|
 | **PhraseId** | **string** | Id of the phrase to be linked | |
 | **DocumentId** | **string** | Id of the document to be linked | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AttributeDetailEventTopicAttributeUpdateEvent
----
+# AttributeDetailEventTopicAttributeUpdateEvent
+
 ## ININ.PureCloudApi.Model.AttributeDetailEventTopicAttributeUpdateEvent
 
 ## Properties
@@ -13,7 +12,8 @@ title: AttributeDetailEventTopicAttributeUpdateEvent
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
-| **Communications** | [**List&lt;AttributeDetailEventTopicCommunication&gt;**](AttributeDetailEventTopicCommunication.html) |  | [optional] |
-{: class="table table-striped"}
+| **Communications** | [**List&lt;AttributeDetailEventTopicCommunication&gt;**](AttributeDetailEventTopicCommunication) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

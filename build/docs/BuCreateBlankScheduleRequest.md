@@ -1,6 +1,5 @@
----
-title: BuCreateBlankScheduleRequest
----
+# BuCreateBlankScheduleRequest
+
 ## ININ.PureCloudApi.Model.BuCreateBlankScheduleRequest
 
 ## Properties
@@ -8,8 +7,9 @@ title: BuCreateBlankScheduleRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Description** | **string** | The description for the schedule | |
-| **ShortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference.html) | The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count | [optional] |
+| **ShortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count | [optional] |
 | **WeekCount** | **int?** | The number of weeks in the schedule. One extra day is added at the end | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

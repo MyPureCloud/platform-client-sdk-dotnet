@@ -1,6 +1,5 @@
----
-title: NluQualityReportSummaryMetric
----
+# NluQualityReportSummaryMetric
+
 ## ININ.PureCloudApi.Model.NluQualityReportSummaryMetric
 
 ## Properties
@@ -9,6 +8,7 @@ title: NluQualityReportSummaryMetric
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the metric. e.g. recall, f1_score | |
 | **Value** | **float?** | The value of the metric | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

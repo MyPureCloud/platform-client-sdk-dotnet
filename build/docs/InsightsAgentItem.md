@@ -1,6 +1,5 @@
----
-title: InsightsAgentItem
----
+# InsightsAgentItem
+
 ## ININ.PureCloudApi.Model.InsightsAgentItem
 
 ## Properties
@@ -9,8 +8,9 @@ title: InsightsAgentItem
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Manager** | [**DomainEntityRef**](DomainEntityRef.html) | This user&#39;s manager. | [optional] |
+| **Manager** | [**DomainEntityRef**](DomainEntityRef) | This user&#39;s manager. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

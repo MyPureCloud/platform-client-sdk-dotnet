@@ -1,6 +1,5 @@
----
-title: CreateCoachingAppointmentRequest
----
+# CreateCoachingAppointmentRequest
+
 ## ININ.PureCloudApi.Model.CreateCoachingAppointmentRequest
 
 ## Properties
@@ -15,8 +14,9 @@ title: CreateCoachingAppointmentRequest
 | **AttendeeIds** | **List&lt;string&gt;** | IDs of attendees in the coaching appointment. | |
 | **ConversationIds** | **List&lt;string&gt;** | IDs of conversations associated with this coaching appointment. | [optional] |
 | **DocumentIds** | **List&lt;string&gt;** | IDs of documents associated with this coaching appointment. | [optional] |
-| **WfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference.html) | The Workforce Management schedule the appointment is associated with. | [optional] |
+| **WfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference) | The Workforce Management schedule the appointment is associated with. | [optional] |
 | **ExternalLinks** | **List&lt;string&gt;** | The list of external links related to the appointment | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

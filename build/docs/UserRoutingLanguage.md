@@ -1,6 +1,5 @@
----
-title: UserRoutingLanguage
----
+# UserRoutingLanguage
+
 ## ININ.PureCloudApi.Model.UserRoutingLanguage
 
 ## Properties
@@ -13,6 +12,7 @@ title: UserRoutingLanguage
 | **State** | **string** | Activate or deactivate this routing language. | [optional] |
 | **LanguageUri** | **string** | URI to the organization language used by this user language. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

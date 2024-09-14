@@ -1,6 +1,5 @@
----
-title: CoverSheet
----
+# CoverSheet
+
 ## ININ.PureCloudApi.Model.CoverSheet
 
 ## Properties
@@ -9,6 +8,7 @@ title: CoverSheet
 |------------ | ------------- | ------------- | -------------|
 | **Notes** | **string** | Text to be added to the coversheet | [optional] |
 | **Locale** | **string** | Locale, e.g. &#x3D; en-US | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

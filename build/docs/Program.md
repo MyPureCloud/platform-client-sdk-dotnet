@@ -1,6 +1,5 @@
----
-title: Program
----
+# Program
+
 ## ININ.PureCloudApi.Model.Program
 
 ## Properties
@@ -11,14 +10,15 @@ title: Program
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Published** | **bool?** |  | [optional] |
-| **Topics** | [**List&lt;BaseTopicEntitiy&gt;**](BaseTopicEntitiy.html) |  | [optional] |
+| **Topics** | [**List&lt;BaseTopicEntitiy&gt;**](BaseTopicEntitiy) |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
-| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **PublishedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **PublishedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **DatePublished** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **TopicLinksJob** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **TopicLinksJob** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

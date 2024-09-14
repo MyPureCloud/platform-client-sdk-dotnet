@@ -1,6 +1,5 @@
----
-title: FunctionZipConfig
----
+# FunctionZipConfig
+
 ## ININ.PureCloudApi.Model.FunctionZipConfig
 
 ## Properties
@@ -13,6 +12,7 @@ title: FunctionZipConfig
 | **DateCreated** | **DateTime?** | Date and time zip record was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ErrorMessage** | **string** | Error message if upload failed. | [optional] |
 | **RequestId** | **string** | Upload request id used for zip upload | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

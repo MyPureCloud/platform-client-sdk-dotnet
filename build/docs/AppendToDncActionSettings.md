@@ -1,6 +1,5 @@
----
-title: AppendToDncActionSettings
----
+# AppendToDncActionSettings
+
 ## ININ.PureCloudApi.Model.AppendToDncActionSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: AppendToDncActionSettings
 | **Expire** | **bool?** | Whether to expire the record appended to the DNC list. | |
 | **ExpirationDuration** | **string** | If &#39;expire&#39; is set to true, how long to keep the record. | [optional] |
 | **ListType** | **string** | The Dnc List Type to append entries to | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

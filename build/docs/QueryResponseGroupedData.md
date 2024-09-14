@@ -1,6 +1,5 @@
----
-title: QueryResponseGroupedData
----
+# QueryResponseGroupedData
+
 ## ININ.PureCloudApi.Model.QueryResponseGroupedData
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueryResponseGroupedData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** | The group values for this data | [optional] |
-| **Data** | [**List&lt;QueryResponseData&gt;**](QueryResponseData.html) | The metrics in this group | [optional] |
-{: class="table table-striped"}
+| **Data** | [**List&lt;QueryResponseData&gt;**](QueryResponseData) | The metrics in this group | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

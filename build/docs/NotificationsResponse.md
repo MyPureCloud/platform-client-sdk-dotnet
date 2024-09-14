@@ -1,13 +1,13 @@
----
-title: NotificationsResponse
----
+# NotificationsResponse
+
 ## ININ.PureCloudApi.Model.NotificationsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WfmUserNotification&gt;**](WfmUserNotification.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;WfmUserNotification&gt;**](WfmUserNotification) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: InboundDomain
----
+# InboundDomain
+
 ## ININ.PureCloudApi.Model.InboundDomain
 
 ## Properties
@@ -11,9 +10,10 @@ title: InboundDomain
 | **Name** | **string** |  | [optional] |
 | **MxRecordStatus** | **string** | Mx Record Status | [optional] |
 | **SubDomain** | **bool?** | Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email. | [optional] |
-| **MailFromSettings** | [**MailFromResult**](MailFromResult.html) | The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false. | [optional] |
-| **CustomSMTPServer** | [**DomainEntityRef**](DomainEntityRef.html) | The custom SMTP server integration to use when sending outbound emails from this domain. | [optional] |
+| **MailFromSettings** | [**MailFromResult**](MailFromResult) | The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false. | [optional] |
+| **CustomSMTPServer** | [**DomainEntityRef**](DomainEntityRef) | The custom SMTP server integration to use when sending outbound emails from this domain. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

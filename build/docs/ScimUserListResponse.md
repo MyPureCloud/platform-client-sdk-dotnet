@@ -1,6 +1,5 @@
----
-title: ScimUserListResponse
----
+# ScimUserListResponse
+
 ## ININ.PureCloudApi.Model.ScimUserListResponse
 
 ## Properties
@@ -11,7 +10,8 @@ title: ScimUserListResponse
 | **TotalResults** | **long?** | The total number of results. | [optional] |
 | **StartIndex** | **long?** | The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results. | [optional] |
 | **ItemsPerPage** | **long?** | The number of resources returned per page. | [optional] |
-| **Resources** | [**List&lt;ScimV2User&gt;**](ScimV2User.html) | The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty. | [optional] |
-{: class="table table-striped"}
+| **Resources** | [**List&lt;ScimV2User&gt;**](ScimV2User) | The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,18 +1,18 @@
----
-title: CampaignInteractions
----
+# CampaignInteractions
+
 ## ININ.PureCloudApi.Model.CampaignInteractions
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Campaign** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **PendingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction.html) |  | [optional] |
-| **ProceedingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction.html) |  | [optional] |
-| **PreviewingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction.html) |  | [optional] |
-| **InteractingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction.html) |  | [optional] |
-| **ScheduledInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Campaign** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **PendingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction) |  | [optional] |
+| **ProceedingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction) |  | [optional] |
+| **PreviewingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction) |  | [optional] |
+| **InteractingInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction) |  | [optional] |
+| **ScheduledInteractions** | [**List&lt;CampaignInteraction&gt;**](CampaignInteraction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

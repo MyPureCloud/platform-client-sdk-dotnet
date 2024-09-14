@@ -1,6 +1,5 @@
----
-title: VideoSettings
----
+# VideoSettings
+
 ## ININ.PureCloudApi.Model.VideoSettings
 
 ## Properties
@@ -8,8 +7,9 @@ title: VideoSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not video is enabled | [optional] |
-| **Agent** | [**AgentVideoSettings**](AgentVideoSettings.html) | Video Settings for agent | [optional] |
-| **User** | [**UserVideoSettings**](UserVideoSettings.html) | Video Settings for user | [optional] |
-{: class="table table-striped"}
+| **Agent** | [**AgentVideoSettings**](AgentVideoSettings) | Video Settings for agent | [optional] |
+| **User** | [**UserVideoSettings**](UserVideoSettings) | Video Settings for user | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyViewResultMetrics
----
+# JourneyViewResultMetrics
+
 ## ININ.PureCloudApi.Model.JourneyViewResultMetrics
 
 ## Properties
@@ -12,6 +11,7 @@ title: JourneyViewResultMetrics
 | **CompletedCount** | **int?** | number of external contacts who completed the journey forward | [optional] |
 | **DropoutCount** | **int?** | number of external contacts who did not make it to the next element | [optional] |
 | **FlowCount** | **int?** | number of external contacts who moved from one element to next element but did not complete the journey | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

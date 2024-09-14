@@ -1,6 +1,5 @@
----
-title: UserPresenceEvent
----
+# UserPresenceEvent
+
 ## ININ.PureCloudApi.Model.UserPresenceEvent
 
 ## Properties
@@ -13,6 +12,7 @@ title: UserPresenceEvent
 | **SourceId** | **string** | The id (V4 UUID) of the presence source being updated | |
 | **PresenceDefinitionId** | **string** | The id (UUID) of the presence definition that the user presence is associated with | [optional] |
 | **Message** | **string** | The message associated with the presence | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

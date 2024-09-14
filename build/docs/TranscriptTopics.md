@@ -1,6 +1,5 @@
----
-title: TranscriptTopics
----
+# TranscriptTopics
+
 ## ININ.PureCloudApi.Model.TranscriptTopics
 
 ## Properties
@@ -9,6 +8,7 @@ title: TranscriptTopics
 |------------ | ------------- | ------------- | -------------|
 | **Includes** | **List&lt;string&gt;** | List of topics which need to be included in exact match criteria. This field is not mutually exclusive with excludes topic list. | [optional] |
 | **Excludes** | **List&lt;string&gt;** | List of topics which need to be excluded in exact match criteria. This field is not mutually exclusive with includes topic list. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

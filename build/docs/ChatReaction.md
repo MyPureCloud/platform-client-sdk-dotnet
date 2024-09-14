@@ -1,6 +1,5 @@
----
-title: ChatReaction
----
+# ChatReaction
+
 ## ININ.PureCloudApi.Model.ChatReaction
 
 ## Properties
@@ -8,7 +7,8 @@ title: ChatReaction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Emoji** | **string** | The emoji string for the reaction | |
-| **Users** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) | The users that reacted with an emoji | |
-{: class="table table-striped"}
+| **Users** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef) | The users that reacted with an emoji | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

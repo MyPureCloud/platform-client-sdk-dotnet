@@ -1,6 +1,5 @@
----
-title: TriggerTarget
----
+# TriggerTarget
+
 ## ININ.PureCloudApi.Model.TriggerTarget
 
 ## Properties
@@ -9,7 +8,8 @@ title: TriggerTarget
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The entity type to target | [optional] |
 | **Id** | **string** | The ID of the entity to target | [optional] |
-| **WorkflowTargetSettings** | [**WorkflowTargetSettings**](WorkflowTargetSettings.html) | Optional config for the target. | [optional] |
-{: class="table table-striped"}
+| **WorkflowTargetSettings** | [**WorkflowTargetSettings**](WorkflowTargetSettings) | Optional config for the target. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AggregationRange
----
+# AggregationRange
+
 ## ININ.PureCloudApi.Model.AggregationRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: AggregationRange
 |------------ | ------------- | ------------- | -------------|
 | **Gte** | **double?** | Greater than or equal to | [optional] |
 | **Lt** | **double?** | Less than | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: LogicalInterfaceEntityListing
----
+# LogicalInterfaceEntityListing
+
 ## ININ.PureCloudApi.Model.LogicalInterfaceEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DomainLogicalInterface&gt;**](DomainLogicalInterface.html) |  | [optional] |
+| **Entities** | [**List&lt;DomainLogicalInterface&gt;**](DomainLogicalInterface) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: LogicalInterfaceEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

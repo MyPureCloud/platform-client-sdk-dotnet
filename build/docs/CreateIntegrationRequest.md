@@ -1,6 +1,5 @@
----
-title: CreateIntegrationRequest
----
+# CreateIntegrationRequest
+
 ## ININ.PureCloudApi.Model.CreateIntegrationRequest
 
 ## Properties
@@ -9,8 +8,9 @@ title: CreateIntegrationRequest
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the integration, used to distinguish this integration from others of the same type. | |
-| **IntegrationType** | [**IntegrationType**](IntegrationType.html) | Type of the integration to create. | |
+| **IntegrationType** | [**IntegrationType**](IntegrationType) | Type of the integration to create. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

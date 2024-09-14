@@ -1,6 +1,5 @@
----
-title: WorkitemQueryJobResponse
----
+# WorkitemQueryJobResponse
+
 ## ININ.PureCloudApi.Model.WorkitemQueryJobResponse
 
 ## Properties
@@ -11,8 +10,9 @@ title: WorkitemQueryJobResponse
 | **State** | **string** | The state of the query job | [optional] |
 | **DateStarted** | **DateTime?** | The date the job was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateFinished** | **DateTime?** | The date the job finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **Error** | [**WorkitemQueryJobError**](WorkitemQueryJobError.html) | The error associated with the query job, if the state is Failed | [optional] |
+| **Error** | [**WorkitemQueryJobError**](WorkitemQueryJobError) | The error associated with the query job, if the state is Failed | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

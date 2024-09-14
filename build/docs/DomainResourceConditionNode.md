@@ -1,6 +1,5 @@
----
-title: DomainResourceConditionNode
----
+# DomainResourceConditionNode
+
 ## ININ.PureCloudApi.Model.DomainResourceConditionNode
 
 ## Properties
@@ -9,9 +8,10 @@ title: DomainResourceConditionNode
 |------------ | ------------- | ------------- | -------------|
 | **VariableName** | **string** |  | [optional] |
 | **Operator** | **string** |  | [optional] |
-| **Operands** | [**List&lt;DomainResourceConditionValue&gt;**](DomainResourceConditionValue.html) |  | [optional] |
+| **Operands** | [**List&lt;DomainResourceConditionValue&gt;**](DomainResourceConditionValue) |  | [optional] |
 | **Conjunction** | **string** |  | [optional] |
-| **Terms** | [**List&lt;DomainResourceConditionNode&gt;**](DomainResourceConditionNode.html) |  | [optional] |
-{: class="table table-striped"}
+| **Terms** | [**List&lt;DomainResourceConditionNode&gt;**](DomainResourceConditionNode) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

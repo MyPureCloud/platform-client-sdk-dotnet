@@ -1,6 +1,5 @@
----
-title: NuanceBotTransferNode
----
+# NuanceBotTransferNode
+
 ## ININ.PureCloudApi.Model.NuanceBotTransferNode
 
 ## Properties
@@ -11,7 +10,8 @@ title: NuanceBotTransferNode
 | **Name** | **string** | The transfer node name | |
 | **Type** | **string** | The transfer node type | |
 | **Description** | **string** | The transfer node description | [optional] |
-| **RequestVariables** | [**List&lt;NuanceBotVariable&gt;**](NuanceBotVariable.html) | List of variables associated with this transfer node | [optional] |
-{: class="table table-striped"}
+| **RequestVariables** | [**List&lt;NuanceBotVariable&gt;**](NuanceBotVariable) | List of variables associated with this transfer node | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

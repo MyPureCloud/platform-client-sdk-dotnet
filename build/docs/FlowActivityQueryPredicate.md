@@ -1,6 +1,5 @@
----
-title: FlowActivityQueryPredicate
----
+# FlowActivityQueryPredicate
+
 ## ININ.PureCloudApi.Model.FlowActivityQueryPredicate
 
 ## Properties
@@ -11,6 +10,7 @@ title: FlowActivityQueryPredicate
 | **Dimension** | **string** | Left hand side for dimension predicates | [optional] |
 | **Operator** | **string** | Optional operator, default is matches | [optional] |
 | **Value** | **string** | Right hand side for dimension predicates | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

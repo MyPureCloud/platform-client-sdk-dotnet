@@ -1,6 +1,5 @@
----
-title: GeolocationEventGeolocation
----
+# GeolocationEventGeolocation
+
 ## ININ.PureCloudApi.Model.GeolocationEventGeolocation
 
 ## Properties
@@ -12,6 +11,7 @@ title: GeolocationEventGeolocation
 | **Country** | **string** |  | [optional] |
 | **Region** | **string** |  | [optional] |
 | **City** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

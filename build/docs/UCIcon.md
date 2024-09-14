@@ -1,6 +1,5 @@
----
-title: UCIcon
----
+# UCIcon
+
 ## ININ.PureCloudApi.Model.UCIcon
 
 ## Properties
@@ -8,6 +7,7 @@ title: UCIcon
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Vector** | **string** | vector | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

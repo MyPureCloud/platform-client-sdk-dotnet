@@ -1,6 +1,5 @@
----
-title: Cursors
----
+# Cursors
+
 ## ININ.PureCloudApi.Model.Cursors
 
 ## Properties
@@ -9,6 +8,7 @@ title: Cursors
 |------------ | ------------- | ------------- | -------------|
 | **Before** | **string** |  | [optional] |
 | **After** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

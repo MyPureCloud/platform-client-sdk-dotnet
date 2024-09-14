@@ -1,6 +1,5 @@
----
-title: JourneyAggregateQueryPredicate
----
+# JourneyAggregateQueryPredicate
+
 ## ININ.PureCloudApi.Model.JourneyAggregateQueryPredicate
 
 ## Properties
@@ -11,7 +10,8 @@ title: JourneyAggregateQueryPredicate
 | **Dimension** | **string** | Left hand side for dimension predicates | [optional] |
 | **Operator** | **string** | Optional operator, default is matches | [optional] |
 | **Value** | **string** | Right hand side for dimension predicates | [optional] |
-| **Range** | [**NumericRange**](NumericRange.html) | Right hand side for dimension predicates | [optional] |
-{: class="table table-striped"}
+| **Range** | [**NumericRange**](NumericRange) | Right hand side for dimension predicates | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

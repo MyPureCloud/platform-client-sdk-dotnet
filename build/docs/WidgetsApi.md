@@ -1,23 +1,22 @@
----
-title: WidgetsApi
----
+# WidgetsApi
+
 ## PureCloudPlatform.Client.V2.Api.WidgetsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteWidgetsDeployment**](WidgetsApi.html#deletewidgetsdeployment) | **Delete** /api/v2/widgets/deployments/{deploymentId} | Delete a Widget deployment |
-| [**GetWidgetsDeployment**](WidgetsApi.html#getwidgetsdeployment) | **Get** /api/v2/widgets/deployments/{deploymentId} | Get a Widget deployment |
-| [**GetWidgetsDeployments**](WidgetsApi.html#getwidgetsdeployments) | **Get** /api/v2/widgets/deployments | List Widget deployments |
-| [**PostWidgetsDeployments**](WidgetsApi.html#postwidgetsdeployments) | **Post** /api/v2/widgets/deployments | Create Widget deployment |
-| [**PutWidgetsDeployment**](WidgetsApi.html#putwidgetsdeployment) | **Put** /api/v2/widgets/deployments/{deploymentId} | Update a Widget deployment |
-{: class="table table-striped"}
+| [**DeleteWidgetsDeployment**](#DeleteWidgetsDeployment) | **Delete** /api/v2/widgets/deployments/{deploymentId} | Delete a Widget deployment |
+| [**GetWidgetsDeployment**](#GetWidgetsDeployment) | **Get** /api/v2/widgets/deployments/{deploymentId} | Get a Widget deployment |
+| [**GetWidgetsDeployments**](#GetWidgetsDeployments) | **Get** /api/v2/widgets/deployments | List Widget deployments |
+| [**PostWidgetsDeployments**](#PostWidgetsDeployments) | **Post** /api/v2/widgets/deployments | Create Widget deployment |
+| [**PutWidgetsDeployment**](#PutWidgetsDeployment) | **Put** /api/v2/widgets/deployments/{deploymentId} | Update a Widget deployment |
 
-<a name="deletewidgetsdeployment"></a>
 
-## void DeleteWidgetsDeployment (string deploymentId)
 
+## DeleteWidgetsDeployment
+
+> void DeleteWidgetsDeployment (string deploymentId)
 
 
 Delete a Widget deployment
@@ -71,16 +70,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Widget Config Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getwidgetsdeployment"></a>
 
-## [**WidgetDeployment**](WidgetDeployment.html) GetWidgetsDeployment (string deploymentId)
+## GetWidgetsDeployment
 
+> [**WidgetDeployment**](WidgetDeployment) GetWidgetsDeployment (string deploymentId)
 
 
 Get a Widget deployment
@@ -135,16 +133,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Widget Config Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WidgetDeployment**](WidgetDeployment.html)
+[**WidgetDeployment**](WidgetDeployment)
 
-<a name="getwidgetsdeployments"></a>
 
-## [**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing.html) GetWidgetsDeployments ()
+## GetWidgetsDeployments
 
+> [**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing) GetWidgetsDeployments ()
 
 
 List Widget deployments
@@ -195,15 +192,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing.html)
+[**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing)
 
-<a name="postwidgetsdeployments"></a>
 
-## [**WidgetDeployment**](WidgetDeployment.html) PostWidgetsDeployments (WidgetDeployment body)
+## PostWidgetsDeployments
 
+> [**WidgetDeployment**](WidgetDeployment) PostWidgetsDeployments (WidgetDeployment body)
 
 
 Create Widget deployment
@@ -257,17 +253,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WidgetDeployment**](WidgetDeployment.html)| Deployment |  |
-{: class="table table-striped"}
+| **body** | [**WidgetDeployment**](WidgetDeployment)| Deployment |  |
 
 ### Return type
 
-[**WidgetDeployment**](WidgetDeployment.html)
+[**WidgetDeployment**](WidgetDeployment)
 
-<a name="putwidgetsdeployment"></a>
 
-## [**WidgetDeployment**](WidgetDeployment.html) PutWidgetsDeployment (string deploymentId, WidgetDeployment body)
+## PutWidgetsDeployment
 
+> [**WidgetDeployment**](WidgetDeployment) PutWidgetsDeployment (string deploymentId, WidgetDeployment body)
 
 
 Update a Widget deployment
@@ -323,10 +318,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Widget Config Id |  |
-| **body** | [**WidgetDeployment**](WidgetDeployment.html)| Deployment |  |
-{: class="table table-striped"}
+| **body** | [**WidgetDeployment**](WidgetDeployment)| Deployment |  |
 
 ### Return type
 
-[**WidgetDeployment**](WidgetDeployment.html)
+[**WidgetDeployment**](WidgetDeployment)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

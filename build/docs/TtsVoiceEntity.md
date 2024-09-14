@@ -1,6 +1,5 @@
----
-title: TtsVoiceEntity
----
+# TtsVoiceEntity
+
 ## ININ.PureCloudApi.Model.TtsVoiceEntity
 
 ## Properties
@@ -11,9 +10,10 @@ title: TtsVoiceEntity
 | **Name** | **string** |  | [optional] |
 | **Gender** | **string** | The gender of the TTS voice | |
 | **Language** | **string** | The language supported by the TTS voice | |
-| **Engine** | [**TtsEngineEntity**](TtsEngineEntity.html) | Ths TTS engine this voice belongs to | |
+| **Engine** | [**TtsEngineEntity**](TtsEngineEntity) | Ths TTS engine this voice belongs to | |
 | **IsDefault** | **bool?** | The voice is the default voice for its language | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

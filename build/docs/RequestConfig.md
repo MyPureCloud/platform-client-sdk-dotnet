@@ -1,6 +1,5 @@
----
-title: RequestConfig
----
+# RequestConfig
+
 ## ININ.PureCloudApi.Model.RequestConfig
 
 ## Properties
@@ -12,6 +11,7 @@ title: RequestConfig
 | **RequestTemplateUri** | **string** | URI to retrieve requestTemplate | [optional] |
 | **RequestType** | **string** | HTTP method to use for request | [optional] |
 | **Headers** | **Dictionary&lt;string, string&gt;** | Headers to include in request in (Header Name, Value) pairs. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

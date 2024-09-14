@@ -1,6 +1,5 @@
----
-title: ShiftTradeMatchViolation
----
+# ShiftTradeMatchViolation
+
 ## ININ.PureCloudApi.Model.ShiftTradeMatchViolation
 
 ## Properties
@@ -9,6 +8,7 @@ title: ShiftTradeMatchViolation
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type of constraint violation | [optional] |
 | **Params** | **Dictionary&lt;string, string&gt;** | Clarifying user params for constructing helpful error messages | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

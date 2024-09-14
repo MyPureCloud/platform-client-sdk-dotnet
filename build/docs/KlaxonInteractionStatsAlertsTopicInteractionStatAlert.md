@@ -1,6 +1,5 @@
----
-title: KlaxonInteractionStatsAlertsTopicInteractionStatAlert
----
+# KlaxonInteractionStatsAlertsTopicInteractionStatAlert
+
 ## ININ.PureCloudApi.Model.KlaxonInteractionStatsAlertsTopicInteractionStatAlert
 
 ## Properties
@@ -21,8 +20,9 @@ title: KlaxonInteractionStatsAlertsTopicInteractionStatAlert
 | **Unread** | **bool?** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
-| **NotificationUsers** | [**List&lt;KlaxonInteractionStatsAlertsTopicNotificationUser&gt;**](KlaxonInteractionStatsAlertsTopicNotificationUser.html) |  | [optional] |
+| **NotificationUsers** | [**List&lt;KlaxonInteractionStatsAlertsTopicNotificationUser&gt;**](KlaxonInteractionStatsAlertsTopicNotificationUser) |  | [optional] |
 | **AlertTypes** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

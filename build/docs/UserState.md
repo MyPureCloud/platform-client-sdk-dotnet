@@ -1,6 +1,5 @@
----
-title: UserState
----
+# UserState
+
 ## ININ.PureCloudApi.Model.UserState
 
 ## Properties
@@ -11,6 +10,7 @@ title: UserState
 | **Version** | **int?** | Version of this user. | [optional] |
 | **StateChangeReason** | **string** | Reason for a change in the user&#39;s state. | [optional] |
 | **StateChangeDate** | **DateTime?** | Date that the state was last changed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
----
+# WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
+
 ## ININ.PureCloudApi.Model.WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Version** | **int?** |  | [optional] |
-| **ModifiedBy** | [**WfmBulkShiftTradeStateUpdateNotificationTopicUserReference**](WfmBulkShiftTradeStateUpdateNotificationTopicUserReference.html) |  | [optional] |
+| **ModifiedBy** | [**WfmBulkShiftTradeStateUpdateNotificationTopicUserReference**](WfmBulkShiftTradeStateUpdateNotificationTopicUserReference) |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

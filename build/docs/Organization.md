@@ -1,6 +1,5 @@
----
-title: Organization
----
+# Organization
+
 ## ININ.PureCloudApi.Model.Organization
 
 ## Properties
@@ -22,6 +21,7 @@ title: Organization
 | **ProductPlatform** | **string** | Organizations Originating Platform. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **Features** | **Dictionary&lt;string, bool?&gt;** | The state of features available for the organization. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

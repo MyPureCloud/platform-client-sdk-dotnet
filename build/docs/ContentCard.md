@@ -1,6 +1,5 @@
----
-title: ContentCard
----
+# ContentCard
+
 ## ININ.PureCloudApi.Model.ContentCard
 
 ## Properties
@@ -11,8 +10,9 @@ title: ContentCard
 | **Description** | **string** | Text to show in the description. | [optional] |
 | **Image** | **string** | URL of an image. | [optional] |
 | **Video** | **string** | URL of a video. | [optional] |
-| **DefaultAction** | [**ContentCardAction**](ContentCardAction.html) | The default button action. | [optional] |
-| **Actions** | [**List&lt;ContentCardAction&gt;**](ContentCardAction.html) | An array of action objects. | |
-{: class="table table-striped"}
+| **DefaultAction** | [**ContentCardAction**](ContentCardAction) | The default button action. | [optional] |
+| **Actions** | [**List&lt;ContentCardAction&gt;**](ContentCardAction) | An array of action objects. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

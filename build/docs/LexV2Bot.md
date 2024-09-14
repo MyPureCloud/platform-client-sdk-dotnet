@@ -1,6 +1,5 @@
----
-title: LexV2Bot
----
+# LexV2Bot
+
 ## ININ.PureCloudApi.Model.LexV2Bot
 
 ## Properties
@@ -13,6 +12,7 @@ title: LexV2Bot
 | **Region** | **string** | A region of the Lex V2 bot | |
 | **Description** | **string** | A description of the Lex V2 bot | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

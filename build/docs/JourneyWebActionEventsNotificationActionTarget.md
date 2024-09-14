@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationActionTarget
----
+# JourneyWebActionEventsNotificationActionTarget
+
 ## ININ.PureCloudApi.Model.JourneyWebActionEventsNotificationActionTarget
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyWebActionEventsNotificationActionTarget
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CreateWebChatConversationResponse
----
+# CreateWebChatConversationResponse
+
 ## ININ.PureCloudApi.Model.CreateWebChatConversationResponse
 
 ## Properties
@@ -10,7 +9,8 @@ title: CreateWebChatConversationResponse
 | **Id** | **string** | Chat Conversation identifier | [optional] |
 | **Jwt** | **string** | The JWT that you can use to identify subsequent calls on this conversation | [optional] |
 | **EventStreamUri** | **string** | The URI which provides the conversation event stream. | [optional] |
-| **Member** | [**WebChatMemberInfo**](WebChatMemberInfo.html) | Chat Member | [optional] |
-{: class="table table-striped"}
+| **Member** | [**WebChatMemberInfo**](WebChatMemberInfo) | Chat Member | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

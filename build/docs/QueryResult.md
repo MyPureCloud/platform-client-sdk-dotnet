@@ -1,6 +1,5 @@
----
-title: QueryResult
----
+# QueryResult
+
 ## ININ.PureCloudApi.Model.QueryResult
 
 ## Properties
@@ -9,8 +8,9 @@ title: QueryResult
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Body** | [**DomainEntity**](DomainEntity.html) |  | [optional] |
+| **Body** | [**DomainEntity**](DomainEntity) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

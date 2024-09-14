@@ -1,6 +1,5 @@
----
-title: OutcomeAttributionJobStateResponse
----
+# OutcomeAttributionJobStateResponse
+
 ## ININ.PureCloudApi.Model.OutcomeAttributionJobStateResponse
 
 ## Properties
@@ -13,6 +12,7 @@ title: OutcomeAttributionJobStateResponse
 | **PercentFailedThreshold** | **int?** | Optional percent failed threshold for validation errors; if reached will halt the job. Default is 5 percent, allowed values 0 to 100. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **CreatedDate** | **DateTime?** | Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

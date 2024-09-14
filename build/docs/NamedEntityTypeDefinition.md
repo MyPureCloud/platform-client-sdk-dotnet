@@ -1,6 +1,5 @@
----
-title: NamedEntityTypeDefinition
----
+# NamedEntityTypeDefinition
+
 ## ININ.PureCloudApi.Model.NamedEntityTypeDefinition
 
 ## Properties
@@ -9,7 +8,8 @@ title: NamedEntityTypeDefinition
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the entity type. | |
 | **Description** | **string** | Description of the of the named entity type. | [optional] |
-| **Mechanism** | [**NamedEntityTypeMechanism**](NamedEntityTypeMechanism.html) | The mechanism enabling detection of the named entity type. | |
-{: class="table table-striped"}
+| **Mechanism** | [**NamedEntityTypeMechanism**](NamedEntityTypeMechanism) | The mechanism enabling detection of the named entity type. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

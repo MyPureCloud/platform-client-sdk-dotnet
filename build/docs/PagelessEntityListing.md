@@ -1,6 +1,5 @@
----
-title: PagelessEntityListing
----
+# PagelessEntityListing
+
 ## ININ.PureCloudApi.Model.PagelessEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: PagelessEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;AddressableEntity&gt;**](AddressableEntity.html) |  | [optional] |
+| **Entities** | [**List&lt;AddressableEntity&gt;**](AddressableEntity) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

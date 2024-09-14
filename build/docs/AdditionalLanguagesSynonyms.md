@@ -1,6 +1,5 @@
----
-title: AdditionalLanguagesSynonyms
----
+# AdditionalLanguagesSynonyms
+
 ## ININ.PureCloudApi.Model.AdditionalLanguagesSynonyms
 
 ## Properties
@@ -8,6 +7,7 @@ title: AdditionalLanguagesSynonyms
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Synonyms** | **List&lt;string&gt;** | Synonyms for additional language | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

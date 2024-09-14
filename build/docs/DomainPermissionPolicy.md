@@ -1,6 +1,5 @@
----
-title: DomainPermissionPolicy
----
+# DomainPermissionPolicy
+
 ## ININ.PureCloudApi.Model.DomainPermissionPolicy
 
 ## Properties
@@ -14,7 +13,8 @@ title: DomainPermissionPolicy
 | **ActionSet** | **List&lt;string&gt;** |  | [optional] |
 | **NamedResources** | **List&lt;string&gt;** |  | [optional] |
 | **AllowConditions** | **bool?** |  | [optional] |
-| **ResourceConditionNode** | [**DomainResourceConditionNode**](DomainResourceConditionNode.html) |  | [optional] |
-{: class="table table-striped"}
+| **ResourceConditionNode** | [**DomainResourceConditionNode**](DomainResourceConditionNode) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

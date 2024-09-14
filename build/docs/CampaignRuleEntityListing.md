@@ -1,13 +1,12 @@
----
-title: CampaignRuleEntityListing
----
+# CampaignRuleEntityListing
+
 ## ININ.PureCloudApi.Model.CampaignRuleEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;CampaignRule&gt;**](CampaignRule.html) |  | [optional] |
+| **Entities** | [**List&lt;CampaignRule&gt;**](CampaignRule) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: CampaignRuleEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

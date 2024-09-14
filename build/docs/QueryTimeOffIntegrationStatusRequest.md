@@ -1,13 +1,13 @@
----
-title: QueryTimeOffIntegrationStatusRequest
----
+# QueryTimeOffIntegrationStatusRequest
+
 ## ININ.PureCloudApi.Model.QueryTimeOffIntegrationStatusRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **TimeOffRequestLookups** | [**List&lt;TimeOffRequestLookup&gt;**](TimeOffRequestLookup.html) | A list of time off request lookups | |
-{: class="table table-striped"}
+| **TimeOffRequestLookups** | [**List&lt;TimeOffRequestLookup&gt;**](TimeOffRequestLookup) | A list of time off request lookups | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

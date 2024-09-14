@@ -1,6 +1,5 @@
----
-title: MetadataItem
----
+# MetadataItem
+
 ## ININ.PureCloudApi.Model.MetadataItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: MetadataItem
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | The text contents of the metadata | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | The custom attributes for the metadata | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

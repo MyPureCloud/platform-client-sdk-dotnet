@@ -1,6 +1,5 @@
----
-title: DraftValidationResult
----
+# DraftValidationResult
+
 ## ININ.PureCloudApi.Model.DraftValidationResult
 
 ## Properties
@@ -8,7 +7,8 @@ title: DraftValidationResult
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Valid** | **bool?** | Indicates if configuration is valid | [optional] |
-| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody.html) | List of errors causing validation failure | [optional] |
-{: class="table table-striped"}
+| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody) | List of errors causing validation failure | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

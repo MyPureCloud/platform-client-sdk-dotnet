@@ -1,6 +1,5 @@
----
-title: Browser
----
+# Browser
+
 ## ININ.PureCloudApi.Model.Browser
 
 ## Properties
@@ -18,6 +17,7 @@ title: Browser
 | **FeaturesJava** | **bool?** | Whether Java is installed. | |
 | **FeaturesPdf** | **bool?** | Whether the browser recognizes PDFs. | |
 | **FeaturesWebrtc** | **bool?** | Whether WebRTC is supported. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

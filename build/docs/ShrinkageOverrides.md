@@ -1,6 +1,5 @@
----
-title: ShrinkageOverrides
----
+# ShrinkageOverrides
+
 ## ININ.PureCloudApi.Model.ShrinkageOverrides
 
 ## Properties
@@ -8,7 +7,8 @@ title: ShrinkageOverrides
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Clear** | **bool?** | Set true to clear the shrinkage interval overrides | [optional] |
-| **Values** | [**List&lt;ShrinkageOverride&gt;**](ShrinkageOverride.html) | List of interval shrinkage overrides | [optional] |
-{: class="table table-striped"}
+| **Values** | [**List&lt;ShrinkageOverride&gt;**](ShrinkageOverride) | List of interval shrinkage overrides | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

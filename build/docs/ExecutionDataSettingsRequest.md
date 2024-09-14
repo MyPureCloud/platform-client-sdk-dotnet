@@ -1,6 +1,5 @@
----
-title: ExecutionDataSettingsRequest
----
+# ExecutionDataSettingsRequest
+
 ## ININ.PureCloudApi.Model.ExecutionDataSettingsRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExecutionDataSettingsRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not the setting is enabled. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

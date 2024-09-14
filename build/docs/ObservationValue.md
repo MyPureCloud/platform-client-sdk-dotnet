@@ -1,6 +1,5 @@
----
-title: ObservationValue
----
+# ObservationValue
+
 ## ININ.PureCloudApi.Model.ObservationValue
 
 ## Properties
@@ -25,7 +24,8 @@ title: ObservationValue
 | **TeamId** | **string** | The team id the user is a member of | [optional] |
 | **RequestedRoutings** | **List&lt;string&gt;** | All routing types for requested/attempted routing methods | [optional] |
 | **UsedRouting** | **string** | Complete routing method | [optional] |
-| **ScoredAgents** | [**List&lt;AnalyticsScoredAgent&gt;**](AnalyticsScoredAgent.html) |  | [optional] |
-{: class="table table-striped"}
+| **ScoredAgents** | [**List&lt;AnalyticsScoredAgent&gt;**](AnalyticsScoredAgent) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

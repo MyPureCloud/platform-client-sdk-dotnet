@@ -1,6 +1,5 @@
----
-title: BusinessUnitActivityCode
----
+# BusinessUnitActivityCode
+
 ## ININ.PureCloudApi.Model.BusinessUnitActivityCode
 
 ## Properties
@@ -19,9 +18,10 @@ title: BusinessUnitActivityCode
 | **CountsTowardShrinkage** | **bool?** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
 | **PlannedShrinkage** | **bool?** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
 | **Interruptible** | **bool?** | Whether this activity code is considered interruptible | [optional] |
-| **SecondaryPresences** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence.html) | The secondary presences of this activity code | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata of this activity code | [optional] |
+| **SecondaryPresences** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence) | The secondary presences of this activity code | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata of this activity code | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

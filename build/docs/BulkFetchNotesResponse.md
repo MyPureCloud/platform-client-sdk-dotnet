@@ -1,15 +1,15 @@
----
-title: BulkFetchNotesResponse
----
+# BulkFetchNotesResponse
+
 ## ININ.PureCloudApi.Model.BulkFetchNotesResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;BulkResponseResultNoteEntity&gt;**](BulkResponseResultNoteEntity.html) |  | [optional] |
+| **Results** | [**List&lt;BulkResponseResultNoteEntity&gt;**](BulkResponseResultNoteEntity) |  | [optional] |
 | **ErrorCount** | **int?** |  | [optional] |
 | **ErrorIndexes** | **List&lt;int?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

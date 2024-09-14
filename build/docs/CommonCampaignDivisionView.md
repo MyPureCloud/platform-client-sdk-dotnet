@@ -1,6 +1,5 @@
----
-title: CommonCampaignDivisionView
----
+# CommonCampaignDivisionView
+
 ## ININ.PureCloudApi.Model.CommonCampaignDivisionView
 
 ## Properties
@@ -9,9 +8,10 @@ title: CommonCampaignDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the Campaign. | [optional] |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **MediaType** | **string** | The media type used for this campaign. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

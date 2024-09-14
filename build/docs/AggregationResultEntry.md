@@ -1,6 +1,5 @@
----
-title: AggregationResultEntry
----
+# AggregationResultEntry
+
 ## ININ.PureCloudApi.Model.AggregationResultEntry
 
 ## Properties
@@ -11,6 +10,7 @@ title: AggregationResultEntry
 | **Value** | **string** | For termFrequency aggregations | [optional] |
 | **Gte** | **double?** | For numericRange aggregations | [optional] |
 | **Lt** | **double?** | For numericRange aggregations | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: EmbeddedIntegration
----
+# EmbeddedIntegration
+
 ## ININ.PureCloudApi.Model.EmbeddedIntegration
 
 ## Properties
@@ -9,6 +8,7 @@ title: EmbeddedIntegration
 |------------ | ------------- | ------------- | -------------|
 | **EnableWhitelist** | **bool?** |  | [optional] |
 | **DomainWhitelist** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

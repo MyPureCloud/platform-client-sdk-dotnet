@@ -1,6 +1,5 @@
----
-title: DialerCallabletimesetConfigChangeTimeSlot
----
+# DialerCallabletimesetConfigChangeTimeSlot
+
 ## ININ.PureCloudApi.Model.DialerCallabletimesetConfigChangeTimeSlot
 
 ## Properties
@@ -11,6 +10,7 @@ title: DialerCallabletimesetConfigChangeTimeSlot
 | **StopTime** | **string** | The stop time of this time slot | [optional] |
 | **Day** | **int?** | The day this time slot applies | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

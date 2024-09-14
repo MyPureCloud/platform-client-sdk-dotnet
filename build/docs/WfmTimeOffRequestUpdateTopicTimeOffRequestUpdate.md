@@ -1,6 +1,5 @@
----
-title: WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
----
+# WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
+
 ## ININ.PureCloudApi.Model.WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
 
 ## Properties
@@ -8,7 +7,7 @@ title: WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **User** | [**WfmTimeOffRequestUpdateTopicUserReference**](WfmTimeOffRequestUpdateTopicUserReference.html) |  | [optional] |
+| **User** | [**WfmTimeOffRequestUpdateTopicUserReference**](WfmTimeOffRequestUpdateTopicUserReference) |  | [optional] |
 | **IsFullDayRequest** | **bool?** |  | [optional] |
 | **MarkedAsRead** | **bool?** |  | [optional] |
 | **ActivityCodeId** | **string** |  | [optional] |
@@ -25,6 +24,7 @@ title: WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
 | **SubmittedBy** | **string** |  | [optional] |
 | **ModifiedDate** | **string** |  | [optional] |
 | **ModifiedBy** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

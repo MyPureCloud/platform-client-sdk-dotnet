@@ -1,6 +1,5 @@
----
-title: OrgAuthSettings
----
+# OrgAuthSettings
+
 ## ININ.PureCloudApi.Model.OrgAuthSettings
 
 ## Properties
@@ -11,7 +10,8 @@ title: OrgAuthSettings
 | **DomainAllowlistEnabled** | **bool?** | Indicates whether the domain allowlist is enabled. | [optional] |
 | **DomainAllowlist** | **List&lt;string&gt;** | The list of domains that will be allowed to embed Genesys Cloud applications. | [optional] |
 | **IpAddressAllowlist** | **List&lt;string&gt;** | The list of IP addresses that will be allowed to authenticate with Genesys Cloud. | [optional] |
-| **PasswordRequirements** | [**PasswordRequirements**](PasswordRequirements.html) | The password requirements for the organization. | [optional] |
-{: class="table table-striped"}
+| **PasswordRequirements** | [**PasswordRequirements**](PasswordRequirements) | The password requirements for the organization. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

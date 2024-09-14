@@ -1,6 +1,5 @@
----
-title: ReportingInterval
----
+# ReportingInterval
+
 ## ININ.PureCloudApi.Model.ReportingInterval
 
 ## Properties
@@ -9,6 +8,7 @@ title: ReportingInterval
 |------------ | ------------- | ------------- | -------------|
 | **IntervalType** | **string** | The granularity of the reporting interval period | |
 | **IntervalValue** | **int?** | The value of the reporting interval period for a given interval type | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

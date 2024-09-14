@@ -1,6 +1,5 @@
----
-title: CertificateDetails
----
+# CertificateDetails
+
 ## ININ.PureCloudApi.Model.CertificateDetails
 
 ## Properties
@@ -14,6 +13,7 @@ title: CertificateDetails
 | **Expired** | **bool?** | True if the certificate is expired, false otherwise. | [optional] |
 | **SignatureValid** | **bool?** |  | [optional] |
 | **Valid** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

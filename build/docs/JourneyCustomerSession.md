@@ -1,6 +1,5 @@
----
-title: JourneyCustomerSession
----
+# JourneyCustomerSession
+
 ## ININ.PureCloudApi.Model.JourneyCustomerSession
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyCustomerSession
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | An ID of a Customer/User&#39;s session within the Journey System at a point-in-time | |
 | **Type** | **string** | The type of the Customer/User&#39;s session within the Journey System (e.g. web, app) | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

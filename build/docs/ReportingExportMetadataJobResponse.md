@@ -1,6 +1,5 @@
----
-title: ReportingExportMetadataJobResponse
----
+# ReportingExportMetadataJobResponse
+
 ## ININ.PureCloudApi.Model.ReportingExportMetadataJobResponse
 
 ## Properties
@@ -17,6 +16,7 @@ title: ReportingExportMetadataJobResponse
 | **DependentColumnIds** | **Dictionary&lt;string, List&lt;string&gt;&gt;** | The list of dependent column ids for the export metadata | [optional] |
 | **AvailableColumnIds** | **List&lt;string&gt;** | The list of available column ids for the export metadata | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WebMessagingEventCoBrowse
----
+# WebMessagingEventCoBrowse
+
 ## ININ.PureCloudApi.Model.WebMessagingEventCoBrowse
 
 ## Properties
@@ -10,6 +9,7 @@ title: WebMessagingEventCoBrowse
 | **Type** | **string** | Describes the type of Cobrowse event. | |
 | **SessionId** | **string** | The Cobrowse session ID. | [optional] |
 | **SessionJoinToken** | **string** | The Cobrowse session join token. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CriteriaCategoryInfo
----
+# CriteriaCategoryInfo
+
 ## ININ.PureCloudApi.Model.CriteriaCategoryInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: CriteriaCategoryInfo
 |------------ | ------------- | ------------- | -------------|
 | **CategoryId** | **string** |  | [optional] |
 | **DisplayOrder** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

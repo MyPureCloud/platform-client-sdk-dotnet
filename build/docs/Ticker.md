@@ -1,6 +1,5 @@
----
-title: Ticker
----
+# Ticker
+
 ## ININ.PureCloudApi.Model.Ticker
 
 ## Properties
@@ -9,6 +8,7 @@ title: Ticker
 |------------ | ------------- | ------------- | -------------|
 | **Symbol** | **string** | The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc. | |
 | **Exchange** | **string** | The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

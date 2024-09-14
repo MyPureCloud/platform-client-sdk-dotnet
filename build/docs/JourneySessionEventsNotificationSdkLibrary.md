@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationSdkLibrary
----
+# JourneySessionEventsNotificationSdkLibrary
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationSdkLibrary
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneySessionEventsNotificationSdkLibrary
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** |  | [optional] |
 | **Version** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

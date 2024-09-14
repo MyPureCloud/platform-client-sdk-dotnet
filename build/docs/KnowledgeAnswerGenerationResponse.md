@@ -1,6 +1,5 @@
----
-title: KnowledgeAnswerGenerationResponse
----
+# KnowledgeAnswerGenerationResponse
+
 ## ININ.PureCloudApi.Model.KnowledgeAnswerGenerationResponse
 
 ## Properties
@@ -8,7 +7,8 @@ title: KnowledgeAnswerGenerationResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Answer** | **string** | The AI-generated answer. | [optional] |
-| **Documents** | [**List&lt;AnswerGenerationDocument&gt;**](AnswerGenerationDocument.html) | The documents used for answer generation. | [optional] |
-{: class="table table-striped"}
+| **Documents** | [**List&lt;AnswerGenerationDocument&gt;**](AnswerGenerationDocument) | The documents used for answer generation. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

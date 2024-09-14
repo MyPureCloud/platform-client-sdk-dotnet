@@ -1,6 +1,5 @@
----
-title: TextBotFlow
----
+# TextBotFlow
+
 ## ININ.PureCloudApi.Model.TextBotFlow
 
 ## Properties
@@ -8,6 +7,7 @@ title: TextBotFlow
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The Bot Flow ID. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

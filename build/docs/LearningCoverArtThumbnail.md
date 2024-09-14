@@ -1,6 +1,5 @@
----
-title: LearningCoverArtThumbnail
----
+# LearningCoverArtThumbnail
+
 ## ININ.PureCloudApi.Model.LearningCoverArtThumbnail
 
 ## Properties
@@ -9,6 +8,7 @@ title: LearningCoverArtThumbnail
 |------------ | ------------- | ------------- | -------------|
 | **Resolution** | **string** | Resolution of thumbnail | [optional] |
 | **Url** | **string** | The URL for the thumbnail | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

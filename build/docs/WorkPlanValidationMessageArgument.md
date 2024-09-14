@@ -1,6 +1,5 @@
----
-title: WorkPlanValidationMessageArgument
----
+# WorkPlanValidationMessageArgument
+
 ## ININ.PureCloudApi.Model.WorkPlanValidationMessageArgument
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkPlanValidationMessageArgument
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type of the argument associated with violation messages | [optional] |
 | **Value** | **string** | The value of the argument | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

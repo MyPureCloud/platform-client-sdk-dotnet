@@ -1,6 +1,5 @@
----
-title: MediaResult
----
+# MediaResult
+
 ## ININ.PureCloudApi.Model.MediaResult
 
 ## Properties
@@ -9,6 +8,7 @@ title: MediaResult
 |------------ | ------------- | ------------- | -------------|
 | **MediaUri** | **string** |  | [optional] |
 | **WaveformData** | **List&lt;float?&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

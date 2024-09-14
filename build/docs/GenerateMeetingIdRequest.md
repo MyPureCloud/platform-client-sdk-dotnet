@@ -1,6 +1,5 @@
----
-title: GenerateMeetingIdRequest
----
+# GenerateMeetingIdRequest
+
 ## ININ.PureCloudApi.Model.GenerateMeetingIdRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: GenerateMeetingIdRequest
 | **ConferenceId** | **string** | The conferenceId for which to generate a meetingId | [optional] |
 | **Ephemeral** | **bool?** | Boolean flag for ephemeral status of the created record | |
 | **ExpireTimeDays** | **int?** | Number of days the meetingId record will remain active | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

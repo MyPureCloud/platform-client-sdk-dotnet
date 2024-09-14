@@ -1,6 +1,5 @@
----
-title: ConversationSocialExpressionEventTopicJourneyAction
----
+# ConversationSocialExpressionEventTopicJourneyAction
+
 ## ININ.PureCloudApi.Model.ConversationSocialExpressionEventTopicJourneyAction
 
 ## Properties
@@ -8,7 +7,8 @@ title: ConversationSocialExpressionEventTopicJourneyAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of an action from the Journey System (an action is spawned from an actionMap) | [optional] |
-| **ActionMap** | [**ConversationSocialExpressionEventTopicJourneyActionMap**](ConversationSocialExpressionEventTopicJourneyActionMap.html) |  | [optional] |
-{: class="table table-striped"}
+| **ActionMap** | [**ConversationSocialExpressionEventTopicJourneyActionMap**](ConversationSocialExpressionEventTopicJourneyActionMap) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

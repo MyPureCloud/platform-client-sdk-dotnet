@@ -1,6 +1,5 @@
----
-title: BatchDownloadRequest
----
+# BatchDownloadRequest
+
 ## ININ.PureCloudApi.Model.BatchDownloadRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: BatchDownloadRequest
 |------------ | ------------- | ------------- | -------------|
 | **ConversationId** | **string** | Conversation id requested | [optional] |
 | **RecordingId** | **string** | Recording id requested, optional.  Leave null for all recordings on the conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationOutcome
----
+# JourneyOutcomeEventsNotificationOutcome
+
 ## ININ.PureCloudApi.Model.JourneyOutcomeEventsNotificationOutcome
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneyOutcomeEventsNotificationOutcome
 | **Id** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **DisplayName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

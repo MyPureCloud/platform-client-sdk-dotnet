@@ -1,6 +1,5 @@
----
-title: WfmActivityPlanJobCompleteTopicErrorBody
----
+# WfmActivityPlanJobCompleteTopicErrorBody
+
 ## ININ.PureCloudApi.Model.WfmActivityPlanJobCompleteTopicErrorBody
 
 ## Properties
@@ -11,6 +10,7 @@ title: WfmActivityPlanJobCompleteTopicErrorBody
 | **Code** | **string** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

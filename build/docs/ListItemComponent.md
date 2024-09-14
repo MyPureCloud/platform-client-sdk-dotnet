@@ -1,6 +1,5 @@
----
-title: ListItemComponent
----
+# ListItemComponent
+
 ## ININ.PureCloudApi.Model.ListItemComponent
 
 ## Properties
@@ -13,7 +12,8 @@ title: ListItemComponent
 | **Image** | **string** | URL of an image. | [optional] |
 | **Title** | **string** | The main headline of the list item. | [optional] |
 | **Description** | **string** | Text to show in the list item description. | [optional] |
-| **Actions** | [**ContentActions**](ContentActions.html) | The list item actions (Deprecated). | [optional] |
-{: class="table table-striped"}
+| **Actions** | [**ContentActions**](ContentActions) | The list item actions (Deprecated). | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

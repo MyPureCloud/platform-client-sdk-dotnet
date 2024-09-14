@@ -1,6 +1,5 @@
----
-title: NluUtteranceSegment
----
+# NluUtteranceSegment
+
 ## ININ.PureCloudApi.Model.NluUtteranceSegment
 
 ## Properties
@@ -8,7 +7,8 @@ title: NluUtteranceSegment
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | The text of the segment. | |
-| **Entity** | [**NamedEntityAnnotation**](NamedEntityAnnotation.html) | The entity annotation of the segment. | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**NamedEntityAnnotation**](NamedEntityAnnotation) | The entity annotation of the segment. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

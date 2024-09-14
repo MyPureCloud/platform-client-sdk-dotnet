@@ -1,6 +1,5 @@
----
-title: UserConversationsEventUserConversationSummary
----
+# UserConversationsEventUserConversationSummary
+
 ## ININ.PureCloudApi.Model.UserConversationsEventUserConversationSummary
 
 ## Properties
@@ -8,13 +7,14 @@ title: UserConversationsEventUserConversationSummary
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UserId** | **string** |  | [optional] |
-| **Call** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **Callback** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **Email** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **Message** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **Chat** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **SocialExpression** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **Video** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-{: class="table table-striped"}
+| **Call** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **Callback** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **Email** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **Message** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **Chat** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **SocialExpression** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **Video** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationAppEventsNotification
----
+# JourneyAppEventsNotificationAppEventsNotification
+
 ## ININ.PureCloudApi.Model.JourneyAppEventsNotificationAppEventsNotification
 
 ## Properties
@@ -9,15 +8,16 @@ title: JourneyAppEventsNotificationAppEventsNotification
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **CorrelationId** | **string** |  | [optional] |
-| **ExternalContact** | [**JourneyAppEventsNotificationExternalContact**](JourneyAppEventsNotificationExternalContact.html) |  | [optional] |
+| **ExternalContact** | [**JourneyAppEventsNotificationExternalContact**](JourneyAppEventsNotificationExternalContact) |  | [optional] |
 | **CreatedDate** | **DateTime?** |  | [optional] |
 | **CustomerId** | **string** |  | [optional] |
 | **CustomerIdType** | **string** |  | [optional] |
-| **Session** | [**JourneyAppEventsNotificationSession**](JourneyAppEventsNotificationSession.html) |  | [optional] |
+| **Session** | [**JourneyAppEventsNotificationSession**](JourneyAppEventsNotificationSession) |  | [optional] |
 | **EventType** | **string** |  | [optional] |
-| **AppEvent** | [**JourneyAppEventsNotificationAppMessage**](JourneyAppEventsNotificationAppMessage.html) |  | [optional] |
-| **OutcomeAchievedEvent** | [**JourneyAppEventsNotificationOutcomeAchievedMessage**](JourneyAppEventsNotificationOutcomeAchievedMessage.html) |  | [optional] |
-| **SegmentAssignmentEvent** | [**JourneyAppEventsNotificationSegmentAssignmentMessage**](JourneyAppEventsNotificationSegmentAssignmentMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **AppEvent** | [**JourneyAppEventsNotificationAppMessage**](JourneyAppEventsNotificationAppMessage) |  | [optional] |
+| **OutcomeAchievedEvent** | [**JourneyAppEventsNotificationOutcomeAchievedMessage**](JourneyAppEventsNotificationOutcomeAchievedMessage) |  | [optional] |
+| **SegmentAssignmentEvent** | [**JourneyAppEventsNotificationSegmentAssignmentMessage**](JourneyAppEventsNotificationSegmentAssignmentMessage) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

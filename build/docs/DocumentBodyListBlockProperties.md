@@ -1,6 +1,5 @@
----
-title: DocumentBodyListBlockProperties
----
+# DocumentBodyListBlockProperties
+
 ## ININ.PureCloudApi.Model.DocumentBodyListBlockProperties
 
 ## Properties
@@ -9,6 +8,7 @@ title: DocumentBodyListBlockProperties
 |------------ | ------------- | ------------- | -------------|
 | **UnorderedType** | **string** | The type of icon for the unordered list. | [optional] |
 | **OrderedType** | **string** | The type of icon for the ordered list. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: ActionTargetListing
----
+# ActionTargetListing
+
 ## ININ.PureCloudApi.Model.ActionTargetListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ActionTarget&gt;**](ActionTarget.html) |  | [optional] |
+| **Entities** | [**List&lt;ActionTarget&gt;**](ActionTarget) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: ActionTargetListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

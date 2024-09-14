@@ -1,14 +1,14 @@
----
-title: BuSetTimeOffLimitValuesRequest
----
+# BuSetTimeOffLimitValuesRequest
+
 ## ININ.PureCloudApi.Model.BuSetTimeOffLimitValuesRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Values** | [**List&lt;BuTimeOffLimitRange&gt;**](BuTimeOffLimitRange.html) |  | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the time-off limit | |
-{: class="table table-striped"}
+| **Values** | [**List&lt;BuTimeOffLimitRange&gt;**](BuTimeOffLimitRange) |  | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the time-off limit | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

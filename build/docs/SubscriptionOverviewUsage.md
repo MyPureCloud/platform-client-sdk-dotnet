@@ -1,6 +1,5 @@
----
-title: SubscriptionOverviewUsage
----
+# SubscriptionOverviewUsage
+
 ## ININ.PureCloudApi.Model.SubscriptionOverviewUsage
 
 ## Properties
@@ -19,6 +18,7 @@ title: SubscriptionOverviewUsage
 | **IsCancellable** | **bool?** | Indicates whether the item is cancellable | [optional] |
 | **BundleQuantity** | **string** | Quantity multiplier for this charge | [optional] |
 | **IsThirdParty** | **bool?** | A charge from a third party entity | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

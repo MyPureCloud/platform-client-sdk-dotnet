@@ -1,6 +1,5 @@
----
-title: GroupSettings
----
+# GroupSettings
+
 ## ININ.PureCloudApi.Model.GroupSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: GroupSettings
 | **MaximumGroupSize** | **int?** | The maximum size of a group for a session | [optional] |
 | **MaximumTotalSessions** | **int?** | The maximum total number of sessions | [optional] |
 | **MaximumConcurrentSessions** | **int?** | The maximum number of sessions that can be scheduled concurrently | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

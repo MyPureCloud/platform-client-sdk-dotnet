@@ -1,6 +1,5 @@
----
-title: V2WemEngagementCelebrationUpdatesTopicSourceEntity
----
+# V2WemEngagementCelebrationUpdatesTopicSourceEntity
+
 ## ININ.PureCloudApi.Model.V2WemEngagementCelebrationUpdatesTopicSourceEntity
 
 ## Properties
@@ -9,6 +8,7 @@ title: V2WemEngagementCelebrationUpdatesTopicSourceEntity
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

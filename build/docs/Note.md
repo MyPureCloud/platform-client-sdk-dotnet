@@ -1,6 +1,5 @@
----
-title: Note
----
+# Note
+
 ## ININ.PureCloudApi.Model.Note
 
 ## Properties
@@ -13,9 +12,10 @@ title: Note
 | **NoteText** | **string** |  | [optional] |
 | **ModifyDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreateDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **CreatedBy** | [**User**](User.html) | When creating or updating a note, only User.id is required. User object is fully populated when expanding a note. | |
-| **ExternalDataSources** | [**List&lt;ExternalDataSource&gt;**](ExternalDataSource.html) | Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. | [optional] |
+| **CreatedBy** | [**User**](User) | When creating or updating a note, only User.id is required. User object is fully populated when expanding a note. | |
+| **ExternalDataSources** | [**List&lt;ExternalDataSource&gt;**](ExternalDataSource) | Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

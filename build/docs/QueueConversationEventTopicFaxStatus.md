@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicFaxStatus
----
+# QueueConversationEventTopicFaxStatus
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicFaxStatus
 
 ## Properties
@@ -15,6 +14,7 @@ title: QueueConversationEventTopicFaxStatus
 | **BaudRate** | **int?** | Current signaling rate of transmission, baud rate. | [optional] |
 | **PageErrors** | **int?** | Number of page errors. | [optional] |
 | **LineErrors** | **int?** | Number of line errors. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

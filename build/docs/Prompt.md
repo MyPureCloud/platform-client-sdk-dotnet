@@ -1,6 +1,5 @@
----
-title: Prompt
----
+# Prompt
+
 ## ININ.PureCloudApi.Model.Prompt
 
 ## Properties
@@ -10,9 +9,10 @@ title: Prompt
 | **Id** | **string** | The prompt identifier | [optional] |
 | **Name** | **string** | The prompt name. | |
 | **Description** | **string** |  | [optional] |
-| **Resources** | [**List&lt;PromptAsset&gt;**](PromptAsset.html) | List of resources associated with this prompt | [optional] |
-| **CurrentOperation** | [**Operation**](Operation.html) | Current prompt operation status | [optional] |
+| **Resources** | [**List&lt;PromptAsset&gt;**](PromptAsset) | List of resources associated with this prompt | [optional] |
+| **CurrentOperation** | [**Operation**](Operation) | Current prompt operation status | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: DialogflowAgentSummaryEntityListing
----
+# DialogflowAgentSummaryEntityListing
+
 ## ININ.PureCloudApi.Model.DialogflowAgentSummaryEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DialogflowAgentSummary&gt;**](DialogflowAgentSummary.html) |  | [optional] |
+| **Entities** | [**List&lt;DialogflowAgentSummary&gt;**](DialogflowAgentSummary) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: DialogflowAgentSummaryEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

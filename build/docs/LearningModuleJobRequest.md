@@ -1,6 +1,5 @@
----
-title: LearningModuleJobRequest
----
+# LearningModuleJobRequest
+
 ## ININ.PureCloudApi.Model.LearningModuleJobRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: LearningModuleJobRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Action** | **string** | The type for the learning module job | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

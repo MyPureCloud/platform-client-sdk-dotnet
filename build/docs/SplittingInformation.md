@@ -1,6 +1,5 @@
----
-title: SplittingInformation
----
+# SplittingInformation
+
 ## ININ.PureCloudApi.Model.SplittingInformation
 
 ## Properties
@@ -11,6 +10,7 @@ title: SplittingInformation
 | **CriteriaValue** | **string** | The criteria value for the specified criteria type | [optional] |
 | **CreateRemainderContactList** | **bool?** | Whether to create remainder contact list | [optional] |
 | **UseWaterfallRule** | **bool?** | Whether to use waterfall rule | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

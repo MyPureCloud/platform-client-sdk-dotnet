@@ -1,6 +1,5 @@
----
-title: PublishScriptRequestData
----
+# PublishScriptRequestData
+
 ## ININ.PureCloudApi.Model.PublishScriptRequestData
 
 ## Properties
@@ -9,6 +8,7 @@ title: PublishScriptRequestData
 |------------ | ------------- | ------------- | -------------|
 | **ScriptId** | **string** | The id of the script to publish | |
 | **VersionId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicWfmUserNotification
----
+# WfmUserNotificationTopicWfmUserNotification
+
 ## ININ.PureCloudApi.Model.WfmUserNotificationTopicWfmUserNotification
 
 ## Properties
@@ -11,13 +10,14 @@ title: WfmUserNotificationTopicWfmUserNotification
 | **MutableGroupId** | **string** |  | [optional] |
 | **Timestamp** | **DateTime?** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **ShiftTrade** | [**WfmUserNotificationTopicShiftTradeNotification**](WfmUserNotificationTopicShiftTradeNotification.html) |  | [optional] |
-| **TimeOffRequest** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification.html) |  | [optional] |
-| **AdherenceExplanation** | [**WfmUserNotificationTopicAdherenceExplanationNotification**](WfmUserNotificationTopicAdherenceExplanationNotification.html) |  | [optional] |
-| **AlternativeShift** | [**WfmUserNotificationTopicAlternativeShiftNotification**](WfmUserNotificationTopicAlternativeShiftNotification.html) |  | [optional] |
+| **ShiftTrade** | [**WfmUserNotificationTopicShiftTradeNotification**](WfmUserNotificationTopicShiftTradeNotification) |  | [optional] |
+| **TimeOffRequest** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification) |  | [optional] |
+| **AdherenceExplanation** | [**WfmUserNotificationTopicAdherenceExplanationNotification**](WfmUserNotificationTopicAdherenceExplanationNotification) |  | [optional] |
+| **AlternativeShift** | [**WfmUserNotificationTopicAlternativeShiftNotification**](WfmUserNotificationTopicAlternativeShiftNotification) |  | [optional] |
 | **AgentNotification** | **bool?** |  | [optional] |
 | **OtherNotificationIdsInGroup** | **List&lt;string&gt;** |  | [optional] |
 | **MarkedAsRead** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

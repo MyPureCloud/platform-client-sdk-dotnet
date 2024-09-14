@@ -1,6 +1,5 @@
----
-title: LogEntry
----
+# LogEntry
+
 ## ININ.PureCloudApi.Model.LogEntry
 
 ## Properties
@@ -10,6 +9,7 @@ title: LogEntry
 | **Level** | **string** | Level of log entry | [optional] |
 | **Message** | **string** | Log message | [optional] |
 | **Timestamp** | **long?** | Timestamp of log entry | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

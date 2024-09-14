@@ -1,27 +1,26 @@
----
-title: UploadsApi
----
+# UploadsApi
+
 ## PureCloudPlatform.Client.V2.Api.UploadsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetKnowledgeKnowledgebaseUploadsUrlsJob**](UploadsApi.html#getknowledgeknowledgebaseuploadsurlsjob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId} | Get content upload from URL job status |
-| [**PostIntegrationsActionDraftFunctionUpload**](UploadsApi.html#postintegrationsactiondraftfunctionupload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
-| [**PostKnowledgeDocumentuploads**](UploadsApi.html#postknowledgedocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
-| [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](UploadsApi.html#postknowledgeknowledgebaseuploadsurlsjobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
-| [**PostLanguageunderstandingMinerUploads**](UploadsApi.html#postlanguageunderstandingmineruploads) | **Post** /api/v2/languageunderstanding/miners/{minerId}/uploads | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
-| [**PostUploadsLearningCoverart**](UploadsApi.html#postuploadslearningcoverart) | **Post** /api/v2/uploads/learning/coverart | Generates pre-signed URL to upload cover art for learning modules |
-| [**PostUploadsPublicassetsImages**](UploadsApi.html#postuploadspublicassetsimages) | **Post** /api/v2/uploads/publicassets/images | Creates presigned url for uploading a public asset image |
-| [**PostUploadsRecordings**](UploadsApi.html#postuploadsrecordings) | **Post** /api/v2/uploads/recordings | Creates presigned url for uploading a recording file |
-| [**PostUploadsWorkforcemanagementHistoricaldataCsv**](UploadsApi.html#postuploadsworkforcemanagementhistoricaldatacsv) | **Post** /api/v2/uploads/workforcemanagement/historicaldata/csv | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
-{: class="table table-striped"}
+| [**GetKnowledgeKnowledgebaseUploadsUrlsJob**](#GetKnowledgeKnowledgebaseUploadsUrlsJob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId} | Get content upload from URL job status |
+| [**PostIntegrationsActionDraftFunctionUpload**](#PostIntegrationsActionDraftFunctionUpload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
+| [**PostKnowledgeDocumentuploads**](#PostKnowledgeDocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](#PostKnowledgeKnowledgebaseUploadsUrlsJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
+| [**PostLanguageunderstandingMinerUploads**](#PostLanguageunderstandingMinerUploads) | **Post** /api/v2/languageunderstanding/miners/{minerId}/uploads | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
+| [**PostUploadsLearningCoverart**](#PostUploadsLearningCoverart) | **Post** /api/v2/uploads/learning/coverart | Generates pre-signed URL to upload cover art for learning modules |
+| [**PostUploadsPublicassetsImages**](#PostUploadsPublicassetsImages) | **Post** /api/v2/uploads/publicassets/images | Creates presigned url for uploading a public asset image |
+| [**PostUploadsRecordings**](#PostUploadsRecordings) | **Post** /api/v2/uploads/recordings | Creates presigned url for uploading a recording file |
+| [**PostUploadsWorkforcemanagementHistoricaldataCsv**](#PostUploadsWorkforcemanagementHistoricaldataCsv) | **Post** /api/v2/uploads/workforcemanagement/historicaldata/csv | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
 
-<a name="getknowledgeknowledgebaseuploadsurlsjob"></a>
 
-## [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse.html) GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId)
 
+## GetKnowledgeKnowledgebaseUploadsUrlsJob
+
+> [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse) GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId)
 
 
 Get content upload from URL job status
@@ -79,16 +78,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **jobId** | **string**| Upload job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse.html)
+[**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse)
 
-<a name="postintegrationsactiondraftfunctionupload"></a>
 
-## [**FunctionUploadResponse**](FunctionUploadResponse.html) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
+## PostIntegrationsActionDraftFunctionUpload
 
+> [**FunctionUploadResponse**](FunctionUploadResponse) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
 
 
 Create upload presigned URL for draft function package file.
@@ -145,17 +143,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | [**FunctionUploadRequest**](FunctionUploadRequest.html)| Input used to request URL upload. |  |
-{: class="table table-striped"}
+| **body** | [**FunctionUploadRequest**](FunctionUploadRequest)| Input used to request URL upload. |  |
 
 ### Return type
 
-[**FunctionUploadResponse**](FunctionUploadResponse.html)
+[**FunctionUploadResponse**](FunctionUploadResponse)
 
-<a name="postknowledgedocumentuploads"></a>
 
-## [**UploadUrlResponse**](UploadUrlResponse.html) PostKnowledgeDocumentuploads (UploadUrlRequest body)
+## PostKnowledgeDocumentuploads
 
+> [**UploadUrlResponse**](UploadUrlResponse) PostKnowledgeDocumentuploads (UploadUrlRequest body)
 
 
 Creates a presigned URL for uploading a knowledge import file with a set of documents
@@ -208,17 +205,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**UploadUrlRequest**](UploadUrlRequest.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
 
 ### Return type
 
-[**UploadUrlResponse**](UploadUrlResponse.html)
+[**UploadUrlResponse**](UploadUrlResponse)
 
-<a name="postknowledgeknowledgebaseuploadsurlsjobs"></a>
 
-## [**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse.html) PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
+## PostKnowledgeKnowledgebaseUploadsUrlsJobs
 
+> [**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse) PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
 
 
 Create content upload from URL job
@@ -275,17 +271,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest.html)| uploadRequest |  |
-{: class="table table-striped"}
+| **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest)| uploadRequest |  |
 
 ### Return type
 
-[**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse.html)
+[**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse)
 
-<a name="postlanguageunderstandingmineruploads"></a>
 
-## [**UploadUrlResponse**](UploadUrlResponse.html) PostLanguageunderstandingMinerUploads (string minerId, Object body)
+## PostLanguageunderstandingMinerUploads
 
+> [**UploadUrlResponse**](UploadUrlResponse) PostLanguageunderstandingMinerUploads (string minerId, Object body)
 
 
 Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
@@ -341,16 +336,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **body** | **Object**| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UploadUrlResponse**](UploadUrlResponse.html)
+[**UploadUrlResponse**](UploadUrlResponse)
 
-<a name="postuploadslearningcoverart"></a>
 
-## [**UploadUrlResponse**](UploadUrlResponse.html) PostUploadsLearningCoverart (LearningCoverArtUploadUrlRequest body)
+## PostUploadsLearningCoverart
 
+> [**UploadUrlResponse**](UploadUrlResponse) PostUploadsLearningCoverart (LearningCoverArtUploadUrlRequest body)
 
 
 Generates pre-signed URL to upload cover art for learning modules
@@ -403,17 +397,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LearningCoverArtUploadUrlRequest**](LearningCoverArtUploadUrlRequest.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**LearningCoverArtUploadUrlRequest**](LearningCoverArtUploadUrlRequest)| query |  |
 
 ### Return type
 
-[**UploadUrlResponse**](UploadUrlResponse.html)
+[**UploadUrlResponse**](UploadUrlResponse)
 
-<a name="postuploadspublicassetsimages"></a>
 
-## [**UploadUrlResponse**](UploadUrlResponse.html) PostUploadsPublicassetsImages (UploadUrlRequest body)
+## PostUploadsPublicassetsImages
 
+> [**UploadUrlResponse**](UploadUrlResponse) PostUploadsPublicassetsImages (UploadUrlRequest body)
 
 
 Creates presigned url for uploading a public asset image
@@ -466,17 +459,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**UploadUrlRequest**](UploadUrlRequest.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
 
 ### Return type
 
-[**UploadUrlResponse**](UploadUrlResponse.html)
+[**UploadUrlResponse**](UploadUrlResponse)
 
-<a name="postuploadsrecordings"></a>
 
-## [**UploadUrlResponse**](UploadUrlResponse.html) PostUploadsRecordings (UploadUrlRequest body)
+## PostUploadsRecordings
 
+> [**UploadUrlResponse**](UploadUrlResponse) PostUploadsRecordings (UploadUrlRequest body)
 
 
 Creates presigned url for uploading a recording file
@@ -529,17 +521,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**UploadUrlRequest**](UploadUrlRequest.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
 
 ### Return type
 
-[**UploadUrlResponse**](UploadUrlResponse.html)
+[**UploadUrlResponse**](UploadUrlResponse)
 
-<a name="postuploadsworkforcemanagementhistoricaldatacsv"></a>
 
-## [**UploadUrlResponse**](UploadUrlResponse.html) PostUploadsWorkforcemanagementHistoricaldataCsv (UploadUrlRequest body)
+## PostUploadsWorkforcemanagementHistoricaldataCsv
 
+> [**UploadUrlResponse**](UploadUrlResponse) PostUploadsWorkforcemanagementHistoricaldataCsv (UploadUrlRequest body)
 
 
 Creates presigned url for uploading WFM historical data file. Requires data in csv format.
@@ -592,10 +583,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**UploadUrlRequest**](UploadUrlRequest.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
 
 ### Return type
 
-[**UploadUrlResponse**](UploadUrlResponse.html)
+[**UploadUrlResponse**](UploadUrlResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

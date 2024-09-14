@@ -1,6 +1,5 @@
----
-title: Education
----
+# Education
+
 ## ININ.PureCloudApi.Model.Education
 
 ## Properties
@@ -12,6 +11,7 @@ title: Education
 | **Notes** | **string** | Notes about education has a 2000 character limit | [optional] |
 | **DateStart** | **String** | Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **DateEnd** | **String** | Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

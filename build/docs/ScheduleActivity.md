@@ -1,6 +1,5 @@
----
-title: ScheduleActivity
----
+# ScheduleActivity
+
 ## ININ.PureCloudApi.Model.ScheduleActivity
 
 ## Properties
@@ -15,6 +14,7 @@ title: ScheduleActivity
 | **TimeOffRequestId** | **string** | The ID of the time off request associated with this activity, if applicable | [optional] |
 | **ExternalActivityId** | **string** | The ID of the external activity associated with this activity, if applicable | [optional] |
 | **ExternalActivityType** | **string** | The type of the external activity associated with this activity, if applicable | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

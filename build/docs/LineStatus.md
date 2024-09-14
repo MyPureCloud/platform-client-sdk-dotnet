@@ -1,6 +1,5 @@
----
-title: LineStatus
----
+# LineStatus
+
 ## ININ.PureCloudApi.Model.LineStatus
 
 ## Properties
@@ -12,6 +11,7 @@ title: LineStatus
 | **AddressOfRecord** | **string** | The line&#39;s address of record. | [optional] |
 | **ContactAddresses** | **List&lt;string&gt;** | The addresses used to contact the line. | [optional] |
 | **ReachableStateTime** | **DateTime?** | The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

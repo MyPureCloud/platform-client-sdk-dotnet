@@ -1,6 +1,5 @@
----
-title: ApprovalNamespace
----
+# ApprovalNamespace
+
 ## ININ.PureCloudApi.Model.ApprovalNamespace
 
 ## Properties
@@ -10,6 +9,7 @@ title: ApprovalNamespace
 | **Namespace** | **string** | The namespace of the associated approvers. | [optional] |
 | **Status** | **string** | The current namespace approval status. | [optional] |
 | **Type** | **string** | The type of namespace approval. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DocumentContentHighlightIndex
----
+# DocumentContentHighlightIndex
+
 ## ININ.PureCloudApi.Model.DocumentContentHighlightIndex
 
 ## Properties
@@ -9,6 +8,7 @@ title: DocumentContentHighlightIndex
 |------------ | ------------- | ------------- | -------------|
 | **StartIndex** | **int?** | Highlight text start index. | [optional] |
 | **EndIndex** | **int?** | Highlight text end index. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

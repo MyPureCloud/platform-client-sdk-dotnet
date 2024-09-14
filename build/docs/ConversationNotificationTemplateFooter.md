@@ -1,6 +1,5 @@
----
-title: ConversationNotificationTemplateFooter
----
+# ConversationNotificationTemplateFooter
+
 ## ININ.PureCloudApi.Model.ConversationNotificationTemplateFooter
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationNotificationTemplateFooter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | Footer text. For WhatsApp, ignored. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

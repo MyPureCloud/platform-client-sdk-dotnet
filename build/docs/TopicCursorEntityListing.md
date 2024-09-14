@@ -1,6 +1,5 @@
----
-title: TopicCursorEntityListing
----
+# TopicCursorEntityListing
+
 ## ININ.PureCloudApi.Model.TopicCursorEntityListing
 
 ## Properties
@@ -11,6 +10,7 @@ title: TopicCursorEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

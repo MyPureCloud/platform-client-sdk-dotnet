@@ -1,6 +1,5 @@
----
-title: WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody
----
+# WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody
+
 ## ININ.PureCloudApi.Model.WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody
 
 ## Properties
@@ -10,6 +9,7 @@ title: WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody
 | **Id** | **string** |  | [optional] |
 | **Version** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

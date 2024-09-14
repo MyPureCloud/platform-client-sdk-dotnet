@@ -1,6 +1,5 @@
----
-title: ExternalContactsContactChangedTopicExternalOrganization
----
+# ExternalContactsContactChangedTopicExternalOrganization
+
 ## ININ.PureCloudApi.Model.ExternalContactsContactChangedTopicExternalOrganization
 
 ## Properties
@@ -8,24 +7,25 @@ title: ExternalContactsContactChangedTopicExternalOrganization
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Division** | [**ExternalContactsContactChangedTopicDivision**](ExternalContactsContactChangedTopicDivision.html) |  | [optional] |
+| **Division** | [**ExternalContactsContactChangedTopicDivision**](ExternalContactsContactChangedTopicDivision) |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **CompanyType** | **string** |  | [optional] |
 | **Industry** | **string** |  | [optional] |
 | **PrimaryContactId** | **string** |  | [optional] |
-| **Address** | [**ExternalContactsContactChangedTopicContactAddress**](ExternalContactsContactChangedTopicContactAddress.html) |  | [optional] |
-| **PhoneNumber** | [**ExternalContactsContactChangedTopicPhoneNumber**](ExternalContactsContactChangedTopicPhoneNumber.html) |  | [optional] |
-| **FaxNumber** | [**ExternalContactsContactChangedTopicPhoneNumber**](ExternalContactsContactChangedTopicPhoneNumber.html) |  | [optional] |
+| **Address** | [**ExternalContactsContactChangedTopicContactAddress**](ExternalContactsContactChangedTopicContactAddress) |  | [optional] |
+| **PhoneNumber** | [**ExternalContactsContactChangedTopicPhoneNumber**](ExternalContactsContactChangedTopicPhoneNumber) |  | [optional] |
+| **FaxNumber** | [**ExternalContactsContactChangedTopicPhoneNumber**](ExternalContactsContactChangedTopicPhoneNumber) |  | [optional] |
 | **EmployeeCount** | **int?** |  | [optional] |
 | **Revenue** | **int?** |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
 | **Websites** | **List&lt;string&gt;** |  | [optional] |
-| **Tickers** | [**List&lt;ExternalContactsContactChangedTopicTicker&gt;**](ExternalContactsContactChangedTopicTicker.html) |  | [optional] |
-| **TwitterId** | [**ExternalContactsContactChangedTopicTwitterId**](ExternalContactsContactChangedTopicTwitterId.html) |  | [optional] |
+| **Tickers** | [**List&lt;ExternalContactsContactChangedTopicTicker&gt;**](ExternalContactsContactChangedTopicTicker) |  | [optional] |
+| **TwitterId** | [**ExternalContactsContactChangedTopicTwitterId**](ExternalContactsContactChangedTopicTwitterId) |  | [optional] |
 | **ExternalSystemUrl** | **string** |  | [optional] |
 | **CustomFields** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **CreateDate** | **DateTime?** |  | [optional] |
 | **ModifyDate** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

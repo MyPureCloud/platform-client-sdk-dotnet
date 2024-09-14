@@ -1,6 +1,5 @@
----
-title: LocationAddress
----
+# LocationAddress
+
 ## ININ.PureCloudApi.Model.LocationAddress
 
 ## Properties
@@ -14,6 +13,7 @@ title: LocationAddress
 | **Street1** | **string** |  | [optional] |
 | **Street2** | **string** |  | [optional] |
 | **Zipcode** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

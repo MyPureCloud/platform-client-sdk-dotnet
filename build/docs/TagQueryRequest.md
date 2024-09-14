@@ -1,6 +1,5 @@
----
-title: TagQueryRequest
----
+# TagQueryRequest
+
 ## ININ.PureCloudApi.Model.TagQueryRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: TagQueryRequest
 | **Query** | **string** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: FacebookPermission
----
+# FacebookPermission
+
 ## ININ.PureCloudApi.Model.FacebookPermission
 
 ## Properties
@@ -9,6 +8,7 @@ title: FacebookPermission
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Facebook permission name | [optional] |
 | **Type** | **string** | Facebook permission type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

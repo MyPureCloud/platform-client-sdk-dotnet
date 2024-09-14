@@ -1,6 +1,5 @@
----
-title: ActionCertificate
----
+# ActionCertificate
+
 ## ININ.PureCloudApi.Model.ActionCertificate
 
 ## Properties
@@ -11,6 +10,7 @@ title: ActionCertificate
 | **Certificate** | **string** | The certificate string | [optional] |
 | **Status** | **string** | The certificate status | [optional] |
 | **Type** | **string** | The certificate type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

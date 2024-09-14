@@ -1,6 +1,5 @@
----
-title: EvaluationQualityV2TopicEvaluationScoringSet
----
+# EvaluationQualityV2TopicEvaluationScoringSet
+
 ## ININ.PureCloudApi.Model.EvaluationQualityV2TopicEvaluationScoringSet
 
 ## Properties
@@ -9,6 +8,7 @@ title: EvaluationQualityV2TopicEvaluationScoringSet
 |------------ | ------------- | ------------- | -------------|
 | **TotalScore** | **int?** |  | [optional] |
 | **TotalCriticalScore** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

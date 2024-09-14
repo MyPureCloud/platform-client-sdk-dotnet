@@ -1,6 +1,5 @@
----
-title: KpiResult
----
+# KpiResult
+
 ## ININ.PureCloudApi.Model.KpiResult
 
 ## Properties
@@ -13,6 +12,7 @@ title: KpiResult
 | **InteractionCountOff** | **long?** | Total interactions not routed by predictive routing (GPR was off) | [optional] |
 | **MediaType** | **string** | Media type used for the KPI | [optional] |
 | **PercentageBenefit** | **double?** | The percentage benefit for this media type for the duration of the comparison period | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

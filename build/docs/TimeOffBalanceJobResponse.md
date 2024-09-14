@@ -1,14 +1,14 @@
----
-title: TimeOffBalanceJobResponse
----
+# TimeOffBalanceJobResponse
+
 ## ININ.PureCloudApi.Model.TimeOffBalanceJobResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;TimeOffBalanceResponse&gt;**](TimeOffBalanceResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;TimeOffBalanceResponse&gt;**](TimeOffBalanceResponse) |  | [optional] |
 | **Status** | **string** | The status of the time off balance job | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

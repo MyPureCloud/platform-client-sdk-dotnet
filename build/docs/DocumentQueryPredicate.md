@@ -1,6 +1,5 @@
----
-title: DocumentQueryPredicate
----
+# DocumentQueryPredicate
+
 ## ININ.PureCloudApi.Model.DocumentQueryPredicate
 
 ## Properties
@@ -10,6 +9,7 @@ title: DocumentQueryPredicate
 | **Fields** | **List&lt;string&gt;** | Specifies the document fields to be matched against. | |
 | **Values** | **List&lt;string&gt;** | Specifies the values of the fields to be matched against. | |
 | **Type** | **string** | Specifies the matching criteria between the fields and values. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

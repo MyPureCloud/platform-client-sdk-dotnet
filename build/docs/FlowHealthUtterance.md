@@ -1,6 +1,5 @@
----
-title: FlowHealthUtterance
----
+# FlowHealthUtterance
+
 ## ININ.PureCloudApi.Model.FlowHealthUtterance
 
 ## Properties
@@ -12,9 +11,10 @@ title: FlowHealthUtterance
 | **IssueCount** | **long?** | Number of issues found for this utterance. | [optional] |
 | **Language** | **string** | Language provided for this utterance&#39;s health. | [optional] |
 | **StaticValidationResults** | **List&lt;string&gt;** | Validation results for the utterance. | [optional] |
-| **OutlierInfo** | [**OutlierInfo**](OutlierInfo.html) | Details about this utterance being an outlier or not. | [optional] |
-| **ConfusionInfo** | [**ConfusionDetails**](ConfusionDetails.html) | Confusion details with other utterances. | [optional] |
+| **OutlierInfo** | [**OutlierInfo**](OutlierInfo) | Details about this utterance being an outlier or not. | [optional] |
+| **ConfusionInfo** | [**ConfusionDetails**](ConfusionDetails) | Confusion details with other utterances. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

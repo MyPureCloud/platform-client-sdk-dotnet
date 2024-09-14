@@ -1,6 +1,5 @@
----
-title: LearningModuleRule
----
+# LearningModuleRule
+
 ## ININ.PureCloudApi.Model.LearningModuleRule
 
 ## Properties
@@ -9,8 +8,9 @@ title: LearningModuleRule
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **IsActive** | **bool?** | If true, rule is active | |
-| **Parts** | [**List&lt;LearningModuleRuleParts&gt;**](LearningModuleRuleParts.html) | The parts of a learning module rule | |
+| **Parts** | [**List&lt;LearningModuleRuleParts&gt;**](LearningModuleRuleParts) | The parts of a learning module rule | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

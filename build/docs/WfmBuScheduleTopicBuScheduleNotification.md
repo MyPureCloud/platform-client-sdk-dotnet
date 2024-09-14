@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicBuScheduleNotification
----
+# WfmBuScheduleTopicBuScheduleNotification
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleTopicBuScheduleNotification
 
 ## Properties
@@ -10,7 +9,8 @@ title: WfmBuScheduleTopicBuScheduleNotification
 | **Status** | **string** |  | [optional] |
 | **OperationId** | **string** |  | [optional] |
 | **EventType** | **string** |  | [optional] |
-| **Result** | [**WfmBuScheduleTopicBuScheduleMetadata**](WfmBuScheduleTopicBuScheduleMetadata.html) |  | [optional] |
-{: class="table table-striped"}
+| **Result** | [**WfmBuScheduleTopicBuScheduleMetadata**](WfmBuScheduleTopicBuScheduleMetadata) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

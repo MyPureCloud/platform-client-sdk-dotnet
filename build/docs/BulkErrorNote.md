@@ -1,6 +1,5 @@
----
-title: BulkErrorNote
----
+# BulkErrorNote
+
 ## ININ.PureCloudApi.Model.BulkErrorNote
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorNote
 | **Message** | **string** |  | [optional] |
 | **Status** | **int?** |  | [optional] |
 | **Retryable** | **bool?** |  | [optional] |
-| **Entity** | [**Note**](Note.html) |  | [optional] |
-| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**Note**](Note) |  | [optional] |
+| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayForecastData
----
+# WfmIntradayDataUpdateTopicIntradayForecastData
+
 ## ININ.PureCloudApi.Model.WfmIntradayDataUpdateTopicIntradayForecastData
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmIntradayDataUpdateTopicIntradayForecastData
 | **Offered** | **double?** |  | [optional] |
 | **AverageTalkTimeSeconds** | **double?** |  | [optional] |
 | **AverageAfterCallWorkSeconds** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

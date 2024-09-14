@@ -1,6 +1,5 @@
----
-title: WorkitemsUserEventsNotificationWrapup
----
+# WorkitemsUserEventsNotificationWrapup
+
 ## ININ.PureCloudApi.Model.WorkitemsUserEventsNotificationWrapup
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemsUserEventsNotificationWrapup
 | **UserId** | **string** |  | [optional] |
 | **Op** | **string** |  | [optional] |
 | **Action** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

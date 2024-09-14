@@ -1,6 +1,5 @@
----
-title: AuthzSubject
----
+# AuthzSubject
+
 ## ININ.PureCloudApi.Model.AuthzSubject
 
 ## Properties
@@ -9,9 +8,10 @@ title: AuthzSubject
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Grants** | [**List&lt;AuthzGrant&gt;**](AuthzGrant.html) |  | [optional] |
+| **Grants** | [**List&lt;AuthzGrant&gt;**](AuthzGrant) |  | [optional] |
 | **Version** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CreateEmailRequest
----
+# CreateEmailRequest
+
 ## ININ.PureCloudApi.Model.CreateEmailRequest
 
 ## Properties
@@ -23,6 +22,7 @@ title: CreateEmailRequest
 | **HtmlBody** | **string** | An HTML body content of the email. | [optional] |
 | **TextBody** | **string** | A text body content of the email. | [optional] |
 | **ExternalContactId** | **string** | The external contact with which the email should be associated. This field is only valid for OUTBOUND email. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

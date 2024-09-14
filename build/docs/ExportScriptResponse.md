@@ -1,6 +1,5 @@
----
-title: ExportScriptResponse
----
+# ExportScriptResponse
+
 ## ININ.PureCloudApi.Model.ExportScriptResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExportScriptResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Url** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

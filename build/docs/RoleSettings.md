@@ -1,6 +1,5 @@
----
-title: RoleSettings
----
+# RoleSettings
+
 ## ININ.PureCloudApi.Model.RoleSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: RoleSettings
 | **BackfillEnabled** | **bool?** | Boolean showing if organization is opted in or not to role backfills | [optional] |
 | **AuthorizationGrantDivisionAware** | **bool?** | Boolean enabling enforcement of division aware for authorization grant add and delete | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

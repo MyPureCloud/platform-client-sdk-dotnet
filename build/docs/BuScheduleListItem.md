@@ -1,6 +1,5 @@
----
-title: BuScheduleListItem
----
+# BuScheduleListItem
+
 ## ININ.PureCloudApi.Model.BuScheduleListItem
 
 ## Properties
@@ -12,10 +11,11 @@ title: BuScheduleListItem
 | **WeekCount** | **int?** | The number of weeks spanned by this schedule | [optional] |
 | **Description** | **string** | The description of this schedule | [optional] |
 | **Published** | **bool?** | Whether this schedule is published | [optional] |
-| **ShortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference.html) | The forecast used for this schedule, if applicable | [optional] |
-| **GenerationResults** | [**ScheduleGenerationResultSummary**](ScheduleGenerationResultSummary.html) | Generation result summary for this schedule, if applicable | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this schedule | [optional] |
+| **ShortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | The forecast used for this schedule, if applicable | [optional] |
+| **GenerationResults** | [**ScheduleGenerationResultSummary**](ScheduleGenerationResultSummary) | Generation result summary for this schedule, if applicable | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this schedule | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

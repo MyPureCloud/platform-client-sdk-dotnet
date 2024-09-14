@@ -1,6 +1,5 @@
----
-title: EventMessage
----
+# EventMessage
+
 ## ININ.PureCloudApi.Model.EventMessage
 
 ## Properties
@@ -13,6 +12,7 @@ title: EventMessage
 | **MessageParams** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **DocumentationUri** | **string** |  | [optional] |
 | **ResourceURIs** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

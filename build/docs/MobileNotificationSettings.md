@@ -1,6 +1,5 @@
----
-title: MobileNotificationSettings
----
+# MobileNotificationSettings
+
 ## ININ.PureCloudApi.Model.MobileNotificationSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: MobileNotificationSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **When** | **string** | When the user should receive notifications | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

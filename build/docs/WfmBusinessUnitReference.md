@@ -1,6 +1,5 @@
----
-title: WfmBusinessUnitReference
----
+# WfmBusinessUnitReference
+
 ## ININ.PureCloudApi.Model.WfmBusinessUnitReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmBusinessUnitReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the business unit | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationScreenShareEventTopicScreenShareConversation
----
+# ConversationScreenShareEventTopicScreenShareConversation
+
 ## ININ.PureCloudApi.Model.ConversationScreenShareEventTopicScreenShareConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationScreenShareEventTopicScreenShareConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;ConversationScreenShareEventTopicScreenShareMediaParticipant&gt;**](ConversationScreenShareEventTopicScreenShareMediaParticipant.html) |  | [optional] |
+| **Participants** | [**List&lt;ConversationScreenShareEventTopicScreenShareMediaParticipant&gt;**](ConversationScreenShareEventTopicScreenShareMediaParticipant) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

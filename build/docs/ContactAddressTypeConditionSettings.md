@@ -1,6 +1,5 @@
----
-title: ContactAddressTypeConditionSettings
----
+# ContactAddressTypeConditionSettings
+
 ## ININ.PureCloudApi.Model.ContactAddressTypeConditionSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: ContactAddressTypeConditionSettings
 |------------ | ------------- | ------------- | -------------|
 | **Operator** | **string** | The operator to use when comparing the address types. | |
 | **Value** | **string** | The type value to compare against the contact column type. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

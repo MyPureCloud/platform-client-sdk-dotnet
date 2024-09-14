@@ -1,6 +1,5 @@
----
-title: LocalEncryptionConfiguration
----
+# LocalEncryptionConfiguration
+
 ## ININ.PureCloudApi.Model.LocalEncryptionConfiguration
 
 ## Properties
@@ -13,6 +12,7 @@ title: LocalEncryptionConfiguration
 | **ApiId** | **string** | The api id for Hawk Authentication. | |
 | **ApiKey** | **string** | The api shared symmetric key used for hawk authentication | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

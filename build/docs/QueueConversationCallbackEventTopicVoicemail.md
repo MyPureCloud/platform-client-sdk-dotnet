@@ -1,6 +1,5 @@
----
-title: QueueConversationCallbackEventTopicVoicemail
----
+# QueueConversationCallbackEventTopicVoicemail
+
 ## ININ.PureCloudApi.Model.QueueConversationCallbackEventTopicVoicemail
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationCallbackEventTopicVoicemail
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The voicemail id | [optional] |
 | **UploadStatus** | **string** | current state of the voicemail upload | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

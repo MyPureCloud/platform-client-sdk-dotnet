@@ -1,6 +1,5 @@
----
-title: CustomEventAttribute
----
+# CustomEventAttribute
+
 ## ININ.PureCloudApi.Model.CustomEventAttribute
 
 ## Properties
@@ -9,6 +8,7 @@ title: CustomEventAttribute
 |------------ | ------------- | ------------- | -------------|
 | **DataType** | **string** | The data type of the custom attribute. | |
 | **Value** | **string** | The value of the custom attribute. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

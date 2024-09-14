@@ -1,6 +1,5 @@
----
-title: QueueConversationChatEventTopicErrorBody
----
+# QueueConversationChatEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.QueueConversationChatEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: QueueConversationChatEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;QueueConversationChatEventTopicDetail&gt;**](QueueConversationChatEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;QueueConversationChatEventTopicErrorBody&gt;**](QueueConversationChatEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;QueueConversationChatEventTopicDetail&gt;**](QueueConversationChatEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;QueueConversationChatEventTopicErrorBody&gt;**](QueueConversationChatEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

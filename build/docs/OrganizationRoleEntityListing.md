@@ -1,13 +1,12 @@
----
-title: OrganizationRoleEntityListing
----
+# OrganizationRoleEntityListing
+
 ## ININ.PureCloudApi.Model.OrganizationRoleEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole.html) |  | [optional] |
+| **Entities** | [**List&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: OrganizationRoleEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

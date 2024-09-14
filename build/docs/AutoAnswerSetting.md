@@ -1,6 +1,5 @@
----
-title: AutoAnswerSetting
----
+# AutoAnswerSetting
+
 ## ININ.PureCloudApi.Model.AutoAnswerSetting
 
 ## Properties
@@ -8,6 +7,7 @@ title: AutoAnswerSetting
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | The media type status. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

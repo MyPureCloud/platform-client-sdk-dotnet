@@ -1,6 +1,5 @@
----
-title: NluDetectionInput
----
+# NluDetectionInput
+
 ## ININ.PureCloudApi.Model.NluDetectionInput
 
 ## Properties
@@ -9,6 +8,7 @@ title: NluDetectionInput
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | The text to perform NLU detection on. | |
 | **Language** | **string** | Language of the version for multilingual detection, e.g. &#x60;en-us&#x60;, &#x60;de-de&#x60; | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

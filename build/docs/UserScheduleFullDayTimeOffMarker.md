@@ -1,6 +1,5 @@
----
-title: UserScheduleFullDayTimeOffMarker
----
+# UserScheduleFullDayTimeOffMarker
+
 ## ININ.PureCloudApi.Model.UserScheduleFullDayTimeOffMarker
 
 ## Properties
@@ -13,6 +12,7 @@ title: UserScheduleFullDayTimeOffMarker
 | **LengthInMinutes** | **int?** | The length in minutes of this time off marker | [optional] |
 | **Description** | **string** | The description associated with the time off request that this marker corresponds to | [optional] |
 | **Delete** | **bool?** | If marked true for updating an existing full day time off marker, it will be deleted | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

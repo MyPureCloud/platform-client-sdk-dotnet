@@ -1,13 +1,13 @@
----
-title: ResponseQueryResults
----
+# ResponseQueryResults
+
 ## ININ.PureCloudApi.Model.ResponseQueryResults
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**ResponseEntityList**](ResponseEntityList.html) | Contains the query results | |
-{: class="table table-striped"}
+| **Results** | [**ResponseEntityList**](ResponseEntityList) | Contains the query results | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

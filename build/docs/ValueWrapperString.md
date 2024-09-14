@@ -1,6 +1,5 @@
----
-title: ValueWrapperString
----
+# ValueWrapperString
+
 ## ININ.PureCloudApi.Model.ValueWrapperString
 
 ## Properties
@@ -8,6 +7,7 @@ title: ValueWrapperString
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **string** | The value for the associated field | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

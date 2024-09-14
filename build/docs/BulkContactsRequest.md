@@ -1,13 +1,13 @@
----
-title: BulkContactsRequest
----
+# BulkContactsRequest
+
 ## ININ.PureCloudApi.Model.BulkContactsRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ExternalContact&gt;**](ExternalContact.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;ExternalContact&gt;**](ExternalContact) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

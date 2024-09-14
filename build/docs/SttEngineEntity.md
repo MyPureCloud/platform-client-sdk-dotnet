@@ -1,6 +1,5 @@
----
-title: SttEngineEntity
----
+# SttEngineEntity
+
 ## ININ.PureCloudApi.Model.SttEngineEntity
 
 ## Properties
@@ -11,6 +10,7 @@ title: SttEngineEntity
 | **Name** | **string** |  | [optional] |
 | **GrammarBased** | **bool?** | The STT engine is intended to be used for Grammars | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

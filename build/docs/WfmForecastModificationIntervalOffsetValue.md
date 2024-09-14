@@ -1,6 +1,5 @@
----
-title: WfmForecastModificationIntervalOffsetValue
----
+# WfmForecastModificationIntervalOffsetValue
+
 ## ININ.PureCloudApi.Model.WfmForecastModificationIntervalOffsetValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmForecastModificationIntervalOffsetValue
 |------------ | ------------- | ------------- | -------------|
 | **IntervalIndex** | **int?** | The number of intervals past referenceStartDate to which to apply this modification | |
 | **Value** | **double?** | The value to set for the given interval | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

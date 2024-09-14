@@ -1,6 +1,5 @@
----
-title: MetadataResultEntity
----
+# MetadataResultEntity
+
 ## ININ.PureCloudApi.Model.MetadataResultEntity
 
 ## Properties
@@ -10,6 +9,7 @@ title: MetadataResultEntity
 | **Type** | **string** | object type of the modified resource | [optional] |
 | **Description** | **string** | description of the modified resource | [optional] |
 | **Visibility** | **string** | whether the modified resource is visible or hidden | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationUtilizationLabelUpdate
----
+# ConversationUtilizationLabelUpdate
+
 ## ININ.PureCloudApi.Model.ConversationUtilizationLabelUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationUtilizationLabelUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UtilizationLabelId** | **string** | The utilization label associated with the conversation. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

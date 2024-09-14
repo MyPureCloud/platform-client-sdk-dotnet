@@ -1,6 +1,5 @@
----
-title: JourneyPage
----
+# JourneyPage
+
 ## ININ.PureCloudApi.Model.JourneyPage
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyPage
 | **Pathname** | **string** | Path name of the page for the event. | |
 | **QueryString** | **string** | Query string that is passed to the page in the current event. | [optional] |
 | **Breadcrumb** | **List&lt;string&gt;** | Hierarchy of the current page in relation to the website&#39;s structure. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CampaignRuleAction
----
+# CampaignRuleAction
+
 ## ININ.PureCloudApi.Model.CampaignRuleAction
 
 ## Properties
@@ -8,9 +7,10 @@ title: CampaignRuleAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Parameters** | [**CampaignRuleParameters**](CampaignRuleParameters.html) | The parameters for the CampaignRuleAction. Required for certain actionTypes. | [optional] |
+| **Parameters** | [**CampaignRuleParameters**](CampaignRuleParameters) | The parameters for the CampaignRuleAction. Required for certain actionTypes. | [optional] |
 | **ActionType** | **string** | The action to take on the campaignRuleActionEntities. | |
-| **CampaignRuleActionEntities** | [**CampaignRuleActionEntities**](CampaignRuleActionEntities.html) | The list of entities that this action will apply to. | |
-{: class="table table-striped"}
+| **CampaignRuleActionEntities** | [**CampaignRuleActionEntities**](CampaignRuleActionEntities) | The list of entities that this action will apply to. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

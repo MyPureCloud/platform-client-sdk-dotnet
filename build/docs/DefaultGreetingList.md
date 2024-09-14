@@ -1,6 +1,5 @@
----
-title: DefaultGreetingList
----
+# DefaultGreetingList
+
 ## ININ.PureCloudApi.Model.DefaultGreetingList
 
 ## Properties
@@ -9,14 +8,15 @@ title: DefaultGreetingList
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Owner** | [**GreetingOwner**](GreetingOwner.html) |  | [optional] |
+| **Owner** | [**GreetingOwner**](GreetingOwner) |  | [optional] |
 | **OwnerType** | **string** |  | [optional] |
-| **Greetings** | [**Dictionary&lt;string, Greeting&gt;**](Greeting.html) |  | [optional] |
+| **Greetings** | [**Dictionary&lt;string, Greeting&gt;**](Greeting) |  | [optional] |
 | **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | **string** |  | [optional] |
 | **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedBy** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

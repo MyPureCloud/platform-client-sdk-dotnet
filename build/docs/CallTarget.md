@@ -1,6 +1,5 @@
----
-title: CallTarget
----
+# CallTarget
+
 ## ININ.PureCloudApi.Model.CallTarget
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallTarget
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type of call | [optional] |
 | **Value** | **string** | The id of the station or an E.164 formatted phone number | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

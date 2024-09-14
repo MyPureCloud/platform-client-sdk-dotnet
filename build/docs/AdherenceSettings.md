@@ -1,6 +1,5 @@
----
-title: AdherenceSettings
----
+# AdherenceSettings
+
 ## ININ.PureCloudApi.Model.AdherenceSettings
 
 ## Properties
@@ -12,7 +11,8 @@ title: AdherenceSettings
 | **AdherenceExceptionThresholdSeconds** | **int?** | The threshold in seconds for which agents should not be penalized for being momentarily out of adherence | [optional] |
 | **NonOnQueueActivitiesEquivalent** | **bool?** | Whether to treat all non-on-queue activities as equivalent for adherence purposes | [optional] |
 | **TrackOnQueueActivity** | **bool?** | Whether to track on-queue activities | [optional] |
-| **IgnoredActivityCategories** | [**IgnoredActivityCategories**](IgnoredActivityCategories.html) | Activity categories that should be ignored for adherence purposes | [optional] |
-{: class="table table-striped"}
+| **IgnoredActivityCategories** | [**IgnoredActivityCategories**](IgnoredActivityCategories) | Activity categories that should be ignored for adherence purposes | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

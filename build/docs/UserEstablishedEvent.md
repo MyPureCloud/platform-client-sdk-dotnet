@@ -1,6 +1,5 @@
----
-title: UserEstablishedEvent
----
+# UserEstablishedEvent
+
 ## ININ.PureCloudApi.Model.UserEstablishedEvent
 
 ## Properties
@@ -18,8 +17,9 @@ title: UserEstablishedEvent
 | **Dnis** | **string** | The dialed number identification if it is available for this conversation. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates whether or not this user will be required to complete after call work. | [optional] |
 | **QueueId** | **string** | The id (V4 UUID) of the queue that the user is calling on behalf of. Applies to outbound calls only. | [optional] |
-| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration.html) | Metadata about this communication. | |
-| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
-{: class="table table-striped"}
+| **InitialConfiguration** | [**InitialConfiguration**](InitialConfiguration) | Metadata about this communication. | |
+| **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration) | Metadata about the source of this communication&#39;s interaction. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationActivityEntityData
----
+# ConversationActivityEntityData
+
 ## ININ.PureCloudApi.Model.ConversationActivityEntityData
 
 ## Properties
@@ -29,7 +28,8 @@ title: ConversationActivityEntityData
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
 | **UsedRouting** | **string** | Complete routing method | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
-| **ScoredAgents** | [**List&lt;ConversationActivityScoredAgent&gt;**](ConversationActivityScoredAgent.html) | Scored agents | [optional] |
-{: class="table table-striped"}
+| **ScoredAgents** | [**List&lt;ConversationActivityScoredAgent&gt;**](ConversationActivityScoredAgent) | Scored agents | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

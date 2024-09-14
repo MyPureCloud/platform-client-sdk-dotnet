@@ -1,6 +1,5 @@
----
-title: FlowMetricsTopicFlowOutcome
----
+# FlowMetricsTopicFlowOutcome
+
 ## ININ.PureCloudApi.Model.FlowMetricsTopicFlowOutcome
 
 ## Properties
@@ -10,6 +9,7 @@ title: FlowMetricsTopicFlowOutcome
 | **FlowOutcome** | **string** | Combination of unique flow outcome identifier and its value separated by colon | [optional] |
 | **FlowOutcomeId** | **string** | Unique identifier of a flow outcome | [optional] |
 | **FlowOutcomeValue** | **string** | Flow outcome value, e.g. SUCCESS | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

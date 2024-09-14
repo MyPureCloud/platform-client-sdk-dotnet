@@ -1,6 +1,5 @@
----
-title: AddConversationRequest
----
+# AddConversationRequest
+
 ## ININ.PureCloudApi.Model.AddConversationRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: AddConversationRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ConversationId** | **string** | The id of the conversation to add | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

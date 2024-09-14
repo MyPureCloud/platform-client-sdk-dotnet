@@ -1,6 +1,5 @@
----
-title: BulkResponseResultRelationshipRelationship
----
+# BulkResponseResultRelationshipRelationship
+
 ## ININ.PureCloudApi.Model.BulkResponseResultRelationshipRelationship
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultRelationshipRelationship
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Success** | **bool?** |  | [optional] |
-| **Entity** | [**Relationship**](Relationship.html) |  | [optional] |
-| **Error** | [**BulkErrorRelationship**](BulkErrorRelationship.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**Relationship**](Relationship) |  | [optional] |
+| **Error** | [**BulkErrorRelationship**](BulkErrorRelationship) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

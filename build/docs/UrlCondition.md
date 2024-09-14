@@ -1,6 +1,5 @@
----
-title: UrlCondition
----
+# UrlCondition
+
 ## ININ.PureCloudApi.Model.UrlCondition
 
 ## Properties
@@ -9,6 +8,7 @@ title: UrlCondition
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** | The URL condition value. | |
 | **Operator** | **string** | The comparison operator. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

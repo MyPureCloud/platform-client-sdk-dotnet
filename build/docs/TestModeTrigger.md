@@ -1,6 +1,5 @@
----
-title: TestModeTrigger
----
+# TestModeTrigger
+
 ## ININ.PureCloudApi.Model.TestModeTrigger
 
 ## Properties
@@ -11,6 +10,7 @@ title: TestModeTrigger
 | **Name** | **string** | The name of the trigger | [optional] |
 | **Enabled** | **bool?** | Whether or not the trigger is enabled | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: CopilotCondition
----
+# CopilotCondition
+
 ## ININ.PureCloudApi.Model.CopilotCondition
 
 ## Properties
@@ -9,6 +8,7 @@ title: CopilotCondition
 |------------ | ------------- | ------------- | -------------|
 | **ConditionType** | **string** | Type of condition. | |
 | **ConditionValues** | **List&lt;string&gt;** | Condition values. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

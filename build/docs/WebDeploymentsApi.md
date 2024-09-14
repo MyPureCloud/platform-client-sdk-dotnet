@@ -1,37 +1,36 @@
----
-title: WebDeploymentsApi
----
+# WebDeploymentsApi
+
 ## PureCloudPlatform.Client.V2.Api.WebDeploymentsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteWebdeploymentsConfiguration**](WebDeploymentsApi.html#deletewebdeploymentsconfiguration) | **Delete** /api/v2/webdeployments/configurations/{configurationId} | Delete all versions of a configuration |
-| [**DeleteWebdeploymentsDeployment**](WebDeploymentsApi.html#deletewebdeploymentsdeployment) | **Delete** /api/v2/webdeployments/deployments/{deploymentId} | Delete a deployment |
-| [**DeleteWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#deletewebdeploymentsdeploymentcobrowsesessionid) | **Delete** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Deletes a cobrowse session |
-| [**DeleteWebdeploymentsTokenRevoke**](WebDeploymentsApi.html#deletewebdeploymentstokenrevoke) | **Delete** /api/v2/webdeployments/token/revoke | Invalidate JWT |
-| [**GetWebdeploymentsConfigurationVersion**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversion) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions/{versionId} | Get a configuration version |
-| [**GetWebdeploymentsConfigurationVersions**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversions) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions | Get the versions of a configuration |
-| [**GetWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversionsdraft) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Get the configuration draft |
-| [**GetWebdeploymentsConfigurations**](WebDeploymentsApi.html#getwebdeploymentsconfigurations) | **Get** /api/v2/webdeployments/configurations | View configuration drafts |
-| [**GetWebdeploymentsDeployment**](WebDeploymentsApi.html#getwebdeploymentsdeployment) | **Get** /api/v2/webdeployments/deployments/{deploymentId} | Get a deployment |
-| [**GetWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#getwebdeploymentsdeploymentcobrowsesessionid) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Retrieves a cobrowse session |
-| [**GetWebdeploymentsDeploymentConfigurations**](WebDeploymentsApi.html#getwebdeploymentsdeploymentconfigurations) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/configurations | Get active configuration for a given deployment |
-| [**GetWebdeploymentsDeployments**](WebDeploymentsApi.html#getwebdeploymentsdeployments) | **Get** /api/v2/webdeployments/deployments | Get deployments |
-| [**PostWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsApi.html#postwebdeploymentsconfigurationversionsdraftpublish) | **Post** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
-| [**PostWebdeploymentsConfigurations**](WebDeploymentsApi.html#postwebdeploymentsconfigurations) | **Post** /api/v2/webdeployments/configurations | Create a configuration draft |
-| [**PostWebdeploymentsDeployments**](WebDeploymentsApi.html#postwebdeploymentsdeployments) | **Post** /api/v2/webdeployments/deployments | Create a deployment |
-| [**PostWebdeploymentsTokenOauthcodegrantjwtexchange**](WebDeploymentsApi.html#postwebdeploymentstokenoauthcodegrantjwtexchange) | **Post** /api/v2/webdeployments/token/oauthcodegrantjwtexchange | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
-| [**PostWebdeploymentsTokenRefresh**](WebDeploymentsApi.html#postwebdeploymentstokenrefresh) | **Post** /api/v2/webdeployments/token/refresh | Refresh a JWT. |
-| [**PutWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#putwebdeploymentsconfigurationversionsdraft) | **Put** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Update the configuration draft |
-| [**PutWebdeploymentsDeployment**](WebDeploymentsApi.html#putwebdeploymentsdeployment) | **Put** /api/v2/webdeployments/deployments/{deploymentId} | Update a deployment |
-{: class="table table-striped"}
+| [**DeleteWebdeploymentsConfiguration**](#DeleteWebdeploymentsConfiguration) | **Delete** /api/v2/webdeployments/configurations/{configurationId} | Delete all versions of a configuration |
+| [**DeleteWebdeploymentsDeployment**](#DeleteWebdeploymentsDeployment) | **Delete** /api/v2/webdeployments/deployments/{deploymentId} | Delete a deployment |
+| [**DeleteWebdeploymentsDeploymentCobrowseSessionId**](#DeleteWebdeploymentsDeploymentCobrowseSessionId) | **Delete** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Deletes a cobrowse session |
+| [**DeleteWebdeploymentsTokenRevoke**](#DeleteWebdeploymentsTokenRevoke) | **Delete** /api/v2/webdeployments/token/revoke | Invalidate JWT |
+| [**GetWebdeploymentsConfigurationVersion**](#GetWebdeploymentsConfigurationVersion) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions/{versionId} | Get a configuration version |
+| [**GetWebdeploymentsConfigurationVersions**](#GetWebdeploymentsConfigurationVersions) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions | Get the versions of a configuration |
+| [**GetWebdeploymentsConfigurationVersionsDraft**](#GetWebdeploymentsConfigurationVersionsDraft) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Get the configuration draft |
+| [**GetWebdeploymentsConfigurations**](#GetWebdeploymentsConfigurations) | **Get** /api/v2/webdeployments/configurations | View configuration drafts |
+| [**GetWebdeploymentsDeployment**](#GetWebdeploymentsDeployment) | **Get** /api/v2/webdeployments/deployments/{deploymentId} | Get a deployment |
+| [**GetWebdeploymentsDeploymentCobrowseSessionId**](#GetWebdeploymentsDeploymentCobrowseSessionId) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Retrieves a cobrowse session |
+| [**GetWebdeploymentsDeploymentConfigurations**](#GetWebdeploymentsDeploymentConfigurations) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/configurations | Get active configuration for a given deployment |
+| [**GetWebdeploymentsDeployments**](#GetWebdeploymentsDeployments) | **Get** /api/v2/webdeployments/deployments | Get deployments |
+| [**PostWebdeploymentsConfigurationVersionsDraftPublish**](#PostWebdeploymentsConfigurationVersionsDraftPublish) | **Post** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
+| [**PostWebdeploymentsConfigurations**](#PostWebdeploymentsConfigurations) | **Post** /api/v2/webdeployments/configurations | Create a configuration draft |
+| [**PostWebdeploymentsDeployments**](#PostWebdeploymentsDeployments) | **Post** /api/v2/webdeployments/deployments | Create a deployment |
+| [**PostWebdeploymentsTokenOauthcodegrantjwtexchange**](#PostWebdeploymentsTokenOauthcodegrantjwtexchange) | **Post** /api/v2/webdeployments/token/oauthcodegrantjwtexchange | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
+| [**PostWebdeploymentsTokenRefresh**](#PostWebdeploymentsTokenRefresh) | **Post** /api/v2/webdeployments/token/refresh | Refresh a JWT. |
+| [**PutWebdeploymentsConfigurationVersionsDraft**](#PutWebdeploymentsConfigurationVersionsDraft) | **Put** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Update the configuration draft |
+| [**PutWebdeploymentsDeployment**](#PutWebdeploymentsDeployment) | **Put** /api/v2/webdeployments/deployments/{deploymentId} | Update a deployment |
 
-<a name="deletewebdeploymentsconfiguration"></a>
 
-## void DeleteWebdeploymentsConfiguration (string configurationId)
 
+## DeleteWebdeploymentsConfiguration
+
+> void DeleteWebdeploymentsConfiguration (string configurationId)
 
 
 Delete all versions of a configuration
@@ -84,16 +83,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **configurationId** | **string**| The configuration version ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletewebdeploymentsdeployment"></a>
 
-## void DeleteWebdeploymentsDeployment (string deploymentId)
+## DeleteWebdeploymentsDeployment
 
+> void DeleteWebdeploymentsDeployment (string deploymentId)
 
 
 Delete a deployment
@@ -146,16 +144,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletewebdeploymentsdeploymentcobrowsesessionid"></a>
 
-## **Object** DeleteWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
+## DeleteWebdeploymentsDeploymentCobrowseSessionId
 
+> **Object** DeleteWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
 
 
 Deletes a cobrowse session
@@ -204,16 +201,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| WebMessaging deployment ID |  |
 | **sessionId** | **string**| Cobrowse session id or join code |  |
-{: class="table table-striped"}
 
 ### Return type
 
 **Object**
 
-<a name="deletewebdeploymentstokenrevoke"></a>
 
-## void DeleteWebdeploymentsTokenRevoke (string xJourneySessionId = null, string xJourneySessionType = null)
+## DeleteWebdeploymentsTokenRevoke
 
+> void DeleteWebdeploymentsTokenRevoke (string xJourneySessionId = null, string xJourneySessionType = null)
 
 
 Invalidate JWT
@@ -261,16 +257,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **xJourneySessionId** | **string**| The Customer&#39;s journey sessionId. | [optional]  |
 | **xJourneySessionType** | **string**| The Customer&#39;s journey session type. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getwebdeploymentsconfigurationversion"></a>
 
-## [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html) GetWebdeploymentsConfigurationVersion (string configurationId, string versionId)
+## GetWebdeploymentsConfigurationVersion
 
+> [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion) GetWebdeploymentsConfigurationVersion (string configurationId, string versionId)
 
 
 Get a configuration version
@@ -326,16 +321,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **configurationId** | **string**| The configuration version ID |  |
 | **versionId** | **string**| The version of the configuration to get |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html)
+[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion)
 
-<a name="getwebdeploymentsconfigurationversions"></a>
 
-## [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing.html) GetWebdeploymentsConfigurationVersions (string configurationId)
+## GetWebdeploymentsConfigurationVersions
 
+> [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing) GetWebdeploymentsConfigurationVersions (string configurationId)
 
 
 Get the versions of a configuration
@@ -391,16 +385,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **configurationId** | **string**| The configuration version ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing.html)
+[**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing)
 
-<a name="getwebdeploymentsconfigurationversionsdraft"></a>
 
-## [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html) GetWebdeploymentsConfigurationVersionsDraft (string configurationId)
+## GetWebdeploymentsConfigurationVersionsDraft
 
+> [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion) GetWebdeploymentsConfigurationVersionsDraft (string configurationId)
 
 
 Get the configuration draft
@@ -454,16 +447,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **configurationId** | **string**| The configuration version ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html)
+[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion)
 
-<a name="getwebdeploymentsconfigurations"></a>
 
-## [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing.html) GetWebdeploymentsConfigurations (bool? showOnlyPublished = null)
+## GetWebdeploymentsConfigurations
 
+> [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing) GetWebdeploymentsConfigurations (bool? showOnlyPublished = null)
 
 
 View configuration drafts
@@ -517,16 +509,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **showOnlyPublished** | **bool?**| Get only configuration drafts with published versions | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing.html)
+[**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing)
 
-<a name="getwebdeploymentsdeployment"></a>
 
-## [**WebDeployment**](WebDeployment.html) GetWebdeploymentsDeployment (string deploymentId, List<string> expand = null)
+## GetWebdeploymentsDeployment
 
+> [**WebDeployment**](WebDeployment) GetWebdeploymentsDeployment (string deploymentId, List<string> expand = null)
 
 
 Get a deployment
@@ -581,17 +572,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
-| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: supportedContent |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: supportedContent |
 
 ### Return type
 
-[**WebDeployment**](WebDeployment.html)
+[**WebDeployment**](WebDeployment)
 
-<a name="getwebdeploymentsdeploymentcobrowsesessionid"></a>
 
-## [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html) GetWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
+## GetWebdeploymentsDeploymentCobrowseSessionId
 
+> [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession) GetWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
 
 
 Retrieves a cobrowse session
@@ -640,16 +630,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| WebMessaging deployment ID |  |
 | **sessionId** | **string**| Cobrowse session id or join code |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html)
+[**CobrowseWebMessagingSession**](CobrowseWebMessagingSession)
 
-<a name="getwebdeploymentsdeploymentconfigurations"></a>
 
-## [**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment.html) GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null, List<string> expand = null)
+## GetWebdeploymentsDeploymentConfigurations
 
+> [**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment) GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null, List<string> expand = null)
 
 
 Get active configuration for a given deployment
@@ -705,17 +694,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
 | **type** | **string**| Get active configuration on a deployment | [optional]  |
-| **expand** | [**List<string>**](string.html)| Expand instructions for the return value | [optional] <br />**Values**: supportedContent |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Expand instructions for the return value | [optional] <br />**Values**: supportedContent |
 
 ### Return type
 
-[**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment.html)
+[**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment)
 
-<a name="getwebdeploymentsdeployments"></a>
 
-## [**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing.html) GetWebdeploymentsDeployments (List<string> expand = null)
+## GetWebdeploymentsDeployments
 
+> [**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing) GetWebdeploymentsDeployments (List<string> expand = null)
 
 
 Get deployments
@@ -768,17 +756,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: Configuration, SupportedContent |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: Configuration, SupportedContent |
 
 ### Return type
 
-[**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing.html)
+[**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing)
 
-<a name="postwebdeploymentsconfigurationversionsdraftpublish"></a>
 
-## [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html) PostWebdeploymentsConfigurationVersionsDraftPublish (string configurationId)
+## PostWebdeploymentsConfigurationVersionsDraftPublish
 
+> [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion) PostWebdeploymentsConfigurationVersionsDraftPublish (string configurationId)
 
 
 Publish the configuration draft and create a new version
@@ -833,16 +820,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **configurationId** | **string**| The configuration version ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html)
+[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion)
 
-<a name="postwebdeploymentsconfigurations"></a>
 
-## [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html) PostWebdeploymentsConfigurations (WebDeploymentConfigurationVersion configurationVersion)
+## PostWebdeploymentsConfigurations
 
+> [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion) PostWebdeploymentsConfigurations (WebDeploymentConfigurationVersion configurationVersion)
 
 
 Create a configuration draft
@@ -895,17 +881,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **configurationVersion** | [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html)|  |  |
-{: class="table table-striped"}
+| **configurationVersion** | [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion)|  |  |
 
 ### Return type
 
-[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html)
+[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion)
 
-<a name="postwebdeploymentsdeployments"></a>
 
-## [**WebDeployment**](WebDeployment.html) PostWebdeploymentsDeployments (WebDeployment deployment)
+## PostWebdeploymentsDeployments
 
+> [**WebDeployment**](WebDeployment) PostWebdeploymentsDeployments (WebDeployment deployment)
 
 
 Create a deployment
@@ -958,17 +943,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **deployment** | [**WebDeployment**](WebDeployment.html)|  |  |
-{: class="table table-striped"}
+| **deployment** | [**WebDeployment**](WebDeployment)|  |  |
 
 ### Return type
 
-[**WebDeployment**](WebDeployment.html)
+[**WebDeployment**](WebDeployment)
 
-<a name="postwebdeploymentstokenoauthcodegrantjwtexchange"></a>
 
-## [**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse.html) PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body)
+## PostWebdeploymentsTokenOauthcodegrantjwtexchange
 
+> [**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse) PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body)
 
 
 Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
@@ -1014,17 +998,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WebDeploymentsOAuthExchangeRequest**](WebDeploymentsOAuthExchangeRequest.html)| webDeploymentsOAuthExchangeRequest |  |
-{: class="table table-striped"}
+| **body** | [**WebDeploymentsOAuthExchangeRequest**](WebDeploymentsOAuthExchangeRequest)| webDeploymentsOAuthExchangeRequest |  |
 
 ### Return type
 
-[**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse.html)
+[**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse)
 
-<a name="postwebdeploymentstokenrefresh"></a>
 
-## [**SignedData**](SignedData.html) PostWebdeploymentsTokenRefresh (WebDeploymentsRefreshJWTRequest body = null)
+## PostWebdeploymentsTokenRefresh
 
+> [**SignedData**](SignedData) PostWebdeploymentsTokenRefresh (WebDeploymentsRefreshJWTRequest body = null)
 
 
 Refresh a JWT.
@@ -1070,17 +1053,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WebDeploymentsRefreshJWTRequest**](WebDeploymentsRefreshJWTRequest.html)|  | [optional]  |
-{: class="table table-striped"}
+| **body** | [**WebDeploymentsRefreshJWTRequest**](WebDeploymentsRefreshJWTRequest)|  | [optional]  |
 
 ### Return type
 
-[**SignedData**](SignedData.html)
+[**SignedData**](SignedData)
 
-<a name="putwebdeploymentsconfigurationversionsdraft"></a>
 
-## [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html) PutWebdeploymentsConfigurationVersionsDraft (string configurationId, WebDeploymentConfigurationVersion configurationVersion)
+## PutWebdeploymentsConfigurationVersionsDraft
 
+> [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion) PutWebdeploymentsConfigurationVersionsDraft (string configurationId, WebDeploymentConfigurationVersion configurationVersion)
 
 
 Update the configuration draft
@@ -1135,17 +1117,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **configurationId** | **string**| The configuration version ID |  |
-| **configurationVersion** | [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html)|  |  |
-{: class="table table-striped"}
+| **configurationVersion** | [**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion)|  |  |
 
 ### Return type
 
-[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion.html)
+[**WebDeploymentConfigurationVersion**](WebDeploymentConfigurationVersion)
 
-<a name="putwebdeploymentsdeployment"></a>
 
-## [**WebDeployment**](WebDeployment.html) PutWebdeploymentsDeployment (string deploymentId, WebDeployment deployment)
+## PutWebdeploymentsDeployment
 
+> [**WebDeployment**](WebDeployment) PutWebdeploymentsDeployment (string deploymentId, WebDeployment deployment)
 
 
 Update a deployment
@@ -1200,10 +1181,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
-| **deployment** | [**WebDeployment**](WebDeployment.html)|  |  |
-{: class="table table-striped"}
+| **deployment** | [**WebDeployment**](WebDeployment)|  |  |
 
 ### Return type
 
-[**WebDeployment**](WebDeployment.html)
+[**WebDeployment**](WebDeployment)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

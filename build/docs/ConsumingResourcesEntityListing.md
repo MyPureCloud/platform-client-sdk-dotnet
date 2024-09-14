@@ -1,13 +1,12 @@
----
-title: ConsumingResourcesEntityListing
----
+# ConsumingResourcesEntityListing
+
 ## ININ.PureCloudApi.Model.ConsumingResourcesEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Dependency&gt;**](Dependency.html) |  | [optional] |
+| **Entities** | [**List&lt;Dependency&gt;**](Dependency) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: ConsumingResourcesEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

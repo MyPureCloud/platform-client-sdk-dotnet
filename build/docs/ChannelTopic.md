@@ -1,6 +1,5 @@
----
-title: ChannelTopic
----
+# ChannelTopic
+
 ## ININ.PureCloudApi.Model.ChannelTopic
 
 ## Properties
@@ -11,6 +10,7 @@ title: ChannelTopic
 | **State** | **string** |  | [optional] |
 | **RejectionReason** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

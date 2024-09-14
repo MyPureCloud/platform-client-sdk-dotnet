@@ -1,13 +1,13 @@
----
-title: AlternativeShiftAsyncResponse
----
+# AlternativeShiftAsyncResponse
+
 ## ININ.PureCloudApi.Model.AlternativeShiftAsyncResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Job** | [**AlternativeShiftJobReference**](AlternativeShiftJobReference.html) | The job related to the async request | |
-{: class="table table-striped"}
+| **Job** | [**AlternativeShiftJobReference**](AlternativeShiftJobReference) | The job related to the async request | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: Cobrowsesession
----
+# Cobrowsesession
+
 ## ININ.PureCloudApi.Model.Cobrowsesession
 
 ## Properties
@@ -11,7 +10,7 @@ title: Cobrowsesession
 | **InitialState** | **string** | The initial connection state of this communication. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
-| **Self** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |
+| **Self** | [**Address**](Address) | Address and name data for a call endpoint. | [optional] |
 | **CobrowseSessionId** | **string** | The co-browse session ID. | [optional] |
 | **CobrowseRole** | **string** | This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer). | [optional] |
 | **Controlling** | **List&lt;string&gt;** | ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages). | [optional] |
@@ -22,10 +21,11 @@ title: Cobrowsesession
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Provider** | **string** | The source provider for the co-browse session. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
-| **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
-| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
+| **Segments** | [**List&lt;Segment&gt;**](Segment) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

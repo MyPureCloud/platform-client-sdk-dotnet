@@ -1,13 +1,12 @@
----
-title: SecurityProfileEntityListing
----
+# SecurityProfileEntityListing
+
 ## ININ.PureCloudApi.Model.SecurityProfileEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;SecurityProfile&gt;**](SecurityProfile.html) |  | [optional] |
+| **Entities** | [**List&lt;SecurityProfile&gt;**](SecurityProfile) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: SecurityProfileEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

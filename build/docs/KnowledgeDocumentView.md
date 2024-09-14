@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentView
----
+# KnowledgeDocumentView
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentView
 
 ## Properties
@@ -12,9 +11,10 @@ title: KnowledgeDocumentView
 | **SearchId** | **string** | The search that surfaced the viewed document. | [optional] |
 | **QueryType** | **string** | The type of the query that surfaced the document. | [optional] |
 | **SurfacingMethod** | **string** | The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown. | [optional] |
-| **Application** | [**KnowledgeSearchClientApplication**](KnowledgeSearchClientApplication.html) | The client application from which the document was viewed. | |
+| **Application** | [**KnowledgeSearchClientApplication**](KnowledgeSearchClientApplication) | The client application from which the document was viewed. | |
 | **SessionId** | **string** | The unique identifier of the knowledge session in which the document was viewed. | [optional] |
-| **ConversationContext** | [**KnowledgeConversationContext**](KnowledgeConversationContext.html) | Conversation context information if the document was viewed in the context of a conversation. | [optional] |
-{: class="table table-striped"}
+| **ConversationContext** | [**KnowledgeConversationContext**](KnowledgeConversationContext) | Conversation context information if the document was viewed in the context of a conversation. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

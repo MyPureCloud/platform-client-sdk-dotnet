@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationCustomEventAttribute
----
+# JourneyWebEventsNotificationCustomEventAttribute
+
 ## ININ.PureCloudApi.Model.JourneyWebEventsNotificationCustomEventAttribute
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyWebEventsNotificationCustomEventAttribute
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **string** |  | [optional] |
 | **DataType** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

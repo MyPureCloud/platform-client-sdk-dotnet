@@ -1,13 +1,13 @@
----
-title: FacebookPermissionEntityListing
----
+# FacebookPermissionEntityListing
+
 ## ININ.PureCloudApi.Model.FacebookPermissionEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;FacebookPermission&gt;**](FacebookPermission.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;FacebookPermission&gt;**](FacebookPermission) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

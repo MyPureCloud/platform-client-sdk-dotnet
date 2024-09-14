@@ -1,6 +1,5 @@
----
-title: SurveyForm
----
+# SurveyForm
+
 ## ININ.PureCloudApi.Model.SurveyForm
 
 ## Properties
@@ -16,9 +15,10 @@ title: SurveyForm
 | **Language** | **string** | Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW | |
 | **Header** | **string** | Markdown text for the top of the form. | [optional] |
 | **Footer** | **string** | Markdown text for the bottom of the form. | [optional] |
-| **QuestionGroups** | [**List&lt;SurveyQuestionGroup&gt;**](SurveyQuestionGroup.html) | A list of question groups | [optional] |
-| **PublishedVersions** | [**DomainEntityListingSurveyForm**](DomainEntityListingSurveyForm.html) | List of published version of this form | [optional] |
+| **QuestionGroups** | [**List&lt;SurveyQuestionGroup&gt;**](SurveyQuestionGroup) | A list of question groups | [optional] |
+| **PublishedVersions** | [**DomainEntityListingSurveyForm**](DomainEntityListingSurveyForm) | List of published version of this form | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

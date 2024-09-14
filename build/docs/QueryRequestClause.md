@@ -1,6 +1,5 @@
----
-title: QueryRequestClause
----
+# QueryRequestClause
+
 ## ININ.PureCloudApi.Model.QueryRequestClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueryRequestClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The logic used to combine the predicates | |
-| **Predicates** | [**List&lt;QueryRequestPredicate&gt;**](QueryRequestPredicate.html) | The list of predicates used to filter the data | |
-{: class="table table-striped"}
+| **Predicates** | [**List&lt;QueryRequestPredicate&gt;**](QueryRequestPredicate) | The list of predicates used to filter the data | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

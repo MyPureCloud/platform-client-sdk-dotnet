@@ -1,6 +1,5 @@
----
-title: SetUuiDataRequest
----
+# SetUuiDataRequest
+
 ## ININ.PureCloudApi.Model.SetUuiDataRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: SetUuiDataRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UuiData** | **string** | The value of the uuiData to set. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

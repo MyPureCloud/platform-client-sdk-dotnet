@@ -1,6 +1,5 @@
----
-title: TestMatchesOperation
----
+# TestMatchesOperation
+
 ## ININ.PureCloudApi.Model.TestMatchesOperation
 
 ## Properties
@@ -10,7 +9,8 @@ title: TestMatchesOperation
 | **Name** | **string** | The name of the processing step | [optional] |
 | **Step** | **int?** | The number of the processing step | [optional] |
 | **Matches** | **bool?** | Whether or not the operation matches expectations | [optional] |
-| **Details** | [**List&lt;MatchCriteriaTestResult&gt;**](MatchCriteriaTestResult.html) | Details about why the operation did or did not succeed | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;MatchCriteriaTestResult&gt;**](MatchCriteriaTestResult) | Details about why the operation did or did not succeed | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

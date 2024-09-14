@@ -1,15 +1,15 @@
----
-title: VoicemailCopyRecord
----
+# VoicemailCopyRecord
+
 ## ININ.PureCloudApi.Model.VoicemailCopyRecord
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**User**](User.html) | The user that the voicemail message was copied to/from | [optional] |
-| **Group** | [**Group**](Group.html) | The group that the voicemail message was copied to/from | [optional] |
+| **User** | [**User**](User) | The user that the voicemail message was copied to/from | [optional] |
+| **Group** | [**Group**](Group) | The group that the voicemail message was copied to/from | [optional] |
 | **Date** | **DateTime?** | The date when the voicemail was copied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

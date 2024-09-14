@@ -1,6 +1,5 @@
----
-title: AcceleratorSpecification
----
+# AcceleratorSpecification
+
 ## ININ.PureCloudApi.Model.AcceleratorSpecification
 
 ## Properties
@@ -16,10 +15,11 @@ title: AcceleratorSpecification
 | **Tags** | **List&lt;string&gt;** | tags | [optional] |
 | **Permissions** | **List&lt;string&gt;** | Genesys Cloud permissions required to install the accelerator | [optional] |
 | **Products** | **List&lt;string&gt;** | Genesys Cloud products required to install the accelerator | [optional] |
-| **Documentation** | [**List&lt;MetadataDocumentation&gt;**](MetadataDocumentation.html) | additional documentation about the artifact | [optional] |
-| **Presentation** | [**List&lt;MetadataPresentation&gt;**](MetadataPresentation.html) | presentation of data fields to be gathered for the accelerator | [optional] |
-| **Results** | [**MetadataResults**](MetadataResults.html) | resources created or modified as a result of running the accelerator | [optional] |
+| **Documentation** | [**List&lt;MetadataDocumentation&gt;**](MetadataDocumentation) | additional documentation about the artifact | [optional] |
+| **Presentation** | [**List&lt;MetadataPresentation&gt;**](MetadataPresentation) | presentation of data fields to be gathered for the accelerator | [optional] |
+| **Results** | [**MetadataResults**](MetadataResults) | resources created or modified as a result of running the accelerator | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

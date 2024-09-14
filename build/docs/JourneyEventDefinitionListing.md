@@ -1,6 +1,5 @@
----
-title: JourneyEventDefinitionListing
----
+# JourneyEventDefinitionListing
+
 ## ININ.PureCloudApi.Model.JourneyEventDefinitionListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: JourneyEventDefinitionListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;JourneyEventDefinition&gt;**](JourneyEventDefinition.html) |  | [optional] |
+| **Entities** | [**List&lt;JourneyEventDefinition&gt;**](JourneyEventDefinition) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

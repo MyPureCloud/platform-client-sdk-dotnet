@@ -1,6 +1,5 @@
----
-title: CreateWorkPlanActivity
----
+# CreateWorkPlanActivity
+
 ## ININ.PureCloudApi.Model.CreateWorkPlanActivity
 
 ## Properties
@@ -20,6 +19,7 @@ title: CreateWorkPlanActivity
 | **CountsAsContiguousWorkTime** | **bool?** | Whether the activity duration is counted towards contiguous work time | [optional] |
 | **MinimumLengthFromShiftStartMinutes** | **int?** | The minimum duration between shift start and shift item (e.g., break or meal) start in minutes | [optional] |
 | **MinimumLengthFromShiftEndMinutes** | **int?** | The minimum duration between shift item (e.g., break or meal) end and shift end in minutes | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

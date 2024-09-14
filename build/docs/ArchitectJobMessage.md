@@ -1,6 +1,5 @@
----
-title: ArchitectJobMessage
----
+# ArchitectJobMessage
+
 ## ININ.PureCloudApi.Model.ArchitectJobMessage
 
 ## Properties
@@ -10,6 +9,7 @@ title: ArchitectJobMessage
 | **DateTime** | **DateTime?** | The DateTime when the message was generated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Type** | **string** | The message type. | [optional] |
 | **Text** | **string** | The text of the message. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

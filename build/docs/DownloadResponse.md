@@ -1,6 +1,5 @@
----
-title: DownloadResponse
----
+# DownloadResponse
+
 ## ININ.PureCloudApi.Model.DownloadResponse
 
 ## Properties
@@ -10,10 +9,11 @@ title: DownloadResponse
 | **Id** | **string** |  | [optional] |
 | **ContentLocationUri** | **string** |  | [optional] |
 | **ImageUri** | **string** |  | [optional] |
-| **Thumbnails** | [**List&lt;DocumentThumbnail&gt;**](DocumentThumbnail.html) |  | [optional] |
+| **Thumbnails** | [**List&lt;DocumentThumbnail&gt;**](DocumentThumbnail) |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **ResultUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

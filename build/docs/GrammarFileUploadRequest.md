@@ -1,6 +1,5 @@
----
-title: GrammarFileUploadRequest
----
+# GrammarFileUploadRequest
+
 ## ININ.PureCloudApi.Model.GrammarFileUploadRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: GrammarFileUploadRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **FileType** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

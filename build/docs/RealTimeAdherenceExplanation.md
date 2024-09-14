@@ -1,6 +1,5 @@
----
-title: RealTimeAdherenceExplanation
----
+# RealTimeAdherenceExplanation
+
 ## ININ.PureCloudApi.Model.RealTimeAdherenceExplanation
 
 ## Properties
@@ -12,6 +11,7 @@ title: RealTimeAdherenceExplanation
 | **LengthMinutes** | **int?** | The length of the adherence explanation in minutes | [optional] |
 | **Status** | **string** | The status of the adherence explanation | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

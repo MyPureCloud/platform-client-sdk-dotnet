@@ -1,6 +1,5 @@
----
-title: ConsultTransferEvent
----
+# ConsultTransferEvent
+
 ## ININ.PureCloudApi.Model.ConsultTransferEvent
 
 ## Properties
@@ -13,6 +12,7 @@ title: ConsultTransferEvent
 | **InitiatingCommunicationId** | **string** | The id (V4 UUID) of the communication representing the participant that is initiating the transfer. | |
 | **DestinationCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred to. | |
 | **ObjectCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: EvaluationQualityV2TopicEvaluationV2
----
+# EvaluationQualityV2TopicEvaluationV2
+
 ## ININ.PureCloudApi.Model.EvaluationQualityV2TopicEvaluationV2
 
 ## Properties
@@ -9,12 +8,12 @@ title: EvaluationQualityV2TopicEvaluationV2
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
-| **Agent** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser.html) |  | [optional] |
-| **Evaluator** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser.html) |  | [optional] |
+| **Agent** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser) |  | [optional] |
+| **Evaluator** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser) |  | [optional] |
 | **EventTime** | **DateTime?** |  | [optional] |
 | **EvaluationFormId** | **string** |  | [optional] |
 | **FormName** | **string** |  | [optional] |
-| **ScoringSet** | [**EvaluationQualityV2TopicEvaluationScoringSet**](EvaluationQualityV2TopicEvaluationScoringSet.html) |  | [optional] |
+| **ScoringSet** | [**EvaluationQualityV2TopicEvaluationScoringSet**](EvaluationQualityV2TopicEvaluationScoringSet) |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **AgentHasRead** | **bool?** |  | [optional] |
@@ -28,8 +27,8 @@ title: EvaluationQualityV2TopicEvaluationV2
 | **Rescore** | **bool?** |  | [optional] |
 | **ConversationDate** | **DateTime?** |  | [optional] |
 | **MediaType** | **List&lt;string&gt;** |  | [optional] |
-| **Calibration** | [**EvaluationQualityV2TopicCalibration**](EvaluationQualityV2TopicCalibration.html) |  | [optional] |
-| **EvaluationSource** | [**EvaluationQualityV2TopicEvaluationSource**](EvaluationQualityV2TopicEvaluationSource.html) |  | [optional] |
+| **Calibration** | [**EvaluationQualityV2TopicCalibration**](EvaluationQualityV2TopicCalibration) |  | [optional] |
+| **EvaluationSource** | [**EvaluationQualityV2TopicEvaluationSource**](EvaluationQualityV2TopicEvaluationSource) |  | [optional] |
 | **AssigneeUserId** | **string** |  | [optional] |
 | **PreviousAssigneeUserId** | **string** |  | [optional] |
 | **AssigneeApplicable** | **bool?** |  | [optional] |
@@ -38,12 +37,13 @@ title: EvaluationQualityV2TopicEvaluationV2
 | **Version** | **int?** |  | [optional] |
 | **PreviousStatus** | **string** |  | [optional] |
 | **DeclinedReview** | **bool?** |  | [optional] |
-| **RetractedEvaluation** | [**EvaluationQualityV2TopicEvaluationReference**](EvaluationQualityV2TopicEvaluationReference.html) |  | [optional] |
+| **RetractedEvaluation** | [**EvaluationQualityV2TopicEvaluationReference**](EvaluationQualityV2TopicEvaluationReference) |  | [optional] |
 | **RescoreCount** | **int?** |  | [optional] |
 | **EvaluatorCommentHasUpdated** | **bool?** |  | [optional] |
 | **AgentCommentHasUpdated** | **bool?** |  | [optional] |
 | **PreviousRescoreCount** | **int?** |  | [optional] |
 | **PreviousEvaluatorUserId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

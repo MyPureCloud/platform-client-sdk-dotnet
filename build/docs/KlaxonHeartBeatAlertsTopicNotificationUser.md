@@ -1,6 +1,5 @@
----
-title: KlaxonHeartBeatAlertsTopicNotificationUser
----
+# KlaxonHeartBeatAlertsTopicNotificationUser
+
 ## ININ.PureCloudApi.Model.KlaxonHeartBeatAlertsTopicNotificationUser
 
 ## Properties
@@ -9,6 +8,7 @@ title: KlaxonHeartBeatAlertsTopicNotificationUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **DisplayName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

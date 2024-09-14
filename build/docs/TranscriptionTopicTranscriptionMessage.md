@@ -1,6 +1,5 @@
----
-title: TranscriptionTopicTranscriptionMessage
----
+# TranscriptionTopicTranscriptionMessage
+
 ## ININ.PureCloudApi.Model.TranscriptionTopicTranscriptionMessage
 
 ## Properties
@@ -13,8 +12,9 @@ title: TranscriptionTopicTranscriptionMessage
 | **CommunicationId** | **string** |  | [optional] |
 | **SessionStartTimeMs** | **int?** |  | [optional] |
 | **TranscriptionStartTimeMs** | **int?** |  | [optional] |
-| **Transcripts** | [**List&lt;TranscriptionTopicTranscriptResult&gt;**](TranscriptionTopicTranscriptResult.html) |  | [optional] |
-| **Status** | [**TranscriptionTopicTranscriptionRequestStatus**](TranscriptionTopicTranscriptionRequestStatus.html) |  | [optional] |
-{: class="table table-striped"}
+| **Transcripts** | [**List&lt;TranscriptionTopicTranscriptResult&gt;**](TranscriptionTopicTranscriptResult) |  | [optional] |
+| **Status** | [**TranscriptionTopicTranscriptionRequestStatus**](TranscriptionTopicTranscriptionRequestStatus) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

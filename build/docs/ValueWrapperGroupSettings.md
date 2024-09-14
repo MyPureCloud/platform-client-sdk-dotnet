@@ -1,13 +1,13 @@
----
-title: ValueWrapperGroupSettings
----
+# ValueWrapperGroupSettings
+
 ## ININ.PureCloudApi.Model.ValueWrapperGroupSettings
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | [**GroupSettings**](GroupSettings.html) | The value for the associated field | [optional] |
-{: class="table table-striped"}
+| **Value** | [**GroupSettings**](GroupSettings) | The value for the associated field | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

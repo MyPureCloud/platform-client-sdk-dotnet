@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicRecentTransfer
----
+# ConversationEventTopicRecentTransfer
+
 ## ININ.PureCloudApi.Model.ConversationEventTopicRecentTransfer
 
 ## Properties
@@ -10,10 +9,11 @@ title: ConversationEventTopicRecentTransfer
 | **Id** | **string** | The id of the command. | [optional] |
 | **State** | **string** |  | [optional] |
 | **DateIssued** | **DateTime?** | The date/time that this command was issued. | [optional] |
-| **Initiator** | [**ConversationEventTopicInitiator**](ConversationEventTopicInitiator.html) |  | [optional] |
-| **ModifiedBy** | [**ConversationEventTopicModifiedBy**](ConversationEventTopicModifiedBy.html) |  | [optional] |
-| **Destination** | [**ConversationEventTopicDestination**](ConversationEventTopicDestination.html) |  | [optional] |
+| **Initiator** | [**ConversationEventTopicInitiator**](ConversationEventTopicInitiator) |  | [optional] |
+| **ModifiedBy** | [**ConversationEventTopicModifiedBy**](ConversationEventTopicModifiedBy) |  | [optional] |
+| **Destination** | [**ConversationEventTopicDestination**](ConversationEventTopicDestination) |  | [optional] |
 | **TransferType** | **string** | The type of transfer to perform. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

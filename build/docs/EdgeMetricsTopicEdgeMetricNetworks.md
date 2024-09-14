@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricNetworks
----
+# EdgeMetricsTopicEdgeMetricNetworks
+
 ## ININ.PureCloudApi.Model.EdgeMetricsTopicEdgeMetricNetworks
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeMetricsTopicEdgeMetricNetworks
 | **ReceivedBytesPerSec** | **int?** |  | [optional] |
 | **BandwidthBitsPerSec** | **int?** |  | [optional] |
 | **UtilizationPct** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue
----
+# WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValu
 |------------ | ------------- | ------------- | -------------|
 | **IntervalIndex** | **int?** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

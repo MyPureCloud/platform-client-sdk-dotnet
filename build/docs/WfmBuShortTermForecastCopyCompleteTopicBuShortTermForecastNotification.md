@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecastNotification
----
+# WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecastNotification
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecastNotification
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecastNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** |  | [optional] |
-| **Result** | [**WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast**](WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast.html) |  | [optional] |
+| **Result** | [**WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast**](WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast) |  | [optional] |
 | **OperationId** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

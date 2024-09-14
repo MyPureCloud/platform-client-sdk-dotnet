@@ -1,6 +1,5 @@
----
-title: ActivityCodesReference
----
+# ActivityCodesReference
+
 ## ININ.PureCloudApi.Model.ActivityCodesReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: ActivityCodesReference
 |------------ | ------------- | ------------- | -------------|
 | **Ids** | **List&lt;string&gt;** | The IDs of activity codes | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

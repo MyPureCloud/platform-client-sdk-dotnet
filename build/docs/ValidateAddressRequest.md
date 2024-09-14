@@ -1,13 +1,13 @@
----
-title: ValidateAddressRequest
----
+# ValidateAddressRequest
+
 ## ININ.PureCloudApi.Model.ValidateAddressRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Address** | [**StreetAddress**](StreetAddress.html) | Address schema | [optional] |
-{: class="table table-striped"}
+| **Address** | [**StreetAddress**](StreetAddress) | Address schema | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

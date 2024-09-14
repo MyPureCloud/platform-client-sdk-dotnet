@@ -1,6 +1,5 @@
----
-title: CelebrationStateParam
----
+# CelebrationStateParam
+
 ## ININ.PureCloudApi.Model.CelebrationStateParam
 
 ## Properties
@@ -8,6 +7,7 @@ title: CelebrationStateParam
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** | The state of the celebration | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

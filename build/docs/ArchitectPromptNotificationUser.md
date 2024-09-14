@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationUser
----
+# ArchitectPromptNotificationUser
+
 ## ININ.PureCloudApi.Model.ArchitectPromptNotificationUser
 
 ## Properties
@@ -9,7 +8,8 @@ title: ArchitectPromptNotificationUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the user. | [optional] |
 | **Name** | **string** | The name of the user, if available. | [optional] |
-| **HomeOrg** | [**ArchitectPromptNotificationHomeOrganization**](ArchitectPromptNotificationHomeOrganization.html) |  | [optional] |
-{: class="table table-striped"}
+| **HomeOrg** | [**ArchitectPromptNotificationHomeOrganization**](ArchitectPromptNotificationHomeOrganization) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

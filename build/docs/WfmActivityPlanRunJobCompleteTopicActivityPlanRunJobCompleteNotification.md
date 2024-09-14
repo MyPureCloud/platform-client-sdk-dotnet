@@ -1,6 +1,5 @@
----
-title: WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification
----
+# WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification
+
 ## ININ.PureCloudApi.Model.WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification
 
 ## Properties
@@ -9,10 +8,11 @@ title: WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **ActivityPlan** | [**WfmActivityPlanRunJobCompleteTopicActivityPlanReference**](WfmActivityPlanRunJobCompleteTopicActivityPlanReference.html) |  | [optional] |
+| **ActivityPlan** | [**WfmActivityPlanRunJobCompleteTopicActivityPlanReference**](WfmActivityPlanRunJobCompleteTopicActivityPlanReference) |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **Exceptions** | [**List&lt;WfmActivityPlanRunJobCompleteTopicActivityPlanJobException&gt;**](WfmActivityPlanRunJobCompleteTopicActivityPlanJobException.html) |  | [optional] |
-| **Error** | [**WfmActivityPlanRunJobCompleteTopicErrorBody**](WfmActivityPlanRunJobCompleteTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Exceptions** | [**List&lt;WfmActivityPlanRunJobCompleteTopicActivityPlanJobException&gt;**](WfmActivityPlanRunJobCompleteTopicActivityPlanJobException) |  | [optional] |
+| **Error** | [**WfmActivityPlanRunJobCompleteTopicErrorBody**](WfmActivityPlanRunJobCompleteTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

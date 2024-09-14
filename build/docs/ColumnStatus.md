@@ -1,6 +1,5 @@
----
-title: ColumnStatus
----
+# ColumnStatus
+
 ## ININ.PureCloudApi.Model.ColumnStatus
 
 ## Properties
@@ -8,6 +7,7 @@ title: ColumnStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Contactable** | **bool?** | Indicates whether or not an individual contact method column is contactable. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

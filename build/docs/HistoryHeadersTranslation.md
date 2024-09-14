@@ -1,6 +1,5 @@
----
-title: HistoryHeadersTranslation
----
+# HistoryHeadersTranslation
+
 ## ININ.PureCloudApi.Model.HistoryHeadersTranslation
 
 ## Properties
@@ -16,6 +15,7 @@ title: HistoryHeadersTranslation
 | **Sent** | **string** | A translation for the word \&quot;sent\&quot;, for the expected language | |
 | **Language** | **string** | The code of the expected language | |
 | **TimeZone** | **string** | Timezone used by the agent, used to format the sent email date and time. If not defined, will default to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ScreenRecordingSession
----
+# ScreenRecordingSession
+
 ## ININ.PureCloudApi.Model.ScreenRecordingSession
 
 ## Properties
@@ -9,11 +8,12 @@ title: ScreenRecordingSession
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **User** | [**User**](User.html) |  | [optional] |
+| **User** | [**User**](User) |  | [optional] |
 | **CommunicationId** | **string** | The id of the communication that is being recorded on the conversation | [optional] |
-| **Conversation** | [**Conversation**](Conversation.html) |  | [optional] |
+| **Conversation** | [**Conversation**](Conversation) |  | [optional] |
 | **StartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

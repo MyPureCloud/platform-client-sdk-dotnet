@@ -1,6 +1,5 @@
----
-title: WhatsAppIntegrationUpdateRequest
----
+# WhatsAppIntegrationUpdateRequest
+
 ## ININ.PureCloudApi.Model.WhatsAppIntegrationUpdateRequest
 
 ## Properties
@@ -9,9 +8,10 @@ title: WhatsAppIntegrationUpdateRequest
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | WhatsApp Integration name | [optional] |
-| **SupportedContent** | [**SupportedContentReference**](SupportedContentReference.html) | Defines the SupportedContent profile configured for an integration | [optional] |
-| **MessagingSetting** | [**MessagingSettingRequestReference**](MessagingSettingRequestReference.html) | Defines the message settings to be applied for this integration | [optional] |
+| **SupportedContent** | [**SupportedContentReference**](SupportedContentReference) | Defines the SupportedContent profile configured for an integration | [optional] |
+| **MessagingSetting** | [**MessagingSettingRequestReference**](MessagingSettingRequestReference) | Defines the message settings to be applied for this integration | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

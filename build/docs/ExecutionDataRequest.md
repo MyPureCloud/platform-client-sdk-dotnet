@@ -1,6 +1,5 @@
----
-title: ExecutionDataRequest
----
+# ExecutionDataRequest
+
 ## ININ.PureCloudApi.Model.ExecutionDataRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExecutionDataRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Ids** | **List&lt;string&gt;** | A list of ids to retrieve | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

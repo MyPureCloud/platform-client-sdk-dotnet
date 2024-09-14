@@ -1,6 +1,5 @@
----
-title: BuFullDayTimeOffMarker
----
+# BuFullDayTimeOffMarker
+
 ## ININ.PureCloudApi.Model.BuFullDayTimeOffMarker
 
 ## Properties
@@ -15,6 +14,7 @@ title: BuFullDayTimeOffMarker
 | **PayableMinutes** | **int?** | Payable minutes for the time off marker | [optional] |
 | **TimeOffRequestId** | **string** | The ID of the time off request | [optional] |
 | **TimeOffRequestSyncVersion** | **int?** | The sync version of the full day time off request for which the scheduled activity is associated | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

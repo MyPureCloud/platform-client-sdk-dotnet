@@ -1,6 +1,5 @@
----
-title: PostTextMessage
----
+# PostTextMessage
+
 ## ININ.PureCloudApi.Model.PostTextMessage
 
 ## Properties
@@ -9,7 +8,8 @@ title: PostTextMessage
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Message type | |
 | **Text** | **string** | Message text. If type is structured, used as fallback for clients that do not support particular structured content | [optional] |
-| **Content** | [**List&lt;ConversationMessageContent&gt;**](ConversationMessageContent.html) | A list of content elements in message | [optional] |
-{: class="table table-striped"}
+| **Content** | [**List&lt;ConversationMessageContent&gt;**](ConversationMessageContent) | A list of content elements in message | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

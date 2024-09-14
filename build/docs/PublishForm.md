@@ -1,6 +1,5 @@
----
-title: PublishForm
----
+# PublishForm
+
 ## ININ.PureCloudApi.Model.PublishForm
 
 ## Properties
@@ -9,6 +8,7 @@ title: PublishForm
 |------------ | ------------- | ------------- | -------------|
 | **Published** | **bool?** | Is this form published | |
 | **Id** | **string** | Unique Id for this version of this form | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: QueueUserEventTopicQueueMember
----
+# QueueUserEventTopicQueueMember
+
 ## ININ.PureCloudApi.Model.QueueUserEventTopicQueueMember
 
 ## Properties
@@ -8,10 +7,11 @@ title: QueueUserEventTopicQueueMember
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **User** | [**QueueUserEventTopicUserReference**](QueueUserEventTopicUserReference.html) |  | [optional] |
+| **User** | [**QueueUserEventTopicUserReference**](QueueUserEventTopicUserReference) |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
 | **Joined** | **bool?** |  | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

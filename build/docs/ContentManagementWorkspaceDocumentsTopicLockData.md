@@ -1,15 +1,15 @@
----
-title: ContentManagementWorkspaceDocumentsTopicLockData
----
+# ContentManagementWorkspaceDocumentsTopicLockData
+
 ## ININ.PureCloudApi.Model.ContentManagementWorkspaceDocumentsTopicLockData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **LockedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData.html) |  | [optional] |
+| **LockedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData) |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateExpires** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

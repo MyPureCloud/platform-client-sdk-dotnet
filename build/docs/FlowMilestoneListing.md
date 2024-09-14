@@ -1,13 +1,12 @@
----
-title: FlowMilestoneListing
----
+# FlowMilestoneListing
+
 ## ININ.PureCloudApi.Model.FlowMilestoneListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;FlowMilestone&gt;**](FlowMilestone.html) |  | [optional] |
+| **Entities** | [**List&lt;FlowMilestone&gt;**](FlowMilestone) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: FlowMilestoneListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

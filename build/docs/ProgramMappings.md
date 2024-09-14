@@ -1,17 +1,17 @@
----
-title: ProgramMappings
----
+# ProgramMappings
+
 ## ININ.PureCloudApi.Model.ProgramMappings
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Program** | [**BaseProgramEntity**](BaseProgramEntity.html) |  | [optional] |
-| **Queues** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) |  | [optional] |
-| **Flows** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) |  | [optional] |
-| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **Program** | [**BaseProgramEntity**](BaseProgramEntity) |  | [optional] |
+| **Queues** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef) |  | [optional] |
+| **Flows** | [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef) |  | [optional] |
+| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

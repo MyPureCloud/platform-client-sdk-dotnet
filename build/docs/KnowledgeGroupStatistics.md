@@ -1,6 +1,5 @@
----
-title: KnowledgeGroupStatistics
----
+# KnowledgeGroupStatistics
+
 ## ININ.PureCloudApi.Model.KnowledgeGroupStatistics
 
 ## Properties
@@ -10,6 +9,7 @@ title: KnowledgeGroupStatistics
 | **UnlinkedPhraseCount** | **int?** | Knowledge Group unique phrase count | [optional] |
 | **UnlinkedPhraseHitCount** | **int?** | Knowledge Group unlinked phrases hit count | [optional] |
 | **TotalPhraseHitCount** | **int?** | Total number of phrase hit counts of an unanswered group | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaignPreContactSMSEvent
----
+# OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaignPreContactSMSEvent
+
 ## ININ.PureCloudApi.Model.OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaignPreContactSMSEvent
 
 ## Properties
@@ -9,7 +8,7 @@ title: OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaign
 |------------ | ------------- | ------------- | -------------|
 | **EventTime** | **int?** |  | [optional] |
 | **OutboundCampaignType** | **string** |  | [optional] |
-| **SmsAttributes** | [**OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes**](OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes.html) |  | [optional] |
+| **SmsAttributes** | [**OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes**](OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes) |  | [optional] |
 | **WrapupCode** | **string** |  | [optional] |
 | **OutboundCampaignId** | **string** |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
@@ -17,6 +16,7 @@ title: OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaign
 | **OutboundContactListId** | **string** |  | [optional] |
 | **OutboundContactId** | **string** |  | [optional] |
 | **IsCampaignAlwaysRunning** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

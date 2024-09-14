@@ -1,13 +1,13 @@
----
-title: TaskManagementAggregateQueryResponse
----
+# TaskManagementAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.TaskManagementAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;TaskManagementAggregateDataContainer&gt;**](TaskManagementAggregateDataContainer.html) |  | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;TaskManagementAggregateDataContainer&gt;**](TaskManagementAggregateDataContainer) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

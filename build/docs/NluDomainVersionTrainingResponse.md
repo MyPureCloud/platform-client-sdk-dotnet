@@ -1,6 +1,5 @@
----
-title: NluDomainVersionTrainingResponse
----
+# NluDomainVersionTrainingResponse
+
 ## ININ.PureCloudApi.Model.NluDomainVersionTrainingResponse
 
 ## Properties
@@ -8,7 +7,8 @@ title: NluDomainVersionTrainingResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Message** | **string** | A message indicating result of the action. | [optional] |
-| **Version** | [**NluDomainVersion**](NluDomainVersion.html) |  | [optional] |
-{: class="table table-striped"}
+| **Version** | [**NluDomainVersion**](NluDomainVersion) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

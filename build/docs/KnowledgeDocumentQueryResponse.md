@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentQueryResponse
----
+# KnowledgeDocumentQueryResponse
+
 ## ININ.PureCloudApi.Model.KnowledgeDocumentQueryResponse
 
 ## Properties
@@ -11,7 +10,8 @@ title: KnowledgeDocumentQueryResponse
 | **PageNumber** | **int?** | Page number of the returned results. | [optional] |
 | **Total** | **long?** | The total number of documents matching the query. | [optional] |
 | **PageCount** | **int?** | The total number of pages of results, calculated according to the pageSize and the total matching documents. | [optional] |
-| **Results** | [**List&lt;KnowledgeDocumentResponse&gt;**](KnowledgeDocumentResponse.html) | Documents matching the query. | [optional] |
-{: class="table table-striped"}
+| **Results** | [**List&lt;KnowledgeDocumentResponse&gt;**](KnowledgeDocumentResponse) | Documents matching the query. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

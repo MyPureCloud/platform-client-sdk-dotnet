@@ -1,6 +1,5 @@
----
-title: BusinessUnitSettingsResponse
----
+# BusinessUnitSettingsResponse
+
 ## ININ.PureCloudApi.Model.BusinessUnitSettingsResponse
 
 ## Properties
@@ -9,9 +8,10 @@ title: BusinessUnitSettingsResponse
 |------------ | ------------- | ------------- | -------------|
 | **StartDayOfWeek** | **string** | The start day of week for this business unit | |
 | **TimeZone** | **string** | The time zone for this business unit, using the Olsen tz database format | |
-| **ShortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings.html) | Short term forecasting settings | [optional] |
-| **Scheduling** | [**BuSchedulingSettingsResponse**](BuSchedulingSettingsResponse.html) | Scheduling settings | [optional] |
-| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this business unit | |
-{: class="table table-striped"}
+| **ShortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings) | Short term forecasting settings | [optional] |
+| **Scheduling** | [**BuSchedulingSettingsResponse**](BuSchedulingSettingsResponse) | Scheduling settings | [optional] |
+| **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this business unit | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

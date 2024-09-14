@@ -1,14 +1,14 @@
----
-title: HrisTimeOffTypesJobResponse
----
+# HrisTimeOffTypesJobResponse
+
 ## ININ.PureCloudApi.Model.HrisTimeOffTypesJobResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;HrisTimeOffTypeResponse&gt;**](HrisTimeOffTypeResponse.html) |  | [optional] |
+| **Entities** | [**List&lt;HrisTimeOffTypeResponse&gt;**](HrisTimeOffTypeResponse) |  | [optional] |
 | **Status** | **string** | The status of the time off types job | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

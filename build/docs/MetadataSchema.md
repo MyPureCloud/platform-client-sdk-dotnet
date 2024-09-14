@@ -1,6 +1,5 @@
----
-title: MetadataSchema
----
+# MetadataSchema
+
 ## ININ.PureCloudApi.Model.MetadataSchema
 
 ## Properties
@@ -12,6 +11,7 @@ title: MetadataSchema
 | **Type** | **string** | type of data being gathered | [optional] |
 | **Properties** | **List&lt;Dictionary&lt;string, MetadataProperty&gt;&gt;** | list of properties for which input is to be gathered, bother required and optional | [optional] |
 | **Required** | **List&lt;string&gt;** | list of required properties | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

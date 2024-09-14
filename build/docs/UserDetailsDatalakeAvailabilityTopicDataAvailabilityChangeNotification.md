@@ -1,6 +1,5 @@
----
-title: UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
----
+# UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
+
 ## ININ.PureCloudApi.Model.UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
 
 ## Properties
@@ -8,6 +7,7 @@ title: UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DataAvailabilityDate** | **DateTime?** | Date and time before which data is guaranteed to be available in the datalake | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

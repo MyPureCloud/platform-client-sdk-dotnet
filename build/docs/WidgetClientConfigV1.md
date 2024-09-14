@@ -1,6 +1,5 @@
----
-title: WidgetClientConfigV1
----
+# WidgetClientConfigV1
+
 ## ININ.PureCloudApi.Model.WidgetClientConfigV1
 
 ## Properties
@@ -9,6 +8,7 @@ title: WidgetClientConfigV1
 |------------ | ------------- | ------------- | -------------|
 | **WebChatSkin** | **string** |  | [optional] |
 | **AuthenticationUrl** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

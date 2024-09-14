@@ -1,13 +1,12 @@
----
-title: TimeZoneEntityListing
----
+# TimeZoneEntityListing
+
 ## ININ.PureCloudApi.Model.TimeZoneEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;RegionTimeZone&gt;**](RegionTimeZone.html) |  | [optional] |
+| **Entities** | [**List&lt;RegionTimeZone&gt;**](RegionTimeZone) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: TimeZoneEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

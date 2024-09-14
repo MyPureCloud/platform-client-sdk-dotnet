@@ -1,6 +1,5 @@
----
-title: QueueConversationScreenShareEventTopicJourneyActionMap
----
+# QueueConversationScreenShareEventTopicJourneyActionMap
+
 ## ININ.PureCloudApi.Model.QueueConversationScreenShareEventTopicJourneyActionMap
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationScreenShareEventTopicJourneyActionMap
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the actionMap in the Journey System which triggered this action | [optional] |
 | **Version** | **int?** | The version number of the actionMap in the Journey System at the time this action was triggered | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

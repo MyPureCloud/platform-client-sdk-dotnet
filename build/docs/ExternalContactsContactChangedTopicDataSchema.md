@@ -1,6 +1,5 @@
----
-title: ExternalContactsContactChangedTopicDataSchema
----
+# ExternalContactsContactChangedTopicDataSchema
+
 ## ININ.PureCloudApi.Model.ExternalContactsContactChangedTopicDataSchema
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExternalContactsContactChangedTopicDataSchema
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

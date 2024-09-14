@@ -1,6 +1,5 @@
----
-title: TeamAddMemberFailure
----
+# TeamAddMemberFailure
+
 ## ININ.PureCloudApi.Model.TeamAddMemberFailure
 
 ## Properties
@@ -9,6 +8,7 @@ title: TeamAddMemberFailure
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Reason** | **string** | Specific reason the member could not be added. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

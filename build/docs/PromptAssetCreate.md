@@ -1,6 +1,5 @@
----
-title: PromptAssetCreate
----
+# PromptAssetCreate
+
 ## ININ.PureCloudApi.Model.PromptAssetCreate
 
 ## Properties
@@ -20,6 +19,7 @@ title: PromptAssetCreate
 | **Tags** | **Dictionary&lt;string, List&lt;string&gt;&gt;** |  | [optional] |
 | **DurationSeconds** | **double?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

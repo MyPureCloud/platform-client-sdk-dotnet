@@ -1,6 +1,5 @@
----
-title: AuditTopicPropertyChange
----
+# AuditTopicPropertyChange
+
 ## ININ.PureCloudApi.Model.AuditTopicPropertyChange
 
 ## Properties
@@ -10,6 +9,7 @@ title: AuditTopicPropertyChange
 | **Property** | **string** |  | [optional] |
 | **OldValues** | **List&lt;string&gt;** |  | [optional] |
 | **NewValues** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

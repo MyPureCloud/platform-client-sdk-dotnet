@@ -1,6 +1,5 @@
----
-title: EvaluationQualityV2TopicEvaluationSource
----
+# EvaluationQualityV2TopicEvaluationSource
+
 ## ININ.PureCloudApi.Model.EvaluationQualityV2TopicEvaluationSource
 
 ## Properties
@@ -10,6 +9,7 @@ title: EvaluationQualityV2TopicEvaluationSource
 | **EvaluationSourceType** | **string** |  | [optional] |
 | **EvaluationSourceId** | **string** |  | [optional] |
 | **EvaluationSourceName** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

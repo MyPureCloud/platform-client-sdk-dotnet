@@ -1,6 +1,5 @@
----
-title: DynamicLineBalancingSettingsPatchRequest
----
+# DynamicLineBalancingSettingsPatchRequest
+
 ## ININ.PureCloudApi.Model.DynamicLineBalancingSettingsPatchRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: DynamicLineBalancingSettingsPatchRequest
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | Indicates that this campaign is subject of dynamic line balancing | [optional] |
 | **RelativeWeight** | **int?** | Relative weight of this campaign in dynamic line balancing | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

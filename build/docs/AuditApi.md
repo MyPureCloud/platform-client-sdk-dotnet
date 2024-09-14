@@ -1,25 +1,24 @@
----
-title: AuditApi
----
+# AuditApi
+
 ## PureCloudPlatform.Client.V2.Api.AuditApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetAuditsQueryRealtimeServicemapping**](AuditApi.html#getauditsqueryrealtimeservicemapping) | **Get** /api/v2/audits/query/realtime/servicemapping | Get service mapping information used in realtime audits. |
-| [**GetAuditsQueryServicemapping**](AuditApi.html#getauditsqueryservicemapping) | **Get** /api/v2/audits/query/servicemapping | Get service mapping information used in audits. |
-| [**GetAuditsQueryTransactionId**](AuditApi.html#getauditsquerytransactionid) | **Get** /api/v2/audits/query/{transactionId} | Get status of audit query execution |
-| [**GetAuditsQueryTransactionIdResults**](AuditApi.html#getauditsquerytransactionidresults) | **Get** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
-| [**PostAuditsQuery**](AuditApi.html#postauditsquery) | **Post** /api/v2/audits/query | Create audit query execution |
-| [**PostAuditsQueryRealtime**](AuditApi.html#postauditsqueryrealtime) | **Post** /api/v2/audits/query/realtime | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
-| [**PostAuditsQueryRealtimeRelated**](AuditApi.html#postauditsqueryrealtimerelated) | **Post** /api/v2/audits/query/realtime/related | Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id. |
-{: class="table table-striped"}
+| [**GetAuditsQueryRealtimeServicemapping**](#GetAuditsQueryRealtimeServicemapping) | **Get** /api/v2/audits/query/realtime/servicemapping | Get service mapping information used in realtime audits. |
+| [**GetAuditsQueryServicemapping**](#GetAuditsQueryServicemapping) | **Get** /api/v2/audits/query/servicemapping | Get service mapping information used in audits. |
+| [**GetAuditsQueryTransactionId**](#GetAuditsQueryTransactionId) | **Get** /api/v2/audits/query/{transactionId} | Get status of audit query execution |
+| [**GetAuditsQueryTransactionIdResults**](#GetAuditsQueryTransactionIdResults) | **Get** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
+| [**PostAuditsQuery**](#PostAuditsQuery) | **Post** /api/v2/audits/query | Create audit query execution |
+| [**PostAuditsQueryRealtime**](#PostAuditsQueryRealtime) | **Post** /api/v2/audits/query/realtime | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
+| [**PostAuditsQueryRealtimeRelated**](#PostAuditsQueryRealtimeRelated) | **Post** /api/v2/audits/query/realtime/related | Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id. |
 
-<a name="getauditsqueryrealtimeservicemapping"></a>
 
-## [**AuditQueryServiceMapping**](AuditQueryServiceMapping.html) GetAuditsQueryRealtimeServicemapping ()
 
+## GetAuditsQueryRealtimeServicemapping
+
+> [**AuditQueryServiceMapping**](AuditQueryServiceMapping) GetAuditsQueryRealtimeServicemapping ()
 
 
 Get service mapping information used in realtime audits.
@@ -69,15 +68,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**AuditQueryServiceMapping**](AuditQueryServiceMapping.html)
+[**AuditQueryServiceMapping**](AuditQueryServiceMapping)
 
-<a name="getauditsqueryservicemapping"></a>
 
-## [**AuditQueryServiceMapping**](AuditQueryServiceMapping.html) GetAuditsQueryServicemapping ()
+## GetAuditsQueryServicemapping
 
+> [**AuditQueryServiceMapping**](AuditQueryServiceMapping) GetAuditsQueryServicemapping ()
 
 
 Get service mapping information used in audits.
@@ -127,15 +125,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**AuditQueryServiceMapping**](AuditQueryServiceMapping.html)
+[**AuditQueryServiceMapping**](AuditQueryServiceMapping)
 
-<a name="getauditsquerytransactionid"></a>
 
-## [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse.html) GetAuditsQueryTransactionId (string transactionId)
+## GetAuditsQueryTransactionId
 
+> [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse) GetAuditsQueryTransactionId (string transactionId)
 
 
 Get status of audit query execution
@@ -189,16 +186,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **transactionId** | **string**| Transaction ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse.html)
+[**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse)
 
-<a name="getauditsquerytransactionidresults"></a>
 
-## [**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse.html) GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
+## GetAuditsQueryTransactionIdResults
 
+> [**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse) GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
 
 
 Get results of audit query
@@ -258,18 +254,17 @@ namespace Example
 | **transactionId** | **string**| Transaction ID |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. | [optional] [default to 25] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user |
 | **allowRedirect** | **bool?**| Result sets with large amounts of data will respond with a download url | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse.html)
+[**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse)
 
-<a name="postauditsquery"></a>
 
-## [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse.html) PostAuditsQuery (AuditQueryRequest body)
+## PostAuditsQuery
 
+> [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse) PostAuditsQuery (AuditQueryRequest body)
 
 
 Create audit query execution
@@ -324,17 +319,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AuditQueryRequest**](AuditQueryRequest.html)| query |  |
-{: class="table table-striped"}
+| **body** | [**AuditQueryRequest**](AuditQueryRequest)| query |  |
 
 ### Return type
 
-[**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse.html)
+[**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse)
 
-<a name="postauditsqueryrealtime"></a>
 
-## [**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html) PostAuditsQueryRealtime (AuditRealtimeQueryRequest body, List<string> expand = null)
+## PostAuditsQueryRealtime
 
+> [**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse) PostAuditsQueryRealtime (AuditRealtimeQueryRequest body, List<string> expand = null)
 
 
 This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
@@ -390,18 +384,17 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AuditRealtimeQueryRequest**](AuditRealtimeQueryRequest.html)| query |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
-{: class="table table-striped"}
+| **body** | [**AuditRealtimeQueryRequest**](AuditRealtimeQueryRequest)| query |  |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user |
 
 ### Return type
 
-[**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html)
+[**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse)
 
-<a name="postauditsqueryrealtimerelated"></a>
 
-## [**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse.html) PostAuditsQueryRealtimeRelated (AuditRealtimeRelatedRequest body, List<string> expand = null)
+## PostAuditsQueryRealtimeRelated
 
+> [**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse) PostAuditsQueryRealtimeRelated (AuditRealtimeRelatedRequest body, List<string> expand = null)
 
 
 Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id.
@@ -455,11 +448,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AuditRealtimeRelatedRequest**](AuditRealtimeRelatedRequest.html)| query |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
-{: class="table table-striped"}
+| **body** | [**AuditRealtimeRelatedRequest**](AuditRealtimeRelatedRequest)| query |  |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user |
 
 ### Return type
 
-[**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse.html)
+[**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

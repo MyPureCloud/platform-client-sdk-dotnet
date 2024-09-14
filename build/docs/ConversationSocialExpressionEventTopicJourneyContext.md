@@ -1,15 +1,15 @@
----
-title: ConversationSocialExpressionEventTopicJourneyContext
----
+# ConversationSocialExpressionEventTopicJourneyContext
+
 ## ININ.PureCloudApi.Model.ConversationSocialExpressionEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Customer** | [**ConversationSocialExpressionEventTopicJourneyCustomer**](ConversationSocialExpressionEventTopicJourneyCustomer.html) |  | [optional] |
-| **CustomerSession** | [**ConversationSocialExpressionEventTopicJourneyCustomerSession**](ConversationSocialExpressionEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **TriggeringAction** | [**ConversationSocialExpressionEventTopicJourneyAction**](ConversationSocialExpressionEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **Customer** | [**ConversationSocialExpressionEventTopicJourneyCustomer**](ConversationSocialExpressionEventTopicJourneyCustomer) |  | [optional] |
+| **CustomerSession** | [**ConversationSocialExpressionEventTopicJourneyCustomerSession**](ConversationSocialExpressionEventTopicJourneyCustomerSession) |  | [optional] |
+| **TriggeringAction** | [**ConversationSocialExpressionEventTopicJourneyAction**](ConversationSocialExpressionEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

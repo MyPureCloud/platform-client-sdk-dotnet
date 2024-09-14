@@ -1,6 +1,5 @@
----
-title: WorkspaceSummary
----
+# WorkspaceSummary
+
 ## ININ.PureCloudApi.Model.WorkspaceSummary
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkspaceSummary
 |------------ | ------------- | ------------- | -------------|
 | **TotalDocumentCount** | **long?** |  | [optional] |
 | **TotalDocumentByteCount** | **long?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WebDeploymentConfigurationVersionEntityRef
----
+# WebDeploymentConfigurationVersionEntityRef
+
 ## ININ.PureCloudApi.Model.WebDeploymentConfigurationVersionEntityRef
 
 ## Properties
@@ -11,6 +10,7 @@ title: WebDeploymentConfigurationVersionEntityRef
 | **Name** | **string** | The configuration version name | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **Version** | **string** | The version of the configuration | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

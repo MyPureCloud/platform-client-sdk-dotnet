@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicRecentTransfer
----
+# QueueConversationEventTopicRecentTransfer
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicRecentTransfer
 
 ## Properties
@@ -10,10 +9,11 @@ title: QueueConversationEventTopicRecentTransfer
 | **Id** | **string** | The id of the command. | [optional] |
 | **State** | **string** |  | [optional] |
 | **DateIssued** | **DateTime?** | The date/time that this command was issued. | [optional] |
-| **Initiator** | [**QueueConversationEventTopicInitiator**](QueueConversationEventTopicInitiator.html) |  | [optional] |
-| **ModifiedBy** | [**QueueConversationEventTopicModifiedBy**](QueueConversationEventTopicModifiedBy.html) |  | [optional] |
-| **Destination** | [**QueueConversationEventTopicDestination**](QueueConversationEventTopicDestination.html) |  | [optional] |
+| **Initiator** | [**QueueConversationEventTopicInitiator**](QueueConversationEventTopicInitiator) |  | [optional] |
+| **ModifiedBy** | [**QueueConversationEventTopicModifiedBy**](QueueConversationEventTopicModifiedBy) |  | [optional] |
+| **Destination** | [**QueueConversationEventTopicDestination**](QueueConversationEventTopicDestination) |  | [optional] |
 | **TransferType** | **string** | The type of transfer to perform. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

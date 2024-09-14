@@ -1,6 +1,5 @@
----
-title: SignedUrlResponse
----
+# SignedUrlResponse
+
 ## ININ.PureCloudApi.Model.SignedUrlResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: SignedUrlResponse
 | **Name** | **string** |  | [optional] |
 | **Url** | **string** | Url of the downloaded pcap file | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

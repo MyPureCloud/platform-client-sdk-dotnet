@@ -1,16 +1,16 @@
----
-title: TriggerEntityListing
----
+# TriggerEntityListing
+
 ## ININ.PureCloudApi.Model.TriggerEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Trigger&gt;**](Trigger.html) |  | [optional] |
+| **Entities** | [**List&lt;Trigger&gt;**](Trigger) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

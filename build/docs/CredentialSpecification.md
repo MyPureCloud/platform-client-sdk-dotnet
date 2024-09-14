@@ -1,6 +1,5 @@
----
-title: CredentialSpecification
----
+# CredentialSpecification
+
 ## ININ.PureCloudApi.Model.CredentialSpecification
 
 ## Properties
@@ -10,6 +9,7 @@ title: CredentialSpecification
 | **Required** | **bool?** | Indicates if the credential must be provided in order for the integration configuration to be valid. | [optional] |
 | **Title** | **string** | Title describing the usage for this credential. | [optional] |
 | **CredentialTypes** | **List&lt;string&gt;** | List of acceptable credential types that can be provided for this credential. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

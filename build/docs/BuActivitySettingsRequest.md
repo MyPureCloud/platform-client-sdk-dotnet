@@ -1,13 +1,13 @@
----
-title: BuActivitySettingsRequest
----
+# BuActivitySettingsRequest
+
 ## ININ.PureCloudApi.Model.BuActivitySettingsRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **DefaultActivityCodeId** | **string** | Default Activity Code ID settings | [optional] |
-{: class="table table-striped"}
+| **DefaultActivityCodeId** | **string** | The ID of the activity code. This is the activity code that will be used by default for agent development activities added to the schedule | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

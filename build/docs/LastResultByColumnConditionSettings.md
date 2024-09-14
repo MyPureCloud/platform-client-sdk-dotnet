@@ -1,6 +1,5 @@
----
-title: LastResultByColumnConditionSettings
----
+# LastResultByColumnConditionSettings
+
 ## ININ.PureCloudApi.Model.LastResultByColumnConditionSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: LastResultByColumnConditionSettings
 | **EmailWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for Email. | [optional] |
 | **SmsColumnName** | **string** | The name of the contact column to evaluate for SMS. | [optional] |
 | **SmsWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for SMS. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

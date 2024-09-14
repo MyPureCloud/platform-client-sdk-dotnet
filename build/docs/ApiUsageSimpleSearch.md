@@ -1,6 +1,5 @@
----
-title: ApiUsageSimpleSearch
----
+# ApiUsageSimpleSearch
+
 ## ININ.PureCloudApi.Model.ApiUsageSimpleSearch
 
 ## Properties
@@ -12,6 +11,7 @@ title: ApiUsageSimpleSearch
 | **OauthClientNames** | **List&lt;string&gt;** | Behaves like a SQL WHERE with multiple IN operators. Specifies a list of OAuth client names to be queried. | [optional] |
 | **HttpMethods** | **List&lt;string&gt;** | Behaves like a SQL WHERE with multiple IN operators. Specifies a list of HTTP methods to be queried. | [optional] |
 | **TemplateUris** | **List&lt;string&gt;** | Behaves like a SQL WHERE with multiple IN operators. Specifies a list of Template Uris to be queried. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

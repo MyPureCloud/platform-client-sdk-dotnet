@@ -1,14 +1,14 @@
----
-title: LearningAssessmentScoringRequest
----
+# LearningAssessmentScoringRequest
+
 ## ININ.PureCloudApi.Model.LearningAssessmentScoringRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **AssessmentForm** | [**AssessmentForm**](AssessmentForm.html) | The assessment form to score against | |
-| **Answers** | [**AssessmentScoringSet**](AssessmentScoringSet.html) | The answers to score | |
-{: class="table table-striped"}
+| **AssessmentForm** | [**AssessmentForm**](AssessmentForm) | The assessment form to score against | |
+| **Answers** | [**AssessmentScoringSet**](AssessmentScoringSet) | The answers to score | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

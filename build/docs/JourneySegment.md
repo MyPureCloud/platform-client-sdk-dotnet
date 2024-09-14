@@ -1,6 +1,5 @@
----
-title: JourneySegment
----
+# JourneySegment
+
 ## ININ.PureCloudApi.Model.JourneySegment
 
 ## Properties
@@ -15,13 +14,14 @@ title: JourneySegment
 | **Color** | **string** | The hexadecimal color value of the segment. | |
 | **Scope** | **string** | The target entity that a segment applies to. | |
 | **ShouldDisplayToAgent** | **bool?** | Whether or not the segment should be displayed to agent/supervisor users. | |
-| **Context** | [**Context**](Context.html) | The context of the segment. | |
-| **Journey** | [**Journey**](Journey.html) | The pattern of rules defining the segment. | |
-| **ExternalSegment** | [**ExternalSegment**](ExternalSegment.html) | Details of an entity corresponding to this segment in an external system. | [optional] |
+| **Context** | [**Context**](Context) | The context of the segment. | |
+| **Journey** | [**Journey**](Journey) | The pattern of rules defining the segment. | |
+| **ExternalSegment** | [**ExternalSegment**](ExternalSegment) | Details of an entity corresponding to this segment in an external system. | [optional] |
 | **AssignmentExpirationDays** | **int?** | Time, in days, from when the segment is assigned until it is automatically unassigned. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **CreatedDate** | **DateTime?** | Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **ModifiedDate** | **DateTime?** | Timestamp indicating when the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

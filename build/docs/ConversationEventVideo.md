@@ -1,6 +1,5 @@
----
-title: ConversationEventVideo
----
+# ConversationEventVideo
+
 ## ININ.PureCloudApi.Model.ConversationEventVideo
 
 ## Properties
@@ -10,6 +9,7 @@ title: ConversationEventVideo
 | **Type** | **string** | Describes the type of Video event. | |
 | **OfferingId** | **string** | The Video offering ID. | [optional] |
 | **Jwt** | **string** | The Video offering JWT token. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

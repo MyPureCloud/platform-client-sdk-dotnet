@@ -1,6 +1,5 @@
----
-title: TimeInterval
----
+# TimeInterval
+
 ## ININ.PureCloudApi.Model.TimeInterval
 
 ## Properties
@@ -11,6 +10,7 @@ title: TimeInterval
 | **Weeks** | **int?** |  | [optional] |
 | **Days** | **int?** |  | [optional] |
 | **Hours** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

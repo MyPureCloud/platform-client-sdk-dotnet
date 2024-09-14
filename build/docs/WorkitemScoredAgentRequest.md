@@ -1,6 +1,5 @@
----
-title: WorkitemScoredAgentRequest
----
+# WorkitemScoredAgentRequest
+
 ## ININ.PureCloudApi.Model.WorkitemScoredAgentRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemScoredAgentRequest
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | An agents ID. Must be a valid UUID. | [optional] |
 | **Score** | **int?** | Agent&#39;s score for the workitem, from 0 - 100, higher being better | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

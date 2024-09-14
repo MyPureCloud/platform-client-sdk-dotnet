@@ -1,14 +1,14 @@
----
-title: QueueEmailAddress
----
+# QueueEmailAddress
+
 ## ININ.PureCloudApi.Model.QueueEmailAddress
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Domain** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **Route** | [**InboundRoute**](InboundRoute.html) |  | [optional] |
-{: class="table table-striped"}
+| **Domain** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **Route** | [**InboundRoute**](InboundRoute) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

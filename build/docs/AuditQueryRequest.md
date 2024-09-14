@@ -1,6 +1,5 @@
----
-title: AuditQueryRequest
----
+# AuditQueryRequest
+
 ## ININ.PureCloudApi.Model.AuditQueryRequest
 
 ## Properties
@@ -9,8 +8,9 @@ title: AuditQueryRequest
 |------------ | ------------- | ------------- | -------------|
 | **Interval** | **string** | Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ | |
 | **ServiceName** | **string** | Name of the service to query audits for. | |
-| **Filters** | [**List&lt;AuditQueryFilter&gt;**](AuditQueryFilter.html) | Additional filters for the query. | [optional] |
-| **Sort** | [**List&lt;AuditQuerySort&gt;**](AuditQuerySort.html) | Sort parameter for the query. | [optional] |
-{: class="table table-striped"}
+| **Filters** | [**List&lt;AuditQueryFilter&gt;**](AuditQueryFilter) | Additional filters for the query. | [optional] |
+| **Sort** | [**List&lt;AuditQuerySort&gt;**](AuditQuerySort) | Sort parameter for the query. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: GroupCreate
----
+# GroupCreate
+
 ## ININ.PureCloudApi.Model.GroupCreate
 
 ## Properties
@@ -15,13 +14,14 @@ title: GroupCreate
 | **State** | **string** | Active, inactive, or deleted state. | [optional] |
 | **Version** | **int?** | Current version for this resource. | [optional] |
 | **Type** | **string** | Type of group. | |
-| **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
-| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
+| **Images** | [**List&lt;UserImage&gt;**](UserImage) |  | [optional] |
+| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | |
 | **Visibility** | **string** | Who can view this group | |
 | **RolesEnabled** | **bool?** | Allow roles to be assigned to this group | [optional] |
 | **OwnerIds** | **List&lt;string&gt;** | Owners of the group | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

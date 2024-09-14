@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicSchedulerMessageSeverityCount
----
+# WfmBuScheduleTopicSchedulerMessageSeverityCount
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleTopicSchedulerMessageSeverityCount
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmBuScheduleTopicSchedulerMessageSeverityCount
 |------------ | ------------- | ------------- | -------------|
 | **Severity** | **string** |  | [optional] |
 | **Count** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

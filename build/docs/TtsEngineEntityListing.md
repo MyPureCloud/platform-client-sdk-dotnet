@@ -1,13 +1,12 @@
----
-title: TtsEngineEntityListing
----
+# TtsEngineEntityListing
+
 ## ININ.PureCloudApi.Model.TtsEngineEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;TtsEngineEntity&gt;**](TtsEngineEntity.html) |  | [optional] |
+| **Entities** | [**List&lt;TtsEngineEntity&gt;**](TtsEngineEntity) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: TtsEngineEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

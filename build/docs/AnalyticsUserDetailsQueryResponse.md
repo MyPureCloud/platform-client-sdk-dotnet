@@ -1,15 +1,15 @@
----
-title: AnalyticsUserDetailsQueryResponse
----
+# AnalyticsUserDetailsQueryResponse
+
 ## ININ.PureCloudApi.Model.AnalyticsUserDetailsQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **UserDetails** | [**List&lt;AnalyticsUserDetail&gt;**](AnalyticsUserDetail.html) |  | [optional] |
-| **Aggregations** | [**List&lt;AggregationResult&gt;**](AggregationResult.html) |  | [optional] |
+| **UserDetails** | [**List&lt;AnalyticsUserDetail&gt;**](AnalyticsUserDetail) |  | [optional] |
+| **Aggregations** | [**List&lt;AggregationResult&gt;**](AggregationResult) |  | [optional] |
 | **TotalHits** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

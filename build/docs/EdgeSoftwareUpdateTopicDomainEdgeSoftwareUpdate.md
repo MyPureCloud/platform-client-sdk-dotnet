@@ -1,6 +1,5 @@
----
-title: EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
----
+# EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
+
 ## ININ.PureCloudApi.Model.EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
 | **DownloadStartTime** | **DateTime?** |  | [optional] |
 | **ExecuteStartTime** | **DateTime?** |  | [optional] |
 | **ExecuteStopTime** | **DateTime?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

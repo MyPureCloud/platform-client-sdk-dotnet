@@ -1,6 +1,5 @@
----
-title: UsageExecutionResult
----
+# UsageExecutionResult
+
 ## ININ.PureCloudApi.Model.UsageExecutionResult
 
 ## Properties
@@ -9,6 +8,7 @@ title: UsageExecutionResult
 |------------ | ------------- | ------------- | -------------|
 | **ExecutionId** | **string** | The id of the query execution | [optional] |
 | **ResultsUri** | **string** | URI where the query results can be retrieved | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

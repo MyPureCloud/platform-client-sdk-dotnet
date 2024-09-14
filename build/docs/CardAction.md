@@ -1,6 +1,5 @@
----
-title: CardAction
----
+# CardAction
+
 ## ININ.PureCloudApi.Model.CardAction
 
 ## Properties
@@ -12,6 +11,7 @@ title: CardAction
 | **Payload** | **string** | Content of the textback payload after clicking a button. | [optional] |
 | **Url** | **string** | The location of the image file associated with action. | [optional] |
 | **IsSelected** | **bool?** | Indicates if the card option is selected by end customer. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

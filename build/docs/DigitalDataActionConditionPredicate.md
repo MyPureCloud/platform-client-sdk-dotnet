@@ -1,6 +1,5 @@
----
-title: DigitalDataActionConditionPredicate
----
+# DigitalDataActionConditionPredicate
+
 ## ININ.PureCloudApi.Model.DigitalDataActionConditionPredicate
 
 ## Properties
@@ -12,6 +11,7 @@ title: DigitalDataActionConditionPredicate
 | **ComparisonValue** | **string** | The value to compare against for this condition | |
 | **Inverted** | **bool?** | If true, inverts the result of evaluating this Predicate. Default is false. | |
 | **OutputFieldMissingResolution** | **bool?** | The result of this predicate if the requested output field is missing from the data action&#39;s result | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

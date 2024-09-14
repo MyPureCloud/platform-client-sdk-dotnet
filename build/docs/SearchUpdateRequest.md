@@ -1,6 +1,5 @@
----
-title: SearchUpdateRequest
----
+# SearchUpdateRequest
+
 ## ININ.PureCloudApi.Model.SearchUpdateRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: SearchUpdateRequest
 |------------ | ------------- | ------------- | -------------|
 | **SessionId** | **string** | The unique identifier of this session | [optional] |
 | **Answered** | **bool?** | Mark the search as answered/unanswered | |
-| **SelectedAnswer** | [**SelectedAnswer**](SelectedAnswer.html) | The selected search result chosen as the answer. | [optional] |
-{: class="table table-striped"}
+| **SelectedAnswer** | [**SelectedAnswer**](SelectedAnswer) | The selected search result chosen as the answer. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

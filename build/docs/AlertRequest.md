@@ -1,6 +1,5 @@
----
-title: AlertRequest
----
+# AlertRequest
+
 ## ININ.PureCloudApi.Model.AlertRequest
 
 ## Properties
@@ -10,8 +9,9 @@ title: AlertRequest
 | **Type** | **string** | The action being taken on the alert. | |
 | **DateStart** | **DateTime?** | The start date of the mute/snooze period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateEnd** | **DateTime?** | The end date of the mute/snooze period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **Unread** | [**UnreadFields**](UnreadFields.html) | The fields need for an unread update requests | [optional] |
+| **Unread** | [**UnreadFields**](UnreadFields) | The fields need for an unread update requests | [optional] |
 | **ValidRequest** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

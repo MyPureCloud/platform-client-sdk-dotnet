@@ -1,6 +1,5 @@
----
-title: UserExternalIdentifier
----
+# UserExternalIdentifier
+
 ## ININ.PureCloudApi.Model.UserExternalIdentifier
 
 ## Properties
@@ -10,6 +9,7 @@ title: UserExternalIdentifier
 | **AuthorityName** | **string** | Authority or System of Record which owns the External Identifier | |
 | **ExternalKey** | **string** | External Key | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

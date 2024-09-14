@@ -1,6 +1,5 @@
----
-title: ImportStatusRequest
----
+# ImportStatusRequest
+
 ## ININ.PureCloudApi.Model.ImportStatusRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ImportStatusRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** | New status for existing import operation | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

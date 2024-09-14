@@ -1,6 +1,5 @@
----
-title: SetTimeOffIntegrationStatusRequest
----
+# SetTimeOffIntegrationStatusRequest
+
 ## ININ.PureCloudApi.Model.SetTimeOffIntegrationStatusRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: SetTimeOffIntegrationStatusRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **IntegrationStatus** | **string** | The integration status value for the time off request | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: FunctionUploadResponse
----
+# FunctionUploadResponse
+
 ## ININ.PureCloudApi.Model.FunctionUploadResponse
 
 ## Properties
@@ -10,6 +9,7 @@ title: FunctionUploadResponse
 | **Url** | **string** | Presigned URL to PUT the file to | [optional] |
 | **Headers** | **Dictionary&lt;string, string&gt;** | Required headers when uploading a file through PUT request to the URL | [optional] |
 | **SignedUrlTimeoutSeconds** | **int?** | Upload time to live in seconds. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

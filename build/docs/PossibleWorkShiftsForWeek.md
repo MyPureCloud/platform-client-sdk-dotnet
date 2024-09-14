@@ -1,6 +1,5 @@
----
-title: PossibleWorkShiftsForWeek
----
+# PossibleWorkShiftsForWeek
+
 ## ININ.PureCloudApi.Model.PossibleWorkShiftsForWeek
 
 ## Properties
@@ -8,7 +7,8 @@ title: PossibleWorkShiftsForWeek
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **int?** | ID of this possible weekly shift | [optional] |
-| **DailyPossibleShifts** | [**List&lt;DailyPossibleShift&gt;**](DailyPossibleShift.html) | Daily shifts in this possible weekly shift | [optional] |
-{: class="table table-striped"}
+| **DailyPossibleShifts** | [**List&lt;DailyPossibleShift&gt;**](DailyPossibleShift) | Daily shifts in this possible weekly shift | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

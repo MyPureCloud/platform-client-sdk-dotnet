@@ -1,6 +1,5 @@
----
-title: AfterCallWork
----
+# AfterCallWork
+
 ## ININ.PureCloudApi.Model.AfterCallWork
 
 ## Properties
@@ -10,6 +9,7 @@ title: AfterCallWork
 | **StartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EndTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **State** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

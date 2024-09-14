@@ -1,13 +1,13 @@
----
-title: JourneyAppEventsNotificationSegmentAssignmentMessage
----
+# JourneyAppEventsNotificationSegmentAssignmentMessage
+
 ## ININ.PureCloudApi.Model.JourneyAppEventsNotificationSegmentAssignmentMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Segment** | [**JourneyAppEventsNotificationSegment**](JourneyAppEventsNotificationSegment.html) |  | [optional] |
-{: class="table table-striped"}
+| **Segment** | [**JourneyAppEventsNotificationSegment**](JourneyAppEventsNotificationSegment) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: LimitDocs
----
+# LimitDocs
+
 ## ININ.PureCloudApi.Model.LimitDocs
 
 ## Properties
@@ -13,6 +12,7 @@ title: LimitDocs
 | **Resource** | **string** |  | [optional] |
 | **Configurable** | **bool?** |  | [optional] |
 | **Trackable** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

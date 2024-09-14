@@ -1,31 +1,30 @@
----
-title: OAuthApi
----
+# OAuthApi
+
 ## PureCloudPlatform.Client.V2.Api.OAuthApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteOauthClient**](OAuthApi.html#deleteoauthclient) | **Delete** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
-| [**GetOauthAuthorization**](OAuthApi.html#getoauthauthorization) | **Get** /api/v2/oauth/authorizations/{clientId} | Get a client that is authorized by the resource owner |
-| [**GetOauthAuthorizations**](OAuthApi.html#getoauthauthorizations) | **Get** /api/v2/oauth/authorizations | List clients that have been authorized, requested, or revoked by the resource owner |
-| [**GetOauthClient**](OAuthApi.html#getoauthclient) | **Get** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
-| [**GetOauthClientUsageQueryResult**](OAuthApi.html#getoauthclientusagequeryresult) | **Get** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
-| [**GetOauthClientUsageSummary**](OAuthApi.html#getoauthclientusagesummary) | **Get** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
-| [**GetOauthClients**](OAuthApi.html#getoauthclients) | **Get** /api/v2/oauth/clients | The list of OAuth clients |
-| [**GetOauthScope**](OAuthApi.html#getoauthscope) | **Get** /api/v2/oauth/scopes/{scopeId} | An OAuth scope |
-| [**GetOauthScopes**](OAuthApi.html#getoauthscopes) | **Get** /api/v2/oauth/scopes | The list of OAuth scopes |
-| [**PostOauthClientSecret**](OAuthApi.html#postoauthclientsecret) | **Post** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
-| [**PostOauthClientUsageQuery**](OAuthApi.html#postoauthclientusagequery) | **Post** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
-| [**PostOauthClients**](OAuthApi.html#postoauthclients) | **Post** /api/v2/oauth/clients | Create OAuth client |
-| [**PutOauthClient**](OAuthApi.html#putoauthclient) | **Put** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
-{: class="table table-striped"}
+| [**DeleteOauthClient**](#DeleteOauthClient) | **Delete** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
+| [**GetOauthAuthorization**](#GetOauthAuthorization) | **Get** /api/v2/oauth/authorizations/{clientId} | Get a client that is authorized by the resource owner |
+| [**GetOauthAuthorizations**](#GetOauthAuthorizations) | **Get** /api/v2/oauth/authorizations | List clients that have been authorized, requested, or revoked by the resource owner |
+| [**GetOauthClient**](#GetOauthClient) | **Get** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
+| [**GetOauthClientUsageQueryResult**](#GetOauthClientUsageQueryResult) | **Get** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
+| [**GetOauthClientUsageSummary**](#GetOauthClientUsageSummary) | **Get** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
+| [**GetOauthClients**](#GetOauthClients) | **Get** /api/v2/oauth/clients | The list of OAuth clients |
+| [**GetOauthScope**](#GetOauthScope) | **Get** /api/v2/oauth/scopes/{scopeId} | An OAuth scope |
+| [**GetOauthScopes**](#GetOauthScopes) | **Get** /api/v2/oauth/scopes | The list of OAuth scopes |
+| [**PostOauthClientSecret**](#PostOauthClientSecret) | **Post** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
+| [**PostOauthClientUsageQuery**](#PostOauthClientUsageQuery) | **Post** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
+| [**PostOauthClients**](#PostOauthClients) | **Post** /api/v2/oauth/clients | Create OAuth client |
+| [**PutOauthClient**](#PutOauthClient) | **Put** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
 
-<a name="deleteoauthclient"></a>
 
-## void DeleteOauthClient (string clientId)
 
+## DeleteOauthClient
+
+> void DeleteOauthClient (string clientId)
 
 
 Delete OAuth Client
@@ -78,16 +77,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getoauthauthorization"></a>
 
-## [**OAuthAuthorization**](OAuthAuthorization.html) GetOauthAuthorization (string clientId, string acceptLanguage = null)
+## GetOauthAuthorization
 
+> [**OAuthAuthorization**](OAuthAuthorization) GetOauthAuthorization (string clientId, string acceptLanguage = null)
 
 
 Get a client that is authorized by the resource owner
@@ -143,16 +141,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| The ID of client |  |
 | **acceptLanguage** | **string**| The language in which to display the client descriptions. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OAuthAuthorization**](OAuthAuthorization.html)
+[**OAuthAuthorization**](OAuthAuthorization)
 
-<a name="getoauthauthorizations"></a>
 
-## [**OAuthAuthorizationListing**](OAuthAuthorizationListing.html) GetOauthAuthorizations (string acceptLanguage = null)
+## GetOauthAuthorizations
 
+> [**OAuthAuthorizationListing**](OAuthAuthorizationListing) GetOauthAuthorizations (string acceptLanguage = null)
 
 
 List clients that have been authorized, requested, or revoked by the resource owner
@@ -206,16 +203,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **acceptLanguage** | **string**| The language in which to display the client descriptions. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OAuthAuthorizationListing**](OAuthAuthorizationListing.html)
+[**OAuthAuthorizationListing**](OAuthAuthorizationListing)
 
-<a name="getoauthclient"></a>
 
-## [**OAuthClient**](OAuthClient.html) GetOauthClient (string clientId)
+## GetOauthClient
 
+> [**OAuthClient**](OAuthClient) GetOauthClient (string clientId)
 
 
 Get OAuth Client
@@ -269,16 +265,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
+[**OAuthClient**](OAuthClient)
 
-<a name="getoauthclientusagequeryresult"></a>
 
-## [**ApiUsageQueryResult**](ApiUsageQueryResult.html) GetOauthClientUsageQueryResult (string executionId, string clientId)
+## GetOauthClientUsageQueryResult
 
+> [**ApiUsageQueryResult**](ApiUsageQueryResult) GetOauthClientUsageQueryResult (string executionId, string clientId)
 
 
 Get the results of a usage query
@@ -335,16 +330,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **executionId** | **string**| ID of the query execution |  |
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
+[**ApiUsageQueryResult**](ApiUsageQueryResult)
 
-<a name="getoauthclientusagesummary"></a>
 
-## [**UsageExecutionResult**](UsageExecutionResult.html) GetOauthClientUsageSummary (string clientId, string days = null)
+## GetOauthClientUsageSummary
 
+> [**UsageExecutionResult**](UsageExecutionResult) GetOauthClientUsageSummary (string clientId, string days = null)
 
 
 Get a summary of OAuth client API usage
@@ -403,16 +397,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
 | **days** | **string**| Previous number of days to query | [optional] [default to "7"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
+[**UsageExecutionResult**](UsageExecutionResult)
 
-<a name="getoauthclients"></a>
 
-## [**OAuthClientEntityListing**](OAuthClientEntityListing.html) GetOauthClients ()
+## GetOauthClients
 
+> [**OAuthClientEntityListing**](OAuthClientEntityListing) GetOauthClients ()
 
 
 The list of OAuth clients
@@ -462,15 +455,14 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**OAuthClientEntityListing**](OAuthClientEntityListing.html)
+[**OAuthClientEntityListing**](OAuthClientEntityListing)
 
-<a name="getoauthscope"></a>
 
-## [**OAuthScope**](OAuthScope.html) GetOauthScope (string scopeId, string acceptLanguage = null)
+## GetOauthScope
 
+> [**OAuthScope**](OAuthScope) GetOauthScope (string scopeId, string acceptLanguage = null)
 
 
 An OAuth scope
@@ -525,16 +517,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **scopeId** | **string**| Scope ID |  |
 | **acceptLanguage** | **string**| The language with which to display the scope description. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OAuthScope**](OAuthScope.html)
+[**OAuthScope**](OAuthScope)
 
-<a name="getoauthscopes"></a>
 
-## [**OAuthScopeListing**](OAuthScopeListing.html) GetOauthScopes (string acceptLanguage = null)
+## GetOauthScopes
 
+> [**OAuthScopeListing**](OAuthScopeListing) GetOauthScopes (string acceptLanguage = null)
 
 
 The list of OAuth scopes
@@ -587,16 +578,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **acceptLanguage** | **string**| The language with which to display the scope descriptions. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OAuthScopeListing**](OAuthScopeListing.html)
+[**OAuthScopeListing**](OAuthScopeListing)
 
-<a name="postoauthclientsecret"></a>
 
-## [**OAuthClient**](OAuthClient.html) PostOauthClientSecret (string clientId)
+## PostOauthClientSecret
 
+> [**OAuthClient**](OAuthClient) PostOauthClientSecret (string clientId)
 
 
 Regenerate Client Secret
@@ -652,16 +642,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
+[**OAuthClient**](OAuthClient)
 
-<a name="postoauthclientusagequery"></a>
 
-## [**UsageExecutionResult**](UsageExecutionResult.html) PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
+## PostOauthClientUsageQuery
 
+> [**UsageExecutionResult**](UsageExecutionResult) PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
 
 
 Query for OAuth client API usage
@@ -719,17 +708,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery.html)| Query |  |
-{: class="table table-striped"}
+| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery)| Query |  |
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
+[**UsageExecutionResult**](UsageExecutionResult)
 
-<a name="postoauthclients"></a>
 
-## [**OAuthClient**](OAuthClient.html) PostOauthClients (OAuthClientRequest body)
+## PostOauthClients
 
+> [**OAuthClient**](OAuthClient) PostOauthClients (OAuthClientRequest body)
 
 
 Create OAuth client
@@ -784,17 +772,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OAuthClientRequest**](OAuthClientRequest.html)| Client |  |
-{: class="table table-striped"}
+| **body** | [**OAuthClientRequest**](OAuthClientRequest)| Client |  |
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
+[**OAuthClient**](OAuthClient)
 
-<a name="putoauthclient"></a>
 
-## [**OAuthClient**](OAuthClient.html) PutOauthClient (string clientId, OAuthClientRequest body)
+## PutOauthClient
 
+> [**OAuthClient**](OAuthClient) PutOauthClient (string clientId, OAuthClientRequest body)
 
 
 Update OAuth Client
@@ -849,10 +836,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-| **body** | [**OAuthClientRequest**](OAuthClientRequest.html)| Client |  |
-{: class="table table-striped"}
+| **body** | [**OAuthClientRequest**](OAuthClientRequest)| Client |  |
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
+[**OAuthClient**](OAuthClient)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

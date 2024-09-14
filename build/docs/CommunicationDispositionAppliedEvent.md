@@ -1,6 +1,5 @@
----
-title: CommunicationDispositionAppliedEvent
----
+# CommunicationDispositionAppliedEvent
+
 ## ININ.PureCloudApi.Model.CommunicationDispositionAppliedEvent
 
 ## Properties
@@ -14,6 +13,7 @@ title: CommunicationDispositionAppliedEvent
 | **Code** | **string** | The wrapup-code (V4 UUID) used to disposition this interaction. If this value is not provided the disposition is considered skipped. | [optional] |
 | **Notes** | **string** | Text entered by the agent to describe the interaction or disposition. Ignored if the disposition is considered skipped. | [optional] |
 | **Tags** | **List&lt;string&gt;** | The list of tags selected by the agent to describe the interaction or disposition. Ignored if the disposition is considered skipped. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

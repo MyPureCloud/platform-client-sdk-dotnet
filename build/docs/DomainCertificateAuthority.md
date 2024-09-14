@@ -1,6 +1,5 @@
----
-title: DomainCertificateAuthority
----
+# DomainCertificateAuthority
+
 ## ININ.PureCloudApi.Model.DomainCertificateAuthority
 
 ## Properties
@@ -9,7 +8,7 @@ title: DomainCertificateAuthority
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the entity. | |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The resource&#39;s description. | [optional] |
 | **Version** | **int?** | The current version of the resource. | [optional] |
 | **DateCreated** | **DateTime?** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -22,8 +21,9 @@ title: DomainCertificateAuthority
 | **Certificate** | **string** | The authorities signed X509 PEM encoded certificate. | |
 | **Type** | **string** | The certificate authorities type.  Managed certificate authorities are generated and maintained by Interactive Intelligence.  These are read-only and not modifiable by clients.  Remote authorities are customer managed. | |
 | **Services** | **List&lt;string&gt;** | The service(s) that the authority can be used to authenticate. | |
-| **CertificateDetails** | [**List&lt;CertificateDetails&gt;**](CertificateDetails.html) | The details of the parsed certificate(s). | [optional] |
+| **CertificateDetails** | [**List&lt;CertificateDetails&gt;**](CertificateDetails) | The details of the parsed certificate(s). | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

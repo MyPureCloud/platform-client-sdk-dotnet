@@ -1,6 +1,5 @@
----
-title: OutcomeAttributionResultsResponse
----
+# OutcomeAttributionResultsResponse
+
 ## ININ.PureCloudApi.Model.OutcomeAttributionResultsResponse
 
 ## Properties
@@ -13,8 +12,9 @@ title: OutcomeAttributionResultsResponse
 | **AssociatedValue** | **double?** | The total value associated with the customer&#39;s outcome. | [optional] |
 | **State** | **string** | State of the Outcome Attribution entity. | |
 | **Message** | **string** | Additional information on the state of the Outcome Attribution entity. | |
-| **Touchpoints** | [**List&lt;TouchpointResponse&gt;**](TouchpointResponse.html) | List of interactions that led to this outcome being achieved. | [optional] |
+| **Touchpoints** | [**List&lt;TouchpointResponse&gt;**](TouchpointResponse) | List of interactions that led to this outcome being achieved. | [optional] |
 | **CreatedDate** | **DateTime?** | Date outcome was achieved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,14 +1,14 @@
----
-title: EmailMediaPolicy
----
+# EmailMediaPolicy
+
 ## ININ.PureCloudApi.Model.EmailMediaPolicy
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Actions** | [**PolicyActions**](PolicyActions.html) | Actions applied when specified conditions are met | [optional] |
-| **Conditions** | [**EmailMediaPolicyConditions**](EmailMediaPolicyConditions.html) | Conditions for when actions should be applied | [optional] |
-{: class="table table-striped"}
+| **Actions** | [**PolicyActions**](PolicyActions) | Actions applied when specified conditions are met | [optional] |
+| **Conditions** | [**EmailMediaPolicyConditions**](EmailMediaPolicyConditions) | Conditions for when actions should be applied | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

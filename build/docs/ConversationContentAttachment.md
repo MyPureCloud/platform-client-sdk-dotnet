@@ -1,6 +1,5 @@
----
-title: ConversationContentAttachment
----
+# ConversationContentAttachment
+
 ## ININ.PureCloudApi.Model.ConversationContentAttachment
 
 ## Properties
@@ -15,6 +14,7 @@ title: ConversationContentAttachment
 | **Sha256** | **string** | Secure hash of the attachment content. | [optional] |
 | **Filename** | **string** | Suggested file name for attachment. | [optional] |
 | **ContentSizeBytes** | **long?** | Size in bytes of the attachment content. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

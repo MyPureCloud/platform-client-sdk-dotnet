@@ -1,6 +1,5 @@
----
-title: UnansweredPhrase
----
+# UnansweredPhrase
+
 ## ININ.PureCloudApi.Model.UnansweredPhrase
 
 ## Properties
@@ -10,6 +9,7 @@ title: UnansweredPhrase
 | **Id** | **string** | Id of an unanswered phrase | [optional] |
 | **Text** | **string** | Phrase text of an unanswered phrase | [optional] |
 | **UnlinkedPhraseHitCount** | **int?** | Hit count of an unlinked phrase | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationApp
----
+# JourneySessionEventsNotificationApp
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationApp
 
 ## Properties
@@ -11,6 +10,7 @@ title: JourneySessionEventsNotificationApp
 | **Namespace** | **string** |  | [optional] |
 | **Version** | **string** |  | [optional] |
 | **BuildNumber** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

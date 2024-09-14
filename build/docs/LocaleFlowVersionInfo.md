@@ -1,13 +1,13 @@
----
-title: LocaleFlowVersionInfo
----
+# LocaleFlowVersionInfo
+
 ## ININ.PureCloudApi.Model.LocaleFlowVersionInfo
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **NluVersion** | [**AddressableEntityRef**](AddressableEntityRef.html) | NLU Version Info for this flow version. | [optional] |
-{: class="table table-striped"}
+| **NluVersion** | [**AddressableEntityRef**](AddressableEntityRef) | NLU Version Info for this flow version. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

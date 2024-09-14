@@ -1,6 +1,5 @@
----
-title: EdgeAutoUpdateConfig
----
+# EdgeAutoUpdateConfig
+
 ## ININ.PureCloudApi.Model.EdgeAutoUpdateConfig
 
 ## Properties
@@ -11,6 +10,7 @@ title: EdgeAutoUpdateConfig
 | **Rrule** | **string** | The recurrence rule for updating the Edges assigned to the site. The only supported frequencies are daily and weekly. Weekly frequencies require a day list with at least oneday specified. All other configurations are not supported. | |
 | **Start** | **DateTime?** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
 | **End** | **DateTime?** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

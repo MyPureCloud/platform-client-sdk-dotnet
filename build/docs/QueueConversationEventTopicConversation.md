@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicConversation
----
+# QueueConversationEventTopicConversation
+
 ## ININ.PureCloudApi.Model.QueueConversationEventTopicConversation
 
 ## Properties
@@ -9,13 +8,14 @@ title: QueueConversationEventTopicConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **MaxParticipants** | **int?** |  | [optional] |
-| **Participants** | [**List&lt;QueueConversationEventTopicParticipant&gt;**](QueueConversationEventTopicParticipant.html) |  | [optional] |
-| **RecentTransfers** | [**List&lt;QueueConversationEventTopicRecentTransfer&gt;**](QueueConversationEventTopicRecentTransfer.html) |  | [optional] |
+| **Participants** | [**List&lt;QueueConversationEventTopicParticipant&gt;**](QueueConversationEventTopicParticipant) |  | [optional] |
+| **RecentTransfers** | [**List&lt;QueueConversationEventTopicRecentTransfer&gt;**](QueueConversationEventTopicRecentTransfer) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

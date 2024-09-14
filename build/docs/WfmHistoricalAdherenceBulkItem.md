@@ -1,6 +1,5 @@
----
-title: WfmHistoricalAdherenceBulkItem
----
+# WfmHistoricalAdherenceBulkItem
+
 ## ININ.PureCloudApi.Model.WfmHistoricalAdherenceBulkItem
 
 ## Properties
@@ -13,6 +12,7 @@ title: WfmHistoricalAdherenceBulkItem
 | **UserIds** | **List&lt;string&gt;** | The IDs of the users to query. If not included, will query every user in the management unit | [optional] |
 | **IncludeExceptions** | **bool?** | Whether user exceptions should be returned as part of the results. Defaults to false if not specified. | [optional] |
 | **IncludeActuals** | **bool?** | Whether user actual activities should be returned as part of the results. Defaults to false if not specified. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

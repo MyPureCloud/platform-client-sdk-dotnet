@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicAfterCallWork
----
+# QueueConversationVideoEventTopicAfterCallWork
+
 ## ININ.PureCloudApi.Model.QueueConversationVideoEventTopicAfterCallWork
 
 ## Properties
@@ -10,6 +9,7 @@ title: QueueConversationVideoEventTopicAfterCallWork
 | **State** | **string** | The communication&#39;s after-call work state. | [optional] |
 | **StartTime** | **DateTime?** | The timestamp when this communication started after-call work in the cloud clock. | [optional] |
 | **EndTime** | **DateTime?** | The timestamp when this communication ended after-call work in the cloud clock. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

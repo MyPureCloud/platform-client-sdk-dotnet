@@ -1,6 +1,5 @@
----
-title: ConversationEventPresence
----
+# ConversationEventPresence
+
 ## ININ.PureCloudApi.Model.ConversationEventPresence
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationEventPresence
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Describes the type of Presence event. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

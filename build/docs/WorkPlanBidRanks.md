@@ -1,6 +1,5 @@
----
-title: WorkPlanBidRanks
----
+# WorkPlanBidRanks
+
 ## ININ.PureCloudApi.Model.WorkPlanBidRanks
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkPlanBidRanks
 | **WorkPlanBiddingPerformance** | **int?** | Work plan bidding agent performance ranking. The range of values is between 0 and 9999. | [optional] |
 | **BiddingTieBreaker** | **string** | Custom agent ranking metric that some customers can use. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

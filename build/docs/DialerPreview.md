@@ -1,6 +1,5 @@
----
-title: DialerPreview
----
+# DialerPreview
+
 ## ININ.PureCloudApi.Model.DialerPreview
 
 ## Properties
@@ -11,8 +10,9 @@ title: DialerPreview
 | **ContactId** | **string** | The contact associated with this preview data pop | [optional] |
 | **ContactListId** | **string** | The contactList associated with this preview data pop. | [optional] |
 | **CampaignId** | **string** | The campaignId associated with this preview data pop. | [optional] |
-| **PhoneNumberColumns** | [**List&lt;PhoneNumberColumn&gt;**](PhoneNumberColumn.html) | The phone number columns associated with this campaign | [optional] |
+| **PhoneNumberColumns** | [**List&lt;PhoneNumberColumn&gt;**](PhoneNumberColumn) | The phone number columns associated with this campaign | [optional] |
 | **CallbackAutoAnswer** | **bool?** | Whether or not to auto answer the callback | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

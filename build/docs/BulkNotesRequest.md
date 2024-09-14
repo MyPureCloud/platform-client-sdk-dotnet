@@ -1,13 +1,13 @@
----
-title: BulkNotesRequest
----
+# BulkNotesRequest
+
 ## ININ.PureCloudApi.Model.BulkNotesRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Note&gt;**](Note.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;Note&gt;**](Note) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

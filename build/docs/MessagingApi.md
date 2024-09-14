@@ -1,32 +1,34 @@
----
-title: MessagingApi
----
+# MessagingApi
+
 ## PureCloudPlatform.Client.V2.Api.MessagingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteMessagingSetting**](MessagingApi.html#deletemessagingsetting) | **Delete** /api/v2/messaging/settings/{messageSettingId} | Delete a messaging setting |
-| [**DeleteMessagingSettingsDefault**](MessagingApi.html#deletemessagingsettingsdefault) | **Delete** /api/v2/messaging/settings/default | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
-| [**DeleteMessagingSupportedcontentSupportedContentId**](MessagingApi.html#deletemessagingsupportedcontentsupportedcontentid) | **Delete** /api/v2/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
-| [**GetMessagingSetting**](MessagingApi.html#getmessagingsetting) | **Get** /api/v2/messaging/settings/{messageSettingId} | Get a messaging setting |
-| [**GetMessagingSettings**](MessagingApi.html#getmessagingsettings) | **Get** /api/v2/messaging/settings | Get a list of messaging settings |
-| [**GetMessagingSettingsDefault**](MessagingApi.html#getmessagingsettingsdefault) | **Get** /api/v2/messaging/settings/default | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
-| [**GetMessagingSupportedcontent**](MessagingApi.html#getmessagingsupportedcontent) | **Get** /api/v2/messaging/supportedcontent | Get a list of Supported Content profiles |
-| [**GetMessagingSupportedcontentSupportedContentId**](MessagingApi.html#getmessagingsupportedcontentsupportedcontentid) | **Get** /api/v2/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
-| [**PatchMessagingSetting**](MessagingApi.html#patchmessagingsetting) | **Patch** /api/v2/messaging/settings/{messageSettingId} | Update a messaging setting |
-| [**PatchMessagingSupportedcontentSupportedContentId**](MessagingApi.html#patchmessagingsupportedcontentsupportedcontentid) | **Patch** /api/v2/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
-| [**PostMessagingSettings**](MessagingApi.html#postmessagingsettings) | **Post** /api/v2/messaging/settings | Create a messaging setting |
-| [**PostMessagingSupportedcontent**](MessagingApi.html#postmessagingsupportedcontent) | **Post** /api/v2/messaging/supportedcontent | Create a Supported Content profile |
-| [**PutMessagingSettingsDefault**](MessagingApi.html#putmessagingsettingsdefault) | **Put** /api/v2/messaging/settings/default | Set the organization&#39;s default settings that may be applied to an integration when it is created. |
-{: class="table table-striped"}
+| [**DeleteMessagingSetting**](#DeleteMessagingSetting) | **Delete** /api/v2/messaging/settings/{messageSettingId} | Delete a messaging setting |
+| [**DeleteMessagingSettingsDefault**](#DeleteMessagingSettingsDefault) | **Delete** /api/v2/messaging/settings/default | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
+| [**DeleteMessagingSupportedcontentSupportedContentId**](#DeleteMessagingSupportedcontentSupportedContentId) | **Delete** /api/v2/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
+| [**GetMessagingSetting**](#GetMessagingSetting) | **Get** /api/v2/messaging/settings/{messageSettingId} | Get a messaging setting |
+| [**GetMessagingSettings**](#GetMessagingSettings) | **Get** /api/v2/messaging/settings | Get a list of messaging settings |
+| [**GetMessagingSettingsDefault**](#GetMessagingSettingsDefault) | **Get** /api/v2/messaging/settings/default | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
+| [**GetMessagingSupportedcontent**](#GetMessagingSupportedcontent) | **Get** /api/v2/messaging/supportedcontent | Get a list of Supported Content profiles |
+| [**GetMessagingSupportedcontentSupportedContentId**](#GetMessagingSupportedcontentSupportedContentId) | **Get** /api/v2/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
+| [**PatchMessagingSetting**](#PatchMessagingSetting) | **Patch** /api/v2/messaging/settings/{messageSettingId} | Update a messaging setting |
+| [**PatchMessagingSupportedcontentSupportedContentId**](#PatchMessagingSupportedcontentSupportedContentId) | **Patch** /api/v2/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
+| [**PostMessagingSettings**](#PostMessagingSettings) | **Post** /api/v2/messaging/settings | Create a messaging setting |
+| [**PostMessagingSupportedcontent**](#PostMessagingSupportedcontent) | **Post** /api/v2/messaging/supportedcontent | Create a Supported Content profile |
+| [**PutMessagingSettingsDefault**](#PutMessagingSettingsDefault) | **Put** /api/v2/messaging/settings/default | Set the organization&#39;s default settings that may be applied to an integration when it is created. |
 
-<a name="deletemessagingsetting"></a>
 
-## void DeleteMessagingSetting (string messageSettingId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+## DeleteMessagingSetting
+
+> void DeleteMessagingSetting (string messageSettingId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete a messaging setting
 
@@ -78,17 +80,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Settings ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="deletemessagingsettingsdefault"></a>
 
-## void DeleteMessagingSettingsDefault ()
+## DeleteMessagingSettingsDefault
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void DeleteMessagingSettingsDefault ()
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete the organization's default setting, a global default will be applied to integrations without settings
 
@@ -138,16 +142,18 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
 
-<a name="deletemessagingsupportedcontentsupportedcontentid"></a>
 
-## void DeleteMessagingSupportedcontentSupportedContentId (string supportedContentId)
+## DeleteMessagingSupportedcontentSupportedContentId
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> void DeleteMessagingSupportedcontentSupportedContentId (string supportedContentId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete a supported content profile
 
@@ -201,17 +207,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getmessagingsetting"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) GetMessagingSetting (string messageSettingId)
+## GetMessagingSetting
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**MessagingSetting**](MessagingSetting) GetMessagingSetting (string messageSettingId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a messaging setting
 
@@ -264,17 +272,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Settings ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="getmessagingsettings"></a>
 
-## [**MessagingConfigListing**](MessagingConfigListing.html) GetMessagingSettings (int? pageSize = null, int? pageNumber = null)
+## GetMessagingSettings
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**MessagingConfigListing**](MessagingConfigListing) GetMessagingSettings (int? pageSize = null, int? pageNumber = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a list of messaging settings
 
@@ -329,17 +339,19 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**MessagingConfigListing**](MessagingConfigListing.html)
+[**MessagingConfigListing**](MessagingConfigListing)
 
-<a name="getmessagingsettingsdefault"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) GetMessagingSettingsDefault ()
+## GetMessagingSettingsDefault
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**MessagingSetting**](MessagingSetting) GetMessagingSettingsDefault ()
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the organization's default settings that will be used as the default when creating an integration.
 
@@ -390,16 +402,18 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="getmessagingsupportedcontent"></a>
 
-## [**SupportedContentListing**](SupportedContentListing.html) GetMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
+## GetMessagingSupportedcontent
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**SupportedContentListing**](SupportedContentListing) GetMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a list of Supported Content profiles
 
@@ -456,17 +470,19 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SupportedContentListing**](SupportedContentListing.html)
+[**SupportedContentListing**](SupportedContentListing)
 
-<a name="getmessagingsupportedcontentsupportedcontentid"></a>
 
-## [**SupportedContent**](SupportedContent.html) GetMessagingSupportedcontentSupportedContentId (string supportedContentId)
+## GetMessagingSupportedcontentSupportedContentId
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**SupportedContent**](SupportedContent) GetMessagingSupportedcontentSupportedContentId (string supportedContentId)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a supported content profile
 
@@ -521,17 +537,19 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="patchmessagingsetting"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) PatchMessagingSetting (string messageSettingId, MessagingSettingRequest body)
+## PatchMessagingSetting
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**MessagingSetting**](MessagingSetting) PatchMessagingSetting (string messageSettingId, MessagingSettingRequest body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a messaging setting
 
@@ -585,18 +603,20 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Settings ID |  |
-| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting |  |
-{: class="table table-striped"}
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest)| MessagingSetting |  |
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="patchmessagingsupportedcontentsupportedcontentid"></a>
 
-## [**SupportedContent**](SupportedContent.html) PatchMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
+## PatchMessagingSupportedcontentSupportedContentId
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**SupportedContent**](SupportedContent) PatchMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a supported content profile
 
@@ -652,18 +672,20 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent |  |
-{: class="table table-striped"}
+| **body** | [**SupportedContent**](SupportedContent)| SupportedContent |  |
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="postmessagingsettings"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) PostMessagingSettings (MessagingSettingRequest body)
+## PostMessagingSettings
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**MessagingSetting**](MessagingSetting) PostMessagingSettings (MessagingSettingRequest body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create a messaging setting
 
@@ -715,18 +737,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting |  |
-{: class="table table-striped"}
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest)| MessagingSetting |  |
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
-<a name="postmessagingsupportedcontent"></a>
 
-## [**SupportedContent**](SupportedContent.html) PostMessagingSupportedcontent (SupportedContent body)
+## PostMessagingSupportedcontent
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**SupportedContent**](SupportedContent) PostMessagingSupportedcontent (SupportedContent body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create a Supported Content profile
 
@@ -780,18 +804,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent |  |
-{: class="table table-striped"}
+| **body** | [**SupportedContent**](SupportedContent)| SupportedContent |  |
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
+[**SupportedContent**](SupportedContent)
 
-<a name="putmessagingsettingsdefault"></a>
 
-## [**MessagingSetting**](MessagingSetting.html) PutMessagingSettingsDefault (MessagingSettingDefaultRequest body)
+## PutMessagingSettingsDefault
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+> [**MessagingSetting**](MessagingSetting) PutMessagingSettingsDefault (MessagingSettingDefaultRequest body)
+
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Set the organization's default settings that may be applied to an integration when it is created.
 
@@ -845,10 +871,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest.html)| Messaging Setting ID |  |
-{: class="table table-striped"}
+| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest)| Messaging Setting ID |  |
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

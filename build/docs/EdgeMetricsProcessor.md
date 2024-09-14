@@ -1,6 +1,5 @@
----
-title: EdgeMetricsProcessor
----
+# EdgeMetricsProcessor
+
 ## ININ.PureCloudApi.Model.EdgeMetricsProcessor
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeMetricsProcessor
 | **IdleTimePct** | **double?** | Percent time processor was idle. | [optional] |
 | **PrivilegedTimePct** | **double?** | Percent time processor spent in privileged mode. | [optional] |
 | **UserTimePct** | **double?** | Percent time processor spent in user mode. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

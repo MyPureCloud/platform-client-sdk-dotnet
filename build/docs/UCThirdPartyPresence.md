@@ -1,6 +1,5 @@
----
-title: UCThirdPartyPresence
----
+# UCThirdPartyPresence
+
 ## ININ.PureCloudApi.Model.UCThirdPartyPresence
 
 ## Properties
@@ -11,6 +10,7 @@ title: UCThirdPartyPresence
 | **Presence** | **string** | Integration presence value. | |
 | **Message** | **string** | Integration presence message. | [optional] |
 | **DateModified** | **DateTime?** | ISO 8601 timestamp of presence value change. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

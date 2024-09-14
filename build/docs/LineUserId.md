@@ -1,6 +1,5 @@
----
-title: LineUserId
----
+# LineUserId
+
 ## ININ.PureCloudApi.Model.LineUserId
 
 ## Properties
@@ -8,6 +7,7 @@ title: LineUserId
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UserId** | **string** | The unique channel-specific userId for the user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AgentVideoSettings
----
+# AgentVideoSettings
+
 ## ININ.PureCloudApi.Model.AgentVideoSettings
 
 ## Properties
@@ -10,7 +9,8 @@ title: AgentVideoSettings
 | **AllowCamera** | **bool?** | whether or not agent camera is allowed | [optional] |
 | **AllowScreenShare** | **bool?** | whether or not agent screen share is allowed | [optional] |
 | **Background** | **string** | background for agent | [optional] |
-| **BackgroundImage** | [**BackgroundImageSettings**](BackgroundImageSettings.html) | background image settings for agent | [optional] |
-{: class="table table-striped"}
+| **BackgroundImage** | [**BackgroundImageSettings**](BackgroundImageSettings) | background image settings for agent | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

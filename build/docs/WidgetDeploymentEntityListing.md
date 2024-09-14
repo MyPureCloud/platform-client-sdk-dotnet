@@ -1,6 +1,5 @@
----
-title: WidgetDeploymentEntityListing
----
+# WidgetDeploymentEntityListing
+
 ## ININ.PureCloudApi.Model.WidgetDeploymentEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: WidgetDeploymentEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;WidgetDeployment&gt;**](WidgetDeployment.html) |  | [optional] |
+| **Entities** | [**List&lt;WidgetDeployment&gt;**](WidgetDeployment) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

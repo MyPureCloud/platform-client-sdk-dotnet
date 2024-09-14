@@ -1,6 +1,5 @@
----
-title: EmergencyGroupDivisionView
----
+# EmergencyGroupDivisionView
+
 ## ININ.PureCloudApi.Model.EmergencyGroupDivisionView
 
 ## Properties
@@ -9,8 +8,9 @@ title: EmergencyGroupDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The emergency group identifier | [optional] |
 | **Name** | **string** | The emergency group name | |
-| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: QueryRequestFilter
----
+# QueryRequestFilter
+
 ## ININ.PureCloudApi.Model.QueryRequestFilter
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueryRequestFilter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The logic used to combine the clauses | |
-| **Clauses** | [**List&lt;QueryRequestClause&gt;**](QueryRequestClause.html) | The list of clauses used to filter the data | |
-{: class="table table-striped"}
+| **Clauses** | [**List&lt;QueryRequestClause&gt;**](QueryRequestClause) | The list of clauses used to filter the data | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

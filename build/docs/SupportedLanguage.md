@@ -1,6 +1,5 @@
----
-title: SupportedLanguage
----
+# SupportedLanguage
+
 ## ININ.PureCloudApi.Model.SupportedLanguage
 
 ## Properties
@@ -9,6 +8,7 @@ title: SupportedLanguage
 |------------ | ------------- | ------------- | -------------|
 | **Language** | **string** | Architect supported language tag, e.g. en-us, es-us | [optional] |
 | **IsDefault** | **bool?** | Whether or not this language is the default language | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: UploadUrlRequest
----
+# UploadUrlRequest
+
 ## ININ.PureCloudApi.Model.UploadUrlRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: UploadUrlRequest
 | **SignedUrlTimeoutSeconds** | **int?** | The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds | [optional] |
 | **ContentType** | **string** | The content type of the file to upload. Allows all MIME types | [optional] |
 | **ServerSideEncryption** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

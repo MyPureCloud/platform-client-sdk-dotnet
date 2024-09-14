@@ -1,6 +1,5 @@
----
-title: SuggestSearchRequest
----
+# SuggestSearchRequest
+
 ## ININ.PureCloudApi.Model.SuggestSearchRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: SuggestSearchRequest
 |------------ | ------------- | ------------- | -------------|
 | **Expand** | **List&lt;string&gt;** | Provides more details about a specified resource | [optional] |
 | **Types** | **List&lt;string&gt;** | Resource domain type to search | |
-| **Query** | [**List&lt;SuggestSearchCriteria&gt;**](SuggestSearchCriteria.html) | Suggest query | |
-{: class="table table-striped"}
+| **Query** | [**List&lt;SuggestSearchCriteria&gt;**](SuggestSearchCriteria) | Suggest query | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

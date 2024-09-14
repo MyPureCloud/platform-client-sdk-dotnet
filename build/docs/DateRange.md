@@ -1,6 +1,5 @@
----
-title: DateRange
----
+# DateRange
+
 ## ININ.PureCloudApi.Model.DateRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: DateRange
 |------------ | ------------- | ------------- | -------------|
 | **StartDate** | **string** | The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone. | [optional] |
 | **EndDate** | **string** | The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

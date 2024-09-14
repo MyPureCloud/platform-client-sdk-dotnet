@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue
----
+# WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue
 |------------ | ------------- | ------------- | -------------|
 | **IntervalIndex** | **int?** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

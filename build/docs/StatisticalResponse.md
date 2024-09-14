@@ -1,6 +1,5 @@
----
-title: StatisticalResponse
----
+# StatisticalResponse
+
 ## ININ.PureCloudApi.Model.StatisticalResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: StatisticalResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Interval** | **string** |  | [optional] |
-| **Metrics** | [**List&lt;AggregateMetricData&gt;**](AggregateMetricData.html) |  | [optional] |
-| **Views** | [**List&lt;AggregateViewData&gt;**](AggregateViewData.html) |  | [optional] |
-{: class="table table-striped"}
+| **Metrics** | [**List&lt;AggregateMetricData&gt;**](AggregateMetricData) |  | [optional] |
+| **Views** | [**List&lt;AggregateViewData&gt;**](AggregateViewData) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeImportJobSettings
----
+# KnowledgeImportJobSettings
+
 ## ININ.PureCloudApi.Model.KnowledgeImportJobSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: KnowledgeImportJobSettings
 | **Visible** | **bool?** | If specified, import will override the visibility of the imported documents. | [optional] |
 | **CategoryId** | **string** | If specified, import will override the category of the imported documents. | [optional] |
 | **LabelIds** | **List&lt;string&gt;** | If specified, import will add this labels to the imported documents. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

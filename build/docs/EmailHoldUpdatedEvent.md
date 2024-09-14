@@ -1,6 +1,5 @@
----
-title: EmailHoldUpdatedEvent
----
+# EmailHoldUpdatedEvent
+
 ## ININ.PureCloudApi.Model.EmailHoldUpdatedEvent
 
 ## Properties
@@ -12,6 +11,7 @@ title: EmailHoldUpdatedEvent
 | **ConversationId** | **string** | A unique Id (V4 UUID) identifying this conversation | |
 | **CommunicationId** | **string** | A unique Id (V4 UUID) identifying this communication | |
 | **Held** | **bool?** | Indicates whether this communication is held. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

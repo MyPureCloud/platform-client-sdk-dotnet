@@ -1,6 +1,5 @@
----
-title: ConversationCallEventTopicErrorBody
----
+# ConversationCallEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.ConversationCallEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationCallEventTopicErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;ConversationCallEventTopicDetail&gt;**](ConversationCallEventTopicDetail.html) |  | [optional] |
-| **Errors** | [**List&lt;ConversationCallEventTopicErrorBody&gt;**](ConversationCallEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;ConversationCallEventTopicDetail&gt;**](ConversationCallEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;ConversationCallEventTopicErrorBody&gt;**](ConversationCallEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

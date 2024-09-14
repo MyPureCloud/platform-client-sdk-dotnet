@@ -1,6 +1,5 @@
----
-title: HistoricalImportStatus
----
+# HistoricalImportStatus
+
 ## ININ.PureCloudApi.Model.HistoricalImportStatus
 
 ## Properties
@@ -16,6 +15,7 @@ title: HistoricalImportStatus
 | **DateModified** | **DateTime?** | Date in which the historical import is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Active** | **bool?** | Whether this historical import is active or not | [optional] |
 | **Type** | **string** | Whether this historical import is of type csv or json | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

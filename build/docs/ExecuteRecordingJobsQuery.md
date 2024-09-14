@@ -1,6 +1,5 @@
----
-title: ExecuteRecordingJobsQuery
----
+# ExecuteRecordingJobsQuery
+
 ## ININ.PureCloudApi.Model.ExecuteRecordingJobsQuery
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExecuteRecordingJobsQuery
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** | The desired state for the job to be set to. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

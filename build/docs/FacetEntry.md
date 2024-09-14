@@ -1,20 +1,20 @@
----
-title: FacetEntry
----
+# FacetEntry
+
 ## ININ.PureCloudApi.Model.FacetEntry
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Attribute** | [**TermAttribute**](TermAttribute.html) |  | [optional] |
-| **Statistics** | [**FacetStatistics**](FacetStatistics.html) |  | [optional] |
+| **Attribute** | [**TermAttribute**](TermAttribute) |  | [optional] |
+| **Statistics** | [**FacetStatistics**](FacetStatistics) |  | [optional] |
 | **Other** | **long?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **Missing** | **long?** |  | [optional] |
 | **TermCount** | **int?** |  | [optional] |
 | **TermType** | **string** |  | [optional] |
-| **Terms** | [**List&lt;FacetTerm&gt;**](FacetTerm.html) |  | [optional] |
-{: class="table table-striped"}
+| **Terms** | [**List&lt;FacetTerm&gt;**](FacetTerm) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

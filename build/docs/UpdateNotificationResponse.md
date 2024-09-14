@@ -1,6 +1,5 @@
----
-title: UpdateNotificationResponse
----
+# UpdateNotificationResponse
+
 ## ININ.PureCloudApi.Model.UpdateNotificationResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: UpdateNotificationResponse
 |------------ | ------------- | ------------- | -------------|
 | **MutableGroupId** | **string** | The mutableGroupId of the notification | [optional] |
 | **Id** | **string** | The id of the notification for mapping the potentially new mutableGroupId | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

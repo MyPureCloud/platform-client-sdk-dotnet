@@ -1,6 +1,5 @@
----
-title: ActivityCodeReference
----
+# ActivityCodeReference
+
 ## ININ.PureCloudApi.Model.ActivityCodeReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: ActivityCodeReference
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

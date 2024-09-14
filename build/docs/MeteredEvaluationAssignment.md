@@ -1,6 +1,5 @@
----
-title: MeteredEvaluationAssignment
----
+# MeteredEvaluationAssignment
+
 ## ININ.PureCloudApi.Model.MeteredEvaluationAssignment
 
 ## Properties
@@ -8,11 +7,12 @@ title: MeteredEvaluationAssignment
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EvaluationContextId** | **string** |  | [optional] |
-| **Evaluators** | [**List&lt;User&gt;**](User.html) |  | [optional] |
+| **Evaluators** | [**List&lt;User&gt;**](User) |  | [optional] |
 | **MaxNumberEvaluations** | **int?** |  | [optional] |
-| **EvaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
+| **EvaluationForm** | [**EvaluationForm**](EvaluationForm) |  | [optional] |
 | **AssignToActiveUser** | **bool?** |  | [optional] |
-| **TimeInterval** | [**TimeInterval**](TimeInterval.html) |  | [optional] |
-{: class="table table-striped"}
+| **TimeInterval** | [**TimeInterval**](TimeInterval) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

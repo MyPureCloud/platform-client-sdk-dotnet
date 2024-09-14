@@ -1,6 +1,5 @@
----
-title: AnalyticsSessionMetric
----
+# AnalyticsSessionMetric
+
 ## ININ.PureCloudApi.Model.AnalyticsSessionMetric
 
 ## Properties
@@ -10,6 +9,7 @@ title: AnalyticsSessionMetric
 | **EmitDate** | **DateTime?** | Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Name** | **string** | Unique name of this metric | [optional] |
 | **Value** | **long?** | The metric value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

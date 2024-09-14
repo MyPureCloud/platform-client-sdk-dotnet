@@ -1,6 +1,5 @@
----
-title: DnsRecordEntry
----
+# DnsRecordEntry
+
 ## ININ.PureCloudApi.Model.DnsRecordEntry
 
 ## Properties
@@ -10,6 +9,7 @@ title: DnsRecordEntry
 | **Host** | **string** | the hostname of the DNS entry | [optional] |
 | **RecordContents** | **string** | the payload of the DNS entry | [optional] |
 | **VerificationStatus** | **string** | the current status of the related verification process | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

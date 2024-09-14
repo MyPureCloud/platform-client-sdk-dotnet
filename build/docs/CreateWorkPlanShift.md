@@ -1,6 +1,5 @@
----
-title: CreateWorkPlanShift
----
+# CreateWorkPlanShift
+
 ## ININ.PureCloudApi.Model.CreateWorkPlanShift
 
 ## Properties
@@ -8,7 +7,7 @@ title: CreateWorkPlanShift
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Name of the shift | |
-| **Days** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek.html) | Days of the week applicable for this shift | [optional] |
+| **Days** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Days of the week applicable for this shift | [optional] |
 | **FlexibleStartTime** | **bool?** | Whether the start time of the shift is flexible | [optional] |
 | **ExactStartTimeMinutesFromMidnight** | **int?** | Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; false | [optional] |
 | **EarliestStartTimeMinutesFromMidnight** | **int?** | Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true | [optional] |
@@ -28,7 +27,8 @@ title: CreateWorkPlanShift
 | **MaximumContiguousWorkTimeMinutes** | **int?** | Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime &#x3D;&#x3D; true | [optional] |
 | **ConstrainDayOff** | **bool?** | Whether day off rule is enabled | [optional] |
 | **DayOffRule** | **string** | The day off rule for agents to have next day off or previous day off. used if constrainDayOff &#x3D; true | [optional] |
-| **Activities** | [**List&lt;CreateWorkPlanActivity&gt;**](CreateWorkPlanActivity.html) | Activities configured for this shift | [optional] |
-{: class="table table-striped"}
+| **Activities** | [**List&lt;CreateWorkPlanActivity&gt;**](CreateWorkPlanActivity) | Activities configured for this shift | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicUserAgentInfo
----
+# PhoneChangeTopicUserAgentInfo
+
 ## ININ.PureCloudApi.Model.PhoneChangeTopicUserAgentInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: PhoneChangeTopicUserAgentInfo
 | **FirmwareVersion** | **string** |  | [optional] |
 | **Manufacturer** | **string** |  | [optional] |
 | **Model** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

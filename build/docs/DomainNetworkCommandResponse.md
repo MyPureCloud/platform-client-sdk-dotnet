@@ -1,6 +1,5 @@
----
-title: DomainNetworkCommandResponse
----
+# DomainNetworkCommandResponse
+
 ## ININ.PureCloudApi.Model.DomainNetworkCommandResponse
 
 ## Properties
@@ -10,7 +9,8 @@ title: DomainNetworkCommandResponse
 | **CorrelationId** | **string** |  | [optional] |
 | **CommandName** | **string** |  | [optional] |
 | **Acknowledged** | **bool?** |  | [optional] |
-| **ErrorInfo** | [**ErrorDetails**](ErrorDetails.html) |  | [optional] |
-{: class="table table-striped"}
+| **ErrorInfo** | [**ErrorDetails**](ErrorDetails) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

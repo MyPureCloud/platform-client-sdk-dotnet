@@ -1,6 +1,5 @@
----
-title: MessengerHomeScreen
----
+# MessengerHomeScreen
+
 ## ININ.PureCloudApi.Model.MessengerHomeScreen
 
 ## Properties
@@ -9,6 +8,7 @@ title: MessengerHomeScreen
 |------------ | ------------- | ------------- | -------------|
 | **Enabled** | **bool?** | whether or not homescreen is enabled | [optional] |
 | **LogoUrl** | **string** | to capture uploaded company logoUrl | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

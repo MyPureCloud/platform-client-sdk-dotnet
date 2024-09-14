@@ -1,6 +1,5 @@
----
-title: BuAverageSpeedOfAnswer
----
+# BuAverageSpeedOfAnswer
+
 ## ININ.PureCloudApi.Model.BuAverageSpeedOfAnswer
 
 ## Properties
@@ -9,6 +8,7 @@ title: BuAverageSpeedOfAnswer
 |------------ | ------------- | ------------- | -------------|
 | **Include** | **bool?** | Whether to include average speed of answer (ASA) in the associated configuration | |
 | **Seconds** | **int?** | The target average speed of answer (ASA) in seconds. Required if include &#x3D;&#x3D; true | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: AggregateMetricData
----
+# AggregateMetricData
+
 ## ININ.PureCloudApi.Model.AggregateMetricData
 
 ## Properties
@@ -9,7 +8,8 @@ title: AggregateMetricData
 |------------ | ------------- | ------------- | -------------|
 | **Metric** | **string** |  | [optional] |
 | **Qualifier** | **string** |  | [optional] |
-| **Stats** | [**StatisticalSummary**](StatisticalSummary.html) |  | [optional] |
-{: class="table table-striped"}
+| **Stats** | [**StatisticalSummary**](StatisticalSummary) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

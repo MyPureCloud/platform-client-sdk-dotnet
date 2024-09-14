@@ -1,6 +1,5 @@
----
-title: GroupSearchRequest
----
+# GroupSearchRequest
+
 ## ININ.PureCloudApi.Model.GroupSearchRequest
 
 ## Properties
@@ -11,8 +10,9 @@ title: GroupSearchRequest
 | **SortBy** | **string** | The field in the resource that you want to sort the results by | [optional] |
 | **PageSize** | **int?** | The number of results per page | [optional] |
 | **PageNumber** | **int?** | The page of resources you want to retrieve | [optional] |
-| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort.html) | Multi-value sort order, list of multiple sort values | [optional] |
-| **Query** | [**List&lt;GroupSearchCriteria&gt;**](GroupSearchCriteria.html) |  | [optional] |
-{: class="table table-striped"}
+| **Sort** | [**List&lt;SearchSort&gt;**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
+| **Query** | [**List&lt;GroupSearchCriteria&gt;**](GroupSearchCriteria) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

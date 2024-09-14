@@ -1,13 +1,13 @@
----
-title: OutcomePredictorRequest
----
+# OutcomePredictorRequest
+
 ## ININ.PureCloudApi.Model.OutcomePredictorRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Outcome** | [**OutcomeRefRequest**](OutcomeRefRequest.html) | The outcome for which this predictor will provide predictions. | |
-{: class="table table-striped"}
+| **Outcome** | [**OutcomeRefRequest**](OutcomeRefRequest) | The outcome for which this predictor will provide predictions. | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

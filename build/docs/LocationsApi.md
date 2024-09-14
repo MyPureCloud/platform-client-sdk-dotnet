@@ -1,26 +1,25 @@
----
-title: LocationsApi
----
+# LocationsApi
+
 ## PureCloudPlatform.Client.V2.Api.LocationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLocation**](LocationsApi.html#deletelocation) | **Delete** /api/v2/locations/{locationId} | Delete a location |
-| [**GetLocation**](LocationsApi.html#getlocation) | **Get** /api/v2/locations/{locationId} | Get Location by ID. |
-| [**GetLocationSublocations**](LocationsApi.html#getlocationsublocations) | **Get** /api/v2/locations/{locationId}/sublocations | Get sublocations for location ID. |
-| [**GetLocations**](LocationsApi.html#getlocations) | **Get** /api/v2/locations | Get a list of all locations. |
-| [**GetLocationsSearch**](LocationsApi.html#getlocationssearch) | **Get** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
-| [**PatchLocation**](LocationsApi.html#patchlocation) | **Patch** /api/v2/locations/{locationId} | Update a location |
-| [**PostLocations**](LocationsApi.html#postlocations) | **Post** /api/v2/locations | Create a location |
-| [**PostLocationsSearch**](LocationsApi.html#postlocationssearch) | **Post** /api/v2/locations/search | Search locations |
-{: class="table table-striped"}
+| [**DeleteLocation**](#DeleteLocation) | **Delete** /api/v2/locations/{locationId} | Delete a location |
+| [**GetLocation**](#GetLocation) | **Get** /api/v2/locations/{locationId} | Get Location by ID. |
+| [**GetLocationSublocations**](#GetLocationSublocations) | **Get** /api/v2/locations/{locationId}/sublocations | Get sublocations for location ID. |
+| [**GetLocations**](#GetLocations) | **Get** /api/v2/locations | Get a list of all locations. |
+| [**GetLocationsSearch**](#GetLocationsSearch) | **Get** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
+| [**PatchLocation**](#PatchLocation) | **Patch** /api/v2/locations/{locationId} | Update a location |
+| [**PostLocations**](#PostLocations) | **Post** /api/v2/locations | Create a location |
+| [**PostLocationsSearch**](#PostLocationsSearch) | **Post** /api/v2/locations/search | Search locations |
 
-<a name="deletelocation"></a>
 
-## void DeleteLocation (string locationId)
 
+## DeleteLocation
+
+> void DeleteLocation (string locationId)
 
 
 Delete a location
@@ -73,16 +72,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="getlocation"></a>
 
-## [**LocationDefinition**](LocationDefinition.html) GetLocation (string locationId, List<string> expand = null)
+## GetLocation
 
+> [**LocationDefinition**](LocationDefinition) GetLocation (string locationId, List<string> expand = null)
 
 
 Get Location by ID.
@@ -136,17 +134,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: images, addressVerificationDetails |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: images, addressVerificationDetails |
 
 ### Return type
 
-[**LocationDefinition**](LocationDefinition.html)
+[**LocationDefinition**](LocationDefinition)
 
-<a name="getlocationsublocations"></a>
 
-## [**LocationEntityListing**](LocationEntityListing.html) GetLocationSublocations (string locationId)
+## GetLocationSublocations
 
+> [**LocationEntityListing**](LocationEntityListing) GetLocationSublocations (string locationId)
 
 
 Get sublocations for location ID.
@@ -199,16 +196,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LocationEntityListing**](LocationEntityListing.html)
+[**LocationEntityListing**](LocationEntityListing)
 
-<a name="getlocations"></a>
 
-## [**LocationEntityListing**](LocationEntityListing.html) GetLocations (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
+## GetLocations
 
+> [**LocationEntityListing**](LocationEntityListing) GetLocations (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
 
 
 Get a list of all locations.
@@ -265,18 +261,17 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **id** | [**List<string>**](string.html)| id | [optional]  |
+| **id** | [**List<string>**](string)| id | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: asc, desc |
-{: class="table table-striped"}
 
 ### Return type
 
-[**LocationEntityListing**](LocationEntityListing.html)
+[**LocationEntityListing**](LocationEntityListing)
 
-<a name="getlocationssearch"></a>
 
-## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetLocationsSearch (string q64, List<string> expand = null)
+## GetLocationsSearch
 
+> [**LocationsSearchResponse**](LocationsSearchResponse) GetLocationsSearch (string q64, List<string> expand = null)
 
 
 Search locations using the q64 value returned from a previous search
@@ -330,17 +325,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Provides more details about a specified resource | [optional] <br />**Values**: images, addressVerificationDetails |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| Provides more details about a specified resource | [optional] <br />**Values**: images, addressVerificationDetails |
 
 ### Return type
 
-[**LocationsSearchResponse**](LocationsSearchResponse.html)
+[**LocationsSearchResponse**](LocationsSearchResponse)
 
-<a name="patchlocation"></a>
 
-## [**LocationDefinition**](LocationDefinition.html) PatchLocation (string locationId, LocationUpdateDefinition body)
+## PatchLocation
 
+> [**LocationDefinition**](LocationDefinition) PatchLocation (string locationId, LocationUpdateDefinition body)
 
 
 Update a location
@@ -395,17 +389,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-| **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition.html)| Location |  |
-{: class="table table-striped"}
+| **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition)| Location |  |
 
 ### Return type
 
-[**LocationDefinition**](LocationDefinition.html)
+[**LocationDefinition**](LocationDefinition)
 
-<a name="postlocations"></a>
 
-## [**LocationDefinition**](LocationDefinition.html) PostLocations (LocationCreateDefinition body)
+## PostLocations
 
+> [**LocationDefinition**](LocationDefinition) PostLocations (LocationCreateDefinition body)
 
 
 Create a location
@@ -458,17 +451,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LocationCreateDefinition**](LocationCreateDefinition.html)| Location |  |
-{: class="table table-striped"}
+| **body** | [**LocationCreateDefinition**](LocationCreateDefinition)| Location |  |
 
 ### Return type
 
-[**LocationDefinition**](LocationDefinition.html)
+[**LocationDefinition**](LocationDefinition)
 
-<a name="postlocationssearch"></a>
 
-## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostLocationsSearch (LocationSearchRequest body)
+## PostLocationsSearch
 
+> [**LocationsSearchResponse**](LocationsSearchResponse) PostLocationsSearch (LocationSearchRequest body)
 
 
 Search locations
@@ -520,10 +512,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options |  |
-{: class="table table-striped"}
+| **body** | [**LocationSearchRequest**](LocationSearchRequest)| Search request options |  |
 
 ### Return type
 
-[**LocationsSearchResponse**](LocationsSearchResponse.html)
+[**LocationsSearchResponse**](LocationsSearchResponse)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

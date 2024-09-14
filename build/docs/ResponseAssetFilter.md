@@ -1,6 +1,5 @@
----
-title: ResponseAssetFilter
----
+# ResponseAssetFilter
+
 ## ININ.PureCloudApi.Model.ResponseAssetFilter
 
 ## Properties
@@ -13,6 +12,7 @@ title: ResponseAssetFilter
 | **Fields** | **List&lt;string&gt;** | Field name to search against. Allowed Values: divisionId, name, contentLength, contentType, dateCreated | [optional] |
 | **Value** | **string** | A value for the search to match against | [optional] |
 | **Type** | **string** | How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE] | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

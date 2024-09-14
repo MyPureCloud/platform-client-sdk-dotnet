@@ -1,13 +1,13 @@
----
-title: ValueWrapperUserSearchRule
----
+# ValueWrapperUserSearchRule
+
 ## ININ.PureCloudApi.Model.ValueWrapperUserSearchRule
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | [**UserSearchRule**](UserSearchRule.html) | The value for the associated field | [optional] |
-{: class="table table-striped"}
+| **Value** | [**UserSearchRule**](UserSearchRule) | The value for the associated field | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

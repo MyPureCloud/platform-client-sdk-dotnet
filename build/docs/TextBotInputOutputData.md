@@ -1,6 +1,5 @@
----
-title: TextBotInputOutputData
----
+# TextBotInputOutputData
+
 ## ININ.PureCloudApi.Model.TextBotInputOutputData
 
 ## Properties
@@ -8,6 +7,7 @@ title: TextBotInputOutputData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Variables** | **Dictionary&lt;string, Object&gt;** | The input/output variables using the format as appropriate for the variable data type in the flow definition. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

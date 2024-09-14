@@ -1,6 +1,5 @@
----
-title: PlanningGroupOutputs
----
+# PlanningGroupOutputs
+
 ## ININ.PureCloudApi.Model.PlanningGroupOutputs
 
 ## Properties
@@ -12,6 +11,7 @@ title: PlanningGroupOutputs
 | **OccupancyPerInterval** | **List&lt;double?&gt;** | List of Occupancy percentage (0.0-100.0) results per interval | |
 | **AverageSpeedOfAnswerSecondsPerInterval** | **List&lt;double?&gt;** | List of Average Speed of Answer (in seconds) results per interval | |
 | **AbandonRatePerInterval** | **List&lt;double?&gt;** | List of Abandon rate percentage (0.0-100.0) results per interval | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

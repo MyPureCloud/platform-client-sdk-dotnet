@@ -1,6 +1,5 @@
----
-title: WebChatGuestMediaRequest
----
+# WebChatGuestMediaRequest
+
 ## ININ.PureCloudApi.Model.WebChatGuestMediaRequest
 
 ## Properties
@@ -14,6 +13,7 @@ title: WebChatGuestMediaRequest
 | **CommunicationId** | **string** | The ID of the new media communication, if applicable. | [optional] |
 | **SecurityKey** | **string** | The security information related to a media request. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

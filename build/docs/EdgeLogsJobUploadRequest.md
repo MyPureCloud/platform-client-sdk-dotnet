@@ -1,6 +1,5 @@
----
-title: EdgeLogsJobUploadRequest
----
+# EdgeLogsJobUploadRequest
+
 ## ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: EdgeLogsJobUploadRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **FileIds** | **List&lt;string&gt;** | A list of file ids to upload. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

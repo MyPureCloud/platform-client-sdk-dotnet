@@ -1,6 +1,5 @@
----
-title: MessagingUserTransferEvent
----
+# MessagingUserTransferEvent
+
 ## ININ.PureCloudApi.Model.MessagingUserTransferEvent
 
 ## Properties
@@ -16,6 +15,7 @@ title: MessagingUserTransferEvent
 | **TargetCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the &#x60;initiatingCommunicationId&#x60;. | |
 | **ObjectCommunicationId** | **string** | The id (V4 UUID) of the communication that is being transferred. | |
 | **DestinationUserId** | **string** | The id (V4 UUID) of the desired destination user that the object communication should be transferred to. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

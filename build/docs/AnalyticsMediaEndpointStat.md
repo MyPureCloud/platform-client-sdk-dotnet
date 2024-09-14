@@ -1,6 +1,5 @@
----
-title: AnalyticsMediaEndpointStat
----
+# AnalyticsMediaEndpointStat
+
 ## ININ.PureCloudApi.Model.AnalyticsMediaEndpointStat
 
 ## Properties
@@ -18,6 +17,7 @@ title: AnalyticsMediaEndpointStat
 | **OverrunPackets** | **long?** | The total number of packets for which there was no room in the jitter queue when it was received, for all audio streams belonging to this endpoint (also counted in discarded) | [optional] |
 | **ReceivedPackets** | **long?** | The total number of packets received for all audio streams belonging to this endpoint (includes invalid, duplicate, and discarded packets) | [optional] |
 | **UnderrunPackets** | **long?** | The total number of packets received after their timestamp/seqnum has been played out, for all audio streams belonging to this endpoint (also counted in discarded) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

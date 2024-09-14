@@ -1,6 +1,5 @@
----
-title: BuAgentScheduleActivity
----
+# BuAgentScheduleActivity
+
 ## ININ.PureCloudApi.Model.BuAgentScheduleActivity
 
 ## Properties
@@ -17,6 +16,7 @@ title: BuAgentScheduleActivity
 | **TimeOffRequestSyncVersion** | **int?** | The sync version of the partial day time off request for which the scheduled activity is associated, if applicable | [optional] |
 | **ExternalActivityId** | **string** | The ID of the external activity associated with this activity, if applicable | [optional] |
 | **ExternalActivityType** | **string** | The type of the external activity associated with this activity, if applicable | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

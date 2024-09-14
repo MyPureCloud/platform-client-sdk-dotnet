@@ -1,6 +1,5 @@
----
-title: FlowPathsFlowFilter
----
+# FlowPathsFlowFilter
+
 ## ININ.PureCloudApi.Model.FlowPathsFlowFilter
 
 ## Properties
@@ -8,6 +7,7 @@ title: FlowPathsFlowFilter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The identifier of the flow. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

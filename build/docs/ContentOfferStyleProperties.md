@@ -1,6 +1,5 @@
----
-title: ContentOfferStyleProperties
----
+# ContentOfferStyleProperties
+
 ## ININ.PureCloudApi.Model.ContentOfferStyleProperties
 
 ## Properties
@@ -10,6 +9,7 @@ title: ContentOfferStyleProperties
 | **Padding** | **string** | Padding of the offer. (eg. 10px) | [optional] |
 | **Color** | **string** | Text color of the offer. (eg. #FF0000) | [optional] |
 | **BackgroundColor** | **string** | Background color of the offer. (eg. #000000) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

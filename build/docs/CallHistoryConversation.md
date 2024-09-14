@@ -1,6 +1,5 @@
----
-title: CallHistoryConversation
----
+# CallHistoryConversation
+
 ## ININ.PureCloudApi.Model.CallHistoryConversation
 
 ## Properties
@@ -9,7 +8,7 @@ title: CallHistoryConversation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Participants** | [**List&lt;CallHistoryParticipant&gt;**](CallHistoryParticipant.html) | The list of participants involved in the conversation. | [optional] |
+| **Participants** | [**List&lt;CallHistoryParticipant&gt;**](CallHistoryParticipant) | The list of participants involved in the conversation. | [optional] |
 | **Direction** | **string** | The direction of the call relating to the current user | [optional] |
 | **WentToVoicemail** | **bool?** | Did the call end in the current user&#39;s voicemail | [optional] |
 | **MissedCall** | **bool?** | Did the user not answer this conversation | [optional] |
@@ -20,6 +19,7 @@ title: CallHistoryConversation
 | **HadCobrowse** | **bool?** | Did this conversation have a cobrowse session | [optional] |
 | **WasOutboundCampaign** | **bool?** | Was this conversation associated with an outbound campaign | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

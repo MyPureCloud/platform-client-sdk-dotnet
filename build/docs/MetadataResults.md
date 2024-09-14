@@ -1,13 +1,13 @@
----
-title: MetadataResults
----
+# MetadataResults
+
 ## ININ.PureCloudApi.Model.MetadataResults
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;MetadataResultEntity&gt;**](MetadataResultEntity.html) | list of resources | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;MetadataResultEntity&gt;**](MetadataResultEntity) | list of resources | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

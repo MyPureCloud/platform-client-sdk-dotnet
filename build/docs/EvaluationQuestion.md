@@ -1,6 +1,5 @@
----
-title: EvaluationQuestion
----
+# EvaluationQuestion
+
 ## ININ.PureCloudApi.Model.EvaluationQuestion
 
 ## Properties
@@ -13,10 +12,11 @@ title: EvaluationQuestion
 | **Type** | **string** |  | [optional] |
 | **NaEnabled** | **bool?** |  | [optional] |
 | **CommentsRequired** | **bool?** |  | [optional] |
-| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
-| **AnswerOptions** | [**List&lt;AnswerOption&gt;**](AnswerOption.html) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
+| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
+| **AnswerOptions** | [**List&lt;AnswerOption&gt;**](AnswerOption) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
 | **IsKill** | **bool?** |  | [optional] |
 | **IsCritical** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

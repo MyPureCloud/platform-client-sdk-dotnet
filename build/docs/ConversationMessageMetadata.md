@@ -1,6 +1,5 @@
----
-title: ConversationMessageMetadata
----
+# ConversationMessageMetadata
+
 ## ININ.PureCloudApi.Model.ConversationMessageMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: ConversationMessageMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Message type. | [optional] |
-| **Events** | [**List&lt;ConversationMessageMetadataEvent&gt;**](ConversationMessageMetadataEvent.html) | List of events metadata | [optional] |
-| **Content** | [**List&lt;ConversationMessageMetadataContent&gt;**](ConversationMessageMetadataContent.html) | List of message content | [optional] |
-{: class="table table-striped"}
+| **Events** | [**List&lt;ConversationMessageMetadataEvent&gt;**](ConversationMessageMetadataEvent) | List of events metadata | [optional] |
+| **Content** | [**List&lt;ConversationMessageMetadataContent&gt;**](ConversationMessageMetadataContent) | List of message content | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: MediaRegions
----
+# MediaRegions
+
 ## ININ.PureCloudApi.Model.MediaRegions
 
 ## Properties
@@ -10,6 +9,7 @@ title: MediaRegions
 | **AwsHomeRegion** | **string** | The AWS region your organization is in. | [optional] |
 | **AwsCoreRegions** | **List&lt;string&gt;** | The list of AWS regions to which Genesys Cloud is deployed with full functionality including media streaming. | [optional] |
 | **AwsSatelliteRegions** | **List&lt;string&gt;** | The list of AWS regions that Genesys Cloud uses only for media streaming. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

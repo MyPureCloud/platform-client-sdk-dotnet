@@ -1,6 +1,5 @@
----
-title: ConversationEncryptionConfiguration
----
+# ConversationEncryptionConfiguration
+
 ## ININ.PureCloudApi.Model.ConversationEncryptionConfiguration
 
 ## Properties
@@ -10,8 +9,9 @@ title: ConversationEncryptionConfiguration
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Url** | **string** | keyConfigurationType is always KmsSymmetric, and should be the arn to the key alias for the master key | |
 | **KeyConfigurationType** | **string** | Type should be &#39;KmsSymmetric&#39; when create or update Key configurations, &#39;None&#39; to disable configuration. | |
-| **LastError** | [**ErrorBody**](ErrorBody.html) | The error message related to the configuration | [optional] |
+| **LastError** | [**ErrorBody**](ErrorBody) | The error message related to the configuration | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

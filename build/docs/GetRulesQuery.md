@@ -1,6 +1,5 @@
----
-title: GetRulesQuery
----
+# GetRulesQuery
+
 ## ININ.PureCloudApi.Model.GetRulesQuery
 
 ## Properties
@@ -16,6 +15,7 @@ title: GetRulesQuery
 | **SortOrder** | **string** | The order in which response will be sorted.  The accepted choices are Asc and Desc | [optional] |
 | **RuleName** | **string** | The name of the rule being queries. | [optional] |
 | **NameSearchType** | **string** | Specifies how strict the name search needs to be. Expected values are Exact and Contains if querying by name. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

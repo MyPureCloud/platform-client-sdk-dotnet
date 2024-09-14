@@ -1,6 +1,5 @@
----
-title: BuForecastTimeSeriesResult
----
+# BuForecastTimeSeriesResult
+
 ## ININ.PureCloudApi.Model.BuForecastTimeSeriesResult
 
 ## Properties
@@ -10,6 +9,7 @@ title: BuForecastTimeSeriesResult
 | **Metric** | **string** | The metric this result applies to | [optional] |
 | **ForecastingMethod** | **string** | The forecasting method that was used for this metric | [optional] |
 | **ForecastType** | **string** | The forecasting type in this forecast result | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemsChangeWorktypeDelta
----
+# WorkitemsChangeWorktypeDelta
+
 ## ININ.PureCloudApi.Model.WorkitemsChangeWorktypeDelta
 
 ## Properties
@@ -8,8 +7,9 @@ title: WorkitemsChangeWorktypeDelta
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Version** | **int?** | Version | [optional] |
-| **ModifiedBy** | [**UserReference**](UserReference.html) | modifiedBy | [optional] |
-| **Delta** | [**WorktypeDelta**](WorktypeDelta.html) | The changes that originated this version | [optional] |
-{: class="table table-striped"}
+| **ModifiedBy** | [**UserReference**](UserReference) | modifiedBy | [optional] |
+| **Delta** | [**WorktypeDelta**](WorktypeDelta) | The changes that originated this version | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

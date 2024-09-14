@@ -1,6 +1,5 @@
----
-title: Faq
----
+# Faq
+
 ## ININ.PureCloudApi.Model.Faq
 
 ## Properties
@@ -13,6 +12,7 @@ title: Faq
 | **DocumentUrl** | **string** | URL pointing to a web page if document was sourced from a URL. | [optional] |
 | **DocumentDisplayName** | **string** | A human-readable description of the document, e.g. &#39;Sample store FAQ&#39; | [optional] |
 | **Confidence** | **float?** | Value between 0 and 1. 1 corresponds to very confident, 0 to not confident at all | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

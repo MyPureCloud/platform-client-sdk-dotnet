@@ -1,16 +1,16 @@
----
-title: DraftListing
----
+# DraftListing
+
 ## ININ.PureCloudApi.Model.DraftListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Draft&gt;**](Draft.html) |  | [optional] |
+| **Entities** | [**List&lt;Draft&gt;**](Draft) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

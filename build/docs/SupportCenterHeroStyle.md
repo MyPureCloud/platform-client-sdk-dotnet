@@ -1,6 +1,5 @@
----
-title: SupportCenterHeroStyle
----
+# SupportCenterHeroStyle
+
 ## ININ.PureCloudApi.Model.SupportCenterHeroStyle
 
 ## Properties
@@ -9,7 +8,8 @@ title: SupportCenterHeroStyle
 |------------ | ------------- | ------------- | -------------|
 | **BackgroundColor** | **string** | Background color for hero section, in hexadecimal format, eg #ffffff | |
 | **TextColor** | **string** | Text color for hero section, in hexadecimal format, eg #ffffff | |
-| **Image** | [**SupportCenterImage**](SupportCenterImage.html) | Background image for hero section | [optional] |
-{: class="table table-striped"}
+| **Image** | [**SupportCenterImage**](SupportCenterImage) | Background image for hero section | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: GroupUpdate
----
+# GroupUpdate
+
 ## ININ.PureCloudApi.Model.GroupUpdate
 
 ## Properties
@@ -12,13 +11,14 @@ title: GroupUpdate
 | **Description** | **string** |  | [optional] |
 | **State** | **string** | State of the group. | [optional] |
 | **Version** | **int?** | Current version for this resource. | |
-| **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
-| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
+| **Images** | [**List&lt;UserImage&gt;**](UserImage) |  | [optional] |
+| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | [optional] |
 | **Visibility** | **string** | Who can view this group | [optional] |
 | **RolesEnabled** | **bool?** | Allow roles to be assigned to this group | [optional] |
 | **OwnerIds** | **List&lt;string&gt;** | Owners of the group | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

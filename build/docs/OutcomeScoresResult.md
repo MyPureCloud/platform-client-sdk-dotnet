@@ -1,14 +1,14 @@
----
-title: OutcomeScoresResult
----
+# OutcomeScoresResult
+
 ## ININ.PureCloudApi.Model.OutcomeScoresResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **OutcomeScores** | [**List&lt;OutcomeScore&gt;**](OutcomeScore.html) | List of scored outcomes in the session. | [optional] |
+| **OutcomeScores** | [**List&lt;OutcomeScore&gt;**](OutcomeScore) | List of scored outcomes in the session. | [optional] |
 | **ModifiedDate** | **DateTime?** | Timestamp indicating the last time that the event was scored. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: DigitLength
----
+# DigitLength
+
 ## ININ.PureCloudApi.Model.DigitLength
 
 ## Properties
@@ -9,6 +8,7 @@ title: DigitLength
 |------------ | ------------- | ------------- | -------------|
 | **Start** | **string** |  | [optional] |
 | **End** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

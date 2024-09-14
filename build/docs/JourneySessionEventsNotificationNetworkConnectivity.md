@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationNetworkConnectivity
----
+# JourneySessionEventsNotificationNetworkConnectivity
+
 ## ININ.PureCloudApi.Model.JourneySessionEventsNotificationNetworkConnectivity
 
 ## Properties
@@ -11,6 +10,7 @@ title: JourneySessionEventsNotificationNetworkConnectivity
 | **BluetoothEnabled** | **bool?** |  | [optional] |
 | **CellularEnabled** | **bool?** |  | [optional] |
 | **WifiEnabled** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

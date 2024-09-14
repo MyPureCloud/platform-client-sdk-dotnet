@@ -1,6 +1,5 @@
----
-title: NumericRange
----
+# NumericRange
+
 ## ININ.PureCloudApi.Model.NumericRange
 
 ## Properties
@@ -11,6 +10,7 @@ title: NumericRange
 | **Gte** | **double?** | Greater than or equal to | [optional] |
 | **Lt** | **double?** | Less than | [optional] |
 | **Lte** | **double?** | Less than or equal to | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

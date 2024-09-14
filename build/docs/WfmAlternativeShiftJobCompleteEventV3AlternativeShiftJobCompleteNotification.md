@@ -1,6 +1,5 @@
----
-title: WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification
----
+# WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification
+
 ## ININ.PureCloudApi.Model.WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification
 
 ## Properties
@@ -11,7 +10,8 @@ title: WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotificat
 | **Type** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
-| **Error** | [**WfmAlternativeShiftJobCompleteEventV3ErrorBody**](WfmAlternativeShiftJobCompleteEventV3ErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Error** | [**WfmAlternativeShiftJobCompleteEventV3ErrorBody**](WfmAlternativeShiftJobCompleteEventV3ErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

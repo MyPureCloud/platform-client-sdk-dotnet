@@ -1,6 +1,5 @@
----
-title: CoretypeListing
----
+# CoretypeListing
+
 ## ININ.PureCloudApi.Model.CoretypeListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: CoretypeListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;Coretype&gt;**](Coretype.html) |  | [optional] |
+| **Entities** | [**List&lt;Coretype&gt;**](Coretype) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

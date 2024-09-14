@@ -1,6 +1,5 @@
----
-title: WfmAlternativeShiftJobCompleteEventV3ErrorBody
----
+# WfmAlternativeShiftJobCompleteEventV3ErrorBody
+
 ## ININ.PureCloudApi.Model.WfmAlternativeShiftJobCompleteEventV3ErrorBody
 
 ## Properties
@@ -11,6 +10,7 @@ title: WfmAlternativeShiftJobCompleteEventV3ErrorBody
 | **Code** | **string** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

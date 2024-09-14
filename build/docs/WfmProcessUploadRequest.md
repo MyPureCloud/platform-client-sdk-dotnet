@@ -1,6 +1,5 @@
----
-title: WfmProcessUploadRequest
----
+# WfmProcessUploadRequest
+
 ## ININ.PureCloudApi.Model.WfmProcessUploadRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: WfmProcessUploadRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **UploadKey** | **string** | The uploadKey provided by the request to get an upload URL | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

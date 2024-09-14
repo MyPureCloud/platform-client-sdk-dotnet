@@ -1,6 +1,5 @@
----
-title: ActivityPlanAbandonRateImpactOverride
----
+# ActivityPlanAbandonRateImpactOverride
+
 ## ININ.PureCloudApi.Model.ActivityPlanAbandonRateImpactOverride
 
 ## Properties
@@ -8,6 +7,7 @@ title: ActivityPlanAbandonRateImpactOverride
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **IncreaseByPercent** | **double?** | Allowed abandon rate increase percent, from 0.0 to 100.0 | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

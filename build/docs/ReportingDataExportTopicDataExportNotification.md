@@ -1,6 +1,5 @@
----
-title: ReportingDataExportTopicDataExportNotification
----
+# ReportingDataExportTopicDataExportNotification
+
 ## ININ.PureCloudApi.Model.ReportingDataExportTopicDataExportNotification
 
 ## Properties
@@ -24,6 +23,7 @@ title: ReportingDataExportTopicDataExportNotification
 | **ScheduleExpression** | **string** |  | [optional] |
 | **ScheduleStaticLinkUrl** | **string** |  | [optional] |
 | **ExportAllowedToRerun** | **bool?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

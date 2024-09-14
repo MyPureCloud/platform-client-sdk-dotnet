@@ -1,6 +1,5 @@
----
-title: InsightsSummaryOverallPeriodPoints
----
+# InsightsSummaryOverallPeriodPoints
+
 ## ININ.PureCloudApi.Model.InsightsSummaryOverallPeriodPoints
 
 ## Properties
@@ -11,6 +10,7 @@ title: InsightsSummaryOverallPeriodPoints
 | **MaxPoints** | **int?** | Max possible points | [optional] |
 | **DataPointCount** | **int?** | Number of data points | [optional] |
 | **PercentOfGoal** | **double?** | Percentage of the goal | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ArchitectFlowOutcomeNotificationUser
----
+# ArchitectFlowOutcomeNotificationUser
+
 ## ININ.PureCloudApi.Model.ArchitectFlowOutcomeNotificationUser
 
 ## Properties
@@ -9,7 +8,8 @@ title: ArchitectFlowOutcomeNotificationUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of the user. | [optional] |
 | **Name** | **string** | The name of the user, if available. | [optional] |
-| **HomeOrg** | [**ArchitectFlowOutcomeNotificationHomeOrganization**](ArchitectFlowOutcomeNotificationHomeOrganization.html) |  | [optional] |
-{: class="table table-striped"}
+| **HomeOrg** | [**ArchitectFlowOutcomeNotificationHomeOrganization**](ArchitectFlowOutcomeNotificationHomeOrganization) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

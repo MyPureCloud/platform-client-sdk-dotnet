@@ -1,23 +1,22 @@
----
-title: InfrastructureAsCodeApi
----
+# InfrastructureAsCodeApi
+
 ## PureCloudPlatform.Client.V2.Api.InfrastructureAsCodeApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetInfrastructureascodeAccelerator**](InfrastructureAsCodeApi.html#getinfrastructureascodeaccelerator) | **Get** /api/v2/infrastructureascode/accelerators/{acceleratorId} | Get information about an accelerator |
-| [**GetInfrastructureascodeAccelerators**](InfrastructureAsCodeApi.html#getinfrastructureascodeaccelerators) | **Get** /api/v2/infrastructureascode/accelerators | Get a list of available accelerators |
-| [**GetInfrastructureascodeJob**](InfrastructureAsCodeApi.html#getinfrastructureascodejob) | **Get** /api/v2/infrastructureascode/jobs/{jobId} | Get job status and results |
-| [**GetInfrastructureascodeJobs**](InfrastructureAsCodeApi.html#getinfrastructureascodejobs) | **Get** /api/v2/infrastructureascode/jobs | Get job history |
-| [**PostInfrastructureascodeJobs**](InfrastructureAsCodeApi.html#postinfrastructureascodejobs) | **Post** /api/v2/infrastructureascode/jobs | Create a Job |
-{: class="table table-striped"}
+| [**GetInfrastructureascodeAccelerator**](#GetInfrastructureascodeAccelerator) | **Get** /api/v2/infrastructureascode/accelerators/{acceleratorId} | Get information about an accelerator |
+| [**GetInfrastructureascodeAccelerators**](#GetInfrastructureascodeAccelerators) | **Get** /api/v2/infrastructureascode/accelerators | Get a list of available accelerators |
+| [**GetInfrastructureascodeJob**](#GetInfrastructureascodeJob) | **Get** /api/v2/infrastructureascode/jobs/{jobId} | Get job status and results |
+| [**GetInfrastructureascodeJobs**](#GetInfrastructureascodeJobs) | **Get** /api/v2/infrastructureascode/jobs | Get job history |
+| [**PostInfrastructureascodeJobs**](#PostInfrastructureascodeJobs) | **Post** /api/v2/infrastructureascode/jobs | Create a Job |
 
-<a name="getinfrastructureascodeaccelerator"></a>
 
-## [**AcceleratorSpecification**](AcceleratorSpecification.html) GetInfrastructureascodeAccelerator (string acceleratorId, string preferredLanguage = null)
 
+## GetInfrastructureascodeAccelerator
+
+> [**AcceleratorSpecification**](AcceleratorSpecification) GetInfrastructureascodeAccelerator (string acceleratorId, string preferredLanguage = null)
 
 
 Get information about an accelerator
@@ -75,16 +74,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **acceleratorId** | **string**| Accelerator ID |  |
 | **preferredLanguage** | **string**| Preferred Language | [optional] [default to en-US]<br />**Values**: ar, cs, da, de, en-US, es, fi, fr, it, iw, ko, ja, nl, no, pl, pt-BR, pt-PT, sv, th, tr, zh-CN, zh-TW |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AcceleratorSpecification**](AcceleratorSpecification.html)
+[**AcceleratorSpecification**](AcceleratorSpecification)
 
-<a name="getinfrastructureascodeaccelerators"></a>
 
-## [**AcceleratorList**](AcceleratorList.html) GetInfrastructureascodeAccelerators (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
+## GetInfrastructureascodeAccelerators
 
+> [**AcceleratorList**](AcceleratorList) GetInfrastructureascodeAccelerators (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
 
 
 Get a list of available accelerators
@@ -158,16 +156,15 @@ namespace Example
 | **type** | **string**| Filter by type | [optional] <br />**Values**: module, accelerator, blueprint |
 | **classification** | **string**| Filter by classification | [optional]  |
 | **tags** | **string**| Filter by tags | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
-[**AcceleratorList**](AcceleratorList.html)
+[**AcceleratorList**](AcceleratorList)
 
-<a name="getinfrastructureascodejob"></a>
 
-## [**InfrastructureascodeJob**](InfrastructureascodeJob.html) GetInfrastructureascodeJob (string jobId, bool? details = null)
+## GetInfrastructureascodeJob
 
+> [**InfrastructureascodeJob**](InfrastructureascodeJob) GetInfrastructureascodeJob (string jobId, bool? details = null)
 
 
 Get job status and results
@@ -225,16 +222,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| Job ID |  |
 | **details** | **bool?**| Include details of execution, including job results or error information | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
-[**InfrastructureascodeJob**](InfrastructureascodeJob.html)
+[**InfrastructureascodeJob**](InfrastructureascodeJob)
 
-<a name="getinfrastructureascodejobs"></a>
 
-## [**InfrastructureascodeJob**](InfrastructureascodeJob.html) GetInfrastructureascodeJobs (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
+## GetInfrastructureascodeJobs
 
+> [**InfrastructureascodeJob**](InfrastructureascodeJob) GetInfrastructureascodeJobs (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
 
 
 Get job history
@@ -302,16 +298,15 @@ namespace Example
 | **acceleratorId** | **string**| Find only jobs associated with this accelerator | [optional]  |
 | **submittedBy** | **string**| Find only jobs submitted by this user | [optional]  |
 | **status** | **string**| Find only jobs in this state | [optional] <br />**Values**: Created, Queued, Running, Complete, Failed, Incomplete |
-{: class="table table-striped"}
 
 ### Return type
 
-[**InfrastructureascodeJob**](InfrastructureascodeJob.html)
+[**InfrastructureascodeJob**](InfrastructureascodeJob)
 
-<a name="postinfrastructureascodejobs"></a>
 
-## [**InfrastructureascodeJob**](InfrastructureascodeJob.html) PostInfrastructureascodeJobs (AcceleratorInput body)
+## PostInfrastructureascodeJobs
 
+> [**InfrastructureascodeJob**](InfrastructureascodeJob) PostInfrastructureascodeJobs (AcceleratorInput body)
 
 
 Create a Job
@@ -366,10 +361,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AcceleratorInput**](AcceleratorInput.html)|  |  |
-{: class="table table-striped"}
+| **body** | [**AcceleratorInput**](AcceleratorInput)|  |  |
 
 ### Return type
 
-[**InfrastructureascodeJob**](InfrastructureascodeJob.html)
+[**InfrastructureascodeJob**](InfrastructureascodeJob)
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

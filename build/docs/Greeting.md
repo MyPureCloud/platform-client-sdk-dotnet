@@ -1,6 +1,5 @@
----
-title: Greeting
----
+# Greeting
+
 ## ININ.PureCloudApi.Model.Greeting
 
 ## Properties
@@ -11,14 +10,15 @@ title: Greeting
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** | Greeting type | |
 | **OwnerType** | **string** | Greeting owner type | |
-| **Owner** | [**DomainEntity**](DomainEntity.html) | Greeting owner | |
-| **AudioFile** | [**GreetingAudioFile**](GreetingAudioFile.html) |  | [optional] |
+| **Owner** | [**DomainEntity**](DomainEntity) | Greeting owner | |
+| **AudioFile** | [**GreetingAudioFile**](GreetingAudioFile) |  | [optional] |
 | **AudioTTS** | **string** |  | [optional] |
 | **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | **string** |  | [optional] |
 | **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedBy** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

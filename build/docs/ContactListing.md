@@ -1,13 +1,12 @@
----
-title: ContactListing
----
+# ContactListing
+
 ## ININ.PureCloudApi.Model.ContactListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ExternalContact&gt;**](ExternalContact.html) |  | [optional] |
+| **Entities** | [**List&lt;ExternalContact&gt;**](ExternalContact) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -18,6 +17,7 @@ title: ContactListing
 | **LastUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

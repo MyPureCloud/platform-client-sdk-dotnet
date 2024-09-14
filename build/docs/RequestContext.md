@@ -1,13 +1,13 @@
----
-title: RequestContext
----
+# RequestContext
+
 ## ININ.PureCloudApi.Model.RequestContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Patterns** | [**List&lt;RequestContextPattern&gt;**](RequestContextPattern.html) | A list of one or more patterns to match. | [optional] |
-{: class="table table-striped"}
+| **Patterns** | [**List&lt;RequestContextPattern&gt;**](RequestContextPattern) | A list of one or more patterns to match. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

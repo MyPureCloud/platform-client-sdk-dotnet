@@ -1,14 +1,14 @@
----
-title: BotAsyncAggregateQueryResponse
----
+# BotAsyncAggregateQueryResponse
+
 ## ININ.PureCloudApi.Model.BotAsyncAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Results** | [**List&lt;BotAggregateDataContainer&gt;**](BotAggregateDataContainer.html) |  | [optional] |
+| **Results** | [**List&lt;BotAggregateDataContainer&gt;**](BotAggregateDataContainer) |  | [optional] |
 | **Cursor** | **string** | Cursor token to retrieve next page | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

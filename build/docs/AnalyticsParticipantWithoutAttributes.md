@@ -1,6 +1,5 @@
----
-title: AnalyticsParticipantWithoutAttributes
----
+# AnalyticsParticipantWithoutAttributes
+
 ## ININ.PureCloudApi.Model.AnalyticsParticipantWithoutAttributes
 
 ## Properties
@@ -16,7 +15,8 @@ title: AnalyticsParticipantWithoutAttributes
 | **ScreenRecording** | **bool?** | Flag determining if a screen recording was started or not | [optional] |
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
-| **Sessions** | [**List&lt;AnalyticsSession&gt;**](AnalyticsSession.html) | List of sessions associated to this participant | [optional] |
-{: class="table table-striped"}
+| **Sessions** | [**List&lt;AnalyticsSession&gt;**](AnalyticsSession) | List of sessions associated to this participant | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

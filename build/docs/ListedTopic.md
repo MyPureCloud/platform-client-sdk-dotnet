@@ -1,6 +1,5 @@
----
-title: ListedTopic
----
+# ListedTopic
+
 ## ININ.PureCloudApi.Model.ListedTopic
 
 ## Properties
@@ -17,9 +16,10 @@ title: ListedTopic
 | **Dialect** | **string** |  | [optional] |
 | **Participants** | **string** |  | [optional] |
 | **PhrasesCount** | **int?** |  | [optional] |
-| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **ModifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

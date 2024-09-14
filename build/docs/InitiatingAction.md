@@ -1,6 +1,5 @@
----
-title: InitiatingAction
----
+# InitiatingAction
+
 ## ININ.PureCloudApi.Model.InitiatingAction
 
 ## Properties
@@ -9,6 +8,7 @@ title: InitiatingAction
 |------------ | ------------- | ------------- | -------------|
 | **TransactionId** | **string** | Id of the audit initiating the transaction | [optional] |
 | **ActionContext** | **string** | Action of the audit initiating the transaction | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

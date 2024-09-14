@@ -1,6 +1,5 @@
----
-title: ProvisionInfo
----
+# ProvisionInfo
+
 ## ININ.PureCloudApi.Model.ProvisionInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: ProvisionInfo
 | **Time** | **DateTime?** | The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Source** | **string** | The source of the provisioning | [optional] |
 | **ErrorInfo** | **string** | The error information from the provision process, if any | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

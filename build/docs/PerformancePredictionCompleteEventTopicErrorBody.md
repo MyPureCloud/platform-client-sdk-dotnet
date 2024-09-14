@@ -1,6 +1,5 @@
----
-title: PerformancePredictionCompleteEventTopicErrorBody
----
+# PerformancePredictionCompleteEventTopicErrorBody
+
 ## ININ.PureCloudApi.Model.PerformancePredictionCompleteEventTopicErrorBody
 
 ## Properties
@@ -11,6 +10,7 @@ title: PerformancePredictionCompleteEventTopicErrorBody
 | **Code** | **string** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

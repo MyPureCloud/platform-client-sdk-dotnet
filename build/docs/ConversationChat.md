@@ -1,6 +1,5 @@
----
-title: ConversationChat
----
+# ConversationChat
+
 ## ININ.PureCloudApi.Model.ConversationChat
 
 ## Properties
@@ -12,7 +11,7 @@ title: ConversationChat
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **RoomId** | **string** | The room id for the chat. | [optional] |
 | **RecordingId** | **string** | A globally unique identifier for the recording associated with this chat. | [optional] |
-| **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s chat, divided into activity segments. | [optional] |
+| **Segments** | [**List&lt;Segment&gt;**](Segment) | The time line of the participant&#39;s chat, divided into activity segments. | [optional] |
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **Direction** | **string** | The direction of the chat | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
@@ -24,11 +23,12 @@ title: ConversationChat
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **AvatarImageUrl** | **string** | If available, the URI to the avatar image of this communication. | [optional] |
-| **JourneyContext** | [**JourneyContext**](JourneyContext.html) | A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). | [optional] |
-| **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
-| **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
+| **JourneyContext** | [**JourneyContext**](JourneyContext) | A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). | [optional] |
+| **Wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
+| **AfterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings.html) | Represents the queue settings for this media type. | [optional] |
-{: class="table table-striped"}
+| **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings) | Represents the queue settings for this media type. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

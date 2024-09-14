@@ -1,6 +1,5 @@
----
-title: ErrorBody
----
+# ErrorBody
+
 ## ININ.PureCloudApi.Model.ErrorBody
 
 ## Properties
@@ -15,9 +14,10 @@ title: ErrorBody
 | **MessageWithParams** | **string** |  | [optional] |
 | **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
-| **Details** | [**List&lt;Detail&gt;**](Detail.html) |  | [optional] |
-| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody.html) |  | [optional] |
-| **Limit** | [**Limit**](Limit.html) |  | [optional] |
-{: class="table table-striped"}
+| **Details** | [**List&lt;Detail&gt;**](Detail) |  | [optional] |
+| **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody) |  | [optional] |
+| **Limit** | [**Limit**](Limit) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

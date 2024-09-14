@@ -1,6 +1,5 @@
----
-title: CopyWorkPlan
----
+# CopyWorkPlan
+
 ## ININ.PureCloudApi.Model.CopyWorkPlan
 
 ## Properties
@@ -8,6 +7,7 @@ title: CopyWorkPlan
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Name of the copied work plan | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

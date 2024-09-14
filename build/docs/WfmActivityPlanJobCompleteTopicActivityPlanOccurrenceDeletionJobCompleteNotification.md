@@ -1,6 +1,5 @@
----
-title: WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification
----
+# WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification
+
 ## ININ.PureCloudApi.Model.WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification
 
 ## Properties
@@ -9,11 +8,12 @@ title: WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteN
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **ActivityPlan** | [**WfmActivityPlanJobCompleteTopicActivityPlanReference**](WfmActivityPlanJobCompleteTopicActivityPlanReference.html) |  | [optional] |
+| **ActivityPlan** | [**WfmActivityPlanJobCompleteTopicActivityPlanReference**](WfmActivityPlanJobCompleteTopicActivityPlanReference) |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **Exceptions** | [**List&lt;WfmActivityPlanJobCompleteTopicActivityPlanJobException&gt;**](WfmActivityPlanJobCompleteTopicActivityPlanJobException.html) |  | [optional] |
-| **Error** | [**WfmActivityPlanJobCompleteTopicErrorBody**](WfmActivityPlanJobCompleteTopicErrorBody.html) |  | [optional] |
-| **Occurrence** | [**WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference**](WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **Exceptions** | [**List&lt;WfmActivityPlanJobCompleteTopicActivityPlanJobException&gt;**](WfmActivityPlanJobCompleteTopicActivityPlanJobException) |  | [optional] |
+| **Error** | [**WfmActivityPlanJobCompleteTopicErrorBody**](WfmActivityPlanJobCompleteTopicErrorBody) |  | [optional] |
+| **Occurrence** | [**WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference**](WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

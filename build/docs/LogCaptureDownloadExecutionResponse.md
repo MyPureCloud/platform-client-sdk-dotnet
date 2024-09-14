@@ -1,6 +1,5 @@
----
-title: LogCaptureDownloadExecutionResponse
----
+# LogCaptureDownloadExecutionResponse
+
 ## ININ.PureCloudApi.Model.LogCaptureDownloadExecutionResponse
 
 ## Properties
@@ -12,7 +11,8 @@ title: LogCaptureDownloadExecutionResponse
 | **DateStart** | **DateTime?** | Start date of file download execution. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **FileUrl** | **string** | Url of a file with query result. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-| **User** | [**AddressableEntityRef**](AddressableEntityRef.html) | Details of the user that created the job | |
-{: class="table table-striped"}
+| **User** | [**AddressableEntityRef**](AddressableEntityRef) | Details of the user that created the job | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

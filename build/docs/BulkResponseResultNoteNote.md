@@ -1,6 +1,5 @@
----
-title: BulkResponseResultNoteNote
----
+# BulkResponseResultNoteNote
+
 ## ININ.PureCloudApi.Model.BulkResponseResultNoteNote
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultNoteNote
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Success** | **bool?** |  | [optional] |
-| **Entity** | [**Note**](Note.html) |  | [optional] |
-| **Error** | [**BulkErrorNote**](BulkErrorNote.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**Note**](Note) |  | [optional] |
+| **Error** | [**BulkErrorNote**](BulkErrorNote) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

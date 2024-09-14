@@ -1,6 +1,5 @@
----
-title: TagValue
----
+# TagValue
+
 ## ININ.PureCloudApi.Model.TagValue
 
 ## Properties
@@ -12,6 +11,7 @@ title: TagValue
 | **InUse** | **bool?** |  | [optional] |
 | **Acl** | **List&lt;string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

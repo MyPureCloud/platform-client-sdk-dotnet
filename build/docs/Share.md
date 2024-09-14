@@ -1,6 +1,5 @@
----
-title: Share
----
+# Share
+
 ## ININ.PureCloudApi.Model.Share
 
 ## Properties
@@ -10,14 +9,15 @@ title: Share
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **SharedEntityType** | **string** |  | [optional] |
-| **SharedEntity** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **SharedEntity** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **MemberType** | **string** |  | [optional] |
-| **Member** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **SharedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **Workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **User** | [**User**](User.html) |  | [optional] |
-| **Group** | [**Group**](Group.html) |  | [optional] |
+| **Member** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **SharedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **Workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **User** | [**User**](User) |  | [optional] |
+| **Group** | [**Group**](Group) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification
----
+# ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification
+
 ## ININ.PureCloudApi.Model.ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification
 
 ## Properties
@@ -8,9 +7,10 @@ title: ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotifi
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** | The organization&#39;s new dependency tracking build status | [optional] |
-| **User** | [**ArchitectDependencyTrackingBuildNotificationUser**](ArchitectDependencyTrackingBuildNotificationUser.html) |  | [optional] |
-| **Client** | [**ArchitectDependencyTrackingBuildNotificationClient**](ArchitectDependencyTrackingBuildNotificationClient.html) |  | [optional] |
+| **User** | [**ArchitectDependencyTrackingBuildNotificationUser**](ArchitectDependencyTrackingBuildNotificationUser) |  | [optional] |
+| **Client** | [**ArchitectDependencyTrackingBuildNotificationClient**](ArchitectDependencyTrackingBuildNotificationClient) |  | [optional] |
 | **StartTime** | **DateTime?** | The time the last build started, in ISO 8601 format | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

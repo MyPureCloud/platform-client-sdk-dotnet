@@ -1,6 +1,5 @@
----
-title: BotMessengerProfile
----
+# BotMessengerProfile
+
 ## ININ.PureCloudApi.Model.BotMessengerProfile
 
 ## Properties
@@ -9,6 +8,7 @@ title: BotMessengerProfile
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | Name of the Bot | [optional] |
 | **AvatarUrl** | **string** | Avatar for Bot | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

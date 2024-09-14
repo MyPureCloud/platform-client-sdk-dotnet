@@ -1,6 +1,5 @@
----
-title: DialogflowIntent
----
+# DialogflowIntent
+
 ## ININ.PureCloudApi.Model.DialogflowIntent
 
 ## Properties
@@ -8,7 +7,8 @@ title: DialogflowIntent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The intent name | |
-| **Parameters** | [**Dictionary&lt;string, DialogflowParameter&gt;**](DialogflowParameter.html) | An object mapping parameter names to Parameter objects | |
-{: class="table table-striped"}
+| **Parameters** | [**Dictionary&lt;string, DialogflowParameter&gt;**](DialogflowParameter) | An object mapping parameter names to Parameter objects | |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,13 +1,12 @@
----
-title: GreetingListing
----
+# GreetingListing
+
 ## ININ.PureCloudApi.Model.GreetingListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;Greeting&gt;**](Greeting.html) |  | [optional] |
+| **Entities** | [**List&lt;Greeting&gt;**](Greeting) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: GreetingListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

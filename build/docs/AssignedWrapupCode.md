@@ -1,6 +1,5 @@
----
-title: AssignedWrapupCode
----
+# AssignedWrapupCode
+
 ## ININ.PureCloudApi.Model.AssignedWrapupCode
 
 ## Properties
@@ -12,6 +11,7 @@ title: AssignedWrapupCode
 | **Tags** | **List&lt;string&gt;** | List of tags selected by the agent to describe the call or disposition. | [optional] |
 | **DurationSeconds** | **int?** | The duration in seconds of the wrap-up segment. | [optional] |
 | **EndTime** | **DateTime?** | The timestamp when the wrap-up segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,16 +1,16 @@
----
-title: LogCaptureQueryResponse
----
+# LogCaptureQueryResponse
+
 ## ININ.PureCloudApi.Model.LogCaptureQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;LogEntry&gt;**](LogEntry.html) |  | [optional] |
+| **Entities** | [**List&lt;LogEntry&gt;**](LogEntry) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

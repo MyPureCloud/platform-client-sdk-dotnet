@@ -1,6 +1,5 @@
----
-title: WebMessagingEvent
----
+# WebMessagingEvent
+
 ## ININ.PureCloudApi.Model.WebMessagingEvent
 
 ## Properties
@@ -8,8 +7,9 @@ title: WebMessagingEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EventType** | **string** | Type of this event element | |
-| **CoBrowse** | [**WebMessagingEventCoBrowse**](WebMessagingEventCoBrowse.html) | Cobrowse event. | [optional] |
-| **Presence** | [**WebMessagingEventPresence**](WebMessagingEventPresence.html) | Presence event. | [optional] |
-{: class="table table-striped"}
+| **CoBrowse** | [**WebMessagingEventCoBrowse**](WebMessagingEventCoBrowse) | Cobrowse event. | [optional] |
+| **Presence** | [**WebMessagingEventPresence**](WebMessagingEventPresence) | Presence event. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

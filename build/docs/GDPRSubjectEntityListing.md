@@ -1,13 +1,12 @@
----
-title: GDPRSubjectEntityListing
----
+# GDPRSubjectEntityListing
+
 ## ININ.PureCloudApi.Model.GDPRSubjectEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;GDPRSubject&gt;**](GDPRSubject.html) |  | [optional] |
+| **Entities** | [**List&lt;GDPRSubject&gt;**](GDPRSubject) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -17,6 +16,7 @@ title: GDPRSubjectEntityListing
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicBuShortTermForecastReference
----
+# WfmBuScheduleTopicBuShortTermForecastReference
+
 ## ININ.PureCloudApi.Model.WfmBuScheduleTopicBuShortTermForecastReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmBuScheduleTopicBuShortTermForecastReference
 | **Id** | **string** |  | [optional] |
 | **WeekDate** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

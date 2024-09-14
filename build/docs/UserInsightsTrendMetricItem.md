@@ -1,14 +1,14 @@
----
-title: UserInsightsTrendMetricItem
----
+# UserInsightsTrendMetricItem
+
 ## ININ.PureCloudApi.Model.UserInsightsTrendMetricItem
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Metric** | [**AddressableEntityRef**](AddressableEntityRef.html) | The gamification metric for the trend | [optional] |
-| **Trends** | [**UserInsightsTrends**](UserInsightsTrends.html) | Trends for the metric | [optional] |
-{: class="table table-striped"}
+| **Metric** | [**AddressableEntityRef**](AddressableEntityRef) | The gamification metric for the trend | [optional] |
+| **Trends** | [**UserInsightsTrends**](UserInsightsTrends) | Trends for the metric | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

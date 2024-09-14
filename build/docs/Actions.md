@@ -1,13 +1,13 @@
----
-title: Actions
----
+# Actions
+
 ## ININ.PureCloudApi.Model.Actions
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **SkillsToRemove** | [**List&lt;SkillsToRemove&gt;**](SkillsToRemove.html) |  | [optional] |
-{: class="table table-striped"}
+| **SkillsToRemove** | [**List&lt;SkillsToRemove&gt;**](SkillsToRemove) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

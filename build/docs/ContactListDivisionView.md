@@ -1,6 +1,5 @@
----
-title: ContactListDivisionView
----
+# ContactListDivisionView
+
 ## ININ.PureCloudApi.Model.ContactListDivisionView
 
 ## Properties
@@ -9,13 +8,14 @@ title: ContactListDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **ColumnNames** | **List&lt;string&gt;** | The names of the contact data columns. | |
-| **PhoneColumns** | [**List&lt;ContactPhoneNumberColumn&gt;**](ContactPhoneNumberColumn.html) | Indicates which columns are phone numbers. | [optional] |
-| **EmailColumns** | [**List&lt;EmailColumn&gt;**](EmailColumn.html) | Indicates which columns are email addresses. | [optional] |
-| **ImportStatus** | [**ImportStatus**](ImportStatus.html) | The status of the import process. | [optional] |
+| **PhoneColumns** | [**List&lt;ContactPhoneNumberColumn&gt;**](ContactPhoneNumberColumn) | Indicates which columns are phone numbers. | [optional] |
+| **EmailColumns** | [**List&lt;EmailColumn&gt;**](EmailColumn) | Indicates which columns are email addresses. | [optional] |
+| **ImportStatus** | [**ImportStatus**](ImportStatus) | The status of the import process. | [optional] |
 | **Size** | **long?** | The number of contacts in the ContactList. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

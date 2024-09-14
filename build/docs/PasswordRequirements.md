@@ -1,6 +1,5 @@
----
-title: PasswordRequirements
----
+# PasswordRequirements
+
 ## ININ.PureCloudApi.Model.PasswordRequirements
 
 ## Properties
@@ -15,6 +14,7 @@ title: PasswordRequirements
 | **MinimumSpecials** | **int?** |  | [optional] |
 | **MinimumAgeSeconds** | **int?** |  | [optional] |
 | **ExpirationDays** | **int?** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

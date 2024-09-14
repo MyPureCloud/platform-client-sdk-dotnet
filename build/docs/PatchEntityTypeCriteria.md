@@ -1,6 +1,5 @@
----
-title: PatchEntityTypeCriteria
----
+# PatchEntityTypeCriteria
+
 ## ININ.PureCloudApi.Model.PatchEntityTypeCriteria
 
 ## Properties
@@ -12,6 +11,7 @@ title: PatchEntityTypeCriteria
 | **ShouldIgnoreCase** | **bool?** | Should criteria be case insensitive. | [optional] |
 | **Operator** | **string** | The comparison operator. | [optional] |
 | **EntityType** | **string** | The entity to match the pattern against. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

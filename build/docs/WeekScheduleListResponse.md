@@ -1,13 +1,13 @@
----
-title: WeekScheduleListResponse
----
+# WeekScheduleListResponse
+
 ## ININ.PureCloudApi.Model.WeekScheduleListResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;WeekScheduleListItemResponse&gt;**](WeekScheduleListItemResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;WeekScheduleListItemResponse&gt;**](WeekScheduleListItemResponse) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

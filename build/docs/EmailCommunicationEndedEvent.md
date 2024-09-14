@@ -1,6 +1,5 @@
----
-title: EmailCommunicationEndedEvent
----
+# EmailCommunicationEndedEvent
+
 ## ININ.PureCloudApi.Model.EmailCommunicationEndedEvent
 
 ## Properties
@@ -12,6 +11,7 @@ title: EmailCommunicationEndedEvent
 | **ConversationId** | **string** | A unique Id (V4 UUID) identifying this conversation | |
 | **CommunicationId** | **string** | A unique Id (V4 UUID) identifying this communication. | |
 | **DisconnectType** | **string** | Indicates how this communication was ended. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: IntentFeedback
----
+# IntentFeedback
+
 ## ININ.PureCloudApi.Model.IntentFeedback
 
 ## Properties
@@ -9,8 +8,9 @@ title: IntentFeedback
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the detected intent. | [optional] |
 | **Probability** | **double?** | The probability of the detected intent. | [optional] |
-| **Entities** | [**List&lt;DetectedNamedEntity&gt;**](DetectedNamedEntity.html) | The collection of named entities detected. | [optional] |
+| **Entities** | [**List&lt;DetectedNamedEntity&gt;**](DetectedNamedEntity) | The collection of named entities detected. | [optional] |
 | **Assessment** | **string** | The assessment on the detection for feedback text. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

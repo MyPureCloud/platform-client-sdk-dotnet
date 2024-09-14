@@ -1,6 +1,5 @@
----
-title: WhatsAppAvailablePhoneNumberDetails
----
+# WhatsAppAvailablePhoneNumberDetails
+
 ## ININ.PureCloudApi.Model.WhatsAppAvailablePhoneNumberDetails
 
 ## Properties
@@ -10,6 +9,7 @@ title: WhatsAppAvailablePhoneNumberDetails
 | **Name** | **string** | The verified name associated with this phone number. | |
 | **PhoneNumber** | **string** | The display name associated with this phone number. It&#39;s typically the E.164 representation of the number. | [optional] |
 | **Status** | **string** | The status of this phone number. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

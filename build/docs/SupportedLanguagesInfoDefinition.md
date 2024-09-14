@@ -1,6 +1,5 @@
----
-title: SupportedLanguagesInfoDefinition
----
+# SupportedLanguagesInfoDefinition
+
 ## ININ.PureCloudApi.Model.SupportedLanguagesInfoDefinition
 
 ## Properties
@@ -11,7 +10,8 @@ title: SupportedLanguagesInfoDefinition
 | **IntentClassification** | **bool?** | The boolean status of if intent classification is supported in this language | [optional] |
 | **Status** | **string** | The language release status | [optional] |
 | **SupportedEntityTypes** | **List&lt;string&gt;** | The supported entity types for this language | [optional] |
-| **SupportedEntityTypeConfiguration** | [**SupportedEntityTypeStatus**](SupportedEntityTypeStatus.html) | The configuration for the supported entity types | [optional] |
-{: class="table table-striped"}
+| **SupportedEntityTypeConfiguration** | [**SupportedEntityTypeStatus**](SupportedEntityTypeStatus) | The configuration for the supported entity types | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

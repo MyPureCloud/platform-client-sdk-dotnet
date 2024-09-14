@@ -1,6 +1,5 @@
----
-title: ConversationAssociation
----
+# ConversationAssociation
+
 ## ININ.PureCloudApi.Model.ConversationAssociation
 
 ## Properties
@@ -11,6 +10,7 @@ title: ConversationAssociation
 | **ConversationId** | **string** | Conversation ID | |
 | **CommunicationId** | **string** | Communication ID | |
 | **MediaType** | **string** | Media type | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

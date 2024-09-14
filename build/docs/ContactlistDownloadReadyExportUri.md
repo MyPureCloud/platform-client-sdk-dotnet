@@ -1,6 +1,5 @@
----
-title: ContactlistDownloadReadyExportUri
----
+# ContactlistDownloadReadyExportUri
+
 ## ININ.PureCloudApi.Model.ContactlistDownloadReadyExportUri
 
 ## Properties
@@ -10,6 +9,7 @@ title: ContactlistDownloadReadyExportUri
 | **Uri** | **string** |  | [optional] |
 | **ExportTimestamp** | **string** |  | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

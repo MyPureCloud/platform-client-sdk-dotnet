@@ -1,6 +1,5 @@
----
-title: UnreadStatus
----
+# UnreadStatus
+
 ## ININ.PureCloudApi.Model.UnreadStatus
 
 ## Properties
@@ -8,6 +7,7 @@ title: UnreadStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Unread** | **bool?** | Sets if the alert is read or unread. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

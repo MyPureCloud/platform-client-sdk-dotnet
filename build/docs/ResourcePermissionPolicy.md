@@ -1,6 +1,5 @@
----
-title: ResourcePermissionPolicy
----
+# ResourcePermissionPolicy
+
 ## ININ.PureCloudApi.Model.ResourcePermissionPolicy
 
 ## Properties
@@ -14,10 +13,11 @@ title: ResourcePermissionPolicy
 | **PolicyDescription** | **string** |  | [optional] |
 | **ActionSetKey** | **string** |  | [optional] |
 | **AllowConditions** | **bool?** |  | [optional] |
-| **ResourceConditionNode** | [**ResourceConditionNode**](ResourceConditionNode.html) |  | [optional] |
+| **ResourceConditionNode** | [**ResourceConditionNode**](ResourceConditionNode) |  | [optional] |
 | **NamedResources** | **List&lt;string&gt;** |  | [optional] |
 | **ResourceCondition** | **string** |  | [optional] |
 | **ActionSet** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

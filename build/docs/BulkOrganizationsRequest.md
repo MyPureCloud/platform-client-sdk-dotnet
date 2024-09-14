@@ -1,13 +1,13 @@
----
-title: BulkOrganizationsRequest
----
+# BulkOrganizationsRequest
+
 ## ININ.PureCloudApi.Model.BulkOrganizationsRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ExternalOrganization&gt;**](ExternalOrganization.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entities** | [**List&lt;ExternalOrganization&gt;**](ExternalOrganization) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
----
+# WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
+
 ## ININ.PureCloudApi.Model.WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
 
 ## Properties
@@ -13,13 +12,14 @@ title: WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
 | **Metric** | **string** |  | [optional] |
 | **LegacyMetric** | **string** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
-| **Values** | [**List&lt;WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue.html) |  | [optional] |
-| **SecondaryValues** | [**List&lt;WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue.html) |  | [optional] |
+| **Values** | [**List&lt;WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue) |  | [optional] |
+| **SecondaryValues** | [**List&lt;WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue&gt;**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue) |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
 | **Granularity** | **string** |  | [optional] |
 | **SecondaryGranularity** | **string** |  | [optional] |
 | **DisplayGranularity** | **string** |  | [optional] |
 | **PlanningGroupIds** | **List&lt;string&gt;** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

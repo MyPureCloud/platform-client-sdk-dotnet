@@ -1,6 +1,5 @@
----
-title: RoutingActivityMetricValue
----
+# RoutingActivityMetricValue
+
 ## ININ.PureCloudApi.Model.RoutingActivityMetricValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: RoutingActivityMetricValue
 |------------ | ------------- | ------------- | -------------|
 | **Metric** | **string** | metric | [optional] |
 | **Count** | **int?** | metric count | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

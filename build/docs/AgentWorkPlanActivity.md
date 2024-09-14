@@ -1,6 +1,5 @@
----
-title: AgentWorkPlanActivity
----
+# AgentWorkPlanActivity
+
 ## ININ.PureCloudApi.Model.AgentWorkPlanActivity
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentWorkPlanActivity
 |------------ | ------------- | ------------- | -------------|
 | **LengthMinutes** | **int?** | Length of the activity in minutes | |
 | **CountsAsPaidTime** | **bool?** | Whether the activity is paid | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

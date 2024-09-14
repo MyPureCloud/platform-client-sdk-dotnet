@@ -1,6 +1,5 @@
----
-title: WebMessagingEventPresence
----
+# WebMessagingEventPresence
+
 ## ININ.PureCloudApi.Model.WebMessagingEventPresence
 
 ## Properties
@@ -8,6 +7,7 @@ title: WebMessagingEventPresence
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Describes the type of Presence event. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

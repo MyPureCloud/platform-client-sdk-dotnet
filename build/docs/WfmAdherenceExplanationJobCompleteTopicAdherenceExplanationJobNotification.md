@@ -1,6 +1,5 @@
----
-title: WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification
----
+# WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification
+
 ## ININ.PureCloudApi.Model.WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification
 
 ## Properties
@@ -10,9 +9,10 @@ title: WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotificatio
 | **Id** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **AdherenceExplanation** | [**WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification**](WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.html) |  | [optional] |
+| **AdherenceExplanation** | [**WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification**](WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification) |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
-| **Error** | [**WfmAdherenceExplanationJobCompleteTopicErrorBody**](WfmAdherenceExplanationJobCompleteTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **Error** | [**WfmAdherenceExplanationJobCompleteTopicErrorBody**](WfmAdherenceExplanationJobCompleteTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

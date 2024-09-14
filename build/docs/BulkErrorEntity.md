@@ -1,6 +1,5 @@
----
-title: BulkErrorEntity
----
+# BulkErrorEntity
+
 ## ININ.PureCloudApi.Model.BulkErrorEntity
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorEntity
 | **Message** | **string** |  | [optional] |
 | **Status** | **int?** |  | [optional] |
 | **Retryable** | **bool?** |  | [optional] |
-| **Entity** | [**Entity**](Entity.html) |  | [optional] |
-| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **Entity** | [**Entity**](Entity) |  | [optional] |
+| **Details** | [**List&lt;BulkErrorDetail&gt;**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_

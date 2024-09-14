@@ -1,6 +1,5 @@
----
-title: NotificationTemplateHeader
----
+# NotificationTemplateHeader
+
 ## ININ.PureCloudApi.Model.NotificationTemplateHeader
 
 ## Properties
@@ -9,8 +8,9 @@ title: NotificationTemplateHeader
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Template header type. | |
 | **Text** | **string** | Header text. For WhatsApp, ignored. | [optional] |
-| **Media** | [**ContentAttachment**](ContentAttachment.html) | Media template header image. | [optional] |
-| **Parameters** | [**List&lt;NotificationTemplateParameter&gt;**](NotificationTemplateParameter.html) | Template parameters for placeholders in template. | [optional] |
-{: class="table table-striped"}
+| **Media** | [**ContentAttachment**](ContentAttachment) | Media template header image. | [optional] |
+| **Parameters** | [**List&lt;NotificationTemplateParameter&gt;**](NotificationTemplateParameter) | Template parameters for placeholders in template. | [optional] |
 
 
+
+_PureCloudPlatform.Client.V2 215.1.0_
