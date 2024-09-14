@@ -37,6 +37,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsCredential**](#GetIntegrationsCredential) | **Get** /api/v2/integrations/credentials/{credentialId} | Get a single credential with sensitive fields redacted |
 | [**GetIntegrationsCredentials**](#GetIntegrationsCredentials) | **Get** /api/v2/integrations/credentials | List multiple sets of credentials |
 | [**GetIntegrationsCredentialsTypes**](#GetIntegrationsCredentialsTypes) | **Get** /api/v2/integrations/credentials/types | List all credential types |
+| [**GetIntegrationsSpeechAudioconnector**](#GetIntegrationsSpeechAudioconnector) | **Get** /api/v2/integrations/speech/audioconnector | Get a list of Audio Connector integrations |
+| [**GetIntegrationsSpeechAudioconnectorIntegrationId**](#GetIntegrationsSpeechAudioconnectorIntegrationId) | **Get** /api/v2/integrations/speech/audioconnector/{integrationId} | Get an Audio Connector integration |
 | [**GetIntegrationsSpeechDialogflowAgent**](#GetIntegrationsSpeechDialogflowAgent) | **Get** /api/v2/integrations/speech/dialogflow/agents/{agentId} | Get details about a Dialogflow agent |
 | [**GetIntegrationsSpeechDialogflowAgents**](#GetIntegrationsSpeechDialogflowAgents) | **Get** /api/v2/integrations/speech/dialogflow/agents | Get a list of Dialogflow agents in the customers&#39; Google accounts |
 | [**GetIntegrationsSpeechDialogflowcxAgent**](#GetIntegrationsSpeechDialogflowcxAgent) | **Get** /api/v2/integrations/speech/dialogflowcx/agents/{agentId} | Get details about a Dialogflow CX agent |
@@ -2141,6 +2143,132 @@ This endpoint does require any parameters.
 ### Return type
 
 [**CredentialTypeListing**](CredentialTypeListing)
+
+
+## GetIntegrationsSpeechAudioconnector
+
+> [**AudioConnectorIntegrationEntityListing**](AudioConnectorIntegrationEntityListing) GetIntegrationsSpeechAudioconnector (int? pageNumber = null, int? pageSize = null)
+
+
+Get a list of Audio Connector integrations
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechAudioconnectorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get a list of Audio Connector integrations
+                AudioConnectorIntegrationEntityListing result = apiInstance.GetIntegrationsSpeechAudioconnector(pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechAudioconnector: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**AudioConnectorIntegrationEntityListing**](AudioConnectorIntegrationEntityListing)
+
+
+## GetIntegrationsSpeechAudioconnectorIntegrationId
+
+> [**AudioConnectorIntegration**](AudioConnectorIntegration) GetIntegrationsSpeechAudioconnectorIntegrationId (string integrationId)
+
+
+Get an Audio Connector integration
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechAudioconnectorIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var integrationId = integrationId_example;  // string | The integration ID
+
+            try
+            { 
+                // Get an Audio Connector integration
+                AudioConnectorIntegration result = apiInstance.GetIntegrationsSpeechAudioconnectorIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechAudioconnectorIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| The integration ID |  |
+
+### Return type
+
+[**AudioConnectorIntegration**](AudioConnectorIntegration)
 
 
 ## GetIntegrationsSpeechDialogflowAgent
@@ -5536,4 +5664,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 215.0.0_
+_PureCloudPlatform.Client.V2 215.1.0_

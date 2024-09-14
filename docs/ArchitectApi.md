@@ -218,8 +218,6 @@ void (empty response body)
 
 Delete a grammar.
 
-DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:grammar:delete
@@ -281,8 +279,6 @@ namespace Example
 
 
 Delete specified grammar language
-
-DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -347,8 +343,6 @@ void (empty response body)
 
 Clear the DTMF mode file for the grammar language if there is one
 
-DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:grammar:edit
@@ -411,8 +405,6 @@ void (empty response body)
 
 
 Clear the voice mode file for the grammar language if there is one
-
-DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2252,8 +2244,6 @@ Get a grammar
 
 Returns a specified grammar
 
-GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:grammar:view
@@ -2317,8 +2307,6 @@ namespace Example
 
 
 Get a grammar language.
-
-GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2385,8 +2373,6 @@ namespace Example
 Get a pageable list of grammars, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
-
-GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -6303,8 +6289,6 @@ namespace Example
 
 Updates a grammar
 
-PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:grammar:edit
@@ -6368,8 +6352,6 @@ namespace Example
 
 
 Updates a grammar language
-
-PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -6621,8 +6603,6 @@ namespace Example
 
 Creates a presigned URL for uploading a grammar DTMF mode file
 
-PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:grammar:edit
@@ -6688,8 +6668,6 @@ namespace Example
 
 
 Creates a presigned URL for uploading a grammar voice mode file
-
-PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -6757,8 +6735,6 @@ namespace Example
 
 Create a new language for a given grammar
 
-PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:grammar:edit
@@ -6822,8 +6798,6 @@ namespace Example
 
 
 Create a new grammar
-
-PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -9587,4 +9561,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 215.0.0_
+_PureCloudPlatform.Client.V2 215.1.0_

@@ -52,8 +52,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -424,8 +425,9 @@ void (empty response body)
 
 Get a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -487,8 +489,9 @@ namespace Example
 
 Download a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -1668,8 +1671,9 @@ namespace Example
 
 Update a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -1735,8 +1739,9 @@ namespace Example
 
 Replace the contents of a document.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 ```{"language":"csharp"}
@@ -2366,4 +2371,4 @@ namespace Example
 [**TagValue**](TagValue)
 
 
-_PureCloudPlatform.Client.V2 215.0.0_
+_PureCloudPlatform.Client.V2 215.1.0_

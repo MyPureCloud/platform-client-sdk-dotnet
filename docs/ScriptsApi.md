@@ -800,7 +800,7 @@ Get the upload status of an imported script
 
 Requires ANY permissions: 
 
-* scripter:script:search
+* scripter:script:view
 
 ### Example
 ```{"language":"csharp"}
@@ -983,4 +983,4 @@ namespace Example
 [**Script**](Script)
 
 
-_PureCloudPlatform.Client.V2 215.0.0_
+_PureCloudPlatform.Client.V2 215.1.0_
