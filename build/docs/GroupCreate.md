@@ -19,9 +19,10 @@
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | |
 | **Visibility** | **string** | Who can view this group | |
 | **RolesEnabled** | **bool?** | Allow roles to be assigned to this group | [optional] |
+| **IncludeOwners** | **bool?** | Allow owners to be included as members of the group | [optional] |
 | **OwnerIds** | **List&lt;string&gt;** | Owners of the group | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

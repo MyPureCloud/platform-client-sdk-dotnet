@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxConfigurableScreenRecordingStreams">Upper limit that maxSimultaneousStreams can be configured.</param>
         /// <param name="RegionalRecordingStorageEnabled">Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region.</param>
         /// <param name="RecordingPlaybackUrlTtl">The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
-        /// <param name="RecordingBatchDownloadUrlTtl">TThe duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
+        /// <param name="RecordingBatchDownloadUrlTtl">The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
         public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null, int? RecordingPlaybackUrlTtl = null, int? RecordingBatchDownloadUrlTtl = null)
         {
             this.MaxSimultaneousStreams = MaxSimultaneousStreams;
@@ -75,9 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// TThe duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.
+        /// The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.
         /// </summary>
-        /// <value>TThe duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.</value>
+        /// <value>The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes.</value>
         [DataMember(Name="recordingBatchDownloadUrlTtl", EmitDefaultValue=false)]
         public int? RecordingBatchDownloadUrlTtl { get; set; }
 

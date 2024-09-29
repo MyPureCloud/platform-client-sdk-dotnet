@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Opaque for "Opaque"
             /// </summary>
             [EnumMember(Value = "Opaque")]
-            Opaque
+            Opaque,
+            
+            /// <summary>
+            /// Enum Topic for "Topic"
+            /// </summary>
+            [EnumMember(Value = "Topic")]
+            Topic
         }
         /// <summary>
         /// The recipient ID type. This is used to indicate the format used for the ID.

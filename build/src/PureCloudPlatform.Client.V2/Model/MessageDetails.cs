@@ -88,11 +88,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Published
         }
         /// <summary>
+        /// For social media messages, the visibility of the message in the originating social platform
+        /// </summary>
+        /// <value>For social media messages, the visibility of the message in the originating social platform</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SocialVisibilityEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Private for "private"
+            /// </summary>
+            [EnumMember(Value = "private")]
+            Private,
+            
+            /// <summary>
+            /// Enum Public for "public"
+            /// </summary>
+            [EnumMember(Value = "public")]
+            Public
+        }
+        /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
         /// <value>Indicates the delivery status of the message.</value>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        /// <summary>
+        /// For social media messages, the visibility of the message in the originating social platform
+        /// </summary>
+        /// <value>For social media messages, the visibility of the message in the originating social platform</value>
+        [DataMember(Name="socialVisibility", EmitDefaultValue=false)]
+        public SocialVisibilityEnum? SocialVisibility { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageDetails" /> class.
         /// </summary>
@@ -104,8 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
         /// <param name="Stickers">One or more stickers associated with this message, if any.</param>
         /// <param name="MessageMetadata">Information that describes the content of the message, if any.</param>
+        /// <param name="SocialVisibility">For social media messages, the visibility of the message in the originating social platform.</param>
         /// <param name="ErrorInfo">Provider specific error information for a communication..</param>
-        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, ConversationMessageMetadata MessageMetadata = null, ErrorBody ErrorInfo = null)
+        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, ConversationMessageMetadata MessageMetadata = null, SocialVisibilityEnum? SocialVisibility = null, ErrorBody ErrorInfo = null)
         {
             this.MessageId = MessageId;
             this.MessageURI = MessageURI;
@@ -115,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Media = Media;
             this.Stickers = Stickers;
             this.MessageMetadata = MessageMetadata;
+            this.SocialVisibility = SocialVisibility;
             this.ErrorInfo = ErrorInfo;
             
         }
@@ -186,6 +221,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Provider specific error information for a communication.
         /// </summary>
@@ -211,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             sb.Append("  MessageMetadata: ").Append(MessageMetadata).Append("\n");
+            sb.Append("  SocialVisibility: ").Append(SocialVisibility).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -293,6 +331,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageMetadata.Equals(other.MessageMetadata)
                 ) &&
                 (
+                    this.SocialVisibility == other.SocialVisibility ||
+                    this.SocialVisibility != null &&
+                    this.SocialVisibility.Equals(other.SocialVisibility)
+                ) &&
+                (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&
                     this.ErrorInfo.Equals(other.ErrorInfo)
@@ -333,6 +376,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MessageMetadata != null)
                     hash = hash * 59 + this.MessageMetadata.GetHashCode();
+
+                if (this.SocialVisibility != null)
+                    hash = hash * 59 + this.SocialVisibility.GetHashCode();
 
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();

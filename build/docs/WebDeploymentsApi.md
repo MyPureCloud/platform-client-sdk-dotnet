@@ -734,7 +734,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WebDeploymentsApi();
-            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected.  (optional) 
 
             try
             { 
@@ -756,7 +756,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: Configuration, SupportedContent |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: Configuration, SupportedContent |
 
 ### Return type
 
@@ -1188,4 +1188,4 @@ namespace Example
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

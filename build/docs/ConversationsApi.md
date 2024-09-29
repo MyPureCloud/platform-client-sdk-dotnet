@@ -34,6 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationSecureattributes**](#GetConversationSecureattributes) | **Get** /api/v2/conversations/{conversationId}/secureattributes | Get the secure attributes on a conversation. |
 | [**GetConversationSuggestion**](#GetConversationSuggestion) | **Get** /api/v2/conversations/{conversationId}/suggestions/{suggestionId} | Get Suggestion. |
 | [**GetConversationSuggestions**](#GetConversationSuggestions) | **Get** /api/v2/conversations/{conversationId}/suggestions | Get all suggestions for a conversation. |
+| [**GetConversationSummaries**](#GetConversationSummaries) | **Get** /api/v2/conversations/{conversationId}/summaries | Get the summaries of the conversation. |
 | [**GetConversations**](#GetConversations) | **Get** /api/v2/conversations | Get active conversations for the logged in user |
 | [**GetConversationsCall**](#GetConversationsCall) | **Get** /api/v2/conversations/calls/{conversationId} | Get call conversation |
 | [**GetConversationsCallParticipantCommunicationWrapup**](#GetConversationsCallParticipantCommunicationWrapup) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
@@ -2003,6 +2004,70 @@ namespace Example
 ### Return type
 
 [**SuggestionListing**](SuggestionListing)
+
+
+## GetConversationSummaries
+
+> [**ConversationSummariesGetResponse**](ConversationSummariesGetResponse) GetConversationSummaries (string conversationId)
+
+
+Get the summaries of the conversation.
+
+GetConversationSummaries is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* conversation:summary:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationSummariesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+
+            try
+            { 
+                // Get the summaries of the conversation.
+                ConversationSummariesGetResponse result = apiInstance.GetConversationSummaries(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationSummaries: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+
+### Return type
+
+[**ConversationSummariesGetResponse**](ConversationSummariesGetResponse)
 
 
 ## GetConversations
@@ -15478,4 +15543,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteTelephonyProvidersEdge**](#DeleteTelephonyProvidersEdge) | **Delete** /api/v2/telephony/providers/edges/{edgeId} | Delete a edge. |
 | [**DeleteTelephonyProvidersEdgeLogicalinterface**](#DeleteTelephonyProvidersEdgeLogicalinterface) | **Delete** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Delete an edge logical interface |
 | [**DeleteTelephonyProvidersEdgeSoftwareupdate**](#DeleteTelephonyProvidersEdgeSoftwareupdate) | **Delete** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Cancels any in-progress update for this edge. |
+| [**DeleteTelephonyProvidersEdgesAlertablepresences**](#DeleteTelephonyProvidersEdgesAlertablepresences) | **Delete** /api/v2/telephony/providers/edges/alertablepresences | Deletes alertable presences overrides. |
 | [**DeleteTelephonyProvidersEdgesCertificateauthority**](#DeleteTelephonyProvidersEdgesCertificateauthority) | **Delete** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Delete a certificate authority. |
 | [**DeleteTelephonyProvidersEdgesDidpool**](#DeleteTelephonyProvidersEdgesDidpool) | **Delete** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Delete a DID Pool by ID. |
 | [**DeleteTelephonyProvidersEdgesEdgegroup**](#DeleteTelephonyProvidersEdgesEdgegroup) | **Delete** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Delete an edge group. |
@@ -34,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgeSoftwareversions**](#GetTelephonyProvidersEdgeSoftwareversions) | **Get** /api/v2/telephony/providers/edges/{edgeId}/softwareversions | Gets all the available software versions for this edge. |
 | [**GetTelephonyProvidersEdgeTrunks**](#GetTelephonyProvidersEdgeTrunks) | **Get** /api/v2/telephony/providers/edges/{edgeId}/trunks | Get the list of available trunks for the given Edge. |
 | [**GetTelephonyProvidersEdges**](#GetTelephonyProvidersEdges) | **Get** /api/v2/telephony/providers/edges | Get the list of edges. |
+| [**GetTelephonyProvidersEdgesAlertablepresences**](#GetTelephonyProvidersEdgesAlertablepresences) | **Get** /api/v2/telephony/providers/edges/alertablepresences | Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. |
 | [**GetTelephonyProvidersEdgesCertificateauthorities**](#GetTelephonyProvidersEdgesCertificateauthorities) | **Get** /api/v2/telephony/providers/edges/certificateauthorities | Get the list of certificate authorities. |
 | [**GetTelephonyProvidersEdgesCertificateauthority**](#GetTelephonyProvidersEdgesCertificateauthority) | **Get** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Get a certificate authority. |
 | [**GetTelephonyProvidersEdgesDid**](#GetTelephonyProvidersEdgesDid) | **Get** /api/v2/telephony/providers/edges/dids/{didId} | Get a DID by ID. |
@@ -114,6 +116,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesTrunkbasesettings**](#PostTelephonyProvidersEdgesTrunkbasesettings) | **Post** /api/v2/telephony/providers/edges/trunkbasesettings | Create a Trunk Base Settings object |
 | [**PutTelephonyProvidersEdge**](#PutTelephonyProvidersEdge) | **Put** /api/v2/telephony/providers/edges/{edgeId} | Update a edge. |
 | [**PutTelephonyProvidersEdgeLogicalinterface**](#PutTelephonyProvidersEdgeLogicalinterface) | **Put** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Update an edge logical interface. |
+| [**PutTelephonyProvidersEdgesAlertablepresences**](#PutTelephonyProvidersEdgesAlertablepresences) | **Put** /api/v2/telephony/providers/edges/alertablepresences | Creates or updates alertable presences overrides. |
 | [**PutTelephonyProvidersEdgesCertificateauthority**](#PutTelephonyProvidersEdgesCertificateauthority) | **Put** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Update a certificate authority. |
 | [**PutTelephonyProvidersEdgesDidpool**](#PutTelephonyProvidersEdgesDidpool) | **Put** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Update a DID Pool by ID. |
 | [**PutTelephonyProvidersEdgesEdgegroup**](#PutTelephonyProvidersEdgesEdgegroup) | **Put** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Update an edge group. |
@@ -307,6 +310,62 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteTelephonyProvidersEdgesAlertablepresences
+
+> void DeleteTelephonyProvidersEdgesAlertablepresences ()
+
+
+Deletes alertable presences overrides.
+
+Requires ANY permissions: 
+
+* telephony:alertablePresences:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTelephonyProvidersEdgesAlertablepresencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+
+            try
+            { 
+                // Deletes alertable presences overrides.
+                apiInstance.DeleteTelephonyProvidersEdgesAlertablepresences();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteTelephonyProvidersEdgesAlertablepresences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
 
 ### Return type
 
@@ -1896,6 +1955,68 @@ namespace Example
 ### Return type
 
 [**EdgeEntityListing**](EdgeEntityListing)
+
+
+## GetTelephonyProvidersEdgesAlertablepresences
+
+> [**AlertablePresences**](AlertablePresences) GetTelephonyProvidersEdgesAlertablepresences (string type = null)
+
+
+Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+
+Requires ANY permissions: 
+
+* telephony:alertablePresences:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesAlertablepresencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var type = type_example;  // string |  (optional) 
+
+            try
+            { 
+                // Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+                AlertablePresences result = apiInstance.GetTelephonyProvidersEdgesAlertablepresences(type);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesAlertablepresences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **type** | **string**|  | [optional] <br />**Values**: defaults, overrides |
+
+### Return type
+
+[**AlertablePresences**](AlertablePresences)
 
 
 ## GetTelephonyProvidersEdgesCertificateauthorities
@@ -7099,6 +7220,67 @@ namespace Example
 [**DomainLogicalInterface**](DomainLogicalInterface)
 
 
+## PutTelephonyProvidersEdgesAlertablepresences
+
+> void PutTelephonyProvidersEdgesAlertablepresences (AlertablePresences body)
+
+
+Creates or updates alertable presences overrides.
+
+Requires ANY permissions: 
+
+* telephony:alertablePresences:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutTelephonyProvidersEdgesAlertablepresencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var body = new AlertablePresences(); // AlertablePresences | Alertable Presences Overrides
+
+            try
+            { 
+                // Creates or updates alertable presences overrides.
+                apiInstance.PutTelephonyProvidersEdgesAlertablepresences(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutTelephonyProvidersEdgesAlertablepresences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AlertablePresences**](AlertablePresences)| Alertable Presences Overrides |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PutTelephonyProvidersEdgesCertificateauthority
 
 > [**DomainCertificateAuthority**](DomainCertificateAuthority) PutTelephonyProvidersEdgesCertificateauthority (string certificateId, DomainCertificateAuthority body)
@@ -7871,4 +8053,4 @@ namespace Example
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

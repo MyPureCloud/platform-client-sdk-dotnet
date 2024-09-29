@@ -48,6 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignInteractions**](#GetOutboundCampaignInteractions) | **Get** /api/v2/outbound/campaigns/{campaignId}/interactions | Get dialer campaign interactions. |
 | [**GetOutboundCampaignLinedistribution**](#GetOutboundCampaignLinedistribution) | **Get** /api/v2/outbound/campaigns/{campaignId}/linedistribution | Get line distribution information for campaigns using same Edge Group or Site as given campaign |
 | [**GetOutboundCampaignProgress**](#GetOutboundCampaignProgress) | **Get** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
+| [**GetOutboundCampaignSkillcombinations**](#GetOutboundCampaignSkillcombinations) | **Get** /api/v2/outbound/campaigns/{campaignId}/skillcombinations | Get the remaining and total contact count for each skill combination in a skills campaign |
 | [**GetOutboundCampaignStats**](#GetOutboundCampaignStats) | **Get** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
 | [**GetOutboundCampaignrule**](#GetOutboundCampaignrule) | **Get** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
 | [**GetOutboundCampaignrules**](#GetOutboundCampaignrules) | **Get** /api/v2/outbound/campaignrules | Query Campaign Rule list |
@@ -2817,6 +2818,72 @@ namespace Example
 ### Return type
 
 [**CampaignProgress**](CampaignProgress)
+
+
+## GetOutboundCampaignSkillcombinations
+
+> [**PagedSkillCombinationListing**](PagedSkillCombinationListing) GetOutboundCampaignSkillcombinations (string campaignId, int? pageNumber = null, int? pageSize = null)
+
+
+Get the remaining and total contact count for each skill combination in a skills campaign
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignSkillcombinationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get the remaining and total contact count for each skill combination in a skills campaign
+                PagedSkillCombinationListing result = apiInstance.GetOutboundCampaignSkillcombinations(campaignId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignSkillcombinations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**PagedSkillCombinationListing**](PagedSkillCombinationListing)
 
 
 ## GetOutboundCampaignStats
@@ -10596,4 +10663,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

@@ -565,6 +565,27 @@ namespace PureCloudPlatform.Client.V2.Model
             General
         }
         /// <summary>
+        /// Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities.
+        /// </summary>
+        /// <value>Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlowSubTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum VirtualAgent for "VIRTUAL_AGENT"
+            /// </summary>
+            [EnumMember(Value = "VIRTUAL_AGENT")]
+            VirtualAgent
+        }
+        /// <summary>
         /// The type of this flow
         /// </summary>
         /// <value>The type of this flow</value>
@@ -1143,6 +1164,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
         public FlaggedReasonEnum? FlaggedReason { get; set; }
         /// <summary>
+        /// Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities.
+        /// </summary>
+        /// <value>Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities.</value>
+        [DataMember(Name="flowSubType", EmitDefaultValue=false)]
+        public FlowSubTypeEnum? FlowSubType { get; set; }
+        /// <summary>
         /// The type of this flow
         /// </summary>
         /// <value>The type of this flow</value>
@@ -1225,6 +1252,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowMilestoneIds">The ID of a flow outcome milestone.</param>
         /// <param name="FlowName">The name of this flow at the time of flow execution.</param>
         /// <param name="FlowOutType">Type of flow out that occurred when emitting tFlowOut..</param>
+        /// <param name="FlowSubType">Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities..</param>
         /// <param name="FlowType">The type of this flow.</param>
         /// <param name="FlowVersion">The version of this flow.</param>
         /// <param name="GroupId">Unique identifier for a PureCloud group.</param>
@@ -1279,7 +1307,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="Outcomes">Flow outcomes.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public FlowMetricsTopicFlowMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string EndingLanguage = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string ErrorCode = null, string ExitReason = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowId = null, string FlowInType = null, List<string> FlowMilestoneIds = null, string FlowName = null, string FlowOutType = null, FlowTypeEnum? FlowType = null, string FlowVersion = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string KnowledgeBaseId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string RecognitionFailureReason = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StartingLanguage = null, string StationId = null, string TeamId = null, string TransferTargetAddress = null, string TransferTargetName = null, string TransferType = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, bool? VideoPresent = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicFlowProposedAgent> ProposedAgents = null, List<FlowMetricsTopicFlowOutcome> Outcomes = null, List<FlowMetricsTopicFlowScoredAgent> ScoredAgents = null)
+        public FlowMetricsTopicFlowMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string EndingLanguage = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string ErrorCode = null, string ExitReason = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowId = null, string FlowInType = null, List<string> FlowMilestoneIds = null, string FlowName = null, string FlowOutType = null, FlowSubTypeEnum? FlowSubType = null, FlowTypeEnum? FlowType = null, string FlowVersion = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string KnowledgeBaseId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string RecognitionFailureReason = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StartingLanguage = null, string StationId = null, string TeamId = null, string TransferTargetAddress = null, string TransferTargetName = null, string TransferType = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, bool? VideoPresent = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicFlowProposedAgent> ProposedAgents = null, List<FlowMetricsTopicFlowOutcome> Outcomes = null, List<FlowMetricsTopicFlowScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -1325,6 +1353,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlowMilestoneIds = FlowMilestoneIds;
             this.FlowName = FlowName;
             this.FlowOutType = FlowOutType;
+            this.FlowSubType = FlowSubType;
             this.FlowType = FlowType;
             this.FlowVersion = FlowVersion;
             this.GroupId = GroupId;
@@ -1721,6 +1750,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Type of flow out that occurred when emitting tFlowOut.</value>
         [DataMember(Name="flowOutType", EmitDefaultValue=false)]
         public string FlowOutType { get; set; }
+
+
 
 
 
@@ -2220,6 +2251,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlowMilestoneIds: ").Append(FlowMilestoneIds).Append("\n");
             sb.Append("  FlowName: ").Append(FlowName).Append("\n");
             sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
+            sb.Append("  FlowSubType: ").Append(FlowSubType).Append("\n");
             sb.Append("  FlowType: ").Append(FlowType).Append("\n");
             sb.Append("  FlowVersion: ").Append(FlowVersion).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
@@ -2533,6 +2565,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlowOutType == other.FlowOutType ||
                     this.FlowOutType != null &&
                     this.FlowOutType.Equals(other.FlowOutType)
+                ) &&
+                (
+                    this.FlowSubType == other.FlowSubType ||
+                    this.FlowSubType != null &&
+                    this.FlowSubType.Equals(other.FlowSubType)
                 ) &&
                 (
                     this.FlowType == other.FlowType ||
@@ -2948,6 +2985,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FlowOutType != null)
                     hash = hash * 59 + this.FlowOutType.GetHashCode();
+
+                if (this.FlowSubType != null)
+                    hash = hash * 59 + this.FlowSubType.GetHashCode();
 
                 if (this.FlowType != null)
                     hash = hash * 59 + this.FlowType.GetHashCode();

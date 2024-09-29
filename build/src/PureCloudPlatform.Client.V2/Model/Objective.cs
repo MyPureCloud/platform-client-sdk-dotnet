@@ -63,6 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Message,
             
             /// <summary>
+            /// Enum Internalmessage for "internalmessage"
+            /// </summary>
+            [EnumMember(Value = "internalmessage")]
+            Internalmessage,
+            
+            /// <summary>
             /// Enum Screenshare for "screenshare"
             /// </summary>
             [EnumMember(Value = "screenshare")]

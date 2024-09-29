@@ -46,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates when log capture was enabled for the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Indicates when log capture was enabled for the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateStarted", EmitDefaultValue=false)]
+        public DateTime? DateStarted { get; private set; }
+
+
+
+        /// <summary>
         /// Indicates when log capture will be turned off for the user. (Must be within 24 hours). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Indicates when log capture will be turned off for the user. (Must be within 24 hours). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -72,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class LogCaptureUserConfiguration {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
             sb.Append("  DateExpired: ").Append(DateExpired).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -120,6 +130,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.DateStarted == other.DateStarted ||
+                    this.DateStarted != null &&
+                    this.DateStarted.Equals(other.DateStarted)
+                ) &&
+                (
                     this.DateExpired == other.DateExpired ||
                     this.DateExpired != null &&
                     this.DateExpired.Equals(other.DateExpired)
@@ -144,6 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.DateStarted != null)
+                    hash = hash * 59 + this.DateStarted.GetHashCode();
 
                 if (this.DateExpired != null)
                     hash = hash * 59 + this.DateExpired.GetHashCode();

@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
+            /// Enum Workitemid for "WorkitemId"
+            /// </summary>
+            [EnumMember(Value = "WorkitemId")]
+            Workitemid,
+            
+            /// <summary>
             /// Enum Flowtype for "FlowType"
             /// </summary>
             [EnumMember(Value = "FlowType")]

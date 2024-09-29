@@ -91,6 +91,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId);
 
         /// <summary>
+        /// Deletes alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        
+        void DeleteTelephonyProvidersEdgesAlertablepresences ();
+
+        /// <summary>
+        /// Deletes alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesAlertablepresencesWithHttpInfo ();
+
+        /// <summary>
         /// Delete a certificate authority.
         /// </summary>
         /// <remarks>
@@ -729,6 +751,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of EdgeEntityListing</returns>
         
         ApiResponse<EdgeEntityListing> GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>AlertablePresences</returns>
+        
+        AlertablePresences GetTelephonyProvidersEdgesAlertablepresences (string type = null);
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>ApiResponse of AlertablePresences</returns>
+        
+        ApiResponse<AlertablePresences> GetTelephonyProvidersEdgesAlertablepresencesWithHttpInfo (string type = null);
 
         /// <summary>
         /// Get the list of certificate authorities.
@@ -2889,6 +2935,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DomainLogicalInterface> PutTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
+        /// Creates or updates alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns></returns>
+        
+        void PutTelephonyProvidersEdgesAlertablepresences (AlertablePresences body);
+
+        /// <summary>
+        /// Creates or updates alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PutTelephonyProvidersEdgesAlertablepresencesWithHttpInfo (AlertablePresences body);
+
+        /// <summary>
         /// Update a certificate authority.
         /// </summary>
         /// <remarks>
@@ -3281,6 +3351,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId);
+
+        /// <summary>
+        /// Deletes alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesAlertablepresencesAsync ();
+
+        /// <summary>
+        /// Deletes alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Delete a certificate authority.
@@ -3921,6 +4013,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>Task of AlertablePresences</returns>
+        
+        System.Threading.Tasks.Task<AlertablePresences> GetTelephonyProvidersEdgesAlertablepresencesAsync (string type = null);
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>Task of ApiResponse (AlertablePresences)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AlertablePresences>> GetTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo (string type = null);
 
         /// <summary>
         /// Get the list of certificate authorities.
@@ -6081,6 +6197,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
+        /// Creates or updates alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PutTelephonyProvidersEdgesAlertablepresencesAsync (AlertablePresences body);
+
+        /// <summary>
+        /// Creates or updates alertable presences overrides.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo (AlertablePresences body);
+
+        /// <summary>
         /// Update a certificate authority.
         /// </summary>
         /// <remarks>
@@ -7124,6 +7264,204 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgeSoftwareupdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgeSoftwareupdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Deletes alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        
+        public void DeleteTelephonyProvidersEdgesAlertablepresences ()
+        {
+             DeleteTelephonyProvidersEdgesAlertablepresencesWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Deletes alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesAlertablepresencesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Deletes alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesAlertablepresencesAsync ()
+        {
+             await DeleteTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Deletes alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -12576,6 +12914,212 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EdgeEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (EdgeEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>AlertablePresences</returns>
+        
+        public AlertablePresences GetTelephonyProvidersEdgesAlertablepresences (string type = null)
+        {
+             ApiResponse<AlertablePresences> localVarResponse = GetTelephonyProvidersEdgesAlertablepresencesWithHttpInfo(type);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>ApiResponse of AlertablePresences</returns>
+        
+        public ApiResponse< AlertablePresences > GetTelephonyProvidersEdgesAlertablepresencesWithHttpInfo (string type = null)
+        { 
+
+            var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AlertablePresences>(localVarStatusCode,
+                localVarHeaders,
+                (AlertablePresences) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AlertablePresences)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>Task of AlertablePresences</returns>
+        
+        public async System.Threading.Tasks.Task<AlertablePresences> GetTelephonyProvidersEdgesAlertablepresencesAsync (string type = null)
+        {
+             ApiResponse<AlertablePresences> localVarResponse = await GetTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo(type);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"> (optional)</param>
+        /// <returns>Task of ApiResponse (AlertablePresences)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AlertablePresences>> GetTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo (string type = null)
+        { 
+
+            var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AlertablePresences>(localVarStatusCode,
+                localVarHeaders,
+                (AlertablePresences) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AlertablePresences)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -30549,6 +31093,227 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DomainLogicalInterface>(localVarStatusCode,
                 localVarHeaders,
                 (DomainLogicalInterface) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainLogicalInterface)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Creates or updates alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns></returns>
+        
+        public void PutTelephonyProvidersEdgesAlertablepresences (AlertablePresences body)
+        {
+             PutTelephonyProvidersEdgesAlertablepresencesWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Creates or updates alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PutTelephonyProvidersEdgesAlertablepresencesWithHttpInfo (AlertablePresences body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesAlertablepresences");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates or updates alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PutTelephonyProvidersEdgesAlertablepresencesAsync (AlertablePresences body)
+        {
+             await PutTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Creates or updates alertable presences overrides. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Alertable Presences Overrides</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo (AlertablePresences body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesAlertablepresences");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesAlertablepresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

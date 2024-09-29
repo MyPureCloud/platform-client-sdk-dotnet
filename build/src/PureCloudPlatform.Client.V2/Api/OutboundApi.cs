@@ -1083,6 +1083,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CampaignProgress> GetOutboundCampaignProgressWithHttpInfo (string campaignId);
 
         /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>PagedSkillCombinationListing</returns>
+        
+        PagedSkillCombinationListing GetOutboundCampaignSkillcombinations (string campaignId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of PagedSkillCombinationListing</returns>
+        
+        ApiResponse<PagedSkillCombinationListing> GetOutboundCampaignSkillcombinationsWithHttpInfo (string campaignId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
         /// Get statistics about a Dialer Campaign
         /// </summary>
         /// <remarks>
@@ -5379,6 +5407,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CampaignProgress)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetOutboundCampaignProgressAsyncWithHttpInfo (string campaignId);
+
+        /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of PagedSkillCombinationListing</returns>
+        
+        System.Threading.Tasks.Task<PagedSkillCombinationListing> GetOutboundCampaignSkillcombinationsAsync (string campaignId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (PagedSkillCombinationListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PagedSkillCombinationListing>> GetOutboundCampaignSkillcombinationsAsyncWithHttpInfo (string campaignId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get statistics about a Dialer Campaign
@@ -17751,6 +17807,231 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CampaignProgress>(localVarStatusCode,
                 localVarHeaders,
                 (CampaignProgress) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignProgress)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>PagedSkillCombinationListing</returns>
+        
+        public PagedSkillCombinationListing GetOutboundCampaignSkillcombinations (string campaignId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<PagedSkillCombinationListing> localVarResponse = GetOutboundCampaignSkillcombinationsWithHttpInfo(campaignId, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of PagedSkillCombinationListing</returns>
+        
+        public ApiResponse< PagedSkillCombinationListing > GetOutboundCampaignSkillcombinationsWithHttpInfo (string campaignId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignSkillcombinations");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/skillcombinations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignSkillcombinations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignSkillcombinations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PagedSkillCombinationListing>(localVarStatusCode,
+                localVarHeaders,
+                (PagedSkillCombinationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedSkillCombinationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of PagedSkillCombinationListing</returns>
+        
+        public async System.Threading.Tasks.Task<PagedSkillCombinationListing> GetOutboundCampaignSkillcombinationsAsync (string campaignId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<PagedSkillCombinationListing> localVarResponse = await GetOutboundCampaignSkillcombinationsAsyncWithHttpInfo(campaignId, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the remaining and total contact count for each skill combination in a skills campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (PagedSkillCombinationListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PagedSkillCombinationListing>> GetOutboundCampaignSkillcombinationsAsyncWithHttpInfo (string campaignId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignSkillcombinations");
+            
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/skillcombinations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignSkillcombinations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignSkillcombinations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PagedSkillCombinationListing>(localVarStatusCode,
+                localVarHeaders,
+                (PagedSkillCombinationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedSkillCombinationListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

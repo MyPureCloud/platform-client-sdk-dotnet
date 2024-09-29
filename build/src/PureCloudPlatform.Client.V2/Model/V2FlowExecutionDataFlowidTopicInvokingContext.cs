@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyActionMap">JourneyActionMap.</param>
         /// <param name="ProcessAutomation">ProcessAutomation.</param>
         /// <param name="Quality">Quality.</param>
-        public V2FlowExecutionDataFlowidTopicInvokingContext(V2FlowExecutionDataFlowidTopicFlow Flow = null, V2FlowExecutionDataFlowidTopicJourneyActionMap JourneyActionMap = null, V2FlowExecutionDataFlowidTopicProcessAutomation ProcessAutomation = null, V2FlowExecutionDataFlowidTopicQuality Quality = null)
+        /// <param name="Workitem">Workitem.</param>
+        public V2FlowExecutionDataFlowidTopicInvokingContext(V2FlowExecutionDataFlowidTopicFlow Flow = null, V2FlowExecutionDataFlowidTopicJourneyActionMap JourneyActionMap = null, V2FlowExecutionDataFlowidTopicProcessAutomation ProcessAutomation = null, V2FlowExecutionDataFlowidTopicQuality Quality = null, V2FlowExecutionDataFlowidTopicWorkitem Workitem = null)
         {
             this.Flow = Flow;
             this.JourneyActionMap = JourneyActionMap;
             this.ProcessAutomation = ProcessAutomation;
             this.Quality = Quality;
+            this.Workitem = Workitem;
             
         }
         
@@ -67,6 +69,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public V2FlowExecutionDataFlowidTopicQuality Quality { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Workitem
+        /// </summary>
+        [DataMember(Name="workitem", EmitDefaultValue=false)]
+        public V2FlowExecutionDataFlowidTopicWorkitem Workitem { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyActionMap: ").Append(JourneyActionMap).Append("\n");
             sb.Append("  ProcessAutomation: ").Append(ProcessAutomation).Append("\n");
             sb.Append("  Quality: ").Append(Quality).Append("\n");
+            sb.Append("  Workitem: ").Append(Workitem).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Quality == other.Quality ||
                     this.Quality != null &&
                     this.Quality.Equals(other.Quality)
+                ) &&
+                (
+                    this.Workitem == other.Workitem ||
+                    this.Workitem != null &&
+                    this.Workitem.Equals(other.Workitem)
                 );
         }
 
@@ -164,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Quality != null)
                     hash = hash * 59 + this.Quality.GetHashCode();
+
+                if (this.Workitem != null)
+                    hash = hash * 59 + this.Workitem.GetHashCode();
 
                 return hash;
             }

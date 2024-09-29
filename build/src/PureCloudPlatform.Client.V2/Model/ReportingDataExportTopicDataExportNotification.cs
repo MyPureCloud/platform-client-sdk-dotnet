@@ -658,7 +658,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum MessagingQueuePerformanceDetailView for "MESSAGING_QUEUE_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "MESSAGING_QUEUE_PERFORMANCE_DETAIL_VIEW")]
-            MessagingQueuePerformanceDetailView
+            MessagingQueuePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum AgentPerformanceTimelineDetailView for "AGENT_PERFORMANCE_TIMELINE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_PERFORMANCE_TIMELINE_DETAIL_VIEW")]
+            AgentPerformanceTimelineDetailView
         }
         /// <summary>
         /// Gets or Sets ExportErrorMessagesType

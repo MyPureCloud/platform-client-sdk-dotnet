@@ -22,13 +22,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkitemPagedEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        /// <param name="PageSize">The total page size requested.</param>
-        /// <param name="PageNumber">The page number requested.</param>
-        public WorkitemPagedEntityListing(List<Workitem> Entities = null, int? PageSize = null, int? PageNumber = null)
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="PageCount">PageCount.</param>
+        public WorkitemPagedEntityListing(List<Workitem> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
+            this.Total = Total;
+            this.PageCount = PageCount;
             
         }
         
@@ -43,20 +47,34 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The total page size requested
+        /// Gets or Sets PageSize
         /// </summary>
-        /// <value>The total page size requested</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
 
 
 
         /// <summary>
-        /// The page number requested
+        /// Gets or Sets PageNumber
         /// </summary>
-        /// <value>The page number requested</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Total
+        /// </summary>
+        [DataMember(Name="total", EmitDefaultValue=false)]
+        public long? Total { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PageCount
+        /// </summary>
+        [DataMember(Name="pageCount", EmitDefaultValue=false)]
+        public int? PageCount { get; set; }
 
 
         /// <summary>
@@ -71,6 +89,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  Total: ").Append(Total).Append("\n");
+            sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -125,6 +145,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
+                ) &&
+                (
+                    this.Total == other.Total ||
+                    this.Total != null &&
+                    this.Total.Equals(other.Total)
+                ) &&
+                (
+                    this.PageCount == other.PageCount ||
+                    this.PageCount != null &&
+                    this.PageCount.Equals(other.PageCount)
                 );
         }
 
@@ -147,6 +177,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
+
+                if (this.Total != null)
+                    hash = hash * 59 + this.Total.GetHashCode();
+
+                if (this.PageCount != null)
+                    hash = hash * 59 + this.PageCount.GetHashCode();
 
                 return hash;
             }

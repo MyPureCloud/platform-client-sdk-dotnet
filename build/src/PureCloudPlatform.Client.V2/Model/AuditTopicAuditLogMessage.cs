@@ -1022,7 +1022,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Provisioned for "Provisioned"
             /// </summary>
             [EnumMember(Value = "Provisioned")]
-            Provisioned
+            Provisioned,
+            
+            /// <summary>
+            /// Enum Updateaborted for "UpdateAborted"
+            /// </summary>
+            [EnumMember(Value = "UpdateAborted")]
+            Updateaborted
         }
         /// <summary>
         /// Gets or Sets EntityType

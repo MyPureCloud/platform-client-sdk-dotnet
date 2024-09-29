@@ -199,9 +199,8 @@ namespace Example
 
 Get the current Idle Token Timeout Value
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* directory:organization:admin
 
 ### Example
 ```{"language":"csharp"}
@@ -366,4 +365,4 @@ namespace Example
 [**IdleTokenTimeout**](IdleTokenTimeout)
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

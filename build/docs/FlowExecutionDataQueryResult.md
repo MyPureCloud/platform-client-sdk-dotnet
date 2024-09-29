@@ -13,6 +13,7 @@
 | **FlowId** | **string** | The id of the flow that was executed. | [optional] |
 | **FlowVersion** | **string** | The version of the flow that was executed. | [optional] |
 | **ConversationId** | **string** | The id of the conversation that executed this flow. | [optional] |
+| **WorkitemId** | **string** | The id of the workitem that executed this flow. | [optional] |
 | **FlowType** | **string** | The type of flow. | [optional] |
 | **FlowErrorReason** | **string** | If the flow errored out this is the reason. | [optional] |
 | **FlowWarningReason** | **string** | If the flow had a warning, this is the reason. | [optional] |
@@ -21,4 +22,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

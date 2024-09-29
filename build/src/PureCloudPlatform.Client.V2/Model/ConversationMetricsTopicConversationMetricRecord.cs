@@ -1286,6 +1286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">The session media type.</param>
         /// <param name="MessageType">Message type for messaging services. E.g.: sms, facebook, twitter, line.</param>
         /// <param name="OriginatingDirection">The original direction of the conversation.</param>
+        /// <param name="OriginatingSocialMediaPublic">Indicates that the conversation originated from a public message on social media.</param>
         /// <param name="OutboundCampaignId">(Dialer) Unique identifier of the outbound campaign.</param>
         /// <param name="OutboundContactId">(Dialer) Unique identifier of the contact.</param>
         /// <param name="OutboundContactListId">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
@@ -1318,7 +1319,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapUpCode">Wrap up code.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ErrorCode = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, bool? VideoPresent = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
+        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ErrorCode = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? OriginatingSocialMediaPublic = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, bool? VideoPresent = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -1371,6 +1372,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaType = MediaType;
             this.MessageType = MessageType;
             this.OriginatingDirection = OriginatingDirection;
+            this.OriginatingSocialMediaPublic = OriginatingSocialMediaPublic;
             this.OutboundCampaignId = OutboundCampaignId;
             this.OutboundContactId = OutboundContactId;
             this.OutboundContactListId = OutboundContactListId;
@@ -1805,6 +1807,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates that the conversation originated from a public message on social media
+        /// </summary>
+        /// <value>Indicates that the conversation originated from a public message on social media</value>
+        [DataMember(Name="originatingSocialMediaPublic", EmitDefaultValue=false)]
+        public bool? OriginatingSocialMediaPublic { get; set; }
+
+
+
+        /// <summary>
         /// (Dialer) Unique identifier of the outbound campaign
         /// </summary>
         /// <value>(Dialer) Unique identifier of the outbound campaign</value>
@@ -2130,6 +2141,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
             sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
+            sb.Append("  OriginatingSocialMediaPublic: ").Append(OriginatingSocialMediaPublic).Append("\n");
             sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
             sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
             sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
@@ -2458,6 +2470,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OriginatingDirection.Equals(other.OriginatingDirection)
                 ) &&
                 (
+                    this.OriginatingSocialMediaPublic == other.OriginatingSocialMediaPublic ||
+                    this.OriginatingSocialMediaPublic != null &&
+                    this.OriginatingSocialMediaPublic.Equals(other.OriginatingSocialMediaPublic)
+                ) &&
+                (
                     this.OutboundCampaignId == other.OutboundCampaignId ||
                     this.OutboundCampaignId != null &&
                     this.OutboundCampaignId.Equals(other.OutboundCampaignId)
@@ -2782,6 +2799,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OriginatingDirection != null)
                     hash = hash * 59 + this.OriginatingDirection.GetHashCode();
+
+                if (this.OriginatingSocialMediaPublic != null)
+                    hash = hash * 59 + this.OriginatingSocialMediaPublic.GetHashCode();
 
                 if (this.OutboundCampaignId != null)
                     hash = hash * 59 + this.OutboundCampaignId.GetHashCode();

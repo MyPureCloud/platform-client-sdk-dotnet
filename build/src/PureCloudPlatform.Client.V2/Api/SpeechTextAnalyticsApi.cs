@@ -821,6 +821,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobWithHttpInfo (string jobId);
 
         /// <summary>
+        /// Translate all communication(s) for an interaction.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>CommunicationTranslationList</returns>
+        
+        CommunicationTranslationList GetSpeechandtextanalyticsTranslationsLanguageConversation (string languageId, string conversationId, string communicationId = null, string recordingId = null);
+
+        /// <summary>
+        /// Translate all communication(s) for an interaction.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>ApiResponse of CommunicationTranslationList</returns>
+        
+        ApiResponse<CommunicationTranslationList> GetSpeechandtextanalyticsTranslationsLanguageConversationWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null);
+
+        /// <summary>
+        /// Get supported translation languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TranslateSupportedLanguageList</returns>
+        
+        TranslateSupportedLanguageList GetSpeechandtextanalyticsTranslationsLanguages ();
+
+        /// <summary>
+        /// Get supported translation languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TranslateSupportedLanguageList</returns>
+        
+        ApiResponse<TranslateSupportedLanguageList> GetSpeechandtextanalyticsTranslationsLanguagesWithHttpInfo ();
+
+        /// <summary>
         /// Patch Speech And Text Analytics Settings
         /// </summary>
         /// <remarks>
@@ -2047,6 +2103,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TopicJob)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> GetSpeechandtextanalyticsTopicsPublishjobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Translate all communication(s) for an interaction.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>Task of CommunicationTranslationList</returns>
+        
+        System.Threading.Tasks.Task<CommunicationTranslationList> GetSpeechandtextanalyticsTranslationsLanguageConversationAsync (string languageId, string conversationId, string communicationId = null, string recordingId = null);
+
+        /// <summary>
+        /// Translate all communication(s) for an interaction.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>Task of ApiResponse (CommunicationTranslationList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CommunicationTranslationList>> GetSpeechandtextanalyticsTranslationsLanguageConversationAsyncWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null);
+
+        /// <summary>
+        /// Get supported translation languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TranslateSupportedLanguageList</returns>
+        
+        System.Threading.Tasks.Task<TranslateSupportedLanguageList> GetSpeechandtextanalyticsTranslationsLanguagesAsync ();
+
+        /// <summary>
+        /// Get supported translation languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TranslateSupportedLanguageList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TranslateSupportedLanguageList>> GetSpeechandtextanalyticsTranslationsLanguagesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Patch Speech And Text Analytics Settings
@@ -9384,6 +9496,452 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TopicJob>(localVarStatusCode,
                 localVarHeaders,
                 (TopicJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Translate all communication(s) for an interaction. 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>CommunicationTranslationList</returns>
+        
+        public CommunicationTranslationList GetSpeechandtextanalyticsTranslationsLanguageConversation (string languageId, string conversationId, string communicationId = null, string recordingId = null)
+        {
+             ApiResponse<CommunicationTranslationList> localVarResponse = GetSpeechandtextanalyticsTranslationsLanguageConversationWithHttpInfo(languageId, conversationId, communicationId, recordingId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Translate all communication(s) for an interaction. 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>ApiResponse of CommunicationTranslationList</returns>
+        
+        public ApiResponse< CommunicationTranslationList > GetSpeechandtextanalyticsTranslationsLanguageConversationWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null)
+        { 
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTranslationsLanguageConversation");
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTranslationsLanguageConversation");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId));
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+            if (communicationId != null) localVarQueryParams.Add(new Tuple<string, string>("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId)));
+            if (recordingId != null) localVarQueryParams.Add(new Tuple<string, string>("recordingId", this.Configuration.ApiClient.ParameterToString(recordingId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguageConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguageConversation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CommunicationTranslationList>(localVarStatusCode,
+                localVarHeaders,
+                (CommunicationTranslationList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommunicationTranslationList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Translate all communication(s) for an interaction. 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>Task of CommunicationTranslationList</returns>
+        
+        public async System.Threading.Tasks.Task<CommunicationTranslationList> GetSpeechandtextanalyticsTranslationsLanguageConversationAsync (string languageId, string conversationId, string communicationId = null, string recordingId = null)
+        {
+             ApiResponse<CommunicationTranslationList> localVarResponse = await GetSpeechandtextanalyticsTranslationsLanguageConversationAsyncWithHttpInfo(languageId, conversationId, communicationId, recordingId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Translate all communication(s) for an interaction. 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Target translation language</param>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <returns>Task of ApiResponse (CommunicationTranslationList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CommunicationTranslationList>> GetSpeechandtextanalyticsTranslationsLanguageConversationAsyncWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null)
+        { 
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTranslationsLanguageConversation");
+            
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTranslationsLanguageConversation");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId));
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+            if (communicationId != null) localVarQueryParams.Add(new Tuple<string, string>("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId)));
+            if (recordingId != null) localVarQueryParams.Add(new Tuple<string, string>("recordingId", this.Configuration.ApiClient.ParameterToString(recordingId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguageConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguageConversation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CommunicationTranslationList>(localVarStatusCode,
+                localVarHeaders,
+                (CommunicationTranslationList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommunicationTranslationList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get supported translation languages 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TranslateSupportedLanguageList</returns>
+        
+        public TranslateSupportedLanguageList GetSpeechandtextanalyticsTranslationsLanguages ()
+        {
+             ApiResponse<TranslateSupportedLanguageList> localVarResponse = GetSpeechandtextanalyticsTranslationsLanguagesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get supported translation languages 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TranslateSupportedLanguageList</returns>
+        
+        public ApiResponse< TranslateSupportedLanguageList > GetSpeechandtextanalyticsTranslationsLanguagesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/speechandtextanalytics/translations/languages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TranslateSupportedLanguageList>(localVarStatusCode,
+                localVarHeaders,
+                (TranslateSupportedLanguageList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranslateSupportedLanguageList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get supported translation languages 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TranslateSupportedLanguageList</returns>
+        
+        public async System.Threading.Tasks.Task<TranslateSupportedLanguageList> GetSpeechandtextanalyticsTranslationsLanguagesAsync ()
+        {
+             ApiResponse<TranslateSupportedLanguageList> localVarResponse = await GetSpeechandtextanalyticsTranslationsLanguagesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get supported translation languages 
+        /// 
+        /// GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TranslateSupportedLanguageList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TranslateSupportedLanguageList>> GetSpeechandtextanalyticsTranslationsLanguagesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/speechandtextanalytics/translations/languages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTranslationsLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TranslateSupportedLanguageList>(localVarStatusCode,
+                localVarHeaders,
+                (TranslateSupportedLanguageList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranslateSupportedLanguageList)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -114,6 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
         /// <param name="OnHoldPrompt">The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play..</param>
         /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
+        /// <param name="CannedResponseLibraries">Canned response library IDs and mode with which they are associated with the queue.</param>
         /// <param name="EnableTranscription">Indicates whether voice transcription is enabled for this queue..</param>
         /// <param name="EnableAudioMonitoring">Indicates whether audio monitoring is enabled for this queue..</param>
         /// <param name="EnableManualAssignment">Indicates whether manual assignment is enabled for this queue..</param>
@@ -126,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
-        public Queue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null)
+        public Queue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, CannedResponseLibraries CannedResponseLibraries = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -149,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WhisperPrompt = WhisperPrompt;
             this.OnHoldPrompt = OnHoldPrompt;
             this.AutoAnswerOnly = AutoAnswerOnly;
+            this.CannedResponseLibraries = CannedResponseLibraries;
             this.EnableTranscription = EnableTranscription;
             this.EnableAudioMonitoring = EnableAudioMonitoring;
             this.EnableManualAssignment = EnableManualAssignment;
@@ -377,6 +379,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Canned response library IDs and mode with which they are associated with the queue
+        /// </summary>
+        /// <value>Canned response library IDs and mode with which they are associated with the queue</value>
+        [DataMember(Name="cannedResponseLibraries", EmitDefaultValue=false)]
+        public CannedResponseLibraries CannedResponseLibraries { get; set; }
+
+
+
+        /// <summary>
         /// Indicates whether voice transcription is enabled for this queue.
         /// </summary>
         /// <value>Indicates whether voice transcription is enabled for this queue.</value>
@@ -525,6 +536,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WhisperPrompt: ").Append(WhisperPrompt).Append("\n");
             sb.Append("  OnHoldPrompt: ").Append(OnHoldPrompt).Append("\n");
             sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
+            sb.Append("  CannedResponseLibraries: ").Append(CannedResponseLibraries).Append("\n");
             sb.Append("  EnableTranscription: ").Append(EnableTranscription).Append("\n");
             sb.Append("  EnableAudioMonitoring: ").Append(EnableAudioMonitoring).Append("\n");
             sb.Append("  EnableManualAssignment: ").Append(EnableManualAssignment).Append("\n");
@@ -704,6 +716,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutoAnswerOnly.Equals(other.AutoAnswerOnly)
                 ) &&
                 (
+                    this.CannedResponseLibraries == other.CannedResponseLibraries ||
+                    this.CannedResponseLibraries != null &&
+                    this.CannedResponseLibraries.Equals(other.CannedResponseLibraries)
+                ) &&
+                (
                     this.EnableTranscription == other.EnableTranscription ||
                     this.EnableTranscription != null &&
                     this.EnableTranscription.Equals(other.EnableTranscription)
@@ -855,6 +872,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AutoAnswerOnly != null)
                     hash = hash * 59 + this.AutoAnswerOnly.GetHashCode();
+
+                if (this.CannedResponseLibraries != null)
+                    hash = hash * 59 + this.CannedResponseLibraries.GetHashCode();
 
                 if (this.EnableTranscription != null)
                     hash = hash * 59 + this.EnableTranscription.GetHashCode();

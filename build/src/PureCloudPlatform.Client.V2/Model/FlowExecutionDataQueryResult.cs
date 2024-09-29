@@ -156,11 +156,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowId">The id of the flow that was executed..</param>
         /// <param name="FlowVersion">The version of the flow that was executed..</param>
         /// <param name="ConversationId">The id of the conversation that executed this flow..</param>
+        /// <param name="WorkitemId">The id of the workitem that executed this flow..</param>
         /// <param name="FlowType">The type of flow..</param>
         /// <param name="FlowErrorReason">If the flow errored out this is the reason..</param>
         /// <param name="FlowWarningReason">If the flow had a warning, this is the reason..</param>
         /// <param name="FlowName">The name of the flow..</param>
-        public FlowExecutionDataQueryResult(string Name = null, DateTime? StartDateTime = null, DateTime? EndDateTime = null, string FlowId = null, string FlowVersion = null, string ConversationId = null, FlowTypeEnum? FlowType = null, string FlowErrorReason = null, string FlowWarningReason = null, string FlowName = null)
+        public FlowExecutionDataQueryResult(string Name = null, DateTime? StartDateTime = null, DateTime? EndDateTime = null, string FlowId = null, string FlowVersion = null, string ConversationId = null, string WorkitemId = null, FlowTypeEnum? FlowType = null, string FlowErrorReason = null, string FlowWarningReason = null, string FlowName = null)
         {
             this.Name = Name;
             this.StartDateTime = StartDateTime;
@@ -168,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlowId = FlowId;
             this.FlowVersion = FlowVersion;
             this.ConversationId = ConversationId;
+            this.WorkitemId = WorkitemId;
             this.FlowType = FlowType;
             this.FlowErrorReason = FlowErrorReason;
             this.FlowWarningReason = FlowWarningReason;
@@ -239,6 +241,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// The id of the workitem that executed this flow.
+        /// </summary>
+        /// <value>The id of the workitem that executed this flow.</value>
+        [DataMember(Name="workitemId", EmitDefaultValue=false)]
+        public string WorkitemId { get; set; }
+
+
+
 
 
         /// <summary>
@@ -292,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlowId: ").Append(FlowId).Append("\n");
             sb.Append("  FlowVersion: ").Append(FlowVersion).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  WorkitemId: ").Append(WorkitemId).Append("\n");
             sb.Append("  FlowType: ").Append(FlowType).Append("\n");
             sb.Append("  FlowErrorReason: ").Append(FlowErrorReason).Append("\n");
             sb.Append("  FlowWarningReason: ").Append(FlowWarningReason).Append("\n");
@@ -373,6 +385,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationId.Equals(other.ConversationId)
                 ) &&
                 (
+                    this.WorkitemId == other.WorkitemId ||
+                    this.WorkitemId != null &&
+                    this.WorkitemId.Equals(other.WorkitemId)
+                ) &&
+                (
                     this.FlowType == other.FlowType ||
                     this.FlowType != null &&
                     this.FlowType.Equals(other.FlowType)
@@ -430,6 +447,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
+
+                if (this.WorkitemId != null)
+                    hash = hash * 59 + this.WorkitemId.GetHashCode();
 
                 if (this.FlowType != null)
                     hash = hash * 59 + this.FlowType.GetHashCode();

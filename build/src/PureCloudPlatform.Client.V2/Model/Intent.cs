@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Intent" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        public Intent(string Name = null)
+        /// <param name="Description">Description.</param>
+        public Intent(string Name = null, string Description = null)
         {
             this.Name = Name;
+            this.Description = Description;
             
         }
         
@@ -37,6 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Name { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Description
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Intent {\n");
 
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
                 );
         }
 
@@ -107,6 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
 
                 return hash;
             }

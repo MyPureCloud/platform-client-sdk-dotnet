@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Instagramprivate,
             
             /// <summary>
+            /// Enum Instagrampublic for "InstagramPublic"
+            /// </summary>
+            [EnumMember(Value = "InstagramPublic")]
+            Instagrampublic,
+            
+            /// <summary>
             /// Enum Whatsappprivate for "WhatsAppPrivate"
             /// </summary>
             [EnumMember(Value = "WhatsAppPrivate")]

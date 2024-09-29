@@ -76,6 +76,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Open,
             
             /// <summary>
+            /// Enum Apple for "Apple"
+            /// </summary>
+            [EnumMember(Value = "Apple")]
+            Apple,
+            
+            /// <summary>
             /// Enum Sms for "Sms"
             /// </summary>
             [EnumMember(Value = "Sms")]

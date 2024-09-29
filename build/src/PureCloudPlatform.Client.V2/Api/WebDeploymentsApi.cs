@@ -301,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
         
         ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null);
@@ -313,7 +313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
         
         ApiResponse<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null);
@@ -779,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
         
         System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null);
@@ -791,7 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null);
@@ -3409,7 +3409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
         
         public ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null)
@@ -3423,7 +3423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
         
         public ApiResponse< ExpandableWebDeploymentEntityListing > GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null)
@@ -3511,7 +3511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
         
         public async System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null)
@@ -3526,7 +3526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null)
