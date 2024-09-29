@@ -10,7 +10,8 @@
 | **JourneyActionMap** | [**V2FlowExecutionDataFlowidTopicJourneyActionMap**](V2FlowExecutionDataFlowidTopicJourneyActionMap) |  | [optional] |
 | **ProcessAutomation** | [**V2FlowExecutionDataFlowidTopicProcessAutomation**](V2FlowExecutionDataFlowidTopicProcessAutomation) |  | [optional] |
 | **Quality** | [**V2FlowExecutionDataFlowidTopicQuality**](V2FlowExecutionDataFlowidTopicQuality) |  | [optional] |
+| **Workitem** | [**V2FlowExecutionDataFlowidTopicWorkitem**](V2FlowExecutionDataFlowidTopicWorkitem) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

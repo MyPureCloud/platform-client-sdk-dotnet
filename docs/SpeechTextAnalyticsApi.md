@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsTopicsGeneral**](#GetSpeechandtextanalyticsTopicsGeneral) | **Get** /api/v2/speechandtextanalytics/topics/general | Get the Speech &amp; Text Analytics general topics for a given dialect |
 | [**GetSpeechandtextanalyticsTopicsGeneralStatus**](#GetSpeechandtextanalyticsTopicsGeneralStatus) | **Get** /api/v2/speechandtextanalytics/topics/general/status | Get the list of general topics from the org and the system with their current status |
 | [**GetSpeechandtextanalyticsTopicsPublishjob**](#GetSpeechandtextanalyticsTopicsPublishjob) | **Get** /api/v2/speechandtextanalytics/topics/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish topics job by id |
+| [**GetSpeechandtextanalyticsTranslationsLanguageConversation**](#GetSpeechandtextanalyticsTranslationsLanguageConversation) | **Get** /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId} | Translate all communication(s) for an interaction. |
+| [**GetSpeechandtextanalyticsTranslationsLanguages**](#GetSpeechandtextanalyticsTranslationsLanguages) | **Get** /api/v2/speechandtextanalytics/translations/languages | Get supported translation languages |
 | [**PatchSpeechandtextanalyticsSettings**](#PatchSpeechandtextanalyticsSettings) | **Patch** /api/v2/speechandtextanalytics/settings | Patch Speech And Text Analytics Settings |
 | [**PostSpeechandtextanalyticsCategories**](#PostSpeechandtextanalyticsCategories) | **Post** /api/v2/speechandtextanalytics/categories | Create new Speech &amp; Text Analytics category |
 | [**PostSpeechandtextanalyticsDictionaryfeedback**](#PostSpeechandtextanalyticsDictionaryfeedback) | **Post** /api/v2/speechandtextanalytics/dictionaryfeedback | Create a Speech &amp; Text Analytics DictionaryFeedback |
@@ -2061,6 +2063,135 @@ namespace Example
 [**TopicJob**](TopicJob)
 
 
+## GetSpeechandtextanalyticsTranslationsLanguageConversation
+
+> [**CommunicationTranslationList**](CommunicationTranslationList) GetSpeechandtextanalyticsTranslationsLanguageConversation (string languageId, string conversationId, string communicationId = null, string recordingId = null)
+
+
+Translate all communication(s) for an interaction.
+
+GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:translation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTranslationsLanguageConversationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var languageId = languageId_example;  // string | Target translation language
+            var conversationId = conversationId_example;  // string | Conversation id
+            var communicationId = communicationId_example;  // string | Communication id associated with the conversation (optional) 
+            var recordingId = recordingId_example;  // string | Recording id associated with the communication (optional) 
+
+            try
+            { 
+                // Translate all communication(s) for an interaction.
+                CommunicationTranslationList result = apiInstance.GetSpeechandtextanalyticsTranslationsLanguageConversation(languageId, conversationId, communicationId, recordingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsTranslationsLanguageConversation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageId** | **string**| Target translation language |  |
+| **conversationId** | **string**| Conversation id |  |
+| **communicationId** | **string**| Communication id associated with the conversation | [optional]  |
+| **recordingId** | **string**| Recording id associated with the communication | [optional]  |
+
+### Return type
+
+[**CommunicationTranslationList**](CommunicationTranslationList)
+
+
+## GetSpeechandtextanalyticsTranslationsLanguages
+
+> [**TranslateSupportedLanguageList**](TranslateSupportedLanguageList) GetSpeechandtextanalyticsTranslationsLanguages ()
+
+
+Get supported translation languages
+
+GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:translation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTranslationsLanguagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+
+            try
+            { 
+                // Get supported translation languages
+                TranslateSupportedLanguageList result = apiInstance.GetSpeechandtextanalyticsTranslationsLanguages();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsTranslationsLanguages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**TranslateSupportedLanguageList**](TranslateSupportedLanguageList)
+
+
 ## PatchSpeechandtextanalyticsSettings
 
 > [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse) PatchSpeechandtextanalyticsSettings (SpeechTextAnalyticsSettingsRequest body)
@@ -3131,4 +3262,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

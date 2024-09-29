@@ -7,9 +7,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Entities** | [**List&lt;Workitem&gt;**](Workitem) |  | [optional] |
-| **PageSize** | **int?** | The total page size requested | [optional] |
-| **PageNumber** | **int?** | The page number requested | [optional] |
+| **PageSize** | **int?** |  | [optional] |
+| **PageNumber** | **int?** |  | [optional] |
+| **Total** | **long?** |  | [optional] |
+| **PageCount** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_

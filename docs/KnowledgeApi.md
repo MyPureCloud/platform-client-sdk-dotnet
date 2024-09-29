@@ -16,9 +16,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteKnowledgeKnowledgebaseLanguageCategory**](#DeleteKnowledgeKnowledgebaseLanguageCategory) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Delete category |
 | [**DeleteKnowledgeKnowledgebaseLanguageDocument**](#DeleteKnowledgeKnowledgebaseLanguageDocument) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Delete document |
 | [**DeleteKnowledgeKnowledgebaseLanguageDocumentsImport**](#DeleteKnowledgeKnowledgebaseLanguageDocumentsImport) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Delete import operation |
+| [**DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Delete Salesforce Knowledge integration source |
+| [**DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId**](#DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Delete ServiceNow Knowledge integration source |
+| [**DeleteKnowledgeKnowledgebaseSynchronizeJob**](#DeleteKnowledgeKnowledgebaseSynchronizeJob) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId} | Delete synchronization job |
 | [**GetKnowledgeGuestSessionCategories**](#GetKnowledgeGuestSessionCategories) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/categories | Get categories |
 | [**GetKnowledgeGuestSessionDocument**](#GetKnowledgeGuestSessionDocument) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId} | Get a knowledge document by ID. |
 | [**GetKnowledgeGuestSessionDocuments**](#GetKnowledgeGuestSessionDocuments) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/documents | Get documents. |
+| [**GetKnowledgeIntegrationOptions**](#GetKnowledgeIntegrationOptions) | **Get** /api/v2/knowledge/integrations/{integrationId}/options | Get sync options available for a knowledge-connect integration |
 | [**GetKnowledgeKnowledgebase**](#GetKnowledgeKnowledgebase) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Get knowledge base |
 | [**GetKnowledgeKnowledgebaseCategories**](#GetKnowledgeKnowledgebaseCategories) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories | Get categories |
 | [**GetKnowledgeKnowledgebaseCategory**](#GetKnowledgeKnowledgebaseCategory) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Get category |
@@ -47,6 +51,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseOperations**](#GetKnowledgeKnowledgebaseOperations) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations | Get operations |
 | [**GetKnowledgeKnowledgebaseOperationsUsersQuery**](#GetKnowledgeKnowledgebaseOperationsUsersQuery) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query | Get ids of operation creator users and oauth clients |
 | [**GetKnowledgeKnowledgebaseParseJob**](#GetKnowledgeKnowledgebaseParseJob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId} | Get parse job report |
+| [**GetKnowledgeKnowledgebaseSources**](#GetKnowledgeKnowledgebaseSources) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources | Get Knowledge integration sources |
+| [**GetKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#GetKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Get Salesforce Knowledge integration source |
+| [**GetKnowledgeKnowledgebaseSourcesServicenowSourceId**](#GetKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Get ServiceNow Knowledge integration source |
+| [**GetKnowledgeKnowledgebaseSynchronizeJob**](#GetKnowledgeKnowledgebaseSynchronizeJob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId} | Get synchronization job report |
 | [**GetKnowledgeKnowledgebaseUnansweredGroup**](#GetKnowledgeKnowledgebaseUnansweredGroup) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId} | Get knowledge base unanswered group for a particular groupId |
 | [**GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](#GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Get knowledge base unanswered phrase group for a particular phraseGroupId |
 | [**GetKnowledgeKnowledgebaseUnansweredGroups**](#GetKnowledgeKnowledgebaseUnansweredGroups) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups | Get knowledge base unanswered groups |
@@ -66,6 +74,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebaseLanguageDocuments**](#PatchKnowledgeKnowledgebaseLanguageDocuments) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Update documents collection |
 | [**PatchKnowledgeKnowledgebaseLanguageDocumentsImport**](#PatchKnowledgeKnowledgebaseLanguageDocumentsImport) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Start import operation |
 | [**PatchKnowledgeKnowledgebaseParseJob**](#PatchKnowledgeKnowledgebaseParseJob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId} | Send update to the parse operation |
+| [**PatchKnowledgeKnowledgebaseSynchronizeJob**](#PatchKnowledgeKnowledgebaseSynchronizeJob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId} | Update synchronization job |
 | [**PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](#PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Update a Knowledge base unanswered phrase group |
 | [**PostKnowledgeDocumentuploads**](#PostKnowledgeDocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**PostKnowledgeGuestSessionDocumentCopies**](#PostKnowledgeGuestSessionDocumentCopies) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies | Indicate that the document was copied by the user. |
@@ -103,8 +112,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseParseJobImport**](#PostKnowledgeKnowledgebaseParseJobImport) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}/import | Import the parsed articles |
 | [**PostKnowledgeKnowledgebaseParseJobs**](#PostKnowledgeKnowledgebaseParseJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs | Create parse job |
 | [**PostKnowledgeKnowledgebaseSearch**](#PostKnowledgeKnowledgebaseSearch) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search | Search Documents |
+| [**PostKnowledgeKnowledgebaseSourcesSalesforce**](#PostKnowledgeKnowledgebaseSourcesSalesforce) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce | Create Salesforce Knowledge integration source |
+| [**PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync**](#PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync | Start sync on Salesforce Knowledge integration source |
+| [**PostKnowledgeKnowledgebaseSourcesServicenow**](#PostKnowledgeKnowledgebaseSourcesServicenow) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow | Create ServiceNow Knowledge integration source |
+| [**PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync**](#PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync | Start synchronization on ServiceNow Knowledge integration source |
+| [**PostKnowledgeKnowledgebaseSynchronizeJobs**](#PostKnowledgeKnowledgebaseSynchronizeJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs | Create synchronization job |
 | [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](#PostKnowledgeKnowledgebaseUploadsUrlsJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
 | [**PostKnowledgeKnowledgebases**](#PostKnowledgeKnowledgebases) | **Post** /api/v2/knowledge/knowledgebases | Create new knowledge base |
+| [**PutKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#PutKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Update Salesforce Knowledge integration source |
+| [**PutKnowledgeKnowledgebaseSourcesServicenowSourceId**](#PutKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Update ServiceNow Knowledge integration source |
 
 
 
@@ -759,6 +775,201 @@ namespace Example
 void (empty response body)
 
 
+## DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId
+
+> void DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId (string knowledgeBaseId, string sourceId)
+
+
+Delete Salesforce Knowledge integration source
+
+DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+
+            try
+            { 
+                // Delete Salesforce Knowledge integration source
+                apiInstance.DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId, sourceId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId
+
+> void DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId (string knowledgeBaseId, string sourceId)
+
+
+Delete ServiceNow Knowledge integration source
+
+DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseSourcesServicenowSourceIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+
+            try
+            { 
+                // Delete ServiceNow Knowledge integration source
+                apiInstance.DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId, sourceId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteKnowledgeKnowledgebaseSynchronizeJob
+
+> void DeleteKnowledgeKnowledgebaseSynchronizeJob (string knowledgeBaseId, string syncJobId)
+
+
+Delete synchronization job
+
+DeleteKnowledgeKnowledgebaseSynchronizeJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseSynchronizeJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var syncJobId = syncJobId_example;  // string | Synchronization job ID
+
+            try
+            { 
+                // Delete synchronization job
+                apiInstance.DeleteKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId, syncJobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseSynchronizeJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **syncJobId** | **string**| Synchronization job ID |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## GetKnowledgeGuestSessionCategories
 
 > [**GuestCategoryResponseListing**](GuestCategoryResponseListing) GetKnowledgeGuestSessionCategories (string sessionId, string before = null, string after = null, string pageSize = null, string parentId = null, bool? isRoot = null, string name = null, string sortBy = null, string expand = null, bool? includeDocumentCount = null)
@@ -946,6 +1157,70 @@ namespace Example
 ### Return type
 
 [**KnowledgeGuestDocumentResponseListing**](KnowledgeGuestDocumentResponseListing)
+
+
+## GetKnowledgeIntegrationOptions
+
+> [**KnowledgeIntegrationOptionsResponse**](KnowledgeIntegrationOptionsResponse) GetKnowledgeIntegrationOptions (string integrationId)
+
+
+Get sync options available for a knowledge-connect integration
+
+GetKnowledgeIntegrationOptions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationOptions:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeIntegrationOptionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get sync options available for a knowledge-connect integration
+                KnowledgeIntegrationOptionsResponse result = apiInstance.GetKnowledgeIntegrationOptions(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeIntegrationOptions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+
+### Return type
+
+[**KnowledgeIntegrationOptionsResponse**](KnowledgeIntegrationOptionsResponse)
 
 
 ## GetKnowledgeKnowledgebase
@@ -2944,6 +3219,278 @@ namespace Example
 [**KnowledgeParseJobResponse**](KnowledgeParseJobResponse)
 
 
+## GetKnowledgeKnowledgebaseSources
+
+> [**List&lt;SourceBaseResponse&gt;**](SourceBaseResponse) GetKnowledgeKnowledgebaseSources (string knowledgeBaseId, string type = null, List<string> expand = null, List<string> ids = null)
+
+
+Get Knowledge integration sources
+
+GetKnowledgeKnowledgebaseSources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseSourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var type = type_example;  // string | If specified, retrieves integration sources with specified integration type. (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+            var ids = new List<string>(); // List<string> | If specified, retrieves integration sources with specified IDs. (optional) 
+
+            try
+            { 
+                // Get Knowledge integration sources
+                List<SourceBaseResponse> result = apiInstance.GetKnowledgeKnowledgebaseSources(knowledgeBaseId, type, expand, ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseSources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **type** | **string**| If specified, retrieves integration sources with specified integration type. | [optional] <br />**Values**: Salesforce, ServiceNow |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: lastsync |
+| **ids** | [**List<string>**](string)| If specified, retrieves integration sources with specified IDs. | [optional]  |
+
+### Return type
+
+[**List<SourceBaseResponse>**](SourceBaseResponse)
+
+
+## GetKnowledgeKnowledgebaseSourcesSalesforceSourceId
+
+> [**SalesforceSourceResponse**](SalesforceSourceResponse) GetKnowledgeKnowledgebaseSourcesSalesforceSourceId (string knowledgeBaseId, string sourceId, List<string> expand = null)
+
+
+Get Salesforce Knowledge integration source
+
+GetKnowledgeKnowledgebaseSourcesSalesforceSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseSourcesSalesforceSourceIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+
+            try
+            { 
+                // Get Salesforce Knowledge integration source
+                SalesforceSourceResponse result = apiInstance.GetKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId, sourceId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseSourcesSalesforceSourceId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: lastsync |
+
+### Return type
+
+[**SalesforceSourceResponse**](SalesforceSourceResponse)
+
+
+## GetKnowledgeKnowledgebaseSourcesServicenowSourceId
+
+> [**ServiceNowSourceResponse**](ServiceNowSourceResponse) GetKnowledgeKnowledgebaseSourcesServicenowSourceId (string knowledgeBaseId, string sourceId, List<string> expand = null)
+
+
+Get ServiceNow Knowledge integration source
+
+GetKnowledgeKnowledgebaseSourcesServicenowSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseSourcesServicenowSourceIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+
+            try
+            { 
+                // Get ServiceNow Knowledge integration source
+                ServiceNowSourceResponse result = apiInstance.GetKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId, sourceId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseSourcesServicenowSourceId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: lastsync |
+
+### Return type
+
+[**ServiceNowSourceResponse**](ServiceNowSourceResponse)
+
+
+## GetKnowledgeKnowledgebaseSynchronizeJob
+
+> [**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse) GetKnowledgeKnowledgebaseSynchronizeJob (string knowledgeBaseId, string syncJobId)
+
+
+Get synchronization job report
+
+GetKnowledgeKnowledgebaseSynchronizeJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseSynchronizeJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var syncJobId = syncJobId_example;  // string | Synchronization job ID
+
+            try
+            { 
+                // Get synchronization job report
+                KnowledgeSyncJobResponse result = apiInstance.GetKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId, syncJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseSynchronizeJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **syncJobId** | **string**| Synchronization job ID |  |
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
 ## GetKnowledgeKnowledgebaseUnansweredGroup
 
 > [**UnansweredGroup**](UnansweredGroup) GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
@@ -4233,6 +4780,74 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+
+## PatchKnowledgeKnowledgebaseSynchronizeJob
+
+> [**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse) PatchKnowledgeKnowledgebaseSynchronizeJob (string knowledgeBaseId, string syncJobId, SyncStatusRequest body)
+
+
+Update synchronization job
+
+PatchKnowledgeKnowledgebaseSynchronizeJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseSynchronizeJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var syncJobId = syncJobId_example;  // string | Synchronization job ID
+            var body = new SyncStatusRequest(); // SyncStatusRequest | 
+
+            try
+            { 
+                // Update synchronization job
+                KnowledgeSyncJobResponse result = apiInstance.PatchKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId, syncJobId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseSynchronizeJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **syncJobId** | **string**| Synchronization job ID |  |
+| **body** | [**SyncStatusRequest**](SyncStatusRequest)|  |  |
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
 
 
 ## PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup
@@ -6612,6 +7227,336 @@ namespace Example
 [**KnowledgeSearchResponse**](KnowledgeSearchResponse)
 
 
+## PostKnowledgeKnowledgebaseSourcesSalesforce
+
+> [**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse) PostKnowledgeKnowledgebaseSourcesSalesforce (string knowledgeBaseId, SalesforceSourceRequest body)
+
+
+Create Salesforce Knowledge integration source
+
+PostKnowledgeKnowledgebaseSourcesSalesforce is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseSourcesSalesforceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new SalesforceSourceRequest(); // SalesforceSourceRequest | 
+
+            try
+            { 
+                // Create Salesforce Knowledge integration source
+                KnowledgeSyncJobResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesSalesforce(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseSourcesSalesforce: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**SalesforceSourceRequest**](SalesforceSourceRequest)|  |  |
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
+## PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync
+
+> [**SourceSyncResponse**](SourceSyncResponse) PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync (string knowledgeBaseId, string sourceId)
+
+
+Start sync on Salesforce Knowledge integration source
+
+PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+
+            try
+            { 
+                // Start sync on Salesforce Knowledge integration source
+                SourceSyncResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId, sourceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+
+### Return type
+
+[**SourceSyncResponse**](SourceSyncResponse)
+
+
+## PostKnowledgeKnowledgebaseSourcesServicenow
+
+> [**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse) PostKnowledgeKnowledgebaseSourcesServicenow (string knowledgeBaseId, ServiceNowSourceRequest body)
+
+
+Create ServiceNow Knowledge integration source
+
+PostKnowledgeKnowledgebaseSourcesServicenow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseSourcesServicenowExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new ServiceNowSourceRequest(); // ServiceNowSourceRequest | 
+
+            try
+            { 
+                // Create ServiceNow Knowledge integration source
+                KnowledgeSyncJobResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesServicenow(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseSourcesServicenow: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**ServiceNowSourceRequest**](ServiceNowSourceRequest)|  |  |
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
+## PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync
+
+> [**SourceSyncResponse**](SourceSyncResponse) PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync (string knowledgeBaseId, string sourceId)
+
+
+Start synchronization on ServiceNow Knowledge integration source
+
+PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+
+            try
+            { 
+                // Start synchronization on ServiceNow Knowledge integration source
+                SourceSyncResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId, sourceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+
+### Return type
+
+[**SourceSyncResponse**](SourceSyncResponse)
+
+
+## PostKnowledgeKnowledgebaseSynchronizeJobs
+
+> [**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse) PostKnowledgeKnowledgebaseSynchronizeJobs (string knowledgeBaseId, KnowledgeSyncJobRequest body)
+
+
+Create synchronization job
+
+PostKnowledgeKnowledgebaseSynchronizeJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseSynchronizeJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeSyncJobRequest(); // KnowledgeSyncJobRequest | 
+
+            try
+            { 
+                // Create synchronization job
+                KnowledgeSyncJobResponse result = apiInstance.PostKnowledgeKnowledgebaseSynchronizeJobs(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseSynchronizeJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeSyncJobRequest**](KnowledgeSyncJobRequest)|  |  |
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
 ## PostKnowledgeKnowledgebaseUploadsUrlsJobs
 
 > [**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse) PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
@@ -6740,4 +7685,140 @@ namespace Example
 [**KnowledgeBase**](KnowledgeBase)
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+## PutKnowledgeKnowledgebaseSourcesSalesforceSourceId
+
+> [**SalesforceSourceResponse**](SalesforceSourceResponse) PutKnowledgeKnowledgebaseSourcesSalesforceSourceId (string knowledgeBaseId, string sourceId, SalesforceSourceRequest body)
+
+
+Update Salesforce Knowledge integration source
+
+PutKnowledgeKnowledgebaseSourcesSalesforceSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutKnowledgeKnowledgebaseSourcesSalesforceSourceIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+            var body = new SalesforceSourceRequest(); // SalesforceSourceRequest | 
+
+            try
+            { 
+                // Update Salesforce Knowledge integration source
+                SalesforceSourceResponse result = apiInstance.PutKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId, sourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PutKnowledgeKnowledgebaseSourcesSalesforceSourceId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+| **body** | [**SalesforceSourceRequest**](SalesforceSourceRequest)|  |  |
+
+### Return type
+
+[**SalesforceSourceResponse**](SalesforceSourceResponse)
+
+
+## PutKnowledgeKnowledgebaseSourcesServicenowSourceId
+
+> [**ServiceNowSourceResponse**](ServiceNowSourceResponse) PutKnowledgeKnowledgebaseSourcesServicenowSourceId (string knowledgeBaseId, string sourceId, ServiceNowSourceRequest body)
+
+
+Update ServiceNow Knowledge integration source
+
+PutKnowledgeKnowledgebaseSourcesServicenowSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutKnowledgeKnowledgebaseSourcesServicenowSourceIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var sourceId = sourceId_example;  // string | Source ID
+            var body = new ServiceNowSourceRequest(); // ServiceNowSourceRequest | 
+
+            try
+            { 
+                // Update ServiceNow Knowledge integration source
+                ServiceNowSourceResponse result = apiInstance.PutKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId, sourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PutKnowledgeKnowledgebaseSourcesServicenowSourceId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **sourceId** | **string**| Source ID |  |
+| **body** | [**ServiceNowSourceRequest**](ServiceNowSourceRequest)|  |  |
+
+### Return type
+
+[**ServiceNowSourceResponse**](ServiceNowSourceResponse)
+
+
+_PureCloudPlatform.Client.V2 216.0.0_

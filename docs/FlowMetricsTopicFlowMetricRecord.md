@@ -50,6 +50,7 @@
 | **FlowMilestoneIds** | **List&lt;string&gt;** | The ID of a flow outcome milestone | [optional] |
 | **FlowName** | **string** | The name of this flow at the time of flow execution | [optional] |
 | **FlowOutType** | **string** | Type of flow out that occurred when emitting tFlowOut. | [optional] |
+| **FlowSubType** | **string** | Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities. | [optional] |
 | **FlowType** | **string** | The type of this flow | [optional] |
 | **FlowVersion** | **string** | The version of this flow | [optional] |
 | **GroupId** | **string** | Unique identifier for a PureCloud group | [optional] |
@@ -107,4 +108,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 215.1.0_
+_PureCloudPlatform.Client.V2 216.0.0_
