@@ -128,7 +128,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Error">Error.</param>
         /// <param name="Active">Active.</param>
         /// <param name="Type">Type.</param>
-        public WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate(string RequestId = null, DateTime? DateImportStarted = null, DateTime? DateImportEnded = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, string Error = null, bool? Active = null, TypeEnum? Type = null)
+        /// <param name="FileName">FileName.</param>
+        /// <param name="FileSize">FileSize.</param>
+        public WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate(string RequestId = null, DateTime? DateImportStarted = null, DateTime? DateImportEnded = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, string Error = null, bool? Active = null, TypeEnum? Type = null, string FileName = null, int? FileSize = null)
         {
             this.RequestId = RequestId;
             this.DateImportStarted = DateImportStarted;
@@ -139,6 +141,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Error = Error;
             this.Active = Active;
             this.Type = Type;
+            this.FileName = FileName;
+            this.FileSize = FileSize;
             
         }
         
@@ -203,6 +207,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets FileName
+        /// </summary>
+        [DataMember(Name="fileName", EmitDefaultValue=false)]
+        public string FileName { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets FileSize
+        /// </summary>
+        [DataMember(Name="fileSize", EmitDefaultValue=false)]
+        public int? FileSize { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -221,6 +241,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  FileName: ").Append(FileName).Append("\n");
+            sb.Append("  FileSize: ").Append(FileSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -305,6 +327,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.FileName == other.FileName ||
+                    this.FileName != null &&
+                    this.FileName.Equals(other.FileName)
+                ) &&
+                (
+                    this.FileSize == other.FileSize ||
+                    this.FileSize != null &&
+                    this.FileSize.Equals(other.FileSize)
                 );
         }
 
@@ -345,6 +377,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.FileName != null)
+                    hash = hash * 59 + this.FileName.GetHashCode();
+
+                if (this.FileSize != null)
+                    hash = hash * 59 + this.FileSize.GetHashCode();
 
                 return hash;
             }

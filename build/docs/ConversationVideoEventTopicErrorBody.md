@@ -16,7 +16,8 @@
 | **ContextId** | **string** |  | [optional] |
 | **Details** | [**List&lt;ConversationVideoEventTopicDetail&gt;**](ConversationVideoEventTopicDetail) |  | [optional] |
 | **Errors** | [**List&lt;ConversationVideoEventTopicErrorBody&gt;**](ConversationVideoEventTopicErrorBody) |  | [optional] |
+| **Limit** | [**ConversationVideoEventTopicLimit**](ConversationVideoEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 216.0.0_
+_PureCloudPlatform.Client.V2 217.0.0_

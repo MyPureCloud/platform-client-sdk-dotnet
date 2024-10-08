@@ -16,7 +16,8 @@
 | **ContextId** | **string** |  | [optional] |
 | **Details** | [**List&lt;QueueConversationMessageEventTopicDetail&gt;**](QueueConversationMessageEventTopicDetail) |  | [optional] |
 | **Errors** | [**List&lt;QueueConversationMessageEventTopicErrorBody&gt;**](QueueConversationMessageEventTopicErrorBody) |  | [optional] |
+| **Limit** | [**QueueConversationMessageEventTopicLimit**](QueueConversationMessageEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 216.0.0_
+_PureCloudPlatform.Client.V2 217.0.0_

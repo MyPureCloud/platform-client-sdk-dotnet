@@ -31,7 +31,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContextId">ContextId.</param>
         /// <param name="Details">Details.</param>
         /// <param name="Errors">Errors.</param>
-        public QueueConversationScreenShareEventTopicErrorBody(string Message = null, string Code = null, int? Status = null, string EntityId = null, string EntityName = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<QueueConversationScreenShareEventTopicDetail> Details = null, List<QueueConversationScreenShareEventTopicErrorBody> Errors = null)
+        /// <param name="Limit">Limit.</param>
+        public QueueConversationScreenShareEventTopicErrorBody(string Message = null, string Code = null, int? Status = null, string EntityId = null, string EntityName = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<QueueConversationScreenShareEventTopicDetail> Details = null, List<QueueConversationScreenShareEventTopicErrorBody> Errors = null, QueueConversationScreenShareEventTopicLimit Limit = null)
         {
             this.Message = Message;
             this.Code = Code;
@@ -43,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContextId = ContextId;
             this.Details = Details;
             this.Errors = Errors;
+            this.Limit = Limit;
             
         }
         
@@ -127,6 +129,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<QueueConversationScreenShareEventTopicErrorBody> Errors { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Limit
+        /// </summary>
+        [DataMember(Name="limit", EmitDefaultValue=false)]
+        public QueueConversationScreenShareEventTopicLimit Limit { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
+            sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -235,6 +246,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
+                ) &&
+                (
+                    this.Limit == other.Limit ||
+                    this.Limit != null &&
+                    this.Limit.Equals(other.Limit)
                 );
         }
 
@@ -278,6 +294,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
+
+                if (this.Limit != null)
+                    hash = hash * 59 + this.Limit.GetHashCode();
 
                 return hash;
             }

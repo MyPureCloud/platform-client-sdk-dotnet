@@ -87,10 +87,41 @@ namespace PureCloudPlatform.Client.V2.Model
             Published
         }
         /// <summary>
+        /// Gets or Sets SocialVisibility
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SocialVisibilityEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Private for "private"
+            /// </summary>
+            [EnumMember(Value = "private")]
+            Private,
+            
+            /// <summary>
+            /// Enum Public for "public"
+            /// </summary>
+            [EnumMember(Value = "public")]
+            Public
+        }
+        /// <summary>
         /// Gets or Sets MessageStatus
         /// </summary>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        /// <summary>
+        /// Gets or Sets SocialVisibility
+        /// </summary>
+        [DataMember(Name="socialVisibility", EmitDefaultValue=false)]
+        public SocialVisibilityEnum? SocialVisibility { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationMessageEventTopicMessageDetails" /> class.
         /// </summary>
@@ -102,7 +133,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Stickers">Stickers.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="MessageMetadata">MessageMetadata.</param>
-        public QueueConversationMessageEventTopicMessageDetails(QueueConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<QueueConversationMessageEventTopicMessageMedia> Media = null, List<QueueConversationMessageEventTopicMessageSticker> Stickers = null, QueueConversationMessageEventTopicErrorDetails ErrorInfo = null, QueueConversationMessageEventTopicMessageMetadata MessageMetadata = null)
+        /// <param name="SocialVisibility">SocialVisibility.</param>
+        public QueueConversationMessageEventTopicMessageDetails(QueueConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<QueueConversationMessageEventTopicMessageMedia> Media = null, List<QueueConversationMessageEventTopicMessageSticker> Stickers = null, QueueConversationMessageEventTopicErrorDetails ErrorInfo = null, QueueConversationMessageEventTopicMessageMetadata MessageMetadata = null, SocialVisibilityEnum? SocialVisibility = null)
         {
             this.Message = Message;
             this.MessageTime = MessageTime;
@@ -112,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Stickers = Stickers;
             this.ErrorInfo = ErrorInfo;
             this.MessageMetadata = MessageMetadata;
+            this.SocialVisibility = SocialVisibility;
             
         }
         
@@ -174,6 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public QueueConversationMessageEventTopicMessageMetadata MessageMetadata { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -191,6 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  MessageMetadata: ").Append(MessageMetadata).Append("\n");
+            sb.Append("  SocialVisibility: ").Append(SocialVisibility).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -270,6 +306,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageMetadata == other.MessageMetadata ||
                     this.MessageMetadata != null &&
                     this.MessageMetadata.Equals(other.MessageMetadata)
+                ) &&
+                (
+                    this.SocialVisibility == other.SocialVisibility ||
+                    this.SocialVisibility != null &&
+                    this.SocialVisibility.Equals(other.SocialVisibility)
                 );
         }
 
@@ -307,6 +348,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MessageMetadata != null)
                     hash = hash * 59 + this.MessageMetadata.GetHashCode();
+
+                if (this.SocialVisibility != null)
+                    hash = hash * 59 + this.SocialVisibility.GetHashCode();
 
                 return hash;
             }

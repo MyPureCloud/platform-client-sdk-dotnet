@@ -84,7 +84,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Message for "Message"
             /// </summary>
             [EnumMember(Value = "Message")]
-            Message
+            Message,
+            
+            /// <summary>
+            /// Enum Internalmessage for "InternalMessage"
+            /// </summary>
+            [EnumMember(Value = "InternalMessage")]
+            Internalmessage
         }
         /// <summary>
         /// Gets or Sets MessageType

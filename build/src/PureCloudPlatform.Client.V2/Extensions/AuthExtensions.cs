@@ -103,8 +103,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers
-                 .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
-                 .Select(header => new { Name = header.First().GetType().GetProperty("Name").GetValue(header.First()), Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList() })
+                 .GroupBy(header =>header?.Name)
+                 .Select(header => new { Name = header?.FirstOrDefault()?.Name, Value = header.Select(x => x?.Value)?.ToList() })
                                     .ToDictionary(header => header.Name.ToString(), header => String.Join(", ", header?.Value?.ToArray())),
                 authTokenInfo,
                 response.Content,
@@ -186,8 +186,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers
-                 .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
-                 .Select(header => new { Name = header.First().GetType().GetProperty("Name").GetValue(header.First()), Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList() })
+                 .GroupBy(header => header?.Name)
+                 .Select(header => new { Name = header?.FirstOrDefault()?.Name, Value = header.Select(x => x?.Value)?.ToList() })
                                     .ToDictionary(header => header.Name.ToString(), header => String.Join(", ", header?.Value?.ToArray())),
                 authTokenInfo,
                 response.Content,
@@ -311,8 +311,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers
-                 .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
-                 .Select(header => new { Name = header.First().GetType().GetProperty("Name").GetValue(header.First()), Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList() })
+                 .GroupBy(header => header?.Name)
+                 .Select(header => new { Name = header?.FirstOrDefault()?.Name, Value = header.Select(x => x?.Value)?.ToList() })
                                     .ToDictionary(header => header.Name.ToString(), header => String.Join(", ", header?.Value?.ToArray())),
                 authTokenInfo,
                 response.Content,
@@ -350,11 +350,11 @@ namespace PureCloudPlatform.Client.V2.Extensions
             var fullUrl = restClient.BuildUri(request);
             string url = fullUrl == null ? path : fullUrl.ToString();
             apiClient.Configuration.Logger.Trace(method.ToString(), url, postBody, statusCode, headerParams, response.Headers?
-                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .GroupBy(header => header?.Name)
                                                              .Select(header => new
                                                          {
-                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
-                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
             apiClient.Configuration.Logger.Debug(method.ToString(), url, postBody, statusCode, headerParams);
@@ -362,11 +362,11 @@ namespace PureCloudPlatform.Client.V2.Extensions
             if (statusCode >= 400 || statusCode == 0)
                 
                 apiClient.Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, statusCode, headerParams, response.Headers?
-                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .GroupBy(header => header?.Name)
                                                              .Select(header => new
                                                          {
-                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
-                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
             return (Object) response;

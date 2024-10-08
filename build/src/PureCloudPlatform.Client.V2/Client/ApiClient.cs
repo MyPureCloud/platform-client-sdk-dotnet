@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "216.0.0");
+            request.AddHeader("purecloud-sdk", "217.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
@@ -263,11 +263,11 @@ namespace PureCloudPlatform.Client.V2.Client
                 response = RestClient.Execute(request);
                 Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
                 Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers?
-                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .GroupBy(header => header?.Name)
                                                              .Select(header => new
                                                          {
-                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
-                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
 
@@ -286,11 +286,11 @@ namespace PureCloudPlatform.Client.V2.Client
 
             if ((int)response.StatusCode < 200 || (int)response.StatusCode >= 300)
                 Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, (int)response.StatusCode, headerParams, response.Headers?
-                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .GroupBy(header => header?.Name)
                                                              .Select(header => new
                                                          {
-                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
-                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
 
@@ -358,11 +358,11 @@ namespace PureCloudPlatform.Client.V2.Client
                 response = await RestClient.ExecuteAsync(request);
                 Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
                 Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers?
-                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .GroupBy(header => header?.Name)
                                                              .Select(header => new
                                                          {
-                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
-                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
             }while(retry.ShouldRetry(response));
@@ -820,8 +820,8 @@ namespace PureCloudPlatform.Client.V2.Client
                    var retryAfterHeader = response.Headers
     .Select(header => new 
     { 
-        Name = header.GetType().GetProperty("Name").GetValue(header), 
-        Value = header.GetType().GetProperty("Value").GetValue(header) 
+        Name = header?.Name, 
+        Value = header?.Value, 
     })
     .FirstOrDefault(header => header.Name.ToString().Equals("Retry-After"));
 

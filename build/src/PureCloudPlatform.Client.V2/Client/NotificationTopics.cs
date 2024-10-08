@@ -179,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.video.conferences.{id}", typeof(VideoConferenceUpdateTopicVideoConference)},
               {"v2.webdeployments.configurations.{id}", typeof(WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody)},
               {"v2.webdeployments.deployments.{id}", typeof(WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody)},
+              {"v2.webmessaging.deployments.{id}.undelivered.messages", typeof(V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody)},
               {"v2.wem.learning.assignments.modules.{id}", typeof(LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification)},
               {"v2.workflows.{id}.conversations.inbound.typing.event", typeof(V2ConversationMessageTypingEventForWorkflowTopicMessageData)},
               {"v2.workforcemanagement.agents", typeof(WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete)},
