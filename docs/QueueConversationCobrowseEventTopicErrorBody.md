@@ -16,7 +16,8 @@
 | **ContextId** | **string** |  | [optional] |
 | **Details** | [**List&lt;QueueConversationCobrowseEventTopicDetail&gt;**](QueueConversationCobrowseEventTopicDetail) |  | [optional] |
 | **Errors** | [**List&lt;QueueConversationCobrowseEventTopicErrorBody&gt;**](QueueConversationCobrowseEventTopicErrorBody) |  | [optional] |
+| **Limit** | [**QueueConversationCobrowseEventTopicLimit**](QueueConversationCobrowseEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 216.0.0_
+_PureCloudPlatform.Client.V2 217.0.0_

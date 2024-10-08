@@ -16,7 +16,8 @@
 | **ContextId** | **string** |  | [optional] |
 | **Details** | [**List&lt;ConversationSocialExpressionEventTopicDetail&gt;**](ConversationSocialExpressionEventTopicDetail) |  | [optional] |
 | **Errors** | [**List&lt;ConversationSocialExpressionEventTopicErrorBody&gt;**](ConversationSocialExpressionEventTopicErrorBody) |  | [optional] |
+| **Limit** | [**ConversationSocialExpressionEventTopicLimit**](ConversationSocialExpressionEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 216.0.0_
+_PureCloudPlatform.Client.V2 217.0.0_

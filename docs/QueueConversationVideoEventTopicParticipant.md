@@ -41,6 +41,7 @@
 | **Cobrowsesessions** | [**List&lt;QueueConversationVideoEventTopicCobrowse&gt;**](QueueConversationVideoEventTopicCobrowse) |  | [optional] |
 | **Emails** | [**List&lt;QueueConversationVideoEventTopicEmail&gt;**](QueueConversationVideoEventTopicEmail) |  | [optional] |
 | **Messages** | [**List&lt;QueueConversationVideoEventTopicMessage&gt;**](QueueConversationVideoEventTopicMessage) |  | [optional] |
+| **InternalMessages** | [**List&lt;QueueConversationVideoEventTopicInternalMessage&gt;**](QueueConversationVideoEventTopicInternalMessage) |  | [optional] |
 | **Screenshares** | [**List&lt;QueueConversationVideoEventTopicScreenshare&gt;**](QueueConversationVideoEventTopicScreenshare) |  | [optional] |
 | **SocialExpressions** | [**List&lt;QueueConversationVideoEventTopicSocialExpression&gt;**](QueueConversationVideoEventTopicSocialExpression) |  | [optional] |
 | **Videos** | [**List&lt;QueueConversationVideoEventTopicVideo&gt;**](QueueConversationVideoEventTopicVideo) |  | [optional] |
@@ -48,4 +49,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 216.0.0_
+_PureCloudPlatform.Client.V2 217.0.0_

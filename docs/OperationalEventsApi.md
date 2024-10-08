@@ -130,4 +130,4 @@ This endpoint does require any parameters.
 [**EventDefinitionListing**](EventDefinitionListing)
 
 
-_PureCloudPlatform.Client.V2 216.0.0_
+_PureCloudPlatform.Client.V2 217.0.0_
