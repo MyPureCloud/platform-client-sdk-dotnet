@@ -144,6 +144,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](#PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences | Overrides the assigned work plan for the specified agents |
 | [**PatchWorkforcemanagementManagementunit**](#PatchWorkforcemanagementManagementunit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Update the requested management unit |
 | [**PatchWorkforcemanagementManagementunitAgents**](#PatchWorkforcemanagementManagementunitAgents) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents | Update agent configurations |
+| [**PatchWorkforcemanagementManagementunitAgentsWorkplansBulk**](#PatchWorkforcemanagementManagementunitAgentsWorkplansBulk) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk | Updates agent work plan configuration |
 | [**PatchWorkforcemanagementManagementunitTimeofflimit**](#PatchWorkforcemanagementManagementunitTimeofflimit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Updates a time off limit object. |
 | [**PatchWorkforcemanagementManagementunitTimeoffplan**](#PatchWorkforcemanagementManagementunitTimeoffplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId} | Updates a time off plan |
 | [**PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](#PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus | Set integration status for a time off request. |
@@ -205,6 +206,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementHistoricaldataDeletejob**](#PostWorkforcemanagementHistoricaldataDeletejob) | **Post** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization |
 | [**PostWorkforcemanagementHistoricaldataValidate**](#PostWorkforcemanagementHistoricaldataValidate) | **Post** /api/v2/workforcemanagement/historicaldata/validate | Trigger validation process for historical import |
 | [**PostWorkforcemanagementIntegrationsHriTimeofftypesJobs**](#PostWorkforcemanagementIntegrationsHriTimeofftypesJobs) | **Post** /api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs | Get list of time off types configured in integration |
+| [**PostWorkforcemanagementManagementunitAgentsWorkplansQuery**](#PostWorkforcemanagementManagementunitAgentsWorkplansQuery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query | Get agents work plans configuration |
 | [**PostWorkforcemanagementManagementunitAgentschedulesSearch**](#PostWorkforcemanagementManagementunitAgentschedulesSearch) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search | Query published schedules for given given time range for set of users |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](#PostWorkforcemanagementManagementunitHistoricaladherencequery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery | Request a historical adherence report |
 | [**PostWorkforcemanagementManagementunitMove**](#PostWorkforcemanagementManagementunitMove) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/move | Move the requested management unit to a new business unit |
@@ -9419,6 +9421,70 @@ namespace Example
 void (empty response body)
 
 
+## PatchWorkforcemanagementManagementunitAgentsWorkplansBulk
+
+> [**UpdateMuAgentWorkPlansBatchResponse**](UpdateMuAgentWorkPlansBatchResponse) PatchWorkforcemanagementManagementunitAgentsWorkplansBulk (string managementUnitId, UpdateMuAgentWorkPlansBatchRequest body = null)
+
+
+Updates agent work plan configuration
+
+Requires ANY permissions: 
+
+* wfm:workPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementManagementunitAgentsWorkplansBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new UpdateMuAgentWorkPlansBatchRequest(); // UpdateMuAgentWorkPlansBatchRequest | body (optional) 
+
+            try
+            { 
+                // Updates agent work plan configuration
+                UpdateMuAgentWorkPlansBatchResponse result = apiInstance.PatchWorkforcemanagementManagementunitAgentsWorkplansBulk(managementUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunitAgentsWorkplansBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**UpdateMuAgentWorkPlansBatchRequest**](UpdateMuAgentWorkPlansBatchRequest)| body | [optional]  |
+
+### Return type
+
+[**UpdateMuAgentWorkPlansBatchResponse**](UpdateMuAgentWorkPlansBatchResponse)
+
+
 ## PatchWorkforcemanagementManagementunitTimeofflimit
 
 > [**TimeOffLimit**](TimeOffLimit) PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
@@ -13407,6 +13473,72 @@ namespace Example
 [**HrisTimeOffTypesResponse**](HrisTimeOffTypesResponse)
 
 
+## PostWorkforcemanagementManagementunitAgentsWorkplansQuery
+
+> [**AgentsWorkPlansResponse**](AgentsWorkPlansResponse) PostWorkforcemanagementManagementunitAgentsWorkplansQuery (string managementUnitId, bool? forceDownloadService = null, GetAgentsWorkPlansRequest body = null)
+
+
+Get agents work plans configuration
+
+Requires ANY permissions: 
+
+* wfm:workPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitAgentsWorkplansQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
+            var body = new GetAgentsWorkPlansRequest(); // GetAgentsWorkPlansRequest | body (optional) 
+
+            try
+            { 
+                // Get agents work plans configuration
+                AgentsWorkPlansResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId, forceDownloadService, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitAgentsWorkplansQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
+| **body** | [**GetAgentsWorkPlansRequest**](GetAgentsWorkPlansRequest)| body | [optional]  |
+
+### Return type
+
+[**AgentsWorkPlansResponse**](AgentsWorkPlansResponse)
+
+
 ## PostWorkforcemanagementManagementunitAgentschedulesSearch
 
 > [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse) PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
@@ -15830,4 +15962,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

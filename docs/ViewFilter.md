@@ -203,7 +203,19 @@
 | **DashboardType** | **string** | The type of dashboard being filtered | [optional] |
 | **DashboardAccessFilter** | **string** | The type of dashboard access being filtered | [optional] |
 | **TranscriptDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The transcript durations in milliseconds used to filter the view | [optional] |
+| **SocialCountries** | **List&lt;string&gt;** | List of countries for social filtering | [optional] |
+| **SocialLanguages** | **List&lt;string&gt;** | List of languages for social filtering | [optional] |
+| **SocialChannels** | **List&lt;string&gt;** | List of channels for social filtering | [optional] |
+| **SocialSentimentCategory** | **List&lt;string&gt;** | The sentiment of the social post | [optional] |
+| **SocialTopicIds** | **List&lt;string&gt;** | The list of topicIds for social filtering | [optional] |
+| **SocialIngestionRuleIds** | **List&lt;string&gt;** | The list of ingestion ruleIds for social filtering | [optional] |
+| **SocialConversationCreated** | **bool?** | Filter to indicate if the post has created a conversation | [optional] |
+| **SocialContentType** | **List&lt;string&gt;** | The list of content Type for social filtering | [optional] |
+| **SocialKeywords** | [**List&lt;SocialKeyword&gt;**](SocialKeyword) | The list of keywords for social filtering | [optional] |
+| **SocialPostEscalated** | **bool?** | Filter to indicate if the post is escalated | [optional] |
+| **SocialClassifications** | **List&lt;string&gt;** | Indicates if a social message was public or private | [optional] |
+| **FilterUsersByManagerIds** | **List&lt;string&gt;** | The manager ids used to fetch associated users for the view | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_
