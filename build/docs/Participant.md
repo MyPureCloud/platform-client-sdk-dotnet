@@ -14,6 +14,7 @@
 | **UserUri** | **string** | If this participant represents a user, then this will be an URI that can be used to fetch the user. | [optional] |
 | **UserId** | **string** | If this participant represents a user, then this will be the globally unique identifier for the user. | [optional] |
 | **ExternalContactId** | **string** | If this participant represents an external contact, then this will be the globally unique identifier for the external contact. | [optional] |
+| **ExternalContactInitialDivisionId** | **string** | If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned. | [optional] |
 | **ExternalOrganizationId** | **string** | If this participant represents an external org, then this will be the globally unique identifier for the external org. | [optional] |
 | **QueueId** | **string** | If present, the queue id that the communication channel came in on. | [optional] |
 | **GroupId** | **string** | If present, group of users the participant represents. | [optional] |
@@ -57,4 +58,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

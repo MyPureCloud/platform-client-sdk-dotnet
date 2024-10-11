@@ -164,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserUri">If this participant represents a user, then this will be an URI that can be used to fetch the user..</param>
         /// <param name="UserId">If this participant represents a user, then this will be the globally unique identifier for the user..</param>
         /// <param name="ExternalContactId">If this participant represents an external contact, then this will be the globally unique identifier for the external contact..</param>
+        /// <param name="ExternalContactInitialDivisionId">If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned..</param>
         /// <param name="ExternalOrganizationId">If this participant represents an external org, then this will be the globally unique identifier for the external org..</param>
         /// <param name="QueueId">If present, the queue id that the communication channel came in on..</param>
         /// <param name="GroupId">If present, group of users the participant represents..</param>
@@ -204,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="InternalMessages">InternalMessages.</param>
         /// <param name="BargedParticipantId">If this participant barged in a participant's call, then this will be the id of the targeted participant..</param>
-        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, List<string> MediaRoles = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<InternalMessage> InternalMessages = null, string BargedParticipantId = null)
+        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, List<string> MediaRoles = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<InternalMessage> InternalMessages = null, string BargedParticipantId = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -214,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UserUri = UserUri;
             this.UserId = UserId;
             this.ExternalContactId = ExternalContactId;
+            this.ExternalContactInitialDivisionId = ExternalContactInitialDivisionId;
             this.ExternalOrganizationId = ExternalOrganizationId;
             this.QueueId = QueueId;
             this.GroupId = GroupId;
@@ -328,6 +330,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>If this participant represents an external contact, then this will be the globally unique identifier for the external contact.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
+
+
+
+        /// <summary>
+        /// If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned.
+        /// </summary>
+        /// <value>If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned.</value>
+        [DataMember(Name="externalContactInitialDivisionId", EmitDefaultValue=false)]
+        public string ExternalContactInitialDivisionId { get; set; }
 
 
 
@@ -675,6 +686,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserUri: ").Append(UserUri).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  ExternalContactInitialDivisionId: ").Append(ExternalContactInitialDivisionId).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
@@ -794,6 +806,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
+                    this.ExternalContactInitialDivisionId == other.ExternalContactInitialDivisionId ||
+                    this.ExternalContactInitialDivisionId != null &&
+                    this.ExternalContactInitialDivisionId.Equals(other.ExternalContactInitialDivisionId)
                 ) &&
                 (
                     this.ExternalOrganizationId == other.ExternalOrganizationId ||
@@ -1031,6 +1048,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.ExternalContactInitialDivisionId != null)
+                    hash = hash * 59 + this.ExternalContactInitialDivisionId.GetHashCode();
 
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();

@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interval">An absolute timeframe for the journey view, expressed as an ISO 8601 interval. Only one of interval or duration must be specified. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="Duration">A relative timeframe for the journey view, expressed as an ISO 8601 duration. Only one of interval or duration must be specified. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
         /// <param name="Elements">The elements within the journey view (required).</param>
-        public JourneyView(string Name = null, string Description = null, string Interval = null, string Duration = null, List<JourneyViewElement> Elements = null)
+        /// <param name="Charts">A list of charts to measure within context of the elements of the the journey view.</param>
+        public JourneyView(string Name = null, string Description = null, string Interval = null, string Duration = null, List<JourneyViewElement> Elements = null, List<JourneyViewChart> Charts = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Interval = Interval;
             this.Duration = Duration;
             this.Elements = Elements;
+            this.Charts = Charts;
             
         }
         
@@ -125,6 +127,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A list of charts to measure within context of the elements of the the journey view
+        /// </summary>
+        /// <value>A list of charts to measure within context of the elements of the the journey view</value>
+        [DataMember(Name="charts", EmitDefaultValue=false)]
+        public List<JourneyViewChart> Charts { get; set; }
+
+
+
+        /// <summary>
         /// The date when the journey view was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the journey view was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -168,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  Elements: ").Append(Elements).Append("\n");
+            sb.Append("  Charts: ").Append(Charts).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -257,6 +269,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Elements.SequenceEqual(other.Elements)
                 ) &&
                 (
+                    this.Charts == other.Charts ||
+                    this.Charts != null &&
+                    this.Charts.SequenceEqual(other.Charts)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -310,6 +327,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Elements != null)
                     hash = hash * 59 + this.Elements.GetHashCode();
+
+                if (this.Charts != null)
+                    hash = hash * 59 + this.Charts.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

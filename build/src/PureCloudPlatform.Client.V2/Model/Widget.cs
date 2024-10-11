@@ -1600,16 +1600,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Email,
             
             /// <summary>
-            /// Enum Message for "message"
-            /// </summary>
-            [EnumMember(Value = "message")]
-            Message,
-            
-            /// <summary>
             /// Enum Internalmessage for "internalmessage"
             /// </summary>
             [EnumMember(Value = "internalmessage")]
             Internalmessage,
+            
+            /// <summary>
+            /// Enum Message for "message"
+            /// </summary>
+            [EnumMember(Value = "message")]
+            Message,
             
             /// <summary>
             /// Enum Screenshare for "screenshare"

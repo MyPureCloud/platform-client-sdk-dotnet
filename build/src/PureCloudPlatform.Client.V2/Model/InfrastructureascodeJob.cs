@@ -58,16 +58,34 @@ namespace PureCloudPlatform.Client.V2.Model
             Complete,
             
             /// <summary>
+            /// Enum Internalerror for "InternalError"
+            /// </summary>
+            [EnumMember(Value = "InternalError")]
+            Internalerror,
+            
+            /// <summary>
+            /// Enum Incomplete for "Incomplete"
+            /// </summary>
+            [EnumMember(Value = "Incomplete")]
+            Incomplete,
+            
+            /// <summary>
             /// Enum Failed for "Failed"
             /// </summary>
             [EnumMember(Value = "Failed")]
             Failed,
             
             /// <summary>
-            /// Enum Incomplete for "Incomplete"
+            /// Enum Rollbackfailed for "RollbackFailed"
             /// </summary>
-            [EnumMember(Value = "Incomplete")]
-            Incomplete
+            [EnumMember(Value = "RollbackFailed")]
+            Rollbackfailed,
+            
+            /// <summary>
+            /// Enum Rollbackcomplete for "RollbackComplete"
+            /// </summary>
+            [EnumMember(Value = "RollbackComplete")]
+            Rollbackcomplete
         }
         /// <summary>
         /// Job status

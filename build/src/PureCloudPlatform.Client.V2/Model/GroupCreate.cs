@@ -147,8 +147,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Visibility">Who can view this group (required).</param>
         /// <param name="RolesEnabled">Allow roles to be assigned to this group.</param>
         /// <param name="IncludeOwners">Allow owners to be included as members of the group.</param>
+        /// <param name="CallsEnabled">Allow calls to be placed to this group..</param>
         /// <param name="OwnerIds">Owners of the group.</param>
-        public GroupCreate(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, bool? RolesEnabled = null, bool? IncludeOwners = null, List<string> OwnerIds = null)
+        public GroupCreate(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, bool? RolesEnabled = null, bool? IncludeOwners = null, bool? CallsEnabled = null, List<string> OwnerIds = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -159,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Visibility = Visibility;
             this.RolesEnabled = RolesEnabled;
             this.IncludeOwners = IncludeOwners;
+            this.CallsEnabled = CallsEnabled;
             this.OwnerIds = OwnerIds;
             
         }
@@ -268,6 +270,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Allow calls to be placed to this group.
+        /// </summary>
+        /// <value>Allow calls to be placed to this group.</value>
+        [DataMember(Name="callsEnabled", EmitDefaultValue=false)]
+        public bool? CallsEnabled { get; set; }
+
+
+
+        /// <summary>
         /// Owners of the group
         /// </summary>
         /// <value>Owners of the group</value>
@@ -307,6 +318,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
             sb.Append("  RolesEnabled: ").Append(RolesEnabled).Append("\n");
             sb.Append("  IncludeOwners: ").Append(IncludeOwners).Append("\n");
+            sb.Append("  CallsEnabled: ").Append(CallsEnabled).Append("\n");
             sb.Append("  OwnerIds: ").Append(OwnerIds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -420,6 +432,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeOwners.Equals(other.IncludeOwners)
                 ) &&
                 (
+                    this.CallsEnabled == other.CallsEnabled ||
+                    this.CallsEnabled != null &&
+                    this.CallsEnabled.Equals(other.CallsEnabled)
+                ) &&
+                (
                     this.OwnerIds == other.OwnerIds ||
                     this.OwnerIds != null &&
                     this.OwnerIds.SequenceEqual(other.OwnerIds)
@@ -483,6 +500,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeOwners != null)
                     hash = hash * 59 + this.IncludeOwners.GetHashCode();
+
+                if (this.CallsEnabled != null)
+                    hash = hash * 59 + this.CallsEnabled.GetHashCode();
 
                 if (this.OwnerIds != null)
                     hash = hash * 59 + this.OwnerIds.GetHashCode();

@@ -60,7 +60,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Message text..</param>
         /// <param name="Content">List of content elements..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
-        public OpenMessageNormalizedMessage(string Id = null, OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null, Dictionary<string, string> Metadata = null)
+        /// <param name="ConversationId">The conversationId context for the message.</param>
+        public OpenMessageNormalizedMessage(string Id = null, OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null, Dictionary<string, string> Metadata = null, string ConversationId = null)
         {
             this.Id = Id;
             this.Channel = Channel;
@@ -68,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Text = Text;
             this.Content = Content;
             this.Metadata = Metadata;
+            this.ConversationId = ConversationId;
             
         }
         
@@ -119,6 +121,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, string> Metadata { get; set; }
 
 
+
+        /// <summary>
+        /// The conversationId context for the message
+        /// </summary>
+        /// <value>The conversationId context for the message</value>
+        [DataMember(Name="conversationId", EmitDefaultValue=false)]
+        public string ConversationId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.SequenceEqual(other.Metadata)
+                ) &&
+                (
+                    this.ConversationId == other.ConversationId ||
+                    this.ConversationId != null &&
+                    this.ConversationId.Equals(other.ConversationId)
                 );
         }
 
@@ -234,6 +251,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+
+                if (this.ConversationId != null)
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
 
                 return hash;
             }

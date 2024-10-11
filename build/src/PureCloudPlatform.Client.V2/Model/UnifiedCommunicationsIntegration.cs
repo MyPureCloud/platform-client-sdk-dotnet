@@ -154,6 +154,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// includeBadge
+        /// </summary>
+        /// <value>includeBadge</value>
+        [DataMember(Name="includeBadge", EmitDefaultValue=false)]
+        public bool? IncludeBadge { get; private set; }
+
+
+
+        /// <summary>
         /// userPermissions
         /// </summary>
         /// <value>userPermissions</value>
@@ -197,6 +206,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  I10n: ").Append(I10n).Append("\n");
             sb.Append("  PolledPresence: ").Append(PolledPresence).Append("\n");
             sb.Append("  PollIntervalSec: ").Append(PollIntervalSec).Append("\n");
+            sb.Append("  IncludeBadge: ").Append(IncludeBadge).Append("\n");
             sb.Append("  UserPermissions: ").Append(UserPermissions).Append("\n");
             sb.Append("  OauthScopes: ").Append(OauthScopes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -291,6 +301,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PollIntervalSec.Equals(other.PollIntervalSec)
                 ) &&
                 (
+                    this.IncludeBadge == other.IncludeBadge ||
+                    this.IncludeBadge != null &&
+                    this.IncludeBadge.Equals(other.IncludeBadge)
+                ) &&
+                (
                     this.UserPermissions == other.UserPermissions ||
                     this.UserPermissions != null &&
                     this.UserPermissions.SequenceEqual(other.UserPermissions)
@@ -347,6 +362,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PollIntervalSec != null)
                     hash = hash * 59 + this.PollIntervalSec.GetHashCode();
+
+                if (this.IncludeBadge != null)
+                    hash = hash * 59 + this.IncludeBadge.GetHashCode();
 
                 if (this.UserPermissions != null)
                     hash = hash * 59 + this.UserPermissions.GetHashCode();

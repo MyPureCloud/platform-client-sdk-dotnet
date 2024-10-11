@@ -1938,10 +1938,8 @@ This endpoint does require any parameters.
 
 Get the Recording Settings for the Organization
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* recording:screenRecording:view
-* recording:settings:editScreenRecordings
 
 ### Example
 ```{"language":"csharp"}
@@ -3795,6 +3793,8 @@ Update the Recording Settings for the Organization
 Requires ANY permissions: 
 
 * recording:settings:editScreenRecordings
+* recording:settings:editRegionalStorage
+* recording:settings:editUrlExpiration
 
 ### Example
 ```{"language":"csharp"}
@@ -3911,4 +3911,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

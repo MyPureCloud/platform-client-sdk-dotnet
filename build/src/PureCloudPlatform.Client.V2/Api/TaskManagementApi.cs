@@ -113,6 +113,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteTaskmanagementWorktypeWithHttpInfo (string worktypeId);
 
         /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns></returns>
+        
+        void DeleteTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns></returns>
+        
+        void DeleteTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
         /// Delete a status
         /// </summary>
         /// <remarks>
@@ -609,6 +661,114 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Worktype> GetTaskmanagementWorktypeWithHttpInfo (string worktypeId, List<string> expands = null);
 
         /// <summary>
+        /// Get an attribute change rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>WorkitemOnAttributeChangeRule</returns>
+        
+        WorkitemOnAttributeChangeRule GetTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get an attribute change rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRule</returns>
+        
+        ApiResponse<WorkitemOnAttributeChangeRule> GetTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>WorkitemOnAttributeChangeRuleListing</returns>
+        
+        WorkitemOnAttributeChangeRuleListing GetTaskmanagementWorktypeFlowsOnattributechangeRules (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRuleListing</returns>
+        
+        ApiResponse<WorkitemOnAttributeChangeRuleListing> GetTaskmanagementWorktypeFlowsOnattributechangeRulesWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get an on-create rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>WorkitemOnCreateRule</returns>
+        
+        WorkitemOnCreateRule GetTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get an on-create rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRule</returns>
+        
+        ApiResponse<WorkitemOnCreateRule> GetTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get all on-create rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>WorkitemOnCreateRuleListing</returns>
+        
+        WorkitemOnCreateRuleListing GetTaskmanagementWorktypeFlowsOncreateRules (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all on-create rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRuleListing</returns>
+        
+        ApiResponse<WorkitemOnCreateRuleListing> GetTaskmanagementWorktypeFlowsOncreateRulesWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Get a listing of a worktype's attribute change history
         /// </summary>
         /// <remarks>
@@ -911,6 +1071,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Worktype> PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnAttributeChangeRule</returns>
+        
+        WorkitemOnAttributeChangeRule PatchTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRule</returns>
+        
+        ApiResponse<WorkitemOnAttributeChangeRule> PatchTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnCreateRule</returns>
+        
+        WorkitemOnCreateRule PatchTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRule</returns>
+        
+        ApiResponse<WorkitemOnCreateRule> PatchTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body);
+
+        /// <summary>
         /// Update the attributes of a status
         /// </summary>
         /// <remarks>
@@ -1159,6 +1375,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchema> PostTaskmanagementWorkitemsSchemasWithHttpInfo (DataSchema body);
 
         /// <summary>
+        /// Add an attribute-change rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnAttributeChangeRule</returns>
+        
+        WorkitemOnAttributeChangeRule PostTaskmanagementWorktypeFlowsOnattributechangeRules (string worktypeId, WorkitemOnAttributeChangeRuleCreate body);
+
+        /// <summary>
+        /// Add an attribute-change rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRule</returns>
+        
+        ApiResponse<WorkitemOnAttributeChangeRule> PostTaskmanagementWorktypeFlowsOnattributechangeRulesWithHttpInfo (string worktypeId, WorkitemOnAttributeChangeRuleCreate body);
+
+        /// <summary>
+        /// Add an on-create rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnCreateRule</returns>
+        
+        WorkitemOnCreateRule PostTaskmanagementWorktypeFlowsOncreateRules (string worktypeId, WorkitemOnCreateRuleCreate body);
+
+        /// <summary>
+        /// Add an on-create rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRule</returns>
+        
+        ApiResponse<WorkitemOnCreateRule> PostTaskmanagementWorktypeFlowsOncreateRulesWithHttpInfo (string worktypeId, WorkitemOnCreateRuleCreate body);
+
+        /// <summary>
         /// Add a status to a worktype
         /// </summary>
         /// <remarks>
@@ -1357,6 +1625,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId);
+
+        /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleAsync (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteTaskmanagementWorktypeFlowsOncreateRuleAsync (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo (string worktypeId, string ruleId);
 
         /// <summary>
         /// Delete a status
@@ -1855,6 +2175,114 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Worktype>> GetTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, List<string> expands = null);
 
         /// <summary>
+        /// Get an attribute change rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnAttributeChangeRule> GetTaskmanagementWorktypeFlowsOnattributechangeRuleAsync (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get an attribute change rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRule>> GetTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRuleListing</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnAttributeChangeRuleListing> GetTaskmanagementWorktypeFlowsOnattributechangeRulesAsync (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRuleListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRuleListing>> GetTaskmanagementWorktypeFlowsOnattributechangeRulesAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get an on-create rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of WorkitemOnCreateRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnCreateRule> GetTaskmanagementWorktypeFlowsOncreateRuleAsync (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get an on-create rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRule>> GetTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get all on-create rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of WorkitemOnCreateRuleListing</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnCreateRuleListing> GetTaskmanagementWorktypeFlowsOncreateRulesAsync (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all on-create rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRuleListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRuleListing>> GetTaskmanagementWorktypeFlowsOncreateRulesAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Get a listing of a worktype's attribute change history
         /// </summary>
         /// <remarks>
@@ -2157,6 +2585,62 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnAttributeChangeRule> PatchTaskmanagementWorktypeFlowsOnattributechangeRuleAsync (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRule>> PatchTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnCreateRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnCreateRule> PatchTaskmanagementWorktypeFlowsOncreateRuleAsync (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRule>> PatchTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body);
+
+        /// <summary>
         /// Update the attributes of a status
         /// </summary>
         /// <remarks>
@@ -2403,6 +2887,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostTaskmanagementWorkitemsSchemasAsyncWithHttpInfo (DataSchema body);
+
+        /// <summary>
+        /// Add an attribute-change rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnAttributeChangeRule> PostTaskmanagementWorktypeFlowsOnattributechangeRulesAsync (string worktypeId, WorkitemOnAttributeChangeRuleCreate body);
+
+        /// <summary>
+        /// Add an attribute-change rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRule>> PostTaskmanagementWorktypeFlowsOnattributechangeRulesAsyncWithHttpInfo (string worktypeId, WorkitemOnAttributeChangeRuleCreate body);
+
+        /// <summary>
+        /// Add an on-create rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnCreateRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemOnCreateRule> PostTaskmanagementWorktypeFlowsOncreateRulesAsync (string worktypeId, WorkitemOnCreateRuleCreate body);
+
+        /// <summary>
+        /// Add an on-create rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRule>> PostTaskmanagementWorktypeFlowsOncreateRulesAsyncWithHttpInfo (string worktypeId, WorkitemOnCreateRuleCreate body);
 
         /// <summary>
         /// Add a status to a worktype
@@ -3430,6 +3966,454 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns></returns>
+        
+        public void DeleteTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId)
+        {
+             DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo(worktypeId, ruleId);
+        }
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOnattributechangeRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOnattributechangeRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleAsync (string worktypeId, string ruleId)
+        {
+             await DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo(worktypeId, ruleId);
+
+        }
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOnattributechangeRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOnattributechangeRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns></returns>
+        
+        public void DeleteTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId)
+        {
+             DeleteTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo(worktypeId, ruleId);
+        }
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOncreateRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOncreateRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteTaskmanagementWorktypeFlowsOncreateRuleAsync (string worktypeId, string ruleId)
+        {
+             await DeleteTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo(worktypeId, ruleId);
+
+        }
+
+        /// <summary>
+        /// Delete a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOncreateRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsOncreateRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -7481,6 +8465,908 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get an attribute change rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>WorkitemOnAttributeChangeRule</returns>
+        
+        public WorkitemOnAttributeChangeRule GetTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRule> localVarResponse = GetTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo(worktypeId, ruleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an attribute change rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRule</returns>
+        
+        public ApiResponse< WorkitemOnAttributeChangeRule > GetTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOnattributechangeRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOnattributechangeRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an attribute change rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnAttributeChangeRule> GetTaskmanagementWorktypeFlowsOnattributechangeRuleAsync (string worktypeId, string ruleId)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRule> localVarResponse = await GetTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo(worktypeId, ruleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an attribute change rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRule>> GetTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOnattributechangeRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOnattributechangeRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>WorkitemOnAttributeChangeRuleListing</returns>
+        
+        public WorkitemOnAttributeChangeRuleListing GetTaskmanagementWorktypeFlowsOnattributechangeRules (string worktypeId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRuleListing> localVarResponse = GetTaskmanagementWorktypeFlowsOnattributechangeRulesWithHttpInfo(worktypeId, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRuleListing</returns>
+        
+        public ApiResponse< WorkitemOnAttributeChangeRuleListing > GetTaskmanagementWorktypeFlowsOnattributechangeRulesWithHttpInfo (string worktypeId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOnattributechangeRules");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRuleListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRuleListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRuleListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRuleListing</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnAttributeChangeRuleListing> GetTaskmanagementWorktypeFlowsOnattributechangeRulesAsync (string worktypeId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRuleListing> localVarResponse = await GetTaskmanagementWorktypeFlowsOnattributechangeRulesAsyncWithHttpInfo(worktypeId, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all attribute-change rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRuleListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRuleListing>> GetTaskmanagementWorktypeFlowsOnattributechangeRulesAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOnattributechangeRules");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRuleListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRuleListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRuleListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an on-create rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>WorkitemOnCreateRule</returns>
+        
+        public WorkitemOnCreateRule GetTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId)
+        {
+             ApiResponse<WorkitemOnCreateRule> localVarResponse = GetTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo(worktypeId, ruleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an on-create rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRule</returns>
+        
+        public ApiResponse< WorkitemOnCreateRule > GetTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOncreateRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOncreateRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an on-create rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of WorkitemOnCreateRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnCreateRule> GetTaskmanagementWorktypeFlowsOncreateRuleAsync (string worktypeId, string ruleId)
+        {
+             ApiResponse<WorkitemOnCreateRule> localVarResponse = await GetTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo(worktypeId, ruleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an on-create rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRule>> GetTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOncreateRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOncreateRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all on-create rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>WorkitemOnCreateRuleListing</returns>
+        
+        public WorkitemOnCreateRuleListing GetTaskmanagementWorktypeFlowsOncreateRules (string worktypeId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<WorkitemOnCreateRuleListing> localVarResponse = GetTaskmanagementWorktypeFlowsOncreateRulesWithHttpInfo(worktypeId, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all on-create rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRuleListing</returns>
+        
+        public ApiResponse< WorkitemOnCreateRuleListing > GetTaskmanagementWorktypeFlowsOncreateRulesWithHttpInfo (string worktypeId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOncreateRules");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRuleListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRuleListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRuleListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all on-create rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of WorkitemOnCreateRuleListing</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnCreateRuleListing> GetTaskmanagementWorktypeFlowsOncreateRulesAsync (string worktypeId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<WorkitemOnCreateRuleListing> localVarResponse = await GetTaskmanagementWorktypeFlowsOncreateRulesAsyncWithHttpInfo(worktypeId, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all on-create rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRuleListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRuleListing>> GetTaskmanagementWorktypeFlowsOncreateRulesAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsOncreateRules");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRuleListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRuleListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRuleListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a listing of a worktype's attribute change history 
         /// 
         /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
@@ -10053,6 +11939,504 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnAttributeChangeRule</returns>
+        
+        public WorkitemOnAttributeChangeRule PatchTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRule> localVarResponse = PatchTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo(worktypeId, ruleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRule</returns>
+        
+        public ApiResponse< WorkitemOnAttributeChangeRule > PatchTaskmanagementWorktypeFlowsOnattributechangeRuleWithHttpInfo (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOnattributechangeRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOnattributechangeRule");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOnattributechangeRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnAttributeChangeRule> PatchTaskmanagementWorktypeFlowsOnattributechangeRuleAsync (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRule> localVarResponse = await PatchTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo(worktypeId, ruleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRule>> PatchTaskmanagementWorktypeFlowsOnattributechangeRuleAsyncWithHttpInfo (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOnattributechangeRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOnattributechangeRule");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOnattributechangeRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOnattributechangeRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnCreateRule</returns>
+        
+        public WorkitemOnCreateRule PatchTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body)
+        {
+             ApiResponse<WorkitemOnCreateRule> localVarResponse = PatchTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo(worktypeId, ruleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRule</returns>
+        
+        public ApiResponse< WorkitemOnCreateRule > PatchTaskmanagementWorktypeFlowsOncreateRuleWithHttpInfo (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOncreateRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOncreateRule");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOncreateRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnCreateRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnCreateRule> PatchTaskmanagementWorktypeFlowsOncreateRuleAsync (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body)
+        {
+             ApiResponse<WorkitemOnCreateRule> localVarResponse = await PatchTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo(worktypeId, ruleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the attributes of a rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRule>> PatchTaskmanagementWorktypeFlowsOncreateRuleAsyncWithHttpInfo (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOncreateRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOncreateRule");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsOncreateRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsOncreateRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update the attributes of a status 
         /// 
         /// </summary>
@@ -12292,6 +14676,478 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataSchema>(localVarStatusCode,
                 localVarHeaders,
                 (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add an attribute-change rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnAttributeChangeRule</returns>
+        
+        public WorkitemOnAttributeChangeRule PostTaskmanagementWorktypeFlowsOnattributechangeRules (string worktypeId, WorkitemOnAttributeChangeRuleCreate body)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRule> localVarResponse = PostTaskmanagementWorktypeFlowsOnattributechangeRulesWithHttpInfo(worktypeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add an attribute-change rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnAttributeChangeRule</returns>
+        
+        public ApiResponse< WorkitemOnAttributeChangeRule > PostTaskmanagementWorktypeFlowsOnattributechangeRulesWithHttpInfo (string worktypeId, WorkitemOnAttributeChangeRuleCreate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOnattributechangeRules");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOnattributechangeRules");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add an attribute-change rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnAttributeChangeRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnAttributeChangeRule> PostTaskmanagementWorktypeFlowsOnattributechangeRulesAsync (string worktypeId, WorkitemOnAttributeChangeRuleCreate body)
+        {
+             ApiResponse<WorkitemOnAttributeChangeRule> localVarResponse = await PostTaskmanagementWorktypeFlowsOnattributechangeRulesAsyncWithHttpInfo(worktypeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add an attribute-change rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnAttributeChangeRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnAttributeChangeRule>> PostTaskmanagementWorktypeFlowsOnattributechangeRulesAsyncWithHttpInfo (string worktypeId, WorkitemOnAttributeChangeRuleCreate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOnattributechangeRules");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOnattributechangeRules");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOnattributechangeRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnAttributeChangeRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnAttributeChangeRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnAttributeChangeRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add an on-create rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemOnCreateRule</returns>
+        
+        public WorkitemOnCreateRule PostTaskmanagementWorktypeFlowsOncreateRules (string worktypeId, WorkitemOnCreateRuleCreate body)
+        {
+             ApiResponse<WorkitemOnCreateRule> localVarResponse = PostTaskmanagementWorktypeFlowsOncreateRulesWithHttpInfo(worktypeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add an on-create rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemOnCreateRule</returns>
+        
+        public ApiResponse< WorkitemOnCreateRule > PostTaskmanagementWorktypeFlowsOncreateRulesWithHttpInfo (string worktypeId, WorkitemOnCreateRuleCreate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOncreateRules");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOncreateRules");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add an on-create rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemOnCreateRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemOnCreateRule> PostTaskmanagementWorktypeFlowsOncreateRulesAsync (string worktypeId, WorkitemOnCreateRuleCreate body)
+        {
+             ApiResponse<WorkitemOnCreateRule> localVarResponse = await PostTaskmanagementWorktypeFlowsOncreateRulesAsyncWithHttpInfo(worktypeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add an on-create rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemOnCreateRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRule>> PostTaskmanagementWorktypeFlowsOncreateRulesAsyncWithHttpInfo (string worktypeId, WorkitemOnCreateRuleCreate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOncreateRules");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsOncreateRules");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsOncreateRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemOnCreateRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemOnCreateRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemOnCreateRule)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -197,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
         WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (bool? showOnlyPublished = null);
@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
         ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsWithHttpInfo (bool? showOnlyPublished = null);
@@ -675,7 +675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (bool? showOnlyPublished = null);
@@ -687,7 +687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (bool? showOnlyPublished = null);
@@ -2547,7 +2547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
         public WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (bool? showOnlyPublished = null)
@@ -2561,7 +2561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
         public ApiResponse< WebDeploymentConfigurationVersionEntityListing > GetWebdeploymentsConfigurationsWithHttpInfo (bool? showOnlyPublished = null)
@@ -2649,7 +2649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (bool? showOnlyPublished = null)
@@ -2664,7 +2664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
+        /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (bool? showOnlyPublished = null)

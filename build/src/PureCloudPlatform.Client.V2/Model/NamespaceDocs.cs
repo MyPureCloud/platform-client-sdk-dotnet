@@ -21,15 +21,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NamespaceDocs" /> class.
         /// </summary>
+        /// <param name="Name">Name.</param>
         /// <param name="FriendlyName">FriendlyName.</param>
         /// <param name="Limits">Limits.</param>
-        public NamespaceDocs(string FriendlyName = null, List<LimitDocs> Limits = null)
+        public NamespaceDocs(string Name = null, string FriendlyName = null, List<LimitDocs> Limits = null)
         {
+            this.Name = Name;
             this.FriendlyName = FriendlyName;
             this.Limits = Limits;
             
         }
         
+
+
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
 
 
         /// <summary>
@@ -56,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class NamespaceDocs {\n");
 
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
             sb.Append("  Limits: ").Append(Limits).Append("\n");
             sb.Append("}\n");
@@ -99,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
                     this.FriendlyName == other.FriendlyName ||
                     this.FriendlyName != null &&
                     this.FriendlyName.Equals(other.FriendlyName)
@@ -121,6 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+
                 if (this.FriendlyName != null)
                     hash = hash * 59 + this.FriendlyName.GetHashCode();
 

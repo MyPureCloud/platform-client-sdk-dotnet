@@ -10,6 +10,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteTaskmanagementWorkitem**](#DeleteTaskmanagementWorkitem) | **Delete** /api/v2/taskmanagement/workitems/{workitemId} | Delete a workitem |
 | [**DeleteTaskmanagementWorkitemsSchema**](#DeleteTaskmanagementWorkitemsSchema) | **Delete** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Delete a schema |
 | [**DeleteTaskmanagementWorktype**](#DeleteTaskmanagementWorktype) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId} | Delete a worktype |
+| [**DeleteTaskmanagementWorktypeFlowsOnattributechangeRule**](#DeleteTaskmanagementWorktypeFlowsOnattributechangeRule) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId} | Delete a rule |
+| [**DeleteTaskmanagementWorktypeFlowsOncreateRule**](#DeleteTaskmanagementWorktypeFlowsOncreateRule) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId} | Delete a rule |
 | [**DeleteTaskmanagementWorktypeStatus**](#DeleteTaskmanagementWorktypeStatus) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Delete a status |
 | [**GetTaskmanagementWorkbin**](#GetTaskmanagementWorkbin) | **Get** /api/v2/taskmanagement/workbins/{workbinId} | Get a workbin |
 | [**GetTaskmanagementWorkbinHistory**](#GetTaskmanagementWorkbinHistory) | **Get** /api/v2/taskmanagement/workbins/{workbinId}/history | Get a listing of a workbin&#39;s attribute change history |
@@ -28,6 +30,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTaskmanagementWorkitemsSchemaVersions**](#GetTaskmanagementWorkitemsSchemaVersions) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions | Get all versions of a schema |
 | [**GetTaskmanagementWorkitemsSchemas**](#GetTaskmanagementWorkitemsSchemas) | **Get** /api/v2/taskmanagement/workitems/schemas | Get a list of schemas. |
 | [**GetTaskmanagementWorktype**](#GetTaskmanagementWorktype) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId} | Get a worktype |
+| [**GetTaskmanagementWorktypeFlowsOnattributechangeRule**](#GetTaskmanagementWorktypeFlowsOnattributechangeRule) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId} | Get an attribute change rule |
+| [**GetTaskmanagementWorktypeFlowsOnattributechangeRules**](#GetTaskmanagementWorktypeFlowsOnattributechangeRules) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules | Get all attribute-change rules for a worktype |
+| [**GetTaskmanagementWorktypeFlowsOncreateRule**](#GetTaskmanagementWorktypeFlowsOncreateRule) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId} | Get an on-create rule |
+| [**GetTaskmanagementWorktypeFlowsOncreateRules**](#GetTaskmanagementWorktypeFlowsOncreateRules) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules | Get all on-create rules for a worktype |
 | [**GetTaskmanagementWorktypeHistory**](#GetTaskmanagementWorktypeHistory) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/history | Get a listing of a worktype&#39;s attribute change history |
 | [**GetTaskmanagementWorktypeStatus**](#GetTaskmanagementWorktypeStatus) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Get a status |
 | [**GetTaskmanagementWorktypeStatuses**](#GetTaskmanagementWorktypeStatuses) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses | Get list of statuses for this worktype. |
@@ -39,6 +45,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchTaskmanagementWorkitemUserWrapups**](#PatchTaskmanagementWorkitemUserWrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups | Add/Remove a wrapup code for a given user in a workitem. |
 | [**PatchTaskmanagementWorkitemUsersMeWrapups**](#PatchTaskmanagementWorkitemUsersMeWrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups | Add/Remove a wrapup code for the current user in a workitem. |
 | [**PatchTaskmanagementWorktype**](#PatchTaskmanagementWorktype) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId} | Update the attributes of a worktype |
+| [**PatchTaskmanagementWorktypeFlowsOnattributechangeRule**](#PatchTaskmanagementWorktypeFlowsOnattributechangeRule) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId} | Update the attributes of a rule |
+| [**PatchTaskmanagementWorktypeFlowsOncreateRule**](#PatchTaskmanagementWorktypeFlowsOncreateRule) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId} | Update the attributes of a rule |
 | [**PatchTaskmanagementWorktypeStatus**](#PatchTaskmanagementWorktypeStatus) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Update the attributes of a status |
 | [**PostTaskmanagementWorkbins**](#PostTaskmanagementWorkbins) | **Post** /api/v2/taskmanagement/workbins | Create a workbin |
 | [**PostTaskmanagementWorkbinsQuery**](#PostTaskmanagementWorkbinsQuery) | **Post** /api/v2/taskmanagement/workbins/query | Query for workbins |
@@ -49,6 +57,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTaskmanagementWorkitemsQuery**](#PostTaskmanagementWorkitemsQuery) | **Post** /api/v2/taskmanagement/workitems/query | Query for workitems |
 | [**PostTaskmanagementWorkitemsQueryJobs**](#PostTaskmanagementWorkitemsQueryJobs) | **Post** /api/v2/taskmanagement/workitems/query/jobs | Create a workitem query job |
 | [**PostTaskmanagementWorkitemsSchemas**](#PostTaskmanagementWorkitemsSchemas) | **Post** /api/v2/taskmanagement/workitems/schemas | Create a schema |
+| [**PostTaskmanagementWorktypeFlowsOnattributechangeRules**](#PostTaskmanagementWorktypeFlowsOnattributechangeRules) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules | Add an attribute-change rule to a worktype |
+| [**PostTaskmanagementWorktypeFlowsOncreateRules**](#PostTaskmanagementWorktypeFlowsOncreateRules) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules | Add an on-create rule to a worktype |
 | [**PostTaskmanagementWorktypeStatuses**](#PostTaskmanagementWorktypeStatuses) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses | Add a status to a worktype |
 | [**PostTaskmanagementWorktypes**](#PostTaskmanagementWorktypes) | **Post** /api/v2/taskmanagement/worktypes | Create a worktype |
 | [**PostTaskmanagementWorktypesQuery**](#PostTaskmanagementWorktypesQuery) | **Post** /api/v2/taskmanagement/worktypes/query | Query for worktypes |
@@ -294,6 +304,132 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteTaskmanagementWorktypeFlowsOnattributechangeRule
+
+> void DeleteTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId)
+
+
+Delete a rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTaskmanagementWorktypeFlowsOnattributechangeRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+
+            try
+            { 
+                // Delete a rule
+                apiInstance.DeleteTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId, ruleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.DeleteTaskmanagementWorktypeFlowsOnattributechangeRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteTaskmanagementWorktypeFlowsOncreateRule
+
+> void DeleteTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId)
+
+
+Delete a rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTaskmanagementWorktypeFlowsOncreateRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+
+            try
+            { 
+                // Delete a rule
+                apiInstance.DeleteTaskmanagementWorktypeFlowsOncreateRule(worktypeId, ruleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.DeleteTaskmanagementWorktypeFlowsOncreateRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
 
 ### Return type
 
@@ -1476,6 +1612,266 @@ namespace Example
 [**Worktype**](Worktype)
 
 
+## GetTaskmanagementWorktypeFlowsOnattributechangeRule
+
+> [**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule) GetTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId)
+
+
+Get an attribute change rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorktypeFlowsOnattributechangeRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+
+            try
+            { 
+                // Get an attribute change rule
+                WorkitemOnAttributeChangeRule result = apiInstance.GetTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId, ruleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorktypeFlowsOnattributechangeRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
+
+### Return type
+
+[**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule)
+
+
+## GetTaskmanagementWorktypeFlowsOnattributechangeRules
+
+> [**WorkitemOnAttributeChangeRuleListing**](WorkitemOnAttributeChangeRuleListing) GetTaskmanagementWorktypeFlowsOnattributechangeRules (string worktypeId, string after = null, int? pageSize = null)
+
+
+Get all attribute-change rules for a worktype
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorktypeFlowsOnattributechangeRulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = 56;  // int? | Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)  (default to 25)
+
+            try
+            { 
+                // Get all attribute-change rules for a worktype
+                WorkitemOnAttributeChangeRuleListing result = apiInstance.GetTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorktypeFlowsOnattributechangeRules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
+
+### Return type
+
+[**WorkitemOnAttributeChangeRuleListing**](WorkitemOnAttributeChangeRuleListing)
+
+
+## GetTaskmanagementWorktypeFlowsOncreateRule
+
+> [**WorkitemOnCreateRule**](WorkitemOnCreateRule) GetTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId)
+
+
+Get an on-create rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorktypeFlowsOncreateRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+
+            try
+            { 
+                // Get an on-create rule
+                WorkitemOnCreateRule result = apiInstance.GetTaskmanagementWorktypeFlowsOncreateRule(worktypeId, ruleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorktypeFlowsOncreateRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
+
+### Return type
+
+[**WorkitemOnCreateRule**](WorkitemOnCreateRule)
+
+
+## GetTaskmanagementWorktypeFlowsOncreateRules
+
+> [**WorkitemOnCreateRuleListing**](WorkitemOnCreateRuleListing) GetTaskmanagementWorktypeFlowsOncreateRules (string worktypeId, string after = null, int? pageSize = null)
+
+
+Get all on-create rules for a worktype
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorktypeFlowsOncreateRulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = 56;  // int? | Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)  (default to 25)
+
+            try
+            { 
+                // Get all on-create rules for a worktype
+                WorkitemOnCreateRuleListing result = apiInstance.GetTaskmanagementWorktypeFlowsOncreateRules(worktypeId, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorktypeFlowsOncreateRules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
+
+### Return type
+
+[**WorkitemOnCreateRuleListing**](WorkitemOnCreateRuleListing)
+
+
 ## GetTaskmanagementWorktypeHistory
 
 > [**WorktypeChangeListing**](WorktypeChangeListing) GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null)
@@ -2197,6 +2593,138 @@ namespace Example
 [**Worktype**](Worktype)
 
 
+## PatchTaskmanagementWorktypeFlowsOnattributechangeRule
+
+> [**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule) PatchTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body)
+
+
+Update the attributes of a rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTaskmanagementWorktypeFlowsOnattributechangeRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+            var body = new WorkitemOnAttributeChangeRuleUpdate(); // WorkitemOnAttributeChangeRuleUpdate | Rule
+
+            try
+            { 
+                // Update the attributes of a rule
+                WorkitemOnAttributeChangeRule result = apiInstance.PatchTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId, ruleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PatchTaskmanagementWorktypeFlowsOnattributechangeRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
+| **body** | [**WorkitemOnAttributeChangeRuleUpdate**](WorkitemOnAttributeChangeRuleUpdate)| Rule |  |
+
+### Return type
+
+[**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule)
+
+
+## PatchTaskmanagementWorktypeFlowsOncreateRule
+
+> [**WorkitemOnCreateRule**](WorkitemOnCreateRule) PatchTaskmanagementWorktypeFlowsOncreateRule (string worktypeId, string ruleId, WorkitemOnCreateRuleUpdate body)
+
+
+Update the attributes of a rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTaskmanagementWorktypeFlowsOncreateRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+            var body = new WorkitemOnCreateRuleUpdate(); // WorkitemOnCreateRuleUpdate | Rule
+
+            try
+            { 
+                // Update the attributes of a rule
+                WorkitemOnCreateRule result = apiInstance.PatchTaskmanagementWorktypeFlowsOncreateRule(worktypeId, ruleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PatchTaskmanagementWorktypeFlowsOncreateRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
+| **body** | [**WorkitemOnCreateRuleUpdate**](WorkitemOnCreateRuleUpdate)| Rule |  |
+
+### Return type
+
+[**WorkitemOnCreateRule**](WorkitemOnCreateRule)
+
+
 ## PatchTaskmanagementWorktypeStatus
 
 > [**WorkitemStatus**](WorkitemStatus) PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body)
@@ -2827,6 +3355,134 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
+## PostTaskmanagementWorktypeFlowsOnattributechangeRules
+
+> [**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule) PostTaskmanagementWorktypeFlowsOnattributechangeRules (string worktypeId, WorkitemOnAttributeChangeRuleCreate body)
+
+
+Add an attribute-change rule to a worktype
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTaskmanagementWorktypeFlowsOnattributechangeRulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var body = new WorkitemOnAttributeChangeRuleCreate(); // WorkitemOnAttributeChangeRuleCreate | Rule
+
+            try
+            { 
+                // Add an attribute-change rule to a worktype
+                WorkitemOnAttributeChangeRule result = apiInstance.PostTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PostTaskmanagementWorktypeFlowsOnattributechangeRules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **body** | [**WorkitemOnAttributeChangeRuleCreate**](WorkitemOnAttributeChangeRuleCreate)| Rule |  |
+
+### Return type
+
+[**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule)
+
+
+## PostTaskmanagementWorktypeFlowsOncreateRules
+
+> [**WorkitemOnCreateRule**](WorkitemOnCreateRule) PostTaskmanagementWorktypeFlowsOncreateRules (string worktypeId, WorkitemOnCreateRuleCreate body)
+
+
+Add an on-create rule to a worktype
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTaskmanagementWorktypeFlowsOncreateRulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var body = new WorkitemOnCreateRuleCreate(); // WorkitemOnCreateRuleCreate | Rule
+
+            try
+            { 
+                // Add an on-create rule to a worktype
+                WorkitemOnCreateRule result = apiInstance.PostTaskmanagementWorktypeFlowsOncreateRules(worktypeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PostTaskmanagementWorktypeFlowsOncreateRules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **body** | [**WorkitemOnCreateRuleCreate**](WorkitemOnCreateRuleCreate)| Rule |  |
+
+### Return type
+
+[**WorkitemOnCreateRule**](WorkitemOnCreateRule)
+
+
 ## PostTaskmanagementWorktypeStatuses
 
 > [**WorkitemStatus**](WorkitemStatus) PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body)
@@ -3079,4 +3735,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

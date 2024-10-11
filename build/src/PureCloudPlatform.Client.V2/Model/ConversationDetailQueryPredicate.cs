@@ -118,7 +118,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Originatingdirection for "originatingDirection"
             /// </summary>
             [EnumMember(Value = "originatingDirection")]
-            Originatingdirection
+            Originatingdirection,
+            
+            /// <summary>
+            /// Enum Originatingsocialmediapublic for "originatingSocialMediaPublic"
+            /// </summary>
+            [EnumMember(Value = "originatingSocialMediaPublic")]
+            Originatingsocialmediapublic
         }
         /// <summary>
         /// Left hand side for metric predicates

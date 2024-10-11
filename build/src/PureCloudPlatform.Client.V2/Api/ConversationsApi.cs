@@ -3369,7 +3369,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3384,7 +3383,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -5287,9 +5285,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>OpenMessageNormalizedMessage</returns>
         
-        OpenMessageNormalizedMessage PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body);
+        OpenMessageNormalizedMessage PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null);
 
         /// <summary>
         /// Send inbound Open Message
@@ -5300,9 +5299,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>ApiResponse of OpenMessageNormalizedMessage</returns>
         
-        ApiResponse<OpenMessageNormalizedMessage> PostConversationsMessageInboundOpenMessageWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body);
+        ApiResponse<OpenMessageNormalizedMessage> PostConversationsMessageInboundOpenMessageWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null);
 
         /// <summary>
         /// Send an inbound Open Receipt Message
@@ -9645,7 +9645,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -9660,7 +9659,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -11563,9 +11561,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>Task of OpenMessageNormalizedMessage</returns>
         
-        System.Threading.Tasks.Task<OpenMessageNormalizedMessage> PostConversationsMessageInboundOpenMessageAsync (string integrationId, OpenInboundNormalizedMessage body);
+        System.Threading.Tasks.Task<OpenMessageNormalizedMessage> PostConversationsMessageInboundOpenMessageAsync (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null);
 
         /// <summary>
         /// Send inbound Open Message
@@ -11576,9 +11575,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OpenMessageNormalizedMessage)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OpenMessageNormalizedMessage>> PostConversationsMessageInboundOpenMessageAsyncWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body);
+        System.Threading.Tasks.Task<ApiResponse<OpenMessageNormalizedMessage>> PostConversationsMessageInboundOpenMessageAsyncWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null);
 
         /// <summary>
         /// Send an inbound Open Receipt Message
@@ -41318,7 +41318,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update conversation by setting its parking state 
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -41334,7 +41333,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update conversation by setting its parking state 
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -41441,7 +41439,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update conversation by setting its parking state 
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -41458,7 +41455,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update conversation by setting its parking state 
         /// 
-        /// PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -58318,11 +58314,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>OpenMessageNormalizedMessage</returns>
         
-        public OpenMessageNormalizedMessage PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body)
+        public OpenMessageNormalizedMessage PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null)
         {
-             ApiResponse<OpenMessageNormalizedMessage> localVarResponse = PostConversationsMessageInboundOpenMessageWithHttpInfo(integrationId, body);
+             ApiResponse<OpenMessageNormalizedMessage> localVarResponse = PostConversationsMessageInboundOpenMessageWithHttpInfo(integrationId, body, prefetchConversationId);
              return localVarResponse.Data;
         }
 
@@ -58333,9 +58330,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>ApiResponse of OpenMessageNormalizedMessage</returns>
         
-        public ApiResponse< OpenMessageNormalizedMessage > PostConversationsMessageInboundOpenMessageWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body)
+        public ApiResponse< OpenMessageNormalizedMessage > PostConversationsMessageInboundOpenMessageWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -58378,6 +58376,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (prefetchConversationId != null) localVarQueryParams.Add(new Tuple<string, string>("prefetchConversationId", this.Configuration.ApiClient.ParameterToString(prefetchConversationId)));
 
             // Header params
 
@@ -58434,11 +58433,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>Task of OpenMessageNormalizedMessage</returns>
         
-        public async System.Threading.Tasks.Task<OpenMessageNormalizedMessage> PostConversationsMessageInboundOpenMessageAsync (string integrationId, OpenInboundNormalizedMessage body)
+        public async System.Threading.Tasks.Task<OpenMessageNormalizedMessage> PostConversationsMessageInboundOpenMessageAsync (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null)
         {
-             ApiResponse<OpenMessageNormalizedMessage> localVarResponse = await PostConversationsMessageInboundOpenMessageAsyncWithHttpInfo(integrationId, body);
+             ApiResponse<OpenMessageNormalizedMessage> localVarResponse = await PostConversationsMessageInboundOpenMessageAsyncWithHttpInfo(integrationId, body, prefetchConversationId);
              return localVarResponse.Data;
 
         }
@@ -58450,9 +58450,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">integrationId</param>
         /// <param name="body">NormalizedMessage</param>
+        /// <param name="prefetchConversationId">Indicates whether or not to prefetch conversationId (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OpenMessageNormalizedMessage)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OpenMessageNormalizedMessage>> PostConversationsMessageInboundOpenMessageAsyncWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body)
+        public async System.Threading.Tasks.Task<ApiResponse<OpenMessageNormalizedMessage>> PostConversationsMessageInboundOpenMessageAsyncWithHttpInfo (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -58497,6 +58498,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (prefetchConversationId != null) localVarQueryParams.Add(new Tuple<string, string>("prefetchConversationId", this.Configuration.ApiClient.ParameterToString(prefetchConversationId)));
 
             // Header params
 

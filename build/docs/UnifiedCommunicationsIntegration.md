@@ -16,10 +16,11 @@
 | **I10n** | [**Dictionary&lt;string, UCI10n&gt;**](UCI10n) | i10n | |
 | **PolledPresence** | **bool?** | polledPresence | |
 | **PollIntervalSec** | **int?** | pollIntervalSec | [optional] |
+| **IncludeBadge** | **bool?** | includeBadge | [optional] |
 | **UserPermissions** | **List&lt;string&gt;** | userPermissions | |
 | **OauthScopes** | **List&lt;string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluUtterance :  IEquatable<NluUtterance>
     {
+        /// <summary>
+        /// The source of the utterance.
+        /// </summary>
+        /// <value>The source of the utterance.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SourceEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Generated for "Generated"
+            /// </summary>
+            [EnumMember(Value = "Generated")]
+            Generated,
+            
+            /// <summary>
+            /// Enum User for "User"
+            /// </summary>
+            [EnumMember(Value = "User")]
+            User
+        }
+        /// <summary>
+        /// The source of the utterance.
+        /// </summary>
+        /// <value>The source of the utterance.</value>
+        [DataMember(Name="source", EmitDefaultValue=false)]
+        public SourceEnum? Source { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NluUtterance" /> class.
@@ -27,9 +60,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NluUtterance" /> class.
         /// </summary>
+        /// <param name="Source">The source of the utterance..</param>
         /// <param name="Segments">The list of segments that that constitute this utterance for the given intent. (required).</param>
-        public NluUtterance(List<NluUtteranceSegment> Segments = null)
+        public NluUtterance(SourceEnum? Source = null, List<NluUtteranceSegment> Segments = null)
         {
+            this.Source = Source;
             this.Segments = Segments;
             
         }
@@ -42,6 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>ID of the utterance.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+
 
 
 
@@ -63,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class NluUtterance {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -110,6 +148,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Source == other.Source ||
+                    this.Source != null &&
+                    this.Source.Equals(other.Source)
+                ) &&
+                (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
@@ -129,6 +172,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Source != null)
+                    hash = hash * 59 + this.Source.GetHashCode();
 
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();

@@ -101,11 +101,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Information on the campaign's number of Right Party Contacts
+        /// </summary>
+        /// <value>Information on the campaign's number of Right Party Contacts</value>
+        [DataMember(Name="rightPartyContactsCount", EmitDefaultValue=false)]
+        public int? RightPartyContactsCount { get; private set; }
+
+
+
+        /// <summary>
+        /// Information on the campaign's valid attempts
+        /// </summary>
+        /// <value>Information on the campaign's valid attempts</value>
+        [DataMember(Name="validAttempts", EmitDefaultValue=false)]
+        public int? ValidAttempts { get; private set; }
+
+
+
+        /// <summary>
         /// Information on the campaign's lines utilization
         /// </summary>
         /// <value>Information on the campaign's lines utilization</value>
         [DataMember(Name="linesUtilization", EmitDefaultValue=false)]
         public CampaignLinesUtilization LinesUtilization { get; private set; }
+
+
+
+        /// <summary>
+        /// Information on the campaign's business category metrics
+        /// </summary>
+        /// <value>Information on the campaign's business category metrics</value>
+        [DataMember(Name="businessCategoryMetrics", EmitDefaultValue=false)]
+        public CampaignBusinessCategoryMetrics BusinessCategoryMetrics { get; private set; }
 
 
         /// <summary>
@@ -125,7 +152,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ScheduledCalls: ").Append(ScheduledCalls).Append("\n");
             sb.Append("  TimeZoneRescheduledCalls: ").Append(TimeZoneRescheduledCalls).Append("\n");
             sb.Append("  FilteredOutContactsCount: ").Append(FilteredOutContactsCount).Append("\n");
+            sb.Append("  RightPartyContactsCount: ").Append(RightPartyContactsCount).Append("\n");
+            sb.Append("  ValidAttempts: ").Append(ValidAttempts).Append("\n");
             sb.Append("  LinesUtilization: ").Append(LinesUtilization).Append("\n");
+            sb.Append("  BusinessCategoryMetrics: ").Append(BusinessCategoryMetrics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -207,9 +237,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FilteredOutContactsCount.Equals(other.FilteredOutContactsCount)
                 ) &&
                 (
+                    this.RightPartyContactsCount == other.RightPartyContactsCount ||
+                    this.RightPartyContactsCount != null &&
+                    this.RightPartyContactsCount.Equals(other.RightPartyContactsCount)
+                ) &&
+                (
+                    this.ValidAttempts == other.ValidAttempts ||
+                    this.ValidAttempts != null &&
+                    this.ValidAttempts.Equals(other.ValidAttempts)
+                ) &&
+                (
                     this.LinesUtilization == other.LinesUtilization ||
                     this.LinesUtilization != null &&
                     this.LinesUtilization.Equals(other.LinesUtilization)
+                ) &&
+                (
+                    this.BusinessCategoryMetrics == other.BusinessCategoryMetrics ||
+                    this.BusinessCategoryMetrics != null &&
+                    this.BusinessCategoryMetrics.Equals(other.BusinessCategoryMetrics)
                 );
         }
 
@@ -248,8 +293,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.FilteredOutContactsCount != null)
                     hash = hash * 59 + this.FilteredOutContactsCount.GetHashCode();
 
+                if (this.RightPartyContactsCount != null)
+                    hash = hash * 59 + this.RightPartyContactsCount.GetHashCode();
+
+                if (this.ValidAttempts != null)
+                    hash = hash * 59 + this.ValidAttempts.GetHashCode();
+
                 if (this.LinesUtilization != null)
                     hash = hash * 59 + this.LinesUtilization.GetHashCode();
+
+                if (this.BusinessCategoryMetrics != null)
+                    hash = hash * 59 + this.BusinessCategoryMetrics.GetHashCode();
 
                 return hash;
             }

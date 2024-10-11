@@ -18,6 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRule :  IEquatable<CampaignRule>
     {
+        /// <summary>
+        /// CampaignRule processing algorithm
+        /// </summary>
+        /// <value>CampaignRule processing algorithm</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CampaignRuleProcessingEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum V2 for "v2"
+            /// </summary>
+            [EnumMember(Value = "v2")]
+            V2
+        }
+        /// <summary>
+        /// CampaignRule processing algorithm
+        /// </summary>
+        /// <value>CampaignRule processing algorithm</value>
+        [DataMember(Name="campaignRuleProcessing", EmitDefaultValue=false)]
+        public CampaignRuleProcessingEnum? CampaignRuleProcessing { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRule" /> class.
@@ -34,7 +61,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CampaignRuleActions">The list of actions that are executed if the conditions are satisfied. (required).</param>
         /// <param name="MatchAnyConditions">MatchAnyConditions.</param>
         /// <param name="Enabled">Whether or not this CampaignRule is currently enabled. Required on updates..</param>
-        public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null)
+        /// <param name="CampaignRuleProcessing">CampaignRule processing algorithm.</param>
+        /// <param name="ConditionGroups">List of condition groups that are evaluated, used only with campaignRuleProcessing=\"v2\".</param>
+        /// <param name="ExecutionSettings">CampaignRule execution settings.</param>
+        public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, CampaignRuleProcessingEnum? CampaignRuleProcessing = null, List<CampaignRuleConditionGroup> ConditionGroups = null, CampaignRuleExecutionSettings ExecutionSettings = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -43,6 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CampaignRuleActions = CampaignRuleActions;
             this.MatchAnyConditions = MatchAnyConditions;
             this.Enabled = Enabled;
+            this.CampaignRuleProcessing = CampaignRuleProcessing;
+            this.ConditionGroups = ConditionGroups;
+            this.ExecutionSettings = ExecutionSettings;
             
         }
         
@@ -137,6 +170,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// List of condition groups that are evaluated, used only with campaignRuleProcessing=\"v2\"
+        /// </summary>
+        /// <value>List of condition groups that are evaluated, used only with campaignRuleProcessing=\"v2\"</value>
+        [DataMember(Name="conditionGroups", EmitDefaultValue=false)]
+        public List<CampaignRuleConditionGroup> ConditionGroups { get; set; }
+
+
+
+        /// <summary>
+        /// CampaignRule execution settings
+        /// </summary>
+        /// <value>CampaignRule execution settings</value>
+        [DataMember(Name="executionSettings", EmitDefaultValue=false)]
+        public CampaignRuleExecutionSettings ExecutionSettings { get; set; }
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -164,6 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CampaignRuleActions: ").Append(CampaignRuleActions).Append("\n");
             sb.Append("  MatchAnyConditions: ").Append(MatchAnyConditions).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  CampaignRuleProcessing: ").Append(CampaignRuleProcessing).Append("\n");
+            sb.Append("  ConditionGroups: ").Append(ConditionGroups).Append("\n");
+            sb.Append("  ExecutionSettings: ").Append(ExecutionSettings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -256,6 +312,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.CampaignRuleProcessing == other.CampaignRuleProcessing ||
+                    this.CampaignRuleProcessing != null &&
+                    this.CampaignRuleProcessing.Equals(other.CampaignRuleProcessing)
+                ) &&
+                (
+                    this.ConditionGroups == other.ConditionGroups ||
+                    this.ConditionGroups != null &&
+                    this.ConditionGroups.SequenceEqual(other.ConditionGroups)
+                ) &&
+                (
+                    this.ExecutionSettings == other.ExecutionSettings ||
+                    this.ExecutionSettings != null &&
+                    this.ExecutionSettings.Equals(other.ExecutionSettings)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -302,6 +373,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.CampaignRuleProcessing != null)
+                    hash = hash * 59 + this.CampaignRuleProcessing.GetHashCode();
+
+                if (this.ConditionGroups != null)
+                    hash = hash * 59 + this.ConditionGroups.GetHashCode();
+
+                if (this.ExecutionSettings != null)
+                    hash = hash * 59 + this.ExecutionSettings.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

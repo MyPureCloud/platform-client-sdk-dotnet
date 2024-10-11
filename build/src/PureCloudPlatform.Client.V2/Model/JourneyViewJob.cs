@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Failed for "Failed"
             /// </summary>
             [EnumMember(Value = "Failed")]
-            Failed
+            Failed,
+            
+            /// <summary>
+            /// Enum Cancelled for "Cancelled"
+            /// </summary>
+            [EnumMember(Value = "Cancelled")]
+            Cancelled
         }
         /// <summary>
         /// The status of the job

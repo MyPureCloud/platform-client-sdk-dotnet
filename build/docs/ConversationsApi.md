@@ -8370,8 +8370,6 @@ namespace Example
 
 Update conversation by setting its parking state
 
-PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * conversation:email:park
@@ -13022,7 +13020,7 @@ namespace Example
 
 ## PostConversationsMessageInboundOpenMessage
 
-> [**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage) PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body)
+> [**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage) PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body, bool? prefetchConversationId = null)
 
 
 Send inbound Open Message
@@ -13057,11 +13055,12 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | integrationId
             var body = new OpenInboundNormalizedMessage(); // OpenInboundNormalizedMessage | NormalizedMessage
+            var prefetchConversationId = true;  // bool? | Indicates whether or not to prefetch conversationId (optional)  (default to false)
 
             try
             { 
                 // Send inbound Open Message
-                OpenMessageNormalizedMessage result = apiInstance.PostConversationsMessageInboundOpenMessage(integrationId, body);
+                OpenMessageNormalizedMessage result = apiInstance.PostConversationsMessageInboundOpenMessage(integrationId, body, prefetchConversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -13080,6 +13079,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| integrationId |  |
 | **body** | [**OpenInboundNormalizedMessage**](OpenInboundNormalizedMessage)| NormalizedMessage |  |
+| **prefetchConversationId** | **bool?**| Indicates whether or not to prefetch conversationId | [optional] [default to false] |
 
 ### Return type
 
@@ -15543,4 +15543,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

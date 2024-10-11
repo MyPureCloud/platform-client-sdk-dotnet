@@ -16,8 +16,11 @@
 | **CampaignRuleActions** | [**List&lt;CampaignRuleAction&gt;**](CampaignRuleAction) | The list of actions that are executed if the conditions are satisfied. | |
 | **MatchAnyConditions** | **bool?** |  | [optional] |
 | **Enabled** | **bool?** | Whether or not this CampaignRule is currently enabled. Required on updates. | [optional] |
+| **CampaignRuleProcessing** | **string** | CampaignRule processing algorithm | [optional] |
+| **ConditionGroups** | [**List&lt;CampaignRuleConditionGroup&gt;**](CampaignRuleConditionGroup) | List of condition groups that are evaluated, used only with campaignRuleProcessing&#x3D;\&quot;v2\&quot; | [optional] |
+| **ExecutionSettings** | [**CampaignRuleExecutionSettings**](CampaignRuleExecutionSettings) | CampaignRule execution settings | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

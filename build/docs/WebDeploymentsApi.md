@@ -486,7 +486,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WebDeploymentsApi();
-            var showOnlyPublished = true;  // bool? | Get only configuration drafts with published versions (optional)  (default to false)
+            var showOnlyPublished = true;  // bool? | Filter by published status. (optional) 
 
             try
             { 
@@ -508,7 +508,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **showOnlyPublished** | **bool?**| Get only configuration drafts with published versions | [optional] [default to false] |
+| **showOnlyPublished** | **bool?**| Filter by published status. | [optional]  |
 
 ### Return type
 
@@ -1188,4 +1188,4 @@ namespace Example
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

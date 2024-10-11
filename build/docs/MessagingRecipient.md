@@ -13,8 +13,9 @@
 | **FirstName** | **string** | First name of the recipient. | [optional] |
 | **LastName** | **string** | Last name of the recipient. | [optional] |
 | **Email** | **string** | E-mail address of the recipient. | [optional] |
+| **ExternalContactId** | **string** | The identifier of the external contact. | [optional] |
 | **AdditionalIds** | [**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

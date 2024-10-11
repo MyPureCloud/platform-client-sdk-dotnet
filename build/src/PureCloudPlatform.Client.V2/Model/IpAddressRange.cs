@@ -66,7 +66,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Audioconnector for "audio-connector"
             /// </summary>
             [EnumMember(Value = "audio-connector")]
-            Audioconnector
+            Audioconnector,
+            
+            /// <summary>
+            /// Enum Byotstt for "byot-stt"
+            /// </summary>
+            [EnumMember(Value = "byot-stt")]
+            Byotstt,
+            
+            /// <summary>
+            /// Enum Botconnector for "bot-connector"
+            /// </summary>
+            [EnumMember(Value = "bot-connector")]
+            Botconnector
         }
         /// <summary>
         /// Gets or Sets Service

@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class Annotation :  IEquatable<Annotation>
     {
         /// <summary>
-        /// Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue
+        /// Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue,Pause
         /// </summary>
-        /// <value>Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue</value>
+        /// <value>Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue,Pause</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ReasonEnum
         {
@@ -49,12 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Floworqueue for "FlowOrQueue"
             /// </summary>
             [EnumMember(Value = "FlowOrQueue")]
-            Floworqueue
+            Floworqueue,
+            
+            /// <summary>
+            /// Enum Pause for "Pause"
+            /// </summary>
+            [EnumMember(Value = "Pause")]
+            Pause
         }
         /// <summary>
-        /// Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue
+        /// Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue,Pause
         /// </summary>
-        /// <value>Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue</value>
+        /// <value>Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue,Pause</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public ReasonEnum? Reason { get; private set; }
         /// <summary>

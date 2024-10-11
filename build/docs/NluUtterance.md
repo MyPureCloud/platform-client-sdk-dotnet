@@ -7,8 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | ID of the utterance. | [optional] |
+| **Source** | **string** | The source of the utterance. | [optional] |
 | **Segments** | [**List&lt;NluUtteranceSegment&gt;**](NluUtteranceSegment) | The list of segments that that constitute this utterance for the given intent. | |
 
 
 
-_PureCloudPlatform.Client.V2 217.0.0_
+_PureCloudPlatform.Client.V2 218.0.0_

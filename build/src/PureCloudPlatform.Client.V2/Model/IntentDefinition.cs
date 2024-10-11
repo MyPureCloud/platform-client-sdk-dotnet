@@ -28,12 +28,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="IntentDefinition" /> class.
         /// </summary>
         /// <param name="Name">The name of the intent. (required).</param>
+        /// <param name="Description">The description of the intent..</param>
         /// <param name="EntityTypeBindings">The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities.</param>
         /// <param name="Utterances">The utterances that act as training phrases for the intent. (required).</param>
         /// <param name="AdditionalLanguages">Additional languages for intents.</param>
-        public IntentDefinition(string Name = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<NluUtterance> Utterances = null, Dictionary<string, AdditionalLanguagesIntent> AdditionalLanguages = null)
+        public IntentDefinition(string Name = null, string Description = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<NluUtterance> Utterances = null, Dictionary<string, AdditionalLanguagesIntent> AdditionalLanguages = null)
         {
             this.Name = Name;
+            this.Description = Description;
             this.EntityTypeBindings = EntityTypeBindings;
             this.Utterances = Utterances;
             this.AdditionalLanguages = AdditionalLanguages;
@@ -57,6 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the intent.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The description of the intent.
+        /// </summary>
+        /// <value>The description of the intent.</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
 
 
 
@@ -106,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  EntityTypeBindings: ").Append(EntityTypeBindings).Append("\n");
             sb.Append("  EntityNameReferences: ").Append(EntityNameReferences).Append("\n");
             sb.Append("  Utterances: ").Append(Utterances).Append("\n");
@@ -161,6 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) &&
+                (
                     this.EntityTypeBindings == other.EntityTypeBindings ||
                     this.EntityTypeBindings != null &&
                     this.EntityTypeBindings.SequenceEqual(other.EntityTypeBindings)
@@ -198,6 +215,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
 
                 if (this.EntityTypeBindings != null)
                     hash = hash * 59 + this.EntityTypeBindings.GetHashCode();

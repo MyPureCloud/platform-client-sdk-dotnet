@@ -73,9 +73,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationMessagingToRecipient" /> class.
         /// </summary>
         /// <param name="Id">The recipient ID specific to the provider. (required).</param>
-        public ConversationMessagingToRecipient(string Id = null)
+        /// <param name="ExternalContactId">The identifier of the external contact..</param>
+        public ConversationMessagingToRecipient(string Id = null, string ExternalContactId = null)
         {
             this.Id = Id;
+            this.ExternalContactId = ExternalContactId;
             
         }
         
@@ -138,6 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The identifier of the external contact.
+        /// </summary>
+        /// <value>The identifier of the external contact.</value>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+
+
+
+        /// <summary>
         /// List of recipient additional identifiers
         /// </summary>
         /// <value>List of recipient additional identifiers</value>
@@ -161,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  AdditionalIds: ").Append(AdditionalIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -238,6 +250,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Email.Equals(other.Email)
                 ) &&
                 (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
                     this.AdditionalIds == other.AdditionalIds ||
                     this.AdditionalIds != null &&
                     this.AdditionalIds.SequenceEqual(other.AdditionalIds)
@@ -275,6 +292,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
+
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
 
                 if (this.AdditionalIds != null)
                     hash = hash * 59 + this.AdditionalIds.GetHashCode();

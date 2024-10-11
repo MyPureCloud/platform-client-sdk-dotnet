@@ -162,10 +162,12 @@ docs/AgentWorkPlanBiddingPreferenceResponse.md
 docs/AgentWorkPlanBids.md
 docs/AgentWorkPlanListResponse.md
 docs/AgentWorkPlanShift.md
+docs/AgentWorkPlans.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
 docs/AgentsBidAssignedWorkPlanOverrideRequest.md
 docs/AgentsIntegrationsListing.md
+docs/AgentsWorkPlansResponse.md
 docs/AggregateMetricData.md
 docs/AggregateViewData.md
 docs/AggregationRange.md
@@ -1511,6 +1513,8 @@ docs/DeleteTaskmanagementWorkbin-example.txt
 docs/DeleteTaskmanagementWorkitem-example.txt
 docs/DeleteTaskmanagementWorkitemsSchema-example.txt
 docs/DeleteTaskmanagementWorktype-example.txt
+docs/DeleteTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
+docs/DeleteTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/DeleteTaskmanagementWorktypeStatus-example.txt
 docs/DeleteTeam-example.txt
 docs/DeleteTeamMembers-example.txt
@@ -1707,6 +1711,7 @@ docs/DisconnectReason.md
 docs/Disposition.md
 docs/DispositionParameters.md
 docs/Division.md
+docs/DivisionEntityRef.md
 docs/DivisionReference.md
 docs/DivsPermittedEntityListing.md
 docs/DncList.md
@@ -2064,6 +2069,7 @@ docs/ExternalContactsRelationshipChangedTopicRelationship.md
 docs/ExternalContactsRelationshipChangedTopicTicker.md
 docs/ExternalContactsRelationshipChangedTopicTwitterId.md
 docs/ExternalContactsRelationshipChangedTopicUser.md
+docs/ExternalContactsSettings.md
 docs/ExternalContactsUnresolvedContactChangedTopicContact.md
 docs/ExternalContactsUnresolvedContactChangedTopicContactAddress.md
 docs/ExternalContactsUnresolvedContactChangedTopicDataSchema.md
@@ -2286,6 +2292,7 @@ docs/GeolocationApi.json
 docs/GeolocationApi.md
 docs/GeolocationEventGeolocation.md
 docs/GeolocationSettings.md
+docs/GetAgentsWorkPlansRequest.md
 docs/GetAlertQuery.md
 docs/GetAlertingAlert-example.txt
 docs/GetAlertingAlertsActive-example.txt
@@ -2816,8 +2823,11 @@ docs/GetJourneySessionEvents-example.txt
 docs/GetJourneySessionOutcomescores-example.txt
 docs/GetJourneyView-example.txt
 docs/GetJourneyViewVersion-example.txt
+docs/GetJourneyViewVersionChart-example.txt
+docs/GetJourneyViewVersionChartVersion-example.txt
 docs/GetJourneyViewVersionJob-example.txt
 docs/GetJourneyViewVersionJobResults-example.txt
+docs/GetJourneyViewVersionJobResultsChart-example.txt
 docs/GetJourneyViewVersionJobsLatest-example.txt
 docs/GetJourneyViews-example.txt
 docs/GetJourneyViewsEventdefinition-example.txt
@@ -3257,6 +3267,10 @@ docs/GetTaskmanagementWorkitemsSchemaVersion-example.txt
 docs/GetTaskmanagementWorkitemsSchemaVersions-example.txt
 docs/GetTaskmanagementWorkitemsSchemas-example.txt
 docs/GetTaskmanagementWorktype-example.txt
+docs/GetTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
+docs/GetTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
+docs/GetTaskmanagementWorktypeFlowsOncreateRule-example.txt
+docs/GetTaskmanagementWorktypeFlowsOncreateRules-example.txt
 docs/GetTaskmanagementWorktypeHistory-example.txt
 docs/GetTaskmanagementWorktypeStatus-example.txt
 docs/GetTaskmanagementWorktypeStatuses-example.txt
@@ -3613,6 +3627,7 @@ docs/IdentityProviderApi.json
 docs/IdentityProviderApi.md
 docs/IdentityProviderEntityListing.md
 docs/IdentityResolutionConfig.md
+docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
@@ -4302,6 +4317,7 @@ docs/MoveAgentsResponse.md
 docs/MoveManagementUnitRequest.md
 docs/MoveManagementUnitResponse.md
 docs/MuAgentQueueTimeRequest.md
+docs/MuAgentsWorkPlansResult.md
 docs/MuRescheduleResultWrapper.md
 docs/MutableUserPresence.md
 docs/MuteSnoozeFields.md
@@ -4637,6 +4653,7 @@ docs/PatchJourneyActiontemplate-example.txt
 docs/PatchJourneyOutcome-example.txt
 docs/PatchJourneyPattern.md
 docs/PatchJourneySegment-example.txt
+docs/PatchJourneyViewVersionJob-example.txt
 docs/PatchKnowledgeGuestSessionDocumentsSearchSearchId-example.txt
 docs/PatchKnowledgeKnowledgebase-example.txt
 docs/PatchKnowledgeKnowledgebaseCategory-example.txt
@@ -4701,6 +4718,8 @@ docs/PatchTaskmanagementWorkitemAssignment-example.txt
 docs/PatchTaskmanagementWorkitemUserWrapups-example.txt
 docs/PatchTaskmanagementWorkitemUsersMeWrapups-example.txt
 docs/PatchTaskmanagementWorktype-example.txt
+docs/PatchTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
+docs/PatchTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/PatchTaskmanagementWorktypeStatus-example.txt
 docs/PatchTeam-example.txt
 docs/PatchTelephonyProvidersEdgesSiteSiteconnections-example.txt
@@ -4748,6 +4767,7 @@ docs/PatchWorkforcemanagementBusinessunitWorkplanbidGroup-example.txt
 docs/PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences-example.txt
 docs/PatchWorkforcemanagementManagementunit-example.txt
 docs/PatchWorkforcemanagementManagementunitAgents-example.txt
+docs/PatchWorkforcemanagementManagementunitAgentsWorkplansBulk-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeofflimit-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeoffplan-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus-example.txt
@@ -5352,6 +5372,8 @@ docs/PostTaskmanagementWorkitems-example.txt
 docs/PostTaskmanagementWorkitemsQuery-example.txt
 docs/PostTaskmanagementWorkitemsQueryJobs-example.txt
 docs/PostTaskmanagementWorkitemsSchemas-example.txt
+docs/PostTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
+docs/PostTaskmanagementWorktypeFlowsOncreateRules-example.txt
 docs/PostTaskmanagementWorktypeStatuses-example.txt
 docs/PostTaskmanagementWorktypes-example.txt
 docs/PostTaskmanagementWorktypesQuery-example.txt
@@ -5478,6 +5500,7 @@ docs/PostWorkforcemanagementCalendarUrlIcs-example.txt
 docs/PostWorkforcemanagementHistoricaldataDeletejob-example.txt
 docs/PostWorkforcemanagementHistoricaldataValidate-example.txt
 docs/PostWorkforcemanagementIntegrationsHriTimeofftypesJobs-example.txt
+docs/PostWorkforcemanagementManagementunitAgentsWorkplansQuery-example.txt
 docs/PostWorkforcemanagementManagementunitAgentschedulesSearch-example.txt
 docs/PostWorkforcemanagementManagementunitHistoricaladherencequery-example.txt
 docs/PostWorkforcemanagementManagementunitMove-example.txt
@@ -5660,6 +5683,7 @@ docs/PutIntegrationsCredential-example.txt
 docs/PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings-example.txt
 docs/PutIntegrationsSpeechTtsSettings-example.txt
 docs/PutIntegrationsUnifiedcommunicationThirdpartypresences-example.txt
+docs/PutJourneyViewVersion-example.txt
 docs/PutKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
 docs/PutKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
 docs/PutLanguageunderstandingDomainVersion-example.txt
@@ -6481,6 +6505,7 @@ docs/SmsPhoneNumberRef.md
 docs/SmsProvisioningStatus.md
 docs/SocialExpression.md
 docs/SocialHandle.md
+docs/SocialKeyword.md
 docs/SortItem.md
 docs/Source.md
 docs/SourceBaseResponse.md
@@ -6864,6 +6889,10 @@ docs/UpdateContactColumnActionSettings.md
 docs/UpdateDraftInput.md
 docs/UpdateManagementUnitRequest.md
 docs/UpdateMuAgentRequest.md
+docs/UpdateMuAgentWorkPlanFailureResponse.md
+docs/UpdateMuAgentWorkPlanRequest.md
+docs/UpdateMuAgentWorkPlansBatchRequest.md
+docs/UpdateMuAgentWorkPlansBatchResponse.md
 docs/UpdateMuAgentsRequest.md
 docs/UpdateNotificationResponse.md
 docs/UpdateNotificationsRequest.md
@@ -6951,6 +6980,7 @@ docs/UserLicenses.md
 docs/UserLicensesEntityListing.md
 docs/UserListScheduleRequestBody.md
 docs/UserMe.md
+docs/UserNextActivityReminder.md
 docs/UserObservationDataContainer.md
 docs/UserObservationQuery.md
 docs/UserObservationQueryClause.md
@@ -7407,6 +7437,8 @@ docs/WorkPlanConstraintMessage.md
 docs/WorkPlanListItemResponse.md
 docs/WorkPlanListResponse.md
 docs/WorkPlanOverride.md
+docs/WorkPlanOverrideListWrapperWorkPlanOverrideRequest.md
+docs/WorkPlanOverrideRequest.md
 docs/WorkPlanPatternRequest.md
 docs/WorkPlanPatternResponse.md
 docs/WorkPlanReference.md
@@ -7446,6 +7478,16 @@ docs/WorkitemDelta.md
 docs/WorkitemFilter.md
 docs/WorkitemFlowReference.md
 docs/WorkitemManualAssign.md
+docs/WorkitemOnAttributeChangeCondition.md
+docs/WorkitemOnAttributeChangeConditionUpdate.md
+docs/WorkitemOnAttributeChangeRule.md
+docs/WorkitemOnAttributeChangeRuleCreate.md
+docs/WorkitemOnAttributeChangeRuleListing.md
+docs/WorkitemOnAttributeChangeRuleUpdate.md
+docs/WorkitemOnCreateRule.md
+docs/WorkitemOnCreateRuleCreate.md
+docs/WorkitemOnCreateRuleListing.md
+docs/WorkitemOnCreateRuleUpdate.md
 docs/WorkitemPagedEntityListing.md
 docs/WorkitemPostQueryEntityListing.md
 docs/WorkitemQueryJobCreate.md
@@ -7457,6 +7499,7 @@ docs/WorkitemQueryPostRequest.md
 docs/WorkitemQuerySort.md
 docs/WorkitemQueueReference.md
 docs/WorkitemReference.md
+docs/WorkitemRuleAction.md
 docs/WorkitemRuleSettings.md
 docs/WorkitemSchema.md
 docs/WorkitemScoredAgent.md
@@ -7776,10 +7819,12 @@ src/PureCloudPlatform.Client.V2/Model/AgentWorkPlanBiddingPreferenceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentWorkPlanBids.cs
 src/PureCloudPlatform.Client.V2/Model/AgentWorkPlanListResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentWorkPlanShift.cs
+src/PureCloudPlatform.Client.V2/Model/AgentWorkPlans.cs
 src/PureCloudPlatform.Client.V2/Model/AgentlessEmailSendRequestDto.cs
 src/PureCloudPlatform.Client.V2/Model/AgentlessEmailSendResponseDto.cs
 src/PureCloudPlatform.Client.V2/Model/AgentsBidAssignedWorkPlanOverrideRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentsIntegrationsListing.cs
+src/PureCloudPlatform.Client.V2/Model/AgentsWorkPlansResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AggregateMetricData.cs
 src/PureCloudPlatform.Client.V2/Model/AggregateViewData.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationRange.cs
@@ -9014,6 +9059,7 @@ src/PureCloudPlatform.Client.V2/Model/DisconnectReason.cs
 src/PureCloudPlatform.Client.V2/Model/Disposition.cs
 src/PureCloudPlatform.Client.V2/Model/DispositionParameters.cs
 src/PureCloudPlatform.Client.V2/Model/Division.cs
+src/PureCloudPlatform.Client.V2/Model/DivisionEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/DivisionReference.cs
 src/PureCloudPlatform.Client.V2/Model/DivsPermittedEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DncList.cs
@@ -9361,6 +9407,7 @@ src/PureCloudPlatform.Client.V2/Model/ExternalContactsRelationshipChangedTopicRe
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsRelationshipChangedTopicTicker.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsRelationshipChangedTopicTwitterId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsRelationshipChangedTopicUser.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalContactsSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicContact.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicContactAddress.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicDataSchema.cs
@@ -9573,6 +9620,7 @@ src/PureCloudPlatform.Client.V2/Model/GenesysBotConnector.cs
 src/PureCloudPlatform.Client.V2/Model/Geolocation.cs
 src/PureCloudPlatform.Client.V2/Model/GeolocationEventGeolocation.cs
 src/PureCloudPlatform.Client.V2/Model/GeolocationSettings.cs
+src/PureCloudPlatform.Client.V2/Model/GetAgentsWorkPlansRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GetAlertQuery.cs
 src/PureCloudPlatform.Client.V2/Model/GetCelebrationListing.cs
 src/PureCloudPlatform.Client.V2/Model/GetFlowExecutionDataJobResult.cs
@@ -9654,6 +9702,7 @@ src/PureCloudPlatform.Client.V2/Model/IdentityNow.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProvider.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProviderEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityResolutionConfig.cs
+src/PureCloudPlatform.Client.V2/Model/IdentityResolutionQueueConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdleEventTrigger.cs
 src/PureCloudPlatform.Client.V2/Model/IdleTokenTimeout.cs
 src/PureCloudPlatform.Client.V2/Model/IgnoredActivityCategories.cs
@@ -10319,6 +10368,7 @@ src/PureCloudPlatform.Client.V2/Model/MoveAgentsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/MoveManagementUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MoveManagementUnitResponse.cs
 src/PureCloudPlatform.Client.V2/Model/MuAgentQueueTimeRequest.cs
+src/PureCloudPlatform.Client.V2/Model/MuAgentsWorkPlansResult.cs
 src/PureCloudPlatform.Client.V2/Model/MuRescheduleResultWrapper.cs
 src/PureCloudPlatform.Client.V2/Model/MutableUserPresence.cs
 src/PureCloudPlatform.Client.V2/Model/MuteSnoozeFields.cs
@@ -11348,6 +11398,7 @@ src/PureCloudPlatform.Client.V2/Model/SmsPhoneNumberRef.cs
 src/PureCloudPlatform.Client.V2/Model/SmsProvisioningStatus.cs
 src/PureCloudPlatform.Client.V2/Model/SocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/SocialHandle.cs
+src/PureCloudPlatform.Client.V2/Model/SocialKeyword.cs
 src/PureCloudPlatform.Client.V2/Model/SortItem.cs
 src/PureCloudPlatform.Client.V2/Model/Source.cs
 src/PureCloudPlatform.Client.V2/Model/SourceBaseResponse.cs
@@ -11713,6 +11764,10 @@ src/PureCloudPlatform.Client.V2/Model/UpdateContactColumnActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateDraftInput.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateManagementUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentWorkPlanFailureResponse.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentWorkPlanRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentWorkPlansBatchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentWorkPlansBatchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateNotificationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateNotificationsRequest.cs
@@ -11796,6 +11851,7 @@ src/PureCloudPlatform.Client.V2/Model/UserLicenses.cs
 src/PureCloudPlatform.Client.V2/Model/UserLicensesEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserListScheduleRequestBody.cs
 src/PureCloudPlatform.Client.V2/Model/UserMe.cs
+src/PureCloudPlatform.Client.V2/Model/UserNextActivityReminder.cs
 src/PureCloudPlatform.Client.V2/Model/UserObservationDataContainer.cs
 src/PureCloudPlatform.Client.V2/Model/UserObservationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/UserObservationQueryClause.cs
@@ -12236,6 +12292,8 @@ src/PureCloudPlatform.Client.V2/Model/WorkPlanConstraintMessage.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanListItemResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanListResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanOverride.cs
+src/PureCloudPlatform.Client.V2/Model/WorkPlanOverrideListWrapperWorkPlanOverrideRequest.cs
+src/PureCloudPlatform.Client.V2/Model/WorkPlanOverrideRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanPatternRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanPatternResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanReference.cs
@@ -12273,6 +12331,16 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemFilter.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemFlowReference.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemManualAssign.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnAttributeChangeCondition.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnAttributeChangeConditionUpdate.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnAttributeChangeRule.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnAttributeChangeRuleCreate.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnAttributeChangeRuleListing.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnAttributeChangeRuleUpdate.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnCreateRule.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnCreateRuleCreate.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnCreateRuleListing.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemOnCreateRuleUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemPagedEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemPostQueryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobCreate.cs
@@ -12284,6 +12352,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemQueryPostRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQuerySort.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueueReference.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemReference.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemRuleAction.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemRuleSettings.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemSchema.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemScoredAgent.cs

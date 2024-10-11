@@ -21,25 +21,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpandableWebDeploymentEntityListing" /> class.
         /// </summary>
-        /// <param name="Total">Total.</param>
         /// <param name="Entities">Entities.</param>
+        /// <param name="NextUri">NextUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
-        public ExpandableWebDeploymentEntityListing(long? Total = null, List<ExpandableWebDeployment> Entities = null, string SelfUri = null)
+        /// <param name="PreviousUri">PreviousUri.</param>
+        /// <param name="Total">Total.</param>
+        public ExpandableWebDeploymentEntityListing(List<ExpandableWebDeployment> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null, long? Total = null)
         {
-            this.Total = Total;
             this.Entities = Entities;
+            this.NextUri = NextUri;
             this.SelfUri = SelfUri;
+            this.PreviousUri = PreviousUri;
+            this.Total = Total;
             
         }
         
-
-
-        /// <summary>
-        /// Gets or Sets Total
-        /// </summary>
-        [DataMember(Name="total", EmitDefaultValue=false)]
-        public long? Total { get; set; }
-
 
 
         /// <summary>
@@ -51,10 +47,34 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets NextUri
+        /// </summary>
+        [DataMember(Name="nextUri", EmitDefaultValue=false)]
+        public string NextUri { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PreviousUri
+        /// </summary>
+        [DataMember(Name="previousUri", EmitDefaultValue=false)]
+        public string PreviousUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Total
+        /// </summary>
+        [DataMember(Name="total", EmitDefaultValue=false)]
+        public long? Total { get; set; }
 
 
         /// <summary>
@@ -66,9 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ExpandableWebDeploymentEntityListing {\n");
 
-            sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
+            sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,19 +132,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Total == other.Total ||
-                    this.Total != null &&
-                    this.Total.Equals(other.Total)
-                ) &&
-                (
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
                 ) &&
                 (
+                    this.NextUri == other.NextUri ||
+                    this.NextUri != null &&
+                    this.NextUri.Equals(other.NextUri)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.PreviousUri == other.PreviousUri ||
+                    this.PreviousUri != null &&
+                    this.PreviousUri.Equals(other.PreviousUri)
+                ) &&
+                (
+                    this.Total == other.Total ||
+                    this.Total != null &&
+                    this.Total.Equals(other.Total)
                 );
         }
 
@@ -137,14 +169,20 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Total != null)
-                    hash = hash * 59 + this.Total.GetHashCode();
-
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
 
+                if (this.NextUri != null)
+                    hash = hash * 59 + this.NextUri.GetHashCode();
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.PreviousUri != null)
+                    hash = hash * 59 + this.PreviousUri.GetHashCode();
+
+                if (this.Total != null)
+                    hash = hash * 59 + this.Total.GetHashCode();
 
                 return hash;
             }

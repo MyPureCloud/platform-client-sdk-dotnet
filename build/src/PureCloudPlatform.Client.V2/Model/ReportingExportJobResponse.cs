@@ -940,7 +940,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CircuitBreakerOpenForViewType for "CIRCUIT_BREAKER_OPEN_FOR_VIEW_TYPE"
             /// </summary>
             [EnumMember(Value = "CIRCUIT_BREAKER_OPEN_FOR_VIEW_TYPE")]
-            CircuitBreakerOpenForViewType
+            CircuitBreakerOpenForViewType,
+            
+            /// <summary>
+            /// Enum BadRequestScheduledRun for "BAD_REQUEST_SCHEDULED_RUN"
+            /// </summary>
+            [EnumMember(Value = "BAD_REQUEST_SCHEDULED_RUN")]
+            BadRequestScheduledRun
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
