@@ -100,7 +100,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]
-            Userid
+            Userid,
+            
+            /// <summary>
+            /// Enum Wrapupdate for "wrapUpDate"
+            /// </summary>
+            [EnumMember(Value = "wrapUpDate")]
+            Wrapupdate
         }
         /// <summary>
         /// Optional operator, default is matches

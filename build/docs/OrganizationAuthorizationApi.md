@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrgauthorizationTrusteeUserRoles**](#GetOrgauthorizationTrusteeUserRoles) | **Get** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Get Trustee User Roles |
 | [**GetOrgauthorizationTrusteeUsers**](#GetOrgauthorizationTrusteeUsers) | **Get** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users | The list of trustee users for this organization (i.e. users granted access to this organization). |
 | [**GetOrgauthorizationTrustees**](#GetOrgauthorizationTrustees) | **Get** /api/v2/orgauthorization/trustees | The list of trustees for this organization (i.e. organizations granted access to this organization). |
+| [**GetOrgauthorizationTrusteesCare**](#GetOrgauthorizationTrusteesCare) | **Get** /api/v2/orgauthorization/trustees/care | Get Customer Care organization ids. |
 | [**GetOrgauthorizationTrusteesDefault**](#GetOrgauthorizationTrusteesDefault) | **Get** /api/v2/orgauthorization/trustees/default | Get organization authorization trust with Customer Care, if one exists. |
 | [**GetOrgauthorizationTrustor**](#GetOrgauthorizationTrustor) | **Get** /api/v2/orgauthorization/trustors/{trustorOrgId} | Get Org Trust |
 | [**GetOrgauthorizationTrustorCloneduser**](#GetOrgauthorizationTrustorCloneduser) | **Get** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Get Cloned User |
@@ -42,6 +43,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOrgauthorizationTrusteeUsers**](#PostOrgauthorizationTrusteeUsers) | **Post** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users | Add a user to the trust. |
 | [**PostOrgauthorizationTrustees**](#PostOrgauthorizationTrustees) | **Post** /api/v2/orgauthorization/trustees | Create a new organization authorization trust. This is required to grant other organizations access to your organization. |
 | [**PostOrgauthorizationTrusteesAudits**](#PostOrgauthorizationTrusteesAudits) | **Post** /api/v2/orgauthorization/trustees/audits | Get Org Trustee Audits |
+| [**PostOrgauthorizationTrusteesCare**](#PostOrgauthorizationTrusteesCare) | **Post** /api/v2/orgauthorization/trustees/care | Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. |
 | [**PostOrgauthorizationTrusteesDefault**](#PostOrgauthorizationTrusteesDefault) | **Post** /api/v2/orgauthorization/trustees/default | Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. |
 | [**PostOrgauthorizationTrustorAudits**](#PostOrgauthorizationTrustorAudits) | **Post** /api/v2/orgauthorization/trustor/audits | Get Org Trustor Audits |
 | [**PutOrgauthorizationTrustee**](#PutOrgauthorizationTrustee) | **Put** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Update Org Trust |
@@ -1448,6 +1450,64 @@ namespace Example
 [**TrustEntityListing**](TrustEntityListing)
 
 
+## GetOrgauthorizationTrusteesCare
+
+> [**TrusteeReferenceList**](TrusteeReferenceList) GetOrgauthorizationTrusteesCare ()
+
+
+Get Customer Care organization ids.
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:view
+* authorization:orgTrusteeUser:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrusteesCareExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+
+            try
+            { 
+                // Get Customer Care organization ids.
+                TrusteeReferenceList result = apiInstance.GetOrgauthorizationTrusteesCare();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrusteesCare: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**TrusteeReferenceList**](TrusteeReferenceList)
+
+
 ## GetOrgauthorizationTrusteesDefault
 
 > [**Trustee**](Trustee) GetOrgauthorizationTrusteesDefault ()
@@ -2341,6 +2401,75 @@ namespace Example
 **Object**
 
 
+## PostOrgauthorizationTrusteesCare
+
+> [**TrustEntityListing**](TrustEntityListing) PostOrgauthorizationTrusteesCare (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null)
+
+
+Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+
+Requires ALL permissions: 
+
+* authorization:orgTrustee:add
+* authorization:orgTrusteeUser:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOrgauthorizationTrusteesCareExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var assignDefaultRole = true;  // bool? | Assign Admin role to default pairing with Customer Care (optional) 
+            var autoExpire = true;  // bool? | Automatically expire pairing after 30 days (optional) 
+            var assignFullAccess = true;  // bool? | Grant Customer Care full access to the organization (optional) 
+            var allowTrustedUserAccess = true;  // bool? | Make Customer Care a Trusted User (optional) 
+
+            try
+            { 
+                // Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+                TrustEntityListing result = apiInstance.PostOrgauthorizationTrusteesCare(assignDefaultRole, autoExpire, assignFullAccess, allowTrustedUserAccess);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PostOrgauthorizationTrusteesCare: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assignDefaultRole** | **bool?**| Assign Admin role to default pairing with Customer Care | [optional]  |
+| **autoExpire** | **bool?**| Automatically expire pairing after 30 days | [optional]  |
+| **assignFullAccess** | **bool?**| Grant Customer Care full access to the organization | [optional]  |
+| **allowTrustedUserAccess** | **bool?**| Make Customer Care a Trusted User | [optional]  |
+
+### Return type
+
+[**TrustEntityListing**](TrustEntityListing)
+
+
 ## PostOrgauthorizationTrusteesDefault
 
 > [**Trustee**](Trustee) PostOrgauthorizationTrusteesDefault (bool? assignDefaultRole = null, bool? autoExpire = null)
@@ -2996,4 +3125,4 @@ namespace Example
 [**TrustUser**](TrustUser)
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

@@ -782,8 +782,6 @@ void (empty response body)
 
 Delete Salesforce Knowledge integration source
 
-DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:delete
@@ -847,8 +845,6 @@ void (empty response body)
 
 Delete ServiceNow Knowledge integration source
 
-DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:delete
@@ -911,8 +907,6 @@ void (empty response body)
 
 
 Delete synchronization job
-
-DeleteKnowledgeKnowledgebaseSynchronizeJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1165,8 +1159,6 @@ namespace Example
 
 
 Get sync options available for a knowledge-connect integration
-
-GetKnowledgeIntegrationOptions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3014,8 +3006,6 @@ namespace Example
 
 Get operations
 
-GetKnowledgeKnowledgebaseOperations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:importExportOperationsList:view
@@ -3093,8 +3083,6 @@ namespace Example
 
 
 Get ids of operation creator users and oauth clients
-
-GetKnowledgeKnowledgebaseOperationsUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3226,8 +3214,6 @@ namespace Example
 
 Get Knowledge integration sources
 
-GetKnowledgeKnowledgebaseSources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:view
@@ -3296,8 +3282,6 @@ namespace Example
 
 Get Salesforce Knowledge integration source
 
-GetKnowledgeKnowledgebaseSourcesSalesforceSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:view
@@ -3364,8 +3348,6 @@ namespace Example
 
 Get ServiceNow Knowledge integration source
 
-GetKnowledgeKnowledgebaseSourcesServicenowSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:view
@@ -3431,8 +3413,6 @@ namespace Example
 
 
 Get synchronization job report
-
-GetKnowledgeKnowledgebaseSynchronizeJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -4788,8 +4768,6 @@ void (empty response body)
 
 
 Update synchronization job
-
-PatchKnowledgeKnowledgebaseSynchronizeJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -7234,8 +7212,6 @@ namespace Example
 
 Create Salesforce Knowledge integration source
 
-PostKnowledgeKnowledgebaseSourcesSalesforce is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:add
@@ -7299,8 +7275,6 @@ namespace Example
 
 
 Start sync on Salesforce Knowledge integration source
-
-PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -7366,8 +7340,6 @@ namespace Example
 
 Create ServiceNow Knowledge integration source
 
-PostKnowledgeKnowledgebaseSourcesServicenow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:add
@@ -7432,8 +7404,6 @@ namespace Example
 
 Start synchronization on ServiceNow Knowledge integration source
 
-PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:edit
@@ -7497,8 +7467,6 @@ namespace Example
 
 
 Create synchronization job
-
-PostKnowledgeKnowledgebaseSynchronizeJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -7692,8 +7660,6 @@ namespace Example
 
 Update Salesforce Knowledge integration source
 
-PutKnowledgeKnowledgebaseSourcesSalesforceSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:edit
@@ -7760,8 +7726,6 @@ namespace Example
 
 Update ServiceNow Knowledge integration source
 
-PutKnowledgeKnowledgebaseSourcesServicenowSourceId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:integrationSource:edit
@@ -7821,4 +7785,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

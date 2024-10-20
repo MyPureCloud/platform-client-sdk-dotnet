@@ -75,10 +75,43 @@ namespace PureCloudPlatform.Client.V2.Model
             Expired
         }
         /// <summary>
+        /// Type of the survey
+        /// </summary>
+        /// <value>Type of the survey</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SurveyTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Web for "Web"
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web,
+            
+            /// <summary>
+            /// Enum Voice for "Voice"
+            /// </summary>
+            [EnumMember(Value = "Voice")]
+            Voice
+        }
+        /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        /// <summary>
+        /// Type of the survey
+        /// </summary>
+        /// <value>Type of the survey</value>
+        [DataMember(Name="surveyType", EmitDefaultValue=false)]
+        public SurveyTypeEnum? SurveyType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Survey" /> class.
         /// </summary>
@@ -92,7 +125,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CompletedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SurveyErrorDetails">Additional information about what happened when the survey is in Error status..</param>
         /// <param name="AgentTeam">The team that the agent belongs to.</param>
-        public Survey(string Name = null, ConversationReference Conversation = null, SurveyForm SurveyForm = null, DomainEntityRef Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null, Team AgentTeam = null)
+        /// <param name="SurveyType">Type of the survey.</param>
+        /// <param name="MissingRequiredAnswer">True if any of the required questions for the survey form have not been answered. Null if survey is not finished..</param>
+        /// <param name="Flow">An Architect flow that executed in order to collect the answers for this survey..</param>
+        public Survey(string Name = null, ConversationReference Conversation = null, SurveyForm SurveyForm = null, DomainEntityRef Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null, Team AgentTeam = null, SurveyTypeEnum? SurveyType = null, bool? MissingRequiredAnswer = null, AddressableEntityRef Flow = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -104,6 +140,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CompletedDate = CompletedDate;
             this.SurveyErrorDetails = SurveyErrorDetails;
             this.AgentTeam = AgentTeam;
+            this.SurveyType = SurveyType;
+            this.MissingRequiredAnswer = MissingRequiredAnswer;
+            this.Flow = Flow;
             
         }
         
@@ -196,6 +235,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// True if any of the required questions for the survey form have not been answered. Null if survey is not finished.
+        /// </summary>
+        /// <value>True if any of the required questions for the survey form have not been answered. Null if survey is not finished.</value>
+        [DataMember(Name="missingRequiredAnswer", EmitDefaultValue=false)]
+        public bool? MissingRequiredAnswer { get; set; }
+
+
+
+        /// <summary>
+        /// An Architect flow that executed in order to collect the answers for this survey.
+        /// </summary>
+        /// <value>An Architect flow that executed in order to collect the answers for this survey.</value>
+        [DataMember(Name="flow", EmitDefaultValue=false)]
+        public AddressableEntityRef Flow { get; set; }
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -224,6 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CompletedDate: ").Append(CompletedDate).Append("\n");
             sb.Append("  SurveyErrorDetails: ").Append(SurveyErrorDetails).Append("\n");
             sb.Append("  AgentTeam: ").Append(AgentTeam).Append("\n");
+            sb.Append("  SurveyType: ").Append(SurveyType).Append("\n");
+            sb.Append("  MissingRequiredAnswer: ").Append(MissingRequiredAnswer).Append("\n");
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -321,6 +383,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentTeam.Equals(other.AgentTeam)
                 ) &&
                 (
+                    this.SurveyType == other.SurveyType ||
+                    this.SurveyType != null &&
+                    this.SurveyType.Equals(other.SurveyType)
+                ) &&
+                (
+                    this.MissingRequiredAnswer == other.MissingRequiredAnswer ||
+                    this.MissingRequiredAnswer != null &&
+                    this.MissingRequiredAnswer.Equals(other.MissingRequiredAnswer)
+                ) &&
+                (
+                    this.Flow == other.Flow ||
+                    this.Flow != null &&
+                    this.Flow.Equals(other.Flow)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -370,6 +447,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentTeam != null)
                     hash = hash * 59 + this.AgentTeam.GetHashCode();
+
+                if (this.SurveyType != null)
+                    hash = hash * 59 + this.SurveyType.GetHashCode();
+
+                if (this.MissingRequiredAnswer != null)
+                    hash = hash * 59 + this.MissingRequiredAnswer.GetHashCode();
+
+                if (this.Flow != null)
+                    hash = hash * 59 + this.Flow.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

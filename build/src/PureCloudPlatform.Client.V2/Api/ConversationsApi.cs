@@ -4188,26 +4188,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Suggestion feedback.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PostConversationSuggestionsFeedback (string conversationId, Feedback body);
 
         /// <summary>
         /// Suggestion feedback.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PostConversationSuggestionsFeedbackWithHttpInfo (string conversationId, Feedback body);
 
         /// <summary>
@@ -10464,26 +10464,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Suggestion feedback.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PostConversationSuggestionsFeedbackAsync (string conversationId, Feedback body);
 
         /// <summary>
         /// Suggestion feedback.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationSuggestionsFeedbackAsyncWithHttpInfo (string conversationId, Feedback body);
 
         /// <summary>
@@ -48616,13 +48616,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggestion feedback. 
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PostConversationSuggestionsFeedback (string conversationId, Feedback body)
         {
              PostConversationSuggestionsFeedbackWithHttpInfo(conversationId, body);
@@ -48630,13 +48630,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggestion feedback. 
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PostConversationSuggestionsFeedbackWithHttpInfo (string conversationId, Feedback body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -48731,13 +48731,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggestion feedback. 
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PostConversationSuggestionsFeedbackAsync (string conversationId, Feedback body)
         {
              await PostConversationSuggestionsFeedbackAsyncWithHttpInfo(conversationId, body);
@@ -48746,13 +48746,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggestion feedback. 
-        /// 
+        /// Google Agent Assist offering within Genesys will no longer be supported
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">SuggestionFeedback</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationSuggestionsFeedbackAsyncWithHttpInfo (string conversationId, Feedback body)
         { 
             // verify the required parameter 'conversationId' is set

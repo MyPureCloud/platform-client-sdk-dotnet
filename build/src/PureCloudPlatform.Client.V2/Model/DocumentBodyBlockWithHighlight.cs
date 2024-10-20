@@ -87,17 +87,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of the block for the body. This determines which body block object (paragraph, list, video, image or table) would have a value. (required).</param>
         /// <param name="Image">Image. It must contain a value if the type of the block is Image..</param>
         /// <param name="Video">Video. It must contain a value if the type of the block is Video..</param>
+        /// <param name="Paragraph">Paragraph. It must contain a value if the type of the block is Paragraph..</param>
         /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList..</param>
         /// <param name="Table">Table. It must contain a value if type of the block is Table..</param>
-        /// <param name="Paragraph">Paragraph. It must contain a value if the type of the block is Paragraph..</param>
-        public DocumentBodyBlockWithHighlight(TypeEnum? Type = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null, DocumentBodyList List = null, DocumentBodyTable Table = null, DocumentBodyParagraphWithHighlight Paragraph = null)
+        public DocumentBodyBlockWithHighlight(TypeEnum? Type = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null, DocumentBodyParagraphWithHighlight Paragraph = null, DocumentBodyListWithHighlight List = null, DocumentBodyTableWithHighlight Table = null)
         {
             this.Type = Type;
             this.Image = Image;
             this.Video = Video;
+            this.Paragraph = Paragraph;
             this.List = List;
             this.Table = Table;
-            this.Paragraph = Paragraph;
             
         }
         
@@ -124,11 +124,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Paragraph. It must contain a value if the type of the block is Paragraph.
+        /// </summary>
+        /// <value>Paragraph. It must contain a value if the type of the block is Paragraph.</value>
+        [DataMember(Name="paragraph", EmitDefaultValue=false)]
+        public DocumentBodyParagraphWithHighlight Paragraph { get; set; }
+
+
+
+        /// <summary>
         /// List. It must contain a value if the type of the block is UnorderedList or OrderedList.
         /// </summary>
         /// <value>List. It must contain a value if the type of the block is UnorderedList or OrderedList.</value>
         [DataMember(Name="list", EmitDefaultValue=false)]
-        public DocumentBodyList List { get; set; }
+        public DocumentBodyListWithHighlight List { get; set; }
 
 
 
@@ -137,16 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Table. It must contain a value if type of the block is Table.</value>
         [DataMember(Name="table", EmitDefaultValue=false)]
-        public DocumentBodyTable Table { get; set; }
-
-
-
-        /// <summary>
-        /// Paragraph. It must contain a value if the type of the block is Paragraph.
-        /// </summary>
-        /// <value>Paragraph. It must contain a value if the type of the block is Paragraph.</value>
-        [DataMember(Name="paragraph", EmitDefaultValue=false)]
-        public DocumentBodyParagraphWithHighlight Paragraph { get; set; }
+        public DocumentBodyTableWithHighlight Table { get; set; }
 
 
         /// <summary>
@@ -161,9 +161,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  Video: ").Append(Video).Append("\n");
+            sb.Append("  Paragraph: ").Append(Paragraph).Append("\n");
             sb.Append("  List: ").Append(List).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
-            sb.Append("  Paragraph: ").Append(Paragraph).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Video.Equals(other.Video)
                 ) &&
                 (
+                    this.Paragraph == other.Paragraph ||
+                    this.Paragraph != null &&
+                    this.Paragraph.Equals(other.Paragraph)
+                ) &&
+                (
                     this.List == other.List ||
                     this.List != null &&
                     this.List.Equals(other.List)
@@ -228,11 +233,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Table == other.Table ||
                     this.Table != null &&
                     this.Table.Equals(other.Table)
-                ) &&
-                (
-                    this.Paragraph == other.Paragraph ||
-                    this.Paragraph != null &&
-                    this.Paragraph.Equals(other.Paragraph)
                 );
         }
 
@@ -256,14 +256,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Video != null)
                     hash = hash * 59 + this.Video.GetHashCode();
 
+                if (this.Paragraph != null)
+                    hash = hash * 59 + this.Paragraph.GetHashCode();
+
                 if (this.List != null)
                     hash = hash * 59 + this.List.GetHashCode();
 
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
-
-                if (this.Paragraph != null)
-                    hash = hash * 59 + this.Paragraph.GetHashCode();
 
                 return hash;
             }

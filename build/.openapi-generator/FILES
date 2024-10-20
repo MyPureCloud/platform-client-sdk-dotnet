@@ -566,6 +566,7 @@ docs/BusinessUnitListing.md
 docs/BusinessUnitReference.md
 docs/BusinessUnitResponse.md
 docs/BusinessUnitSettingsResponse.md
+docs/Button.md
 docs/ButtonComponent.md
 docs/ButtonResponse.md
 docs/CachedMediaItem.md
@@ -633,6 +634,8 @@ docs/CampaignRuleEntities.md
 docs/CampaignRuleEntityListing.md
 docs/CampaignRuleExecutionSettings.md
 docs/CampaignRuleParameters.md
+docs/CampaignRuleWarning.md
+docs/CampaignRuleWarningParameters.md
 docs/CampaignSchedule.md
 docs/CampaignSequence.md
 docs/CampaignSequenceEntityListing.md
@@ -1117,6 +1120,14 @@ docs/ConversationSummary.md
 docs/ConversationSummaryFollowup.md
 docs/ConversationSummaryReason.md
 docs/ConversationSummaryResolution.md
+docs/ConversationSummaryTopicVirtualAgentsConversationHeadline.md
+docs/ConversationSummaryTopicVirtualAgentsConversationReason.md
+docs/ConversationSummaryTopicVirtualAgentsConversationResolution.md
+docs/ConversationSummaryTopicVirtualAgentsConversationSummary.md
+docs/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.md
+docs/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.md
+docs/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.md
+docs/ConversationSummaryTopicVirtualAgentsTriggerSource.md
 docs/ConversationSummaryWrapupCode.md
 docs/ConversationTagsUpdate.md
 docs/ConversationThreadingWindow.md
@@ -1235,6 +1246,14 @@ docs/CrossPlatformPolicy.md
 docs/CrossPlatformPolicyActions.md
 docs/CrossPlatformPolicyCreate.md
 docs/CrossPlatformPolicyUpdate.md
+docs/CsvJobRequest.md
+docs/CsvJobResponse.md
+docs/CsvMappingEntry.md
+docs/CsvSettings.md
+docs/CsvUploadDetailsResponse.md
+docs/CsvUploadPreviewResponse.md
+docs/CsvUploadRequest.md
+docs/CsvUploadResponse.md
 docs/CtaButtonStyleProperties.md
 docs/CurrentUserScheduleRequestBody.md
 docs/CurrentUserTimeOffIntegrationStatusRequest.md
@@ -1347,6 +1366,7 @@ docs/DeleteExternalcontactsContact-example.txt
 docs/DeleteExternalcontactsContactNote-example.txt
 docs/DeleteExternalcontactsContactsSchema-example.txt
 docs/DeleteExternalcontactsExternalsource-example.txt
+docs/DeleteExternalcontactsImportCsvSetting-example.txt
 docs/DeleteExternalcontactsOrganization-example.txt
 docs/DeleteExternalcontactsOrganizationNote-example.txt
 docs/DeleteExternalcontactsOrganizationTrustor-example.txt
@@ -1739,7 +1759,9 @@ docs/DocumentBodyImageProperties.md
 docs/DocumentBodyList.md
 docs/DocumentBodyListBlock.md
 docs/DocumentBodyListBlockProperties.md
+docs/DocumentBodyListBlockWithHighlight.md
 docs/DocumentBodyListItemProperties.md
+docs/DocumentBodyListWithHighlight.md
 docs/DocumentBodyParagraph.md
 docs/DocumentBodyParagraphProperties.md
 docs/DocumentBodyParagraphWithHighlight.md
@@ -1748,9 +1770,12 @@ docs/DocumentBodyTableCaptionBlock.md
 docs/DocumentBodyTableCaptionItem.md
 docs/DocumentBodyTableCellBlock.md
 docs/DocumentBodyTableCellBlockProperties.md
+docs/DocumentBodyTableCellBlockWithHighlight.md
 docs/DocumentBodyTableProperties.md
 docs/DocumentBodyTableRowBlock.md
 docs/DocumentBodyTableRowBlockProperties.md
+docs/DocumentBodyTableRowBlockWithHighlight.md
+docs/DocumentBodyTableWithHighlight.md
 docs/DocumentBodyVideo.md
 docs/DocumentBodyVideoProperties.md
 docs/DocumentBodyWithHighlight.md
@@ -1762,6 +1787,7 @@ docs/DocumentElementLength.md
 docs/DocumentEntityListing.md
 docs/DocumentFaq.md
 docs/DocumentListContentBlock.md
+docs/DocumentListContentBlockWithHighlight.md
 docs/DocumentListing.md
 docs/DocumentQuery.md
 docs/DocumentQueryClause.md
@@ -1769,6 +1795,7 @@ docs/DocumentQueryInterval.md
 docs/DocumentQueryPredicate.md
 docs/DocumentReference.md
 docs/DocumentTableContentBlock.md
+docs/DocumentTableContentBlockWithHighlight.md
 docs/DocumentText.md
 docs/DocumentTextProperties.md
 docs/DocumentThumbnail.md
@@ -2601,6 +2628,10 @@ docs/GetExternalcontactsContactsSchemaVersions-example.txt
 docs/GetExternalcontactsContactsSchemas-example.txt
 docs/GetExternalcontactsExternalsource-example.txt
 docs/GetExternalcontactsExternalsources-example.txt
+docs/GetExternalcontactsImportCsvSetting-example.txt
+docs/GetExternalcontactsImportCsvSettings-example.txt
+docs/GetExternalcontactsImportCsvUploadDetails-example.txt
+docs/GetExternalcontactsImportCsvUploadPreview-example.txt
 docs/GetExternalcontactsOrganization-example.txt
 docs/GetExternalcontactsOrganizationContacts-example.txt
 docs/GetExternalcontactsOrganizationNote-example.txt
@@ -2968,6 +2999,7 @@ docs/GetOrgauthorizationTrusteeUser-example.txt
 docs/GetOrgauthorizationTrusteeUserRoles-example.txt
 docs/GetOrgauthorizationTrusteeUsers-example.txt
 docs/GetOrgauthorizationTrustees-example.txt
+docs/GetOrgauthorizationTrusteesCare-example.txt
 docs/GetOrgauthorizationTrusteesDefault-example.txt
 docs/GetOrgauthorizationTrustor-example.txt
 docs/GetOrgauthorizationTrustorCloneduser-example.txt
@@ -3590,6 +3622,7 @@ docs/HeadNotificationsChannel-example.txt
 docs/HeadTokensMe-example.txt
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
+docs/Header.md
 docs/HealthInfo.md
 docs/HelpLink.md
 docs/HelpSettings.md
@@ -4148,6 +4181,7 @@ docs/ListWrapperString.md
 docs/ListedDictionaryFeedback.md
 docs/ListedProgram.md
 docs/ListedTopic.md
+docs/Listing.md
 docs/LocalDateRange.md
 docs/LocalEncryptionConfiguration.md
 docs/LocalEncryptionKeyRequest.md
@@ -4232,6 +4266,8 @@ docs/MessageConversationEntityListing.md
 docs/MessageData.md
 docs/MessageDetails.md
 docs/MessageEvaluation.md
+docs/MessageFooter.md
+docs/MessageHeader.md
 docs/MessageInfo.md
 docs/MessageMedia.md
 docs/MessageMediaAttachment.md
@@ -5082,6 +5118,9 @@ docs/PostExternalcontactsContacts-example.txt
 docs/PostExternalcontactsContactsSchemas-example.txt
 docs/PostExternalcontactsExternalsources-example.txt
 docs/PostExternalcontactsIdentifierlookup-example.txt
+docs/PostExternalcontactsImportCsvJobs-example.txt
+docs/PostExternalcontactsImportCsvSettings-example.txt
+docs/PostExternalcontactsImportCsvUploads-example.txt
 docs/PostExternalcontactsMergeContacts-example.txt
 docs/PostExternalcontactsOrganizationNotes-example.txt
 docs/PostExternalcontactsOrganizations-example.txt
@@ -5247,6 +5286,7 @@ docs/PostOrgauthorizationTrusteeGroups-example.txt
 docs/PostOrgauthorizationTrusteeUsers-example.txt
 docs/PostOrgauthorizationTrustees-example.txt
 docs/PostOrgauthorizationTrusteesAudits-example.txt
+docs/PostOrgauthorizationTrusteesCare-example.txt
 docs/PostOrgauthorizationTrusteesDefault-example.txt
 docs/PostOrgauthorizationTrustorAudits-example.txt
 docs/PostOutboundAttemptlimits-example.txt
@@ -5642,6 +5682,7 @@ docs/PutExternalcontactsContactNote-example.txt
 docs/PutExternalcontactsContactsSchema-example.txt
 docs/PutExternalcontactsConversation-example.txt
 docs/PutExternalcontactsExternalsource-example.txt
+docs/PutExternalcontactsImportCsvSetting-example.txt
 docs/PutExternalcontactsOrganization-example.txt
 docs/PutExternalcontactsOrganizationNote-example.txt
 docs/PutExternalcontactsOrganizationTrustorTrustorId-example.txt
@@ -6844,6 +6885,7 @@ docs/Trustee.md
 docs/TrusteeAuditQueryRequest.md
 docs/TrusteeAuthorization.md
 docs/TrusteeBillingOverview.md
+docs/TrusteeReferenceList.md
 docs/Trustor.md
 docs/TrustorAuditQueryRequest.md
 docs/TrustorEntityListing.md
@@ -7002,6 +7044,7 @@ docs/UserRecordingEntityListing.md
 docs/UserRecordingsApi.json
 docs/UserRecordingsApi.md
 docs/UserReference.md
+docs/UserReferenceEntityListing.md
 docs/UserReferenceWithName.md
 docs/UserRoutingLanguage.md
 docs/UserRoutingLanguagePost.md
@@ -7110,7 +7153,9 @@ docs/ValidateAddressResponse.md
 docs/ValidateAssignUsers.md
 docs/ValidateWorkPlanMessages.md
 docs/ValidateWorkPlanResponse.md
+docs/ValidationError.md
 docs/ValidationLimits.md
+docs/ValidationResult.md
 docs/ValidationServiceRequest.md
 docs/ValueWrapperActivityPlanServiceGoalImpactOverrides.md
 docs/ValueWrapperDate.md
@@ -7381,6 +7426,7 @@ docs/WfmUserScheduleAdherenceUpdatedMuTopicQueueReference.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicUriReference.md
+docs/WfmUserScheduleAdherenceUpdatedMuTopicUserNextActivityReminder.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicUserReference.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference.md
@@ -7388,6 +7434,7 @@ docs/WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicUriReference.md
+docs/WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicUserReference.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate.md
 docs/WfmUserScheduleAdherenceUpdatedTopicActivityCodeReference.md
@@ -7395,6 +7442,7 @@ docs/WfmUserScheduleAdherenceUpdatedTopicQueueReference.md
 docs/WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation.md
 docs/WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference.md
 docs/WfmUserScheduleAdherenceUpdatedTopicUriReference.md
+docs/WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder.md
 docs/WfmUserScheduleAdherenceUpdatedTopicUserReference.md
 docs/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.md
 docs/WfmVersionedEntityMetadata.md
@@ -7493,6 +7541,9 @@ docs/WorkitemPostQueryEntityListing.md
 docs/WorkitemQueryJobCreate.md
 docs/WorkitemQueryJobError.md
 docs/WorkitemQueryJobFilter.md
+docs/WorkitemQueryJobQueryFilters.md
+docs/WorkitemQueryJobQueryFiltersCriteria.md
+docs/WorkitemQueryJobQueryFiltersPredicate.md
 docs/WorkitemQueryJobResponse.md
 docs/WorkitemQueryJobSort.md
 docs/WorkitemQueryPostRequest.md
@@ -8211,6 +8262,7 @@ src/PureCloudPlatform.Client.V2/Model/BusinessUnitListing.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitReference.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitSettingsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/Button.cs
 src/PureCloudPlatform.Client.V2/Model/ButtonComponent.cs
 src/PureCloudPlatform.Client.V2/Model/ButtonResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CachedMediaItem.cs
@@ -8278,6 +8330,8 @@ src/PureCloudPlatform.Client.V2/Model/CampaignRuleEntities.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRuleEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRuleExecutionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRuleParameters.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignRuleWarning.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignRuleWarningParameters.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignSequence.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignSequenceEntityListing.cs
@@ -8754,6 +8808,14 @@ src/PureCloudPlatform.Client.V2/Model/ConversationSummary.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryFollowup.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryReason.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryResolution.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationHeadline.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationReason.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationResolution.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationSummary.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsTriggerSource.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryWrapupCode.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationTagsUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationThreadingWindow.cs
@@ -8870,6 +8932,14 @@ src/PureCloudPlatform.Client.V2/Model/CrossPlatformPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/CrossPlatformPolicyActions.cs
 src/PureCloudPlatform.Client.V2/Model/CrossPlatformPolicyCreate.cs
 src/PureCloudPlatform.Client.V2/Model/CrossPlatformPolicyUpdate.cs
+src/PureCloudPlatform.Client.V2/Model/CsvJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CsvJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CsvMappingEntry.cs
+src/PureCloudPlatform.Client.V2/Model/CsvSettings.cs
+src/PureCloudPlatform.Client.V2/Model/CsvUploadDetailsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CsvUploadPreviewResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CsvUploadRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CsvUploadResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CtaButtonStyleProperties.cs
 src/PureCloudPlatform.Client.V2/Model/CurrentUserScheduleRequestBody.cs
 src/PureCloudPlatform.Client.V2/Model/CurrentUserTimeOffIntegrationStatusRequest.cs
@@ -9087,7 +9157,9 @@ src/PureCloudPlatform.Client.V2/Model/DocumentBodyImageProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyList.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyListBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyListBlockProperties.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyListBlockWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyListItemProperties.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyListWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraph.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraphProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraphWithHighlight.cs
@@ -9096,9 +9168,12 @@ src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCaptionBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCaptionItem.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCellBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCellBlockProperties.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCellBlockWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableRowBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableRowBlockProperties.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableRowBlockWithHighlight.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideo.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideoProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyWithHighlight.cs
@@ -9110,6 +9185,7 @@ src/PureCloudPlatform.Client.V2/Model/DocumentElementLength.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentFaq.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentListContentBlock.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentListContentBlockWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQuery.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQueryClause.cs
@@ -9117,6 +9193,7 @@ src/PureCloudPlatform.Client.V2/Model/DocumentQueryInterval.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentReference.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentTableContentBlock.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentTableContentBlockWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentText.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentTextProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentThumbnail.cs
@@ -9667,6 +9744,7 @@ src/PureCloudPlatform.Client.V2/Model/GuestMemberInfo.cs
 src/PureCloudPlatform.Client.V2/Model/GuestResponseCategory.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountForecast.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountInterval.cs
+src/PureCloudPlatform.Client.V2/Model/Header.cs
 src/PureCloudPlatform.Client.V2/Model/HealthInfo.cs
 src/PureCloudPlatform.Client.V2/Model/HelpLink.cs
 src/PureCloudPlatform.Client.V2/Model/HelpSettings.cs
@@ -10207,6 +10285,7 @@ src/PureCloudPlatform.Client.V2/Model/ListWrapperString.cs
 src/PureCloudPlatform.Client.V2/Model/ListedDictionaryFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/ListedProgram.cs
 src/PureCloudPlatform.Client.V2/Model/ListedTopic.cs
+src/PureCloudPlatform.Client.V2/Model/Listing.cs
 src/PureCloudPlatform.Client.V2/Model/LocalDateRange.cs
 src/PureCloudPlatform.Client.V2/Model/LocalEncryptionConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/LocalEncryptionKeyRequest.cs
@@ -10287,6 +10366,8 @@ src/PureCloudPlatform.Client.V2/Model/MessageConversationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/MessageData.cs
 src/PureCloudPlatform.Client.V2/Model/MessageDetails.cs
 src/PureCloudPlatform.Client.V2/Model/MessageEvaluation.cs
+src/PureCloudPlatform.Client.V2/Model/MessageFooter.cs
+src/PureCloudPlatform.Client.V2/Model/MessageHeader.cs
 src/PureCloudPlatform.Client.V2/Model/MessageInfo.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMedia.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMediaAttachment.cs
@@ -11719,6 +11800,7 @@ src/PureCloudPlatform.Client.V2/Model/Trustee.cs
 src/PureCloudPlatform.Client.V2/Model/TrusteeAuditQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TrusteeAuthorization.cs
 src/PureCloudPlatform.Client.V2/Model/TrusteeBillingOverview.cs
+src/PureCloudPlatform.Client.V2/Model/TrusteeReferenceList.cs
 src/PureCloudPlatform.Client.V2/Model/Trustor.cs
 src/PureCloudPlatform.Client.V2/Model/TrustorAuditQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TrustorEntityListing.cs
@@ -11871,6 +11953,7 @@ src/PureCloudPlatform.Client.V2/Model/UserQueueEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserRecording.cs
 src/PureCloudPlatform.Client.V2/Model/UserRecordingEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserReference.cs
+src/PureCloudPlatform.Client.V2/Model/UserReferenceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserReferenceWithName.cs
 src/PureCloudPlatform.Client.V2/Model/UserRoutingLanguage.cs
 src/PureCloudPlatform.Client.V2/Model/UserRoutingLanguagePost.cs
@@ -11975,7 +12058,9 @@ src/PureCloudPlatform.Client.V2/Model/ValidateAddressResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateAssignUsers.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateWorkPlanMessages.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateWorkPlanResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ValidationError.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationLimits.cs
+src/PureCloudPlatform.Client.V2/Model/ValidationResult.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationServiceRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperActivityPlanServiceGoalImpactOverrides.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperDate.cs
@@ -12238,6 +12323,7 @@ src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedMuTopicQueu
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedMuTopicUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedMuTopicUserNextActivityReminder.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedMuTopicUserReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference.cs
@@ -12245,6 +12331,7 @@ src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicQu
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicUserReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicActivityCodeReference.cs
@@ -12252,6 +12339,7 @@ src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicQueueR
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicUserReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmVersionedEntityMetadata.cs
@@ -12346,6 +12434,9 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemPostQueryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobCreate.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobError.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobFilter.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobQueryFilters.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobQueryFiltersCriteria.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobQueryFiltersPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryJobSort.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryPostRequest.cs

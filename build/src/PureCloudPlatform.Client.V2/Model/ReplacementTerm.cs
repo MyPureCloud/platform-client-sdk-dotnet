@@ -60,13 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Twitter for "TWITTER"
             /// </summary>
             [EnumMember(Value = "TWITTER")]
-            Twitter,
-            
-            /// <summary>
-            /// Enum Facebook for "FACEBOOK"
-            /// </summary>
-            [EnumMember(Value = "FACEBOOK")]
-            Facebook
+            Twitter
         }
         /// <summary>
         /// Gets or Sets Type

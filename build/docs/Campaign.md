@@ -39,6 +39,7 @@
 | **ContactListFilters** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef) | Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied. | [optional] |
 | **Division** | [**DomainEntityRef**](DomainEntityRef) | The division this campaign belongs to. | [optional] |
 | **DynamicContactQueueingSettings** | [**DynamicContactQueueingSettings**](DynamicContactQueueingSettings) | Settings for dynamic queueing of contacts. | [optional] |
+| **SkillColumns** | **List&lt;string&gt;** | The skill columns on the ContactList that this Campaign should take into account when dialing | [optional] |
 | **MaxCallsPerAgent** | **int?** | The maximum number of calls that can be placed per agent on this campaign | [optional] |
 | **CallbackAutoAnswer** | **bool?** | The option manages the auto-answer callback calls | [optional] |
 | **DynamicLineBalancingSettings** | [**DynamicLineBalancingSettings**](DynamicLineBalancingSettings) | Dynamic line balancing settings | [optional] |
@@ -46,4 +47,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Assistant" /> class.
         /// </summary>
         /// <param name="Name">The name of the assistant that will assist the agent. (required).</param>
-        /// <param name="GoogleDialogflowConfig">Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions..</param>
+        /// <param name="GoogleDialogflowConfig">(Deprecated: use the 'knowledgeSuggestionConfig' for genesys knowledge suggestions) Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions..</param>
         /// <param name="TranscriptionConfig">Configuration for speech transcription used to assist the agent. (required).</param>
         /// <param name="KnowledgeSuggestionConfig">Configuration that defines how to produce knowledge suggestions. (required).</param>
         public Assistant(string Name = null, GoogleDialogflowConfig GoogleDialogflowConfig = null, TranscriptionConfig TranscriptionConfig = null, KnowledgeSuggestionConfig KnowledgeSuggestionConfig = null)
@@ -130,9 +130,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions.
+        /// (Deprecated: use the 'knowledgeSuggestionConfig' for genesys knowledge suggestions) Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions.
         /// </summary>
-        /// <value>Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions.</value>
+        /// <value>(Deprecated: use the 'knowledgeSuggestionConfig' for genesys knowledge suggestions) Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions.</value>
         [DataMember(Name="googleDialogflowConfig", EmitDefaultValue=false)]
         public GoogleDialogflowConfig GoogleDialogflowConfig { get; set; }
 

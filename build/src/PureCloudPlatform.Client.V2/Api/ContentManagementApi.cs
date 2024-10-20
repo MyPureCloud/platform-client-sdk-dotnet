@@ -372,13 +372,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>SharedResponse</returns>
         
-        SharedResponse GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        SharedResponse GetContentmanagementSharedSharedId (string sharedId, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -388,13 +387,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of SharedResponse</returns>
         
-        ApiResponse<SharedResponse> GetContentmanagementSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        ApiResponse<SharedResponse> GetContentmanagementSharedSharedIdWithHttpInfo (string sharedId, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -1364,13 +1362,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of SharedResponse</returns>
         
-        System.Threading.Tasks.Task<SharedResponse> GetContentmanagementSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        System.Threading.Tasks.Task<SharedResponse> GetContentmanagementSharedSharedIdAsync (string sharedId, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -1380,13 +1377,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (SharedResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetContentmanagementSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetContentmanagementSharedSharedIdAsyncWithHttpInfo (string sharedId, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -4966,15 +4962,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>SharedResponse</returns>
         
-        public SharedResponse GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public SharedResponse GetContentmanagementSharedSharedId (string sharedId, string disposition = null, string contentType = null, string expand = null)
         {
-             ApiResponse<SharedResponse> localVarResponse = GetContentmanagementSharedSharedIdWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             ApiResponse<SharedResponse> localVarResponse = GetContentmanagementSharedSharedIdWithHttpInfo(sharedId, disposition, contentType, expand);
              return localVarResponse.Data;
         }
 
@@ -4984,13 +4979,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of SharedResponse</returns>
         
-        public ApiResponse< SharedResponse > GetContentmanagementSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public ApiResponse< SharedResponse > GetContentmanagementSharedSharedIdWithHttpInfo (string sharedId, string disposition = null, string contentType = null, string expand = null)
         { 
             // verify the required parameter 'sharedId' is set
             if (sharedId == null)
@@ -5029,7 +5023,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sharedId != null) localVarPathParams.Add("sharedId", this.Configuration.ApiClient.ParameterToString(sharedId));
 
             // Query params
-            if (redirect != null) localVarQueryParams.Add(new Tuple<string, string>("redirect", this.Configuration.ApiClient.ParameterToString(redirect)));
             if (disposition != null) localVarQueryParams.Add(new Tuple<string, string>("disposition", this.Configuration.ApiClient.ParameterToString(disposition)));
             if (contentType != null) localVarQueryParams.Add(new Tuple<string, string>("contentType", this.Configuration.ApiClient.ParameterToString(contentType)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
@@ -5083,15 +5076,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of SharedResponse</returns>
         
-        public async System.Threading.Tasks.Task<SharedResponse> GetContentmanagementSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public async System.Threading.Tasks.Task<SharedResponse> GetContentmanagementSharedSharedIdAsync (string sharedId, string disposition = null, string contentType = null, string expand = null)
         {
-             ApiResponse<SharedResponse> localVarResponse = await GetContentmanagementSharedSharedIdAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             ApiResponse<SharedResponse> localVarResponse = await GetContentmanagementSharedSharedIdAsyncWithHttpInfo(sharedId, disposition, contentType, expand);
              return localVarResponse.Data;
 
         }
@@ -5102,13 +5094,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (SharedResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetContentmanagementSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetContentmanagementSharedSharedIdAsyncWithHttpInfo (string sharedId, string disposition = null, string contentType = null, string expand = null)
         { 
             // verify the required parameter 'sharedId' is set
             if (sharedId == null)
@@ -5148,7 +5139,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sharedId != null) localVarPathParams.Add("sharedId", this.Configuration.ApiClient.ParameterToString(sharedId));
 
             // Query params
-            if (redirect != null) localVarQueryParams.Add(new Tuple<string, string>("redirect", this.Configuration.ApiClient.ParameterToString(redirect)));
             if (disposition != null) localVarQueryParams.Add(new Tuple<string, string>("disposition", this.Configuration.ApiClient.ParameterToString(disposition)));
             if (contentType != null) localVarQueryParams.Add(new Tuple<string, string>("contentType", this.Configuration.ApiClient.ParameterToString(contentType)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));

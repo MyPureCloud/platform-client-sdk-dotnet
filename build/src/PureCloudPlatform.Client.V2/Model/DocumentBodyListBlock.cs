@@ -55,26 +55,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentBodyListBlock" /> class.
         /// </summary>
         /// <param name="Type">The type of the list block. (required).</param>
-        /// <param name="Blocks">The list of items for an OrderedList or an UnorderedList. (required).</param>
         /// <param name="Properties">The properties for the list block..</param>
-        public DocumentBodyListBlock(TypeEnum? Type = null, List<DocumentListContentBlock> Blocks = null, DocumentBodyListItemProperties Properties = null)
+        /// <param name="Blocks">The list of items for an OrderedList or an UnorderedList. (required).</param>
+        public DocumentBodyListBlock(TypeEnum? Type = null, DocumentBodyListItemProperties Properties = null, List<DocumentListContentBlock> Blocks = null)
         {
             this.Type = Type;
-            this.Blocks = Blocks;
             this.Properties = Properties;
+            this.Blocks = Blocks;
             
         }
         
 
-
-
-
-        /// <summary>
-        /// The list of items for an OrderedList or an UnorderedList.
-        /// </summary>
-        /// <value>The list of items for an OrderedList or an UnorderedList.</value>
-        [DataMember(Name="blocks", EmitDefaultValue=false)]
-        public List<DocumentListContentBlock> Blocks { get; set; }
 
 
 
@@ -84,6 +75,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The properties for the list block.</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public DocumentBodyListItemProperties Properties { get; set; }
+
+
+
+        /// <summary>
+        /// The list of items for an OrderedList or an UnorderedList.
+        /// </summary>
+        /// <value>The list of items for an OrderedList or an UnorderedList.</value>
+        [DataMember(Name="blocks", EmitDefaultValue=false)]
+        public List<DocumentListContentBlock> Blocks { get; set; }
 
 
         /// <summary>
@@ -96,8 +96,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DocumentBodyListBlock {\n");
 
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Blocks: ").Append(Blocks).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            sb.Append("  Blocks: ").Append(Blocks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,14 +144,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this.Blocks == other.Blocks ||
-                    this.Blocks != null &&
-                    this.Blocks.SequenceEqual(other.Blocks)
-                ) &&
-                (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.Equals(other.Properties)
+                ) &&
+                (
+                    this.Blocks == other.Blocks ||
+                    this.Blocks != null &&
+                    this.Blocks.SequenceEqual(other.Blocks)
                 );
         }
 
@@ -169,11 +169,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
 
-                if (this.Blocks != null)
-                    hash = hash * 59 + this.Blocks.GetHashCode();
-
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+
+                if (this.Blocks != null)
+                    hash = hash * 59 + this.Blocks.GetHashCode();
 
                 return hash;
             }

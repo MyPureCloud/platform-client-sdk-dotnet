@@ -155,7 +155,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActiveQueues">ActiveQueues.</param>
         /// <param name="ActiveQueuesModifiedTime">ActiveQueuesModifiedTime.</param>
         /// <param name="RemovedFromManagementUnit">RemovedFromManagementUnit.</param>
-        public WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTeamTopicUserReference User = null, string ManagementUnitId = null, WfmUserScheduleAdherenceUpdatedTeamTopicUriReference Team = null, string ScheduledActivityCategory = null, WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference ScheduledActivityCode = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation AdherenceExplanation = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null, bool? RemovedFromManagementUnit = null)
+        /// <param name="SuppressOnTimeReminder">SuppressOnTimeReminder.</param>
+        /// <param name="NextActivityReminders">NextActivityReminders.</param>
+        public WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTeamTopicUserReference User = null, string ManagementUnitId = null, WfmUserScheduleAdherenceUpdatedTeamTopicUriReference Team = null, string ScheduledActivityCategory = null, WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference ScheduledActivityCode = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation AdherenceExplanation = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null, bool? RemovedFromManagementUnit = null, bool? SuppressOnTimeReminder = null, List<WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder> NextActivityReminders = null)
         {
             this.User = User;
             this.ManagementUnitId = ManagementUnitId;
@@ -175,6 +177,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ActiveQueues = ActiveQueues;
             this.ActiveQueuesModifiedTime = ActiveQueuesModifiedTime;
             this.RemovedFromManagementUnit = RemovedFromManagementUnit;
+            this.SuppressOnTimeReminder = SuppressOnTimeReminder;
+            this.NextActivityReminders = NextActivityReminders;
             
         }
         
@@ -311,6 +315,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? RemovedFromManagementUnit { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SuppressOnTimeReminder
+        /// </summary>
+        [DataMember(Name="suppressOnTimeReminder", EmitDefaultValue=false)]
+        public bool? SuppressOnTimeReminder { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets NextActivityReminders
+        /// </summary>
+        [DataMember(Name="nextActivityReminders", EmitDefaultValue=false)]
+        public List<WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder> NextActivityReminders { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -338,6 +358,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
             sb.Append("  ActiveQueuesModifiedTime: ").Append(ActiveQueuesModifiedTime).Append("\n");
             sb.Append("  RemovedFromManagementUnit: ").Append(RemovedFromManagementUnit).Append("\n");
+            sb.Append("  SuppressOnTimeReminder: ").Append(SuppressOnTimeReminder).Append("\n");
+            sb.Append("  NextActivityReminders: ").Append(NextActivityReminders).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -467,6 +489,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RemovedFromManagementUnit == other.RemovedFromManagementUnit ||
                     this.RemovedFromManagementUnit != null &&
                     this.RemovedFromManagementUnit.Equals(other.RemovedFromManagementUnit)
+                ) &&
+                (
+                    this.SuppressOnTimeReminder == other.SuppressOnTimeReminder ||
+                    this.SuppressOnTimeReminder != null &&
+                    this.SuppressOnTimeReminder.Equals(other.SuppressOnTimeReminder)
+                ) &&
+                (
+                    this.NextActivityReminders == other.NextActivityReminders ||
+                    this.NextActivityReminders != null &&
+                    this.NextActivityReminders.SequenceEqual(other.NextActivityReminders)
                 );
         }
 
@@ -534,6 +566,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RemovedFromManagementUnit != null)
                     hash = hash * 59 + this.RemovedFromManagementUnit.GetHashCode();
+
+                if (this.SuppressOnTimeReminder != null)
+                    hash = hash * 59 + this.SuppressOnTimeReminder.GetHashCode();
+
+                if (this.NextActivityReminders != null)
+                    hash = hash * 59 + this.NextActivityReminders.GetHashCode();
 
                 return hash;
             }

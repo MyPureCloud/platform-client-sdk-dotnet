@@ -100,10 +100,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Setcampaignmaxcallsperagent,
             
             /// <summary>
+            /// Enum Setcampaignmessagesperminute for "setCampaignMessagesPerMinute"
+            /// </summary>
+            [EnumMember(Value = "setCampaignMessagesPerMinute")]
+            Setcampaignmessagesperminute,
+            
+            /// <summary>
             /// Enum Changecampaignqueue for "changeCampaignQueue"
             /// </summary>
             [EnumMember(Value = "changeCampaignQueue")]
-            Changecampaignqueue
+            Changecampaignqueue,
+            
+            /// <summary>
+            /// Enum Changecampaigntemplate for "changeCampaignTemplate"
+            /// </summary>
+            [EnumMember(Value = "changeCampaignTemplate")]
+            Changecampaigntemplate
         }
         /// <summary>
         /// The action to take on the campaignRuleActionEntities.

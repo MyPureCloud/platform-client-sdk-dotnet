@@ -1053,7 +1053,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -1066,7 +1065,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -1079,7 +1077,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>JourneyEventDefinitionListing</returns>
@@ -1091,7 +1088,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of JourneyEventDefinitionListing</returns>
@@ -1691,7 +1687,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -1704,7 +1699,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -2781,7 +2775,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -2794,7 +2787,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -2807,7 +2799,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of JourneyEventDefinitionListing</returns>
@@ -2819,7 +2810,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (JourneyEventDefinitionListing)</returns>
@@ -3419,7 +3409,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -3432,7 +3421,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -12039,7 +12027,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an Event Definition 
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -12054,7 +12041,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an Event Definition 
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -12146,7 +12132,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an Event Definition 
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -12162,7 +12147,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an Event Definition 
         /// 
-        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventDefinitionId">Event Definition ID</param>
@@ -12256,7 +12240,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Event Definitions 
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>JourneyEventDefinitionListing</returns>
@@ -12270,7 +12253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Event Definitions 
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of JourneyEventDefinitionListing</returns>
@@ -12357,7 +12339,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Event Definitions 
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of JourneyEventDefinitionListing</returns>
@@ -12372,7 +12353,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Event Definitions 
         /// 
-        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (JourneyEventDefinitionListing)</returns>
@@ -17615,7 +17595,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate whether an encoding exist for a label/value combination. 
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -17630,7 +17609,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate whether an encoding exist for a label/value combination. 
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -17724,7 +17702,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate whether an encoding exist for a label/value combination. 
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -17740,7 +17717,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate whether an encoding exist for a label/value combination. 
         /// True indicates a valid encoding
-        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>

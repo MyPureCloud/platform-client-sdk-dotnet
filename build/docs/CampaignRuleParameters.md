@@ -15,7 +15,10 @@
 | **RelativeWeight** | **int?** | The relative weight to set a campaign to. Required for the &#39;setCampaignWeight&#39; action. | [optional] |
 | **MaxCallsPerAgent** | **double?** | The maximum number of calls per agent to set a campaign to. Required for the &#39;setCampaignMaxCallsPerAgent&#39; action. | [optional] |
 | **Queue** | [**DomainEntityRef**](DomainEntityRef) | The queue a campaign to. Required for the &#39;changeCampaignQueue&#39; action. | [optional] |
+| **MessagesPerMinute** | **int?** | The number of messages per minute to set a messaging campaign to. | [optional] |
+| **SmsContentTemplate** | [**DomainEntityRef**](DomainEntityRef) | The content template to set a SMS campaign to. | [optional] |
+| **EmailContentTemplate** | [**DomainEntityRef**](DomainEntityRef) | The content template to set a Email campaign to. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

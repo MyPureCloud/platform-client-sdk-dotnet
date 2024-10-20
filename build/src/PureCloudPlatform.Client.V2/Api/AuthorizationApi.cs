@@ -468,9 +468,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>UserEntityListing</returns>
+        /// <returns>UserReferenceEntityListing</returns>
         
-        UserEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null);
+        UserReferenceEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of the users in a specified role.
@@ -482,9 +482,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of UserEntityListing</returns>
+        /// <returns>ApiResponse of UserReferenceEntityListing</returns>
         
-        ApiResponse<UserEntityListing> GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<UserReferenceEntityListing> GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -1650,9 +1650,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of UserEntityListing</returns>
+        /// <returns>Task of UserReferenceEntityListing</returns>
         
-        System.Threading.Tasks.Task<UserEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<UserReferenceEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of the users in a specified role.
@@ -1664,9 +1664,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        /// <returns>Task of ApiResponse (UserReferenceEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<UserReferenceEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -6045,11 +6045,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>UserEntityListing</returns>
+        /// <returns>UserReferenceEntityListing</returns>
         
-        public UserEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
+        public UserReferenceEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = GetAuthorizationRoleUsersWithHttpInfo(roleId, pageSize, pageNumber);
+             ApiResponse<UserReferenceEntityListing> localVarResponse = GetAuthorizationRoleUsersWithHttpInfo(roleId, pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -6061,9 +6061,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of UserEntityListing</returns>
+        /// <returns>ApiResponse of UserReferenceEntityListing</returns>
         
-        public ApiResponse< UserEntityListing > GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< UserReferenceEntityListing > GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -6140,9 +6140,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationRoleUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserEntityListing>(localVarStatusCode,
+            return new ApiResponse<UserReferenceEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                (UserReferenceEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserReferenceEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6156,11 +6156,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of UserEntityListing</returns>
+        /// <returns>Task of UserReferenceEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<UserEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<UserReferenceEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = await GetAuthorizationRoleUsersAsyncWithHttpInfo(roleId, pageSize, pageNumber);
+             ApiResponse<UserReferenceEntityListing> localVarResponse = await GetAuthorizationRoleUsersAsyncWithHttpInfo(roleId, pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -6173,9 +6173,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        /// <returns>Task of ApiResponse (UserReferenceEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserReferenceEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -6253,9 +6253,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationRoleUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserEntityListing>(localVarStatusCode,
+            return new ApiResponse<UserReferenceEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                (UserReferenceEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserReferenceEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

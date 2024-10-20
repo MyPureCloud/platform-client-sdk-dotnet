@@ -2554,8 +2554,6 @@ namespace Example
 
 Get an Event Definition
 
-GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:eventDefinition:view
@@ -2617,8 +2615,6 @@ namespace Example
 
 
 Get a list of Event Definitions
-
-GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -4125,8 +4121,6 @@ Validate whether an encoding exist for a label/value combination.
 
 True indicates a valid encoding
 
-PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:viewsEncodings:view
@@ -4250,4 +4244,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

@@ -65,7 +65,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowInstancesSettingsLoglevels**](#GetFlowInstancesSettingsLoglevels) | **Get** /api/v2/flows/{flowId}/instances/settings/loglevels | Retrieves the log level for a flow by flow id. |
 | [**GetFlowLatestconfiguration**](#GetFlowLatestconfiguration) | **Get** /api/v2/flows/{flowId}/latestconfiguration | Get the latest configuration for flow |
 | [**GetFlowVersion**](#GetFlowVersion) | **Get** /api/v2/flows/{flowId}/versions/{versionId} | Get flow version |
-| [**GetFlowVersionConfiguration**](#GetFlowVersionConfiguration) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
+| [**GetFlowVersionConfiguration**](#GetFlowVersionConfiguration) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Get flow version configuration |
 | [**GetFlowVersionHealth**](#GetFlowVersionHealth) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/health | Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. |
 | [**GetFlowVersionIntentHealth**](#GetFlowVersionIntentHealth) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health | Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. |
 | [**GetFlowVersionIntentUtteranceHealth**](#GetFlowVersionIntentUtteranceHealth) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health | Get health metrics associated with a specific utterance of an intent. |
@@ -4124,7 +4124,7 @@ namespace Example
 > **Object** GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null)
 
 
-Create flow version configuration
+Get flow version configuration
 
 Requires ANY permissions: 
 
@@ -4158,7 +4158,7 @@ namespace Example
 
             try
             { 
-                // Create flow version configuration
+                // Get flow version configuration
                 Object result = apiInstance.GetFlowVersionConfiguration(flowId, versionId, deleted);
                 Debug.WriteLine(result);
             }
@@ -9561,4 +9561,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

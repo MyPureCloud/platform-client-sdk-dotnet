@@ -107,7 +107,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Eventtime for "eventTime"
             /// </summary>
             [EnumMember(Value = "eventTime")]
-            Eventtime
+            Eventtime,
+            
+            /// <summary>
+            /// Enum Wrapupdate for "wrapUpDate"
+            /// </summary>
+            [EnumMember(Value = "wrapUpDate")]
+            Wrapupdate
         }
         /// <summary>
         /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.

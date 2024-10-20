@@ -27,24 +27,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentBodyTableCellBlock" /> class.
         /// </summary>
-        /// <param name="Blocks">The list of content blocks for the table. (required).</param>
         /// <param name="Properties">The properties for the table cell..</param>
-        public DocumentBodyTableCellBlock(List<DocumentTableContentBlock> Blocks = null, DocumentBodyTableCellBlockProperties Properties = null)
+        /// <param name="Blocks">The list of content blocks for the table. (required).</param>
+        public DocumentBodyTableCellBlock(DocumentBodyTableCellBlockProperties Properties = null, List<DocumentTableContentBlock> Blocks = null)
         {
-            this.Blocks = Blocks;
             this.Properties = Properties;
+            this.Blocks = Blocks;
             
         }
         
-
-
-        /// <summary>
-        /// The list of content blocks for the table.
-        /// </summary>
-        /// <value>The list of content blocks for the table.</value>
-        [DataMember(Name="blocks", EmitDefaultValue=false)]
-        public List<DocumentTableContentBlock> Blocks { get; set; }
-
 
 
         /// <summary>
@@ -53,6 +44,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The properties for the table cell.</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public DocumentBodyTableCellBlockProperties Properties { get; set; }
+
+
+
+        /// <summary>
+        /// The list of content blocks for the table.
+        /// </summary>
+        /// <value>The list of content blocks for the table.</value>
+        [DataMember(Name="blocks", EmitDefaultValue=false)]
+        public List<DocumentTableContentBlock> Blocks { get; set; }
 
 
         /// <summary>
@@ -64,8 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DocumentBodyTableCellBlock {\n");
 
-            sb.Append("  Blocks: ").Append(Blocks).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            sb.Append("  Blocks: ").Append(Blocks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,14 +107,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Blocks == other.Blocks ||
-                    this.Blocks != null &&
-                    this.Blocks.SequenceEqual(other.Blocks)
-                ) &&
-                (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.Equals(other.Properties)
+                ) &&
+                (
+                    this.Blocks == other.Blocks ||
+                    this.Blocks != null &&
+                    this.Blocks.SequenceEqual(other.Blocks)
                 );
         }
 
@@ -129,11 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Blocks != null)
-                    hash = hash * 59 + this.Blocks.GetHashCode();
-
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+
+                if (this.Blocks != null)
+                    hash = hash * 59 + this.Blocks.GetHashCode();
 
                 return hash;
             }

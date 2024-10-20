@@ -81,15 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of the list block. (required).</param>
         /// <param name="Text">Text. It must contain a value if the type of the block is Text..</param>
         /// <param name="Image">Image. It must contain a value if the type of the block is Image..</param>
-        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList..</param>
         /// <param name="Video">Video. It must contain a value if the type of the block is Video..</param>
-        public DocumentListContentBlock(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyImage Image = null, DocumentBodyList List = null, DocumentBodyVideo Video = null)
+        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList..</param>
+        public DocumentListContentBlock(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null, DocumentBodyList List = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Image = Image;
-            this.List = List;
             this.Video = Video;
+            this.List = List;
             
         }
         
@@ -116,20 +116,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List. It must contain a value if the type of the block is UnorderedList or OrderedList.
-        /// </summary>
-        /// <value>List. It must contain a value if the type of the block is UnorderedList or OrderedList.</value>
-        [DataMember(Name="list", EmitDefaultValue=false)]
-        public DocumentBodyList List { get; set; }
-
-
-
-        /// <summary>
         /// Video. It must contain a value if the type of the block is Video.
         /// </summary>
         /// <value>Video. It must contain a value if the type of the block is Video.</value>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public DocumentBodyVideo Video { get; set; }
+
+
+
+        /// <summary>
+        /// List. It must contain a value if the type of the block is UnorderedList or OrderedList.
+        /// </summary>
+        /// <value>List. It must contain a value if the type of the block is UnorderedList or OrderedList.</value>
+        [DataMember(Name="list", EmitDefaultValue=false)]
+        public DocumentBodyList List { get; set; }
 
 
         /// <summary>
@@ -144,8 +144,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
-            sb.Append("  List: ").Append(List).Append("\n");
             sb.Append("  Video: ").Append(Video).Append("\n");
+            sb.Append("  List: ").Append(List).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -202,14 +202,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Image.Equals(other.Image)
                 ) &&
                 (
-                    this.List == other.List ||
-                    this.List != null &&
-                    this.List.Equals(other.List)
-                ) &&
-                (
                     this.Video == other.Video ||
                     this.Video != null &&
                     this.Video.Equals(other.Video)
+                ) &&
+                (
+                    this.List == other.List ||
+                    this.List != null &&
+                    this.List.Equals(other.List)
                 );
         }
 
@@ -233,11 +233,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
 
-                if (this.List != null)
-                    hash = hash * 59 + this.List.GetHashCode();
-
                 if (this.Video != null)
                     hash = hash * 59 + this.Video.GetHashCode();
+
+                if (this.List != null)
+                    hash = hash * 59 + this.List.GetHashCode();
 
                 return hash;
             }

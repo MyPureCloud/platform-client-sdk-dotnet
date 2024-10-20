@@ -27,24 +27,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentBodyTable" /> class.
         /// </summary>
-        /// <param name="Rows">The list of rows for the table. (required).</param>
         /// <param name="Properties">The properties for the table..</param>
-        public DocumentBodyTable(List<DocumentBodyTableRowBlock> Rows = null, DocumentBodyTableProperties Properties = null)
+        /// <param name="Rows">The list of rows for the table. (required).</param>
+        public DocumentBodyTable(DocumentBodyTableProperties Properties = null, List<DocumentBodyTableRowBlock> Rows = null)
         {
-            this.Rows = Rows;
             this.Properties = Properties;
+            this.Rows = Rows;
             
         }
         
-
-
-        /// <summary>
-        /// The list of rows for the table.
-        /// </summary>
-        /// <value>The list of rows for the table.</value>
-        [DataMember(Name="rows", EmitDefaultValue=false)]
-        public List<DocumentBodyTableRowBlock> Rows { get; set; }
-
 
 
         /// <summary>
@@ -53,6 +44,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The properties for the table.</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public DocumentBodyTableProperties Properties { get; set; }
+
+
+
+        /// <summary>
+        /// The list of rows for the table.
+        /// </summary>
+        /// <value>The list of rows for the table.</value>
+        [DataMember(Name="rows", EmitDefaultValue=false)]
+        public List<DocumentBodyTableRowBlock> Rows { get; set; }
 
 
         /// <summary>
@@ -64,8 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DocumentBodyTable {\n");
 
-            sb.Append("  Rows: ").Append(Rows).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            sb.Append("  Rows: ").Append(Rows).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,14 +107,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Rows == other.Rows ||
-                    this.Rows != null &&
-                    this.Rows.SequenceEqual(other.Rows)
-                ) &&
-                (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.Equals(other.Properties)
+                ) &&
+                (
+                    this.Rows == other.Rows ||
+                    this.Rows != null &&
+                    this.Rows.SequenceEqual(other.Rows)
                 );
         }
 
@@ -129,11 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Rows != null)
-                    hash = hash * 59 + this.Rows.GetHashCode();
-
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+
+                if (this.Rows != null)
+                    hash = hash * 59 + this.Rows.GetHashCode();
 
                 return hash;
             }

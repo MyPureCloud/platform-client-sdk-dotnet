@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Message for "Message"
             /// </summary>
             [EnumMember(Value = "Message")]
-            Message
+            Message,
+            
+            /// <summary>
+            /// Enum Workitem for "Workitem"
+            /// </summary>
+            [EnumMember(Value = "Workitem")]
+            Workitem
         }
         /// <summary>
         /// The media type of the given queue associated with the route path

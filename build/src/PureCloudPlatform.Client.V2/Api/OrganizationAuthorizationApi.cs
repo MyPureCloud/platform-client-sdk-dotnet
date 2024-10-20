@@ -583,6 +583,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TrustEntityListing> GetOrgauthorizationTrusteesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
+        /// Get Customer Care organization ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TrusteeReferenceList</returns>
+        
+        TrusteeReferenceList GetOrgauthorizationTrusteesCare ();
+
+        /// <summary>
+        /// Get Customer Care organization ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TrusteeReferenceList</returns>
+        
+        ApiResponse<TrusteeReferenceList> GetOrgauthorizationTrusteesCareWithHttpInfo ();
+
+        /// <summary>
         /// Get organization authorization trust with Customer Care, if one exists.
         /// </summary>
         /// <remarks>
@@ -943,6 +965,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object</returns>
         
         ApiResponse<Object> PostOrgauthorizationTrusteesAuditsWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>TrustEntityListing</returns>
+        
+        TrustEntityListing PostOrgauthorizationTrusteesCare (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null);
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>ApiResponse of TrustEntityListing</returns>
+        
+        ApiResponse<TrustEntityListing> PostOrgauthorizationTrusteesCareWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null);
 
         /// <summary>
         /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
@@ -1789,6 +1841,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> GetOrgauthorizationTrusteesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
+        /// Get Customer Care organization ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TrusteeReferenceList</returns>
+        
+        System.Threading.Tasks.Task<TrusteeReferenceList> GetOrgauthorizationTrusteesCareAsync ();
+
+        /// <summary>
+        /// Get Customer Care organization ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TrusteeReferenceList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrusteeReferenceList>> GetOrgauthorizationTrusteesCareAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get organization authorization trust with Customer Care, if one exists.
         /// </summary>
         /// <remarks>
@@ -2149,6 +2223,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>Task of TrustEntityListing</returns>
+        
+        System.Threading.Tasks.Task<TrustEntityListing> PostOrgauthorizationTrusteesCareAsync (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null);
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>Task of ApiResponse (TrustEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> PostOrgauthorizationTrusteesCareAsyncWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null);
 
         /// <summary>
         /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
@@ -7366,6 +7470,206 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get Customer Care organization ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TrusteeReferenceList</returns>
+        
+        public TrusteeReferenceList GetOrgauthorizationTrusteesCare ()
+        {
+             ApiResponse<TrusteeReferenceList> localVarResponse = GetOrgauthorizationTrusteesCareWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Customer Care organization ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TrusteeReferenceList</returns>
+        
+        public ApiResponse< TrusteeReferenceList > GetOrgauthorizationTrusteesCareWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/care";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteesCare: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteesCare: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrusteeReferenceList>(localVarStatusCode,
+                localVarHeaders,
+                (TrusteeReferenceList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrusteeReferenceList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Customer Care organization ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TrusteeReferenceList</returns>
+        
+        public async System.Threading.Tasks.Task<TrusteeReferenceList> GetOrgauthorizationTrusteesCareAsync ()
+        {
+             ApiResponse<TrusteeReferenceList> localVarResponse = await GetOrgauthorizationTrusteesCareAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Customer Care organization ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TrusteeReferenceList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrusteeReferenceList>> GetOrgauthorizationTrusteesCareAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/care";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteesCare: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteesCare: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrusteeReferenceList>(localVarStatusCode,
+                localVarHeaders,
+                (TrusteeReferenceList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrusteeReferenceList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get organization authorization trust with Customer Care, if one exists. 
         /// 
         /// </summary>
@@ -10490,6 +10794,230 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>TrustEntityListing</returns>
+        
+        public TrustEntityListing PostOrgauthorizationTrusteesCare (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null)
+        {
+             ApiResponse<TrustEntityListing> localVarResponse = PostOrgauthorizationTrusteesCareWithHttpInfo(assignDefaultRole, autoExpire, assignFullAccess, allowTrustedUserAccess);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>ApiResponse of TrustEntityListing</returns>
+        
+        public ApiResponse< TrustEntityListing > PostOrgauthorizationTrusteesCareWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null)
+        { 
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/care";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (assignDefaultRole != null) localVarQueryParams.Add(new Tuple<string, string>("assignDefaultRole", this.Configuration.ApiClient.ParameterToString(assignDefaultRole)));
+            if (autoExpire != null) localVarQueryParams.Add(new Tuple<string, string>("autoExpire", this.Configuration.ApiClient.ParameterToString(autoExpire)));
+            if (assignFullAccess != null) localVarQueryParams.Add(new Tuple<string, string>("assignFullAccess", this.Configuration.ApiClient.ParameterToString(assignFullAccess)));
+            if (allowTrustedUserAccess != null) localVarQueryParams.Add(new Tuple<string, string>("allowTrustedUserAccess", this.Configuration.ApiClient.ParameterToString(allowTrustedUserAccess)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteesCare: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteesCare: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrustEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>Task of TrustEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<TrustEntityListing> PostOrgauthorizationTrusteesCareAsync (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null)
+        {
+             ApiResponse<TrustEntityListing> localVarResponse = await PostOrgauthorizationTrusteesCareAsyncWithHttpInfo(assignDefaultRole, autoExpire, assignFullAccess, allowTrustedUserAccess);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
+        /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
+        /// <param name="assignFullAccess">Grant Customer Care full access to the organization (optional)</param>
+        /// <param name="allowTrustedUserAccess">Make Customer Care a Trusted User (optional)</param>
+        /// <returns>Task of ApiResponse (TrustEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> PostOrgauthorizationTrusteesCareAsyncWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null)
+        { 
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/care";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (assignDefaultRole != null) localVarQueryParams.Add(new Tuple<string, string>("assignDefaultRole", this.Configuration.ApiClient.ParameterToString(assignDefaultRole)));
+            if (autoExpire != null) localVarQueryParams.Add(new Tuple<string, string>("autoExpire", this.Configuration.ApiClient.ParameterToString(autoExpire)));
+            if (assignFullAccess != null) localVarQueryParams.Add(new Tuple<string, string>("assignFullAccess", this.Configuration.ApiClient.ParameterToString(assignFullAccess)));
+            if (allowTrustedUserAccess != null) localVarQueryParams.Add(new Tuple<string, string>("allowTrustedUserAccess", this.Configuration.ApiClient.ParameterToString(allowTrustedUserAccess)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteesCare: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteesCare: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrustEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

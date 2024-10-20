@@ -10370,8 +10370,13 @@ namespace Example
 
 > void PostConversationSuggestionsFeedback (string conversationId, Feedback body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Suggestion feedback.
+
+Google Agent Assist offering within Genesys will no longer be supported
 
 Requires ANY permissions: 
 
@@ -15543,4 +15548,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

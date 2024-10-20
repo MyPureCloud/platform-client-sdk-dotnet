@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Rows** | [**List&lt;DocumentBodyTableRowBlock&gt;**](DocumentBodyTableRowBlock) | The list of rows for the table. | |
 | **Properties** | [**DocumentBodyTableProperties**](DocumentBodyTableProperties) | The properties for the table. | [optional] |
+| **Rows** | [**List&lt;DocumentBodyTableRowBlock&gt;**](DocumentBodyTableRowBlock) | The list of rows for the table. | |
 
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

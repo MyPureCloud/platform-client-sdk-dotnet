@@ -58,6 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Socialwhatsapp,
             
             /// <summary>
+            /// Enum Socialinstagram for "SocialInstagram"
+            /// </summary>
+            [EnumMember(Value = "SocialInstagram")]
+            Socialinstagram,
+            
+            /// <summary>
             /// Enum Email for "Email"
             /// </summary>
             [EnumMember(Value = "Email")]

@@ -1741,7 +1741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowVersion> GetFlowVersionWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
-        /// Create flow version configuration
+        /// Get flow version configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -1755,7 +1755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Object GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null);
 
         /// <summary>
-        /// Create flow version configuration
+        /// Get flow version configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -5705,7 +5705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowVersionAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
-        /// Create flow version configuration
+        /// Get flow version configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -5719,7 +5719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Object> GetFlowVersionConfigurationAsync (string flowId, string versionId, string deleted = null);
 
         /// <summary>
-        /// Create flow version configuration
+        /// Get flow version configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -21499,7 +21499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create flow version configuration 
+        /// Get flow version configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21515,7 +21515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create flow version configuration 
+        /// Get flow version configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21613,7 +21613,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create flow version configuration 
+        /// Get flow version configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21630,7 +21630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create flow version configuration 
+        /// Get flow version configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
