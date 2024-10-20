@@ -1110,7 +1110,7 @@ namespace Example
 
 ## GetAuthorizationRoleUsers
 
-> [**UserEntityListing**](UserEntityListing) GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
+> [**UserReferenceEntityListing**](UserReferenceEntityListing) GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
 
 
 Get a list of the users in a specified role.
@@ -1149,7 +1149,7 @@ namespace Example
             try
             { 
                 // Get a list of the users in a specified role.
-                UserEntityListing result = apiInstance.GetAuthorizationRoleUsers(roleId, pageSize, pageNumber);
+                UserReferenceEntityListing result = apiInstance.GetAuthorizationRoleUsers(roleId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1172,7 +1172,7 @@ namespace Example
 
 ### Return type
 
-[**UserEntityListing**](UserEntityListing)
+[**UserReferenceEntityListing**](UserReferenceEntityListing)
 
 
 ## GetAuthorizationRoles
@@ -2917,4 +2917,4 @@ namespace Example
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

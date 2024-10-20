@@ -877,7 +877,7 @@ namespace Example
 
 ## GetContentmanagementSharedSharedId
 
-> [**SharedResponse**](SharedResponse) GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+> [**SharedResponse**](SharedResponse) GetContentmanagementSharedSharedId (string sharedId, string disposition = null, string contentType = null, string expand = null)
 
 
 Get shared documents. Securely download a shared document.
@@ -910,7 +910,6 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var sharedId = sharedId_example;  // string | Shared ID
-            var redirect = true;  // bool? | Turn on or off redirect (optional)  (default to true)
             var disposition = disposition_example;  // string | Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional)  (default to attachment)
             var contentType = contentType_example;  // string | The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav (optional) 
             var expand = expand_example;  // string | Expand some document fields (optional) 
@@ -918,7 +917,7 @@ namespace Example
             try
             { 
                 // Get shared documents. Securely download a shared document.
-                SharedResponse result = apiInstance.GetContentmanagementSharedSharedId(sharedId, redirect, disposition, contentType, expand);
+                SharedResponse result = apiInstance.GetContentmanagementSharedSharedId(sharedId, disposition, contentType, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -936,7 +935,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sharedId** | **string**| Shared ID |  |
-| **redirect** | **bool?**| Turn on or off redirect | [optional] [default to true] |
 | **disposition** | **string**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional] [default to attachment]<br />**Values**: attachment, inline, none |
 | **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: document.acl |
@@ -2371,4 +2369,4 @@ namespace Example
 [**TagValue**](TagValue)
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

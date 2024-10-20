@@ -12,7 +12,7 @@
 | **DateModified** | **DateTime?** | Date when the assistant was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | [**UserReference**](UserReference) | The user who created the assistant. | [optional] |
 | **ModifiedBy** | [**UserReference**](UserReference) | The user who last modified the assistant. | [optional] |
-| **GoogleDialogflowConfig** | [**GoogleDialogflowConfig**](GoogleDialogflowConfig) | Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions. | [optional] |
+| **GoogleDialogflowConfig** | [**GoogleDialogflowConfig**](GoogleDialogflowConfig) | (Deprecated: use the &#39;knowledgeSuggestionConfig&#39; for genesys knowledge suggestions) Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions. | [optional] |
 | **TranscriptionConfig** | [**TranscriptionConfig**](TranscriptionConfig) | Configuration for speech transcription used to assist the agent. | |
 | **KnowledgeSuggestionConfig** | [**KnowledgeSuggestionConfig**](KnowledgeSuggestionConfig) | Configuration that defines how to produce knowledge suggestions. | |
 | **State** | **string** | State of the assistant. | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_

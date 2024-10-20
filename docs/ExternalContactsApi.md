@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteExternalcontactsContactNote**](#DeleteExternalcontactsContactNote) | **Delete** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Delete a note for an external contact |
 | [**DeleteExternalcontactsContactsSchema**](#DeleteExternalcontactsContactsSchema) | **Delete** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Delete a schema |
 | [**DeleteExternalcontactsExternalsource**](#DeleteExternalcontactsExternalsource) | **Delete** /api/v2/externalcontacts/externalsources/{externalSourceId} | Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. |
+| [**DeleteExternalcontactsImportCsvSetting**](#DeleteExternalcontactsImportCsvSetting) | **Delete** /api/v2/externalcontacts/import/csv/settings/{settingsId} | Delete settings for CSV import |
 | [**DeleteExternalcontactsOrganization**](#DeleteExternalcontactsOrganization) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Delete an external organization |
 | [**DeleteExternalcontactsOrganizationNote**](#DeleteExternalcontactsOrganizationNote) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Delete a note for an external organization |
 | [**DeleteExternalcontactsOrganizationTrustor**](#DeleteExternalcontactsOrganizationTrustor) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor | Unlink the Trustor for this External Organization |
@@ -27,6 +28,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactsSchemas**](#GetExternalcontactsContactsSchemas) | **Get** /api/v2/externalcontacts/contacts/schemas | Get a list of schemas. |
 | [**GetExternalcontactsExternalsource**](#GetExternalcontactsExternalsource) | **Get** /api/v2/externalcontacts/externalsources/{externalSourceId} | Fetch an External Source |
 | [**GetExternalcontactsExternalsources**](#GetExternalcontactsExternalsources) | **Get** /api/v2/externalcontacts/externalsources | Fetch a list of External Sources |
+| [**GetExternalcontactsImportCsvSetting**](#GetExternalcontactsImportCsvSetting) | **Get** /api/v2/externalcontacts/import/csv/settings/{settingsId} | Get settings for CSV import |
+| [**GetExternalcontactsImportCsvSettings**](#GetExternalcontactsImportCsvSettings) | **Get** /api/v2/externalcontacts/import/csv/settings | Retrieve all settings for organization filtered by externalSettingsId if provided |
+| [**GetExternalcontactsImportCsvUploadDetails**](#GetExternalcontactsImportCsvUploadDetails) | **Get** /api/v2/externalcontacts/import/csv/uploads/{uploadId}/details | Get details for CSV upload |
+| [**GetExternalcontactsImportCsvUploadPreview**](#GetExternalcontactsImportCsvUploadPreview) | **Get** /api/v2/externalcontacts/import/csv/uploads/{uploadId}/preview | Get preview for CSV upload |
 | [**GetExternalcontactsOrganization**](#GetExternalcontactsOrganization) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Fetch an external organization |
 | [**GetExternalcontactsOrganizationContacts**](#GetExternalcontactsOrganizationContacts) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts | Search for external contacts in an external organization |
 | [**GetExternalcontactsOrganizationNote**](#GetExternalcontactsOrganizationNote) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Fetch a note for an external organization |
@@ -67,6 +72,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsContactsSchemas**](#PostExternalcontactsContactsSchemas) | **Post** /api/v2/externalcontacts/contacts/schemas | Create a schema |
 | [**PostExternalcontactsExternalsources**](#PostExternalcontactsExternalsources) | **Post** /api/v2/externalcontacts/externalsources | Create an External Source |
 | [**PostExternalcontactsIdentifierlookup**](#PostExternalcontactsIdentifierlookup) | **Post** /api/v2/externalcontacts/identifierlookup | Fetch a contact using an identifier type and value. |
+| [**PostExternalcontactsImportCsvJobs**](#PostExternalcontactsImportCsvJobs) | **Post** /api/v2/externalcontacts/import/csv/jobs | Create CSV import job |
+| [**PostExternalcontactsImportCsvSettings**](#PostExternalcontactsImportCsvSettings) | **Post** /api/v2/externalcontacts/import/csv/settings | Create settings for CSV import |
+| [**PostExternalcontactsImportCsvUploads**](#PostExternalcontactsImportCsvUploads) | **Post** /api/v2/externalcontacts/import/csv/uploads | Get url for CSV upload |
 | [**PostExternalcontactsMergeContacts**](#PostExternalcontactsMergeContacts) | **Post** /api/v2/externalcontacts/merge/contacts | Merge two contacts into a new contact record |
 | [**PostExternalcontactsOrganizationNotes**](#PostExternalcontactsOrganizationNotes) | **Post** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | Create a note for an external organization |
 | [**PostExternalcontactsOrganizations**](#PostExternalcontactsOrganizations) | **Post** /api/v2/externalcontacts/organizations | Create an external organization |
@@ -77,6 +85,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutExternalcontactsContactsSchema**](#PutExternalcontactsContactsSchema) | **Put** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Update a schema |
 | [**PutExternalcontactsConversation**](#PutExternalcontactsConversation) | **Put** /api/v2/externalcontacts/conversations/{conversationId} | Associate/disassociate an external contact with a conversation |
 | [**PutExternalcontactsExternalsource**](#PutExternalcontactsExternalsource) | **Put** /api/v2/externalcontacts/externalsources/{externalSourceId} | Update an External Source |
+| [**PutExternalcontactsImportCsvSetting**](#PutExternalcontactsImportCsvSetting) | **Put** /api/v2/externalcontacts/import/csv/settings/{settingsId} | Update settings for CSV import |
 | [**PutExternalcontactsOrganization**](#PutExternalcontactsOrganization) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an external organization |
 | [**PutExternalcontactsOrganizationNote**](#PutExternalcontactsOrganizationNote) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note for an external organization |
 | [**PutExternalcontactsOrganizationTrustorTrustorId**](#PutExternalcontactsOrganizationTrustorTrustorId) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} | Links a Trustor with an External Organization |
@@ -336,6 +345,67 @@ namespace Example
 ### Return type
 
 **Object**
+
+
+## DeleteExternalcontactsImportCsvSetting
+
+> void DeleteExternalcontactsImportCsvSetting (string settingsId)
+
+
+Delete settings for CSV import
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvSettings:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteExternalcontactsImportCsvSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var settingsId = settingsId_example;  // string | Settings id
+
+            try
+            { 
+                // Delete settings for CSV import
+                apiInstance.DeleteExternalcontactsImportCsvSetting(settingsId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.DeleteExternalcontactsImportCsvSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **settingsId** | **string**| Settings id |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## DeleteExternalcontactsOrganization
@@ -1439,6 +1509,258 @@ namespace Example
 ### Return type
 
 [**CursorExternalSourceListing**](CursorExternalSourceListing)
+
+
+## GetExternalcontactsImportCsvSetting
+
+> [**CsvSettings**](CsvSettings) GetExternalcontactsImportCsvSetting (string settingsId)
+
+
+Get settings for CSV import
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsImportCsvSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var settingsId = settingsId_example;  // string | Settings id
+
+            try
+            { 
+                // Get settings for CSV import
+                CsvSettings result = apiInstance.GetExternalcontactsImportCsvSetting(settingsId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsImportCsvSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **settingsId** | **string**| Settings id |  |
+
+### Return type
+
+[**CsvSettings**](CsvSettings)
+
+
+## GetExternalcontactsImportCsvSettings
+
+> [**Listing**](Listing) GetExternalcontactsImportCsvSettings (string after = null, string pageSize = null, string externalSettingsId = null)
+
+
+Retrieve all settings for organization filtered by externalSettingsId if provided
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsImportCsvSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var externalSettingsId = externalSettingsId_example;  // string | External Settings Id to filter the list. (optional) 
+
+            try
+            { 
+                // Retrieve all settings for organization filtered by externalSettingsId if provided
+                Listing result = apiInstance.GetExternalcontactsImportCsvSettings(after, pageSize, externalSettingsId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsImportCsvSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **externalSettingsId** | **string**| External Settings Id to filter the list. | [optional]  |
+
+### Return type
+
+[**Listing**](Listing)
+
+
+## GetExternalcontactsImportCsvUploadDetails
+
+> [**CsvUploadDetailsResponse**](CsvUploadDetailsResponse) GetExternalcontactsImportCsvUploadDetails (string uploadId)
+
+
+Get details for CSV upload
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvUpload:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsImportCsvUploadDetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var uploadId = uploadId_example;  // string | Upload id
+
+            try
+            { 
+                // Get details for CSV upload
+                CsvUploadDetailsResponse result = apiInstance.GetExternalcontactsImportCsvUploadDetails(uploadId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsImportCsvUploadDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **uploadId** | **string**| Upload id |  |
+
+### Return type
+
+[**CsvUploadDetailsResponse**](CsvUploadDetailsResponse)
+
+
+## GetExternalcontactsImportCsvUploadPreview
+
+> [**CsvUploadPreviewResponse**](CsvUploadPreviewResponse) GetExternalcontactsImportCsvUploadPreview (string uploadId)
+
+
+Get preview for CSV upload
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvUpload:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsImportCsvUploadPreviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var uploadId = uploadId_example;  // string | Upload id
+
+            try
+            { 
+                // Get preview for CSV upload
+                CsvUploadPreviewResponse result = apiInstance.GetExternalcontactsImportCsvUploadPreview(uploadId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsImportCsvUploadPreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **uploadId** | **string**| Upload id |  |
+
+### Return type
+
+[**CsvUploadPreviewResponse**](CsvUploadPreviewResponse)
 
 
 ## GetExternalcontactsOrganization
@@ -4008,6 +4330,192 @@ namespace Example
 [**ExternalContact**](ExternalContact)
 
 
+## PostExternalcontactsImportCsvJobs
+
+> [**CsvJobResponse**](CsvJobResponse) PostExternalcontactsImportCsvJobs (CsvJobRequest body)
+
+
+Create CSV import job
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsImportCsvJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new CsvJobRequest(); // CsvJobRequest | ImportRequest
+
+            try
+            { 
+                // Create CSV import job
+                CsvJobResponse result = apiInstance.PostExternalcontactsImportCsvJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsImportCsvJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CsvJobRequest**](CsvJobRequest)| ImportRequest |  |
+
+### Return type
+
+[**CsvJobResponse**](CsvJobResponse)
+
+
+## PostExternalcontactsImportCsvSettings
+
+> [**CsvSettings**](CsvSettings) PostExternalcontactsImportCsvSettings (CsvSettings body)
+
+
+Create settings for CSV import
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvSettings:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsImportCsvSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new CsvSettings(); // CsvSettings | Settings
+
+            try
+            { 
+                // Create settings for CSV import
+                CsvSettings result = apiInstance.PostExternalcontactsImportCsvSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsImportCsvSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CsvSettings**](CsvSettings)| Settings |  |
+
+### Return type
+
+[**CsvSettings**](CsvSettings)
+
+
+## PostExternalcontactsImportCsvUploads
+
+> [**CsvUploadResponse**](CsvUploadResponse) PostExternalcontactsImportCsvUploads (CsvUploadRequest body)
+
+
+Get url for CSV upload
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvUpload:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsImportCsvUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new CsvUploadRequest(); // CsvUploadRequest | UploadRequest
+
+            try
+            { 
+                // Get url for CSV upload
+                CsvUploadResponse result = apiInstance.PostExternalcontactsImportCsvUploads(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsImportCsvUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CsvUploadRequest**](CsvUploadRequest)| UploadRequest |  |
+
+### Return type
+
+[**CsvUploadResponse**](CsvUploadResponse)
+
+
 ## PostExternalcontactsMergeContacts
 
 > [**ExternalContact**](ExternalContact) PostExternalcontactsMergeContacts (MergeRequest body)
@@ -4653,6 +5161,70 @@ namespace Example
 [**ExternalSource**](ExternalSource)
 
 
+## PutExternalcontactsImportCsvSetting
+
+> [**CsvSettings**](CsvSettings) PutExternalcontactsImportCsvSetting (string settingsId, CsvSettings body)
+
+
+Update settings for CSV import
+
+Requires ANY permissions: 
+
+* externalContacts:importCsvSettings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsImportCsvSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var settingsId = settingsId_example;  // string | Settings id
+            var body = new CsvSettings(); // CsvSettings | Settings
+
+            try
+            { 
+                // Update settings for CSV import
+                CsvSettings result = apiInstance.PutExternalcontactsImportCsvSetting(settingsId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsImportCsvSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **settingsId** | **string**| Settings id |  |
+| **body** | [**CsvSettings**](CsvSettings)| Settings |  |
+
+### Return type
+
+[**CsvSettings**](CsvSettings)
+
+
 ## PutExternalcontactsOrganization
 
 > [**ExternalOrganization**](ExternalOrganization) PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body)
@@ -4978,4 +5550,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 218.0.0_
+_PureCloudPlatform.Client.V2 219.0.0_
