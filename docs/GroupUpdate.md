@@ -11,7 +11,7 @@
 | **Description** | **string** |  | [optional] |
 | **State** | **string** | State of the group. | [optional] |
 | **Version** | **int?** | Current version for this resource. | |
-| **Images** | [**List&lt;UserImage&gt;**](UserImage) |  | [optional] |
+| **Images** | [**List&lt;Image&gt;**](Image) |  | [optional] |
 | **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | [optional] |
 | **Visibility** | **string** | Who can view this group | [optional] |
@@ -23,4 +23,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

@@ -23,7 +23,7 @@
 | **FlowId** | **string** |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
 | **FlowVersion** | **string** |  | [optional] |
-| **FlowOutcomeId** | **string** |  | [optional] |
+| **FlowOutcomeId** | **Guid?** |  | [optional] |
 | **FlowOutcomeStartTime** | **int?** |  | [optional] |
 | **FlowOutcomeEndTime** | **int?** |  | [optional] |
 | **FlowOutcomeValue** | **string** |  | [optional] |
@@ -33,4 +33,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

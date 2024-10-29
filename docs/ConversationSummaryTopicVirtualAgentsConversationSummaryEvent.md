@@ -6,13 +6,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ConversationId** | **string** |  | [optional] |
+| **ConversationId** | **Guid?** |  | [optional] |
 | **Participants** | [**List&lt;ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant&gt;**](ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant) |  | [optional] |
 | **CommunicationIds** | **List&lt;string&gt;** |  | [optional] |
 | **CreatedDate** | **DateTime?** |  | [optional] |
 | **MessageType** | **string** |  | [optional] |
 | **MediaType** | **string** |  | [optional] |
-| **SummaryId** | **string** |  | [optional] |
+| **SummaryId** | **Guid?** |  | [optional] |
 | **Language** | **string** |  | [optional] |
 | **Summary** | [**ConversationSummaryTopicVirtualAgentsConversationSummary**](ConversationSummaryTopicVirtualAgentsConversationSummary) |  | [optional] |
 | **Headline** | [**ConversationSummaryTopicVirtualAgentsConversationHeadline**](ConversationSummaryTopicVirtualAgentsConversationHeadline) |  | [optional] |
@@ -24,4 +24,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

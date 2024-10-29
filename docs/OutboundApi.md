@@ -116,6 +116,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundCallanalysisresponsesets**](#PostOutboundCallanalysisresponsesets) | **Post** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
 | [**PostOutboundCampaignAgentownedmappingpreview**](#PostOutboundCampaignAgentownedmappingpreview) | **Post** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**PostOutboundCampaignCallbackSchedule**](#PostOutboundCampaignCallbackSchedule) | **Post** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign (Deprecated) |
+| [**PostOutboundCampaignStart**](#PostOutboundCampaignStart) | **Post** /api/v2/outbound/campaigns/{campaignId}/start | Start the campaign |
+| [**PostOutboundCampaignStop**](#PostOutboundCampaignStop) | **Post** /api/v2/outbound/campaigns/{campaignId}/stop | Stop the campaign |
 | [**PostOutboundCampaignrules**](#PostOutboundCampaignrules) | **Post** /api/v2/outbound/campaignrules | Create Campaign Rule |
 | [**PostOutboundCampaigns**](#PostOutboundCampaigns) | **Post** /api/v2/outbound/campaigns | Create a campaign. |
 | [**PostOutboundCampaignsProgress**](#PostOutboundCampaignsProgress) | **Post** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
@@ -142,6 +144,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundFilespecificationtemplates**](#PostOutboundFilespecificationtemplates) | **Post** /api/v2/outbound/filespecificationtemplates | Create File Specification Template |
 | [**PostOutboundImporttemplates**](#PostOutboundImporttemplates) | **Post** /api/v2/outbound/importtemplates | Create Import Template |
 | [**PostOutboundImporttemplatesBulkAdd**](#PostOutboundImporttemplatesBulkAdd) | **Post** /api/v2/outbound/importtemplates/bulk/add | Add multiple import templates |
+| [**PostOutboundMessagingcampaignStart**](#PostOutboundMessagingcampaignStart) | **Post** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/start | Start the campaign |
+| [**PostOutboundMessagingcampaignStop**](#PostOutboundMessagingcampaignStop) | **Post** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/stop | Stop the campaign |
 | [**PostOutboundMessagingcampaigns**](#PostOutboundMessagingcampaigns) | **Post** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
 | [**PostOutboundMessagingcampaignsProgress**](#PostOutboundMessagingcampaignsProgress) | **Post** /api/v2/outbound/messagingcampaigns/progress | Get progress for a list of messaging campaigns |
 | [**PostOutboundRulesets**](#PostOutboundRulesets) | **Post** /api/v2/outbound/rulesets | Create a Rule Set. |
@@ -7359,6 +7363,128 @@ namespace Example
 [**ContactCallbackRequest**](ContactCallbackRequest)
 
 
+## PostOutboundCampaignStart
+
+> void PostOutboundCampaignStart (string campaignId)
+
+
+Start the campaign
+
+Requires ANY permissions: 
+
+* outbound:campaign:start
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundCampaignStartExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            { 
+                // Start the campaign
+                apiInstance.PostOutboundCampaignStart(campaignId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundCampaignStart: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostOutboundCampaignStop
+
+> void PostOutboundCampaignStop (string campaignId)
+
+
+Stop the campaign
+
+Requires ANY permissions: 
+
+* outbound:campaign:stop
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundCampaignStopExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            { 
+                // Stop the campaign
+                apiInstance.PostOutboundCampaignStop(campaignId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundCampaignStop: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PostOutboundCampaignrules
 
 > [**CampaignRule**](CampaignRule) PostOutboundCampaignrules (CampaignRule body)
@@ -8999,6 +9125,134 @@ namespace Example
 ### Return type
 
 [**ImportTemplateEntityListing**](ImportTemplateEntityListing)
+
+
+## PostOutboundMessagingcampaignStart
+
+> void PostOutboundMessagingcampaignStart (string messagingCampaignId)
+
+
+Start the campaign
+
+Documented permissions are applicable based on campaign type.
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:start
+* outbound:emailCampaign:start
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundMessagingcampaignStartExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+
+            try
+            { 
+                // Start the campaign
+                apiInstance.PostOutboundMessagingcampaignStart(messagingCampaignId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundMessagingcampaignStart: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostOutboundMessagingcampaignStop
+
+> void PostOutboundMessagingcampaignStop (string messagingCampaignId)
+
+
+Stop the campaign
+
+Documented permissions are applicable based on campaign type.
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:stop
+* outbound:emailCampaign:stop
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundMessagingcampaignStopExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+
+            try
+            { 
+                // Stop the campaign
+                apiInstance.PostOutboundMessagingcampaignStop(messagingCampaignId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundMessagingcampaignStop: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## PostOutboundMessagingcampaigns
@@ -10663,4 +10917,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

@@ -40,7 +40,7 @@
 | **CallingPartyNumber** | **string** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
 | **DefaultScripts** | [**Dictionary&lt;string, Script&gt;**](Script) | The default script Ids for the communication types. | [optional] |
 | **OutboundMessagingAddresses** | [**QueueMessagingAddresses**](QueueMessagingAddresses) | The messaging addresses for the queue. | [optional] |
-| **OutboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress) |  | [optional] |
+| **OutboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress) | The default email address to use for outbound email from this queue. | [optional] |
 | **PeerId** | **string** | The ID of an associated external queue. | [optional] |
 | **SuppressInQueueCallRecording** | **bool?** | Indicates whether recording in-queue calls is suppressed for this queue. | [optional] |
 | **Joined** | **bool?** |  | [optional] |
@@ -48,4 +48,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

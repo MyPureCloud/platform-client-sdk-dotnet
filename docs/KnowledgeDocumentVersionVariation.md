@@ -12,10 +12,10 @@
 | **Contexts** | [**List&lt;DocumentVariationContext&gt;**](DocumentVariationContext) | The context values associated with the variation. | |
 | **Priority** | **int?** | The priority of the variation. | [optional] |
 | **Name** | **string** | The name of the variation. | [optional] |
-| **Body** | [**DocumentBody**](DocumentBody) | The content for the variation. | [optional] |
+| **Body** | [**DocumentBodyResponse**](DocumentBodyResponse) | The content for the variation. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **DocumentVersion** | [**AddressableEntityRef**](AddressableEntityRef) | Reference to the document version to which the variation is associated with. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

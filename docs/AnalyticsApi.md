@@ -83,9 +83,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsKnowledgeAggregatesQuery**](#PostAnalyticsKnowledgeAggregatesQuery) | **Post** /api/v2/analytics/knowledge/aggregates/query | Query for knowledge aggregates |
 | [**PostAnalyticsQueuesObservationsQuery**](#PostAnalyticsQueuesObservationsQuery) | **Post** /api/v2/analytics/queues/observations/query | Query for queue observations |
 | [**PostAnalyticsRatelimitsAggregatesQuery**](#PostAnalyticsRatelimitsAggregatesQuery) | **Post** /api/v2/analytics/ratelimits/aggregates/query | Query for limits rate limit aggregates. Data populated when limits reach 90% of the maximum. Not a source of truth for limits hit but a best effort estimate. |
-| [**PostAnalyticsReportingDashboardsUsersBulkRemove**](#PostAnalyticsReportingDashboardsUsersBulkRemove) | **Post** /api/v2/analytics/reporting/dashboards/users/bulk/remove | Bulk delete dashboards owned by other user(s) |
+| [**PostAnalyticsReportingDashboardsUsersBulkRemove**](#PostAnalyticsReportingDashboardsUsersBulkRemove) | **Post** /api/v2/analytics/reporting/dashboards/users/bulk/remove | Bulk soft delete dashboards owned by other user(s) |
 | [**PostAnalyticsReportingExports**](#PostAnalyticsReportingExports) | **Post** /api/v2/analytics/reporting/exports | Generate a view export request |
-| [**PostAnalyticsReportingSettingsDashboardsBulkRemove**](#PostAnalyticsReportingSettingsDashboardsBulkRemove) | **Post** /api/v2/analytics/reporting/settings/dashboards/bulk/remove | Bulk remove dashboard configurations |
+| [**PostAnalyticsReportingSettingsDashboardsBulkRemove**](#PostAnalyticsReportingSettingsDashboardsBulkRemove) | **Post** /api/v2/analytics/reporting/settings/dashboards/bulk/remove | Bulk soft delete dashboard configurations |
 | [**PostAnalyticsReportingSettingsDashboardsQuery**](#PostAnalyticsReportingSettingsDashboardsQuery) | **Post** /api/v2/analytics/reporting/settings/dashboards/query | Query dashboard configurations |
 | [**PostAnalyticsResolutionsAggregatesJobs**](#PostAnalyticsResolutionsAggregatesJobs) | **Post** /api/v2/analytics/resolutions/aggregates/jobs | Query for resolution aggregates asynchronously |
 | [**PostAnalyticsRoutingActivityQuery**](#PostAnalyticsRoutingActivityQuery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
@@ -2068,7 +2068,7 @@ namespace Example
 
 ## GetAnalyticsReportingDashboardsUsers
 
-> [**DashboardUserListing**](DashboardUserListing) GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+> [**DashboardUserListing**](DashboardUserListing) GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
 
 
 Get dashboards summary for users in a org
@@ -2104,11 +2104,12 @@ namespace Example
             var pageSize = 56;  // int? |  (optional)  (default to 25)
             var id = new List<string>(); // List<string> | A list of user IDs to fetch by bulk (optional) 
             var state = state_example;  // string | Only list users of this state (optional) 
+            var deletedOnly = true;  // bool? | Only list deleted dashboards that are still recoverable (optional) 
 
             try
             { 
                 // Get dashboards summary for users in a org
-                DashboardUserListing result = apiInstance.GetAnalyticsReportingDashboardsUsers(sortBy, pageNumber, pageSize, id, state);
+                DashboardUserListing result = apiInstance.GetAnalyticsReportingDashboardsUsers(sortBy, pageNumber, pageSize, id, state, deletedOnly);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2130,6 +2131,7 @@ namespace Example
 | **pageSize** | **int?**|  | [optional] [default to 25] |
 | **id** | [**List<string>**](string)| A list of user IDs to fetch by bulk | [optional]  |
 | **state** | **string**| Only list users of this state | [optional] <br />**Values**: active, inactive |
+| **deletedOnly** | **bool?**| Only list deleted dashboards that are still recoverable | [optional]  |
 
 ### Return type
 
@@ -2373,7 +2375,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dashboardType** | **string**| List dashboard of given type | <br />**Values**: All, Public, Private, Shared, Favorites |
+| **dashboardType** | **string**| List dashboard of given type | <br />**Values**: All, Public, Private, Shared, Favorites, Deleted |
 | **dashboardAccessFilter** | **string**| Filter dashboard based on the owner of dashboard | <br />**Values**: OwnedByMe, OwnedByAnyone, NotOwnedByMe |
 | **name** | **string**| name of the dashboard | [optional]  |
 | **sortBy** | **string**|  | [optional] [default to "desc"] |
@@ -2387,7 +2389,7 @@ namespace Example
 
 ## GetAnalyticsReportingSettingsUserDashboards
 
-> [**DashboardConfigurationListing**](DashboardConfigurationListing) GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
+> [**DashboardConfigurationListing**](DashboardConfigurationListing) GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null)
 
 
 Get list of dashboards for an user
@@ -2424,12 +2426,13 @@ namespace Example
             var pageSize = 56;  // int? |  (optional)  (default to 50)
             var publicOnly = true;  // bool? | If true, retrieve only public dashboards (optional) 
             var favoriteOnly = true;  // bool? | If true, retrieve only favorite dashboards (optional) 
+            var deletedOnly = true;  // bool? | If true, retrieve only deleted dashboards that are still recoverable (optional) 
             var name = name_example;  // string | retrieve dashboards that match with given name (optional) 
 
             try
             { 
                 // Get list of dashboards for an user
-                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name);
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, deletedOnly, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2452,6 +2455,7 @@ namespace Example
 | **pageSize** | **int?**|  | [optional] [default to 50] |
 | **publicOnly** | **bool?**| If true, retrieve only public dashboards | [optional]  |
 | **favoriteOnly** | **bool?**| If true, retrieve only favorite dashboards | [optional]  |
+| **deletedOnly** | **bool?**| If true, retrieve only deleted dashboards that are still recoverable | [optional]  |
 | **name** | **string**| retrieve dashboards that match with given name | [optional]  |
 
 ### Return type
@@ -5069,7 +5073,7 @@ namespace Example
 > void PostAnalyticsReportingDashboardsUsersBulkRemove (List<string> body)
 
 
-Bulk delete dashboards owned by other user(s)
+Bulk soft delete dashboards owned by other user(s)
 
 Requires ANY permissions: 
 
@@ -5102,7 +5106,7 @@ namespace Example
 
             try
             { 
-                // Bulk delete dashboards owned by other user(s)
+                // Bulk soft delete dashboards owned by other user(s)
                 apiInstance.PostAnalyticsReportingDashboardsUsersBulkRemove(body);
             }
             catch (Exception e)
@@ -5195,7 +5199,7 @@ namespace Example
 > void PostAnalyticsReportingSettingsDashboardsBulkRemove (DashboardConfigurationBulkRequest body)
 
 
-Bulk remove dashboard configurations
+Bulk soft delete dashboard configurations
 
 Requires ALL permissions: 
 
@@ -5227,7 +5231,7 @@ namespace Example
 
             try
             { 
-                // Bulk remove dashboard configurations
+                // Bulk soft delete dashboard configurations
                 apiInstance.PostAnalyticsReportingSettingsDashboardsBulkRemove(body);
             }
             catch (Exception e)
@@ -5639,8 +5643,6 @@ namespace Example
 
 
 Query for task management aggregates
-
-PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6329,4 +6331,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

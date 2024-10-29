@@ -399,4 +399,4 @@ namespace Example
 [**FlowObservationQueryResponse**](FlowObservationQueryResponse)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

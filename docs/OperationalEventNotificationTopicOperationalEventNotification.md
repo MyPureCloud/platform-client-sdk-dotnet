@@ -7,17 +7,17 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EventEntity** | [**OperationalEventNotificationTopicEventEntity**](OperationalEventNotificationTopicEventEntity) |  | [optional] |
-| **EntityId** | **string** |  | [optional] |
+| **EntityId** | **Guid?** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |
 | **PreviousValue** | **string** |  | [optional] |
 | **CurrentValue** | **string** |  | [optional] |
 | **ErrorCode** | **string** |  | [optional] |
 | **Version** | **string** |  | [optional] |
-| **ParentEntity** | **string** |  | [optional] |
+| **ParentEntity** | **Guid?** |  | [optional] |
 | **EntityType** | **string** |  | [optional] |
-| **ConversationId** | **string** |  | [optional] |
+| **ConversationId** | **Guid?** |  | [optional] |
 | **Timestamp** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

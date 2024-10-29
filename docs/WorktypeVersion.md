@@ -27,9 +27,11 @@
 | **AssignmentEnabled** | **bool?** | When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false. | [optional] |
 | **Schema** | [**WorkitemSchema**](WorkitemSchema) | The schema defining the custom attributes for Workitems created from the Worktype. | [optional] |
 | **ServiceLevelTarget** | **int?** | The target service level for Workitems created from the Worktype. The default value is 100. | [optional] |
+| **RuleSettings** | [**WorkitemRuleSettings**](WorkitemRuleSettings) | Settings for the worktypes rules. | [optional] |
+| **Flow** | [**WorkitemFlowReference**](WorkitemFlowReference) | The flow associated with the Worktype. | [optional] |
 | **Version** | **int?** | Version | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

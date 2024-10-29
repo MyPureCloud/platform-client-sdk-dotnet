@@ -1643,7 +1643,7 @@ namespace Example
 
 ## GetKnowledgeKnowledgebaseDocumentVariation
 
-> [**DocumentVariation**](DocumentVariation) GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+> [**DocumentVariationResponse**](DocumentVariationResponse) GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
 
 
 Get a variation for a document.
@@ -1682,7 +1682,7 @@ namespace Example
             try
             { 
                 // Get a variation for a document.
-                DocumentVariation result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState);
+                DocumentVariationResponse result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1706,12 +1706,12 @@ namespace Example
 
 ### Return type
 
-[**DocumentVariation**](DocumentVariation)
+[**DocumentVariationResponse**](DocumentVariationResponse)
 
 
 ## GetKnowledgeKnowledgebaseDocumentVariations
 
-> [**DocumentVariationListing**](DocumentVariationListing) GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+> [**DocumentVariationResponseListing**](DocumentVariationResponseListing) GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
 
 
 Get variations for a document.
@@ -1752,7 +1752,7 @@ namespace Example
             try
             { 
                 // Get variations for a document.
-                DocumentVariationListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState);
+                DocumentVariationResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1778,7 +1778,7 @@ namespace Example
 
 ### Return type
 
-[**DocumentVariationListing**](DocumentVariationListing)
+[**DocumentVariationResponseListing**](DocumentVariationResponseListing)
 
 
 ## GetKnowledgeKnowledgebaseDocumentVersion
@@ -4149,7 +4149,7 @@ namespace Example
 
 ## PatchKnowledgeKnowledgebaseDocumentVariation
 
-> [**DocumentVariation**](DocumentVariation) PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body)
+> [**DocumentVariationResponse**](DocumentVariationResponse) PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body)
 
 
 Update a variation for a document.
@@ -4183,12 +4183,12 @@ namespace Example
             var documentVariationId = documentVariationId_example;  // string | Globally unique identifier for a document variation.
             var documentId = documentId_example;  // string | Globally unique identifier for a document.
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for a knowledge base.
-            var body = new DocumentVariation(); // DocumentVariation | 
+            var body = new DocumentVariationRequest(); // DocumentVariationRequest | 
 
             try
             { 
                 // Update a variation for a document.
-                DocumentVariation result = apiInstance.PatchKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, body);
+                DocumentVariationResponse result = apiInstance.PatchKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4208,11 +4208,11 @@ namespace Example
 | **documentVariationId** | **string**| Globally unique identifier for a document variation. |  |
 | **documentId** | **string**| Globally unique identifier for a document. |  |
 | **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
-| **body** | [**DocumentVariation**](DocumentVariation)|  |  |
+| **body** | [**DocumentVariationRequest**](DocumentVariationRequest)|  |  |
 
 ### Return type
 
-[**DocumentVariation**](DocumentVariation)
+[**DocumentVariationResponse**](DocumentVariationResponse)
 
 
 ## PatchKnowledgeKnowledgebaseDocumentsSearchSearchId
@@ -5615,7 +5615,7 @@ namespace Example
 
 ## PostKnowledgeKnowledgebaseDocumentVariations
 
-> [**DocumentVariation**](DocumentVariation) PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariation body)
+> [**DocumentVariationResponse**](DocumentVariationResponse) PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariationRequest body)
 
 
 Create a variation for a document.
@@ -5649,12 +5649,12 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
             var documentId = documentId_example;  // string | Globally unique identifier for the document.
-            var body = new DocumentVariation(); // DocumentVariation | 
+            var body = new DocumentVariationRequest(); // DocumentVariationRequest | 
 
             try
             { 
                 // Create a variation for a document.
-                DocumentVariation result = apiInstance.PostKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, body);
+                DocumentVariationResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5673,11 +5673,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
 | **documentId** | **string**| Globally unique identifier for the document. |  |
-| **body** | [**DocumentVariation**](DocumentVariation)|  |  |
+| **body** | [**DocumentVariationRequest**](DocumentVariationRequest)|  |  |
 
 ### Return type
 
-[**DocumentVariation**](DocumentVariation)
+[**DocumentVariationResponse**](DocumentVariationResponse)
 
 
 ## PostKnowledgeKnowledgebaseDocumentVersions
@@ -5813,7 +5813,7 @@ void (empty response body)
 
 ## PostKnowledgeKnowledgebaseDocuments
 
-> [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse) PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentReq body)
+> [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse) PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
 
 
 Create document.
@@ -5845,7 +5845,7 @@ namespace Example
 
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
-            var body = new KnowledgeDocumentReq(); // KnowledgeDocumentReq | 
+            var body = new KnowledgeDocumentCreateRequest(); // KnowledgeDocumentCreateRequest | 
 
             try
             { 
@@ -5868,7 +5868,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **body** | [**KnowledgeDocumentReq**](KnowledgeDocumentReq)|  |  |
+| **body** | [**KnowledgeDocumentCreateRequest**](KnowledgeDocumentCreateRequest)|  |  |
 
 ### Return type
 
@@ -7785,4 +7785,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

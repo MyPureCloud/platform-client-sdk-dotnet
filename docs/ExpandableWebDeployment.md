@@ -16,11 +16,11 @@
 | **DateCreated** | **DateTime?** | The date the deployment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | The date the deployment was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **LastModifiedUser** | [**AddressableEntityRef**](AddressableEntityRef) | A reference to the user who most recently modified the deployment | [optional] |
-| **Flow** | [**DomainEntityRef**](DomainEntityRef) | A reference to the inboundshortmessage flow used by this deployment | [optional] |
+| **Flow** | [**WebDeploymentFlowEntityRef**](WebDeploymentFlowEntityRef) | A reference to the inboundshortmessage flow used by this deployment | [optional] |
 | **Status** | **string** | The current status of the deployment | [optional] |
 | **Configuration** | [**WebDeploymentConfigurationVersionResponse**](WebDeploymentConfigurationVersionResponse) | The config version this deployment uses | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

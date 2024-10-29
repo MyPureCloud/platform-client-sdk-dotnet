@@ -572,7 +572,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
-| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: supportedContent |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: supportedContent, flowDetails |
 
 ### Return type
 
@@ -1188,4 +1188,4 @@ namespace Example
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

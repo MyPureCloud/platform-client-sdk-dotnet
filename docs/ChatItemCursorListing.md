@@ -1,16 +1,16 @@
-# DocumentVariationListing
+# ChatItemCursorListing
 
-## ININ.PureCloudApi.Model.DocumentVariationListing
+## ININ.PureCloudApi.Model.ChatItemCursorListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DocumentVariation&gt;**](DocumentVariation) |  | [optional] |
+| **Entities** | [**List&lt;ChatItem&gt;**](ChatItem) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

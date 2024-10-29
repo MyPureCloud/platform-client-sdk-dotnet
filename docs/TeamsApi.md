@@ -145,7 +145,7 @@ void (empty response body)
 
 ## GetTeam
 
-> [**Team**](Team) GetTeam (string teamId)
+> [**Team**](Team) GetTeam (string teamId, string expand = null)
 
 
 Get team
@@ -177,11 +177,12 @@ namespace Example
 
             var apiInstance = new TeamsApi();
             var teamId = teamId_example;  // string | Team ID
+            var expand = expand_example;  // string | Expand the division name (optional) 
 
             try
             { 
                 // Get team
-                Team result = apiInstance.GetTeam(teamId);
+                Team result = apiInstance.GetTeam(teamId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -199,6 +200,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
+| **expand** | **string**| Expand the division name | [optional] <br />**Values**: entities.division |
 
 ### Return type
 
@@ -663,4 +665,4 @@ namespace Example
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_
