@@ -149,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IncludeOwners">Allow owners to be included as members of the group.</param>
         /// <param name="CallsEnabled">Allow calls to be placed to this group..</param>
         /// <param name="OwnerIds">Owners of the group.</param>
-        public GroupCreate(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, bool? RolesEnabled = null, bool? IncludeOwners = null, bool? CallsEnabled = null, List<string> OwnerIds = null)
+        public GroupCreate(string Name = null, string Description = null, TypeEnum? Type = null, List<Image> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, bool? RolesEnabled = null, bool? IncludeOwners = null, bool? CallsEnabled = null, List<string> OwnerIds = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -228,7 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
-        public List<UserImage> Images { get; set; }
+        public List<Image> Images { get; set; }
 
 
 

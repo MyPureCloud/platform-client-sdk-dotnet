@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DocumentVersion">The version of the document..</param>
         /// <param name="Contexts">The context values associated with the variation. (required).</param>
         /// <param name="Body">The content for the variation..</param>
-        public KnowledgeGuestDocumentVariation(AddressableEntityRef DocumentVersion = null, List<KnowledgeGuestDocumentVariationContext> Contexts = null, DocumentBody Body = null)
+        public KnowledgeGuestDocumentVariation(AddressableEntityRef DocumentVersion = null, List<KnowledgeGuestDocumentVariationContext> Contexts = null, DocumentBodyResponse Body = null)
         {
             this.DocumentVersion = DocumentVersion;
             this.Contexts = Contexts;
@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The content for the variation.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public DocumentBody Body { get; set; }
+        public DocumentBodyResponse Body { get; set; }
 
 
 

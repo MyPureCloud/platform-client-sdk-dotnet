@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **RunId** | **string** |  | [optional] |
+| **Id** | **Guid?** |  | [optional] |
+| **RunId** | **Guid?** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **ExportFormat** | **string** |  | [optional] |
@@ -26,4 +26,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

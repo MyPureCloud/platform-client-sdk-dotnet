@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
+| **Id** | **Guid?** |  | [optional] |
 | **Recipient** | [**V2WemEngagementCelebrationUpdatesTopicUserId**](V2WemEngagementCelebrationUpdatesTopicUserId) |  | [optional] |
 | **CreatedBy** | [**V2WemEngagementCelebrationUpdatesTopicUserId**](V2WemEngagementCelebrationUpdatesTopicUserId) |  | [optional] |
 | **DateCreated** | **string** |  | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

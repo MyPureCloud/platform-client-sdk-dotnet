@@ -860,7 +860,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScheduleExpression">ScheduleExpression.</param>
         /// <param name="ScheduleStaticLinkUrl">ScheduleStaticLinkUrl.</param>
         /// <param name="ExportAllowedToRerun">ExportAllowedToRerun.</param>
-        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, string ScheduleExpression = null, string ScheduleStaticLinkUrl = null, bool? ExportAllowedToRerun = null)
+        public ReportingDataExportTopicDataExportNotification(Guid? Id = null, Guid? RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, string ScheduleExpression = null, string ScheduleStaticLinkUrl = null, bool? ExportAllowedToRerun = null)
         {
             this.Id = Id;
             this.RunId = RunId;
@@ -888,7 +888,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public Guid? Id { get; set; }
 
 
 
@@ -896,7 +896,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RunId
         /// </summary>
         [DataMember(Name="runId", EmitDefaultValue=false)]
-        public string RunId { get; set; }
+        public Guid? RunId { get; set; }
 
 
 

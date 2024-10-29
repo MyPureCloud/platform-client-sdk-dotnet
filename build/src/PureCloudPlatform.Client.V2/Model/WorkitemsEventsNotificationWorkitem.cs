@@ -339,7 +339,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="Sessions">Sessions.</param>
         /// <param name="SkillIds">SkillIds.</param>
-        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null, WorkitemsEventsNotificationWrapup Wrapup = null, List<WorkitemsEventsNotificationSession> Sessions = null, List<string> SkillIds = null)
+        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null, WorkitemsEventsNotificationWrapup Wrapup = null, List<WorkitemsEventsNotificationSession> Sessions = null, List<Guid?> SkillIds = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -621,7 +621,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SkillIds
         /// </summary>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
-        public List<string> SkillIds { get; set; }
+        public List<Guid?> SkillIds { get; set; }
 
 
         /// <summary>

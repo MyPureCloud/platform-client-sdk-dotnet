@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Title">Title.</param>
         /// <param name="Note">Note.</param>
         /// <param name="SourceEntity">SourceEntity.</param>
-        public V2WemEngagementCelebrationUpdatesTopicEngagementCelebration(string Id = null, V2WemEngagementCelebrationUpdatesTopicUserId Recipient = null, V2WemEngagementCelebrationUpdatesTopicUserId CreatedBy = null, string DateCreated = null, TypeEnum? Type = null, string Title = null, string Note = null, V2WemEngagementCelebrationUpdatesTopicSourceEntity SourceEntity = null)
+        public V2WemEngagementCelebrationUpdatesTopicEngagementCelebration(Guid? Id = null, V2WemEngagementCelebrationUpdatesTopicUserId Recipient = null, V2WemEngagementCelebrationUpdatesTopicUserId CreatedBy = null, string DateCreated = null, TypeEnum? Type = null, string Title = null, string Note = null, V2WemEngagementCelebrationUpdatesTopicSourceEntity SourceEntity = null)
         {
             this.Id = Id;
             this.Recipient = Recipient;
@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public Guid? Id { get; set; }
 
 
 

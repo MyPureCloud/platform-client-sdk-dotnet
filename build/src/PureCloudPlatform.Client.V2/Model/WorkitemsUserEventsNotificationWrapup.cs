@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserId">UserId.</param>
         /// <param name="Op">Op.</param>
         /// <param name="Action">Action.</param>
-        public WorkitemsUserEventsNotificationWrapup(string Code = null, string UserId = null, OpEnum? Op = null, ActionEnum? Action = null)
+        public WorkitemsUserEventsNotificationWrapup(string Code = null, Guid? UserId = null, OpEnum? Op = null, ActionEnum? Action = null)
         {
             this.Code = Code;
             this.UserId = UserId;
@@ -122,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
-        public string UserId { get; set; }
+        public Guid? UserId { get; set; }
 
 
 

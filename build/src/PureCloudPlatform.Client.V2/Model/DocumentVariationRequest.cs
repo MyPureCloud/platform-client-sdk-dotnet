@@ -13,26 +13,26 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DocumentVariation
+    /// DocumentVariationRequest
     /// </summary>
     [DataContract]
-    public partial class DocumentVariation :  IEquatable<DocumentVariation>
+    public partial class DocumentVariationRequest :  IEquatable<DocumentVariationRequest>
     {
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentVariation" /> class.
+        /// Initializes a new instance of the <see cref="DocumentVariationRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected DocumentVariation() { }
+        protected DocumentVariationRequest() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentVariation" /> class.
+        /// Initializes a new instance of the <see cref="DocumentVariationRequest" /> class.
         /// </summary>
         /// <param name="DocumentVersion">The version of the document..</param>
         /// <param name="Contexts">The context values associated with the variation. (required).</param>
         /// <param name="Priority">The priority of the variation..</param>
         /// <param name="Name">The name of the variation..</param>
         /// <param name="Body">The content for the variation..</param>
-        public DocumentVariation(AddressableEntityRef DocumentVersion = null, List<DocumentVariationContext> Contexts = null, int? Priority = null, string Name = null, DocumentBody Body = null)
+        public DocumentVariationRequest(AddressableEntityRef DocumentVersion = null, List<DocumentVariationContext> Contexts = null, int? Priority = null, string Name = null, DocumentBodyRequest Body = null)
         {
             this.DocumentVersion = DocumentVersion;
             this.Contexts = Contexts;
@@ -121,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The content for the variation.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public DocumentBody Body { get; set; }
+        public DocumentBodyRequest Body { get; set; }
 
 
 
@@ -140,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocumentVariation {\n");
+            sb.Append("class DocumentVariationRequest {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -177,15 +177,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DocumentVariation);
+            return this.Equals(obj as DocumentVariationRequest);
         }
 
         /// <summary>
-        /// Returns true if DocumentVariation instances are equal
+        /// Returns true if DocumentVariationRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of DocumentVariation to be compared</param>
+        /// <param name="other">Instance of DocumentVariationRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocumentVariation other)
+        public bool Equals(DocumentVariationRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

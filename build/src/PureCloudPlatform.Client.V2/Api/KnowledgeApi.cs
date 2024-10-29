@@ -689,9 +689,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>DocumentVariation</returns>
+        /// <returns>DocumentVariationResponse</returns>
         
-        DocumentVariation GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        DocumentVariationResponse GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
 
         /// <summary>
         /// Get a variation for a document.
@@ -704,9 +704,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>ApiResponse of DocumentVariation</returns>
+        /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        ApiResponse<DocumentVariation> GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        ApiResponse<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -721,9 +721,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>DocumentVariationListing</returns>
+        /// <returns>DocumentVariationResponseListing</returns>
         
-        DocumentVariationListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        DocumentVariationResponseListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -738,9 +738,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>ApiResponse of DocumentVariationListing</returns>
+        /// <returns>ApiResponse of DocumentVariationResponseListing</returns>
         
-        ApiResponse<DocumentVariationListing> GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        ApiResponse<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
 
         /// <summary>
         /// Get document version.
@@ -1811,9 +1811,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>DocumentVariation</returns>
+        /// <returns>DocumentVariationResponse</returns>
         
-        DocumentVariation PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body);
+        DocumentVariationResponse PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body);
 
         /// <summary>
         /// Update a variation for a document.
@@ -1826,9 +1826,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of DocumentVariation</returns>
+        /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        ApiResponse<DocumentVariation> PatchKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body);
+        ApiResponse<DocumentVariationResponse> PatchKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body);
 
         /// <summary>
         /// Update search result.
@@ -2450,9 +2450,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>DocumentVariation</returns>
+        /// <returns>DocumentVariationResponse</returns>
         
-        DocumentVariation PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariation body);
+        DocumentVariationResponse PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariationRequest body);
 
         /// <summary>
         /// Create a variation for a document.
@@ -2464,9 +2464,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of DocumentVariation</returns>
+        /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        ApiResponse<DocumentVariation> PostKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariation body);
+        ApiResponse<DocumentVariationResponse> PostKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariationRequest body);
 
         /// <summary>
         /// Creates or restores a document version.
@@ -2535,7 +2535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeDocumentResponse</returns>
         
-        KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentReq body);
+        KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
 
         /// <summary>
         /// Create document.
@@ -2548,7 +2548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocumentResponse</returns>
         
-        ApiResponse<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body);
+        ApiResponse<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
 
         /// <summary>
         /// Answer documents.
@@ -4015,9 +4015,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of DocumentVariation</returns>
+        /// <returns>Task of DocumentVariationResponse</returns>
         
-        System.Threading.Tasks.Task<DocumentVariation> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        System.Threading.Tasks.Task<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
 
         /// <summary>
         /// Get a variation for a document.
@@ -4030,9 +4030,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of ApiResponse (DocumentVariation)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DocumentVariation>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -4047,9 +4047,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of DocumentVariationListing</returns>
+        /// <returns>Task of DocumentVariationResponseListing</returns>
         
-        System.Threading.Tasks.Task<DocumentVariationListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        System.Threading.Tasks.Task<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -4064,9 +4064,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of ApiResponse (DocumentVariationListing)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponseListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DocumentVariationListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponseListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
 
         /// <summary>
         /// Get document version.
@@ -5137,9 +5137,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>Task of DocumentVariation</returns>
+        /// <returns>Task of DocumentVariationResponse</returns>
         
-        System.Threading.Tasks.Task<DocumentVariation> PatchKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body);
+        System.Threading.Tasks.Task<DocumentVariationResponse> PatchKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body);
 
         /// <summary>
         /// Update a variation for a document.
@@ -5152,9 +5152,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (DocumentVariation)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DocumentVariation>> PatchKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body);
+        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> PatchKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body);
 
         /// <summary>
         /// Update search result.
@@ -5776,9 +5776,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>Task of DocumentVariation</returns>
+        /// <returns>Task of DocumentVariationResponse</returns>
         
-        System.Threading.Tasks.Task<DocumentVariation> PostKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, DocumentVariation body);
+        System.Threading.Tasks.Task<DocumentVariationResponse> PostKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, DocumentVariationRequest body);
 
         /// <summary>
         /// Create a variation for a document.
@@ -5790,9 +5790,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (DocumentVariation)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DocumentVariation>> PostKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariation body);
+        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> PostKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariationRequest body);
 
         /// <summary>
         /// Creates or restores a document version.
@@ -5861,7 +5861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocumentResponse</returns>
         
-        System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentReq body);
+        System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
 
         /// <summary>
         /// Create document.
@@ -5874,7 +5874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
 
         /// <summary>
         /// Answer documents.
@@ -12090,11 +12090,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>DocumentVariation</returns>
+        /// <returns>DocumentVariationResponse</returns>
         
-        public DocumentVariation GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public DocumentVariationResponse GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
         {
-             ApiResponse<DocumentVariation> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState);
+             ApiResponse<DocumentVariationResponse> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState);
              return localVarResponse.Data;
         }
 
@@ -12107,9 +12107,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>ApiResponse of DocumentVariation</returns>
+        /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        public ApiResponse< DocumentVariation > GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public ApiResponse< DocumentVariationResponse > GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
         { 
             // verify the required parameter 'documentVariationId' is set
             if (documentVariationId == null)
@@ -12193,9 +12193,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariation>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariation)),
+                (DocumentVariationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12210,11 +12210,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of DocumentVariation</returns>
+        /// <returns>Task of DocumentVariationResponse</returns>
         
-        public async System.Threading.Tasks.Task<DocumentVariation> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public async System.Threading.Tasks.Task<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
         {
-             ApiResponse<DocumentVariation> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState);
+             ApiResponse<DocumentVariationResponse> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState);
              return localVarResponse.Data;
 
         }
@@ -12228,9 +12228,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of ApiResponse (DocumentVariation)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariation>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
         { 
             // verify the required parameter 'documentVariationId' is set
             if (documentVariationId == null)
@@ -12317,9 +12317,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariation>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariation)),
+                (DocumentVariationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12337,11 +12337,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>DocumentVariationListing</returns>
+        /// <returns>DocumentVariationResponseListing</returns>
         
-        public DocumentVariationListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public DocumentVariationResponseListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
         {
-             ApiResponse<DocumentVariationListing> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState);
+             ApiResponse<DocumentVariationResponseListing> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState);
              return localVarResponse.Data;
         }
 
@@ -12356,9 +12356,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>ApiResponse of DocumentVariationListing</returns>
+        /// <returns>ApiResponse of DocumentVariationResponseListing</returns>
         
-        public ApiResponse< DocumentVariationListing > GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public ApiResponse< DocumentVariationResponseListing > GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -12441,9 +12441,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariationListing>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponseListing>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationListing)),
+                (DocumentVariationResponseListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponseListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12460,11 +12460,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of DocumentVariationListing</returns>
+        /// <returns>Task of DocumentVariationResponseListing</returns>
         
-        public async System.Threading.Tasks.Task<DocumentVariationListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public async System.Threading.Tasks.Task<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
         {
-             ApiResponse<DocumentVariationListing> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState);
+             ApiResponse<DocumentVariationResponseListing> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState);
              return localVarResponse.Data;
 
         }
@@ -12480,9 +12480,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
-        /// <returns>Task of ApiResponse (DocumentVariationListing)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponseListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponseListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -12567,9 +12567,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariationListing>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponseListing>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationListing)),
+                (DocumentVariationResponseListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponseListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20868,11 +20868,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>DocumentVariation</returns>
+        /// <returns>DocumentVariationResponse</returns>
         
-        public DocumentVariation PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body)
+        public DocumentVariationResponse PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body)
         {
-             ApiResponse<DocumentVariation> localVarResponse = PatchKnowledgeKnowledgebaseDocumentVariationWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, body);
+             ApiResponse<DocumentVariationResponse> localVarResponse = PatchKnowledgeKnowledgebaseDocumentVariationWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, body);
              return localVarResponse.Data;
         }
 
@@ -20885,9 +20885,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of DocumentVariation</returns>
+        /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        public ApiResponse< DocumentVariation > PatchKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body)
+        public ApiResponse< DocumentVariationResponse > PatchKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body)
         { 
             // verify the required parameter 'documentVariationId' is set
             if (documentVariationId == null)
@@ -20979,9 +20979,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariation>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariation)),
+                (DocumentVariationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20996,11 +20996,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>Task of DocumentVariation</returns>
+        /// <returns>Task of DocumentVariationResponse</returns>
         
-        public async System.Threading.Tasks.Task<DocumentVariation> PatchKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body)
+        public async System.Threading.Tasks.Task<DocumentVariationResponse> PatchKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body)
         {
-             ApiResponse<DocumentVariation> localVarResponse = await PatchKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, body);
+             ApiResponse<DocumentVariationResponse> localVarResponse = await PatchKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, body);
              return localVarResponse.Data;
 
         }
@@ -21014,9 +21014,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (DocumentVariation)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariation>> PatchKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> PatchKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariationRequest body)
         { 
             // verify the required parameter 'documentVariationId' is set
             if (documentVariationId == null)
@@ -21112,9 +21112,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariation>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariation)),
+                (DocumentVariationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -26365,11 +26365,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>DocumentVariation</returns>
+        /// <returns>DocumentVariationResponse</returns>
         
-        public DocumentVariation PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariation body)
+        public DocumentVariationResponse PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariationRequest body)
         {
-             ApiResponse<DocumentVariation> localVarResponse = PostKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo(knowledgeBaseId, documentId, body);
+             ApiResponse<DocumentVariationResponse> localVarResponse = PostKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo(knowledgeBaseId, documentId, body);
              return localVarResponse.Data;
         }
 
@@ -26381,9 +26381,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of DocumentVariation</returns>
+        /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        public ApiResponse< DocumentVariation > PostKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariation body)
+        public ApiResponse< DocumentVariationResponse > PostKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariationRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -26471,9 +26471,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariation>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariation)),
+                (DocumentVariationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -26487,11 +26487,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>Task of DocumentVariation</returns>
+        /// <returns>Task of DocumentVariationResponse</returns>
         
-        public async System.Threading.Tasks.Task<DocumentVariation> PostKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, DocumentVariation body)
+        public async System.Threading.Tasks.Task<DocumentVariationResponse> PostKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, DocumentVariationRequest body)
         {
-             ApiResponse<DocumentVariation> localVarResponse = await PostKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo(knowledgeBaseId, documentId, body);
+             ApiResponse<DocumentVariationResponse> localVarResponse = await PostKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo(knowledgeBaseId, documentId, body);
              return localVarResponse.Data;
 
         }
@@ -26504,9 +26504,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Globally unique identifier for the knowledge base.</param>
         /// <param name="documentId">Globally unique identifier for the document.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (DocumentVariation)</returns>
+        /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariation>> PostKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariation body)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> PostKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, DocumentVariationRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -26597,9 +26597,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DocumentVariation>(localVarStatusCode,
+            return new ApiResponse<DocumentVariationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DocumentVariation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariation)),
+                (DocumentVariationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentVariationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27104,7 +27104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeDocumentResponse</returns>
         
-        public KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentReq body)
+        public KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
         {
              ApiResponse<KnowledgeDocumentResponse> localVarResponse = PostKnowledgeKnowledgebaseDocumentsWithHttpInfo(knowledgeBaseId, body);
              return localVarResponse.Data;
@@ -27119,7 +27119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocumentResponse</returns>
         
-        public ApiResponse< KnowledgeDocumentResponse > PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body)
+        public ApiResponse< KnowledgeDocumentResponse > PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -27220,7 +27220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocumentResponse</returns>
         
-        public async System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentReq body)
+        public async System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
         {
              ApiResponse<KnowledgeDocumentResponse> localVarResponse = await PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo(knowledgeBaseId, body);
              return localVarResponse.Data;
@@ -27236,7 +27236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)

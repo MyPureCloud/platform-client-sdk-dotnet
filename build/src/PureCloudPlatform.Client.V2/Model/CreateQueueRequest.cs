@@ -130,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
-        /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
+        /// <param name="OutboundEmailAddress">The default email address to use for outbound email from this queue..</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
         /// <param name="SourceQueueId">The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue..</param>
@@ -478,8 +478,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets OutboundEmailAddress
+        /// The default email address to use for outbound email from this queue.
         /// </summary>
+        /// <value>The default email address to use for outbound email from this queue.</value>
         [DataMember(Name="outboundEmailAddress", EmitDefaultValue=false)]
         public QueueEmailAddress OutboundEmailAddress { get; set; }
 

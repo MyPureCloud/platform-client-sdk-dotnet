@@ -410,7 +410,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowMilestones">FlowMilestones.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public FlowOutcomeDetailEventTopicFlowOutcomeEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, string FlowOutcomeId = null, int? FlowOutcomeStartTime = null, int? FlowOutcomeEndTime = null, FlowOutcomeValueEnum? FlowOutcomeValue = null, List<FlowOutcomeDetailEventTopicFlowMilestone> FlowMilestones = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        public FlowOutcomeDetailEventTopicFlowOutcomeEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, Guid? FlowOutcomeId = null, int? FlowOutcomeStartTime = null, int? FlowOutcomeEndTime = null, FlowOutcomeValueEnum? FlowOutcomeValue = null, List<FlowOutcomeDetailEventTopicFlowMilestone> FlowMilestones = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -557,7 +557,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets FlowOutcomeId
         /// </summary>
         [DataMember(Name="flowOutcomeId", EmitDefaultValue=false)]
-        public string FlowOutcomeId { get; set; }
+        public Guid? FlowOutcomeId { get; set; }
 
 
 

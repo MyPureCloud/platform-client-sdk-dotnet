@@ -53,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserTrustors**](#GetUserTrustors) | **Get** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
 | [**GetUserVerifiers**](#GetUserVerifiers) | **Get** /api/v2/users/{userId}/verifiers | Get a list of verifiers |
 | [**GetUsers**](#GetUsers) | **Get** /api/v2/users | Get the list of available users. |
+| [**GetUsersChatsMe**](#GetUsersChatsMe) | **Get** /api/v2/users/chats/me | Get chats for a user |
 | [**GetUsersDevelopmentActivities**](#GetUsersDevelopmentActivities) | **Get** /api/v2/users/development/activities | Get list of Development Activities |
 | [**GetUsersDevelopmentActivitiesMe**](#GetUsersDevelopmentActivitiesMe) | **Get** /api/v2/users/development/activities/me | Get list of Development Activities for current user |
 | [**GetUsersDevelopmentActivity**](#GetUsersDevelopmentActivity) | **Get** /api/v2/users/development/activities/{activityId} | Get a Development Activity |
@@ -3121,6 +3122,73 @@ namespace Example
 ### Return type
 
 [**UserEntityListing**](UserEntityListing)
+
+
+## GetUsersChatsMe
+
+> [**ChatItemCursorListing**](ChatItemCursorListing) GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+
+
+Get chats for a user
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* user:chats:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUsersChatsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var excludeClosed = true;  // bool? | Whether or not to exclude closed chats (optional) 
+            var includePresence = true;  // bool? | Whether or not to include user presence (optional) 
+            var after = after_example;  // string | The key to start after (optional) 
+
+            try
+            { 
+                // Get chats for a user
+                ChatItemCursorListing result = apiInstance.GetUsersChatsMe(excludeClosed, includePresence, after);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUsersChatsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **excludeClosed** | **bool?**| Whether or not to exclude closed chats | [optional]  |
+| **includePresence** | **bool?**| Whether or not to include user presence | [optional]  |
+| **after** | **string**| The key to start after | [optional]  |
+
+### Return type
+
+[**ChatItemCursorListing**](ChatItemCursorListing)
 
 
 ## GetUsersDevelopmentActivities
@@ -6381,4 +6449,4 @@ namespace Example
 [**Verifier**](Verifier)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

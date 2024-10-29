@@ -21,11 +21,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemRuleSettings" /> class.
         /// </summary>
-        public WorkitemRuleSettings()
+        /// <param name="FlowRulesEnabled">When set to true, the worktypes flow rules will be processed. Default value is false..</param>
+        public WorkitemRuleSettings(bool? FlowRulesEnabled = null)
         {
+            this.FlowRulesEnabled = FlowRulesEnabled;
             
         }
         
+
+
+        /// <summary>
+        /// When set to true, the worktypes flow rules will be processed. Default value is false.
+        /// </summary>
+        /// <value>When set to true, the worktypes flow rules will be processed. Default value is false.</value>
+        [DataMember(Name="flowRulesEnabled", EmitDefaultValue=false)]
+        public bool? FlowRulesEnabled { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class WorkitemRuleSettings {\n");
 
+            sb.Append("  FlowRulesEnabled: ").Append(FlowRulesEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.FlowRulesEnabled == other.FlowRulesEnabled ||
+                    this.FlowRulesEnabled != null &&
+                    this.FlowRulesEnabled.Equals(other.FlowRulesEnabled)
+                );
         }
 
         /// <summary>
@@ -89,6 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.FlowRulesEnabled != null)
+                    hash = hash * 59 + this.FlowRulesEnabled.GetHashCode();
+
                 return hash;
             }
         }

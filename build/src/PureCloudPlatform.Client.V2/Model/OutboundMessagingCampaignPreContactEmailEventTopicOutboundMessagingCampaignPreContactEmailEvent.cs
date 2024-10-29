@@ -177,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundContactListId">OutboundContactListId.</param>
         /// <param name="OutboundContactId">OutboundContactId.</param>
         /// <param name="IsCampaignAlwaysRunning">IsCampaignAlwaysRunning.</param>
-        public OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampaignPreContactEmailEvent(int? EventTime = null, OutboundCampaignTypeEnum? OutboundCampaignType = null, OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes EmailAttributes = null, WrapupCodeEnum? WrapupCode = null, string OutboundCampaignId = null, string DivisionId = null, string ContentTemplateId = null, string OutboundContactListId = null, string OutboundContactId = null, bool? IsCampaignAlwaysRunning = null)
+        public OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampaignPreContactEmailEvent(int? EventTime = null, OutboundCampaignTypeEnum? OutboundCampaignType = null, OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes EmailAttributes = null, WrapupCodeEnum? WrapupCode = null, Guid? OutboundCampaignId = null, Guid? DivisionId = null, Guid? ContentTemplateId = null, Guid? OutboundContactListId = null, string OutboundContactId = null, bool? IsCampaignAlwaysRunning = null)
         {
             this.EventTime = EventTime;
             this.OutboundCampaignType = OutboundCampaignType;
@@ -218,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets OutboundCampaignId
         /// </summary>
         [DataMember(Name="outboundCampaignId", EmitDefaultValue=false)]
-        public string OutboundCampaignId { get; set; }
+        public Guid? OutboundCampaignId { get; set; }
 
 
 
@@ -226,7 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DivisionId
         /// </summary>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
-        public string DivisionId { get; set; }
+        public Guid? DivisionId { get; set; }
 
 
 
@@ -234,7 +234,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ContentTemplateId
         /// </summary>
         [DataMember(Name="contentTemplateId", EmitDefaultValue=false)]
-        public string ContentTemplateId { get; set; }
+        public Guid? ContentTemplateId { get; set; }
 
 
 
@@ -242,7 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets OutboundContactListId
         /// </summary>
         [DataMember(Name="outboundContactListId", EmitDefaultValue=false)]
-        public string OutboundContactListId { get; set; }
+        public Guid? OutboundContactListId { get; set; }
 
 
 

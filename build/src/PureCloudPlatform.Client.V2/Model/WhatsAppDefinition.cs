@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WhatsAppDefinition" /> class.
         /// </summary>
         /// <param name="Name">The messaging template name. (required).</param>
-        /// <param name="Namespace">The messaging template namespace. (required).</param>
+        /// <param name="Namespace">The messaging template namespace..</param>
         /// <param name="Language">The messaging template language configured for this template. This is a WhatsApp specific value. For example, 'en_US' (required).</param>
         public WhatsAppDefinition(string Name = null, string Namespace = null, string Language = null)
         {

@@ -41,7 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignmentEnabled">When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false..</param>
         /// <param name="Schema">The schema defining the custom attributes for Workitems created from the Worktype..</param>
         /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
-        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null)
+        /// <param name="RuleSettings">Settings for the worktypes rules..</param>
+        /// <param name="Flow">The flow associated with the Worktype..</param>
+        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, WorkitemFlowReference Flow = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -63,6 +65,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignmentEnabled = AssignmentEnabled;
             this.Schema = Schema;
             this.ServiceLevelTarget = ServiceLevelTarget;
+            this.RuleSettings = RuleSettings;
+            this.Flow = Flow;
             
         }
         
@@ -258,6 +262,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Settings for the worktypes rules.
+        /// </summary>
+        /// <value>Settings for the worktypes rules.</value>
+        [DataMember(Name="ruleSettings", EmitDefaultValue=false)]
+        public WorkitemRuleSettings RuleSettings { get; set; }
+
+
+
+        /// <summary>
+        /// The flow associated with the Worktype.
+        /// </summary>
+        /// <value>The flow associated with the Worktype.</value>
+        [DataMember(Name="flow", EmitDefaultValue=false)]
+        public WorkitemFlowReference Flow { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -295,6 +317,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignmentEnabled: ").Append(AssignmentEnabled).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
+            sb.Append("  RuleSettings: ").Append(RuleSettings).Append("\n");
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -442,6 +466,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceLevelTarget.Equals(other.ServiceLevelTarget)
                 ) &&
                 (
+                    this.RuleSettings == other.RuleSettings ||
+                    this.RuleSettings != null &&
+                    this.RuleSettings.Equals(other.RuleSettings)
+                ) &&
+                (
+                    this.Flow == other.Flow ||
+                    this.Flow != null &&
+                    this.Flow.Equals(other.Flow)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -521,6 +555,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ServiceLevelTarget != null)
                     hash = hash * 59 + this.ServiceLevelTarget.GetHashCode();
+
+                if (this.RuleSettings != null)
+                    hash = hash * 59 + this.RuleSettings.GetHashCode();
+
+                if (this.Flow != null)
+                    hash = hash * 59 + this.Flow.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

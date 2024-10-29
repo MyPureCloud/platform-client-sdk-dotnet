@@ -239,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UtilizationLabel">UtilizationLabel.</param>
         /// <param name="RoutingPriority">RoutingPriority.</param>
         /// <param name="RequestedRoutingSkillIds">RequestedRoutingSkillIds.</param>
-        public AcdStartDetailEventTopicAcdStartEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, int? RoutingPriority = null, List<string> RequestedRoutingSkillIds = null)
+        public AcdStartDetailEventTopicAcdStartEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, int? RoutingPriority = null, List<Guid?> RequestedRoutingSkillIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -431,7 +431,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RequestedRoutingSkillIds
         /// </summary>
         [DataMember(Name="requestedRoutingSkillIds", EmitDefaultValue=false)]
-        public List<string> RequestedRoutingSkillIds { get; set; }
+        public List<Guid?> RequestedRoutingSkillIds { get; set; }
 
 
         /// <summary>

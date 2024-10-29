@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The messaging template name. | |
-| **Namespace** | **string** | The messaging template namespace. | |
+| **Namespace** | **string** | The messaging template namespace. | [optional] |
 | **Language** | **string** | The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39; | |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

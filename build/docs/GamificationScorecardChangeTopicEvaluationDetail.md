@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EvaluationId** | **string** |  | [optional] |
-| **ConversationId** | **string** |  | [optional] |
+| **EvaluationId** | **Guid?** |  | [optional] |
+| **ConversationId** | **Guid?** |  | [optional] |
 | **ConversationDate** | **string** |  | [optional] |
 | **FormName** | **string** |  | [optional] |
 | **Points** | **int?** |  | [optional] |
@@ -18,4 +18,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

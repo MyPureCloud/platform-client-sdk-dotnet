@@ -84,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
         /// <param name="LastTokenIssued">LastTokenIssued.</param>
         /// <param name="Organization">Organization.</param>
-        public OrgUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, string PreferredName = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null, Organization Organization = null)
+        public OrgUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<Image> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, string PreferredName = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null, Organization Organization = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
-        public List<UserImage> Images { get; set; }
+        public List<Image> Images { get; set; }
 
 
 

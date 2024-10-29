@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GamificationScorecardChangeTopicMetric" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public GamificationScorecardChangeTopicMetric(string Id = null)
+        public GamificationScorecardChangeTopicMetric(Guid? Id = null)
         {
             this.Id = Id;
             
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public Guid? Id { get; set; }
 
 
         /// <summary>

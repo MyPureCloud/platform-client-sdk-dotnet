@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="ConferenceId">ConferenceId.</param>
         /// <param name="ParticipantInfo">ParticipantInfo.</param>
-        public VideoConferenceUpdateTopicVideoConference(string ConversationId = null, string ConferenceId = null, VideoConferenceUpdateTopicParticipantInfo ParticipantInfo = null)
+        public VideoConferenceUpdateTopicVideoConference(Guid? ConversationId = null, string ConferenceId = null, VideoConferenceUpdateTopicParticipantInfo ParticipantInfo = null)
         {
             this.ConversationId = ConversationId;
             this.ConferenceId = ConferenceId;
@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
-        public string ConversationId { get; set; }
+        public Guid? ConversationId { get; set; }
 
 
 

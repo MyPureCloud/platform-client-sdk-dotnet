@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Collection of logos.</value>
         [DataMember(Name="images", EmitDefaultValue=false)]
-        public List<UserImage> Images { get; private set; }
+        public List<Image> Images { get; private set; }
 
 
 

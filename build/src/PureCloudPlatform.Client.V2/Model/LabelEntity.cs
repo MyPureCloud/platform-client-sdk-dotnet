@@ -13,58 +13,44 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DocumentVariationListing
+    /// LabelEntity
     /// </summary>
     [DataContract]
-    public partial class DocumentVariationListing :  IEquatable<DocumentVariationListing>
+    public partial class LabelEntity :  IEquatable<LabelEntity>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentVariationListing" /> class.
+        /// Initializes a new instance of the <see cref="LabelEntity" /> class.
         /// </summary>
-        /// <param name="Entities">Entities.</param>
-        /// <param name="NextUri">NextUri.</param>
-        /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="PreviousUri">PreviousUri.</param>
-        public DocumentVariationListing(List<DocumentVariation> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null)
+        [JsonConstructorAttribute]
+        protected LabelEntity() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LabelEntity" /> class.
+        /// </summary>
+        /// <param name="Id">The Id of the label. (required).</param>
+        public LabelEntity(string Id = null)
         {
-            this.Entities = Entities;
-            this.NextUri = NextUri;
-            this.SelfUri = SelfUri;
-            this.PreviousUri = PreviousUri;
+            this.Id = Id;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Entities
+        /// The Id of the label.
         /// </summary>
-        [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<DocumentVariation> Entities { get; set; }
+        /// <value>The Id of the label.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets NextUri
+        /// The selfUri of the label.
         /// </summary>
-        [DataMember(Name="nextUri", EmitDefaultValue=false)]
-        public string NextUri { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets SelfUri
-        /// </summary>
+        /// <value>The selfUri of the label.</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets PreviousUri
-        /// </summary>
-        [DataMember(Name="previousUri", EmitDefaultValue=false)]
-        public string PreviousUri { get; set; }
+        public string SelfUri { get; private set; }
 
 
         /// <summary>
@@ -74,12 +60,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocumentVariationListing {\n");
+            sb.Append("class LabelEntity {\n");
 
-            sb.Append("  Entities: ").Append(Entities).Append("\n");
-            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,15 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DocumentVariationListing);
+            return this.Equals(obj as LabelEntity);
         }
 
         /// <summary>
-        /// Returns true if DocumentVariationListing instances are equal
+        /// Returns true if LabelEntity instances are equal
         /// </summary>
-        /// <param name="other">Instance of DocumentVariationListing to be compared</param>
+        /// <param name="other">Instance of LabelEntity to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocumentVariationListing other)
+        public bool Equals(LabelEntity other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -121,24 +105,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Entities == other.Entities ||
-                    this.Entities != null &&
-                    this.Entities.SequenceEqual(other.Entities)
-                ) &&
-                (
-                    this.NextUri == other.NextUri ||
-                    this.NextUri != null &&
-                    this.NextUri.Equals(other.NextUri)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.PreviousUri == other.PreviousUri ||
-                    this.PreviousUri != null &&
-                    this.PreviousUri.Equals(other.PreviousUri)
                 );
         }
 
@@ -153,17 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Entities != null)
-                    hash = hash * 59 + this.Entities.GetHashCode();
-
-                if (this.NextUri != null)
-                    hash = hash * 59 + this.NextUri.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-
-                if (this.PreviousUri != null)
-                    hash = hash * 59 + this.PreviousUri.GetHashCode();
 
                 return hash;
             }

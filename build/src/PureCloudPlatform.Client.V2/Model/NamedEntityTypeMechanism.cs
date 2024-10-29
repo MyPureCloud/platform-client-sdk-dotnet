@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Ai for "AI"
+            /// </summary>
+            [EnumMember(Value = "AI")]
+            Ai,
+            
+            /// <summary>
             /// Enum Dynamiclist for "DynamicList"
             /// </summary>
             [EnumMember(Value = "DynamicList")]
@@ -58,11 +64,50 @@ namespace PureCloudPlatform.Client.V2.Model
             Unknown
         }
         /// <summary>
+        /// Subtype of detection mechanism
+        /// </summary>
+        /// <value>Subtype of detection mechanism</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SubTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alphanumeric for "Alphanumeric"
+            /// </summary>
+            [EnumMember(Value = "Alphanumeric")]
+            Alphanumeric,
+            
+            /// <summary>
+            /// Enum Numbersequence for "NumberSequence"
+            /// </summary>
+            [EnumMember(Value = "NumberSequence")]
+            Numbersequence,
+            
+            /// <summary>
+            /// Enum Freeform for "FreeForm"
+            /// </summary>
+            [EnumMember(Value = "FreeForm")]
+            Freeform
+        }
+        /// <summary>
         /// The type of the mechanism.
         /// </summary>
         /// <value>The type of the mechanism.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// Subtype of detection mechanism
+        /// </summary>
+        /// <value>Subtype of detection mechanism</value>
+        [DataMember(Name="subType", EmitDefaultValue=false)]
+        public SubTypeEnum? SubType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeMechanism" /> class.
@@ -75,11 +120,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Items">The items that define the named entity type. (required).</param>
         /// <param name="Restricted">Whether the named entity type is restricted to the items provided. Default: false.</param>
         /// <param name="Type">The type of the mechanism. (required).</param>
-        public NamedEntityTypeMechanism(List<NamedEntityTypeItem> Items = null, bool? Restricted = null, TypeEnum? Type = null)
+        /// <param name="SubType">Subtype of detection mechanism.</param>
+        /// <param name="MaxLength">The maximum length of the entity resolved value.</param>
+        /// <param name="Examples">Examples for entity detection.</param>
+        public NamedEntityTypeMechanism(List<NamedEntityTypeItem> Items = null, bool? Restricted = null, TypeEnum? Type = null, SubTypeEnum? SubType = null, int? MaxLength = null, List<NamedEntityTypeMechanismExample> Examples = null)
         {
             this.Items = Items;
             this.Restricted = Restricted;
             this.Type = Type;
+            this.SubType = SubType;
+            this.MaxLength = MaxLength;
+            this.Examples = Examples;
             
         }
         
@@ -104,6 +155,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+
+        /// <summary>
+        /// The maximum length of the entity resolved value
+        /// </summary>
+        /// <value>The maximum length of the entity resolved value</value>
+        [DataMember(Name="maxLength", EmitDefaultValue=false)]
+        public int? MaxLength { get; set; }
+
+
+
+        /// <summary>
+        /// Examples for entity detection
+        /// </summary>
+        /// <value>Examples for entity detection</value>
+        [DataMember(Name="examples", EmitDefaultValue=false)]
+        public List<NamedEntityTypeMechanismExample> Examples { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,6 +187,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("  Restricted: ").Append(Restricted).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  SubType: ").Append(SubType).Append("\n");
+            sb.Append("  MaxLength: ").Append(MaxLength).Append("\n");
+            sb.Append("  Examples: ").Append(Examples).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -170,6 +244,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.SubType == other.SubType ||
+                    this.SubType != null &&
+                    this.SubType.Equals(other.SubType)
+                ) &&
+                (
+                    this.MaxLength == other.MaxLength ||
+                    this.MaxLength != null &&
+                    this.MaxLength.Equals(other.MaxLength)
+                ) &&
+                (
+                    this.Examples == other.Examples ||
+                    this.Examples != null &&
+                    this.Examples.SequenceEqual(other.Examples)
                 );
         }
 
@@ -192,6 +281,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.SubType != null)
+                    hash = hash * 59 + this.SubType.GetHashCode();
+
+                if (this.MaxLength != null)
+                    hash = hash * 59 + this.MaxLength.GetHashCode();
+
+                if (this.Examples != null)
+                    hash = hash * 59 + this.Examples.GetHashCode();
 
                 return hash;
             }

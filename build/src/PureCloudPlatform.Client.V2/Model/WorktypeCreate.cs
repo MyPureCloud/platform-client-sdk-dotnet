@@ -37,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignmentEnabled">When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false..</param>
         /// <param name="SchemaId">The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
+        /// <param name="RuleSettings">Settings for the worktypes rules..</param>
         /// <param name="Description">The description of the Worktype. Maximum length of 512 characters..</param>
         /// <param name="DivisionId">The ID of the division the Worktype belongs to. Defaults to the default Workbin division ID. The Worktype must be in the same division as its default Workbin..</param>
         /// <param name="DisableDefaultStatusCreation">Set to true to disable default status creation. Default statuses are created with the Worktype by default.</param>
@@ -44,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultQueueId">The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="DefaultLanguageId">The ID of the default language for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="DefaultSkillIds">The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs.</param>
-        public WorktypeCreate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, string Description = null, string DivisionId = null, bool? DisableDefaultStatusCreation = null, int? SchemaVersion = null, string DefaultQueueId = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null)
+        public WorktypeCreate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, string Description = null, string DivisionId = null, bool? DisableDefaultStatusCreation = null, int? SchemaVersion = null, string DefaultQueueId = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null)
         {
             this.Name = Name;
             this.DefaultWorkbinId = DefaultWorkbinId;
@@ -56,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignmentEnabled = AssignmentEnabled;
             this.SchemaId = SchemaId;
             this.ServiceLevelTarget = ServiceLevelTarget;
+            this.RuleSettings = RuleSettings;
             this.Description = Description;
             this.DivisionId = DivisionId;
             this.DisableDefaultStatusCreation = DisableDefaultStatusCreation;
@@ -159,6 +161,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Settings for the worktypes rules.
+        /// </summary>
+        /// <value>Settings for the worktypes rules.</value>
+        [DataMember(Name="ruleSettings", EmitDefaultValue=false)]
+        public WorkitemRuleSettings RuleSettings { get; set; }
+
+
+
+        /// <summary>
         /// The description of the Worktype. Maximum length of 512 characters.
         /// </summary>
         /// <value>The description of the Worktype. Maximum length of 512 characters.</value>
@@ -239,6 +250,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignmentEnabled: ").Append(AssignmentEnabled).Append("\n");
             sb.Append("  SchemaId: ").Append(SchemaId).Append("\n");
             sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
+            sb.Append("  RuleSettings: ").Append(RuleSettings).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  DisableDefaultStatusCreation: ").Append(DisableDefaultStatusCreation).Append("\n");
@@ -337,6 +349,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceLevelTarget.Equals(other.ServiceLevelTarget)
                 ) &&
                 (
+                    this.RuleSettings == other.RuleSettings ||
+                    this.RuleSettings != null &&
+                    this.RuleSettings.Equals(other.RuleSettings)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -413,6 +430,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ServiceLevelTarget != null)
                     hash = hash * 59 + this.ServiceLevelTarget.GetHashCode();
+
+                if (this.RuleSettings != null)
+                    hash = hash * 59 + this.RuleSettings.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

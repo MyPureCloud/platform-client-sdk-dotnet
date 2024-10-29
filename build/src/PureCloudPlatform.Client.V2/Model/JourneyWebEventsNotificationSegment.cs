@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="SelfUri">SelfUri.</param>
-        public JourneyWebEventsNotificationSegment(string Id = null, string SelfUri = null)
+        public JourneyWebEventsNotificationSegment(Guid? Id = null, string SelfUri = null)
         {
             this.Id = Id;
             this.SelfUri = SelfUri;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public Guid? Id { get; set; }
 
 
 

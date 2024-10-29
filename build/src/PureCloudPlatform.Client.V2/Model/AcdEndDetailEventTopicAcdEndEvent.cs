@@ -577,7 +577,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
         /// <param name="UtilizationLabel">UtilizationLabel.</param>
         /// <param name="FlowType">FlowType.</param>
-        public AcdEndDetailEventTopicAcdEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, AcdOutcomeEnum? AcdOutcome = null, string AnsweredUserId = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingUserIds = null, int? RoutingPriority = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, string FlowType = null)
+        public AcdEndDetailEventTopicAcdEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, AcdOutcomeEnum? AcdOutcome = null, string AnsweredUserId = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, List<Guid?> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<Guid?> RequestedRoutingUserIds = null, int? RoutingPriority = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, string FlowType = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -768,7 +768,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RequestedRoutingSkillIds
         /// </summary>
         [DataMember(Name="requestedRoutingSkillIds", EmitDefaultValue=false)]
-        public List<string> RequestedRoutingSkillIds { get; set; }
+        public List<Guid?> RequestedRoutingSkillIds { get; set; }
 
 
 
@@ -784,7 +784,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RequestedRoutingUserIds
         /// </summary>
         [DataMember(Name="requestedRoutingUserIds", EmitDefaultValue=false)]
-        public List<string> RequestedRoutingUserIds { get; set; }
+        public List<Guid?> RequestedRoutingUserIds { get; set; }
 
 
 

@@ -11,7 +11,7 @@
 | **Description** | **string** | Description of the integration type. | [optional] |
 | **Provider** | **string** | PureCloud provider of the integration type. | [optional] |
 | **Category** | **string** | Category describing the integration type. | [optional] |
-| **Images** | [**List&lt;UserImage&gt;**](UserImage) | Collection of logos. | [optional] |
+| **Images** | [**List&lt;Image&gt;**](Image) | Collection of logos. | [optional] |
 | **ConfigPropertiesSchemaUri** | **string** | URI of the schema describing the key-value properties needed to configure an integration of this type. | [optional] |
 | **ConfigAdvancedSchemaUri** | **string** | URI of the schema describing the advanced JSON document needed to configure an integration of this type. | [optional] |
 | **HelpUri** | **string** | URI of a page with more information about the integration type | [optional] |
@@ -33,4 +33,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

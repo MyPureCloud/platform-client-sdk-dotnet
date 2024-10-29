@@ -152,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapUpCodes">WrapUpCodes.</param>
         /// <param name="TriggerSource">TriggerSource.</param>
         /// <param name="LastEditedBy">LastEditedBy.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(string ConversationId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, string SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null)
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null)
         {
             this.ConversationId = ConversationId;
             this.Participants = Participants;
@@ -178,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
-        public string ConversationId { get; set; }
+        public Guid? ConversationId { get; set; }
 
 
 
@@ -214,7 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SummaryId
         /// </summary>
         [DataMember(Name="summaryId", EmitDefaultValue=false)]
-        public string SummaryId { get; set; }
+        public Guid? SummaryId { get; set; }
 
 
 

@@ -840,9 +840,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>DashboardUserListing</returns>
         
-        DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+        DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
 
         /// <summary>
         /// Get dashboards summary for users in a org
@@ -856,9 +857,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>ApiResponse of DashboardUserListing</returns>
         
-        ApiResponse<DashboardUserListing> GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+        ApiResponse<DashboardUserListing> GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
 
         /// <summary>
         /// Get all view export requests for a user
@@ -977,10 +979,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>DashboardConfigurationListing</returns>
         
-        DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
+        DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null);
 
         /// <summary>
         /// Get list of dashboards for an user
@@ -995,10 +998,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>ApiResponse of DashboardConfigurationListing</returns>
         
-        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
+        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null);
 
         /// <summary>
         /// Get status for async query for resolution aggregates
@@ -2045,7 +2049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RateLimitAggregateQueryResponse> PostAnalyticsRatelimitsAggregatesQueryWithHttpInfo (RateLimitAggregationQuery body);
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s)
+        /// Bulk soft delete dashboards owned by other user(s)
         /// </summary>
         /// <remarks>
         /// 
@@ -2057,7 +2061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void PostAnalyticsReportingDashboardsUsersBulkRemove (List<string> body);
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s)
+        /// Bulk soft delete dashboards owned by other user(s)
         /// </summary>
         /// <remarks>
         /// 
@@ -2093,7 +2097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ReportingExportJobResponse> PostAnalyticsReportingExportsWithHttpInfo (ReportingExportJobRequest body);
 
         /// <summary>
-        /// Bulk remove dashboard configurations
+        /// Bulk soft delete dashboard configurations
         /// </summary>
         /// <remarks>
         /// 
@@ -2105,7 +2109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void PostAnalyticsReportingSettingsDashboardsBulkRemove (DashboardConfigurationBulkRequest body);
 
         /// <summary>
-        /// Bulk remove dashboard configurations
+        /// Bulk soft delete dashboard configurations
         /// </summary>
         /// <remarks>
         /// 
@@ -2275,7 +2279,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2288,7 +2291,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -3376,9 +3378,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>Task of DashboardUserListing</returns>
         
-        System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+        System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
 
         /// <summary>
         /// Get dashboards summary for users in a org
@@ -3392,9 +3395,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>Task of ApiResponse (DashboardUserListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+        System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
 
         /// <summary>
         /// Get all view export requests for a user
@@ -3513,10 +3517,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of DashboardConfigurationListing</returns>
         
-        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
+        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null);
 
         /// <summary>
         /// Get list of dashboards for an user
@@ -3531,10 +3536,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null);
 
         /// <summary>
         /// Get status for async query for resolution aggregates
@@ -4581,7 +4587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RateLimitAggregateQueryResponse>> PostAnalyticsRatelimitsAggregatesQueryAsyncWithHttpInfo (RateLimitAggregationQuery body);
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s)
+        /// Bulk soft delete dashboards owned by other user(s)
         /// </summary>
         /// <remarks>
         /// 
@@ -4593,7 +4599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task PostAnalyticsReportingDashboardsUsersBulkRemoveAsync (List<string> body);
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s)
+        /// Bulk soft delete dashboards owned by other user(s)
         /// </summary>
         /// <remarks>
         /// 
@@ -4629,7 +4635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ReportingExportJobResponse>> PostAnalyticsReportingExportsAsyncWithHttpInfo (ReportingExportJobRequest body);
 
         /// <summary>
-        /// Bulk remove dashboard configurations
+        /// Bulk soft delete dashboard configurations
         /// </summary>
         /// <remarks>
         /// 
@@ -4641,7 +4647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task PostAnalyticsReportingSettingsDashboardsBulkRemoveAsync (DashboardConfigurationBulkRequest body);
 
         /// <summary>
-        /// Bulk remove dashboard configurations
+        /// Bulk soft delete dashboard configurations
         /// </summary>
         /// <remarks>
         /// 
@@ -4811,7 +4817,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -4824,7 +4829,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -11791,11 +11795,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>DashboardUserListing</returns>
         
-        public DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        public DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
         {
-             ApiResponse<DashboardUserListing> localVarResponse = GetAnalyticsReportingDashboardsUsersWithHttpInfo(sortBy, pageNumber, pageSize, id, state);
+             ApiResponse<DashboardUserListing> localVarResponse = GetAnalyticsReportingDashboardsUsersWithHttpInfo(sortBy, pageNumber, pageSize, id, state, deletedOnly);
              return localVarResponse.Data;
         }
 
@@ -11809,9 +11814,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>ApiResponse of DashboardUserListing</returns>
         
-        public ApiResponse< DashboardUserListing > GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        public ApiResponse< DashboardUserListing > GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
         { 
 
             var localVarPath = "/api/v2/analytics/reporting/dashboards/users";
@@ -11851,6 +11857,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (deletedOnly != null) localVarQueryParams.Add(new Tuple<string, string>("deletedOnly", this.Configuration.ApiClient.ParameterToString(deletedOnly)));
 
             // Header params
 
@@ -11905,11 +11912,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>Task of DashboardUserListing</returns>
         
-        public async System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        public async System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
         {
-             ApiResponse<DashboardUserListing> localVarResponse = await GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo(sortBy, pageNumber, pageSize, id, state);
+             ApiResponse<DashboardUserListing> localVarResponse = await GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo(sortBy, pageNumber, pageSize, id, state, deletedOnly);
              return localVarResponse.Data;
 
         }
@@ -11924,9 +11932,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
+        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
         /// <returns>Task of ApiResponse (DashboardUserListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
         { 
 
             var localVarPath = "/api/v2/analytics/reporting/dashboards/users";
@@ -11966,6 +11975,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (deletedOnly != null) localVarQueryParams.Add(new Tuple<string, string>("deletedOnly", this.Configuration.ApiClient.ParameterToString(deletedOnly)));
 
             // Header params
 
@@ -12884,12 +12894,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>DashboardConfigurationListing</returns>
         
-        public DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
+        public DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null)
         {
-             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name);
+             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, deletedOnly, name);
              return localVarResponse.Data;
         }
 
@@ -12904,10 +12915,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>ApiResponse of DashboardConfigurationListing</returns>
         
-        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
+        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -12951,6 +12963,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (publicOnly != null) localVarQueryParams.Add(new Tuple<string, string>("publicOnly", this.Configuration.ApiClient.ParameterToString(publicOnly)));
             if (favoriteOnly != null) localVarQueryParams.Add(new Tuple<string, string>("favoriteOnly", this.Configuration.ApiClient.ParameterToString(favoriteOnly)));
+            if (deletedOnly != null) localVarQueryParams.Add(new Tuple<string, string>("deletedOnly", this.Configuration.ApiClient.ParameterToString(deletedOnly)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
@@ -13007,12 +13020,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of DashboardConfigurationListing</returns>
         
-        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
+        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null)
         {
-             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name);
+             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, deletedOnly, name);
              return localVarResponse.Data;
 
         }
@@ -13028,10 +13042,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="deletedOnly">If true, retrieve only deleted dashboards that are still recoverable (optional)</param>
         /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, bool? deletedOnly = null, string name = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -13076,6 +13091,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (publicOnly != null) localVarQueryParams.Add(new Tuple<string, string>("publicOnly", this.Configuration.ApiClient.ParameterToString(publicOnly)));
             if (favoriteOnly != null) localVarQueryParams.Add(new Tuple<string, string>("favoriteOnly", this.Configuration.ApiClient.ParameterToString(favoriteOnly)));
+            if (deletedOnly != null) localVarQueryParams.Add(new Tuple<string, string>("deletedOnly", this.Configuration.ApiClient.ParameterToString(deletedOnly)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
@@ -22278,7 +22294,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s) 
+        /// Bulk soft delete dashboards owned by other user(s) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22291,7 +22307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s) 
+        /// Bulk soft delete dashboards owned by other user(s) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22387,7 +22403,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s) 
+        /// Bulk soft delete dashboards owned by other user(s) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22401,7 +22417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk delete dashboards owned by other user(s) 
+        /// Bulk soft delete dashboards owned by other user(s) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22722,7 +22738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Bulk remove dashboard configurations 
+        /// Bulk soft delete dashboard configurations 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22735,7 +22751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk remove dashboard configurations 
+        /// Bulk soft delete dashboard configurations 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22831,7 +22847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Bulk remove dashboard configurations 
+        /// Bulk soft delete dashboard configurations 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22845,7 +22861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk remove dashboard configurations 
+        /// Bulk soft delete dashboard configurations 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24307,7 +24323,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for task management aggregates 
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24322,7 +24337,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for task management aggregates 
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24419,7 +24433,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for task management aggregates 
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24435,7 +24448,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for task management aggregates 
         /// 
-        /// PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>

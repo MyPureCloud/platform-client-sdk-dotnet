@@ -13,39 +13,29 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// UserImage
+    /// RecordingTemplateBody
     /// </summary>
     [DataContract]
-    public partial class UserImage :  IEquatable<UserImage>
+    public partial class RecordingTemplateBody :  IEquatable<RecordingTemplateBody>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserImage" /> class.
+        /// Initializes a new instance of the <see cref="RecordingTemplateBody" /> class.
         /// </summary>
-        /// <param name="Resolution">Height and/or width of image. ex: 640x480 or x128.</param>
-        /// <param name="ImageUri">ImageUri.</param>
-        public UserImage(string Resolution = null, string ImageUri = null)
+        /// <param name="Text">Template parameters for placeholders in template..</param>
+        public RecordingTemplateBody(string Text = null)
         {
-            this.Resolution = Resolution;
-            this.ImageUri = ImageUri;
+            this.Text = Text;
             
         }
         
 
 
         /// <summary>
-        /// Height and/or width of image. ex: 640x480 or x128
+        /// Template parameters for placeholders in template.
         /// </summary>
-        /// <value>Height and/or width of image. ex: 640x480 or x128</value>
-        [DataMember(Name="resolution", EmitDefaultValue=false)]
-        public string Resolution { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets ImageUri
-        /// </summary>
-        [DataMember(Name="imageUri", EmitDefaultValue=false)]
-        public string ImageUri { get; set; }
+        /// <value>Template parameters for placeholders in template.</value>
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
 
 
         /// <summary>
@@ -55,10 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UserImage {\n");
+            sb.Append("class RecordingTemplateBody {\n");
 
-            sb.Append("  Resolution: ").Append(Resolution).Append("\n");
-            sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,15 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UserImage);
+            return this.Equals(obj as RecordingTemplateBody);
         }
 
         /// <summary>
-        /// Returns true if UserImage instances are equal
+        /// Returns true if RecordingTemplateBody instances are equal
         /// </summary>
-        /// <param name="other">Instance of UserImage to be compared</param>
+        /// <param name="other">Instance of RecordingTemplateBody to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UserImage other)
+        public bool Equals(RecordingTemplateBody other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -100,14 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Resolution == other.Resolution ||
-                    this.Resolution != null &&
-                    this.Resolution.Equals(other.Resolution)
-                ) &&
-                (
-                    this.ImageUri == other.ImageUri ||
-                    this.ImageUri != null &&
-                    this.ImageUri.Equals(other.ImageUri)
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
                 );
         }
 
@@ -122,11 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Resolution != null)
-                    hash = hash * 59 + this.Resolution.GetHashCode();
-
-                if (this.ImageUri != null)
-                    hash = hash * 59 + this.ImageUri.GetHashCode();
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
 
                 return hash;
             }

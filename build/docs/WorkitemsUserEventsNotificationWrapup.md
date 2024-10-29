@@ -7,10 +7,10 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Code** | **string** |  | [optional] |
-| **UserId** | **string** |  | [optional] |
+| **UserId** | **Guid?** |  | [optional] |
 | **Op** | **string** |  | [optional] |
 | **Action** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

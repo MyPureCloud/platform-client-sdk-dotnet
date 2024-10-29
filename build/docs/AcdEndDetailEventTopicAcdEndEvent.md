@@ -29,9 +29,9 @@
 | **AnsweredUserId** | **string** |  | [optional] |
 | **RequestedRoutings** | **List&lt;string&gt;** |  | [optional] |
 | **UsedRouting** | **string** |  | [optional] |
-| **RequestedRoutingSkillIds** | **List&lt;string&gt;** |  | [optional] |
+| **RequestedRoutingSkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
 | **RequestedLanguageId** | **string** |  | [optional] |
-| **RequestedRoutingUserIds** | **List&lt;string&gt;** |  | [optional] |
+| **RequestedRoutingUserIds** | **List&lt;Guid?&gt;** |  | [optional] |
 | **RoutingPriority** | **int?** |  | [optional] |
 | **ConnectedDurationMs** | **int?** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
@@ -41,4 +41,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

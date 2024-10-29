@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="SystemPresence">SystemPresence.</param>
-        public V2IntegrationPresenceEventOrganizationPresence(string Id = null, string SystemPresence = null)
+        public V2IntegrationPresenceEventOrganizationPresence(Guid? Id = null, string SystemPresence = null)
         {
             this.Id = Id;
             this.SystemPresence = SystemPresence;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public Guid? Id { get; set; }
 
 
 

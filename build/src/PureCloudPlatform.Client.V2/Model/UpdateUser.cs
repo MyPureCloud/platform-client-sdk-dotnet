@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Certifications">Certifications.</param>
         /// <param name="Biography">Biography.</param>
         /// <param name="EmployerInfo">EmployerInfo.</param>
-        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, string PreferredName = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null, bool? AcdAutoAnswer = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null)
+        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, string PreferredName = null, string Manager = null, List<Image> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null, bool? AcdAutoAnswer = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null)
         {
             this.Name = Name;
             this.Chat = Chat;
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
-        public List<UserImage> Images { get; set; }
+        public List<Image> Images { get; set; }
 
 
 

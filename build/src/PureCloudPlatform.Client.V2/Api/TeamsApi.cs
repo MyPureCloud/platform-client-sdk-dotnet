@@ -74,9 +74,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>Team</returns>
         
-        Team GetTeam (string teamId);
+        Team GetTeam (string teamId, string expand = null);
 
         /// <summary>
         /// Get team
@@ -86,9 +87,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>ApiResponse of Team</returns>
         
-        ApiResponse<Team> GetTeamWithHttpInfo (string teamId);
+        ApiResponse<Team> GetTeamWithHttpInfo (string teamId, string expand = null);
 
         /// <summary>
         /// Get team membership
@@ -344,9 +346,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>Task of Team</returns>
         
-        System.Threading.Tasks.Task<Team> GetTeamAsync (string teamId);
+        System.Threading.Tasks.Task<Team> GetTeamAsync (string teamId, string expand = null);
 
         /// <summary>
         /// Get team
@@ -356,9 +359,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Team>> GetTeamAsyncWithHttpInfo (string teamId);
+        System.Threading.Tasks.Task<ApiResponse<Team>> GetTeamAsyncWithHttpInfo (string teamId, string expand = null);
 
         /// <summary>
         /// Get team membership
@@ -1085,11 +1089,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>Team</returns>
         
-        public Team GetTeam (string teamId)
+        public Team GetTeam (string teamId, string expand = null)
         {
-             ApiResponse<Team> localVarResponse = GetTeamWithHttpInfo(teamId);
+             ApiResponse<Team> localVarResponse = GetTeamWithHttpInfo(teamId, expand);
              return localVarResponse.Data;
         }
 
@@ -1099,9 +1104,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>ApiResponse of Team</returns>
         
-        public ApiResponse< Team > GetTeamWithHttpInfo (string teamId)
+        public ApiResponse< Team > GetTeamWithHttpInfo (string teamId, string expand = null)
         { 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
@@ -1140,6 +1146,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -1190,11 +1197,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>Task of Team</returns>
         
-        public async System.Threading.Tasks.Task<Team> GetTeamAsync (string teamId)
+        public async System.Threading.Tasks.Task<Team> GetTeamAsync (string teamId, string expand = null)
         {
-             ApiResponse<Team> localVarResponse = await GetTeamAsyncWithHttpInfo(teamId);
+             ApiResponse<Team> localVarResponse = await GetTeamAsyncWithHttpInfo(teamId, expand);
              return localVarResponse.Data;
 
         }
@@ -1205,9 +1213,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
+        /// <param name="expand">Expand the division name (optional)</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Team>> GetTeamAsyncWithHttpInfo (string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<Team>> GetTeamAsyncWithHttpInfo (string teamId, string expand = null)
         { 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
@@ -1247,6 +1256,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 

@@ -288,6 +288,7 @@ docs/ArrayNode.md
 docs/Article.md
 docs/ArticleContent.md
 docs/ArticleContentBody.md
+docs/ArticlesFilter.md
 docs/AssessmentForm.md
 docs/AssessmentFormQuestion.md
 docs/AssessmentFormQuestionGroup.md
@@ -648,8 +649,10 @@ docs/CardAction.md
 docs/CarrierServicesApi.json
 docs/CarrierServicesApi.md
 docs/CategoriesEntityListing.md
+docs/CategoriesFilter.md
 docs/Category.md
 docs/CategoryCreateRequest.md
+docs/CategoryEntity.md
 docs/CategoryEntityListing.md
 docs/CategoryListing.md
 docs/CategoryReference.md
@@ -675,6 +678,9 @@ docs/ChatBadgeTopicBadgeEntity.md
 docs/ChatBadgeTopicChatBadge.md
 docs/ChatConversation.md
 docs/ChatConversationEntityListing.md
+docs/ChatFavorite.md
+docs/ChatItem.md
+docs/ChatItemCursorListing.md
 docs/ChatMediaParticipant.md
 docs/ChatMediaPolicy.md
 docs/ChatMediaPolicyConditions.md
@@ -682,10 +688,12 @@ docs/ChatMessage.md
 docs/ChatMessageEntityListing.md
 docs/ChatMessageResponse.md
 docs/ChatMessageUser.md
+docs/ChatPresence.md
 docs/ChatReaction.md
 docs/ChatReactionUpdate.md
 docs/ChatSendMessageResponse.md
 docs/ChatSettings.md
+docs/ChatUserRef.md
 docs/ChatUserSettings.md
 docs/Check.md
 docs/ClientApp.md
@@ -820,6 +828,8 @@ docs/ContentButtonResponse.md
 docs/ContentCard.md
 docs/ContentCardAction.md
 docs/ContentCarousel.md
+docs/ContentFileRequest.md
+docs/ContentFileResponse.md
 docs/ContentFilterItem.md
 docs/ContentGeneric.md
 docs/ContentList.md
@@ -1765,6 +1775,8 @@ docs/DocumentBodyListWithHighlight.md
 docs/DocumentBodyParagraph.md
 docs/DocumentBodyParagraphProperties.md
 docs/DocumentBodyParagraphWithHighlight.md
+docs/DocumentBodyRequest.md
+docs/DocumentBodyResponse.md
 docs/DocumentBodyTable.md
 docs/DocumentBodyTableCaptionBlock.md
 docs/DocumentBodyTableCaptionItem.md
@@ -1801,10 +1813,11 @@ docs/DocumentTextProperties.md
 docs/DocumentThumbnail.md
 docs/DocumentUpdate.md
 docs/DocumentUpload.md
-docs/DocumentVariation.md
 docs/DocumentVariationAnswer.md
 docs/DocumentVariationContext.md
-docs/DocumentVariationListing.md
+docs/DocumentVariationRequest.md
+docs/DocumentVariationResponse.md
+docs/DocumentVariationResponseListing.md
 docs/DocumentationResult.md
 docs/DocumentationSearchCriteria.md
 docs/DocumentationSearchRequest.md
@@ -1924,6 +1937,7 @@ docs/EmailInitialConfiguration.md
 docs/EmailMediaParticipant.md
 docs/EmailMediaPolicy.md
 docs/EmailMediaPolicyConditions.md
+docs/EmailMediaSettings.md
 docs/EmailMessage.md
 docs/EmailMessagePreview.md
 docs/EmailMessagePreviewListing.md
@@ -3434,6 +3448,7 @@ docs/GetUserrecordingsSummary-example.txt
 docs/GetUsers-example.txt
 docs/GetUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/GetUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/GetUsersChatsMe-example.txt
 docs/GetUsersDevelopmentActivities-example.txt
 docs/GetUsersDevelopmentActivitiesMe-example.txt
 docs/GetUsersDevelopmentActivity-example.txt
@@ -3456,6 +3471,8 @@ docs/GetVoicemailPolicy-example.txt
 docs/GetVoicemailQueueMessages-example.txt
 docs/GetVoicemailSearch-example.txt
 docs/GetVoicemailSearch-example.txt
+docs/GetVoicemailUserMailbox-example.txt
+docs/GetVoicemailUserMessages-example.txt
 docs/GetVoicemailUserpolicy-example.txt
 docs/GetWebchatDeployment-example.txt
 docs/GetWebchatDeployments-example.txt
@@ -3664,6 +3681,7 @@ docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
+docs/Image.md
 docs/ImapSettings.md
 docs/ImportError.md
 docs/ImportForecastResponse.md
@@ -3945,6 +3963,8 @@ docs/KnowledgeDocumentBulkVersionAddEntity.md
 docs/KnowledgeDocumentBulkVersionAddRequest.md
 docs/KnowledgeDocumentContentUpload.md
 docs/KnowledgeDocumentCopy.md
+docs/KnowledgeDocumentCreateRequest.md
+docs/KnowledgeDocumentDescriptor.md
 docs/KnowledgeDocumentFeedback.md
 docs/KnowledgeDocumentFeedbackResponse.md
 docs/KnowledgeDocumentFeedbackResponseListing.md
@@ -4033,11 +4053,13 @@ docs/KnowledgeTraining.md
 docs/KpiResult.md
 docs/Label.md
 docs/LabelCreateRequest.md
+docs/LabelEntity.md
 docs/LabelListing.md
 docs/LabelResponse.md
 docs/LabelUpdateRequest.md
 docs/LabelUtilizationRequest.md
 docs/LabelUtilizationResponse.md
+docs/LabelsFilter.md
 docs/Language.md
 docs/LanguageEntityListing.md
 docs/LanguageOverride.md
@@ -4365,6 +4387,7 @@ docs/NamedEntityTypeBinding.md
 docs/NamedEntityTypeDefinition.md
 docs/NamedEntityTypeItem.md
 docs/NamedEntityTypeMechanism.md
+docs/NamedEntityTypeMechanismExample.md
 docs/NamespaceDocs.md
 docs/NetworkConnectivity.md
 docs/NextOccurrenceDetails.md
@@ -5294,6 +5317,8 @@ docs/PostOutboundCallabletimesets-example.txt
 docs/PostOutboundCallanalysisresponsesets-example.txt
 docs/PostOutboundCampaignAgentownedmappingpreview-example.txt
 docs/PostOutboundCampaignCallbackSchedule-example.txt
+docs/PostOutboundCampaignStart-example.txt
+docs/PostOutboundCampaignStop-example.txt
 docs/PostOutboundCampaignrules-example.txt
 docs/PostOutboundCampaigns-example.txt
 docs/PostOutboundCampaignsProgress-example.txt
@@ -5320,6 +5345,8 @@ docs/PostOutboundDnclists-example.txt
 docs/PostOutboundFilespecificationtemplates-example.txt
 docs/PostOutboundImporttemplates-example.txt
 docs/PostOutboundImporttemplatesBulkAdd-example.txt
+docs/PostOutboundMessagingcampaignStart-example.txt
+docs/PostOutboundMessagingcampaignStop-example.txt
 docs/PostOutboundMessagingcampaigns-example.txt
 docs/PostOutboundMessagingcampaignsProgress-example.txt
 docs/PostOutboundRulesets-example.txt
@@ -6193,6 +6220,7 @@ docs/RecordingApi.json
 docs/RecordingApi.md
 docs/RecordingArchiveRestoreTopicMediaResult.md
 docs/RecordingArchiveRestoreTopicRecording.md
+docs/RecordingAttachment.md
 docs/RecordingButtonComponent.md
 docs/RecordingContentActions.md
 docs/RecordingContentStory.md
@@ -6207,9 +6235,14 @@ docs/RecordingJobFailedRecording.md
 docs/RecordingJobsQuery.md
 docs/RecordingMessagingMessage.md
 docs/RecordingMetadata.md
+docs/RecordingNotificationTemplate.md
 docs/RecordingRetention.md
 docs/RecordingRetentionCursorEntityListing.md
 docs/RecordingSettings.md
+docs/RecordingTemplateBody.md
+docs/RecordingTemplateButton.md
+docs/RecordingTemplateFooter.md
+docs/RecordingTemplateHeader.md
 docs/RecordingTranscodeCompleteTopicMediaResult.md
 docs/RecordingTranscodeCompleteTopicRecording.md
 docs/RecordingUploadReport.md
@@ -7012,7 +7045,6 @@ docs/UserExternalIdentifier.md
 docs/UserGreetingEventGreeting.md
 docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
-docs/UserImage.md
 docs/UserInsightsTrend.md
 docs/UserInsightsTrendMetricItem.md
 docs/UserInsightsTrendTotalItem.md
@@ -7221,6 +7253,7 @@ docs/WebDeploymentConfigurationVersion.md
 docs/WebDeploymentConfigurationVersionEntityListing.md
 docs/WebDeploymentConfigurationVersionEntityRef.md
 docs/WebDeploymentConfigurationVersionResponse.md
+docs/WebDeploymentFlowEntityRef.md
 docs/WebDeploymentHeadlessMode.md
 docs/WebDeploymentsApi.json
 docs/WebDeploymentsApi.md
@@ -7990,6 +8023,7 @@ src/PureCloudPlatform.Client.V2/Model/ArrayNode.cs
 src/PureCloudPlatform.Client.V2/Model/Article.cs
 src/PureCloudPlatform.Client.V2/Model/ArticleContent.cs
 src/PureCloudPlatform.Client.V2/Model/ArticleContentBody.cs
+src/PureCloudPlatform.Client.V2/Model/ArticlesFilter.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentForm.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentFormQuestion.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentFormQuestionGroup.cs
@@ -8342,8 +8376,10 @@ src/PureCloudPlatform.Client.V2/Model/CannedResponseLibraries.cs
 src/PureCloudPlatform.Client.V2/Model/Card.cs
 src/PureCloudPlatform.Client.V2/Model/CardAction.cs
 src/PureCloudPlatform.Client.V2/Model/CategoriesEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/CategoriesFilter.cs
 src/PureCloudPlatform.Client.V2/Model/Category.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryCreateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CategoryEntity.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryListing.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryReference.cs
@@ -8367,6 +8403,9 @@ src/PureCloudPlatform.Client.V2/Model/ChatBadgeTopicBadgeEntity.cs
 src/PureCloudPlatform.Client.V2/Model/ChatBadgeTopicChatBadge.cs
 src/PureCloudPlatform.Client.V2/Model/ChatConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ChatConversationEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/ChatFavorite.cs
+src/PureCloudPlatform.Client.V2/Model/ChatItem.cs
+src/PureCloudPlatform.Client.V2/Model/ChatItemCursorListing.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMediaPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMediaPolicyConditions.cs
@@ -8374,10 +8413,12 @@ src/PureCloudPlatform.Client.V2/Model/ChatMessage.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessageEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessageResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessageUser.cs
+src/PureCloudPlatform.Client.V2/Model/ChatPresence.cs
 src/PureCloudPlatform.Client.V2/Model/ChatReaction.cs
 src/PureCloudPlatform.Client.V2/Model/ChatReactionUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/ChatSendMessageResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChatSettings.cs
+src/PureCloudPlatform.Client.V2/Model/ChatUserRef.cs
 src/PureCloudPlatform.Client.V2/Model/ChatUserSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Check.cs
 src/PureCloudPlatform.Client.V2/Model/ClientApp.cs
@@ -8510,6 +8551,8 @@ src/PureCloudPlatform.Client.V2/Model/ContentButtonResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContentCard.cs
 src/PureCloudPlatform.Client.V2/Model/ContentCardAction.cs
 src/PureCloudPlatform.Client.V2/Model/ContentCarousel.cs
+src/PureCloudPlatform.Client.V2/Model/ContentFileRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ContentFileResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContentFilterItem.cs
 src/PureCloudPlatform.Client.V2/Model/ContentGeneric.cs
 src/PureCloudPlatform.Client.V2/Model/ContentList.cs
@@ -9163,6 +9206,8 @@ src/PureCloudPlatform.Client.V2/Model/DocumentBodyListWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraph.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraphProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraphWithHighlight.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyResponse.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTable.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCaptionBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCaptionItem.cs
@@ -9199,10 +9244,11 @@ src/PureCloudPlatform.Client.V2/Model/DocumentTextProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentThumbnail.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentUpload.cs
-src/PureCloudPlatform.Client.V2/Model/DocumentVariation.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentVariationAnswer.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentVariationContext.cs
-src/PureCloudPlatform.Client.V2/Model/DocumentVariationListing.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentVariationRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentVariationResponse.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentVariationResponseListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentationResult.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentationSearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentationSearchRequest.cs
@@ -9320,6 +9366,7 @@ src/PureCloudPlatform.Client.V2/Model/EmailInitialConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMediaPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMediaPolicyConditions.cs
+src/PureCloudPlatform.Client.V2/Model/EmailMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMessage.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMessagePreview.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMessagePreviewListing.cs
@@ -9784,6 +9831,7 @@ src/PureCloudPlatform.Client.V2/Model/IdentityResolutionQueueConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdleEventTrigger.cs
 src/PureCloudPlatform.Client.V2/Model/IdleTokenTimeout.cs
 src/PureCloudPlatform.Client.V2/Model/IgnoredActivityCategories.cs
+src/PureCloudPlatform.Client.V2/Model/Image.cs
 src/PureCloudPlatform.Client.V2/Model/ImapSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ImportError.cs
 src/PureCloudPlatform.Client.V2/Model/ImportForecastResponse.cs
@@ -10057,6 +10105,8 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkVersionAddEntity.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkVersionAddRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentContentUpload.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentCopy.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentCreateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentDescriptor.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentFeedbackResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentFeedbackResponseListing.cs
@@ -10145,11 +10195,13 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeTraining.cs
 src/PureCloudPlatform.Client.V2/Model/KpiResult.cs
 src/PureCloudPlatform.Client.V2/Model/Label.cs
 src/PureCloudPlatform.Client.V2/Model/LabelCreateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/LabelEntity.cs
 src/PureCloudPlatform.Client.V2/Model/LabelListing.cs
 src/PureCloudPlatform.Client.V2/Model/LabelResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LabelUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LabelUtilizationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LabelUtilizationResponse.cs
+src/PureCloudPlatform.Client.V2/Model/LabelsFilter.cs
 src/PureCloudPlatform.Client.V2/Model/Language.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageOverride.cs
@@ -10461,6 +10513,7 @@ src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeBinding.cs
 src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeItem.cs
 src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeMechanism.cs
+src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeMechanismExample.cs
 src/PureCloudPlatform.Client.V2/Model/NamespaceDocs.cs
 src/PureCloudPlatform.Client.V2/Model/NetworkConnectivity.cs
 src/PureCloudPlatform.Client.V2/Model/NextOccurrenceDetails.cs
@@ -11140,6 +11193,7 @@ src/PureCloudPlatform.Client.V2/Model/RecordingAnnotationFlow.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingAnnotationQueue.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingArchiveRestoreTopicMediaResult.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingArchiveRestoreTopicRecording.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingAttachment.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingButtonComponent.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingContentActions.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingContentStory.cs
@@ -11154,9 +11208,14 @@ src/PureCloudPlatform.Client.V2/Model/RecordingJobFailedRecording.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingJobsQuery.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMessagingMessage.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingNotificationTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingRetention.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingRetentionCursorEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingSettings.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingTemplateBody.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingTemplateButton.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingTemplateFooter.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingTemplateHeader.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTranscodeCompleteTopicMediaResult.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTranscodeCompleteTopicRecording.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingUploadReport.cs
@@ -11923,7 +11982,6 @@ src/PureCloudPlatform.Client.V2/Model/UserExternalIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreeting.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreetingAudioFile.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreetingOwner.cs
-src/PureCloudPlatform.Client.V2/Model/UserImage.cs
 src/PureCloudPlatform.Client.V2/Model/UserInsightsTrend.cs
 src/PureCloudPlatform.Client.V2/Model/UserInsightsTrendMetricItem.cs
 src/PureCloudPlatform.Client.V2/Model/UserInsightsTrendTotalItem.cs
@@ -12122,6 +12180,7 @@ src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersion.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersionEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersionResponse.cs
+src/PureCloudPlatform.Client.V2/Model/WebDeploymentFlowEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentHeadlessMode.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentsAuthorizationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody.cs

@@ -113,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateSessionStart">DateSessionStart.</param>
         /// <param name="DateSessionEnd">DateSessionEnd.</param>
         /// <param name="AssignmentSegments">AssignmentSegments.</param>
-        public WorkitemsUserEventsNotificationSession(TypeEnum? Type = null, string Id = null, StatusEnum? Status = null, string DateSessionStart = null, string DateSessionEnd = null, List<WorkitemsUserEventsNotificationAssignmentSegment> AssignmentSegments = null)
+        public WorkitemsUserEventsNotificationSession(TypeEnum? Type = null, Guid? Id = null, StatusEnum? Status = null, string DateSessionStart = null, string DateSessionEnd = null, List<WorkitemsUserEventsNotificationAssignmentSegment> AssignmentSegments = null)
         {
             this.Type = Type;
             this.Id = Id;
@@ -132,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public Guid? Id { get; set; }
 
 
 

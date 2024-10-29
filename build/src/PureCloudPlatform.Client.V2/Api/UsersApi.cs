@@ -1255,6 +1255,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
+        /// Get chats for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>ChatItemCursorListing</returns>
+        
+        ChatItemCursorListing GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, string after = null);
+
+        /// <summary>
+        /// Get chats for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>ApiResponse of ChatItemCursorListing</returns>
+        
+        ApiResponse<ChatItemCursorListing> GetUsersChatsMeWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null);
+
+        /// <summary>
         /// Get list of Development Activities
         /// </summary>
         /// <remarks>
@@ -3835,6 +3863,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+
+        /// <summary>
+        /// Get chats for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>Task of ChatItemCursorListing</returns>
+        
+        System.Threading.Tasks.Task<ChatItemCursorListing> GetUsersChatsMeAsync (bool? excludeClosed = null, bool? includePresence = null, string after = null);
+
+        /// <summary>
+        /// Get chats for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>Task of ApiResponse (ChatItemCursorListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null);
 
         /// <summary>
         /// Get list of Development Activities
@@ -15586,6 +15642,224 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get chats for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>ChatItemCursorListing</returns>
+        
+        public ChatItemCursorListing GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        {
+             ApiResponse<ChatItemCursorListing> localVarResponse = GetUsersChatsMeWithHttpInfo(excludeClosed, includePresence, after);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get chats for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>ApiResponse of ChatItemCursorListing</returns>
+        
+        public ApiResponse< ChatItemCursorListing > GetUsersChatsMeWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        { 
+
+            var localVarPath = "/api/v2/users/chats/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (excludeClosed != null) localVarQueryParams.Add(new Tuple<string, string>("excludeClosed", this.Configuration.ApiClient.ParameterToString(excludeClosed)));
+            if (includePresence != null) localVarQueryParams.Add(new Tuple<string, string>("includePresence", this.Configuration.ApiClient.ParameterToString(includePresence)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersChatsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersChatsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatItemCursorListing>(localVarStatusCode,
+                localVarHeaders,
+                (ChatItemCursorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatItemCursorListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get chats for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>Task of ChatItemCursorListing</returns>
+        
+        public async System.Threading.Tasks.Task<ChatItemCursorListing> GetUsersChatsMeAsync (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        {
+             ApiResponse<ChatItemCursorListing> localVarResponse = await GetUsersChatsMeAsyncWithHttpInfo(excludeClosed, includePresence, after);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get chats for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
+        /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="after">The key to start after (optional)</param>
+        /// <returns>Task of ApiResponse (ChatItemCursorListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        { 
+
+            var localVarPath = "/api/v2/users/chats/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (excludeClosed != null) localVarQueryParams.Add(new Tuple<string, string>("excludeClosed", this.Configuration.ApiClient.ParameterToString(excludeClosed)));
+            if (includePresence != null) localVarQueryParams.Add(new Tuple<string, string>("includePresence", this.Configuration.ApiClient.ParameterToString(includePresence)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersChatsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersChatsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatItemCursorListing>(localVarStatusCode,
+                localVarHeaders,
+                (ChatItemCursorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatItemCursorListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

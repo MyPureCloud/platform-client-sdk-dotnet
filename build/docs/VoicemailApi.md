@@ -21,6 +21,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetVoicemailPolicy**](#GetVoicemailPolicy) | **Get** /api/v2/voicemail/policy | Get a policy |
 | [**GetVoicemailQueueMessages**](#GetVoicemailQueueMessages) | **Get** /api/v2/voicemail/queues/{queueId}/messages | List voicemail messages |
 | [**GetVoicemailSearch**](#GetVoicemailSearch) | **Get** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
+| [**GetVoicemailUserMailbox**](#GetVoicemailUserMailbox) | **Get** /api/v2/voicemail/users/{userId}/mailbox | Get a user&#39;s mailbox information |
+| [**GetVoicemailUserMessages**](#GetVoicemailUserMessages) | **Get** /api/v2/voicemail/users/{userId}/messages | List voicemail messages |
 | [**GetVoicemailUserpolicy**](#GetVoicemailUserpolicy) | **Get** /api/v2/voicemail/userpolicies/{userId} | Get a user&#39;s voicemail policy |
 | [**PatchVoicemailGroupPolicy**](#PatchVoicemailGroupPolicy) | **Patch** /api/v2/voicemail/groups/{groupId}/policy | Update a group&#39;s voicemail policy |
 | [**PatchVoicemailMePolicy**](#PatchVoicemailMePolicy) | **Patch** /api/v2/voicemail/me/policy | Update the current user&#39;s voicemail policy |
@@ -946,6 +948,134 @@ namespace Example
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
+## GetVoicemailUserMailbox
+
+> [**VoicemailMailboxInfo**](VoicemailMailboxInfo) GetVoicemailUserMailbox (string userId)
+
+
+Get a user's mailbox information
+
+Requires ANY permissions: 
+
+* voicemail:mailbox:viewOther
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetVoicemailUserMailboxExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new VoicemailApi();
+            var userId = userId_example;  // string | userId
+
+            try
+            { 
+                // Get a user's mailbox information
+                VoicemailMailboxInfo result = apiInstance.GetVoicemailUserMailbox(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetVoicemailUserMailbox: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| userId |  |
+
+### Return type
+
+[**VoicemailMailboxInfo**](VoicemailMailboxInfo)
+
+
+## GetVoicemailUserMessages
+
+> [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing) GetVoicemailUserMessages (string userId, int? pageSize = null, int? pageNumber = null)
+
+
+List voicemail messages
+
+Requires ANY permissions: 
+
+* voicemail:voicemail:viewOther
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetVoicemailUserMessagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new VoicemailApi();
+            var userId = userId_example;  // string | User ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // List voicemail messages
+                VoicemailMessageEntityListing result = apiInstance.GetVoicemailUserMessages(userId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetVoicemailUserMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+
+### Return type
+
+[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing)
+
+
 ## GetVoicemailUserpolicy
 
 > [**VoicemailUserPolicy**](VoicemailUserPolicy) GetVoicemailUserpolicy (string userId)
@@ -1574,4 +1704,4 @@ namespace Example
 [**VoicemailUserPolicy**](VoicemailUserPolicy)
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

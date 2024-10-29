@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ForcedOff for "forced_off"
             /// </summary>
             [EnumMember(Value = "forced_off")]
-            ForcedOff
+            ForcedOff,
+            
+            /// <summary>
+            /// Enum ForcedStopping for "forced_stopping"
+            /// </summary>
+            [EnumMember(Value = "forced_stopping")]
+            ForcedStopping
         }
         /// <summary>
         /// The current status of the messaging campaign. A messaging campaign may be turned 'on' or 'off'.

@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Source">The reference to source associated with the document..</param>
         /// <param name="Readonly">Whether the document is read-only..</param>
         /// <param name="Variations">Variations of the document..</param>
-        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, string ExternalUrl = null, AddressableEntityRef Source = null, bool? Readonly = null, List<DocumentVariation> Variations = null)
+        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, string ExternalUrl = null, AddressableEntityRef Source = null, bool? Readonly = null, List<DocumentVariationResponse> Variations = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -281,7 +281,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Variations of the document.</value>
         [DataMember(Name="variations", EmitDefaultValue=false)]
-        public List<DocumentVariation> Variations { get; set; }
+        public List<DocumentVariationResponse> Variations { get; set; }
 
 
 

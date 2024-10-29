@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Message">Message.</param>
         /// <param name="CurrentDisplaySourceId">CurrentDisplaySourceId.</param>
         /// <param name="PreviousDisplaySourceId">PreviousDisplaySourceId.</param>
-        public V2IntegrationPresenceEventPresenceActivityEvent(string UserId = null, EventTypeEnum? EventType = null, string Source = null, DateTime? ModifiedDate = null, V2IntegrationPresenceEventOrganizationPresence PresenceDefinition = null, string Message = null, string CurrentDisplaySourceId = null, string PreviousDisplaySourceId = null)
+        public V2IntegrationPresenceEventPresenceActivityEvent(Guid? UserId = null, EventTypeEnum? EventType = null, string Source = null, DateTime? ModifiedDate = null, V2IntegrationPresenceEventOrganizationPresence PresenceDefinition = null, string Message = null, Guid? CurrentDisplaySourceId = null, Guid? PreviousDisplaySourceId = null)
         {
             this.UserId = UserId;
             this.EventType = EventType;
@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
-        public string UserId { get; set; }
+        public Guid? UserId { get; set; }
 
 
 
@@ -121,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CurrentDisplaySourceId
         /// </summary>
         [DataMember(Name="currentDisplaySourceId", EmitDefaultValue=false)]
-        public string CurrentDisplaySourceId { get; set; }
+        public Guid? CurrentDisplaySourceId { get; set; }
 
 
 
@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PreviousDisplaySourceId
         /// </summary>
         [DataMember(Name="previousDisplaySourceId", EmitDefaultValue=false)]
-        public string PreviousDisplaySourceId { get; set; }
+        public Guid? PreviousDisplaySourceId { get; set; }
 
 
         /// <summary>

@@ -28,8 +28,8 @@
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **UtilizationLabel** | **string** |  | [optional] |
 | **RoutingPriority** | **int?** |  | [optional] |
-| **RequestedRoutingSkillIds** | **List&lt;string&gt;** |  | [optional] |
+| **RequestedRoutingSkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

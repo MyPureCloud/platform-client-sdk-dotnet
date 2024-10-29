@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEnrichmentLanguage" /> class.
         /// </summary>
-        /// <param name="Language">The ISO 639-3 detected language code of this message. (required).</param>
+        /// <param name="Language">The IETF detected language code of this message. (required).</param>
         public ConversationEnrichmentLanguage(string Language = null)
         {
             this.Language = Language;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ISO 639-3 detected language code of this message.
+        /// The IETF detected language code of this message.
         /// </summary>
-        /// <value>The ISO 639-3 detected language code of this message.</value>
+        /// <value>The IETF detected language code of this message.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
 

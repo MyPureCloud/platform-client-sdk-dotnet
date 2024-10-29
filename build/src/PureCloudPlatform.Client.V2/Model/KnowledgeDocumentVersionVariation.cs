@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of the variation..</param>
         /// <param name="Name">The name of the variation..</param>
         /// <param name="Body">The content for the variation..</param>
-        public KnowledgeDocumentVersionVariation(List<DocumentVariationContext> Contexts = null, int? Priority = null, string Name = null, DocumentBody Body = null)
+        public KnowledgeDocumentVersionVariation(List<DocumentVariationContext> Contexts = null, int? Priority = null, string Name = null, DocumentBodyResponse Body = null)
         {
             this.Contexts = Contexts;
             this.Priority = Priority;
@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The content for the variation.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public DocumentBody Body { get; set; }
+        public DocumentBodyResponse Body { get; set; }
 
 
 

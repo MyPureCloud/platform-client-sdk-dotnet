@@ -38,8 +38,8 @@
 | **CustomFields** | [**Dictionary&lt;string, WorkitemsQueueEventsNotificationCustomAttribute&gt;**](WorkitemsQueueEventsNotificationCustomAttribute) |  | [optional] |
 | **Wrapup** | [**WorkitemsQueueEventsNotificationWrapup**](WorkitemsQueueEventsNotificationWrapup) |  | [optional] |
 | **Sessions** | [**List&lt;WorkitemsQueueEventsNotificationSession&gt;**](WorkitemsQueueEventsNotificationSession) |  | [optional] |
-| **SkillIds** | **List&lt;string&gt;** |  | [optional] |
+| **SkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 219.0.0_
+_PureCloudPlatform.Client.V2 220.0.0_

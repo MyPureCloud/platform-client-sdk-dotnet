@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisplayName">DisplayName.</param>
         /// <param name="Username">Username.</param>
         /// <param name="Images">Images.</param>
-        public ChatMessageUser(string Id = null, string Name = null, string DisplayName = null, string Username = null, List<UserImage> Images = null)
+        public ChatMessageUser(string Id = null, string Name = null, string DisplayName = null, string Username = null, List<Image> Images = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
-        public List<UserImage> Images { get; set; }
+        public List<Image> Images { get; set; }
 
 
         /// <summary>

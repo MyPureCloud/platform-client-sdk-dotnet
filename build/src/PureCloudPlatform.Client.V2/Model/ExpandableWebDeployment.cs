@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">A reference to the inboundshortmessage flow used by this deployment.</param>
         /// <param name="Status">The current status of the deployment.</param>
         /// <param name="Configuration">The config version this deployment uses (required).</param>
-        public ExpandableWebDeployment(string Name = null, string Description = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, SupportedContentReference SupportedContent = null, DomainEntityRef Flow = null, StatusEnum? Status = null, WebDeploymentConfigurationVersionResponse Configuration = null)
+        public ExpandableWebDeployment(string Name = null, string Description = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, SupportedContentReference SupportedContent = null, WebDeploymentFlowEntityRef Flow = null, StatusEnum? Status = null, WebDeploymentConfigurationVersionResponse Configuration = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -196,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A reference to the inboundshortmessage flow used by this deployment</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
-        public DomainEntityRef Flow { get; set; }
+        public WebDeploymentFlowEntityRef Flow { get; set; }
 
 
 

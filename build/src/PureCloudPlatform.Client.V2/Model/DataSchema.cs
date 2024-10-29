@@ -39,6 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contact,
             
             /// <summary>
+            /// Enum Conversation for "CONVERSATION"
+            /// </summary>
+            [EnumMember(Value = "CONVERSATION")]
+            Conversation,
+            
+            /// <summary>
             /// Enum ExternalOrganization for "EXTERNAL_ORGANIZATION"
             /// </summary>
             [EnumMember(Value = "EXTERNAL_ORGANIZATION")]
@@ -109,9 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// One of \"CONTACT\" or \"EXTERNAL_ORGANIZATION\".  Indicates the built-in entity type to which this schema applies.
+        /// Indicates the built-in entity type to which this schema applies.
         /// </summary>
-        /// <value>One of \"CONTACT\" or \"EXTERNAL_ORGANIZATION\".  Indicates the built-in entity type to which this schema applies.</value>
+        /// <value>Indicates the built-in entity type to which this schema applies.</value>
         [DataMember(Name="appliesTo", EmitDefaultValue=false)]
         public List<AppliesToEnum> AppliesTo { get; private set; }
 

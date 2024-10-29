@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EntityType">EntityType.</param>
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="Timestamp">Timestamp.</param>
-        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, string EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, string ParentEntity = null, string EntityType = null, string ConversationId = null, int? Timestamp = null)
+        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, int? Timestamp = null)
         {
             this.EventEntity = EventEntity;
             this.EntityId = EntityId;
@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EntityId
         /// </summary>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
-        public string EntityId { get; set; }
+        public Guid? EntityId { get; set; }
 
 
 
@@ -110,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ParentEntity
         /// </summary>
         [DataMember(Name="parentEntity", EmitDefaultValue=false)]
-        public string ParentEntity { get; set; }
+        public Guid? ParentEntity { get; set; }
 
 
 
@@ -126,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
-        public string ConversationId { get; set; }
+        public Guid? ConversationId { get; set; }
 
 
 

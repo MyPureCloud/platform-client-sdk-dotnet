@@ -69,9 +69,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LayoutType">The layout type of the dashboard.</param>
         /// <param name="DateCreated">The created date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="DateModified">The last modified date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        /// <param name="DateDeleted">The deleted date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Shared">The flag to indicate if the dashboard is shared.</param>
         /// <param name="DashboardsSharedWith">The list of users and teams the dashboard is shared with.</param>
-        public DashboardConfiguration(string Name = null, int? Rows = null, int? Columns = null, List<Widget> Widgets = null, bool? Favorite = null, bool? PublicDashboard = null, LayoutTypeEnum? LayoutType = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Shared = null, DashboardsSharedWith DashboardsSharedWith = null)
+        public DashboardConfiguration(string Name = null, int? Rows = null, int? Columns = null, List<Widget> Widgets = null, bool? Favorite = null, bool? PublicDashboard = null, LayoutTypeEnum? LayoutType = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDeleted = null, bool? Shared = null, DashboardsSharedWith DashboardsSharedWith = null)
         {
             this.Name = Name;
             this.Rows = Rows;
@@ -82,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LayoutType = LayoutType;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
+            this.DateDeleted = DateDeleted;
             this.Shared = Shared;
             this.DashboardsSharedWith = DashboardsSharedWith;
             
@@ -182,6 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The deleted date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The deleted date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateDeleted", EmitDefaultValue=false)]
+        public DateTime? DateDeleted { get; set; }
+
+
+
+        /// <summary>
         /// The id of user who created the dashboard
         /// </summary>
         /// <value>The id of user who created the dashboard</value>
@@ -236,6 +247,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LayoutType: ").Append(LayoutType).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  DateDeleted: ").Append(DateDeleted).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  Shared: ").Append(Shared).Append("\n");
             sb.Append("  DashboardsSharedWith: ").Append(DashboardsSharedWith).Append("\n");
@@ -336,6 +348,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
+                    this.DateDeleted == other.DateDeleted ||
+                    this.DateDeleted != null &&
+                    this.DateDeleted.Equals(other.DateDeleted)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -400,6 +417,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.DateDeleted != null)
+                    hash = hash * 59 + this.DateDeleted.GetHashCode();
 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
