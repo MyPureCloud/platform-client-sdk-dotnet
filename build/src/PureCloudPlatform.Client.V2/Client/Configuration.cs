@@ -162,6 +162,42 @@ namespace PureCloudPlatform.Client.V2.Client
 
             if (!String.IsNullOrEmpty(parser.GetString("retry", "retry_max")))
                 ApiClient.RetryConfig.RetryMax = parser.GetInt("retry", "retry_max");
+
+            // Gateway Configuration
+            String gatewayHost = parser.GetString("gateway", "host");
+            if (!String.IsNullOrEmpty(gatewayHost)) {
+                ApiClient.GatewayConfiguration gatewayConfiguration = new ApiClient.GatewayConfiguration();
+                gatewayConfiguration.Host = (gatewayHost);
+
+                String gatewayProtocol = parser.GetString("gateway", "protocol");
+                if (!String.IsNullOrEmpty(gatewayProtocol)) {
+                    gatewayConfiguration.Protocol = gatewayProtocol;
+                }
+                String gatewayPort = parser.GetString("gateway", "port");
+                if (!String.IsNullOrEmpty(gatewayPort)) {
+                    gatewayConfiguration.Port = parser.GetInt("gateway", "port");
+                }
+                String gatewayPathParamsLogin = parser.GetString("gateway", "path_params_login");
+                if (!String.IsNullOrEmpty(gatewayPathParamsLogin)) {
+                    gatewayConfiguration.PathParamsLogin = gatewayPathParamsLogin;
+                }
+                String gatewayPathParamsApi = parser.GetString("gateway", "path_params_api");
+                if (!String.IsNullOrEmpty(gatewayPathParamsApi)) {
+                    gatewayConfiguration.PathParamsApi = gatewayPathParamsApi;
+                }
+                String gatewayUsername = parser.GetString("gateway", "username");
+                if (!String.IsNullOrEmpty(gatewayUsername)) {
+                    gatewayConfiguration.Username = gatewayUsername;
+                }
+                String gatewayPassword = parser.GetString("gateway", "password");
+                if (!String.IsNullOrEmpty(gatewayPassword)) {
+                    gatewayConfiguration.Password = gatewayPassword;
+                }
+
+                ApiClient.GatewayConfig = gatewayConfiguration;
+            } else {
+                ApiClient.GatewayConfig = null;
+            }
         }
 
         private void runConfigChecker()
@@ -207,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "220.0.0";
+        public const string Version = "221.0.0";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -463,7 +499,7 @@ namespace PureCloudPlatform.Client.V2.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: v2\n";
-            report += "    SDK Package Version: 220.0.0\n";
+            report += "    SDK Package Version: 221.0.0\n";
 
             return report;
         }

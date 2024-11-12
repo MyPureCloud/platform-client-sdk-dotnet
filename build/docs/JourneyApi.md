@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteJourneyOutcomesPredictor**](#DeleteJourneyOutcomesPredictor) | **Delete** /api/v2/journey/outcomes/predictors/{predictorId} | Delete an outcome predictor. |
 | [**DeleteJourneySegment**](#DeleteJourneySegment) | **Delete** /api/v2/journey/segments/{segmentId} | Delete a segment. |
 | [**DeleteJourneyView**](#DeleteJourneyView) | **Delete** /api/v2/journey/views/{viewId} | Delete a Journey View by ID |
+| [**DeleteJourneyViewSchedules**](#DeleteJourneyViewSchedules) | **Delete** /api/v2/journey/views/{viewId}/schedules | Delete the Schedule of a JourneyView |
 | [**GetAnalyticsJourneysAggregatesJob**](#GetAnalyticsJourneysAggregatesJob) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
 | [**GetAnalyticsJourneysAggregatesJobResults**](#GetAnalyticsJourneysAggregatesJobResults) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetExternalcontactsContactJourneySessions**](#GetExternalcontactsContactJourneySessions) | **Get** /api/v2/externalcontacts/contacts/{contactId}/journey/sessions | Retrieve all sessions for a given external contact. |
@@ -36,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneySessionEvents**](#GetJourneySessionEvents) | **Get** /api/v2/journey/sessions/{sessionId}/events | Retrieve all events for a given session. |
 | [**GetJourneySessionOutcomescores**](#GetJourneySessionOutcomescores) | **Get** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
 | [**GetJourneyView**](#GetJourneyView) | **Get** /api/v2/journey/views/{viewId} | Get a Journey View by ID |
+| [**GetJourneyViewSchedules**](#GetJourneyViewSchedules) | **Get** /api/v2/journey/views/{viewId}/schedules | Get the Schedule for a JourneyView |
 | [**GetJourneyViewVersion**](#GetJourneyViewVersion) | **Get** /api/v2/journey/views/{viewId}/versions/{versionId} | Get a Journey View by ID and version |
 | [**GetJourneyViewVersionChart**](#GetJourneyViewVersionChart) | **Get** /api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId} | Get a Chart by ID |
 | [**GetJourneyViewVersionChartVersion**](#GetJourneyViewVersionChartVersion) | **Get** /api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}/versions/{chartVersion} | Get a Chart by ID and version |
@@ -47,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyViewsEventdefinition**](#GetJourneyViewsEventdefinition) | **Get** /api/v2/journey/views/eventdefinitions/{eventDefinitionId} | Get an Event Definition |
 | [**GetJourneyViewsEventdefinitions**](#GetJourneyViewsEventdefinitions) | **Get** /api/v2/journey/views/eventdefinitions | Get a list of Event Definitions |
 | [**GetJourneyViewsJobs**](#GetJourneyViewsJobs) | **Get** /api/v2/journey/views/jobs | Get the jobs for an organization. |
+| [**GetJourneyViewsSchedules**](#GetJourneyViewsSchedules) | **Get** /api/v2/journey/views/schedules | Get the journey schedules for an organization. |
 | [**PatchJourneyActionmap**](#PatchJourneyActionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](#PatchJourneyActiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](#PatchJourneyActiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
@@ -66,10 +69,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyOutcomesAttributionsJobs**](#PostJourneyOutcomesAttributionsJobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
 | [**PostJourneyOutcomesPredictors**](#PostJourneyOutcomesPredictors) | **Post** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
 | [**PostJourneySegments**](#PostJourneySegments) | **Post** /api/v2/journey/segments | Create a segment. |
+| [**PostJourneyViewSchedules**](#PostJourneyViewSchedules) | **Post** /api/v2/journey/views/{viewId}/schedules | Add a new Schedule to a JourneyView |
 | [**PostJourneyViewVersionJobs**](#PostJourneyViewVersionJobs) | **Post** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs | Submit a job request for a journey view version. |
 | [**PostJourneyViewVersions**](#PostJourneyViewVersions) | **Post** /api/v2/journey/views/{viewId}/versions | Update a Journey View by ID |
 | [**PostJourneyViews**](#PostJourneyViews) | **Post** /api/v2/journey/views | Create a new Journey View |
 | [**PostJourneyViewsEncodingsValidate**](#PostJourneyViewsEncodingsValidate) | **Post** /api/v2/journey/views/encodings/validate | Validate whether an encoding exist for a label/value combination. |
+| [**PutJourneyViewSchedules**](#PutJourneyViewSchedules) | **Put** /api/v2/journey/views/{viewId}/schedules | Update the Schedule for a JourneyView |
 | [**PutJourneyViewVersion**](#PutJourneyViewVersion) | **Put** /api/v2/journey/views/{viewId}/versions/{versionId} | Update a Journey View by ID and version |
 
 
@@ -442,6 +447,70 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+
+## DeleteJourneyViewSchedules
+
+> [**JourneyViewSchedule**](JourneyViewSchedule) DeleteJourneyViewSchedules (string viewId)
+
+
+Delete the Schedule of a JourneyView
+
+used for long descriptions
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteJourneyViewSchedulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | Journey View Id
+
+            try
+            { 
+                // Delete the Schedule of a JourneyView
+                JourneyViewSchedule result = apiInstance.DeleteJourneyViewSchedules(viewId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.DeleteJourneyViewSchedules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| Journey View Id |  |
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
 
 
 ## GetAnalyticsJourneysAggregatesJob
@@ -2007,6 +2076,70 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
+## GetJourneyViewSchedules
+
+> [**JourneyViewSchedule**](JourneyViewSchedule) GetJourneyViewSchedules (string viewId)
+
+
+Get the Schedule for a JourneyView
+
+used for long descriptions
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewSchedulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | Journey View Id
+
+            try
+            { 
+                // Get the Schedule for a JourneyView
+                JourneyViewSchedule result = apiInstance.GetJourneyViewSchedules(viewId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewSchedules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| Journey View Id |  |
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
+
+
 ## GetJourneyViewVersion
 
 > [**JourneyView**](JourneyView) GetJourneyViewVersion (string viewId, string versionId)
@@ -2732,6 +2865,70 @@ namespace Example
 ### Return type
 
 [**JourneyViewJobListing**](JourneyViewJobListing)
+
+
+## GetJourneyViewsSchedules
+
+> [**JourneyViewScheduleListing**](JourneyViewScheduleListing) GetJourneyViewsSchedules (int? pageNumber = null, int? pageSize = null)
+
+
+Get the journey schedules for an organization.
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsSchedulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var pageNumber = 56;  // int? | The number of the page to return (optional)  (default to 1)
+            var pageSize = 56;  // int? | Max number of entities to return (optional)  (default to 25)
+
+            try
+            { 
+                // Get the journey schedules for an organization.
+                JourneyViewScheduleListing result = apiInstance.GetJourneyViewsSchedules(pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsSchedules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| The number of the page to return | [optional] [default to 1] |
+| **pageSize** | **int?**| Max number of entities to return | [optional] [default to 25] |
+
+### Return type
+
+[**JourneyViewScheduleListing**](JourneyViewScheduleListing)
 
 
 ## PatchJourneyActionmap
@@ -3918,6 +4115,70 @@ namespace Example
 [**JourneySegment**](JourneySegment)
 
 
+## PostJourneyViewSchedules
+
+> [**JourneyViewSchedule**](JourneyViewSchedule) PostJourneyViewSchedules (string viewId, JourneyViewSchedule body)
+
+
+Add a new Schedule to a JourneyView
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyViewSchedulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | Journey View Id
+            var body = new JourneyViewSchedule(); // JourneyViewSchedule | journeyViewSchedule
+
+            try
+            { 
+                // Add a new Schedule to a JourneyView
+                JourneyViewSchedule result = apiInstance.PostJourneyViewSchedules(viewId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyViewSchedules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| Journey View Id |  |
+| **body** | [**JourneyViewSchedule**](JourneyViewSchedule)| journeyViewSchedule |  |
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
+
+
 ## PostJourneyViewVersionJobs
 
 > [**JourneyViewJob**](JourneyViewJob) PostJourneyViewVersionJobs (string viewId, string journeyVersionId)
@@ -4176,6 +4437,72 @@ namespace Example
 [**EntityListing**](EntityListing)
 
 
+## PutJourneyViewSchedules
+
+> [**JourneyViewSchedule**](JourneyViewSchedule) PutJourneyViewSchedules (string viewId, JourneyViewSchedule body)
+
+
+Update the Schedule for a JourneyView
+
+used for long descriptions
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutJourneyViewSchedulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | Journey View Id
+            var body = new JourneyViewSchedule(); // JourneyViewSchedule | journeyViewSchedule
+
+            try
+            { 
+                // Update the Schedule for a JourneyView
+                JourneyViewSchedule result = apiInstance.PutJourneyViewSchedules(viewId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PutJourneyViewSchedules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| Journey View Id |  |
+| **body** | [**JourneyViewSchedule**](JourneyViewSchedule)| journeyViewSchedule |  |
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
+
+
 ## PutJourneyViewVersion
 
 > [**JourneyView**](JourneyView) PutJourneyViewVersion (string viewId, string versionId, JourneyView body)
@@ -4244,4 +4571,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

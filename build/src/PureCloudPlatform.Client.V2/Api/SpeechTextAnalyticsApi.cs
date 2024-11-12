@@ -821,7 +821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Translate all communication(s) for an interaction.
+        /// Translate a single interaction recording (or an email conversation)
         /// </summary>
         /// <remarks>
         /// 
@@ -830,14 +830,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>CommunicationTranslationList</returns>
         
         CommunicationTranslationList GetSpeechandtextanalyticsTranslationsLanguageConversation (string languageId, string conversationId, string communicationId = null, string recordingId = null);
 
         /// <summary>
-        /// Translate all communication(s) for an interaction.
+        /// Translate a single interaction recording (or an email conversation)
         /// </summary>
         /// <remarks>
         /// 
@@ -846,8 +846,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>ApiResponse of CommunicationTranslationList</returns>
         
         ApiResponse<CommunicationTranslationList> GetSpeechandtextanalyticsTranslationsLanguageConversationWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null);
@@ -2105,7 +2105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> GetSpeechandtextanalyticsTopicsPublishjobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Translate all communication(s) for an interaction.
+        /// Translate a single interaction recording (or an email conversation)
         /// </summary>
         /// <remarks>
         /// 
@@ -2114,14 +2114,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>Task of CommunicationTranslationList</returns>
         
         System.Threading.Tasks.Task<CommunicationTranslationList> GetSpeechandtextanalyticsTranslationsLanguageConversationAsync (string languageId, string conversationId, string communicationId = null, string recordingId = null);
 
         /// <summary>
-        /// Translate all communication(s) for an interaction.
+        /// Translate a single interaction recording (or an email conversation)
         /// </summary>
         /// <remarks>
         /// 
@@ -2130,8 +2130,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>Task of ApiResponse (CommunicationTranslationList)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CommunicationTranslationList>> GetSpeechandtextanalyticsTranslationsLanguageConversationAsyncWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null);
@@ -9503,15 +9503,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Translate all communication(s) for an interaction. 
+        /// Translate a single interaction recording (or an email conversation) 
         /// 
         /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>CommunicationTranslationList</returns>
         
         public CommunicationTranslationList GetSpeechandtextanalyticsTranslationsLanguageConversation (string languageId, string conversationId, string communicationId = null, string recordingId = null)
@@ -9521,15 +9521,15 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Translate all communication(s) for an interaction. 
+        /// Translate a single interaction recording (or an email conversation) 
         /// 
         /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>ApiResponse of CommunicationTranslationList</returns>
         
         public ApiResponse< CommunicationTranslationList > GetSpeechandtextanalyticsTranslationsLanguageConversationWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null)
@@ -9622,15 +9622,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Translate all communication(s) for an interaction. 
+        /// Translate a single interaction recording (or an email conversation) 
         /// 
         /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>Task of CommunicationTranslationList</returns>
         
         public async System.Threading.Tasks.Task<CommunicationTranslationList> GetSpeechandtextanalyticsTranslationsLanguageConversationAsync (string languageId, string conversationId, string communicationId = null, string recordingId = null)
@@ -9641,15 +9641,15 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Translate all communication(s) for an interaction. 
+        /// Translate a single interaction recording (or an email conversation) 
         /// 
         /// GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Target translation language</param>
         /// <param name="conversationId">Conversation id</param>
-        /// <param name="communicationId">Communication id associated with the conversation (optional)</param>
-        /// <param name="recordingId">Recording id associated with the communication (optional)</param>
+        /// <param name="communicationId">Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)</param>
+        /// <param name="recordingId">Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)</param>
         /// <returns>Task of ApiResponse (CommunicationTranslationList)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CommunicationTranslationList>> GetSpeechandtextanalyticsTranslationsLanguageConversationAsyncWithHttpInfo (string languageId, string conversationId, string communicationId = null, string recordingId = null)

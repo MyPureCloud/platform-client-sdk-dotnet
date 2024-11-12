@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaIds">The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage..</param>
         /// <param name="StickerIds">The sticker ids associated with the text message..</param>
         /// <param name="MessagingTemplate">The messaging template use to send a predefined canned response with the message.</param>
-        public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null, MessagingTemplateRequest MessagingTemplate = null)
+        public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null, SendMessagingTemplateRequest MessagingTemplate = null)
         {
             this.TextBody = TextBody;
             this.MediaIds = MediaIds;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The messaging template use to send a predefined canned response with the message</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
-        public MessagingTemplateRequest MessagingTemplate { get; set; }
+        public SendMessagingTemplateRequest MessagingTemplate { get; set; }
 
 
         /// <summary>

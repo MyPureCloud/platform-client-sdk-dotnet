@@ -47,7 +47,8 @@
 | **SdkLibrary** | [**JourneySessionEventsNotificationSdkLibrary**](JourneySessionEventsNotificationSdkLibrary) |  | [optional] |
 | **NetworkConnectivity** | [**JourneySessionEventsNotificationNetworkConnectivity**](JourneySessionEventsNotificationNetworkConnectivity) |  | [optional] |
 | **DivisionIds** | **List&lt;string&gt;** |  | [optional] |
+| **LastScreen** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

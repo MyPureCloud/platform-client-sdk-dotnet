@@ -64,12 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FromAddress">The sender of the message..</param>
         /// <param name="ToAddress">The recipient of the message..</param>
         /// <param name="MessengerType">Type of messenger..</param>
-        /// <param name="TextBody">The body of the text message..</param>
-        /// <param name="MessagingTemplate">The messaging template sent.</param>
+        /// <param name="TextBody">The body of the text message. (Deprecated - Instead use message.normalizedMessage.text).</param>
+        /// <param name="MessagingTemplate">The messaging template sent. (Deprecated - Instead use message.normalizedMessage.content[#].template).</param>
         /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false.</param>
         /// <param name="Message">Sent agentless outbound message in normalized format.</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null, MessageData Message = null, DateTime? Timestamp = null)
+        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, SendMessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null, MessageData Message = null, DateTime? Timestamp = null)
         {
             this.ConversationId = ConversationId;
             this.FromAddress = FromAddress;
@@ -124,20 +124,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The body of the text message.
+        /// The body of the text message. (Deprecated - Instead use message.normalizedMessage.text)
         /// </summary>
-        /// <value>The body of the text message.</value>
+        /// <value>The body of the text message. (Deprecated - Instead use message.normalizedMessage.text)</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
 
 
 
         /// <summary>
-        /// The messaging template sent
+        /// The messaging template sent. (Deprecated - Instead use message.normalizedMessage.content[#].template)
         /// </summary>
-        /// <value>The messaging template sent</value>
+        /// <value>The messaging template sent. (Deprecated - Instead use message.normalizedMessage.content[#].template)</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
-        public MessagingTemplateRequest MessagingTemplate { get; set; }
+        public SendMessagingTemplateRequest MessagingTemplate { get; set; }
 
 
 

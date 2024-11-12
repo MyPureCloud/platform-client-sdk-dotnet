@@ -32,6 +32,7 @@
 | **AlertingTimeoutMs** | **int?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
 | **ExternalContact** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
+| **ExternalContactInitialDivisionId** | **string** |  | [optional] |
 | **ExternalOrganization** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) |  | [optional] |
 | **Wrapup** | [**ConversationCallbackEventTopicWrapup**](ConversationCallbackEventTopicWrapup) |  | [optional] |
 | **ConversationRoutingData** | [**ConversationCallbackEventTopicConversationRoutingData**](ConversationCallbackEventTopicConversationRoutingData) |  | [optional] |
@@ -57,4 +58,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

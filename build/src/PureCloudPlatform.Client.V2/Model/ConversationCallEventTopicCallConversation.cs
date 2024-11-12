@@ -64,10 +64,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="Address">Address.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
+        /// <param name="Divisions">Divisions.</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="MaxParticipants">MaxParticipants.</param>
-        public ConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<ConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, int? MaxParticipants = null)
+        public ConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<ConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, List<ConversationCallEventTopicConversationDivisionMembership> Divisions = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, int? MaxParticipants = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -75,6 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OtherMediaUris = OtherMediaUris;
             this.Address = Address;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.Divisions = Divisions;
             this.RecordingState = RecordingState;
             this.SecurePause = SecurePause;
             this.MaxParticipants = MaxParticipants;
@@ -131,6 +133,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets Divisions
+        /// </summary>
+        [DataMember(Name="divisions", EmitDefaultValue=false)]
+        public List<ConversationCallEventTopicConversationDivisionMembership> Divisions { get; set; }
+
+
+
 
 
         /// <summary>
@@ -163,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
@@ -237,6 +248,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 ) &&
                 (
+                    this.Divisions == other.Divisions ||
+                    this.Divisions != null &&
+                    this.Divisions.SequenceEqual(other.Divisions)
+                ) &&
+                (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
@@ -281,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.Divisions != null)
+                    hash = hash * 59 + this.Divisions.GetHashCode();
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();

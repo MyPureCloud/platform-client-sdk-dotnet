@@ -83,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndTime">The timestamp when this participant disconnected from the conversation in the provider clock..</param>
         /// <param name="UserId">If this participant represents a user, then this will be the globally unique identifier for the user..</param>
         /// <param name="ExternalContactId">If this participant represents an external contact, then this will be the globally unique identifier for the external contact..</param>
+        /// <param name="ExternalContactInitialDivisionId">If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned..</param>
         /// <param name="ExternalOrganizationId">If this participant represents an external org, then this will be the globally unique identifier for the external org..</param>
         /// <param name="Name">A human readable name identifying the participant..</param>
         /// <param name="QueueId">If present, the queue id that the communication channel came in on..</param>
@@ -118,13 +119,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="Workflow">Workflow.</param>
-        public ConversationEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, ConversationEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, List<string> MediaRoles = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<ConversationEventTopicCall> Calls = null, List<ConversationEventTopicCallback> Callbacks = null, List<ConversationEventTopicChat> Chats = null, List<ConversationEventTopicCobrowse> Cobrowsesessions = null, List<ConversationEventTopicEmail> Emails = null, List<ConversationEventTopicMessage> Messages = null, List<ConversationEventTopicInternalMessage> InternalMessages = null, List<ConversationEventTopicScreenshare> Screenshares = null, List<ConversationEventTopicSocialExpression> SocialExpressions = null, List<ConversationEventTopicVideo> Videos = null, ConversationEventTopicWorkflow Workflow = null)
+        public ConversationEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, ConversationEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, List<string> MediaRoles = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<ConversationEventTopicCall> Calls = null, List<ConversationEventTopicCallback> Callbacks = null, List<ConversationEventTopicChat> Chats = null, List<ConversationEventTopicCobrowse> Cobrowsesessions = null, List<ConversationEventTopicEmail> Emails = null, List<ConversationEventTopicMessage> Messages = null, List<ConversationEventTopicInternalMessage> InternalMessages = null, List<ConversationEventTopicScreenshare> Screenshares = null, List<ConversationEventTopicSocialExpression> SocialExpressions = null, List<ConversationEventTopicVideo> Videos = null, ConversationEventTopicWorkflow Workflow = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
             this.EndTime = EndTime;
             this.UserId = UserId;
             this.ExternalContactId = ExternalContactId;
+            this.ExternalContactInitialDivisionId = ExternalContactInitialDivisionId;
             this.ExternalOrganizationId = ExternalOrganizationId;
             this.Name = Name;
             this.QueueId = QueueId;
@@ -207,6 +209,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>If this participant represents an external contact, then this will be the globally unique identifier for the external contact.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
+
+
+
+        /// <summary>
+        /// If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned.
+        /// </summary>
+        /// <value>If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned.</value>
+        [DataMember(Name="externalContactInitialDivisionId", EmitDefaultValue=false)]
+        public string ExternalContactInitialDivisionId { get; set; }
 
 
 
@@ -518,6 +529,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  ExternalContactInitialDivisionId: ").Append(ExternalContactInitialDivisionId).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
@@ -617,6 +629,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
+                    this.ExternalContactInitialDivisionId == other.ExternalContactInitialDivisionId ||
+                    this.ExternalContactInitialDivisionId != null &&
+                    this.ExternalContactInitialDivisionId.Equals(other.ExternalContactInitialDivisionId)
                 ) &&
                 (
                     this.ExternalOrganizationId == other.ExternalOrganizationId ||
@@ -820,6 +837,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.ExternalContactInitialDivisionId != null)
+                    hash = hash * 59 + this.ExternalContactInitialDivisionId.GetHashCode();
 
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();

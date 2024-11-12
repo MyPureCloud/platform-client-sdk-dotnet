@@ -275,7 +275,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SdkLibrary">SdkLibrary.</param>
         /// <param name="NetworkConnectivity">NetworkConnectivity.</param>
         /// <param name="DivisionIds">DivisionIds.</param>
-        public JourneySessionEventsNotificationSessionEvent(Guid? Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, JourneySessionEventsNotificationApp App = null, JourneySessionEventsNotificationSdkLibrary SdkLibrary = null, JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity = null, List<string> DivisionIds = null)
+        /// <param name="LastScreen">LastScreen.</param>
+        public JourneySessionEventsNotificationSessionEvent(Guid? Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, JourneySessionEventsNotificationApp App = null, JourneySessionEventsNotificationSdkLibrary SdkLibrary = null, JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity = null, List<string> DivisionIds = null, string LastScreen = null)
         {
             this.Id = Id;
             this.SelfUri = SelfUri;
@@ -318,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SdkLibrary = SdkLibrary;
             this.NetworkConnectivity = NetworkConnectivity;
             this.DivisionIds = DivisionIds;
+            this.LastScreen = LastScreen;
             
         }
         
@@ -632,6 +634,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> DivisionIds { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets LastScreen
+        /// </summary>
+        [DataMember(Name="lastScreen", EmitDefaultValue=false)]
+        public string LastScreen { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -682,6 +692,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SdkLibrary: ").Append(SdkLibrary).Append("\n");
             sb.Append("  NetworkConnectivity: ").Append(NetworkConnectivity).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
+            sb.Append("  LastScreen: ").Append(LastScreen).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -926,6 +937,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DivisionIds == other.DivisionIds ||
                     this.DivisionIds != null &&
                     this.DivisionIds.SequenceEqual(other.DivisionIds)
+                ) &&
+                (
+                    this.LastScreen == other.LastScreen ||
+                    this.LastScreen != null &&
+                    this.LastScreen.Equals(other.LastScreen)
                 );
         }
 
@@ -1062,6 +1078,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
+
+                if (this.LastScreen != null)
+                    hash = hash * 59 + this.LastScreen.GetHashCode();
 
                 return hash;
             }

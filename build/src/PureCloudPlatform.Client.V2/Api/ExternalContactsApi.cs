@@ -95,7 +95,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -108,7 +107,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -386,7 +384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         
         ExternalContact GetExternalcontactsContactUnresolved (string contactId, List<string> expand = null);
@@ -399,7 +397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
         ApiResponse<ExternalContact> GetExternalcontactsContactUnresolvedWithHttpInfo (string contactId, List<string> expand = null);
@@ -537,7 +535,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -550,7 +547,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -563,7 +559,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -579,7 +574,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -698,7 +692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         
@@ -712,7 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         
@@ -1669,7 +1663,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -1682,7 +1675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -2021,7 +2013,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -2035,7 +2026,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -2285,7 +2275,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -2298,7 +2287,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -2576,7 +2564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
         System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactUnresolvedAsync (string contactId, List<string> expand = null);
@@ -2589,7 +2577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactUnresolvedAsyncWithHttpInfo (string contactId, List<string> expand = null);
@@ -2727,7 +2715,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -2740,7 +2727,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -2753,7 +2739,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -2769,7 +2754,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -2888,7 +2872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         
@@ -2902,7 +2886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         
@@ -3859,7 +3843,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -3872,7 +3855,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -4211,7 +4193,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -4225,7 +4206,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -5137,7 +5117,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -5152,7 +5131,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -5244,7 +5222,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -5260,7 +5237,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
         /// 
-        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -7563,7 +7539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         
         public ExternalContact GetExternalcontactsContactUnresolved (string contactId, List<string> expand = null)
@@ -7578,7 +7554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
         public ApiResponse< ExternalContact > GetExternalcontactsContactUnresolvedWithHttpInfo (string contactId, List<string> expand = null)
@@ -7671,7 +7647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
         public async System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactUnresolvedAsync (string contactId, List<string> expand = null)
@@ -7687,7 +7663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactUnresolvedAsyncWithHttpInfo (string contactId, List<string> expand = null)
@@ -8861,7 +8837,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch an External Source 
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -8876,7 +8851,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch an External Source 
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -8968,7 +8942,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch an External Source 
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -8984,7 +8957,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch an External Source 
         /// 
-        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -9078,7 +9050,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a list of External Sources 
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -9096,7 +9067,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a list of External Sources 
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -9191,7 +9161,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a list of External Sources 
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -9210,7 +9179,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a list of External Sources 
         /// 
-        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
@@ -10166,7 +10134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         
@@ -10182,7 +10150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         
@@ -10277,7 +10245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         
@@ -10294,7 +10262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         
@@ -18639,7 +18607,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an External Source 
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -18654,7 +18621,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an External Source 
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -18751,7 +18717,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an External Source 
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -18767,7 +18732,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an External Source 
         /// 
-        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">External Source</param>
@@ -21847,7 +21811,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an External Source 
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -21863,7 +21826,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an External Source 
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -21965,7 +21927,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an External Source 
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>
@@ -21982,7 +21943,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an External Source 
         /// 
-        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalSourceId">External Source ID</param>

@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">The text of the message to send. This field is required in the case of SMS messenger type. Maximum character counts are: SMS - 765 characters, other channels - 2000 characters..</param>
         /// <param name="MessagingTemplate">The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type.</param>
         /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false.</param>
-        public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null)
+        public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null, SendMessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null)
         {
             this.FromAddress = FromAddress;
             this.ToAddress = ToAddress;
@@ -119,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
-        public MessagingTemplateRequest MessagingTemplate { get; set; }
+        public SendMessagingTemplateRequest MessagingTemplate { get; set; }
 
 
 

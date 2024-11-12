@@ -105,6 +105,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Learning,
             
             /// <summary>
+            /// Enum Gamification for "Gamification"
+            /// </summary>
+            [EnumMember(Value = "Gamification")]
+            Gamification,
+            
+            /// <summary>
             /// Enum Employeeengagement for "EmployeeEngagement"
             /// </summary>
             [EnumMember(Value = "EmployeeEngagement")]
@@ -157,12 +163,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Routing")]
             Routing,
-            
-            /// <summary>
-            /// Enum Gamification for "Gamification"
-            /// </summary>
-            [EnumMember(Value = "Gamification")]
-            Gamification,
             
             /// <summary>
             /// Enum Integrations for "Integrations"
@@ -665,6 +665,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Reschedule,
             
             /// <summary>
+            /// Enum Complete for "Complete"
+            /// </summary>
+            [EnumMember(Value = "Complete")]
+            Complete,
+            
+            /// <summary>
+            /// Enum Cancel for "Cancel"
+            /// </summary>
+            [EnumMember(Value = "Cancel")]
+            Cancel,
+            
+            /// <summary>
             /// Enum Unpublish for "Unpublish"
             /// </summary>
             [EnumMember(Value = "Unpublish")]
@@ -969,12 +981,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Reverse")]
             Reverse,
-            
-            /// <summary>
-            /// Enum Cancel for "Cancel"
-            /// </summary>
-            [EnumMember(Value = "Cancel")]
-            Cancel,
             
             /// <summary>
             /// Enum Harddelete for "HardDelete"
@@ -1475,6 +1481,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Assignment")]
             Assignment,
+            
+            /// <summary>
+            /// Enum Contest for "Contest"
+            /// </summary>
+            [EnumMember(Value = "Contest")]
+            Contest,
             
             /// <summary>
             /// Enum Recognition for "Recognition"
@@ -2207,6 +2219,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Worktype")]
             Worktype,
+            
+            /// <summary>
+            /// Enum Bulkjob for "BulkJob"
+            /// </summary>
+            [EnumMember(Value = "BulkJob")]
+            Bulkjob,
             
             /// <summary>
             /// Enum Credential for "Credential"

@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
         public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfo(this ApiClient apiClient, string clientId,
             string clientSecret, string redirectUri = "", string authorizationCode = "", bool isRefreshRequest = false)
         {
-            var path_ = "/token";
+            var path_ = "/oauth/token";
 
             // This may be uninitialized if no API classes have been constructed yet
             if (apiClient.Configuration == null)
@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
         public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfoSaml2Bearer(this ApiClient apiClient, string clientId,
             string clientSecret, string orgName, string assertion)
         {
-            var path_ = "/token";
+            var path_ = "/oauth/token";
 
             // This may be uninitialized if no API classes have been constructed yet
             if (apiClient.Configuration == null)
@@ -257,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
         public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfoPKCE(this ApiClient apiClient, string clientId, string redirectUri, string codeVerifier, string authorizationCode)
         {
-            var path_ = "/token";
+            var path_ = "/oauth/token";
 
             // This may be uninitialized if no API classes have been constructed yet
             if (apiClient.Configuration == null)
@@ -325,13 +325,12 @@ namespace PureCloudPlatform.Client.V2.Extensions
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
         {
-            var regex = new Regex(@"://(api)\.");
-            var authUrl = regex.Replace(apiClient.ClientOptions.BaseUrl.ToString(), "://login.");
-            var options = new RestClientOptions(new Uri(authUrl));
+            var authUri = apiClient.GetConfUri("login", apiClient.ClientOptions.BaseUrl);
+            var options = new RestClientOptions(authUri);
             
             if (apiClient.ClientOptions != null && apiClient.ClientOptions.Proxy != null)
             {
-                options = new RestClientOptions(new Uri(authUrl))
+                options = new RestClientOptions(authUri)
                 {
                     Proxy = apiClient.ClientOptions.Proxy
                 };

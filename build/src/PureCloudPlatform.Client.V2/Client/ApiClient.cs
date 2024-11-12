@@ -117,6 +117,78 @@ namespace PureCloudPlatform.Client.V2.Client
         public RetryConfiguration RetryConfig { get; set; }
         private static readonly RetryConfiguration DEFAULT_RETRY_CONFIG = new RetryConfiguration();
 
+        private GatewayConfiguration gatewayConfig;
+        public GatewayConfiguration GatewayConfig {
+            get
+            {
+                return this.gatewayConfig;
+            }
+            set
+            {
+                if (value != null) {
+                    this.gatewayConfig = value;
+                } else {
+                    // Reset
+                    this.gatewayConfig = null;
+                }
+            }
+        }
+
+        public Uri GetConfUri(String pathType, Uri baseUri) {
+            if (pathType.Equals("login")) {
+                if (this.GatewayConfig == null || String.IsNullOrEmpty(this.GatewayConfig.Host)) {
+                    var regex = new Regex(@"://(api)\.");
+                    var authUrl = regex.Replace(baseUri.ToString(), "://login.");
+                    return new Uri(authUrl);
+                } else {
+                    String confUrl = this.GatewayConfig.Protocol + "://" + this.GatewayConfig.Host;
+                    if (this.GatewayConfig.Port > 0) confUrl = confUrl + ":" + this.GatewayConfig.Port.ToString();
+                    if (!String.IsNullOrEmpty(this.GatewayConfig.PathParamsLogin)) {
+                        if (this.GatewayConfig.PathParamsLogin.StartsWith("/")) {
+                            confUrl = confUrl + this.GatewayConfig.PathParamsLogin;
+                        } else {
+                            confUrl = confUrl + "/" + this.GatewayConfig.PathParamsLogin;
+                        }
+                    }
+                    return new Uri(confUrl);
+                }
+            } else {
+                if (this.GatewayConfig == null || String.IsNullOrEmpty(this.GatewayConfig.Host)) {
+                    return baseUri;
+                } else {
+                    String confUrl = this.GatewayConfig.Protocol + "://" + this.GatewayConfig.Host;
+                    if (this.GatewayConfig.Port > 0) confUrl = confUrl + ":" + this.GatewayConfig.Port.ToString();
+                    if (!String.IsNullOrEmpty(this.GatewayConfig.PathParamsApi)) {
+                        if (this.GatewayConfig.PathParamsApi.StartsWith("/")) {
+                            confUrl = confUrl + this.GatewayConfig.PathParamsApi;
+                        } else {
+                            confUrl = confUrl + "/" + this.GatewayConfig.PathParamsApi;
+                        }
+                    }
+                    return new Uri(confUrl);
+                }
+            }
+        }
+
+        public void SetGateway(String host,
+            String protocol,
+            int port,
+            String pathParamsLogin,
+            String pathParamsApi,
+            String username,
+            String password) {
+            this.GatewayConfig = new GatewayConfiguration(host, protocol, port, pathParamsLogin, pathParamsApi, username, password);
+        }
+
+        public void SetGateway(String host,
+            String protocol,
+            int port,
+            String pathParamsLogin,
+            String pathParamsApi) {
+            this.GatewayConfig = new GatewayConfiguration(host, protocol, port, pathParamsLogin, pathParamsApi);
+        }
+        
+
         // These fields are only applicable to the Code Authorization OAuth flow:
         public bool UsingCodeAuth { get; set; }
         public string ClientId { get; set; }
@@ -222,17 +294,17 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "220.0.0");
+            request.AddHeader("purecloud-sdk", "221.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
 
 
-            var options = new RestClientOptions(ClientOptions.BaseUrl){};
+            var options = new RestClientOptions(GetConfUri("api", ClientOptions.BaseUrl)){};
             
             if (ClientOptions.HttpMessageHandler != null)
             {
-                options = new RestClientOptions(ClientOptions.BaseUrl)
+                options = new RestClientOptions(GetConfUri("api", ClientOptions.BaseUrl))
                 {
                     ConfigureMessageHandler = _ => ClientOptions.HttpMessageHandler 
                 };
@@ -323,11 +395,11 @@ namespace PureCloudPlatform.Client.V2.Client
              Retry retry = new Retry(this.RetryConfig);
              RestResponse response;
 
-             var options = new RestClientOptions(ClientOptions.BaseUrl){};
+             var options = new RestClientOptions(GetConfUri("api", ClientOptions.BaseUrl)){};
             
             if (ClientOptions.HttpMessageHandler != null)
             {
-                options = new RestClientOptions(ClientOptions.BaseUrl)
+                options = new RestClientOptions(GetConfUri("api", ClientOptions.BaseUrl))
                 {
                     ConfigureMessageHandler = _ => ClientOptions.HttpMessageHandler 
                 };
@@ -747,6 +819,181 @@ namespace PureCloudPlatform.Client.V2.Client
                         throw new ArgumentException("RetryMax should be a positive integer");
                     }
                     this.retryMax = value;
+                }
+            }
+        }
+
+        public class GatewayConfiguration
+        {
+
+            // Gateway Host
+            private String host = null;
+
+            // Gateway Protocol
+            private String protocol = "https";
+
+            // Gateway Port
+            private int port = -1;
+
+            // Gateway Path Param for Login
+            private String pathParamsLogin = "";
+
+            // Gateway Path Param for API
+            private String pathParamsApi = "";
+
+            // Gateway Username (future)
+            private String username = null;
+
+            // Gateway Password (future)
+            private String password = null;
+
+            public GatewayConfiguration()
+            {
+                this.protocol = "https";
+                this.port = -1;
+                this.pathParamsLogin = "";
+                this.pathParamsApi = "";
+            }
+
+            public GatewayConfiguration(String host,
+                String protocol,
+                int port,
+                String pathParamsLogin,
+                String pathParamsApi,
+                String username,
+                String password)
+            {
+                this.Host = host;
+                this.Protocol = protocol;
+                this.Port = port;
+                this.PathParamsLogin = pathParamsLogin;
+                this.PathParamsApi = pathParamsApi;
+                this.Username = username;
+                this.Password = password;
+            }
+
+            public GatewayConfiguration(String host,
+                String protocol,
+                int port,
+                String pathParamsLogin,
+                String pathParamsApi)
+            {
+                this.Host = host;
+                this.Protocol = protocol;
+                this.Port = port;
+                this.PathParamsLogin = pathParamsLogin;
+                this.PathParamsApi = pathParamsApi;
+            }
+
+            public String Host
+            {
+                get
+                {
+                    return this.host;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value)) {
+                        this.host = value;
+                    }
+                }
+            }
+
+            public String Protocol
+            {
+                get
+                {
+                    return this.protocol;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value)) {
+                        this.protocol = value;
+                    } else {
+                        this.protocol = "https";
+                    }
+                }
+            }
+
+            public int Port
+            {
+                get
+                {
+                    return this.port;
+                }
+                set
+                {
+                    if (value > -1) {
+                        this.port = value;
+                    } else {
+                        this.port = -1;
+                    }
+                }
+            }
+
+            public String PathParamsLogin
+            {
+                get
+                {
+                    return this.pathParamsLogin;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value)) {
+                        this.pathParamsLogin = value;
+                        if (this.pathParamsLogin.EndsWith("/")) {
+                            this.pathParamsLogin = this.pathParamsLogin.Substring(0, this.pathParamsLogin.Length-1);
+                        }
+                    } else {
+                        this.pathParamsLogin = "";
+                    }
+                }
+            }
+
+            public String PathParamsApi
+            {
+                get
+                {
+                    return this.pathParamsApi;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value)) {
+                        this.pathParamsApi = value;
+                        if (this.pathParamsApi.EndsWith("/")) {
+                            this.pathParamsApi = this.pathParamsApi.Substring(0, this.pathParamsApi.Length-1);
+                        }
+                    } else {
+                        this.pathParamsApi = "";
+                    }
+                }
+            }
+
+            public String Username
+            {
+                get
+                {
+                    return this.username;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value)) {
+                        this.username = value;
+                    }
+                }
+            }
+
+            public String Password
+            {
+                get
+                {
+                    return this.password;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value)) {
+                        this.password = value;
+                    }
                 }
             }
         }

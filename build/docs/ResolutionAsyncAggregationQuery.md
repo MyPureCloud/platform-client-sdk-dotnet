@@ -14,9 +14,9 @@
 | **Metrics** | **List&lt;string&gt;** | Behaves like a SQL SELECT clause. Only named metrics will be retrieved. | |
 | **FlattenMultivaluedDimensions** | **bool?** | Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) | [optional] |
 | **Views** | [**List&lt;ResolutionAggregationView&gt;**](ResolutionAggregationView) | Custom derived metric views | [optional] |
-| **AlternateTimeDimension** | **string** | Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. | [optional] |
+| **AlternateTimeDimension** | **string** | Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event and choosing \&quot;wrapUpDate\&quot; uses the date when conversation is ended | [optional] |
 | **PageSize** | **int?** | The number of results per page | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

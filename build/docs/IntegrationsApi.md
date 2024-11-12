@@ -747,7 +747,7 @@ namespace Example
 
 ## GetIntegrationsActionDraftSchema
 
-> [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionDraftSchema (string actionId, string fileName)
+> [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionDraftSchema (string actionId, string fileName, bool? flatten = null)
 
 
 Retrieve schema for a Draft based on filename.
@@ -781,11 +781,12 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var fileName = fileName_example;  // string | Name of schema file to be retrieved for this draft.
+            var flatten = true;  // bool? | Indicates the response should be reformatted, based on Architect's flattening format. (optional)  (default to false)
 
             try
             { 
                 // Retrieve schema for a Draft based on filename.
-                JsonSchemaDocument result = apiInstance.GetIntegrationsActionDraftSchema(actionId, fileName);
+                JsonSchemaDocument result = apiInstance.GetIntegrationsActionDraftSchema(actionId, fileName, flatten);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -804,6 +805,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of schema file to be retrieved for this draft. |  |
+| **flatten** | **bool?**| Indicates the response should be reformatted, based on Architect&#39;s flattening format. | [optional] [default to false] |
 
 ### Return type
 
@@ -1003,7 +1005,7 @@ namespace Example
 
 ## GetIntegrationsActionSchema
 
-> [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionSchema (string actionId, string fileName)
+> [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionSchema (string actionId, string fileName, bool? flatten = null)
 
 
 Retrieve schema for an action based on filename.
@@ -1037,11 +1039,12 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var fileName = fileName_example;  // string | Name of schema file to be retrieved for this action.
+            var flatten = true;  // bool? | Indicates the response should be reformatted, based on Architect's flattening format. (optional)  (default to false)
 
             try
             { 
                 // Retrieve schema for an action based on filename.
-                JsonSchemaDocument result = apiInstance.GetIntegrationsActionSchema(actionId, fileName);
+                JsonSchemaDocument result = apiInstance.GetIntegrationsActionSchema(actionId, fileName, flatten);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1060,6 +1063,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of schema file to be retrieved for this action. |  |
+| **flatten** | **bool?**| Indicates the response should be reformatted, based on Architect&#39;s flattening format. | [optional] [default to false] |
 
 ### Return type
 
@@ -4639,7 +4643,7 @@ namespace Example
 
 ## PostIntegrationsActionDraftTest
 
-> [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionDraftTest (string actionId, Object body)
+> [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionDraftTest (string actionId, Object body, bool? flatten = null)
 
 
 Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4672,11 +4676,12 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var body = new Object(); // Object | Map of parameters used for variable substitution.
+            var flatten = true;  // bool? | Indicates the response should be reformatted, based on Architect's flattening format. (optional)  (default to false)
 
             try
             { 
                 // Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
-                TestExecutionResult result = apiInstance.PostIntegrationsActionDraftTest(actionId, body);
+                TestExecutionResult result = apiInstance.PostIntegrationsActionDraftTest(actionId, body, flatten);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4695,6 +4700,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
+| **flatten** | **bool?**| Indicates the response should be reformatted, based on Architect&#39;s flattening format. | [optional] [default to false] |
 
 ### Return type
 
@@ -4703,7 +4709,7 @@ namespace Example
 
 ## PostIntegrationsActionExecute
 
-> **Object** PostIntegrationsActionExecute (string actionId, Object body)
+> **Object** PostIntegrationsActionExecute (string actionId, Object body, bool? flatten = null)
 
 
 Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
@@ -4737,11 +4743,12 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var body = new Object(); // Object | Map of parameters used for variable substitution.
+            var flatten = true;  // bool? | Indicates the response should be reformatted, based on Architect's flattening format. (optional)  (default to false)
 
             try
             { 
                 // Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
-                Object result = apiInstance.PostIntegrationsActionExecute(actionId, body);
+                Object result = apiInstance.PostIntegrationsActionExecute(actionId, body, flatten);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4760,6 +4767,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
+| **flatten** | **bool?**| Indicates the response should be reformatted, based on Architect&#39;s flattening format. | [optional] [default to false] |
 
 ### Return type
 
@@ -4768,7 +4776,7 @@ namespace Example
 
 ## PostIntegrationsActionTest
 
-> [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionTest (string actionId, Object body)
+> [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionTest (string actionId, Object body, bool? flatten = null)
 
 
 Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4802,11 +4810,12 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var body = new Object(); // Object | Map of parameters used for variable substitution.
+            var flatten = true;  // bool? | Indicates the response should be reformatted, based on Architect's flattening format. (optional)  (default to false)
 
             try
             { 
                 // Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
-                TestExecutionResult result = apiInstance.PostIntegrationsActionTest(actionId, body);
+                TestExecutionResult result = apiInstance.PostIntegrationsActionTest(actionId, body, flatten);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4825,6 +4834,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
+| **flatten** | **bool?**| Indicates the response should be reformatted, based on Architect&#39;s flattening format. | [optional] [default to false] |
 
 ### Return type
 
@@ -5664,4 +5674,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

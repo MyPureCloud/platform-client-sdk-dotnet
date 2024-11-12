@@ -175,12 +175,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest..</param>
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
         /// <param name="Division">The division this campaign belongs to..</param>
+        /// <param name="AgentOwnedColumn">Name of the contact list column containing the id of the agent who owns the record. Only applicable to preview campaigns..</param>
         /// <param name="DynamicContactQueueingSettings">Settings for dynamic queueing of contacts..</param>
         /// <param name="SkillColumns">The skill columns on the ContactList that this Campaign should take into account when dialing.</param>
         /// <param name="MaxCallsPerAgent">The maximum number of calls that can be placed per agent on this campaign.</param>
         /// <param name="CallbackAutoAnswer">The option manages the auto-answer callback calls.</param>
         /// <param name="DynamicLineBalancingSettings">Dynamic line balancing settings.</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, int? MaxCallsPerAgent = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null)
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, int? MaxCallsPerAgent = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -210,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Priority = Priority;
             this.ContactListFilters = ContactListFilters;
             this.Division = Division;
+            this.AgentOwnedColumn = AgentOwnedColumn;
             this.DynamicContactQueueingSettings = DynamicContactQueueingSettings;
             this.SkillColumns = SkillColumns;
             this.MaxCallsPerAgent = MaxCallsPerAgent;
@@ -495,6 +497,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Name of the contact list column containing the id of the agent who owns the record. Only applicable to preview campaigns.
+        /// </summary>
+        /// <value>Name of the contact list column containing the id of the agent who owns the record. Only applicable to preview campaigns.</value>
+        [DataMember(Name="agentOwnedColumn", EmitDefaultValue=false)]
+        public string AgentOwnedColumn { get; set; }
+
+
+
+        /// <summary>
         /// Settings for dynamic queueing of contacts.
         /// </summary>
         /// <value>Settings for dynamic queueing of contacts.</value>
@@ -588,6 +599,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  AgentOwnedColumn: ").Append(AgentOwnedColumn).Append("\n");
             sb.Append("  DynamicContactQueueingSettings: ").Append(DynamicContactQueueingSettings).Append("\n");
             sb.Append("  SkillColumns: ").Append(SkillColumns).Append("\n");
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
@@ -795,6 +807,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
+                    this.AgentOwnedColumn == other.AgentOwnedColumn ||
+                    this.AgentOwnedColumn != null &&
+                    this.AgentOwnedColumn.Equals(other.AgentOwnedColumn)
+                ) &&
+                (
                     this.DynamicContactQueueingSettings == other.DynamicContactQueueingSettings ||
                     this.DynamicContactQueueingSettings != null &&
                     this.DynamicContactQueueingSettings.Equals(other.DynamicContactQueueingSettings)
@@ -932,6 +949,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
+
+                if (this.AgentOwnedColumn != null)
+                    hash = hash * 59 + this.AgentOwnedColumn.GetHashCode();
 
                 if (this.DynamicContactQueueingSettings != null)
                     hash = hash * 59 + this.DynamicContactQueueingSettings.GetHashCode();

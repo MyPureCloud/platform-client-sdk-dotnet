@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="Address">Address.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
-        public ConversationSocialExpressionEventTopicSocialConversation(string Id = null, string Name = null, List<ConversationSocialExpressionEventTopicSocialMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null)
+        /// <param name="Divisions">Divisions.</param>
+        public ConversationSocialExpressionEventTopicSocialConversation(string Id = null, string Name = null, List<ConversationSocialExpressionEventTopicSocialMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, List<ConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OtherMediaUris = OtherMediaUris;
             this.Address = Address;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.Divisions = Divisions;
             
         }
         
@@ -87,6 +89,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string UtilizationLabelId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Divisions
+        /// </summary>
+        [DataMember(Name="divisions", EmitDefaultValue=false)]
+        public List<ConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,6 +182,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId == other.UtilizationLabelId ||
                     this.UtilizationLabelId != null &&
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
+                ) &&
+                (
+                    this.Divisions == other.Divisions ||
+                    this.Divisions != null &&
+                    this.Divisions.SequenceEqual(other.Divisions)
                 );
         }
 
@@ -202,6 +218,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.Divisions != null)
+                    hash = hash * 59 + this.Divisions.GetHashCode();
 
                 return hash;
             }

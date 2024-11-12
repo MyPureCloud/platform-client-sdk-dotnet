@@ -11,6 +11,7 @@
 | **EndTime** | **DateTime?** | The timestamp when this participant disconnected from the conversation in the provider clock. | [optional] |
 | **UserId** | **string** | If this participant represents a user, then this will be the globally unique identifier for the user. | [optional] |
 | **ExternalContactId** | **string** | If this participant represents an external contact, then this will be the globally unique identifier for the external contact. | [optional] |
+| **ExternalContactInitialDivisionId** | **string** | If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned. | [optional] |
 | **ExternalOrganizationId** | **string** | If this participant represents an external org, then this will be the globally unique identifier for the external org. | [optional] |
 | **Name** | **string** | A human readable name identifying the participant. | [optional] |
 | **QueueId** | **string** | If present, the queue id that the communication channel came in on. | [optional] |
@@ -49,4 +50,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

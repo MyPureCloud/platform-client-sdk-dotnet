@@ -111,6 +111,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Datatable,
             
             /// <summary>
+            /// Enum Decisiontable for "DECISIONTABLE"
+            /// </summary>
+            [EnumMember(Value = "DECISIONTABLE")]
+            Decisiontable,
+            
+            /// <summary>
             /// Enum Dialogenginebot for "DIALOGENGINEBOT"
             /// </summary>
             [EnumMember(Value = "DIALOGENGINEBOT")]

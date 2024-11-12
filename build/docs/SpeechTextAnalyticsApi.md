@@ -38,7 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsTopicsGeneral**](#GetSpeechandtextanalyticsTopicsGeneral) | **Get** /api/v2/speechandtextanalytics/topics/general | Get the Speech &amp; Text Analytics general topics for a given dialect |
 | [**GetSpeechandtextanalyticsTopicsGeneralStatus**](#GetSpeechandtextanalyticsTopicsGeneralStatus) | **Get** /api/v2/speechandtextanalytics/topics/general/status | Get the list of general topics from the org and the system with their current status |
 | [**GetSpeechandtextanalyticsTopicsPublishjob**](#GetSpeechandtextanalyticsTopicsPublishjob) | **Get** /api/v2/speechandtextanalytics/topics/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish topics job by id |
-| [**GetSpeechandtextanalyticsTranslationsLanguageConversation**](#GetSpeechandtextanalyticsTranslationsLanguageConversation) | **Get** /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId} | Translate all communication(s) for an interaction. |
+| [**GetSpeechandtextanalyticsTranslationsLanguageConversation**](#GetSpeechandtextanalyticsTranslationsLanguageConversation) | **Get** /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId} | Translate a single interaction recording (or an email conversation) |
 | [**GetSpeechandtextanalyticsTranslationsLanguages**](#GetSpeechandtextanalyticsTranslationsLanguages) | **Get** /api/v2/speechandtextanalytics/translations/languages | Get supported translation languages |
 | [**PatchSpeechandtextanalyticsSettings**](#PatchSpeechandtextanalyticsSettings) | **Patch** /api/v2/speechandtextanalytics/settings | Patch Speech And Text Analytics Settings |
 | [**PostSpeechandtextanalyticsCategories**](#PostSpeechandtextanalyticsCategories) | **Post** /api/v2/speechandtextanalytics/categories | Create new Speech &amp; Text Analytics category |
@@ -2068,7 +2068,7 @@ namespace Example
 > [**CommunicationTranslationList**](CommunicationTranslationList) GetSpeechandtextanalyticsTranslationsLanguageConversation (string languageId, string conversationId, string communicationId = null, string recordingId = null)
 
 
-Translate all communication(s) for an interaction.
+Translate a single interaction recording (or an email conversation)
 
 GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
@@ -2100,12 +2100,12 @@ namespace Example
             var apiInstance = new SpeechTextAnalyticsApi();
             var languageId = languageId_example;  // string | Target translation language
             var conversationId = conversationId_example;  // string | Conversation id
-            var communicationId = communicationId_example;  // string | Communication id associated with the conversation (optional) 
-            var recordingId = recordingId_example;  // string | Recording id associated with the communication (optional) 
+            var communicationId = communicationId_example;  // string | Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional) 
+            var recordingId = recordingId_example;  // string | Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional) 
 
             try
             { 
-                // Translate all communication(s) for an interaction.
+                // Translate a single interaction recording (or an email conversation)
                 CommunicationTranslationList result = apiInstance.GetSpeechandtextanalyticsTranslationsLanguageConversation(languageId, conversationId, communicationId, recordingId);
                 Debug.WriteLine(result);
             }
@@ -2125,8 +2125,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **languageId** | **string**| Target translation language |  |
 | **conversationId** | **string**| Conversation id |  |
-| **communicationId** | **string**| Communication id associated with the conversation | [optional]  |
-| **recordingId** | **string**| Recording id associated with the communication | [optional]  |
+| **communicationId** | **string**| Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. | [optional]  |
+| **recordingId** | **string**| Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. | [optional]  |
 
 ### Return type
 
@@ -3262,4 +3262,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

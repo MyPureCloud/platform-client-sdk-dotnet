@@ -38,6 +38,7 @@
 | **Priority** | **int?** | The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest. | [optional] |
 | **ContactListFilters** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef) | Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied. | [optional] |
 | **Division** | [**DomainEntityRef**](DomainEntityRef) | The division this campaign belongs to. | [optional] |
+| **AgentOwnedColumn** | **string** | Name of the contact list column containing the id of the agent who owns the record. Only applicable to preview campaigns. | [optional] |
 | **DynamicContactQueueingSettings** | [**DynamicContactQueueingSettings**](DynamicContactQueueingSettings) | Settings for dynamic queueing of contacts. | [optional] |
 | **SkillColumns** | **List&lt;string&gt;** | The skill columns on the ContactList that this Campaign should take into account when dialing | [optional] |
 | **MaxCallsPerAgent** | **int?** | The maximum number of calls that can be placed per agent on this campaign | [optional] |
@@ -47,4 +48,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

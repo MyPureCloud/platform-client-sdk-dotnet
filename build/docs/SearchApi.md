@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLocationsSearch**](#GetLocationsSearch) | **Get** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
 | [**GetSearch**](#GetSearch) | **Get** /api/v2/search | Search using the q64 value returned from a previous search. |
 | [**GetSearchSuggest**](#GetSearchSuggest) | **Get** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**GetTelephonyProvidersEdgesSitesSearch**](#GetTelephonyProvidersEdgesSitesSearch) | **Get** /api/v2/telephony/providers/edges/sites/search | Search sites using the q64 value returned from a previous search |
 | [**GetUsersSearch**](#GetUsersSearch) | **Get** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetVoicemailSearch**](#GetVoicemailSearch) | **Get** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
 | [**PostAnalyticsConversationsTranscriptsQuery**](#PostAnalyticsConversationsTranscriptsQuery) | **Post** /api/v2/analytics/conversations/transcripts/query | Search resources. |
@@ -26,6 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSearchSuggest**](#PostSearchSuggest) | **Post** /api/v2/search/suggest | Suggest resources. |
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](#PostSpeechandtextanalyticsTranscriptsSearch) | **Post** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
 | [**PostTeamsSearch**](#PostTeamsSearch) | **Post** /api/v2/teams/search | Search resources. |
+| [**PostTelephonyProvidersEdgesSitesSearch**](#PostTelephonyProvidersEdgesSitesSearch) | **Post** /api/v2/telephony/providers/edges/sites/search | Search sites |
 | [**PostUsersSearch**](#PostUsersSearch) | **Post** /api/v2/users/search | Search users |
 | [**PostUsersSearchConversationTarget**](#PostUsersSearchConversationTarget) | **Post** /api/v2/users/search/conversation/target | Search users as conversation targets |
 | [**PostUsersSearchQueuemembersManage**](#PostUsersSearchQueuemembersManage) | **Post** /api/v2/users/search/queuemembers/manage | Search manage queue member |
@@ -400,6 +402,71 @@ namespace Example
 ### Return type
 
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse)
+
+
+## GetTelephonyProvidersEdgesSitesSearch
+
+> [**SitesSearchResponse**](SitesSearchResponse) GetTelephonyProvidersEdgesSitesSearch (string q64, List<string> expand = null)
+
+
+Search sites using the q64 value returned from a previous search
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesSitesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
+
+            try
+            { 
+                // Search sites using the q64 value returned from a previous search
+                SitesSearchResponse result = apiInstance.GetTelephonyProvidersEdgesSitesSearch(q64, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.GetTelephonyProvidersEdgesSitesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string)| expand | [optional]  |
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
 
 
 ## GetUsersSearch
@@ -1264,6 +1331,69 @@ namespace Example
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
+## PostTelephonyProvidersEdgesSitesSearch
+
+> [**SitesSearchResponse**](SitesSearchResponse) PostTelephonyProvidersEdgesSitesSearch (SiteSearchRequest body)
+
+
+Search sites
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgesSitesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new SiteSearchRequest(); // SiteSearchRequest | Search request options
+
+            try
+            { 
+                // Search sites
+                SitesSearchResponse result = apiInstance.PostTelephonyProvidersEdgesSitesSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostTelephonyProvidersEdgesSitesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SiteSearchRequest**](SiteSearchRequest)| Search request options |  |
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
+
+
 ## PostUsersSearch
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearch (UserSearchRequest body)
@@ -1578,4 +1708,4 @@ namespace Example
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

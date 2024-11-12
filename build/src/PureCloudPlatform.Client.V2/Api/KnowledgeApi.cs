@@ -689,9 +689,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>DocumentVariationResponse</returns>
         
-        DocumentVariationResponse GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        DocumentVariationResponse GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get a variation for a document.
@@ -704,9 +705,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        ApiResponse<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        ApiResponse<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -721,9 +723,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>DocumentVariationResponseListing</returns>
         
-        DocumentVariationResponseListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        DocumentVariationResponseListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -738,9 +741,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of DocumentVariationResponseListing</returns>
         
-        ApiResponse<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        ApiResponse<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get document version.
@@ -4015,9 +4019,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of DocumentVariationResponse</returns>
         
-        System.Threading.Tasks.Task<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        System.Threading.Tasks.Task<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get a variation for a document.
@@ -4030,9 +4035,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -4047,9 +4053,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of DocumentVariationResponseListing</returns>
         
-        System.Threading.Tasks.Task<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        System.Threading.Tasks.Task<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get variations for a document.
@@ -4064,9 +4071,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentVariationResponseListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponseListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponseListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null);
 
         /// <summary>
         /// Get document version.
@@ -12090,11 +12098,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>DocumentVariationResponse</returns>
         
-        public DocumentVariationResponse GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public DocumentVariationResponse GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null)
         {
-             ApiResponse<DocumentVariationResponse> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState);
+             ApiResponse<DocumentVariationResponse> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState, expand);
              return localVarResponse.Data;
         }
 
@@ -12107,9 +12116,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of DocumentVariationResponse</returns>
         
-        public ApiResponse< DocumentVariationResponse > GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public ApiResponse< DocumentVariationResponse > GetKnowledgeKnowledgebaseDocumentVariationWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null)
         { 
             // verify the required parameter 'documentVariationId' is set
             if (documentVariationId == null)
@@ -12157,6 +12167,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (documentState != null) localVarQueryParams.Add(new Tuple<string, string>("documentState", this.Configuration.ApiClient.ParameterToString(documentState)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -12210,11 +12221,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of DocumentVariationResponse</returns>
         
-        public async System.Threading.Tasks.Task<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public async System.Threading.Tasks.Task<DocumentVariationResponse> GetKnowledgeKnowledgebaseDocumentVariationAsync (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null)
         {
-             ApiResponse<DocumentVariationResponse> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState);
+             ApiResponse<DocumentVariationResponse> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo(documentVariationId, documentId, knowledgeBaseId, documentState, expand);
              return localVarResponse.Data;
 
         }
@@ -12228,9 +12240,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Globally unique identifier for a document.</param>
         /// <param name="knowledgeBaseId">Globally unique identifier for a knowledge base.</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentVariationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponse>> GetKnowledgeKnowledgebaseDocumentVariationAsyncWithHttpInfo (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null)
         { 
             // verify the required parameter 'documentVariationId' is set
             if (documentVariationId == null)
@@ -12281,6 +12294,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (documentState != null) localVarQueryParams.Add(new Tuple<string, string>("documentState", this.Configuration.ApiClient.ParameterToString(documentState)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -12337,11 +12351,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>DocumentVariationResponseListing</returns>
         
-        public DocumentVariationResponseListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public DocumentVariationResponseListing GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null)
         {
-             ApiResponse<DocumentVariationResponseListing> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState);
+             ApiResponse<DocumentVariationResponseListing> localVarResponse = GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState, expand);
              return localVarResponse.Data;
         }
 
@@ -12356,9 +12371,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of DocumentVariationResponseListing</returns>
         
-        public ApiResponse< DocumentVariationResponseListing > GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public ApiResponse< DocumentVariationResponseListing > GetKnowledgeKnowledgebaseDocumentVariationsWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -12405,6 +12421,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (documentState != null) localVarQueryParams.Add(new Tuple<string, string>("documentState", this.Configuration.ApiClient.ParameterToString(documentState)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -12460,11 +12477,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of DocumentVariationResponseListing</returns>
         
-        public async System.Threading.Tasks.Task<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public async System.Threading.Tasks.Task<DocumentVariationResponseListing> GetKnowledgeKnowledgebaseDocumentVariationsAsync (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null)
         {
-             ApiResponse<DocumentVariationResponseListing> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState);
+             ApiResponse<DocumentVariationResponseListing> localVarResponse = await GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo(knowledgeBaseId, documentId, before, after, pageSize, documentState, expand);
              return localVarResponse.Data;
 
         }
@@ -12480,9 +12498,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="documentState">The state of the document. (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentVariationResponseListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponseListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentVariationResponseListing>> GetKnowledgeKnowledgebaseDocumentVariationsAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -12531,6 +12550,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (documentState != null) localVarQueryParams.Add(new Tuple<string, string>("documentState", this.Configuration.ApiClient.ParameterToString(documentState)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

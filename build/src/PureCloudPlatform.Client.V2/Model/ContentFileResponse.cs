@@ -70,12 +70,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The file format (required).</param>
         /// <param name="Checksum">The checksum of the file (required).</param>
         /// <param name="Size">The size of the file in bytes (required).</param>
-        public ContentFileResponse(string Name = null, TypeEnum? Type = null, string Checksum = null, long? Size = null)
+        /// <param name="ContentUrl">Public download url for content. Needs to be expanded (required).</param>
+        public ContentFileResponse(string Name = null, TypeEnum? Type = null, string Checksum = null, long? Size = null, string ContentUrl = null)
         {
             this.Name = Name;
             this.Type = Type;
             this.Checksum = Checksum;
             this.Size = Size;
+            this.ContentUrl = ContentUrl;
             
         }
         
@@ -109,6 +111,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public long? Size { get; set; }
 
 
+
+        /// <summary>
+        /// Public download url for content. Needs to be expanded
+        /// </summary>
+        /// <value>Public download url for content. Needs to be expanded</value>
+        [DataMember(Name="contentUrl", EmitDefaultValue=false)]
+        public string ContentUrl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Checksum: ").Append(Checksum).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  ContentUrl: ").Append(ContentUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,6 +193,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Size == other.Size ||
                     this.Size != null &&
                     this.Size.Equals(other.Size)
+                ) &&
+                (
+                    this.ContentUrl == other.ContentUrl ||
+                    this.ContentUrl != null &&
+                    this.ContentUrl.Equals(other.ContentUrl)
                 );
         }
 
@@ -206,6 +223,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
+
+                if (this.ContentUrl != null)
+                    hash = hash * 59 + this.ContentUrl.GetHashCode();
 
                 return hash;
             }

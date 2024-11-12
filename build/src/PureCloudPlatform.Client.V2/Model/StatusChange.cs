@@ -220,6 +220,48 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Agentassistant for "agent.assistant"
+            /// </summary>
+            [EnumMember(Value = "agent.assistant")]
+            Agentassistant,
+            
+            /// <summary>
+            /// Enum Analyticsalerting for "analytics.alerting"
+            /// </summary>
+            [EnumMember(Value = "analytics.alerting")]
+            Analyticsalerting,
+            
+            /// <summary>
+            /// Enum Analytics for "analytics"
+            /// </summary>
+            [EnumMember(Value = "analytics")]
+            Analytics,
+            
+            /// <summary>
+            /// Enum Analyticsrealtime for "analytics.realtime"
+            /// </summary>
+            [EnumMember(Value = "analytics.realtime")]
+            Analyticsrealtime,
+            
+            /// <summary>
+            /// Enum Analyticsreportingsettings for "analytics.reporting.settings"
+            /// </summary>
+            [EnumMember(Value = "analytics.reporting.settings")]
+            Analyticsreportingsettings,
+            
+            /// <summary>
+            /// Enum Architect for "architect"
+            /// </summary>
+            [EnumMember(Value = "architect")]
+            Architect,
+            
+            /// <summary>
+            /// Enum Audiohook for "audiohook"
+            /// </summary>
+            [EnumMember(Value = "audiohook")]
+            Audiohook,
+            
+            /// <summary>
             /// Enum Audit for "audit"
             /// </summary>
             [EnumMember(Value = "audit")]
@@ -254,6 +296,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "bots.voice")]
             Botsvoice,
+            
+            /// <summary>
+            /// Enum Businessrules for "business.rules"
+            /// </summary>
+            [EnumMember(Value = "business.rules")]
+            Businessrules,
             
             /// <summary>
             /// Enum Callback for "callback"
@@ -320,6 +368,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "external.contacts")]
             Externalcontacts,
+            
+            /// <summary>
+            /// Enum Gamification for "gamification"
+            /// </summary>
+            [EnumMember(Value = "gamification")]
+            Gamification,
             
             /// <summary>
             /// Enum Gcv for "gcv"
@@ -584,48 +638,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "workforce.management")]
             Workforcemanagement,
-            
-            /// <summary>
-            /// Enum Agentassistant for "agent.assistant"
-            /// </summary>
-            [EnumMember(Value = "agent.assistant")]
-            Agentassistant,
-            
-            /// <summary>
-            /// Enum Analyticsalerting for "analytics.alerting"
-            /// </summary>
-            [EnumMember(Value = "analytics.alerting")]
-            Analyticsalerting,
-            
-            /// <summary>
-            /// Enum Analytics for "analytics"
-            /// </summary>
-            [EnumMember(Value = "analytics")]
-            Analytics,
-            
-            /// <summary>
-            /// Enum Analyticsrealtime for "analytics.realtime"
-            /// </summary>
-            [EnumMember(Value = "analytics.realtime")]
-            Analyticsrealtime,
-            
-            /// <summary>
-            /// Enum Analyticsreportingsettings for "analytics.reporting.settings"
-            /// </summary>
-            [EnumMember(Value = "analytics.reporting.settings")]
-            Analyticsreportingsettings,
-            
-            /// <summary>
-            /// Enum Architect for "architect"
-            /// </summary>
-            [EnumMember(Value = "architect")]
-            Architect,
-            
-            /// <summary>
-            /// Enum Audiohook for "audiohook"
-            /// </summary>
-            [EnumMember(Value = "audiohook")]
-            Audiohook,
             
             /// <summary>
             /// Enum System for "system"

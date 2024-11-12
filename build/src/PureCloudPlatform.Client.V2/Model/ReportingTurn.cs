@@ -58,6 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Skippedcollection,
             
             /// <summary>
+            /// Enum Partialcollection for "PartialCollection"
+            /// </summary>
+            [EnumMember(Value = "PartialCollection")]
+            Partialcollection,
+            
+            /// <summary>
             /// Enum Nomatchcollection for "NoMatchCollection"
             /// </summary>
             [EnumMember(Value = "NoMatchCollection")]

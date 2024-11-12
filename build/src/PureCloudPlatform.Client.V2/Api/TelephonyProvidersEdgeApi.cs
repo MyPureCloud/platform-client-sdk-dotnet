@@ -1979,6 +1979,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SiteEntityListing> GetTelephonyProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
+        /// Search sites using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>SitesSearchResponse</returns>
+        
+        SitesSearchResponse GetTelephonyProvidersEdgesSitesSearch (string q64, List<string> expand = null);
+
+        /// <summary>
+        /// Search sites using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>ApiResponse of SitesSearchResponse</returns>
+        
+        ApiResponse<SitesSearchResponse> GetTelephonyProvidersEdgesSitesSearchWithHttpInfo (string q64, List<string> expand = null);
+
+        /// <summary>
         /// Get a list of Edge-compatible time zones
         /// </summary>
         /// <remarks>
@@ -2855,6 +2881,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Site</returns>
         
         ApiResponse<Site> PostTelephonyProvidersEdgesSitesWithHttpInfo (Site body);
+
+        /// <summary>
+        /// Search sites
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>SitesSearchResponse</returns>
+        
+        SitesSearchResponse PostTelephonyProvidersEdgesSitesSearch (SiteSearchRequest body);
+
+        /// <summary>
+        /// Search sites
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of SitesSearchResponse</returns>
+        
+        ApiResponse<SitesSearchResponse> PostTelephonyProvidersEdgesSitesSearchWithHttpInfo (SiteSearchRequest body);
 
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -5241,6 +5291,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
+        /// Search sites using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of SitesSearchResponse</returns>
+        
+        System.Threading.Tasks.Task<SitesSearchResponse> GetTelephonyProvidersEdgesSitesSearchAsync (string q64, List<string> expand = null);
+
+        /// <summary>
+        /// Search sites using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of ApiResponse (SitesSearchResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SitesSearchResponse>> GetTelephonyProvidersEdgesSitesSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
+
+        /// <summary>
         /// Get a list of Edge-compatible time zones
         /// </summary>
         /// <remarks>
@@ -6117,6 +6193,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Site)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Site>> PostTelephonyProvidersEdgesSitesAsyncWithHttpInfo (Site body);
+
+        /// <summary>
+        /// Search sites
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of SitesSearchResponse</returns>
+        
+        System.Threading.Tasks.Task<SitesSearchResponse> PostTelephonyProvidersEdgesSitesSearchAsync (SiteSearchRequest body);
+
+        /// <summary>
+        /// Search sites
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (SitesSearchResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SitesSearchResponse>> PostTelephonyProvidersEdgesSitesSearchAsyncWithHttpInfo (SiteSearchRequest body);
 
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -22708,6 +22808,225 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Search sites using the q64 value returned from a previous search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>SitesSearchResponse</returns>
+        
+        public SitesSearchResponse GetTelephonyProvidersEdgesSitesSearch (string q64, List<string> expand = null)
+        {
+             ApiResponse<SitesSearchResponse> localVarResponse = GetTelephonyProvidersEdgesSitesSearchWithHttpInfo(q64, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search sites using the q64 value returned from a previous search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>ApiResponse of SitesSearchResponse</returns>
+        
+        public ApiResponse< SitesSearchResponse > GetTelephonyProvidersEdgesSitesSearchWithHttpInfo (string q64, List<string> expand = null)
+        { 
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSitesSearch");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSitesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSitesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SitesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SitesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SitesSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search sites using the q64 value returned from a previous search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of SitesSearchResponse</returns>
+        
+        public async System.Threading.Tasks.Task<SitesSearchResponse> GetTelephonyProvidersEdgesSitesSearchAsync (string q64, List<string> expand = null)
+        {
+             ApiResponse<SitesSearchResponse> localVarResponse = await GetTelephonyProvidersEdgesSitesSearchAsyncWithHttpInfo(q64, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search sites using the q64 value returned from a previous search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of ApiResponse (SitesSearchResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SitesSearchResponse>> GetTelephonyProvidersEdgesSitesSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
+        { 
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSitesSearch");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSitesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSitesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SitesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SitesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SitesSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a list of Edge-compatible time zones 
         /// 
         /// </summary>
@@ -30385,6 +30704,229 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Site>(localVarStatusCode,
                 localVarHeaders,
                 (Site) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Site)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Search sites 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>SitesSearchResponse</returns>
+        
+        public SitesSearchResponse PostTelephonyProvidersEdgesSitesSearch (SiteSearchRequest body)
+        {
+             ApiResponse<SitesSearchResponse> localVarResponse = PostTelephonyProvidersEdgesSitesSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search sites 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of SitesSearchResponse</returns>
+        
+        public ApiResponse< SitesSearchResponse > PostTelephonyProvidersEdgesSitesSearchWithHttpInfo (SiteSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSitesSearch");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesSitesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesSitesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SitesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SitesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SitesSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search sites 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of SitesSearchResponse</returns>
+        
+        public async System.Threading.Tasks.Task<SitesSearchResponse> PostTelephonyProvidersEdgesSitesSearchAsync (SiteSearchRequest body)
+        {
+             ApiResponse<SitesSearchResponse> localVarResponse = await PostTelephonyProvidersEdgesSitesSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search sites 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (SitesSearchResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SitesSearchResponse>> PostTelephonyProvidersEdgesSitesSearchAsyncWithHttpInfo (SiteSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSitesSearch");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesSitesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesSitesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SitesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SitesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SitesSearchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

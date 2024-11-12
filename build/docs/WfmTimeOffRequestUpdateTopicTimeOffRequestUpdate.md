@@ -17,6 +17,8 @@
 | **PartialDayStartDateTimes** | **List&lt;string&gt;** |  | [optional] |
 | **FullDayManagementUnitDates** | **List&lt;string&gt;** |  | [optional] |
 | **DailyDurationMinutes** | **int?** |  | [optional] |
+| **DurationMinutes** | **List&lt;int?&gt;** |  | [optional] |
+| **PayableMinutes** | **List&lt;int?&gt;** |  | [optional] |
 | **Notes** | **string** |  | [optional] |
 | **ReviewedDate** | **string** |  | [optional] |
 | **ReviewedBy** | **string** |  | [optional] |
@@ -27,4 +29,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

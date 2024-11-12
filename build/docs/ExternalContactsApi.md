@@ -290,8 +290,6 @@ void (empty response body)
 
 Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
 
-DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:externalSource:delete
@@ -718,7 +716,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources, division |
 
 ### Return type
 
@@ -915,7 +913,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
 | **noteId** | **string**| Note Id |  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources, division |
 
 ### Return type
 
@@ -986,7 +984,7 @@ namespace Example
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **sortOrder** | **string**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources, division |
 
 ### Return type
 
@@ -1027,7 +1025,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var contactId = contactId_example;  // string | ExternalContact ID
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
             { 
@@ -1050,7 +1048,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, division |
 
 ### Return type
 
@@ -1121,7 +1119,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources, division |
 
 ### Return type
 
@@ -1380,8 +1378,6 @@ This endpoint does require any parameters.
 
 Fetch an External Source
 
-GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:externalSource:view
@@ -1445,8 +1441,6 @@ namespace Example
 
 
 Fetch a list of External Sources
-
-GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1798,7 +1792,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalDataSources) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
             var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
 
             try
@@ -1822,7 +1816,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources, division |
 | **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 
 ### Return type
@@ -1896,7 +1890,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources, division |
 
 ### Return type
 
@@ -1963,7 +1957,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **noteId** | **string**| Note Id |  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources, division |
 
 ### Return type
 
@@ -2034,7 +2028,7 @@ namespace Example
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **sortOrder** | **string**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources, division |
 
 ### Return type
 
@@ -2104,7 +2098,7 @@ namespace Example
 | **externalOrganizationId** | **string**| External Organization ID |  |
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources, division |
 | **sortOrder** | **string**| The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; | [optional]  |
 
 ### Return type
@@ -2179,7 +2173,7 @@ namespace Example
 | **q** | **string**| Search query | [optional]  |
 | **trustorId** | [**List<string>**](string)| Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested | [optional]  |
 | **sortOrder** | **string**| The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources, division |
 | **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 
 ### Return type
@@ -2490,7 +2484,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **relationshipId** | **string**| Relationship Id |  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources, division |
 
 ### Return type
 
@@ -2554,7 +2548,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **lookupVal** | **string**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) |  |
-| **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: contacts.externalOrganization, externalDataSources |
+| **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: contacts.externalOrganization, externalDataSources, division |
 
 ### Return type
 
@@ -4206,8 +4200,6 @@ namespace Example
 
 Create an External Source
 
-PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:externalSource:add
@@ -4323,7 +4315,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **identifier** | [**ContactIdentifier**](ContactIdentifier)|  |  |
-| **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: externalOrganization, identifiers, externalSources |
+| **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: externalOrganization, identifiers, externalSources, division |
 
 ### Return type
 
@@ -5102,8 +5094,6 @@ void (empty response body)
 
 Update an External Source
 
-PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:externalSource:edit
@@ -5550,4 +5540,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

@@ -424,6 +424,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlertingTimeoutMs">AlertingTimeoutMs.</param>
         /// <param name="Provider">Provider.</param>
         /// <param name="ExternalContact">ExternalContact.</param>
+        /// <param name="ExternalContactInitialDivisionId">ExternalContactInitialDivisionId.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="ConversationRoutingData">ConversationRoutingData.</param>
@@ -446,7 +447,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        public ConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallbackEventTopicUriReference User = null, ConversationCallbackEventTopicUriReference Queue = null, ConversationCallbackEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationCallbackEventTopicErrorBody ErrorInfo = null, ConversationCallbackEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationCallbackEventTopicUriReference ExternalContact = null, ConversationCallbackEventTopicUriReference ExternalOrganization = null, ConversationCallbackEventTopicWrapup Wrapup = null, ConversationCallbackEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallbackEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationCallbackEventTopicQueueMediaSettings QueueMediaSettings = null, ConversationCallbackEventTopicDialerPreview OutboundPreview = null, ConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, bool? ExternalCampaign = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
+        public ConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallbackEventTopicUriReference User = null, ConversationCallbackEventTopicUriReference Queue = null, ConversationCallbackEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationCallbackEventTopicErrorBody ErrorInfo = null, ConversationCallbackEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationCallbackEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationCallbackEventTopicUriReference ExternalOrganization = null, ConversationCallbackEventTopicWrapup Wrapup = null, ConversationCallbackEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallbackEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationCallbackEventTopicQueueMediaSettings QueueMediaSettings = null, ConversationCallbackEventTopicDialerPreview OutboundPreview = null, ConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, bool? ExternalCampaign = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -474,6 +475,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.Provider = Provider;
             this.ExternalContact = ExternalContact;
+            this.ExternalContactInitialDivisionId = ExternalContactInitialDivisionId;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
             this.ConversationRoutingData = ConversationRoutingData;
@@ -686,6 +688,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ExternalContactInitialDivisionId
+        /// </summary>
+        [DataMember(Name="externalContactInitialDivisionId", EmitDefaultValue=false)]
+        public string ExternalContactInitialDivisionId { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets ExternalOrganization
         /// </summary>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
@@ -889,6 +899,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalContactInitialDivisionId: ").Append(ExternalContactInitialDivisionId).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
@@ -1080,6 +1091,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContact == other.ExternalContact ||
                     this.ExternalContact != null &&
                     this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalContactInitialDivisionId == other.ExternalContactInitialDivisionId ||
+                    this.ExternalContactInitialDivisionId != null &&
+                    this.ExternalContactInitialDivisionId.Equals(other.ExternalContactInitialDivisionId)
                 ) &&
                 (
                     this.ExternalOrganization == other.ExternalOrganization ||
@@ -1281,6 +1297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
+
+                if (this.ExternalContactInitialDivisionId != null)
+                    hash = hash * 59 + this.ExternalContactInitialDivisionId.GetHashCode();
 
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();

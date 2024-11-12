@@ -142,6 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PartialDayStartDateTimes">PartialDayStartDateTimes.</param>
         /// <param name="FullDayManagementUnitDates">FullDayManagementUnitDates.</param>
         /// <param name="DailyDurationMinutes">DailyDurationMinutes.</param>
+        /// <param name="DurationMinutes">DurationMinutes.</param>
+        /// <param name="PayableMinutes">PayableMinutes.</param>
         /// <param name="Notes">Notes.</param>
         /// <param name="ReviewedDate">ReviewedDate.</param>
         /// <param name="ReviewedBy">ReviewedBy.</param>
@@ -149,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubmittedBy">SubmittedBy.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
+        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
         {
             this.Id = Id;
             this.User = User;
@@ -162,6 +164,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.DailyDurationMinutes = DailyDurationMinutes;
+            this.DurationMinutes = DurationMinutes;
+            this.PayableMinutes = PayableMinutes;
             this.Notes = Notes;
             this.ReviewedDate = ReviewedDate;
             this.ReviewedBy = ReviewedBy;
@@ -251,6 +255,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets DurationMinutes
+        /// </summary>
+        [DataMember(Name="durationMinutes", EmitDefaultValue=false)]
+        public List<int?> DurationMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PayableMinutes
+        /// </summary>
+        [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
+        public List<int?> PayableMinutes { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Notes
         /// </summary>
         [DataMember(Name="notes", EmitDefaultValue=false)]
@@ -325,6 +345,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
+            sb.Append("  DurationMinutes: ").Append(DurationMinutes).Append("\n");
+            sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  ReviewedDate: ").Append(ReviewedDate).Append("\n");
             sb.Append("  ReviewedBy: ").Append(ReviewedBy).Append("\n");
@@ -428,6 +450,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DailyDurationMinutes.Equals(other.DailyDurationMinutes)
                 ) &&
                 (
+                    this.DurationMinutes == other.DurationMinutes ||
+                    this.DurationMinutes != null &&
+                    this.DurationMinutes.SequenceEqual(other.DurationMinutes)
+                ) &&
+                (
+                    this.PayableMinutes == other.PayableMinutes ||
+                    this.PayableMinutes != null &&
+                    this.PayableMinutes.SequenceEqual(other.PayableMinutes)
+                ) &&
+                (
                     this.Notes == other.Notes ||
                     this.Notes != null &&
                     this.Notes.Equals(other.Notes)
@@ -507,6 +539,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
+
+                if (this.DurationMinutes != null)
+                    hash = hash * 59 + this.DurationMinutes.GetHashCode();
+
+                if (this.PayableMinutes != null)
+                    hash = hash * 59 + this.PayableMinutes.GetHashCode();
 
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();

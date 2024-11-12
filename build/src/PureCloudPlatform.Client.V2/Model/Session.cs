@@ -284,11 +284,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUserDisconnectType">Disconnect reason for the last user connected to the conversation..</param>
         /// <param name="LastAcdOutcome">Last ACD outcome for the conversation..</param>
         /// <param name="Authenticated">Indicates whether or not the session is authenticated. (required).</param>
+        /// <param name="LastScreen">The app screen name where the customer's last app interaction occurred..</param>
         /// <param name="CreatedDate">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="EndedDate">Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AwayDate">Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="IdleDate">Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Session(string Id = null, string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, JourneyApp App = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
+        public Session(string Id = null, string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, JourneyApp App = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, string LastScreen = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
         {
             this.Id = Id;
             this.CustomerId = CustomerId;
@@ -328,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LastUserDisconnectType = LastUserDisconnectType;
             this.LastAcdOutcome = LastAcdOutcome;
             this.Authenticated = Authenticated;
+            this.LastScreen = LastScreen;
             this.CreatedDate = CreatedDate;
             this.EndedDate = EndedDate;
             this.AwayDate = AwayDate;
@@ -659,6 +661,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The app screen name where the customer's last app interaction occurred.
+        /// </summary>
+        /// <value>The app screen name where the customer's last app interaction occurred.</value>
+        [DataMember(Name="lastScreen", EmitDefaultValue=false)]
+        public string LastScreen { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -767,6 +778,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastUserDisconnectType: ").Append(LastUserDisconnectType).Append("\n");
             sb.Append("  LastAcdOutcome: ").Append(LastAcdOutcome).Append("\n");
             sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
+            sb.Append("  LastScreen: ").Append(LastScreen).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  EndedDate: ").Append(EndedDate).Append("\n");
@@ -1005,6 +1017,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Authenticated.Equals(other.Authenticated)
                 ) &&
                 (
+                    this.LastScreen == other.LastScreen ||
+                    this.LastScreen != null &&
+                    this.LastScreen.Equals(other.LastScreen)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1165,6 +1182,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();
+
+                if (this.LastScreen != null)
+                    hash = hash * 59 + this.LastScreen.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

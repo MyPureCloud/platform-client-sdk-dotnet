@@ -811,7 +811,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentPerformanceTimelineDetailView for "AGENT_PERFORMANCE_TIMELINE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_PERFORMANCE_TIMELINE_DETAIL_VIEW")]
-            AgentPerformanceTimelineDetailView
+            AgentPerformanceTimelineDetailView,
+            
+            /// <summary>
+            /// Enum DashboardSlideshows for "DASHBOARD_SLIDESHOWS"
+            /// </summary>
+            [EnumMember(Value = "DASHBOARD_SLIDESHOWS")]
+            DashboardSlideshows,
+            
+            /// <summary>
+            /// Enum DashboardSlideshowsDetail for "DASHBOARD_SLIDESHOWS_DETAIL"
+            /// </summary>
+            [EnumMember(Value = "DASHBOARD_SLIDESHOWS_DETAIL")]
+            DashboardSlideshowsDetail
         }
         /// <summary>
         /// The error message in case the export request failed

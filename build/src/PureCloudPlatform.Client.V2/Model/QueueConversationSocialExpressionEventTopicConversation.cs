@@ -30,7 +30,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalTag">ExternalTag.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
         /// <param name="SecurePause">SecurePause.</param>
-        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicRecentTransfer> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null)
+        /// <param name="Divisions">Divisions.</param>
+        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicTransferResponse> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null, List<QueueConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
@@ -41,6 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalTag = ExternalTag;
             this.UtilizationLabelId = UtilizationLabelId;
             this.SecurePause = SecurePause;
+            this.Divisions = Divisions;
             
         }
         
@@ -74,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RecentTransfers
         /// </summary>
         [DataMember(Name="recentTransfers", EmitDefaultValue=false)]
-        public List<QueueConversationSocialExpressionEventTopicRecentTransfer> RecentTransfers { get; set; }
+        public List<QueueConversationSocialExpressionEventTopicTransferResponse> RecentTransfers { get; set; }
 
 
 
@@ -117,6 +119,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? SecurePause { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Divisions
+        /// </summary>
+        [DataMember(Name="divisions", EmitDefaultValue=false)]
+        public List<QueueConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
+            sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -219,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SecurePause == other.SecurePause ||
                     this.SecurePause != null &&
                     this.SecurePause.Equals(other.SecurePause)
+                ) &&
+                (
+                    this.Divisions == other.Divisions ||
+                    this.Divisions != null &&
+                    this.Divisions.SequenceEqual(other.Divisions)
                 );
         }
 
@@ -259,6 +275,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SecurePause != null)
                     hash = hash * 59 + this.SecurePause.GetHashCode();
+
+                if (this.Divisions != null)
+                    hash = hash * 59 + this.Divisions.GetHashCode();
 
                 return hash;
             }

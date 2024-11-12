@@ -12,7 +12,8 @@
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
+| **Divisions** | [**List&lt;ConversationCallbackEventTopicConversationDivisionMembership&gt;**](ConversationCallbackEventTopicConversationDivisionMembership) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

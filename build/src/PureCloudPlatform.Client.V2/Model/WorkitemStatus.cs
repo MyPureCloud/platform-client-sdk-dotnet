@@ -80,7 +80,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StatusTransitionDelaySeconds">Delay in seconds for auto status transition.</param>
         /// <param name="StatusTransitionTime">Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS.</param>
         /// <param name="Worktype">The Worktype containing the Status..</param>
-        public WorkitemStatus(string Name = null, CategoryEnum? Category = null, List<WorkitemStatusReference> DestinationStatuses = null, string Description = null, WorkitemStatusReference DefaultDestinationStatus = null, int? StatusTransitionDelaySeconds = null, string StatusTransitionTime = null, WorktypeReference Worktype = null)
+        /// <param name="AutoTerminateWorkitem">Terminate workitem on selection of status. Applicable only for statuses in the Closed category..</param>
+        public WorkitemStatus(string Name = null, CategoryEnum? Category = null, List<WorkitemStatusReference> DestinationStatuses = null, string Description = null, WorkitemStatusReference DefaultDestinationStatus = null, int? StatusTransitionDelaySeconds = null, string StatusTransitionTime = null, WorktypeReference Worktype = null, bool? AutoTerminateWorkitem = null)
         {
             this.Name = Name;
             this.Category = Category;
@@ -90,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StatusTransitionDelaySeconds = StatusTransitionDelaySeconds;
             this.StatusTransitionTime = StatusTransitionTime;
             this.Worktype = Worktype;
+            this.AutoTerminateWorkitem = AutoTerminateWorkitem;
             
         }
         
@@ -169,6 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Terminate workitem on selection of status. Applicable only for statuses in the Closed category.
+        /// </summary>
+        /// <value>Terminate workitem on selection of status. Applicable only for statuses in the Closed category.</value>
+        [DataMember(Name="autoTerminateWorkitem", EmitDefaultValue=false)]
+        public bool? AutoTerminateWorkitem { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -194,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StatusTransitionDelaySeconds: ").Append(StatusTransitionDelaySeconds).Append("\n");
             sb.Append("  StatusTransitionTime: ").Append(StatusTransitionTime).Append("\n");
             sb.Append("  Worktype: ").Append(Worktype).Append("\n");
+            sb.Append("  AutoTerminateWorkitem: ").Append(AutoTerminateWorkitem).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -281,6 +293,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Worktype.Equals(other.Worktype)
                 ) &&
                 (
+                    this.AutoTerminateWorkitem == other.AutoTerminateWorkitem ||
+                    this.AutoTerminateWorkitem != null &&
+                    this.AutoTerminateWorkitem.Equals(other.AutoTerminateWorkitem)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -324,6 +341,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Worktype != null)
                     hash = hash * 59 + this.Worktype.GetHashCode();
+
+                if (this.AutoTerminateWorkitem != null)
+                    hash = hash * 59 + this.AutoTerminateWorkitem.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

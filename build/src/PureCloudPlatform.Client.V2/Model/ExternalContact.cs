@@ -78,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LineId">LineId.</param>
         /// <param name="WhatsAppId">WhatsAppId.</param>
         /// <param name="FacebookId">FacebookId.</param>
+        /// <param name="ExternalIds">A list of external identifiers that identify this contact in an external system.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
@@ -85,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        public ExternalContact(string Id = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
+        public ExternalContact(string Id = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, List<ExternalId> ExternalIds = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
             this.FirstName = FirstName;
@@ -105,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LineId = LineId;
             this.WhatsAppId = WhatsAppId;
             this.FacebookId = FacebookId;
+            this.ExternalIds = ExternalIds;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
             this.ExternalOrganization = ExternalOrganization;
@@ -265,6 +267,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A list of external identifiers that identify this contact in an external system
+        /// </summary>
+        /// <value>A list of external identifiers that identify this contact in an external system</value>
+        [DataMember(Name="externalIds", EmitDefaultValue=false)]
+        public List<ExternalId> ExternalIds { get; set; }
+
+
+
+        /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -398,6 +409,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LineId: ").Append(LineId).Append("\n");
             sb.Append("  WhatsAppId: ").Append(WhatsAppId).Append("\n");
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
+            sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
@@ -542,6 +554,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FacebookId.Equals(other.FacebookId)
                 ) &&
                 (
+                    this.ExternalIds == other.ExternalIds ||
+                    this.ExternalIds != null &&
+                    this.ExternalIds.SequenceEqual(other.ExternalIds)
+                ) &&
+                (
                     this.ModifyDate == other.ModifyDate ||
                     this.ModifyDate != null &&
                     this.ModifyDate.Equals(other.ModifyDate)
@@ -672,6 +689,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FacebookId != null)
                     hash = hash * 59 + this.FacebookId.GetHashCode();
+
+                if (this.ExternalIds != null)
+                    hash = hash * 59 + this.ExternalIds.GetHashCode();
 
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();

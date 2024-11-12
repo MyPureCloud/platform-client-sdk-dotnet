@@ -89,9 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Nnextcontactavoided
         }
         /// <summary>
-        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.
+        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event and choosing \"wrapUpDate\" uses the date when conversation is ended
         /// </summary>
-        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.</value>
+        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event and choosing \"wrapUpDate\" uses the date when conversation is ended</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AlternateTimeDimensionEnum
         {
@@ -116,9 +116,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Wrapupdate
         }
         /// <summary>
-        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.
+        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event and choosing \"wrapUpDate\" uses the date when conversation is ended
         /// </summary>
-        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.</value>
+        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event and choosing \"wrapUpDate\" uses the date when conversation is ended</value>
         [DataMember(Name="alternateTimeDimension", EmitDefaultValue=false)]
         public AlternateTimeDimensionEnum? AlternateTimeDimension { get; set; }
 
@@ -138,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Only named metrics will be retrieved. (required).</param>
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. ['a','b','c']->'a,b,c').</param>
         /// <param name="Views">Custom derived metric views.</param>
-        /// <param name="AlternateTimeDimension">Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event..</param>
+        /// <param name="AlternateTimeDimension">Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event and choosing \"wrapUpDate\" uses the date when conversation is ended.</param>
         /// <param name="PageSize">The number of results per page.</param>
         public ResolutionAsyncAggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, ResolutionAggregateQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<ResolutionAggregationView> Views = null, AlternateTimeDimensionEnum? AlternateTimeDimension = null, int? PageSize = null)
         {

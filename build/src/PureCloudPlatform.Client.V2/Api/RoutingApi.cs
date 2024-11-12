@@ -555,7 +555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingWrapupcodeWithHttpInfo (string codeId);
 
         /// <summary>
-        /// Remove routing language from user
+        /// Remove a routing language from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -568,7 +568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteUserRoutinglanguage (string userId, string languageId);
 
         /// <summary>
-        /// Remove routing language from user
+        /// Remove a routing language from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -581,7 +581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteUserRoutinglanguageWithHttpInfo (string userId, string languageId);
 
         /// <summary>
-        /// Remove routing skill from user
+        /// Remove a routing skill from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -594,7 +594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteUserRoutingskill (string userId, string skillId);
 
         /// <summary>
-        /// Remove routing skill from user
+        /// Remove a routing skill from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -2403,7 +2403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserQueueEntityListing> GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
-        /// List routing language for user
+        /// List routing languages assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -2418,7 +2418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserLanguageEntityListing GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// List routing language for user
+        /// List routing languages assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -2433,7 +2433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserLanguageEntityListing> GetUserRoutinglanguagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// List routing skills for user
+        /// List routing skills assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -2448,7 +2448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserSkillEntityListing GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// List routing skills for user
+        /// List routing skills assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -2835,7 +2835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
-        /// Update routing language proficiency or state.
+        /// Update an assigned routing language's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -2849,7 +2849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Update routing language proficiency or state.
+        /// Update an assigned routing language's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -2863,7 +2863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserRoutingLanguage> PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body
         /// </summary>
         /// <remarks>
         /// 
@@ -2876,7 +2876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserLanguageEntityListing PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body
         /// </summary>
         /// <remarks>
         /// 
@@ -2889,7 +2889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
-        /// Bulk add routing skills to user
+        /// Assign multiple routing skills to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -2902,7 +2902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserSkillEntityListing PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
-        /// Bulk add routing skills to user
+        /// Assign multiple routing skills to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -3539,7 +3539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WrapupCode> PostRoutingWrapupcodesWithHttpInfo (WrapupCodeRequest body);
 
         /// <summary>
-        /// Add routing language to user
+        /// Assign a routing language to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -3552,7 +3552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingLanguage PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
-        /// Add routing language to user
+        /// Assign a routing language to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -3565,7 +3565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserRoutingLanguage> PostUserRoutinglanguagesWithHttpInfo (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
-        /// Add routing skill to user
+        /// Assign a routing skill to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -3578,7 +3578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingSkill PostUserRoutingskills (string userId, UserRoutingSkillPost body);
 
         /// <summary>
-        /// Add routing skill to user
+        /// Assign a routing skill to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -3921,7 +3921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WrapupCode> PutRoutingWrapupcodeWithHttpInfo (string codeId, WrapupCodeRequest body);
 
         /// <summary>
-        /// Update routing skill proficiency or state.
+        /// Update an assigned routing skill's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -3935,7 +3935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Update routing skill proficiency or state.
+        /// Update an assigned routing skill's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -3949,7 +3949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserRoutingSkill> PutUserRoutingskillWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Replace all routing skills assigned to a user
+        /// Assign multiple routing skills to a user, replacing any current assignments
         /// </summary>
         /// <remarks>
         /// 
@@ -3962,7 +3962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserSkillEntityListing PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
-        /// Replace all routing skills assigned to a user
+        /// Assign multiple routing skills to a user, replacing any current assignments
         /// </summary>
         /// <remarks>
         /// 
@@ -4517,7 +4517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingWrapupcodeAsyncWithHttpInfo (string codeId);
 
         /// <summary>
-        /// Remove routing language from user
+        /// Remove a routing language from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -4530,7 +4530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteUserRoutinglanguageAsync (string userId, string languageId);
 
         /// <summary>
-        /// Remove routing language from user
+        /// Remove a routing language from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -4543,7 +4543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId);
 
         /// <summary>
-        /// Remove routing skill from user
+        /// Remove a routing skill from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -4556,7 +4556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId);
 
         /// <summary>
-        /// Remove routing skill from user
+        /// Remove a routing skill from a user
         /// </summary>
         /// <remarks>
         /// 
@@ -6365,7 +6365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
-        /// List routing language for user
+        /// List routing languages assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -6380,7 +6380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserLanguageEntityListing> GetUserRoutinglanguagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// List routing language for user
+        /// List routing languages assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -6395,7 +6395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> GetUserRoutinglanguagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// List routing skills for user
+        /// List routing skills assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -6410,7 +6410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserSkillEntityListing> GetUserRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// List routing skills for user
+        /// List routing skills assigned to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -6797,7 +6797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
-        /// Update routing language proficiency or state.
+        /// Update an assigned routing language's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -6811,7 +6811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Update routing language proficiency or state.
+        /// Update an assigned routing language's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -6825,7 +6825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body
         /// </summary>
         /// <remarks>
         /// 
@@ -6838,7 +6838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkAsync (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body
         /// </summary>
         /// <remarks>
         /// 
@@ -6851,7 +6851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> PatchUserRoutinglanguagesBulkAsyncWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
-        /// Bulk add routing skills to user
+        /// Assign multiple routing skills to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -6864,7 +6864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserSkillEntityListing> PatchUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
-        /// Bulk add routing skills to user
+        /// Assign multiple routing skills to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -7501,7 +7501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PostRoutingWrapupcodesAsyncWithHttpInfo (WrapupCodeRequest body);
 
         /// <summary>
-        /// Add routing language to user
+        /// Assign a routing language to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -7514,7 +7514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingLanguage> PostUserRoutinglanguagesAsync (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
-        /// Add routing language to user
+        /// Assign a routing language to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -7527,7 +7527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PostUserRoutinglanguagesAsyncWithHttpInfo (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
-        /// Add routing skill to user
+        /// Assign a routing skill to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -7540,7 +7540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingSkill> PostUserRoutingskillsAsync (string userId, UserRoutingSkillPost body);
 
         /// <summary>
-        /// Add routing skill to user
+        /// Assign a routing skill to a user
         /// </summary>
         /// <remarks>
         /// 
@@ -7883,7 +7883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutRoutingWrapupcodeAsyncWithHttpInfo (string codeId, WrapupCodeRequest body);
 
         /// <summary>
-        /// Update routing skill proficiency or state.
+        /// Update an assigned routing skill's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -7897,7 +7897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Update routing skill proficiency or state.
+        /// Update an assigned routing skill's proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -7911,7 +7911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserRoutingskillAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Replace all routing skills assigned to a user
+        /// Assign multiple routing skills to a user, replacing any current assignments
         /// </summary>
         /// <remarks>
         /// 
@@ -7924,7 +7924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserSkillEntityListing> PutUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
-        /// Replace all routing skills assigned to a user
+        /// Assign multiple routing skills to a user, replacing any current assignments
         /// </summary>
         /// <remarks>
         /// 
@@ -12706,7 +12706,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Remove routing language from user 
+        /// Remove a routing language from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12720,7 +12720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Remove routing language from user 
+        /// Remove a routing language from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12816,7 +12816,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Remove routing language from user 
+        /// Remove a routing language from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12831,7 +12831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Remove routing language from user 
+        /// Remove a routing language from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12930,7 +12930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Remove routing skill from user 
+        /// Remove a routing skill from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12944,7 +12944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Remove routing skill from user 
+        /// Remove a routing skill from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13040,7 +13040,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Remove routing skill from user 
+        /// Remove a routing skill from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13055,7 +13055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Remove routing skill from user 
+        /// Remove a routing skill from a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27547,7 +27547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// List routing language for user 
+        /// List routing languages assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27564,7 +27564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// List routing language for user 
+        /// List routing languages assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27661,7 +27661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// List routing language for user 
+        /// List routing languages assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27679,7 +27679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// List routing language for user 
+        /// List routing languages assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27778,7 +27778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// List routing skills for user 
+        /// List routing skills assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27795,7 +27795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// List routing skills for user 
+        /// List routing skills assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27892,7 +27892,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// List routing skills for user 
+        /// List routing skills assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27910,7 +27910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// List routing skills for user 
+        /// List routing skills assigned to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31314,7 +31314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update routing language proficiency or state. 
+        /// Update an assigned routing language's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31330,7 +31330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update routing language proficiency or state. 
+        /// Update an assigned routing language's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31436,7 +31436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update routing language proficiency or state. 
+        /// Update an assigned routing language's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31453,7 +31453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update routing language proficiency or state. 
+        /// Update an assigned routing language's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31563,7 +31563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages 
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31578,7 +31578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages 
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31679,7 +31679,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages 
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31695,7 +31695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add bulk routing language to user. Max limit 50 languages 
+        /// Assign multiple routing languages to a user. Max 50 routing languages in request body 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31799,7 +31799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Bulk add routing skills to user 
+        /// Assign multiple routing skills to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31814,7 +31814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk add routing skills to user 
+        /// Assign multiple routing skills to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31915,7 +31915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Bulk add routing skills to user 
+        /// Assign multiple routing skills to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31931,7 +31931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Bulk add routing skills to user 
+        /// Assign multiple routing skills to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37679,7 +37679,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add routing language to user 
+        /// Assign a routing language to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37694,7 +37694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add routing language to user 
+        /// Assign a routing language to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37795,7 +37795,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add routing language to user 
+        /// Assign a routing language to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37811,7 +37811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add routing language to user 
+        /// Assign a routing language to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37915,7 +37915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add routing skill to user 
+        /// Assign a routing skill to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37930,7 +37930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add routing skill to user 
+        /// Assign a routing skill to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38031,7 +38031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add routing skill to user 
+        /// Assign a routing skill to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38047,7 +38047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add routing skill to user 
+        /// Assign a routing skill to a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41157,7 +41157,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update routing skill proficiency or state. 
+        /// Update an assigned routing skill's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41173,7 +41173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update routing skill proficiency or state. 
+        /// Update an assigned routing skill's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41279,7 +41279,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update routing skill proficiency or state. 
+        /// Update an assigned routing skill's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41296,7 +41296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update routing skill proficiency or state. 
+        /// Update an assigned routing skill's proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41406,7 +41406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Replace all routing skills assigned to a user 
+        /// Assign multiple routing skills to a user, replacing any current assignments 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41421,7 +41421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Replace all routing skills assigned to a user 
+        /// Assign multiple routing skills to a user, replacing any current assignments 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41522,7 +41522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Replace all routing skills assigned to a user 
+        /// Assign multiple routing skills to a user, replacing any current assignments 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41538,7 +41538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Replace all routing skills assigned to a user 
+        /// Assign multiple routing skills to a user, replacing any current assignments 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

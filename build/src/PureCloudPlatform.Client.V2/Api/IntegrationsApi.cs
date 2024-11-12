@@ -297,9 +297,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>JsonSchemaDocument</returns>
         
-        JsonSchemaDocument GetIntegrationsActionDraftSchema (string actionId, string fileName);
+        JsonSchemaDocument GetIntegrationsActionDraftSchema (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve schema for a Draft based on filename.
@@ -310,9 +311,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
         
-        ApiResponse<JsonSchemaDocument> GetIntegrationsActionDraftSchemaWithHttpInfo (string actionId, string fileName);
+        ApiResponse<JsonSchemaDocument> GetIntegrationsActionDraftSchemaWithHttpInfo (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve templates for a Draft based on filename.
@@ -399,9 +401,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>JsonSchemaDocument</returns>
         
-        JsonSchemaDocument GetIntegrationsActionSchema (string actionId, string fileName);
+        JsonSchemaDocument GetIntegrationsActionSchema (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve schema for an action based on filename.
@@ -412,9 +415,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
         
-        ApiResponse<JsonSchemaDocument> GetIntegrationsActionSchemaWithHttpInfo (string actionId, string fileName);
+        ApiResponse<JsonSchemaDocument> GetIntegrationsActionSchemaWithHttpInfo (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve text of templates for an action based on filename.
@@ -1943,9 +1947,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>TestExecutionResult</returns>
         
-        TestExecutionResult PostIntegrationsActionDraftTest (string actionId, Object body);
+        TestExecutionResult PostIntegrationsActionDraftTest (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -1956,9 +1961,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
         
-        ApiResponse<TestExecutionResult> PostIntegrationsActionDraftTestWithHttpInfo (string actionId, Object body);
+        ApiResponse<TestExecutionResult> PostIntegrationsActionDraftTestWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
@@ -1969,9 +1975,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Object</returns>
         
-        Object PostIntegrationsActionExecute (string actionId, Object body);
+        Object PostIntegrationsActionExecute (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
@@ -1982,9 +1989,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of Object</returns>
         
-        ApiResponse<Object> PostIntegrationsActionExecuteWithHttpInfo (string actionId, Object body);
+        ApiResponse<Object> PostIntegrationsActionExecuteWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -1995,9 +2003,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>TestExecutionResult</returns>
         
-        TestExecutionResult PostIntegrationsActionTest (string actionId, Object body);
+        TestExecutionResult PostIntegrationsActionTest (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -2008,9 +2017,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
         
-        ApiResponse<TestExecutionResult> PostIntegrationsActionTestWithHttpInfo (string actionId, Object body);
+        ApiResponse<TestExecutionResult> PostIntegrationsActionTestWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
@@ -2637,9 +2647,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of JsonSchemaDocument</returns>
         
-        System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionDraftSchemaAsync (string actionId, string fileName);
+        System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionDraftSchemaAsync (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve schema for a Draft based on filename.
@@ -2650,9 +2661,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionDraftSchemaAsyncWithHttpInfo (string actionId, string fileName);
+        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionDraftSchemaAsyncWithHttpInfo (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve templates for a Draft based on filename.
@@ -2739,9 +2751,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of JsonSchemaDocument</returns>
         
-        System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionSchemaAsync (string actionId, string fileName);
+        System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionSchemaAsync (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve schema for an action based on filename.
@@ -2752,9 +2765,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionSchemaAsyncWithHttpInfo (string actionId, string fileName);
+        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionSchemaAsyncWithHttpInfo (string actionId, string fileName, bool? flatten = null);
 
         /// <summary>
         /// Retrieve text of templates for an action based on filename.
@@ -4283,9 +4297,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of TestExecutionResult</returns>
         
-        System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionDraftTestAsync (string actionId, Object body);
+        System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionDraftTestAsync (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4296,9 +4311,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionDraftTestAsyncWithHttpInfo (string actionId, Object body);
+        System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionDraftTestAsyncWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
@@ -4309,9 +4325,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of Object</returns>
         
-        System.Threading.Tasks.Task<Object> PostIntegrationsActionExecuteAsync (string actionId, Object body);
+        System.Threading.Tasks.Task<Object> PostIntegrationsActionExecuteAsync (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
@@ -4322,9 +4339,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsActionExecuteAsyncWithHttpInfo (string actionId, Object body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsActionExecuteAsyncWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4335,9 +4353,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of TestExecutionResult</returns>
         
-        System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionTestAsync (string actionId, Object body);
+        System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionTestAsync (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4348,9 +4367,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionTestAsyncWithHttpInfo (string actionId, Object body);
+        System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionTestAsyncWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
         /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
@@ -7002,11 +7022,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>JsonSchemaDocument</returns>
         
-        public JsonSchemaDocument GetIntegrationsActionDraftSchema (string actionId, string fileName)
+        public JsonSchemaDocument GetIntegrationsActionDraftSchema (string actionId, string fileName, bool? flatten = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = GetIntegrationsActionDraftSchemaWithHttpInfo(actionId, fileName);
+             ApiResponse<JsonSchemaDocument> localVarResponse = GetIntegrationsActionDraftSchemaWithHttpInfo(actionId, fileName, flatten);
              return localVarResponse.Data;
         }
 
@@ -7017,9 +7038,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
         
-        public ApiResponse< JsonSchemaDocument > GetIntegrationsActionDraftSchemaWithHttpInfo (string actionId, string fileName)
+        public ApiResponse< JsonSchemaDocument > GetIntegrationsActionDraftSchemaWithHttpInfo (string actionId, string fileName, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -7062,6 +7084,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (fileName != null) localVarPathParams.Add("fileName", this.Configuration.ApiClient.ParameterToString(fileName));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -7113,11 +7136,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of JsonSchemaDocument</returns>
         
-        public async System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionDraftSchemaAsync (string actionId, string fileName)
+        public async System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionDraftSchemaAsync (string actionId, string fileName, bool? flatten = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = await GetIntegrationsActionDraftSchemaAsyncWithHttpInfo(actionId, fileName);
+             ApiResponse<JsonSchemaDocument> localVarResponse = await GetIntegrationsActionDraftSchemaAsyncWithHttpInfo(actionId, fileName, flatten);
              return localVarResponse.Data;
 
         }
@@ -7129,9 +7153,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionDraftSchemaAsyncWithHttpInfo (string actionId, string fileName)
+        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionDraftSchemaAsyncWithHttpInfo (string actionId, string fileName, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -7176,6 +7201,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (fileName != null) localVarPathParams.Add("fileName", this.Configuration.ApiClient.ParameterToString(fileName));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -7884,11 +7910,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>JsonSchemaDocument</returns>
         
-        public JsonSchemaDocument GetIntegrationsActionSchema (string actionId, string fileName)
+        public JsonSchemaDocument GetIntegrationsActionSchema (string actionId, string fileName, bool? flatten = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = GetIntegrationsActionSchemaWithHttpInfo(actionId, fileName);
+             ApiResponse<JsonSchemaDocument> localVarResponse = GetIntegrationsActionSchemaWithHttpInfo(actionId, fileName, flatten);
              return localVarResponse.Data;
         }
 
@@ -7899,9 +7926,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
         
-        public ApiResponse< JsonSchemaDocument > GetIntegrationsActionSchemaWithHttpInfo (string actionId, string fileName)
+        public ApiResponse< JsonSchemaDocument > GetIntegrationsActionSchemaWithHttpInfo (string actionId, string fileName, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -7944,6 +7972,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (fileName != null) localVarPathParams.Add("fileName", this.Configuration.ApiClient.ParameterToString(fileName));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -7995,11 +8024,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of JsonSchemaDocument</returns>
         
-        public async System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionSchemaAsync (string actionId, string fileName)
+        public async System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionSchemaAsync (string actionId, string fileName, bool? flatten = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = await GetIntegrationsActionSchemaAsyncWithHttpInfo(actionId, fileName);
+             ApiResponse<JsonSchemaDocument> localVarResponse = await GetIntegrationsActionSchemaAsyncWithHttpInfo(actionId, fileName, flatten);
              return localVarResponse.Data;
 
         }
@@ -8011,9 +8041,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionSchemaAsyncWithHttpInfo (string actionId, string fileName)
+        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionSchemaAsyncWithHttpInfo (string actionId, string fileName, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -8058,6 +8089,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (fileName != null) localVarPathParams.Add("fileName", this.Configuration.ApiClient.ParameterToString(fileName));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -20292,11 +20324,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>TestExecutionResult</returns>
         
-        public TestExecutionResult PostIntegrationsActionDraftTest (string actionId, Object body)
+        public TestExecutionResult PostIntegrationsActionDraftTest (string actionId, Object body, bool? flatten = null)
         {
-             ApiResponse<TestExecutionResult> localVarResponse = PostIntegrationsActionDraftTestWithHttpInfo(actionId, body);
+             ApiResponse<TestExecutionResult> localVarResponse = PostIntegrationsActionDraftTestWithHttpInfo(actionId, body, flatten);
              return localVarResponse.Data;
         }
 
@@ -20307,9 +20340,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
         
-        public ApiResponse< TestExecutionResult > PostIntegrationsActionDraftTestWithHttpInfo (string actionId, Object body)
+        public ApiResponse< TestExecutionResult > PostIntegrationsActionDraftTestWithHttpInfo (string actionId, Object body, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -20352,6 +20386,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -20408,11 +20443,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of TestExecutionResult</returns>
         
-        public async System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionDraftTestAsync (string actionId, Object body)
+        public async System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionDraftTestAsync (string actionId, Object body, bool? flatten = null)
         {
-             ApiResponse<TestExecutionResult> localVarResponse = await PostIntegrationsActionDraftTestAsyncWithHttpInfo(actionId, body);
+             ApiResponse<TestExecutionResult> localVarResponse = await PostIntegrationsActionDraftTestAsyncWithHttpInfo(actionId, body, flatten);
              return localVarResponse.Data;
 
         }
@@ -20424,9 +20460,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionDraftTestAsyncWithHttpInfo (string actionId, Object body)
+        public async System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionDraftTestAsyncWithHttpInfo (string actionId, Object body, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -20471,6 +20508,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -20528,11 +20566,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Object</returns>
         
-        public Object PostIntegrationsActionExecute (string actionId, Object body)
+        public Object PostIntegrationsActionExecute (string actionId, Object body, bool? flatten = null)
         {
-             ApiResponse<Object> localVarResponse = PostIntegrationsActionExecuteWithHttpInfo(actionId, body);
+             ApiResponse<Object> localVarResponse = PostIntegrationsActionExecuteWithHttpInfo(actionId, body, flatten);
              return localVarResponse.Data;
         }
 
@@ -20543,9 +20582,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of Object</returns>
         
-        public ApiResponse< Object > PostIntegrationsActionExecuteWithHttpInfo (string actionId, Object body)
+        public ApiResponse< Object > PostIntegrationsActionExecuteWithHttpInfo (string actionId, Object body, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -20588,6 +20628,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -20644,11 +20685,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of Object</returns>
         
-        public async System.Threading.Tasks.Task<Object> PostIntegrationsActionExecuteAsync (string actionId, Object body)
+        public async System.Threading.Tasks.Task<Object> PostIntegrationsActionExecuteAsync (string actionId, Object body, bool? flatten = null)
         {
-             ApiResponse<Object> localVarResponse = await PostIntegrationsActionExecuteAsyncWithHttpInfo(actionId, body);
+             ApiResponse<Object> localVarResponse = await PostIntegrationsActionExecuteAsyncWithHttpInfo(actionId, body, flatten);
              return localVarResponse.Data;
 
         }
@@ -20660,9 +20702,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsActionExecuteAsyncWithHttpInfo (string actionId, Object body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsActionExecuteAsyncWithHttpInfo (string actionId, Object body, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -20707,6 +20750,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -20764,11 +20808,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>TestExecutionResult</returns>
         
-        public TestExecutionResult PostIntegrationsActionTest (string actionId, Object body)
+        public TestExecutionResult PostIntegrationsActionTest (string actionId, Object body, bool? flatten = null)
         {
-             ApiResponse<TestExecutionResult> localVarResponse = PostIntegrationsActionTestWithHttpInfo(actionId, body);
+             ApiResponse<TestExecutionResult> localVarResponse = PostIntegrationsActionTestWithHttpInfo(actionId, body, flatten);
              return localVarResponse.Data;
         }
 
@@ -20779,9 +20824,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
         
-        public ApiResponse< TestExecutionResult > PostIntegrationsActionTestWithHttpInfo (string actionId, Object body)
+        public ApiResponse< TestExecutionResult > PostIntegrationsActionTestWithHttpInfo (string actionId, Object body, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -20824,6 +20870,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
@@ -20880,11 +20927,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of TestExecutionResult</returns>
         
-        public async System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionTestAsync (string actionId, Object body)
+        public async System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionTestAsync (string actionId, Object body, bool? flatten = null)
         {
-             ApiResponse<TestExecutionResult> localVarResponse = await PostIntegrationsActionTestAsyncWithHttpInfo(actionId, body);
+             ApiResponse<TestExecutionResult> localVarResponse = await PostIntegrationsActionTestAsyncWithHttpInfo(actionId, body, flatten);
              return localVarResponse.Data;
 
         }
@@ -20896,9 +20944,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionTestAsyncWithHttpInfo (string actionId, Object body)
+        public async System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionTestAsyncWithHttpInfo (string actionId, Object body, bool? flatten = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -20943,6 +20992,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
 
             // Query params
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
 
             // Header params
 
