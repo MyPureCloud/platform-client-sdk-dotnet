@@ -79,6 +79,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesSiteOutboundroutes**](#GetTelephonyProvidersEdgesSiteOutboundroutes) | **Get** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes | Get outbound routes |
 | [**GetTelephonyProvidersEdgesSiteSiteconnections**](#GetTelephonyProvidersEdgesSiteSiteconnections) | **Get** /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections | Get site connections for a site. |
 | [**GetTelephonyProvidersEdgesSites**](#GetTelephonyProvidersEdgesSites) | **Get** /api/v2/telephony/providers/edges/sites | Get the list of Sites. |
+| [**GetTelephonyProvidersEdgesSitesSearch**](#GetTelephonyProvidersEdgesSitesSearch) | **Get** /api/v2/telephony/providers/edges/sites/search | Search sites using the q64 value returned from a previous search |
 | [**GetTelephonyProvidersEdgesTimezones**](#GetTelephonyProvidersEdgesTimezones) | **Get** /api/v2/telephony/providers/edges/timezones | Get a list of Edge-compatible time zones |
 | [**GetTelephonyProvidersEdgesTrunk**](#GetTelephonyProvidersEdgesTrunk) | **Get** /api/v2/telephony/providers/edges/trunks/{trunkId} | Get a Trunk by ID |
 | [**GetTelephonyProvidersEdgesTrunkMetrics**](#GetTelephonyProvidersEdgesTrunkMetrics) | **Get** /api/v2/telephony/providers/edges/trunks/{trunkId}/metrics | Get the trunk metrics. |
@@ -113,6 +114,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesPhonesReboot**](#PostTelephonyProvidersEdgesPhonesReboot) | **Post** /api/v2/telephony/providers/edges/phones/reboot | Reboot Multiple Phones |
 | [**PostTelephonyProvidersEdgesSiteOutboundroutes**](#PostTelephonyProvidersEdgesSiteOutboundroutes) | **Post** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes | Create outbound route |
 | [**PostTelephonyProvidersEdgesSites**](#PostTelephonyProvidersEdgesSites) | **Post** /api/v2/telephony/providers/edges/sites | Create a Site. |
+| [**PostTelephonyProvidersEdgesSitesSearch**](#PostTelephonyProvidersEdgesSitesSearch) | **Post** /api/v2/telephony/providers/edges/sites/search | Search sites |
 | [**PostTelephonyProvidersEdgesTrunkbasesettings**](#PostTelephonyProvidersEdgesTrunkbasesettings) | **Post** /api/v2/telephony/providers/edges/trunkbasesettings | Create a Trunk Base Settings object |
 | [**PutTelephonyProvidersEdge**](#PutTelephonyProvidersEdge) | **Put** /api/v2/telephony/providers/edges/{edgeId} | Update a edge. |
 | [**PutTelephonyProvidersEdgeLogicalinterface**](#PutTelephonyProvidersEdgeLogicalinterface) | **Put** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Update an edge logical interface. |
@@ -4855,6 +4857,71 @@ namespace Example
 [**SiteEntityListing**](SiteEntityListing)
 
 
+## GetTelephonyProvidersEdgesSitesSearch
+
+> [**SitesSearchResponse**](SitesSearchResponse) GetTelephonyProvidersEdgesSitesSearch (string q64, List<string> expand = null)
+
+
+Search sites using the q64 value returned from a previous search
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesSitesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
+
+            try
+            { 
+                // Search sites using the q64 value returned from a previous search
+                SitesSearchResponse result = apiInstance.GetTelephonyProvidersEdgesSitesSearch(q64, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesSitesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string)| expand | [optional]  |
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
+
+
 ## GetTelephonyProvidersEdgesTimezones
 
 > [**TimeZoneEntityListing**](TimeZoneEntityListing) GetTelephonyProvidersEdgesTimezones (int? pageSize = null, int? pageNumber = null)
@@ -7028,6 +7095,69 @@ namespace Example
 [**Site**](Site)
 
 
+## PostTelephonyProvidersEdgesSitesSearch
+
+> [**SitesSearchResponse**](SitesSearchResponse) PostTelephonyProvidersEdgesSitesSearch (SiteSearchRequest body)
+
+
+Search sites
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgesSitesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var body = new SiteSearchRequest(); // SiteSearchRequest | Search request options
+
+            try
+            { 
+                // Search sites
+                SitesSearchResponse result = apiInstance.PostTelephonyProvidersEdgesSitesSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgesSitesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SiteSearchRequest**](SiteSearchRequest)| Search request options |  |
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
+
+
 ## PostTelephonyProvidersEdgesTrunkbasesettings
 
 > [**TrunkBase**](TrunkBase) PostTelephonyProvidersEdgesTrunkbasesettings (TrunkBase body)
@@ -8053,4 +8183,4 @@ namespace Example
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

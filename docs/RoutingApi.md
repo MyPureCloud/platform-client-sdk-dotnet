@@ -28,8 +28,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingUtilizationLabel**](#DeleteRoutingUtilizationLabel) | **Delete** /api/v2/routing/utilization/labels/{labelId} | Delete a utilization label |
 | [**DeleteRoutingUtilizationTag**](#DeleteRoutingUtilizationTag) | **Delete** /api/v2/routing/utilization/tags/{tagId} | Delete an utilization tag |
 | [**DeleteRoutingWrapupcode**](#DeleteRoutingWrapupcode) | **Delete** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
-| [**DeleteUserRoutinglanguage**](#DeleteUserRoutinglanguage) | **Delete** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
-| [**DeleteUserRoutingskill**](#DeleteUserRoutingskill) | **Delete** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
+| [**DeleteUserRoutinglanguage**](#DeleteUserRoutinglanguage) | **Delete** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove a routing language from a user |
+| [**DeleteUserRoutingskill**](#DeleteUserRoutingskill) | **Delete** /api/v2/users/{userId}/routingskills/{skillId} | Remove a routing skill from a user |
 | [**GetRoutingAssessment**](#GetRoutingAssessment) | **Get** /api/v2/routing/assessments/{assessmentId} | Retrieve a single benefit assessment. |
 | [**GetRoutingAssessments**](#GetRoutingAssessments) | **Get** /api/v2/routing/assessments | Retrieve all benefit assessments. |
 | [**GetRoutingAssessmentsJob**](#GetRoutingAssessmentsJob) | **Get** /api/v2/routing/assessments/jobs/{jobId} | Retrieve a single benefit assessments job. |
@@ -95,8 +95,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingWrapupcodesDivisionview**](#GetRoutingWrapupcodesDivisionview) | **Get** /api/v2/routing/wrapupcodes/divisionviews/{codeId} | Get a simplified wrap-up code. |
 | [**GetRoutingWrapupcodesDivisionviews**](#GetRoutingWrapupcodesDivisionviews) | **Get** /api/v2/routing/wrapupcodes/divisionviews | Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s). |
 | [**GetUserQueues**](#GetUserQueues) | **Get** /api/v2/users/{userId}/queues | Get queues for user |
-| [**GetUserRoutinglanguages**](#GetUserRoutinglanguages) | **Get** /api/v2/users/{userId}/routinglanguages | List routing language for user |
-| [**GetUserRoutingskills**](#GetUserRoutingskills) | **Get** /api/v2/users/{userId}/routingskills | List routing skills for user |
+| [**GetUserRoutinglanguages**](#GetUserRoutinglanguages) | **Get** /api/v2/users/{userId}/routinglanguages | List routing languages assigned to a user |
+| [**GetUserRoutingskills**](#GetUserRoutingskills) | **Get** /api/v2/users/{userId}/routingskills | List routing skills assigned to a user |
 | [**GetUserSkillgroups**](#GetUserSkillgroups) | **Get** /api/v2/users/{userId}/skillgroups | Get skill groups for a user |
 | [**PatchRoutingConversation**](#PatchRoutingConversation) | **Patch** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
 | [**PatchRoutingEmailDomain**](#PatchRoutingEmailDomain) | **Patch** /api/v2/routing/email/domains/{domainId} | Update domain settings |
@@ -111,9 +111,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingSkillgroup**](#PatchRoutingSkillgroup) | **Patch** /api/v2/routing/skillgroups/{skillGroupId} | Update skill group definition |
 | [**PatchUserQueue**](#PatchUserQueue) | **Patch** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
 | [**PatchUserQueues**](#PatchUserQueues) | **Patch** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
-| [**PatchUserRoutinglanguage**](#PatchUserRoutinglanguage) | **Patch** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
-| [**PatchUserRoutinglanguagesBulk**](#PatchUserRoutinglanguagesBulk) | **Patch** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
-| [**PatchUserRoutingskillsBulk**](#PatchUserRoutingskillsBulk) | **Patch** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
+| [**PatchUserRoutinglanguage**](#PatchUserRoutinglanguage) | **Patch** /api/v2/users/{userId}/routinglanguages/{languageId} | Update an assigned routing language&#39;s proficiency |
+| [**PatchUserRoutinglanguagesBulk**](#PatchUserRoutinglanguagesBulk) | **Patch** /api/v2/users/{userId}/routinglanguages/bulk | Assign multiple routing languages to a user. Max 50 routing languages in request body |
+| [**PatchUserRoutingskillsBulk**](#PatchUserRoutingskillsBulk) | **Patch** /api/v2/users/{userId}/routingskills/bulk | Assign multiple routing skills to a user |
 | [**PostAnalyticsQueuesObservationsQuery**](#PostAnalyticsQueuesObservationsQuery) | **Post** /api/v2/analytics/queues/observations/query | Query for queue observations |
 | [**PostAnalyticsRoutingActivityQuery**](#PostAnalyticsRoutingActivityQuery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
 | [**PostRoutingAssessments**](#PostRoutingAssessments) | **Post** /api/v2/routing/assessments | Create a benefit assessment. |
@@ -139,8 +139,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingUtilizationLabels**](#PostRoutingUtilizationLabels) | **Post** /api/v2/routing/utilization/labels | Create a utilization label |
 | [**PostRoutingUtilizationTags**](#PostRoutingUtilizationTags) | **Post** /api/v2/routing/utilization/tags | Create an utilization tag |
 | [**PostRoutingWrapupcodes**](#PostRoutingWrapupcodes) | **Post** /api/v2/routing/wrapupcodes | Create a wrap-up code |
-| [**PostUserRoutinglanguages**](#PostUserRoutinglanguages) | **Post** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
-| [**PostUserRoutingskills**](#PostUserRoutingskills) | **Post** /api/v2/users/{userId}/routingskills | Add routing skill to user |
+| [**PostUserRoutinglanguages**](#PostUserRoutinglanguages) | **Post** /api/v2/users/{userId}/routinglanguages | Assign a routing language to a user |
+| [**PostUserRoutingskills**](#PostUserRoutingskills) | **Post** /api/v2/users/{userId}/routingskills | Assign a routing skill to a user |
 | [**PutRoutingDirectroutingbackupSettingsMe**](#PutRoutingDirectroutingbackupSettingsMe) | **Put** /api/v2/routing/directroutingbackup/settings/me | Update the user&#39;s Direct Routing Backup settings. |
 | [**PutRoutingEmailDomainRoute**](#PutRoutingEmailDomainRoute) | **Put** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
 | [**PutRoutingEmailOutboundDomainActivation**](#PutRoutingEmailOutboundDomainActivation) | **Put** /api/v2/routing/email/outbound/domains/{domainId}/activation | Request an activation status (cname + dkim) update of an outbound domain |
@@ -154,8 +154,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingUtilization**](#PutRoutingUtilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutRoutingUtilizationLabel**](#PutRoutingUtilizationLabel) | **Put** /api/v2/routing/utilization/labels/{labelId} | Update a utilization label |
 | [**PutRoutingWrapupcode**](#PutRoutingWrapupcode) | **Put** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
-| [**PutUserRoutingskill**](#PutUserRoutingskill) | **Put** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
-| [**PutUserRoutingskillsBulk**](#PutUserRoutingskillsBulk) | **Put** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
+| [**PutUserRoutingskill**](#PutUserRoutingskill) | **Put** /api/v2/users/{userId}/routingskills/{skillId} | Update an assigned routing skill&#39;s proficiency |
+| [**PutUserRoutingskillsBulk**](#PutUserRoutingskillsBulk) | **Put** /api/v2/users/{userId}/routingskills/bulk | Assign multiple routing skills to a user, replacing any current assignments |
 
 
 
@@ -1513,7 +1513,7 @@ void (empty response body)
 > void DeleteUserRoutinglanguage (string userId, string languageId)
 
 
-Remove routing language from user
+Remove a routing language from a user
 
 Requires ANY permissions: 
 
@@ -1547,7 +1547,7 @@ namespace Example
 
             try
             { 
-                // Remove routing language from user
+                // Remove a routing language from a user
                 apiInstance.DeleteUserRoutinglanguage(userId, languageId);
             }
             catch (Exception e)
@@ -1577,7 +1577,7 @@ void (empty response body)
 > void DeleteUserRoutingskill (string userId, string skillId)
 
 
-Remove routing skill from user
+Remove a routing skill from a user
 
 Requires ALL permissions: 
 
@@ -1610,7 +1610,7 @@ namespace Example
 
             try
             { 
-                // Remove routing skill from user
+                // Remove a routing skill from a user
                 apiInstance.DeleteUserRoutingskill(userId, skillId);
             }
             catch (Exception e)
@@ -5896,7 +5896,7 @@ namespace Example
 > [**UserLanguageEntityListing**](UserLanguageEntityListing) GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 
-List routing language for user
+List routing languages assigned to a user
 
 Requires NO permissions: 
 
@@ -5930,7 +5930,7 @@ namespace Example
 
             try
             { 
-                // List routing language for user
+                // List routing languages assigned to a user
                 UserLanguageEntityListing result = apiInstance.GetUserRoutinglanguages(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -5963,7 +5963,7 @@ namespace Example
 > [**UserSkillEntityListing**](UserSkillEntityListing) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 
-List routing skills for user
+List routing skills assigned to a user
 
 Requires NO permissions: 
 
@@ -5997,7 +5997,7 @@ namespace Example
 
             try
             { 
-                // List routing skills for user
+                // List routing skills assigned to a user
                 UserSkillEntityListing result = apiInstance.GetUserRoutingskills(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -6946,7 +6946,7 @@ namespace Example
 > [**UserRoutingLanguage**](UserRoutingLanguage) PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
 
 
-Update routing language proficiency or state.
+Update an assigned routing language's proficiency
 
 Requires ANY permissions: 
 
@@ -6981,7 +6981,7 @@ namespace Example
 
             try
             { 
-                // Update routing language proficiency or state.
+                // Update an assigned routing language's proficiency
                 UserRoutingLanguage result = apiInstance.PatchUserRoutinglanguage(userId, languageId, body);
                 Debug.WriteLine(result);
             }
@@ -7013,7 +7013,7 @@ namespace Example
 > [**UserLanguageEntityListing**](UserLanguageEntityListing) PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
 
 
-Add bulk routing language to user. Max limit 50 languages
+Assign multiple routing languages to a user. Max 50 routing languages in request body
 
 Requires ANY permissions: 
 
@@ -7047,7 +7047,7 @@ namespace Example
 
             try
             { 
-                // Add bulk routing language to user. Max limit 50 languages
+                // Assign multiple routing languages to a user. Max 50 routing languages in request body
                 UserLanguageEntityListing result = apiInstance.PatchUserRoutinglanguagesBulk(userId, body);
                 Debug.WriteLine(result);
             }
@@ -7078,7 +7078,7 @@ namespace Example
 > [**UserSkillEntityListing**](UserSkillEntityListing) PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
 
 
-Bulk add routing skills to user
+Assign multiple routing skills to a user
 
 Requires ANY permissions: 
 
@@ -7111,7 +7111,7 @@ namespace Example
 
             try
             { 
-                // Bulk add routing skills to user
+                // Assign multiple routing skills to a user
                 UserSkillEntityListing result = apiInstance.PatchUserRoutingskillsBulk(userId, body);
                 Debug.WriteLine(result);
             }
@@ -8722,7 +8722,7 @@ namespace Example
 > [**UserRoutingLanguage**](UserRoutingLanguage) PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
 
 
-Add routing language to user
+Assign a routing language to a user
 
 Requires ANY permissions: 
 
@@ -8756,7 +8756,7 @@ namespace Example
 
             try
             { 
-                // Add routing language to user
+                // Assign a routing language to a user
                 UserRoutingLanguage result = apiInstance.PostUserRoutinglanguages(userId, body);
                 Debug.WriteLine(result);
             }
@@ -8787,7 +8787,7 @@ namespace Example
 > [**UserRoutingSkill**](UserRoutingSkill) PostUserRoutingskills (string userId, UserRoutingSkillPost body)
 
 
-Add routing skill to user
+Assign a routing skill to a user
 
 Requires ALL permissions: 
 
@@ -8820,7 +8820,7 @@ namespace Example
 
             try
             { 
-                // Add routing skill to user
+                // Assign a routing skill to a user
                 UserRoutingSkill result = apiInstance.PostUserRoutingskills(userId, body);
                 Debug.WriteLine(result);
             }
@@ -9675,7 +9675,7 @@ namespace Example
 > [**UserRoutingSkill**](UserRoutingSkill) PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
 
 
-Update routing skill proficiency or state.
+Update an assigned routing skill's proficiency
 
 Requires ALL permissions: 
 
@@ -9709,7 +9709,7 @@ namespace Example
 
             try
             { 
-                // Update routing skill proficiency or state.
+                // Update an assigned routing skill's proficiency
                 UserRoutingSkill result = apiInstance.PutUserRoutingskill(userId, skillId, body);
                 Debug.WriteLine(result);
             }
@@ -9741,7 +9741,7 @@ namespace Example
 > [**UserSkillEntityListing**](UserSkillEntityListing) PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
 
 
-Replace all routing skills assigned to a user
+Assign multiple routing skills to a user, replacing any current assignments
 
 Requires ANY permissions: 
 
@@ -9774,7 +9774,7 @@ namespace Example
 
             try
             { 
-                // Replace all routing skills assigned to a user
+                // Assign multiple routing skills to a user, replacing any current assignments
                 UserSkillEntityListing result = apiInstance.PutUserRoutingskillsBulk(userId, body);
                 Debug.WriteLine(result);
             }
@@ -9800,4 +9800,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

@@ -10,7 +10,8 @@
 | **Type** | **string** | The file format | |
 | **Checksum** | **string** | The checksum of the file | |
 | **Size** | **long?** | The size of the file in bytes | |
+| **ContentUrl** | **string** | Public download url for content. Needs to be expanded | |
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

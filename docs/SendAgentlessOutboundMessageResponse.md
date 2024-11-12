@@ -11,8 +11,8 @@
 | **FromAddress** | **string** | The sender of the message. | [optional] |
 | **ToAddress** | **string** | The recipient of the message. | [optional] |
 | **MessengerType** | **string** | Type of messenger. | [optional] |
-| **TextBody** | **string** | The body of the text message. | [optional] |
-| **MessagingTemplate** | [**MessagingTemplateRequest**](MessagingTemplateRequest) | The messaging template sent | [optional] |
+| **TextBody** | **string** | The body of the text message. (Deprecated - Instead use message.normalizedMessage.text) | [optional] |
+| **MessagingTemplate** | [**SendMessagingTemplateRequest**](SendMessagingTemplateRequest) | The messaging template sent. (Deprecated - Instead use message.normalizedMessage.content[#].template) | [optional] |
 | **UseExistingActiveConversation** | **bool?** | Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false | [optional] |
 | **Message** | [**MessageData**](MessageData) | Sent agentless outbound message in normalized format | [optional] |
 | **Timestamp** | **DateTime?** | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

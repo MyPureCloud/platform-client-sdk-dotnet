@@ -1643,7 +1643,7 @@ namespace Example
 
 ## GetKnowledgeKnowledgebaseDocumentVariation
 
-> [**DocumentVariationResponse**](DocumentVariationResponse) GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+> [**DocumentVariationResponse**](DocumentVariationResponse) GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null, List<string> expand = null)
 
 
 Get a variation for a document.
@@ -1678,11 +1678,12 @@ namespace Example
             var documentId = documentId_example;  // string | Globally unique identifier for a document.
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for a knowledge base.
             var documentState = documentState_example;  // string | The state of the document. (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
 
             try
             { 
                 // Get a variation for a document.
-                DocumentVariationResponse result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState);
+                DocumentVariationResponse result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1703,6 +1704,7 @@ namespace Example
 | **documentId** | **string**| Globally unique identifier for a document. |  |
 | **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
 | **documentState** | **string**| The state of the document. | [optional] <br />**Values**: Draft, Published |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: contentUrl |
 
 ### Return type
 
@@ -1711,7 +1713,7 @@ namespace Example
 
 ## GetKnowledgeKnowledgebaseDocumentVariations
 
-> [**DocumentVariationResponseListing**](DocumentVariationResponseListing) GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+> [**DocumentVariationResponseListing**](DocumentVariationResponseListing) GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null, List<string> expand = null)
 
 
 Get variations for a document.
@@ -1748,11 +1750,12 @@ namespace Example
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var documentState = documentState_example;  // string | The state of the document. (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
 
             try
             { 
                 // Get variations for a document.
-                DocumentVariationResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState);
+                DocumentVariationResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1775,6 +1778,7 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **documentState** | **string**| The state of the document. | [optional] <br />**Values**: Draft, Published |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: contentUrl |
 
 ### Return type
 
@@ -7785,4 +7789,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

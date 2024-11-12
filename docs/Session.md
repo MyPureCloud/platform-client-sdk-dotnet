@@ -44,6 +44,7 @@
 | **LastUserDisconnectType** | **string** | Disconnect reason for the last user connected to the conversation. | [optional] |
 | **LastAcdOutcome** | **string** | Last ACD outcome for the conversation. | [optional] |
 | **Authenticated** | **bool?** | Indicates whether or not the session is authenticated. | |
+| **LastScreen** | **string** | The app screen name where the customer&#39;s last app interaction occurred. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **CreatedDate** | **DateTime?** | Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **EndedDate** | **DateTime?** | Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -54,4 +55,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 220.0.0_
+_PureCloudPlatform.Client.V2 221.0.0_

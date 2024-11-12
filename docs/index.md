@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 220.0.0
+Documentation version PureCloudPlatform.Client.V2 221.0.0
 
 ## Install Using nuget
 
@@ -192,6 +192,41 @@ PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1;
 Configuration.Default.ApiClient.setBasePath(region);
 ```
 
+#### Setting the gateway
+
+The Genesys Cloud Login and API URL path can be overridden if necessary (i.e. if the Genesys Cloud requests must be sent through to an intermediate API gateway or equivalent).
+
+This can be achieved setting the gateway on the `ApiClient` instance with *SetGateway*.
+
+```csharp
+Configuration.Default.ApiClient.SetGateway("mygateway.mydomain.myextension", "https", 1443, "myadditionalpathforlogin", "myadditionalpathforapi");
+```
+
+or
+
+```csharp
+ApiClient.GatewayConfiguration gatewayConfiguration = new ApiClient.GatewayConfiguration();
+gatewayConfiguration.Host = "mygateway.mydomain.myextension";
+gatewayConfiguration.Protocol = "https";
+gatewayConfiguration.Port = 1443;
+gatewayConfiguration.PathParamsLogin = "myadditionalpathforlogin";
+gatewayConfiguration.PathParamsApi = "myadditionalpathforapi";
+...
+Configuration.Default.ApiClient.GatewayConfig = gatewayConfiguration;
+```
+
+* "Host" is the address of your gateway.
+* "Protocol" is not mandatory. It will default to "https" if the parameter is not defined or empty.
+* "Port" is not mandatory. This parameter can be defined if a non default port is used and needs to be specified in the url (value must be greater or equal to 0). Set to -1 to use default port (default unspecified port).
+* "PathParamsLogin" and "PathParamsApi" are not mandatory. They will be appended to the gateway url path if these parameters are defined and non empty (for Login requests and for API requests).
+* "Username" and "Password" are not used at this stage. This is for a possible future use.
+
+With the configuration below, this would result in:
+
+* Login requests to: "https://mygateway.mydomain.myextension:1443/myadditionalpathforlogin" (e.g. "https://mygateway.mydomain.myextension:1443/myadditionalpathforlogin/oauth/token")
+* API requests to: "https://mygateway.mydomain.myextension:1443/myadditionalpathforapi" (e.g. "https://mygateway.mydomain.myextension:1443/myadditionalpathforlogin/api/v2/users/me")
+
+
 #### Setting the max retry time
 
 By default, the .NET SDK does not automatically retry any failed requests.
@@ -309,6 +344,86 @@ JSON:
     "general": {
         "live_reload_config": true,
         "host": "https://api.mypurecloud.com"
+    }
+}
+```
+
+The Genesys Cloud Login and API URL path can be overridden if necessary (i.e. if the Genesys Cloud requests must be sent through to an intermediate API gateway or equivalent).
+
+This can be achieved defining a "gateway" configuration, in the INI or the JSON configuration file.
+
+* "host" is the address of your gateway.
+* "protocol" is not mandatory. It will default to "https" if the parameter is not defined or empty.
+* "port" is not mandatory. This parameter can be defined if a non default port is used and needs to be specified in the url (value must be greater or equal to 0). Set to -1 to use default port (default unspecified port).
+* "path_params_login" and "path_params_api" are not mandatory. They will be appended to the gateway url path if these parameters are defined and non empty (for Login requests and for API requests).
+* "username" and "password" are not used at this stage. This is for a possible future use.
+
+With the configuration below, this would result in:
+
+* Login requests to: "https://mygateway.mydomain.myextension:1443/myadditionalpathforlogin" (e.g. "https://mygateway.mydomain.myextension:1443/myadditionalpathforlogin/oauth/token")
+* API requests to: "https://mygateway.mydomain.myextension:1443/myadditionalpathforapi" (e.g. "https://mygateway.mydomain.myextension:1443/myadditionalpathforlogin/api/v2/users/me")
+
+INI:
+```ini
+[logging]
+log_level = trace
+log_format = text
+log_to_console = false
+log_file_path = /var/log/dotnetsdk.log
+log_response_body = false
+log_request_body = false
+[retry]
+retry_wait_min = 3
+retry_wait_max = 10
+retry_max = 5
+[reauthentication]
+refresh_access_token = true
+refresh_token_wait_max = 10
+[general]
+live_reload_config = true
+host = https://api.mypurecloud.com
+[gateway]
+host = mygateway.mydomain.myextension
+protocol = https
+port = 1443
+path_params_login = myadditionalpathforlogin
+path_params_api = myadditionalpathforapi
+username = username
+password = password
+```
+
+JSON:
+```json
+{
+    "logging": {
+        "log_level": "trace",
+        "log_format": "text",
+        "log_to_console": false,
+        "log_file_path": "/var/log/dotnetsdk.log",
+        "log_response_body": false,
+        "log_request_body": false
+    },
+    "retry": {
+        "retry_wait_min": 3,
+        "retry_wait_max": 10,
+        "retry_max": 5
+    },
+    "reauthentication": {
+        "refresh_access_token": true,
+        "refresh_token_wait_max": 10
+    },
+    "general": {
+        "live_reload_config": true,
+        "host": "https://api.mypurecloud.com"
+    },
+    "gateway": {
+        "host": "mygateway.mydomain.myextension",
+        "protocol": "https",
+        "port": 1443,
+        "path_params_login": "myadditionalpathforlogin",
+        "path_params_api": "myadditionalpathforapi",
+        "username": "username",
+        "password": "password"
     }
 }
 ```
