@@ -39,6 +39,7 @@
 | **WorkPlanBidRanks** | [**WorkPlanBidRanks**](WorkPlanBidRanks) | The WFM work plan bid rank settings for the user | [optional] |
 | **Skills** | [**List&lt;UserRoutingSkill&gt;**](UserRoutingSkill) | Routing (ACD) skills possessed by the user | [optional] |
 | **Languages** | [**List&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage) | Routing (ACD) languages possessed by the user | [optional] |
+| **AutoAnswerSettings** | [**AutoAnswerSettings**](AutoAnswerSettings) | Auto answer settings for this user | [optional] |
 | **AcdAutoAnswer** | **bool?** | acd auto answer | [optional] |
 | **LanguagePreference** | **string** | preferred language by the user | [optional] |
 | **LastTokenIssued** | [**OAuthLastTokenIssued**](OAuthLastTokenIssued) |  | [optional] |
@@ -63,4 +64,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

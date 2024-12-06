@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **WeekDate** | **string** | The start date of the schedule with which this trade is associated | [optional] |
+| **WeekDate** | **string** | The start week date of the initiating shift of the shift trade in yyyy-MM-dd format | [optional] |
 | **TradeId** | **string** | The ID of the shift trade | [optional] |
 | **OneSided** | **bool?** | Whether this is a one sided shift trade | [optional] |
 | **NewState** | **string** | The new state of the shift trade, null if there was no change | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

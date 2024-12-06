@@ -2013,8 +2013,6 @@ namespace Example
 
 Get the summaries of the conversation.
 
-GetConversationSummaries is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * conversation:summary:view
@@ -15548,4 +15546,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

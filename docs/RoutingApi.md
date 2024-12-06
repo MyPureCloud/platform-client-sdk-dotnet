@@ -21,7 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingSkill**](#DeleteRoutingSkill) | **Delete** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
 | [**DeleteRoutingSkillgroup**](#DeleteRoutingSkillgroup) | **Delete** /api/v2/routing/skillgroups/{skillGroupId} | Remove skill group definition |
 | [**DeleteRoutingSmsAddress**](#DeleteRoutingSmsAddress) | **Delete** /api/v2/routing/sms/addresses/{addressId} | Delete an Address by Id for SMS |
-| [**DeleteRoutingSmsPhonenumber**](#DeleteRoutingSmsPhonenumber) | **Delete** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
+| [**DeleteRoutingSmsPhonenumber**](#DeleteRoutingSmsPhonenumber) | **Delete** /api/v2/routing/sms/phonenumbers/{phoneNumberId} | Delete a phone number provisioned for SMS. |
 | [**DeleteRoutingUserDirectroutingbackupSettings**](#DeleteRoutingUserDirectroutingbackupSettings) | **Delete** /api/v2/routing/users/{userId}/directroutingbackup/settings | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
 | [**DeleteRoutingUserUtilization**](#DeleteRoutingUserUtilization) | **Delete** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteRoutingUtilization**](#DeleteRoutingUtilization) | **Delete** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
@@ -79,7 +79,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingSmsAddress**](#GetRoutingSmsAddress) | **Get** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
 | [**GetRoutingSmsAddresses**](#GetRoutingSmsAddresses) | **Get** /api/v2/routing/sms/addresses | Get a list of Addresses for SMS |
 | [**GetRoutingSmsAvailablephonenumbers**](#GetRoutingSmsAvailablephonenumbers) | **Get** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
-| [**GetRoutingSmsPhonenumber**](#GetRoutingSmsPhonenumber) | **Get** /api/v2/routing/sms/phonenumbers/{addressId} | Get a phone number provisioned for SMS. |
+| [**GetRoutingSmsPhonenumber**](#GetRoutingSmsPhonenumber) | **Get** /api/v2/routing/sms/phonenumbers/{phoneNumberId} | Get a phone number provisioned for SMS. |
 | [**GetRoutingSmsPhonenumbers**](#GetRoutingSmsPhonenumbers) | **Get** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
 | [**GetRoutingUserDirectroutingbackupSettings**](#GetRoutingUserDirectroutingbackupSettings) | **Get** /api/v2/routing/users/{userId}/directroutingbackup/settings | Get the user&#39;s Direct Routing Backup settings. |
 | [**GetRoutingUserUtilization**](#GetRoutingUserUtilization) | **Get** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
@@ -148,7 +148,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingQueue**](#PutRoutingQueue) | **Put** /api/v2/routing/queues/{queueId} | Update a queue |
 | [**PutRoutingSettings**](#PutRoutingSettings) | **Put** /api/v2/routing/settings | Update an organization&#39;s routing settings |
 | [**PutRoutingSettingsTranscription**](#PutRoutingSettingsTranscription) | **Put** /api/v2/routing/settings/transcription | Update Transcription Settings |
-| [**PutRoutingSmsPhonenumber**](#PutRoutingSmsPhonenumber) | **Put** /api/v2/routing/sms/phonenumbers/{addressId} | Update a phone number provisioned for SMS. |
+| [**PutRoutingSmsPhonenumber**](#PutRoutingSmsPhonenumber) | **Put** /api/v2/routing/sms/phonenumbers/{phoneNumberId} | Update a phone number provisioned for SMS. |
 | [**PutRoutingUserDirectroutingbackupSettings**](#PutRoutingUserDirectroutingbackupSettings) | **Put** /api/v2/routing/users/{userId}/directroutingbackup/settings | Update the user&#39;s Direct Routing Backup settings. |
 | [**PutRoutingUserUtilization**](#PutRoutingUserUtilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutRoutingUtilization**](#PutRoutingUtilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
@@ -1082,7 +1082,7 @@ void (empty response body)
 
 ## DeleteRoutingSmsPhonenumber
 
-> void DeleteRoutingSmsPhonenumber (string addressId)
+> void DeleteRoutingSmsPhonenumber (string phoneNumberId)
 
 
 Delete a phone number provisioned for SMS.
@@ -1113,12 +1113,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var addressId = addressId_example;  // string | Address ID
+            var phoneNumberId = phoneNumberId_example;  // string | phone number
 
             try
             { 
                 // Delete a phone number provisioned for SMS.
-                apiInstance.DeleteRoutingSmsPhonenumber(addressId);
+                apiInstance.DeleteRoutingSmsPhonenumber(phoneNumberId);
             }
             catch (Exception e)
             {
@@ -1134,7 +1134,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addressId** | **string**| Address ID |  |
+| **phoneNumberId** | **string**| phone number |  |
 
 ### Return type
 
@@ -3475,7 +3475,7 @@ namespace Example
 
 ## GetRoutingQueueMediatypeEstimatedwaittime
 
-> [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions) GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType)
+> [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions) GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType, string labelId = null)
 
 
 Get Estimated Wait Time
@@ -3508,11 +3508,12 @@ namespace Example
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | queueId
             var mediaType = mediaType_example;  // string | mediaType
+            var labelId = labelId_example;  // string | Unique id that represents the interaction label used with media type for EWT calculation (optional) 
 
             try
             { 
                 // Get Estimated Wait Time
-                EstimatedWaitTimePredictions result = apiInstance.GetRoutingQueueMediatypeEstimatedwaittime(queueId, mediaType);
+                EstimatedWaitTimePredictions result = apiInstance.GetRoutingQueueMediatypeEstimatedwaittime(queueId, mediaType, labelId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3530,7 +3531,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| queueId |  |
-| **mediaType** | **string**| mediaType |  |
+| **mediaType** | **string**| mediaType | <br />**Values**: all, call, chat, callback, email, videoComm, message |
+| **labelId** | **string**| Unique id that represents the interaction label used with media type for EWT calculation | [optional]  |
 
 ### Return type
 
@@ -4830,7 +4832,7 @@ namespace Example
 
 ## GetRoutingSmsPhonenumber
 
-> [**SmsPhoneNumber**](SmsPhoneNumber) GetRoutingSmsPhonenumber (string addressId, string expand = null)
+> [**SmsPhoneNumber**](SmsPhoneNumber) GetRoutingSmsPhonenumber (string phoneNumberId, string expand = null)
 
 
 Get a phone number provisioned for SMS.
@@ -4861,13 +4863,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var addressId = addressId_example;  // string | Address ID
+            var phoneNumberId = phoneNumberId_example;  // string | phone number
             var expand = expand_example;  // string | Expand response with additional information (optional) 
 
             try
             { 
                 // Get a phone number provisioned for SMS.
-                SmsPhoneNumber result = apiInstance.GetRoutingSmsPhonenumber(addressId, expand);
+                SmsPhoneNumber result = apiInstance.GetRoutingSmsPhonenumber(phoneNumberId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4884,7 +4886,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addressId** | **string**| Address ID |  |
+| **phoneNumberId** | **string**| phone number |  |
 | **expand** | **string**| Expand response with additional information | [optional] <br />**Values**: compliance, supportedContent |
 
 ### Return type
@@ -9290,7 +9292,7 @@ namespace Example
 
 ## PutRoutingSmsPhonenumber
 
-> [**SmsPhoneNumber**](SmsPhoneNumber) PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body)
+> [**SmsPhoneNumber**](SmsPhoneNumber) PutRoutingSmsPhonenumber (string phoneNumberId, SmsPhoneNumber body)
 
 
 Update a phone number provisioned for SMS.
@@ -9321,13 +9323,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var addressId = addressId_example;  // string | Address ID
+            var phoneNumberId = phoneNumberId_example;  // string | phone number
             var body = new SmsPhoneNumber(); // SmsPhoneNumber | SmsPhoneNumber
 
             try
             { 
                 // Update a phone number provisioned for SMS.
-                SmsPhoneNumber result = apiInstance.PutRoutingSmsPhonenumber(addressId, body);
+                SmsPhoneNumber result = apiInstance.PutRoutingSmsPhonenumber(phoneNumberId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9344,7 +9346,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addressId** | **string**| Address ID |  |
+| **phoneNumberId** | **string**| phone number |  |
 | **body** | [**SmsPhoneNumber**](SmsPhoneNumber)| SmsPhoneNumber |  |
 
 ### Return type
@@ -9800,4 +9802,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

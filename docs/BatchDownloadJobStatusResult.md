@@ -11,9 +11,10 @@
 | **ExpectedResultCount** | **int?** | Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed. | [optional] |
 | **ResultCount** | **int?** | Current number of results available, this includes both success and error results. | [optional] |
 | **ErrorCount** | **int?** | Current number of error results. | [optional] |
+| **Status** | **string** | Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled. | [optional] |
 | **Results** | [**List&lt;BatchDownloadJobResult&gt;**](BatchDownloadJobResult) | Current set of results for the job. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_
