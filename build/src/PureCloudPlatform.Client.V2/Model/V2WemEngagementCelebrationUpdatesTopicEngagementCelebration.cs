@@ -42,7 +42,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Recognition for "RECOGNITION"
             /// </summary>
             [EnumMember(Value = "RECOGNITION")]
-            Recognition
+            Recognition,
+            
+            /// <summary>
+            /// Enum ContestComplete for "CONTEST_COMPLETE"
+            /// </summary>
+            [EnumMember(Value = "CONTEST_COMPLETE")]
+            ContestComplete
         }
         /// <summary>
         /// Gets or Sets Type

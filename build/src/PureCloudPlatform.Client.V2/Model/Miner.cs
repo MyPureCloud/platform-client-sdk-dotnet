@@ -109,7 +109,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Itit for "it-it"
             /// </summary>
             [EnumMember(Value = "it-it")]
-            Itit
+            Itit,
+            
+            /// <summary>
+            /// Enum Nlnl for "nl-nl"
+            /// </summary>
+            [EnumMember(Value = "nl-nl")]
+            Nlnl
         }
         /// <summary>
         /// Type of the miner, intent or topic.

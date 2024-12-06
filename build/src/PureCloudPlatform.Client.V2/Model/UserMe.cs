@@ -387,6 +387,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Auto answer settings for this user
+        /// </summary>
+        /// <value>Auto answer settings for this user</value>
+        [DataMember(Name="autoAnswerSettings", EmitDefaultValue=false)]
+        public AutoAnswerSettings AutoAnswerSettings { get; private set; }
+
+
+
+        /// <summary>
         /// acd auto answer
         /// </summary>
         /// <value>acd auto answer</value>
@@ -615,6 +624,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WorkPlanBidRanks: ").Append(WorkPlanBidRanks).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
+            sb.Append("  AutoAnswerSettings: ").Append(AutoAnswerSettings).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("  LastTokenIssued: ").Append(LastTokenIssued).Append("\n");
@@ -842,6 +852,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Languages.SequenceEqual(other.Languages)
                 ) &&
                 (
+                    this.AutoAnswerSettings == other.AutoAnswerSettings ||
+                    this.AutoAnswerSettings != null &&
+                    this.AutoAnswerSettings.Equals(other.AutoAnswerSettings)
+                ) &&
+                (
                     this.AcdAutoAnswer == other.AcdAutoAnswer ||
                     this.AcdAutoAnswer != null &&
                     this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
@@ -1057,6 +1072,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Languages != null)
                     hash = hash * 59 + this.Languages.GetHashCode();
+
+                if (this.AutoAnswerSettings != null)
+                    hash = hash * 59 + this.AutoAnswerSettings.GetHashCode();
 
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();

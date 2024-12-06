@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeNotification" /> class.
         /// </summary>
-        /// <param name="WeekDate">The start date of the schedule with which this trade is associated.</param>
+        /// <param name="WeekDate">The start week date of the initiating shift of the shift trade in yyyy-MM-dd format.</param>
         /// <param name="TradeId">The ID of the shift trade.</param>
         /// <param name="OneSided">Whether this is a one sided shift trade.</param>
         /// <param name="NewState">The new state of the shift trade, null if there was no change.</param>
@@ -102,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The start date of the schedule with which this trade is associated
+        /// The start week date of the initiating shift of the shift trade in yyyy-MM-dd format
         /// </summary>
-        /// <value>The start date of the schedule with which this trade is associated</value>
+        /// <value>The start week date of the initiating shift of the shift trade in yyyy-MM-dd format</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public string WeekDate { get; set; }
 

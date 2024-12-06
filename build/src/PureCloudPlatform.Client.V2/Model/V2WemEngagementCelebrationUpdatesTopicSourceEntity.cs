@@ -60,7 +60,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CompanyValues for "COMPANY_VALUES"
             /// </summary>
             [EnumMember(Value = "COMPANY_VALUES")]
-            CompanyValues
+            CompanyValues,
+            
+            /// <summary>
+            /// Enum Competition for "COMPETITION"
+            /// </summary>
+            [EnumMember(Value = "COMPETITION")]
+            Competition,
+            
+            /// <summary>
+            /// Enum Race for "RACE"
+            /// </summary>
+            [EnumMember(Value = "RACE")]
+            Race,
+            
+            /// <summary>
+            /// Enum Raffle for "RAFFLE"
+            /// </summary>
+            [EnumMember(Value = "RAFFLE")]
+            Raffle,
+            
+            /// <summary>
+            /// Enum TeamGoal for "TEAM_GOAL"
+            /// </summary>
+            [EnumMember(Value = "TEAM_GOAL")]
+            TeamGoal
         }
         /// <summary>
         /// Gets or Sets Type

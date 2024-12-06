@@ -79,6 +79,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Multiselect
         }
         /// <summary>
+        /// Filter action.
+        /// </summary>
+        /// <value>Filter action.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None,
+            
+            /// <summary>
+            /// Enum Filterupdate for "FilterUpdate"
+            /// </summary>
+            [EnumMember(Value = "FilterUpdate")]
+            Filterupdate
+        }
+        /// <summary>
         /// Filter name, which is the name of a setting in a knowledge source.
         /// </summary>
         /// <value>Filter name, which is the name of a setting in a knowledge source.</value>
@@ -91,19 +118,29 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
+        /// Filter action.
+        /// </summary>
+        /// <value>Filter action.</value>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public ActionEnum? Action { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeIntegrationFilter" /> class.
         /// </summary>
         /// <param name="Name">Filter name, which is the name of a setting in a knowledge source..</param>
         /// <param name="Type">Filter type..</param>
+        /// <param name="Action">Filter action..</param>
         /// <param name="Values">Available options of the filter setting..</param>
-        public KnowledgeIntegrationFilter(NameEnum? Name = null, TypeEnum? Type = null, List<KnowledgeIntegrationFilterValue> Values = null)
+        public KnowledgeIntegrationFilter(NameEnum? Name = null, TypeEnum? Type = null, ActionEnum? Action = null, List<KnowledgeIntegrationFilterValue> Values = null)
         {
             this.Name = Name;
             this.Type = Type;
+            this.Action = Action;
             this.Values = Values;
             
         }
         
+
+
 
 
 
@@ -129,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -181,6 +219,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.Action == other.Action ||
+                    this.Action != null &&
+                    this.Action.Equals(other.Action)
+                ) &&
+                (
                     this.Values == other.Values ||
                     this.Values != null &&
                     this.Values.SequenceEqual(other.Values)
@@ -203,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.Action != null)
+                    hash = hash * 59 + this.Action.GetHashCode();
 
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();

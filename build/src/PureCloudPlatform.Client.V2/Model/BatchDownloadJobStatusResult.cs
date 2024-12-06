@@ -19,19 +19,54 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class BatchDownloadJobStatusResult :  IEquatable<BatchDownloadJobStatusResult>
     {
         /// <summary>
+        /// Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.
+        /// </summary>
+        /// <value>Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Completed for "Completed"
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed
+        }
+        /// <summary>
+        /// Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.
+        /// </summary>
+        /// <value>Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobStatusResult" /> class.
         /// </summary>
         /// <param name="JobId">JobId returned when job was initially submitted..</param>
         /// <param name="ExpectedResultCount">Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed..</param>
         /// <param name="ResultCount">Current number of results available, this includes both success and error results..</param>
         /// <param name="ErrorCount">Current number of error results..</param>
+        /// <param name="Status">Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled..</param>
         /// <param name="Results">Current set of results for the job..</param>
-        public BatchDownloadJobStatusResult(string JobId = null, int? ExpectedResultCount = null, int? ResultCount = null, int? ErrorCount = null, List<BatchDownloadJobResult> Results = null)
+        public BatchDownloadJobStatusResult(string JobId = null, int? ExpectedResultCount = null, int? ResultCount = null, int? ErrorCount = null, StatusEnum? Status = null, List<BatchDownloadJobResult> Results = null)
         {
             this.JobId = JobId;
             this.ExpectedResultCount = ExpectedResultCount;
             this.ResultCount = ResultCount;
             this.ErrorCount = ErrorCount;
+            this.Status = Status;
             this.Results = Results;
             
         }
@@ -83,6 +118,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Current set of results for the job.
         /// </summary>
@@ -114,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExpectedResultCount: ").Append(ExpectedResultCount).Append("\n");
             sb.Append("  ResultCount: ").Append(ResultCount).Append("\n");
             sb.Append("  ErrorCount: ").Append(ErrorCount).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -182,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorCount.Equals(other.ErrorCount)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
                     this.Results == other.Results ||
                     this.Results != null &&
                     this.Results.SequenceEqual(other.Results)
@@ -218,6 +261,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ErrorCount != null)
                     hash = hash * 59 + this.ErrorCount.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
 
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();

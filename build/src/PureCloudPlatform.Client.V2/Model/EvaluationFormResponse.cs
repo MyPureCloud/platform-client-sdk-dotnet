@@ -66,8 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContextId">ContextId.</param>
         /// <param name="QuestionGroups">A list of question groups.</param>
         /// <param name="WeightMode">Mode for evaluation form weight.</param>
+        /// <param name="EvaluationSettings">Settings for evaluations associated with this form.</param>
         /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
-        public EvaluationFormResponse(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, WeightModeEnum? WeightMode = null, DomainEntityListingEvaluationForm PublishedVersions = null)
+        public EvaluationFormResponse(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, WeightModeEnum? WeightMode = null, EvaluationSettings EvaluationSettings = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
@@ -75,6 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContextId = ContextId;
             this.QuestionGroups = QuestionGroups;
             this.WeightMode = WeightMode;
+            this.EvaluationSettings = EvaluationSettings;
             this.PublishedVersions = PublishedVersions;
             
         }
@@ -136,6 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Settings for evaluations associated with this form
+        /// </summary>
+        /// <value>Settings for evaluations associated with this form</value>
+        [DataMember(Name="evaluationSettings", EmitDefaultValue=false)]
+        public EvaluationSettings EvaluationSettings { get; set; }
+
+
+
+        /// <summary>
         /// A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).
         /// </summary>
         /// <value>A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).</value>
@@ -168,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
             sb.Append("  WeightMode: ").Append(WeightMode).Append("\n");
+            sb.Append("  EvaluationSettings: ").Append(EvaluationSettings).Append("\n");
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -246,6 +258,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WeightMode.Equals(other.WeightMode)
                 ) &&
                 (
+                    this.EvaluationSettings == other.EvaluationSettings ||
+                    this.EvaluationSettings != null &&
+                    this.EvaluationSettings.Equals(other.EvaluationSettings)
+                ) &&
+                (
                     this.PublishedVersions == other.PublishedVersions ||
                     this.PublishedVersions != null &&
                     this.PublishedVersions.Equals(other.PublishedVersions)
@@ -288,6 +305,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WeightMode != null)
                     hash = hash * 59 + this.WeightMode.GetHashCode();
+
+                if (this.EvaluationSettings != null)
+                    hash = hash * 59 + this.EvaluationSettings.GetHashCode();
 
                 if (this.PublishedVersions != null)
                     hash = hash * 59 + this.PublishedVersions.GetHashCode();

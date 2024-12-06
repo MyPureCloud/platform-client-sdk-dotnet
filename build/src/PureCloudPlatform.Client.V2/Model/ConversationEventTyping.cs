@@ -55,9 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationEventTyping" /> class.
         /// </summary>
         /// <param name="Type">Describes the type of Typing event. (required).</param>
-        public ConversationEventTyping(TypeEnum? Type = null)
+        /// <param name="Duration">The duration of the Typing event in milliseconds..</param>
+        public ConversationEventTyping(TypeEnum? Type = null, long? Duration = null)
         {
             this.Type = Type;
+            this.Duration = Duration;
             
         }
         
@@ -70,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The duration of the Typing event in milliseconds.</value>
         [DataMember(Name="duration", EmitDefaultValue=false)]
-        public long? Duration { get; private set; }
+        public long? Duration { get; set; }
 
 
         /// <summary>

@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Ids">Ids.</param>
         /// <param name="DisplayName">DisplayName.</param>
-        public ExternalContactsUnresolvedContactChangedTopicInstagramId(List<ExternalContactsUnresolvedContactChangedTopicInstagramScopedId> Ids = null, string DisplayName = null)
+        /// <param name="Handle">Handle.</param>
+        public ExternalContactsUnresolvedContactChangedTopicInstagramId(List<ExternalContactsUnresolvedContactChangedTopicInstagramScopedId> Ids = null, string DisplayName = null, string Handle = null)
         {
             this.Ids = Ids;
             this.DisplayName = DisplayName;
+            this.Handle = Handle;
             
         }
         
@@ -47,6 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DisplayName { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Handle
+        /// </summary>
+        [DataMember(Name="handle", EmitDefaultValue=false)]
+        public string Handle { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,6 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Ids: ").Append(Ids).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Handle: ").Append(Handle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
                     this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
+                    this.Handle == other.Handle ||
+                    this.Handle != null &&
+                    this.Handle.Equals(other.Handle)
                 );
         }
 
@@ -126,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
+
+                if (this.Handle != null)
+                    hash = hash * 59 + this.Handle.GetHashCode();
 
                 return hash;
             }

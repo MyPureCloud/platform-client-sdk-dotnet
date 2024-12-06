@@ -66,9 +66,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RouterType">Router type for knowledge portal (previously support center).</param>
         /// <param name="Screens">Available screens for the knowledge portal (previously support center) with its modules (required).</param>
         /// <param name="EnabledCategories">Featured categories for knowledge portal (previously support center) home screen (required).</param>
+        /// <param name="LabelFilter">Document label filter. If set, only documents having at least one of the specified labels will be returned by knowledge document query operations..</param>
         /// <param name="StyleSetting">Style attributes for knowledge portal (previously support center) (required).</param>
         /// <param name="Feedback">Customer feedback settings.</param>
-        public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<SupportCenterCategory> EnabledCategories = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
+        public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<SupportCenterCategory> EnabledCategories = null, SupportCenterLabelFilter LabelFilter = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
         {
             this.Enabled = Enabled;
             this.KnowledgeBase = KnowledgeBase;
@@ -76,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RouterType = RouterType;
             this.Screens = Screens;
             this.EnabledCategories = EnabledCategories;
+            this.LabelFilter = LabelFilter;
             this.StyleSetting = StyleSetting;
             this.Feedback = Feedback;
             
@@ -131,6 +133,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Document label filter. If set, only documents having at least one of the specified labels will be returned by knowledge document query operations.
+        /// </summary>
+        /// <value>Document label filter. If set, only documents having at least one of the specified labels will be returned by knowledge document query operations.</value>
+        [DataMember(Name="labelFilter", EmitDefaultValue=false)]
+        public SupportCenterLabelFilter LabelFilter { get; set; }
+
+
+
+        /// <summary>
         /// Style attributes for knowledge portal (previously support center)
         /// </summary>
         /// <value>Style attributes for knowledge portal (previously support center)</value>
@@ -162,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RouterType: ").Append(RouterType).Append("\n");
             sb.Append("  Screens: ").Append(Screens).Append("\n");
             sb.Append("  EnabledCategories: ").Append(EnabledCategories).Append("\n");
+            sb.Append("  LabelFilter: ").Append(LabelFilter).Append("\n");
             sb.Append("  StyleSetting: ").Append(StyleSetting).Append("\n");
             sb.Append("  Feedback: ").Append(Feedback).Append("\n");
             sb.Append("}\n");
@@ -235,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EnabledCategories.SequenceEqual(other.EnabledCategories)
                 ) &&
                 (
+                    this.LabelFilter == other.LabelFilter ||
+                    this.LabelFilter != null &&
+                    this.LabelFilter.Equals(other.LabelFilter)
+                ) &&
+                (
                     this.StyleSetting == other.StyleSetting ||
                     this.StyleSetting != null &&
                     this.StyleSetting.Equals(other.StyleSetting)
@@ -274,6 +291,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EnabledCategories != null)
                     hash = hash * 59 + this.EnabledCategories.GetHashCode();
+
+                if (this.LabelFilter != null)
+                    hash = hash * 59 + this.LabelFilter.GetHashCode();
 
                 if (this.StyleSetting != null)
                     hash = hash * 59 + this.StyleSetting.GetHashCode();

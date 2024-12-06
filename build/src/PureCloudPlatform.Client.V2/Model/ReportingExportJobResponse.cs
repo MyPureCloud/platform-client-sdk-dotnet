@@ -823,7 +823,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum DashboardSlideshowsDetail for "DASHBOARD_SLIDESHOWS_DETAIL"
             /// </summary>
             [EnumMember(Value = "DASHBOARD_SLIDESHOWS_DETAIL")]
-            DashboardSlideshowsDetail
+            DashboardSlideshowsDetail,
+            
+            /// <summary>
+            /// Enum AgentCopilotPerformanceView for "AGENT_COPILOT_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_COPILOT_PERFORMANCE_VIEW")]
+            AgentCopilotPerformanceView
         }
         /// <summary>
         /// The error message in case the export request failed

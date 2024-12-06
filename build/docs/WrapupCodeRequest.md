@@ -9,6 +9,7 @@
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The wrap-up code name. | |
 | **Division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
+| **Description** | **string** | The wrap-up code description. | [optional] |
 | **DateCreated** | **DateTime?** | Date when the wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Date when the wrap-up code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | **string** | The ID of the user that created the wrap-up code. | [optional] |
@@ -17,4 +18,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

@@ -41,15 +41,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomFields">Custom fields defined in the schema referenced by the worktype of the workitem..</param>
         /// <param name="QueueId">The ID of the Workitems queue. Must be a valid UUID..</param>
         /// <param name="AssigneeId">The ID of the assignee of the Workitem. Must be a valid UUID..</param>
-        /// <param name="WrapupCode">The ID of the wrapup. Must be a valid UUID..</param>
         /// <param name="ScoredAgents">A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents..</param>
         /// <param name="LanguageId">The ID of language of the Workitem. Must be a valid UUID..</param>
-        /// <param name="UtilizationLabelId">The ID of utilization label of the Workitem. Must be a valid UUID..</param>
         /// <param name="ExternalContactId">The ID of the external contact of the Workitem. Must be a valid UUID..</param>
         /// <param name="ExternalTag">The external tag of the Workitem..</param>
         /// <param name="SkillIds">The skill IDs of the Workitem. Must be valid UUIDs..</param>
         /// <param name="PreferredAgentIds">The preferred agent IDs of the Workitem. Must be valid UUIDs..</param>
-        public WorkitemCreate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, string TypeId = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, string WrapupCode = null, List<WorkitemScoredAgentRequest> ScoredAgents = null, string LanguageId = null, string UtilizationLabelId = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null)
+        /// <param name="WrapupCode">The ID of the wrapup. Must be a valid UUID..</param>
+        /// <param name="UtilizationLabelId">The ID of utilization label of the Workitem. Must be a valid UUID..</param>
+        public WorkitemCreate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, string TypeId = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, List<WorkitemScoredAgentRequest> ScoredAgents = null, string LanguageId = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, string WrapupCode = null, string UtilizationLabelId = null)
         {
             this.Name = Name;
             this.Priority = Priority;
@@ -65,14 +65,14 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CustomFields = CustomFields;
             this.QueueId = QueueId;
             this.AssigneeId = AssigneeId;
-            this.WrapupCode = WrapupCode;
             this.ScoredAgents = ScoredAgents;
             this.LanguageId = LanguageId;
-            this.UtilizationLabelId = UtilizationLabelId;
             this.ExternalContactId = ExternalContactId;
             this.ExternalTag = ExternalTag;
             this.SkillIds = SkillIds;
             this.PreferredAgentIds = PreferredAgentIds;
+            this.WrapupCode = WrapupCode;
+            this.UtilizationLabelId = UtilizationLabelId;
             
         }
         
@@ -205,15 +205,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the wrapup. Must be a valid UUID.
-        /// </summary>
-        /// <value>The ID of the wrapup. Must be a valid UUID.</value>
-        [DataMember(Name="wrapupCode", EmitDefaultValue=false)]
-        public string WrapupCode { get; set; }
-
-
-
-        /// <summary>
         /// A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents.
         /// </summary>
         /// <value>A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents.</value>
@@ -228,15 +219,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The ID of language of the Workitem. Must be a valid UUID.</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
-
-
-
-        /// <summary>
-        /// The ID of utilization label of the Workitem. Must be a valid UUID.
-        /// </summary>
-        /// <value>The ID of utilization label of the Workitem. Must be a valid UUID.</value>
-        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
-        public string UtilizationLabelId { get; set; }
 
 
 
@@ -275,6 +257,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> PreferredAgentIds { get; set; }
 
 
+
+        /// <summary>
+        /// The ID of the wrapup. Must be a valid UUID.
+        /// </summary>
+        /// <value>The ID of the wrapup. Must be a valid UUID.</value>
+        [DataMember(Name="wrapupCode", EmitDefaultValue=false)]
+        public string WrapupCode { get; set; }
+
+
+
+        /// <summary>
+        /// The ID of utilization label of the Workitem. Must be a valid UUID.
+        /// </summary>
+        /// <value>The ID of utilization label of the Workitem. Must be a valid UUID.</value>
+        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
+        public string UtilizationLabelId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -298,14 +298,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  AssigneeId: ").Append(AssigneeId).Append("\n");
-            sb.Append("  WrapupCode: ").Append(WrapupCode).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
-            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
+            sb.Append("  WrapupCode: ").Append(WrapupCode).Append("\n");
+            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -417,11 +417,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssigneeId.Equals(other.AssigneeId)
                 ) &&
                 (
-                    this.WrapupCode == other.WrapupCode ||
-                    this.WrapupCode != null &&
-                    this.WrapupCode.Equals(other.WrapupCode)
-                ) &&
-                (
                     this.ScoredAgents == other.ScoredAgents ||
                     this.ScoredAgents != null &&
                     this.ScoredAgents.SequenceEqual(other.ScoredAgents)
@@ -430,11 +425,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguageId == other.LanguageId ||
                     this.LanguageId != null &&
                     this.LanguageId.Equals(other.LanguageId)
-                ) &&
-                (
-                    this.UtilizationLabelId == other.UtilizationLabelId ||
-                    this.UtilizationLabelId != null &&
-                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 ) &&
                 (
                     this.ExternalContactId == other.ExternalContactId ||
@@ -455,6 +445,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreferredAgentIds == other.PreferredAgentIds ||
                     this.PreferredAgentIds != null &&
                     this.PreferredAgentIds.SequenceEqual(other.PreferredAgentIds)
+                ) &&
+                (
+                    this.WrapupCode == other.WrapupCode ||
+                    this.WrapupCode != null &&
+                    this.WrapupCode.Equals(other.WrapupCode)
+                ) &&
+                (
+                    this.UtilizationLabelId == other.UtilizationLabelId ||
+                    this.UtilizationLabelId != null &&
+                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 );
         }
 
@@ -511,17 +511,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.AssigneeId != null)
                     hash = hash * 59 + this.AssigneeId.GetHashCode();
 
-                if (this.WrapupCode != null)
-                    hash = hash * 59 + this.WrapupCode.GetHashCode();
-
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
 
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
-
-                if (this.UtilizationLabelId != null)
-                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
@@ -534,6 +528,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PreferredAgentIds != null)
                     hash = hash * 59 + this.PreferredAgentIds.GetHashCode();
+
+                if (this.WrapupCode != null)
+                    hash = hash * 59 + this.WrapupCode.GetHashCode();
+
+                if (this.UtilizationLabelId != null)
+                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 return hash;
             }

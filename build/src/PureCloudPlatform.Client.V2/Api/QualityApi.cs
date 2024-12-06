@@ -271,9 +271,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>AgentActivityEntityListing</returns>
         
-        AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null);
+        AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -296,9 +297,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
         
-        ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null);
+        ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null);
 
         /// <summary>
         /// Get a calibration by id.  Requires either calibrator id or conversation id
@@ -502,9 +504,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>EvaluationEntityListing</returns>
         
-        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -532,9 +535,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
-        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -2005,9 +2009,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
         
-        System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null);
+        System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -2030,9 +2035,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null);
 
         /// <summary>
         /// Get a calibration by id.  Requires either calibrator id or conversation id
@@ -2236,9 +2242,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
-        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -2266,9 +2273,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -5562,11 +5570,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>AgentActivityEntityListing</returns>
         
-        public AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
+        public AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null)
         {
-             ApiResponse<AgentActivityEntityListing> localVarResponse = GetQualityAgentsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId);
+             ApiResponse<AgentActivityEntityListing> localVarResponse = GetQualityAgentsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId, userState);
              return localVarResponse.Data;
         }
 
@@ -5589,9 +5598,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
         
-        public ApiResponse< AgentActivityEntityListing > GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
+        public ApiResponse< AgentActivityEntityListing > GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null)
         { 
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -5640,6 +5650,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (group != null) localVarQueryParams.Add(new Tuple<string, string>("group", this.Configuration.ApiClient.ParameterToString(group)));
             if (agentTeamId != null) localVarQueryParams.Add(new Tuple<string, string>("agentTeamId", this.Configuration.ApiClient.ParameterToString(agentTeamId)));
             if (formContextId != null) localVarQueryParams.Add(new Tuple<string, string>("formContextId", this.Configuration.ApiClient.ParameterToString(formContextId)));
+            if (userState != null) localVarQueryParams.Add(new Tuple<string, string>("userState", this.Configuration.ApiClient.ParameterToString(userState)));
 
             // Header params
 
@@ -5703,11 +5714,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
+        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null)
         {
-             ApiResponse<AgentActivityEntityListing> localVarResponse = await GetQualityAgentsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId);
+             ApiResponse<AgentActivityEntityListing> localVarResponse = await GetQualityAgentsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId, userState);
              return localVarResponse.Data;
 
         }
@@ -5731,9 +5743,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="group">group id (optional)</param>
         /// <param name="agentTeamId">team id of agents requested (optional)</param>
         /// <param name="formContextId">shared id between form versions (optional)</param>
+        /// <param name="userState">&#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional, default to Legacy)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null)
         { 
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -5782,6 +5795,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (group != null) localVarQueryParams.Add(new Tuple<string, string>("group", this.Configuration.ApiClient.ParameterToString(group)));
             if (agentTeamId != null) localVarQueryParams.Add(new Tuple<string, string>("agentTeamId", this.Configuration.ApiClient.ParameterToString(agentTeamId)));
             if (formContextId != null) localVarQueryParams.Add(new Tuple<string, string>("formContextId", this.Configuration.ApiClient.ParameterToString(formContextId)));
+            if (userState != null) localVarQueryParams.Add(new Tuple<string, string>("userState", this.Configuration.ApiClient.ParameterToString(userState)));
 
             // Header params
 
@@ -7232,11 +7246,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>EvaluationEntityListing</returns>
         
-        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder, includeDeletedUsers);
              return localVarResponse.Data;
         }
 
@@ -7264,9 +7279,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
-        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -7320,6 +7336,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expandAnswerTotalScores != null) localVarQueryParams.Add(new Tuple<string, string>("expandAnswerTotalScores", this.Configuration.ApiClient.ParameterToString(expandAnswerTotalScores)));
             if (maximum != null) localVarQueryParams.Add(new Tuple<string, string>("maximum", this.Configuration.ApiClient.ParameterToString(maximum)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (includeDeletedUsers != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeletedUsers", this.Configuration.ApiClient.ParameterToString(includeDeletedUsers)));
 
             // Header params
 
@@ -7388,11 +7405,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder, includeDeletedUsers);
              return localVarResponse.Data;
 
         }
@@ -7421,9 +7439,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
+        /// <param name="includeDeletedUsers">Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -7477,6 +7496,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expandAnswerTotalScores != null) localVarQueryParams.Add(new Tuple<string, string>("expandAnswerTotalScores", this.Configuration.ApiClient.ParameterToString(expandAnswerTotalScores)));
             if (maximum != null) localVarQueryParams.Add(new Tuple<string, string>("maximum", this.Configuration.ApiClient.ParameterToString(maximum)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (includeDeletedUsers != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeletedUsers", this.Configuration.ApiClient.ParameterToString(includeDeletedUsers)));
 
             // Header params
 

@@ -29,14 +29,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The wrap-up code name. (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
+        /// <param name="Description">The wrap-up code description..</param>
         /// <param name="DateCreated">Date when the wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date when the wrap-up code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">The ID of the user that created the wrap-up code..</param>
         /// <param name="ModifiedBy">The ID of the user that modified the wrap-up code..</param>
-        public WrapupCode(string Name = null, StarrableDivision Division = null, DateTime? DateCreated = null, DateTime? DateModified = null, string CreatedBy = null, string ModifiedBy = null)
+        public WrapupCode(string Name = null, StarrableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string CreatedBy = null, string ModifiedBy = null)
         {
             this.Name = Name;
             this.Division = Division;
+            this.Description = Description;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
@@ -70,6 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public StarrableDivision Division { get; set; }
+
+
+
+        /// <summary>
+        /// The wrap-up code description.
+        /// </summary>
+        /// <value>The wrap-up code description.</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
 
 
 
@@ -129,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -190,6 +202,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -235,6 +252,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
+
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

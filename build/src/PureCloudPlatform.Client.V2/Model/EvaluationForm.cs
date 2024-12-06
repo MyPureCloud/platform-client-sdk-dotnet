@@ -33,7 +33,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContextId">ContextId.</param>
         /// <param name="QuestionGroups">A list of question groups (required).</param>
         /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
-        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
+        /// <param name="EvaluationSettings">Settings for evaluations associated with this form.</param>
+        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, EvaluationSettings EvaluationSettings = null)
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
@@ -41,6 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContextId = ContextId;
             this.QuestionGroups = QuestionGroups;
             this.PublishedVersions = PublishedVersions;
+            this.EvaluationSettings = EvaluationSettings;
             
         }
         
@@ -108,6 +110,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Settings for evaluations associated with this form
+        /// </summary>
+        /// <value>Settings for evaluations associated with this form</value>
+        [DataMember(Name="evaluationSettings", EmitDefaultValue=false)]
+        public EvaluationSettings EvaluationSettings { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -131,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
+            sb.Append("  EvaluationSettings: ").Append(EvaluationSettings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -208,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PublishedVersions.Equals(other.PublishedVersions)
                 ) &&
                 (
+                    this.EvaluationSettings == other.EvaluationSettings ||
+                    this.EvaluationSettings != null &&
+                    this.EvaluationSettings.Equals(other.EvaluationSettings)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -245,6 +262,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PublishedVersions != null)
                     hash = hash * 59 + this.PublishedVersions.GetHashCode();
+
+                if (this.EvaluationSettings != null)
+                    hash = hash * 59 + this.EvaluationSettings.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

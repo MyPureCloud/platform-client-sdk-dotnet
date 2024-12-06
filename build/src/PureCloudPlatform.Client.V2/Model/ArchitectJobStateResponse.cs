@@ -88,7 +88,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Update for "Update"
             /// </summary>
             [EnumMember(Value = "Update")]
-            Update
+            Update,
+            
+            /// <summary>
+            /// Enum Export for "Export"
+            /// </summary>
+            [EnumMember(Value = "Export")]
+            Export
         }
         /// <summary>
         /// Status of the Architect Job

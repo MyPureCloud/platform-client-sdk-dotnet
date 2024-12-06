@@ -1155,7 +1155,7 @@ namespace Example
 
 ## GetKnowledgeIntegrationOptions
 
-> [**KnowledgeIntegrationOptionsResponse**](KnowledgeIntegrationOptionsResponse) GetKnowledgeIntegrationOptions (string integrationId)
+> [**KnowledgeIntegrationOptionsResponse**](KnowledgeIntegrationOptionsResponse) GetKnowledgeIntegrationOptions (string integrationId, List<string> knowledgeBaseIds = null)
 
 
 Get sync options available for a knowledge-connect integration
@@ -1187,11 +1187,12 @@ namespace Example
 
             var apiInstance = new KnowledgeApi();
             var integrationId = integrationId_example;  // string | Integration ID
+            var knowledgeBaseIds = new List<string>(); // List<string> | Narrowing down filtering option results by knowledge base. (optional) 
 
             try
             { 
                 // Get sync options available for a knowledge-connect integration
-                KnowledgeIntegrationOptionsResponse result = apiInstance.GetKnowledgeIntegrationOptions(integrationId);
+                KnowledgeIntegrationOptionsResponse result = apiInstance.GetKnowledgeIntegrationOptions(integrationId, knowledgeBaseIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1209,6 +1210,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
+| **knowledgeBaseIds** | [**List<string>**](string)| Narrowing down filtering option results by knowledge base. | [optional]  |
 
 ### Return type
 
@@ -7789,4 +7791,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

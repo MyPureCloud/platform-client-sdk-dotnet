@@ -649,7 +649,7 @@ namespace Example
 
 ## GetQualityAgentsActivity
 
-> [**AgentActivityEntityListing**](AgentActivityEntityListing) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
+> [**AgentActivityEntityListing**](AgentActivityEntityListing) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null)
 
 
 Gets a list of Agent Activities
@@ -696,11 +696,12 @@ namespace Example
             var group = group_example;  // string | group id (optional) 
             var agentTeamId = agentTeamId_example;  // string | team id of agents requested (optional) 
             var formContextId = formContextId_example;  // string | shared id between form versions (optional) 
+            var userState = userState_example;  // string | 'Legacy' fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  'Any' fetches users of 'active', 'inactive' and 'deleted' states. (optional)  (default to Legacy)
 
             try
             { 
                 // Gets a list of Agent Activities
-                AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId);
+                AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId, userState);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -731,6 +732,7 @@ namespace Example
 | **group** | **string**| group id | [optional]  |
 | **agentTeamId** | **string**| team id of agents requested | [optional]  |
 | **formContextId** | **string**| shared id between form versions | [optional]  |
+| **userState** | **string**| &#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. | [optional] [default to Legacy]<br />**Values**: Any, Legacy |
 
 ### Return type
 
@@ -1147,7 +1149,7 @@ namespace Example
 
 ## GetQualityEvaluationsQuery
 
-> [**EvaluationEntityListing**](EvaluationEntityListing) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+> [**EvaluationEntityListing**](EvaluationEntityListing) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null)
 
 
 Queries Evaluations and returns a paged list
@@ -1199,11 +1201,12 @@ namespace Example
             var expandAnswerTotalScores = true;  // bool? | get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional) 
             var maximum = 56;  // int? | the maximum number of results to return (optional) 
             var sortOrder = sortOrder_example;  // string | NOTE: Does not work when conversationId is supplied. (optional) 
+            var includeDeletedUsers = true;  // bool? | Allow returning an agent or evaluator user with a 'delete' status. Defaults to false. (optional)  (default to false)
 
             try
             { 
                 // Queries Evaluations and returns a paged list
-                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder, includeDeletedUsers);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1239,6 +1242,7 @@ namespace Example
 | **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. | [optional]  |
 | **maximum** | **int?**| the maximum number of results to return | [optional]  |
 | **sortOrder** | **string**| NOTE: Does not work when conversationId is supplied. | [optional]  |
+| **includeDeletedUsers** | **bool?**| Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. | [optional] [default to false] |
 
 ### Return type
 
@@ -4178,4 +4182,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

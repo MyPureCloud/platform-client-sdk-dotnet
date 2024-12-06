@@ -73,7 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Deletionfailed for "DeletionFailed"
             /// </summary>
             [EnumMember(Value = "DeletionFailed")]
-            Deletionfailed
+            Deletionfailed,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed
         }
         /// <summary>
         /// The status code of WhatsApp Integration activation process

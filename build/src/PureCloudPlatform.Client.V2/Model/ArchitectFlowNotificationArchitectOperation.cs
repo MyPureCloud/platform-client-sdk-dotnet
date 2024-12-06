@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Checkout,
             
             /// <summary>
+            /// Enum Deactivate for "DEACTIVATE"
+            /// </summary>
+            [EnumMember(Value = "DEACTIVATE")]
+            Deactivate,
+            
+            /// <summary>
             /// Enum Debug for "DEBUG"
             /// </summary>
             [EnumMember(Value = "DEBUG")]

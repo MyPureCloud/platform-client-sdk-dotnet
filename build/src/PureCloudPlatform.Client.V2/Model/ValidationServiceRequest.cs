@@ -29,12 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="DateImportEnded">The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="UploadKey">S3 key for the uploaded file (required).</param>
-        /// <param name="FileName">Name of the uploaded file.</param>
-        public ValidationServiceRequest(DateTime? DateImportEnded = null, string UploadKey = null, string FileName = null)
+        public ValidationServiceRequest(DateTime? DateImportEnded = null, string UploadKey = null)
         {
             this.DateImportEnded = DateImportEnded;
             this.UploadKey = UploadKey;
-            this.FileName = FileName;
             
         }
         
@@ -57,15 +55,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string UploadKey { get; set; }
 
 
-
-        /// <summary>
-        /// Name of the uploaded file
-        /// </summary>
-        /// <value>Name of the uploaded file</value>
-        [DataMember(Name="fileName", EmitDefaultValue=false)]
-        public string FileName { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -77,7 +66,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  DateImportEnded: ").Append(DateImportEnded).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
-            sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,11 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UploadKey == other.UploadKey ||
                     this.UploadKey != null &&
                     this.UploadKey.Equals(other.UploadKey)
-                ) &&
-                (
-                    this.FileName == other.FileName ||
-                    this.FileName != null &&
-                    this.FileName.Equals(other.FileName)
                 );
         }
 
@@ -151,9 +134,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-
-                if (this.FileName != null)
-                    hash = hash * 59 + this.FileName.GetHashCode();
 
                 return hash;
             }

@@ -217,7 +217,8 @@
 | **SocialClassifications** | **List&lt;string&gt;** | Indicates if a social message was public or private | [optional] |
 | **FilterUsersByManagerIds** | **List&lt;string&gt;** | The manager ids used to fetch associated users for the view | [optional] |
 | **SlideshowIds** | **List&lt;string&gt;** | List of Dashboard slideshowIds to be filtered | [optional] |
+| **Conferenced** | **bool?** | Filter to indicate if the conversation has conference | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

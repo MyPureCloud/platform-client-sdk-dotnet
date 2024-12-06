@@ -389,10 +389,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns></returns>
         
-        void DeleteRoutingSmsPhonenumber (string addressId);
+        void DeleteRoutingSmsPhonenumber (string phoneNumberId);
 
         /// <summary>
         /// Delete a phone number provisioned for SMS.
@@ -401,10 +401,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId);
+        ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId);
 
         /// <summary>
         /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
@@ -1359,9 +1359,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>EstimatedWaitTimePredictions</returns>
         
-        EstimatedWaitTimePredictions GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType);
+        EstimatedWaitTimePredictions GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType, string labelId = null);
 
         /// <summary>
         /// Get Estimated Wait Time
@@ -1372,9 +1373,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
         
-        ApiResponse<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType);
+        ApiResponse<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType, string labelId = null);
 
         /// <summary>
         /// Get the members of this queue.
@@ -1957,11 +1959,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>SmsPhoneNumber</returns>
         
-        SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId, string expand = null);
+        SmsPhoneNumber GetRoutingSmsPhonenumber (string phoneNumberId, string expand = null);
 
         /// <summary>
         /// Get a phone number provisioned for SMS.
@@ -1970,11 +1972,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
         
-        ApiResponse<SmsPhoneNumber> GetRoutingSmsPhonenumberWithHttpInfo (string addressId, string expand = null);
+        ApiResponse<SmsPhoneNumber> GetRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId, string expand = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -3773,11 +3775,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>SmsPhoneNumber</returns>
         
-        SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body);
+        SmsPhoneNumber PutRoutingSmsPhonenumber (string phoneNumberId, SmsPhoneNumber body);
 
         /// <summary>
         /// Update a phone number provisioned for SMS.
@@ -3786,11 +3788,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
         
-        ApiResponse<SmsPhoneNumber> PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body);
+        ApiResponse<SmsPhoneNumber> PutRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId, SmsPhoneNumber body);
 
         /// <summary>
         /// Update the user's Direct Routing Backup settings.
@@ -4351,10 +4353,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns>Task of void</returns>
         
-        System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId);
+        System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string phoneNumberId);
 
         /// <summary>
         /// Delete a phone number provisioned for SMS.
@@ -4363,10 +4365,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns>Task of ApiResponse</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId);
 
         /// <summary>
         /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
@@ -5321,9 +5323,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>Task of EstimatedWaitTimePredictions</returns>
         
-        System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeAsync (string queueId, string mediaType);
+        System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeAsync (string queueId, string mediaType, string labelId = null);
 
         /// <summary>
         /// Get Estimated Wait Time
@@ -5334,9 +5337,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType);
+        System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType, string labelId = null);
 
         /// <summary>
         /// Get the members of this queue.
@@ -5919,11 +5923,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
-        System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId, string expand = null);
+        System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string phoneNumberId, string expand = null);
 
         /// <summary>
         /// Get a phone number provisioned for SMS.
@@ -5932,11 +5936,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId, string expand = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -7735,11 +7739,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
-        System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body);
+        System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string phoneNumberId, SmsPhoneNumber body);
 
         /// <summary>
         /// Update a phone number provisioned for SMS.
@@ -7748,11 +7752,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body);
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId, SmsPhoneNumber body);
 
         /// <summary>
         /// Update the user's Direct Routing Backup settings.
@@ -11230,12 +11234,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns></returns>
         
-        public void DeleteRoutingSmsPhonenumber (string addressId)
+        public void DeleteRoutingSmsPhonenumber (string phoneNumberId)
         {
-             DeleteRoutingSmsPhonenumberWithHttpInfo(addressId);
+             DeleteRoutingSmsPhonenumberWithHttpInfo(phoneNumberId);
         }
 
         /// <summary>
@@ -11243,16 +11247,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        public ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId)
+        public ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId)
         { 
-            // verify the required parameter 'addressId' is set
-            if (addressId == null)
-                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->DeleteRoutingSmsPhonenumber");
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->DeleteRoutingSmsPhonenumber");
 
-            var localVarPath = "/api/v2/routing/sms/phonenumbers/{addressId}";
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11282,7 +11286,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
 
             // Query params
 
@@ -11334,12 +11338,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns>Task of void</returns>
         
-        public async System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId)
+        public async System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string phoneNumberId)
         {
-             await DeleteRoutingSmsPhonenumberAsyncWithHttpInfo(addressId);
+             await DeleteRoutingSmsPhonenumberAsyncWithHttpInfo(phoneNumberId);
 
         }
 
@@ -11348,17 +11352,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <returns>Task of ApiResponse</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId)
         { 
-            // verify the required parameter 'addressId' is set
-            if (addressId == null)
-                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->DeleteRoutingSmsPhonenumber");
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->DeleteRoutingSmsPhonenumber");
             
 
-            var localVarPath = "/api/v2/routing/sms/phonenumbers/{addressId}";
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11388,7 +11392,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
 
             // Query params
 
@@ -19425,11 +19429,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>EstimatedWaitTimePredictions</returns>
         
-        public EstimatedWaitTimePredictions GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType)
+        public EstimatedWaitTimePredictions GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType, string labelId = null)
         {
-             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo(queueId, mediaType);
+             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo(queueId, mediaType, labelId);
              return localVarResponse.Data;
         }
 
@@ -19440,9 +19445,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
         
-        public ApiResponse< EstimatedWaitTimePredictions > GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType)
+        public ApiResponse< EstimatedWaitTimePredictions > GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType, string labelId = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -19485,6 +19491,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (mediaType != null) localVarPathParams.Add("mediaType", this.Configuration.ApiClient.ParameterToString(mediaType));
 
             // Query params
+            if (labelId != null) localVarQueryParams.Add(new Tuple<string, string>("labelId", this.Configuration.ApiClient.ParameterToString(labelId)));
 
             // Header params
 
@@ -19536,11 +19543,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>Task of EstimatedWaitTimePredictions</returns>
         
-        public async System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeAsync (string queueId, string mediaType)
+        public async System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeAsync (string queueId, string mediaType, string labelId = null)
         {
-             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = await GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo(queueId, mediaType);
+             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = await GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo(queueId, mediaType, labelId);
              return localVarResponse.Data;
 
         }
@@ -19552,9 +19560,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
+        /// <param name="labelId">Unique id that represents the interaction label used with media type for EWT calculation (optional)</param>
         /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType)
+        public async System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType, string labelId = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -19599,6 +19608,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (mediaType != null) localVarPathParams.Add("mediaType", this.Configuration.ApiClient.ParameterToString(mediaType));
 
             // Query params
+            if (labelId != null) localVarQueryParams.Add(new Tuple<string, string>("labelId", this.Configuration.ApiClient.ParameterToString(labelId)));
 
             // Header params
 
@@ -23987,13 +23997,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>SmsPhoneNumber</returns>
         
-        public SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId, string expand = null)
+        public SmsPhoneNumber GetRoutingSmsPhonenumber (string phoneNumberId, string expand = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = GetRoutingSmsPhonenumberWithHttpInfo(addressId, expand);
+             ApiResponse<SmsPhoneNumber> localVarResponse = GetRoutingSmsPhonenumberWithHttpInfo(phoneNumberId, expand);
              return localVarResponse.Data;
         }
 
@@ -24002,17 +24012,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
         
-        public ApiResponse< SmsPhoneNumber > GetRoutingSmsPhonenumberWithHttpInfo (string addressId, string expand = null)
+        public ApiResponse< SmsPhoneNumber > GetRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId, string expand = null)
         { 
-            // verify the required parameter 'addressId' is set
-            if (addressId == null)
-                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->GetRoutingSmsPhonenumber");
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->GetRoutingSmsPhonenumber");
 
-            var localVarPath = "/api/v2/routing/sms/phonenumbers/{addressId}";
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24042,7 +24052,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
@@ -24095,13 +24105,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
-        public async System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId, string expand = null)
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string phoneNumberId, string expand = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = await GetRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, expand);
+             ApiResponse<SmsPhoneNumber> localVarResponse = await GetRoutingSmsPhonenumberAsyncWithHttpInfo(phoneNumberId, expand);
              return localVarResponse.Data;
 
         }
@@ -24111,18 +24121,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId, string expand = null)
         { 
-            // verify the required parameter 'addressId' is set
-            if (addressId == null)
-                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->GetRoutingSmsPhonenumber");
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->GetRoutingSmsPhonenumber");
             
 
-            var localVarPath = "/api/v2/routing/sms/phonenumbers/{addressId}";
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -24152,7 +24162,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
@@ -39758,13 +39768,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>SmsPhoneNumber</returns>
         
-        public SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body)
+        public SmsPhoneNumber PutRoutingSmsPhonenumber (string phoneNumberId, SmsPhoneNumber body)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = PutRoutingSmsPhonenumberWithHttpInfo(addressId, body);
+             ApiResponse<SmsPhoneNumber> localVarResponse = PutRoutingSmsPhonenumberWithHttpInfo(phoneNumberId, body);
              return localVarResponse.Data;
         }
 
@@ -39773,20 +39783,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
         
-        public ApiResponse< SmsPhoneNumber > PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body)
+        public ApiResponse< SmsPhoneNumber > PutRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId, SmsPhoneNumber body)
         { 
-            // verify the required parameter 'addressId' is set
-            if (addressId == null)
-                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->PutRoutingSmsPhonenumber");
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->PutRoutingSmsPhonenumber");
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingSmsPhonenumber");
 
-            var localVarPath = "/api/v2/routing/sms/phonenumbers/{addressId}";
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -39817,7 +39827,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
 
             // Query params
 
@@ -39874,13 +39884,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
-        public async System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body)
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string phoneNumberId, SmsPhoneNumber body)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = await PutRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, body);
+             ApiResponse<SmsPhoneNumber> localVarResponse = await PutRoutingSmsPhonenumberAsyncWithHttpInfo(phoneNumberId, body);
              return localVarResponse.Data;
 
         }
@@ -39890,22 +39900,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addressId">Address ID</param>
+        /// <param name="phoneNumberId">phone number</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId, SmsPhoneNumber body)
         { 
-            // verify the required parameter 'addressId' is set
-            if (addressId == null)
-                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->PutRoutingSmsPhonenumber");
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->PutRoutingSmsPhonenumber");
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingSmsPhonenumber");
             
 
-            var localVarPath = "/api/v2/routing/sms/phonenumbers/{addressId}";
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -39936,7 +39946,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
 
             // Query params
 

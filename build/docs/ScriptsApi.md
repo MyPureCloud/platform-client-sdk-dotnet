@@ -285,7 +285,7 @@ namespace Example
 | **name** | **string**| Name filter | [optional]  |
 | **feature** | **string**| Feature filter | [optional]  |
 | **flowId** | **string**| Secure flow id filter | [optional]  |
-| **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
+| **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate, name |
 | **sortOrder** | **string**| SortOrder | [optional] <br />**Values**: ascending, descending |
 | **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 | **divisionIds** | **string**| Filters scripts to requested divisionIds | [optional]  |
@@ -365,7 +365,7 @@ namespace Example
 | **name** | **string**| Name filter | [optional]  |
 | **feature** | **string**| Feature filter | [optional]  |
 | **flowId** | **string**| Secure flow id filter | [optional]  |
-| **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
+| **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate, name |
 | **sortOrder** | **string**| SortOrder | [optional] <br />**Values**: ascending, descending |
 | **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 | **divisionIds** | **string**| Filters scripts to requested divisionIds | [optional]  |
@@ -983,4 +983,4 @@ namespace Example
 [**Script**](Script)
 
 
-_PureCloudPlatform.Client.V2 221.0.0_
+_PureCloudPlatform.Client.V2 222.0.0_

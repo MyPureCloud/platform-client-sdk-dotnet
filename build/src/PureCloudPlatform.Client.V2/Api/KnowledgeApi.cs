@@ -464,9 +464,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>KnowledgeIntegrationOptionsResponse</returns>
         
-        KnowledgeIntegrationOptionsResponse GetKnowledgeIntegrationOptions (string integrationId);
+        KnowledgeIntegrationOptionsResponse GetKnowledgeIntegrationOptions (string integrationId, List<string> knowledgeBaseIds = null);
 
         /// <summary>
         /// Get sync options available for a knowledge-connect integration
@@ -476,9 +477,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>ApiResponse of KnowledgeIntegrationOptionsResponse</returns>
         
-        ApiResponse<KnowledgeIntegrationOptionsResponse> GetKnowledgeIntegrationOptionsWithHttpInfo (string integrationId);
+        ApiResponse<KnowledgeIntegrationOptionsResponse> GetKnowledgeIntegrationOptionsWithHttpInfo (string integrationId, List<string> knowledgeBaseIds = null);
 
         /// <summary>
         /// Get knowledge base
@@ -3794,9 +3796,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>Task of KnowledgeIntegrationOptionsResponse</returns>
         
-        System.Threading.Tasks.Task<KnowledgeIntegrationOptionsResponse> GetKnowledgeIntegrationOptionsAsync (string integrationId);
+        System.Threading.Tasks.Task<KnowledgeIntegrationOptionsResponse> GetKnowledgeIntegrationOptionsAsync (string integrationId, List<string> knowledgeBaseIds = null);
 
         /// <summary>
         /// Get sync options available for a knowledge-connect integration
@@ -3806,9 +3809,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeIntegrationOptionsResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeIntegrationOptionsResponse>> GetKnowledgeIntegrationOptionsAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeIntegrationOptionsResponse>> GetKnowledgeIntegrationOptionsAsyncWithHttpInfo (string integrationId, List<string> knowledgeBaseIds = null);
 
         /// <summary>
         /// Get knowledge base
@@ -10407,11 +10411,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>KnowledgeIntegrationOptionsResponse</returns>
         
-        public KnowledgeIntegrationOptionsResponse GetKnowledgeIntegrationOptions (string integrationId)
+        public KnowledgeIntegrationOptionsResponse GetKnowledgeIntegrationOptions (string integrationId, List<string> knowledgeBaseIds = null)
         {
-             ApiResponse<KnowledgeIntegrationOptionsResponse> localVarResponse = GetKnowledgeIntegrationOptionsWithHttpInfo(integrationId);
+             ApiResponse<KnowledgeIntegrationOptionsResponse> localVarResponse = GetKnowledgeIntegrationOptionsWithHttpInfo(integrationId, knowledgeBaseIds);
              return localVarResponse.Data;
         }
 
@@ -10421,9 +10426,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>ApiResponse of KnowledgeIntegrationOptionsResponse</returns>
         
-        public ApiResponse< KnowledgeIntegrationOptionsResponse > GetKnowledgeIntegrationOptionsWithHttpInfo (string integrationId)
+        public ApiResponse< KnowledgeIntegrationOptionsResponse > GetKnowledgeIntegrationOptionsWithHttpInfo (string integrationId, List<string> knowledgeBaseIds = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -10462,6 +10468,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (knowledgeBaseIds != null) knowledgeBaseIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("knowledgeBaseIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -10512,11 +10519,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>Task of KnowledgeIntegrationOptionsResponse</returns>
         
-        public async System.Threading.Tasks.Task<KnowledgeIntegrationOptionsResponse> GetKnowledgeIntegrationOptionsAsync (string integrationId)
+        public async System.Threading.Tasks.Task<KnowledgeIntegrationOptionsResponse> GetKnowledgeIntegrationOptionsAsync (string integrationId, List<string> knowledgeBaseIds = null)
         {
-             ApiResponse<KnowledgeIntegrationOptionsResponse> localVarResponse = await GetKnowledgeIntegrationOptionsAsyncWithHttpInfo(integrationId);
+             ApiResponse<KnowledgeIntegrationOptionsResponse> localVarResponse = await GetKnowledgeIntegrationOptionsAsyncWithHttpInfo(integrationId, knowledgeBaseIds);
              return localVarResponse.Data;
 
         }
@@ -10527,9 +10535,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
+        /// <param name="knowledgeBaseIds">Narrowing down filtering option results by knowledge base. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeIntegrationOptionsResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeIntegrationOptionsResponse>> GetKnowledgeIntegrationOptionsAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeIntegrationOptionsResponse>> GetKnowledgeIntegrationOptionsAsyncWithHttpInfo (string integrationId, List<string> knowledgeBaseIds = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -10569,6 +10578,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
 
             // Query params
+            if (knowledgeBaseIds != null) knowledgeBaseIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("knowledgeBaseIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

@@ -31,12 +31,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomerId">An arbitrary ID for the customer starting the session. Used to track multiple sessions started by the same customer. (required).</param>
         /// <param name="PageUrl">URL of the page where the session is started..</param>
         /// <param name="Contexts">The session contexts..</param>
-        public KnowledgeGuestSession(KnowledgeGuestSessionApp App = null, string CustomerId = null, string PageUrl = null, List<KnowledgeGuestSessionContext> Contexts = null)
+        /// <param name="JourneySessionId">Journey session ID. Used to get the segments of the customer to filter search results..</param>
+        public KnowledgeGuestSession(KnowledgeGuestSessionApp App = null, string CustomerId = null, string PageUrl = null, List<KnowledgeGuestSessionContext> Contexts = null, string JourneySessionId = null)
         {
             this.App = App;
             this.CustomerId = CustomerId;
             this.PageUrl = PageUrl;
             this.Contexts = Contexts;
+            this.JourneySessionId = JourneySessionId;
             
         }
         
@@ -86,6 +88,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<KnowledgeGuestSessionContext> Contexts { get; set; }
 
 
+
+        /// <summary>
+        /// Journey session ID. Used to get the segments of the customer to filter search results.
+        /// </summary>
+        /// <value>Journey session ID. Used to get the segments of the customer to filter search results.</value>
+        [DataMember(Name="journeySessionId", EmitDefaultValue=false)]
+        public string JourneySessionId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,6 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("  PageUrl: ").Append(PageUrl).Append("\n");
             sb.Append("  Contexts: ").Append(Contexts).Append("\n");
+            sb.Append("  JourneySessionId: ").Append(JourneySessionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Contexts == other.Contexts ||
                     this.Contexts != null &&
                     this.Contexts.SequenceEqual(other.Contexts)
+                ) &&
+                (
+                    this.JourneySessionId == other.JourneySessionId ||
+                    this.JourneySessionId != null &&
+                    this.JourneySessionId.Equals(other.JourneySessionId)
                 );
         }
 
@@ -192,6 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Contexts != null)
                     hash = hash * 59 + this.Contexts.GetHashCode();
+
+                if (this.JourneySessionId != null)
+                    hash = hash * 59 + this.JourneySessionId.GetHashCode();
 
                 return hash;
             }

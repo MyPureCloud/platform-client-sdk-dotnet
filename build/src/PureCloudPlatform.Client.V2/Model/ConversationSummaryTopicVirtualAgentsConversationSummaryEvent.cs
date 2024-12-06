@@ -125,6 +125,38 @@ namespace PureCloudPlatform.Client.V2.Model
             Email
         }
         /// <summary>
+        /// Gets or Sets ErrorType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ErrorTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum ConversationTooLong for "CONVERSATION_TOO_LONG"
+            /// </summary>
+            [EnumMember(Value = "CONVERSATION_TOO_LONG")]
+            ConversationTooLong,
+            
+            /// <summary>
+            /// Enum ConversationTooShort for "CONVERSATION_TOO_SHORT"
+            /// </summary>
+            [EnumMember(Value = "CONVERSATION_TOO_SHORT")]
+            ConversationTooShort
+        }
+        /// <summary>
         /// Gets or Sets MessageType
         /// </summary>
         [DataMember(Name="messageType", EmitDefaultValue=false)]
@@ -134,6 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
+        /// <summary>
+        /// Gets or Sets ErrorType
+        /// </summary>
+        [DataMember(Name="errorType", EmitDefaultValue=false)]
+        public ErrorTypeEnum? ErrorType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationSummaryTopicVirtualAgentsConversationSummaryEvent" /> class.
         /// </summary>
@@ -152,7 +189,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapUpCodes">WrapUpCodes.</param>
         /// <param name="TriggerSource">TriggerSource.</param>
         /// <param name="LastEditedBy">LastEditedBy.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null)
+        /// <param name="ErrorType">ErrorType.</param>
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null)
         {
             this.ConversationId = ConversationId;
             this.Participants = Participants;
@@ -169,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapUpCodes = WrapUpCodes;
             this.TriggerSource = TriggerSource;
             this.LastEditedBy = LastEditedBy;
+            this.ErrorType = ErrorType;
             
         }
         
@@ -281,6 +320,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -305,6 +346,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapUpCodes: ").Append(WrapUpCodes).Append("\n");
             sb.Append("  TriggerSource: ").Append(TriggerSource).Append("\n");
             sb.Append("  LastEditedBy: ").Append(LastEditedBy).Append("\n");
+            sb.Append("  ErrorType: ").Append(ErrorType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -419,6 +461,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LastEditedBy == other.LastEditedBy ||
                     this.LastEditedBy != null &&
                     this.LastEditedBy.Equals(other.LastEditedBy)
+                ) &&
+                (
+                    this.ErrorType == other.ErrorType ||
+                    this.ErrorType != null &&
+                    this.ErrorType.Equals(other.ErrorType)
                 );
         }
 
@@ -477,6 +524,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LastEditedBy != null)
                     hash = hash * 59 + this.LastEditedBy.GetHashCode();
+
+                if (this.ErrorType != null)
+                    hash = hash * 59 + this.ErrorType.GetHashCode();
 
                 return hash;
             }

@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DomainAllowlist">The list of domains that will be allowed to embed Genesys Cloud applications..</param>
         /// <param name="IpAddressAllowlist">The list of IP addresses that will be allowed to authenticate with Genesys Cloud..</param>
         /// <param name="PasswordRequirements">The password requirements for the organization..</param>
-        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null)
+        /// <param name="InactivityTimeoutExclusions">The list of exempt apis from inactivity timeout..</param>
+        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null, List<string> InactivityTimeoutExclusions = null)
         {
             this.MultifactorAuthenticationRequired = MultifactorAuthenticationRequired;
             this.DomainAllowlistEnabled = DomainAllowlistEnabled;
             this.DomainAllowlist = DomainAllowlist;
             this.IpAddressAllowlist = IpAddressAllowlist;
             this.PasswordRequirements = PasswordRequirements;
+            this.InactivityTimeoutExclusions = InactivityTimeoutExclusions;
             
         }
         
@@ -82,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public PasswordRequirements PasswordRequirements { get; set; }
 
 
+
+        /// <summary>
+        /// The list of exempt apis from inactivity timeout.
+        /// </summary>
+        /// <value>The list of exempt apis from inactivity timeout.</value>
+        [DataMember(Name="inactivityTimeoutExclusions", EmitDefaultValue=false)]
+        public List<string> InactivityTimeoutExclusions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DomainAllowlist: ").Append(DomainAllowlist).Append("\n");
             sb.Append("  IpAddressAllowlist: ").Append(IpAddressAllowlist).Append("\n");
             sb.Append("  PasswordRequirements: ").Append(PasswordRequirements).Append("\n");
+            sb.Append("  InactivityTimeoutExclusions: ").Append(InactivityTimeoutExclusions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PasswordRequirements == other.PasswordRequirements ||
                     this.PasswordRequirements != null &&
                     this.PasswordRequirements.Equals(other.PasswordRequirements)
+                ) &&
+                (
+                    this.InactivityTimeoutExclusions == other.InactivityTimeoutExclusions ||
+                    this.InactivityTimeoutExclusions != null &&
+                    this.InactivityTimeoutExclusions.SequenceEqual(other.InactivityTimeoutExclusions)
                 );
         }
 
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PasswordRequirements != null)
                     hash = hash * 59 + this.PasswordRequirements.GetHashCode();
+
+                if (this.InactivityTimeoutExclusions != null)
+                    hash = hash * 59 + this.InactivityTimeoutExclusions.GetHashCode();
 
                 return hash;
             }

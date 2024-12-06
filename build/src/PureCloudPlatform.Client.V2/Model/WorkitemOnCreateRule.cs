@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Onattributechange for "OnAttributeChange"
             /// </summary>
             [EnumMember(Value = "OnAttributeChange")]
-            Onattributechange
+            Onattributechange,
+            
+            /// <summary>
+            /// Enum Date for "Date"
+            /// </summary>
+            [EnumMember(Value = "Date")]
+            Date
         }
         /// <summary>
         /// The type of the rule.

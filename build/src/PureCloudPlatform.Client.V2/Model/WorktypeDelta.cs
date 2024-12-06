@@ -40,7 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ServiceLevelTarget">ServiceLevelTarget.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public WorktypeDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeList Statuses = null, WorkitemsAttributeChangeString DefaultWorkbinId = null, WorkitemsAttributeChangeInteger DefaultDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultExpirationSeconds = null, WorkitemsAttributeChangeInteger DefaultDueDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultPriority = null, WorkitemsAttributeChangeList DefaultSkillIds = null, WorkitemsAttributeChangeString DefaultStatusId = null, WorkitemsAttributeChangeString DefaultLanguageId = null, WorkitemsAttributeChangeInteger DefaultTtlSeconds = null, WorkitemsAttributeChangeBoolean AssignmentEnabled = null, WorkitemsAttributeChangeString DefaultQueueId = null, WorkitemsAttributeChangeString SchemaId = null, WorkitemsAttributeChangeString SchemaVersion = null, WorkitemsAttributeChangeInteger ServiceLevelTarget = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null)
+        /// <param name="DefaultScriptId">DefaultScriptId.</param>
+        public WorktypeDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeList Statuses = null, WorkitemsAttributeChangeString DefaultWorkbinId = null, WorkitemsAttributeChangeInteger DefaultDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultExpirationSeconds = null, WorkitemsAttributeChangeInteger DefaultDueDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultPriority = null, WorkitemsAttributeChangeList DefaultSkillIds = null, WorkitemsAttributeChangeString DefaultStatusId = null, WorkitemsAttributeChangeString DefaultLanguageId = null, WorkitemsAttributeChangeInteger DefaultTtlSeconds = null, WorkitemsAttributeChangeBoolean AssignmentEnabled = null, WorkitemsAttributeChangeString DefaultQueueId = null, WorkitemsAttributeChangeString SchemaId = null, WorkitemsAttributeChangeString SchemaVersion = null, WorkitemsAttributeChangeInteger ServiceLevelTarget = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeString DefaultScriptId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -61,6 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ServiceLevelTarget = ServiceLevelTarget;
             this.DateModified = DateModified;
             this.ModifiedBy = ModifiedBy;
+            this.DefaultScriptId = DefaultScriptId;
             
         }
         
@@ -217,6 +219,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public WorkitemsAttributeChangeString ModifiedBy { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets DefaultScriptId
+        /// </summary>
+        [DataMember(Name="defaultScriptId", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeString DefaultScriptId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -245,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  DefaultScriptId: ").Append(DefaultScriptId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,6 +390,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
+                ) &&
+                (
+                    this.DefaultScriptId == other.DefaultScriptId ||
+                    this.DefaultScriptId != null &&
+                    this.DefaultScriptId.Equals(other.DefaultScriptId)
                 );
         }
 
@@ -449,6 +465,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+
+                if (this.DefaultScriptId != null)
+                    hash = hash * 59 + this.DefaultScriptId.GetHashCode();
 
                 return hash;
             }

@@ -19,8 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ReplacementTerm :  IEquatable<ReplacementTerm>
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Social Handle Type
         /// </summary>
+        /// <value>Social Handle Type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -63,14 +64,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Twitter
         }
         /// <summary>
-        /// Gets or Sets Type
+        /// Social Handle Type
         /// </summary>
+        /// <value>Social Handle Type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacementTerm" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
+        /// <param name="Type">Social Handle Type.</param>
         /// <param name="ExistingValue">ExistingValue.</param>
         /// <param name="UpdatedValue">UpdatedValue.</param>
         public ReplacementTerm(TypeEnum? Type = null, string ExistingValue = null, string UpdatedValue = null)

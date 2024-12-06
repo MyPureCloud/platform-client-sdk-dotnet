@@ -19,13 +19,67 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class EvaluationSettingsAssignee :  IEquatable<EvaluationSettingsAssignee>
     {
         /// <summary>
+        /// The assignee type. Valid values: Original, Individual, None
+        /// </summary>
+        /// <value>The assignee type. Valid values: Original, Individual, None</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Original for "Original"
+            /// </summary>
+            [EnumMember(Value = "Original")]
+            Original,
+            
+            /// <summary>
+            /// Enum Individual for "Individual"
+            /// </summary>
+            [EnumMember(Value = "Individual")]
+            Individual,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
+        }
+        /// <summary>
+        /// The assignee type. Valid values: Original, Individual, None
+        /// </summary>
+        /// <value>The assignee type. Valid values: Original, Individual, None</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationSettingsAssignee" /> class.
         /// </summary>
-        public EvaluationSettingsAssignee()
+        /// <param name="User">The user the dispute should be assigned to.</param>
+        /// <param name="Type">The assignee type. Valid values: Original, Individual, None.</param>
+        public EvaluationSettingsAssignee(UserReferenceWithName User = null, TypeEnum? Type = null)
         {
+            this.User = User;
+            this.Type = Type;
             
         }
         
+
+
+        /// <summary>
+        /// The user the dispute should be assigned to
+        /// </summary>
+        /// <value>The user the dispute should be assigned to</value>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public UserReferenceWithName User { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class EvaluationSettingsAssignee {\n");
 
+            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +131,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                );
         }
 
         /// <summary>
@@ -89,6 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+
                 return hash;
             }
         }

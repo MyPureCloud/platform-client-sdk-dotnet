@@ -151,6 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Campaignrecordsattempted,
             
             /// <summary>
+            /// Enum Campaigncontactsmessaged for "campaignContactsMessaged"
+            /// </summary>
+            [EnumMember(Value = "campaignContactsMessaged")]
+            Campaigncontactsmessaged,
+            
+            /// <summary>
             /// Enum Campaignbusinesssuccess for "campaignBusinessSuccess"
             /// </summary>
             [EnumMember(Value = "campaignBusinessSuccess")]

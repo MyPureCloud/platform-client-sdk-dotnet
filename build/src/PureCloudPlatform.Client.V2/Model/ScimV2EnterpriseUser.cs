@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Department">The department that the user belongs to..</param>
         /// <param name="Manager">The user's manager..</param>
         /// <param name="EmployeeNumber">The user's employee number..</param>
-        public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null, string EmployeeNumber = null)
+        /// <param name="DateHire">The user's hire date. Format in JSON will be YYYY-MM-DD..</param>
+        public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null, string EmployeeNumber = null, string DateHire = null)
         {
             this.Division = Division;
             this.Department = Department;
             this.Manager = Manager;
             this.EmployeeNumber = EmployeeNumber;
+            this.DateHire = DateHire;
             
         }
         
@@ -71,6 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string EmployeeNumber { get; set; }
 
 
+
+        /// <summary>
+        /// The user's hire date. Format in JSON will be YYYY-MM-DD.
+        /// </summary>
+        /// <value>The user's hire date. Format in JSON will be YYYY-MM-DD.</value>
+        [DataMember(Name="dateHire", EmitDefaultValue=false)]
+        public string DateHire { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Manager: ").Append(Manager).Append("\n");
             sb.Append("  EmployeeNumber: ").Append(EmployeeNumber).Append("\n");
+            sb.Append("  DateHire: ").Append(DateHire).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmployeeNumber == other.EmployeeNumber ||
                     this.EmployeeNumber != null &&
                     this.EmployeeNumber.Equals(other.EmployeeNumber)
+                ) &&
+                (
+                    this.DateHire == other.DateHire ||
+                    this.DateHire != null &&
+                    this.DateHire.Equals(other.DateHire)
                 );
         }
 
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmployeeNumber != null)
                     hash = hash * 59 + this.EmployeeNumber.GetHashCode();
+
+                if (this.DateHire != null)
+                    hash = hash * 59 + this.DateHire.GetHashCode();
 
                 return hash;
             }

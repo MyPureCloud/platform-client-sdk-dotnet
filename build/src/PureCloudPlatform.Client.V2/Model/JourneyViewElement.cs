@@ -30,13 +30,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The unique identifier of the element within the elements list (required).</param>
         /// <param name="Name">The unique name of the element within the view (required).</param>
         /// <param name="Attributes">Required attributes of the element (required).</param>
+        /// <param name="DisplayAttributes">Attributes that defines the visualization of the element in the journey view.</param>
         /// <param name="Filter">Any filters applied to this element.</param>
         /// <param name="FollowedBy">A list of JourneyViewLink objects, listing the elements downstream of this element.</param>
-        public JourneyViewElement(string Id = null, string Name = null, JourneyViewElementAttributes Attributes = null, JourneyViewElementFilter Filter = null, List<JourneyViewLink> FollowedBy = null)
+        public JourneyViewElement(string Id = null, string Name = null, JourneyViewElementAttributes Attributes = null, JourneyViewElementDisplayAttributes DisplayAttributes = null, JourneyViewElementFilter Filter = null, List<JourneyViewLink> FollowedBy = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Attributes = Attributes;
+            this.DisplayAttributes = DisplayAttributes;
             this.Filter = Filter;
             this.FollowedBy = FollowedBy;
             
@@ -72,6 +74,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Attributes that defines the visualization of the element in the journey view
+        /// </summary>
+        /// <value>Attributes that defines the visualization of the element in the journey view</value>
+        [DataMember(Name="displayAttributes", EmitDefaultValue=false)]
+        public JourneyViewElementDisplayAttributes DisplayAttributes { get; set; }
+
+
+
+        /// <summary>
         /// Any filters applied to this element
         /// </summary>
         /// <value>Any filters applied to this element</value>
@@ -100,6 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            sb.Append("  DisplayAttributes: ").Append(DisplayAttributes).Append("\n");
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  FollowedBy: ").Append(FollowedBy).Append("\n");
             sb.Append("}\n");
@@ -158,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Attributes.Equals(other.Attributes)
                 ) &&
                 (
+                    this.DisplayAttributes == other.DisplayAttributes ||
+                    this.DisplayAttributes != null &&
+                    this.DisplayAttributes.Equals(other.DisplayAttributes)
+                ) &&
+                (
                     this.Filter == other.Filter ||
                     this.Filter != null &&
                     this.Filter.Equals(other.Filter)
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
+
+                if (this.DisplayAttributes != null)
+                    hash = hash * 59 + this.DisplayAttributes.GetHashCode();
 
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();

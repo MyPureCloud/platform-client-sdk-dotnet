@@ -47,7 +47,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">DateModified.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="StatusCategory">StatusCategory.</param>
-        public WorkitemDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeString LanguageId = null, WorkitemsAttributeChangeString UtilizationLabelId = null, WorkitemsAttributeChangeInteger Priority = null, WorkitemsAttributeChangeList SkillIds = null, WorkitemsAttributeChangeList PreferredAgentIds = null, WorkitemsAttributeChangeInstant DateDue = null, WorkitemsAttributeChangeInstant DateExpires = null, WorkitemsAttributeChangeInteger DurationSeconds = null, WorkitemsAttributeChangeString StatusId = null, WorkitemsAttributeChangeString ReporterId = null, WorkitemsAttributeChangeString ExternalContactId = null, WorkitemsAttributeChangeString AssigneeId = null, WorkitemsAttributeChangeString WorkbinId = null, WorkitemsAttributeChangeString QueueId = null, WorkitemsAttributeChangeString ExternalTag = null, WorkitemsAttributeChangeString WrapupId = null, WorkitemsAttributeChangeInteger Ttl = null, WorkitemsAttributeChangeInstant DateClosed = null, WorkitemsAttributeChangeString AssignmentState = null, WorkitemsAttributeChangeBoolean AutoStatusTransition = null, WorkitemsAttributeChangeMap CustomFields = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeWorkitemStatusCategory StatusCategory = null)
+        /// <param name="ScriptId">ScriptId.</param>
+        public WorkitemDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeString LanguageId = null, WorkitemsAttributeChangeString UtilizationLabelId = null, WorkitemsAttributeChangeInteger Priority = null, WorkitemsAttributeChangeList SkillIds = null, WorkitemsAttributeChangeList PreferredAgentIds = null, WorkitemsAttributeChangeInstant DateDue = null, WorkitemsAttributeChangeInstant DateExpires = null, WorkitemsAttributeChangeInteger DurationSeconds = null, WorkitemsAttributeChangeString StatusId = null, WorkitemsAttributeChangeString ReporterId = null, WorkitemsAttributeChangeString ExternalContactId = null, WorkitemsAttributeChangeString AssigneeId = null, WorkitemsAttributeChangeString WorkbinId = null, WorkitemsAttributeChangeString QueueId = null, WorkitemsAttributeChangeString ExternalTag = null, WorkitemsAttributeChangeString WrapupId = null, WorkitemsAttributeChangeInteger Ttl = null, WorkitemsAttributeChangeInstant DateClosed = null, WorkitemsAttributeChangeString AssignmentState = null, WorkitemsAttributeChangeBoolean AutoStatusTransition = null, WorkitemsAttributeChangeMap CustomFields = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeWorkitemStatusCategory StatusCategory = null, WorkitemsAttributeChangeString ScriptId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -75,6 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.ModifiedBy = ModifiedBy;
             this.StatusCategory = StatusCategory;
+            this.ScriptId = ScriptId;
             
         }
         
@@ -287,6 +289,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public WorkitemsAttributeChangeWorkitemStatusCategory StatusCategory { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ScriptId
+        /// </summary>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeString ScriptId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -322,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  StatusCategory: ").Append(StatusCategory).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -491,6 +502,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StatusCategory == other.StatusCategory ||
                     this.StatusCategory != null &&
                     this.StatusCategory.Equals(other.StatusCategory)
+                ) &&
+                (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
                 );
         }
 
@@ -582,6 +598,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.StatusCategory != null)
                     hash = hash * 59 + this.StatusCategory.GetHashCode();
+
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
 
                 return hash;
             }

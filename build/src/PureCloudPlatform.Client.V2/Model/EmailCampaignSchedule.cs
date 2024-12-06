@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Intervals">A list of intervals during which to run the associated Campaign. (required).</param>
         /// <param name="TimeZone">The time zone for this email campaign schedule..</param>
         /// <param name="EmailCampaign">The Campaign that this email campaign schedule is for. (required).</param>
-        public EmailCampaignSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, DomainEntityRef EmailCampaign = null)
+        public EmailCampaignSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, DivisionedDomainEntityRef EmailCampaign = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Campaign that this email campaign schedule is for.</value>
         [DataMember(Name="emailCampaign", EmitDefaultValue=false)]
-        public DomainEntityRef EmailCampaign { get; set; }
+        public DivisionedDomainEntityRef EmailCampaign { get; set; }
 
 
 

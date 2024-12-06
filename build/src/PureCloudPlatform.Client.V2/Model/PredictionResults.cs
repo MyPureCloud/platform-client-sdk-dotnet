@@ -144,11 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Intent">Indicates the media type scope of this estimated wait time.</param>
         /// <param name="Formula">Indicates the estimated wait time Formula (required).</param>
         /// <param name="EstimatedWaitTimeSeconds">Estimated wait time in seconds (required).</param>
-        public PredictionResults(IntentEnum? Intent = null, FormulaEnum? Formula = null, int? EstimatedWaitTimeSeconds = null)
+        /// <param name="Label">This specifies the interaction label scoped to this estimated wait time calculation.</param>
+        public PredictionResults(IntentEnum? Intent = null, FormulaEnum? Formula = null, int? EstimatedWaitTimeSeconds = null, AddressableEntityRef Label = null)
         {
             this.Intent = Intent;
             this.Formula = Formula;
             this.EstimatedWaitTimeSeconds = EstimatedWaitTimeSeconds;
+            this.Label = Label;
             
         }
         
@@ -166,6 +168,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? EstimatedWaitTimeSeconds { get; set; }
 
 
+
+        /// <summary>
+        /// This specifies the interaction label scoped to this estimated wait time calculation
+        /// </summary>
+        /// <value>This specifies the interaction label scoped to this estimated wait time calculation</value>
+        [DataMember(Name="label", EmitDefaultValue=false)]
+        public AddressableEntityRef Label { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Intent: ").Append(Intent).Append("\n");
             sb.Append("  Formula: ").Append(Formula).Append("\n");
             sb.Append("  EstimatedWaitTimeSeconds: ").Append(EstimatedWaitTimeSeconds).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -232,6 +244,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EstimatedWaitTimeSeconds == other.EstimatedWaitTimeSeconds ||
                     this.EstimatedWaitTimeSeconds != null &&
                     this.EstimatedWaitTimeSeconds.Equals(other.EstimatedWaitTimeSeconds)
+                ) &&
+                (
+                    this.Label == other.Label ||
+                    this.Label != null &&
+                    this.Label.Equals(other.Label)
                 );
         }
 
@@ -254,6 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EstimatedWaitTimeSeconds != null)
                     hash = hash * 59 + this.EstimatedWaitTimeSeconds.GetHashCode();
+
+                if (this.Label != null)
+                    hash = hash * 59 + this.Label.GetHashCode();
 
                 return hash;
             }

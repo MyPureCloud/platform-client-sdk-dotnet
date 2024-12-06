@@ -109,6 +109,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Feedbackrating,
             
             /// <summary>
+            /// Enum Hasanswerhighlight for "hasAnswerHighlight"
+            /// </summary>
+            [EnumMember(Value = "hasAnswerHighlight")]
+            Hasanswerhighlight,
+            
+            /// <summary>
             /// Enum Knowledgebasedocumentid for "knowledgeBaseDocumentId"
             /// </summary>
             [EnumMember(Value = "knowledgeBaseDocumentId")]
