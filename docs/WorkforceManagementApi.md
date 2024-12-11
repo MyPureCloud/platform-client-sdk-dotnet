@@ -6826,7 +6826,7 @@ namespace Example
 
 ## GetWorkforcemanagementManagementunitUserTimeoffrequests
 
-> [**TimeOffRequestList**](TimeOffRequestList) GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId, bool? recentlyReviewed = null)
+> [**TimeOffRequestList**](TimeOffRequestList) GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId)
 
 
 Get a list of time off requests for a given user
@@ -6859,12 +6859,11 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
-            var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
 
             try
             { 
                 // Get a list of time off requests for a given user
-                TimeOffRequestList result = apiInstance.GetWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId, recentlyReviewed);
+                TimeOffRequestList result = apiInstance.GetWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6883,7 +6882,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The userId to whom the Time Off Request applies. |  |
-| **recentlyReviewed** | **bool?**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 
 ### Return type
 
@@ -8005,7 +8003,7 @@ namespace Example
 
 ## GetWorkforcemanagementTimeoffrequests
 
-> [**TimeOffRequestList**](TimeOffRequestList) GetWorkforcemanagementTimeoffrequests (bool? recentlyReviewed = null)
+> [**TimeOffRequestList**](TimeOffRequestList) GetWorkforcemanagementTimeoffrequests ()
 
 
 Get a list of time off requests for the current user
@@ -8037,12 +8035,11 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
 
             try
             { 
                 // Get a list of time off requests for the current user
-                TimeOffRequestList result = apiInstance.GetWorkforcemanagementTimeoffrequests(recentlyReviewed);
+                TimeOffRequestList result = apiInstance.GetWorkforcemanagementTimeoffrequests();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8055,11 +8052,7 @@ namespace Example
 ```
 
 ### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **recentlyReviewed** | **bool?**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
+This endpoint does require any parameters.
 
 ### Return type
 
@@ -15962,4 +15955,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 222.0.0_
+_PureCloudPlatform.Client.V2 223.0.0_

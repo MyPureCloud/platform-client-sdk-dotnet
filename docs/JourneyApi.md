@@ -456,8 +456,6 @@ void (empty response body)
 
 Delete the Schedule of a JourneyView
 
-used for long descriptions
-
 Requires ALL permissions: 
 
 * journey:viewsSchedule:delete
@@ -2083,8 +2081,6 @@ namespace Example
 
 Get the Schedule for a JourneyView
 
-used for long descriptions
-
 Requires ALL permissions: 
 
 * journey:viewsSchedule:view
@@ -2347,8 +2343,6 @@ namespace Example
 
 Get the job for a journey view version.
 
-used for long descriptions
-
 Requires ALL permissions: 
 
 * journey:viewsJobs:view
@@ -2414,8 +2408,6 @@ namespace Example
 
 
 Get the result of a job for a journey view version.
-
-used for long descriptions
 
 Requires ALL permissions: 
 
@@ -2550,8 +2542,6 @@ namespace Example
 
 
 Get the latest job of a journey view version.
-
-used for long descriptions
 
 Requires ALL permissions: 
 
@@ -3257,8 +3247,6 @@ namespace Example
 
 
 Update the job for a journey view version. Only the status can be changed and only to Cancelled
-
-used for long descriptions
 
 Requires ALL permissions: 
 
@@ -4186,8 +4174,6 @@ namespace Example
 
 Submit a job request for a journey view version.
 
-used for long descriptions
-
 Requires ALL permissions: 
 
 * journey:viewsJobs:add
@@ -4444,8 +4430,6 @@ namespace Example
 
 Update the Schedule for a JourneyView
 
-used for long descriptions
-
 Requires ALL permissions: 
 
 * journey:viewsSchedule:edit
@@ -4571,4 +4555,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 222.0.0_
+_PureCloudPlatform.Client.V2 223.0.0_

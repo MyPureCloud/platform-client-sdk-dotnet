@@ -9,6 +9,7 @@
 | **Enabled** | **bool?** | Whether or not cobrowse is enabled | [optional] |
 | **AllowAgentControl** | **bool?** | Whether the viewer should have option to request control | [optional] |
 | **AllowAgentNavigation** | **bool?** | Whether the viewer should have option to request navigation | [optional] |
+| **AllowDraw** | **bool?** | Should cobrowse draw be enabled | [optional] |
 | **MaskSelectors** | **List&lt;string&gt;** | Mask patterns that will apply to pages being shared | [optional] |
 | **Channels** | **List&lt;string&gt;** | Cobrowse channels for web messenger | [optional] |
 | **ReadonlySelectors** | **List&lt;string&gt;** | Readonly patterns that will apply to pages being shared | [optional] |
@@ -16,4 +17,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 222.0.0_
+_PureCloudPlatform.Client.V2 223.0.0_
