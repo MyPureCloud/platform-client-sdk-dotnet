@@ -39,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">QueueId.</param>
         /// <param name="ExternalTag">ExternalTag.</param>
         /// <param name="WrapupId">WrapupId.</param>
+        /// <param name="Wrapup">Wrapup.</param>
         /// <param name="Ttl">Ttl.</param>
         /// <param name="DateClosed">DateClosed.</param>
         /// <param name="AssignmentState">AssignmentState.</param>
@@ -48,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="StatusCategory">StatusCategory.</param>
         /// <param name="ScriptId">ScriptId.</param>
-        public WorkitemDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeString LanguageId = null, WorkitemsAttributeChangeString UtilizationLabelId = null, WorkitemsAttributeChangeInteger Priority = null, WorkitemsAttributeChangeList SkillIds = null, WorkitemsAttributeChangeList PreferredAgentIds = null, WorkitemsAttributeChangeInstant DateDue = null, WorkitemsAttributeChangeInstant DateExpires = null, WorkitemsAttributeChangeInteger DurationSeconds = null, WorkitemsAttributeChangeString StatusId = null, WorkitemsAttributeChangeString ReporterId = null, WorkitemsAttributeChangeString ExternalContactId = null, WorkitemsAttributeChangeString AssigneeId = null, WorkitemsAttributeChangeString WorkbinId = null, WorkitemsAttributeChangeString QueueId = null, WorkitemsAttributeChangeString ExternalTag = null, WorkitemsAttributeChangeString WrapupId = null, WorkitemsAttributeChangeInteger Ttl = null, WorkitemsAttributeChangeInstant DateClosed = null, WorkitemsAttributeChangeString AssignmentState = null, WorkitemsAttributeChangeBoolean AutoStatusTransition = null, WorkitemsAttributeChangeMap CustomFields = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeWorkitemStatusCategory StatusCategory = null, WorkitemsAttributeChangeString ScriptId = null)
+        public WorkitemDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeString LanguageId = null, WorkitemsAttributeChangeString UtilizationLabelId = null, WorkitemsAttributeChangeInteger Priority = null, WorkitemsAttributeChangeList SkillIds = null, WorkitemsAttributeChangeList PreferredAgentIds = null, WorkitemsAttributeChangeInstant DateDue = null, WorkitemsAttributeChangeInstant DateExpires = null, WorkitemsAttributeChangeInteger DurationSeconds = null, WorkitemsAttributeChangeString StatusId = null, WorkitemsAttributeChangeString ReporterId = null, WorkitemsAttributeChangeString ExternalContactId = null, WorkitemsAttributeChangeString AssigneeId = null, WorkitemsAttributeChangeString WorkbinId = null, WorkitemsAttributeChangeString QueueId = null, WorkitemsAttributeChangeString ExternalTag = null, WorkitemsAttributeChangeString WrapupId = null, WorkitemsAttributeChangeWrapupDelta Wrapup = null, WorkitemsAttributeChangeInteger Ttl = null, WorkitemsAttributeChangeInstant DateClosed = null, WorkitemsAttributeChangeString AssignmentState = null, WorkitemsAttributeChangeBoolean AutoStatusTransition = null, WorkitemsAttributeChangeMap CustomFields = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeWorkitemStatusCategory StatusCategory = null, WorkitemsAttributeChangeString ScriptId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -68,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueueId = QueueId;
             this.ExternalTag = ExternalTag;
             this.WrapupId = WrapupId;
+            this.Wrapup = Wrapup;
             this.Ttl = Ttl;
             this.DateClosed = DateClosed;
             this.AssignmentState = AssignmentState;
@@ -227,6 +229,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Wrapup
+        /// </summary>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeWrapupDelta Wrapup { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Ttl
         /// </summary>
         [DataMember(Name="ttl", EmitDefaultValue=false)]
@@ -324,6 +334,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  WrapupId: ").Append(WrapupId).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
             sb.Append("  DateClosed: ").Append(DateClosed).Append("\n");
             sb.Append("  AssignmentState: ").Append(AssignmentState).Append("\n");
@@ -464,6 +475,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupId.Equals(other.WrapupId)
                 ) &&
                 (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
                     this.Ttl == other.Ttl ||
                     this.Ttl != null &&
                     this.Ttl.Equals(other.Ttl)
@@ -574,6 +590,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WrapupId != null)
                     hash = hash * 59 + this.WrapupId.GetHashCode();
+
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
 
                 if (this.Ttl != null)
                     hash = hash * 59 + this.Ttl.GetHashCode();

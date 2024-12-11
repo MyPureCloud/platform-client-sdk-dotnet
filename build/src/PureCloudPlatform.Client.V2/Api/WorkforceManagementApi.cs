@@ -2567,10 +2567,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
-        TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId, bool? recentlyReviewed = null);
+        TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId);
 
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -2581,10 +2580,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         
-        ApiResponse<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
+        ApiResponse<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId);
 
         /// <summary>
         /// Get users in the management unit
@@ -3039,10 +3037,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
-        TimeOffRequestList GetWorkforcemanagementTimeoffrequests (bool? recentlyReviewed = null);
+        TimeOffRequestList GetWorkforcemanagementTimeoffrequests ();
 
         /// <summary>
         /// Get a list of time off requests for the current user
@@ -3051,10 +3048,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         
-        ApiResponse<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsWithHttpInfo (bool? recentlyReviewed = null);
+        ApiResponse<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsWithHttpInfo ();
 
         /// <summary>
         /// Get work plan bid ranks for a user
@@ -8861,10 +8857,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
-        System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId, bool? recentlyReviewed = null);
+        System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId);
 
         /// <summary>
         /// Get a list of time off requests for a given user
@@ -8875,10 +8870,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId);
 
         /// <summary>
         /// Get users in the management unit
@@ -9333,10 +9327,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
-        System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsAsync (bool? recentlyReviewed = null);
+        System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsAsync ();
 
         /// <summary>
         /// Get a list of time off requests for the current user
@@ -9345,10 +9338,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (bool? recentlyReviewed = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get work plan bid ranks for a user
@@ -34564,12 +34556,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
-        public TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId, bool? recentlyReviewed = null)
+        public TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo(managementUnitId, userId, recentlyReviewed);
+             ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo(managementUnitId, userId);
              return localVarResponse.Data;
         }
 
@@ -34580,10 +34571,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         
-        public ApiResponse< TimeOffRequestList > GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null)
+        public ApiResponse< TimeOffRequestList > GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -34626,7 +34616,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
-            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", this.Configuration.ApiClient.ParameterToString(recentlyReviewed)));
 
             // Header params
 
@@ -34678,12 +34667,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
-        public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId, bool? recentlyReviewed = null)
+        public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo(managementUnitId, userId, recentlyReviewed);
+             ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo(managementUnitId, userId);
              return localVarResponse.Data;
 
         }
@@ -34695,10 +34683,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -34743,7 +34730,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
-            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", this.Configuration.ApiClient.ParameterToString(recentlyReviewed)));
 
             // Header params
 
@@ -38543,12 +38529,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
-        public TimeOffRequestList GetWorkforcemanagementTimeoffrequests (bool? recentlyReviewed = null)
+        public TimeOffRequestList GetWorkforcemanagementTimeoffrequests ()
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementTimeoffrequestsWithHttpInfo(recentlyReviewed);
+             ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementTimeoffrequestsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -38557,10 +38542,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         
-        public ApiResponse< TimeOffRequestList > GetWorkforcemanagementTimeoffrequestsWithHttpInfo (bool? recentlyReviewed = null)
+        public ApiResponse< TimeOffRequestList > GetWorkforcemanagementTimeoffrequestsWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
@@ -38595,7 +38579,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", this.Configuration.ApiClient.ParameterToString(recentlyReviewed)));
 
             // Header params
 
@@ -38645,12 +38628,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
-        public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsAsync (bool? recentlyReviewed = null)
+        public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsAsync ()
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo(recentlyReviewed);
+             ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -38660,10 +38642,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (bool? recentlyReviewed = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
@@ -38698,7 +38679,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", this.Configuration.ApiClient.ParameterToString(recentlyReviewed)));
 
             // Header params
 

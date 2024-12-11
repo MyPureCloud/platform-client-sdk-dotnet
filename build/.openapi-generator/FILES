@@ -796,6 +796,16 @@ docs/ContactColumnTimeZone.md
 docs/ContactColumnToDataActionFieldMapping.md
 docs/ContactDetailEventTopicContactUpdateEvent.md
 docs/ContactIdentifier.md
+docs/ContactIdentifierListing.md
+docs/ContactImportField.md
+docs/ContactImportJobEntityListing.md
+docs/ContactImportJobMetadata.md
+docs/ContactImportJobRequest.md
+docs/ContactImportJobResponse.md
+docs/ContactImportJobStatusUpdateRequest.md
+docs/ContactImportJobStatusUpdateResponse.md
+docs/ContactImportSettings.md
+docs/ContactImportSettingsEntityListing.md
 docs/ContactList.md
 docs/ContactListDivisionView.md
 docs/ContactListDivisionViewListing.md
@@ -970,6 +980,8 @@ docs/ConversationContentButtonResponse.md
 docs/ConversationContentCard.md
 docs/ConversationContentCardAction.md
 docs/ConversationContentCarousel.md
+docs/ConversationContentDatePicker.md
+docs/ConversationContentDatePickerAvailableTime.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
@@ -1334,6 +1346,8 @@ docs/DataExtensionsApi.json
 docs/DataExtensionsApi.md
 docs/DataIngestionRuleStatusPatchRequest.md
 docs/DataIngestionRules.md
+docs/DataPrivacyApi.json
+docs/DataPrivacyApi.md
 docs/DataSchema.md
 docs/DataSchemaListing.md
 docs/DataTable.md
@@ -1402,6 +1416,7 @@ docs/DeleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/DeleteConversationsMessagingSetting-example.txt
 docs/DeleteConversationsMessagingSettingsDefault-example.txt
 docs/DeleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
+docs/DeleteDataprivacyMaskingrule-example.txt
 docs/DeleteDiagnosticsLogcaptureBrowserUser-example.txt
 docs/DeleteEmployeeengagementCelebration-example.txt
 docs/DeleteEmployeeperformanceExternalmetricsDefinition-example.txt
@@ -1410,6 +1425,7 @@ docs/DeleteExternalcontactsContactNote-example.txt
 docs/DeleteExternalcontactsContactsSchema-example.txt
 docs/DeleteExternalcontactsExternalsource-example.txt
 docs/DeleteExternalcontactsImportCsvSetting-example.txt
+docs/DeleteExternalcontactsImportSetting-example.txt
 docs/DeleteExternalcontactsOrganization-example.txt
 docs/DeleteExternalcontactsOrganizationNote-example.txt
 docs/DeleteExternalcontactsOrganizationTrustor-example.txt
@@ -2664,6 +2680,8 @@ docs/GetConversationsVideosMeeting-example.txt
 docs/GetDataextensionsCoretype-example.txt
 docs/GetDataextensionsCoretypes-example.txt
 docs/GetDataextensionsLimits-example.txt
+docs/GetDataprivacyMaskingrule-example.txt
+docs/GetDataprivacyMaskingrules-example.txt
 docs/GetDate-example.txt
 docs/GetDiagnosticsLogcaptureBrowserEntriesDownloadJob-example.txt
 docs/GetDiagnosticsLogcaptureBrowserUser-example.txt
@@ -2695,6 +2713,10 @@ docs/GetExternalcontactsImportCsvSetting-example.txt
 docs/GetExternalcontactsImportCsvSettings-example.txt
 docs/GetExternalcontactsImportCsvUploadDetails-example.txt
 docs/GetExternalcontactsImportCsvUploadPreview-example.txt
+docs/GetExternalcontactsImportJob-example.txt
+docs/GetExternalcontactsImportJobs-example.txt
+docs/GetExternalcontactsImportSetting-example.txt
+docs/GetExternalcontactsImportSettings-example.txt
 docs/GetExternalcontactsOrganization-example.txt
 docs/GetExternalcontactsOrganizationContacts-example.txt
 docs/GetExternalcontactsOrganizationNote-example.txt
@@ -4099,6 +4121,7 @@ docs/KnowledgeImportJobRequest.md
 docs/KnowledgeImportJobResponse.md
 docs/KnowledgeImportJobSettings.md
 docs/KnowledgeImportJobStatistics.md
+docs/KnowledgeIntegrationDefaultSettings.md
 docs/KnowledgeIntegrationFilter.md
 docs/KnowledgeIntegrationFilterValue.md
 docs/KnowledgeIntegrationOptionsResponse.md
@@ -4318,6 +4341,10 @@ docs/Manager.md
 docs/MarkContactAddressUncontactableActionSettings.md
 docs/MarkContactUncontactableActionSettings.md
 docs/Markdown.md
+docs/MaskingRule.md
+docs/MaskingRuleListing.md
+docs/MaskingRuleValidateRequest.md
+docs/MaskingRuleValidateResponse.md
 docs/MatchCriteria.md
 docs/MatchCriteriaTestResult.md
 docs/MatchShiftTradeRequest.md
@@ -4768,6 +4795,7 @@ docs/PatchConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/PatchConversationsSettings-example.txt
 docs/PatchCriteria.md
 docs/PatchCtaButtonStyleProperties.md
+docs/PatchDataprivacyMaskingrule-example.txt
 docs/PatchEmailsSettings-example.txt
 docs/PatchEmailsSettings-example.txt
 docs/PatchEmployeeengagementCelebration-example.txt
@@ -4934,6 +4962,10 @@ docs/PerformanceProfile.md
 docs/PermissionCollectionEntityListing.md
 docs/PermissionDetails.md
 docs/Permissions.md
+docs/PersistentConnectionChangeTopicErrorInfo.md
+docs/PersistentConnectionChangeTopicErrorInfoDetails.md
+docs/PersistentConnectionChangeTopicErrorLocation.md
+docs/PersistentConnectionChangeTopicPersistentConnectionChangeEvent.md
 docs/Phone.md
 docs/PhoneBase.md
 docs/PhoneBaseEntityListing.md
@@ -5187,6 +5219,8 @@ docs/PostConversationsScreenshareParticipantCommunicationWrapup-example.txt
 docs/PostConversationsSocialParticipantCommunicationWrapup-example.txt
 docs/PostConversationsVideoParticipantCommunicationWrapup-example.txt
 docs/PostConversationsVideosMeetings-example.txt
+docs/PostDataprivacyMaskingrules-example.txt
+docs/PostDataprivacyMaskingrulesValidate-example.txt
 docs/PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
 docs/PostDiagnosticsLogcaptureBrowserEntriesQuery-example.txt
 docs/PostDiagnosticsLogcaptureBrowserUser-example.txt
@@ -5225,6 +5259,8 @@ docs/PostExternalcontactsIdentifierlookup-example.txt
 docs/PostExternalcontactsImportCsvJobs-example.txt
 docs/PostExternalcontactsImportCsvSettings-example.txt
 docs/PostExternalcontactsImportCsvUploads-example.txt
+docs/PostExternalcontactsImportJobs-example.txt
+docs/PostExternalcontactsImportSettings-example.txt
 docs/PostExternalcontactsMergeContacts-example.txt
 docs/PostExternalcontactsOrganizationNotes-example.txt
 docs/PostExternalcontactsOrganizations-example.txt
@@ -5800,6 +5836,8 @@ docs/PutExternalcontactsContactsSchema-example.txt
 docs/PutExternalcontactsConversation-example.txt
 docs/PutExternalcontactsExternalsource-example.txt
 docs/PutExternalcontactsImportCsvSetting-example.txt
+docs/PutExternalcontactsImportJob-example.txt
+docs/PutExternalcontactsImportSetting-example.txt
 docs/PutExternalcontactsOrganization-example.txt
 docs/PutExternalcontactsOrganizationNote-example.txt
 docs/PutExternalcontactsOrganizationTrustorTrustorId-example.txt
@@ -7750,6 +7788,7 @@ docs/WorkitemsAttributeChangeList.md
 docs/WorkitemsAttributeChangeMap.md
 docs/WorkitemsAttributeChangeString.md
 docs/WorkitemsAttributeChangeWorkitemStatusCategory.md
+docs/WorkitemsAttributeChangeWrapupDelta.md
 docs/WorkitemsChangeWorkbinDelta.md
 docs/WorkitemsChangeWorkitemDelta.md
 docs/WorkitemsChangeWorktypeDelta.md
@@ -7796,6 +7835,7 @@ docs/WrapupCode.md
 docs/WrapupCodeEntityListing.md
 docs/WrapupCodePredictionConfig.md
 docs/WrapupCodeRequest.md
+docs/WrapupDelta.md
 docs/WrapupDetailEventTopicWrapupEvent.md
 docs/WrapupIdReference.md
 docs/WrapupInput.md
@@ -7824,6 +7864,7 @@ src/PureCloudPlatform.Client.V2/Api/CoachingApi.cs
 src/PureCloudPlatform.Client.V2/Api/ContentManagementApi.cs
 src/PureCloudPlatform.Client.V2/Api/ConversationsApi.cs
 src/PureCloudPlatform.Client.V2/Api/DataExtensionsApi.cs
+src/PureCloudPlatform.Client.V2/Api/DataPrivacyApi.cs
 src/PureCloudPlatform.Client.V2/Api/DownloadsApi.cs
 src/PureCloudPlatform.Client.V2/Api/EmailsApi.cs
 src/PureCloudPlatform.Client.V2/Api/EmployeeEngagementApi.cs
@@ -8662,6 +8703,16 @@ src/PureCloudPlatform.Client.V2/Model/ContactColumnTimeZone.cs
 src/PureCloudPlatform.Client.V2/Model/ContactColumnToDataActionFieldMapping.cs
 src/PureCloudPlatform.Client.V2/Model/ContactDetailEventTopicContactUpdateEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ContactIdentifier.cs
+src/PureCloudPlatform.Client.V2/Model/ContactIdentifierListing.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportField.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportJobEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportJobMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportJobStatusUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportJobStatusUpdateResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportSettings.cs
+src/PureCloudPlatform.Client.V2/Model/ContactImportSettingsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactList.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListDivisionViewListing.cs
@@ -8834,6 +8885,8 @@ src/PureCloudPlatform.Client.V2/Model/ConversationContentButtonResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentCard.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentCardAction.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentCarousel.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentDatePicker.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentDatePickerAvailableTime.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentLocation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentNotificationTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentQuickReply.cs
@@ -10364,6 +10417,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobSettings.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobStatistics.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeIntegrationDefaultSettings.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeIntegrationFilter.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeIntegrationFilterValue.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeIntegrationOptionsResponse.cs
@@ -10571,6 +10625,10 @@ src/PureCloudPlatform.Client.V2/Model/Manager.cs
 src/PureCloudPlatform.Client.V2/Model/MarkContactAddressUncontactableActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/MarkContactUncontactableActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Markdown.cs
+src/PureCloudPlatform.Client.V2/Model/MaskingRule.cs
+src/PureCloudPlatform.Client.V2/Model/MaskingRuleListing.cs
+src/PureCloudPlatform.Client.V2/Model/MaskingRuleValidateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/MaskingRuleValidateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/MatchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/MatchCriteriaTestResult.cs
 src/PureCloudPlatform.Client.V2/Model/MatchShiftTradeRequest.cs
@@ -10971,6 +11029,10 @@ src/PureCloudPlatform.Client.V2/Model/PerformanceProfile.cs
 src/PureCloudPlatform.Client.V2/Model/PermissionCollectionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/PermissionDetails.cs
 src/PureCloudPlatform.Client.V2/Model/Permissions.cs
+src/PureCloudPlatform.Client.V2/Model/PersistentConnectionChangeTopicErrorInfo.cs
+src/PureCloudPlatform.Client.V2/Model/PersistentConnectionChangeTopicErrorInfoDetails.cs
+src/PureCloudPlatform.Client.V2/Model/PersistentConnectionChangeTopicErrorLocation.cs
+src/PureCloudPlatform.Client.V2/Model/PersistentConnectionChangeTopicPersistentConnectionChangeEvent.cs
 src/PureCloudPlatform.Client.V2/Model/Phone.cs
 src/PureCloudPlatform.Client.V2/Model/PhoneBase.cs
 src/PureCloudPlatform.Client.V2/Model/PhoneBaseEntityListing.cs
@@ -12773,6 +12835,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemsAttributeChangeList.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsAttributeChangeMap.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsAttributeChangeString.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsAttributeChangeWorkitemStatusCategory.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsAttributeChangeWrapupDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsChangeWorkbinDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsChangeWorkitemDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsChangeWorktypeDelta.cs
@@ -12819,6 +12882,7 @@ src/PureCloudPlatform.Client.V2/Model/WrapupCode.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupCodeEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupCodePredictionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupCodeRequest.cs
+src/PureCloudPlatform.Client.V2/Model/WrapupDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupDetailEventTopicWrapupEvent.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupIdReference.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupInput.cs

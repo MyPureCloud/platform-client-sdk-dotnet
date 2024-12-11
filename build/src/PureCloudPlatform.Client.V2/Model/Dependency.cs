@@ -363,6 +363,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Securecallflow,
             
             /// <summary>
+            /// Enum Smsphonenumber for "SMSPHONENUMBER"
+            /// </summary>
+            [EnumMember(Value = "SMSPHONENUMBER")]
+            Smsphonenumber,
+            
+            /// <summary>
             /// Enum Sttengine for "STTENGINE"
             /// </summary>
             [EnumMember(Value = "STTENGINE")]

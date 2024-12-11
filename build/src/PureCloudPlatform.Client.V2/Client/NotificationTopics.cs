@@ -156,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.outbound.contactlists.{id}.export", typeof(ContactlistDownloadReadyExportUri)},
               {"v2.users.{id}.outbound.dnclists.{id}.export", typeof(DnclistDownloadReadyExportUri)},
               {"v2.users.{id}.outofoffice", typeof(OutOfOfficeEventOutOfOffice)},
+              {"v2.users.{id}.persistentconnection", typeof(PersistentConnectionChangeTopicPersistentConnectionChangeEvent)},
               {"v2.users.{id}.presence", typeof(PresenceEventUserPresence)},
               {"v2.users.{id}.recordings", typeof(RecordingArchiveRestoreTopicRecording)},
               {"v2.users.{id}.routingStatus", typeof(UserRoutingStatusUserRoutingStatus)},

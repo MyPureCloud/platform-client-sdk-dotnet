@@ -21,26 +21,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionSettings" /> class.
         /// </summary>
-        /// <param name="QuestionIndex">This field represents the location of the Question in the form. Note: Indexes are zero-based.</param>
         /// <param name="QuestionContextId">The context id of the question in the group.</param>
         /// <param name="Settings">Settings.</param>
-        public QuestionSettings(int? QuestionIndex = null, string QuestionContextId = null, AiScoringSetting Settings = null)
+        public QuestionSettings(string QuestionContextId = null, AiScoringSetting Settings = null)
         {
-            this.QuestionIndex = QuestionIndex;
             this.QuestionContextId = QuestionContextId;
             this.Settings = Settings;
             
         }
         
-
-
-        /// <summary>
-        /// This field represents the location of the Question in the form. Note: Indexes are zero-based
-        /// </summary>
-        /// <value>This field represents the location of the Question in the form. Note: Indexes are zero-based</value>
-        [DataMember(Name="questionIndex", EmitDefaultValue=false)]
-        public int? QuestionIndex { get; set; }
-
 
 
         /// <summary>
@@ -68,7 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class QuestionSettings {\n");
 
-            sb.Append("  QuestionIndex: ").Append(QuestionIndex).Append("\n");
             sb.Append("  QuestionContextId: ").Append(QuestionContextId).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("}\n");
@@ -112,11 +100,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.QuestionIndex == other.QuestionIndex ||
-                    this.QuestionIndex != null &&
-                    this.QuestionIndex.Equals(other.QuestionIndex)
-                ) &&
-                (
                     this.QuestionContextId == other.QuestionContextId ||
                     this.QuestionContextId != null &&
                     this.QuestionContextId.Equals(other.QuestionContextId)
@@ -139,9 +122,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.QuestionIndex != null)
-                    hash = hash * 59 + this.QuestionIndex.GetHashCode();
-
                 if (this.QuestionContextId != null)
                     hash = hash * 59 + this.QuestionContextId.GetHashCode();
 

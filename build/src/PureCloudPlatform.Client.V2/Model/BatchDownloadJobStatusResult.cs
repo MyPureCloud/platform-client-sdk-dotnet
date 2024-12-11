@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class BatchDownloadJobStatusResult :  IEquatable<BatchDownloadJobStatusResult>
     {
         /// <summary>
-        /// Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.
+        /// Current status of the job. A job is considered completed when all the submitted requests have been processed and fulfilled.
         /// </summary>
-        /// <value>Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.</value>
+        /// <value>Current status of the job. A job is considered completed when all the submitted requests have been processed and fulfilled.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Completed
         }
         /// <summary>
-        /// Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.
+        /// Current status of the job. A job is considered completed when all the submitted requests have been processed and fulfilled.
         /// </summary>
-        /// <value>Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled.</value>
+        /// <value>Current status of the job. A job is considered completed when all the submitted requests have been processed and fulfilled.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExpectedResultCount">Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed..</param>
         /// <param name="ResultCount">Current number of results available, this includes both success and error results..</param>
         /// <param name="ErrorCount">Current number of error results..</param>
-        /// <param name="Status">Current status of the job. This could be either IN_PROGRESS or COMPLETED. A job is considered completed when all the submitted requests have been processed and fulfilled..</param>
+        /// <param name="Status">Current status of the job. A job is considered completed when all the submitted requests have been processed and fulfilled..</param>
         /// <param name="Results">Current set of results for the job..</param>
         public BatchDownloadJobStatusResult(string JobId = null, int? ExpectedResultCount = null, int? ResultCount = null, int? ErrorCount = null, StatusEnum? Status = null, List<BatchDownloadJobResult> Results = null)
         {

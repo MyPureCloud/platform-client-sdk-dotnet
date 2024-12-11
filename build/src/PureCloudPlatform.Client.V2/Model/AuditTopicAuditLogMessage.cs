@@ -318,7 +318,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sociallistening for "SocialListening"
             /// </summary>
             [EnumMember(Value = "SocialListening")]
-            Sociallistening
+            Sociallistening,
+            
+            /// <summary>
+            /// Enum Businessrules for "BusinessRules"
+            /// </summary>
+            [EnumMember(Value = "BusinessRules")]
+            Businessrules
         }
         /// <summary>
         /// Gets or Sets Action
@@ -1993,6 +1999,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Analyticsreportingsettings,
             
             /// <summary>
+            /// Enum Customcalculations for "CustomCalculations"
+            /// </summary>
+            [EnumMember(Value = "CustomCalculations")]
+            Customcalculations,
+            
+            /// <summary>
             /// Enum Scheduledexports for "ScheduledExports"
             /// </summary>
             [EnumMember(Value = "ScheduledExports")]
@@ -2356,7 +2368,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Directoryfeature for "DirectoryFeature"
             /// </summary>
             [EnumMember(Value = "DirectoryFeature")]
-            Directoryfeature
+            Directoryfeature,
+            
+            /// <summary>
+            /// Enum Rulecategory for "RuleCategory"
+            /// </summary>
+            [EnumMember(Value = "RuleCategory")]
+            Rulecategory,
+            
+            /// <summary>
+            /// Enum Decisiontable for "DecisionTable"
+            /// </summary>
+            [EnumMember(Value = "DecisionTable")]
+            Decisiontable,
+            
+            /// <summary>
+            /// Enum Decisiontableversion for "DecisionTableVersion"
+            /// </summary>
+            [EnumMember(Value = "DecisionTableVersion")]
+            Decisiontableversion,
+            
+            /// <summary>
+            /// Enum Decisiontablerow for "DecisionTableRow"
+            /// </summary>
+            [EnumMember(Value = "DecisionTableRow")]
+            Decisiontablerow
         }
         /// <summary>
         /// Gets or Sets ServiceName

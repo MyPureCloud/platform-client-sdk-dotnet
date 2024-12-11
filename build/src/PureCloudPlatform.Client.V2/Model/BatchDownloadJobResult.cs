@@ -21,15 +21,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobResult" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
         /// <param name="ConversationId">Conversation id of the result.</param>
         /// <param name="RecordingId">Recording id of the result.</param>
         /// <param name="ResultUrl">URL of results... HTTP GET from this location to download results for this item.</param>
         /// <param name="ContentType">Content type of this result.</param>
         /// <param name="ErrorMsg">An error message, in case of failed processing will indicate the cause of the failure.</param>
-        public BatchDownloadJobResult(string Name = null, string ConversationId = null, string RecordingId = null, string ResultUrl = null, string ContentType = null, string ErrorMsg = null)
+        public BatchDownloadJobResult(string ConversationId = null, string RecordingId = null, string ResultUrl = null, string ContentType = null, string ErrorMsg = null)
         {
-            this.Name = Name;
             this.ConversationId = ConversationId;
             this.RecordingId = RecordingId;
             this.ResultUrl = ResultUrl;
@@ -38,23 +36,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-
-
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
 
 
         /// <summary>
@@ -101,15 +82,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ErrorMsg { get; set; }
 
 
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,14 +91,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class BatchDownloadJobResult {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
             sb.Append("  ResultUrl: ").Append(ResultUrl).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  ErrorMsg: ").Append(ErrorMsg).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,16 +137,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
@@ -201,11 +160,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorMsg == other.ErrorMsg ||
                     this.ErrorMsg != null &&
                     this.ErrorMsg.Equals(other.ErrorMsg)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -220,12 +174,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
 
@@ -240,9 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ErrorMsg != null)
                     hash = hash * 59 + this.ErrorMsg.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

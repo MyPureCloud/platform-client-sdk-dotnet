@@ -24,6 +24,7 @@
 | **QueueId** | [**WorkitemsAttributeChangeString**](WorkitemsAttributeChangeString) |  | [optional] |
 | **ExternalTag** | [**WorkitemsAttributeChangeString**](WorkitemsAttributeChangeString) |  | [optional] |
 | **WrapupId** | [**WorkitemsAttributeChangeString**](WorkitemsAttributeChangeString) |  | [optional] |
+| **Wrapup** | [**WorkitemsAttributeChangeWrapupDelta**](WorkitemsAttributeChangeWrapupDelta) |  | [optional] |
 | **Ttl** | [**WorkitemsAttributeChangeInteger**](WorkitemsAttributeChangeInteger) |  | [optional] |
 | **DateClosed** | [**WorkitemsAttributeChangeInstant**](WorkitemsAttributeChangeInstant) |  | [optional] |
 | **AssignmentState** | [**WorkitemsAttributeChangeString**](WorkitemsAttributeChangeString) |  | [optional] |
@@ -36,4 +37,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 222.0.0_
+_PureCloudPlatform.Client.V2 223.0.0_

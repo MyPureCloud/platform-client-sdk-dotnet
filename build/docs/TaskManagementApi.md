@@ -1605,7 +1605,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
-| **expands** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: defaultQueue, defaultSkills, defaultLanguage, schema, flow |
+| **expands** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: defaultQueue, defaultSkills, defaultLanguage, schema, flow, defaultScript |
 
 ### Return type
 
@@ -3735,4 +3735,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 222.0.0_
+_PureCloudPlatform.Client.V2 223.0.0_

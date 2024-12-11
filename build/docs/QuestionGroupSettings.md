@@ -6,10 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **QuestionGroupIndex** | **int?** | This field represents the location of the Question Group in the form. Note: Indexes are zero-based | [optional] |
 | **QuestionGroupContextId** | **string** | The context id of the question group in the form. | [optional] |
 | **QuestionSettings** | [**List&lt;QuestionSettings&gt;**](QuestionSettings) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 222.0.0_
+_PureCloudPlatform.Client.V2 223.0.0_

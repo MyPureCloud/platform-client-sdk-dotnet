@@ -190,7 +190,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TriggerSource">TriggerSource.</param>
         /// <param name="LastEditedBy">LastEditedBy.</param>
         /// <param name="ErrorType">ErrorType.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null)
+        /// <param name="DurationMs">DurationMs.</param>
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, int? DurationMs = null)
         {
             this.ConversationId = ConversationId;
             this.Participants = Participants;
@@ -208,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TriggerSource = TriggerSource;
             this.LastEditedBy = LastEditedBy;
             this.ErrorType = ErrorType;
+            this.DurationMs = DurationMs;
             
         }
         
@@ -322,6 +324,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets DurationMs
+        /// </summary>
+        [DataMember(Name="durationMs", EmitDefaultValue=false)]
+        public int? DurationMs { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -347,6 +357,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TriggerSource: ").Append(TriggerSource).Append("\n");
             sb.Append("  LastEditedBy: ").Append(LastEditedBy).Append("\n");
             sb.Append("  ErrorType: ").Append(ErrorType).Append("\n");
+            sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -466,6 +477,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorType == other.ErrorType ||
                     this.ErrorType != null &&
                     this.ErrorType.Equals(other.ErrorType)
+                ) &&
+                (
+                    this.DurationMs == other.DurationMs ||
+                    this.DurationMs != null &&
+                    this.DurationMs.Equals(other.DurationMs)
                 );
         }
 
@@ -527,6 +543,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ErrorType != null)
                     hash = hash * 59 + this.ErrorType.GetHashCode();
+
+                if (this.DurationMs != null)
+                    hash = hash * 59 + this.DurationMs.GetHashCode();
 
                 return hash;
             }

@@ -69,11 +69,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Channel">Filter source by channel..</param>
         /// <param name="Language">Filter source by language..</param>
         /// <param name="Categories">Filter source by categories..</param>
-        public SalesforceSettings(ChannelEnum? Channel = null, string Language = null, List<string> Categories = null)
+        /// <param name="BaseUrl">The base URL to resources..</param>
+        public SalesforceSettings(ChannelEnum? Channel = null, string Language = null, List<string> Categories = null, string BaseUrl = null)
         {
             this.Channel = Channel;
             this.Language = Language;
             this.Categories = Categories;
+            this.BaseUrl = BaseUrl;
             
         }
         
@@ -98,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> Categories { get; set; }
 
 
+
+        /// <summary>
+        /// The base URL to resources.
+        /// </summary>
+        /// <value>The base URL to resources.</value>
+        [DataMember(Name="baseUrl", EmitDefaultValue=false)]
+        public string BaseUrl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Channel: ").Append(Channel).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Categories: ").Append(Categories).Append("\n");
+            sb.Append("  BaseUrl: ").Append(BaseUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Categories == other.Categories ||
                     this.Categories != null &&
                     this.Categories.SequenceEqual(other.Categories)
+                ) &&
+                (
+                    this.BaseUrl == other.BaseUrl ||
+                    this.BaseUrl != null &&
+                    this.BaseUrl.Equals(other.BaseUrl)
                 );
         }
 
@@ -186,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
+
+                if (this.BaseUrl != null)
+                    hash = hash * 59 + this.BaseUrl.GetHashCode();
 
                 return hash;
             }

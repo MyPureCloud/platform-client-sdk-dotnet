@@ -22,7 +22,8 @@
 | **TriggerSource** | [**ConversationSummaryTopicVirtualAgentsTriggerSource**](ConversationSummaryTopicVirtualAgentsTriggerSource) |  | [optional] |
 | **LastEditedBy** | [**ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant**](ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant) |  | [optional] |
 | **ErrorType** | **string** |  | [optional] |
+| **DurationMs** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 222.0.0_
+_PureCloudPlatform.Client.V2 223.0.0_

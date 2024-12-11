@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Offset">Offset.</param>
-        public RegionTimeZone(string Name = null, long? Offset = null)
+        /// <param name="CanonicalId">Canonical identifier for this time zone, if applicable.</param>
+        public RegionTimeZone(string Name = null, long? Offset = null, string CanonicalId = null)
         {
             this.Name = Name;
             this.Offset = Offset;
+            this.CanonicalId = CanonicalId;
             
         }
         
@@ -58,6 +60,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Canonical identifier for this time zone, if applicable
+        /// </summary>
+        /// <value>Canonical identifier for this time zone, if applicable</value>
+        [DataMember(Name="canonicalId", EmitDefaultValue=false)]
+        public string CanonicalId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -77,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Offset: ").Append(Offset).Append("\n");
+            sb.Append("  CanonicalId: ").Append(CanonicalId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -134,6 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Offset.Equals(other.Offset)
                 ) &&
                 (
+                    this.CanonicalId == other.CanonicalId ||
+                    this.CanonicalId != null &&
+                    this.CanonicalId.Equals(other.CanonicalId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -159,6 +176,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Offset != null)
                     hash = hash * 59 + this.Offset.GetHashCode();
+
+                if (this.CanonicalId != null)
+                    hash = hash * 59 + this.CanonicalId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

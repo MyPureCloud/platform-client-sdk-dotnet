@@ -106,6 +106,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Quickreplyv2,
             
             /// <summary>
+            /// Enum Datepicker for "DatePicker"
+            /// </summary>
+            [EnumMember(Value = "DatePicker")]
+            Datepicker,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

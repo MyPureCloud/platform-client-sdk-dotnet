@@ -166,7 +166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete the Schedule of a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -178,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete the Schedule of a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -848,7 +848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -860,7 +860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -956,7 +956,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -970,7 +970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -984,7 +984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -998,7 +998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -1042,7 +1042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the latest job of a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1055,7 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the latest job of a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1332,7 +1332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1347,7 +1347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1710,7 +1710,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Submit a job request for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1723,7 +1723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Submit a job request for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1810,7 +1810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1823,7 +1823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2014,7 +2014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete the Schedule of a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2026,7 +2026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete the Schedule of a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2696,7 +2696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2708,7 +2708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2804,7 +2804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2818,7 +2818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2832,7 +2832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -2846,7 +2846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a job for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -2890,7 +2890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the latest job of a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2903,7 +2903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the latest job of a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3180,7 +3180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3195,7 +3195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3558,7 +3558,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Submit a job request for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3571,7 +3571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Submit a job request for a journey view version.
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3658,7 +3658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3671,7 +3671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
-        /// used for long descriptions
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -5074,7 +5074,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the Schedule of a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -5088,7 +5088,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the Schedule of a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -5179,7 +5179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the Schedule of a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -5194,7 +5194,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the Schedule of a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10588,7 +10588,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10602,7 +10602,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10693,7 +10693,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10708,7 +10708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -11518,7 +11518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -11534,7 +11534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -11635,7 +11635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -11652,7 +11652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -11757,7 +11757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of a job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -11773,7 +11773,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of a job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -11874,7 +11874,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of a job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -11891,7 +11891,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of a job for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -12248,7 +12248,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the latest job of a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -12263,7 +12263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the latest job of a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -12359,7 +12359,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the latest job of a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -12375,7 +12375,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the latest job of a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -14698,7 +14698,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -14715,7 +14715,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -14826,7 +14826,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -14844,7 +14844,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the job for a journey view version. Only the status can be changed and only to Cancelled 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -18035,7 +18035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Submit a job request for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -18050,7 +18050,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Submit a job request for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -18146,7 +18146,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Submit a job request for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -18162,7 +18162,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Submit a job request for a journey view version. 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -18936,7 +18936,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -18951,7 +18951,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -19052,7 +19052,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -19068,7 +19068,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Schedule for a JourneyView 
-        /// used for long descriptions
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
