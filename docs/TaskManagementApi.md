@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteTaskmanagementWorkitem**](#DeleteTaskmanagementWorkitem) | **Delete** /api/v2/taskmanagement/workitems/{workitemId} | Delete a workitem |
 | [**DeleteTaskmanagementWorkitemsSchema**](#DeleteTaskmanagementWorkitemsSchema) | **Delete** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Delete a schema |
 | [**DeleteTaskmanagementWorktype**](#DeleteTaskmanagementWorktype) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId} | Delete a worktype |
+| [**DeleteTaskmanagementWorktypeFlowsDatebasedRule**](#DeleteTaskmanagementWorktypeFlowsDatebasedRule) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId} | Delete a date based rule |
 | [**DeleteTaskmanagementWorktypeFlowsOnattributechangeRule**](#DeleteTaskmanagementWorktypeFlowsOnattributechangeRule) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId} | Delete a rule |
 | [**DeleteTaskmanagementWorktypeFlowsOncreateRule**](#DeleteTaskmanagementWorktypeFlowsOncreateRule) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId} | Delete a rule |
 | [**DeleteTaskmanagementWorktypeStatus**](#DeleteTaskmanagementWorktypeStatus) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Delete a status |
@@ -30,6 +31,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTaskmanagementWorkitemsSchemaVersions**](#GetTaskmanagementWorkitemsSchemaVersions) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions | Get all versions of a schema |
 | [**GetTaskmanagementWorkitemsSchemas**](#GetTaskmanagementWorkitemsSchemas) | **Get** /api/v2/taskmanagement/workitems/schemas | Get a list of schemas. |
 | [**GetTaskmanagementWorktype**](#GetTaskmanagementWorktype) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId} | Get a worktype |
+| [**GetTaskmanagementWorktypeFlowsDatebasedRule**](#GetTaskmanagementWorktypeFlowsDatebasedRule) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId} | Get a date based rule |
+| [**GetTaskmanagementWorktypeFlowsDatebasedRules**](#GetTaskmanagementWorktypeFlowsDatebasedRules) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules | Get all date based rules for a worktype |
 | [**GetTaskmanagementWorktypeFlowsOnattributechangeRule**](#GetTaskmanagementWorktypeFlowsOnattributechangeRule) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId} | Get an attribute change rule |
 | [**GetTaskmanagementWorktypeFlowsOnattributechangeRules**](#GetTaskmanagementWorktypeFlowsOnattributechangeRules) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules | Get all attribute-change rules for a worktype |
 | [**GetTaskmanagementWorktypeFlowsOncreateRule**](#GetTaskmanagementWorktypeFlowsOncreateRule) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId} | Get an on-create rule |
@@ -45,6 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchTaskmanagementWorkitemUserWrapups**](#PatchTaskmanagementWorkitemUserWrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups | Add/Remove a wrapup code for a given user in a workitem. |
 | [**PatchTaskmanagementWorkitemUsersMeWrapups**](#PatchTaskmanagementWorkitemUsersMeWrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups | Add/Remove a wrapup code for the current user in a workitem. |
 | [**PatchTaskmanagementWorktype**](#PatchTaskmanagementWorktype) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId} | Update the attributes of a worktype |
+| [**PatchTaskmanagementWorktypeFlowsDatebasedRule**](#PatchTaskmanagementWorktypeFlowsDatebasedRule) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId} | Update the attributes of a date based rule |
 | [**PatchTaskmanagementWorktypeFlowsOnattributechangeRule**](#PatchTaskmanagementWorktypeFlowsOnattributechangeRule) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId} | Update the attributes of a rule |
 | [**PatchTaskmanagementWorktypeFlowsOncreateRule**](#PatchTaskmanagementWorktypeFlowsOncreateRule) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId} | Update the attributes of a rule |
 | [**PatchTaskmanagementWorktypeStatus**](#PatchTaskmanagementWorktypeStatus) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Update the attributes of a status |
@@ -57,6 +61,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTaskmanagementWorkitemsQuery**](#PostTaskmanagementWorkitemsQuery) | **Post** /api/v2/taskmanagement/workitems/query | Query for workitems |
 | [**PostTaskmanagementWorkitemsQueryJobs**](#PostTaskmanagementWorkitemsQueryJobs) | **Post** /api/v2/taskmanagement/workitems/query/jobs | Create a workitem query job |
 | [**PostTaskmanagementWorkitemsSchemas**](#PostTaskmanagementWorkitemsSchemas) | **Post** /api/v2/taskmanagement/workitems/schemas | Create a schema |
+| [**PostTaskmanagementWorktypeFlowsDatebasedRules**](#PostTaskmanagementWorktypeFlowsDatebasedRules) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules | Add a date based rule to a worktype |
 | [**PostTaskmanagementWorktypeFlowsOnattributechangeRules**](#PostTaskmanagementWorktypeFlowsOnattributechangeRules) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules | Add an attribute-change rule to a worktype |
 | [**PostTaskmanagementWorktypeFlowsOncreateRules**](#PostTaskmanagementWorktypeFlowsOncreateRules) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules | Add an on-create rule to a worktype |
 | [**PostTaskmanagementWorktypeStatuses**](#PostTaskmanagementWorktypeStatuses) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses | Add a status to a worktype |
@@ -304,6 +309,69 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteTaskmanagementWorktypeFlowsDatebasedRule
+
+> void DeleteTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId)
+
+
+Delete a date based rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTaskmanagementWorktypeFlowsDatebasedRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+
+            try
+            { 
+                // Delete a date based rule
+                apiInstance.DeleteTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.DeleteTaskmanagementWorktypeFlowsDatebasedRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
 
 ### Return type
 
@@ -1612,6 +1680,136 @@ namespace Example
 [**Worktype**](Worktype)
 
 
+## GetTaskmanagementWorktypeFlowsDatebasedRule
+
+> [**WorkitemDateBasedRule**](WorkitemDateBasedRule) GetTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId)
+
+
+Get a date based rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorktypeFlowsDatebasedRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+
+            try
+            { 
+                // Get a date based rule
+                WorkitemDateBasedRule result = apiInstance.GetTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorktypeFlowsDatebasedRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
+
+### Return type
+
+[**WorkitemDateBasedRule**](WorkitemDateBasedRule)
+
+
+## GetTaskmanagementWorktypeFlowsDatebasedRules
+
+> [**WorkitemDateBasedRuleListing**](WorkitemDateBasedRuleListing) GetTaskmanagementWorktypeFlowsDatebasedRules (string worktypeId, string after = null, int? pageSize = null)
+
+
+Get all date based rules for a worktype
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorktypeFlowsDatebasedRulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = 56;  // int? | Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)  (default to 25)
+
+            try
+            { 
+                // Get all date based rules for a worktype
+                WorkitemDateBasedRuleListing result = apiInstance.GetTaskmanagementWorktypeFlowsDatebasedRules(worktypeId, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorktypeFlowsDatebasedRules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
+
+### Return type
+
+[**WorkitemDateBasedRuleListing**](WorkitemDateBasedRuleListing)
+
+
 ## GetTaskmanagementWorktypeFlowsOnattributechangeRule
 
 > [**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule) GetTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId)
@@ -2593,6 +2791,72 @@ namespace Example
 [**Worktype**](Worktype)
 
 
+## PatchTaskmanagementWorktypeFlowsDatebasedRule
+
+> [**WorkitemDateBasedRule**](WorkitemDateBasedRule) PatchTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body)
+
+
+Update the attributes of a date based rule
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTaskmanagementWorktypeFlowsDatebasedRuleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var ruleId = ruleId_example;  // string | ruleId
+            var body = new WorkitemDateBasedRuleUpdate(); // WorkitemDateBasedRuleUpdate | Rule
+
+            try
+            { 
+                // Update the attributes of a date based rule
+                WorkitemDateBasedRule result = apiInstance.PatchTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PatchTaskmanagementWorktypeFlowsDatebasedRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **ruleId** | **string**| ruleId |  |
+| **body** | [**WorkitemDateBasedRuleUpdate**](WorkitemDateBasedRuleUpdate)| Rule |  |
+
+### Return type
+
+[**WorkitemDateBasedRule**](WorkitemDateBasedRule)
+
+
 ## PatchTaskmanagementWorktypeFlowsOnattributechangeRule
 
 > [**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule) PatchTaskmanagementWorktypeFlowsOnattributechangeRule (string worktypeId, string ruleId, WorkitemOnAttributeChangeRuleUpdate body)
@@ -3355,6 +3619,70 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
+## PostTaskmanagementWorktypeFlowsDatebasedRules
+
+> [**WorkitemDateBasedRule**](WorkitemDateBasedRule) PostTaskmanagementWorktypeFlowsDatebasedRules (string worktypeId, WorkitemDateBasedRuleCreate body)
+
+
+Add a date based rule to a worktype
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTaskmanagementWorktypeFlowsDatebasedRulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+            var body = new WorkitemDateBasedRuleCreate(); // WorkitemDateBasedRuleCreate | Rule
+
+            try
+            { 
+                // Add a date based rule to a worktype
+                WorkitemDateBasedRule result = apiInstance.PostTaskmanagementWorktypeFlowsDatebasedRules(worktypeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PostTaskmanagementWorktypeFlowsDatebasedRules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+| **body** | [**WorkitemDateBasedRuleCreate**](WorkitemDateBasedRuleCreate)| Rule |  |
+
+### Return type
+
+[**WorkitemDateBasedRule**](WorkitemDateBasedRule)
+
+
 ## PostTaskmanagementWorktypeFlowsOnattributechangeRules
 
 > [**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule) PostTaskmanagementWorktypeFlowsOnattributechangeRules (string worktypeId, WorkitemOnAttributeChangeRuleCreate body)
@@ -3735,4 +4063,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 223.0.0_
+_PureCloudPlatform.Client.V2 224.0.0_

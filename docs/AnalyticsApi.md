@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAnalyticsUsersDetailsJob**](#DeleteAnalyticsUsersDetailsJob) | **Delete** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
 | [**GetAnalyticsActionsAggregatesJob**](#GetAnalyticsActionsAggregatesJob) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId} | Get status for async query for action aggregates |
 | [**GetAnalyticsActionsAggregatesJobResults**](#GetAnalyticsActionsAggregatesJobResults) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsAgentStatus**](#GetAnalyticsAgentStatus) | **Get** /api/v2/analytics/agents/{userId}/status | Get an agent and their active sessions by user ID |
 | [**GetAnalyticsAgentcopilotsAggregatesJob**](#GetAnalyticsAgentcopilotsAggregatesJob) | **Get** /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId} | Get status for async query for agent copilot aggregates |
 | [**GetAnalyticsAgentcopilotsAggregatesJobResults**](#GetAnalyticsAgentcopilotsAggregatesJobResults) | **Get** /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsBotflowDivisionsReportingturns**](#GetAnalyticsBotflowDivisionsReportingturns) | **Get** /api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns | Get Reporting Turns (division aware). |
@@ -44,6 +45,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsReportingSettingsUserDashboards**](#GetAnalyticsReportingSettingsUserDashboards) | **Get** /api/v2/analytics/reporting/settings/users/{userId}/dashboards | Get list of dashboards for an user |
 | [**GetAnalyticsResolutionsAggregatesJob**](#GetAnalyticsResolutionsAggregatesJob) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId} | Get status for async query for resolution aggregates |
 | [**GetAnalyticsResolutionsAggregatesJobResults**](#GetAnalyticsResolutionsAggregatesJobResults) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsSummariesAggregatesJob**](#GetAnalyticsSummariesAggregatesJob) | **Get** /api/v2/analytics/summaries/aggregates/jobs/{jobId} | Get status for async query for summary aggregates |
+| [**GetAnalyticsSummariesAggregatesJobResults**](#GetAnalyticsSummariesAggregatesJobResults) | **Get** /api/v2/analytics/summaries/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsSurveysAggregatesJob**](#GetAnalyticsSurveysAggregatesJob) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
 | [**GetAnalyticsSurveysAggregatesJobResults**](#GetAnalyticsSurveysAggregatesJobResults) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsTaskmanagementAggregatesJob**](#GetAnalyticsTaskmanagementAggregatesJob) | **Get** /api/v2/analytics/taskmanagement/aggregates/jobs/{jobId} | Get status for async query for task management aggregates |
@@ -60,6 +63,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsActionsAggregatesQuery**](#PostAnalyticsActionsAggregatesQuery) | **Post** /api/v2/analytics/actions/aggregates/query | Query for action aggregates |
 | [**PostAnalyticsAgentcopilotsAggregatesJobs**](#PostAnalyticsAgentcopilotsAggregatesJobs) | **Post** /api/v2/analytics/agentcopilots/aggregates/jobs | Query for agent copilot aggregates asynchronously |
 | [**PostAnalyticsAgentcopilotsAggregatesQuery**](#PostAnalyticsAgentcopilotsAggregatesQuery) | **Post** /api/v2/analytics/agentcopilots/aggregates/query | Query for agent copilot aggregates |
+| [**PostAnalyticsAgentsStatusCounts**](#PostAnalyticsAgentsStatusCounts) | **Post** /api/v2/analytics/agents/status/counts | Count agents by segment type |
+| [**PostAnalyticsAgentsStatusQuery**](#PostAnalyticsAgentsStatusQuery) | **Post** /api/v2/analytics/agents/status/query | Retrieve the top 50 agents matching the query filters |
 | [**PostAnalyticsBotsAggregatesJobs**](#PostAnalyticsBotsAggregatesJobs) | **Post** /api/v2/analytics/bots/aggregates/jobs | Query for bot aggregates asynchronously |
 | [**PostAnalyticsBotsAggregatesQuery**](#PostAnalyticsBotsAggregatesQuery) | **Post** /api/v2/analytics/bots/aggregates/query | Query for bot aggregates |
 | [**PostAnalyticsConversationDetailsProperties**](#PostAnalyticsConversationDetailsProperties) | **Post** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
@@ -89,6 +94,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsReportingSettingsDashboardsQuery**](#PostAnalyticsReportingSettingsDashboardsQuery) | **Post** /api/v2/analytics/reporting/settings/dashboards/query | Query dashboard configurations |
 | [**PostAnalyticsResolutionsAggregatesJobs**](#PostAnalyticsResolutionsAggregatesJobs) | **Post** /api/v2/analytics/resolutions/aggregates/jobs | Query for resolution aggregates asynchronously |
 | [**PostAnalyticsRoutingActivityQuery**](#PostAnalyticsRoutingActivityQuery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
+| [**PostAnalyticsSummariesAggregatesJobs**](#PostAnalyticsSummariesAggregatesJobs) | **Post** /api/v2/analytics/summaries/aggregates/jobs | Query for summary aggregates asynchronously |
+| [**PostAnalyticsSummariesAggregatesQuery**](#PostAnalyticsSummariesAggregatesQuery) | **Post** /api/v2/analytics/summaries/aggregates/query | Query for summary aggregates |
 | [**PostAnalyticsSurveysAggregatesJobs**](#PostAnalyticsSurveysAggregatesJobs) | **Post** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
 | [**PostAnalyticsSurveysAggregatesQuery**](#PostAnalyticsSurveysAggregatesQuery) | **Post** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
 | [**PostAnalyticsTaskmanagementAggregatesJobs**](#PostAnalyticsTaskmanagementAggregatesJobs) | **Post** /api/v2/analytics/taskmanagement/aggregates/jobs | Query for task management aggregates asynchronously |
@@ -359,6 +366,70 @@ namespace Example
 ### Return type
 
 [**ActionAsyncAggregateQueryResponse**](ActionAsyncAggregateQueryResponse)
+
+
+## GetAnalyticsAgentStatus
+
+> [**AnalyticsAgentStateAgentResponse**](AnalyticsAgentStateAgentResponse) GetAnalyticsAgentStatus (string userId)
+
+
+Get an agent and their active sessions by user ID
+
+GetAnalyticsAgentStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:agentState:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsAgentStatusExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var userId = userId_example;  // string | userId
+
+            try
+            { 
+                // Get an agent and their active sessions by user ID
+                AnalyticsAgentStateAgentResponse result = apiInstance.GetAnalyticsAgentStatus(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsAgentStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| userId |  |
+
+### Return type
+
+[**AnalyticsAgentStateAgentResponse**](AnalyticsAgentStateAgentResponse)
 
 
 ## GetAnalyticsAgentcopilotsAggregatesJob
@@ -2593,6 +2664,136 @@ namespace Example
 [**ResolutionAsyncAggregateQueryResponse**](ResolutionAsyncAggregateQueryResponse)
 
 
+## GetAnalyticsSummariesAggregatesJob
+
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsSummariesAggregatesJob (string jobId)
+
+
+Get status for async query for summary aggregates
+
+GetAnalyticsSummariesAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:summaryAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsSummariesAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for summary aggregates
+                AsyncQueryStatus result = apiInstance.GetAnalyticsSummariesAggregatesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsSummariesAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## GetAnalyticsSummariesAggregatesJobResults
+
+> [**SummaryAsyncAggregateQueryResponse**](SummaryAsyncAggregateQueryResponse) GetAnalyticsSummariesAggregatesJobResults (string jobId, string cursor = null)
+
+
+Fetch a page of results for an async aggregates query
+
+GetAnalyticsSummariesAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:summaryAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsSummariesAggregatesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Cursor token to retrieve next page (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async aggregates query
+                SummaryAsyncAggregateQueryResponse result = apiInstance.GetAnalyticsSummariesAggregatesJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsSummariesAggregatesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
+
+### Return type
+
+[**SummaryAsyncAggregateQueryResponse**](SummaryAsyncAggregateQueryResponse)
+
+
 ## GetAnalyticsSurveysAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsSurveysAggregatesJob (string jobId)
@@ -3612,6 +3813,134 @@ namespace Example
 ### Return type
 
 [**AgentCopilotAggregateQueryResponse**](AgentCopilotAggregateQueryResponse)
+
+
+## PostAnalyticsAgentsStatusCounts
+
+> [**AnalyticsAgentStateCountsResponse**](AnalyticsAgentStateCountsResponse) PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body)
+
+
+Count agents by segment type
+
+PostAnalyticsAgentsStatusCounts is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:agentState:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsAgentsStatusCountsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new AgentStateCountsRequest(); // AgentStateCountsRequest | query
+
+            try
+            { 
+                // Count agents by segment type
+                AnalyticsAgentStateCountsResponse result = apiInstance.PostAnalyticsAgentsStatusCounts(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsAgentsStatusCounts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentStateCountsRequest**](AgentStateCountsRequest)| query |  |
+
+### Return type
+
+[**AnalyticsAgentStateCountsResponse**](AnalyticsAgentStateCountsResponse)
+
+
+## PostAnalyticsAgentsStatusQuery
+
+> [**AnalyticsAgentStateQueryResponse**](AnalyticsAgentStateQueryResponse) PostAnalyticsAgentsStatusQuery (AgentStateQueryRequest body)
+
+
+Retrieve the top 50 agents matching the query filters
+
+PostAnalyticsAgentsStatusQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:agentState:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsAgentsStatusQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new AgentStateQueryRequest(); // AgentStateQueryRequest | query
+
+            try
+            { 
+                // Retrieve the top 50 agents matching the query filters
+                AnalyticsAgentStateQueryResponse result = apiInstance.PostAnalyticsAgentsStatusQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsAgentsStatusQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentStateQueryRequest**](AgentStateQueryRequest)| query |  |
+
+### Return type
+
+[**AnalyticsAgentStateQueryResponse**](AnalyticsAgentStateQueryResponse)
 
 
 ## PostAnalyticsBotsAggregatesJobs
@@ -5447,6 +5776,134 @@ namespace Example
 [**RoutingActivityResponse**](RoutingActivityResponse)
 
 
+## PostAnalyticsSummariesAggregatesJobs
+
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsSummariesAggregatesJobs (SummaryAsyncAggregationQuery body)
+
+
+Query for summary aggregates asynchronously
+
+PostAnalyticsSummariesAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:summaryAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsSummariesAggregatesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new SummaryAsyncAggregationQuery(); // SummaryAsyncAggregationQuery | query
+
+            try
+            { 
+                // Query for summary aggregates asynchronously
+                AsyncQueryResponse result = apiInstance.PostAnalyticsSummariesAggregatesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsSummariesAggregatesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SummaryAsyncAggregationQuery**](SummaryAsyncAggregationQuery)| query |  |
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
+## PostAnalyticsSummariesAggregatesQuery
+
+> [**SummaryAggregateQueryResponse**](SummaryAggregateQueryResponse) PostAnalyticsSummariesAggregatesQuery (SummaryAggregationQuery body)
+
+
+Query for summary aggregates
+
+PostAnalyticsSummariesAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:summaryAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsSummariesAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new SummaryAggregationQuery(); // SummaryAggregationQuery | query
+
+            try
+            { 
+                // Query for summary aggregates
+                SummaryAggregateQueryResponse result = apiInstance.PostAnalyticsSummariesAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsSummariesAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SummaryAggregationQuery**](SummaryAggregationQuery)| query |  |
+
+### Return type
+
+[**SummaryAggregateQueryResponse**](SummaryAggregateQueryResponse)
+
+
 ## PostAnalyticsSurveysAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsSurveysAggregatesJobs (SurveyAsyncAggregationQuery body)
@@ -6331,4 +6788,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 223.0.0_
+_PureCloudPlatform.Client.V2 224.0.0_

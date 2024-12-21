@@ -13485,7 +13485,7 @@ namespace Example
 
 ## PostConversationsMessagesAgentless
 
-> [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse) PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body)
+> [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse) PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null)
 
 
 Send an agentless outbound message
@@ -13519,11 +13519,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var body = new SendAgentlessOutboundMessageRequest(); // SendAgentlessOutboundMessageRequest | Create agentless outbound messaging request
+            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, messagingTemplate) (optional)  (default to false)
 
             try
             { 
                 // Send an agentless outbound message
-                SendAgentlessOutboundMessageResponse result = apiInstance.PostConversationsMessagesAgentless(body);
+                SendAgentlessOutboundMessageResponse result = apiInstance.PostConversationsMessagesAgentless(body, useNormalizedMessage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -13541,6 +13542,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest)| Create agentless outbound messaging request |  |
+| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, messagingTemplate) | [optional] [default to false] |
 
 ### Return type
 
@@ -15546,4 +15548,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 223.0.0_
+_PureCloudPlatform.Client.V2 224.0.0_

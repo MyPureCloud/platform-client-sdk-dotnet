@@ -1546,6 +1546,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:delete
 * outbound:emailCampaign:delete
+* outbound:whatsAppCampaign:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -1610,9 +1611,11 @@ Documented permissions are applicable based on campaign type.
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:edit
-* outbound:emailCampaign:edit
 * outbound:messagingCampaign:recycle
+* outbound:emailCampaign:edit
 * outbound:emailCampaign:recycle
+* outbound:whatsAppCampaign:edit
+* outbound:whatsAppCampaign:recycle
 
 ### Example
 ```{"language":"csharp"}
@@ -5463,6 +5466,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -5526,6 +5530,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -5589,6 +5594,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -5652,6 +5658,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -5713,7 +5720,7 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **contactListId** | **string**| Contact List ID | [optional]  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-| **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS |
+| **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS, WHATSAPP |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
 | **id** | [**List<string>**](string)| A list of messaging campaign ids to bulk fetch | [optional]  |
 
@@ -5855,7 +5862,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| The direction to sort | [optional] [default to a]<br />**Values**: ascending, descending |
 | **name** | **string**| Name | [optional]  |
-| **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS |
+| **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS, WHATSAPP |
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
 
@@ -9140,6 +9147,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:start
 * outbound:emailCampaign:start
+* outbound:whatsAppCampaign:start
 
 ### Example
 ```{"language":"csharp"}
@@ -9204,6 +9212,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:stop
 * outbound:emailCampaign:stop
+* outbound:whatsAppCampaign:stop
 
 ### Example
 ```{"language":"csharp"}
@@ -9266,6 +9275,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:add
 * outbound:emailCampaign:add
+* outbound:whatsAppCampaign:add
 
 ### Example
 ```{"language":"csharp"}
@@ -10417,6 +10427,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:edit
 * outbound:emailCampaign:edit
+* outbound:whatsAppCampaign:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -10917,4 +10928,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 223.0.0_
+_PureCloudPlatform.Client.V2 224.0.0_

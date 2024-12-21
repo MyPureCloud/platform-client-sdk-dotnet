@@ -2348,8 +2348,6 @@ Get queues for user
 Requires ANY permissions: 
 
 * routing:queue:view
-* routing:queue:join
-* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -6449,4 +6447,4 @@ namespace Example
 [**Verifier**](Verifier)
 
 
-_PureCloudPlatform.Client.V2 223.0.0_
+_PureCloudPlatform.Client.V2 224.0.0_
