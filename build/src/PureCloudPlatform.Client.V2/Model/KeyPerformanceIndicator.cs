@@ -115,7 +115,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Handletime for "HandleTime"
             /// </summary>
             [EnumMember(Value = "HandleTime")]
-            Handletime
+            Handletime,
+            
+            /// <summary>
+            /// Enum Nextcontactavoidance for "NextContactAvoidance"
+            /// </summary>
+            [EnumMember(Value = "NextContactAvoidance")]
+            Nextcontactavoidance
         }
         /// <summary>
         /// Source of values for Key Performance Indicator.

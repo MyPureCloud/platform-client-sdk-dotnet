@@ -166,6 +166,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Maxpaidtimenotdivisiblebygranularity,
             
             /// <summary>
+            /// Enum Maxpaidtimepermonthlyplanningperiod for "MaxPaidTimePerMonthlyPlanningPeriod"
+            /// </summary>
+            [EnumMember(Value = "MaxPaidTimePerMonthlyPlanningPeriod")]
+            Maxpaidtimepermonthlyplanningperiod,
+            
+            /// <summary>
             /// Enum Maxpaidtimeperplanningperiod for "MaxPaidTimePerPlanningPeriod"
             /// </summary>
             [EnumMember(Value = "MaxPaidTimePerPlanningPeriod")]
@@ -182,6 +188,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "MinPaidTimeNotDivisibleByGranularity")]
             Minpaidtimenotdivisiblebygranularity,
+            
+            /// <summary>
+            /// Enum Minpaidtimepermonthlyplanningperiod for "MinPaidTimePerMonthlyPlanningPeriod"
+            /// </summary>
+            [EnumMember(Value = "MinPaidTimePerMonthlyPlanningPeriod")]
+            Minpaidtimepermonthlyplanningperiod,
             
             /// <summary>
             /// Enum Minpaidtimeperplanningperiod for "MinPaidTimePerPlanningPeriod"

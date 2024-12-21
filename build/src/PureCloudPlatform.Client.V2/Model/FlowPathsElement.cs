@@ -88,10 +88,70 @@ namespace PureCloudPlatform.Client.V2.Model
             Root,
             
             /// <summary>
+            /// Enum Transferreturntoagent for "TransferReturnToAgent"
+            /// </summary>
+            [EnumMember(Value = "TransferReturnToAgent")]
+            Transferreturntoagent,
+            
+            /// <summary>
             /// Enum Transfertoacd for "TransferToAcd"
             /// </summary>
             [EnumMember(Value = "TransferToAcd")]
-            Transfertoacd
+            Transfertoacd,
+            
+            /// <summary>
+            /// Enum Transfertoacdvoicemail for "TransferToAcdVoicemail"
+            /// </summary>
+            [EnumMember(Value = "TransferToAcdVoicemail")]
+            Transfertoacdvoicemail,
+            
+            /// <summary>
+            /// Enum Transfertoflow for "TransferToFlow"
+            /// </summary>
+            [EnumMember(Value = "TransferToFlow")]
+            Transfertoflow,
+            
+            /// <summary>
+            /// Enum Transfertogroup for "TransferToGroup"
+            /// </summary>
+            [EnumMember(Value = "TransferToGroup")]
+            Transfertogroup,
+            
+            /// <summary>
+            /// Enum Transfertogroupvoicemail for "TransferToGroupVoicemail"
+            /// </summary>
+            [EnumMember(Value = "TransferToGroupVoicemail")]
+            Transfertogroupvoicemail,
+            
+            /// <summary>
+            /// Enum Transfertonumber for "TransferToNumber"
+            /// </summary>
+            [EnumMember(Value = "TransferToNumber")]
+            Transfertonumber,
+            
+            /// <summary>
+            /// Enum Transfertosecureflow for "TransferToSecureFlow"
+            /// </summary>
+            [EnumMember(Value = "TransferToSecureFlow")]
+            Transfertosecureflow,
+            
+            /// <summary>
+            /// Enum Transfertounknown for "TransferToUnknown"
+            /// </summary>
+            [EnumMember(Value = "TransferToUnknown")]
+            Transfertounknown,
+            
+            /// <summary>
+            /// Enum Transfertouser for "TransferToUser"
+            /// </summary>
+            [EnumMember(Value = "TransferToUser")]
+            Transfertouser,
+            
+            /// <summary>
+            /// Enum Transfertouservoicemail for "TransferToUserVoicemail"
+            /// </summary>
+            [EnumMember(Value = "TransferToUserVoicemail")]
+            Transfertouservoicemail
         }
         /// <summary>
         /// The value of the flow outcome, if the element type is Outcome.

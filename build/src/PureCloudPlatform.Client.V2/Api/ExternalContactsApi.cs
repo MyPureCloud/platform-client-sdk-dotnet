@@ -1818,26 +1818,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Fetch a contact using an identifier type and value.
         /// </summary>
         /// <remarks>
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
-        
+        [Obsolete]
         ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
         /// Fetch a contact using an identifier type and value.
         /// </summary>
         /// <remarks>
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        
+        [Obsolete]
         ApiResponse<ExternalContact> PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
@@ -4230,26 +4230,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Fetch a contact using an identifier type and value.
         /// </summary>
         /// <remarks>
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
         /// Fetch a contact using an identifier type and value.
         /// </summary>
         /// <remarks>
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
@@ -20378,13 +20378,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a contact using an identifier type and value. 
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
-        
+        [Obsolete]
         public ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier, List<string> expand = null)
         {
              ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsIdentifierlookupWithHttpInfo(identifier, expand);
@@ -20393,13 +20393,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a contact using an identifier type and value. 
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        
+        [Obsolete]
         public ApiResponse< ExternalContact > PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier, List<string> expand = null)
         { 
             // verify the required parameter 'identifier' is set
@@ -20491,13 +20491,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a contact using an identifier type and value. 
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier, List<string> expand = null)
         {
              ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsIdentifierlookupAsyncWithHttpInfo(identifier, expand);
@@ -20507,13 +20507,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a contact using an identifier type and value. 
-        /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+        /// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier, List<string> expand = null)
         { 
             // verify the required parameter 'identifier' is set

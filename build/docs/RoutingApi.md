@@ -103,7 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingEmailDomainValidate**](#PatchRoutingEmailDomainValidate) | **Patch** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
 | [**PatchRoutingPredictor**](#PatchRoutingPredictor) | **Patch** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
 | [**PatchRoutingQueueMember**](#PatchRoutingQueueMember) | **Patch** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
-| [**PatchRoutingQueueMembers**](#PatchRoutingQueueMembers) | **Patch** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of users for a queue |
+| [**PatchRoutingQueueMembers**](#PatchRoutingQueueMembers) | **Patch** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of up to 100 users for a queue |
 | [**PatchRoutingQueueUser**](#PatchRoutingQueueUser) | **Patch** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
 | [**PatchRoutingQueueUsers**](#PatchRoutingQueueUsers) | **Patch** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**PatchRoutingSettingsContactcenter**](#PatchRoutingSettingsContactcenter) | **Patch** /api/v2/routing/settings/contactcenter | Update Contact Center Settings |
@@ -5831,8 +5831,6 @@ Get queues for user
 Requires ANY permissions: 
 
 * routing:queue:view
-* routing:queue:join
-* routing:queueMember:manage
 
 ### Example
 ```{"language":"csharp"}
@@ -6425,7 +6423,7 @@ void (empty response body)
 > [**QueueMemberEntityListing**](QueueMemberEntityListing) PatchRoutingQueueMembers (string queueId, List<QueueMember> body)
 
 
-Join or unjoin a set of users for a queue
+Join or unjoin a set of up to 100 users for a queue
 
 Requires ANY permissions: 
 
@@ -6459,7 +6457,7 @@ namespace Example
 
             try
             { 
-                // Join or unjoin a set of users for a queue
+                // Join or unjoin a set of up to 100 users for a queue
                 QueueMemberEntityListing result = apiInstance.PatchRoutingQueueMembers(queueId, body);
                 Debug.WriteLine(result);
             }
@@ -9802,4 +9800,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 223.0.0_
+_PureCloudPlatform.Client.V2 224.0.0_

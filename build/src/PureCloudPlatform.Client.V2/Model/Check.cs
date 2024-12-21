@@ -115,6 +115,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Churnratevalue,
             
             /// <summary>
+            /// Enum Nextcontactavoidanceratevalue for "NextContactAvoidanceRateValue"
+            /// </summary>
+            [EnumMember(Value = "NextContactAvoidanceRateValue")]
+            Nextcontactavoidanceratevalue,
+            
+            /// <summary>
             /// Enum Interactionvolume for "InteractionVolume"
             /// </summary>
             [EnumMember(Value = "InteractionVolume")]

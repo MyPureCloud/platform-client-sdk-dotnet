@@ -133,7 +133,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NameIdentifierFormat">NameIdentifierFormat.</param>
         /// <param name="SsoBinding">SsoBinding.</param>
         /// <param name="SignAuthnRequests">SignAuthnRequests.</param>
-        public CustomProvider(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, bool? EndpointCompression = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, SsoBindingEnum? SsoBinding = null, bool? SignAuthnRequests = null)
+        /// <param name="ProviderName">ProviderName.</param>
+        public CustomProvider(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, bool? EndpointCompression = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, SsoBindingEnum? SsoBinding = null, bool? SignAuthnRequests = null, string ProviderName = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
@@ -149,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NameIdentifierFormat = NameIdentifierFormat;
             this.SsoBinding = SsoBinding;
             this.SignAuthnRequests = SignAuthnRequests;
+            this.ProviderName = ProviderName;
             
         }
         
@@ -264,6 +266,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ProviderName
+        /// </summary>
+        [DataMember(Name="providerName", EmitDefaultValue=false)]
+        public string ProviderName { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -295,6 +305,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NameIdentifierFormat: ").Append(NameIdentifierFormat).Append("\n");
             sb.Append("  SsoBinding: ").Append(SsoBinding).Append("\n");
             sb.Append("  SignAuthnRequests: ").Append(SignAuthnRequests).Append("\n");
+            sb.Append("  ProviderName: ").Append(ProviderName).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -412,6 +423,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SignAuthnRequests.Equals(other.SignAuthnRequests)
                 ) &&
                 (
+                    this.ProviderName == other.ProviderName ||
+                    this.ProviderName != null &&
+                    this.ProviderName.Equals(other.ProviderName)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -473,6 +489,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SignAuthnRequests != null)
                     hash = hash * 59 + this.SignAuthnRequests.GetHashCode();
+
+                if (this.ProviderName != null)
+                    hash = hash * 59 + this.ProviderName.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

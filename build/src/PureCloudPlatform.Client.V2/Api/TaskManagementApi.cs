@@ -113,6 +113,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteTaskmanagementWorktypeWithHttpInfo (string worktypeId);
 
         /// <summary>
+        /// Delete a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns></returns>
+        
+        void DeleteTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
         /// Delete a rule
         /// </summary>
         /// <remarks>
@@ -661,6 +687,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Worktype> GetTaskmanagementWorktypeWithHttpInfo (string worktypeId, List<string> expands = null);
 
         /// <summary>
+        /// Get a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>WorkitemDateBasedRule</returns>
+        
+        WorkitemDateBasedRule GetTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRule</returns>
+        
+        ApiResponse<WorkitemDateBasedRule> GetTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get all date based rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>WorkitemDateBasedRuleListing</returns>
+        
+        WorkitemDateBasedRuleListing GetTaskmanagementWorktypeFlowsDatebasedRules (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all date based rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRuleListing</returns>
+        
+        ApiResponse<WorkitemDateBasedRuleListing> GetTaskmanagementWorktypeFlowsDatebasedRulesWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Get an attribute change rule
         /// </summary>
         /// <remarks>
@@ -1071,6 +1151,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Worktype> PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
+        /// Update the attributes of a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemDateBasedRule</returns>
+        
+        WorkitemDateBasedRule PatchTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRule</returns>
+        
+        ApiResponse<WorkitemDateBasedRule> PatchTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body);
+
+        /// <summary>
         /// Update the attributes of a rule
         /// </summary>
         /// <remarks>
@@ -1375,6 +1483,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchema> PostTaskmanagementWorkitemsSchemasWithHttpInfo (DataSchema body);
 
         /// <summary>
+        /// Add a date based rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemDateBasedRule</returns>
+        
+        WorkitemDateBasedRule PostTaskmanagementWorktypeFlowsDatebasedRules (string worktypeId, WorkitemDateBasedRuleCreate body);
+
+        /// <summary>
+        /// Add a date based rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRule</returns>
+        
+        ApiResponse<WorkitemDateBasedRule> PostTaskmanagementWorktypeFlowsDatebasedRulesWithHttpInfo (string worktypeId, WorkitemDateBasedRuleCreate body);
+
+        /// <summary>
         /// Add an attribute-change rule to a worktype
         /// </summary>
         /// <remarks>
@@ -1625,6 +1759,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId);
+
+        /// <summary>
+        /// Delete a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteTaskmanagementWorktypeFlowsDatebasedRuleAsync (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Delete a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo (string worktypeId, string ruleId);
 
         /// <summary>
         /// Delete a rule
@@ -2175,6 +2335,60 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Worktype>> GetTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, List<string> expands = null);
 
         /// <summary>
+        /// Get a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of WorkitemDateBasedRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemDateBasedRule> GetTaskmanagementWorktypeFlowsDatebasedRuleAsync (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRule>> GetTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo (string worktypeId, string ruleId);
+
+        /// <summary>
+        /// Get all date based rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of WorkitemDateBasedRuleListing</returns>
+        
+        System.Threading.Tasks.Task<WorkitemDateBasedRuleListing> GetTaskmanagementWorktypeFlowsDatebasedRulesAsync (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all date based rules for a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRuleListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRuleListing>> GetTaskmanagementWorktypeFlowsDatebasedRulesAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Get an attribute change rule
         /// </summary>
         /// <remarks>
@@ -2585,6 +2799,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
+        /// Update the attributes of a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemDateBasedRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemDateBasedRule> PatchTaskmanagementWorktypeFlowsDatebasedRuleAsync (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body);
+
+        /// <summary>
+        /// Update the attributes of a date based rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRule>> PatchTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body);
+
+        /// <summary>
         /// Update the attributes of a rule
         /// </summary>
         /// <remarks>
@@ -2887,6 +3129,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostTaskmanagementWorkitemsSchemasAsyncWithHttpInfo (DataSchema body);
+
+        /// <summary>
+        /// Add a date based rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemDateBasedRule</returns>
+        
+        System.Threading.Tasks.Task<WorkitemDateBasedRule> PostTaskmanagementWorktypeFlowsDatebasedRulesAsync (string worktypeId, WorkitemDateBasedRuleCreate body);
+
+        /// <summary>
+        /// Add a date based rule to a worktype
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRule>> PostTaskmanagementWorktypeFlowsDatebasedRulesAsyncWithHttpInfo (string worktypeId, WorkitemDateBasedRuleCreate body);
 
         /// <summary>
         /// Add an attribute-change rule to a worktype
@@ -3966,6 +4234,230 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns></returns>
+        
+        public void DeleteTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId)
+        {
+             DeleteTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo(worktypeId, ruleId);
+        }
+
+        /// <summary>
+        /// Delete a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsDatebasedRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsDatebasedRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteTaskmanagementWorktypeFlowsDatebasedRuleAsync (string worktypeId, string ruleId)
+        {
+             await DeleteTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo(worktypeId, ruleId);
+
+        }
+
+        /// <summary>
+        /// Delete a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsDatebasedRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->DeleteTaskmanagementWorktypeFlowsDatebasedRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -8465,6 +8957,457 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>WorkitemDateBasedRule</returns>
+        
+        public WorkitemDateBasedRule GetTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId)
+        {
+             ApiResponse<WorkitemDateBasedRule> localVarResponse = GetTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo(worktypeId, ruleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRule</returns>
+        
+        public ApiResponse< WorkitemDateBasedRule > GetTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsDatebasedRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsDatebasedRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of WorkitemDateBasedRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemDateBasedRule> GetTaskmanagementWorktypeFlowsDatebasedRuleAsync (string worktypeId, string ruleId)
+        {
+             ApiResponse<WorkitemDateBasedRule> localVarResponse = await GetTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo(worktypeId, ruleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRule>> GetTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo (string worktypeId, string ruleId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsDatebasedRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsDatebasedRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all date based rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>WorkitemDateBasedRuleListing</returns>
+        
+        public WorkitemDateBasedRuleListing GetTaskmanagementWorktypeFlowsDatebasedRules (string worktypeId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<WorkitemDateBasedRuleListing> localVarResponse = GetTaskmanagementWorktypeFlowsDatebasedRulesWithHttpInfo(worktypeId, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all date based rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRuleListing</returns>
+        
+        public ApiResponse< WorkitemDateBasedRuleListing > GetTaskmanagementWorktypeFlowsDatebasedRulesWithHttpInfo (string worktypeId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsDatebasedRules");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRuleListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRuleListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRuleListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all date based rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of WorkitemDateBasedRuleListing</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemDateBasedRuleListing> GetTaskmanagementWorktypeFlowsDatebasedRulesAsync (string worktypeId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<WorkitemDateBasedRuleListing> localVarResponse = await GetTaskmanagementWorktypeFlowsDatebasedRulesAsyncWithHttpInfo(worktypeId, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all date based rules for a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRuleListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRuleListing>> GetTaskmanagementWorktypeFlowsDatebasedRulesAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeFlowsDatebasedRules");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRuleListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRuleListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRuleListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get an attribute change rule 
         /// 
         /// </summary>
@@ -11939,6 +12882,255 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update the attributes of a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemDateBasedRule</returns>
+        
+        public WorkitemDateBasedRule PatchTaskmanagementWorktypeFlowsDatebasedRule (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body)
+        {
+             ApiResponse<WorkitemDateBasedRule> localVarResponse = PatchTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo(worktypeId, ruleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the attributes of a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRule</returns>
+        
+        public ApiResponse< WorkitemDateBasedRule > PatchTaskmanagementWorktypeFlowsDatebasedRuleWithHttpInfo (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsDatebasedRule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsDatebasedRule");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsDatebasedRule");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the attributes of a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemDateBasedRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemDateBasedRule> PatchTaskmanagementWorktypeFlowsDatebasedRuleAsync (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body)
+        {
+             ApiResponse<WorkitemDateBasedRule> localVarResponse = await PatchTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo(worktypeId, ruleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the attributes of a date based rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="ruleId">ruleId</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRule>> PatchTaskmanagementWorktypeFlowsDatebasedRuleAsyncWithHttpInfo (string worktypeId, string ruleId, WorkitemDateBasedRuleUpdate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsDatebasedRule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsDatebasedRule");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeFlowsDatebasedRule");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorktypeFlowsDatebasedRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update the attributes of a rule 
         /// 
         /// </summary>
@@ -14676,6 +15868,242 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataSchema>(localVarStatusCode,
                 localVarHeaders,
                 (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add a date based rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>WorkitemDateBasedRule</returns>
+        
+        public WorkitemDateBasedRule PostTaskmanagementWorktypeFlowsDatebasedRules (string worktypeId, WorkitemDateBasedRuleCreate body)
+        {
+             ApiResponse<WorkitemDateBasedRule> localVarResponse = PostTaskmanagementWorktypeFlowsDatebasedRulesWithHttpInfo(worktypeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a date based rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>ApiResponse of WorkitemDateBasedRule</returns>
+        
+        public ApiResponse< WorkitemDateBasedRule > PostTaskmanagementWorktypeFlowsDatebasedRulesWithHttpInfo (string worktypeId, WorkitemDateBasedRuleCreate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsDatebasedRules");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsDatebasedRules");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add a date based rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of WorkitemDateBasedRule</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemDateBasedRule> PostTaskmanagementWorktypeFlowsDatebasedRulesAsync (string worktypeId, WorkitemDateBasedRuleCreate body)
+        {
+             ApiResponse<WorkitemDateBasedRule> localVarResponse = await PostTaskmanagementWorktypeFlowsDatebasedRulesAsyncWithHttpInfo(worktypeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a date based rule to a worktype 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <param name="body">Rule</param>
+        /// <returns>Task of ApiResponse (WorkitemDateBasedRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemDateBasedRule>> PostTaskmanagementWorktypeFlowsDatebasedRulesAsyncWithHttpInfo (string worktypeId, WorkitemDateBasedRuleCreate body)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsDatebasedRules");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeFlowsDatebasedRules");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorktypeFlowsDatebasedRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemDateBasedRule>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemDateBasedRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemDateBasedRule)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -148,6 +148,15 @@ docs/AgentPossibleWorkShiftsResponse.md
 docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
+docs/AgentStateAgentQueryClause.md
+docs/AgentStateAgentQueryPredicate.md
+docs/AgentStateCountsRequest.md
+docs/AgentStateQueryRequest.md
+docs/AgentStateSegmentTypeCount.md
+docs/AgentStateSessionFilter.md
+docs/AgentStateSessionQueryClause.md
+docs/AgentStateSessionQueryPredicate.md
+docs/AgentStateUserFilter.md
 docs/AgentTimeOffRequestPatch.md
 docs/AgentUIApi.json
 docs/AgentUIApi.md
@@ -206,6 +215,10 @@ docs/AlternativeShiftTradeResponse.md
 docs/AlternativeShiftTradesViewResponseTemplate.md
 docs/AmazonLexRequest.md
 docs/AnalyticsAgentGroup.md
+docs/AnalyticsAgentStateAgentResponse.md
+docs/AnalyticsAgentStateAgentSessionResult.md
+docs/AnalyticsAgentStateCountsResponse.md
+docs/AnalyticsAgentStateQueryResponse.md
 docs/AnalyticsApi.json
 docs/AnalyticsApi.md
 docs/AnalyticsConversation.md
@@ -1597,6 +1610,7 @@ docs/DeleteTaskmanagementWorkbin-example.txt
 docs/DeleteTaskmanagementWorkitem-example.txt
 docs/DeleteTaskmanagementWorkitemsSchema-example.txt
 docs/DeleteTaskmanagementWorktype-example.txt
+docs/DeleteTaskmanagementWorktypeFlowsDatebasedRule-example.txt
 docs/DeleteTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
 docs/DeleteTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/DeleteTaskmanagementWorktypeStatus-example.txt
@@ -1979,7 +1993,6 @@ docs/EmailColumn.md
 docs/EmailCommunicationAnsweredEvent.md
 docs/EmailCommunicationDispositionAppliedEvent.md
 docs/EmailCommunicationEndedEvent.md
-docs/EmailCommunicationRepliedEvent.md
 docs/EmailCommunicationSentMessageEvent.md
 docs/EmailConfig.md
 docs/EmailConversation.md
@@ -2204,6 +2217,7 @@ docs/ExternalMetricDefinitionCreateRequest.md
 docs/ExternalMetricDefinitionListing.md
 docs/ExternalMetricDefinitionUpdateRequest.md
 docs/ExternalOrganization.md
+docs/ExternalOrganizationIdentifier.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
 docs/ExternalSegment.md
@@ -2410,6 +2424,7 @@ docs/GetAlertingInteractionstatsRules-example.txt
 docs/GetAlertingRule-example.txt
 docs/GetAnalyticsActionsAggregatesJob-example.txt
 docs/GetAnalyticsActionsAggregatesJobResults-example.txt
+docs/GetAnalyticsAgentStatus-example.txt
 docs/GetAnalyticsAgentcopilotsAggregatesJob-example.txt
 docs/GetAnalyticsAgentcopilotsAggregatesJobResults-example.txt
 docs/GetAnalyticsBotflowDivisionsReportingturns-example.txt
@@ -2457,6 +2472,8 @@ docs/GetAnalyticsReportingSettingsDashboardsQuery-example.txt
 docs/GetAnalyticsReportingSettingsUserDashboards-example.txt
 docs/GetAnalyticsResolutionsAggregatesJob-example.txt
 docs/GetAnalyticsResolutionsAggregatesJobResults-example.txt
+docs/GetAnalyticsSummariesAggregatesJob-example.txt
+docs/GetAnalyticsSummariesAggregatesJobResults-example.txt
 docs/GetAnalyticsSurveysAggregatesJob-example.txt
 docs/GetAnalyticsSurveysAggregatesJob-example.txt
 docs/GetAnalyticsSurveysAggregatesJobResults-example.txt
@@ -3397,6 +3414,8 @@ docs/GetTaskmanagementWorkitemsSchemaVersion-example.txt
 docs/GetTaskmanagementWorkitemsSchemaVersions-example.txt
 docs/GetTaskmanagementWorkitemsSchemas-example.txt
 docs/GetTaskmanagementWorktype-example.txt
+docs/GetTaskmanagementWorktypeFlowsDatebasedRule-example.txt
+docs/GetTaskmanagementWorktypeFlowsDatebasedRules-example.txt
 docs/GetTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
 docs/GetTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
 docs/GetTaskmanagementWorktypeFlowsOncreateRule-example.txt
@@ -4886,6 +4905,7 @@ docs/PatchTaskmanagementWorkitemAssignment-example.txt
 docs/PatchTaskmanagementWorkitemUserWrapups-example.txt
 docs/PatchTaskmanagementWorkitemUsersMeWrapups-example.txt
 docs/PatchTaskmanagementWorktype-example.txt
+docs/PatchTaskmanagementWorktypeFlowsDatebasedRule-example.txt
 docs/PatchTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
 docs/PatchTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/PatchTaskmanagementWorktypeStatus-example.txt
@@ -5018,6 +5038,8 @@ docs/PostAnalyticsActionsAggregatesJobs-example.txt
 docs/PostAnalyticsActionsAggregatesQuery-example.txt
 docs/PostAnalyticsAgentcopilotsAggregatesJobs-example.txt
 docs/PostAnalyticsAgentcopilotsAggregatesQuery-example.txt
+docs/PostAnalyticsAgentsStatusCounts-example.txt
+docs/PostAnalyticsAgentsStatusQuery-example.txt
 docs/PostAnalyticsBotsAggregatesJobs-example.txt
 docs/PostAnalyticsBotsAggregatesQuery-example.txt
 docs/PostAnalyticsConversationDetailsProperties-example.txt
@@ -5064,6 +5086,8 @@ docs/PostAnalyticsReportingSettingsDashboardsQuery-example.txt
 docs/PostAnalyticsResolutionsAggregatesJobs-example.txt
 docs/PostAnalyticsRoutingActivityQuery-example.txt
 docs/PostAnalyticsRoutingActivityQuery-example.txt
+docs/PostAnalyticsSummariesAggregatesJobs-example.txt
+docs/PostAnalyticsSummariesAggregatesQuery-example.txt
 docs/PostAnalyticsSurveysAggregatesJobs-example.txt
 docs/PostAnalyticsSurveysAggregatesJobs-example.txt
 docs/PostAnalyticsSurveysAggregatesQuery-example.txt
@@ -5561,6 +5585,7 @@ docs/PostTaskmanagementWorkitems-example.txt
 docs/PostTaskmanagementWorkitemsQuery-example.txt
 docs/PostTaskmanagementWorkitemsQueryJobs-example.txt
 docs/PostTaskmanagementWorkitemsSchemas-example.txt
+docs/PostTaskmanagementWorktypeFlowsDatebasedRules-example.txt
 docs/PostTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
 docs/PostTaskmanagementWorktypeFlowsOncreateRules-example.txt
 docs/PostTaskmanagementWorktypeStatuses-example.txt
@@ -6822,6 +6847,15 @@ docs/SuggestionKnowledgeArticle.md
 docs/SuggestionKnowledgeSearch.md
 docs/SuggestionListing.md
 docs/SuggestionScript.md
+docs/SummaryAggregateDataContainer.md
+docs/SummaryAggregateQueryClause.md
+docs/SummaryAggregateQueryFilter.md
+docs/SummaryAggregateQueryPredicate.md
+docs/SummaryAggregateQueryResponse.md
+docs/SummaryAggregationQuery.md
+docs/SummaryAggregationView.md
+docs/SummaryAsyncAggregateQueryResponse.md
+docs/SummaryAsyncAggregationQuery.md
 docs/SummaryGenerationConfig.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
@@ -7659,6 +7693,7 @@ docs/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.md
 docs/WfmVersionedEntityMetadata.md
 docs/WhatsAppAvailablePhoneNumberDetails.md
 docs/WhatsAppAvailablePhoneNumberDetailsListing.md
+docs/WhatsAppConfig.md
 docs/WhatsAppDefinition.md
 docs/WhatsAppEmbeddedSignupIntegrationActivationRequest.md
 docs/WhatsAppEmbeddedSignupIntegrationRequest.md
@@ -7733,6 +7768,12 @@ docs/WorkforceManagementApi.md
 docs/Workitem.md
 docs/WorkitemChangeListing.md
 docs/WorkitemCreate.md
+docs/WorkitemDateBasedCondition.md
+docs/WorkitemDateBasedConditionUpdate.md
+docs/WorkitemDateBasedRule.md
+docs/WorkitemDateBasedRuleCreate.md
+docs/WorkitemDateBasedRuleListing.md
+docs/WorkitemDateBasedRuleUpdate.md
 docs/WorkitemDelta.md
 docs/WorkitemFilter.md
 docs/WorkitemFlowReference.md
@@ -8075,6 +8116,15 @@ src/PureCloudPlatform.Client.V2/Model/AgentPossibleWorkShiftsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueueTimeRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryClause.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryPredicate.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateCountsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateQueryRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateSegmentTypeCount.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateSessionFilter.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateSessionQueryClause.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateSessionQueryPredicate.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateUserFilter.cs
 src/PureCloudPlatform.Client.V2/Model/AgentTimeOffRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUpdateAlternativeShiftTradeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentVideoSettings.cs
@@ -8129,6 +8179,10 @@ src/PureCloudPlatform.Client.V2/Model/AlternativeShiftTradeResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AlternativeShiftTradesViewResponseTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/AmazonLexRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsAgentGroup.cs
+src/PureCloudPlatform.Client.V2/Model/AnalyticsAgentStateAgentResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AnalyticsAgentStateAgentSessionResult.cs
+src/PureCloudPlatform.Client.V2/Model/AnalyticsAgentStateCountsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AnalyticsAgentStateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversation.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationAsyncQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationQueryResponse.cs
@@ -9583,7 +9637,6 @@ src/PureCloudPlatform.Client.V2/Model/EmailColumn.cs
 src/PureCloudPlatform.Client.V2/Model/EmailCommunicationAnsweredEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailCommunicationDispositionAppliedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailCommunicationEndedEvent.cs
-src/PureCloudPlatform.Client.V2/Model/EmailCommunicationRepliedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailCommunicationSentMessageEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailConfig.cs
 src/PureCloudPlatform.Client.V2/Model/EmailConversation.cs
@@ -9800,6 +9853,7 @@ src/PureCloudPlatform.Client.V2/Model/ExternalMetricDefinitionCreateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalMetricDefinitionListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalMetricDefinitionUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganization.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationTrustorLink.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalSegment.cs
@@ -11903,6 +11957,15 @@ src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeArticle.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeSearch.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionListing.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionScript.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregateDataContainer.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregateQueryClause.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregateQueryFilter.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregateQueryPredicate.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregateQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregationView.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAsyncAggregateQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAsyncAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryGenerationConfig.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCategory.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCompactCategoryModuleTemplate.cs
@@ -12710,6 +12773,7 @@ src/PureCloudPlatform.Client.V2/Model/WfmUserScheduleAdherenceUpdatedTopicUserSc
 src/PureCloudPlatform.Client.V2/Model/WfmVersionedEntityMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppAvailablePhoneNumberDetails.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppAvailablePhoneNumberDetailsListing.cs
+src/PureCloudPlatform.Client.V2/Model/WhatsAppConfig.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppEmbeddedSignupIntegrationActivationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppEmbeddedSignupIntegrationRequest.cs
@@ -12780,6 +12844,12 @@ src/PureCloudPlatform.Client.V2/Model/WorkflowTargetSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Workitem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemChangeListing.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemCreate.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemDateBasedCondition.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemDateBasedConditionUpdate.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemDateBasedRule.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemDateBasedRuleCreate.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemDateBasedRuleListing.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemDateBasedRuleUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemFilter.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemFlowReference.cs

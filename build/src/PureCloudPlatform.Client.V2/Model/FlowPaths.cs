@@ -97,15 +97,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="FlowPaths" /> class.
         /// </summary>
         /// <param name="Category">Category (use case) of the paths within a given domain. (required).</param>
+        /// <param name="DateStart">Start date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateEnd">End date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Elements">Unique element identifiers and their corresponding elements in the trie data structure representing the paths. (required).</param>
-        public FlowPaths(CategoryEnum? Category = null, Dictionary<string, FlowPathsElement> Elements = null)
+        public FlowPaths(CategoryEnum? Category = null, DateTime? DateStart = null, DateTime? DateEnd = null, Dictionary<string, FlowPathsElement> Elements = null)
         {
             this.Category = Category;
+            this.DateStart = DateStart;
+            this.DateEnd = DateEnd;
             this.Elements = Elements;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// Start date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Start date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateStart", EmitDefaultValue=false)]
+        public DateTime? DateStart { get; set; }
+
+
+
+        /// <summary>
+        /// End date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>End date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateEnd", EmitDefaultValue=false)]
+        public DateTime? DateEnd { get; set; }
 
 
 
@@ -127,6 +149,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class FlowPaths {\n");
 
             sb.Append("  Category: ").Append(Category).Append("\n");
+            sb.Append("  DateStart: ").Append(DateStart).Append("\n");
+            sb.Append("  DateEnd: ").Append(DateEnd).Append("\n");
             sb.Append("  Elements: ").Append(Elements).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -174,6 +198,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Category.Equals(other.Category)
                 ) &&
                 (
+                    this.DateStart == other.DateStart ||
+                    this.DateStart != null &&
+                    this.DateStart.Equals(other.DateStart)
+                ) &&
+                (
+                    this.DateEnd == other.DateEnd ||
+                    this.DateEnd != null &&
+                    this.DateEnd.Equals(other.DateEnd)
+                ) &&
+                (
                     this.Elements == other.Elements ||
                     this.Elements != null &&
                     this.Elements.SequenceEqual(other.Elements)
@@ -193,6 +227,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
+
+                if (this.DateStart != null)
+                    hash = hash * 59 + this.DateStart.GetHashCode();
+
+                if (this.DateEnd != null)
+                    hash = hash * 59 + this.DateEnd.GetHashCode();
 
                 if (this.Elements != null)
                     hash = hash * 59 + this.Elements.GetHashCode();

@@ -2627,7 +2627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body);
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -2640,7 +2640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         QueueMemberEntityListing PatchRoutingQueueMembers (string queueId, List<QueueMember> body);
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -6591,7 +6591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -6604,7 +6604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueMembersAsync (string queueId, List<QueueMember> body);
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue
+        /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -29434,7 +29434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// Join or unjoin a set of up to 100 users for a queue 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -29449,7 +29449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// Join or unjoin a set of up to 100 users for a queue 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -29550,7 +29550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// Join or unjoin a set of up to 100 users for a queue 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -29566,7 +29566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Join or unjoin a set of users for a queue 
+        /// Join or unjoin a set of up to 100 users for a queue 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

@@ -5472,9 +5472,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>SendAgentlessOutboundMessageResponse</returns>
         
-        SendAgentlessOutboundMessageResponse PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body);
+        SendAgentlessOutboundMessageResponse PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Send an agentless outbound message
@@ -5484,9 +5485,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>ApiResponse of SendAgentlessOutboundMessageResponse</returns>
         
-        ApiResponse<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessWithHttpInfo (SendAgentlessOutboundMessageRequest body);
+        ApiResponse<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessWithHttpInfo (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Send an inbound Open Message
@@ -11746,9 +11748,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>Task of SendAgentlessOutboundMessageResponse</returns>
         
-        System.Threading.Tasks.Task<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessAsync (SendAgentlessOutboundMessageRequest body);
+        System.Threading.Tasks.Task<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessAsync (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Send an agentless outbound message
@@ -11758,9 +11761,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SendAgentlessOutboundMessageResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SendAgentlessOutboundMessageResponse>> PostConversationsMessagesAgentlessAsyncWithHttpInfo (SendAgentlessOutboundMessageRequest body);
+        System.Threading.Tasks.Task<ApiResponse<SendAgentlessOutboundMessageResponse>> PostConversationsMessagesAgentlessAsyncWithHttpInfo (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Send an inbound Open Message
@@ -59965,11 +59969,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>SendAgentlessOutboundMessageResponse</returns>
         
-        public SendAgentlessOutboundMessageResponse PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body)
+        public SendAgentlessOutboundMessageResponse PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null)
         {
-             ApiResponse<SendAgentlessOutboundMessageResponse> localVarResponse = PostConversationsMessagesAgentlessWithHttpInfo(body);
+             ApiResponse<SendAgentlessOutboundMessageResponse> localVarResponse = PostConversationsMessagesAgentlessWithHttpInfo(body, useNormalizedMessage);
              return localVarResponse.Data;
         }
 
@@ -59979,9 +59984,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>ApiResponse of SendAgentlessOutboundMessageResponse</returns>
         
-        public ApiResponse< SendAgentlessOutboundMessageResponse > PostConversationsMessagesAgentlessWithHttpInfo (SendAgentlessOutboundMessageRequest body)
+        public ApiResponse< SendAgentlessOutboundMessageResponse > PostConversationsMessagesAgentlessWithHttpInfo (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -60020,6 +60026,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -60075,11 +60082,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>Task of SendAgentlessOutboundMessageResponse</returns>
         
-        public async System.Threading.Tasks.Task<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessAsync (SendAgentlessOutboundMessageRequest body)
+        public async System.Threading.Tasks.Task<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessAsync (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null)
         {
-             ApiResponse<SendAgentlessOutboundMessageResponse> localVarResponse = await PostConversationsMessagesAgentlessAsyncWithHttpInfo(body);
+             ApiResponse<SendAgentlessOutboundMessageResponse> localVarResponse = await PostConversationsMessagesAgentlessAsyncWithHttpInfo(body, useNormalizedMessage);
              return localVarResponse.Data;
 
         }
@@ -60090,9 +60098,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create agentless outbound messaging request</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, messagingTemplate) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SendAgentlessOutboundMessageResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SendAgentlessOutboundMessageResponse>> PostConversationsMessagesAgentlessAsyncWithHttpInfo (SendAgentlessOutboundMessageRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<SendAgentlessOutboundMessageResponse>> PostConversationsMessagesAgentlessAsyncWithHttpInfo (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -60132,6 +60141,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 

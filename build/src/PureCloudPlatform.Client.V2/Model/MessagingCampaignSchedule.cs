@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Intervals">A list of intervals during which to run the associated Campaign. (required).</param>
-        /// <param name="TimeZone">The time zone for this messaging campaign schedule..</param>
+        /// <param name="TimeZone">The time zone for this messaging campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones.</param>
         /// <param name="MessagingCampaign">The Campaign that this messaging campaign schedule is for. (required).</param>
         public MessagingCampaignSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, DivisionedDomainEntityRef MessagingCampaign = null)
         {
@@ -98,9 +98,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time zone for this messaging campaign schedule.
+        /// The time zone for this messaging campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones
         /// </summary>
-        /// <value>The time zone for this messaging campaign schedule.</value>
+        /// <value>The time zone for this messaging campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
 
