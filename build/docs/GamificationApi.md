@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationInsightsGroupsTrends**](#GetGamificationInsightsGroupsTrends) | **Get** /api/v2/gamification/insights/groups/trends | Get insights overall trend for the current user |
 | [**GetGamificationInsightsGroupsTrendsAll**](#GetGamificationInsightsGroupsTrendsAll) | **Get** /api/v2/gamification/insights/groups/trends/all | Get insights overall trend |
 | [**GetGamificationInsightsMembers**](#GetGamificationInsightsMembers) | **Get** /api/v2/gamification/insights/members | Query users in a profile during a period of time |
+| [**GetGamificationInsightsRankings**](#GetGamificationInsightsRankings) | **Get** /api/v2/gamification/insights/rankings | Get insights rankings |
 | [**GetGamificationInsightsTrends**](#GetGamificationInsightsTrends) | **Get** /api/v2/gamification/insights/trends | Get insights user trend for the current user |
 | [**GetGamificationInsightsUserDetails**](#GetGamificationInsightsUserDetails) | **Get** /api/v2/gamification/insights/users/{userId}/details | Get insights details for the user |
 | [**GetGamificationInsightsUserTrends**](#GetGamificationInsightsUserTrends) | **Get** /api/v2/gamification/insights/users/{userId}/trends | Get insights user trend for the user |
@@ -625,6 +626,84 @@ namespace Example
 ### Return type
 
 [**InsightsAgents**](InsightsAgents)
+
+
+## GetGamificationInsightsRankings
+
+> [**InsightsRankings**](InsightsRankings) GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+
+
+Get insights rankings
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsRankingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var sortKey = sortKey_example;  // string | Sort key
+            var sortMetricId = sortMetricId_example;  // string | Sort Metric Id (optional) 
+            var sectionSize = 56;  // int? | The number of top and bottom users to return before ties (optional) 
+            var userIds = userIds_example;  // string | A list of up to 100 comma-separated user Ids (optional) 
+
+            try
+            { 
+                // Get insights rankings
+                InsightsRankings result = apiInstance.GetGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsRankings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **sortKey** | **string**| Sort key | <br />**Values**: percentOfGoal, percentOfGoalChange, overallPercentOfGoal, overallPercentOfGoalChange, value, valueChange |
+| **sortMetricId** | **string**| Sort Metric Id | [optional]  |
+| **sectionSize** | **int?**| The number of top and bottom users to return before ties | [optional]  |
+| **userIds** | **string**| A list of up to 100 comma-separated user Ids | [optional]  |
+
+### Return type
+
+[**InsightsRankings**](InsightsRankings)
 
 
 ## GetGamificationInsightsTrends
@@ -4203,4 +4282,4 @@ namespace Example
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatform.Client.V2 224.0.0_
+_PureCloudPlatform.Client.V2 224.1.0_

@@ -88,7 +88,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Any for "Any"
             /// </summary>
             [EnumMember(Value = "Any")]
-            Any
+            Any,
+            
+            /// <summary>
+            /// Enum Whatsapp for "WhatsApp"
+            /// </summary>
+            [EnumMember(Value = "WhatsApp")]
+            Whatsapp
         }
         /// <summary>
         /// The type of the DncList.

@@ -60,7 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workitem for "WORKITEM"
             /// </summary>
             [EnumMember(Value = "WORKITEM")]
-            Workitem
+            Workitem,
+            
+            /// <summary>
+            /// Enum DecisionTable for "DECISION_TABLE"
+            /// </summary>
+            [EnumMember(Value = "DECISION_TABLE")]
+            DecisionTable
         }
 
         /// <summary>

@@ -1125,6 +1125,90 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date);
 
         /// <summary>
+        /// Get the latest session for the business unit ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>ContinuousForecastGetSessionResponse</returns>
+        
+        ContinuousForecastGetSessionResponse GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession (string businessUnitId);
+
+        /// <summary>
+        /// Get the latest session for the business unit ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>ApiResponse of ContinuousForecastGetSessionResponse</returns>
+        
+        ApiResponse<ContinuousForecastGetSessionResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get the session details for the session ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>ContinuousForecastSessionResponse</returns>
+        
+        ContinuousForecastSessionResponse GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId (string businessUnitId, string sessionId);
+
+        /// <summary>
+        /// Get the session details for the session ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>ApiResponse of ContinuousForecastSessionResponse</returns>
+        
+        ApiResponse<ContinuousForecastSessionResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdWithHttpInfo (string businessUnitId, string sessionId);
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>ContinuousForecastSnapshotResponse</returns>
+        
+        ContinuousForecastSnapshotResponse GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId (string businessUnitId, string sessionId, string snapshotId);
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>ApiResponse of ContinuousForecastSnapshotResponse</returns>
+        
+        ApiResponse<ContinuousForecastSnapshotResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdWithHttpInfo (string businessUnitId, string sessionId, string snapshotId);
+
+        /// <summary>
         /// Get all authorized management units in the business unit
         /// </summary>
         /// <remarks>
@@ -7413,6 +7497,90 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date);
+
+        /// <summary>
+        /// Get the latest session for the business unit ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>Task of ContinuousForecastGetSessionResponse</returns>
+        
+        System.Threading.Tasks.Task<ContinuousForecastGetSessionResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionAsync (string businessUnitId);
+
+        /// <summary>
+        /// Get the latest session for the business unit ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>Task of ApiResponse (ContinuousForecastGetSessionResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContinuousForecastGetSessionResponse>> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionAsyncWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get the session details for the session ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>Task of ContinuousForecastSessionResponse</returns>
+        
+        System.Threading.Tasks.Task<ContinuousForecastSessionResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdAsync (string businessUnitId, string sessionId);
+
+        /// <summary>
+        /// Get the session details for the session ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>Task of ApiResponse (ContinuousForecastSessionResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContinuousForecastSessionResponse>> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdAsyncWithHttpInfo (string businessUnitId, string sessionId);
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>Task of ContinuousForecastSnapshotResponse</returns>
+        
+        System.Threading.Tasks.Task<ContinuousForecastSnapshotResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdAsync (string businessUnitId, string sessionId, string snapshotId);
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>Task of ApiResponse (ContinuousForecastSnapshotResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContinuousForecastSnapshotResponse>> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdAsyncWithHttpInfo (string businessUnitId, string sessionId, string snapshotId);
 
         /// <summary>
         /// Get all authorized management units in the business unit
@@ -22326,6 +22494,696 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WfmIntradayPlanningGroupListing>(localVarStatusCode,
                 localVarHeaders,
                 (WfmIntradayPlanningGroupListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmIntradayPlanningGroupListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the latest session for the business unit ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>ContinuousForecastGetSessionResponse</returns>
+        
+        public ContinuousForecastGetSessionResponse GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession (string businessUnitId)
+        {
+             ApiResponse<ContinuousForecastGetSessionResponse> localVarResponse = GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the latest session for the business unit ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>ApiResponse of ContinuousForecastGetSessionResponse</returns>
+        
+        public ApiResponse< ContinuousForecastGetSessionResponse > GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContinuousForecastGetSessionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContinuousForecastGetSessionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContinuousForecastGetSessionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the latest session for the business unit ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>Task of ContinuousForecastGetSessionResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContinuousForecastGetSessionResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionAsync (string businessUnitId)
+        {
+             ApiResponse<ContinuousForecastGetSessionResponse> localVarResponse = await GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionAsyncWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the latest session for the business unit ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <returns>Task of ApiResponse (ContinuousForecastGetSessionResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContinuousForecastGetSessionResponse>> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionAsyncWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContinuousForecastGetSessionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContinuousForecastGetSessionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContinuousForecastGetSessionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the session details for the session ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>ContinuousForecastSessionResponse</returns>
+        
+        public ContinuousForecastSessionResponse GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId (string businessUnitId, string sessionId)
+        {
+             ApiResponse<ContinuousForecastSessionResponse> localVarResponse = GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdWithHttpInfo(businessUnitId, sessionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the session details for the session ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>ApiResponse of ContinuousForecastSessionResponse</returns>
+        
+        public ApiResponse< ContinuousForecastSessionResponse > GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdWithHttpInfo (string businessUnitId, string sessionId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId");
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContinuousForecastSessionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContinuousForecastSessionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContinuousForecastSessionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the session details for the session ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>Task of ContinuousForecastSessionResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContinuousForecastSessionResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdAsync (string businessUnitId, string sessionId)
+        {
+             ApiResponse<ContinuousForecastSessionResponse> localVarResponse = await GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdAsyncWithHttpInfo(businessUnitId, sessionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the session details for the session ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <returns>Task of ApiResponse (ContinuousForecastSessionResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContinuousForecastSessionResponse>> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdAsyncWithHttpInfo (string businessUnitId, string sessionId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId");
+            
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContinuousForecastSessionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContinuousForecastSessionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContinuousForecastSessionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>ContinuousForecastSnapshotResponse</returns>
+        
+        public ContinuousForecastSnapshotResponse GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId (string businessUnitId, string sessionId, string snapshotId)
+        {
+             ApiResponse<ContinuousForecastSnapshotResponse> localVarResponse = GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdWithHttpInfo(businessUnitId, sessionId, snapshotId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>ApiResponse of ContinuousForecastSnapshotResponse</returns>
+        
+        public ApiResponse< ContinuousForecastSnapshotResponse > GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdWithHttpInfo (string businessUnitId, string sessionId, string snapshotId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
+            // verify the required parameter 'snapshotId' is set
+            if (snapshotId == null)
+                throw new ApiException(400, "Missing required parameter 'snapshotId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+            if (snapshotId != null) localVarPathParams.Add("snapshotId", this.Configuration.ApiClient.ParameterToString(snapshotId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContinuousForecastSnapshotResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContinuousForecastSnapshotResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContinuousForecastSnapshotResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>Task of ContinuousForecastSnapshotResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContinuousForecastSnapshotResponse> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdAsync (string businessUnitId, string sessionId, string snapshotId)
+        {
+             ApiResponse<ContinuousForecastSnapshotResponse> localVarResponse = await GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdAsyncWithHttpInfo(businessUnitId, sessionId, snapshotId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the snapshot details for the snapshot ID 
+        /// 
+        /// GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="snapshotId"></param>
+        /// <returns>Task of ApiResponse (ContinuousForecastSnapshotResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContinuousForecastSnapshotResponse>> GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdAsyncWithHttpInfo (string businessUnitId, string sessionId, string snapshotId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
+            
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
+            
+            // verify the required parameter 'snapshotId' is set
+            if (snapshotId == null)
+                throw new ApiException(400, "Missing required parameter 'snapshotId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+            if (snapshotId != null) localVarPathParams.Add("snapshotId", this.Configuration.ApiClient.ParameterToString(snapshotId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContinuousForecastSnapshotResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContinuousForecastSnapshotResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContinuousForecastSnapshotResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

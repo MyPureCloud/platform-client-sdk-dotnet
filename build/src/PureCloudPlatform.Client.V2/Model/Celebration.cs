@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Recognition for "Recognition"
             /// </summary>
             [EnumMember(Value = "Recognition")]
-            Recognition
+            Recognition,
+            
+            /// <summary>
+            /// Enum Contestcomplete for "ContestComplete"
+            /// </summary>
+            [EnumMember(Value = "ContestComplete")]
+            Contestcomplete
         }
         /// <summary>
         /// The Celebration Type

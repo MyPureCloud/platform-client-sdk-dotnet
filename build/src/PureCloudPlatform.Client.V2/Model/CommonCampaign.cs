@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Voice for "voice"
             /// </summary>
             [EnumMember(Value = "voice")]
-            Voice
+            Voice,
+            
+            /// <summary>
+            /// Enum Whatsapp for "whatsapp"
+            /// </summary>
+            [EnumMember(Value = "whatsapp")]
+            Whatsapp
         }
         /// <summary>
         /// The media type used for this campaign.

@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Richmedia for "RichMedia"
             /// </summary>
             [EnumMember(Value = "RichMedia")]
-            Richmedia
+            Richmedia,
+            
+            /// <summary>
+            /// Enum Messageevent for "MessageEvent"
+            /// </summary>
+            [EnumMember(Value = "MessageEvent")]
+            Messageevent
         }
         /// <summary>
         /// The segment type which describes any semantics about the 'text' and also indicates which other field might include additional relevant info.

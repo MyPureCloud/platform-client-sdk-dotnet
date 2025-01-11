@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class JourneyViewChartMetric :  IEquatable<JourneyViewChartMetric>
     {
         /// <summary>
-        /// How to aggregate the given element, defaults to EventCount
+        /// How to aggregate the given element, defaults to CustomerCount
         /// </summary>
-        /// <value>How to aggregate the given element, defaults to EventCount</value>
+        /// <value>How to aggregate the given element, defaults to CustomerCount</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AggregateEnum
         {
@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Customercount
         }
         /// <summary>
-        /// How to aggregate the given element, defaults to EventCount
+        /// How to aggregate the given element, defaults to CustomerCount
         /// </summary>
-        /// <value>How to aggregate the given element, defaults to EventCount</value>
+        /// <value>How to aggregate the given element, defaults to CustomerCount</value>
         [DataMember(Name="aggregate", EmitDefaultValue=false)]
         public AggregateEnum? Aggregate { get; set; }
 
@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The unique identifier of the metric within the chart (required).</param>
         /// <param name="ElementId">The element in the list of elements which the metric is measuring (required).</param>
-        /// <param name="Aggregate">How to aggregate the given element, defaults to EventCount.</param>
+        /// <param name="Aggregate">How to aggregate the given element, defaults to CustomerCount.</param>
         /// <param name="DisplayLabel">A display label for the metric.</param>
         public JourneyViewChartMetric(string Id = null, string ElementId = null, AggregateEnum? Aggregate = null, string DisplayLabel = null)
         {

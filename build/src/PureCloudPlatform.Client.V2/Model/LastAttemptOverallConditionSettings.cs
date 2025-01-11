@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "Sms"
             /// </summary>
             [EnumMember(Value = "Sms")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Whatsapp for "WhatsApp"
+            /// </summary>
+            [EnumMember(Value = "WhatsApp")]
+            Whatsapp
         }
         /// <summary>
         /// The operator to use when comparing values.

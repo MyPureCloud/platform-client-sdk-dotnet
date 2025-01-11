@@ -56,10 +56,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Boolean operation to apply to the provided predicates and clauses. Valid values: And (required).</param>
         /// <param name="Predicates">predicates.</param>
-        public JourneyViewElementFilter(TypeEnum? Type = null, List<JourneyViewElementFilterPredicate> Predicates = null)
+        /// <param name="NumberPredicates">numberPredicates.</param>
+        public JourneyViewElementFilter(TypeEnum? Type = null, List<JourneyViewElementFilterPredicate> Predicates = null, List<JourneyViewElementFilterNumberPredicate> NumberPredicates = null)
         {
             this.Type = Type;
             this.Predicates = Predicates;
+            this.NumberPredicates = NumberPredicates;
             
         }
         
@@ -75,6 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<JourneyViewElementFilterPredicate> Predicates { get; set; }
 
 
+
+        /// <summary>
+        /// numberPredicates
+        /// </summary>
+        /// <value>numberPredicates</value>
+        [DataMember(Name="numberPredicates", EmitDefaultValue=false)]
+        public List<JourneyViewElementFilterNumberPredicate> NumberPredicates { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            sb.Append("  NumberPredicates: ").Append(NumberPredicates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Predicates == other.Predicates ||
                     this.Predicates != null &&
                     this.Predicates.SequenceEqual(other.Predicates)
+                ) &&
+                (
+                    this.NumberPredicates == other.NumberPredicates ||
+                    this.NumberPredicates != null &&
+                    this.NumberPredicates.SequenceEqual(other.NumberPredicates)
                 );
         }
 
@@ -154,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+
+                if (this.NumberPredicates != null)
+                    hash = hash * 59 + this.NumberPredicates.GetHashCode();
 
                 return hash;
             }

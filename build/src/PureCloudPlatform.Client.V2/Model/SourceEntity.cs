@@ -55,7 +55,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Companyvalues for "CompanyValues"
             /// </summary>
             [EnumMember(Value = "CompanyValues")]
-            Companyvalues
+            Companyvalues,
+            
+            /// <summary>
+            /// Enum Competition for "Competition"
+            /// </summary>
+            [EnumMember(Value = "Competition")]
+            Competition,
+            
+            /// <summary>
+            /// Enum Race for "Race"
+            /// </summary>
+            [EnumMember(Value = "Race")]
+            Race,
+            
+            /// <summary>
+            /// Enum Raffle for "Raffle"
+            /// </summary>
+            [EnumMember(Value = "Raffle")]
+            Raffle,
+            
+            /// <summary>
+            /// Enum Teamgoal for "TeamGoal"
+            /// </summary>
+            [EnumMember(Value = "TeamGoal")]
+            Teamgoal
         }
         /// <summary>
         /// The type of the source entity
@@ -67,9 +91,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SourceEntity" /> class.
         /// </summary>
         /// <param name="Type">The type of the source entity.</param>
-        public SourceEntity(TypeEnum? Type = null)
+        /// <param name="ContestCompleteData">The contest data - Only supplied when celebration is of type ContestComplete.</param>
+        public SourceEntity(TypeEnum? Type = null, ContestCompleteData ContestCompleteData = null)
         {
             this.Type = Type;
+            this.ContestCompleteData = ContestCompleteData;
             
         }
         
@@ -83,6 +109,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; private set; }
 
 
+
+
+
+        /// <summary>
+        /// The contest data - Only supplied when celebration is of type ContestComplete
+        /// </summary>
+        /// <value>The contest data - Only supplied when celebration is of type ContestComplete</value>
+        [DataMember(Name="contestCompleteData", EmitDefaultValue=false)]
+        public ContestCompleteData ContestCompleteData { get; set; }
 
 
 
@@ -105,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ContestCompleteData: ").Append(ContestCompleteData).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -157,6 +193,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.ContestCompleteData == other.ContestCompleteData ||
+                    this.ContestCompleteData != null &&
+                    this.ContestCompleteData.Equals(other.ContestCompleteData)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -179,6 +220,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.ContestCompleteData != null)
+                    hash = hash * 59 + this.ContestCompleteData.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Email for "Email"
             /// </summary>
             [EnumMember(Value = "Email")]
-            Email
+            Email,
+            
+            /// <summary>
+            /// Enum Whatsapp for "WhatsApp"
+            /// </summary>
+            [EnumMember(Value = "WhatsApp")]
+            Whatsapp
         }
         /// <summary>
         /// The type of message sent

@@ -269,6 +269,46 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InsightsAgents> GetGamificationInsightsMembersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday);
 
         /// <summary>
+        /// Get insights rankings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>InsightsRankings</returns>
+        
+        InsightsRankings GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
+
+        /// <summary>
+        /// Get insights rankings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>ApiResponse of InsightsRankings</returns>
+        
+        ApiResponse<InsightsRankings> GetGamificationInsightsRankingsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
+
+        /// <summary>
         /// Get insights user trend for the current user
         /// </summary>
         /// <remarks>
@@ -2013,6 +2053,46 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (InsightsAgents)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsMembersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday);
+
+        /// <summary>
+        /// Get insights rankings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>Task of InsightsRankings</returns>
+        
+        System.Threading.Tasks.Task<InsightsRankings> GetGamificationInsightsRankingsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
+
+        /// <summary>
+        /// Get insights rankings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>Task of ApiResponse (InsightsRankings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<InsightsRankings>> GetGamificationInsightsRankingsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
 
         /// <summary>
         /// Get insights user trend for the current user
@@ -5626,6 +5706,302 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InsightsAgents>(localVarStatusCode,
                 localVarHeaders,
                 (InsightsAgents) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsightsAgents)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get insights rankings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>InsightsRankings</returns>
+        
+        public InsightsRankings GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        {
+             ApiResponse<InsightsRankings> localVarResponse = GetGamificationInsightsRankingsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get insights rankings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>ApiResponse of InsightsRankings</returns>
+        
+        public ApiResponse< InsightsRankings > GetGamificationInsightsRankingsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        { 
+            // verify the required parameter 'filterType' is set
+            if (filterType == null)
+                throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationInsightsRankings");
+            // verify the required parameter 'filterId' is set
+            if (filterId == null)
+                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationInsightsRankings");
+            // verify the required parameter 'granularity' is set
+            if (granularity == null)
+                throw new ApiException(400, "Missing required parameter 'granularity' when calling GamificationApi->GetGamificationInsightsRankings");
+            // verify the required parameter 'comparativePeriodStartWorkday' is set
+            if (comparativePeriodStartWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'comparativePeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsRankings");
+            // verify the required parameter 'primaryPeriodStartWorkday' is set
+            if (primaryPeriodStartWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsRankings");
+            // verify the required parameter 'sortKey' is set
+            if (sortKey == null)
+                throw new ApiException(400, "Missing required parameter 'sortKey' when calling GamificationApi->GetGamificationInsightsRankings");
+
+            var localVarPath = "/api/v2/gamification/insights/rankings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
+            if (granularity != null) localVarQueryParams.Add(new Tuple<string, string>("granularity", this.Configuration.ApiClient.ParameterToString(granularity)));
+            if (comparativePeriodStartWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("comparativePeriodStartWorkday", this.Configuration.ApiClient.ParameterToString(comparativePeriodStartWorkday)));
+            if (primaryPeriodStartWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("primaryPeriodStartWorkday", this.Configuration.ApiClient.ParameterToString(primaryPeriodStartWorkday)));
+            if (sortKey != null) localVarQueryParams.Add(new Tuple<string, string>("sortKey", this.Configuration.ApiClient.ParameterToString(sortKey)));
+            if (sortMetricId != null) localVarQueryParams.Add(new Tuple<string, string>("sortMetricId", this.Configuration.ApiClient.ParameterToString(sortMetricId)));
+            if (sectionSize != null) localVarQueryParams.Add(new Tuple<string, string>("sectionSize", this.Configuration.ApiClient.ParameterToString(sectionSize)));
+            if (userIds != null) localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(userIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsRankings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsRankings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InsightsRankings>(localVarStatusCode,
+                localVarHeaders,
+                (InsightsRankings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsightsRankings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get insights rankings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>Task of InsightsRankings</returns>
+        
+        public async System.Threading.Tasks.Task<InsightsRankings> GetGamificationInsightsRankingsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        {
+             ApiResponse<InsightsRankings> localVarResponse = await GetGamificationInsightsRankingsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get insights rankings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="sortKey">Sort key</param>
+        /// <param name="sortMetricId">Sort Metric Id (optional)</param>
+        /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
+        /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <returns>Task of ApiResponse (InsightsRankings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<InsightsRankings>> GetGamificationInsightsRankingsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        { 
+            // verify the required parameter 'filterType' is set
+            if (filterType == null)
+                throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationInsightsRankings");
+            
+            // verify the required parameter 'filterId' is set
+            if (filterId == null)
+                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationInsightsRankings");
+            
+            // verify the required parameter 'granularity' is set
+            if (granularity == null)
+                throw new ApiException(400, "Missing required parameter 'granularity' when calling GamificationApi->GetGamificationInsightsRankings");
+            
+            // verify the required parameter 'comparativePeriodStartWorkday' is set
+            if (comparativePeriodStartWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'comparativePeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsRankings");
+            
+            // verify the required parameter 'primaryPeriodStartWorkday' is set
+            if (primaryPeriodStartWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsRankings");
+            
+            // verify the required parameter 'sortKey' is set
+            if (sortKey == null)
+                throw new ApiException(400, "Missing required parameter 'sortKey' when calling GamificationApi->GetGamificationInsightsRankings");
+            
+
+            var localVarPath = "/api/v2/gamification/insights/rankings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
+            if (granularity != null) localVarQueryParams.Add(new Tuple<string, string>("granularity", this.Configuration.ApiClient.ParameterToString(granularity)));
+            if (comparativePeriodStartWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("comparativePeriodStartWorkday", this.Configuration.ApiClient.ParameterToString(comparativePeriodStartWorkday)));
+            if (primaryPeriodStartWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("primaryPeriodStartWorkday", this.Configuration.ApiClient.ParameterToString(primaryPeriodStartWorkday)));
+            if (sortKey != null) localVarQueryParams.Add(new Tuple<string, string>("sortKey", this.Configuration.ApiClient.ParameterToString(sortKey)));
+            if (sortMetricId != null) localVarQueryParams.Add(new Tuple<string, string>("sortMetricId", this.Configuration.ApiClient.ParameterToString(sortMetricId)));
+            if (sectionSize != null) localVarQueryParams.Add(new Tuple<string, string>("sectionSize", this.Configuration.ApiClient.ParameterToString(sectionSize)));
+            if (userIds != null) localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(userIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsRankings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsRankings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InsightsRankings>(localVarStatusCode,
+                localVarHeaders,
+                (InsightsRankings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsightsRankings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

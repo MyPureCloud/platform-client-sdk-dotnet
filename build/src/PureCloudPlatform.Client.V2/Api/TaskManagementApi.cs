@@ -65,6 +65,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteTaskmanagementWorkitemWithHttpInfo (string workitemId);
 
         /// <summary>
+        /// Delete a bulk add job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns></returns>
+        
+        void DeleteTaskmanagementWorkitemsBulkAddJob (string bulkJobId);
+
+        /// <summary>
+        /// Delete a bulk add job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteTaskmanagementWorkitemsBulkAddJobWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Delete a Bulk job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns></returns>
+        
+        void DeleteTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId);
+
+        /// <summary>
+        /// Delete a Bulk job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo (string bulkJobId);
+
+        /// <summary>
         /// Delete a schema
         /// </summary>
         /// <remarks>
@@ -515,6 +563,132 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of WorkitemWrapupEntityListing</returns>
         
         ApiResponse<WorkitemWrapupEntityListing> GetTaskmanagementWorkitemWrapupsWithHttpInfo (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJob</returns>
+        
+        BulkJob GetTaskmanagementWorkitemsBulkAddJob (string bulkJobId);
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        ApiResponse<BulkJob> GetTaskmanagementWorkitemsBulkAddJobWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk add job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJobAddResponse</returns>
+        
+        BulkJobAddResponse GetTaskmanagementWorkitemsBulkAddJobResults (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk add job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJobAddResponse</returns>
+        
+        ApiResponse<BulkJobAddResponse> GetTaskmanagementWorkitemsBulkAddJobResultsWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>BulkJobsListing</returns>
+        
+        BulkJobsListing GetTaskmanagementWorkitemsBulkJobsUsersMe (string after = null, int? pageSize = null, string sortOrder = null, string action = null);
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>ApiResponse of BulkJobsListing</returns>
+        
+        ApiResponse<BulkJobsListing> GetTaskmanagementWorkitemsBulkJobsUsersMeWithHttpInfo (string after = null, int? pageSize = null, string sortOrder = null, string action = null);
+
+        /// <summary>
+        /// Get the bulk job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJob</returns>
+        
+        BulkJob GetTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId);
+
+        /// <summary>
+        /// Get the bulk job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        ApiResponse<BulkJob> GetTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk terminate job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJobTerminateResultsResponse</returns>
+        
+        BulkJobTerminateResultsResponse GetTaskmanagementWorkitemsBulkTerminateJobResults (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk terminate job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJobTerminateResultsResponse</returns>
+        
+        ApiResponse<BulkJobTerminateResultsResponse> GetTaskmanagementWorkitemsBulkTerminateJobResultsWithHttpInfo (string bulkJobId);
 
         /// <summary>
         /// Get the workitem query job associated with the job id.
@@ -1125,6 +1299,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkitemWrapup> PatchTaskmanagementWorkitemUsersMeWrapupsWithHttpInfo (string workitemId, WorkitemWrapupUpdate body);
 
         /// <summary>
+        /// Update workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>BulkJob</returns>
+        
+        BulkJob PatchTaskmanagementWorkitemsBulkAddJob (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
+        /// Update workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        ApiResponse<BulkJob> PatchTaskmanagementWorkitemsBulkAddJobWithHttpInfo (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
+        /// Update workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>BulkJob</returns>
+        
+        BulkJob PatchTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
+        /// Update workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        ApiResponse<BulkJob> PatchTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
         /// Update the attributes of a worktype
         /// </summary>
         /// <remarks>
@@ -1407,6 +1633,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Workitem</returns>
         
         ApiResponse<Workitem> PostTaskmanagementWorkitemsWithHttpInfo (WorkitemCreate body);
+
+        /// <summary>
+        /// Create a workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>BulkJob</returns>
+        
+        BulkJob PostTaskmanagementWorkitemsBulkAddJobs (BulkJobAddRequest body);
+
+        /// <summary>
+        /// Create a workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        ApiResponse<BulkJob> PostTaskmanagementWorkitemsBulkAddJobsWithHttpInfo (BulkJobAddRequest body);
+
+        /// <summary>
+        /// Create a workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>BulkJob</returns>
+        
+        BulkJob PostTaskmanagementWorkitemsBulkTerminateJobs (BulkJobTerminateRequest body);
+
+        /// <summary>
+        /// Create a workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        ApiResponse<BulkJob> PostTaskmanagementWorkitemsBulkTerminateJobsWithHttpInfo (BulkJobTerminateRequest body);
 
         /// <summary>
         /// Query for workitems
@@ -1711,6 +1985,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId);
+
+        /// <summary>
+        /// Delete a bulk add job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteTaskmanagementWorkitemsBulkAddJobAsync (string bulkJobId);
+
+        /// <summary>
+        /// Delete a bulk add job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Delete a Bulk job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteTaskmanagementWorkitemsBulkTerminateJobAsync (string bulkJobId);
+
+        /// <summary>
+        /// Delete a Bulk job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo (string bulkJobId);
 
         /// <summary>
         /// Delete a schema
@@ -2163,6 +2485,132 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (WorkitemWrapupEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<WorkitemWrapupEntityListing>> GetTaskmanagementWorkitemWrapupsAsyncWithHttpInfo (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        System.Threading.Tasks.Task<BulkJob> GetTaskmanagementWorkitemsBulkAddJobAsync (string bulkJobId);
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJob>> GetTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk add job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJobAddResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkJobAddResponse> GetTaskmanagementWorkitemsBulkAddJobResultsAsync (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk add job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJobAddResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJobAddResponse>> GetTaskmanagementWorkitemsBulkAddJobResultsAsyncWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>Task of BulkJobsListing</returns>
+        
+        System.Threading.Tasks.Task<BulkJobsListing> GetTaskmanagementWorkitemsBulkJobsUsersMeAsync (string after = null, int? pageSize = null, string sortOrder = null, string action = null);
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>Task of ApiResponse (BulkJobsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJobsListing>> GetTaskmanagementWorkitemsBulkJobsUsersMeAsyncWithHttpInfo (string after = null, int? pageSize = null, string sortOrder = null, string action = null);
+
+        /// <summary>
+        /// Get the bulk job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        System.Threading.Tasks.Task<BulkJob> GetTaskmanagementWorkitemsBulkTerminateJobAsync (string bulkJobId);
+
+        /// <summary>
+        /// Get the bulk job associated with the job id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJob>> GetTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk terminate job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJobTerminateResultsResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkJobTerminateResultsResponse> GetTaskmanagementWorkitemsBulkTerminateJobResultsAsync (string bulkJobId);
+
+        /// <summary>
+        /// Get bulk terminate job results.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJobTerminateResultsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJobTerminateResultsResponse>> GetTaskmanagementWorkitemsBulkTerminateJobResultsAsyncWithHttpInfo (string bulkJobId);
 
         /// <summary>
         /// Get the workitem query job associated with the job id.
@@ -2773,6 +3221,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> PatchTaskmanagementWorkitemUsersMeWrapupsAsyncWithHttpInfo (string workitemId, WorkitemWrapupUpdate body);
 
         /// <summary>
+        /// Update workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        System.Threading.Tasks.Task<BulkJob> PatchTaskmanagementWorkitemsBulkAddJobAsync (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
+        /// Update workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJob>> PatchTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
+        /// Update workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        System.Threading.Tasks.Task<BulkJob> PatchTaskmanagementWorkitemsBulkTerminateJobAsync (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
+        /// Update workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJob>> PatchTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo (string bulkJobId, BulkJobUpdate body);
+
+        /// <summary>
         /// Update the attributes of a worktype
         /// </summary>
         /// <remarks>
@@ -3055,6 +3555,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemsAsyncWithHttpInfo (WorkitemCreate body);
+
+        /// <summary>
+        /// Create a workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        System.Threading.Tasks.Task<BulkJob> PostTaskmanagementWorkitemsBulkAddJobsAsync (BulkJobAddRequest body);
+
+        /// <summary>
+        /// Create a workitem bulk add job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJob>> PostTaskmanagementWorkitemsBulkAddJobsAsyncWithHttpInfo (BulkJobAddRequest body);
+
+        /// <summary>
+        /// Create a workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        System.Threading.Tasks.Task<BulkJob> PostTaskmanagementWorkitemsBulkTerminateJobsAsync (BulkJobTerminateRequest body);
+
+        /// <summary>
+        /// Create a workitem bulk terminate job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkJob>> PostTaskmanagementWorkitemsBulkTerminateJobsAsyncWithHttpInfo (BulkJobTerminateRequest body);
 
         /// <summary>
         /// Query for workitems
@@ -3812,6 +4360,428 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitem: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a bulk add job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns></returns>
+        
+        public void DeleteTaskmanagementWorkitemsBulkAddJob (string bulkJobId)
+        {
+             DeleteTaskmanagementWorkitemsBulkAddJobWithHttpInfo(bulkJobId);
+        }
+
+        /// <summary>
+        /// Delete a bulk add job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteTaskmanagementWorkitemsBulkAddJobWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->DeleteTaskmanagementWorkitemsBulkAddJob");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a bulk add job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteTaskmanagementWorkitemsBulkAddJobAsync (string bulkJobId)
+        {
+             await DeleteTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo(bulkJobId);
+
+        }
+
+        /// <summary>
+        /// Delete a bulk add job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->DeleteTaskmanagementWorkitemsBulkAddJob");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a Bulk job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns></returns>
+        
+        public void DeleteTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId)
+        {
+             DeleteTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo(bulkJobId);
+        }
+
+        /// <summary>
+        /// Delete a Bulk job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->DeleteTaskmanagementWorkitemsBulkTerminateJob");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a Bulk job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteTaskmanagementWorkitemsBulkTerminateJobAsync (string bulkJobId)
+        {
+             await DeleteTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo(bulkJobId);
+
+        }
+
+        /// <summary>
+        /// Delete a Bulk job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->DeleteTaskmanagementWorkitemsBulkTerminateJob");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -7453,6 +8423,1082 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WorkitemWrapupEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (WorkitemWrapupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemWrapupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJob</returns>
+        
+        public BulkJob GetTaskmanagementWorkitemsBulkAddJob (string bulkJobId)
+        {
+             ApiResponse<BulkJob> localVarResponse = GetTaskmanagementWorkitemsBulkAddJobWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        public ApiResponse< BulkJob > GetTaskmanagementWorkitemsBulkAddJobWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkAddJob");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJob> GetTaskmanagementWorkitemsBulkAddJobAsync (string bulkJobId)
+        {
+             ApiResponse<BulkJob> localVarResponse = await GetTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the bulk add job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJob>> GetTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkAddJob");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get bulk add job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJobAddResponse</returns>
+        
+        public BulkJobAddResponse GetTaskmanagementWorkitemsBulkAddJobResults (string bulkJobId)
+        {
+             ApiResponse<BulkJobAddResponse> localVarResponse = GetTaskmanagementWorkitemsBulkAddJobResultsWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get bulk add job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJobAddResponse</returns>
+        
+        public ApiResponse< BulkJobAddResponse > GetTaskmanagementWorkitemsBulkAddJobResultsWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkAddJobResults");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJobAddResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJobAddResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJobAddResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get bulk add job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJobAddResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJobAddResponse> GetTaskmanagementWorkitemsBulkAddJobResultsAsync (string bulkJobId)
+        {
+             ApiResponse<BulkJobAddResponse> localVarResponse = await GetTaskmanagementWorkitemsBulkAddJobResultsAsyncWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get bulk add job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJobAddResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJobAddResponse>> GetTaskmanagementWorkitemsBulkAddJobResultsAsyncWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkAddJobResults");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkAddJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJobAddResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJobAddResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJobAddResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>BulkJobsListing</returns>
+        
+        public BulkJobsListing GetTaskmanagementWorkitemsBulkJobsUsersMe (string after = null, int? pageSize = null, string sortOrder = null, string action = null)
+        {
+             ApiResponse<BulkJobsListing> localVarResponse = GetTaskmanagementWorkitemsBulkJobsUsersMeWithHttpInfo(after, pageSize, sortOrder, action);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>ApiResponse of BulkJobsListing</returns>
+        
+        public ApiResponse< BulkJobsListing > GetTaskmanagementWorkitemsBulkJobsUsersMeWithHttpInfo (string after = null, int? pageSize = null, string sortOrder = null, string action = null)
+        { 
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/jobs/users/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (action != null) localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(action)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkJobsUsersMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkJobsUsersMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJobsListing>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJobsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJobsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>Task of BulkJobsListing</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJobsListing> GetTaskmanagementWorkitemsBulkJobsUsersMeAsync (string after = null, int? pageSize = null, string sortOrder = null, string action = null)
+        {
+             ApiResponse<BulkJobsListing> localVarResponse = await GetTaskmanagementWorkitemsBulkJobsUsersMeAsyncWithHttpInfo(after, pageSize, sortOrder, action);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get bulk jobs created by the currently logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="action">The bulk job action. (optional)</param>
+        /// <returns>Task of ApiResponse (BulkJobsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJobsListing>> GetTaskmanagementWorkitemsBulkJobsUsersMeAsyncWithHttpInfo (string after = null, int? pageSize = null, string sortOrder = null, string action = null)
+        { 
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/jobs/users/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (action != null) localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(action)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkJobsUsersMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkJobsUsersMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJobsListing>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJobsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJobsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the bulk job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJob</returns>
+        
+        public BulkJob GetTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId)
+        {
+             ApiResponse<BulkJob> localVarResponse = GetTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the bulk job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        public ApiResponse< BulkJob > GetTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkTerminateJob");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the bulk job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJob> GetTaskmanagementWorkitemsBulkTerminateJobAsync (string bulkJobId)
+        {
+             ApiResponse<BulkJob> localVarResponse = await GetTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the bulk job associated with the job id. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJob>> GetTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkTerminateJob");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get bulk terminate job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>BulkJobTerminateResultsResponse</returns>
+        
+        public BulkJobTerminateResultsResponse GetTaskmanagementWorkitemsBulkTerminateJobResults (string bulkJobId)
+        {
+             ApiResponse<BulkJobTerminateResultsResponse> localVarResponse = GetTaskmanagementWorkitemsBulkTerminateJobResultsWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get bulk terminate job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>ApiResponse of BulkJobTerminateResultsResponse</returns>
+        
+        public ApiResponse< BulkJobTerminateResultsResponse > GetTaskmanagementWorkitemsBulkTerminateJobResultsWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkTerminateJobResults");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJobTerminateResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJobTerminateResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJobTerminateResultsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get bulk terminate job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of BulkJobTerminateResultsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJobTerminateResultsResponse> GetTaskmanagementWorkitemsBulkTerminateJobResultsAsync (string bulkJobId)
+        {
+             ApiResponse<BulkJobTerminateResultsResponse> localVarResponse = await GetTaskmanagementWorkitemsBulkTerminateJobResultsAsyncWithHttpInfo(bulkJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get bulk terminate job results. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <returns>Task of ApiResponse (BulkJobTerminateResultsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJobTerminateResultsResponse>> GetTaskmanagementWorkitemsBulkTerminateJobResultsAsyncWithHttpInfo (string bulkJobId)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->GetTaskmanagementWorkitemsBulkTerminateJobResults");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsBulkTerminateJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJobTerminateResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJobTerminateResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJobTerminateResultsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12646,6 +14692,478 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>BulkJob</returns>
+        
+        public BulkJob PatchTaskmanagementWorkitemsBulkAddJob (string bulkJobId, BulkJobUpdate body)
+        {
+             ApiResponse<BulkJob> localVarResponse = PatchTaskmanagementWorkitemsBulkAddJobWithHttpInfo(bulkJobId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        public ApiResponse< BulkJob > PatchTaskmanagementWorkitemsBulkAddJobWithHttpInfo (string bulkJobId, BulkJobUpdate body)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkAddJob");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkAddJob");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJob> PatchTaskmanagementWorkitemsBulkAddJobAsync (string bulkJobId, BulkJobUpdate body)
+        {
+             ApiResponse<BulkJob> localVarResponse = await PatchTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo(bulkJobId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk add job update request</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJob>> PatchTaskmanagementWorkitemsBulkAddJobAsyncWithHttpInfo (string bulkJobId, BulkJobUpdate body)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkAddJob");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkAddJob");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkAddJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>BulkJob</returns>
+        
+        public BulkJob PatchTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId, BulkJobUpdate body)
+        {
+             ApiResponse<BulkJob> localVarResponse = PatchTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo(bulkJobId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        public ApiResponse< BulkJob > PatchTaskmanagementWorkitemsBulkTerminateJobWithHttpInfo (string bulkJobId, BulkJobUpdate body)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkTerminateJob");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkTerminateJob");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJob> PatchTaskmanagementWorkitemsBulkTerminateJobAsync (string bulkJobId, BulkJobUpdate body)
+        {
+             ApiResponse<BulkJob> localVarResponse = await PatchTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo(bulkJobId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bulkJobId">Bulk job id</param>
+        /// <param name="body">Bulk job update request</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJob>> PatchTaskmanagementWorkitemsBulkTerminateJobAsyncWithHttpInfo (string bulkJobId, BulkJobUpdate body)
+        { 
+            // verify the required parameter 'bulkJobId' is set
+            if (bulkJobId == null)
+                throw new ApiException(400, "Missing required parameter 'bulkJobId' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkTerminateJob");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorkitemsBulkTerminateJob");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (bulkJobId != null) localVarPathParams.Add("bulkJobId", this.Configuration.ApiClient.ParameterToString(bulkJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTaskmanagementWorkitemsBulkTerminateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update the attributes of a worktype 
         /// 
         /// </summary>
@@ -15195,6 +17713,452 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Workitem>(localVarStatusCode,
                 localVarHeaders,
                 (Workitem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workitem)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>BulkJob</returns>
+        
+        public BulkJob PostTaskmanagementWorkitemsBulkAddJobs (BulkJobAddRequest body)
+        {
+             ApiResponse<BulkJob> localVarResponse = PostTaskmanagementWorkitemsBulkAddJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        public ApiResponse< BulkJob > PostTaskmanagementWorkitemsBulkAddJobsWithHttpInfo (BulkJobAddRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorkitemsBulkAddJobs");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkAddJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkAddJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJob> PostTaskmanagementWorkitemsBulkAddJobsAsync (BulkJobAddRequest body)
+        {
+             ApiResponse<BulkJob> localVarResponse = await PostTaskmanagementWorkitemsBulkAddJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a workitem bulk add job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJob>> PostTaskmanagementWorkitemsBulkAddJobsAsyncWithHttpInfo (BulkJobAddRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorkitemsBulkAddJobs");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/add/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkAddJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkAddJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>BulkJob</returns>
+        
+        public BulkJob PostTaskmanagementWorkitemsBulkTerminateJobs (BulkJobTerminateRequest body)
+        {
+             ApiResponse<BulkJob> localVarResponse = PostTaskmanagementWorkitemsBulkTerminateJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>ApiResponse of BulkJob</returns>
+        
+        public ApiResponse< BulkJob > PostTaskmanagementWorkitemsBulkTerminateJobsWithHttpInfo (BulkJobTerminateRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorkitemsBulkTerminateJobs");
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkTerminateJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkTerminateJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of BulkJob</returns>
+        
+        public async System.Threading.Tasks.Task<BulkJob> PostTaskmanagementWorkitemsBulkTerminateJobsAsync (BulkJobTerminateRequest body)
+        {
+             ApiResponse<BulkJob> localVarResponse = await PostTaskmanagementWorkitemsBulkTerminateJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a workitem bulk terminate job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk job definition.</param>
+        /// <returns>Task of ApiResponse (BulkJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkJob>> PostTaskmanagementWorkitemsBulkTerminateJobsAsyncWithHttpInfo (BulkJobTerminateRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorkitemsBulkTerminateJobs");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkTerminateJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTaskmanagementWorkitemsBulkTerminateJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkJob>(localVarStatusCode,
+                localVarHeaders,
+                (BulkJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkJob)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

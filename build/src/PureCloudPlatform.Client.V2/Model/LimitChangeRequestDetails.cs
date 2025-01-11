@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentassistant,
             
             /// <summary>
+            /// Enum Analyticsagents for "analytics.agents"
+            /// </summary>
+            [EnumMember(Value = "analytics.agents")]
+            Analyticsagents,
+            
+            /// <summary>
             /// Enum Analyticsalerting for "analytics.alerting"
             /// </summary>
             [EnumMember(Value = "analytics.alerting")]
@@ -284,6 +290,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "messaging")]
             Messaging,
+            
+            /// <summary>
+            /// Enum Microfrontend for "micro.frontend"
+            /// </summary>
+            [EnumMember(Value = "micro.frontend")]
+            Microfrontend,
             
             /// <summary>
             /// Enum Notifications for "notifications"
