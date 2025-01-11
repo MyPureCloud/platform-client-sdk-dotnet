@@ -3189,6 +3189,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3245,7 +3246,7 @@ namespace Example
 | **id** | [**List<string>**](string)| Campaign ID(s) | [optional]  |
 | **name** | **string**| Campaign name(s) | [optional]  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-| **mediaType** | [**List<string>**](string)| Media type(s) | [optional] <br />**Values**: email, sms, voice |
+| **mediaType** | [**List<string>**](string)| Media type(s) | [optional] <br />**Values**: email, sms, voice, whatsapp |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 
 ### Return type
@@ -3265,6 +3266,7 @@ Requires ANY permissions:
 * outbound:campaign:search
 * outbound:messagingCampaign:search
 * outbound:emailCampaign:search
+* outbound:whatsAppCampaign:search
 
 ### Example
 ```{"language":"csharp"}
@@ -3321,7 +3323,7 @@ namespace Example
 | **id** | [**List<string>**](string)| Campaign ID(s) | [optional]  |
 | **name** | **string**| Campaign name(s) | [optional]  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-| **mediaType** | [**List<string>**](string)| Media type(s) | [optional] <br />**Values**: email, sms, voice |
+| **mediaType** | [**List<string>**](string)| Media type(s) | [optional] <br />**Values**: email, sms, voice, whatsapp |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 
 ### Return type
@@ -10928,4 +10930,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 224.0.0_
+_PureCloudPlatform.Client.V2 224.1.0_

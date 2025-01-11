@@ -8,6 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteTaskmanagementWorkbin**](#DeleteTaskmanagementWorkbin) | **Delete** /api/v2/taskmanagement/workbins/{workbinId} | Delete a workbin |
 | [**DeleteTaskmanagementWorkitem**](#DeleteTaskmanagementWorkitem) | **Delete** /api/v2/taskmanagement/workitems/{workitemId} | Delete a workitem |
+| [**DeleteTaskmanagementWorkitemsBulkAddJob**](#DeleteTaskmanagementWorkitemsBulkAddJob) | **Delete** /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId} | Delete a bulk add job |
+| [**DeleteTaskmanagementWorkitemsBulkTerminateJob**](#DeleteTaskmanagementWorkitemsBulkTerminateJob) | **Delete** /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId} | Delete a Bulk job |
 | [**DeleteTaskmanagementWorkitemsSchema**](#DeleteTaskmanagementWorkitemsSchema) | **Delete** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Delete a schema |
 | [**DeleteTaskmanagementWorktype**](#DeleteTaskmanagementWorktype) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId} | Delete a worktype |
 | [**DeleteTaskmanagementWorktypeFlowsDatebasedRule**](#DeleteTaskmanagementWorktypeFlowsDatebasedRule) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId} | Delete a date based rule |
@@ -24,6 +26,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTaskmanagementWorkitemVersion**](#GetTaskmanagementWorkitemVersion) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/versions/{entityVersion} | Get a version of a workitem |
 | [**GetTaskmanagementWorkitemVersions**](#GetTaskmanagementWorkitemVersions) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/versions | Get all versions of a workitem |
 | [**GetTaskmanagementWorkitemWrapups**](#GetTaskmanagementWorkitemWrapups) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/wrapups | Get all wrapup codes added for all users for a workitem. |
+| [**GetTaskmanagementWorkitemsBulkAddJob**](#GetTaskmanagementWorkitemsBulkAddJob) | **Get** /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId} | Get the bulk add job associated with the job id. |
+| [**GetTaskmanagementWorkitemsBulkAddJobResults**](#GetTaskmanagementWorkitemsBulkAddJobResults) | **Get** /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results | Get bulk add job results. |
+| [**GetTaskmanagementWorkitemsBulkJobsUsersMe**](#GetTaskmanagementWorkitemsBulkJobsUsersMe) | **Get** /api/v2/taskmanagement/workitems/bulk/jobs/users/me | Get bulk jobs created by the currently logged in user. |
+| [**GetTaskmanagementWorkitemsBulkTerminateJob**](#GetTaskmanagementWorkitemsBulkTerminateJob) | **Get** /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId} | Get the bulk job associated with the job id. |
+| [**GetTaskmanagementWorkitemsBulkTerminateJobResults**](#GetTaskmanagementWorkitemsBulkTerminateJobResults) | **Get** /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results | Get bulk terminate job results. |
 | [**GetTaskmanagementWorkitemsQueryJob**](#GetTaskmanagementWorkitemsQueryJob) | **Get** /api/v2/taskmanagement/workitems/query/jobs/{jobId} | Get the workitem query job associated with the job id. |
 | [**GetTaskmanagementWorkitemsQueryJobResults**](#GetTaskmanagementWorkitemsQueryJobResults) | **Get** /api/v2/taskmanagement/workitems/query/jobs/{jobId}/results | Get results from for workitem query job  |
 | [**GetTaskmanagementWorkitemsSchema**](#GetTaskmanagementWorkitemsSchema) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Get a schema |
@@ -47,6 +54,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchTaskmanagementWorkitemAssignment**](#PatchTaskmanagementWorkitemAssignment) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/assignment | Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
 | [**PatchTaskmanagementWorkitemUserWrapups**](#PatchTaskmanagementWorkitemUserWrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups | Add/Remove a wrapup code for a given user in a workitem. |
 | [**PatchTaskmanagementWorkitemUsersMeWrapups**](#PatchTaskmanagementWorkitemUsersMeWrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups | Add/Remove a wrapup code for the current user in a workitem. |
+| [**PatchTaskmanagementWorkitemsBulkAddJob**](#PatchTaskmanagementWorkitemsBulkAddJob) | **Patch** /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId} | Update workitem bulk add job. |
+| [**PatchTaskmanagementWorkitemsBulkTerminateJob**](#PatchTaskmanagementWorkitemsBulkTerminateJob) | **Patch** /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId} | Update workitem bulk terminate job. |
 | [**PatchTaskmanagementWorktype**](#PatchTaskmanagementWorktype) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId} | Update the attributes of a worktype |
 | [**PatchTaskmanagementWorktypeFlowsDatebasedRule**](#PatchTaskmanagementWorktypeFlowsDatebasedRule) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId} | Update the attributes of a date based rule |
 | [**PatchTaskmanagementWorktypeFlowsOnattributechangeRule**](#PatchTaskmanagementWorktypeFlowsOnattributechangeRule) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId} | Update the attributes of a rule |
@@ -58,6 +67,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTaskmanagementWorkitemDisconnect**](#PostTaskmanagementWorkitemDisconnect) | **Post** /api/v2/taskmanagement/workitems/{workitemId}/disconnect | Disconnect the assignee of the workitem |
 | [**PostTaskmanagementWorkitemTerminate**](#PostTaskmanagementWorkitemTerminate) | **Post** /api/v2/taskmanagement/workitems/{workitemId}/terminate | Terminate a workitem |
 | [**PostTaskmanagementWorkitems**](#PostTaskmanagementWorkitems) | **Post** /api/v2/taskmanagement/workitems | Create a workitem |
+| [**PostTaskmanagementWorkitemsBulkAddJobs**](#PostTaskmanagementWorkitemsBulkAddJobs) | **Post** /api/v2/taskmanagement/workitems/bulk/add/jobs | Create a workitem bulk add job. |
+| [**PostTaskmanagementWorkitemsBulkTerminateJobs**](#PostTaskmanagementWorkitemsBulkTerminateJobs) | **Post** /api/v2/taskmanagement/workitems/bulk/terminate/jobs | Create a workitem bulk terminate job. |
 | [**PostTaskmanagementWorkitemsQuery**](#PostTaskmanagementWorkitemsQuery) | **Post** /api/v2/taskmanagement/workitems/query | Query for workitems |
 | [**PostTaskmanagementWorkitemsQueryJobs**](#PostTaskmanagementWorkitemsQueryJobs) | **Post** /api/v2/taskmanagement/workitems/query/jobs | Create a workitem query job |
 | [**PostTaskmanagementWorkitemsSchemas**](#PostTaskmanagementWorkitemsSchemas) | **Post** /api/v2/taskmanagement/workitems/schemas | Create a schema |
@@ -187,6 +198,128 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteTaskmanagementWorkitemsBulkAddJob
+
+> void DeleteTaskmanagementWorkitemsBulkAddJob (string bulkJobId)
+
+
+Delete a bulk add job
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTaskmanagementWorkitemsBulkAddJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+
+            try
+            { 
+                // Delete a bulk add job
+                apiInstance.DeleteTaskmanagementWorkitemsBulkAddJob(bulkJobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.DeleteTaskmanagementWorkitemsBulkAddJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteTaskmanagementWorkitemsBulkTerminateJob
+
+> void DeleteTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId)
+
+
+Delete a Bulk job
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTaskmanagementWorkitemsBulkTerminateJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+
+            try
+            { 
+                // Delete a Bulk job
+                apiInstance.DeleteTaskmanagementWorkitemsBulkTerminateJob(bulkJobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.DeleteTaskmanagementWorkitemsBulkTerminateJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
 
 ### Return type
 
@@ -1245,6 +1378,322 @@ namespace Example
 ### Return type
 
 [**WorkitemWrapupEntityListing**](WorkitemWrapupEntityListing)
+
+
+## GetTaskmanagementWorkitemsBulkAddJob
+
+> [**BulkJob**](BulkJob) GetTaskmanagementWorkitemsBulkAddJob (string bulkJobId)
+
+
+Get the bulk add job associated with the job id.
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsBulkAddJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+
+            try
+            { 
+                // Get the bulk add job associated with the job id.
+                BulkJob result = apiInstance.GetTaskmanagementWorkitemsBulkAddJob(bulkJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsBulkAddJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## GetTaskmanagementWorkitemsBulkAddJobResults
+
+> [**BulkJobAddResponse**](BulkJobAddResponse) GetTaskmanagementWorkitemsBulkAddJobResults (string bulkJobId)
+
+
+Get bulk add job results.
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJobResults:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsBulkAddJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+
+            try
+            { 
+                // Get bulk add job results.
+                BulkJobAddResponse result = apiInstance.GetTaskmanagementWorkitemsBulkAddJobResults(bulkJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsBulkAddJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
+
+### Return type
+
+[**BulkJobAddResponse**](BulkJobAddResponse)
+
+
+## GetTaskmanagementWorkitemsBulkJobsUsersMe
+
+> [**BulkJobsListing**](BulkJobsListing) GetTaskmanagementWorkitemsBulkJobsUsersMe (string after = null, int? pageSize = null, string sortOrder = null, string action = null)
+
+
+Get bulk jobs created by the currently logged in user.
+
+Requires ANY permissions: 
+
+* workitems:bulkJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsBulkJobsUsersMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = 56;  // int? | Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)  (default to 25)
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to descending)
+            var action = action_example;  // string | The bulk job action. (optional) 
+
+            try
+            { 
+                // Get bulk jobs created by the currently logged in user.
+                BulkJobsListing result = apiInstance.GetTaskmanagementWorkitemsBulkJobsUsersMe(after, pageSize, sortOrder, action);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsBulkJobsUsersMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
+| **action** | **string**| The bulk job action. | [optional] <br />**Values**: TerminateWorkitems, AddWorkitems |
+
+### Return type
+
+[**BulkJobsListing**](BulkJobsListing)
+
+
+## GetTaskmanagementWorkitemsBulkTerminateJob
+
+> [**BulkJob**](BulkJob) GetTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId)
+
+
+Get the bulk job associated with the job id.
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsBulkTerminateJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+
+            try
+            { 
+                // Get the bulk job associated with the job id.
+                BulkJob result = apiInstance.GetTaskmanagementWorkitemsBulkTerminateJob(bulkJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsBulkTerminateJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## GetTaskmanagementWorkitemsBulkTerminateJobResults
+
+> [**BulkJobTerminateResultsResponse**](BulkJobTerminateResultsResponse) GetTaskmanagementWorkitemsBulkTerminateJobResults (string bulkJobId)
+
+
+Get bulk terminate job results.
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJobResults:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsBulkTerminateJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+
+            try
+            { 
+                // Get bulk terminate job results.
+                BulkJobTerminateResultsResponse result = apiInstance.GetTaskmanagementWorkitemsBulkTerminateJobResults(bulkJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsBulkTerminateJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
+
+### Return type
+
+[**BulkJobTerminateResultsResponse**](BulkJobTerminateResultsResponse)
 
 
 ## GetTaskmanagementWorkitemsQueryJob
@@ -2727,6 +3176,134 @@ namespace Example
 [**WorkitemWrapup**](WorkitemWrapup)
 
 
+## PatchTaskmanagementWorkitemsBulkAddJob
+
+> [**BulkJob**](BulkJob) PatchTaskmanagementWorkitemsBulkAddJob (string bulkJobId, BulkJobUpdate body)
+
+
+Update workitem bulk add job.
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTaskmanagementWorkitemsBulkAddJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+            var body = new BulkJobUpdate(); // BulkJobUpdate | Bulk add job update request
+
+            try
+            { 
+                // Update workitem bulk add job.
+                BulkJob result = apiInstance.PatchTaskmanagementWorkitemsBulkAddJob(bulkJobId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PatchTaskmanagementWorkitemsBulkAddJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
+| **body** | [**BulkJobUpdate**](BulkJobUpdate)| Bulk add job update request |  |
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## PatchTaskmanagementWorkitemsBulkTerminateJob
+
+> [**BulkJob**](BulkJob) PatchTaskmanagementWorkitemsBulkTerminateJob (string bulkJobId, BulkJobUpdate body)
+
+
+Update workitem bulk terminate job.
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTaskmanagementWorkitemsBulkTerminateJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var bulkJobId = bulkJobId_example;  // string | Bulk job id
+            var body = new BulkJobUpdate(); // BulkJobUpdate | Bulk job update request
+
+            try
+            { 
+                // Update workitem bulk terminate job.
+                BulkJob result = apiInstance.PatchTaskmanagementWorkitemsBulkTerminateJob(bulkJobId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PatchTaskmanagementWorkitemsBulkTerminateJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkJobId** | **string**| Bulk job id |  |
+| **body** | [**BulkJobUpdate**](BulkJobUpdate)| Bulk job update request |  |
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
 ## PatchTaskmanagementWorktype
 
 > [**Worktype**](Worktype) PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body)
@@ -3429,6 +4006,130 @@ namespace Example
 [**Workitem**](Workitem)
 
 
+## PostTaskmanagementWorkitemsBulkAddJobs
+
+> [**BulkJob**](BulkJob) PostTaskmanagementWorkitemsBulkAddJobs (BulkJobAddRequest body)
+
+
+Create a workitem bulk add job.
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTaskmanagementWorkitemsBulkAddJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var body = new BulkJobAddRequest(); // BulkJobAddRequest | Bulk job definition.
+
+            try
+            { 
+                // Create a workitem bulk add job.
+                BulkJob result = apiInstance.PostTaskmanagementWorkitemsBulkAddJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PostTaskmanagementWorkitemsBulkAddJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkJobAddRequest**](BulkJobAddRequest)| Bulk job definition. |  |
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## PostTaskmanagementWorkitemsBulkTerminateJobs
+
+> [**BulkJob**](BulkJob) PostTaskmanagementWorkitemsBulkTerminateJobs (BulkJobTerminateRequest body)
+
+
+Create a workitem bulk terminate job.
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTaskmanagementWorkitemsBulkTerminateJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var body = new BulkJobTerminateRequest(); // BulkJobTerminateRequest | Bulk job definition.
+
+            try
+            { 
+                // Create a workitem bulk terminate job.
+                BulkJob result = apiInstance.PostTaskmanagementWorkitemsBulkTerminateJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PostTaskmanagementWorkitemsBulkTerminateJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkJobTerminateRequest**](BulkJobTerminateRequest)| Bulk job definition. |  |
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
 ## PostTaskmanagementWorkitemsQuery
 
 > [**WorkitemPostQueryEntityListing**](WorkitemPostQueryEntityListing) PostTaskmanagementWorkitemsQuery (WorkitemQueryPostRequest body)
@@ -4063,4 +4764,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 224.0.0_
+_PureCloudPlatform.Client.V2 224.1.0_

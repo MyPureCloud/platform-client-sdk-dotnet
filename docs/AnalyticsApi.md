@@ -93,6 +93,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsReportingSettingsDashboardsBulkRemove**](#PostAnalyticsReportingSettingsDashboardsBulkRemove) | **Post** /api/v2/analytics/reporting/settings/dashboards/bulk/remove | Bulk soft delete dashboard configurations |
 | [**PostAnalyticsReportingSettingsDashboardsQuery**](#PostAnalyticsReportingSettingsDashboardsQuery) | **Post** /api/v2/analytics/reporting/settings/dashboards/query | Query dashboard configurations |
 | [**PostAnalyticsResolutionsAggregatesJobs**](#PostAnalyticsResolutionsAggregatesJobs) | **Post** /api/v2/analytics/resolutions/aggregates/jobs | Query for resolution aggregates asynchronously |
+| [**PostAnalyticsResolutionsAggregatesQuery**](#PostAnalyticsResolutionsAggregatesQuery) | **Post** /api/v2/analytics/resolutions/aggregates/query | Query for resolution aggregates |
 | [**PostAnalyticsRoutingActivityQuery**](#PostAnalyticsRoutingActivityQuery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
 | [**PostAnalyticsSummariesAggregatesJobs**](#PostAnalyticsSummariesAggregatesJobs) | **Post** /api/v2/analytics/summaries/aggregates/jobs | Query for summary aggregates asynchronously |
 | [**PostAnalyticsSummariesAggregatesQuery**](#PostAnalyticsSummariesAggregatesQuery) | **Post** /api/v2/analytics/summaries/aggregates/query | Query for summary aggregates |
@@ -5710,6 +5711,68 @@ namespace Example
 [**AsyncQueryResponse**](AsyncQueryResponse)
 
 
+## PostAnalyticsResolutionsAggregatesQuery
+
+> [**ResolutionAggregateQueryResponse**](ResolutionAggregateQueryResponse) PostAnalyticsResolutionsAggregatesQuery (ResolutionAggregationQuery body)
+
+
+Query for resolution aggregates
+
+Requires ANY permissions: 
+
+* analytics:resolutionAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsResolutionsAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new ResolutionAggregationQuery(); // ResolutionAggregationQuery | query
+
+            try
+            { 
+                // Query for resolution aggregates
+                ResolutionAggregateQueryResponse result = apiInstance.PostAnalyticsResolutionsAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsResolutionsAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ResolutionAggregationQuery**](ResolutionAggregationQuery)| query |  |
+
+### Return type
+
+[**ResolutionAggregateQueryResponse**](ResolutionAggregateQueryResponse)
+
+
 ## PostAnalyticsRoutingActivityQuery
 
 > [**RoutingActivityResponse**](RoutingActivityResponse) PostAnalyticsRoutingActivityQuery (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
@@ -6788,4 +6851,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 224.0.0_
+_PureCloudPlatform.Client.V2 224.1.0_

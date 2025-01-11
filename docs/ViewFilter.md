@@ -218,7 +218,10 @@
 | **FilterUsersByManagerIds** | **List&lt;string&gt;** | The manager ids used to fetch associated users for the view | [optional] |
 | **SlideshowIds** | **List&lt;string&gt;** | List of Dashboard slideshowIds to be filtered | [optional] |
 | **Conferenced** | **bool?** | Filter to indicate if the conversation has conference | [optional] |
+| **Video** | **bool?** | Filter to indicate if the conversation has video | [optional] |
+| **LinkedInteraction** | **bool?** | Filter to indicate if the conversation has linked interaction | [optional] |
+| **RecommendationSources** | **List&lt;string&gt;** | List of recommendation sources for filtering recommendation details pane | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 224.0.0_
+_PureCloudPlatform.Client.V2 224.1.0_

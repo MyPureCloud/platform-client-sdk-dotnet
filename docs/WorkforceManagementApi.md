@@ -50,6 +50,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTrade**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTrade) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId} | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId} | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementBusinessunitIntradayPlanninggroups**](#GetWorkforcemanagementBusinessunitIntradayPlanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups | Get intraday planning groups for the given date |
+| [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session | Get the latest session for the business unit ID |
+| [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId} | Get the session details for the session ID |
+| [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId} | Get the snapshot details for the snapshot ID |
 | [**GetWorkforcemanagementBusinessunitManagementunits**](#GetWorkforcemanagementBusinessunitManagementunits) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits | Get all authorized management units in the business unit |
 | [**GetWorkforcemanagementBusinessunitPlanninggroup**](#GetWorkforcemanagementBusinessunitPlanninggroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Get a planning group |
 | [**GetWorkforcemanagementBusinessunitPlanninggroups**](#GetWorkforcemanagementBusinessunitPlanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Gets list of planning groups |
@@ -3210,6 +3213,204 @@ namespace Example
 ### Return type
 
 [**WfmIntradayPlanningGroupListing**](WfmIntradayPlanningGroupListing)
+
+
+## GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession
+
+> [**ContinuousForecastGetSessionResponse**](ContinuousForecastGetSessionResponse) GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession (string businessUnitId)
+
+
+Get the latest session for the business unit ID
+
+GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* wfm:mainForecast:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | 
+
+            try
+            { 
+                // Get the latest session for the business unit ID
+                ContinuousForecastGetSessionResponse result = apiInstance.GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**|  |  |
+
+### Return type
+
+[**ContinuousForecastGetSessionResponse**](ContinuousForecastGetSessionResponse)
+
+
+## GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId
+
+> [**ContinuousForecastSessionResponse**](ContinuousForecastSessionResponse) GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId (string businessUnitId, string sessionId)
+
+
+Get the session details for the session ID
+
+GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* wfm:mainForecast:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | 
+            var sessionId = sessionId_example;  // string | 
+
+            try
+            { 
+                // Get the session details for the session ID
+                ContinuousForecastSessionResponse result = apiInstance.GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId(businessUnitId, sessionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**|  |  |
+| **sessionId** | **string**|  |  |
+
+### Return type
+
+[**ContinuousForecastSessionResponse**](ContinuousForecastSessionResponse)
+
+
+## GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId
+
+> [**ContinuousForecastSnapshotResponse**](ContinuousForecastSnapshotResponse) GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId (string businessUnitId, string sessionId, string snapshotId)
+
+
+Get the snapshot details for the snapshot ID
+
+GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* wfm:mainForecast:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | 
+            var sessionId = sessionId_example;  // string | 
+            var snapshotId = snapshotId_example;  // string | 
+
+            try
+            { 
+                // Get the snapshot details for the snapshot ID
+                ContinuousForecastSnapshotResponse result = apiInstance.GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId(businessUnitId, sessionId, snapshotId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**|  |  |
+| **sessionId** | **string**|  |  |
+| **snapshotId** | **string**|  |  |
+
+### Return type
+
+[**ContinuousForecastSnapshotResponse**](ContinuousForecastSnapshotResponse)
 
 
 ## GetWorkforcemanagementBusinessunitManagementunits
@@ -15955,4 +16156,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 224.0.0_
+_PureCloudPlatform.Client.V2 224.1.0_
