@@ -1609,13 +1609,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Favorites for "Favorites"
             /// </summary>
             [EnumMember(Value = "Favorites")]
-            Favorites,
-            
-            /// <summary>
-            /// Enum Deleted for "Deleted"
-            /// </summary>
-            [EnumMember(Value = "Deleted")]
-            Deleted
+            Favorites
         }
         /// <summary>
         /// The type of dashboard access being filtered

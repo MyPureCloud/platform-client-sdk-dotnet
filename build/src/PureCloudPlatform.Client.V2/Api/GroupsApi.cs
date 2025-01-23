@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>Object</returns>
         
         Object DeleteGroupMembers (string groupId, string ids);
@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>ApiResponse of Object</returns>
         
         ApiResponse<Object> DeleteGroupMembersWithHttpInfo (string groupId, string ids);
@@ -554,7 +554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>Task of Object</returns>
         
         System.Threading.Tasks.Task<Object> DeleteGroupMembersAsync (string groupId, string ids);
@@ -567,7 +567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids);
@@ -1496,7 +1496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>Object</returns>
         
         public Object DeleteGroupMembers (string groupId, string ids)
@@ -1511,7 +1511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>ApiResponse of Object</returns>
         
         public ApiResponse< Object > DeleteGroupMembersWithHttpInfo (string groupId, string ids)
@@ -1607,7 +1607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>Task of Object</returns>
         
         public async System.Threading.Tasks.Task<Object> DeleteGroupMembersAsync (string groupId, string ids)
@@ -1623,7 +1623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="ids">Comma separated list of userIds to remove</param>
+        /// <param name="ids">Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids)

@@ -968,12 +968,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>DashboardConfigurationListing</returns>
         
-        DashboardConfigurationListing GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+        DashboardConfigurationListing GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get list of dashboard configurations
@@ -985,12 +986,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>ApiResponse of DashboardConfigurationListing</returns>
         
-        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get list of dashboards for an user
@@ -3714,12 +3716,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>Task of DashboardConfigurationListing</returns>
         
-        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryAsync (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryAsync (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get list of dashboard configurations
@@ -3731,12 +3734,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get list of dashboards for an user
@@ -13274,14 +13278,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>DashboardConfigurationListing</returns>
         
-        public DashboardConfigurationListing GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        public DashboardConfigurationListing GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize);
+             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo(dashboardType, dashboardAccessFilter, name, dashboardState, sortBy, pageNumber, pageSize);
              return localVarResponse.Data;
         }
 
@@ -13293,12 +13298,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>ApiResponse of DashboardConfigurationListing</returns>
         
-        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'dashboardType' is set
             if (dashboardType == null)
@@ -13341,6 +13347,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (dashboardType != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardType", this.Configuration.ApiClient.ParameterToString(dashboardType)));
+            if (dashboardState != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardState", this.Configuration.ApiClient.ParameterToString(dashboardState)));
             if (dashboardAccessFilter != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardAccessFilter", this.Configuration.ApiClient.ParameterToString(dashboardAccessFilter)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
@@ -13397,14 +13404,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>Task of DashboardConfigurationListing</returns>
         
-        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryAsync (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryAsync (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize);
+             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo(dashboardType, dashboardAccessFilter, name, dashboardState, sortBy, pageNumber, pageSize);
              return localVarResponse.Data;
 
         }
@@ -13417,12 +13425,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dashboardType">List dashboard of given type</param>
         /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
         /// <param name="name">name of the dashboard (optional)</param>
+        /// <param name="dashboardState">List dashboard of given state (optional, default to Active)</param>
         /// <param name="sortBy"> (optional, default to "desc")</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <param name="pageSize"> (optional, default to 9)</param>
         /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'dashboardType' is set
             if (dashboardType == null)
@@ -13467,6 +13476,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (dashboardType != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardType", this.Configuration.ApiClient.ParameterToString(dashboardType)));
+            if (dashboardState != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardState", this.Configuration.ApiClient.ParameterToString(dashboardState)));
             if (dashboardAccessFilter != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardAccessFilter", this.Configuration.ApiClient.ParameterToString(dashboardAccessFilter)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));

@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ai,
             
             /// <summary>
+            /// Enum Dynamicdatetime for "DynamicDateTime"
+            /// </summary>
+            [EnumMember(Value = "DynamicDateTime")]
+            Dynamicdatetime,
+            
+            /// <summary>
             /// Enum Dynamiclist for "DynamicList"
             /// </summary>
             [EnumMember(Value = "DynamicList")]

@@ -30,13 +30,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Intervals">A list of intervals during which to run the associated Campaign. (required).</param>
+        /// <param name="Recurrences">Recurring schedules of the campaign.</param>
         /// <param name="TimeZone">The time zone for this email campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones.</param>
         /// <param name="EmailCampaign">The Campaign that this email campaign schedule is for. (required).</param>
-        public EmailCampaignSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, DivisionedDomainEntityRef EmailCampaign = null)
+        public EmailCampaignSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, List<Reoccurrence> Recurrences = null, string TimeZone = null, DivisionedDomainEntityRef EmailCampaign = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Intervals = Intervals;
+            this.Recurrences = Recurrences;
             this.TimeZone = TimeZone;
             this.EmailCampaign = EmailCampaign;
             
@@ -98,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Recurring schedules of the campaign
+        /// </summary>
+        /// <value>Recurring schedules of the campaign</value>
+        [DataMember(Name="recurrences", EmitDefaultValue=false)]
+        public List<Reoccurrence> Recurrences { get; set; }
+
+
+
+        /// <summary>
         /// The time zone for this email campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones
         /// </summary>
         /// <value>The time zone for this email campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones</value>
@@ -138,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
+            sb.Append("  Recurrences: ").Append(Recurrences).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  EmailCampaign: ").Append(EmailCampaign).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -212,6 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Intervals.SequenceEqual(other.Intervals)
                 ) &&
                 (
+                    this.Recurrences == other.Recurrences ||
+                    this.Recurrences != null &&
+                    this.Recurrences.SequenceEqual(other.Recurrences)
+                ) &&
+                (
                     this.TimeZone == other.TimeZone ||
                     this.TimeZone != null &&
                     this.TimeZone.Equals(other.TimeZone)
@@ -256,6 +273,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Intervals != null)
                     hash = hash * 59 + this.Intervals.GetHashCode();
+
+                if (this.Recurrences != null)
+                    hash = hash * 59 + this.Recurrences.GetHashCode();
 
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();

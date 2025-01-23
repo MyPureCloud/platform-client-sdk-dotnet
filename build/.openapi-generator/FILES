@@ -973,6 +973,7 @@ docs/ConversationCallbackEventTopicWrapup.md
 docs/ConversationCategoriesEntityListing.md
 docs/ConversationCategory.md
 docs/ConversationChannel.md
+docs/ConversationChannelLocation.md
 docs/ConversationChannelMetadata.md
 docs/ConversationChat.md
 docs/ConversationChatEventTopicChatConversation.md
@@ -3704,6 +3705,7 @@ docs/GetWorkforcemanagementCalendarDataIcs-example.txt
 docs/GetWorkforcemanagementCalendarUrlIcs-example.txt
 docs/GetWorkforcemanagementHistoricaldataDeletejob-example.txt
 docs/GetWorkforcemanagementHistoricaldataImportstatus-example.txt
+docs/GetWorkforcemanagementHistoricaldataImportstatusJobId-example.txt
 docs/GetWorkforcemanagementIntegrationsHris-example.txt
 docs/GetWorkforcemanagementIntegrationsHrisTimeofftypesJob-example.txt
 docs/GetWorkforcemanagementManagementunit-example.txt
@@ -3795,6 +3797,7 @@ docs/HistoricalAdherenceQueryResult.md
 docs/HistoricalData.md
 docs/HistoricalImportDeleteJobResponse.md
 docs/HistoricalImportStatus.md
+docs/HistoricalImportStatusJobResponse.md
 docs/HistoricalImportStatusListing.md
 docs/HistoricalShrinkageActivityCategoryResponse.md
 docs/HistoricalShrinkageActivityCodeResponse.md
@@ -5862,6 +5865,7 @@ docs/PublishedSurveyFormReference.md
 docs/PunctualityEvent.md
 docs/PureCloud.md
 docs/PureEngage.md
+docs/PushIntegration.md
 docs/PutAlertingAlert-example.txt
 docs/PutAlertingInteractionstatsAlert-example.txt
 docs/PutAlertingInteractionstatsRule-example.txt
@@ -7467,6 +7471,7 @@ docs/ValidateWorkPlanResponse.md
 docs/ValidationError.md
 docs/ValidationLimits.md
 docs/ValidationResult.md
+docs/ValidationServiceAsyncResponse.md
 docs/ValidationServiceRequest.md
 docs/ValueWrapperActivityPlanServiceGoalImpactOverrides.md
 docs/ValueWrapperDate.md
@@ -8991,6 +8996,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCategoriesEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCategory.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChannel.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationChannelLocation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChannelMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChat.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicChatConversation.cs
@@ -10197,6 +10203,7 @@ src/PureCloudPlatform.Client.V2/Model/HistoricalAdherenceQueryResult.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalData.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalImportDeleteJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalImportStatus.cs
+src/PureCloudPlatform.Client.V2/Model/HistoricalImportStatusJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalImportStatusListing.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageActivityCategoryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageActivityCodeResponse.cs
@@ -11296,6 +11303,7 @@ src/PureCloudPlatform.Client.V2/Model/PublishedSurveyFormReference.cs
 src/PureCloudPlatform.Client.V2/Model/PunctualityEvent.cs
 src/PureCloudPlatform.Client.V2/Model/PureCloud.cs
 src/PureCloudPlatform.Client.V2/Model/PureEngage.cs
+src/PureCloudPlatform.Client.V2/Model/PushIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/QMAuditQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditLogMessage.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryExecutionResultsResponse.cs
@@ -12611,6 +12619,7 @@ src/PureCloudPlatform.Client.V2/Model/ValidateWorkPlanResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationError.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationLimits.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationResult.cs
+src/PureCloudPlatform.Client.V2/Model/ValidationServiceAsyncResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationServiceRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperActivityPlanServiceGoalImpactOverrides.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperDate.cs

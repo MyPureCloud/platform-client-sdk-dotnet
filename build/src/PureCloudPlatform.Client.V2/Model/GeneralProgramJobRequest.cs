@@ -184,6 +184,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Heil,
             
             /// <summary>
+            /// Enum Hiin for "hi-IN"
+            /// </summary>
+            [EnumMember(Value = "hi-IN")]
+            Hiin,
+            
+            /// <summary>
             /// Enum Itit for "it-IT"
             /// </summary>
             [EnumMember(Value = "it-IT")]

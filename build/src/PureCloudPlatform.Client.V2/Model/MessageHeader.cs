@@ -19,13 +19,61 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class MessageHeader :  IEquatable<MessageHeader>
     {
         /// <summary>
+        /// Defines the content type of the Header in message
+        /// </summary>
+        /// <value>Defines the content type of the Header in message</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Text for "Text"
+            /// </summary>
+            [EnumMember(Value = "Text")]
+            Text,
+            
+            /// <summary>
+            /// Enum Image for "Image"
+            /// </summary>
+            [EnumMember(Value = "Image")]
+            Image
+        }
+        /// <summary>
+        /// Defines the content type of the Header in message
+        /// </summary>
+        /// <value>Defines the content type of the Header in message</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="MessageHeader" /> class.
         /// </summary>
-        public MessageHeader()
+        /// <param name="Type">Defines the content type of the Header in message.</param>
+        /// <param name="Content">Content associated with the header in the message.</param>
+        public MessageHeader(TypeEnum? Type = null, string Content = null)
         {
+            this.Type = Type;
+            this.Content = Content;
             
         }
         
+
+
+
+
+        /// <summary>
+        /// Content associated with the header in the message
+        /// </summary>
+        /// <value>Content associated with the header in the message</value>
+        [DataMember(Name="content", EmitDefaultValue=false)]
+        public string Content { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +84,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class MessageHeader {\n");
 
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +125,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.Content == other.Content ||
+                    this.Content != null &&
+                    this.Content.Equals(other.Content)
+                );
         }
 
         /// <summary>
@@ -89,6 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.Content != null)
+                    hash = hash * 59 + this.Content.GetHashCode();
+
                 return hash;
             }
         }

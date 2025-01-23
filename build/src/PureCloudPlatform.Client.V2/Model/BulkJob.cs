@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Cancelled for "Cancelled"
             /// </summary>
             [EnumMember(Value = "Cancelled")]
-            Cancelled
+            Cancelled,
+            
+            /// <summary>
+            /// Enum Terminated for "Terminated"
+            /// </summary>
+            [EnumMember(Value = "Terminated")]
+            Terminated
         }
         /// <summary>
         /// The bulk job action. This determines what the bulk job does, for example, terminate workitems.

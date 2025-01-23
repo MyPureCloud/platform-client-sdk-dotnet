@@ -106,7 +106,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Team for "Team"
             /// </summary>
             [EnumMember(Value = "Team")]
-            Team
+            Team,
+            
+            /// <summary>
+            /// Enum User for "User"
+            /// </summary>
+            [EnumMember(Value = "User")]
+            User
         }
         /// <summary>
         /// The learning module rule operation

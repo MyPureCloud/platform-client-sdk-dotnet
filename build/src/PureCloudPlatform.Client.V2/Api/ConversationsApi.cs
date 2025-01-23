@@ -1092,57 +1092,57 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ChatConversation</returns>
-        
+        [Obsolete]
         ChatConversation GetConversationsChat (string conversationId);
 
         /// <summary>
         /// Get chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ApiResponse of ChatConversation</returns>
-        
+        [Obsolete]
         ApiResponse<ChatConversation> GetConversationsChatWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>WebChatMessage</returns>
-        
+        [Obsolete]
         WebChatMessage GetConversationsChatMessage (string conversationId, string messageId);
 
         /// <summary>
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatMessage> GetConversationsChatMessageWithHttpInfo (string conversationId, string messageId);
 
         /// <summary>
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -1151,14 +1151,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>WebChatMessageEntityList</returns>
-        
+        [Obsolete]
         WebChatMessageEntityList GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -1167,14 +1167,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>ApiResponse of WebChatMessageEntityList</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatMessageEntityList> GetConversationsChatMessagesWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -1182,14 +1182,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         AssignedWrapupCode GetConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -1197,83 +1197,83 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         ApiResponse<AssignedWrapupCode> GetConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         AssignedWrapupCode GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         ApiResponse<AssignedWrapupCode> GetConversationsChatParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         List<WrapupCode> GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         ApiResponse<List<WrapupCode>> GetConversationsChatParticipantWrapupcodesWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
         /// Get active chat conversations for the logged in user
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatConversationEntityListing</returns>
-        
+        [Obsolete]
         ChatConversationEntityListing GetConversationsChats ();
 
         /// <summary>
         /// Get active chat conversations for the logged in user
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatConversationEntityListing</returns>
-        
+        [Obsolete]
         ApiResponse<ChatConversationEntityListing> GetConversationsChatsWithHttpInfo ();
 
         /// <summary>
@@ -3000,89 +3000,89 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
-        
+        [Obsolete]
         Conversation PatchConversationsChat (string conversationId, Conversation body);
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
-        
+        [Obsolete]
         ApiResponse<Conversation> PatchConversationsChatWithHttpInfo (string conversationId, Conversation body);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PatchConversationsChatParticipantWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ParticipantAttributes</returns>
-        
+        [Obsolete]
         ParticipantAttributes PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of ParticipantAttributes</returns>
-        
+        [Obsolete]
         ApiResponse<ParticipantAttributes> PatchConversationsChatParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3090,14 +3090,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Object</returns>
-        
+        [Obsolete]
         Object PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3105,7 +3105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PatchConversationsChatParticipantCommunicationWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
@@ -4694,61 +4694,61 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send a message on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>WebChatMessage</returns>
-        
+        [Obsolete]
         WebChatMessage PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body);
 
         /// <summary>
         /// Send a message on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatMessage> PostConversationsChatCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body);
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>WebChatTyping</returns>
-        
+        [Obsolete]
         WebChatTyping PostConversationsChatCommunicationTyping (string conversationId, string communicationId);
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>ApiResponse of WebChatTyping</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatTyping> PostConversationsChatCommunicationTypingWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -4756,14 +4756,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -4771,59 +4771,59 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PostConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PostConversationsChatParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body);
 
         /// <summary>
         /// Create a web chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>ChatConversation</returns>
-        
+        [Obsolete]
         ChatConversation PostConversationsChats (CreateWebChatRequest body);
 
         /// <summary>
         /// Create a web chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>ApiResponse of ChatConversation</returns>
-        
+        [Obsolete]
         ApiResponse<ChatConversation> PostConversationsChatsWithHttpInfo (CreateWebChatRequest body);
 
         /// <summary>
@@ -5986,26 +5986,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>string</returns>
-        
+        [Obsolete]
         string PutConversationsChatRecordingstate (string conversationId, SetRecordingState body);
 
         /// <summary>
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>ApiResponse of string</returns>
-        
+        [Obsolete]
         ApiResponse<string> PutConversationsChatRecordingstateWithHttpInfo (string conversationId, SetRecordingState body);
 
         /// <summary>
@@ -7368,57 +7368,57 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ChatConversation</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ChatConversation> GetConversationsChatAsync (string conversationId);
 
         /// <summary>
         /// Get chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (ChatConversation)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ChatConversation>> GetConversationsChatAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>Task of WebChatMessage</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatMessage> GetConversationsChatMessageAsync (string conversationId, string messageId);
 
         /// <summary>
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> GetConversationsChatMessageAsyncWithHttpInfo (string conversationId, string messageId);
 
         /// <summary>
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -7427,14 +7427,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of WebChatMessageEntityList</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatMessageEntityList> GetConversationsChatMessagesAsync (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -7443,14 +7443,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (WebChatMessageEntityList)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatMessageEntityList>> GetConversationsChatMessagesAsyncWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -7458,14 +7458,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -7473,83 +7473,83 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsChatParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsChatParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<List<WrapupCode>> GetConversationsChatParticipantWrapupcodesAsync (string conversationId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetConversationsChatParticipantWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
         /// Get active chat conversations for the logged in user
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatConversationEntityListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ChatConversationEntityListing> GetConversationsChatsAsync ();
 
         /// <summary>
         /// Get active chat conversations for the logged in user
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetConversationsChatsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -9276,89 +9276,89 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<Conversation> PatchConversationsChatAsync (string conversationId, Conversation body);
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchConversationsChatAsyncWithHttpInfo (string conversationId, Conversation body);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PatchConversationsChatParticipantAsync (string conversationId, string participantId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsChatParticipantAsyncWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ParticipantAttributes</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsChatParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsChatParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -9366,14 +9366,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of Object</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<Object> PatchConversationsChatParticipantCommunicationAsync (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -9381,7 +9381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsChatParticipantCommunicationAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
@@ -10970,61 +10970,61 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send a message on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>Task of WebChatMessage</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatMessage> PostConversationsChatCommunicationMessagesAsync (string conversationId, string communicationId, CreateWebChatMessageRequest body);
 
         /// <summary>
         /// Send a message on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> PostConversationsChatCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body);
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>Task of WebChatTyping</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatTyping> PostConversationsChatCommunicationTypingAsync (string conversationId, string communicationId);
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>Task of ApiResponse (WebChatTyping)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatTyping>> PostConversationsChatCommunicationTypingAsyncWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -11032,14 +11032,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PostConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -11047,59 +11047,59 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PostConversationsChatParticipantReplaceAsync (string conversationId, string participantId, TransferRequest body);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body);
 
         /// <summary>
         /// Create a web chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>Task of ChatConversation</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ChatConversation> PostConversationsChatsAsync (CreateWebChatRequest body);
 
         /// <summary>
         /// Create a web chat conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>Task of ApiResponse (ChatConversation)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ChatConversation>> PostConversationsChatsAsyncWithHttpInfo (CreateWebChatRequest body);
 
         /// <summary>
@@ -12262,26 +12262,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of string</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<string> PutConversationsChatRecordingstateAsync (string conversationId, SetRecordingState body);
 
         /// <summary>
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<string>> PutConversationsChatRecordingstateAsyncWithHttpInfo (string conversationId, SetRecordingState body);
 
         /// <summary>
@@ -21845,12 +21845,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ChatConversation</returns>
-        
+        [Obsolete]
         public ChatConversation GetConversationsChat (string conversationId)
         {
              ApiResponse<ChatConversation> localVarResponse = GetConversationsChatWithHttpInfo(conversationId);
@@ -21859,12 +21859,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ApiResponse of ChatConversation</returns>
-        
+        [Obsolete]
         public ApiResponse< ChatConversation > GetConversationsChatWithHttpInfo (string conversationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -21950,12 +21950,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ChatConversation</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ChatConversation> GetConversationsChatAsync (string conversationId)
         {
              ApiResponse<ChatConversation> localVarResponse = await GetConversationsChatAsyncWithHttpInfo(conversationId);
@@ -21965,12 +21965,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (ChatConversation)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ChatConversation>> GetConversationsChatAsyncWithHttpInfo (string conversationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22058,13 +22058,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a web chat conversation message 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>WebChatMessage</returns>
-        
+        [Obsolete]
         public WebChatMessage GetConversationsChatMessage (string conversationId, string messageId)
         {
              ApiResponse<WebChatMessage> localVarResponse = GetConversationsChatMessageWithHttpInfo(conversationId, messageId);
@@ -22073,13 +22073,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a web chat conversation message 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatMessage > GetConversationsChatMessageWithHttpInfo (string conversationId, string messageId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22169,13 +22169,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a web chat conversation message 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>Task of WebChatMessage</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatMessage> GetConversationsChatMessageAsync (string conversationId, string messageId)
         {
              ApiResponse<WebChatMessage> localVarResponse = await GetConversationsChatMessageAsyncWithHttpInfo(conversationId, messageId);
@@ -22185,13 +22185,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a web chat conversation message 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> GetConversationsChatMessageAsyncWithHttpInfo (string conversationId, string messageId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22284,7 +22284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages of a chat conversation. 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22293,7 +22293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>WebChatMessageEntityList</returns>
-        
+        [Obsolete]
         public WebChatMessageEntityList GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         {
              ApiResponse<WebChatMessageEntityList> localVarResponse = GetConversationsChatMessagesWithHttpInfo(conversationId, after, before, sortOrder, maxResults);
@@ -22302,7 +22302,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages of a chat conversation. 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22311,7 +22311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>ApiResponse of WebChatMessageEntityList</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatMessageEntityList > GetConversationsChatMessagesWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22401,7 +22401,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages of a chat conversation. 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22410,7 +22410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of WebChatMessageEntityList</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatMessageEntityList> GetConversationsChatMessagesAsync (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         {
              ApiResponse<WebChatMessageEntityList> localVarResponse = await GetConversationsChatMessagesAsyncWithHttpInfo(conversationId, after, before, sortOrder, maxResults);
@@ -22420,7 +22420,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages of a chat conversation. 
-        /// The current user must be involved with the conversation to get its messages.
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22429,7 +22429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (WebChatMessageEntityList)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMessageEntityList>> GetConversationsChatMessagesAsyncWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22521,7 +22521,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22529,7 +22529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public AssignedWrapupCode GetConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsChatParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, provisional);
@@ -22538,7 +22538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22546,7 +22546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public ApiResponse< AssignedWrapupCode > GetConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22641,7 +22641,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22649,7 +22649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, provisional);
@@ -22659,7 +22659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22667,7 +22667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22766,14 +22766,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public AssignedWrapupCode GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsChatParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
@@ -22782,14 +22782,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public ApiResponse< AssignedWrapupCode > GetConversationsChatParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22880,14 +22880,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsChatParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsChatParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
@@ -22897,14 +22897,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsChatParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -22998,13 +22998,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         public List<WrapupCode> GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = GetConversationsChatParticipantWrapupcodesWithHttpInfo(conversationId, participantId);
@@ -23013,13 +23013,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         public ApiResponse< List<WrapupCode> > GetConversationsChatParticipantWrapupcodesWithHttpInfo (string conversationId, string participantId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -23109,13 +23109,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<List<WrapupCode>> GetConversationsChatParticipantWrapupcodesAsync (string conversationId, string participantId)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = await GetConversationsChatParticipantWrapupcodesAsyncWithHttpInfo(conversationId, participantId);
@@ -23125,13 +23125,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetConversationsChatParticipantWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -23224,11 +23224,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get active chat conversations for the logged in user 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatConversationEntityListing</returns>
-        
+        [Obsolete]
         public ChatConversationEntityListing GetConversationsChats ()
         {
              ApiResponse<ChatConversationEntityListing> localVarResponse = GetConversationsChatsWithHttpInfo();
@@ -23237,11 +23237,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get active chat conversations for the logged in user 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatConversationEntityListing</returns>
-        
+        [Obsolete]
         public ApiResponse< ChatConversationEntityListing > GetConversationsChatsWithHttpInfo ()
         { 
 
@@ -23323,11 +23323,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get active chat conversations for the logged in user 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatConversationEntityListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ChatConversationEntityListing> GetConversationsChatsAsync ()
         {
              ApiResponse<ChatConversationEntityListing> localVarResponse = await GetConversationsChatsAsyncWithHttpInfo();
@@ -23337,11 +23337,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get active chat conversations for the logged in user 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetConversationsChatsAsyncWithHttpInfo ()
         { 
 
@@ -38104,13 +38104,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
-        
+        [Obsolete]
         public Conversation PatchConversationsChat (string conversationId, Conversation body)
         {
              ApiResponse<Conversation> localVarResponse = PatchConversationsChatWithHttpInfo(conversationId, body);
@@ -38119,13 +38119,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
-        
+        [Obsolete]
         public ApiResponse< Conversation > PatchConversationsChatWithHttpInfo (string conversationId, Conversation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -38220,13 +38220,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<Conversation> PatchConversationsChatAsync (string conversationId, Conversation body)
         {
              ApiResponse<Conversation> localVarResponse = await PatchConversationsChatAsyncWithHttpInfo(conversationId, body);
@@ -38236,13 +38236,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchConversationsChatAsyncWithHttpInfo (string conversationId, Conversation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -38340,14 +38340,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body)
         {
              PatchConversationsChatParticipantWithHttpInfo(conversationId, participantId, body);
@@ -38355,14 +38355,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PatchConversationsChatParticipantWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -38461,14 +38461,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PatchConversationsChatParticipantAsync (string conversationId, string participantId, MediaParticipantRequest body)
         {
              await PatchConversationsChatParticipantAsyncWithHttpInfo(conversationId, participantId, body);
@@ -38477,14 +38477,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsChatParticipantAsyncWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -38587,14 +38587,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ParticipantAttributes</returns>
-        
+        [Obsolete]
         public ParticipantAttributes PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
         {
              ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsChatParticipantAttributesWithHttpInfo(conversationId, participantId, body);
@@ -38603,14 +38603,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of ParticipantAttributes</returns>
-        
+        [Obsolete]
         public ApiResponse< ParticipantAttributes > PatchConversationsChatParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -38709,14 +38709,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ParticipantAttributes</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsChatParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
         {
              ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsChatParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
@@ -38726,14 +38726,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsChatParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -38836,7 +38836,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -38844,7 +38844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Object</returns>
-        
+        [Obsolete]
         public Object PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         {
              ApiResponse<Object> localVarResponse = PatchConversationsChatParticipantCommunicationWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -38853,7 +38853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -38861,7 +38861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object</returns>
-        
+        [Obsolete]
         public ApiResponse< Object > PatchConversationsChatParticipantCommunicationWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -38964,7 +38964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -38972,7 +38972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of Object</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<Object> PatchConversationsChatParticipantCommunicationAsync (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         {
              ApiResponse<Object> localVarResponse = await PatchConversationsChatParticipantCommunicationAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -38982,7 +38982,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -38990,7 +38990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsChatParticipantCommunicationAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53116,14 +53116,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a message on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>WebChatMessage</returns>
-        
+        [Obsolete]
         public WebChatMessage PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body)
         {
              ApiResponse<WebChatMessage> localVarResponse = PostConversationsChatCommunicationMessagesWithHttpInfo(conversationId, communicationId, body);
@@ -53132,14 +53132,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a message on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatMessage > PostConversationsChatCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53238,14 +53238,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a message on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>Task of WebChatMessage</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatMessage> PostConversationsChatCommunicationMessagesAsync (string conversationId, string communicationId, CreateWebChatMessageRequest body)
         {
              ApiResponse<WebChatMessage> localVarResponse = await PostConversationsChatCommunicationMessagesAsyncWithHttpInfo(conversationId, communicationId, body);
@@ -53255,14 +53255,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a message on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> PostConversationsChatCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53365,13 +53365,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>WebChatTyping</returns>
-        
+        [Obsolete]
         public WebChatTyping PostConversationsChatCommunicationTyping (string conversationId, string communicationId)
         {
              ApiResponse<WebChatTyping> localVarResponse = PostConversationsChatCommunicationTypingWithHttpInfo(conversationId, communicationId);
@@ -53380,13 +53380,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>ApiResponse of WebChatTyping</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatTyping > PostConversationsChatCommunicationTypingWithHttpInfo (string conversationId, string communicationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53476,13 +53476,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>Task of WebChatTyping</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatTyping> PostConversationsChatCommunicationTypingAsync (string conversationId, string communicationId)
         {
              ApiResponse<WebChatTyping> localVarResponse = await PostConversationsChatCommunicationTypingAsyncWithHttpInfo(conversationId, communicationId);
@@ -53492,13 +53492,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send a typing-indicator on behalf of a communication in a chat conversation. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <returns>Task of ApiResponse (WebChatTyping)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatTyping>> PostConversationsChatCommunicationTypingAsyncWithHttpInfo (string conversationId, string communicationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53591,7 +53591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -53599,7 +53599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsChatParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -53607,7 +53607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -53615,7 +53615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PostConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53715,7 +53715,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -53723,7 +53723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PostConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -53732,7 +53732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -53740,7 +53740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53844,14 +53844,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
         {
              PostConversationsChatParticipantReplaceWithHttpInfo(conversationId, participantId, body);
@@ -53859,14 +53859,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PostConversationsChatParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -53965,14 +53965,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PostConversationsChatParticipantReplaceAsync (string conversationId, string participantId, TransferRequest body)
         {
              await PostConversationsChatParticipantReplaceAsyncWithHttpInfo(conversationId, participantId, body);
@@ -53981,14 +53981,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -54091,12 +54091,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a web chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>ChatConversation</returns>
-        
+        [Obsolete]
         public ChatConversation PostConversationsChats (CreateWebChatRequest body)
         {
              ApiResponse<ChatConversation> localVarResponse = PostConversationsChatsWithHttpInfo(body);
@@ -54105,12 +54105,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a web chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>ApiResponse of ChatConversation</returns>
-        
+        [Obsolete]
         public ApiResponse< ChatConversation > PostConversationsChatsWithHttpInfo (CreateWebChatRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -54201,12 +54201,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a web chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>Task of ChatConversation</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ChatConversation> PostConversationsChatsAsync (CreateWebChatRequest body)
         {
              ApiResponse<ChatConversation> localVarResponse = await PostConversationsChatsAsyncWithHttpInfo(body);
@@ -54216,12 +54216,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a web chat conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create web chat request</param>
         /// <returns>Task of ApiResponse (ChatConversation)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ChatConversation>> PostConversationsChatsAsyncWithHttpInfo (CreateWebChatRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -64617,13 +64617,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>string</returns>
-        
+        [Obsolete]
         public string PutConversationsChatRecordingstate (string conversationId, SetRecordingState body)
         {
              ApiResponse<string> localVarResponse = PutConversationsChatRecordingstateWithHttpInfo(conversationId, body);
@@ -64632,13 +64632,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>ApiResponse of string</returns>
-        
+        [Obsolete]
         public ApiResponse< string > PutConversationsChatRecordingstateWithHttpInfo (string conversationId, SetRecordingState body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -64733,13 +64733,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of string</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<string> PutConversationsChatRecordingstateAsync (string conversationId, SetRecordingState body)
         {
              ApiResponse<string> localVarResponse = await PutConversationsChatRecordingstateAsyncWithHttpInfo(conversationId, body);
@@ -64749,13 +64749,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<string>> PutConversationsChatRecordingstateAsyncWithHttpInfo (string conversationId, SetRecordingState body)
         { 
             // verify the required parameter 'conversationId' is set

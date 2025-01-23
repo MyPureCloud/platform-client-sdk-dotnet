@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class FlowActivityMetricValue :  IEquatable<FlowActivityMetricValue>
     {
         /// <summary>
-        /// metric
+        /// Metric
         /// </summary>
-        /// <value>metric</value>
+        /// <value>Metric</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MetricEnum
         {
@@ -40,19 +40,23 @@ namespace PureCloudPlatform.Client.V2.Model
             Oflow
         }
         /// <summary>
-        /// metric
+        /// Metric
         /// </summary>
-        /// <value>metric</value>
+        /// <value>Metric</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowActivityMetricValue" /> class.
         /// </summary>
-        /// <param name="Metric">metric.</param>
-        /// <param name="Count">metric count.</param>
-        public FlowActivityMetricValue(MetricEnum? Metric = null, int? Count = null)
+        /// <param name="Metric">Metric.</param>
+        /// <param name="Qualifier">Metric qualifier.</param>
+        /// <param name="EntityIds">Entity ids for matching entities if details were requested.</param>
+        /// <param name="Count">Metric count.</param>
+        public FlowActivityMetricValue(MetricEnum? Metric = null, string Qualifier = null, List<string> EntityIds = null, int? Count = null)
         {
             this.Metric = Metric;
+            this.Qualifier = Qualifier;
+            this.EntityIds = EntityIds;
             this.Count = Count;
             
         }
@@ -62,9 +66,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// metric count
+        /// Metric qualifier
         /// </summary>
-        /// <value>metric count</value>
+        /// <value>Metric qualifier</value>
+        [DataMember(Name="qualifier", EmitDefaultValue=false)]
+        public string Qualifier { get; set; }
+
+
+
+        /// <summary>
+        /// Entity ids for matching entities if details were requested
+        /// </summary>
+        /// <value>Entity ids for matching entities if details were requested</value>
+        [DataMember(Name="entityIds", EmitDefaultValue=false)]
+        public List<string> EntityIds { get; set; }
+
+
+
+        /// <summary>
+        /// Metric count
+        /// </summary>
+        /// <value>Metric count</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
 
@@ -79,6 +101,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class FlowActivityMetricValue {\n");
 
             sb.Append("  Metric: ").Append(Metric).Append("\n");
+            sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
+            sb.Append("  EntityIds: ").Append(EntityIds).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -126,6 +150,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metric.Equals(other.Metric)
                 ) &&
                 (
+                    this.Qualifier == other.Qualifier ||
+                    this.Qualifier != null &&
+                    this.Qualifier.Equals(other.Qualifier)
+                ) &&
+                (
+                    this.EntityIds == other.EntityIds ||
+                    this.EntityIds != null &&
+                    this.EntityIds.SequenceEqual(other.EntityIds)
+                ) &&
+                (
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
@@ -145,6 +179,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
+
+                if (this.Qualifier != null)
+                    hash = hash * 59 + this.Qualifier.GetHashCode();
+
+                if (this.EntityIds != null)
+                    hash = hash * 59 + this.EntityIds.GetHashCode();
 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();

@@ -184,6 +184,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Esco,
             
             /// <summary>
+            /// Enum Kokr for "ko-KR"
+            /// </summary>
+            [EnumMember(Value = "ko-KR")]
+            Kokr,
+            
+            /// <summary>
+            /// Enum Hiin for "hi-IN"
+            /// </summary>
+            [EnumMember(Value = "hi-IN")]
+            Hiin,
+            
+            /// <summary>
             /// Enum Esar for "es-AR"
             /// </summary>
             [EnumMember(Value = "es-AR")]

@@ -475,4 +475,4 @@ namespace Example
 [**UsageExecutionResult**](UsageExecutionResult)
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_

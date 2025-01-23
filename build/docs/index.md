@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 224.1.0
+Documentation version PureCloudPlatform.Client.V2 225.0.0
 
 ## Install Using nuget
 
@@ -444,6 +444,25 @@ var usersApi = new UsersApi();
 // Get the logged in user
 var me = usersApi.GetMe();
 Console.WriteLine($"Hello, {me.DisplayName}");
+```
+
+#### Using multiple ApiClients
+
+Applications which need to create and to maintain distinct Configuration and ApiClient instances (i.e. distinct instances to different Genesys Cloud regions or to the same region, with distinct access tokens), can use the optional `useDefaultApiClient` parameter (set to: false - default: true), of the `Configuration` constructor.
+
+When the `useDefaultApiClient` optional parameter is not specified or is set to true (`useDefaultApiClient` default value is true), the SDK sets or uses the ApiClient of the Default Configuration (static single instance).
+
+**To create and to use distinct Configuration.ApiClient instances, set the `useDefaultApiClient` optional parameter to false.**
+
+```csharp
+        Configuration configuration = new Configuration(useDefaultApiClient: false);
+        ApiClient client =  configuration.ApiClient;
+        PureCloudRegionHosts region = PureCloudRegionHosts.eu_west_1;
+        client.setBasePath(region);
+
+        var apiInstance = new UsersApi(configuration);
+        var userId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";  // string | User ID
+        User resultUser = apiInstance.GetUser(userId, null, null, null);
 ```
 
 ## NotificationHandler Helper Class

@@ -6,7 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Type** | **string** | Type of button to include in whatsApp template | [optional] |
+| **Content** | **string** | Content of the button. Use for &#39;Url&#39; or &#39;PhoneNumber&#39; button type | [optional] |
+| **ContentText** | **string** | The text label that will be displayed on the button | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_

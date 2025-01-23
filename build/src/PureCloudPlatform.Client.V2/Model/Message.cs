@@ -238,22 +238,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Unknown for "unknown"
+            /// Enum Apple for "apple"
             /// </summary>
-            [EnumMember(Value = "unknown")]
-            Unknown,
-            
-            /// <summary>
-            /// Enum Sms for "sms"
-            /// </summary>
-            [EnumMember(Value = "sms")]
-            Sms,
-            
-            /// <summary>
-            /// Enum Twitter for "twitter"
-            /// </summary>
-            [EnumMember(Value = "twitter")]
-            Twitter,
+            [EnumMember(Value = "apple")]
+            Apple,
             
             /// <summary>
             /// Enum Facebook for "facebook"
@@ -262,22 +250,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Facebook,
             
             /// <summary>
-            /// Enum Line for "line"
+            /// Enum Instagram for "instagram"
             /// </summary>
-            [EnumMember(Value = "line")]
-            Line,
-            
-            /// <summary>
-            /// Enum Whatsapp for "whatsapp"
-            /// </summary>
-            [EnumMember(Value = "whatsapp")]
-            Whatsapp,
-            
-            /// <summary>
-            /// Enum Telegram for "telegram"
-            /// </summary>
-            [EnumMember(Value = "telegram")]
-            Telegram,
+            [EnumMember(Value = "instagram")]
+            Instagram,
             
             /// <summary>
             /// Enum Kakao for "kakao"
@@ -286,10 +262,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Kakao,
             
             /// <summary>
-            /// Enum Webmessaging for "webmessaging"
+            /// Enum Line for "line"
             /// </summary>
-            [EnumMember(Value = "webmessaging")]
-            Webmessaging,
+            [EnumMember(Value = "line")]
+            Line,
             
             /// <summary>
             /// Enum Open for "open"
@@ -298,10 +274,40 @@ namespace PureCloudPlatform.Client.V2.Model
             Open,
             
             /// <summary>
-            /// Enum Instagram for "instagram"
+            /// Enum Sms for "sms"
             /// </summary>
-            [EnumMember(Value = "instagram")]
-            Instagram
+            [EnumMember(Value = "sms")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Telegram for "telegram"
+            /// </summary>
+            [EnumMember(Value = "telegram")]
+            Telegram,
+            
+            /// <summary>
+            /// Enum Twitter for "twitter"
+            /// </summary>
+            [EnumMember(Value = "twitter")]
+            Twitter,
+            
+            /// <summary>
+            /// Enum Webmessaging for "webmessaging"
+            /// </summary>
+            [EnumMember(Value = "webmessaging")]
+            Webmessaging,
+            
+            /// <summary>
+            /// Enum Whatsapp for "whatsapp"
+            /// </summary>
+            [EnumMember(Value = "whatsapp")]
+            Whatsapp,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown
         }
         /// <summary>
         /// The connection state of this communication.

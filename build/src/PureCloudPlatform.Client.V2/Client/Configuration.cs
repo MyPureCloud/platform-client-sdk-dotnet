@@ -40,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="userAgent">HTTP user agent</param>
         /// <param name="configFilePath">Config file path</param>
         /// <param name="autoReloadConfig">AutoReloadConfig</param>
+        /// <param name="useDefaultApiClient">Use Default ApiClient</param>
         public Configuration(ApiClient apiClient = null,
                              Dictionary<String, String> defaultHeader = null,
                              string username = null,
@@ -54,10 +55,18 @@ namespace PureCloudPlatform.Client.V2.Client
                              int refreshTokenWaitTime = 10,
                              string userAgent = "PureCloud SDK/dotnet",
                              string configFilePath = null,
-                             bool autoReloadConfig = true
+                             bool autoReloadConfig = true,
+                             bool useDefaultApiClient = true
                             )
         {
-            setApiClientUsingDefault(apiClient);
+            if (useDefaultApiClient == true)
+            {
+                setApiClientUsingDefault(apiClient);
+            }
+            else
+            {
+                setApiClient(apiClient);
+            }
 
             Username = username;
             Password = password;
@@ -111,6 +120,39 @@ namespace PureCloudPlatform.Client.V2.Client
         public Configuration(ApiClient apiClient)
         {
             setApiClientUsingDefault(apiClient);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Configuration class.
+        /// </summary>
+        /// <param name="apiClient">Api client.</param>
+        /// <param name="setDefaultApiClient">Set Default ApiClient</param>
+        public Configuration(ApiClient apiClient,
+                             bool setDefaultApiClient
+                            )
+        {
+            if (setDefaultApiClient == true)
+            {
+                setApiClientUsingDefault(apiClient);
+            }
+            else
+            {
+                setApiClient(apiClient);
+            }
+
+            Timeout = 100000;
+            ShouldRefreshAccessToken = true;
+            RefreshTokenWaitTime = 10;
+
+            Logger = new Logger();
+            
+            string homePath = (Environment.OSVersion.Platform == PlatformID.Unix ||
+                                Environment.OSVersion.Platform == PlatformID.MacOSX)
+                    ? Environment.GetEnvironmentVariable("HOME")
+                    : Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%");
+            ConfigFilePath = Path.Combine(homePath, ".genesysclouddotnet", "config");
+            
+            AutoReloadConfig = false;
         }
 
         private void applyConfigFromFile()
@@ -243,7 +285,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "224.1.0";
+        public const string Version = "225.0.0";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -284,6 +326,25 @@ namespace PureCloudPlatform.Client.V2.Client
                     Default.ApiClient = apiClient;
 
                 ApiClient = apiClient;
+            }
+        }
+
+        /// <summary>
+        /// Set or create the ApiClient.
+        /// </summary>
+        /// <param name="apiClient">An instance of ApiClient.</param>
+        /// <returns></returns>
+        public void setApiClient (ApiClient apiClient = null)
+        {
+            AuthTokenInfo = new AuthTokenInfo();
+            if (apiClient == null)
+            {
+                ApiClient = new ApiClient(this);
+            }
+            else
+            {
+                ApiClient = apiClient;
+                ApiClient.Configuration = this;
             }
         }
 
@@ -499,7 +560,7 @@ namespace PureCloudPlatform.Client.V2.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: v2\n";
-            report += "    SDK Package Version: 224.1.0\n";
+            report += "    SDK Package Version: 225.0.0\n";
 
             return report;
         }

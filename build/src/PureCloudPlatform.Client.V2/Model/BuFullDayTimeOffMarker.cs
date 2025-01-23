@@ -29,7 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PayableMinutes">Payable minutes for the time off marker.</param>
         /// <param name="TimeOffRequestId">The ID of the time off request.</param>
         /// <param name="TimeOffRequestSyncVersion">The sync version of the full day time off request for which the scheduled activity is associated.</param>
-        public BuFullDayTimeOffMarker(String BusinessUnitDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, int? PayableMinutes = null, string TimeOffRequestId = null, int? TimeOffRequestSyncVersion = null)
+        /// <param name="Delete">Set to 'true' to delete this time off marker. Will always be null on responses, only has an effect on schedule update.</param>
+        public BuFullDayTimeOffMarker(String BusinessUnitDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, int? PayableMinutes = null, string TimeOffRequestId = null, int? TimeOffRequestSyncVersion = null, bool? Delete = null)
         {
             this.BusinessUnitDate = BusinessUnitDate;
             this.LengthMinutes = LengthMinutes;
@@ -39,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PayableMinutes = PayableMinutes;
             this.TimeOffRequestId = TimeOffRequestId;
             this.TimeOffRequestSyncVersion = TimeOffRequestSyncVersion;
+            this.Delete = Delete;
             
         }
         
@@ -115,6 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? TimeOffRequestSyncVersion { get; set; }
 
 
+
+        /// <summary>
+        /// Set to 'true' to delete this time off marker. Will always be null on responses, only has an effect on schedule update
+        /// </summary>
+        /// <value>Set to 'true' to delete this time off marker. Will always be null on responses, only has an effect on schedule update</value>
+        [DataMember(Name="delete", EmitDefaultValue=false)]
+        public bool? Delete { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
             sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
             sb.Append("  TimeOffRequestSyncVersion: ").Append(TimeOffRequestSyncVersion).Append("\n");
+            sb.Append("  Delete: ").Append(Delete).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +223,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeOffRequestSyncVersion == other.TimeOffRequestSyncVersion ||
                     this.TimeOffRequestSyncVersion != null &&
                     this.TimeOffRequestSyncVersion.Equals(other.TimeOffRequestSyncVersion)
+                ) &&
+                (
+                    this.Delete == other.Delete ||
+                    this.Delete != null &&
+                    this.Delete.Equals(other.Delete)
                 );
         }
 
@@ -248,6 +265,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeOffRequestSyncVersion != null)
                     hash = hash * 59 + this.TimeOffRequestSyncVersion.GetHashCode();
+
+                if (this.Delete != null)
+                    hash = hash * 59 + this.Delete.GetHashCode();
 
                 return hash;
             }

@@ -2389,7 +2389,7 @@ This endpoint does require any parameters.
 
 ## GetAnalyticsReportingSettingsDashboardsQuery
 
-> [**DashboardConfigurationListing**](DashboardConfigurationListing) GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+> [**DashboardConfigurationListing**](DashboardConfigurationListing) GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string dashboardState = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
 
 
 Get list of dashboard configurations
@@ -2423,6 +2423,7 @@ namespace Example
             var dashboardType = dashboardType_example;  // string | List dashboard of given type
             var dashboardAccessFilter = dashboardAccessFilter_example;  // string | Filter dashboard based on the owner of dashboard
             var name = name_example;  // string | name of the dashboard (optional) 
+            var dashboardState = dashboardState_example;  // string | List dashboard of given state (optional)  (default to Active)
             var sortBy = sortBy_example;  // string |  (optional)  (default to "desc")
             var pageNumber = 56;  // int? |  (optional)  (default to 1)
             var pageSize = 56;  // int? |  (optional)  (default to 9)
@@ -2430,7 +2431,7 @@ namespace Example
             try
             { 
                 // Get list of dashboard configurations
-                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize);
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, dashboardState, sortBy, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2447,9 +2448,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dashboardType** | **string**| List dashboard of given type | <br />**Values**: All, Public, Private, Shared, Favorites, Deleted |
+| **dashboardType** | **string**| List dashboard of given type | <br />**Values**: All, Public, Private, Shared, Favorites |
 | **dashboardAccessFilter** | **string**| Filter dashboard based on the owner of dashboard | <br />**Values**: OwnedByMe, OwnedByAnyone, NotOwnedByMe |
 | **name** | **string**| name of the dashboard | [optional]  |
+| **dashboardState** | **string**| List dashboard of given state | [optional] [default to Active]<br />**Values**: Active, Deleted |
 | **sortBy** | **string**|  | [optional] [default to "desc"] |
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**|  | [optional] [default to 9] |
@@ -6851,4 +6853,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_
