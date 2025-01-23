@@ -2880,8 +2880,13 @@ This endpoint does require any parameters.
 
 > [**ChatConversation**](ChatConversation) GetConversationsChat (string conversationId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get chat conversation
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -2941,10 +2946,13 @@ namespace Example
 
 > [**WebChatMessage**](WebChatMessage) GetConversationsChatMessage (string conversationId, string messageId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a web chat conversation message
 
-The current user must be involved with the conversation to get its messages.
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
 
 Requires NO permissions: 
 
@@ -3006,10 +3014,13 @@ namespace Example
 
 > [**WebChatMessageEntityList**](WebChatMessageEntityList) GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the messages of a chat conversation.
 
-The current user must be involved with the conversation to get its messages.
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
 
 Requires NO permissions: 
 
@@ -3077,8 +3088,13 @@ namespace Example
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation communication. 
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -3144,8 +3160,13 @@ namespace Example
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation participant. 
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -3209,8 +3230,13 @@ namespace Example
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get list of wrapup codes for this conversation participant
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -3272,8 +3298,13 @@ namespace Example
 
 > [**ChatConversationEntityListing**](ChatConversationEntityListing) GetConversationsChats ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get active chat conversations for the logged in user
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -7495,8 +7526,13 @@ namespace Example
 
 > [**Conversation**](Conversation) PatchConversationsChat (string conversationId, Conversation body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a conversation by disconnecting all of the participants
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires ANY permissions: 
 
@@ -7559,8 +7595,13 @@ namespace Example
 
 > void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update conversation participant
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires ANY permissions: 
 
@@ -7624,8 +7665,13 @@ void (empty response body)
 
 > [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update the attributes on a conversation participant.
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -7689,8 +7735,13 @@ namespace Example
 
 > **Object** PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update conversation participant's communication by disconnecting it.
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -11594,8 +11645,13 @@ namespace Example
 
 > [**WebChatMessage**](WebChatMessage) PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Send a message on behalf of a communication in a chat conversation.
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -11659,8 +11715,13 @@ namespace Example
 
 > [**WebChatTyping**](WebChatTyping) PostConversationsChatCommunicationTyping (string conversationId, string communicationId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Send a typing-indicator on behalf of a communication in a chat conversation.
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires NO permissions: 
 
@@ -11722,8 +11783,13 @@ namespace Example
 
 > void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Apply wrap-up for this conversation communication
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires ANY permissions: 
 
@@ -11789,8 +11855,13 @@ void (empty response body)
 
 > void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Replace this participant with the specified user and/or address
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires ANY permissions: 
 
@@ -11854,8 +11925,13 @@ void (empty response body)
 
 > [**ChatConversation**](ChatConversation) PostConversationsChats (CreateWebChatRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create a web chat conversation
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires ALL permissions: 
 
@@ -14780,8 +14856,13 @@ namespace Example
 
 > **string** PutConversationsChatRecordingstate (string conversationId, SetRecordingState body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a conversation by setting its recording state
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 Requires ANY permissions: 
 
@@ -15548,4 +15629,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_

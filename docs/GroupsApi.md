@@ -184,7 +184,7 @@ namespace Example
 
             var apiInstance = new GroupsApi();
             var groupId = groupId_example;  // string | Group ID
-            var ids = ids_example;  // string | Comma separated list of userIds to remove
+            var ids = ids_example;  // string | Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.
 
             try
             { 
@@ -207,7 +207,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-| **ids** | **string**| Comma separated list of userIds to remove |  |
+| **ids** | **string**| Comma separated list of userIds to remove. A maximum of 50 members are allowed per request. |  |
 
 ### Return type
 
@@ -1189,4 +1189,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_

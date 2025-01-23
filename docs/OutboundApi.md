@@ -5651,7 +5651,7 @@ namespace Example
 
 ## GetOutboundMessagingcampaigns
 
-> [**MessagingCampaignEntityListing**](MessagingCampaignEntityListing) GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null)
+> [**MessagingCampaignEntityListing**](MessagingCampaignEntityListing) GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null)
 
 
 Query a list of Messaging Campaigns
@@ -5694,11 +5694,13 @@ namespace Example
             var type = type_example;  // string | Campaign Type (optional) 
             var senderSmsPhoneNumber = senderSmsPhoneNumber_example;  // string | Sender SMS Phone Number (optional) 
             var id = new List<string>(); // List<string> | A list of messaging campaign ids to bulk fetch (optional) 
+            var contentTemplateId = contentTemplateId_example;  // string | Content template ID (optional) 
+            var campaignStatus = campaignStatus_example;  // string | Campaign Status (optional) 
 
             try
             { 
                 // Query a list of Messaging Campaigns
-                MessagingCampaignEntityListing result = apiInstance.GetOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id);
+                MessagingCampaignEntityListing result = apiInstance.GetOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id, contentTemplateId, campaignStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5725,6 +5727,8 @@ namespace Example
 | **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS, WHATSAPP |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
 | **id** | [**List<string>**](string)| A list of messaging campaign ids to bulk fetch | [optional]  |
+| **contentTemplateId** | **string**| Content template ID | [optional]  |
+| **campaignStatus** | **string**| Campaign Status | [optional] <br />**Values**: on, stopping, off, complete, invalid, forced_off, forced_stopping |
 
 ### Return type
 
@@ -5798,7 +5802,7 @@ namespace Example
 
 ## GetOutboundMessagingcampaignsDivisionviews
 
-> [**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing) GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
+> [**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing) GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null, string contentTemplateId = null, string campaignStatus = null)
 
 
 Query a list of basic Messaging Campaign information objects
@@ -5839,11 +5843,13 @@ namespace Example
             var type = type_example;  // string | Campaign Type (optional) 
             var id = new List<string>(); // List<string> | id (optional) 
             var senderSmsPhoneNumber = senderSmsPhoneNumber_example;  // string | Sender SMS Phone Number (optional) 
+            var contentTemplateId = contentTemplateId_example;  // string | Content template ID (optional) 
+            var campaignStatus = campaignStatus_example;  // string | Campaign Status (optional) 
 
             try
             { 
                 // Query a list of basic Messaging Campaign information objects
-                MessagingCampaignDivisionViewEntityListing result = apiInstance.GetOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber);
+                MessagingCampaignDivisionViewEntityListing result = apiInstance.GetOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber, contentTemplateId, campaignStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5867,6 +5873,8 @@ namespace Example
 | **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS, WHATSAPP |
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
+| **contentTemplateId** | **string**| Content template ID | [optional]  |
+| **campaignStatus** | **string**| Campaign Status | [optional] <br />**Values**: on, stopping, off, complete, invalid, forced_off, forced_stopping |
 
 ### Return type
 
@@ -10930,4 +10938,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_

@@ -92,6 +92,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementCalendarUrlIcs**](#GetWorkforcemanagementCalendarUrlIcs) | **Get** /api/v2/workforcemanagement/calendar/url/ics | Get existing calendar link for the current user |
 | [**GetWorkforcemanagementHistoricaldataDeletejob**](#GetWorkforcemanagementHistoricaldataDeletejob) | **Get** /api/v2/workforcemanagement/historicaldata/deletejob | Retrieves delete job status for historical data imports of the organization |
 | [**GetWorkforcemanagementHistoricaldataImportstatus**](#GetWorkforcemanagementHistoricaldataImportstatus) | **Get** /api/v2/workforcemanagement/historicaldata/importstatus | Retrieves status of the historical data imports of the organization |
+| [**GetWorkforcemanagementHistoricaldataImportstatusJobId**](#GetWorkforcemanagementHistoricaldataImportstatusJobId) | **Get** /api/v2/workforcemanagement/historicaldata/importstatus/{jobId} | Retrieves status of the historical data imports associated with job id |
 | [**GetWorkforcemanagementIntegrationsHris**](#GetWorkforcemanagementIntegrationsHris) | **Get** /api/v2/workforcemanagement/integrations/hris | Get integrations |
 | [**GetWorkforcemanagementIntegrationsHrisTimeofftypesJob**](#GetWorkforcemanagementIntegrationsHrisTimeofftypesJob) | **Get** /api/v2/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId} | Query the results of time off types job |
 | [**GetWorkforcemanagementManagementunit**](#GetWorkforcemanagementManagementunit) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Get management unit |
@@ -5959,6 +5960,68 @@ This endpoint does require any parameters.
 ### Return type
 
 [**HistoricalImportStatusListing**](HistoricalImportStatusListing)
+
+
+## GetWorkforcemanagementHistoricaldataImportstatusJobId
+
+> [**HistoricalImportStatusJobResponse**](HistoricalImportStatusJobResponse) GetWorkforcemanagementHistoricaldataImportstatusJobId (string jobId)
+
+
+Retrieves status of the historical data imports associated with job id
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementHistoricaldataImportstatusJobIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The job Id of the historical data import request
+
+            try
+            { 
+                // Retrieves status of the historical data imports associated with job id
+                HistoricalImportStatusJobResponse result = apiInstance.GetWorkforcemanagementHistoricaldataImportstatusJobId(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementHistoricaldataImportstatusJobId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The job Id of the historical data import request |  |
+
+### Return type
+
+[**HistoricalImportStatusJobResponse**](HistoricalImportStatusJobResponse)
 
 
 ## GetWorkforcemanagementIntegrationsHris
@@ -13546,7 +13609,7 @@ This endpoint does require any parameters.
 
 ## PostWorkforcemanagementHistoricaldataValidate
 
-> void PostWorkforcemanagementHistoricaldataValidate (ValidationServiceRequest body = null)
+> [**ValidationServiceAsyncResponse**](ValidationServiceAsyncResponse) PostWorkforcemanagementHistoricaldataValidate (ValidationServiceRequest body = null)
 
 
 Trigger validation process for historical import
@@ -13582,7 +13645,8 @@ namespace Example
             try
             { 
                 // Trigger validation process for historical import
-                apiInstance.PostWorkforcemanagementHistoricaldataValidate(body);
+                ValidationServiceAsyncResponse result = apiInstance.PostWorkforcemanagementHistoricaldataValidate(body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -13602,7 +13666,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**ValidationServiceAsyncResponse**](ValidationServiceAsyncResponse)
 
 
 ## PostWorkforcemanagementIntegrationsHriTimeofftypesJobs
@@ -16156,4 +16220,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_

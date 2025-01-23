@@ -6,7 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Type** | **string** | Defines the content type of the Header in message | [optional] |
+| **Content** | **string** | Content associated with the header in the message | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 224.1.0_
+_PureCloudPlatform.Client.V2 225.0.0_
