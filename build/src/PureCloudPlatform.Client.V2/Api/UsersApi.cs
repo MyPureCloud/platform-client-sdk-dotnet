@@ -163,6 +163,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteUserWithHttpInfo (string userId);
 
         /// <summary>
+        /// Delete the external identifier for user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns></returns>
+        
+        void DeleteUserExternalidAuthorityNameExternalKey (string userId, string authorityName, string externalKey);
+
+        /// <summary>
+        /// Delete the external identifier for user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteUserExternalidAuthorityNameExternalKeyWithHttpInfo (string userId, string authorityName, string externalKey);
+
+        /// <summary>
         /// Remove a routing language from a user
         /// </summary>
         /// <remarks>
@@ -787,6 +815,56 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<User>> GetUserDirectreportsWithHttpInfo (string userId, List<string> expand = null);
 
         /// <summary>
+        /// Get the external identifiers for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>List&lt;UserExternalIdentifier&gt;</returns>
+        
+        List<UserExternalIdentifier> GetUserExternalid (string userId);
+
+        /// <summary>
+        /// Get the external identifiers for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of List&lt;UserExternalIdentifier&gt;</returns>
+        
+        ApiResponse<List<UserExternalIdentifier>> GetUserExternalidWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get the external identifier of user for an authority.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>UserExternalIdentifier</returns>
+        
+        UserExternalIdentifier GetUserExternalidAuthorityName (string userId, string authorityName);
+
+        /// <summary>
+        /// Get the external identifier of user for an authority.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>ApiResponse of UserExternalIdentifier</returns>
+        
+        ApiResponse<UserExternalIdentifier> GetUserExternalidAuthorityNameWithHttpInfo (string userId, string authorityName);
+
+        /// <summary>
         /// Deprecated; will be revived with new contract
         /// </summary>
         /// <remarks>
@@ -1397,6 +1475,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DevelopmentActivity</returns>
         
         ApiResponse<DevelopmentActivity> GetUsersDevelopmentActivityWithHttpInfo (string activityId, string type);
+
+        /// <summary>
+        /// Get the user associated with external identifier.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>User</returns>
+        
+        User GetUsersExternalidAuthorityNameExternalKey (string authorityName, string externalKey, List<string> expand = null);
+
+        /// <summary>
+        /// Get the user associated with external identifier.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of User</returns>
+        
+        ApiResponse<User> GetUsersExternalidAuthorityNameExternalKeyWithHttpInfo (string authorityName, string externalKey, List<string> expand = null);
 
         /// <summary>
         /// Get current user details.
@@ -2773,6 +2879,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserAsyncWithHttpInfo (string userId);
 
         /// <summary>
+        /// Delete the external identifier for user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteUserExternalidAuthorityNameExternalKeyAsync (string userId, string authorityName, string externalKey);
+
+        /// <summary>
+        /// Delete the external identifier for user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserExternalidAuthorityNameExternalKeyAsyncWithHttpInfo (string userId, string authorityName, string externalKey);
+
+        /// <summary>
         /// Remove a routing language from a user
         /// </summary>
         /// <remarks>
@@ -3397,6 +3531,56 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null);
 
         /// <summary>
+        /// Get the external identifiers for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of List&lt;UserExternalIdentifier&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<UserExternalIdentifier>> GetUserExternalidAsync (string userId);
+
+        /// <summary>
+        /// Get the external identifiers for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (List&lt;UserExternalIdentifier&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<UserExternalIdentifier>>> GetUserExternalidAsyncWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get the external identifier of user for an authority.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>Task of UserExternalIdentifier</returns>
+        
+        System.Threading.Tasks.Task<UserExternalIdentifier> GetUserExternalidAuthorityNameAsync (string userId, string authorityName);
+
+        /// <summary>
+        /// Get the external identifier of user for an authority.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>Task of ApiResponse (UserExternalIdentifier)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UserExternalIdentifier>> GetUserExternalidAuthorityNameAsyncWithHttpInfo (string userId, string authorityName);
+
+        /// <summary>
         /// Deprecated; will be revived with new contract
         /// </summary>
         /// <remarks>
@@ -4007,6 +4191,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DevelopmentActivity)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivity>> GetUsersDevelopmentActivityAsyncWithHttpInfo (string activityId, string type);
+
+        /// <summary>
+        /// Get the user associated with external identifier.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of User</returns>
+        
+        System.Threading.Tasks.Task<User> GetUsersExternalidAuthorityNameExternalKeyAsync (string authorityName, string externalKey, List<string> expand = null);
+
+        /// <summary>
+        /// Get the user associated with external identifier.
+        /// </summary>
+        /// <remarks>
+        /// Authority name and external key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (User)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<User>> GetUsersExternalidAuthorityNameExternalKeyAsyncWithHttpInfo (string authorityName, string externalKey, List<string> expand = null);
 
         /// <summary>
         /// Get current user details.
@@ -6599,6 +6811,243 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete the external identifier for user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns></returns>
+        
+        public void DeleteUserExternalidAuthorityNameExternalKey (string userId, string authorityName, string externalKey)
+        {
+             DeleteUserExternalidAuthorityNameExternalKeyWithHttpInfo(userId, authorityName, externalKey);
+        }
+
+        /// <summary>
+        /// Delete the external identifier for user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteUserExternalidAuthorityNameExternalKeyWithHttpInfo (string userId, string authorityName, string externalKey)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
+            // verify the required parameter 'authorityName' is set
+            if (authorityName == null)
+                throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
+            // verify the required parameter 'externalKey' is set
+            if (externalKey == null)
+                throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
+
+            var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}/{externalKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (authorityName != null) localVarPathParams.Add("authorityName", this.Configuration.ApiClient.ParameterToString(authorityName));
+            if (externalKey != null) localVarPathParams.Add("externalKey", this.Configuration.ApiClient.ParameterToString(externalKey));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserExternalidAuthorityNameExternalKey: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserExternalidAuthorityNameExternalKey: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete the external identifier for user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteUserExternalidAuthorityNameExternalKeyAsync (string userId, string authorityName, string externalKey)
+        {
+             await DeleteUserExternalidAuthorityNameExternalKeyAsyncWithHttpInfo(userId, authorityName, externalKey);
+
+        }
+
+        /// <summary>
+        /// Delete the external identifier for user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserExternalidAuthorityNameExternalKeyAsyncWithHttpInfo (string userId, string authorityName, string externalKey)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
+            
+            // verify the required parameter 'authorityName' is set
+            if (authorityName == null)
+                throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
+            
+            // verify the required parameter 'externalKey' is set
+            if (externalKey == null)
+                throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}/{externalKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (authorityName != null) localVarPathParams.Add("authorityName", this.Configuration.ApiClient.ParameterToString(authorityName));
+            if (externalKey != null) localVarPathParams.Add("externalKey", this.Configuration.ApiClient.ParameterToString(externalKey));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserExternalidAuthorityNameExternalKey: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserExternalidAuthorityNameExternalKey: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -11848,6 +12297,445 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the external identifiers for a user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>List&lt;UserExternalIdentifier&gt;</returns>
+        
+        public List<UserExternalIdentifier> GetUserExternalid (string userId)
+        {
+             ApiResponse<List<UserExternalIdentifier>> localVarResponse = GetUserExternalidWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the external identifiers for a user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of List&lt;UserExternalIdentifier&gt;</returns>
+        
+        public ApiResponse< List<UserExternalIdentifier> > GetUserExternalidWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserExternalid");
+
+            var localVarPath = "/api/v2/users/{userId}/externalid";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalid: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UserExternalIdentifier>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UserExternalIdentifier>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserExternalIdentifier>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the external identifiers for a user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of List&lt;UserExternalIdentifier&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<UserExternalIdentifier>> GetUserExternalidAsync (string userId)
+        {
+             ApiResponse<List<UserExternalIdentifier>> localVarResponse = await GetUserExternalidAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the external identifiers for a user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (List&lt;UserExternalIdentifier&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserExternalIdentifier>>> GetUserExternalidAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserExternalid");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/externalid";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalid: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UserExternalIdentifier>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UserExternalIdentifier>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserExternalIdentifier>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the external identifier of user for an authority. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>UserExternalIdentifier</returns>
+        
+        public UserExternalIdentifier GetUserExternalidAuthorityName (string userId, string authorityName)
+        {
+             ApiResponse<UserExternalIdentifier> localVarResponse = GetUserExternalidAuthorityNameWithHttpInfo(userId, authorityName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the external identifier of user for an authority. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>ApiResponse of UserExternalIdentifier</returns>
+        
+        public ApiResponse< UserExternalIdentifier > GetUserExternalidAuthorityNameWithHttpInfo (string userId, string authorityName)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserExternalidAuthorityName");
+            // verify the required parameter 'authorityName' is set
+            if (authorityName == null)
+                throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->GetUserExternalidAuthorityName");
+
+            var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (authorityName != null) localVarPathParams.Add("authorityName", this.Configuration.ApiClient.ParameterToString(authorityName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalidAuthorityName: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalidAuthorityName: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserExternalIdentifier>(localVarStatusCode,
+                localVarHeaders,
+                (UserExternalIdentifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserExternalIdentifier)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the external identifier of user for an authority. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>Task of UserExternalIdentifier</returns>
+        
+        public async System.Threading.Tasks.Task<UserExternalIdentifier> GetUserExternalidAuthorityNameAsync (string userId, string authorityName)
+        {
+             ApiResponse<UserExternalIdentifier> localVarResponse = await GetUserExternalidAuthorityNameAsyncWithHttpInfo(userId, authorityName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the external identifier of user for an authority. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="authorityName">Authority Name</param>
+        /// <returns>Task of ApiResponse (UserExternalIdentifier)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UserExternalIdentifier>> GetUserExternalidAuthorityNameAsyncWithHttpInfo (string userId, string authorityName)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserExternalidAuthorityName");
+            
+            // verify the required parameter 'authorityName' is set
+            if (authorityName == null)
+                throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->GetUserExternalidAuthorityName");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (authorityName != null) localVarPathParams.Add("authorityName", this.Configuration.ApiClient.ParameterToString(authorityName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalidAuthorityName: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserExternalidAuthorityName: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserExternalIdentifier>(localVarStatusCode,
+                localVarHeaders,
+                (UserExternalIdentifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserExternalIdentifier)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Deprecated; will be revived with new contract 
         /// 
         /// </summary>
@@ -16624,6 +17512,238 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DevelopmentActivity>(localVarStatusCode,
                 localVarHeaders,
                 (DevelopmentActivity) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DevelopmentActivity)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the user associated with external identifier. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>User</returns>
+        
+        public User GetUsersExternalidAuthorityNameExternalKey (string authorityName, string externalKey, List<string> expand = null)
+        {
+             ApiResponse<User> localVarResponse = GetUsersExternalidAuthorityNameExternalKeyWithHttpInfo(authorityName, externalKey, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the user associated with external identifier. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of User</returns>
+        
+        public ApiResponse< User > GetUsersExternalidAuthorityNameExternalKeyWithHttpInfo (string authorityName, string externalKey, List<string> expand = null)
+        { 
+            // verify the required parameter 'authorityName' is set
+            if (authorityName == null)
+                throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->GetUsersExternalidAuthorityNameExternalKey");
+            // verify the required parameter 'externalKey' is set
+            if (externalKey == null)
+                throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->GetUsersExternalidAuthorityNameExternalKey");
+
+            var localVarPath = "/api/v2/users/externalid/{authorityName}/{externalKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (authorityName != null) localVarPathParams.Add("authorityName", this.Configuration.ApiClient.ParameterToString(authorityName));
+            if (externalKey != null) localVarPathParams.Add("externalKey", this.Configuration.ApiClient.ParameterToString(externalKey));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersExternalidAuthorityNameExternalKey: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersExternalidAuthorityNameExternalKey: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<User>(localVarStatusCode,
+                localVarHeaders,
+                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the user associated with external identifier. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of User</returns>
+        
+        public async System.Threading.Tasks.Task<User> GetUsersExternalidAuthorityNameExternalKeyAsync (string authorityName, string externalKey, List<string> expand = null)
+        {
+             ApiResponse<User> localVarResponse = await GetUsersExternalidAuthorityNameExternalKeyAsyncWithHttpInfo(authorityName, externalKey, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the user associated with external identifier. 
+        /// Authority name and external key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorityName">Authority Name</param>
+        /// <param name="externalKey">External Key</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (User)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<User>> GetUsersExternalidAuthorityNameExternalKeyAsyncWithHttpInfo (string authorityName, string externalKey, List<string> expand = null)
+        { 
+            // verify the required parameter 'authorityName' is set
+            if (authorityName == null)
+                throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->GetUsersExternalidAuthorityNameExternalKey");
+            
+            // verify the required parameter 'externalKey' is set
+            if (externalKey == null)
+                throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->GetUsersExternalidAuthorityNameExternalKey");
+            
+
+            var localVarPath = "/api/v2/users/externalid/{authorityName}/{externalKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (authorityName != null) localVarPathParams.Add("authorityName", this.Configuration.ApiClient.ParameterToString(authorityName));
+            if (externalKey != null) localVarPathParams.Add("externalKey", this.Configuration.ApiClient.ParameterToString(externalKey));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersExternalidAuthorityNameExternalKey: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersExternalidAuthorityNameExternalKey: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<User>(localVarStatusCode,
+                localVarHeaders,
+                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

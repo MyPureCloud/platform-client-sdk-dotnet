@@ -96,10 +96,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Type">Type.</param>
-        public V2WemEngagementCelebrationUpdatesTopicSourceEntity(Guid? Id = null, TypeEnum? Type = null)
+        /// <param name="ContestCompleteData">ContestCompleteData.</param>
+        public V2WemEngagementCelebrationUpdatesTopicSourceEntity(Guid? Id = null, TypeEnum? Type = null, V2WemEngagementCelebrationUpdatesTopicContestCompleteData ContestCompleteData = null)
         {
             this.Id = Id;
             this.Type = Type;
+            this.ContestCompleteData = ContestCompleteData;
             
         }
         
@@ -114,6 +116,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets ContestCompleteData
+        /// </summary>
+        [DataMember(Name="contestCompleteData", EmitDefaultValue=false)]
+        public V2WemEngagementCelebrationUpdatesTopicContestCompleteData ContestCompleteData { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -125,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ContestCompleteData: ").Append(ContestCompleteData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.ContestCompleteData == other.ContestCompleteData ||
+                    this.ContestCompleteData != null &&
+                    this.ContestCompleteData.Equals(other.ContestCompleteData)
                 );
         }
 
@@ -193,6 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.ContestCompleteData != null)
+                    hash = hash * 59 + this.ContestCompleteData.GetHashCode();
 
                 return hash;
             }

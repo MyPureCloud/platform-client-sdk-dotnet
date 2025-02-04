@@ -190,9 +190,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxCallsPerAgent">The maximum number of calls per agent to set a campaign to. Required for the 'setCampaignMaxCallsPerAgent' action..</param>
         /// <param name="Queue">The queue a campaign to. Required for the 'changeCampaignQueue' action..</param>
         /// <param name="MessagesPerMinute">The number of messages per minute to set a messaging campaign to..</param>
+        /// <param name="SmsMessagesPerMinute">The number of messages per minute to set a SMS messaging campaign to..</param>
+        /// <param name="EmailMessagesPerMinute">The number of messages per minute to set a Email messaging campaign to..</param>
         /// <param name="SmsContentTemplate">The content template to set a SMS campaign to..</param>
         /// <param name="EmailContentTemplate">The content template to set a Email campaign to..</param>
-        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null, double? AbandonRate = null, int? OutboundLineCount = null, int? RelativeWeight = null, double? MaxCallsPerAgent = null, DomainEntityRef Queue = null, int? MessagesPerMinute = null, DomainEntityRef SmsContentTemplate = null, DomainEntityRef EmailContentTemplate = null)
+        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null, double? AbandonRate = null, int? OutboundLineCount = null, int? RelativeWeight = null, double? MaxCallsPerAgent = null, DomainEntityRef Queue = null, int? MessagesPerMinute = null, int? SmsMessagesPerMinute = null, int? EmailMessagesPerMinute = null, DomainEntityRef SmsContentTemplate = null, DomainEntityRef EmailContentTemplate = null)
         {
             this.Operator = Operator;
             this.Value = Value;
@@ -204,6 +206,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaxCallsPerAgent = MaxCallsPerAgent;
             this.Queue = Queue;
             this.MessagesPerMinute = MessagesPerMinute;
+            this.SmsMessagesPerMinute = SmsMessagesPerMinute;
+            this.EmailMessagesPerMinute = EmailMessagesPerMinute;
             this.SmsContentTemplate = SmsContentTemplate;
             this.EmailContentTemplate = EmailContentTemplate;
             
@@ -281,6 +285,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The number of messages per minute to set a SMS messaging campaign to.
+        /// </summary>
+        /// <value>The number of messages per minute to set a SMS messaging campaign to.</value>
+        [DataMember(Name="smsMessagesPerMinute", EmitDefaultValue=false)]
+        public int? SmsMessagesPerMinute { get; set; }
+
+
+
+        /// <summary>
+        /// The number of messages per minute to set a Email messaging campaign to.
+        /// </summary>
+        /// <value>The number of messages per minute to set a Email messaging campaign to.</value>
+        [DataMember(Name="emailMessagesPerMinute", EmitDefaultValue=false)]
+        public int? EmailMessagesPerMinute { get; set; }
+
+
+
+        /// <summary>
         /// The content template to set a SMS campaign to.
         /// </summary>
         /// <value>The content template to set a SMS campaign to.</value>
@@ -316,6 +338,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  MessagesPerMinute: ").Append(MessagesPerMinute).Append("\n");
+            sb.Append("  SmsMessagesPerMinute: ").Append(SmsMessagesPerMinute).Append("\n");
+            sb.Append("  EmailMessagesPerMinute: ").Append(EmailMessagesPerMinute).Append("\n");
             sb.Append("  SmsContentTemplate: ").Append(SmsContentTemplate).Append("\n");
             sb.Append("  EmailContentTemplate: ").Append(EmailContentTemplate).Append("\n");
             sb.Append("}\n");
@@ -409,6 +433,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessagesPerMinute.Equals(other.MessagesPerMinute)
                 ) &&
                 (
+                    this.SmsMessagesPerMinute == other.SmsMessagesPerMinute ||
+                    this.SmsMessagesPerMinute != null &&
+                    this.SmsMessagesPerMinute.Equals(other.SmsMessagesPerMinute)
+                ) &&
+                (
+                    this.EmailMessagesPerMinute == other.EmailMessagesPerMinute ||
+                    this.EmailMessagesPerMinute != null &&
+                    this.EmailMessagesPerMinute.Equals(other.EmailMessagesPerMinute)
+                ) &&
+                (
                     this.SmsContentTemplate == other.SmsContentTemplate ||
                     this.SmsContentTemplate != null &&
                     this.SmsContentTemplate.Equals(other.SmsContentTemplate)
@@ -460,6 +494,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MessagesPerMinute != null)
                     hash = hash * 59 + this.MessagesPerMinute.GetHashCode();
+
+                if (this.SmsMessagesPerMinute != null)
+                    hash = hash * 59 + this.SmsMessagesPerMinute.GetHashCode();
+
+                if (this.EmailMessagesPerMinute != null)
+                    hash = hash * 59 + this.EmailMessagesPerMinute.GetHashCode();
 
                 if (this.SmsContentTemplate != null)
                     hash = hash * 59 + this.SmsContentTemplate.GetHashCode();

@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Deliveryfailed,
             
             /// <summary>
+            /// Enum Deliverypushed for "DeliveryPushed"
+            /// </summary>
+            [EnumMember(Value = "DeliveryPushed")]
+            Deliverypushed,
+            
+            /// <summary>
             /// Enum Deliverysuccess for "DeliverySuccess"
             /// </summary>
             [EnumMember(Value = "DeliverySuccess")]

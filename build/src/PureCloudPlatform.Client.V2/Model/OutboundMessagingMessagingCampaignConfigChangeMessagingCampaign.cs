@@ -81,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RuleSets">RuleSets.</param>
         /// <param name="SmsConfig">SmsConfig.</param>
         /// <param name="EmailConfig">EmailConfig.</param>
+        /// <param name="WhatsAppConfig">WhatsAppConfig.</param>
         /// <param name="Errors">A list of current error conditions associated with this messaging campaign.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The UI-visible name of the object.</param>
@@ -88,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Division">A UriReference for a resource.</param>
-        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> RuleSets = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null)
+        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> RuleSets = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig = null, OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig WhatsAppConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null)
         {
             this.CampaignStatus = CampaignStatus;
             this.CallableTimeSet = CallableTimeSet;
@@ -101,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RuleSets = RuleSets;
             this.SmsConfig = SmsConfig;
             this.EmailConfig = EmailConfig;
+            this.WhatsAppConfig = WhatsAppConfig;
             this.Errors = Errors;
             this.Id = Id;
             this.Name = Name;
@@ -202,6 +204,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets WhatsAppConfig
+        /// </summary>
+        [DataMember(Name="whatsAppConfig", EmitDefaultValue=false)]
+        public OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig WhatsAppConfig { get; set; }
+
+
+
+        /// <summary>
         /// A list of current error conditions associated with this messaging campaign
         /// </summary>
         /// <value>A list of current error conditions associated with this messaging campaign</value>
@@ -283,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
             sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
+            sb.Append("  WhatsAppConfig: ").Append(WhatsAppConfig).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -386,6 +397,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailConfig.Equals(other.EmailConfig)
                 ) &&
                 (
+                    this.WhatsAppConfig == other.WhatsAppConfig ||
+                    this.WhatsAppConfig != null &&
+                    this.WhatsAppConfig.Equals(other.WhatsAppConfig)
+                ) &&
+                (
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
@@ -465,6 +481,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmailConfig != null)
                     hash = hash * 59 + this.EmailConfig.GetHashCode();
+
+                if (this.WhatsAppConfig != null)
+                    hash = hash * 59 + this.WhatsAppConfig.GetHashCode();
 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();

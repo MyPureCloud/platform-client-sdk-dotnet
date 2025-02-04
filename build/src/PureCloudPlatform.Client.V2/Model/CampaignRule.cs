@@ -191,6 +191,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A list of current warning conditions associated with the campaign rule.
+        /// </summary>
+        /// <value>A list of current warning conditions associated with the campaign rule.</value>
+        [DataMember(Name="warnings", EmitDefaultValue=false)]
+        public List<CampaignRuleWarning> Warnings { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -220,6 +229,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CampaignRuleProcessing: ").Append(CampaignRuleProcessing).Append("\n");
             sb.Append("  ConditionGroups: ").Append(ConditionGroups).Append("\n");
             sb.Append("  ExecutionSettings: ").Append(ExecutionSettings).Append("\n");
+            sb.Append("  Warnings: ").Append(Warnings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -327,6 +337,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExecutionSettings.Equals(other.ExecutionSettings)
                 ) &&
                 (
+                    this.Warnings == other.Warnings ||
+                    this.Warnings != null &&
+                    this.Warnings.SequenceEqual(other.Warnings)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -382,6 +397,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExecutionSettings != null)
                     hash = hash * 59 + this.ExecutionSettings.GetHashCode();
+
+                if (this.Warnings != null)
+                    hash = hash * 59 + this.Warnings.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

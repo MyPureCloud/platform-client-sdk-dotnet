@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteAlertingAlert**](#DeleteAlertingAlert) | **Delete** /api/v2/alerting/alerts/{alertId} | Delete an alert |
+| [**DeleteAlertingAlertsAll**](#DeleteAlertingAlertsAll) | **Delete** /api/v2/alerting/alerts/all | Delete all alerts for the user |
 | [**DeleteAlertingInteractionstatsAlert**](#DeleteAlertingInteractionstatsAlert) | **Delete** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
 | [**DeleteAlertingInteractionstatsRule**](#DeleteAlertingInteractionstatsRule) | **Delete** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule |
 | [**DeleteAlertingRule**](#DeleteAlertingRule) | **Delete** /api/v2/alerting/rules/{ruleId} | Delete a rule. |
@@ -19,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAlertingInteractionstatsRules**](#GetAlertingInteractionstatsRules) | **Get** /api/v2/alerting/interactionstats/rules | Get an interaction stats rule list |
 | [**GetAlertingRule**](#GetAlertingRule) | **Get** /api/v2/alerting/rules/{ruleId} | Get a rule. |
 | [**PatchAlertingAlert**](#PatchAlertingAlert) | **Patch** /api/v2/alerting/alerts/{alertId} | Allows an entity to mute/snooze an alert or update the unread status of the alert. |
+| [**PatchAlertingAlertsAll**](#PatchAlertingAlertsAll) | **Patch** /api/v2/alerting/alerts/all | Updates all alerts |
 | [**PatchAlertingAlertsBulk**](#PatchAlertingAlertsBulk) | **Patch** /api/v2/alerting/alerts/bulk | Bulk alert updates |
 | [**PatchAlertingRulesBulk**](#PatchAlertingRulesBulk) | **Patch** /api/v2/alerting/rules/bulk | Bulk update of notification lists |
 | [**PostAlertingAlertsQuery**](#PostAlertingAlertsQuery) | **Post** /api/v2/alerting/alerts/query | Gets a paged list of alerts. The max page size is 50 |
@@ -92,6 +94,63 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+
+## DeleteAlertingAlertsAll
+
+> **Object** DeleteAlertingAlertsAll ()
+
+
+Delete all alerts for the user
+
+Requires ALL permissions: 
+
+* alerting:alert:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAlertingAlertsAllExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AlertingApi();
+
+            try
+            { 
+                // Delete all alerts for the user
+                Object result = apiInstance.DeleteAlertingAlertsAll();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.DeleteAlertingAlertsAll: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+**Object**
 
 
 ## DeleteAlertingInteractionstatsAlert
@@ -871,6 +930,68 @@ namespace Example
 [**CommonAlert**](CommonAlert)
 
 
+## PatchAlertingAlertsAll
+
+> **Object** PatchAlertingAlertsAll (CommonAllAlertUpdateRequest body = null)
+
+
+Updates all alerts
+
+Requires ALL permissions: 
+
+* alerting:alert:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchAlertingAlertsAllExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AlertingApi();
+            var body = new CommonAllAlertUpdateRequest(); // CommonAllAlertUpdateRequest |  (optional) 
+
+            try
+            { 
+                // Updates all alerts
+                Object result = apiInstance.PatchAlertingAlertsAll(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.PatchAlertingAlertsAll: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CommonAllAlertUpdateRequest**](CommonAllAlertUpdateRequest)|  | [optional]  |
+
+### Return type
+
+**Object**
+
+
 ## PatchAlertingAlertsBulk
 
 > [**BulkResponse**](BulkResponse) PatchAlertingAlertsBulk (CommonAlertBulkUpdateRequest body)
@@ -1582,4 +1703,4 @@ namespace Example
 [**CommonRule**](CommonRule)
 
 
-_PureCloudPlatform.Client.V2 225.0.0_
+_PureCloudPlatform.Client.V2 226.0.0_

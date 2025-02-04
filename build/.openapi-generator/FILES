@@ -764,6 +764,7 @@ docs/CommandStatus.md
 docs/CommandStatusEntityListing.md
 docs/CommonAlert.md
 docs/CommonAlertBulkUpdateRequest.md
+docs/CommonAllAlertUpdateRequest.md
 docs/CommonCampaign.md
 docs/CommonCampaignDivisionView.md
 docs/CommonCampaignDivisionViewEntityListing.md
@@ -1401,6 +1402,7 @@ docs/DefaultGreetingList.md
 docs/DefaultObjective.md
 docs/DeletableUserReference.md
 docs/DeleteAlertingAlert-example.txt
+docs/DeleteAlertingAlertsAll-example.txt
 docs/DeleteAlertingInteractionstatsAlert-example.txt
 docs/DeleteAlertingInteractionstatsRule-example.txt
 docs/DeleteAlertingRule-example.txt
@@ -1660,6 +1662,7 @@ docs/DeleteTelephonyProvidersEdgesTrunkbasesetting-example.txt
 docs/DeleteToken-example.txt
 docs/DeleteTokensMe-example.txt
 docs/DeleteUser-example.txt
+docs/DeleteUserExternalidAuthorityNameExternalKey-example.txt
 docs/DeleteUserRoutinglanguage-example.txt
 docs/DeleteUserRoutinglanguage-example.txt
 docs/DeleteUserRoutingskill-example.txt
@@ -3405,15 +3408,18 @@ docs/GetSpeechandtextanalyticsConversation-example.txt
 docs/GetSpeechandtextanalyticsConversationCategories-example.txt
 docs/GetSpeechandtextanalyticsConversationCommunicationTranscripturl-example.txt
 docs/GetSpeechandtextanalyticsConversationCommunicationTranscripturls-example.txt
+docs/GetSpeechandtextanalyticsConversationSummaries-example.txt
 docs/GetSpeechandtextanalyticsDictionaryfeedback-example.txt
 docs/GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/GetSpeechandtextanalyticsProgram-example.txt
 docs/GetSpeechandtextanalyticsProgramMappings-example.txt
+docs/GetSpeechandtextanalyticsProgramSettingsInsights-example.txt
 docs/GetSpeechandtextanalyticsProgramTranscriptionengines-example.txt
 docs/GetSpeechandtextanalyticsPrograms-example.txt
 docs/GetSpeechandtextanalyticsProgramsGeneralJob-example.txt
 docs/GetSpeechandtextanalyticsProgramsMappings-example.txt
 docs/GetSpeechandtextanalyticsProgramsPublishjob-example.txt
+docs/GetSpeechandtextanalyticsProgramsSettingsInsights-example.txt
 docs/GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects-example.txt
 docs/GetSpeechandtextanalyticsProgramsUnpublished-example.txt
 docs/GetSpeechandtextanalyticsSentimentDialects-example.txt
@@ -3557,6 +3563,8 @@ docs/GetUser-example.txt
 docs/GetUserAdjacents-example.txt
 docs/GetUserCallforwarding-example.txt
 docs/GetUserDirectreports-example.txt
+docs/GetUserExternalid-example.txt
+docs/GetUserExternalidAuthorityName-example.txt
 docs/GetUserFavorites-example.txt
 docs/GetUserGeolocation-example.txt
 docs/GetUserGeolocation-example.txt
@@ -3595,6 +3603,7 @@ docs/GetUsersChatsMe-example.txt
 docs/GetUsersDevelopmentActivities-example.txt
 docs/GetUsersDevelopmentActivitiesMe-example.txt
 docs/GetUsersDevelopmentActivity-example.txt
+docs/GetUsersExternalidAuthorityNameExternalKey-example.txt
 docs/GetUsersMe-example.txt
 docs/GetUsersPresenceBulk-example.txt
 docs/GetUsersPresencesPurecloudBulk-example.txt
@@ -3868,6 +3877,7 @@ docs/InsightsDetailsMetricPeriodPoints.md
 docs/InsightsDetailsOverallItem.md
 docs/InsightsDetailsOverallPeriodPoints.md
 docs/InsightsRankings.md
+docs/InsightsSettingsRequest.md
 docs/InsightsSummary.md
 docs/InsightsSummaryMetricItem.md
 docs/InsightsSummaryMetricPeriodPoints.md
@@ -4710,6 +4720,7 @@ docs/OutboundMessagingEmailCampaignConfigChangeContactSort.md
 docs/OutboundMessagingEmailCampaignConfigChangeEmailConfig.md
 docs/OutboundMessagingEmailCampaignConfigChangeErrorDetail.md
 docs/OutboundMessagingEmailCampaignConfigChangeFromEmailAddress.md
+docs/OutboundMessagingEmailCampaignConfigChangeIntegrationRef.md
 docs/OutboundMessagingEmailCampaignConfigChangeMessagingCampaign.md
 docs/OutboundMessagingEmailCampaignConfigChangeObject.md
 docs/OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress.md
@@ -4717,6 +4728,7 @@ docs/OutboundMessagingEmailCampaignConfigChangeResponseRef.md
 docs/OutboundMessagingEmailCampaignConfigChangeSmsConfig.md
 docs/OutboundMessagingEmailCampaignConfigChangeSmsPhoneNumberRef.md
 docs/OutboundMessagingEmailCampaignConfigChangeUriReference.md
+docs/OutboundMessagingEmailCampaignConfigChangeWhatsAppConfig.md
 docs/OutboundMessagingEmailCampaignProgressEventCampaignProgress.md
 docs/OutboundMessagingEmailCampaignProgressEventObject.md
 docs/OutboundMessagingEmailCampaignProgressEventUriReference.md
@@ -4724,6 +4736,7 @@ docs/OutboundMessagingMessagingCampaignConfigChangeContactSort.md
 docs/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.md
 docs/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.md
 docs/OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress.md
+docs/OutboundMessagingMessagingCampaignConfigChangeIntegrationRef.md
 docs/OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign.md
 docs/OutboundMessagingMessagingCampaignConfigChangeObject.md
 docs/OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress.md
@@ -4731,6 +4744,7 @@ docs/OutboundMessagingMessagingCampaignConfigChangeResponseRef.md
 docs/OutboundMessagingMessagingCampaignConfigChangeSmsConfig.md
 docs/OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef.md
 docs/OutboundMessagingMessagingCampaignConfigChangeUriReference.md
+docs/OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig.md
 docs/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.md
 docs/OutboundMessagingMessagingCampaignProgressEventObject.md
 docs/OutboundMessagingMessagingCampaignProgressEventUriReference.md
@@ -4788,6 +4802,7 @@ docs/PatchActionSurvey.md
 docs/PatchActionTarget.md
 docs/PatchActionTemplate.md
 docs/PatchAlertingAlert-example.txt
+docs/PatchAlertingAlertsAll-example.txt
 docs/PatchAlertingAlertsBulk-example.txt
 docs/PatchAlertingRulesBulk-example.txt
 docs/PatchAnalyticsReportingSettings-example.txt
@@ -5836,6 +5851,8 @@ docs/ProcessAutomationApi.md
 docs/ProcessScheduleUpdateUploadRequest.md
 docs/ProfileWithDateRange.md
 docs/Program.md
+docs/ProgramInsightsSettings.md
+docs/ProgramInsightsSettingsEntityListing.md
 docs/ProgramJob.md
 docs/ProgramJobRequest.md
 docs/ProgramMappings.md
@@ -6039,7 +6056,6 @@ docs/PutRoutingMessageRecipient-example.txt
 docs/PutRoutingQueue-example.txt
 docs/PutRoutingSettings-example.txt
 docs/PutRoutingSettingsTranscription-example.txt
-docs/PutRoutingSmsPhonenumber-example.txt
 docs/PutRoutingUserDirectroutingbackupSettings-example.txt
 docs/PutRoutingUserDirectroutingbackupSettings-example.txt
 docs/PutRoutingUserUtilization-example.txt
@@ -6058,6 +6074,7 @@ docs/PutSpeechandtextanalyticsCategory-example.txt
 docs/PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/PutSpeechandtextanalyticsProgram-example.txt
 docs/PutSpeechandtextanalyticsProgramMappings-example.txt
+docs/PutSpeechandtextanalyticsProgramSettingsInsights-example.txt
 docs/PutSpeechandtextanalyticsProgramTranscriptionengines-example.txt
 docs/PutSpeechandtextanalyticsSettings-example.txt
 docs/PutSpeechandtextanalyticsTopic-example.txt
@@ -6859,6 +6876,8 @@ docs/SourcePlanningGroupRequest.md
 docs/SourceSyncResponse.md
 docs/SpeechTextAnalyticsApi.json
 docs/SpeechTextAnalyticsApi.md
+docs/SpeechTextAnalyticsConversationSummary.md
+docs/SpeechTextAnalyticsConversationSummaryListing.md
 docs/SpeechTextAnalyticsSettingsRequest.md
 docs/SpeechTextAnalyticsSettingsResponse.md
 docs/SplittingInformation.md
@@ -7460,6 +7479,12 @@ docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
 docs/V2WebMessagingUndeliveredMessageTopicMessage.md
 docs/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestMetrics.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestPrizes.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestWinners.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestWinnersScore.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers.md
 docs/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.md
 docs/V2WemEngagementCelebrationUpdatesTopicSourceEntity.md
 docs/V2WemEngagementCelebrationUpdatesTopicUserId.md
@@ -8789,6 +8814,7 @@ src/PureCloudPlatform.Client.V2/Model/CommandStatus.cs
 src/PureCloudPlatform.Client.V2/Model/CommandStatusEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CommonAlert.cs
 src/PureCloudPlatform.Client.V2/Model/CommonAlertBulkUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CommonAllAlertUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CommonCampaign.cs
 src/PureCloudPlatform.Client.V2/Model/CommonCampaignDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/CommonCampaignDivisionViewEntityListing.cs
@@ -10270,6 +10296,7 @@ src/PureCloudPlatform.Client.V2/Model/InsightsDetailsMetricPeriodPoints.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsDetailsOverallItem.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsDetailsOverallPeriodPoints.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsRankings.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsSummary.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsSummaryMetricItem.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsSummaryMetricPeriodPoints.cs
@@ -11076,6 +11103,7 @@ src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChange
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeEmailConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeErrorDetail.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeFromEmailAddress.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeIntegrationRef.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeMessagingCampaign.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeObject.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress.cs
@@ -11083,6 +11111,7 @@ src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChange
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeSmsConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeSmsPhoneNumberRef.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignConfigChangeWhatsAppConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignProgressEventCampaignProgress.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignProgressEventObject.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingEmailCampaignProgressEventUriReference.cs
@@ -11090,6 +11119,7 @@ src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigCh
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeIntegrationRef.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeObject.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress.cs
@@ -11097,6 +11127,7 @@ src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigCh
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeSmsConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignProgressEventObject.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignProgressEventUriReference.cs
@@ -11274,6 +11305,8 @@ src/PureCloudPlatform.Client.V2/Model/PresenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ProcessScheduleUpdateUploadRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ProfileWithDateRange.cs
 src/PureCloudPlatform.Client.V2/Model/Program.cs
+src/PureCloudPlatform.Client.V2/Model/ProgramInsightsSettings.cs
+src/PureCloudPlatform.Client.V2/Model/ProgramInsightsSettingsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramJob.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramMappings.cs
@@ -12033,6 +12066,8 @@ src/PureCloudPlatform.Client.V2/Model/SourceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SourceLastSync.cs
 src/PureCloudPlatform.Client.V2/Model/SourcePlanningGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SourceSyncResponse.cs
+src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsConversationSummary.cs
+src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsConversationSummaryListing.cs
 src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SplittingInformation.cs
@@ -12608,6 +12643,12 @@ src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicEntityProperties.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicRule.cs
 src/PureCloudPlatform.Client.V2/Model/V2WebMessagingUndeliveredMessageTopicMessage.cs
 src/PureCloudPlatform.Client.V2/Model/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.cs
+src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.cs
+src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicContestMetrics.cs
+src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicContestPrizes.cs
+src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicContestWinners.cs
+src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicContestWinnersScore.cs
+src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers.cs
 src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.cs
 src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicSourceEntity.cs
 src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicUserId.cs

@@ -18,15 +18,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsConversationCategories**](#GetSpeechandtextanalyticsConversationCategories) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/categories | Get the list of detected Speech and Text Analytics categories of conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturl**](#GetSpeechandtextanalyticsConversationCommunicationTranscripturl) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturls**](#GetSpeechandtextanalyticsConversationCommunicationTranscripturls) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
+| [**GetSpeechandtextanalyticsConversationSummaries**](#GetSpeechandtextanalyticsConversationSummaries) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/summaries | Get conversation summaries by conversation id. |
 | [**GetSpeechandtextanalyticsDictionaryfeedback**](#GetSpeechandtextanalyticsDictionaryfeedback) | **Get** /api/v2/speechandtextanalytics/dictionaryfeedback | Get the list of Speech &amp; Text Analytics dictionary feedbacks |
 | [**GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](#GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | **Get** /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId} | Get a Speech &amp; Text Analytics dictionary feedback by id |
 | [**GetSpeechandtextanalyticsProgram**](#GetSpeechandtextanalyticsProgram) | **Get** /api/v2/speechandtextanalytics/programs/{programId} | Get a Speech &amp; Text Analytics program by id |
 | [**GetSpeechandtextanalyticsProgramMappings**](#GetSpeechandtextanalyticsProgramMappings) | **Get** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
+| [**GetSpeechandtextanalyticsProgramSettingsInsights**](#GetSpeechandtextanalyticsProgramSettingsInsights) | **Get** /api/v2/speechandtextanalytics/programs/{programId}/settings/insights | Get AI Insights settings of a program |
 | [**GetSpeechandtextanalyticsProgramTranscriptionengines**](#GetSpeechandtextanalyticsProgramTranscriptionengines) | **Get** /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines | Get transcription engine settings of a program |
 | [**GetSpeechandtextanalyticsPrograms**](#GetSpeechandtextanalyticsPrograms) | **Get** /api/v2/speechandtextanalytics/programs | Get the list of Speech &amp; Text Analytics programs |
 | [**GetSpeechandtextanalyticsProgramsGeneralJob**](#GetSpeechandtextanalyticsProgramsGeneralJob) | **Get** /api/v2/speechandtextanalytics/programs/general/jobs/{jobId} | Get a Speech &amp; Text Analytics general program job by id |
 | [**GetSpeechandtextanalyticsProgramsMappings**](#GetSpeechandtextanalyticsProgramsMappings) | **Get** /api/v2/speechandtextanalytics/programs/mappings | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**GetSpeechandtextanalyticsProgramsPublishjob**](#GetSpeechandtextanalyticsProgramsPublishjob) | **Get** /api/v2/speechandtextanalytics/programs/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish programs job by id |
+| [**GetSpeechandtextanalyticsProgramsSettingsInsights**](#GetSpeechandtextanalyticsProgramsSettingsInsights) | **Get** /api/v2/speechandtextanalytics/programs/settings/insights | Get the list of program AI Insights settings for the organization |
 | [**GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](#GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | **Get** /api/v2/speechandtextanalytics/programs/transcriptionengines/dialects | Get supported dialects for each transcription engine |
 | [**GetSpeechandtextanalyticsProgramsUnpublished**](#GetSpeechandtextanalyticsProgramsUnpublished) | **Get** /api/v2/speechandtextanalytics/programs/unpublished | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**GetSpeechandtextanalyticsSentimentDialects**](#GetSpeechandtextanalyticsSentimentDialects) | **Get** /api/v2/speechandtextanalytics/sentiment/dialects | Get the list of Speech &amp; Text Analytics sentiment supported dialects |
@@ -54,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](#PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | **Put** /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId} | Update existing Speech &amp; Text Analytics dictionary feedback by id |
 | [**PutSpeechandtextanalyticsProgram**](#PutSpeechandtextanalyticsProgram) | **Put** /api/v2/speechandtextanalytics/programs/{programId} | Update existing Speech &amp; Text Analytics program |
 | [**PutSpeechandtextanalyticsProgramMappings**](#PutSpeechandtextanalyticsProgramMappings) | **Put** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Set Speech &amp; Text Analytics program mappings to queues and flows |
+| [**PutSpeechandtextanalyticsProgramSettingsInsights**](#PutSpeechandtextanalyticsProgramSettingsInsights) | **Put** /api/v2/speechandtextanalytics/programs/{programId}/settings/insights | Update AI Insights settings of a program |
 | [**PutSpeechandtextanalyticsProgramTranscriptionengines**](#PutSpeechandtextanalyticsProgramTranscriptionengines) | **Put** /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines | Update transcription engine settings of a program |
 | [**PutSpeechandtextanalyticsSettings**](#PutSpeechandtextanalyticsSettings) | **Put** /api/v2/speechandtextanalytics/settings | Update Speech And Text Analytics Settings |
 | [**PutSpeechandtextanalyticsTopic**](#PutSpeechandtextanalyticsTopic) | **Put** /api/v2/speechandtextanalytics/topics/{topicId} | Update existing Speech &amp; Text Analytics topic |
@@ -817,6 +821,70 @@ namespace Example
 [**TranscriptUrls**](TranscriptUrls)
 
 
+## GetSpeechandtextanalyticsConversationSummaries
+
+> [**SpeechTextAnalyticsConversationSummaryListing**](SpeechTextAnalyticsConversationSummaryListing) GetSpeechandtextanalyticsConversationSummaries (string conversationId)
+
+
+Get conversation summaries by conversation id.
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:aiSummary:view
+* recording:recording:view
+* recording:recording:viewSensitiveData
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsConversationSummariesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var conversationId = conversationId_example;  // string | The conversation ID of the summaries
+
+            try
+            { 
+                // Get conversation summaries by conversation id.
+                SpeechTextAnalyticsConversationSummaryListing result = apiInstance.GetSpeechandtextanalyticsConversationSummaries(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsConversationSummaries: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| The conversation ID of the summaries |  |
+
+### Return type
+
+[**SpeechTextAnalyticsConversationSummaryListing**](SpeechTextAnalyticsConversationSummaryListing)
+
+
 ## GetSpeechandtextanalyticsDictionaryfeedback
 
 > [**DictionaryFeedbackEntityListing**](DictionaryFeedbackEntityListing) GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string nextPage = null, int? pageSize = null)
@@ -1067,6 +1135,69 @@ namespace Example
 ### Return type
 
 [**ProgramMappings**](ProgramMappings)
+
+
+## GetSpeechandtextanalyticsProgramSettingsInsights
+
+> [**ProgramInsightsSettings**](ProgramInsightsSettings) GetSpeechandtextanalyticsProgramSettingsInsights (string programId)
+
+
+Get AI Insights settings of a program
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:insightsSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramSettingsInsightsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+
+            try
+            { 
+                // Get AI Insights settings of a program
+                ProgramInsightsSettings result = apiInstance.GetSpeechandtextanalyticsProgramSettingsInsights(programId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramSettingsInsights: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+
+### Return type
+
+[**ProgramInsightsSettings**](ProgramInsightsSettings)
 
 
 ## GetSpeechandtextanalyticsProgramTranscriptionengines
@@ -1386,6 +1517,73 @@ namespace Example
 ### Return type
 
 [**ProgramJob**](ProgramJob)
+
+
+## GetSpeechandtextanalyticsProgramsSettingsInsights
+
+> [**ProgramInsightsSettingsEntityListing**](ProgramInsightsSettingsEntityListing) GetSpeechandtextanalyticsProgramsSettingsInsights (int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
+
+
+Get the list of program AI Insights settings for the organization
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:insightsSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramsSettingsInsightsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 100. (optional)  (default to 100)
+            var pageNumber = 56;  // int? | The page number for the listing (optional)  (default to 1)
+            var programIds = new List<string>(); // List<string> | Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional) 
+
+            try
+            { 
+                // Get the list of program AI Insights settings for the organization
+                ProgramInsightsSettingsEntityListing result = apiInstance.GetSpeechandtextanalyticsProgramsSettingsInsights(pageSize, pageNumber, programIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramsSettingsInsights: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 100. | [optional] [default to 100] |
+| **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
+| **programIds** | [**List<string>**](string)| Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. | [optional]  |
+
+### Return type
+
+[**ProgramInsightsSettingsEntityListing**](ProgramInsightsSettingsEntityListing)
 
 
 ## GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects
@@ -3072,6 +3270,71 @@ namespace Example
 [**ProgramMappings**](ProgramMappings)
 
 
+## PutSpeechandtextanalyticsProgramSettingsInsights
+
+> [**ProgramInsightsSettings**](ProgramInsightsSettings) PutSpeechandtextanalyticsProgramSettingsInsights (string programId, InsightsSettingsRequest body)
+
+
+Update AI Insights settings of a program
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+* speechAndTextAnalytics:insightsSettings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutSpeechandtextanalyticsProgramSettingsInsightsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+            var body = new InsightsSettingsRequest(); // InsightsSettingsRequest | Program AI Insights setting
+
+            try
+            { 
+                // Update AI Insights settings of a program
+                ProgramInsightsSettings result = apiInstance.PutSpeechandtextanalyticsProgramSettingsInsights(programId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PutSpeechandtextanalyticsProgramSettingsInsights: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+| **body** | [**InsightsSettingsRequest**](InsightsSettingsRequest)| Program AI Insights setting |  |
+
+### Return type
+
+[**ProgramInsightsSettings**](ProgramInsightsSettings)
+
+
 ## PutSpeechandtextanalyticsProgramTranscriptionengines
 
 > [**ProgramTranscriptionEngines**](ProgramTranscriptionEngines) PutSpeechandtextanalyticsProgramTranscriptionengines (string programId, TranscriptionEnginesRequest body)
@@ -3262,4 +3525,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 225.0.0_
+_PureCloudPlatform.Client.V2 226.0.0_

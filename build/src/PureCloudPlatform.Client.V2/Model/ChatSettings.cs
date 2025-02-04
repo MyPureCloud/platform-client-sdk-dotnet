@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ChatSettings" /> class.
         /// </summary>
         /// <param name="MessageRetentionPeriodDays">Retention time for messages in days, expressed as int in the range [10,3650].</param>
-        public ChatSettings(int? MessageRetentionPeriodDays = null)
+        /// <param name="ReactionsEnabled">Reactions enabled for org.</param>
+        public ChatSettings(int? MessageRetentionPeriodDays = null, bool? ReactionsEnabled = null)
         {
             this.MessageRetentionPeriodDays = MessageRetentionPeriodDays;
+            this.ReactionsEnabled = ReactionsEnabled;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MessageRetentionPeriodDays { get; set; }
 
 
+
+        /// <summary>
+        /// Reactions enabled for org
+        /// </summary>
+        /// <value>Reactions enabled for org</value>
+        [DataMember(Name="reactionsEnabled", EmitDefaultValue=false)]
+        public bool? ReactionsEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ChatSettings {\n");
 
             sb.Append("  MessageRetentionPeriodDays: ").Append(MessageRetentionPeriodDays).Append("\n");
+            sb.Append("  ReactionsEnabled: ").Append(ReactionsEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageRetentionPeriodDays == other.MessageRetentionPeriodDays ||
                     this.MessageRetentionPeriodDays != null &&
                     this.MessageRetentionPeriodDays.Equals(other.MessageRetentionPeriodDays)
+                ) &&
+                (
+                    this.ReactionsEnabled == other.ReactionsEnabled ||
+                    this.ReactionsEnabled != null &&
+                    this.ReactionsEnabled.Equals(other.ReactionsEnabled)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.MessageRetentionPeriodDays != null)
                     hash = hash * 59 + this.MessageRetentionPeriodDays.GetHashCode();
+
+                if (this.ReactionsEnabled != null)
+                    hash = hash * 59 + this.ReactionsEnabled.GetHashCode();
 
                 return hash;
             }

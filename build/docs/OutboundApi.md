@@ -5748,6 +5748,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:search
 * outbound:emailCampaign:search
+* outbound:whatsAppCampaign:search
 
 ### Example
 ```{"language":"csharp"}
@@ -5813,6 +5814,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:search
 * outbound:emailCampaign:search
+* outbound:whatsAppCampaign:search
 
 ### Example
 ```{"language":"csharp"}
@@ -10938,4 +10940,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 225.0.0_
+_PureCloudPlatform.Client.V2 226.0.0_

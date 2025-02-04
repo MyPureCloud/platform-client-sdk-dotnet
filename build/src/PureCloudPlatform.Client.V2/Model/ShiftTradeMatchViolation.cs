@@ -52,10 +52,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Directtradeforotheruser,
             
             /// <summary>
+            /// Enum Initiatingagentminimumtimebetweenshifts for "InitiatingAgentMinimumTimeBetweenShifts"
+            /// </summary>
+            [EnumMember(Value = "InitiatingAgentMinimumTimeBetweenShifts")]
+            Initiatingagentminimumtimebetweenshifts,
+            
+            /// <summary>
             /// Enum Initiatingagentscheduledoesnotexist for "InitiatingAgentScheduleDoesNotExist"
             /// </summary>
             [EnumMember(Value = "InitiatingAgentScheduleDoesNotExist")]
             Initiatingagentscheduledoesnotexist,
+            
+            /// <summary>
+            /// Enum Initiatingplanningperiodmaxpaidtime for "InitiatingPlanningPeriodMaxPaidTime"
+            /// </summary>
+            [EnumMember(Value = "InitiatingPlanningPeriodMaxPaidTime")]
+            Initiatingplanningperiodmaxpaidtime,
+            
+            /// <summary>
+            /// Enum Initiatingplanningperiodminpaidtime for "InitiatingPlanningPeriodMinPaidTime"
+            /// </summary>
+            [EnumMember(Value = "InitiatingPlanningPeriodMinPaidTime")]
+            Initiatingplanningperiodminpaidtime,
             
             /// <summary>
             /// Enum Initiatingshiftdisallowedactivitycategory for "InitiatingShiftDisallowedActivityCategory"
@@ -118,10 +136,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Onesidedtradecreation,
             
             /// <summary>
+            /// Enum Receivingagentminimumtimebetweenshifts for "ReceivingAgentMinimumTimeBetweenShifts"
+            /// </summary>
+            [EnumMember(Value = "ReceivingAgentMinimumTimeBetweenShifts")]
+            Receivingagentminimumtimebetweenshifts,
+            
+            /// <summary>
             /// Enum Receivingagentscheduledoesnotexist for "ReceivingAgentScheduleDoesNotExist"
             /// </summary>
             [EnumMember(Value = "ReceivingAgentScheduleDoesNotExist")]
             Receivingagentscheduledoesnotexist,
+            
+            /// <summary>
+            /// Enum Receivingplanningperiodmaxpaidtime for "ReceivingPlanningPeriodMaxPaidTime"
+            /// </summary>
+            [EnumMember(Value = "ReceivingPlanningPeriodMaxPaidTime")]
+            Receivingplanningperiodmaxpaidtime,
+            
+            /// <summary>
+            /// Enum Receivingplanningperiodminpaidtime for "ReceivingPlanningPeriodMinPaidTime"
+            /// </summary>
+            [EnumMember(Value = "ReceivingPlanningPeriodMinPaidTime")]
+            Receivingplanningperiodminpaidtime,
             
             /// <summary>
             /// Enum Receivingshiftdisallowedactivitycategory for "ReceivingShiftDisallowedActivityCategory"

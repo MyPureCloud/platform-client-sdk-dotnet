@@ -261,8 +261,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">Value.</param>
         /// <param name="Status">Status.</param>
         /// <param name="MediaType">MediaType.</param>
+        /// <param name="Topic">Topic.</param>
         /// <param name="ComparisonOperator">ComparisonOperator.</param>
-        public V2MobiusRulesTopicConditionRulePredicate(Guid? Id = null, V2MobiusRulesTopicEntityProperties Entity = null, string Metric = null, MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, double? Value = null, string Status = null, MediaTypeEnum? MediaType = null, ComparisonOperatorEnum? ComparisonOperator = null)
+        public V2MobiusRulesTopicConditionRulePredicate(Guid? Id = null, V2MobiusRulesTopicEntityProperties Entity = null, string Metric = null, MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, double? Value = null, string Status = null, MediaTypeEnum? MediaType = null, string Topic = null, ComparisonOperatorEnum? ComparisonOperator = null)
         {
             this.Id = Id;
             this.Entity = Entity;
@@ -272,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Value = Value;
             this.Status = Status;
             this.MediaType = MediaType;
+            this.Topic = Topic;
             this.ComparisonOperator = ComparisonOperator;
             
         }
@@ -324,6 +326,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets Topic
+        /// </summary>
+        [DataMember(Name="topic", EmitDefaultValue=false)]
+        public string Topic { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -342,6 +352,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  Topic: ").Append(Topic).Append("\n");
             sb.Append("  ComparisonOperator: ").Append(ComparisonOperator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -424,6 +435,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.Equals(other.MediaType)
                 ) &&
                 (
+                    this.Topic == other.Topic ||
+                    this.Topic != null &&
+                    this.Topic.Equals(other.Topic)
+                ) &&
+                (
                     this.ComparisonOperator == other.ComparisonOperator ||
                     this.ComparisonOperator != null &&
                     this.ComparisonOperator.Equals(other.ComparisonOperator)
@@ -464,6 +480,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.Topic != null)
+                    hash = hash * 59 + this.Topic.GetHashCode();
 
                 if (this.ComparisonOperator != null)
                     hash = hash * 59 + this.ComparisonOperator.GetHashCode();

@@ -772,7 +772,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentCopilotPerformanceView for "AGENT_COPILOT_PERFORMANCE_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_COPILOT_PERFORMANCE_VIEW")]
-            AgentCopilotPerformanceView
+            AgentCopilotPerformanceView,
+            
+            /// <summary>
+            /// Enum AgentAssignedEvaluationMeView for "AGENT_ASSIGNED_EVALUATION_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_ASSIGNED_EVALUATION_ME_VIEW")]
+            AgentAssignedEvaluationMeView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request

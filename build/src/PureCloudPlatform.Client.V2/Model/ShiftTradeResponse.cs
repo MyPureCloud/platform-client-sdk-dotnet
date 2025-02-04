@@ -86,13 +86,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InitiatingShiftId">The ID of the shift offered for trade by the initiating user.</param>
         /// <param name="InitiatingShiftStart">The start date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="InitiatingShiftEnd">The end date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ReceivingUser">The user matching the trade, or if the state is not Matched, the user to whom the trade request was sent.</param>
+        /// <param name="ReceivingUser">The user matching the trade, or if the state is not 'Matched', the user to whom the trade request was sent.</param>
         /// <param name="ReceivingShiftId">The ID of the shift being exchanged for the initiating shift, null if the receiving user is picking up a shift.</param>
         /// <param name="ReceivingShiftStart">The start date/time of the receiving shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ReceivingShiftEnd">The end date/time of the receiving shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Expiration">When this shift trade offer will expire if not matched or approved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="OneSided">Whether this is a one-sided shift trade (e.g. the initiating user is not asking for a shift in return).</param>
-        /// <param name="AcceptableIntervals">Time frames when the initiating user is willing to accept trades.  Empty means giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        /// <param name="AcceptableIntervals">Time frames when the initiating user is willing to accept trades. Empty means giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="ReviewedBy">The user who reviewed this shift trade.</param>
         /// <param name="ReviewedDate">The timestamp when this shift trade was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Metadata">Version data for this trade.</param>
@@ -187,9 +187,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user matching the trade, or if the state is not Matched, the user to whom the trade request was sent
+        /// The user matching the trade, or if the state is not 'Matched', the user to whom the trade request was sent
         /// </summary>
-        /// <value>The user matching the trade, or if the state is not Matched, the user to whom the trade request was sent</value>
+        /// <value>The user matching the trade, or if the state is not 'Matched', the user to whom the trade request was sent</value>
         [DataMember(Name="receivingUser", EmitDefaultValue=false)]
         public UserReference ReceivingUser { get; set; }
 
@@ -241,9 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Time frames when the initiating user is willing to accept trades.  Empty means giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+        /// Time frames when the initiating user is willing to accept trades. Empty means giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
-        /// <value>Time frames when the initiating user is willing to accept trades.  Empty means giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
+        /// <value>Time frames when the initiating user is willing to accept trades. Empty means giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="acceptableIntervals", EmitDefaultValue=false)]
         public List<string> AcceptableIntervals { get; set; }
 

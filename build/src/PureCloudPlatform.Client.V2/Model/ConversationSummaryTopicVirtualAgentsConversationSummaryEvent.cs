@@ -84,7 +84,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Open for "OPEN"
             /// </summary>
             [EnumMember(Value = "OPEN")]
-            Open
+            Open,
+            
+            /// <summary>
+            /// Enum Apple for "APPLE"
+            /// </summary>
+            [EnumMember(Value = "APPLE")]
+            Apple
         }
         /// <summary>
         /// Gets or Sets MediaType
@@ -154,7 +160,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ConversationTooShort for "CONVERSATION_TOO_SHORT"
             /// </summary>
             [EnumMember(Value = "CONVERSATION_TOO_SHORT")]
-            ConversationTooShort
+            ConversationTooShort,
+            
+            /// <summary>
+            /// Enum RateLimited for "RATE_LIMITED"
+            /// </summary>
+            [EnumMember(Value = "RATE_LIMITED")]
+            RateLimited
         }
         /// <summary>
         /// Gets or Sets MessageType
@@ -175,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationSummaryTopicVirtualAgentsConversationSummaryEvent" /> class.
         /// </summary>
         /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="QueueId">QueueId.</param>
         /// <param name="Participants">Participants.</param>
         /// <param name="CommunicationIds">CommunicationIds.</param>
         /// <param name="CreatedDate">CreatedDate.</param>
@@ -191,9 +204,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastEditedBy">LastEditedBy.</param>
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, int? DurationMs = null)
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, int? DurationMs = null)
         {
             this.ConversationId = ConversationId;
+            this.QueueId = QueueId;
             this.Participants = Participants;
             this.CommunicationIds = CommunicationIds;
             this.CreatedDate = CreatedDate;
@@ -220,6 +234,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public Guid? ConversationId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets QueueId
+        /// </summary>
+        [DataMember(Name="queueId", EmitDefaultValue=false)]
+        public Guid? QueueId { get; set; }
 
 
 
@@ -342,6 +364,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent {\n");
 
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  CommunicationIds: ").Append(CommunicationIds).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
@@ -402,6 +425,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
+                ) &&
+                (
+                    this.QueueId == other.QueueId ||
+                    this.QueueId != null &&
+                    this.QueueId.Equals(other.QueueId)
                 ) &&
                 (
                     this.Participants == other.Participants ||
@@ -498,6 +526,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
+
+                if (this.QueueId != null)
+                    hash = hash * 59 + this.QueueId.GetHashCode();
 
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();

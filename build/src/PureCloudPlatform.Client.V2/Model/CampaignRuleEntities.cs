@@ -23,10 +23,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Campaigns">The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign..</param>
         /// <param name="Sequences">The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence..</param>
-        public CampaignRuleEntities(List<DomainEntityRef> Campaigns = null, List<DomainEntityRef> Sequences = null)
+        /// <param name="EmailCampaigns">The list of Email campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a Email campaign..</param>
+        /// <param name="SmsCampaigns">The list of SMS campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a SMS campaign..</param>
+        public CampaignRuleEntities(List<DomainEntityRef> Campaigns = null, List<DomainEntityRef> Sequences = null, List<DomainEntityRef> EmailCampaigns = null, List<DomainEntityRef> SmsCampaigns = null)
         {
             this.Campaigns = Campaigns;
             this.Sequences = Sequences;
+            this.EmailCampaigns = EmailCampaigns;
+            this.SmsCampaigns = SmsCampaigns;
             
         }
         
@@ -49,6 +53,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DomainEntityRef> Sequences { get; set; }
 
 
+
+        /// <summary>
+        /// The list of Email campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a Email campaign.
+        /// </summary>
+        /// <value>The list of Email campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a Email campaign.</value>
+        [DataMember(Name="emailCampaigns", EmitDefaultValue=false)]
+        public List<DomainEntityRef> EmailCampaigns { get; set; }
+
+
+
+        /// <summary>
+        /// The list of SMS campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a SMS campaign.
+        /// </summary>
+        /// <value>The list of SMS campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a SMS campaign.</value>
+        [DataMember(Name="smsCampaigns", EmitDefaultValue=false)]
+        public List<DomainEntityRef> SmsCampaigns { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +82,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
+            sb.Append("  EmailCampaigns: ").Append(EmailCampaigns).Append("\n");
+            sb.Append("  SmsCampaigns: ").Append(SmsCampaigns).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +133,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sequences == other.Sequences ||
                     this.Sequences != null &&
                     this.Sequences.SequenceEqual(other.Sequences)
+                ) &&
+                (
+                    this.EmailCampaigns == other.EmailCampaigns ||
+                    this.EmailCampaigns != null &&
+                    this.EmailCampaigns.SequenceEqual(other.EmailCampaigns)
+                ) &&
+                (
+                    this.SmsCampaigns == other.SmsCampaigns ||
+                    this.SmsCampaigns != null &&
+                    this.SmsCampaigns.SequenceEqual(other.SmsCampaigns)
                 );
         }
 
@@ -128,6 +162,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Sequences != null)
                     hash = hash * 59 + this.Sequences.GetHashCode();
+
+                if (this.EmailCampaigns != null)
+                    hash = hash * 59 + this.EmailCampaigns.GetHashCode();
+
+                if (this.SmsCampaigns != null)
+                    hash = hash * 59 + this.SmsCampaigns.GetHashCode();
 
                 return hash;
             }
