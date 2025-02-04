@@ -688,8 +688,6 @@ namespace Example
 
 Get draft function settings for Action
 
-GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:actionFunction:view
@@ -945,8 +943,6 @@ namespace Example
 
 
 Get published function settings for Action
-
-GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1503,8 +1499,6 @@ namespace Example
 
 
 Get action function settings for Action
-
-GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4518,8 +4512,6 @@ namespace Example
 
 Create upload presigned URL for draft function package file.
 
-PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:actionFunction:edit
@@ -5297,8 +5289,6 @@ namespace Example
 
 Update draft function settings.
 
-PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:actionFunction:edit
@@ -5674,4 +5664,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 225.0.0_
+_PureCloudPlatform.Client.V2 226.0.0_

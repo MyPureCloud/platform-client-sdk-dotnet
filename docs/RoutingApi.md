@@ -148,7 +148,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingQueue**](#PutRoutingQueue) | **Put** /api/v2/routing/queues/{queueId} | Update a queue |
 | [**PutRoutingSettings**](#PutRoutingSettings) | **Put** /api/v2/routing/settings | Update an organization&#39;s routing settings |
 | [**PutRoutingSettingsTranscription**](#PutRoutingSettingsTranscription) | **Put** /api/v2/routing/settings/transcription | Update Transcription Settings |
-| [**PutRoutingSmsPhonenumber**](#PutRoutingSmsPhonenumber) | **Put** /api/v2/routing/sms/phonenumbers/{phoneNumberId} | Update a phone number provisioned for SMS. |
 | [**PutRoutingUserDirectroutingbackupSettings**](#PutRoutingUserDirectroutingbackupSettings) | **Put** /api/v2/routing/users/{userId}/directroutingbackup/settings | Update the user&#39;s Direct Routing Backup settings. |
 | [**PutRoutingUserUtilization**](#PutRoutingUserUtilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutRoutingUtilization**](#PutRoutingUtilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
@@ -9288,70 +9287,6 @@ namespace Example
 [**TranscriptionSettings**](TranscriptionSettings)
 
 
-## PutRoutingSmsPhonenumber
-
-> [**SmsPhoneNumber**](SmsPhoneNumber) PutRoutingSmsPhonenumber (string phoneNumberId, SmsPhoneNumber body)
-
-
-Update a phone number provisioned for SMS.
-
-Requires ALL permissions: 
-
-* sms:phoneNumber:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutRoutingSmsPhonenumberExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RoutingApi();
-            var phoneNumberId = phoneNumberId_example;  // string | phone number
-            var body = new SmsPhoneNumber(); // SmsPhoneNumber | SmsPhoneNumber
-
-            try
-            { 
-                // Update a phone number provisioned for SMS.
-                SmsPhoneNumber result = apiInstance.PutRoutingSmsPhonenumber(phoneNumberId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.PutRoutingSmsPhonenumber: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **phoneNumberId** | **string**| phone number |  |
-| **body** | [**SmsPhoneNumber**](SmsPhoneNumber)| SmsPhoneNumber |  |
-
-### Return type
-
-[**SmsPhoneNumber**](SmsPhoneNumber)
-
-
 ## PutRoutingUserDirectroutingbackupSettings
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) PutRoutingUserDirectroutingbackupSettings (string userId, AgentDirectRoutingBackupSettings body)
@@ -9800,4 +9735,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 225.0.0_
+_PureCloudPlatform.Client.V2 226.0.0_

@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **Guid?** |  | [optional] |
 | **Type** | **string** |  | [optional] |
+| **ContestCompleteData** | [**V2WemEngagementCelebrationUpdatesTopicContestCompleteData**](V2WemEngagementCelebrationUpdatesTopicContestCompleteData) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 225.0.0_
+_PureCloudPlatform.Client.V2 226.0.0_
