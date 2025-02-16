@@ -419,7 +419,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Cleared">Flag that indicates that the conversation has been cleared by the customer.</param>
         /// <param name="CoachedParticipantId">The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation).</param>
         /// <param name="CobrowseRole">Describes side of the cobrowse (sharer or viewer).</param>
-        /// <param name="CobrowseRoomId">A unique identifier for a PureCloud cobrowse room.</param>
+        /// <param name="CobrowseRoomId">A unique identifier for a Genesys Cloud cobrowse room.</param>
         /// <param name="DeliveryStatus">The email or SMS delivery status.</param>
         /// <param name="DeliveryStatusChangeDate">Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DestinationAddresses">Destination address(es) of transfers or consults.</param>
@@ -461,19 +461,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingRing">Routing ring for bullseye or preferred agent routing.</param>
         /// <param name="RoutingRule">Routing rule for preferred, conditional and predictive routing type.</param>
         /// <param name="RoutingRuleType">Routing rule type.</param>
-        /// <param name="ScreenShareAddressSelf">Direct ScreenShare address.</param>
-        /// <param name="ScreenShareRoomId">A unique identifier for a PureCloud ScreenShare room.</param>
+        /// <param name="ScreenShareAddressSelf">Direct screen share address.</param>
+        /// <param name="ScreenShareRoomId">A unique identifier for a Genesys Cloud screen share room.</param>
         /// <param name="ScriptId">A unique identifier for a script.</param>
         /// <param name="SelectedAgentId">Selected agent ID.</param>
         /// <param name="SelectedAgentRank">Selected agent GPR rank.</param>
         /// <param name="SessionDnis">Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred.</param>
         /// <param name="SessionId">The unique identifier of this session.</param>
-        /// <param name="SharingScreen">Flag determining if screenShare is started or not (true/false).</param>
+        /// <param name="SharingScreen">Flag determining if screen share is started or not (true/false).</param>
         /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
-        /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling).</param>
+        /// <param name="TimeoutSeconds">The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling).</param>
         /// <param name="UsedRouting">Complete routing method.</param>
         /// <param name="VideoAddressSelf">Direct Video address.</param>
-        /// <param name="VideoRoomId">A unique identifier for a PureCloud video room.</param>
+        /// <param name="VideoRoomId">A unique identifier for a Genesys Cloud video room.</param>
         /// <param name="WaitingInteractionCounts">Number of waiting interactions for each predictive routing attempt.</param>
         /// <param name="AgentGroups">Conditional group routing agent groups.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
@@ -761,9 +761,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A unique identifier for a PureCloud cobrowse room
+        /// A unique identifier for a Genesys Cloud cobrowse room
         /// </summary>
-        /// <value>A unique identifier for a PureCloud cobrowse room</value>
+        /// <value>A unique identifier for a Genesys Cloud cobrowse room</value>
         [DataMember(Name="cobrowseRoomId", EmitDefaultValue=false)]
         public string CobrowseRoomId { get; set; }
 
@@ -1111,18 +1111,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Direct ScreenShare address
+        /// Direct screen share address
         /// </summary>
-        /// <value>Direct ScreenShare address</value>
+        /// <value>Direct screen share address</value>
         [DataMember(Name="screenShareAddressSelf", EmitDefaultValue=false)]
         public string ScreenShareAddressSelf { get; set; }
 
 
 
         /// <summary>
-        /// A unique identifier for a PureCloud ScreenShare room
+        /// A unique identifier for a Genesys Cloud screen share room
         /// </summary>
-        /// <value>A unique identifier for a PureCloud ScreenShare room</value>
+        /// <value>A unique identifier for a Genesys Cloud screen share room</value>
         [DataMember(Name="screenShareRoomId", EmitDefaultValue=false)]
         public string ScreenShareRoomId { get; set; }
 
@@ -1174,9 +1174,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Flag determining if screenShare is started or not (true/false)
+        /// Flag determining if screen share is started or not (true/false)
         /// </summary>
-        /// <value>Flag determining if screenShare is started or not (true/false)</value>
+        /// <value>Flag determining if screen share is started or not (true/false)</value>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
 
@@ -1192,9 +1192,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)
+        /// The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling)
         /// </summary>
-        /// <value>The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)</value>
+        /// <value>The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling)</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
 
@@ -1212,9 +1212,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A unique identifier for a PureCloud video room
+        /// A unique identifier for a Genesys Cloud video room
         /// </summary>
-        /// <value>A unique identifier for a PureCloud video room</value>
+        /// <value>A unique identifier for a Genesys Cloud video room</value>
         [DataMember(Name="videoRoomId", EmitDefaultValue=false)]
         public string VideoRoomId { get; set; }
 

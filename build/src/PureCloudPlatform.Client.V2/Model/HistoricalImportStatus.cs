@@ -196,6 +196,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Name of the file that you are importing.
+        /// </summary>
+        /// <value>Name of the file that you are importing.</value>
+        [DataMember(Name="fileName", EmitDefaultValue=false)]
+        public string FileName { get; private set; }
+
+
+
+        /// <summary>
+        /// Size of the file that you are importing.
+        /// </summary>
+        /// <value>Size of the file that you are importing.</value>
+        [DataMember(Name="fileSize", EmitDefaultValue=false)]
+        public long? FileSize { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -214,6 +232,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  FileName: ").Append(FileName).Append("\n");
+            sb.Append("  FileSize: ").Append(FileSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -298,6 +318,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.FileName == other.FileName ||
+                    this.FileName != null &&
+                    this.FileName.Equals(other.FileName)
+                ) &&
+                (
+                    this.FileSize == other.FileSize ||
+                    this.FileSize != null &&
+                    this.FileSize.Equals(other.FileSize)
                 );
         }
 
@@ -338,6 +368,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.FileName != null)
+                    hash = hash * 59 + this.FileName.GetHashCode();
+
+                if (this.FileSize != null)
+                    hash = hash * 59 + this.FileSize.GetHashCode();
 
                 return hash;
             }

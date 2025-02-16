@@ -167,12 +167,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>CategoriesEntityListing</returns>
         
         CategoriesEntityListing GetSpeechandtextanalyticsCategories (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null);
@@ -184,12 +184,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>ApiResponse of CategoriesEntityListing</returns>
         
         ApiResponse<CategoriesEntityListing> GetSpeechandtextanalyticsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null);
@@ -1553,12 +1553,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>Task of CategoriesEntityListing</returns>
         
         System.Threading.Tasks.Task<CategoriesEntityListing> GetSpeechandtextanalyticsCategoriesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null);
@@ -1570,12 +1570,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>Task of ApiResponse (CategoriesEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CategoriesEntityListing>> GetSpeechandtextanalyticsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null);
@@ -4142,12 +4142,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>CategoriesEntityListing</returns>
         
         public CategoriesEntityListing GetSpeechandtextanalyticsCategories (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)
@@ -4161,12 +4161,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>ApiResponse of CategoriesEntityListing</returns>
         
         public ApiResponse< CategoriesEntityListing > GetSpeechandtextanalyticsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)
@@ -4259,12 +4259,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>Task of CategoriesEntityListing</returns>
         
         public async System.Threading.Tasks.Task<CategoriesEntityListing> GetSpeechandtextanalyticsCategoriesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)
@@ -4279,12 +4279,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">The page size for the listing. The max that will be returned is 50. (optional, default to 25)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 25. (optional, default to 25)</param>
         /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
         /// <param name="name">The category name filter applied to the listing (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional, default to asc)</param>
         /// <param name="sortBy">The field to sort by for the listing (optional, default to name)</param>
-        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="ids">Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)</param>
         /// <returns>Task of ApiResponse (CategoriesEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CategoriesEntityListing>> GetSpeechandtextanalyticsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)

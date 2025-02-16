@@ -81,18 +81,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">ID of the open data ingestion rule..</param>
         /// <param name="Name">The name of the data ingestion rule..</param>
         /// <param name="Description">A description of the data ingestion rule..</param>
-        /// <param name="DateCreated">Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="DateModified">Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Status">The status of the data ingestion rule..</param>
         /// <param name="Version">The version number of the data ingestion rule..</param>
         /// <param name="ExternalSource">The external source associated with this open data ingestion rule, which is used when performing identity resolution.</param>
-        public OpenDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, int? Version = null, DomainEntityRef ExternalSource = null)
+        public OpenDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, DomainEntityRef ExternalSource = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Description = Description;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
             this.Status = Status;
             this.Version = Version;
             this.ExternalSource = ExternalSource;
@@ -128,24 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-        /// <summary>
-        /// Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-
-
-
-        /// <summary>
-        /// Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-
-
-
 
 
         /// <summary>
@@ -154,6 +132,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The version number of the data ingestion rule.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+
+
+
+        /// <summary>
+        /// Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+
+
+
+        /// <summary>
+        /// Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; private set; }
+
+
+
+        /// <summary>
+        /// The platform of the data ingestion rule.
+        /// </summary>
+        /// <value>The platform of the data ingestion rule.</value>
+        [DataMember(Name="platform", EmitDefaultValue=false)]
+        public string Platform { get; private set; }
 
 
 
@@ -186,10 +191,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Platform: ").Append(Platform).Append("\n");
             sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -248,6 +254,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -258,14 +274,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
+                    this.Platform == other.Platform ||
+                    this.Platform != null &&
+                    this.Platform.Equals(other.Platform)
                 ) &&
                 (
                     this.ExternalSource == other.ExternalSource ||
@@ -299,17 +310,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
 
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
 
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
+                if (this.Platform != null)
+                    hash = hash * 59 + this.Platform.GetHashCode();
 
                 if (this.ExternalSource != null)
                     hash = hash * 59 + this.ExternalSource.GetHashCode();

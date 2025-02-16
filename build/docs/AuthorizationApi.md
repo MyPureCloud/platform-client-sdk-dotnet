@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteAuthorizationDivision**](#DeleteAuthorizationDivision) | **Delete** /api/v2/authorization/divisions/{divisionId} | Delete a division. |
+| [**DeleteAuthorizationPoliciesTargetSubjectSubjectId**](#DeleteAuthorizationPoliciesTargetSubjectSubjectId) | **Delete** /api/v2/authorization/policies/targets/{targetName}/subject/{subjectId} | Delete an access control policy |
 | [**DeleteAuthorizationRole**](#DeleteAuthorizationRole) | **Delete** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
 | [**DeleteAuthorizationSubjectDivisionRole**](#DeleteAuthorizationSubjectDivisionRole) | **Delete** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
 | [**GetAuthorizationDivision**](#GetAuthorizationDivision) | **Get** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
@@ -18,6 +19,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationDivisionspermittedPagedMe**](#GetAuthorizationDivisionspermittedPagedMe) | **Get** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
 | [**GetAuthorizationDivisionspermittedPagedSubjectId**](#GetAuthorizationDivisionspermittedPagedSubjectId) | **Get** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
 | [**GetAuthorizationPermissions**](#GetAuthorizationPermissions) | **Get** /api/v2/authorization/permissions | Get all permissions. |
+| [**GetAuthorizationPolicies**](#GetAuthorizationPolicies) | **Get** /api/v2/authorization/policies | Get a page of access policies for an organization |
+| [**GetAuthorizationPoliciesSubjectSubjectId**](#GetAuthorizationPoliciesSubjectSubjectId) | **Get** /api/v2/authorization/policies/subject/{subjectId} | Get a page of access policies for a given subject |
+| [**GetAuthorizationPoliciesTarget**](#GetAuthorizationPoliciesTarget) | **Get** /api/v2/authorization/policies/targets/{targetName} | Get a page of access policies for a given policy target |
+| [**GetAuthorizationPoliciesTargetSubjectSubjectId**](#GetAuthorizationPoliciesTargetSubjectSubjectId) | **Get** /api/v2/authorization/policies/targets/{targetName}/subject/{subjectId} | Get an access control policy for a specified resource target and subject |
+| [**GetAuthorizationPoliciesTargets**](#GetAuthorizationPoliciesTargets) | **Get** /api/v2/authorization/policies/targets | Get a map of policy targets to valid attributes for those targets |
+| [**GetAuthorizationPolicy**](#GetAuthorizationPolicy) | **Get** /api/v2/authorization/policies/{policyId} | Get an access control policy with the specified policy ID |
+| [**GetAuthorizationPolicyAttributes**](#GetAuthorizationPolicyAttributes) | **Get** /api/v2/authorization/policies/{policyId}/attributes | Get the list of attributes used to evaluate an access control policy with the specified policy ID |
 | [**GetAuthorizationProducts**](#GetAuthorizationProducts) | **Get** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetAuthorizationRole**](#GetAuthorizationRole) | **Get** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
 | [**GetAuthorizationRoleComparedefaultRightRoleId**](#GetAuthorizationRoleComparedefaultRightRoleId) | **Get** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison |
@@ -35,6 +43,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAuthorizationDivisionObject**](#PostAuthorizationDivisionObject) | **Post** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
 | [**PostAuthorizationDivisionRestore**](#PostAuthorizationDivisionRestore) | **Post** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
 | [**PostAuthorizationDivisions**](#PostAuthorizationDivisions) | **Post** /api/v2/authorization/divisions | Create a division. |
+| [**PostAuthorizationPoliciesTarget**](#PostAuthorizationPoliciesTarget) | **Post** /api/v2/authorization/policies/targets/{targetName} | Add an access control policy for a specified resource target and subject |
+| [**PostAuthorizationPoliciesTargetValidate**](#PostAuthorizationPoliciesTargetValidate) | **Post** /api/v2/authorization/policies/targets/{targetName}/validate | Validate the conditions and attributes of an access control policy for a specified resource target |
+| [**PostAuthorizationPolicySimulate**](#PostAuthorizationPolicySimulate) | **Post** /api/v2/authorization/policies/{policyId}/simulate | Simulate a request and evaluate the specified policy ID against the provided values |
 | [**PostAuthorizationRole**](#PostAuthorizationRole) | **Post** /api/v2/authorization/roles/{roleId} | Bulk-grant subjects and divisions with an organization role. |
 | [**PostAuthorizationRoleComparedefaultRightRoleId**](#PostAuthorizationRoleComparedefaultRightRoleId) | **Post** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
 | [**PostAuthorizationRoles**](#PostAuthorizationRoles) | **Post** /api/v2/authorization/roles | Create an organization role. |
@@ -44,6 +55,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAuthorizationSubjectBulkreplace**](#PostAuthorizationSubjectBulkreplace) | **Post** /api/v2/authorization/subjects/{subjectId}/bulkreplace | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**PostAuthorizationSubjectDivisionRole**](#PostAuthorizationSubjectDivisionRole) | **Post** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
 | [**PutAuthorizationDivision**](#PutAuthorizationDivision) | **Put** /api/v2/authorization/divisions/{divisionId} | Update a division. |
+| [**PutAuthorizationPoliciesTarget**](#PutAuthorizationPoliciesTarget) | **Put** /api/v2/authorization/policies/targets/{targetName} | Add an access control policy for a specified resource target and subject, overwriting any existing policy |
+| [**PutAuthorizationPolicy**](#PutAuthorizationPolicy) | **Put** /api/v2/authorization/policies/{policyId} | Update an access control policy with a given ID |
 | [**PutAuthorizationRole**](#PutAuthorizationRole) | **Put** /api/v2/authorization/roles/{roleId} | Update an organization role. |
 | [**PutAuthorizationRoleUsersAdd**](#PutAuthorizationRoleUsersAdd) | **Put** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
 | [**PutAuthorizationRoleUsersRemove**](#PutAuthorizationRoleUsersRemove) | **Put** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
@@ -110,6 +123,71 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **force** | **bool?**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteAuthorizationPoliciesTargetSubjectSubjectId
+
+> void DeleteAuthorizationPoliciesTargetSubjectSubjectId (string targetName, string subjectId)
+
+
+Delete an access control policy
+
+DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAuthorizationPoliciesTargetSubjectSubjectIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var targetName = targetName_example;  // string | The domain:entity:action target to which the policy is applied
+            var subjectId = subjectId_example;  // string | The ID of the subject to which the policy is applied
+
+            try
+            { 
+                // Delete an access control policy
+                apiInstance.DeleteAuthorizationPoliciesTargetSubjectSubjectId(targetName, subjectId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.DeleteAuthorizationPoliciesTargetSubjectSubjectId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **targetName** | **string**| The domain:entity:action target to which the policy is applied |  |
+| **subjectId** | **string**| The ID of the subject to which the policy is applied |  |
 
 ### Return type
 
@@ -838,6 +916,461 @@ namespace Example
 ### Return type
 
 [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing)
+
+
+## GetAuthorizationPolicies
+
+> [**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing) GetAuthorizationPolicies (string after = null, int? pageSize = null)
+
+
+Get a page of access policies for an organization
+
+GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationPoliciesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional)  (default to 25)
+
+            try
+            { 
+                // Get a page of access policies for an organization
+                AuthorizationPolicyEntityListing result = apiInstance.GetAuthorizationPolicies(after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationPolicies: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional] [default to 25] |
+
+### Return type
+
+[**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing)
+
+
+## GetAuthorizationPoliciesSubjectSubjectId
+
+> [**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing) GetAuthorizationPoliciesSubjectSubjectId (string subjectId, string after = null, int? pageSize = null)
+
+
+Get a page of access policies for a given subject
+
+GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationPoliciesSubjectSubjectIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var subjectId = subjectId_example;  // string | The ID of the subject to which policies are applied
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional)  (default to 25)
+
+            try
+            { 
+                // Get a page of access policies for a given subject
+                AuthorizationPolicyEntityListing result = apiInstance.GetAuthorizationPoliciesSubjectSubjectId(subjectId, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationPoliciesSubjectSubjectId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| The ID of the subject to which policies are applied |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional] [default to 25] |
+
+### Return type
+
+[**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing)
+
+
+## GetAuthorizationPoliciesTarget
+
+> [**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing) GetAuthorizationPoliciesTarget (string targetName, string after = null, int? pageSize = null)
+
+
+Get a page of access policies for a given policy target
+
+GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationPoliciesTargetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var targetName = targetName_example;  // string | The domain:entity:action resource target to which policies are applied
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional)  (default to 25)
+
+            try
+            { 
+                // Get a page of access policies for a given policy target
+                AuthorizationPolicyEntityListing result = apiInstance.GetAuthorizationPoliciesTarget(targetName, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationPoliciesTarget: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **targetName** | **string**| The domain:entity:action resource target to which policies are applied |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional] [default to 25] |
+
+### Return type
+
+[**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing)
+
+
+## GetAuthorizationPoliciesTargetSubjectSubjectId
+
+> [**AuthorizationPolicy**](AuthorizationPolicy) GetAuthorizationPoliciesTargetSubjectSubjectId (string targetName, string subjectId)
+
+
+Get an access control policy for a specified resource target and subject
+
+GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationPoliciesTargetSubjectSubjectIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var targetName = targetName_example;  // string | The domain:entity:action resource target to which the policy is applied
+            var subjectId = subjectId_example;  // string | The ID of the subject to which the policy is applied
+
+            try
+            { 
+                // Get an access control policy for a specified resource target and subject
+                AuthorizationPolicy result = apiInstance.GetAuthorizationPoliciesTargetSubjectSubjectId(targetName, subjectId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationPoliciesTargetSubjectSubjectId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **targetName** | **string**| The domain:entity:action resource target to which the policy is applied |  |
+| **subjectId** | **string**| The ID of the subject to which the policy is applied |  |
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## GetAuthorizationPoliciesTargets
+
+> [**TargetAttributes**](TargetAttributes) GetAuthorizationPoliciesTargets ()
+
+
+Get a map of policy targets to valid attributes for those targets
+
+GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationPoliciesTargetsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+
+            try
+            { 
+                // Get a map of policy targets to valid attributes for those targets
+                TargetAttributes result = apiInstance.GetAuthorizationPoliciesTargets();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationPoliciesTargets: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**TargetAttributes**](TargetAttributes)
+
+
+## GetAuthorizationPolicy
+
+> [**AuthorizationPolicy**](AuthorizationPolicy) GetAuthorizationPolicy (string policyId)
+
+
+Get an access control policy with the specified policy ID
+
+GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationPolicyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var policyId = policyId_example;  // string | The ID of the policy to retrieve
+
+            try
+            { 
+                // Get an access control policy with the specified policy ID
+                AuthorizationPolicy result = apiInstance.GetAuthorizationPolicy(policyId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationPolicy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| The ID of the policy to retrieve |  |
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## GetAuthorizationPolicyAttributes
+
+> [**PolicyAttributeSet**](PolicyAttributeSet) GetAuthorizationPolicyAttributes (string policyId)
+
+
+Get the list of attributes used to evaluate an access control policy with the specified policy ID
+
+GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationPolicyAttributesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var policyId = policyId_example;  // string | The ID of the policy to retrieve attributes
+
+            try
+            { 
+                // Get the list of attributes used to evaluate an access control policy with the specified policy ID
+                PolicyAttributeSet result = apiInstance.GetAuthorizationPolicyAttributes(policyId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationPolicyAttributes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| The ID of the policy to retrieve attributes |  |
+
+### Return type
+
+[**PolicyAttributeSet**](PolicyAttributeSet)
 
 
 ## GetAuthorizationProducts
@@ -1946,6 +2479,204 @@ namespace Example
 [**AuthzDivision**](AuthzDivision)
 
 
+## PostAuthorizationPoliciesTarget
+
+> [**AuthorizationPolicy**](AuthorizationPolicy) PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+
+
+Add an access control policy for a specified resource target and subject
+
+PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationPoliciesTargetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var targetName = targetName_example;  // string | The domain:entity:action target to which the policy will be applied
+            var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+
+            try
+            { 
+                // Add an access control policy for a specified resource target and subject
+                AuthorizationPolicy result = apiInstance.PostAuthorizationPoliciesTarget(targetName, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationPoliciesTarget: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **targetName** | **string**| The domain:entity:action target to which the policy will be applied |  |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy |  |
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## PostAuthorizationPoliciesTargetValidate
+
+> [**ValidationErrorListing**](ValidationErrorListing) PostAuthorizationPoliciesTargetValidate (string targetName, AuthorizationPolicy body)
+
+
+Validate the conditions and attributes of an access control policy for a specified resource target
+
+PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationPoliciesTargetValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var targetName = targetName_example;  // string | The domain:entity:action target to which the policy will be applied
+            var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+
+            try
+            { 
+                // Validate the conditions and attributes of an access control policy for a specified resource target
+                ValidationErrorListing result = apiInstance.PostAuthorizationPoliciesTargetValidate(targetName, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationPoliciesTargetValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **targetName** | **string**| The domain:entity:action target to which the policy will be applied |  |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy |  |
+
+### Return type
+
+[**ValidationErrorListing**](ValidationErrorListing)
+
+
+## PostAuthorizationPolicySimulate
+
+> [**PolicyTestResult**](PolicyTestResult) PostAuthorizationPolicySimulate (string policyId, PolicyTestPayload body)
+
+
+Simulate a request and evaluate the specified policy ID against the provided values
+
+PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationPolicySimulateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var policyId = policyId_example;  // string | The ID of the policy to test the simulated data against
+            var body = new PolicyTestPayload(); // PolicyTestPayload | A map of attribute names to type and simulated data value
+
+            try
+            { 
+                // Simulate a request and evaluate the specified policy ID against the provided values
+                PolicyTestResult result = apiInstance.PostAuthorizationPolicySimulate(policyId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationPolicySimulate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| The ID of the policy to test the simulated data against |  |
+| **body** | [**PolicyTestPayload**](PolicyTestPayload)| A map of attribute names to type and simulated data value |  |
+
+### Return type
+
+[**PolicyTestResult**](PolicyTestResult)
+
+
 ## PostAuthorizationRole
 
 > void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null)
@@ -2532,6 +3263,139 @@ namespace Example
 [**AuthzDivision**](AuthzDivision)
 
 
+## PutAuthorizationPoliciesTarget
+
+> [**AuthorizationPolicy**](AuthorizationPolicy) PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+
+
+Add an access control policy for a specified resource target and subject, overwriting any existing policy
+
+PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:edit
+* authorization:policy:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutAuthorizationPoliciesTargetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var targetName = targetName_example;  // string | The domain:entity:action target to which the policy will be applied
+            var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+
+            try
+            { 
+                // Add an access control policy for a specified resource target and subject, overwriting any existing policy
+                AuthorizationPolicy result = apiInstance.PutAuthorizationPoliciesTarget(targetName, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PutAuthorizationPoliciesTarget: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **targetName** | **string**| The domain:entity:action target to which the policy will be applied |  |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy |  |
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## PutAuthorizationPolicy
+
+> [**AuthorizationPolicy**](AuthorizationPolicy) PutAuthorizationPolicy (string policyId, AuthorizationPolicy body)
+
+
+Update an access control policy with a given ID
+
+PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:policy:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutAuthorizationPolicyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var policyId = policyId_example;  // string | The ID of the policy to update
+            var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+
+            try
+            { 
+                // Update an access control policy with a given ID
+                AuthorizationPolicy result = apiInstance.PutAuthorizationPolicy(policyId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PutAuthorizationPolicy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **policyId** | **string**| The ID of the policy to update |  |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy |  |
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
 ## PutAuthorizationRole
 
 > [**DomainOrganizationRole**](DomainOrganizationRole) PutAuthorizationRole (string roleId, DomainOrganizationRoleUpdate body)
@@ -2917,4 +3781,4 @@ namespace Example
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

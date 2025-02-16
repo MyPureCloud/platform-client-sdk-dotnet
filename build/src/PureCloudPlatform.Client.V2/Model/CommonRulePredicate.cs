@@ -373,7 +373,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Tadherencestatus for "tAdherenceStatus"
             /// </summary>
             [EnumMember(Value = "tAdherenceStatus")]
-            Tadherencestatus
+            Tadherencestatus,
+            
+            /// <summary>
+            /// Enum Nevents for "nEvents"
+            /// </summary>
+            [EnumMember(Value = "nEvents")]
+            Nevents
         }
         /// <summary>
         /// The type of metric being evaluated.
@@ -419,16 +425,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ComparisonOperator">The comparison operator being performed on the metric. (required).</param>
         /// <param name="Value">The value the metric will be compared to. (required).</param>
         /// <param name="Status">The status of the entity corresponding to the metric..</param>
+        /// <param name="Topic">The operational console topic corresponding to the metric..</param>
         /// <param name="Entity">The entity whose metric is being represented. (required).</param>
         /// <param name="MediaType">The media type of the conversation the metric describes..</param>
         /// <param name="Metric">The metric being evaluated. (required).</param>
-        public CommonRulePredicate(MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, ComparisonOperatorEnum? ComparisonOperator = null, double? Value = null, string Status = null, CommonRulePredicateEntity Entity = null, MediaTypeEnum? MediaType = null, MetricEnum? Metric = null)
+        public CommonRulePredicate(MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, ComparisonOperatorEnum? ComparisonOperator = null, double? Value = null, string Status = null, string Topic = null, CommonRulePredicateEntity Entity = null, MediaTypeEnum? MediaType = null, MetricEnum? Metric = null)
         {
             this.MetricType = MetricType;
             this.MetricValueType = MetricValueType;
             this.ComparisonOperator = ComparisonOperator;
             this.Value = Value;
             this.Status = Status;
+            this.Topic = Topic;
             this.Entity = Entity;
             this.MediaType = MediaType;
             this.Metric = Metric;
@@ -462,6 +470,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The operational console topic corresponding to the metric.
+        /// </summary>
+        /// <value>The operational console topic corresponding to the metric.</value>
+        [DataMember(Name="topic", EmitDefaultValue=false)]
+        public string Topic { get; set; }
+
+
+
+        /// <summary>
         /// The entity whose metric is being represented.
         /// </summary>
         /// <value>The entity whose metric is being represented.</value>
@@ -487,6 +504,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ComparisonOperator: ").Append(ComparisonOperator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Topic: ").Append(Topic).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
@@ -556,6 +574,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.Topic == other.Topic ||
+                    this.Topic != null &&
+                    this.Topic.Equals(other.Topic)
+                ) &&
+                (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
@@ -597,6 +620,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.Topic != null)
+                    hash = hash * 59 + this.Topic.GetHashCode();
 
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();

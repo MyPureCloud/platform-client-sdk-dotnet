@@ -365,6 +365,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ParkTime">The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ResumeTime">The time when this participant's communications will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Muted">Value is true when the call is muted..</param>
         /// <param name="Confined">Value is true when the call is confined..</param>
         /// <param name="Recording">Value is true when the call is being recorded..</param>
@@ -382,7 +383,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BargedTime">The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
         /// <param name="Disposition">Call resolution data for Dialer bulk make calls commands..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null)
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -419,6 +420,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
             this.ParkTime = ParkTime;
+            this.ResumeTime = ResumeTime;
             this.Muted = Muted;
             this.Confined = Confined;
             this.Recording = Recording;
@@ -729,6 +731,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The time when this participant's communications will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The time when this participant's communications will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="resumeTime", EmitDefaultValue=false)]
+        public DateTime? ResumeTime { get; set; }
+
+
+
+        /// <summary>
         /// Value is true when the call is muted.
         /// </summary>
         /// <value>Value is true when the call is muted.</value>
@@ -917,6 +928,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("  ParkTime: ").Append(ParkTime).Append("\n");
+            sb.Append("  ResumeTime: ").Append(ResumeTime).Append("\n");
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
@@ -1150,6 +1162,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ParkTime.Equals(other.ParkTime)
                 ) &&
                 (
+                    this.ResumeTime == other.ResumeTime ||
+                    this.ResumeTime != null &&
+                    this.ResumeTime.Equals(other.ResumeTime)
+                ) &&
+                (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
@@ -1351,6 +1368,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ParkTime != null)
                     hash = hash * 59 + this.ParkTime.GetHashCode();
+
+                if (this.ResumeTime != null)
+                    hash = hash * 59 + this.ResumeTime.GetHashCode();
 
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();

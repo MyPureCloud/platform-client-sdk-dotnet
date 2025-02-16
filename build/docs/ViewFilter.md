@@ -200,6 +200,7 @@
 | **OvertalkInstances** | [**NumericRange**](NumericRange) | The overtalk instance range used to filter the view | [optional] |
 | **IsScreenRecorded** | **bool?** | Filter to indicate if the screen is recorded | [optional] |
 | **ScreenMonitorUserIds** | **List&lt;string&gt;** | The list of Screen Monitor User Ids | [optional] |
+| **DashboardState** | **string** | The state of dashboard being filtered | [optional] |
 | **DashboardType** | **string** | The type of dashboard being filtered | [optional] |
 | **DashboardAccessFilter** | **string** | The type of dashboard access being filtered | [optional] |
 | **TranscriptDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange) | The transcript durations in milliseconds used to filter the view | [optional] |
@@ -223,7 +224,9 @@
 | **RecommendationSources** | **List&lt;string&gt;** | List of recommendation sources for filtering recommendation details pane | [optional] |
 | **EvaluationRole** | **string** | Sets the role when viewing agent evaluations | [optional] |
 | **ComparisonQueueIds** | **List&lt;string&gt;** | The queue ids are used to for comparison to the primary queue filter in reporting | [optional] |
+| **ViewMetrics** | **List&lt;string&gt;** | A list of metrics selected for the view | [optional] |
+| **TimelineCategories** | **List&lt;string&gt;** | A list of timeline categories | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

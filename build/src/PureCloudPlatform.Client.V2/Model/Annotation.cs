@@ -66,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Annotation" /> class.
         /// </summary>
+        /// <param name="Id">Annotation id. All pause annotations on a recording will share an ID value, bookmark annotations will have unique IDs, and hold annotations will have randomly generated UUIDs (i.e. the ID will change at each request)..</param>
         /// <param name="Name">Name.</param>
         /// <param name="Type">Type.</param>
         /// <param name="Location">Offset of annotation in milliseconds..</param>
@@ -76,8 +77,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingDurationMs">Duration of annotation (milliseconds), adjusted for any recording cuts..</param>
         /// <param name="User">User that created this annotation (if any)..</param>
         /// <param name="Description">Text of annotation. Maximum character limit is 500..</param>
-        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, long? AbsoluteLocation = null, long? AbsoluteDurationMs = null, long? RecordingLocation = null, long? RecordingDurationMs = null, User User = null, string Description = null)
+        public Annotation(string Id = null, string Name = null, string Type = null, long? Location = null, long? DurationMs = null, long? AbsoluteLocation = null, long? AbsoluteDurationMs = null, long? RecordingLocation = null, long? RecordingDurationMs = null, User User = null, string Description = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Type = Type;
             this.Location = Location;
@@ -94,11 +96,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Annotation id. All pause annotations on a recording will share an ID value, bookmark annotations will have unique IDs, and hold annotations will have randomly generated UUIDs (i.e. the ID will change at each request).
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>Annotation id. All pause annotations on a recording will share an ID value, bookmark annotations will have unique IDs, and hold annotations will have randomly generated UUIDs (i.e. the ID will change at each request).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

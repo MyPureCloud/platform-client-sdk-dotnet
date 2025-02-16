@@ -15,7 +15,9 @@
 | **DateModified** | **DateTime?** | Date in which the historical import is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Active** | **bool?** | Whether this historical import is active or not | [optional] |
 | **Type** | **string** | Whether this historical import is of type csv or json | [optional] |
+| **FileName** | **string** | Name of the file that you are importing. | [optional] |
+| **FileSize** | **long?** | Size of the file that you are importing. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

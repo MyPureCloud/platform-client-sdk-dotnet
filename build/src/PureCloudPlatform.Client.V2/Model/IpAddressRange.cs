@@ -45,6 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Smtp,
             
             /// <summary>
+            /// Enum Imap for "imap"
+            /// </summary>
+            [EnumMember(Value = "imap")]
+            Imap,
+            
+            /// <summary>
+            /// Enum Graphapi for "graphapi"
+            /// </summary>
+            [EnumMember(Value = "graphapi")]
+            Graphapi,
+            
+            /// <summary>
             /// Enum Audiohook for "audiohook"
             /// </summary>
             [EnumMember(Value = "audiohook")]
@@ -78,7 +90,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Botconnector for "bot-connector"
             /// </summary>
             [EnumMember(Value = "bot-connector")]
-            Botconnector
+            Botconnector,
+            
+            /// <summary>
+            /// Enum Ttsconnector for "tts-connector"
+            /// </summary>
+            [EnumMember(Value = "tts-connector")]
+            Ttsconnector
         }
         /// <summary>
         /// Gets or Sets Service

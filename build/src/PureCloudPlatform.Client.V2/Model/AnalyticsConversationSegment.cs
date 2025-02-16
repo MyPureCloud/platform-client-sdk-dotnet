@@ -303,7 +303,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DestinationSessionId">The unique identifier of a new session when a session is ended for a conference.</param>
         /// <param name="DisconnectType">The session disconnect type.</param>
         /// <param name="ErrorCode">A code corresponding to the error that occurred.</param>
-        /// <param name="GroupId">Unique identifier for a PureCloud group.</param>
+        /// <param name="GroupId">Unique identifier for a Genesys Cloud group.</param>
         /// <param name="Q850ResponseCodes">Q.850 response code(s).</param>
         /// <param name="QueueId">Queue identifier.</param>
         /// <param name="RequestedLanguageId">Unique identifier for the language requested for an interaction.</param>
@@ -402,9 +402,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Unique identifier for a PureCloud group
+        /// Unique identifier for a Genesys Cloud group
         /// </summary>
-        /// <value>Unique identifier for a PureCloud group</value>
+        /// <value>Unique identifier for a Genesys Cloud group</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
 

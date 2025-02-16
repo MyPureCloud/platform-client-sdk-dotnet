@@ -94,12 +94,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">The time zone for this business unit, using the Olsen tz database format (required).</param>
         /// <param name="ShortTermForecasting">Short term forecasting settings.</param>
         /// <param name="Scheduling">Scheduling settings.</param>
-        public CreateBusinessUnitSettingsRequest(StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, BuShortTermForecastingSettings ShortTermForecasting = null, BuSchedulingSettingsRequest Scheduling = null)
+        /// <param name="Notifications">Notification settings.</param>
+        public CreateBusinessUnitSettingsRequest(StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, BuShortTermForecastingSettings ShortTermForecasting = null, BuSchedulingSettingsRequest Scheduling = null, BuNotificationSettingsRequest Notifications = null)
         {
             this.StartDayOfWeek = StartDayOfWeek;
             this.TimeZone = TimeZone;
             this.ShortTermForecasting = ShortTermForecasting;
             this.Scheduling = Scheduling;
+            this.Notifications = Notifications;
             
         }
         
@@ -133,6 +135,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public BuSchedulingSettingsRequest Scheduling { get; set; }
 
 
+
+        /// <summary>
+        /// Notification settings
+        /// </summary>
+        /// <value>Notification settings</value>
+        [DataMember(Name="notifications", EmitDefaultValue=false)]
+        public BuNotificationSettingsRequest Notifications { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
             sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
+            sb.Append("  Notifications: ").Append(Notifications).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -205,6 +217,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Scheduling == other.Scheduling ||
                     this.Scheduling != null &&
                     this.Scheduling.Equals(other.Scheduling)
+                ) &&
+                (
+                    this.Notifications == other.Notifications ||
+                    this.Notifications != null &&
+                    this.Notifications.Equals(other.Notifications)
                 );
         }
 
@@ -230,6 +247,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Scheduling != null)
                     hash = hash * 59 + this.Scheduling.GetHashCode();
+
+                if (this.Notifications != null)
+                    hash = hash * 59 + this.Notifications.GetHashCode();
 
                 return hash;
             }

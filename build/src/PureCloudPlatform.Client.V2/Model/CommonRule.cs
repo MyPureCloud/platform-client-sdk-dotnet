@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Workforcemanagement,
             
             /// <summary>
+            /// Enum Operationalconsole for "OperationalConsole"
+            /// </summary>
+            [EnumMember(Value = "OperationalConsole")]
+            Operationalconsole,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

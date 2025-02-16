@@ -41,9 +41,10 @@
 | **CustomFields** | **Dictionary&lt;string, Object&gt;** | Custom fields defined in the schema referenced by the Workitem. | [optional] |
 | **AutoStatusTransitionDetail** | [**AutoStatusTransitionDetail**](AutoStatusTransitionDetail) | Auto status transition details of Workitem. | [optional] |
 | **ScoredAgents** | [**List&lt;WorkitemScoredAgent&gt;**](WorkitemScoredAgent) | A list of scored agents for the Workitem. | [optional] |
+| **Script** | [**WorkitemScriptReference**](WorkitemScriptReference) | The script that will be executed for the Workitem. | [optional] |
 | **Version** | **int?** | Version | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

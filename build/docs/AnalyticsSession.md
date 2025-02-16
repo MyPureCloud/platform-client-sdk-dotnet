@@ -27,7 +27,7 @@
 | **Cleared** | **bool?** | Flag that indicates that the conversation has been cleared by the customer | [optional] |
 | **CoachedParticipantId** | **string** | The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **CobrowseRole** | **string** | Describes side of the cobrowse (sharer or viewer) | [optional] |
-| **CobrowseRoomId** | **string** | A unique identifier for a PureCloud cobrowse room | [optional] |
+| **CobrowseRoomId** | **string** | A unique identifier for a Genesys Cloud cobrowse room | [optional] |
 | **DeliveryStatus** | **string** | The email or SMS delivery status | [optional] |
 | **DeliveryStatusChangeDate** | **DateTime?** | Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DestinationAddresses** | **List&lt;string&gt;** | Destination address(es) of transfers or consults | [optional] |
@@ -69,19 +69,19 @@
 | **RoutingRing** | **int?** | Routing ring for bullseye or preferred agent routing | [optional] |
 | **RoutingRule** | **string** | Routing rule for preferred, conditional and predictive routing type | [optional] |
 | **RoutingRuleType** | **string** | Routing rule type | [optional] |
-| **ScreenShareAddressSelf** | **string** | Direct ScreenShare address | [optional] |
-| **ScreenShareRoomId** | **string** | A unique identifier for a PureCloud ScreenShare room | [optional] |
+| **ScreenShareAddressSelf** | **string** | Direct screen share address | [optional] |
+| **ScreenShareRoomId** | **string** | A unique identifier for a Genesys Cloud screen share room | [optional] |
 | **ScriptId** | **string** | A unique identifier for a script | [optional] |
 | **SelectedAgentId** | **string** | Selected agent ID | [optional] |
 | **SelectedAgentRank** | **int?** | Selected agent GPR rank | [optional] |
 | **SessionDnis** | **string** | Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred | [optional] |
 | **SessionId** | **string** | The unique identifier of this session | [optional] |
-| **SharingScreen** | **bool?** | Flag determining if screenShare is started or not (true/false) | [optional] |
+| **SharingScreen** | **bool?** | Flag determining if screen share is started or not (true/false) | [optional] |
 | **SkipEnabled** | **bool?** | (Dialer) Whether the agent can skip the dialer contact | [optional] |
-| **TimeoutSeconds** | **int?** | The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling) | [optional] |
+| **TimeoutSeconds** | **int?** | The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling) | [optional] |
 | **UsedRouting** | **string** | Complete routing method | [optional] |
 | **VideoAddressSelf** | **string** | Direct Video address | [optional] |
-| **VideoRoomId** | **string** | A unique identifier for a PureCloud video room | [optional] |
+| **VideoRoomId** | **string** | A unique identifier for a Genesys Cloud video room | [optional] |
 | **WaitingInteractionCounts** | **List&lt;int?&gt;** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **AgentGroups** | [**List&lt;AnalyticsAgentGroup&gt;**](AnalyticsAgentGroup) | Conditional group routing agent groups | [optional] |
 | **ProposedAgents** | [**List&lt;AnalyticsProposedAgent&gt;**](AnalyticsProposedAgent) | Proposed agents | [optional] |
@@ -92,4 +92,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

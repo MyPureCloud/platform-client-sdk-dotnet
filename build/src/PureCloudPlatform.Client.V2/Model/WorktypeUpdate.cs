@@ -38,7 +38,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultLanguageId">The ID of the default language for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="DefaultSkillIds">The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs.</param>
         /// <param name="DefaultQueueId">The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID..</param>
-        public WorktypeUpdate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, string Description = null, string DefaultStatusId = null, int? SchemaVersion = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultQueueId = null)
+        /// <param name="DefaultScriptId">The default script for Workitems created from the Worktype. Must be a valid UUID..</param>
+        public WorktypeUpdate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, string Description = null, string DefaultStatusId = null, int? SchemaVersion = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultQueueId = null, string DefaultScriptId = null)
         {
             this.Name = Name;
             this.DefaultWorkbinId = DefaultWorkbinId;
@@ -57,6 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultLanguageId = DefaultLanguageId;
             this.DefaultSkillIds = DefaultSkillIds;
             this.DefaultQueueId = DefaultQueueId;
+            this.DefaultScriptId = DefaultScriptId;
             
         }
         
@@ -214,6 +216,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DefaultQueueId { get; set; }
 
 
+
+        /// <summary>
+        /// The default script for Workitems created from the Worktype. Must be a valid UUID.
+        /// </summary>
+        /// <value>The default script for Workitems created from the Worktype. Must be a valid UUID.</value>
+        [DataMember(Name="defaultScriptId", EmitDefaultValue=false)]
+        public string DefaultScriptId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -240,6 +251,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultLanguageId: ").Append(DefaultLanguageId).Append("\n");
             sb.Append("  DefaultSkillIds: ").Append(DefaultSkillIds).Append("\n");
             sb.Append("  DefaultQueueId: ").Append(DefaultQueueId).Append("\n");
+            sb.Append("  DefaultScriptId: ").Append(DefaultScriptId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -364,6 +376,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultQueueId == other.DefaultQueueId ||
                     this.DefaultQueueId != null &&
                     this.DefaultQueueId.Equals(other.DefaultQueueId)
+                ) &&
+                (
+                    this.DefaultScriptId == other.DefaultScriptId ||
+                    this.DefaultScriptId != null &&
+                    this.DefaultScriptId.Equals(other.DefaultScriptId)
                 );
         }
 
@@ -428,6 +445,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DefaultQueueId != null)
                     hash = hash * 59 + this.DefaultQueueId.GetHashCode();
+
+                if (this.DefaultScriptId != null)
+                    hash = hash * 59 + this.DefaultScriptId.GetHashCode();
 
                 return hash;
             }

@@ -57,11 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of this identifier (required).</param>
         /// <param name="Value">The string value of the identifier. Will vary in syntax by type. (required).</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public ExternalOrganizationIdentifier(TypeEnum? Type = null, string Value = null, DateTime? DateCreated = null)
+        /// <param name="ExternalSource">The External Source ID of the identifier.</param>
+        public ExternalOrganizationIdentifier(TypeEnum? Type = null, string Value = null, DateTime? DateCreated = null, ExternalSource ExternalSource = null)
         {
             this.Type = Type;
             this.Value = Value;
             this.DateCreated = DateCreated;
+            this.ExternalSource = ExternalSource;
             
         }
         
@@ -97,6 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The External Source ID of the identifier
+        /// </summary>
+        /// <value>The External Source ID of the identifier</value>
+        [DataMember(Name="externalSource", EmitDefaultValue=false)]
+        public ExternalSource ExternalSource { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -117,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -179,6 +191,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.ExternalSource == other.ExternalSource ||
+                    this.ExternalSource != null &&
+                    this.ExternalSource.Equals(other.ExternalSource)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -207,6 +224,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.ExternalSource != null)
+                    hash = hash * 59 + this.ExternalSource.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

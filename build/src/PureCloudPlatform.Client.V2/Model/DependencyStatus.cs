@@ -33,6 +33,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Buildincomplete for "BUILDINCOMPLETE"
+            /// </summary>
+            [EnumMember(Value = "BUILDINCOMPLETE")]
+            Buildincomplete,
+            
+            /// <summary>
             /// Enum Buildinitializing for "BUILDINITIALIZING"
             /// </summary>
             [EnumMember(Value = "BUILDINITIALIZING")]

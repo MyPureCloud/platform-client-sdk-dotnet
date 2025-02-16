@@ -41,7 +41,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingsScreensessionsDetails**](#GetRecordingsScreensessionsDetails) | **Get** /api/v2/recordings/screensessions/details | Retrieves an object containing the total number of concurrent active screen recordings |
 | [**PatchRecordingCrossplatformMediaretentionpolicy**](#PatchRecordingCrossplatformMediaretentionpolicy) | **Patch** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingMediaretentionpolicy**](#PatchRecordingMediaretentionpolicy) | **Patch** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PatchRecordingsScreensession**](#PatchRecordingsScreensession) | **Patch** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
 | [**PostConversationRecordingAnnotations**](#PostConversationRecordingAnnotations) | **Post** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
 | [**PostRecordingBatchrequests**](#PostRecordingBatchrequests) | **Post** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
 | [**PostRecordingCrossplatformMediaretentionpolicies**](#PostRecordingCrossplatformMediaretentionpolicies) | **Post** /api/v2/recording/crossplatform/mediaretentionpolicies | Create media retention policy |
@@ -2374,74 +2373,6 @@ namespace Example
 [**Policy**](Policy)
 
 
-## PatchRecordingsScreensession
-
-> void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Update a screen recording session
-
-This API is deprecated and the functionality to stop screen recording will be no longer supported.
-
-Requires ANY permissions: 
-
-* recording:screenRecording:stop
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PatchRecordingsScreensessionExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RecordingApi();
-            var recordingSessionId = recordingSessionId_example;  // string | Screen recording session ID
-            var body = new ScreenRecordingSessionRequest(); // ScreenRecordingSessionRequest |  (optional) 
-
-            try
-            { 
-                // Update a screen recording session
-                apiInstance.PatchRecordingsScreensession(recordingSessionId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RecordingApi.PatchRecordingsScreensession: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **recordingSessionId** | **string**| Screen recording session ID |  |
-| **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest)|  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-
 ## PostConversationRecordingAnnotations
 
 > [**Annotation**](Annotation) PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
@@ -3911,4 +3842,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

@@ -43,7 +43,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
         /// <param name="RuleSettings">Settings for the worktypes rules..</param>
         /// <param name="Flow">The flow associated with the Worktype..</param>
-        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, WorkitemFlowReference Flow = null)
+        /// <param name="DefaultScript">The default script for Workitems created from the Worktype..</param>
+        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, WorkitemFlowReference Flow = null, WorkitemScriptReference DefaultScript = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -67,6 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ServiceLevelTarget = ServiceLevelTarget;
             this.RuleSettings = RuleSettings;
             this.Flow = Flow;
+            this.DefaultScript = DefaultScript;
             
         }
         
@@ -280,6 +282,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The default script for Workitems created from the Worktype.
+        /// </summary>
+        /// <value>The default script for Workitems created from the Worktype.</value>
+        [DataMember(Name="defaultScript", EmitDefaultValue=false)]
+        public WorkitemScriptReference DefaultScript { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -319,6 +330,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
             sb.Append("  RuleSettings: ").Append(RuleSettings).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
+            sb.Append("  DefaultScript: ").Append(DefaultScript).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -476,6 +488,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Flow.Equals(other.Flow)
                 ) &&
                 (
+                    this.DefaultScript == other.DefaultScript ||
+                    this.DefaultScript != null &&
+                    this.DefaultScript.Equals(other.DefaultScript)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -561,6 +578,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
+
+                if (this.DefaultScript != null)
+                    hash = hash * 59 + this.DefaultScript.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

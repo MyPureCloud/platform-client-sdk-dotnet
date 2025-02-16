@@ -90,6 +90,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitsDivisionviews**](#GetWorkforcemanagementBusinessunitsDivisionviews) | **Get** /api/v2/workforcemanagement/businessunits/divisionviews | Get business units across divisions |
 | [**GetWorkforcemanagementCalendarDataIcs**](#GetWorkforcemanagementCalendarDataIcs) | **Get** /api/v2/workforcemanagement/calendar/data/ics | Get ics formatted calendar based on shareable link |
 | [**GetWorkforcemanagementCalendarUrlIcs**](#GetWorkforcemanagementCalendarUrlIcs) | **Get** /api/v2/workforcemanagement/calendar/url/ics | Get existing calendar link for the current user |
+| [**GetWorkforcemanagementHistoricaldataBulkRemoveJob**](#GetWorkforcemanagementHistoricaldataBulkRemoveJob) | **Get** /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId} | Retrieves delete job status for historical data imports associated with the job id |
+| [**GetWorkforcemanagementHistoricaldataBulkRemoveJobs**](#GetWorkforcemanagementHistoricaldataBulkRemoveJobs) | **Get** /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs | Retrieves all delete job status for historical data |
 | [**GetWorkforcemanagementHistoricaldataDeletejob**](#GetWorkforcemanagementHistoricaldataDeletejob) | **Get** /api/v2/workforcemanagement/historicaldata/deletejob | Retrieves delete job status for historical data imports of the organization |
 | [**GetWorkforcemanagementHistoricaldataImportstatus**](#GetWorkforcemanagementHistoricaldataImportstatus) | **Get** /api/v2/workforcemanagement/historicaldata/importstatus | Retrieves status of the historical data imports of the organization |
 | [**GetWorkforcemanagementHistoricaldataImportstatusJobId**](#GetWorkforcemanagementHistoricaldataImportstatusJobId) | **Get** /api/v2/workforcemanagement/historicaldata/importstatus/{jobId} | Retrieves status of the historical data imports associated with job id |
@@ -207,6 +209,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitWorkplanbids**](#PostWorkforcemanagementBusinessunitWorkplanbids) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids | Create a new work plan bid |
 | [**PostWorkforcemanagementBusinessunits**](#PostWorkforcemanagementBusinessunits) | **Post** /api/v2/workforcemanagement/businessunits | Add a new business unit |
 | [**PostWorkforcemanagementCalendarUrlIcs**](#PostWorkforcemanagementCalendarUrlIcs) | **Post** /api/v2/workforcemanagement/calendar/url/ics | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
+| [**PostWorkforcemanagementHistoricaldataBulkRemoveJobs**](#PostWorkforcemanagementHistoricaldataBulkRemoveJobs) | **Post** /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs | Delete the list of the historical data import entries |
 | [**PostWorkforcemanagementHistoricaldataDeletejob**](#PostWorkforcemanagementHistoricaldataDeletejob) | **Post** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization |
 | [**PostWorkforcemanagementHistoricaldataValidate**](#PostWorkforcemanagementHistoricaldataValidate) | **Post** /api/v2/workforcemanagement/historicaldata/validate | Trigger validation process for historical import |
 | [**PostWorkforcemanagementIntegrationsHriTimeofftypesJobs**](#PostWorkforcemanagementIntegrationsHriTimeofftypesJobs) | **Post** /api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs | Get list of time off types configured in integration |
@@ -5846,6 +5849,125 @@ This endpoint does require any parameters.
 ### Return type
 
 [**CalendarUrlResponse**](CalendarUrlResponse)
+
+
+## GetWorkforcemanagementHistoricaldataBulkRemoveJob
+
+> [**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse) GetWorkforcemanagementHistoricaldataBulkRemoveJob (string jobId)
+
+
+Retrieves delete job status for historical data imports associated with the job id
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementHistoricaldataBulkRemoveJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The job ID of the historical data delete request
+
+            try
+            { 
+                // Retrieves delete job status for historical data imports associated with the job id
+                HistoricalImportDeleteFilesJobResponse result = apiInstance.GetWorkforcemanagementHistoricaldataBulkRemoveJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementHistoricaldataBulkRemoveJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The job ID of the historical data delete request |  |
+
+### Return type
+
+[**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse)
+
+
+## GetWorkforcemanagementHistoricaldataBulkRemoveJobs
+
+> [**HistoricalImportOverallDeleteStatusResponse**](HistoricalImportOverallDeleteStatusResponse) GetWorkforcemanagementHistoricaldataBulkRemoveJobs ()
+
+
+Retrieves all delete job status for historical data
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementHistoricaldataBulkRemoveJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Retrieves all delete job status for historical data
+                HistoricalImportOverallDeleteStatusResponse result = apiInstance.GetWorkforcemanagementHistoricaldataBulkRemoveJobs();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementHistoricaldataBulkRemoveJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**HistoricalImportOverallDeleteStatusResponse**](HistoricalImportOverallDeleteStatusResponse)
 
 
 ## GetWorkforcemanagementHistoricaldataDeletejob
@@ -13550,6 +13672,68 @@ namespace Example
 [**CalendarUrlResponse**](CalendarUrlResponse)
 
 
+## PostWorkforcemanagementHistoricaldataBulkRemoveJobs
+
+> [**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse) PostWorkforcemanagementHistoricaldataBulkRemoveJobs (HistoricalImportDeleteFilesJobRequest body = null)
+
+
+Delete the list of the historical data import entries
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementHistoricaldataBulkRemoveJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new HistoricalImportDeleteFilesJobRequest(); // HistoricalImportDeleteFilesJobRequest | body (optional) 
+
+            try
+            { 
+                // Delete the list of the historical data import entries
+                HistoricalImportDeleteFilesJobResponse result = apiInstance.PostWorkforcemanagementHistoricaldataBulkRemoveJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementHistoricaldataBulkRemoveJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**HistoricalImportDeleteFilesJobRequest**](HistoricalImportDeleteFilesJobRequest)| body | [optional]  |
+
+### Return type
+
+[**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse)
+
+
 ## PostWorkforcemanagementHistoricaldataDeletejob
 
 > [**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse) PostWorkforcemanagementHistoricaldataDeletejob ()
@@ -16220,4 +16404,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

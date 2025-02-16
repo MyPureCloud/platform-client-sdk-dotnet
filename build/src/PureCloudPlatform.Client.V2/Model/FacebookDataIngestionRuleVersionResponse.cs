@@ -136,29 +136,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/facebook resource
+        /// Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/facebook resource</value>
-        [DataMember(Name="integrationId", EmitDefaultValue=false)]
-        public string IntegrationId { get; set; }
-
-
-
-        /// <summary>
-        /// Date this ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Date this ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
 
 
 
         /// <summary>
-        /// Date this ingestion rule was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date this ingestion rule was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+
+
+
+        /// <summary>
+        /// The platform of the data ingestion rule.
+        /// </summary>
+        /// <value>The platform of the data ingestion rule.</value>
+        [DataMember(Name="platform", EmitDefaultValue=false)]
+        public string Platform { get; private set; }
+
+
+
+        /// <summary>
+        /// The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/facebook resource
+        /// </summary>
+        /// <value>The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/facebook resource</value>
+        [DataMember(Name="integrationId", EmitDefaultValue=false)]
+        public string IntegrationId { get; set; }
 
 
 
@@ -184,9 +193,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Platform: ").Append(Platform).Append("\n");
+            sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -254,11 +264,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
-                    this.IntegrationId == other.IntegrationId ||
-                    this.IntegrationId != null &&
-                    this.IntegrationId.Equals(other.IntegrationId)
-                ) &&
-                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -267,6 +272,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.Platform == other.Platform ||
+                    this.Platform != null &&
+                    this.Platform.Equals(other.Platform)
+                ) &&
+                (
+                    this.IntegrationId == other.IntegrationId ||
+                    this.IntegrationId != null &&
+                    this.IntegrationId.Equals(other.IntegrationId)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -301,14 +316,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
 
-                if (this.IntegrationId != null)
-                    hash = hash * 59 + this.IntegrationId.GetHashCode();
-
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.Platform != null)
+                    hash = hash * 59 + this.Platform.GetHashCode();
+
+                if (this.IntegrationId != null)
+                    hash = hash * 59 + this.IntegrationId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

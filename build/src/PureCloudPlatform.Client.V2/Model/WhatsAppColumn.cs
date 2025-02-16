@@ -29,12 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ColumnName">The name of the whatsApp column. (required).</param>
         /// <param name="Type">Indicates the type of the whatsApp column. For example, 'work' or 'personal'. (required).</param>
-        /// <param name="ContactableTimeColumn">A column that indicates the timezone to use for a given contact when checking contactable times..</param>
-        public WhatsAppColumn(string ColumnName = null, string Type = null, string ContactableTimeColumn = null)
+        public WhatsAppColumn(string ColumnName = null, string Type = null)
         {
             this.ColumnName = ColumnName;
             this.Type = Type;
-            this.ContactableTimeColumn = ContactableTimeColumn;
             
         }
         
@@ -57,15 +55,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Type { get; set; }
 
 
-
-        /// <summary>
-        /// A column that indicates the timezone to use for a given contact when checking contactable times.
-        /// </summary>
-        /// <value>A column that indicates the timezone to use for a given contact when checking contactable times.</value>
-        [DataMember(Name="contactableTimeColumn", EmitDefaultValue=false)]
-        public string ContactableTimeColumn { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -77,7 +66,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  ContactableTimeColumn: ").Append(ContactableTimeColumn).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,11 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) &&
-                (
-                    this.ContactableTimeColumn == other.ContactableTimeColumn ||
-                    this.ContactableTimeColumn != null &&
-                    this.ContactableTimeColumn.Equals(other.ContactableTimeColumn)
                 );
         }
 
@@ -151,9 +134,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-
-                if (this.ContactableTimeColumn != null)
-                    hash = hash * 59 + this.ContactableTimeColumn.GetHashCode();
 
                 return hash;
             }

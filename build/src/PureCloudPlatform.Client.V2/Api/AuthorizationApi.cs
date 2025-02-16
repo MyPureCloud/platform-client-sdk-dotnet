@@ -43,6 +43,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId, bool? force = null);
 
         /// <summary>
+        /// Delete an access control policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns></returns>
+        
+        void DeleteAuthorizationPoliciesTargetSubjectSubjectId (string targetName, string subjectId);
+
+        /// <summary>
+        /// Delete an access control policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteAuthorizationPoliciesTargetSubjectSubjectIdWithHttpInfo (string targetName, string subjectId);
+
+        /// <summary>
         /// Delete an organization role.
         /// </summary>
         /// <remarks>
@@ -345,6 +373,198 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
         
         ApiResponse<PermissionCollectionEntityListing> GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
+
+        /// <summary>
+        /// Get a page of access policies for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>AuthorizationPolicyEntityListing</returns>
+        
+        AuthorizationPolicyEntityListing GetAuthorizationPolicies (string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthorizationPolicyEntityListing</returns>
+        
+        ApiResponse<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesWithHttpInfo (string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>AuthorizationPolicyEntityListing</returns>
+        
+        AuthorizationPolicyEntityListing GetAuthorizationPoliciesSubjectSubjectId (string subjectId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthorizationPolicyEntityListing</returns>
+        
+        ApiResponse<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesSubjectSubjectIdWithHttpInfo (string subjectId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>AuthorizationPolicyEntityListing</returns>
+        
+        AuthorizationPolicyEntityListing GetAuthorizationPoliciesTarget (string targetName, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthorizationPolicyEntityListing</returns>
+        
+        ApiResponse<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesTargetWithHttpInfo (string targetName, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        AuthorizationPolicy GetAuthorizationPoliciesTargetSubjectSubjectId (string targetName, string subjectId);
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        ApiResponse<AuthorizationPolicy> GetAuthorizationPoliciesTargetSubjectSubjectIdWithHttpInfo (string targetName, string subjectId);
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TargetAttributes</returns>
+        
+        TargetAttributes GetAuthorizationPoliciesTargets ();
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TargetAttributes</returns>
+        
+        ApiResponse<TargetAttributes> GetAuthorizationPoliciesTargetsWithHttpInfo ();
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        AuthorizationPolicy GetAuthorizationPolicy (string policyId);
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        ApiResponse<AuthorizationPolicy> GetAuthorizationPolicyWithHttpInfo (string policyId);
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>PolicyAttributeSet</returns>
+        
+        PolicyAttributeSet GetAuthorizationPolicyAttributes (string policyId);
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>ApiResponse of PolicyAttributeSet</returns>
+        
+        ApiResponse<PolicyAttributeSet> GetAuthorizationPolicyAttributesWithHttpInfo (string policyId);
 
         /// <summary>
         /// Get the list of enabled products
@@ -801,6 +1021,90 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AuthzDivision> PostAuthorizationDivisionsWithHttpInfo (AuthzDivision body);
 
         /// <summary>
+        /// Add an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        AuthorizationPolicy PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        ApiResponse<AuthorizationPolicy> PostAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ValidationErrorListing</returns>
+        
+        ValidationErrorListing PostAuthorizationPoliciesTargetValidate (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of ValidationErrorListing</returns>
+        
+        ApiResponse<ValidationErrorListing> PostAuthorizationPoliciesTargetValidateWithHttpInfo (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>PolicyTestResult</returns>
+        
+        PolicyTestResult PostAuthorizationPolicySimulate (string policyId, PolicyTestPayload body);
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>ApiResponse of PolicyTestResult</returns>
+        
+        ApiResponse<PolicyTestResult> PostAuthorizationPolicySimulateWithHttpInfo (string policyId, PolicyTestPayload body);
+
+        /// <summary>
         /// Bulk-grant subjects and divisions with an organization role.
         /// </summary>
         /// <remarks>
@@ -1043,6 +1347,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AuthzDivision> PutAuthorizationDivisionWithHttpInfo (string divisionId, AuthzDivision body);
 
         /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        AuthorizationPolicy PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        ApiResponse<AuthorizationPolicy> PutAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Update an access control policy with a given ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        AuthorizationPolicy PutAuthorizationPolicy (string policyId, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Update an access control policy with a given ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        ApiResponse<AuthorizationPolicy> PutAuthorizationPolicyWithHttpInfo (string policyId, AuthorizationPolicy body);
+
+        /// <summary>
         /// Update an organization role.
         /// </summary>
         /// <remarks>
@@ -1223,6 +1583,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? force = null);
+
+        /// <summary>
+        /// Delete an access control policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteAuthorizationPoliciesTargetSubjectSubjectIdAsync (string targetName, string subjectId);
+
+        /// <summary>
+        /// Delete an access control policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationPoliciesTargetSubjectSubjectIdAsyncWithHttpInfo (string targetName, string subjectId);
 
         /// <summary>
         /// Delete an organization role.
@@ -1527,6 +1915,198 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
+
+        /// <summary>
+        /// Get a page of access policies for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of AuthorizationPolicyEntityListing</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesAsync (string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for an organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicyEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicyEntityListing>> GetAuthorizationPoliciesAsyncWithHttpInfo (string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of AuthorizationPolicyEntityListing</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesSubjectSubjectIdAsync (string subjectId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicyEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicyEntityListing>> GetAuthorizationPoliciesSubjectSubjectIdAsyncWithHttpInfo (string subjectId, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of AuthorizationPolicyEntityListing</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesTargetAsync (string targetName, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicyEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicyEntityListing>> GetAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicy> GetAuthorizationPoliciesTargetSubjectSubjectIdAsync (string targetName, string subjectId);
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> GetAuthorizationPoliciesTargetSubjectSubjectIdAsyncWithHttpInfo (string targetName, string subjectId);
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TargetAttributes</returns>
+        
+        System.Threading.Tasks.Task<TargetAttributes> GetAuthorizationPoliciesTargetsAsync ();
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TargetAttributes)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TargetAttributes>> GetAuthorizationPoliciesTargetsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicy> GetAuthorizationPolicyAsync (string policyId);
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> GetAuthorizationPolicyAsyncWithHttpInfo (string policyId);
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>Task of PolicyAttributeSet</returns>
+        
+        System.Threading.Tasks.Task<PolicyAttributeSet> GetAuthorizationPolicyAttributesAsync (string policyId);
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>Task of ApiResponse (PolicyAttributeSet)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PolicyAttributeSet>> GetAuthorizationPolicyAttributesAsyncWithHttpInfo (string policyId);
 
         /// <summary>
         /// Get the list of enabled products
@@ -1983,6 +2563,90 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionsAsyncWithHttpInfo (AuthzDivision body);
 
         /// <summary>
+        /// Add an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicy> PostAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PostAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ValidationErrorListing</returns>
+        
+        System.Threading.Tasks.Task<ValidationErrorListing> PostAuthorizationPoliciesTargetValidateAsync (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (ValidationErrorListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ValidationErrorListing>> PostAuthorizationPoliciesTargetValidateAsyncWithHttpInfo (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>Task of PolicyTestResult</returns>
+        
+        System.Threading.Tasks.Task<PolicyTestResult> PostAuthorizationPolicySimulateAsync (string policyId, PolicyTestPayload body);
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>Task of ApiResponse (PolicyTestResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PolicyTestResult>> PostAuthorizationPolicySimulateAsyncWithHttpInfo (string policyId, PolicyTestPayload body);
+
+        /// <summary>
         /// Bulk-grant subjects and divisions with an organization role.
         /// </summary>
         /// <remarks>
@@ -2223,6 +2887,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PutAuthorizationDivisionAsyncWithHttpInfo (string divisionId, AuthzDivision body);
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Update an access control policy with a given ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPolicyAsync (string policyId, AuthorizationPolicy body);
+
+        /// <summary>
+        /// Update an access control policy with a given ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPolicyAsyncWithHttpInfo (string policyId, AuthorizationPolicy body);
 
         /// <summary>
         /// Update an organization role.
@@ -2675,6 +3395,234 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationDivision: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationDivision: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an access control policy 
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns></returns>
+        
+        public void DeleteAuthorizationPoliciesTargetSubjectSubjectId (string targetName, string subjectId)
+        {
+             DeleteAuthorizationPoliciesTargetSubjectSubjectIdWithHttpInfo(targetName, subjectId);
+        }
+
+        /// <summary>
+        /// Delete an access control policy 
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteAuthorizationPoliciesTargetSubjectSubjectIdWithHttpInfo (string targetName, string subjectId)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->DeleteAuthorizationPoliciesTargetSubjectSubjectId");
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->DeleteAuthorizationPoliciesTargetSubjectSubjectId");
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an access control policy 
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteAuthorizationPoliciesTargetSubjectSubjectIdAsync (string targetName, string subjectId)
+        {
+             await DeleteAuthorizationPoliciesTargetSubjectSubjectIdAsyncWithHttpInfo(targetName, subjectId);
+
+        }
+
+        /// <summary>
+        /// Delete an access control policy 
+        /// 
+        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationPoliciesTargetSubjectSubjectIdAsyncWithHttpInfo (string targetName, string subjectId)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->DeleteAuthorizationPoliciesTargetSubjectSubjectId");
+            
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->DeleteAuthorizationPoliciesTargetSubjectSubjectId");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -5131,6 +6079,1548 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<PermissionCollectionEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (PermissionCollectionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCollectionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a page of access policies for an organization 
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>AuthorizationPolicyEntityListing</returns>
+        
+        public AuthorizationPolicyEntityListing GetAuthorizationPolicies (string after = null, int? pageSize = null)
+        {
+             ApiResponse<AuthorizationPolicyEntityListing> localVarResponse = GetAuthorizationPoliciesWithHttpInfo(after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a page of access policies for an organization 
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthorizationPolicyEntityListing</returns>
+        
+        public ApiResponse< AuthorizationPolicyEntityListing > GetAuthorizationPoliciesWithHttpInfo (string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/authorization/policies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a page of access policies for an organization 
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of AuthorizationPolicyEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesAsync (string after = null, int? pageSize = null)
+        {
+             ApiResponse<AuthorizationPolicyEntityListing> localVarResponse = await GetAuthorizationPoliciesAsyncWithHttpInfo(after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a page of access policies for an organization 
+        /// 
+        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicyEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicyEntityListing>> GetAuthorizationPoliciesAsyncWithHttpInfo (string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/authorization/policies";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a page of access policies for a given subject 
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>AuthorizationPolicyEntityListing</returns>
+        
+        public AuthorizationPolicyEntityListing GetAuthorizationPoliciesSubjectSubjectId (string subjectId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<AuthorizationPolicyEntityListing> localVarResponse = GetAuthorizationPoliciesSubjectSubjectIdWithHttpInfo(subjectId, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a page of access policies for a given subject 
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthorizationPolicyEntityListing</returns>
+        
+        public ApiResponse< AuthorizationPolicyEntityListing > GetAuthorizationPoliciesSubjectSubjectIdWithHttpInfo (string subjectId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesSubjectSubjectId");
+
+            var localVarPath = "/api/v2/authorization/policies/subject/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesSubjectSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesSubjectSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a page of access policies for a given subject 
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of AuthorizationPolicyEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesSubjectSubjectIdAsync (string subjectId, string after = null, int? pageSize = null)
+        {
+             ApiResponse<AuthorizationPolicyEntityListing> localVarResponse = await GetAuthorizationPoliciesSubjectSubjectIdAsyncWithHttpInfo(subjectId, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a page of access policies for a given subject 
+        /// 
+        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">The ID of the subject to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicyEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicyEntityListing>> GetAuthorizationPoliciesSubjectSubjectIdAsyncWithHttpInfo (string subjectId, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesSubjectSubjectId");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/subject/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesSubjectSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesSubjectSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target 
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>AuthorizationPolicyEntityListing</returns>
+        
+        public AuthorizationPolicyEntityListing GetAuthorizationPoliciesTarget (string targetName, string after = null, int? pageSize = null)
+        {
+             ApiResponse<AuthorizationPolicyEntityListing> localVarResponse = GetAuthorizationPoliciesTargetWithHttpInfo(targetName, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target 
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of AuthorizationPolicyEntityListing</returns>
+        
+        public ApiResponse< AuthorizationPolicyEntityListing > GetAuthorizationPoliciesTargetWithHttpInfo (string targetName, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->GetAuthorizationPoliciesTarget");
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target 
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of AuthorizationPolicyEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesTargetAsync (string targetName, string after = null, int? pageSize = null)
+        {
+             ApiResponse<AuthorizationPolicyEntityListing> localVarResponse = await GetAuthorizationPoliciesTargetAsyncWithHttpInfo(targetName, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a page of access policies for a given policy target 
+        /// 
+        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicyEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicyEntityListing>> GetAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->GetAuthorizationPoliciesTarget");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicyEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicyEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicyEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject 
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        public AuthorizationPolicy GetAuthorizationPoliciesTargetSubjectSubjectId (string targetName, string subjectId)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = GetAuthorizationPoliciesTargetSubjectSubjectIdWithHttpInfo(targetName, subjectId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject 
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        public ApiResponse< AuthorizationPolicy > GetAuthorizationPoliciesTargetSubjectSubjectIdWithHttpInfo (string targetName, string subjectId)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->GetAuthorizationPoliciesTargetSubjectSubjectId");
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesTargetSubjectSubjectId");
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject 
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> GetAuthorizationPoliciesTargetSubjectSubjectIdAsync (string targetName, string subjectId)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = await GetAuthorizationPoliciesTargetSubjectSubjectIdAsyncWithHttpInfo(targetName, subjectId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an access control policy for a specified resource target and subject 
+        /// 
+        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
+        /// <param name="subjectId">The ID of the subject to which the policy is applied</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> GetAuthorizationPoliciesTargetSubjectSubjectIdAsyncWithHttpInfo (string targetName, string subjectId)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->GetAuthorizationPoliciesTargetSubjectSubjectId");
+            
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesTargetSubjectSubjectId");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargetSubjectSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets 
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TargetAttributes</returns>
+        
+        public TargetAttributes GetAuthorizationPoliciesTargets ()
+        {
+             ApiResponse<TargetAttributes> localVarResponse = GetAuthorizationPoliciesTargetsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets 
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TargetAttributes</returns>
+        
+        public ApiResponse< TargetAttributes > GetAuthorizationPoliciesTargetsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/policies/targets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TargetAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (TargetAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TargetAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets 
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TargetAttributes</returns>
+        
+        public async System.Threading.Tasks.Task<TargetAttributes> GetAuthorizationPoliciesTargetsAsync ()
+        {
+             ApiResponse<TargetAttributes> localVarResponse = await GetAuthorizationPoliciesTargetsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a map of policy targets to valid attributes for those targets 
+        /// 
+        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TargetAttributes)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TargetAttributes>> GetAuthorizationPoliciesTargetsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/policies/targets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPoliciesTargets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TargetAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (TargetAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TargetAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        public AuthorizationPolicy GetAuthorizationPolicy (string policyId)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = GetAuthorizationPolicyWithHttpInfo(policyId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        public ApiResponse< AuthorizationPolicy > GetAuthorizationPolicyWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicy");
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> GetAuthorizationPolicyAsync (string policyId)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = await GetAuthorizationPolicyAsyncWithHttpInfo(policyId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> GetAuthorizationPolicyAsyncWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicy");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>PolicyAttributeSet</returns>
+        
+        public PolicyAttributeSet GetAuthorizationPolicyAttributes (string policyId)
+        {
+             ApiResponse<PolicyAttributeSet> localVarResponse = GetAuthorizationPolicyAttributesWithHttpInfo(policyId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>ApiResponse of PolicyAttributeSet</returns>
+        
+        public ApiResponse< PolicyAttributeSet > GetAuthorizationPolicyAttributesWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicyAttributes");
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}/attributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicyAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicyAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PolicyAttributeSet>(localVarStatusCode,
+                localVarHeaders,
+                (PolicyAttributeSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyAttributeSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>Task of PolicyAttributeSet</returns>
+        
+        public async System.Threading.Tasks.Task<PolicyAttributeSet> GetAuthorizationPolicyAttributesAsync (string policyId)
+        {
+             ApiResponse<PolicyAttributeSet> localVarResponse = await GetAuthorizationPolicyAttributesAsyncWithHttpInfo(policyId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
+        /// 
+        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to retrieve attributes</param>
+        /// <returns>Task of ApiResponse (PolicyAttributeSet)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyAttributeSet>> GetAuthorizationPolicyAttributesAsyncWithHttpInfo (string policyId)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicyAttributes");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}/attributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicyAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPolicyAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PolicyAttributeSet>(localVarStatusCode,
+                localVarHeaders,
+                (PolicyAttributeSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyAttributeSet)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8931,6 +11421,726 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Add an access control policy for a specified resource target and subject 
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        public AuthorizationPolicy PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = PostAuthorizationPoliciesTargetWithHttpInfo(targetName, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject 
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        public ApiResponse< AuthorizationPolicy > PostAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->PostAuthorizationPoliciesTarget");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTarget");
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject 
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> PostAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = await PostAuthorizationPoliciesTargetAsyncWithHttpInfo(targetName, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject 
+        /// 
+        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PostAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->PostAuthorizationPoliciesTarget");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTarget");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target 
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ValidationErrorListing</returns>
+        
+        public ValidationErrorListing PostAuthorizationPoliciesTargetValidate (string targetName, AuthorizationPolicy body)
+        {
+             ApiResponse<ValidationErrorListing> localVarResponse = PostAuthorizationPoliciesTargetValidateWithHttpInfo(targetName, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target 
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of ValidationErrorListing</returns>
+        
+        public ApiResponse< ValidationErrorListing > PostAuthorizationPoliciesTargetValidateWithHttpInfo (string targetName, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->PostAuthorizationPoliciesTargetValidate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTargetValidate");
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTargetValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTargetValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ValidationErrorListing>(localVarStatusCode,
+                localVarHeaders,
+                (ValidationErrorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidationErrorListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target 
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ValidationErrorListing</returns>
+        
+        public async System.Threading.Tasks.Task<ValidationErrorListing> PostAuthorizationPoliciesTargetValidateAsync (string targetName, AuthorizationPolicy body)
+        {
+             ApiResponse<ValidationErrorListing> localVarResponse = await PostAuthorizationPoliciesTargetValidateAsyncWithHttpInfo(targetName, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate the conditions and attributes of an access control policy for a specified resource target 
+        /// 
+        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (ValidationErrorListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ValidationErrorListing>> PostAuthorizationPoliciesTargetValidateAsyncWithHttpInfo (string targetName, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->PostAuthorizationPoliciesTargetValidate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTargetValidate");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTargetValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPoliciesTargetValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ValidationErrorListing>(localVarStatusCode,
+                localVarHeaders,
+                (ValidationErrorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidationErrorListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values 
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>PolicyTestResult</returns>
+        
+        public PolicyTestResult PostAuthorizationPolicySimulate (string policyId, PolicyTestPayload body)
+        {
+             ApiResponse<PolicyTestResult> localVarResponse = PostAuthorizationPolicySimulateWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values 
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>ApiResponse of PolicyTestResult</returns>
+        
+        public ApiResponse< PolicyTestResult > PostAuthorizationPolicySimulateWithHttpInfo (string policyId, PolicyTestPayload body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->PostAuthorizationPolicySimulate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPolicySimulate");
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}/simulate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPolicySimulate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPolicySimulate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PolicyTestResult>(localVarStatusCode,
+                localVarHeaders,
+                (PolicyTestResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyTestResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values 
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>Task of PolicyTestResult</returns>
+        
+        public async System.Threading.Tasks.Task<PolicyTestResult> PostAuthorizationPolicySimulateAsync (string policyId, PolicyTestPayload body)
+        {
+             ApiResponse<PolicyTestResult> localVarResponse = await PostAuthorizationPolicySimulateAsyncWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Simulate a request and evaluate the specified policy ID against the provided values 
+        /// 
+        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to test the simulated data against</param>
+        /// <param name="body">A map of attribute names to type and simulated data value</param>
+        /// <returns>Task of ApiResponse (PolicyTestResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyTestResult>> PostAuthorizationPolicySimulateAsyncWithHttpInfo (string policyId, PolicyTestPayload body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->PostAuthorizationPolicySimulate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPolicySimulate");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}/simulate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPolicySimulate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationPolicySimulate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PolicyTestResult>(localVarStatusCode,
+                localVarHeaders,
+                (PolicyTestResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyTestResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Bulk-grant subjects and divisions with an organization role. 
         /// 
         /// </summary>
@@ -11035,6 +14245,486 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AuthzDivision>(localVarStatusCode,
                 localVarHeaders,
                 (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        public AuthorizationPolicy PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = PutAuthorizationPoliciesTargetWithHttpInfo(targetName, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        public ApiResponse< AuthorizationPolicy > PutAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->PutAuthorizationPoliciesTarget");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPoliciesTarget");
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPoliciesTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPoliciesTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = await PutAuthorizationPoliciesTargetAsyncWithHttpInfo(targetName, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
+        /// 
+        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'targetName' is set
+            if (targetName == null)
+                throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->PutAuthorizationPoliciesTarget");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPoliciesTarget");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPoliciesTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPoliciesTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an access control policy with a given ID 
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>AuthorizationPolicy</returns>
+        
+        public AuthorizationPolicy PutAuthorizationPolicy (string policyId, AuthorizationPolicy body)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = PutAuthorizationPolicyWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an access control policy with a given ID 
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>ApiResponse of AuthorizationPolicy</returns>
+        
+        public ApiResponse< AuthorizationPolicy > PutAuthorizationPolicyWithHttpInfo (string policyId, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->PutAuthorizationPolicy");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPolicy");
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an access control policy with a given ID 
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of AuthorizationPolicy</returns>
+        
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPolicyAsync (string policyId, AuthorizationPolicy body)
+        {
+             ApiResponse<AuthorizationPolicy> localVarResponse = await PutAuthorizationPolicyAsyncWithHttpInfo(policyId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an access control policy with a given ID 
+        /// 
+        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="policyId">The ID of the policy to update</param>
+        /// <param name="body">Access control policy</param>
+        /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPolicyAsyncWithHttpInfo (string policyId, AuthorizationPolicy body)
+        { 
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->PutAuthorizationPolicy");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPolicy");
+            
+
+            var localVarPath = "/api/v2/authorization/policies/{policyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthorizationPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (AuthorizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthorizationPolicy)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

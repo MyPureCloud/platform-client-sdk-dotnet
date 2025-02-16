@@ -561,6 +561,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A list of upcoming activities for which the user is scheduled
+        /// </summary>
+        /// <value>A list of upcoming activities for which the user is scheduled</value>
+        [DataMember(Name="nextActivityReminders", EmitDefaultValue=false)]
+        public List<UserNextActivityReminder> NextActivityReminders { get; private set; }
+
+
+
+        /// <summary>
+        /// Indicates whether the on-time adherence notification should be suppressed for the user
+        /// </summary>
+        /// <value>Indicates whether the on-time adherence notification should be suppressed for the user</value>
+        [DataMember(Name="suppressOnTimeReminder", EmitDefaultValue=false)]
+        public bool? SuppressOnTimeReminder { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -598,6 +616,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
             sb.Append("  ActiveQueuesModifiedTime: ").Append(ActiveQueuesModifiedTime).Append("\n");
             sb.Append("  RemovedFromManagementUnit: ").Append(RemovedFromManagementUnit).Append("\n");
+            sb.Append("  NextActivityReminders: ").Append(NextActivityReminders).Append("\n");
+            sb.Append("  SuppressOnTimeReminder: ").Append(SuppressOnTimeReminder).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -745,6 +765,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RemovedFromManagementUnit.Equals(other.RemovedFromManagementUnit)
                 ) &&
                 (
+                    this.NextActivityReminders == other.NextActivityReminders ||
+                    this.NextActivityReminders != null &&
+                    this.NextActivityReminders.SequenceEqual(other.NextActivityReminders)
+                ) &&
+                (
+                    this.SuppressOnTimeReminder == other.SuppressOnTimeReminder ||
+                    this.SuppressOnTimeReminder != null &&
+                    this.SuppressOnTimeReminder.Equals(other.SuppressOnTimeReminder)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -824,6 +854,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RemovedFromManagementUnit != null)
                     hash = hash * 59 + this.RemovedFromManagementUnit.GetHashCode();
+
+                if (this.NextActivityReminders != null)
+                    hash = hash * 59 + this.NextActivityReminders.GetHashCode();
+
+                if (this.SuppressOnTimeReminder != null)
+                    hash = hash * 59 + this.SuppressOnTimeReminder.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

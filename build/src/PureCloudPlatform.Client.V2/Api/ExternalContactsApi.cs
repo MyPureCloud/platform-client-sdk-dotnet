@@ -716,9 +716,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactImportJobResponse</returns>
         
-        ContactImportJobResponse GetExternalcontactsImportJob (string jobId);
+        ContactImportJobResponse GetExternalcontactsImportJob (string jobId, List<string> expand = null);
 
         /// <summary>
         /// Get job based on id
@@ -728,9 +729,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactImportJobResponse</returns>
         
-        ApiResponse<ContactImportJobResponse> GetExternalcontactsImportJobWithHttpInfo (string jobId);
+        ApiResponse<ContactImportJobResponse> GetExternalcontactsImportJobWithHttpInfo (string jobId, List<string> expand = null);
 
         /// <summary>
         /// List jobs for organization
@@ -739,13 +741,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>ContactImportJobEntityListing</returns>
         
-        ContactImportJobEntityListing GetExternalcontactsImportJobs (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
+        ContactImportJobEntityListing GetExternalcontactsImportJobs (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
 
         /// <summary>
         /// List jobs for organization
@@ -754,13 +757,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>ApiResponse of ContactImportJobEntityListing</returns>
         
-        ApiResponse<ContactImportJobEntityListing> GetExternalcontactsImportJobsWithHttpInfo (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
+        ApiResponse<ContactImportJobEntityListing> GetExternalcontactsImportJobsWithHttpInfo (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
 
         /// <summary>
         /// Get setting based on id
@@ -3128,9 +3132,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactImportJobResponse</returns>
         
-        System.Threading.Tasks.Task<ContactImportJobResponse> GetExternalcontactsImportJobAsync (string jobId);
+        System.Threading.Tasks.Task<ContactImportJobResponse> GetExternalcontactsImportJobAsync (string jobId, List<string> expand = null);
 
         /// <summary>
         /// Get job based on id
@@ -3140,9 +3145,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactImportJobResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ContactImportJobResponse>> GetExternalcontactsImportJobAsyncWithHttpInfo (string jobId);
+        System.Threading.Tasks.Task<ApiResponse<ContactImportJobResponse>> GetExternalcontactsImportJobAsyncWithHttpInfo (string jobId, List<string> expand = null);
 
         /// <summary>
         /// List jobs for organization
@@ -3151,13 +3157,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>Task of ContactImportJobEntityListing</returns>
         
-        System.Threading.Tasks.Task<ContactImportJobEntityListing> GetExternalcontactsImportJobsAsync (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
+        System.Threading.Tasks.Task<ContactImportJobEntityListing> GetExternalcontactsImportJobsAsync (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
 
         /// <summary>
         /// List jobs for organization
@@ -3166,13 +3173,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>Task of ApiResponse (ContactImportJobEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ContactImportJobEntityListing>> GetExternalcontactsImportJobsAsyncWithHttpInfo (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactImportJobEntityListing>> GetExternalcontactsImportJobsAsyncWithHttpInfo (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null);
 
         /// <summary>
         /// Get setting based on id
@@ -10809,11 +10817,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactImportJobResponse</returns>
         
-        public ContactImportJobResponse GetExternalcontactsImportJob (string jobId)
+        public ContactImportJobResponse GetExternalcontactsImportJob (string jobId, List<string> expand = null)
         {
-             ApiResponse<ContactImportJobResponse> localVarResponse = GetExternalcontactsImportJobWithHttpInfo(jobId);
+             ApiResponse<ContactImportJobResponse> localVarResponse = GetExternalcontactsImportJobWithHttpInfo(jobId, expand);
              return localVarResponse.Data;
         }
 
@@ -10823,9 +10832,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactImportJobResponse</returns>
         
-        public ApiResponse< ContactImportJobResponse > GetExternalcontactsImportJobWithHttpInfo (string jobId)
+        public ApiResponse< ContactImportJobResponse > GetExternalcontactsImportJobWithHttpInfo (string jobId, List<string> expand = null)
         { 
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -10864,6 +10874,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -10914,11 +10925,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactImportJobResponse</returns>
         
-        public async System.Threading.Tasks.Task<ContactImportJobResponse> GetExternalcontactsImportJobAsync (string jobId)
+        public async System.Threading.Tasks.Task<ContactImportJobResponse> GetExternalcontactsImportJobAsync (string jobId, List<string> expand = null)
         {
-             ApiResponse<ContactImportJobResponse> localVarResponse = await GetExternalcontactsImportJobAsyncWithHttpInfo(jobId);
+             ApiResponse<ContactImportJobResponse> localVarResponse = await GetExternalcontactsImportJobAsyncWithHttpInfo(jobId, expand);
              return localVarResponse.Data;
 
         }
@@ -10929,9 +10941,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job id</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactImportJobResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ContactImportJobResponse>> GetExternalcontactsImportJobAsyncWithHttpInfo (string jobId)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactImportJobResponse>> GetExternalcontactsImportJobAsyncWithHttpInfo (string jobId, List<string> expand = null)
         { 
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -10971,6 +10984,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -11021,15 +11035,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>ContactImportJobEntityListing</returns>
         
-        public ContactImportJobEntityListing GetExternalcontactsImportJobs (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
+        public ContactImportJobEntityListing GetExternalcontactsImportJobs (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
         {
-             ApiResponse<ContactImportJobEntityListing> localVarResponse = GetExternalcontactsImportJobsWithHttpInfo(after, pageSize, sortOrder, jobStatus);
+             ApiResponse<ContactImportJobEntityListing> localVarResponse = GetExternalcontactsImportJobsWithHttpInfo(expand, after, pageSize, sortOrder, jobStatus);
              return localVarResponse.Data;
         }
 
@@ -11038,13 +11053,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>ApiResponse of ContactImportJobEntityListing</returns>
         
-        public ApiResponse< ContactImportJobEntityListing > GetExternalcontactsImportJobsWithHttpInfo (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
+        public ApiResponse< ContactImportJobEntityListing > GetExternalcontactsImportJobsWithHttpInfo (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/import/jobs";
@@ -11079,6 +11095,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
@@ -11132,15 +11149,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>Task of ContactImportJobEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ContactImportJobEntityListing> GetExternalcontactsImportJobsAsync (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
+        public async System.Threading.Tasks.Task<ContactImportJobEntityListing> GetExternalcontactsImportJobsAsync (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
         {
-             ApiResponse<ContactImportJobEntityListing> localVarResponse = await GetExternalcontactsImportJobsAsyncWithHttpInfo(after, pageSize, sortOrder, jobStatus);
+             ApiResponse<ContactImportJobEntityListing> localVarResponse = await GetExternalcontactsImportJobsAsyncWithHttpInfo(expand, after, pageSize, sortOrder, jobStatus);
              return localVarResponse.Data;
 
         }
@@ -11150,13 +11168,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional, default to "25")</param>
         /// <param name="sortOrder">Direction of sorting. (optional, default to Ascending)</param>
         /// <param name="jobStatus">Search term to filter by jobStatus (optional)</param>
         /// <returns>Task of ApiResponse (ContactImportJobEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ContactImportJobEntityListing>> GetExternalcontactsImportJobsAsyncWithHttpInfo (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactImportJobEntityListing>> GetExternalcontactsImportJobsAsyncWithHttpInfo (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/import/jobs";
@@ -11191,6 +11210,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));

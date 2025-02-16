@@ -109,7 +109,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Buttonresponse for "ButtonResponse"
             /// </summary>
             [EnumMember(Value = "ButtonResponse")]
-            Buttonresponse
+            Buttonresponse,
+            
+            /// <summary>
+            /// Enum Datepicker for "DatePicker"
+            /// </summary>
+            [EnumMember(Value = "DatePicker")]
+            Datepicker
         }
         /// <summary>
         /// Indicates the content type for this message

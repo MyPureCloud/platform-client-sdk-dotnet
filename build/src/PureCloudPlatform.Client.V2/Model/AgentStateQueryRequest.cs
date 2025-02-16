@@ -106,9 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Sessionstart
         }
         /// <summary>
-        /// Search session order direction; default to desc
+        /// Search session order direction; default to asc
         /// </summary>
-        /// <value>Search session order direction; default to desc</value>
+        /// <value>Search session order direction; default to asc</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SessionOrderEnum
         {
@@ -151,9 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="sessionOrderBy", EmitDefaultValue=false)]
         public SessionOrderByEnum? SessionOrderBy { get; set; }
         /// <summary>
-        /// Search session order direction; default to desc
+        /// Search session order direction; default to asc
         /// </summary>
-        /// <value>Search session order direction; default to desc</value>
+        /// <value>Search session order direction; default to asc</value>
         [DataMember(Name="sessionOrder", EmitDefaultValue=false)]
         public SessionOrderEnum? SessionOrder { get; set; }
         /// <summary>
@@ -164,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserOrderBy">Search user order dimension names; default to userName.</param>
         /// <param name="UserOrder">Search user order direction; default to asc.</param>
         /// <param name="SessionOrderBy">Search session order dimension names; default to segmentStart.</param>
-        /// <param name="SessionOrder">Search session order direction; default to desc.</param>
+        /// <param name="SessionOrder">Search session order direction; default to asc.</param>
         public AgentStateQueryRequest(AgentStateUserFilter UserFilter = null, AgentStateSessionFilter SessionFilter = null, UserOrderByEnum? UserOrderBy = null, UserOrderEnum? UserOrder = null, SessionOrderByEnum? SessionOrderBy = null, SessionOrderEnum? SessionOrder = null)
         {
             this.UserFilter = UserFilter;

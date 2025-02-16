@@ -176,7 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LanguageId">The ID of language of the Workitem. Must be a valid UUID..</param>
         /// <param name="UtilizationLabelId">The ID of the utilization label of the Workitem. Must be a valid UUID..</param>
         /// <param name="PreferredAgentIds">The preferred agent IDs of the Workitem. Must be valid UUIDs..</param>
-        public WorkitemUpdate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, DateTime? DateClosed = null, AssignmentStateEnum? AssignmentState = null, AssignmentOperationEnum? AssignmentOperation = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, List<WorkitemScoredAgentRequest> ScoredAgents = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null, string LanguageId = null, string UtilizationLabelId = null, List<string> PreferredAgentIds = null)
+        /// <param name="ScriptId">The ID of the Workitems script. Must be a valid UUID..</param>
+        public WorkitemUpdate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, DateTime? DateClosed = null, AssignmentStateEnum? AssignmentState = null, AssignmentOperationEnum? AssignmentOperation = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, List<WorkitemScoredAgentRequest> ScoredAgents = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null, string LanguageId = null, string UtilizationLabelId = null, List<string> PreferredAgentIds = null, string ScriptId = null)
         {
             this.Name = Name;
             this.Priority = Priority;
@@ -201,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LanguageId = LanguageId;
             this.UtilizationLabelId = UtilizationLabelId;
             this.PreferredAgentIds = PreferredAgentIds;
+            this.ScriptId = ScriptId;
             
         }
         
@@ -398,6 +400,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> PreferredAgentIds { get; set; }
 
 
+
+        /// <summary>
+        /// The ID of the Workitems script. Must be a valid UUID.
+        /// </summary>
+        /// <value>The ID of the Workitems script. Must be a valid UUID.</value>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -430,6 +441,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -584,6 +596,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreferredAgentIds == other.PreferredAgentIds ||
                     this.PreferredAgentIds != null &&
                     this.PreferredAgentIds.SequenceEqual(other.PreferredAgentIds)
+                ) &&
+                (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
                 );
         }
 
@@ -666,6 +683,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PreferredAgentIds != null)
                     hash = hash * 59 + this.PreferredAgentIds.GetHashCode();
+
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
 
                 return hash;
             }

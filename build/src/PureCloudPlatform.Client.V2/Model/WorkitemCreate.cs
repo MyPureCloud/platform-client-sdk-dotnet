@@ -45,11 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContactId">The ID of the external contact of the Workitem. Must be a valid UUID..</param>
         /// <param name="ExternalTag">The external tag of the Workitem..</param>
         /// <param name="SkillIds">The skill IDs of the Workitem. Must be valid UUIDs..</param>
+        /// <param name="ScriptId">The ID of the Workitems script. Must be a valid UUID..</param>
         /// <param name="WrapupCode">The ID of the wrapup. Must be a valid UUID..</param>
         /// <param name="UtilizationLabelId">The ID of utilization label of the Workitem. Must be a valid UUID..</param>
         /// <param name="ScoredAgents">A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents..</param>
         /// <param name="PreferredAgentIds">The preferred agent IDs of the Workitem. Must be valid UUIDs..</param>
-        public WorkitemCreate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, string TypeId = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, string LanguageId = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null, string WrapupCode = null, string UtilizationLabelId = null, List<WorkitemScoredAgentRequest> ScoredAgents = null, List<string> PreferredAgentIds = null)
+        public WorkitemCreate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, string TypeId = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, string LanguageId = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null, string ScriptId = null, string WrapupCode = null, string UtilizationLabelId = null, List<WorkitemScoredAgentRequest> ScoredAgents = null, List<string> PreferredAgentIds = null)
         {
             this.Name = Name;
             this.Priority = Priority;
@@ -69,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContactId = ExternalContactId;
             this.ExternalTag = ExternalTag;
             this.SkillIds = SkillIds;
+            this.ScriptId = ScriptId;
             this.WrapupCode = WrapupCode;
             this.UtilizationLabelId = UtilizationLabelId;
             this.ScoredAgents = ScoredAgents;
@@ -241,6 +243,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The ID of the Workitems script. Must be a valid UUID.
+        /// </summary>
+        /// <value>The ID of the Workitems script. Must be a valid UUID.</value>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+
+
+
+        /// <summary>
         /// The ID of the wrapup. Must be a valid UUID.
         /// </summary>
         /// <value>The ID of the wrapup. Must be a valid UUID.</value>
@@ -302,6 +313,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  WrapupCode: ").Append(WrapupCode).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
@@ -437,6 +449,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillIds.SequenceEqual(other.SkillIds)
                 ) &&
                 (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
                     this.WrapupCode == other.WrapupCode ||
                     this.WrapupCode != null &&
                     this.WrapupCode.Equals(other.WrapupCode)
@@ -522,6 +539,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
+
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
 
                 if (this.WrapupCode != null)
                     hash = hash * 59 + this.WrapupCode.GetHashCode();

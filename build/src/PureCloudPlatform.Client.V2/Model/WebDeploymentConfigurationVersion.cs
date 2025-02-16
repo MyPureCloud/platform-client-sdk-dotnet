@@ -90,8 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Cobrowse">The settings for cobrowse.</param>
         /// <param name="JourneyEvents">The settings for journey events.</param>
         /// <param name="AuthenticationSettings">The settings for authenticated deployments.</param>
+        /// <param name="Video">The settings for video.</param>
         /// <param name="Status">The current status of the configuration version.</param>
-        public WebDeploymentConfigurationVersion(string Name = null, WebDeploymentHeadlessMode HeadlessMode = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, List<CustomI18nLabels> CustomI18nLabels = null, MessengerSettings Messenger = null, PositionSettings Position = null, SupportCenterSettings SupportCenter = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, StatusEnum? Status = null)
+        public WebDeploymentConfigurationVersion(string Name = null, WebDeploymentHeadlessMode HeadlessMode = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, List<CustomI18nLabels> CustomI18nLabels = null, MessengerSettings Messenger = null, PositionSettings Position = null, SupportCenterSettings SupportCenter = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, VideoSettings Video = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.HeadlessMode = HeadlessMode;
@@ -105,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Cobrowse = Cobrowse;
             this.JourneyEvents = JourneyEvents;
             this.AuthenticationSettings = AuthenticationSettings;
+            this.Video = Video;
             this.Status = Status;
             
         }
@@ -238,6 +240,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The settings for video
+        /// </summary>
+        /// <value>The settings for video</value>
+        [DataMember(Name="video", EmitDefaultValue=false)]
+        public VideoSettings Video { get; set; }
+
+
+
+        /// <summary>
         /// The date the configuration version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the configuration version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -324,6 +335,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Cobrowse: ").Append(Cobrowse).Append("\n");
             sb.Append("  JourneyEvents: ").Append(JourneyEvents).Append("\n");
             sb.Append("  AuthenticationSettings: ").Append(AuthenticationSettings).Append("\n");
+            sb.Append("  Video: ").Append(Video).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
@@ -443,6 +455,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AuthenticationSettings.Equals(other.AuthenticationSettings)
                 ) &&
                 (
+                    this.Video == other.Video ||
+                    this.Video != null &&
+                    this.Video.Equals(other.Video)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -536,6 +553,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AuthenticationSettings != null)
                     hash = hash * 59 + this.AuthenticationSettings.GetHashCode();
+
+                if (this.Video != null)
+                    hash = hash * 59 + this.Video.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

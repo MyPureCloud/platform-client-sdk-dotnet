@@ -1829,7 +1829,7 @@ namespace Example
 
 ## GetExternalcontactsImportJob
 
-> [**ContactImportJobResponse**](ContactImportJobResponse) GetExternalcontactsImportJob (string jobId)
+> [**ContactImportJobResponse**](ContactImportJobResponse) GetExternalcontactsImportJob (string jobId, List<string> expand = null)
 
 
 Get job based on id
@@ -1861,11 +1861,12 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var jobId = jobId_example;  // string | Job id
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
             { 
                 // Get job based on id
-                ContactImportJobResponse result = apiInstance.GetExternalcontactsImportJob(jobId);
+                ContactImportJobResponse result = apiInstance.GetExternalcontactsImportJob(jobId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1883,6 +1884,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| Job id |  |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: division |
 
 ### Return type
 
@@ -1891,7 +1893,7 @@ namespace Example
 
 ## GetExternalcontactsImportJobs
 
-> [**ContactImportJobEntityListing**](ContactImportJobEntityListing) GetExternalcontactsImportJobs (string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
+> [**ContactImportJobEntityListing**](ContactImportJobEntityListing) GetExternalcontactsImportJobs (List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
 
 
 List jobs for organization
@@ -1922,6 +1924,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ExternalContactsApi();
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional)  (default to "25")
             var sortOrder = sortOrder_example;  // string | Direction of sorting. (optional)  (default to Ascending)
@@ -1930,7 +1933,7 @@ namespace Example
             try
             { 
                 // List jobs for organization
-                ContactImportJobEntityListing result = apiInstance.GetExternalcontactsImportJobs(after, pageSize, sortOrder, jobStatus);
+                ContactImportJobEntityListing result = apiInstance.GetExternalcontactsImportJobs(expand, after, pageSize, sortOrder, jobStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1947,6 +1950,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: division |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional] [default to "25"] |
 | **sortOrder** | **string**| Direction of sorting. | [optional] [default to Ascending]<br />**Values**: Ascending, Descending |
@@ -6125,4 +6129,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

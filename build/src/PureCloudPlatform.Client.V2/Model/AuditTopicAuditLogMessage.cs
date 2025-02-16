@@ -273,6 +273,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Gdpr,
             
             /// <summary>
+            /// Enum Externalcontactsexport for "ExternalContactsExport"
+            /// </summary>
+            [EnumMember(Value = "ExternalContactsExport")]
+            Externalcontactsexport,
+            
+            /// <summary>
             /// Enum Agentconfig for "AgentConfig"
             /// </summary>
             [EnumMember(Value = "AgentConfig")]
@@ -1025,6 +1031,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Downloadcapture,
             
             /// <summary>
+            /// Enum Succeeded for "Succeeded"
+            /// </summary>
+            [EnumMember(Value = "Succeeded")]
+            Succeeded,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed,
+            
+            /// <summary>
             /// Enum Initiate for "Initiate"
             /// </summary>
             [EnumMember(Value = "Initiate")]
@@ -1655,6 +1673,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Response")]
             Response,
+            
+            /// <summary>
+            /// Enum Responselibrary for "ResponseLibrary"
+            /// </summary>
+            [EnumMember(Value = "ResponseLibrary")]
+            Responselibrary,
             
             /// <summary>
             /// Enum Responseasset for "ResponseAsset"
@@ -2291,6 +2315,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "GdprRequest")]
             Gdprrequest,
+            
+            /// <summary>
+            /// Enum Exportrequest for "ExportRequest"
+            /// </summary>
+            [EnumMember(Value = "ExportRequest")]
+            Exportrequest,
             
             /// <summary>
             /// Enum Defaultpanelsettings for "DefaultPanelSettings"

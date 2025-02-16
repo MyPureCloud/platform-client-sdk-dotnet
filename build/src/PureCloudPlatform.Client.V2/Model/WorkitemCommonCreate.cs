@@ -45,7 +45,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContactId">The ID of the external contact of the Workitem. Must be a valid UUID..</param>
         /// <param name="ExternalTag">The external tag of the Workitem..</param>
         /// <param name="SkillIds">The skill IDs of the Workitem. Must be valid UUIDs..</param>
-        public WorkitemCommonCreate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, string TypeId = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, string LanguageId = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null)
+        /// <param name="ScriptId">The ID of the Workitems script. Must be a valid UUID..</param>
+        public WorkitemCommonCreate(string Name = null, int? Priority = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string WorkbinId = null, bool? AutoStatusTransition = null, string Description = null, string TypeId = null, Dictionary<string, Object> CustomFields = null, string QueueId = null, string AssigneeId = null, string LanguageId = null, string ExternalContactId = null, string ExternalTag = null, List<string> SkillIds = null, string ScriptId = null)
         {
             this.Name = Name;
             this.Priority = Priority;
@@ -65,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContactId = ExternalContactId;
             this.ExternalTag = ExternalTag;
             this.SkillIds = SkillIds;
+            this.ScriptId = ScriptId;
             
         }
         
@@ -231,6 +233,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> SkillIds { get; set; }
 
 
+
+        /// <summary>
+        /// The ID of the Workitems script. Must be a valid UUID.
+        /// </summary>
+        /// <value>The ID of the Workitems script. Must be a valid UUID.</value>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -258,6 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -387,6 +399,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillIds == other.SkillIds ||
                     this.SkillIds != null &&
                     this.SkillIds.SequenceEqual(other.SkillIds)
+                ) &&
+                (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
                 );
         }
 
@@ -454,6 +471,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
+
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
 
                 return hash;
             }

@@ -81,23 +81,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">ID of the data ingestion rule..</param>
         /// <param name="Name">The name of the data ingestion rule..</param>
         /// <param name="Description">A description of the data ingestion rule..</param>
-        /// <param name="SearchTerms">Search terms for X (formally Twitter)..</param>
-        /// <param name="Countries">ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide..</param>
-        /// <param name="DateCreated">Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="DateModified">Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Status">The status of the data ingestion rule..</param>
         /// <param name="Version">The version number of the data ingestion rule..</param>
-        public TwitterDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, string SearchTerms = null, List<string> Countries = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, int? Version = null)
+        /// <param name="SearchTerms">Search terms for X (formally Twitter)..</param>
+        /// <param name="Countries">ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide..</param>
+        public TwitterDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, string SearchTerms = null, List<string> Countries = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Description = Description;
-            this.SearchTerms = SearchTerms;
-            this.Countries = Countries;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
             this.Status = Status;
             this.Version = Version;
+            this.SearchTerms = SearchTerms;
+            this.Countries = Countries;
             
         }
         
@@ -130,6 +126,44 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// The version number of the data ingestion rule.
+        /// </summary>
+        /// <value>The version number of the data ingestion rule.</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
+
+
+
+        /// <summary>
+        /// Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+
+
+
+        /// <summary>
+        /// Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; private set; }
+
+
+
+        /// <summary>
+        /// The platform of the data ingestion rule.
+        /// </summary>
+        /// <value>The platform of the data ingestion rule.</value>
+        [DataMember(Name="platform", EmitDefaultValue=false)]
+        public string Platform { get; private set; }
+
+
+
         /// <summary>
         /// Search terms for X (formally Twitter).
         /// </summary>
@@ -145,35 +179,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.</value>
         [DataMember(Name="countries", EmitDefaultValue=false)]
         public List<string> Countries { get; set; }
-
-
-
-        /// <summary>
-        /// Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-
-
-
-        /// <summary>
-        /// Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-
-
-
-
-
-        /// <summary>
-        /// The version number of the data ingestion rule.
-        /// </summary>
-        /// <value>The version number of the data ingestion rule.</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
 
 
 
@@ -197,12 +202,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  SearchTerms: ").Append(SearchTerms).Append("\n");
-            sb.Append("  Countries: ").Append(Countries).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Platform: ").Append(Platform).Append("\n");
+            sb.Append("  SearchTerms: ").Append(SearchTerms).Append("\n");
+            sb.Append("  Countries: ").Append(Countries).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -260,14 +266,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
-                    this.SearchTerms == other.SearchTerms ||
-                    this.SearchTerms != null &&
-                    this.SearchTerms.Equals(other.SearchTerms)
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 ) &&
                 (
-                    this.Countries == other.Countries ||
-                    this.Countries != null &&
-                    this.Countries.SequenceEqual(other.Countries)
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
                 ) &&
                 (
                     this.DateCreated == other.DateCreated ||
@@ -280,14 +286,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
+                    this.Platform == other.Platform ||
+                    this.Platform != null &&
+                    this.Platform.Equals(other.Platform)
                 ) &&
                 (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
+                    this.SearchTerms == other.SearchTerms ||
+                    this.SearchTerms != null &&
+                    this.SearchTerms.Equals(other.SearchTerms)
+                ) &&
+                (
+                    this.Countries == other.Countries ||
+                    this.Countries != null &&
+                    this.Countries.SequenceEqual(other.Countries)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -316,11 +327,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
 
-                if (this.SearchTerms != null)
-                    hash = hash * 59 + this.SearchTerms.GetHashCode();
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
 
-                if (this.Countries != null)
-                    hash = hash * 59 + this.Countries.GetHashCode();
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
@@ -328,11 +339,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
 
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
+                if (this.Platform != null)
+                    hash = hash * 59 + this.Platform.GetHashCode();
 
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
+                if (this.SearchTerms != null)
+                    hash = hash * 59 + this.SearchTerms.GetHashCode();
+
+                if (this.Countries != null)
+                    hash = hash * 59 + this.Countries.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

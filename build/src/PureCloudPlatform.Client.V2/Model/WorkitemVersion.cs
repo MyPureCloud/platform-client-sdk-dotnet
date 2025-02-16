@@ -205,8 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomFields">Custom fields defined in the schema referenced by the Workitem..</param>
         /// <param name="AutoStatusTransitionDetail">Auto status transition details of Workitem..</param>
         /// <param name="ScoredAgents">A list of scored agents for the Workitem..</param>
+        /// <param name="Script">The script that will be executed for the Workitem..</param>
         /// <param name="Version">Version.</param>
-        public WorkitemVersion(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, LanguageReference Language = null, WorkitemUtilizationLabelReference UtilizationLabel = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, WorkitemQueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<RoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null, int? Version = null)
+        public WorkitemVersion(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, LanguageReference Language = null, WorkitemUtilizationLabelReference UtilizationLabel = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, WorkitemQueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<RoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null, WorkitemScriptReference Script = null, int? Version = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -242,6 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CustomFields = CustomFields;
             this.AutoStatusTransitionDetail = AutoStatusTransitionDetail;
             this.ScoredAgents = ScoredAgents;
+            this.Script = Script;
             this.Version = Version;
             
         }
@@ -550,6 +552,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The script that will be executed for the Workitem.
+        /// </summary>
+        /// <value>The script that will be executed for the Workitem.</value>
+        [DataMember(Name="script", EmitDefaultValue=false)]
+        public WorkitemScriptReference Script { get; set; }
+
+
+
+        /// <summary>
         /// Version
         /// </summary>
         /// <value>Version</value>
@@ -610,6 +621,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  AutoStatusTransitionDetail: ").Append(AutoStatusTransitionDetail).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
+            sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -828,6 +840,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScoredAgents.SequenceEqual(other.ScoredAgents)
                 ) &&
                 (
+                    this.Script == other.Script ||
+                    this.Script != null &&
+                    this.Script.Equals(other.Script)
+                ) &&
+                (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
@@ -954,6 +971,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
+
+                if (this.Script != null)
+                    hash = hash * 59 + this.Script.GetHashCode();
 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();

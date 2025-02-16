@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LearningScheduleSlotsQueryRequest" /> class.
         /// </summary>
         /// <param name="Interval">Range of time to get slots for scheduling learning activities. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
-        /// <param name="LengthInMinutes">The duration of coaching appointment to schedule in 15 minutes granularity (required).</param>
+        /// <param name="LengthInMinutes">The duration of Learning Assignment to schedule in 15 minutes granularity (required).</param>
         /// <param name="UserIds">The user IDs for which to fetch schedules. Must be only 1. (required).</param>
         /// <param name="InterruptibleAssignmentId">Assignment ID to exclude from consideration when determining blocked slots.</param>
         public LearningScheduleSlotsQueryRequest(string Interval = null, int? LengthInMinutes = null, List<string> UserIds = null, string InterruptibleAssignmentId = null)
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The duration of coaching appointment to schedule in 15 minutes granularity
+        /// The duration of Learning Assignment to schedule in 15 minutes granularity
         /// </summary>
-        /// <value>The duration of coaching appointment to schedule in 15 minutes granularity</value>
+        /// <value>The duration of Learning Assignment to schedule in 15 minutes granularity</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
 

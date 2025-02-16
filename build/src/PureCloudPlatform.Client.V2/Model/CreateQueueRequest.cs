@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class CreateQueueRequest :  IEquatable<CreateQueueRequest>
     {
         /// <summary>
-        /// The Scoring Method for the queue
+        /// The Scoring Method for the queue.
         /// </summary>
-        /// <value>The Scoring Method for the queue</value>
+        /// <value>The Scoring Method for the queue.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ScoringMethodEnum
         {
@@ -44,6 +44,39 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PriorityOnly")]
             Priorityonly
+        }
+        /// <summary>
+        /// The Last Agent Routing Mode for the queue.
+        /// </summary>
+        /// <value>The Last Agent Routing Mode for the queue.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum LastAgentRoutingModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Disabled for "Disabled"
+            /// </summary>
+            [EnumMember(Value = "Disabled")]
+            Disabled,
+            
+            /// <summary>
+            /// Enum Queuemembersonly for "QueueMembersOnly"
+            /// </summary>
+            [EnumMember(Value = "QueueMembersOnly")]
+            Queuemembersonly,
+            
+            /// <summary>
+            /// Enum Anyagent for "AnyAgent"
+            /// </summary>
+            [EnumMember(Value = "AnyAgent")]
+            Anyagent
         }
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
@@ -79,11 +112,17 @@ namespace PureCloudPlatform.Client.V2.Model
             All
         }
         /// <summary>
-        /// The Scoring Method for the queue
+        /// The Scoring Method for the queue.
         /// </summary>
-        /// <value>The Scoring Method for the queue</value>
+        /// <value>The Scoring Method for the queue.</value>
         [DataMember(Name="scoringMethod", EmitDefaultValue=false)]
         public ScoringMethodEnum? ScoringMethod { get; set; }
+        /// <summary>
+        /// The Last Agent Routing Mode for the queue.
+        /// </summary>
+        /// <value>The Last Agent Routing Mode for the queue.</value>
+        [DataMember(Name="lastAgentRoutingMode", EmitDefaultValue=false)]
+        public LastAgentRoutingModeEnum? LastAgentRoutingMode { get; set; }
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
@@ -110,7 +149,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingRules">The routing rules for the queue, used for Preferred Agent Routing..</param>
         /// <param name="ConditionalGroupRouting">The Conditional Group Routing settings for the queue..</param>
         /// <param name="Bullseye">The bullseye settings for the queue..</param>
-        /// <param name="ScoringMethod">The Scoring Method for the queue.</param>
+        /// <param name="ScoringMethod">The Scoring Method for the queue..</param>
+        /// <param name="LastAgentRoutingMode">The Last Agent Routing Mode for the queue..</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
         /// <param name="MemberGroups">The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes..</param>
@@ -134,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
         /// <param name="SourceQueueId">The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue..</param>
-        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, CannedResponseLibraries CannedResponseLibraries = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, string SourceQueueId = null)
+        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, LastAgentRoutingModeEnum? LastAgentRoutingMode = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, CannedResponseLibraries CannedResponseLibraries = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, string SourceQueueId = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -148,6 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConditionalGroupRouting = ConditionalGroupRouting;
             this.Bullseye = Bullseye;
             this.ScoringMethod = ScoringMethod;
+            this.LastAgentRoutingMode = LastAgentRoutingMode;
             this.AcwSettings = AcwSettings;
             this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.MemberGroups = MemberGroups;
@@ -308,6 +349,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The bullseye settings for the queue.</value>
         [DataMember(Name="bullseye", EmitDefaultValue=false)]
         public Bullseye Bullseye { get; set; }
+
+
 
 
 
@@ -546,6 +589,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConditionalGroupRouting: ").Append(ConditionalGroupRouting).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
             sb.Append("  ScoringMethod: ").Append(ScoringMethod).Append("\n");
+            sb.Append("  LastAgentRoutingMode: ").Append(LastAgentRoutingMode).Append("\n");
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
             sb.Append("  MemberGroups: ").Append(MemberGroups).Append("\n");
@@ -689,6 +733,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScoringMethod == other.ScoringMethod ||
                     this.ScoringMethod != null &&
                     this.ScoringMethod.Equals(other.ScoringMethod)
+                ) &&
+                (
+                    this.LastAgentRoutingMode == other.LastAgentRoutingMode ||
+                    this.LastAgentRoutingMode != null &&
+                    this.LastAgentRoutingMode.Equals(other.LastAgentRoutingMode)
                 ) &&
                 (
                     this.AcwSettings == other.AcwSettings ||
@@ -870,6 +919,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScoringMethod != null)
                     hash = hash * 59 + this.ScoringMethod.GetHashCode();
+
+                if (this.LastAgentRoutingMode != null)
+                    hash = hash * 59 + this.LastAgentRoutingMode.GetHashCode();
 
                 if (this.AcwSettings != null)
                     hash = hash * 59 + this.AcwSettings.GetHashCode();
