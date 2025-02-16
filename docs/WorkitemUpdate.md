@@ -29,7 +29,8 @@
 | **LanguageId** | **string** | The ID of language of the Workitem. Must be a valid UUID. | [optional] |
 | **UtilizationLabelId** | **string** | The ID of the utilization label of the Workitem. Must be a valid UUID. | [optional] |
 | **PreferredAgentIds** | **List&lt;string&gt;** | The preferred agent IDs of the Workitem. Must be valid UUIDs. | [optional] |
+| **ScriptId** | **string** | The ID of the Workitems script. Must be a valid UUID. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

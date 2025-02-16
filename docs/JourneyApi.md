@@ -46,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyViewVersionJobResultsChart**](#GetJourneyViewVersionJobResultsChart) | **Get** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}/results/charts/{chartId} | Get the chart result associated with a journey view job. |
 | [**GetJourneyViewVersionJobsLatest**](#GetJourneyViewVersionJobsLatest) | **Get** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest | Get the latest job of a journey view version. |
 | [**GetJourneyViews**](#GetJourneyViews) | **Get** /api/v2/journey/views | Get a list of Journey Views |
+| [**GetJourneyViewsDataDetails**](#GetJourneyViewsDataDetails) | **Get** /api/v2/journey/views/data/details | Get details about the data available for journey queries including oldest and newest event dates |
 | [**GetJourneyViewsEventdefinition**](#GetJourneyViewsEventdefinition) | **Get** /api/v2/journey/views/eventdefinitions/{eventDefinitionId} | Get an Event Definition |
 | [**GetJourneyViewsEventdefinitions**](#GetJourneyViewsEventdefinitions) | **Get** /api/v2/journey/views/eventdefinitions | Get a list of Event Definitions |
 | [**GetJourneyViewsJobs**](#GetJourneyViewsJobs) | **Get** /api/v2/journey/views/jobs | Get the jobs for an organization. |
@@ -2670,6 +2671,63 @@ namespace Example
 [**JourneyViewListing**](JourneyViewListing)
 
 
+## GetJourneyViewsDataDetails
+
+> [**DataRange**](DataRange) GetJourneyViewsDataDetails ()
+
+
+Get details about the data available for journey queries including oldest and newest event dates
+
+Requires ALL permissions: 
+
+* journey:dataDetails:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsDataDetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+
+            try
+            { 
+                // Get details about the data available for journey queries including oldest and newest event dates
+                DataRange result = apiInstance.GetJourneyViewsDataDetails();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsDataDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**DataRange**](DataRange)
+
+
 ## GetJourneyViewsEventdefinition
 
 > [**JourneyEventDefinition**](JourneyEventDefinition) GetJourneyViewsEventdefinition (string eventDefinitionId)
@@ -4555,4 +4613,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

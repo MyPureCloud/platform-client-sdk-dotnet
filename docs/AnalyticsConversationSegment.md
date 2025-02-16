@@ -12,7 +12,7 @@
 | **DestinationSessionId** | **string** | The unique identifier of a new session when a session is ended for a conference | [optional] |
 | **DisconnectType** | **string** | The session disconnect type | [optional] |
 | **ErrorCode** | **string** | A code corresponding to the error that occurred | [optional] |
-| **GroupId** | **string** | Unique identifier for a PureCloud group | [optional] |
+| **GroupId** | **string** | Unique identifier for a Genesys Cloud group | [optional] |
 | **Q850ResponseCodes** | **List&lt;long?&gt;** | Q.850 response code(s) | [optional] |
 | **QueueId** | **string** | Queue identifier | [optional] |
 | **RequestedLanguageId** | **string** | Unique identifier for the language requested for an interaction | [optional] |
@@ -34,4 +34,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

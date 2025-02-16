@@ -20,6 +20,7 @@
 | **Cobrowse** | [**CobrowseSettings**](CobrowseSettings) | The settings for cobrowse | [optional] |
 | **JourneyEvents** | [**JourneyEventsSettings**](JourneyEventsSettings) | The settings for journey events | [optional] |
 | **AuthenticationSettings** | [**AuthenticationSettings**](AuthenticationSettings) | The settings for authenticated deployments | [optional] |
+| **Video** | [**VideoSettings**](VideoSettings) | The settings for video | [optional] |
 | **DateCreated** | **DateTime?** | The date the configuration version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | The date the configuration version was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DatePublished** | **DateTime?** | The date the configuration version was most recently published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -31,4 +32,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

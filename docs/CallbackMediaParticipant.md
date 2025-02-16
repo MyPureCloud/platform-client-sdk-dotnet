@@ -41,6 +41,7 @@
 | **StartAcwTime** | **DateTime?** | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EndAcwTime** | **DateTime?** | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ParkTime** | **DateTime?** | The time when this participant&#39;s communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **ResumeTime** | **DateTime?** | The time when this participant&#39;s communications will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **OutboundPreview** | [**DialerPreview**](DialerPreview) | The outbound preview associated with this callback. | [optional] |
 | **Voicemail** | [**Voicemail**](Voicemail) | The voicemail associated with this callback. | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | The list of phone number to use for this callback. | [optional] |
@@ -53,4 +54,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_

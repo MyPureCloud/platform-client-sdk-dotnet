@@ -461,12 +461,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new SpeechTextAnalyticsApi();
-            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 50. (optional)  (default to 25)
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 25. (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number for the listing (optional)  (default to 1)
             var name = name_example;  // string | The category name filter applied to the listing (optional) 
             var sortOrder = sortOrder_example;  // string | The sort order for the listing (optional)  (default to asc)
             var sortBy = sortBy_example;  // string | The field to sort by for the listing (optional)  (default to name)
-            var ids = new List<string>(); // List<string> | Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
+            var ids = new List<string>(); // List<string> | Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional) 
 
             try
             { 
@@ -488,12 +488,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 50. | [optional] [default to 25] |
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 25. | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
 | **name** | **string**| The category name filter applied to the listing | [optional]  |
 | **sortOrder** | **string**| The sort order for the listing | [optional] [default to asc]<br />**Values**: asc, desc |
 | **sortBy** | **string**| The field to sort by for the listing | [optional] [default to name]<br />**Values**: name, description |
-| **ids** | [**List<string>**](string)| Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
+| **ids** | [**List<string>**](string)| Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. | [optional]  |
 
 ### Return type
 
@@ -3525,4 +3525,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 226.0.0_
+_PureCloudPlatform.Client.V2 227.0.0_
