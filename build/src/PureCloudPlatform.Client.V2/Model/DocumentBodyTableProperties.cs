@@ -143,9 +143,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Width">The width of the table converted to em unit..</param>
         /// <param name="Height">The height for the table..</param>
-        /// <param name="CellSpacing">The cell spacing for the table. The valid values in 'em'..</param>
-        /// <param name="CellPadding">The cell padding for the table. The valid values in 'em'..</param>
-        /// <param name="BorderWidth">The border width for the table. The valid values in 'em'.</param>
+        /// <param name="CellSpacing">The cell spacing for the table. The valid values in &#39;em&#39;..</param>
+        /// <param name="CellPadding">The cell padding for the table. The valid values in &#39;em&#39;..</param>
+        /// <param name="BorderWidth">The border width for the table. The valid values in &#39;em&#39;.</param>
         /// <param name="Alignment">The alignment for the table..</param>
         /// <param name="BorderStyle">The border style for the table..</param>
         /// <param name="BorderColor">The border color for the table. The valid values in hex color code representation. For example black color - #000000.</param>
@@ -187,27 +187,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The cell spacing for the table. The valid values in 'em'.
+        /// The cell spacing for the table. The valid values in &#39;em&#39;.
         /// </summary>
-        /// <value>The cell spacing for the table. The valid values in 'em'.</value>
+        /// <value>The cell spacing for the table. The valid values in &#39;em&#39;.</value>
         [DataMember(Name="cellSpacing", EmitDefaultValue=false)]
         public float? CellSpacing { get; set; }
 
 
 
         /// <summary>
-        /// The cell padding for the table. The valid values in 'em'.
+        /// The cell padding for the table. The valid values in &#39;em&#39;.
         /// </summary>
-        /// <value>The cell padding for the table. The valid values in 'em'.</value>
+        /// <value>The cell padding for the table. The valid values in &#39;em&#39;.</value>
         [DataMember(Name="cellPadding", EmitDefaultValue=false)]
         public float? CellPadding { get; set; }
 
 
 
         /// <summary>
-        /// The border width for the table. The valid values in 'em'
+        /// The border width for the table. The valid values in &#39;em&#39;
         /// </summary>
-        /// <value>The border width for the table. The valid values in 'em'</value>
+        /// <value>The border width for the table. The valid values in &#39;em&#39;</value>
         [DataMember(Name="borderWidth", EmitDefaultValue=false)]
         public float? BorderWidth { get; set; }
 

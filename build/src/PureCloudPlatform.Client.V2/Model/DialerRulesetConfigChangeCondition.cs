@@ -200,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">A value associated with the condition.</param>
         /// <param name="ValueType">Determines the type of the value associated with the condition.</param>
         /// <param name="Operator">An operation type for condition evaluation.</param>
-        /// <param name="Codes">List of wrap-up code identifiers (used only in conditions of type 'wrapupCondition').</param>
+        /// <param name="Codes">List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;).</param>
         /// <param name="PropertyType">Determines the type of the property associated with the condition.</param>
         /// <param name="Property">A value associated with the property type of this condition.</param>
         /// <param name="DataNotFoundResolution">The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition..</param>
@@ -291,9 +291,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of wrap-up code identifiers (used only in conditions of type 'wrapupCondition')
+        /// List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)
         /// </summary>
-        /// <value>List of wrap-up code identifiers (used only in conditions of type 'wrapupCondition')</value>
+        /// <value>List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)</value>
         [DataMember(Name="codes", EmitDefaultValue=false)]
         public List<string> Codes { get; set; }
 

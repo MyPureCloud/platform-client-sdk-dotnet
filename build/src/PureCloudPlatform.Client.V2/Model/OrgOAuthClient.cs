@@ -230,9 +230,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The  oauth client's organization.
+        /// The  oauth client&#39;s organization.
         /// </summary>
-        /// <value>The  oauth client's organization.</value>
+        /// <value>The  oauth client&#39;s organization.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public NamedEntity Organization { get; private set; }
 

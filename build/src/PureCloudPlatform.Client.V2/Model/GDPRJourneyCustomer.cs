@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRJourneyCustomer" /> class.
         /// </summary>
-        /// <param name="Type">The type of the customerId within the Journey System (e.g. cookie). Required if `id` is defined..</param>
-        /// <param name="Id">An ID of a customer within the Journey System at a point-in-time. Required if `type` is defined..</param>
+        /// <param name="Type">The type of the customerId within the Journey System (e.g. cookie). Required if &#x60;id&#x60; is defined..</param>
+        /// <param name="Id">An ID of a customer within the Journey System at a point-in-time. Required if &#x60;type&#x60; is defined..</param>
         public GDPRJourneyCustomer(string Type = null, string Id = null)
         {
             this.Type = Type;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The type of the customerId within the Journey System (e.g. cookie). Required if `id` is defined.
+        /// The type of the customerId within the Journey System (e.g. cookie). Required if &#x60;id&#x60; is defined.
         /// </summary>
-        /// <value>The type of the customerId within the Journey System (e.g. cookie). Required if `id` is defined.</value>
+        /// <value>The type of the customerId within the Journey System (e.g. cookie). Required if &#x60;id&#x60; is defined.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 
 
 
         /// <summary>
-        /// An ID of a customer within the Journey System at a point-in-time. Required if `type` is defined.
+        /// An ID of a customer within the Journey System at a point-in-time. Required if &#x60;type&#x60; is defined.
         /// </summary>
-        /// <value>An ID of a customer within the Journey System at a point-in-time. Required if `type` is defined.</value>
+        /// <value>An ID of a customer within the Journey System at a point-in-time. Required if &#x60;type&#x60; is defined.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The immutable globally unique identifier for the object. (required).</param>
         /// <param name="MutableGroupId">The group ID of the notification (mutable, may change  on update) (required).</param>
-        /// <param name="MarkedAsRead">Whether this notification has been marked \"read\" (required).</param>
+        /// <param name="MarkedAsRead">Whether this notification has been marked \&quot;read\&quot; (required).</param>
         public WfmUserNotification(string Id = null, string MutableGroupId = null, bool? MarkedAsRead = null)
         {
             this.Id = Id;
@@ -115,45 +115,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A shift trade notification.  Only set if type == ShiftTrade
+        /// A shift trade notification.  Only set if type &#x3D;&#x3D; ShiftTrade
         /// </summary>
-        /// <value>A shift trade notification.  Only set if type == ShiftTrade</value>
+        /// <value>A shift trade notification.  Only set if type &#x3D;&#x3D; ShiftTrade</value>
         [DataMember(Name="shiftTrade", EmitDefaultValue=false)]
         public ShiftTradeNotification ShiftTrade { get; private set; }
 
 
 
         /// <summary>
-        /// A time off request notification.  Only set if type == TimeOffRequest
+        /// A time off request notification.  Only set if type &#x3D;&#x3D; TimeOffRequest
         /// </summary>
-        /// <value>A time off request notification.  Only set if type == TimeOffRequest</value>
+        /// <value>A time off request notification.  Only set if type &#x3D;&#x3D; TimeOffRequest</value>
         [DataMember(Name="timeOffRequest", EmitDefaultValue=false)]
         public TimeOffRequestNotification TimeOffRequest { get; private set; }
 
 
 
         /// <summary>
-        /// An adherence explanation notification.  Only set if type == AdherenceExplanation
+        /// An adherence explanation notification.  Only set if type &#x3D;&#x3D; AdherenceExplanation
         /// </summary>
-        /// <value>An adherence explanation notification.  Only set if type == AdherenceExplanation</value>
+        /// <value>An adherence explanation notification.  Only set if type &#x3D;&#x3D; AdherenceExplanation</value>
         [DataMember(Name="adherenceExplanation", EmitDefaultValue=false)]
         public AdherenceExplanationNotification AdherenceExplanation { get; private set; }
 
 
 
         /// <summary>
-        /// An alternative shift trade notification.  Only set if type == AlternativeShift
+        /// An alternative shift trade notification.  Only set if type &#x3D;&#x3D; AlternativeShift
         /// </summary>
-        /// <value>An alternative shift trade notification.  Only set if type == AlternativeShift</value>
+        /// <value>An alternative shift trade notification.  Only set if type &#x3D;&#x3D; AlternativeShift</value>
         [DataMember(Name="alternativeShift", EmitDefaultValue=false)]
         public AlternativeShiftNotification AlternativeShift { get; private set; }
 
 
 
         /// <summary>
-        /// Whether this notification has been marked \"read\"
+        /// Whether this notification has been marked \&quot;read\&quot;
         /// </summary>
-        /// <value>Whether this notification has been marked \"read\"</value>
+        /// <value>Whether this notification has been marked \&quot;read\&quot;</value>
         [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
         public bool? MarkedAsRead { get; set; }
 

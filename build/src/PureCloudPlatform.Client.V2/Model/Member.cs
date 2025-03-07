@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Member" /> class.
         /// </summary>
-        /// <param name="Id">The user's id (required).</param>
+        /// <param name="Id">The user&#39;s id (required).</param>
         public Member(string Id = null)
         {
             this.Id = Id;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user's id
+        /// The user&#39;s id
         /// </summary>
-        /// <value>The user's id</value>
+        /// <value>The user&#39;s id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

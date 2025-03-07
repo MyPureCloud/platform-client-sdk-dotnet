@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SkillIds">The unique identifiers (V4 UUID) for the skills that should be used to determine the destination for the conversation..</param>
         /// <param name="LanguageId">The unique identifier (V4 UUID) for the language that should be used to determine the destination for the conversation..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
-        /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
+        /// <param name="SourceConfiguration">Metadata about the source of this communication&#39;s interaction. (required).</param>
         public RoutingEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string PhoneNumber = null, string QueueId = null, string Ani = null, string Dnis = null, List<string> SkillIds = null, string LanguageId = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
         {
             this.EventId = EventId;
@@ -158,9 +158,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Metadata about the source of this communication's interaction.
+        /// Metadata about the source of this communication&#39;s interaction.
         /// </summary>
-        /// <value>Metadata about the source of this communication's interaction.</value>
+        /// <value>Metadata about the source of this communication&#39;s interaction.</value>
         [DataMember(Name="sourceConfiguration", EmitDefaultValue=false)]
         public SourceConfiguration SourceConfiguration { get; set; }
 

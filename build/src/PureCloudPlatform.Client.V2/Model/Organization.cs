@@ -130,8 +130,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Organization" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="DefaultLanguage">The default language for this organization. Example: 'en'.</param>
-        /// <param name="DefaultCountryCode">The default country code for this organization. Example: 'US'.</param>
+        /// <param name="DefaultLanguage">The default language for this organization. Example: &#39;en&#39;.</param>
+        /// <param name="DefaultCountryCode">The default country code for this organization. Example: &#39;US&#39;.</param>
         /// <param name="ThirdPartyURI">ThirdPartyURI.</param>
         /// <param name="Domain">Domain.</param>
         /// <param name="Version">The current version of the organization. (required).</param>
@@ -174,18 +174,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The default language for this organization. Example: 'en'
+        /// The default language for this organization. Example: &#39;en&#39;
         /// </summary>
-        /// <value>The default language for this organization. Example: 'en'</value>
+        /// <value>The default language for this organization. Example: &#39;en&#39;</value>
         [DataMember(Name="defaultLanguage", EmitDefaultValue=false)]
         public string DefaultLanguage { get; set; }
 
 
 
         /// <summary>
-        /// The default country code for this organization. Example: 'US'
+        /// The default country code for this organization. Example: &#39;US&#39;
         /// </summary>
-        /// <value>The default country code for this organization. Example: 'US'</value>
+        /// <value>The default country code for this organization. Example: &#39;US&#39;</value>
         [DataMember(Name="defaultCountryCode", EmitDefaultValue=false)]
         public string DefaultCountryCode { get; set; }
 

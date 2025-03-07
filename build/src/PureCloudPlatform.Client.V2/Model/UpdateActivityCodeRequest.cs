@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UpdateActivityCodeRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the activity code.</param>
-        /// <param name="Category">The activity code's category. Attempting to change the category of a default activity code will return an error.</param>
+        /// <param name="Category">The activity code&#39;s category. Attempting to change the category of a default activity code will return an error.</param>
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PlannedShrinkage">Whether this activity code is considered planned or unplanned shrinkage.</param>
         /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
         /// <param name="SecondaryPresences">The secondary presences of this activity code.</param>
-        /// <param name="Metadata">Version metadata for the associated business unit's list of activity codes (required).</param>
+        /// <param name="Metadata">Version metadata for the associated business unit&#39;s list of activity codes (required).</param>
         public UpdateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, ListWrapperSecondaryPresence SecondaryPresences = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
@@ -215,9 +215,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Version metadata for the associated business unit's list of activity codes
+        /// Version metadata for the associated business unit&#39;s list of activity codes
         /// </summary>
-        /// <value>Version metadata for the associated business unit's list of activity codes</value>
+        /// <value>Version metadata for the associated business unit&#39;s list of activity codes</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
 

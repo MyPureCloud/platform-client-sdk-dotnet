@@ -153,13 +153,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserInput">The chosen user input associated with this reporting turn..</param>
         /// <param name="BotPrompts">The bot prompts associated with this reporting turn..</param>
         /// <param name="SessionId">The bot session ID that this reporting turn is grouped under..</param>
-        /// <param name="AskAction">The bot flow 'ask' action associated with this reporting turn (e.g. AskForIntent)..</param>
+        /// <param name="AskAction">The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent)..</param>
         /// <param name="Intent">The intent and associated slots detected during this reporting turn..</param>
         /// <param name="Knowledge">The knowledge data captured during this reporting turn..</param>
         /// <param name="KnowledgeBaseEvents">The knowledge data captured during this reporting turn..</param>
         /// <param name="DateCreated">Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="DateCompleted">Timestamp indicating when the original turn was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="AskActionResult">Result of the bot flow 'ask' action..</param>
+        /// <param name="DateCompleted">Timestamp indicating when the original turn was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="AskActionResult">Result of the bot flow &#39;ask&#39; action..</param>
         /// <param name="SessionEndDetails">The details related to end of bot flow session..</param>
         public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, ReportingTurnKnowledgeEvents KnowledgeBaseEvents = null, DateTime? DateCreated = null, DateTime? DateCompleted = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null)
         {
@@ -207,9 +207,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The bot flow 'ask' action associated with this reporting turn (e.g. AskForIntent).
+        /// The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent).
         /// </summary>
-        /// <value>The bot flow 'ask' action associated with this reporting turn (e.g. AskForIntent).</value>
+        /// <value>The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent).</value>
         [DataMember(Name="askAction", EmitDefaultValue=false)]
         public ReportingTurnAction AskAction { get; set; }
 
@@ -252,9 +252,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Timestamp indicating when the original turn was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Timestamp indicating when the original turn was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Timestamp indicating when the original turn was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Timestamp indicating when the original turn was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; set; }
 

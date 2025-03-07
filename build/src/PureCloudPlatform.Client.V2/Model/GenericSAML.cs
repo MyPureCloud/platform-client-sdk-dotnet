@@ -81,10 +81,41 @@ namespace PureCloudPlatform.Client.V2.Model
             _20nameidformattransient
         }
         /// <summary>
+        /// Gets or Sets SsoBinding
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SsoBindingEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Post for "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            /// </summary>
+            [EnumMember(Value = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST")]
+            Post,
+            
+            /// <summary>
+            /// Enum Redirect for "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            /// </summary>
+            [EnumMember(Value = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect")]
+            Redirect
+        }
+        /// <summary>
         /// Gets or Sets NameIdentifierFormat
         /// </summary>
         [DataMember(Name="nameIdentifierFormat", EmitDefaultValue=false)]
         public NameIdentifierFormatEnum? NameIdentifierFormat { get; set; }
+        /// <summary>
+        /// Gets or Sets SsoBinding
+        /// </summary>
+        [DataMember(Name="ssoBinding", EmitDefaultValue=false)]
+        public SsoBindingEnum? SsoBinding { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="GenericSAML" /> class.
         /// </summary>
@@ -98,9 +129,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Certificate">Certificate.</param>
         /// <param name="Certificates">Certificates.</param>
         /// <param name="LogoImageData">LogoImageData.</param>
-        /// <param name="EndpointCompression">EndpointCompression.</param>
         /// <param name="NameIdentifierFormat">NameIdentifierFormat.</param>
-        public GenericSAML(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, bool? EndpointCompression = null, NameIdentifierFormatEnum? NameIdentifierFormat = null)
+        /// <param name="SsoBinding">SsoBinding.</param>
+        /// <param name="SignAuthnRequests">SignAuthnRequests.</param>
+        /// <param name="ProviderName">ProviderName.</param>
+        /// <param name="DisplayOnLogin">DisplayOnLogin.</param>
+        /// <param name="EndpointCompression">EndpointCompression.</param>
+        public GenericSAML(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, SsoBindingEnum? SsoBinding = null, bool? SignAuthnRequests = null, string ProviderName = null, bool? DisplayOnLogin = null, bool? EndpointCompression = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
@@ -112,8 +147,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Certificate = Certificate;
             this.Certificates = Certificates;
             this.LogoImageData = LogoImageData;
-            this.EndpointCompression = EndpointCompression;
             this.NameIdentifierFormat = NameIdentifierFormat;
+            this.SsoBinding = SsoBinding;
+            this.SignAuthnRequests = SignAuthnRequests;
+            this.ProviderName = ProviderName;
+            this.DisplayOnLogin = DisplayOnLogin;
+            this.EndpointCompression = EndpointCompression;
             
         }
         
@@ -208,13 +247,39 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+
+
+        /// <summary>
+        /// Gets or Sets SignAuthnRequests
+        /// </summary>
+        [DataMember(Name="signAuthnRequests", EmitDefaultValue=false)]
+        public bool? SignAuthnRequests { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ProviderName
+        /// </summary>
+        [DataMember(Name="providerName", EmitDefaultValue=false)]
+        public string ProviderName { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DisplayOnLogin
+        /// </summary>
+        [DataMember(Name="displayOnLogin", EmitDefaultValue=false)]
+        public bool? DisplayOnLogin { get; set; }
+
+
+
         /// <summary>
         /// Gets or Sets EndpointCompression
         /// </summary>
         [DataMember(Name="endpointCompression", EmitDefaultValue=false)]
         public bool? EndpointCompression { get; set; }
-
-
 
 
 
@@ -246,8 +311,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  Certificates: ").Append(Certificates).Append("\n");
             sb.Append("  LogoImageData: ").Append(LogoImageData).Append("\n");
-            sb.Append("  EndpointCompression: ").Append(EndpointCompression).Append("\n");
             sb.Append("  NameIdentifierFormat: ").Append(NameIdentifierFormat).Append("\n");
+            sb.Append("  SsoBinding: ").Append(SsoBinding).Append("\n");
+            sb.Append("  SignAuthnRequests: ").Append(SignAuthnRequests).Append("\n");
+            sb.Append("  ProviderName: ").Append(ProviderName).Append("\n");
+            sb.Append("  DisplayOnLogin: ").Append(DisplayOnLogin).Append("\n");
+            sb.Append("  EndpointCompression: ").Append(EndpointCompression).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -345,14 +414,34 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LogoImageData.Equals(other.LogoImageData)
                 ) &&
                 (
-                    this.EndpointCompression == other.EndpointCompression ||
-                    this.EndpointCompression != null &&
-                    this.EndpointCompression.Equals(other.EndpointCompression)
-                ) &&
-                (
                     this.NameIdentifierFormat == other.NameIdentifierFormat ||
                     this.NameIdentifierFormat != null &&
                     this.NameIdentifierFormat.Equals(other.NameIdentifierFormat)
+                ) &&
+                (
+                    this.SsoBinding == other.SsoBinding ||
+                    this.SsoBinding != null &&
+                    this.SsoBinding.Equals(other.SsoBinding)
+                ) &&
+                (
+                    this.SignAuthnRequests == other.SignAuthnRequests ||
+                    this.SignAuthnRequests != null &&
+                    this.SignAuthnRequests.Equals(other.SignAuthnRequests)
+                ) &&
+                (
+                    this.ProviderName == other.ProviderName ||
+                    this.ProviderName != null &&
+                    this.ProviderName.Equals(other.ProviderName)
+                ) &&
+                (
+                    this.DisplayOnLogin == other.DisplayOnLogin ||
+                    this.DisplayOnLogin != null &&
+                    this.DisplayOnLogin.Equals(other.DisplayOnLogin)
+                ) &&
+                (
+                    this.EndpointCompression == other.EndpointCompression ||
+                    this.EndpointCompression != null &&
+                    this.EndpointCompression.Equals(other.EndpointCompression)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -405,11 +494,23 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.LogoImageData != null)
                     hash = hash * 59 + this.LogoImageData.GetHashCode();
 
-                if (this.EndpointCompression != null)
-                    hash = hash * 59 + this.EndpointCompression.GetHashCode();
-
                 if (this.NameIdentifierFormat != null)
                     hash = hash * 59 + this.NameIdentifierFormat.GetHashCode();
+
+                if (this.SsoBinding != null)
+                    hash = hash * 59 + this.SsoBinding.GetHashCode();
+
+                if (this.SignAuthnRequests != null)
+                    hash = hash * 59 + this.SignAuthnRequests.GetHashCode();
+
+                if (this.ProviderName != null)
+                    hash = hash * 59 + this.ProviderName.GetHashCode();
+
+                if (this.DisplayOnLogin != null)
+                    hash = hash * 59 + this.DisplayOnLogin.GetHashCode();
+
+                if (this.EndpointCompression != null)
+                    hash = hash * 59 + this.EndpointCompression.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -137,9 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// URI of the vendor's website
+        /// URI of the vendor&#39;s website
         /// </summary>
-        /// <value>URI of the vendor's website</value>
+        /// <value>URI of the vendor&#39;s website</value>
         [DataMember(Name="vendorWebsiteUri", EmitDefaultValue=false)]
         public string VendorWebsiteUri { get; private set; }
 

@@ -155,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ColumnName">The name of the contact list column to evaluate. (required).</param>
         /// <param name="Operator">The operator to use when comparing values. (required).</param>
-        /// <param name="Value">The value to compare against the contact's data. (required).</param>
+        /// <param name="Value">The value to compare against the contact&#39;s data. (required).</param>
         /// <param name="ValueType">The data type the value should be treated as. (required).</param>
         public ContactColumnConditionSettings(string ColumnName = null, OperatorEnum? Operator = null, string Value = null, ValueTypeEnum? ValueType = null)
         {
@@ -180,9 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The value to compare against the contact's data.
+        /// The value to compare against the contact&#39;s data.
         /// </summary>
-        /// <value>The value to compare against the contact's data.</value>
+        /// <value>The value to compare against the contact&#39;s data.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

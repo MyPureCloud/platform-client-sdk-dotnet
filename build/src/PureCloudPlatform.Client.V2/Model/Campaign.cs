@@ -155,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Script">The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless..</param>
         /// <param name="EdgeGroup">The EdgeGroup that will place the calls. Required for all dialing modes except preview..</param>
         /// <param name="Site">The identifier of the site to be used for dialing; can be set in place of an edge group..</param>
-        /// <param name="CampaignStatus">The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates..</param>
+        /// <param name="CampaignStatus">The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates..</param>
         /// <param name="PhoneColumns">The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. (required).</param>
         /// <param name="AbandonRate">The targeted compliance abandon rate percentage. Required for power and predictive campaigns..</param>
         /// <param name="DncLists">DncLists for this Campaign to check before placing a call..</param>
@@ -170,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlwaysRunning">Indicates (when true) that the campaign will remain on after contacts are depleted, allowing additional contacts to be appended/added to the contact list and processed by the still-running campaign. The campaign can still be turned off manually..</param>
         /// <param name="ContactSort">The order in which to sort contacts for dialing, based on a column..</param>
         /// <param name="ContactSorts">The order in which to sort contacts for dialing, based on up to four columns..</param>
-        /// <param name="NoAnswerTimeout">How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns..</param>
+        /// <param name="NoAnswerTimeout">How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns..</param>
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyze the call..</param>
         /// <param name="Priority">The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest..</param>
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
@@ -179,9 +179,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DynamicContactQueueingSettings">Settings for dynamic queueing of contacts..</param>
         /// <param name="SkillColumns">The skill columns on the ContactList that this Campaign should take into account when dialing.</param>
         /// <param name="MaxCallsPerAgent">The maximum number of calls that can be placed per agent on this campaign.</param>
+        /// <param name="MaxCallsPerAgentDecimal">The maximum number of calls that can be placed per agent on this campaign with decimal precision.</param>
         /// <param name="CallbackAutoAnswer">The option manages the auto-answer callback calls.</param>
         /// <param name="DynamicLineBalancingSettings">Dynamic line balancing settings.</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, int? MaxCallsPerAgent = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null)
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -215,6 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DynamicContactQueueingSettings = DynamicContactQueueingSettings;
             this.SkillColumns = SkillColumns;
             this.MaxCallsPerAgent = MaxCallsPerAgent;
+            this.MaxCallsPerAgentDecimal = MaxCallsPerAgentDecimal;
             this.CallbackAutoAnswer = CallbackAutoAnswer;
             this.DynamicLineBalancingSettings = DynamicLineBalancingSettings;
             
@@ -452,9 +454,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns.
+        /// How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns.
         /// </summary>
-        /// <value>How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns.</value>
+        /// <value>How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns.</value>
         [DataMember(Name="noAnswerTimeout", EmitDefaultValue=false)]
         public int? NoAnswerTimeout { get; set; }
 
@@ -533,6 +535,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The maximum number of calls that can be placed per agent on this campaign with decimal precision
+        /// </summary>
+        /// <value>The maximum number of calls that can be placed per agent on this campaign with decimal precision</value>
+        [DataMember(Name="maxCallsPerAgentDecimal", EmitDefaultValue=false)]
+        public double? MaxCallsPerAgentDecimal { get; set; }
+
+
+
+        /// <summary>
         /// The option manages the auto-answer callback calls
         /// </summary>
         /// <value>The option manages the auto-answer callback calls</value>
@@ -603,6 +614,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DynamicContactQueueingSettings: ").Append(DynamicContactQueueingSettings).Append("\n");
             sb.Append("  SkillColumns: ").Append(SkillColumns).Append("\n");
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
+            sb.Append("  MaxCallsPerAgentDecimal: ").Append(MaxCallsPerAgentDecimal).Append("\n");
             sb.Append("  CallbackAutoAnswer: ").Append(CallbackAutoAnswer).Append("\n");
             sb.Append("  DynamicLineBalancingSettings: ").Append(DynamicLineBalancingSettings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -827,6 +839,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxCallsPerAgent.Equals(other.MaxCallsPerAgent)
                 ) &&
                 (
+                    this.MaxCallsPerAgentDecimal == other.MaxCallsPerAgentDecimal ||
+                    this.MaxCallsPerAgentDecimal != null &&
+                    this.MaxCallsPerAgentDecimal.Equals(other.MaxCallsPerAgentDecimal)
+                ) &&
+                (
                     this.CallbackAutoAnswer == other.CallbackAutoAnswer ||
                     this.CallbackAutoAnswer != null &&
                     this.CallbackAutoAnswer.Equals(other.CallbackAutoAnswer)
@@ -961,6 +978,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxCallsPerAgent != null)
                     hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();
+
+                if (this.MaxCallsPerAgentDecimal != null)
+                    hash = hash * 59 + this.MaxCallsPerAgentDecimal.GetHashCode();
 
                 if (this.CallbackAutoAnswer != null)
                     hash = hash * 59 + this.CallbackAutoAnswer.GetHashCode();

@@ -23,10 +23,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ErrorCode">A code unique to this error. Typically prefixed with the service that originated the error. For example CONFIG_USER_NOT_FOUND.</param>
         /// <param name="Status">The HTTP status code for this message. If left blank the status code from the HTTP response is used..</param>
-        /// <param name="CorrelationId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead..</param>
+        /// <param name="CorrelationId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead..</param>
         /// <param name="UserMessage">A customer friendly message. This should be a complete sentence, use proper grammar and only include information useful to a customer. This is not a dev message and should not include things like Org Id.</param>
-        /// <param name="UserParamsMessage">This is the same as userMessage except it uses template fields for variable replacement. For instance: 'User {username} was not found'.</param>
-        /// <param name="UserParams">Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'chuck.pulfer'.</param>
+        /// <param name="UserParamsMessage">This is the same as userMessage except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;.</param>
+        /// <param name="UserParams">Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;chuck.pulfer&#39;.</param>
         public UserRoutingStatusErrorInfo(string ErrorCode = null, int? Status = null, string CorrelationId = null, string UserMessage = null, string UserParamsMessage = null, List<UserRoutingStatusUserParam> UserParams = null)
         {
             this.ErrorCode = ErrorCode;
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead.
+        /// The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.
         /// </summary>
-        /// <value>The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead.</value>
+        /// <value>The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.</value>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
 
@@ -77,18 +77,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// This is the same as userMessage except it uses template fields for variable replacement. For instance: 'User {username} was not found'
+        /// This is the same as userMessage except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;
         /// </summary>
-        /// <value>This is the same as userMessage except it uses template fields for variable replacement. For instance: 'User {username} was not found'</value>
+        /// <value>This is the same as userMessage except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;</value>
         [DataMember(Name="userParamsMessage", EmitDefaultValue=false)]
         public string UserParamsMessage { get; set; }
 
 
 
         /// <summary>
-        /// Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'chuck.pulfer'
+        /// Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;chuck.pulfer&#39;
         /// </summary>
-        /// <value>Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'chuck.pulfer'</value>
+        /// <value>Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;chuck.pulfer&#39;</value>
         [DataMember(Name="userParams", EmitDefaultValue=false)]
         public List<UserRoutingStatusUserParam> UserParams { get; set; }
 

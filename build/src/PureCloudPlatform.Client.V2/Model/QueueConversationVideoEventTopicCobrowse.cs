@@ -301,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock..</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="AfterCallWork">A communication's after-call work data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
         public QueueConversationVideoEventTopicCobrowse(StateEnum? State = null, InitialStateEnum? InitialState = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, QueueConversationVideoEventTopicAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, QueueConversationVideoEventTopicQueueMediaSettings QueueMediaSettings = null)
@@ -464,9 +464,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A communication's after-call work data.
+        /// A communication&#39;s after-call work data.
         /// </summary>
-        /// <value>A communication's after-call work data.</value>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationVideoEventTopicAfterCallWork AfterCallWork { get; set; }
 

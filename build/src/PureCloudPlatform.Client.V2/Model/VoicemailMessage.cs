@@ -64,27 +64,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The voicemail message's audio recording duration in seconds
+        /// The voicemail message&#39;s audio recording duration in seconds
         /// </summary>
-        /// <value>The voicemail message's audio recording duration in seconds</value>
+        /// <value>The voicemail message&#39;s audio recording duration in seconds</value>
         [DataMember(Name="audioRecordingDurationSeconds", EmitDefaultValue=false)]
         public int? AudioRecordingDurationSeconds { get; private set; }
 
 
 
         /// <summary>
-        /// The voicemail message's audio recording size in bytes
+        /// The voicemail message&#39;s audio recording size in bytes
         /// </summary>
-        /// <value>The voicemail message's audio recording size in bytes</value>
+        /// <value>The voicemail message&#39;s audio recording size in bytes</value>
         [DataMember(Name="audioRecordingSizeBytes", EmitDefaultValue=false)]
         public long? AudioRecordingSizeBytes { get; private set; }
 
 
 
         /// <summary>
-        /// The transcription of the voicemail's audio
+        /// The transcription of the voicemail&#39;s audio
         /// </summary>
-        /// <value>The transcription of the voicemail's audio</value>
+        /// <value>The transcription of the voicemail&#39;s audio</value>
         [DataMember(Name="transcription", EmitDefaultValue=false)]
         public string Transcription { get; private set; }
 

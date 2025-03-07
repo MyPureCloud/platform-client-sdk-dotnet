@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Status">The status of the operation.</param>
         /// <param name="OperationId">The ID for the operation.</param>
-        /// <param name="Result">The result of the operation.  Null unless status == Complete.</param>
+        /// <param name="Result">The result of the operation.  Null unless status &#x3D;&#x3D; Complete.</param>
         /// <param name="Progress">Percent progress for the operation.</param>
         /// <param name="DownloadUrl">The URL from which to download the result if it is too large to pass directly.</param>
         public BuAsyncAgentSchedulesSearchResponse(StatusEnum? Status = null, string OperationId = null, BuAgentSchedulesSearchResponse Result = null, int? Progress = null, string DownloadUrl = null)
@@ -95,9 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The result of the operation.  Null unless status == Complete
+        /// The result of the operation.  Null unless status &#x3D;&#x3D; Complete
         /// </summary>
-        /// <value>The result of the operation.  Null unless status == Complete</value>
+        /// <value>The result of the operation.  Null unless status &#x3D;&#x3D; Complete</value>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public BuAgentSchedulesSearchResponse Result { get; set; }
 

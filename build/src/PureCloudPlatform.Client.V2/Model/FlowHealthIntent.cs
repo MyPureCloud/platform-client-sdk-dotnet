@@ -140,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="FlowVersionInfo">Info about given flow version..</param>
-        /// <param name="Language">Language provided for this intent's health..</param>
+        /// <param name="Language">Language provided for this intent&#39;s health..</param>
         /// <param name="Health">Health computation details for given language..</param>
         public FlowHealthIntent(string Name = null, FlowHealthIntentVersionInfo FlowVersionInfo = null, LanguageEnum? Language = null, HealthInfo Health = null)
         {

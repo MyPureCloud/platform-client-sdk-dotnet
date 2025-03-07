@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateCompleted">The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="UploadURI">The URL of the location at which the caller can upload the file to be imported.</param>
-        /// <param name="ImportMode">The indication of whether the processing should remove rows that don't appear in the import file.</param>
+        /// <param name="ImportMode">The indication of whether the processing should remove rows that don&#39;t appear in the import file.</param>
         /// <param name="ErrorInformation">Any error information, or null of the processing is not in an error state.</param>
         /// <param name="CountRecordsUpdated">The current count of the number of records processed.</param>
         /// <param name="CountRecordsDeleted">The current count of the number of records deleted.</param>

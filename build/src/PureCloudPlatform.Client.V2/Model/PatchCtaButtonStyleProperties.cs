@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Color">Color of the text. (eg. #FFFFFF).</param>
         /// <param name="Font">Font of the text. (eg. Helvetica).</param>
-        /// <param name="FontSize">Font size of the text. (eg. '12').</param>
+        /// <param name="FontSize">Font size of the text. (eg. &#39;12&#39;).</param>
         /// <param name="TextAlign">Text alignment..</param>
         /// <param name="BackgroundColor">Background color of the CTA button. (eg. #A04033).</param>
         public PatchCtaButtonStyleProperties(string Color = null, string Font = null, string FontSize = null, TextAlignEnum? TextAlign = null, string BackgroundColor = null)
@@ -96,9 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Font size of the text. (eg. '12')
+        /// Font size of the text. (eg. &#39;12&#39;)
         /// </summary>
-        /// <value>Font size of the text. (eg. '12')</value>
+        /// <value>Font size of the text. (eg. &#39;12&#39;)</value>
         [DataMember(Name="fontSize", EmitDefaultValue=false)]
         public string FontSize { get; set; }
 

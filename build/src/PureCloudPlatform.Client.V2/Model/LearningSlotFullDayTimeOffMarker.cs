@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningSlotFullDayTimeOffMarker" /> class.
         /// </summary>
-        /// <param name="BusinessUnitDate">The date of the time off marker, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        /// <param name="BusinessUnitDate">The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="LengthMinutes">The length of the time off marker in minutes.</param>
         /// <param name="Description">The description of the time off marker.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with the time off marker.</param>
@@ -41,9 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The date of the time off marker, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>The date of the time off marker, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="businessUnitDate", EmitDefaultValue=false)]
         public String BusinessUnitDate { get; set; }
 

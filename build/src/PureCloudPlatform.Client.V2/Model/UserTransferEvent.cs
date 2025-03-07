@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TransferType">Indicates the desired type of transfer. (required).</param>
         /// <param name="CommandId">The id (V4 UUID) used by the external platform to refer to the transfer in subsequent Transfer events. (required).</param>
         /// <param name="InitiatingCommunicationId">The id (V4 UUID) of the communication representing the participant that is initiating the transfer. (required).</param>
-        /// <param name="TargetCommunicationId">The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the `initiatingCommunicationId`. (required).</param>
+        /// <param name="TargetCommunicationId">The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the &#x60;initiatingCommunicationId&#x60;. (required).</param>
         /// <param name="ObjectCommunicationId">The id (V4 UUID) of the communication that is being transferred. (required).</param>
         /// <param name="DestinationUserId">The id (V4 UUID) of the desired destination user that the object communication should be transferred to. (required).</param>
         public UserTransferEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, TransferTypeEnum? TransferType = null, string CommandId = null, string InitiatingCommunicationId = null, string TargetCommunicationId = null, string ObjectCommunicationId = null, string DestinationUserId = null)
@@ -133,9 +133,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the `initiatingCommunicationId`.
+        /// The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the &#x60;initiatingCommunicationId&#x60;.
         /// </summary>
-        /// <value>The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the `initiatingCommunicationId`.</value>
+        /// <value>The id (V4 UUID) of the communication that is being transferred away from. In many cases this will be the same as the &#x60;initiatingCommunicationId&#x60;.</value>
         [DataMember(Name="targetCommunicationId", EmitDefaultValue=false)]
         public string TargetCommunicationId { get; set; }
 

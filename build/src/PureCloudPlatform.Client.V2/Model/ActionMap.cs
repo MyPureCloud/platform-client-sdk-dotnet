@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Activation">Type of activation..</param>
         /// <param name="Weight">Weight of the action map with higher number denoting higher weight..</param>
         /// <param name="Action">The action that will be executed if this action map is triggered..</param>
-        /// <param name="ActionMapScheduleGroups">The action map's associated schedule groups..</param>
+        /// <param name="ActionMapScheduleGroups">The action map&#39;s associated schedule groups..</param>
         /// <param name="IgnoreFrequencyCap">Override organization-level frequency cap and always offer web engagements from this action map..</param>
         /// <param name="CreatedDate">Timestamp indicating when the action map was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedDate">Timestamp indicating when the action map was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -188,9 +188,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The action map's associated schedule groups.
+        /// The action map&#39;s associated schedule groups.
         /// </summary>
-        /// <value>The action map's associated schedule groups.</value>
+        /// <value>The action map&#39;s associated schedule groups.</value>
         [DataMember(Name="actionMapScheduleGroups", EmitDefaultValue=false)]
         public ActionMapScheduleGroups ActionMapScheduleGroups { get; set; }
 

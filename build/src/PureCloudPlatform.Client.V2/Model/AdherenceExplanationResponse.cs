@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">The start timestamp of the adherence explanation in ISO-8601 format (required).</param>
         /// <param name="LengthMinutes">The length of the adherence explanation in minutes (required).</param>
         /// <param name="Notes">Notes about the adherence explanation.</param>
-        /// <param name="ReviewedBy">The user who reviewed the adherence explanation, if applicable.</param>
+        /// <param name="ReviewedBy">The user who reviewed the adherence explanation, if applicable. The id may be &#39;System&#39; if it was an automated process.</param>
         /// <param name="ReviewedDate">The timestamp for when the adherence explanation was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public AdherenceExplanationResponse(UserReference Agent = null, ManagementUnitReference ManagementUnit = null, BusinessUnitReference BusinessUnit = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? StartDate = null, int? LengthMinutes = null, string Notes = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null)
         {
@@ -188,9 +188,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user who reviewed the adherence explanation, if applicable
+        /// The user who reviewed the adherence explanation, if applicable. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The user who reviewed the adherence explanation, if applicable</value>
+        /// <value>The user who reviewed the adherence explanation, if applicable. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
         public UserReference ReviewedBy { get; set; }
 

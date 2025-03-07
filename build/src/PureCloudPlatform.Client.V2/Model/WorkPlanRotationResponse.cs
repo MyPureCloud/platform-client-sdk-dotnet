@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateRange">The date range to which this work plan rotation applies.</param>
         /// <param name="Pattern">Pattern with ordered list of work plans that rotate on a weekly basis.</param>
         /// <param name="AgentCount">Number of agents in this work plan rotation.</param>
-        /// <param name="Agents">Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list).</param>
+        /// <param name="Agents">Agents in this work plan rotation. Populate with expand&#x3D;agents for GET WorkPlanRotationsList (defaults to empty list).</param>
         /// <param name="Metadata">Version metadata for this work plan rotation.</param>
         public WorkPlanRotationResponse(string Name = null, bool? Enabled = null, DateRangeWithOptionalEnd DateRange = null, WorkPlanPatternResponse Pattern = null, int? AgentCount = null, List<WorkPlanRotationAgentResponse> Agents = null, WfmVersionedEntityMetadata Metadata = null)
         {
@@ -96,9 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list)
+        /// Agents in this work plan rotation. Populate with expand&#x3D;agents for GET WorkPlanRotationsList (defaults to empty list)
         /// </summary>
-        /// <value>Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list)</value>
+        /// <value>Agents in this work plan rotation. Populate with expand&#x3D;agents for GET WorkPlanRotationsList (defaults to empty list)</value>
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<WorkPlanRotationAgentResponse> Agents { get; set; }
 

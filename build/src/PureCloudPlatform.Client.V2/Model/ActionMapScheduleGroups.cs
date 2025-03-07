@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMapScheduleGroups" /> class.
         /// </summary>
-        /// <param name="ActionMapScheduleGroup">The actions map's associated schedule group. (required).</param>
-        /// <param name="EmergencyActionMapScheduleGroup">The action map's associated emergency schedule group..</param>
+        /// <param name="ActionMapScheduleGroup">The actions map&#39;s associated schedule group. (required).</param>
+        /// <param name="EmergencyActionMapScheduleGroup">The action map&#39;s associated emergency schedule group..</param>
         public ActionMapScheduleGroups(ActionMapScheduleGroup ActionMapScheduleGroup = null, ActionMapScheduleGroup EmergencyActionMapScheduleGroup = null)
         {
             this.ActionMapScheduleGroup = ActionMapScheduleGroup;
@@ -39,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The actions map's associated schedule group.
+        /// The actions map&#39;s associated schedule group.
         /// </summary>
-        /// <value>The actions map's associated schedule group.</value>
+        /// <value>The actions map&#39;s associated schedule group.</value>
         [DataMember(Name="actionMapScheduleGroup", EmitDefaultValue=false)]
         public ActionMapScheduleGroup ActionMapScheduleGroup { get; set; }
 
 
 
         /// <summary>
-        /// The action map's associated emergency schedule group.
+        /// The action map&#39;s associated emergency schedule group.
         /// </summary>
-        /// <value>The action map's associated emergency schedule group.</value>
+        /// <value>The action map&#39;s associated emergency schedule group.</value>
         [DataMember(Name="emergencyActionMapScheduleGroup", EmitDefaultValue=false)]
         public ActionMapScheduleGroup EmergencyActionMapScheduleGroup { get; set; }
 

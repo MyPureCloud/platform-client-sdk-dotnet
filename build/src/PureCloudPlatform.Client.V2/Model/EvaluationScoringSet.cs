@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Comments">Overall comments from the evaluator.</param>
         /// <param name="PrivateComments">Overall private comments from the evaluator.</param>
         /// <param name="AgentComments">Comments from the agent while reviewing evaluation results.</param>
-        /// <param name="TranscriptTopics">List of topics found within the conversation's transcripts.</param>
+        /// <param name="TranscriptTopics">List of topics found within the conversation&#39;s transcripts.</param>
         public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string PrivateComments = null, string AgentComments = null, List<TranscriptTopic> TranscriptTopics = null)
         {
             this.TotalScore = TotalScore;
@@ -118,9 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of topics found within the conversation's transcripts
+        /// List of topics found within the conversation&#39;s transcripts
         /// </summary>
-        /// <value>List of topics found within the conversation's transcripts</value>
+        /// <value>List of topics found within the conversation&#39;s transcripts</value>
         [DataMember(Name="transcriptTopics", EmitDefaultValue=false)]
         public List<TranscriptTopic> TranscriptTopics { get; set; }
 

@@ -33,7 +33,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CategoryId">The category associated with the document..</param>
         /// <param name="LabelIds">The ids of labels associated with the document..</param>
         /// <param name="ExternalId">The external id associated with the document..</param>
-        public KnowledgeDocumentCreateRequest(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, string CategoryId = null, List<string> LabelIds = null, string ExternalId = null)
+        /// <param name="ExternalUrl">The URL to external document..</param>
+        public KnowledgeDocumentCreateRequest(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, string CategoryId = null, List<string> LabelIds = null, string ExternalId = null, string ExternalUrl = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -41,6 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CategoryId = CategoryId;
             this.LabelIds = LabelIds;
             this.ExternalId = ExternalId;
+            this.ExternalUrl = ExternalUrl;
             
         }
         
@@ -110,6 +112,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The URL to external document.
+        /// </summary>
+        /// <value>The URL to external document.</value>
+        [DataMember(Name="externalUrl", EmitDefaultValue=false)]
+        public string ExternalUrl { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -133,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
             sb.Append("  LabelIds: ").Append(LabelIds).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
+            sb.Append("  ExternalUrl: ").Append(ExternalUrl).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -210,6 +222,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalId.Equals(other.ExternalId)
                 ) &&
                 (
+                    this.ExternalUrl == other.ExternalUrl ||
+                    this.ExternalUrl != null &&
+                    this.ExternalUrl.Equals(other.ExternalUrl)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -247,6 +264,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
+
+                if (this.ExternalUrl != null)
+                    hash = hash * 59 + this.ExternalUrl.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

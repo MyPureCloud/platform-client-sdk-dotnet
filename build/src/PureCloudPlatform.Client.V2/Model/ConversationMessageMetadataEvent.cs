@@ -133,6 +133,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Signin,
             
             /// <summary>
+            /// Enum Sessionexpired for "SessionExpired"
+            /// </summary>
+            [EnumMember(Value = "SessionExpired")]
+            Sessionexpired,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

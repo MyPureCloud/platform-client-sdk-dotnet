@@ -123,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Interval">Specifies the range of due dates to be used for filtering. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="Metrics">The list of metrics to be returned. If omitted, all metrics are returned..</param>
-        /// <param name="GroupBy">Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \"attendeeId\").</param>
+        /// <param name="GroupBy">Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \&quot;attendeeId\&quot;).</param>
         /// <param name="Filter">The filter applied to the data. This is ANDed with the interval parameter. (required).</param>
         public DevelopmentActivityAggregateParam(string Interval = null, List<MetricsEnum> Metrics = null, List<GroupByEnum> GroupBy = null, DevelopmentActivityAggregateQueryRequestFilter Filter = null)
         {
@@ -155,9 +155,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \"attendeeId\")
+        /// Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \&quot;attendeeId\&quot;)
         /// </summary>
-        /// <value>Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \"attendeeId\")</value>
+        /// <value>Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \&quot;attendeeId\&quot;)</value>
         [DataMember(Name="groupBy", EmitDefaultValue=false)]
         public List<GroupByEnum> GroupBy { get; set; }
 

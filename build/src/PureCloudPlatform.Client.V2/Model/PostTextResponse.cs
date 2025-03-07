@@ -73,8 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BotCorrelationId">The optional ID specified in the request.</param>
         /// <param name="AmazonLex">Raw data response from AWS (if called).</param>
         /// <param name="GoogleDialogFlow">Raw data response from Google Dialogflow (if called).</param>
-        /// <param name="GenesysDialogEngine">Raw data response from Genesys' Dialogengine (if called).</param>
-        /// <param name="GenesysBotConnector">Raw data response from Genesys' BotConnector (if called).</param>
+        /// <param name="GenesysDialogEngine">Raw data response from Genesys&#39; Dialogengine (if called).</param>
+        /// <param name="GenesysBotConnector">Raw data response from Genesys&#39; BotConnector (if called).</param>
         /// <param name="NuanceMixDlg">Raw data response from Nuance Mix Dlg (if called).</param>
         public PostTextResponse(BotStateEnum? BotState = null, List<PostTextMessage> ReplyMessages = null, string IntentName = null, Dictionary<string, string> Slots = null, string BotCorrelationId = null, Dictionary<string, Object> AmazonLex = null, Dictionary<string, Object> GoogleDialogFlow = null, Dictionary<string, Object> GenesysDialogEngine = null, Dictionary<string, Object> GenesysBotConnector = null, Dictionary<string, Object> NuanceMixDlg = null)
         {
@@ -150,18 +150,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Raw data response from Genesys' Dialogengine (if called)
+        /// Raw data response from Genesys&#39; Dialogengine (if called)
         /// </summary>
-        /// <value>Raw data response from Genesys' Dialogengine (if called)</value>
+        /// <value>Raw data response from Genesys&#39; Dialogengine (if called)</value>
         [DataMember(Name="genesysDialogEngine", EmitDefaultValue=false)]
         public Dictionary<string, Object> GenesysDialogEngine { get; set; }
 
 
 
         /// <summary>
-        /// Raw data response from Genesys' BotConnector (if called)
+        /// Raw data response from Genesys&#39; BotConnector (if called)
         /// </summary>
-        /// <value>Raw data response from Genesys' BotConnector (if called)</value>
+        /// <value>Raw data response from Genesys&#39; BotConnector (if called)</value>
         [DataMember(Name="genesysBotConnector", EmitDefaultValue=false)]
         public Dictionary<string, Object> GenesysBotConnector { get; set; }
 

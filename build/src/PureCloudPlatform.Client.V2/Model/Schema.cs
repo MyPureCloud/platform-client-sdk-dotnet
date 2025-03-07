@@ -29,18 +29,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A core type's title
+        /// A core type&#39;s title
         /// </summary>
-        /// <value>A core type's title</value>
+        /// <value>A core type&#39;s title</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; private set; }
 
 
 
         /// <summary>
-        /// A core type's description
+        /// A core type&#39;s description
         /// </summary>
-        /// <value>A core type's description</value>
+        /// <value>A core type&#39;s description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
 
@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// For the \"date\" and \"datetime\" core types, denotes the regex prescribing the allowable date/datetime format
+        /// For the \&quot;date\&quot; and \&quot;datetime\&quot; core types, denotes the regex prescribing the allowable date/datetime format
         /// </summary>
-        /// <value>For the \"date\" and \"datetime\" core types, denotes the regex prescribing the allowable date/datetime format</value>
+        /// <value>For the \&quot;date\&quot; and \&quot;datetime\&quot; core types, denotes the regex prescribing the allowable date/datetime format</value>
         [DataMember(Name="pattern", EmitDefaultValue=false)]
         public string Pattern { get; private set; }
 

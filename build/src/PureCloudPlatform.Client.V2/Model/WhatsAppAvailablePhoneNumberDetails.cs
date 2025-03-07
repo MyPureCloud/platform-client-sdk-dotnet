@@ -38,9 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The display name associated with this phone number. It's typically the E.164 representation of the number.
+        /// The display name associated with this phone number. It&#39;s typically the E.164 representation of the number.
         /// </summary>
-        /// <value>The display name associated with this phone number. It's typically the E.164 representation of the number.</value>
+        /// <value>The display name associated with this phone number. It&#39;s typically the E.164 representation of the number.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; private set; }
 

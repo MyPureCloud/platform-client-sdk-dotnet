@@ -229,6 +229,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The location of the appointment
+        /// </summary>
+        /// <value>The location of the appointment</value>
+        [DataMember(Name="location", EmitDefaultValue=false)]
+        public string Location { get; private set; }
+
+
+
+        /// <summary>
+        /// Whether to share the insight data
+        /// </summary>
+        /// <value>Whether to share the insight data</value>
+        [DataMember(Name="shareInsightsData", EmitDefaultValue=false)]
+        public bool? ShareInsightsData { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -263,6 +281,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WfmSchedule: ").Append(WfmSchedule).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  ExternalLinks: ").Append(ExternalLinks).Append("\n");
+            sb.Append("  Location: ").Append(Location).Append("\n");
+            sb.Append("  ShareInsightsData: ").Append(ShareInsightsData).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -395,6 +415,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalLinks.SequenceEqual(other.ExternalLinks)
                 ) &&
                 (
+                    this.Location == other.Location ||
+                    this.Location != null &&
+                    this.Location.Equals(other.Location)
+                ) &&
+                (
+                    this.ShareInsightsData == other.ShareInsightsData ||
+                    this.ShareInsightsData != null &&
+                    this.ShareInsightsData.Equals(other.ShareInsightsData)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -465,6 +495,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalLinks != null)
                     hash = hash * 59 + this.ExternalLinks.GetHashCode();
+
+                if (this.Location != null)
+                    hash = hash * 59 + this.Location.GetHashCode();
+
+                if (this.ShareInsightsData != null)
+                    hash = hash * 59 + this.ShareInsightsData.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

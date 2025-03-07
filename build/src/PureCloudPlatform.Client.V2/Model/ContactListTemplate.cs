@@ -36,9 +36,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreviewModeAcceptedValues">The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode..</param>
         /// <param name="AttemptLimits">AttemptLimits for this ContactListTemplate..</param>
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactListTemplate..</param>
-        /// <param name="ZipCodeColumnName">The name of ContactListTemplate column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true..</param>
+        /// <param name="ZipCodeColumnName">The name of ContactListTemplate column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
         /// <param name="ColumnDataTypeSpecifications">The settings of the columns selected for dynamic queueing.</param>
-        /// <param name="TrimWhitespace">Whether to trim white space when importing a ContactListTemplate csv file, default value = true.</param>
+        /// <param name="TrimWhitespace">Whether to trim white space when importing a ContactListTemplate csv file, default value &#x3D; true.</param>
         public ContactListTemplate(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null, bool? TrimWhitespace = null)
         {
             this.Name = Name;
@@ -166,9 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of ContactListTemplate column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true.
+        /// The name of ContactListTemplate column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true.
         /// </summary>
-        /// <value>The name of ContactListTemplate column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true.</value>
+        /// <value>The name of ContactListTemplate column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true.</value>
         [DataMember(Name="zipCodeColumnName", EmitDefaultValue=false)]
         public string ZipCodeColumnName { get; set; }
 
@@ -184,9 +184,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether to trim white space when importing a ContactListTemplate csv file, default value = true
+        /// Whether to trim white space when importing a ContactListTemplate csv file, default value &#x3D; true
         /// </summary>
-        /// <value>Whether to trim white space when importing a ContactListTemplate csv file, default value = true</value>
+        /// <value>Whether to trim white space when importing a ContactListTemplate csv file, default value &#x3D; true</value>
         [DataMember(Name="trimWhitespace", EmitDefaultValue=false)]
         public bool? TrimWhitespace { get; set; }
 

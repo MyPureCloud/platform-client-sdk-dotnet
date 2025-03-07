@@ -21,10 +21,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
         /// </summary>
-        /// <param name="AlertTimeoutSeconds">The organization's default number of seconds to ring a user's phone before a call is transferred to voicemail.</param>
+        /// <param name="AlertTimeoutSeconds">The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transferred to voicemail.</param>
         /// <param name="PinConfiguration">The configuration for user PINs to access their voicemail from a phone.</param>
         /// <param name="VoicemailExtension">The extension for voicemail retrieval.  The default value is *86..</param>
-        /// <param name="PinRequired">If this is true, a PIN is required when accessing a user's voicemail from a phone..</param>
+        /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone..</param>
         /// <param name="InteractiveResponseRequired">Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting..</param>
         /// <param name="IncludeEmailTranscriptions">Whether to include the voicemail transcription in the notification email.</param>
@@ -56,9 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The organization's default number of seconds to ring a user's phone before a call is transferred to voicemail
+        /// The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transferred to voicemail
         /// </summary>
-        /// <value>The organization's default number of seconds to ring a user's phone before a call is transferred to voicemail</value>
+        /// <value>The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transferred to voicemail</value>
         [DataMember(Name="alertTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertTimeoutSeconds { get; set; }
 
@@ -83,9 +83,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// If this is true, a PIN is required when accessing a user's voicemail from a phone.
+        /// If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone.
         /// </summary>
-        /// <value>If this is true, a PIN is required when accessing a user's voicemail from a phone.</value>
+        /// <value>If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone.</value>
         [DataMember(Name="pinRequired", EmitDefaultValue=false)]
         public bool? PinRequired { get; set; }
 

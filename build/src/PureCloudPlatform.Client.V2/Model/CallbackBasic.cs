@@ -324,7 +324,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">The connection state of this communication..</param>
         /// <param name="InitialState">The initial connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        /// <param name="Segments">The time line of the participant's callback, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant&#39;s callback, divided into activity segments..</param>
         /// <param name="Direction">The direction of the call.</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
@@ -400,9 +400,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time line of the participant's callback, divided into activity segments.
+        /// The time line of the participant&#39;s callback, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant's callback, divided into activity segments.</value>
+        /// <value>The time line of the participant&#39;s callback, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
 

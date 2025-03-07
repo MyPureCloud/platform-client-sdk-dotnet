@@ -314,8 +314,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="BackgroundColor">The background color for the list item. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="Align">The align type for the list item..</param>
-        /// <param name="Indentation">The indentation property for the list item. The valid values in 'em'..</param>
-        /// <param name="FontSize">The font size for the list item. The valid values in 'em'..</param>
+        /// <param name="Indentation">The indentation property for the list item. The valid values in &#39;em&#39;..</param>
+        /// <param name="FontSize">The font size for the list item. The valid values in &#39;em&#39;..</param>
         /// <param name="FontType">The font type for the list item..</param>
         /// <param name="TextColor">The text color for the list item. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="UnorderedType">The type of icon for the unordered list..</param>
@@ -347,9 +347,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The indentation property for the list item. The valid values in 'em'.
+        /// The indentation property for the list item. The valid values in &#39;em&#39;.
         /// </summary>
-        /// <value>The indentation property for the list item. The valid values in 'em'.</value>
+        /// <value>The indentation property for the list item. The valid values in &#39;em&#39;.</value>
         [DataMember(Name="indentation", EmitDefaultValue=false)]
         public float? Indentation { get; set; }
 

@@ -188,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
         /// <param name="ParticipantId">Unique identifier for the participant.</param>
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
-        /// <param name="Purpose">The participant's purpose.</param>
+        /// <param name="Purpose">The participant&#39;s purpose.</param>
         /// <param name="ScreenRecording">Flag determining if a screen recording was started or not.</param>
         /// <param name="TeamId">The team ID the user is a member of.</param>
         /// <param name="UserId">Unique identifier for the user.</param>

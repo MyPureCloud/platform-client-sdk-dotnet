@@ -29,16 +29,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Days">Days of the week applicable for this shift (required).</param>
         /// <param name="FlexibleStartTime">Whether the start time of the shift is flexible (required).</param>
-        /// <param name="ExactStartTimeMinutesFromMidnight">Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == false (required).</param>
-        /// <param name="EarliestStartTimeMinutesFromMidnight">Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true (required).</param>
-        /// <param name="LatestStartTimeMinutesFromMidnight">Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true (required).</param>
+        /// <param name="ExactStartTimeMinutesFromMidnight">Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; false (required).</param>
+        /// <param name="EarliestStartTimeMinutesFromMidnight">Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true (required).</param>
+        /// <param name="LatestStartTimeMinutesFromMidnight">Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true (required).</param>
         /// <param name="EarliestStopTimeMinutesFromMidnight">This is the earliest time a shift can end (required).</param>
         /// <param name="ConstrainLatestStopTime">Whether the latest stop time constraint for the shift is enabled (required).</param>
-        /// <param name="LatestStopTimeMinutesFromMidnight">Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true (required).</param>
+        /// <param name="LatestStopTimeMinutesFromMidnight">Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime &#x3D;&#x3D; true (required).</param>
         /// <param name="FlexiblePaidTime">Whether the paid time setting for the shift is flexible (required).</param>
-        /// <param name="ExactPaidTimeMinutes">Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false (required).</param>
-        /// <param name="MinimumPaidTimeMinutes">Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime == true (required).</param>
-        /// <param name="MaximumPaidTimeMinutes">Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime == true (required).</param>
+        /// <param name="ExactPaidTimeMinutes">Exact paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; false (required).</param>
+        /// <param name="MinimumPaidTimeMinutes">Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true (required).</param>
+        /// <param name="MaximumPaidTimeMinutes">Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true (required).</param>
         /// <param name="Activities">Activities configured for this shift (required).</param>
         public AgentWorkPlanShift(SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, int? EarliestStopTimeMinutesFromMidnight = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, List<AgentWorkPlanActivity> Activities = null)
         {
@@ -79,27 +79,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == false
+        /// Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; false
         /// </summary>
-        /// <value>Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == false</value>
+        /// <value>Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; false</value>
         [DataMember(Name="exactStartTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? ExactStartTimeMinutesFromMidnight { get; set; }
 
 
 
         /// <summary>
-        /// Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true
+        /// Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true</value>
+        /// <value>Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true</value>
         [DataMember(Name="earliestStartTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? EarliestStartTimeMinutesFromMidnight { get; set; }
 
 
 
         /// <summary>
-        /// Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true
+        /// Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true</value>
+        /// <value>Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true</value>
         [DataMember(Name="latestStartTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? LatestStartTimeMinutesFromMidnight { get; set; }
 
@@ -124,9 +124,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true
+        /// Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true</value>
+        /// <value>Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime &#x3D;&#x3D; true</value>
         [DataMember(Name="latestStopTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? LatestStopTimeMinutesFromMidnight { get; set; }
 
@@ -142,27 +142,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false
+        /// Exact paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; false
         /// </summary>
-        /// <value>Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false</value>
+        /// <value>Exact paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; false</value>
         [DataMember(Name="exactPaidTimeMinutes", EmitDefaultValue=false)]
         public int? ExactPaidTimeMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime == true
+        /// Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime == true</value>
+        /// <value>Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true</value>
         [DataMember(Name="minimumPaidTimeMinutes", EmitDefaultValue=false)]
         public int? MinimumPaidTimeMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime == true
+        /// Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime == true</value>
+        /// <value>Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true</value>
         [DataMember(Name="maximumPaidTimeMinutes", EmitDefaultValue=false)]
         public int? MaximumPaidTimeMinutes { get; set; }
 

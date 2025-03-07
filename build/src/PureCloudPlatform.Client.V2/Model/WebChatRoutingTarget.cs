@@ -54,8 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatRoutingTarget" /> class.
         /// </summary>
-        /// <param name="TargetType">The target type of the routing target, such as 'QUEUE'. (required).</param>
-        /// <param name="TargetAddress">The target of the route, in the format appropriate given the 'targetType'. (required).</param>
+        /// <param name="TargetType">The target type of the routing target, such as &#39;QUEUE&#39;. (required).</param>
+        /// <param name="TargetAddress">The target of the route, in the format appropriate given the &#39;targetType&#39;. (required).</param>
         /// <param name="Skills">The list of skill names to use for routing..</param>
         /// <param name="Language">The language name to use for routing..</param>
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The target of the route, in the format appropriate given the 'targetType'.
+        /// The target of the route, in the format appropriate given the &#39;targetType&#39;.
         /// </summary>
-        /// <value>The target of the route, in the format appropriate given the 'targetType'.</value>
+        /// <value>The target of the route, in the format appropriate given the &#39;targetType&#39;.</value>
         [DataMember(Name="targetAddress", EmitDefaultValue=false)]
         public string TargetAddress { get; set; }
 

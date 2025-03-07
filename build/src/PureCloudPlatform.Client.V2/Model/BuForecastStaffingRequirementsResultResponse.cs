@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WeekCount">The number of weeks in this forecast (required).</param>
         /// <param name="IntervalLengthMinutes">The period/interval in minutes for which to aggregate the data (required).</param>
         /// <param name="State">The state of the staffing requirements generation (required).</param>
-        /// <param name="Results">The forecast staffing requirement results, Will be populated when state == 'Complete'.</param>
+        /// <param name="Results">The forecast staffing requirement results, Will be populated when state &#x3D;&#x3D; &#39;Complete&#39;.</param>
         public BuForecastStaffingRequirementsResultResponse(string BusinessUnitId = null, BuShortTermForecastReference Forecast = null, DateTime? ReferenceStartDate = null, int? WeekCount = null, int? IntervalLengthMinutes = null, StateEnum? State = null, List<BuForecastStaffingRequirementsResult> Results = null)
         {
             this.BusinessUnitId = BusinessUnitId;
@@ -135,9 +135,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The forecast staffing requirement results, Will be populated when state == 'Complete'
+        /// The forecast staffing requirement results, Will be populated when state &#x3D;&#x3D; &#39;Complete&#39;
         /// </summary>
-        /// <value>The forecast staffing requirement results, Will be populated when state == 'Complete'</value>
+        /// <value>The forecast staffing requirement results, Will be populated when state &#x3D;&#x3D; &#39;Complete&#39;</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<BuForecastStaffingRequirementsResult> Results { get; set; }
 

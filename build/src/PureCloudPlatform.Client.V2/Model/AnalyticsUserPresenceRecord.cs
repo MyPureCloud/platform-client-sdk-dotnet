@@ -104,8 +104,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="StartTime">The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndTime">The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="SystemPresence">The user's system presence.</param>
-        /// <param name="OrganizationPresenceId">The identifier for the user's organization presence.</param>
+        /// <param name="SystemPresence">The user&#39;s system presence.</param>
+        /// <param name="OrganizationPresenceId">The identifier for the user&#39;s organization presence.</param>
         public AnalyticsUserPresenceRecord(DateTime? StartTime = null, DateTime? EndTime = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null)
         {
             this.StartTime = StartTime;
@@ -138,9 +138,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The identifier for the user's organization presence
+        /// The identifier for the user&#39;s organization presence
         /// </summary>
-        /// <value>The identifier for the user's organization presence</value>
+        /// <value>The identifier for the user&#39;s organization presence</value>
         [DataMember(Name="organizationPresenceId", EmitDefaultValue=false)]
         public string OrganizationPresenceId { get; set; }
 

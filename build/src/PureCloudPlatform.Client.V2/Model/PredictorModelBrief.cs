@@ -124,9 +124,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The model's retraining errors.
+        /// The model&#39;s retraining errors.
         /// </summary>
-        /// <value>The model's retraining errors.</value>
+        /// <value>The model&#39;s retraining errors.</value>
         [DataMember(Name="retrainingErrors", EmitDefaultValue=false)]
         public List<PredictorModelRetrainingError> RetrainingErrors { get; private set; }
 

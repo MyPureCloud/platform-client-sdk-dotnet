@@ -38,63 +38,63 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The HTTP-addressable URL that points to the service provider's documentation.
+        /// The HTTP-addressable URL that points to the service provider&#39;s documentation.
         /// </summary>
-        /// <value>The HTTP-addressable URL that points to the service provider's documentation.</value>
+        /// <value>The HTTP-addressable URL that points to the service provider&#39;s documentation.</value>
         [DataMember(Name="documentationUri", EmitDefaultValue=false)]
         public string DocumentationUri { get; private set; }
 
 
 
         /// <summary>
-        /// The \"patch\" configuration options.
+        /// The \&quot;patch\&quot; configuration options.
         /// </summary>
-        /// <value>The \"patch\" configuration options.</value>
+        /// <value>The \&quot;patch\&quot; configuration options.</value>
         [DataMember(Name="patch", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Patch { get; private set; }
 
 
 
         /// <summary>
-        /// The \"filter\" configuration options.
+        /// The \&quot;filter\&quot; configuration options.
         /// </summary>
-        /// <value>The \"filter\" configuration options.</value>
+        /// <value>The \&quot;filter\&quot; configuration options.</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public ScimServiceProviderConfigFilterFeature Filter { get; private set; }
 
 
 
         /// <summary>
-        /// The \"etag\" configuration options.
+        /// The \&quot;etag\&quot; configuration options.
         /// </summary>
-        /// <value>The \"etag\" configuration options.</value>
+        /// <value>The \&quot;etag\&quot; configuration options.</value>
         [DataMember(Name="etag", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Etag { get; private set; }
 
 
 
         /// <summary>
-        /// The \"sort\" configuration options.
+        /// The \&quot;sort\&quot; configuration options.
         /// </summary>
-        /// <value>The \"sort\" configuration options.</value>
+        /// <value>The \&quot;sort\&quot; configuration options.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Sort { get; private set; }
 
 
 
         /// <summary>
-        /// The \"bulk\" configuration options.
+        /// The \&quot;bulk\&quot; configuration options.
         /// </summary>
-        /// <value>The \"bulk\" configuration options.</value>
+        /// <value>The \&quot;bulk\&quot; configuration options.</value>
         [DataMember(Name="bulk", EmitDefaultValue=false)]
         public ScimServiceProviderConfigBulkFeature Bulk { get; private set; }
 
 
 
         /// <summary>
-        /// The \"changePassword\" configuration options.
+        /// The \&quot;changePassword\&quot; configuration options.
         /// </summary>
-        /// <value>The \"changePassword\" configuration options.</value>
+        /// <value>The \&quot;changePassword\&quot; configuration options.</value>
         [DataMember(Name="changePassword", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature ChangePassword { get; private set; }
 

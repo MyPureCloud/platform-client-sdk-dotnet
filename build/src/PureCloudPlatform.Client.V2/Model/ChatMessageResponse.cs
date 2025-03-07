@@ -28,14 +28,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ChatMessageResponse" /> class.
         /// </summary>
         /// <param name="Id">The id of the message (required).</param>
-        /// <param name="DateCreated">Message's created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="DateModified">Message's last updated time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ToJid">Jid of message's recipient (roomJid or userJid) (required).</param>
-        /// <param name="Jid">Jid of message's sender (userJid) (required).</param>
-        /// <param name="Body">Message's body (required).</param>
-        /// <param name="Mentions">Message's mentions.</param>
+        /// <param name="DateCreated">Message&#39;s created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        /// <param name="DateModified">Message&#39;s last updated time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ToJid">Jid of message&#39;s recipient (roomJid or userJid) (required).</param>
+        /// <param name="Jid">Jid of message&#39;s sender (userJid) (required).</param>
+        /// <param name="Body">Message&#39;s body (required).</param>
+        /// <param name="Mentions">Message&#39;s mentions.</param>
         /// <param name="Edited">If message was edited.</param>
-        /// <param name="AttachmentDeleted">If message's attachment was deleted.</param>
+        /// <param name="AttachmentDeleted">If message&#39;s attachment was deleted.</param>
         /// <param name="FileUri">URI of file attachment.</param>
         /// <param name="Thread">The id for a thread this message corresponds to (required).</param>
         /// <param name="ParentThread">Parent thread id for thread replies.</param>
@@ -74,54 +74,54 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Message's created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Message&#39;s created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Message's created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Message&#39;s created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
 
 
 
         /// <summary>
-        /// Message's last updated time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Message&#39;s last updated time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Message's last updated time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Message&#39;s last updated time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
 
 
 
         /// <summary>
-        /// Jid of message's recipient (roomJid or userJid)
+        /// Jid of message&#39;s recipient (roomJid or userJid)
         /// </summary>
-        /// <value>Jid of message's recipient (roomJid or userJid)</value>
+        /// <value>Jid of message&#39;s recipient (roomJid or userJid)</value>
         [DataMember(Name="toJid", EmitDefaultValue=false)]
         public string ToJid { get; set; }
 
 
 
         /// <summary>
-        /// Jid of message's sender (userJid)
+        /// Jid of message&#39;s sender (userJid)
         /// </summary>
-        /// <value>Jid of message's sender (userJid)</value>
+        /// <value>Jid of message&#39;s sender (userJid)</value>
         [DataMember(Name="jid", EmitDefaultValue=false)]
         public string Jid { get; set; }
 
 
 
         /// <summary>
-        /// Message's body
+        /// Message&#39;s body
         /// </summary>
-        /// <value>Message's body</value>
+        /// <value>Message&#39;s body</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
 
 
 
         /// <summary>
-        /// Message's mentions
+        /// Message&#39;s mentions
         /// </summary>
-        /// <value>Message's mentions</value>
+        /// <value>Message&#39;s mentions</value>
         [DataMember(Name="mentions", EmitDefaultValue=false)]
         public Dictionary<string, string> Mentions { get; set; }
 
@@ -137,9 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// If message's attachment was deleted
+        /// If message&#39;s attachment was deleted
         /// </summary>
-        /// <value>If message's attachment was deleted</value>
+        /// <value>If message&#39;s attachment was deleted</value>
         [DataMember(Name="attachmentDeleted", EmitDefaultValue=false)]
         public bool? AttachmentDeleted { get; set; }
 

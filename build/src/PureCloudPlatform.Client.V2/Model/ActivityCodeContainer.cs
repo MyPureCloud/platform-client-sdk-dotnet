@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ActivityCodeContainer" /> class.
         /// </summary>
         /// <param name="ActivityCodes">Map of activity code id to activity code.</param>
-        /// <param name="Metadata">Version metadata for the associated management unit's list of activity codes (required).</param>
+        /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
         public ActivityCodeContainer(Dictionary<string, ActivityCode> ActivityCodes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.ActivityCodes = ActivityCodes;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Version metadata for the associated management unit's list of activity codes
+        /// Version metadata for the associated management unit&#39;s list of activity codes
         /// </summary>
-        /// <value>Version metadata for the associated management unit's list of activity codes</value>
+        /// <value>Version metadata for the associated management unit&#39;s list of activity codes</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
 

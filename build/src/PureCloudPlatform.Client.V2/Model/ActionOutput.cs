@@ -21,13 +21,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionOutput" /> class.
         /// </summary>
-        /// <param name="SuccessSchema">JSON schema that defines the transformed, successful result that will be sent back to the caller. If the 'flatten' query parameter is omitted or false, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both..</param>
+        /// <param name="SuccessSchema">JSON schema that defines the transformed, successful result that will be sent back to the caller. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both..</param>
         /// <param name="SuccessSchemaUri">URI to retrieve success schema.</param>
-        /// <param name="ErrorSchema">JSON schema that defines the body of response when request is not successful. If the 'flatten' query parameter is omitted or false, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both..</param>
+        /// <param name="ErrorSchema">JSON schema that defines the body of response when request is not successful. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both..</param>
         /// <param name="ErrorSchemaUri">URI to retrieve error schema.</param>
-        /// <param name="SuccessSchemaFlattened">JSON schema that defines the transformed, successful result that will be sent back to the caller. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both..</param>
-        /// <param name="ErrorSchemaFlattened">JSON schema that defines the body of response when request is not successful. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both..</param>
-        public ActionOutput(JsonSchemaDocument SuccessSchema = null, string SuccessSchemaUri = null, JsonSchemaDocument ErrorSchema = null, string ErrorSchemaUri = null, JsonSchemaDocument SuccessSchemaFlattened = null, Object ErrorSchemaFlattened = null)
+        /// <param name="SuccessSchemaFlattened">JSON schema that defines the transformed, successful result that will be sent back to the caller. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both..</param>
+        /// <param name="ErrorSchemaFlattened">JSON schema that defines the body of response when request is not successful. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both..</param>
+        public ActionOutput(JsonSchemaDocument SuccessSchema = null, string SuccessSchemaUri = null, JsonSchemaDocument ErrorSchema = null, string ErrorSchemaUri = null, FlattenedJsonSchemaDocument SuccessSchemaFlattened = null, FlattenedJsonSchemaDocument ErrorSchemaFlattened = null)
         {
             this.SuccessSchema = SuccessSchema;
             this.SuccessSchemaUri = SuccessSchemaUri;
@@ -41,9 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// JSON schema that defines the transformed, successful result that will be sent back to the caller. If the 'flatten' query parameter is omitted or false, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.
+        /// JSON schema that defines the transformed, successful result that will be sent back to the caller. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON schema that defines the transformed, successful result that will be sent back to the caller. If the 'flatten' query parameter is omitted or false, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON schema that defines the transformed, successful result that will be sent back to the caller. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="successSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument SuccessSchema { get; set; }
 
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// JSON schema that defines the body of response when request is not successful. If the 'flatten' query parameter is omitted or false, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.
+        /// JSON schema that defines the body of response when request is not successful. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON schema that defines the body of response when request is not successful. If the 'flatten' query parameter is omitted or false, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON schema that defines the body of response when request is not successful. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="errorSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument ErrorSchema { get; set; }
 
@@ -77,20 +77,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// JSON schema that defines the transformed, successful result that will be sent back to the caller. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.
+        /// JSON schema that defines the transformed, successful result that will be sent back to the caller. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON schema that defines the transformed, successful result that will be sent back to the caller. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON schema that defines the transformed, successful result that will be sent back to the caller. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="successSchemaFlattened", EmitDefaultValue=false)]
-        public JsonSchemaDocument SuccessSchemaFlattened { get; set; }
+        public FlattenedJsonSchemaDocument SuccessSchemaFlattened { get; set; }
 
 
 
         /// <summary>
-        /// JSON schema that defines the body of response when request is not successful. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.
+        /// JSON schema that defines the body of response when request is not successful. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON schema that defines the body of response when request is not successful. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON schema that defines the body of response when request is not successful. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="errorSchemaFlattened", EmitDefaultValue=false)]
-        public Object ErrorSchemaFlattened { get; set; }
+        public FlattenedJsonSchemaDocument ErrorSchemaFlattened { get; set; }
 
 
         /// <summary>

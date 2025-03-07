@@ -38,18 +38,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Information regarding the campaign's queue
+        /// Information regarding the campaign&#39;s queue
         /// </summary>
-        /// <value>Information regarding the campaign's queue</value>
+        /// <value>Information regarding the campaign&#39;s queue</value>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
         public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; private set; }
 
 
 
         /// <summary>
-        /// Information regarding the campaign's rule sets
+        /// Information regarding the campaign&#39;s rule sets
         /// </summary>
-        /// <value>Information regarding the campaign's rule sets</value>
+        /// <value>Information regarding the campaign&#39;s rule sets</value>
         [DataMember(Name="ruleSetDiagnostics", EmitDefaultValue=false)]
         public List<RuleSetDiagnostic> RuleSetDiagnostics { get; private set; }
 
@@ -83,18 +83,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.
+        /// Number of contacts that don&#39;t match filter. This is currently supported only for Campaigns with dynamic filter on.
         /// </summary>
-        /// <value>Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
+        /// <value>Number of contacts that don&#39;t match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
         [DataMember(Name="filteredOutContactsCount", EmitDefaultValue=false)]
         public int? FilteredOutContactsCount { get; private set; }
 
 
 
         /// <summary>
-        /// Information regarding the campaign's skills
+        /// Information regarding the campaign&#39;s skills
         /// </summary>
-        /// <value>Information regarding the campaign's skills</value>
+        /// <value>Information regarding the campaign&#39;s skills</value>
         [DataMember(Name="campaignSkillStatistics", EmitDefaultValue=false)]
         public CampaignSkillStatistics CampaignSkillStatistics { get; private set; }
 

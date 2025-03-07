@@ -182,13 +182,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Operator">The operator for comparison. Required for a CampaignRuleCondition..</param>
         /// <param name="Value">The value for comparison. Required for a CampaignRuleCondition..</param>
-        /// <param name="Priority">The priority to set a campaign to. Required for the 'setCampaignPriority' action..</param>
-        /// <param name="DialingMode">The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action..</param>
-        /// <param name="AbandonRate">The abandon rate to set a campaign to. Required for the 'setCampaignAbandonRate' action..</param>
-        /// <param name="OutboundLineCount">The  number of outbound lines to set a campaign to. Required for the 'setCampaignNumberOfLines' action..</param>
-        /// <param name="RelativeWeight">The relative weight to set a campaign to. Required for the 'setCampaignWeight' action..</param>
-        /// <param name="MaxCallsPerAgent">The maximum number of calls per agent to set a campaign to. Required for the 'setCampaignMaxCallsPerAgent' action..</param>
-        /// <param name="Queue">The queue a campaign to. Required for the 'changeCampaignQueue' action..</param>
+        /// <param name="Priority">The priority to set a campaign to. Required for the &#39;setCampaignPriority&#39; action..</param>
+        /// <param name="DialingMode">The dialing mode to set a campaign to. Required for the &#39;setCampaignDialingMode&#39; action..</param>
+        /// <param name="AbandonRate">The abandon rate to set a campaign to. Required for the &#39;setCampaignAbandonRate&#39; action..</param>
+        /// <param name="OutboundLineCount">The  number of outbound lines to set a campaign to. Required for the &#39;setCampaignNumberOfLines&#39; action..</param>
+        /// <param name="RelativeWeight">The relative weight to set a campaign to. Required for the &#39;setCampaignWeight&#39; action..</param>
+        /// <param name="MaxCallsPerAgent">The maximum number of calls per agent to set a campaign to. Required for the &#39;setCampaignMaxCallsPerAgent&#39; action..</param>
+        /// <param name="Queue">The queue a campaign to. Required for the &#39;changeCampaignQueue&#39; action..</param>
         /// <param name="MessagesPerMinute">The number of messages per minute to set a messaging campaign to..</param>
         /// <param name="SmsMessagesPerMinute">The number of messages per minute to set a SMS messaging campaign to..</param>
         /// <param name="EmailMessagesPerMinute">The number of messages per minute to set a Email messaging campaign to..</param>
@@ -231,45 +231,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The abandon rate to set a campaign to. Required for the 'setCampaignAbandonRate' action.
+        /// The abandon rate to set a campaign to. Required for the &#39;setCampaignAbandonRate&#39; action.
         /// </summary>
-        /// <value>The abandon rate to set a campaign to. Required for the 'setCampaignAbandonRate' action.</value>
+        /// <value>The abandon rate to set a campaign to. Required for the &#39;setCampaignAbandonRate&#39; action.</value>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public double? AbandonRate { get; set; }
 
 
 
         /// <summary>
-        /// The  number of outbound lines to set a campaign to. Required for the 'setCampaignNumberOfLines' action.
+        /// The  number of outbound lines to set a campaign to. Required for the &#39;setCampaignNumberOfLines&#39; action.
         /// </summary>
-        /// <value>The  number of outbound lines to set a campaign to. Required for the 'setCampaignNumberOfLines' action.</value>
+        /// <value>The  number of outbound lines to set a campaign to. Required for the &#39;setCampaignNumberOfLines&#39; action.</value>
         [DataMember(Name="outboundLineCount", EmitDefaultValue=false)]
         public int? OutboundLineCount { get; set; }
 
 
 
         /// <summary>
-        /// The relative weight to set a campaign to. Required for the 'setCampaignWeight' action.
+        /// The relative weight to set a campaign to. Required for the &#39;setCampaignWeight&#39; action.
         /// </summary>
-        /// <value>The relative weight to set a campaign to. Required for the 'setCampaignWeight' action.</value>
+        /// <value>The relative weight to set a campaign to. Required for the &#39;setCampaignWeight&#39; action.</value>
         [DataMember(Name="relativeWeight", EmitDefaultValue=false)]
         public int? RelativeWeight { get; set; }
 
 
 
         /// <summary>
-        /// The maximum number of calls per agent to set a campaign to. Required for the 'setCampaignMaxCallsPerAgent' action.
+        /// The maximum number of calls per agent to set a campaign to. Required for the &#39;setCampaignMaxCallsPerAgent&#39; action.
         /// </summary>
-        /// <value>The maximum number of calls per agent to set a campaign to. Required for the 'setCampaignMaxCallsPerAgent' action.</value>
+        /// <value>The maximum number of calls per agent to set a campaign to. Required for the &#39;setCampaignMaxCallsPerAgent&#39; action.</value>
         [DataMember(Name="maxCallsPerAgent", EmitDefaultValue=false)]
         public double? MaxCallsPerAgent { get; set; }
 
 
 
         /// <summary>
-        /// The queue a campaign to. Required for the 'changeCampaignQueue' action.
+        /// The queue a campaign to. Required for the &#39;changeCampaignQueue&#39; action.
         /// </summary>
-        /// <value>The queue a campaign to. Required for the 'changeCampaignQueue' action.</value>
+        /// <value>The queue a campaign to. Required for the &#39;changeCampaignQueue&#39; action.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
 

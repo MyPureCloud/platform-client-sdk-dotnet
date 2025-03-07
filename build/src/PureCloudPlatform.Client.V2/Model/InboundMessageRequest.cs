@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId.</param>
         /// <param name="FlowId">The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId.</param>
         /// <param name="Provider">The name of the provider that is sourcing the email such as Oracle, Salesforce, etc. (required).</param>
-        /// <param name="SkillIds">The list of skill ID's to use for routing..</param>
+        /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
         /// <param name="LanguageId">The ID of the language to use for routing..</param>
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of skill ID's to use for routing.
+        /// The list of skill ID&#39;s to use for routing.
         /// </summary>
-        /// <value>The list of skill ID's to use for routing.</value>
+        /// <value>The list of skill ID&#39;s to use for routing.</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
 

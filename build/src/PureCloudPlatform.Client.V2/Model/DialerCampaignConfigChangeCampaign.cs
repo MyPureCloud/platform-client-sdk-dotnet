@@ -149,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SingleNumberPreview">for preview campaigns with multiple phone columns, indicator if one (true) or multiple (false) phone numbers will be available to call for each preview.</param>
         /// <param name="ContactSort">ContactSort.</param>
         /// <param name="ContactSorts">List of contact sort objects..</param>
-        /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as 'no-answer', default 30 seconds.</param>
+        /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds.</param>
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyze the call.</param>
         /// <param name="Priority">The priority of this campaign relative to other campaigns.</param>
         /// <param name="ContactListFilters">List of contact filters.</param>
@@ -385,9 +385,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// for non-preview campaigns, how long to wait before dispositioning as 'no-answer', default 30 seconds
+        /// for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds
         /// </summary>
-        /// <value>for non-preview campaigns, how long to wait before dispositioning as 'no-answer', default 30 seconds</value>
+        /// <value>for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds</value>
         [DataMember(Name="noAnswerTimeout", EmitDefaultValue=false)]
         public int? NoAnswerTimeout { get; set; }
 

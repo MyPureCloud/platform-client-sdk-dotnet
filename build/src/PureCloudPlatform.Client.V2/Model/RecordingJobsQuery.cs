@@ -68,13 +68,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Action">Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. (required).</param>
         /// <param name="ActionDate">The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ActionAge">The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings..</param>
+        /// <param name="ActionAge">The number of days after each recording&#39;s creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings..</param>
         /// <param name="ScreenRecordingActionDate">The date when the action will be performed for screen recordings. If this is provided then includeScreenRecordings must be true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ScreenRecordingActionAge">The number of days after each screen recording's creation date when the action will be performed. If this is provided then includeScreenRecordings must be true..</param>
+        /// <param name="ScreenRecordingActionAge">The number of days after each screen recording&#39;s creation date when the action will be performed. If this is provided then includeScreenRecordings must be true..</param>
         /// <param name="IntegrationId">IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is required and used only for EXPORT action..</param>
-        /// <param name="IncludeRecordingsWithSensitiveData">Whether to include recordings with PCI DSS and/or PII data, default value = false .</param>
-        /// <param name="IncludeScreenRecordings">Whether to include Screen recordings for the action, default value = true .</param>
-        /// <param name="ClearExport">For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false.</param>
+        /// <param name="IncludeRecordingsWithSensitiveData">Whether to include recordings with PCI DSS and/or PII data, default value &#x3D; false .</param>
+        /// <param name="IncludeScreenRecordings">Whether to include Screen recordings for the action, default value &#x3D; true .</param>
+        /// <param name="ClearExport">For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value &#x3D; false.</param>
         /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is supported only when querying for conversations up to and including 5 years old..</param>
         /// <param name="AgedConversationInterval">As an alternative to conversationQuery, specify the date and time range of conversations that are older than 5 years to query.Results will include all conversations that had activity during the interval. This is supported only when querying for conversations older than 5 years;conversationQuery must not be provided when this is provided. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.Interval duration must not exceed 6 months. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, int? ActionAge = null, DateTime? ScreenRecordingActionDate = null, int? ScreenRecordingActionAge = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null, string AgedConversationInterval = null)
@@ -107,9 +107,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings.
+        /// The number of days after each recording&#39;s creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings.
         /// </summary>
-        /// <value>The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings.</value>
+        /// <value>The number of days after each recording&#39;s creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings.</value>
         [DataMember(Name="actionAge", EmitDefaultValue=false)]
         public int? ActionAge { get; set; }
 
@@ -125,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of days after each screen recording's creation date when the action will be performed. If this is provided then includeScreenRecordings must be true.
+        /// The number of days after each screen recording&#39;s creation date when the action will be performed. If this is provided then includeScreenRecordings must be true.
         /// </summary>
-        /// <value>The number of days after each screen recording's creation date when the action will be performed. If this is provided then includeScreenRecordings must be true.</value>
+        /// <value>The number of days after each screen recording&#39;s creation date when the action will be performed. If this is provided then includeScreenRecordings must be true.</value>
         [DataMember(Name="screenRecordingActionAge", EmitDefaultValue=false)]
         public int? ScreenRecordingActionAge { get; set; }
 
@@ -143,27 +143,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether to include recordings with PCI DSS and/or PII data, default value = false 
+        /// Whether to include recordings with PCI DSS and/or PII data, default value &#x3D; false 
         /// </summary>
-        /// <value>Whether to include recordings with PCI DSS and/or PII data, default value = false </value>
+        /// <value>Whether to include recordings with PCI DSS and/or PII data, default value &#x3D; false </value>
         [DataMember(Name="includeRecordingsWithSensitiveData", EmitDefaultValue=false)]
         public bool? IncludeRecordingsWithSensitiveData { get; set; }
 
 
 
         /// <summary>
-        /// Whether to include Screen recordings for the action, default value = true 
+        /// Whether to include Screen recordings for the action, default value &#x3D; true 
         /// </summary>
-        /// <value>Whether to include Screen recordings for the action, default value = true </value>
+        /// <value>Whether to include Screen recordings for the action, default value &#x3D; true </value>
         [DataMember(Name="includeScreenRecordings", EmitDefaultValue=false)]
         public bool? IncludeScreenRecordings { get; set; }
 
 
 
         /// <summary>
-        /// For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false
+        /// For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value &#x3D; false
         /// </summary>
-        /// <value>For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false</value>
+        /// <value>For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value &#x3D; false</value>
         [DataMember(Name="clearExport", EmitDefaultValue=false)]
         public bool? ClearExport { get; set; }
 

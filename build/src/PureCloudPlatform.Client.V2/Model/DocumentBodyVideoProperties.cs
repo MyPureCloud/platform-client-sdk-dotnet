@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="BackgroundColor">The background color for the video. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="Align">The align type for the video..</param>
-        /// <param name="Indentation">The indentation for the video. The valid values in 'em'..</param>
+        /// <param name="Indentation">The indentation for the video. The valid values in &#39;em&#39;..</param>
         public DocumentBodyVideoProperties(string BackgroundColor = null, AlignEnum? Align = null, float? Indentation = null)
         {
             this.BackgroundColor = BackgroundColor;
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The indentation for the video. The valid values in 'em'.
+        /// The indentation for the video. The valid values in &#39;em&#39;.
         /// </summary>
-        /// <value>The indentation for the video. The valid values in 'em'.</value>
+        /// <value>The indentation for the video. The valid values in &#39;em&#39;.</value>
         [DataMember(Name="indentation", EmitDefaultValue=false)]
         public float? Indentation { get; set; }
 

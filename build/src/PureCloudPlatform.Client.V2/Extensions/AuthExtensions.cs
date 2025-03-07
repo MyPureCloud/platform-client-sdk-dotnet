@@ -11,23 +11,37 @@ using System.Security.Cryptography;
 
 namespace PureCloudPlatform.Client.V2.Extensions
 {
+    /// <summary>
+    /// Extensions for Authorization processing
+    /// </summary>
     public static class AuthExtensions
     {
         /// <summary>
-        /// 
+        /// Performs the Client Credentials or Code Authorization and returns Token Information
         /// </summary>
         /// <param name="apiClient"></param>
         /// <param name="clientId"></param>
         /// <param name="clientSecret"></param>
         /// <param name="redirectUri"></param>
         /// <param name="authorizationCode"></param>
-        /// <returns></returns>
+        /// <param name="isRefreshRequest"></param>
+        /// <returns>AuthTokenInfo</returns>
         public static AuthTokenInfo PostToken(this ApiClient apiClient, string clientId, string clientSecret,string redirectUri = "", string authorizationCode = "", bool isRefreshRequest = false)
         {
             var response = apiClient.PostTokenWithHttpInfo(clientId, clientSecret, redirectUri, authorizationCode, isRefreshRequest);
             return response.Data;
         }
 
+        ///<Summary>
+        /// Performs the Client Credentials or Code Authorization and returns ApiResponse with Token Information
+        ///</Summary>
+        /// <param name="apiClient"></param>
+        /// <param name="clientId"></param>
+        /// <param name="clientSecret"></param>
+        /// <param name="redirectUri"></param>
+        /// <param name="authorizationCode"></param>
+        /// <param name="isRefreshRequest"></param>
+        /// <returns>ApiResponse with AuthTokenInfo</returns>
         public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfo(this ApiClient apiClient, string clientId,
             string clientSecret, string redirectUri = "", string authorizationCode = "", bool isRefreshRequest = false)
         {
@@ -112,20 +126,29 @@ namespace PureCloudPlatform.Client.V2.Extensions
         }
 
         /// <summary>
-        /// 
+        /// Performs the Saml2 Bearer Authorization and returns Token Information
         /// </summary>
         /// <param name="apiClient"></param>
         /// <param name="clientId"></param>
         /// <param name="clientSecret"></param>
         /// <param name="orgName"></param>
         /// <param name="assertion"></param>
-        /// <returns></returns>
+        /// <returns>AuthTokenInfo</returns>
         public static AuthTokenInfo PostTokenSaml2Bearer(this ApiClient apiClient, string clientId, string clientSecret,string orgName, string assertion)
         {
             var response = apiClient.PostTokenWithHttpInfoSaml2Bearer(clientId, clientSecret, orgName, assertion);
             return response.Data;
         }
 
+        /// <summary>
+        /// Performs the Saml2 Bearer Authorization and returns ApiResponse with Token Information
+        /// </summary>
+        /// <param name="apiClient"></param>
+        /// <param name="clientId"></param>
+        /// <param name="clientSecret"></param>
+        /// <param name="orgName"></param>
+        /// <param name="assertion"></param>
+        /// <returns>ApiResponse with AuthTokenInfo</returns>
         public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfoSaml2Bearer(this ApiClient apiClient, string clientId,
             string clientSecret, string orgName, string assertion)
         {
@@ -199,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
         /// </summary>
         /// <param name="apiClient"></param>
         /// <param name="length"></param>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public static string GeneratePKCECodeVerifier(this ApiClient apiClient, int length)
         {
             if (length < 43 || length > 128)
@@ -224,7 +247,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
         /// </summary>
         /// <param name="apiClient"></param>
         /// <param name="code"></param>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public static string ComputePKCECodeChallenge(this ApiClient apiClient, string code)
         {
             if (code.Length < 43 || code.Length > 128)
@@ -241,20 +264,29 @@ namespace PureCloudPlatform.Client.V2.Extensions
         }
 
         /// <summary>
-        /// Completes the PKCE Code Authorization.
+        /// Completes the PKCE Code Authorization and returns Token Information
         /// </summary>
         /// <param name="apiClient"></param>
         /// <param name="clientId"></param>
         /// <param name="redirectUri"></param>
         /// <param name="codeVerifier"></param>
         /// <param name="authorizationCode"></param>
-        /// <returns></returns>
+        /// <returns>AuthTokenInfo</returns>
         public static AuthTokenInfo PostTokenPKCE(this ApiClient apiClient, string clientId, string redirectUri, string codeVerifier, string authorizationCode)
         {
             var response = apiClient.PostTokenWithHttpInfoPKCE(clientId, redirectUri, codeVerifier, authorizationCode);
             return response.Data;
         }
 
+        /// <summary>
+        /// Completes the PKCE Code Authorization and returns ApiResponse with Token Information
+        /// </summary>
+        /// <param name="apiClient"></param>
+        /// <param name="clientId"></param>
+        /// <param name="redirectUri"></param>
+        /// <param name="codeVerifier"></param>
+        /// <param name="authorizationCode"></param>
+        /// <returns>ApiResponse with AuthTokenInfo</returns>
         public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfoPKCE(this ApiClient apiClient, string clientId, string redirectUri, string codeVerifier, string authorizationCode)
         {
             var path_ = "/oauth/token";

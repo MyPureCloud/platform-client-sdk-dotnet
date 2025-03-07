@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **CreatedBy** | [**UserReference**](UserReference) | The user who created the associated entity | |
 | **CreatedDate** | **DateTime?** | The date the entity created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-| **ModifiedBy** | [**UserReference**](UserReference) | The user who modified the entity | [optional] |
+| **ModifiedBy** | [**UserReference**](UserReference) | The user who modified the entity. The id may be &#39;System&#39; if it was an automated process | [optional] |
 | **ModifiedDate** | **DateTime?** | The entity last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

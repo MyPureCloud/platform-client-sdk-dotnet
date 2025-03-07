@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="FlowHealth" /> class.
         /// </summary>
         /// <param name="FlowVersionInfo">Info about given flow version..</param>
-        /// <param name="LanguageInfo">Each language's status about its health computation..</param>
+        /// <param name="LanguageInfo">Each language&#39;s status about its health computation..</param>
         /// <param name="Intents">Health metrics information for the intents..</param>
         public FlowHealth(FlowHealthVersionInfo FlowVersionInfo = null, Dictionary<string, LocaleInfo> LanguageInfo = null, List<FlowHealthIntentInfo> Intents = null)
         {
@@ -44,9 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Each language's status about its health computation.
+        /// Each language&#39;s status about its health computation.
         /// </summary>
-        /// <value>Each language's status about its health computation.</value>
+        /// <value>Each language&#39;s status about its health computation.</value>
         [DataMember(Name="languageInfo", EmitDefaultValue=false)]
         public Dictionary<string, LocaleInfo> LanguageInfo { get; set; }
 

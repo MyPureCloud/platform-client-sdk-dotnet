@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingRule" /> class.
         /// </summary>
-        /// <param name="Operator">matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule's threshold.  ANY matches all specified agents, regardless of score..</param>
+        /// <param name="Operator">matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule&#39;s threshold.  ANY matches all specified agents, regardless of score..</param>
         /// <param name="Threshold">threshold required for routing attempt (generally an agent score).  may be null for operator ANY..</param>
         /// <param name="WaitSeconds">seconds to wait in this rule before moving to the next.</param>
         public RoutingRule(OperatorEnum? Operator = null, int? Threshold = null, double? WaitSeconds = null)

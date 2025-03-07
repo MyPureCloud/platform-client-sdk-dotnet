@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Signin for "SignIn"
             /// </summary>
             [EnumMember(Value = "SignIn")]
-            Signin
+            Signin,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "SessionExpired"
+            /// </summary>
+            [EnumMember(Value = "SessionExpired")]
+            Sessionexpired
         }
         /// <summary>
         /// Describes the type of Presence event.

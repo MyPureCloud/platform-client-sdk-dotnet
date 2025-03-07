@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FieldConfig> GetFieldconfigWithHttpInfo (string type);
 
         /// <summary>
-        /// Gets the organization's settings
+        /// Gets the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OrgAuthSettings GetOrganizationsAuthenticationSettings ();
 
         /// <summary>
-        /// Gets the organization's settings
+        /// Gets the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -242,7 +242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>LimitCountListing</returns>
-        
+        [Obsolete]
         LimitCountListing GetOrganizationsLimitsNamespaceCounts (string namespaceName, string cursor = null, string entityId = null, string userId = null);
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>ApiResponse of LimitCountListing</returns>
-        
+        [Obsolete]
         ApiResponse<LimitCountListing> GetOrganizationsLimitsNamespaceCountsWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null);
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>LimitCountListing</returns>
-        
+        [Obsolete]
         LimitCountListing GetOrganizationsLimitsNamespaceLimitCounts (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
 
         /// <summary>
@@ -313,7 +313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>ApiResponse of LimitCountListing</returns>
-        
+        [Obsolete]
         ApiResponse<LimitCountListing> GetOrganizationsLimitsNamespaceLimitCountsWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
 
         /// <summary>
@@ -387,7 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OrgWhitelistSettings> GetOrganizationsWhitelistWithHttpInfo ();
 
         /// <summary>
-        /// Update the organization's settings
+        /// Update the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -399,7 +399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OrgAuthSettings PatchOrganizationsAuthenticationSettings (OrgAuthSettings body);
 
         /// <summary>
-        /// Update the organization's settings
+        /// Update the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -561,7 +561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type);
 
         /// <summary>
-        /// Gets the organization's settings
+        /// Gets the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -572,7 +572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OrgAuthSettings> GetOrganizationsAuthenticationSettingsAsync ();
 
         /// <summary>
-        /// Gets the organization's settings
+        /// Gets the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -762,7 +762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>Task of LimitCountListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceCountsAsync (string namespaceName, string cursor = null, string entityId = null, string userId = null);
 
         /// <summary>
@@ -777,7 +777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>Task of ApiResponse (LimitCountListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceCountsAsyncWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null);
 
         /// <summary>
@@ -817,7 +817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>Task of LimitCountListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceLimitCountsAsync (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
 
         /// <summary>
@@ -833,7 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>Task of ApiResponse (LimitCountListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceLimitCountsAsyncWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
 
         /// <summary>
@@ -907,7 +907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OrgWhitelistSettings>> GetOrganizationsWhitelistAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Update the organization's settings
+        /// Update the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -919,7 +919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OrgAuthSettings> PatchOrganizationsAuthenticationSettingsAsync (OrgAuthSettings body);
 
         /// <summary>
-        /// Update the organization's settings
+        /// Update the organization&#39;s settings
         /// </summary>
         /// <remarks>
         /// 
@@ -1358,7 +1358,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets the organization's settings 
+        /// Gets the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1371,7 +1371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets the organization's settings 
+        /// Gets the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1457,7 +1457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets the organization's settings 
+        /// Gets the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1471,7 +1471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets the organization's settings 
+        /// Gets the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3023,7 +3023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>LimitCountListing</returns>
-        
+        [Obsolete]
         public LimitCountListing GetOrganizationsLimitsNamespaceCounts (string namespaceName, string cursor = null, string entityId = null, string userId = null)
         {
              ApiResponse<LimitCountListing> localVarResponse = GetOrganizationsLimitsNamespaceCountsWithHttpInfo(namespaceName, cursor, entityId, userId);
@@ -3040,7 +3040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>ApiResponse of LimitCountListing</returns>
-        
+        [Obsolete]
         public ApiResponse< LimitCountListing > GetOrganizationsLimitsNamespaceCountsWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -3137,7 +3137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>Task of LimitCountListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceCountsAsync (string namespaceName, string cursor = null, string entityId = null, string userId = null)
         {
              ApiResponse<LimitCountListing> localVarResponse = await GetOrganizationsLimitsNamespaceCountsAsyncWithHttpInfo(namespaceName, cursor, entityId, userId);
@@ -3155,7 +3155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="entityId">entity id of the count (optional)</param>
         /// <param name="userId">userid of the count (optional)</param>
         /// <returns>Task of ApiResponse (LimitCountListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceCountsAsyncWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -3468,7 +3468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>LimitCountListing</returns>
-        
+        [Obsolete]
         public LimitCountListing GetOrganizationsLimitsNamespaceLimitCounts (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
         {
              ApiResponse<LimitCountListing> localVarResponse = GetOrganizationsLimitsNamespaceLimitCountsWithHttpInfo(namespaceName, limitName, entityId, userId, cursor);
@@ -3486,7 +3486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>ApiResponse of LimitCountListing</returns>
-        
+        [Obsolete]
         public ApiResponse< LimitCountListing > GetOrganizationsLimitsNamespaceLimitCountsWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -3588,7 +3588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>Task of LimitCountListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceLimitCountsAsync (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
         {
              ApiResponse<LimitCountListing> localVarResponse = await GetOrganizationsLimitsNamespaceLimitCountsAsyncWithHttpInfo(namespaceName, limitName, entityId, userId, cursor);
@@ -3607,7 +3607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">userid of the count (optional)</param>
         /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
         /// <returns>Task of ApiResponse (LimitCountListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceLimitCountsAsyncWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -4314,7 +4314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the organization's settings 
+        /// Update the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4328,7 +4328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the organization's settings 
+        /// Update the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4424,7 +4424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the organization's settings 
+        /// Update the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4439,7 +4439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the organization's settings 
+        /// Update the organization&#39;s settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

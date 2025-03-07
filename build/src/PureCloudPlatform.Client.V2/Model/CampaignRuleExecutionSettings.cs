@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CampaignRuleExecutionSettings" /> class.
         /// </summary>
         /// <param name="Frequency">Execution control frequency (required).</param>
-        /// <param name="TimeZoneId">The time zone for the execution control frequency=\"oncePerDay\"; for example, Africa/Abidjan. This property is ignored when frequency is not \"oncePerDay\".</param>
+        /// <param name="TimeZoneId">The time zone for the execution control frequency&#x3D;\&quot;oncePerDay\&quot;; for example, Africa/Abidjan. This property is ignored when frequency is not \&quot;oncePerDay\&quot;.</param>
         public CampaignRuleExecutionSettings(FrequencyEnum? Frequency = null, string TimeZoneId = null)
         {
             this.Frequency = Frequency;
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time zone for the execution control frequency=\"oncePerDay\"; for example, Africa/Abidjan. This property is ignored when frequency is not \"oncePerDay\"
+        /// The time zone for the execution control frequency&#x3D;\&quot;oncePerDay\&quot;; for example, Africa/Abidjan. This property is ignored when frequency is not \&quot;oncePerDay\&quot;
         /// </summary>
-        /// <value>The time zone for the execution control frequency=\"oncePerDay\"; for example, Africa/Abidjan. This property is ignored when frequency is not \"oncePerDay\"</value>
+        /// <value>The time zone for the execution control frequency&#x3D;\&quot;oncePerDay\&quot;; for example, Africa/Abidjan. This property is ignored when frequency is not \&quot;oncePerDay\&quot;</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
 

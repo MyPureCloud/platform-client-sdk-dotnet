@@ -52,6 +52,8 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="statusCode">HTTP status code.</param>
         /// <param name="headers">HTTP headers.</param>
         /// <param name="data">Data (parsed HTTP body)</param>
+        /// <param name="rawData">Raw data (un-parsed HTTP body)</param>
+        /// <param name="statusDescription">Status description (HTTP status description)</param>
         public ApiResponse(int statusCode, IDictionary<string, string> headers, T data, string rawData, string statusDescription)
         {
             this.StatusCode= statusCode;

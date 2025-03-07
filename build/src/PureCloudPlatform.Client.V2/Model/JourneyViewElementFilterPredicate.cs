@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyViewElementFilterPredicate" /> class.
         /// </summary>
-        /// <param name="Dimension">the element's attribute being filtered on (required).</param>
+        /// <param name="Dimension">the element&#39;s attribute being filtered on (required).</param>
         /// <param name="Values">the values of the attribute to filter on (required).</param>
         /// <param name="Operator">Optional operator, default is Matches. Valid values: Matches.</param>
         /// <param name="NoValue">set this to true if no specific value to be considered.</param>
@@ -76,9 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// the element's attribute being filtered on
+        /// the element&#39;s attribute being filtered on
         /// </summary>
-        /// <value>the element's attribute being filtered on</value>
+        /// <value>the element&#39;s attribute being filtered on</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public string Dimension { get; set; }
 

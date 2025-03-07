@@ -147,7 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">The connection state of this communication..</param>
         /// <param name="InitialState">The initial connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        /// <param name="Segments">The time line of the participant's internal message, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant&#39;s internal message, divided into activity segments..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -193,9 +193,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time line of the participant's internal message, divided into activity segments.
+        /// The time line of the participant&#39;s internal message, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant's internal message, divided into activity segments.</value>
+        /// <value>The time line of the participant&#39;s internal message, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
 

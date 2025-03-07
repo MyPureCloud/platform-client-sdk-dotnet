@@ -299,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Format" /> class.
         /// </summary>
-        /// <param name="Flags">The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \"format\": { \"flags\": [StringPlayChars] }.</param>
+        /// <param name="Flags">The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \&quot;format\&quot;: { \&quot;flags\&quot;: [StringPlayChars] }.</param>
         public Format(List<FlagsEnum> Flags = null)
         {
             this.Flags = Flags;
@@ -309,9 +309,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \"format\": { \"flags\": [StringPlayChars] }
+        /// The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \&quot;format\&quot;: { \&quot;flags\&quot;: [StringPlayChars] }
         /// </summary>
-        /// <value>The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \"format\": { \"flags\": [StringPlayChars] }</value>
+        /// <value>The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \&quot;format\&quot;: { \&quot;flags\&quot;: [StringPlayChars] }</value>
         [DataMember(Name="flags", EmitDefaultValue=false)]
         public List<FlagsEnum> Flags { get; set; }
 

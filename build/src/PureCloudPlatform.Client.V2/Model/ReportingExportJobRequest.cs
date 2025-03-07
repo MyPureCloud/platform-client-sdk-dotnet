@@ -893,7 +893,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
         /// <param name="HasSplitByMedia">Indicates if media type will be split in aggregate detail exports.</param>
         /// <param name="HasSummaryRow">Indicates if summary row needs to be present in exports.</param>
-        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request.</param>
+        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>

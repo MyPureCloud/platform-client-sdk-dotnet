@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Number">The number of the DID formatted as E164..</param>
         /// <param name="Assigned">True if this DID is assigned to an entity.  False otherwise..</param>
         /// <param name="DidPool">A Uri reference to the DID Pool this DID is a part of..</param>
-        /// <param name="Owner">A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL..</param>
+        /// <param name="Owner">A Uri reference to the owner of this DID.  The owner&#39;s type can be found in ownerType.  If the DID is unassigned, this will be NULL..</param>
         /// <param name="OwnerType">The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL..</param>
         public DIDNumber(string Name = null, string Number = null, bool? Assigned = null, AddressableEntityRef DidPool = null, DomainEntityRef Owner = null, OwnerTypeEnum? OwnerType = null)
         {
@@ -130,9 +130,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL.
+        /// A Uri reference to the owner of this DID.  The owner&#39;s type can be found in ownerType.  If the DID is unassigned, this will be NULL.
         /// </summary>
-        /// <value>A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL.</value>
+        /// <value>A Uri reference to the owner of this DID.  The owner&#39;s type can be found in ownerType.  If the DID is unassigned, this will be NULL.</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public DomainEntityRef Owner { get; set; }
 

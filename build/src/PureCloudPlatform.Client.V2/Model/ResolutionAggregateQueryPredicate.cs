@@ -73,6 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
+            /// Enum Externalcontactid for "externalContactId"
+            /// </summary>
+            [EnumMember(Value = "externalContactId")]
+            Externalcontactid,
+            
+            /// <summary>
             /// Enum Mediatype for "mediaType"
             /// </summary>
             [EnumMember(Value = "mediaType")]

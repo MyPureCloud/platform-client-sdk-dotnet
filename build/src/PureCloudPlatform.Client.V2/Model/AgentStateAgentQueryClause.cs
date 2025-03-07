@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AgentStateAgentQueryClause" /> class.
         /// </summary>
         /// <param name="Type">Boolean operation to apply to the provided predicates (required).</param>
-        /// <param name="Predicates">Describes a <dimension> = <value> filter used to perform matching (required).</param>
+        /// <param name="Predicates">Describes a &lt;dimension&gt; &#x3D; &lt;value&gt; filter used to perform matching (required).</param>
         public AgentStateAgentQueryClause(TypeEnum? Type = null, List<AgentStateAgentQueryPredicate> Predicates = null)
         {
             this.Type = Type;
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Describes a <dimension> = <value> filter used to perform matching
+        /// Describes a &lt;dimension&gt; &#x3D; &lt;value&gt; filter used to perform matching
         /// </summary>
-        /// <value>Describes a <dimension> = <value> filter used to perform matching</value>
+        /// <value>Describes a &lt;dimension&gt; &#x3D; &lt;value&gt; filter used to perform matching</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<AgentStateAgentQueryPredicate> Predicates { get; set; }
 

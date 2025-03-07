@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LearningSlotWfmScheduleActivity" /> class.
         /// </summary>
         /// <param name="User">User that the schedule is for.</param>
-        /// <param name="Activities">List of user's scheduled activities.</param>
-        /// <param name="FullDayTimeOffMarkers">List of user's days off.</param>
+        /// <param name="Activities">List of user&#39;s scheduled activities.</param>
+        /// <param name="FullDayTimeOffMarkers">List of user&#39;s days off.</param>
         public LearningSlotWfmScheduleActivity(UserReference User = null, List<LearningSlotScheduleActivity> Activities = null, List<LearningSlotFullDayTimeOffMarker> FullDayTimeOffMarkers = null)
         {
             this.User = User;
@@ -44,18 +44,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of user's scheduled activities
+        /// List of user&#39;s scheduled activities
         /// </summary>
-        /// <value>List of user's scheduled activities</value>
+        /// <value>List of user&#39;s scheduled activities</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<LearningSlotScheduleActivity> Activities { get; set; }
 
 
 
         /// <summary>
-        /// List of user's days off
+        /// List of user&#39;s days off
         /// </summary>
-        /// <value>List of user's days off</value>
+        /// <value>List of user&#39;s days off</value>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<LearningSlotFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
 

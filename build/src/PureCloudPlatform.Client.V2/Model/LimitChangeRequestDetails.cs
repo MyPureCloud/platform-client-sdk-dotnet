@@ -190,6 +190,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Externalcontacts,
             
             /// <summary>
+            /// Enum Externaleventsdataingestion for "external.events.data.ingestion"
+            /// </summary>
+            [EnumMember(Value = "external.events.data.ingestion")]
+            Externaleventsdataingestion,
+            
+            /// <summary>
             /// Enum Gamification for "gamification"
             /// </summary>
             [EnumMember(Value = "gamification")]

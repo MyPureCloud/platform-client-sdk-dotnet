@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionInput" /> class.
         /// </summary>
-        /// <param name="InputSchema">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the 'flatten' query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
-        /// <param name="InputSchemaFlattened">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
+        /// <param name="InputSchema">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
+        /// <param name="InputSchemaFlattened">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
         /// <param name="InputSchemaUri">The URI of the input schema.</param>
         public ActionInput(JsonSchemaDocument InputSchema = null, JsonSchemaDocument InputSchemaFlattened = null, string InputSchemaUri = null)
         {
@@ -35,18 +35,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the 'flatten' query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
+        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the 'flatten' query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="inputSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument InputSchema { get; set; }
 
 
 
         /// <summary>
-        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
+        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="inputSchemaFlattened", EmitDefaultValue=false)]
         public JsonSchemaDocument InputSchemaFlattened { get; set; }
 

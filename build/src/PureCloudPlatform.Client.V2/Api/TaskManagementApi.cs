@@ -289,7 +289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Workbin> GetTaskmanagementWorkbinWithHttpInfo (string workbinId);
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history
+        /// Get a listing of a workbin&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -305,7 +305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         WorkbinChangeListing GetTaskmanagementWorkbinHistory (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history
+        /// Get a listing of a workbin&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -407,7 +407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Workitem> GetTaskmanagementWorkitemWithHttpInfo (string workitemId, string expands = null);
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history
+        /// Get a listing of a workitem&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -423,7 +423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         WorkitemChangeListing GetTaskmanagementWorkitemHistory (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history
+        /// Get a listing of a workitem&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -1023,7 +1023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkitemOnCreateRuleListing> GetTaskmanagementWorktypeFlowsOncreateRulesWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history
+        /// Get a listing of a worktype&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -1040,7 +1040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         WorktypeChangeListing GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null);
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history
+        /// Get a listing of a worktype&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -2211,7 +2211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Workbin>> GetTaskmanagementWorkbinAsyncWithHttpInfo (string workbinId);
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history
+        /// Get a listing of a workbin&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -2227,7 +2227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WorkbinChangeListing> GetTaskmanagementWorkbinHistoryAsync (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history
+        /// Get a listing of a workbin&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -2329,7 +2329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, string expands = null);
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history
+        /// Get a listing of a workitem&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -2345,7 +2345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WorkitemChangeListing> GetTaskmanagementWorkitemHistoryAsync (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history
+        /// Get a listing of a workitem&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -2945,7 +2945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WorkitemOnCreateRuleListing>> GetTaskmanagementWorktypeFlowsOncreateRulesAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null);
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history
+        /// Get a listing of a worktype&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -2962,7 +2962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null);
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history
+        /// Get a listing of a worktype&#39;s attribute change history
         /// </summary>
         /// <remarks>
         /// 
@@ -6324,7 +6324,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history 
+        /// Get a listing of a workbin&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -6342,7 +6342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history 
+        /// Get a listing of a workbin&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -6440,7 +6440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history 
+        /// Get a listing of a workbin&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -6459,7 +6459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a listing of a workbin's attribute change history 
+        /// Get a listing of a workbin&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -7243,7 +7243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history 
+        /// Get a listing of a workitem&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -7261,7 +7261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history 
+        /// Get a listing of a workitem&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -7359,7 +7359,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history 
+        /// Get a listing of a workitem&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -7378,7 +7378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a listing of a workitem's attribute change history 
+        /// Get a listing of a workitem&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -12356,7 +12356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history 
+        /// Get a listing of a worktype&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -12375,7 +12375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history 
+        /// Get a listing of a worktype&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -12475,7 +12475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history 
+        /// Get a listing of a worktype&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
@@ -12495,7 +12495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a listing of a worktype's attribute change history 
+        /// Get a listing of a worktype&#39;s attribute change history 
         /// 
         /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>

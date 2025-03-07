@@ -753,7 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EdgeEntityListing> GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
         /// </summary>
         /// <remarks>
         /// 
@@ -765,7 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AlertablePresences GetTelephonyProvidersEdgesAlertablepresences (string type = null);
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
         /// </summary>
         /// <remarks>
         /// 
@@ -4065,7 +4065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
         /// </summary>
         /// <remarks>
         /// 
@@ -4077,7 +4077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AlertablePresences> GetTelephonyProvidersEdgesAlertablepresencesAsync (string type = null);
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
         /// </summary>
         /// <remarks>
         /// 
@@ -13021,7 +13021,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13035,7 +13035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13123,7 +13123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13138,7 +13138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
+        /// Get the list alertable presences. The &#39;type&#39; query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

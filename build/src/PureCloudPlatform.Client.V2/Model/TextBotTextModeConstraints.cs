@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TextBotTextModeConstraints" /> class.
         /// </summary>
         /// <param name="LanguagePreferences">The list of language preferences by their ISO language code. (required).</param>
-        /// <param name="NoInputTimeoutMilliseconds">The amount of time, in milliseconds, before the client should send the 'NoInput' event  to trigger the \"no input\" bot response and handling on digital channels.  Note: This optional field will only be returned for 'Digital Bot Flow' turns..</param>
+        /// <param name="NoInputTimeoutMilliseconds">The amount of time, in milliseconds, before the client should send the &#39;NoInput&#39; event  to trigger the \&quot;no input\&quot; bot response and handling on digital channels.  Note: This optional field will only be returned for &#39;Digital Bot Flow&#39; turns..</param>
         public TextBotTextModeConstraints(List<string> LanguagePreferences = null, int? NoInputTimeoutMilliseconds = null)
         {
             this.LanguagePreferences = LanguagePreferences;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The amount of time, in milliseconds, before the client should send the 'NoInput' event  to trigger the \"no input\" bot response and handling on digital channels.  Note: This optional field will only be returned for 'Digital Bot Flow' turns.
+        /// The amount of time, in milliseconds, before the client should send the &#39;NoInput&#39; event  to trigger the \&quot;no input\&quot; bot response and handling on digital channels.  Note: This optional field will only be returned for &#39;Digital Bot Flow&#39; turns.
         /// </summary>
-        /// <value>The amount of time, in milliseconds, before the client should send the 'NoInput' event  to trigger the \"no input\" bot response and handling on digital channels.  Note: This optional field will only be returned for 'Digital Bot Flow' turns.</value>
+        /// <value>The amount of time, in milliseconds, before the client should send the &#39;NoInput&#39; event  to trigger the \&quot;no input\&quot; bot response and handling on digital channels.  Note: This optional field will only be returned for &#39;Digital Bot Flow&#39; turns.</value>
         [DataMember(Name="noInputTimeoutMilliseconds", EmitDefaultValue=false)]
         public int? NoInputTimeoutMilliseconds { get; set; }
 

@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGenesysUserExternalId" /> class.
         /// </summary>
-        /// <param name="Authority">Authority, or scope, of \"externalId\". Allows multiple external identifiers to be defined. Represents the source of the external identifier. (required).</param>
+        /// <param name="Authority">Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier. (required).</param>
         /// <param name="Value">Identifier of the user in an external system. (required).</param>
         public ScimGenesysUserExternalId(string Authority = null, string Value = null)
         {
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Authority, or scope, of \"externalId\". Allows multiple external identifiers to be defined. Represents the source of the external identifier.
+        /// Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier.
         /// </summary>
-        /// <value>Authority, or scope, of \"externalId\". Allows multiple external identifiers to be defined. Represents the source of the external identifier.</value>
+        /// <value>Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier.</value>
         [DataMember(Name="authority", EmitDefaultValue=false)]
         public string Authority { get; set; }
 

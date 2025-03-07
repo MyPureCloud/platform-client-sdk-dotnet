@@ -29,9 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Given flow's Version Info.
+        /// Given flow&#39;s Version Info.
         /// </summary>
-        /// <value>Given flow's Version Info.</value>
+        /// <value>Given flow&#39;s Version Info.</value>
         [DataMember(Name="flowVersion", EmitDefaultValue=false)]
         public AddressableEntityRef FlowVersion { get; private set; }
 

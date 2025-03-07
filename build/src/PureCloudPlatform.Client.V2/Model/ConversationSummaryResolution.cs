@@ -60,9 +60,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The outcome of the conversation's resolution.
+        /// The outcome of the conversation&#39;s resolution.
         /// </summary>
-        /// <value>The outcome of the conversation's resolution.</value>
+        /// <value>The outcome of the conversation&#39;s resolution.</value>
         [DataMember(Name="outcome", EmitDefaultValue=false)]
         public string Outcome { get; private set; }
 

@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTimeOffLimitRequest" /> class.
         /// </summary>
-        /// <param name="Granularity">Granularity choice for time off limit. If not specified, 'Daily' is assumed.</param>
+        /// <param name="Granularity">Granularity choice for time off limit. If not specified, &#39;Daily&#39; is assumed.</param>
         /// <param name="DefaultLimitMinutes">The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available.</param>
         public CreateTimeOffLimitRequest(GranularityEnum? Granularity = null, int? DefaultLimitMinutes = null)
         {

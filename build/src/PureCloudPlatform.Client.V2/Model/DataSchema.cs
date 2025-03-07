@@ -79,8 +79,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The globally unique identifier for the schema.  Only required if a schema is used for custom fields during external entity creation or updates..</param>
         /// <param name="Name">Name.</param>
-        /// <param name="Version">The schema's version, a positive integer. Required for updates. (required).</param>
-        /// <param name="Enabled">The schema's enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists..</param>
+        /// <param name="Version">The schema&#39;s version, a positive integer. Required for updates. (required).</param>
+        /// <param name="Enabled">The schema&#39;s enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists..</param>
         /// <param name="JsonSchema">A JSON schema defining the extension to the built-in entity type. (required).</param>
         public DataSchema(string Id = null, string Name = null, int? Version = null, bool? Enabled = null, JsonSchemaDocument JsonSchema = null)
         {
@@ -112,9 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The schema's version, a positive integer. Required for updates.
+        /// The schema&#39;s version, a positive integer. Required for updates.
         /// </summary>
-        /// <value>The schema's version, a positive integer. Required for updates.</value>
+        /// <value>The schema&#39;s version, a positive integer. Required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
 
@@ -130,9 +130,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The schema's enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists.
+        /// The schema&#39;s enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists.
         /// </summary>
-        /// <value>The schema's enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists.</value>
+        /// <value>The schema&#39;s enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 

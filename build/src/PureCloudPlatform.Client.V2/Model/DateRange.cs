@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DateRange" /> class.
         /// </summary>
-        /// <param name="StartDate">The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone..</param>
-        /// <param name="EndDate">The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone..</param>
+        /// <param name="StartDate">The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone..</param>
+        /// <param name="EndDate">The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone..</param>
         public DateRange(string StartDate = null, string EndDate = null)
         {
             this.StartDate = StartDate;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.
+        /// The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.
         /// </summary>
-        /// <value>The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.</value>
+        /// <value>The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public string StartDate { get; set; }
 
 
 
         /// <summary>
-        /// The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.
+        /// The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.
         /// </summary>
-        /// <value>The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.</value>
+        /// <value>The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public string EndDate { get; set; }
 

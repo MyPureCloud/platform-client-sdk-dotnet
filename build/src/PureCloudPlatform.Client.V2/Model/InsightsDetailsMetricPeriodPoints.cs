@@ -25,8 +25,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxPoints">Max possible points.</param>
         /// <param name="DataPointCount">Number of data points.</param>
         /// <param name="PercentOfGoal">Percentage of the goal.</param>
-        /// <param name="RankTotalPoints">The agent's rank in leader board for points on this metric.</param>
-        /// <param name="RankPercentagePoints">The agent's rank in leader board for percentage on this metric.</param>
+        /// <param name="RankTotalPoints">The agent&#39;s rank in leader board for points on this metric.</param>
+        /// <param name="RankPercentagePoints">The agent&#39;s rank in leader board for percentage on this metric.</param>
         /// <param name="Value">Average value.</param>
         public InsightsDetailsMetricPeriodPoints(int? Points = null, int? MaxPoints = null, int? DataPointCount = null, double? PercentOfGoal = null, int? RankTotalPoints = null, int? RankPercentagePoints = null, double? Value = null)
         {
@@ -79,18 +79,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The agent's rank in leader board for points on this metric
+        /// The agent&#39;s rank in leader board for points on this metric
         /// </summary>
-        /// <value>The agent's rank in leader board for points on this metric</value>
+        /// <value>The agent&#39;s rank in leader board for points on this metric</value>
         [DataMember(Name="rankTotalPoints", EmitDefaultValue=false)]
         public int? RankTotalPoints { get; set; }
 
 
 
         /// <summary>
-        /// The agent's rank in leader board for percentage on this metric
+        /// The agent&#39;s rank in leader board for percentage on this metric
         /// </summary>
-        /// <value>The agent's rank in leader board for percentage on this metric</value>
+        /// <value>The agent&#39;s rank in leader board for percentage on this metric</value>
         [DataMember(Name="rankPercentagePoints", EmitDefaultValue=false)]
         public int? RankPercentagePoints { get; set; }
 

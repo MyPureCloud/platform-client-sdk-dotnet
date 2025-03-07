@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkErrorDetail" /> class.
         /// </summary>
-        /// <param name="FieldName">FieldName.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="Message">Message.</param>
+        /// <param name="FieldName">The name of the field which experienced an error..</param>
+        /// <param name="Value">The field value from the request which caused the error..</param>
+        /// <param name="Message">A field-specific error message describing why this operation was rejected..</param>
         public BulkErrorDetail(string FieldName = null, string Value = null, string Message = null)
         {
             this.FieldName = FieldName;
@@ -35,24 +35,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets FieldName
+        /// The name of the field which experienced an error.
         /// </summary>
+        /// <value>The name of the field which experienced an error.</value>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Value
+        /// The field value from the request which caused the error.
         /// </summary>
+        /// <value>The field value from the request which caused the error.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Message
+        /// A field-specific error message describing why this operation was rejected.
         /// </summary>
+        /// <value>A field-specific error message describing why this operation was rejected.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
 

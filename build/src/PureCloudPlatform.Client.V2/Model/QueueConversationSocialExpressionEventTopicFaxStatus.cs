@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicFaxStatus" /> class.
         /// </summary>
-        /// <param name="Direction">The fax direction, either \"send\" or \"receive\"..</param>
+        /// <param name="Direction">The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;..</param>
         /// <param name="ExpectedPages">Total number of expected pages, if known..</param>
         /// <param name="ActivePage">Active page of the transmission..</param>
         /// <param name="LinesTransmitted">Number of lines that have completed transmission..</param>
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The fax direction, either \"send\" or \"receive\".
+        /// The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;.
         /// </summary>
-        /// <value>The fax direction, either \"send\" or \"receive\".</value>
+        /// <value>The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public string Direction { get; set; }
 

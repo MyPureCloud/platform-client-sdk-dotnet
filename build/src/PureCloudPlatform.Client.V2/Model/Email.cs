@@ -291,7 +291,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="Subject">The subject for the initial email that started this conversation..</param>
         /// <param name="MessagesSent">The number of email messages sent by this participant..</param>
-        /// <param name="Segments">The time line of the participant's email, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant&#39;s email, divided into activity segments..</param>
         /// <param name="Direction">The direction of the email.</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
@@ -387,9 +387,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time line of the participant's email, divided into activity segments.
+        /// The time line of the participant&#39;s email, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant's email, divided into activity segments.</value>
+        /// <value>The time line of the participant&#39;s email, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
 

@@ -38,9 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.
+        /// Number of contacts that don&#39;t match filter. This is currently supported only for Campaigns with dynamic filter on.
         /// </summary>
-        /// <value>Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
+        /// <value>Number of contacts that don&#39;t match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
         [DataMember(Name="filteredOutContactsCount", EmitDefaultValue=false)]
         public int? FilteredOutContactsCount { get; private set; }
 

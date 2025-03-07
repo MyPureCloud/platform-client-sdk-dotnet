@@ -87,14 +87,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxOccupancyPercentForDeferredWork">Max occupancy percent for deferred work.</param>
         /// <param name="DefaultShrinkagePercent">Default shrinkage percent for scheduling.</param>
         /// <param name="ShrinkageOverrides">Shrinkage overrides for scheduling.</param>
-        /// <param name="PlanningPeriod">Planning period settings for scheduling.</param>
+        /// <param name="PlanningPeriod">Planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null.</param>
+        /// <param name="MonthlyPlanningPeriod">Monthly planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null.</param>
         /// <param name="StartDayOfWeekend">Start day of weekend for scheduling.</param>
-        public SchedulingSettingsResponse(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null, PlanningPeriodSettings PlanningPeriod = null, StartDayOfWeekendEnum? StartDayOfWeekend = null)
+        public SchedulingSettingsResponse(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null, PlanningPeriodSettings PlanningPeriod = null, MonthlyPlanningPeriodSettings MonthlyPlanningPeriod = null, StartDayOfWeekendEnum? StartDayOfWeekend = null)
         {
             this.MaxOccupancyPercentForDeferredWork = MaxOccupancyPercentForDeferredWork;
             this.DefaultShrinkagePercent = DefaultShrinkagePercent;
             this.ShrinkageOverrides = ShrinkageOverrides;
             this.PlanningPeriod = PlanningPeriod;
+            this.MonthlyPlanningPeriod = MonthlyPlanningPeriod;
             this.StartDayOfWeekend = StartDayOfWeekend;
             
         }
@@ -129,11 +131,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Planning period settings for scheduling
+        /// Planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null
         /// </summary>
-        /// <value>Planning period settings for scheduling</value>
+        /// <value>Planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null</value>
         [DataMember(Name="planningPeriod", EmitDefaultValue=false)]
         public PlanningPeriodSettings PlanningPeriod { get; set; }
+
+
+
+        /// <summary>
+        /// Monthly planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null
+        /// </summary>
+        /// <value>Monthly planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null</value>
+        [DataMember(Name="monthlyPlanningPeriod", EmitDefaultValue=false)]
+        public MonthlyPlanningPeriodSettings MonthlyPlanningPeriod { get; set; }
 
 
 
@@ -151,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultShrinkagePercent: ").Append(DefaultShrinkagePercent).Append("\n");
             sb.Append("  ShrinkageOverrides: ").Append(ShrinkageOverrides).Append("\n");
             sb.Append("  PlanningPeriod: ").Append(PlanningPeriod).Append("\n");
+            sb.Append("  MonthlyPlanningPeriod: ").Append(MonthlyPlanningPeriod).Append("\n");
             sb.Append("  StartDayOfWeekend: ").Append(StartDayOfWeekend).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -213,6 +225,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PlanningPeriod.Equals(other.PlanningPeriod)
                 ) &&
                 (
+                    this.MonthlyPlanningPeriod == other.MonthlyPlanningPeriod ||
+                    this.MonthlyPlanningPeriod != null &&
+                    this.MonthlyPlanningPeriod.Equals(other.MonthlyPlanningPeriod)
+                ) &&
+                (
                     this.StartDayOfWeekend == other.StartDayOfWeekend ||
                     this.StartDayOfWeekend != null &&
                     this.StartDayOfWeekend.Equals(other.StartDayOfWeekend)
@@ -241,6 +258,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PlanningPeriod != null)
                     hash = hash * 59 + this.PlanningPeriod.GetHashCode();
+
+                if (this.MonthlyPlanningPeriod != null)
+                    hash = hash * 59 + this.MonthlyPlanningPeriod.GetHashCode();
 
                 if (this.StartDayOfWeekend != null)
                     hash = hash * 59 + this.StartDayOfWeekend.GetHashCode();

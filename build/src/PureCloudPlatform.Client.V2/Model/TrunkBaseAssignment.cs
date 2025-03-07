@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkBaseAssignment" /> class.
         /// </summary>
-        /// <param name="Family">The address family to use with the trunk base settings. 2=IPv4, 23=IPv6.</param>
+        /// <param name="Family">The address family to use with the trunk base settings. 2&#x3D;IPv4, 23&#x3D;IPv6.</param>
         /// <param name="TrunkBase">A trunk base settings reference..</param>
         public TrunkBaseAssignment(int? Family = null, TrunkBase TrunkBase = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The address family to use with the trunk base settings. 2=IPv4, 23=IPv6
+        /// The address family to use with the trunk base settings. 2&#x3D;IPv4, 23&#x3D;IPv6
         /// </summary>
-        /// <value>The address family to use with the trunk base settings. 2=IPv4, 23=IPv6</value>
+        /// <value>The address family to use with the trunk base settings. 2&#x3D;IPv4, 23&#x3D;IPv6</value>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public int? Family { get; set; }
 

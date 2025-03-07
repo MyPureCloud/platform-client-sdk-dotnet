@@ -27,13 +27,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoryHeadersTranslation" /> class.
         /// </summary>
-        /// <param name="From">A translation for the word \"from\", for the expected language (required).</param>
-        /// <param name="To">A translation for the word \"to\", for the expected language (required).</param>
-        /// <param name="Cc">A translation for the word \"cc\", for the expected language (required).</param>
-        /// <param name="Subject">A translation for the word \"subject\", for the expected language (required).</param>
-        /// <param name="ReplyPrefix">A translation for the subject prefix \"Reply\", for the expected language (required).</param>
-        /// <param name="ForwardPrefix">A translation for the subject prefix \"Forward\", for the expected language (required).</param>
-        /// <param name="Sent">A translation for the word \"sent\", for the expected language (required).</param>
+        /// <param name="From">A translation for the word \&quot;from\&quot;, for the expected language (required).</param>
+        /// <param name="To">A translation for the word \&quot;to\&quot;, for the expected language (required).</param>
+        /// <param name="Cc">A translation for the word \&quot;cc\&quot;, for the expected language (required).</param>
+        /// <param name="Subject">A translation for the word \&quot;subject\&quot;, for the expected language (required).</param>
+        /// <param name="ReplyPrefix">A translation for the subject prefix \&quot;Reply\&quot;, for the expected language (required).</param>
+        /// <param name="ForwardPrefix">A translation for the subject prefix \&quot;Forward\&quot;, for the expected language (required).</param>
+        /// <param name="Sent">A translation for the word \&quot;sent\&quot;, for the expected language (required).</param>
         /// <param name="Language">The code of the expected language (required).</param>
         /// <param name="TimeZone">Timezone used by the agent, used to format the sent email date and time. If not defined, will default to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
         public HistoryHeadersTranslation(string From = null, string To = null, string Cc = null, string Subject = null, string ReplyPrefix = null, string ForwardPrefix = null, string Sent = null, string Language = null, string TimeZone = null)
@@ -53,63 +53,63 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A translation for the word \"from\", for the expected language
+        /// A translation for the word \&quot;from\&quot;, for the expected language
         /// </summary>
-        /// <value>A translation for the word \"from\", for the expected language</value>
+        /// <value>A translation for the word \&quot;from\&quot;, for the expected language</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
 
 
 
         /// <summary>
-        /// A translation for the word \"to\", for the expected language
+        /// A translation for the word \&quot;to\&quot;, for the expected language
         /// </summary>
-        /// <value>A translation for the word \"to\", for the expected language</value>
+        /// <value>A translation for the word \&quot;to\&quot;, for the expected language</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
 
 
 
         /// <summary>
-        /// A translation for the word \"cc\", for the expected language
+        /// A translation for the word \&quot;cc\&quot;, for the expected language
         /// </summary>
-        /// <value>A translation for the word \"cc\", for the expected language</value>
+        /// <value>A translation for the word \&quot;cc\&quot;, for the expected language</value>
         [DataMember(Name="cc", EmitDefaultValue=false)]
         public string Cc { get; set; }
 
 
 
         /// <summary>
-        /// A translation for the word \"subject\", for the expected language
+        /// A translation for the word \&quot;subject\&quot;, for the expected language
         /// </summary>
-        /// <value>A translation for the word \"subject\", for the expected language</value>
+        /// <value>A translation for the word \&quot;subject\&quot;, for the expected language</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
 
 
 
         /// <summary>
-        /// A translation for the subject prefix \"Reply\", for the expected language
+        /// A translation for the subject prefix \&quot;Reply\&quot;, for the expected language
         /// </summary>
-        /// <value>A translation for the subject prefix \"Reply\", for the expected language</value>
+        /// <value>A translation for the subject prefix \&quot;Reply\&quot;, for the expected language</value>
         [DataMember(Name="replyPrefix", EmitDefaultValue=false)]
         public string ReplyPrefix { get; set; }
 
 
 
         /// <summary>
-        /// A translation for the subject prefix \"Forward\", for the expected language
+        /// A translation for the subject prefix \&quot;Forward\&quot;, for the expected language
         /// </summary>
-        /// <value>A translation for the subject prefix \"Forward\", for the expected language</value>
+        /// <value>A translation for the subject prefix \&quot;Forward\&quot;, for the expected language</value>
         [DataMember(Name="forwardPrefix", EmitDefaultValue=false)]
         public string ForwardPrefix { get; set; }
 
 
 
         /// <summary>
-        /// A translation for the word \"sent\", for the expected language
+        /// A translation for the word \&quot;sent\&quot;, for the expected language
         /// </summary>
-        /// <value>A translation for the word \"sent\", for the expected language</value>
+        /// <value>A translation for the word \&quot;sent\&quot;, for the expected language</value>
         [DataMember(Name="sent", EmitDefaultValue=false)]
         public string Sent { get; set; }
 

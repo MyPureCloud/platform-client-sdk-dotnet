@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="MaxSimultaneousStreams">Maximum number of simultaneous screen recording streams.</param>
         /// <param name="MaxConfigurableScreenRecordingStreams">Upper limit that maxSimultaneousStreams can be configured.</param>
-        /// <param name="RegionalRecordingStorageEnabled">Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region.</param>
+        /// <param name="RegionalRecordingStorageEnabled">Store call recordings in the region where they are intended to be recorded, otherwise in the organization&#39;s home region.</param>
         /// <param name="RecordingPlaybackUrlTtl">The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
         /// <param name="RecordingBatchDownloadUrlTtl">The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
         public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null, int? RecordingPlaybackUrlTtl = null, int? RecordingBatchDownloadUrlTtl = null)
@@ -57,9 +57,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region
+        /// Store call recordings in the region where they are intended to be recorded, otherwise in the organization&#39;s home region
         /// </summary>
-        /// <value>Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region</value>
+        /// <value>Store call recordings in the region where they are intended to be recorded, otherwise in the organization&#39;s home region</value>
         [DataMember(Name="regionalRecordingStorageEnabled", EmitDefaultValue=false)]
         public bool? RegionalRecordingStorageEnabled { get; set; }
 

@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MobileSettings" /> class.
         /// </summary>
-        /// <param name="Notifications">Settings for a user's mobile notifications (required).</param>
+        /// <param name="Notifications">Settings for a user&#39;s mobile notifications (required).</param>
         public MobileSettings(MobileNotificationSettings Notifications = null)
         {
             this.Notifications = Notifications;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Settings for a user's mobile notifications
+        /// Settings for a user&#39;s mobile notifications
         /// </summary>
-        /// <value>Settings for a user's mobile notifications</value>
+        /// <value>Settings for a user&#39;s mobile notifications</value>
         [DataMember(Name="notifications", EmitDefaultValue=false)]
         public MobileNotificationSettings Notifications { get; set; }
 

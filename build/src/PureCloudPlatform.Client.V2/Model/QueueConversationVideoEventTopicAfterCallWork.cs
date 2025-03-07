@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicAfterCallWork" /> class.
         /// </summary>
-        /// <param name="State">The communication's after-call work state..</param>
+        /// <param name="State">The communication&#39;s after-call work state..</param>
         /// <param name="StartTime">The timestamp when this communication started after-call work in the cloud clock..</param>
         /// <param name="EndTime">The timestamp when this communication ended after-call work in the cloud clock..</param>
         public QueueConversationVideoEventTopicAfterCallWork(StateEnum? State = null, DateTime? StartTime = null, DateTime? EndTime = null)

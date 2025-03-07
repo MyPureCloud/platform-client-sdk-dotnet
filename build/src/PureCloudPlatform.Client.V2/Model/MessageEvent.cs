@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Video for "Video"
             /// </summary>
             [EnumMember(Value = "Video")]
-            Video
+            Video,
+            
+            /// <summary>
+            /// Enum Reactions for "Reactions"
+            /// </summary>
+            [EnumMember(Value = "Reactions")]
+            Reactions
         }
         /// <summary>
         /// Type of this event element
@@ -77,13 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Typing">Typing event..</param>
         /// <param name="Presence">Presence event..</param>
         /// <param name="Video">Video event..</param>
-        public MessageEvent(EventTypeEnum? EventType = null, EventCoBrowse CoBrowse = null, EventTyping Typing = null, EventPresence Presence = null, EventVideo Video = null)
+        /// <param name="Reactions">A list of reactions to a message..</param>
+        public MessageEvent(EventTypeEnum? EventType = null, EventCoBrowse CoBrowse = null, EventTyping Typing = null, EventPresence Presence = null, EventVideo Video = null, List<ContentReaction> Reactions = null)
         {
             this.EventType = EventType;
             this.CoBrowse = CoBrowse;
             this.Typing = Typing;
             this.Presence = Presence;
             this.Video = Video;
+            this.Reactions = Reactions;
             
         }
         
@@ -126,6 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public EventVideo Video { get; set; }
 
 
+
+        /// <summary>
+        /// A list of reactions to a message.
+        /// </summary>
+        /// <value>A list of reactions to a message.</value>
+        [DataMember(Name="reactions", EmitDefaultValue=false)]
+        public List<ContentReaction> Reactions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Typing: ").Append(Typing).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("  Video: ").Append(Video).Append("\n");
+            sb.Append("  Reactions: ").Append(Reactions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,6 +222,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Video == other.Video ||
                     this.Video != null &&
                     this.Video.Equals(other.Video)
+                ) &&
+                (
+                    this.Reactions == other.Reactions ||
+                    this.Reactions != null &&
+                    this.Reactions.SequenceEqual(other.Reactions)
                 );
         }
 
@@ -232,6 +255,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Video != null)
                     hash = hash * 59 + this.Video.GetHashCode();
+
+                if (this.Reactions != null)
+                    hash = hash * 59 + this.Reactions.GetHashCode();
 
                 return hash;
             }

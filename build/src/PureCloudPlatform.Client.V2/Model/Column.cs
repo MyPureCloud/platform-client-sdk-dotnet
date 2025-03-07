@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ColumnName">Column name. Mandatory for Fixed position/length file format..</param>
         /// <param name="ColumnNumber">0 based column number in delimited file format.</param>
-        /// <param name="StartPosition">Zero-based position of the first column's character. Mandatory for Fixed position/length file format..</param>
+        /// <param name="StartPosition">Zero-based position of the first column&#39;s character. Mandatory for Fixed position/length file format..</param>
         /// <param name="Length">Column width. Mandatory for Fixed position/length file format..</param>
         public Column(string ColumnName = null, int? ColumnNumber = null, int? StartPosition = null, int? Length = null)
         {
@@ -55,9 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Zero-based position of the first column's character. Mandatory for Fixed position/length file format.
+        /// Zero-based position of the first column&#39;s character. Mandatory for Fixed position/length file format.
         /// </summary>
-        /// <value>Zero-based position of the first column's character. Mandatory for Fixed position/length file format.</value>
+        /// <value>Zero-based position of the first column&#39;s character. Mandatory for Fixed position/length file format.</value>
         [DataMember(Name="startPosition", EmitDefaultValue=false)]
         public int? StartPosition { get; set; }
 

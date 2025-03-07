@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="User">The user (agent) for whom the management unit was requested.</param>
         /// <param name="ManagementUnit">The management to which the user (agent) belongs.</param>
-        /// <param name="BusinessUnit">The business unit to which the user (agent) belongs. Populate with expand=businessUnit.</param>
+        /// <param name="BusinessUnit">The business unit to which the user (agent) belongs. Populate with expand&#x3D;businessUnit.</param>
         public AgentManagementUnitReference(UserReference User = null, ManagementUnitReference ManagementUnit = null, BusinessUnitReference BusinessUnit = null)
         {
             this.User = User;
@@ -53,9 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The business unit to which the user (agent) belongs. Populate with expand=businessUnit
+        /// The business unit to which the user (agent) belongs. Populate with expand&#x3D;businessUnit
         /// </summary>
-        /// <value>The business unit to which the user (agent) belongs. Populate with expand=businessUnit</value>
+        /// <value>The business unit to which the user (agent) belongs. Populate with expand&#x3D;businessUnit</value>
         [DataMember(Name="businessUnit", EmitDefaultValue=false)]
         public BusinessUnitReference BusinessUnit { get; set; }
 

@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventName">Represents the action the customer performed. Event types are created for each unique event name and can be faceted on in segment and outcome conditions. A valid event name must only contain alphanumeric characters and underscores. A good event name is typically an object followed by the action performed in past tense, e.g. screen_viewed, search_performed, user_registered. (required).</param>
         /// <param name="ScreenName">The name of the screen, view, or fragment in the app where the event took place. (required).</param>
         /// <param name="App">Application that the customer is interacting with. (required).</param>
-        /// <param name="Device">Customer's device. (required).</param>
+        /// <param name="Device">Customer&#39;s device. (required).</param>
         /// <param name="SdkLibrary">SDK library used to generate the event..</param>
-        /// <param name="NetworkConnectivity">Information relating to the device's network connectivity..</param>
+        /// <param name="NetworkConnectivity">Information relating to the device&#39;s network connectivity..</param>
         /// <param name="ReferrerUrl">The referrer URL of the first event in the app session..</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. These attributes provide additional context about the event. For example, items_in_cart or subscription_level..</param>
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Customer's device.
+        /// Customer&#39;s device.
         /// </summary>
-        /// <value>Customer's device.</value>
+        /// <value>Customer&#39;s device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public RequestDevice Device { get; set; }
 
@@ -104,9 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Information relating to the device's network connectivity.
+        /// Information relating to the device&#39;s network connectivity.
         /// </summary>
-        /// <value>Information relating to the device's network connectivity.</value>
+        /// <value>Information relating to the device&#39;s network connectivity.</value>
         [DataMember(Name="networkConnectivity", EmitDefaultValue=false)]
         public NetworkConnectivity NetworkConnectivity { get; set; }
 

@@ -178,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Text">Utterance Text..</param>
         /// <param name="IssueCount">Number of issues found for this utterance..</param>
-        /// <param name="Language">Language provided for this utterance's health..</param>
+        /// <param name="Language">Language provided for this utterance&#39;s health..</param>
         /// <param name="StaticValidationResults">Validation results for the utterance..</param>
         /// <param name="OutlierInfo">Details about this utterance being an outlier or not..</param>
         /// <param name="ConfusionInfo">Confusion details with other utterances..</param>

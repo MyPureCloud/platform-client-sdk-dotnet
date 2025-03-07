@@ -73,13 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Room" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">Room's created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateCreated">Room&#39;s created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="RoomType">The type of room.</param>
-        /// <param name="Description">Room's description.</param>
-        /// <param name="Subject">Room's subject.</param>
-        /// <param name="ParticipantLimit">Room's size limit.</param>
-        /// <param name="Owners">Room's owners.</param>
-        /// <param name="PinnedMessages">Room's pinned messages.</param>
+        /// <param name="Description">Room&#39;s description.</param>
+        /// <param name="Subject">Room&#39;s subject.</param>
+        /// <param name="ParticipantLimit">Room&#39;s size limit.</param>
+        /// <param name="Owners">Room&#39;s owners.</param>
+        /// <param name="PinnedMessages">Room&#39;s pinned messages.</param>
         /// <param name="Jid">The jid of the room.</param>
         public Room(string Name = null, DateTime? DateCreated = null, RoomTypeEnum? RoomType = null, string Description = null, string Subject = null, int? ParticipantLimit = null, List<UserReference> Owners = null, List<AddressableEntityRef> PinnedMessages = null, string Jid = null)
         {
@@ -115,9 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Room's created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Room&#39;s created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Room's created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Room&#39;s created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
 
@@ -126,45 +126,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Room's description
+        /// Room&#39;s description
         /// </summary>
-        /// <value>Room's description</value>
+        /// <value>Room&#39;s description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
 
 
         /// <summary>
-        /// Room's subject
+        /// Room&#39;s subject
         /// </summary>
-        /// <value>Room's subject</value>
+        /// <value>Room&#39;s subject</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
 
 
 
         /// <summary>
-        /// Room's size limit
+        /// Room&#39;s size limit
         /// </summary>
-        /// <value>Room's size limit</value>
+        /// <value>Room&#39;s size limit</value>
         [DataMember(Name="participantLimit", EmitDefaultValue=false)]
         public int? ParticipantLimit { get; set; }
 
 
 
         /// <summary>
-        /// Room's owners
+        /// Room&#39;s owners
         /// </summary>
-        /// <value>Room's owners</value>
+        /// <value>Room&#39;s owners</value>
         [DataMember(Name="owners", EmitDefaultValue=false)]
         public List<UserReference> Owners { get; set; }
 
 
 
         /// <summary>
-        /// Room's pinned messages
+        /// Room&#39;s pinned messages
         /// </summary>
-        /// <value>Room's pinned messages</value>
+        /// <value>Room&#39;s pinned messages</value>
         [DataMember(Name="pinnedMessages", EmitDefaultValue=false)]
         public List<AddressableEntityRef> PinnedMessages { get; set; }
 

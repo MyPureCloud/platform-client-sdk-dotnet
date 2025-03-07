@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DirectRoutingMediaSettings" /> class.
         /// </summary>
-        /// <param name="UseAgentAddressOutbound">Toggle that enables using an agent's Direct Routing address outbound on behalf of queue for this media type..</param>
+        /// <param name="UseAgentAddressOutbound">Toggle that enables using an agent&#39;s Direct Routing address outbound on behalf of queue for this media type..</param>
         public DirectRoutingMediaSettings(bool? UseAgentAddressOutbound = null)
         {
             this.UseAgentAddressOutbound = UseAgentAddressOutbound;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Toggle that enables using an agent's Direct Routing address outbound on behalf of queue for this media type.
+        /// Toggle that enables using an agent&#39;s Direct Routing address outbound on behalf of queue for this media type.
         /// </summary>
-        /// <value>Toggle that enables using an agent's Direct Routing address outbound on behalf of queue for this media type.</value>
+        /// <value>Toggle that enables using an agent&#39;s Direct Routing address outbound on behalf of queue for this media type.</value>
         [DataMember(Name="useAgentAddressOutbound", EmitDefaultValue=false)]
         public bool? UseAgentAddressOutbound { get; set; }
 

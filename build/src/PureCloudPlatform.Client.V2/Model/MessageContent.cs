@@ -40,12 +40,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Attachment,
             
             /// <summary>
-            /// Enum Location for "Location"
-            /// </summary>
-            [EnumMember(Value = "Location")]
-            Location,
-            
-            /// <summary>
             /// Enum Quickreply for "QuickReply"
             /// </summary>
             [EnumMember(Value = "QuickReply")]
@@ -121,7 +115,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Quickreplyv2 for "QuickReplyV2"
             /// </summary>
             [EnumMember(Value = "QuickReplyV2")]
-            Quickreplyv2
+            Quickreplyv2,
+            
+            /// <summary>
+            /// Enum Datepicker for "DatePicker"
+            /// </summary>
+            [EnumMember(Value = "DatePicker")]
+            Datepicker
         }
         /// <summary>
         /// Type of this content element.
@@ -139,7 +139,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MessageContent" /> class.
         /// </summary>
         /// <param name="ContentType">Type of this content element. (required).</param>
-        /// <param name="Location">Location content..</param>
         /// <param name="Attachment">Attachment content..</param>
         /// <param name="QuickReply">Quick reply content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
@@ -154,10 +153,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Carousel">Carousel content.</param>
         /// <param name="Text">Text content..</param>
         /// <param name="QuickReplyV2">Quick reply V2 content..</param>
-        public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null, ContentStory Story = null, ContentCard Card = null, ContentCarousel Carousel = null, ContentText Text = null, ContentQuickReplyV2 QuickReplyV2 = null)
+        /// <param name="DatePicker">DatePicker content..</param>
+        public MessageContent(ContentTypeEnum? ContentType = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null, ContentStory Story = null, ContentCard Card = null, ContentCarousel Carousel = null, ContentText Text = null, ContentQuickReplyV2 QuickReplyV2 = null, ContentDatePicker DatePicker = null)
         {
             this.ContentType = ContentType;
-            this.Location = Location;
             this.Attachment = Attachment;
             this.QuickReply = QuickReply;
             this.ButtonResponse = ButtonResponse;
@@ -172,19 +171,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Carousel = Carousel;
             this.Text = Text;
             this.QuickReplyV2 = QuickReplyV2;
+            this.DatePicker = DatePicker;
             
         }
         
 
-
-
-
-        /// <summary>
-        /// Location content.
-        /// </summary>
-        /// <value>Location content.</value>
-        [DataMember(Name="location", EmitDefaultValue=false)]
-        public ContentLocation Location { get; set; }
 
 
 
@@ -313,6 +304,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ContentQuickReplyV2 QuickReplyV2 { get; set; }
 
 
+
+        /// <summary>
+        /// DatePicker content.
+        /// </summary>
+        /// <value>DatePicker content.</value>
+        [DataMember(Name="datePicker", EmitDefaultValue=false)]
+        public ContentDatePicker DatePicker { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -323,7 +323,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class MessageContent {\n");
 
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Attachment: ").Append(Attachment).Append("\n");
             sb.Append("  QuickReply: ").Append(QuickReply).Append("\n");
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
@@ -338,6 +337,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  QuickReplyV2: ").Append(QuickReplyV2).Append("\n");
+            sb.Append("  DatePicker: ").Append(DatePicker).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -382,11 +382,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
-                ) &&
-                (
-                    this.Location == other.Location ||
-                    this.Location != null &&
-                    this.Location.Equals(other.Location)
                 ) &&
                 (
                     this.Attachment == other.Attachment ||
@@ -457,6 +452,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QuickReplyV2 == other.QuickReplyV2 ||
                     this.QuickReplyV2 != null &&
                     this.QuickReplyV2.Equals(other.QuickReplyV2)
+                ) &&
+                (
+                    this.DatePicker == other.DatePicker ||
+                    this.DatePicker != null &&
+                    this.DatePicker.Equals(other.DatePicker)
                 );
         }
 
@@ -473,9 +473,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-
-                if (this.Location != null)
-                    hash = hash * 59 + this.Location.GetHashCode();
 
                 if (this.Attachment != null)
                     hash = hash * 59 + this.Attachment.GetHashCode();
@@ -518,6 +515,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QuickReplyV2 != null)
                     hash = hash * 59 + this.QuickReplyV2.GetHashCode();
+
+                if (this.DatePicker != null)
+                    hash = hash * 59 + this.DatePicker.GetHashCode();
 
                 return hash;
             }

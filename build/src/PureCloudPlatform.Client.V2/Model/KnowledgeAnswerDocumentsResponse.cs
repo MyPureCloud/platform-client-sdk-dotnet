@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeAnswerDocumentsResponse" /> class.
         /// </summary>
-        /// <param name="Results">The results with answers if the answerMode request property is not set or contains \"AnswerHighlight\". Empty array otherwise..</param>
-        /// <param name="AnswerGeneration">The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\"..</param>
+        /// <param name="Results">The results with answers if the answerMode request property is not set or contains \&quot;AnswerHighlight\&quot;. Empty array otherwise..</param>
+        /// <param name="AnswerGeneration">The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;..</param>
         public KnowledgeAnswerDocumentsResponse(List<KnowledgeAnswerDocumentResponse> Results = null, KnowledgeAnswerGenerationResponse AnswerGeneration = null)
         {
             this.Results = Results;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The results with answers if the answerMode request property is not set or contains \"AnswerHighlight\". Empty array otherwise.
+        /// The results with answers if the answerMode request property is not set or contains \&quot;AnswerHighlight\&quot;. Empty array otherwise.
         /// </summary>
-        /// <value>The results with answers if the answerMode request property is not set or contains \"AnswerHighlight\". Empty array otherwise.</value>
+        /// <value>The results with answers if the answerMode request property is not set or contains \&quot;AnswerHighlight\&quot;. Empty array otherwise.</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<KnowledgeAnswerDocumentResponse> Results { get; set; }
 
 
 
         /// <summary>
-        /// The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\".
+        /// The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;.
         /// </summary>
-        /// <value>The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\".</value>
+        /// <value>The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;.</value>
         [DataMember(Name="answerGeneration", EmitDefaultValue=false)]
         public KnowledgeAnswerGenerationResponse AnswerGeneration { get; set; }
 

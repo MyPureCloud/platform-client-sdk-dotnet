@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EnabledGranularities">The granularity at which alternative shifts is allowed. An empty list as the wrapped value will indicate alternative shifts is disabled.</param>
         /// <param name="MinMinutesBeforeStartTime">The minimum number of minutes before the start of a shift that an alternative shift can be automatically approved.</param>
         /// <param name="RetainedActivityCategories">Categories of activities that are required to remain at the same time slot for the alternative shifts offered. An empty list indicates no retained activities.</param>
-        /// <param name="Metadata">Version metadata for this business unit's alternative shift settings (required).</param>
+        /// <param name="Metadata">Version metadata for this business unit&#39;s alternative shift settings (required).</param>
         public UpdateAlternativeShiftBuSettingsRequest(ListWrapperAlternativeShiftBuSettingsGranularity EnabledGranularities = null, int? MinMinutesBeforeStartTime = null, ListWrapperAlternativeShiftBuSettingsActivityCategory RetainedActivityCategories = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.EnabledGranularities = EnabledGranularities;
@@ -70,9 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Version metadata for this business unit's alternative shift settings
+        /// Version metadata for this business unit&#39;s alternative shift settings
         /// </summary>
-        /// <value>Version metadata for this business unit's alternative shift settings</value>
+        /// <value>Version metadata for this business unit&#39;s alternative shift settings</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
 

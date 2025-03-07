@@ -28,8 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuServiceLevel" /> class.
         /// </summary>
         /// <param name="Include">Whether to include service level targets in the associated configuration (required).</param>
-        /// <param name="Percent">Service level target percent answered. Required if include == true.</param>
-        /// <param name="Seconds">Service level target answer time. Required if include == true.</param>
+        /// <param name="Percent">Service level target percent answered. Required if include &#x3D;&#x3D; true.</param>
+        /// <param name="Seconds">Service level target answer time. Required if include &#x3D;&#x3D; true.</param>
         public BuServiceLevel(bool? Include = null, int? Percent = null, int? Seconds = null)
         {
             this.Include = Include;
@@ -50,18 +50,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Service level target percent answered. Required if include == true
+        /// Service level target percent answered. Required if include &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Service level target percent answered. Required if include == true</value>
+        /// <value>Service level target percent answered. Required if include &#x3D;&#x3D; true</value>
         [DataMember(Name="percent", EmitDefaultValue=false)]
         public int? Percent { get; set; }
 
 
 
         /// <summary>
-        /// Service level target answer time. Required if include == true
+        /// Service level target answer time. Required if include &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Service level target answer time. Required if include == true</value>
+        /// <value>Service level target answer time. Required if include &#x3D;&#x3D; true</value>
         [DataMember(Name="seconds", EmitDefaultValue=false)]
         public int? Seconds { get; set; }
 

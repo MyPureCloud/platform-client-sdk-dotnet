@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="After">After.</param>
-        /// <param name="Count">Count of items returned by the query. Refer to the \"select\" request parameter for more information..</param>
+        /// <param name="Count">Count of items returned by the query. Refer to the \&quot;select\&quot; request parameter for more information..</param>
         public WorktypeQueryEntityListing(List<Worktype> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null, string After = null, int? Count = null)
         {
             this.Entities = Entities;
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Count of items returned by the query. Refer to the \"select\" request parameter for more information.
+        /// Count of items returned by the query. Refer to the \&quot;select\&quot; request parameter for more information.
         /// </summary>
-        /// <value>Count of items returned by the query. Refer to the \"select\" request parameter for more information.</value>
+        /// <value>Count of items returned by the query. Refer to the \&quot;select\&quot; request parameter for more information.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
 

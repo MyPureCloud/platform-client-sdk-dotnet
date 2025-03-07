@@ -100,9 +100,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The uri of the scheduling result. It has a value if the status is 'Success'.
+        /// The uri of the scheduling result. It has a value if the status is &#39;Success&#39;.
         /// </summary>
-        /// <value>The uri of the scheduling result. It has a value if the status is 'Success'.</value>
+        /// <value>The uri of the scheduling result. It has a value if the status is &#39;Success&#39;.</value>
         [DataMember(Name="schedulingResultUri", EmitDefaultValue=false)]
         public string SchedulingResultUri { get; private set; }
 

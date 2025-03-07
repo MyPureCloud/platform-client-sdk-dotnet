@@ -3205,6 +3205,146 @@ namespace PureCloudPlatform.Client.V2.Model
             MaxParkTime
         }
         /// <summary>
+        /// Gets or Sets SegmentTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SegmentTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alert for "alert"
+            /// </summary>
+            [EnumMember(Value = "alert")]
+            Alert,
+            
+            /// <summary>
+            /// Enum Barging for "barging"
+            /// </summary>
+            [EnumMember(Value = "barging")]
+            Barging,
+            
+            /// <summary>
+            /// Enum Callback for "callback"
+            /// </summary>
+            [EnumMember(Value = "callback")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Coaching for "coaching"
+            /// </summary>
+            [EnumMember(Value = "coaching")]
+            Coaching,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Converting for "converting"
+            /// </summary>
+            [EnumMember(Value = "converting")]
+            Converting,
+            
+            /// <summary>
+            /// Enum Delay for "delay"
+            /// </summary>
+            [EnumMember(Value = "delay")]
+            Delay,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Hold for "hold"
+            /// </summary>
+            [EnumMember(Value = "hold")]
+            Hold,
+            
+            /// <summary>
+            /// Enum Interact for "interact"
+            /// </summary>
+            [EnumMember(Value = "interact")]
+            Interact,
+            
+            /// <summary>
+            /// Enum Ivr for "ivr"
+            /// </summary>
+            [EnumMember(Value = "ivr")]
+            Ivr,
+            
+            /// <summary>
+            /// Enum Monitoring for "monitoring"
+            /// </summary>
+            [EnumMember(Value = "monitoring")]
+            Monitoring,
+            
+            /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked,
+            
+            /// <summary>
+            /// Enum Scheduled for "scheduled"
+            /// </summary>
+            [EnumMember(Value = "scheduled")]
+            Scheduled,
+            
+            /// <summary>
+            /// Enum Sharing for "sharing"
+            /// </summary>
+            [EnumMember(Value = "sharing")]
+            Sharing,
+            
+            /// <summary>
+            /// Enum System for "system"
+            /// </summary>
+            [EnumMember(Value = "system")]
+            System,
+            
+            /// <summary>
+            /// Enum Transmitting for "transmitting"
+            /// </summary>
+            [EnumMember(Value = "transmitting")]
+            Transmitting,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Uploading for "uploading"
+            /// </summary>
+            [EnumMember(Value = "uploading")]
+            Uploading,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Wrapup for "wrapup"
+            /// </summary>
+            [EnumMember(Value = "wrapup")]
+            Wrapup
+        }
+        /// <summary>
         /// Filter to indicate the availability of the dashboard is public or private.
         /// </summary>
         /// <value>Filter to indicate the availability of the dashboard is public or private.</value>
@@ -3246,8 +3386,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaTypes">The media types are used to filter the view.</param>
         /// <param name="QueueIds">The queue ids are used to filter the view.</param>
         /// <param name="SkillIds">The skill ids are used to filter the view.</param>
+        /// <param name="AssignedSkillIds">The assigned user skill ids are used to filter the view.</param>
         /// <param name="SkillGroups">The skill groups used to filter the view.</param>
         /// <param name="LanguageIds">The language ids are used to filter the view.</param>
+        /// <param name="AssignedLanguageIds">The assigned user language ids are used to filter the view.</param>
         /// <param name="LanguageGroups">The language groups used to filter the view.</param>
         /// <param name="Directions">The directions are used to filter the view.</param>
         /// <param name="OriginatingDirections">The list of orginating directions used to filter the view.</param>
@@ -3322,7 +3464,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LocationIds">The location Ids used to filter the view.</param>
         /// <param name="FlowOutTypes">A list of flow out types.</param>
         /// <param name="ProviderList">A list of providers.</param>
-        /// <param name="CallbackNumberList">A list of callback numbers or substrings of numbers (ex: [\"317\", \"13172222222\"]).</param>
+        /// <param name="CallbackNumberList">A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;]).</param>
         /// <param name="CallbackInterval">An interval of time to filter for scheduled callbacks. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="UsedRoutingTypes">A list of routing types used.</param>
         /// <param name="RequestedRoutingTypes">A list of routing types requested.</param>
@@ -3463,13 +3605,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ComparisonQueueIds">The queue ids are used to for comparison to the primary queue filter in reporting.</param>
         /// <param name="ViewMetrics">A list of metrics selected for the view.</param>
         /// <param name="TimelineCategories">A list of timeline categories.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> ManagementUnitIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null, List<string> JourneyFrequencyCapReasons = null, List<string> JourneyBlockingActionMapIds = null, List<string> JourneyActionTargetIds = null, List<string> JourneyBlockingScheduleGroupIds = null, List<string> JourneyBlockingEmergencyScheduleGroupIds = null, List<string> JourneyUrlEqualConditions = null, List<string> JourneyUrlNotEqualConditions = null, List<string> JourneyUrlStartsWithConditions = null, List<string> JourneyUrlEndsWithConditions = null, List<string> JourneyUrlContainsAnyConditions = null, List<string> JourneyUrlNotContainsAnyConditions = null, List<string> JourneyUrlContainsAllConditions = null, List<string> JourneyUrlNotContainsAllConditions = null, List<string> FlowMilestoneIds = null, bool? IsAssessmentPassed = null, List<string> ConversationInitiators = null, bool? HasCustomerParticipated = null, bool? IsAcdInteraction = null, bool? HasFax = null, List<string> DataActionIds = null, string ActionCategoryName = null, List<string> IntegrationIds = null, List<string> ResponseStatuses = null, AvailableDashboardEnum? AvailableDashboard = null, bool? FavouriteDashboard = null, bool? MyDashboard = null, List<string> StationErrors = null, List<string> CanonicalContactIds = null, List<string> AlertRuleIds = null, List<string> EvaluationFormContextIds = null, List<EvaluationStatusesEnum> EvaluationStatuses = null, List<string> WorkbinIds = null, List<string> WorktypeIds = null, List<string> WorkitemIds = null, List<string> WorkitemAssigneeIds = null, List<string> WorkitemStatuses = null, bool? IsAnalyzedForSensitiveData = null, bool? HasSensitiveData = null, bool? HasPciData = null, bool? HasPiiData = null, string SubPath = null, UserStateEnum? UserState = null, bool? IsClearedByCustomer = null, List<string> EvaluationAssigneeIds = null, bool? EvaluationAssigned = null, List<string> AssistantIds = null, List<string> KnowledgeBaseIds = null, bool? IsParked = null, NumericRange AgentEmpathyScore = null, List<SurveyTypesEnum> SurveyTypes = null, List<SurveyResponseStatusesEnum> SurveyResponseStatuses = null, List<BotFlowTypesEnum> BotFlowTypes = null, List<NumericRange> AgentTalkDurationMilliseconds = null, List<NumericRange> CustomerTalkDurationMilliseconds = null, List<NumericRange> OvertalkDurationMilliseconds = null, List<NumericRange> SilenceDurationMilliseconds = null, List<NumericRange> AcdDurationMilliseconds = null, List<NumericRange> IvrDurationMilliseconds = null, List<NumericRange> OtherDurationMilliseconds = null, NumericRange AgentTalkPercentage = null, NumericRange CustomerTalkPercentage = null, NumericRange OvertalkPercentage = null, NumericRange SilencePercentage = null, NumericRange AcdPercentage = null, NumericRange IvrPercentage = null, NumericRange OtherPercentage = null, NumericRange OvertalkInstances = null, bool? IsScreenRecorded = null, List<string> ScreenMonitorUserIds = null, DashboardStateEnum? DashboardState = null, DashboardTypeEnum? DashboardType = null, DashboardAccessFilterEnum? DashboardAccessFilter = null, List<NumericRange> TranscriptDurationMilliseconds = null, List<WorkitemStatusFilter> WorkitemsStatuses = null, List<string> SocialCountries = null, List<string> SocialLanguages = null, List<SocialChannelsEnum> SocialChannels = null, List<SocialSentimentCategoryEnum> SocialSentimentCategory = null, List<string> SocialTopicIds = null, List<string> SocialIngestionRuleIds = null, bool? SocialConversationCreated = null, List<SocialContentTypeEnum> SocialContentType = null, List<SocialKeyword> SocialKeywords = null, bool? SocialPostEscalated = null, List<SocialClassificationsEnum> SocialClassifications = null, List<string> FilterUsersByManagerIds = null, List<string> SlideshowIds = null, bool? Conferenced = null, bool? Video = null, bool? LinkedInteraction = null, List<RecommendationSourcesEnum> RecommendationSources = null, EvaluationRoleEnum? EvaluationRole = null, List<string> ComparisonQueueIds = null, List<ViewMetricsEnum> ViewMetrics = null, List<string> TimelineCategories = null)
+        /// <param name="Acw">Filter to indicate for acw state.</param>
+        /// <param name="SegmentTypes">A list of filtered segment types.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> AssignedSkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> AssignedLanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> ManagementUnitIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null, List<string> JourneyFrequencyCapReasons = null, List<string> JourneyBlockingActionMapIds = null, List<string> JourneyActionTargetIds = null, List<string> JourneyBlockingScheduleGroupIds = null, List<string> JourneyBlockingEmergencyScheduleGroupIds = null, List<string> JourneyUrlEqualConditions = null, List<string> JourneyUrlNotEqualConditions = null, List<string> JourneyUrlStartsWithConditions = null, List<string> JourneyUrlEndsWithConditions = null, List<string> JourneyUrlContainsAnyConditions = null, List<string> JourneyUrlNotContainsAnyConditions = null, List<string> JourneyUrlContainsAllConditions = null, List<string> JourneyUrlNotContainsAllConditions = null, List<string> FlowMilestoneIds = null, bool? IsAssessmentPassed = null, List<string> ConversationInitiators = null, bool? HasCustomerParticipated = null, bool? IsAcdInteraction = null, bool? HasFax = null, List<string> DataActionIds = null, string ActionCategoryName = null, List<string> IntegrationIds = null, List<string> ResponseStatuses = null, AvailableDashboardEnum? AvailableDashboard = null, bool? FavouriteDashboard = null, bool? MyDashboard = null, List<string> StationErrors = null, List<string> CanonicalContactIds = null, List<string> AlertRuleIds = null, List<string> EvaluationFormContextIds = null, List<EvaluationStatusesEnum> EvaluationStatuses = null, List<string> WorkbinIds = null, List<string> WorktypeIds = null, List<string> WorkitemIds = null, List<string> WorkitemAssigneeIds = null, List<string> WorkitemStatuses = null, bool? IsAnalyzedForSensitiveData = null, bool? HasSensitiveData = null, bool? HasPciData = null, bool? HasPiiData = null, string SubPath = null, UserStateEnum? UserState = null, bool? IsClearedByCustomer = null, List<string> EvaluationAssigneeIds = null, bool? EvaluationAssigned = null, List<string> AssistantIds = null, List<string> KnowledgeBaseIds = null, bool? IsParked = null, NumericRange AgentEmpathyScore = null, List<SurveyTypesEnum> SurveyTypes = null, List<SurveyResponseStatusesEnum> SurveyResponseStatuses = null, List<BotFlowTypesEnum> BotFlowTypes = null, List<NumericRange> AgentTalkDurationMilliseconds = null, List<NumericRange> CustomerTalkDurationMilliseconds = null, List<NumericRange> OvertalkDurationMilliseconds = null, List<NumericRange> SilenceDurationMilliseconds = null, List<NumericRange> AcdDurationMilliseconds = null, List<NumericRange> IvrDurationMilliseconds = null, List<NumericRange> OtherDurationMilliseconds = null, NumericRange AgentTalkPercentage = null, NumericRange CustomerTalkPercentage = null, NumericRange OvertalkPercentage = null, NumericRange SilencePercentage = null, NumericRange AcdPercentage = null, NumericRange IvrPercentage = null, NumericRange OtherPercentage = null, NumericRange OvertalkInstances = null, bool? IsScreenRecorded = null, List<string> ScreenMonitorUserIds = null, DashboardStateEnum? DashboardState = null, DashboardTypeEnum? DashboardType = null, DashboardAccessFilterEnum? DashboardAccessFilter = null, List<NumericRange> TranscriptDurationMilliseconds = null, List<WorkitemStatusFilter> WorkitemsStatuses = null, List<string> SocialCountries = null, List<string> SocialLanguages = null, List<SocialChannelsEnum> SocialChannels = null, List<SocialSentimentCategoryEnum> SocialSentimentCategory = null, List<string> SocialTopicIds = null, List<string> SocialIngestionRuleIds = null, bool? SocialConversationCreated = null, List<SocialContentTypeEnum> SocialContentType = null, List<SocialKeyword> SocialKeywords = null, bool? SocialPostEscalated = null, List<SocialClassificationsEnum> SocialClassifications = null, List<string> FilterUsersByManagerIds = null, List<string> SlideshowIds = null, bool? Conferenced = null, bool? Video = null, bool? LinkedInteraction = null, List<RecommendationSourcesEnum> RecommendationSources = null, EvaluationRoleEnum? EvaluationRole = null, List<string> ComparisonQueueIds = null, List<ViewMetricsEnum> ViewMetrics = null, List<string> TimelineCategories = null, bool? Acw = null, List<SegmentTypesEnum> SegmentTypes = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
             this.SkillIds = SkillIds;
+            this.AssignedSkillIds = AssignedSkillIds;
             this.SkillGroups = SkillGroups;
             this.LanguageIds = LanguageIds;
+            this.AssignedLanguageIds = AssignedLanguageIds;
             this.LanguageGroups = LanguageGroups;
             this.Directions = Directions;
             this.OriginatingDirections = OriginatingDirections;
@@ -3685,6 +3831,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ComparisonQueueIds = ComparisonQueueIds;
             this.ViewMetrics = ViewMetrics;
             this.TimelineCategories = TimelineCategories;
+            this.Acw = Acw;
+            this.SegmentTypes = SegmentTypes;
             
         }
         
@@ -3718,6 +3866,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The assigned user skill ids are used to filter the view
+        /// </summary>
+        /// <value>The assigned user skill ids are used to filter the view</value>
+        [DataMember(Name="assignedSkillIds", EmitDefaultValue=false)]
+        public List<string> AssignedSkillIds { get; set; }
+
+
+
+        /// <summary>
         /// The skill groups used to filter the view
         /// </summary>
         /// <value>The skill groups used to filter the view</value>
@@ -3732,6 +3889,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The language ids are used to filter the view</value>
         [DataMember(Name="languageIds", EmitDefaultValue=false)]
         public List<string> LanguageIds { get; set; }
+
+
+
+        /// <summary>
+        /// The assigned user language ids are used to filter the view
+        /// </summary>
+        /// <value>The assigned user language ids are used to filter the view</value>
+        [DataMember(Name="assignedLanguageIds", EmitDefaultValue=false)]
+        public List<string> AssignedLanguageIds { get; set; }
 
 
 
@@ -4402,9 +4568,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of callback numbers or substrings of numbers (ex: [\"317\", \"13172222222\"])
+        /// A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;])
         /// </summary>
-        /// <value>A list of callback numbers or substrings of numbers (ex: [\"317\", \"13172222222\"])</value>
+        /// <value>A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;])</value>
         [DataMember(Name="callbackNumberList", EmitDefaultValue=false)]
         public List<string> CallbackNumberList { get; set; }
 
@@ -5627,6 +5793,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> TimelineCategories { get; set; }
 
 
+
+        /// <summary>
+        /// Filter to indicate for acw state
+        /// </summary>
+        /// <value>Filter to indicate for acw state</value>
+        [DataMember(Name="acw", EmitDefaultValue=false)]
+        public bool? Acw { get; set; }
+
+
+
+        /// <summary>
+        /// A list of filtered segment types
+        /// </summary>
+        /// <value>A list of filtered segment types</value>
+        [DataMember(Name="segmentTypes", EmitDefaultValue=false)]
+        public List<SegmentTypesEnum> SegmentTypes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -5639,8 +5823,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            sb.Append("  AssignedSkillIds: ").Append(AssignedSkillIds).Append("\n");
             sb.Append("  SkillGroups: ").Append(SkillGroups).Append("\n");
             sb.Append("  LanguageIds: ").Append(LanguageIds).Append("\n");
+            sb.Append("  AssignedLanguageIds: ").Append(AssignedLanguageIds).Append("\n");
             sb.Append("  LanguageGroups: ").Append(LanguageGroups).Append("\n");
             sb.Append("  Directions: ").Append(Directions).Append("\n");
             sb.Append("  OriginatingDirections: ").Append(OriginatingDirections).Append("\n");
@@ -5856,6 +6042,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ComparisonQueueIds: ").Append(ComparisonQueueIds).Append("\n");
             sb.Append("  ViewMetrics: ").Append(ViewMetrics).Append("\n");
             sb.Append("  TimelineCategories: ").Append(TimelineCategories).Append("\n");
+            sb.Append("  Acw: ").Append(Acw).Append("\n");
+            sb.Append("  SegmentTypes: ").Append(SegmentTypes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -5912,6 +6100,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillIds.SequenceEqual(other.SkillIds)
                 ) &&
                 (
+                    this.AssignedSkillIds == other.AssignedSkillIds ||
+                    this.AssignedSkillIds != null &&
+                    this.AssignedSkillIds.SequenceEqual(other.AssignedSkillIds)
+                ) &&
+                (
                     this.SkillGroups == other.SkillGroups ||
                     this.SkillGroups != null &&
                     this.SkillGroups.SequenceEqual(other.SkillGroups)
@@ -5920,6 +6113,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguageIds == other.LanguageIds ||
                     this.LanguageIds != null &&
                     this.LanguageIds.SequenceEqual(other.LanguageIds)
+                ) &&
+                (
+                    this.AssignedLanguageIds == other.AssignedLanguageIds ||
+                    this.AssignedLanguageIds != null &&
+                    this.AssignedLanguageIds.SequenceEqual(other.AssignedLanguageIds)
                 ) &&
                 (
                     this.LanguageGroups == other.LanguageGroups ||
@@ -6995,6 +7193,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimelineCategories == other.TimelineCategories ||
                     this.TimelineCategories != null &&
                     this.TimelineCategories.SequenceEqual(other.TimelineCategories)
+                ) &&
+                (
+                    this.Acw == other.Acw ||
+                    this.Acw != null &&
+                    this.Acw.Equals(other.Acw)
+                ) &&
+                (
+                    this.SegmentTypes == other.SegmentTypes ||
+                    this.SegmentTypes != null &&
+                    this.SegmentTypes.SequenceEqual(other.SegmentTypes)
                 );
         }
 
@@ -7018,11 +7226,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
 
+                if (this.AssignedSkillIds != null)
+                    hash = hash * 59 + this.AssignedSkillIds.GetHashCode();
+
                 if (this.SkillGroups != null)
                     hash = hash * 59 + this.SkillGroups.GetHashCode();
 
                 if (this.LanguageIds != null)
                     hash = hash * 59 + this.LanguageIds.GetHashCode();
+
+                if (this.AssignedLanguageIds != null)
+                    hash = hash * 59 + this.AssignedLanguageIds.GetHashCode();
 
                 if (this.LanguageGroups != null)
                     hash = hash * 59 + this.LanguageGroups.GetHashCode();
@@ -7668,6 +7882,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimelineCategories != null)
                     hash = hash * 59 + this.TimelineCategories.GetHashCode();
+
+                if (this.Acw != null)
+                    hash = hash * 59 + this.Acw.GetHashCode();
+
+                if (this.SegmentTypes != null)
+                    hash = hash * 59 + this.SegmentTypes.GetHashCode();
 
                 return hash;
             }

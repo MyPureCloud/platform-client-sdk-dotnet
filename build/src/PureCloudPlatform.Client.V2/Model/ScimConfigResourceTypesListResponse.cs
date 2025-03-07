@@ -49,9 +49,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The 1-based index of the first result returned by this request. Add this to \"itemsPerPage\" when requesting the next page of results.
+        /// The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results.
         /// </summary>
-        /// <value>The 1-based index of the first result returned by this request. Add this to \"itemsPerPage\" when requesting the next page of results.</value>
+        /// <value>The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results.</value>
         [DataMember(Name="startIndex", EmitDefaultValue=false)]
         public long? StartIndex { get; private set; }
 

@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PerformancePredictionRecalculationResponse" /> class.
         /// </summary>
         /// <param name="OperationId">The operationId for which to listen (required).</param>
-        /// <param name="DownloadUrl">The url to GET the results of the performance prediction. This field is populated only if query state is 'Complete'.</param>
+        /// <param name="DownloadUrl">The url to GET the results of the performance prediction. This field is populated only if query state is &#39;Complete&#39;.</param>
         /// <param name="DownloadResult">Result will always come via downloadUrls; however the schema is included for documentation.</param>
         /// <param name="State">The state of the performance prediction (required).</param>
         public PerformancePredictionRecalculationResponse(string OperationId = null, string DownloadUrl = null, PerformancePredictionOutputs DownloadResult = null, StateEnum? State = null)
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The url to GET the results of the performance prediction. This field is populated only if query state is 'Complete'
+        /// The url to GET the results of the performance prediction. This field is populated only if query state is &#39;Complete&#39;
         /// </summary>
-        /// <value>The url to GET the results of the performance prediction. This field is populated only if query state is 'Complete'</value>
+        /// <value>The url to GET the results of the performance prediction. This field is populated only if query state is &#39;Complete&#39;</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
 

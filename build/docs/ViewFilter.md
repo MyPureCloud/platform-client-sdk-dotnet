@@ -9,8 +9,10 @@
 | **MediaTypes** | **List&lt;string&gt;** | The media types are used to filter the view | [optional] |
 | **QueueIds** | **List&lt;string&gt;** | The queue ids are used to filter the view | [optional] |
 | **SkillIds** | **List&lt;string&gt;** | The skill ids are used to filter the view | [optional] |
+| **AssignedSkillIds** | **List&lt;string&gt;** | The assigned user skill ids are used to filter the view | [optional] |
 | **SkillGroups** | **List&lt;string&gt;** | The skill groups used to filter the view | [optional] |
 | **LanguageIds** | **List&lt;string&gt;** | The language ids are used to filter the view | [optional] |
+| **AssignedLanguageIds** | **List&lt;string&gt;** | The assigned user language ids are used to filter the view | [optional] |
 | **LanguageGroups** | **List&lt;string&gt;** | The language groups used to filter the view | [optional] |
 | **Directions** | **List&lt;string&gt;** | The directions are used to filter the view | [optional] |
 | **OriginatingDirections** | **List&lt;string&gt;** | The list of orginating directions used to filter the view | [optional] |
@@ -226,7 +228,9 @@
 | **ComparisonQueueIds** | **List&lt;string&gt;** | The queue ids are used to for comparison to the primary queue filter in reporting | [optional] |
 | **ViewMetrics** | **List&lt;string&gt;** | A list of metrics selected for the view | [optional] |
 | **TimelineCategories** | **List&lt;string&gt;** | A list of timeline categories | [optional] |
+| **Acw** | **bool?** | Filter to indicate for acw state | [optional] |
+| **SegmentTypes** | **List&lt;string&gt;** | A list of filtered segment types | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

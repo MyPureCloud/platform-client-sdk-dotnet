@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingDirectroutingbackupSettingsMe ();
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingDirectroutingbackupSettingsMeWithHttpInfo ();
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingUserDirectroutingbackupSettings (string userId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingUserDirectroutingbackupSettingsWithHttpInfo (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingUserUtilization (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -639,7 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserProfileEntityListing> GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -650,7 +650,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings GetRoutingDirectroutingbackupSettingsMe ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -661,7 +661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentDirectRoutingBackupSettings> GetRoutingDirectroutingbackupSettingsMeWithHttpInfo ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -673,7 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings GetRoutingUserDirectroutingbackupSettings (string userId);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -685,7 +685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentDirectRoutingBackupSettings> GetRoutingUserDirectroutingbackupSettingsWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -697,7 +697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentMaxUtilizationResponse GetRoutingUserUtilization (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -765,7 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Adjacents> GetUserAdjacentsWithHttpInfo (string userId, List<string> expand = null);
 
         /// <summary>
-        /// Get a user's CallForwarding
+        /// Get a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -777,7 +777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         CallForwarding GetUserCallforwarding (string userId);
 
         /// <summary>
-        /// Get a user's CallForwarding
+        /// Get a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -897,7 +897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserEntityListing> GetUserFavoritesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -910,7 +910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Geolocation GetUserGeolocation (string userId, string clientId);
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -1585,7 +1585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<User> PatchUserWithHttpInfo (string userId, UpdateUser body);
 
         /// <summary>
-        /// Patch a user's CallForwarding
+        /// Patch a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -1598,7 +1598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         CallForwarding PatchUserCallforwarding (string userId, CallForwarding body);
 
         /// <summary>
-        /// Patch a user's CallForwarding
+        /// Patch a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -1611,7 +1611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CallForwarding> PatchUserCallforwardingWithHttpInfo (string userId, CallForwarding body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -1625,7 +1625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Geolocation PatchUserGeolocation (string userId, string clientId, Geolocation body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -1695,7 +1695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -1709,7 +1709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -2003,7 +2003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostAuthorizationSubjectBulkremoveWithHttpInfo (string subjectId, RoleDivisionGrants body);
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request.
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request.
         /// </summary>
         /// <remarks>
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
@@ -2017,7 +2017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request.
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request.
         /// </summary>
         /// <remarks>
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
@@ -2363,7 +2363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UsersSearchResponse> PostUsersSearchTeamsAssignWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -2375,7 +2375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings PutRoutingDirectroutingbackupSettingsMe (AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -2387,7 +2387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentDirectRoutingBackupSettings> PutRoutingDirectroutingbackupSettingsMeWithHttpInfo (AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -2400,7 +2400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings PutRoutingUserDirectroutingbackupSettings (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -2413,7 +2413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentDirectRoutingBackupSettings> PutRoutingUserDirectroutingbackupSettingsWithHttpInfo (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -2426,7 +2426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentMaxUtilizationResponse PutRoutingUserUtilization (string userId, UtilizationRequest body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -2439,7 +2439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentMaxUtilizationResponse> PutRoutingUserUtilizationWithHttpInfo (string userId, UtilizationRequest body);
 
         /// <summary>
-        /// Update a user's CallForwarding
+        /// Update a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -2452,7 +2452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         CallForwarding PutUserCallforwarding (string userId, CallForwarding body);
 
         /// <summary>
-        /// Update a user's CallForwarding
+        /// Update a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -2517,7 +2517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<string>> PutUserProfileskillsWithHttpInfo (string userId, List<string> body);
 
         /// <summary>
-        /// Sets the user's roles
+        /// Sets the user&#39;s roles
         /// </summary>
         /// <remarks>
         /// 
@@ -2530,7 +2530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserAuthorization PutUserRoles (string subjectId, List<string> body);
 
         /// <summary>
-        /// Sets the user's roles
+        /// Sets the user&#39;s roles
         /// </summary>
         /// <remarks>
         /// 
@@ -2543,7 +2543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserAuthorization> PutUserRolesWithHttpInfo (string subjectId, List<string> body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -2557,7 +2557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -2785,7 +2785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -2796,7 +2796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingDirectroutingbackupSettingsMeAsync ();
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -2807,7 +2807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingDirectroutingbackupSettingsMeAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -2819,7 +2819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingUserDirectroutingbackupSettingsAsync (string userId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -2831,7 +2831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserDirectroutingbackupSettingsAsyncWithHttpInfo (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -2843,7 +2843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -3355,7 +3355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3366,7 +3366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> GetRoutingDirectroutingbackupSettingsMeAsync ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3377,7 +3377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentDirectRoutingBackupSettings>> GetRoutingDirectroutingbackupSettingsMeAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3389,7 +3389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> GetRoutingUserDirectroutingbackupSettingsAsync (string userId);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3401,7 +3401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentDirectRoutingBackupSettings>> GetRoutingUserDirectroutingbackupSettingsAsyncWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -3413,7 +3413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentMaxUtilizationResponse> GetRoutingUserUtilizationAsync (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -3481,7 +3481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Adjacents>> GetUserAdjacentsAsyncWithHttpInfo (string userId, List<string> expand = null);
 
         /// <summary>
-        /// Get a user's CallForwarding
+        /// Get a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -3493,7 +3493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<CallForwarding> GetUserCallforwardingAsync (string userId);
 
         /// <summary>
-        /// Get a user's CallForwarding
+        /// Get a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -3613,7 +3613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUserFavoritesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -3626,7 +3626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Geolocation> GetUserGeolocationAsync (string userId, string clientId);
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -4301,7 +4301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<User>> PatchUserAsyncWithHttpInfo (string userId, UpdateUser body);
 
         /// <summary>
-        /// Patch a user's CallForwarding
+        /// Patch a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -4314,7 +4314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<CallForwarding> PatchUserCallforwardingAsync (string userId, CallForwarding body);
 
         /// <summary>
-        /// Patch a user's CallForwarding
+        /// Patch a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -4327,7 +4327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -4341,7 +4341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationAsync (string userId, string clientId, Geolocation body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -4411,7 +4411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -4425,7 +4425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -4719,7 +4719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkremoveAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body);
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request.
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request.
         /// </summary>
         /// <remarks>
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
@@ -4733,7 +4733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task PostAuthorizationSubjectBulkreplaceAsync (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request.
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request.
         /// </summary>
         /// <remarks>
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
@@ -5079,7 +5079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchTeamsAssignAsyncWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -5091,7 +5091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> PutRoutingDirectroutingbackupSettingsMeAsync (AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -5103,7 +5103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentDirectRoutingBackupSettings>> PutRoutingDirectroutingbackupSettingsMeAsyncWithHttpInfo (AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -5116,7 +5116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> PutRoutingUserDirectroutingbackupSettingsAsync (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -5129,7 +5129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentDirectRoutingBackupSettings>> PutRoutingUserDirectroutingbackupSettingsAsyncWithHttpInfo (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -5142,7 +5142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentMaxUtilizationResponse> PutRoutingUserUtilizationAsync (string userId, UtilizationRequest body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -5155,7 +5155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilizationResponse>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, UtilizationRequest body);
 
         /// <summary>
-        /// Update a user's CallForwarding
+        /// Update a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -5168,7 +5168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<CallForwarding> PutUserCallforwardingAsync (string userId, CallForwarding body);
 
         /// <summary>
-        /// Update a user's CallForwarding
+        /// Update a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
         /// 
@@ -5233,7 +5233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserProfileskillsAsyncWithHttpInfo (string userId, List<string> body);
 
         /// <summary>
-        /// Sets the user's roles
+        /// Sets the user&#39;s roles
         /// </summary>
         /// <remarks>
         /// 
@@ -5246,7 +5246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string subjectId, List<string> body);
 
         /// <summary>
-        /// Sets the user's roles
+        /// Sets the user&#39;s roles
         /// </summary>
         /// <remarks>
         /// 
@@ -5259,7 +5259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string subjectId, List<string> body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -5273,7 +5273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -5985,7 +5985,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5997,7 +5997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6083,7 +6083,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6096,7 +6096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6183,7 +6183,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6196,7 +6196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6287,7 +6287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6301,7 +6301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6394,7 +6394,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6407,7 +6407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6498,7 +6498,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6512,7 +6512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10789,7 +10789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10802,7 +10802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10888,7 +10888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10902,7 +10902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10989,7 +10989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11003,7 +11003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11094,7 +11094,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11109,7 +11109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11202,7 +11202,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11216,7 +11216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11307,7 +11307,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11322,7 +11322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11865,7 +11865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's CallForwarding 
+        /// Get a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11879,7 +11879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's CallForwarding 
+        /// Get a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11970,7 +11970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's CallForwarding 
+        /// Get a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11985,7 +11985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's CallForwarding 
+        /// Get a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12973,7 +12973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12988,7 +12988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13084,7 +13084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13100,7 +13100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18424,7 +18424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's CallForwarding 
+        /// Patch a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18439,7 +18439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's CallForwarding 
+        /// Patch a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18540,7 +18540,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's CallForwarding 
+        /// Patch a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18556,7 +18556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's CallForwarding 
+        /// Patch a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18660,7 +18660,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18676,7 +18676,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18782,7 +18782,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18799,7 +18799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19400,7 +19400,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19416,7 +19416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19522,7 +19522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19539,7 +19539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22172,7 +22172,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request. 
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request. 
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22187,7 +22187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request. 
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request. 
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22290,7 +22290,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request. 
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request. 
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22306,7 +22306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Replace subject's roles and divisions with the exact list supplied in the request. 
+        /// Replace subject&#39;s roles and divisions with the exact list supplied in the request. 
         /// This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25381,7 +25381,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25395,7 +25395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25491,7 +25491,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25506,7 +25506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25604,7 +25604,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25619,7 +25619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25720,7 +25720,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25736,7 +25736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25840,7 +25840,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25855,7 +25855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25956,7 +25956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25972,7 +25972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26076,7 +26076,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a user's CallForwarding 
+        /// Update a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26091,7 +26091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a user's CallForwarding 
+        /// Update a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26192,7 +26192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a user's CallForwarding 
+        /// Update a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26208,7 +26208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a user's CallForwarding 
+        /// Update a user&#39;s CallForwarding 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26784,7 +26784,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Sets the user's roles 
+        /// Sets the user&#39;s roles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26799,7 +26799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Sets the user's roles 
+        /// Sets the user&#39;s roles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26900,7 +26900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Sets the user's roles 
+        /// Sets the user&#39;s roles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26916,7 +26916,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Sets the user's roles 
+        /// Sets the user&#39;s roles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27020,7 +27020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27036,7 +27036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27142,7 +27142,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27159,7 +27159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

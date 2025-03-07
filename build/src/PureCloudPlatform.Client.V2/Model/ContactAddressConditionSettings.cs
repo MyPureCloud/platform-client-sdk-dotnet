@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ContactAddressConditionSettings" /> class.
         /// </summary>
         /// <param name="Operator">The operator to use when comparing address values. (required).</param>
-        /// <param name="Value">The value to compare against the contact's address. (required).</param>
+        /// <param name="Value">The value to compare against the contact&#39;s address. (required).</param>
         public ContactAddressConditionSettings(OperatorEnum? Operator = null, string Value = null)
         {
             this.Operator = Operator;
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The value to compare against the contact's address.
+        /// The value to compare against the contact&#39;s address.
         /// </summary>
-        /// <value>The value to compare against the contact's address.</value>
+        /// <value>The value to compare against the contact&#39;s address.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

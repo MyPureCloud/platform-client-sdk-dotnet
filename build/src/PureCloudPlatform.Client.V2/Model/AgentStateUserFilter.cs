@@ -61,8 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AgentStateUserFilter" /> class.
         /// </summary>
         /// <param name="Type">Boolean operation to apply to the provided predicates and clauses (required).</param>
-        /// <param name="Clauses">Boolean 'and/or' logic with up to two-levels of nesting.</param>
-        /// <param name="Predicates">Describes a <dimension> = <value> filter used to perform matching.</param>
+        /// <param name="Clauses">Boolean &#39;and/or&#39; logic with up to two-levels of nesting.</param>
+        /// <param name="Predicates">Describes a &lt;dimension&gt; &#x3D; &lt;value&gt; filter used to perform matching.</param>
         public AgentStateUserFilter(TypeEnum? Type = null, List<AgentStateAgentQueryClause> Clauses = null, List<AgentStateAgentQueryPredicate> Predicates = null)
         {
             this.Type = Type;
@@ -76,18 +76,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Boolean 'and/or' logic with up to two-levels of nesting
+        /// Boolean &#39;and/or&#39; logic with up to two-levels of nesting
         /// </summary>
-        /// <value>Boolean 'and/or' logic with up to two-levels of nesting</value>
+        /// <value>Boolean &#39;and/or&#39; logic with up to two-levels of nesting</value>
         [DataMember(Name="clauses", EmitDefaultValue=false)]
         public List<AgentStateAgentQueryClause> Clauses { get; set; }
 
 
 
         /// <summary>
-        /// Describes a <dimension> = <value> filter used to perform matching
+        /// Describes a &lt;dimension&gt; &#x3D; &lt;value&gt; filter used to perform matching
         /// </summary>
-        /// <value>Describes a <dimension> = <value> filter used to perform matching</value>
+        /// <value>Describes a &lt;dimension&gt; &#x3D; &lt;value&gt; filter used to perform matching</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<AgentStateAgentQueryPredicate> Predicates { get; set; }
 

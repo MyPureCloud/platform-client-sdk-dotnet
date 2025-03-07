@@ -22,18 +22,33 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
         }
 
+        ///<Summary>
+        /// Access Token
+        ///</Summary>
         [DataMember(Name = "access_token", EmitDefaultValue = false)]
         public string AccessToken { get; set; }
 
+        ///<Summary>
+        /// Refresh Token
+        ///</Summary>
         [DataMember(Name = "refresh_token", EmitDefaultValue = false)]
         public string RefreshToken { get; set; }
 
+        ///<Summary>
+        /// Token Type
+        ///</Summary>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
         public string TokenType { get; set; }
 
+        ///<Summary>
+        /// Token Expires In
+        ///</Summary>
         [DataMember(Name = "expires_in", EmitDefaultValue = false)]
         public int? ExpiresIn { get; set; }
 
+        ///<Summary>
+        /// Error
+        ///</Summary>
         [DataMember(Name = "error", EmitDefaultValue = false)]
         public string Error { get; set; }
 

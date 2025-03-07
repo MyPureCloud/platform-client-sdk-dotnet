@@ -22,14 +22,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DigitalCondition" /> class.
         /// </summary>
         /// <param name="Inverted">If true, inverts the result of evaluating this condition. Default is false..</param>
-        /// <param name="ContactColumnConditionSettings">The settings for a 'contact list column' condition..</param>
-        /// <param name="ContactAddressConditionSettings">The settings for a 'contact address' condition..</param>
-        /// <param name="ContactAddressTypeConditionSettings">The settings for a 'contact address type' condition..</param>
-        /// <param name="LastAttemptByColumnConditionSettings">The settings for a 'last attempt by column' condition..</param>
-        /// <param name="LastAttemptOverallConditionSettings">The settings for a 'last attempt overall' condition..</param>
-        /// <param name="LastResultByColumnConditionSettings">The settings for a 'last result by column' condition..</param>
-        /// <param name="LastResultOverallConditionSettings">The settings for a 'last result overall' condition..</param>
-        /// <param name="DataActionConditionSettings">The settings for a 'data action' condition..</param>
+        /// <param name="ContactColumnConditionSettings">The settings for a &#39;contact list column&#39; condition..</param>
+        /// <param name="ContactAddressConditionSettings">The settings for a &#39;contact address&#39; condition..</param>
+        /// <param name="ContactAddressTypeConditionSettings">The settings for a &#39;contact address type&#39; condition..</param>
+        /// <param name="LastAttemptByColumnConditionSettings">The settings for a &#39;last attempt by column&#39; condition..</param>
+        /// <param name="LastAttemptOverallConditionSettings">The settings for a &#39;last attempt overall&#39; condition..</param>
+        /// <param name="LastResultByColumnConditionSettings">The settings for a &#39;last result by column&#39; condition..</param>
+        /// <param name="LastResultOverallConditionSettings">The settings for a &#39;last result overall&#39; condition..</param>
+        /// <param name="DataActionConditionSettings">The settings for a &#39;data action&#39; condition..</param>
         public DigitalCondition(bool? Inverted = null, ContactColumnConditionSettings ContactColumnConditionSettings = null, ContactAddressConditionSettings ContactAddressConditionSettings = null, ContactAddressTypeConditionSettings ContactAddressTypeConditionSettings = null, LastAttemptByColumnConditionSettings LastAttemptByColumnConditionSettings = null, LastAttemptOverallConditionSettings LastAttemptOverallConditionSettings = null, LastResultByColumnConditionSettings LastResultByColumnConditionSettings = null, LastResultOverallConditionSettings LastResultOverallConditionSettings = null, DataActionConditionSettings DataActionConditionSettings = null)
         {
             this.Inverted = Inverted;
@@ -56,72 +56,72 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The settings for a 'contact list column' condition.
+        /// The settings for a &#39;contact list column&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'contact list column' condition.</value>
+        /// <value>The settings for a &#39;contact list column&#39; condition.</value>
         [DataMember(Name="contactColumnConditionSettings", EmitDefaultValue=false)]
         public ContactColumnConditionSettings ContactColumnConditionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'contact address' condition.
+        /// The settings for a &#39;contact address&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'contact address' condition.</value>
+        /// <value>The settings for a &#39;contact address&#39; condition.</value>
         [DataMember(Name="contactAddressConditionSettings", EmitDefaultValue=false)]
         public ContactAddressConditionSettings ContactAddressConditionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'contact address type' condition.
+        /// The settings for a &#39;contact address type&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'contact address type' condition.</value>
+        /// <value>The settings for a &#39;contact address type&#39; condition.</value>
         [DataMember(Name="contactAddressTypeConditionSettings", EmitDefaultValue=false)]
         public ContactAddressTypeConditionSettings ContactAddressTypeConditionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'last attempt by column' condition.
+        /// The settings for a &#39;last attempt by column&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'last attempt by column' condition.</value>
+        /// <value>The settings for a &#39;last attempt by column&#39; condition.</value>
         [DataMember(Name="lastAttemptByColumnConditionSettings", EmitDefaultValue=false)]
         public LastAttemptByColumnConditionSettings LastAttemptByColumnConditionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'last attempt overall' condition.
+        /// The settings for a &#39;last attempt overall&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'last attempt overall' condition.</value>
+        /// <value>The settings for a &#39;last attempt overall&#39; condition.</value>
         [DataMember(Name="lastAttemptOverallConditionSettings", EmitDefaultValue=false)]
         public LastAttemptOverallConditionSettings LastAttemptOverallConditionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'last result by column' condition.
+        /// The settings for a &#39;last result by column&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'last result by column' condition.</value>
+        /// <value>The settings for a &#39;last result by column&#39; condition.</value>
         [DataMember(Name="lastResultByColumnConditionSettings", EmitDefaultValue=false)]
         public LastResultByColumnConditionSettings LastResultByColumnConditionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'last result overall' condition.
+        /// The settings for a &#39;last result overall&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'last result overall' condition.</value>
+        /// <value>The settings for a &#39;last result overall&#39; condition.</value>
         [DataMember(Name="lastResultOverallConditionSettings", EmitDefaultValue=false)]
         public LastResultOverallConditionSettings LastResultOverallConditionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'data action' condition.
+        /// The settings for a &#39;data action&#39; condition.
         /// </summary>
-        /// <value>The settings for a 'data action' condition.</value>
+        /// <value>The settings for a &#39;data action&#39; condition.</value>
         [DataMember(Name="dataActionConditionSettings", EmitDefaultValue=false)]
         public DataActionConditionSettings DataActionConditionSettings { get; set; }
 

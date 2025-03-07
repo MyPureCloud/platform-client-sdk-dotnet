@@ -39,7 +39,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConsultTransferEvents">Voice - ConsultTransfer events for this batch.</param>
         /// <param name="ProgressConsultTransferEvents">Voice - ProgressConsultTransfer events for this batch.</param>
         /// <param name="EndConsultTransferEvents">Voice - EndConsultTransfer events for this batch.</param>
-        public BatchConversationEventRequest(List<EndTransferEvent> EndTransferEvents = null, List<PhoneTransferEvent> PhoneTransferEvents = null, List<ProgressTransferEvent> ProgressTransferEvents = null, List<RoutingTransferEvent> RoutingTransferEvents = null, List<UserTransferEvent> UserTransferEvents = null, List<CommunicationAnsweredEvent> CommunicationAnsweredEvents = null, List<CommunicationDispositionAppliedEvent> CommunicationDispositionAppliedEvents = null, List<HoldUpdatedEvent> HoldUpdatedEvents = null, List<ExternalEstablishedEvent> ExternalEstablishedEvents = null, List<IvrEstablishedEvent> IvrEstablishedEvents = null, List<PhoneEstablishedEvent> PhoneEstablishedEvents = null, List<RoutingEstablishedEvent> RoutingEstablishedEvents = null, List<UserEstablishedEvent> UserEstablishedEvents = null, List<AudioUpdatedEvent> AudioUpdatedEvents = null, List<CommunicationEndedEvent> CommunicationEndedEvents = null, List<ConsultTransferEvent> ConsultTransferEvents = null, List<ProgressConsultTransferEvent> ProgressConsultTransferEvents = null, List<EndConsultTransferEvent> EndConsultTransferEvents = null)
+        /// <param name="EmailBeginTransmittingEvents">Email - EmailBeginTransmittingEvent events for this batch.</param>
+        /// <param name="EmailCommunicationEndedEvents">Email - EmailCommunicationEndedEvent events for this batch.</param>
+        /// <param name="EmailExternalEstablishedEvents">Email - EmailExternalEstablishedEvent events for this batch.</param>
+        /// <param name="EmailFlowEstablishedEvents">Email - EmailFlowEstablishedEvent events for this batch.</param>
+        /// <param name="EmailRoutingEstablishedEvents">Email - EmailRoutingEstablishedEvent events for this batch.</param>
+        /// <param name="EmailUserEstablishedEvents">Email - EmailUserEstablishedEvent events for this batch.</param>
+        /// <param name="EmailCommunicationAnsweredEvents">Email - EmailCommunicationAnsweredEvent events for this batch.</param>
+        /// <param name="EmailCommunicationDispositionAppliedEvents">Email - EmailCommunicationDispositionAppliedEvent events for this batch.</param>
+        /// <param name="EmailCommunicationSentMessageEvents">Email - EmailCommunicationSentMessageEvent events for this batch.</param>
+        /// <param name="EmailHoldUpdatedEvents">Email - EmailHoldUpdatedEvent events for this batch.</param>
+        /// <param name="EmailEndTransferEvents">Email - EmailEndTransferEvent events for this batch.</param>
+        /// <param name="EmailProgressTransferEvents">Email - EmailProgressTransferEvent events for this batch.</param>
+        /// <param name="EmailRoutingTransferEvents">Email - EmailRoutingTransferEvent events for this batch.</param>
+        /// <param name="EmailUserTransferEvents">Email - EmailUserTransferEvent events for this batch.</param>
+        public BatchConversationEventRequest(List<EndTransferEvent> EndTransferEvents = null, List<PhoneTransferEvent> PhoneTransferEvents = null, List<ProgressTransferEvent> ProgressTransferEvents = null, List<RoutingTransferEvent> RoutingTransferEvents = null, List<UserTransferEvent> UserTransferEvents = null, List<CommunicationAnsweredEvent> CommunicationAnsweredEvents = null, List<CommunicationDispositionAppliedEvent> CommunicationDispositionAppliedEvents = null, List<HoldUpdatedEvent> HoldUpdatedEvents = null, List<ExternalEstablishedEvent> ExternalEstablishedEvents = null, List<IvrEstablishedEvent> IvrEstablishedEvents = null, List<PhoneEstablishedEvent> PhoneEstablishedEvents = null, List<RoutingEstablishedEvent> RoutingEstablishedEvents = null, List<UserEstablishedEvent> UserEstablishedEvents = null, List<AudioUpdatedEvent> AudioUpdatedEvents = null, List<CommunicationEndedEvent> CommunicationEndedEvents = null, List<ConsultTransferEvent> ConsultTransferEvents = null, List<ProgressConsultTransferEvent> ProgressConsultTransferEvents = null, List<EndConsultTransferEvent> EndConsultTransferEvents = null, List<EmailBeginTransmittingEvent> EmailBeginTransmittingEvents = null, List<EmailCommunicationEndedEvent> EmailCommunicationEndedEvents = null, List<EmailExternalEstablishedEvent> EmailExternalEstablishedEvents = null, List<EmailFlowEstablishedEvent> EmailFlowEstablishedEvents = null, List<EmailRoutingEstablishedEvent> EmailRoutingEstablishedEvents = null, List<EmailUserEstablishedEvent> EmailUserEstablishedEvents = null, List<EmailCommunicationAnsweredEvent> EmailCommunicationAnsweredEvents = null, List<EmailCommunicationDispositionAppliedEvent> EmailCommunicationDispositionAppliedEvents = null, List<EmailCommunicationSentMessageEvent> EmailCommunicationSentMessageEvents = null, List<EmailHoldUpdatedEvent> EmailHoldUpdatedEvents = null, List<EmailEndTransferEvent> EmailEndTransferEvents = null, List<EmailProgressTransferEvent> EmailProgressTransferEvents = null, List<EmailRoutingTransferEvent> EmailRoutingTransferEvents = null, List<EmailUserTransferEvent> EmailUserTransferEvents = null)
         {
             this.EndTransferEvents = EndTransferEvents;
             this.PhoneTransferEvents = PhoneTransferEvents;
@@ -59,6 +73,20 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConsultTransferEvents = ConsultTransferEvents;
             this.ProgressConsultTransferEvents = ProgressConsultTransferEvents;
             this.EndConsultTransferEvents = EndConsultTransferEvents;
+            this.EmailBeginTransmittingEvents = EmailBeginTransmittingEvents;
+            this.EmailCommunicationEndedEvents = EmailCommunicationEndedEvents;
+            this.EmailExternalEstablishedEvents = EmailExternalEstablishedEvents;
+            this.EmailFlowEstablishedEvents = EmailFlowEstablishedEvents;
+            this.EmailRoutingEstablishedEvents = EmailRoutingEstablishedEvents;
+            this.EmailUserEstablishedEvents = EmailUserEstablishedEvents;
+            this.EmailCommunicationAnsweredEvents = EmailCommunicationAnsweredEvents;
+            this.EmailCommunicationDispositionAppliedEvents = EmailCommunicationDispositionAppliedEvents;
+            this.EmailCommunicationSentMessageEvents = EmailCommunicationSentMessageEvents;
+            this.EmailHoldUpdatedEvents = EmailHoldUpdatedEvents;
+            this.EmailEndTransferEvents = EmailEndTransferEvents;
+            this.EmailProgressTransferEvents = EmailProgressTransferEvents;
+            this.EmailRoutingTransferEvents = EmailRoutingTransferEvents;
+            this.EmailUserTransferEvents = EmailUserTransferEvents;
             
         }
         
@@ -225,6 +253,132 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<EndConsultTransferEvent> EndConsultTransferEvents { get; set; }
 
 
+
+        /// <summary>
+        /// Email - EmailBeginTransmittingEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailBeginTransmittingEvent events for this batch</value>
+        [DataMember(Name="emailBeginTransmittingEvents", EmitDefaultValue=false)]
+        public List<EmailBeginTransmittingEvent> EmailBeginTransmittingEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailCommunicationEndedEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailCommunicationEndedEvent events for this batch</value>
+        [DataMember(Name="emailCommunicationEndedEvents", EmitDefaultValue=false)]
+        public List<EmailCommunicationEndedEvent> EmailCommunicationEndedEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailExternalEstablishedEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailExternalEstablishedEvent events for this batch</value>
+        [DataMember(Name="emailExternalEstablishedEvents", EmitDefaultValue=false)]
+        public List<EmailExternalEstablishedEvent> EmailExternalEstablishedEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailFlowEstablishedEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailFlowEstablishedEvent events for this batch</value>
+        [DataMember(Name="emailFlowEstablishedEvents", EmitDefaultValue=false)]
+        public List<EmailFlowEstablishedEvent> EmailFlowEstablishedEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailRoutingEstablishedEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailRoutingEstablishedEvent events for this batch</value>
+        [DataMember(Name="emailRoutingEstablishedEvents", EmitDefaultValue=false)]
+        public List<EmailRoutingEstablishedEvent> EmailRoutingEstablishedEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailUserEstablishedEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailUserEstablishedEvent events for this batch</value>
+        [DataMember(Name="emailUserEstablishedEvents", EmitDefaultValue=false)]
+        public List<EmailUserEstablishedEvent> EmailUserEstablishedEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailCommunicationAnsweredEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailCommunicationAnsweredEvent events for this batch</value>
+        [DataMember(Name="emailCommunicationAnsweredEvents", EmitDefaultValue=false)]
+        public List<EmailCommunicationAnsweredEvent> EmailCommunicationAnsweredEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailCommunicationDispositionAppliedEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailCommunicationDispositionAppliedEvent events for this batch</value>
+        [DataMember(Name="emailCommunicationDispositionAppliedEvents", EmitDefaultValue=false)]
+        public List<EmailCommunicationDispositionAppliedEvent> EmailCommunicationDispositionAppliedEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailCommunicationSentMessageEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailCommunicationSentMessageEvent events for this batch</value>
+        [DataMember(Name="emailCommunicationSentMessageEvents", EmitDefaultValue=false)]
+        public List<EmailCommunicationSentMessageEvent> EmailCommunicationSentMessageEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailHoldUpdatedEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailHoldUpdatedEvent events for this batch</value>
+        [DataMember(Name="emailHoldUpdatedEvents", EmitDefaultValue=false)]
+        public List<EmailHoldUpdatedEvent> EmailHoldUpdatedEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailEndTransferEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailEndTransferEvent events for this batch</value>
+        [DataMember(Name="emailEndTransferEvents", EmitDefaultValue=false)]
+        public List<EmailEndTransferEvent> EmailEndTransferEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailProgressTransferEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailProgressTransferEvent events for this batch</value>
+        [DataMember(Name="emailProgressTransferEvents", EmitDefaultValue=false)]
+        public List<EmailProgressTransferEvent> EmailProgressTransferEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailRoutingTransferEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailRoutingTransferEvent events for this batch</value>
+        [DataMember(Name="emailRoutingTransferEvents", EmitDefaultValue=false)]
+        public List<EmailRoutingTransferEvent> EmailRoutingTransferEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Email - EmailUserTransferEvent events for this batch
+        /// </summary>
+        /// <value>Email - EmailUserTransferEvent events for this batch</value>
+        [DataMember(Name="emailUserTransferEvents", EmitDefaultValue=false)]
+        public List<EmailUserTransferEvent> EmailUserTransferEvents { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -252,6 +406,20 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConsultTransferEvents: ").Append(ConsultTransferEvents).Append("\n");
             sb.Append("  ProgressConsultTransferEvents: ").Append(ProgressConsultTransferEvents).Append("\n");
             sb.Append("  EndConsultTransferEvents: ").Append(EndConsultTransferEvents).Append("\n");
+            sb.Append("  EmailBeginTransmittingEvents: ").Append(EmailBeginTransmittingEvents).Append("\n");
+            sb.Append("  EmailCommunicationEndedEvents: ").Append(EmailCommunicationEndedEvents).Append("\n");
+            sb.Append("  EmailExternalEstablishedEvents: ").Append(EmailExternalEstablishedEvents).Append("\n");
+            sb.Append("  EmailFlowEstablishedEvents: ").Append(EmailFlowEstablishedEvents).Append("\n");
+            sb.Append("  EmailRoutingEstablishedEvents: ").Append(EmailRoutingEstablishedEvents).Append("\n");
+            sb.Append("  EmailUserEstablishedEvents: ").Append(EmailUserEstablishedEvents).Append("\n");
+            sb.Append("  EmailCommunicationAnsweredEvents: ").Append(EmailCommunicationAnsweredEvents).Append("\n");
+            sb.Append("  EmailCommunicationDispositionAppliedEvents: ").Append(EmailCommunicationDispositionAppliedEvents).Append("\n");
+            sb.Append("  EmailCommunicationSentMessageEvents: ").Append(EmailCommunicationSentMessageEvents).Append("\n");
+            sb.Append("  EmailHoldUpdatedEvents: ").Append(EmailHoldUpdatedEvents).Append("\n");
+            sb.Append("  EmailEndTransferEvents: ").Append(EmailEndTransferEvents).Append("\n");
+            sb.Append("  EmailProgressTransferEvents: ").Append(EmailProgressTransferEvents).Append("\n");
+            sb.Append("  EmailRoutingTransferEvents: ").Append(EmailRoutingTransferEvents).Append("\n");
+            sb.Append("  EmailUserTransferEvents: ").Append(EmailUserTransferEvents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -381,6 +549,76 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndConsultTransferEvents == other.EndConsultTransferEvents ||
                     this.EndConsultTransferEvents != null &&
                     this.EndConsultTransferEvents.SequenceEqual(other.EndConsultTransferEvents)
+                ) &&
+                (
+                    this.EmailBeginTransmittingEvents == other.EmailBeginTransmittingEvents ||
+                    this.EmailBeginTransmittingEvents != null &&
+                    this.EmailBeginTransmittingEvents.SequenceEqual(other.EmailBeginTransmittingEvents)
+                ) &&
+                (
+                    this.EmailCommunicationEndedEvents == other.EmailCommunicationEndedEvents ||
+                    this.EmailCommunicationEndedEvents != null &&
+                    this.EmailCommunicationEndedEvents.SequenceEqual(other.EmailCommunicationEndedEvents)
+                ) &&
+                (
+                    this.EmailExternalEstablishedEvents == other.EmailExternalEstablishedEvents ||
+                    this.EmailExternalEstablishedEvents != null &&
+                    this.EmailExternalEstablishedEvents.SequenceEqual(other.EmailExternalEstablishedEvents)
+                ) &&
+                (
+                    this.EmailFlowEstablishedEvents == other.EmailFlowEstablishedEvents ||
+                    this.EmailFlowEstablishedEvents != null &&
+                    this.EmailFlowEstablishedEvents.SequenceEqual(other.EmailFlowEstablishedEvents)
+                ) &&
+                (
+                    this.EmailRoutingEstablishedEvents == other.EmailRoutingEstablishedEvents ||
+                    this.EmailRoutingEstablishedEvents != null &&
+                    this.EmailRoutingEstablishedEvents.SequenceEqual(other.EmailRoutingEstablishedEvents)
+                ) &&
+                (
+                    this.EmailUserEstablishedEvents == other.EmailUserEstablishedEvents ||
+                    this.EmailUserEstablishedEvents != null &&
+                    this.EmailUserEstablishedEvents.SequenceEqual(other.EmailUserEstablishedEvents)
+                ) &&
+                (
+                    this.EmailCommunicationAnsweredEvents == other.EmailCommunicationAnsweredEvents ||
+                    this.EmailCommunicationAnsweredEvents != null &&
+                    this.EmailCommunicationAnsweredEvents.SequenceEqual(other.EmailCommunicationAnsweredEvents)
+                ) &&
+                (
+                    this.EmailCommunicationDispositionAppliedEvents == other.EmailCommunicationDispositionAppliedEvents ||
+                    this.EmailCommunicationDispositionAppliedEvents != null &&
+                    this.EmailCommunicationDispositionAppliedEvents.SequenceEqual(other.EmailCommunicationDispositionAppliedEvents)
+                ) &&
+                (
+                    this.EmailCommunicationSentMessageEvents == other.EmailCommunicationSentMessageEvents ||
+                    this.EmailCommunicationSentMessageEvents != null &&
+                    this.EmailCommunicationSentMessageEvents.SequenceEqual(other.EmailCommunicationSentMessageEvents)
+                ) &&
+                (
+                    this.EmailHoldUpdatedEvents == other.EmailHoldUpdatedEvents ||
+                    this.EmailHoldUpdatedEvents != null &&
+                    this.EmailHoldUpdatedEvents.SequenceEqual(other.EmailHoldUpdatedEvents)
+                ) &&
+                (
+                    this.EmailEndTransferEvents == other.EmailEndTransferEvents ||
+                    this.EmailEndTransferEvents != null &&
+                    this.EmailEndTransferEvents.SequenceEqual(other.EmailEndTransferEvents)
+                ) &&
+                (
+                    this.EmailProgressTransferEvents == other.EmailProgressTransferEvents ||
+                    this.EmailProgressTransferEvents != null &&
+                    this.EmailProgressTransferEvents.SequenceEqual(other.EmailProgressTransferEvents)
+                ) &&
+                (
+                    this.EmailRoutingTransferEvents == other.EmailRoutingTransferEvents ||
+                    this.EmailRoutingTransferEvents != null &&
+                    this.EmailRoutingTransferEvents.SequenceEqual(other.EmailRoutingTransferEvents)
+                ) &&
+                (
+                    this.EmailUserTransferEvents == other.EmailUserTransferEvents ||
+                    this.EmailUserTransferEvents != null &&
+                    this.EmailUserTransferEvents.SequenceEqual(other.EmailUserTransferEvents)
                 );
         }
 
@@ -448,6 +686,48 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndConsultTransferEvents != null)
                     hash = hash * 59 + this.EndConsultTransferEvents.GetHashCode();
+
+                if (this.EmailBeginTransmittingEvents != null)
+                    hash = hash * 59 + this.EmailBeginTransmittingEvents.GetHashCode();
+
+                if (this.EmailCommunicationEndedEvents != null)
+                    hash = hash * 59 + this.EmailCommunicationEndedEvents.GetHashCode();
+
+                if (this.EmailExternalEstablishedEvents != null)
+                    hash = hash * 59 + this.EmailExternalEstablishedEvents.GetHashCode();
+
+                if (this.EmailFlowEstablishedEvents != null)
+                    hash = hash * 59 + this.EmailFlowEstablishedEvents.GetHashCode();
+
+                if (this.EmailRoutingEstablishedEvents != null)
+                    hash = hash * 59 + this.EmailRoutingEstablishedEvents.GetHashCode();
+
+                if (this.EmailUserEstablishedEvents != null)
+                    hash = hash * 59 + this.EmailUserEstablishedEvents.GetHashCode();
+
+                if (this.EmailCommunicationAnsweredEvents != null)
+                    hash = hash * 59 + this.EmailCommunicationAnsweredEvents.GetHashCode();
+
+                if (this.EmailCommunicationDispositionAppliedEvents != null)
+                    hash = hash * 59 + this.EmailCommunicationDispositionAppliedEvents.GetHashCode();
+
+                if (this.EmailCommunicationSentMessageEvents != null)
+                    hash = hash * 59 + this.EmailCommunicationSentMessageEvents.GetHashCode();
+
+                if (this.EmailHoldUpdatedEvents != null)
+                    hash = hash * 59 + this.EmailHoldUpdatedEvents.GetHashCode();
+
+                if (this.EmailEndTransferEvents != null)
+                    hash = hash * 59 + this.EmailEndTransferEvents.GetHashCode();
+
+                if (this.EmailProgressTransferEvents != null)
+                    hash = hash * 59 + this.EmailProgressTransferEvents.GetHashCode();
+
+                if (this.EmailRoutingTransferEvents != null)
+                    hash = hash * 59 + this.EmailRoutingTransferEvents.GetHashCode();
+
+                if (this.EmailUserTransferEvents != null)
+                    hash = hash * 59 + this.EmailUserTransferEvents.GetHashCode();
 
                 return hash;
             }

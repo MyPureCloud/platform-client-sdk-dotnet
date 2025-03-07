@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="VoicemailRetentionPolicy" /> class.
         /// </summary>
         /// <param name="VoicemailRetentionPolicyType">The retention policy type.</param>
-        /// <param name="NumberOfDays">If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL.</param>
+        /// <param name="NumberOfDays">If retentionPolicyType &#x3D;&#x3D; RETAIN_WITH_TTL, then this value represents the number of days for the TTL.</param>
         public VoicemailRetentionPolicy(VoicemailRetentionPolicyTypeEnum? VoicemailRetentionPolicyType = null, int? NumberOfDays = null)
         {
             this.VoicemailRetentionPolicyType = VoicemailRetentionPolicyType;
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL
+        /// If retentionPolicyType &#x3D;&#x3D; RETAIN_WITH_TTL, then this value represents the number of days for the TTL
         /// </summary>
-        /// <value>If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL</value>
+        /// <value>If retentionPolicyType &#x3D;&#x3D; RETAIN_WITH_TTL, then this value represents the number of days for the TTL</value>
         [DataMember(Name="numberOfDays", EmitDefaultValue=false)]
         public int? NumberOfDays { get; set; }
 

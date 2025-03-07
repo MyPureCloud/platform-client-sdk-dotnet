@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="InsightsAgentItem" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Manager">This user's manager..</param>
+        /// <param name="Manager">This user&#39;s manager..</param>
         public InsightsAgentItem(string Name = null, DomainEntityRef Manager = null)
         {
             this.Name = Name;
@@ -50,9 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// This user's manager.
+        /// This user&#39;s manager.
         /// </summary>
-        /// <value>This user's manager.</value>
+        /// <value>This user&#39;s manager.</value>
         [DataMember(Name="manager", EmitDefaultValue=false)]
         public DomainEntityRef Manager { get; set; }
 

@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Participants">The list of participants involved in the conversation..</param>
         /// <param name="Direction">The direction of the call relating to the current user.</param>
-        /// <param name="WentToVoicemail">Did the call end in the current user's voicemail.</param>
+        /// <param name="WentToVoicemail">Did the call end in the current user&#39;s voicemail.</param>
         /// <param name="MissedCall">Did the user not answer this conversation.</param>
         /// <param name="StartTime">The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="WasConference">Was this conversation a conference.</param>
@@ -112,9 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Did the call end in the current user's voicemail
+        /// Did the call end in the current user&#39;s voicemail
         /// </summary>
-        /// <value>Did the call end in the current user's voicemail</value>
+        /// <value>Did the call end in the current user&#39;s voicemail</value>
         [DataMember(Name="wentToVoicemail", EmitDefaultValue=false)]
         public bool? WentToVoicemail { get; set; }
 

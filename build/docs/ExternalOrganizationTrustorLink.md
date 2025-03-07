@@ -7,6 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
 | **ExternalOrganizationId** | **string** | The id of a PureCloud External Organization entity in the External Contacts system that will be used to represent the trustor org | [optional] |
 | **TrustorOrgId** | **string** | The id of a PureCloud organization that has granted trust to this PureCloud organization | [optional] |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -15,4 +16,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

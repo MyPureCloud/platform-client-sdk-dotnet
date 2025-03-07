@@ -269,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Height">The height for the table cell..</param>
         /// <param name="HorizontalAlign">The horizontal alignment for the table cell..</param>
         /// <param name="VerticalAlign">The vertical alignment for the table cell..</param>
-        /// <param name="BorderWidth">The border width for the table cell. The valid values in 'em'.</param>
+        /// <param name="BorderWidth">The border width for the table cell. The valid values in &#39;em&#39;.</param>
         /// <param name="BorderStyle">The border style for the table cell..</param>
         /// <param name="BorderColor">The border color for the table cell. For example black color - #000000.</param>
         /// <param name="BackgroundColor">The background color for the table cell. For example black color - #000000.</param>
@@ -320,9 +320,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The border width for the table cell. The valid values in 'em'
+        /// The border width for the table cell. The valid values in &#39;em&#39;
         /// </summary>
-        /// <value>The border width for the table cell. The valid values in 'em'</value>
+        /// <value>The border width for the table cell. The valid values in &#39;em&#39;</value>
         [DataMember(Name="borderWidth", EmitDefaultValue=false)]
         public float? BorderWidth { get; set; }
 

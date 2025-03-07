@@ -142,15 +142,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Paid">Whether this is a paid time off request.</param>
         /// <param name="Status">The status of this time off request.</param>
         /// <param name="Substatus">The substatus of this time off request.</param>
-        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest == false.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. Will be not empty if isFullDayRequest == true.</param>
+        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest &#x3D;&#x3D; false.</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone. Will be not empty if isFullDayRequest &#x3D;&#x3D; true.</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
         /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes.</param>
         /// <param name="PayableMinutes">Payable minutes for each day of this time off request.</param>
         /// <param name="Notes">Notes about the time off request.</param>
-        /// <param name="SubmittedBy">The user who submitted this time off request.</param>
+        /// <param name="SubmittedBy">The user who submitted this time off request. The id may be &#39;System&#39; if it was an automated process.</param>
         /// <param name="SubmittedDate">The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ReviewedBy">The user who reviewed this time off request.</param>
+        /// <param name="ReviewedBy">The user who reviewed this time off request. The id may be &#39;System&#39; if it was an automated process.</param>
         /// <param name="ReviewedDate">The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedBy">The user who last modified this TimeOffRequestResponse.</param>
         /// <param name="ModifiedDate">The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -243,18 +243,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest == false
+        /// A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest &#x3D;&#x3D; false
         /// </summary>
-        /// <value>A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest == false</value>
+        /// <value>A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest &#x3D;&#x3D; false</value>
         [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
         public List<DateTime?> PartialDayStartDateTimes { get; set; }
 
 
 
         /// <summary>
-        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. Will be not empty if isFullDayRequest == true
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone. Will be not empty if isFullDayRequest &#x3D;&#x3D; true
         /// </summary>
-        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. Will be not empty if isFullDayRequest == true</value>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone. Will be not empty if isFullDayRequest &#x3D;&#x3D; true</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
 
@@ -297,9 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user who submitted this time off request
+        /// The user who submitted this time off request. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The user who submitted this time off request</value>
+        /// <value>The user who submitted this time off request. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="submittedBy", EmitDefaultValue=false)]
         public UserReference SubmittedBy { get; set; }
 
@@ -315,9 +315,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user who reviewed this time off request
+        /// The user who reviewed this time off request. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The user who reviewed this time off request</value>
+        /// <value>The user who reviewed this time off request. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
         public UserReference ReviewedBy { get; set; }
 

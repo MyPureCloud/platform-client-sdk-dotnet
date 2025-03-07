@@ -273,4 +273,4 @@ namespace Example
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessengerType">Type of messenger..</param>
         /// <param name="TextBody">The body of the text message. (Deprecated - Instead use message.normalizedMessage.text).</param>
         /// <param name="MessagingTemplate">The messaging template sent. (Deprecated - Instead use message.normalizedMessage.content[#].template).</param>
-        /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false.</param>
+        /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false.</param>
         /// <param name="Message">Sent agentless outbound message in normalized format.</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, SendMessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null, MessageData Message = null, DateTime? Timestamp = null)
@@ -142,9 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false
+        /// Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false
         /// </summary>
-        /// <value>Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false</value>
+        /// <value>Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false</value>
         [DataMember(Name="useExistingActiveConversation", EmitDefaultValue=false)]
         public bool? UseExistingActiveConversation { get; set; }
 

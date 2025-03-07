@@ -99,12 +99,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="Description">The resource's description..</param>
+        /// <param name="Description">The resource&#39;s description..</param>
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="ClassificationTypes">The site associated to the outbound route. (required).</param>
         /// <param name="Enabled">Enabled.</param>
         /// <param name="Distribution">Distribution.</param>
-        /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \"EXTERNAL\".  This base must also be set on an edge logical interface for correct routing..</param>
+        /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
         public OutboundRouteBase(string Name = null, Division Division = null, string Description = null, int? Version = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<DomainEntityRef> ExternalTrunkBases = null)
         {
             this.Name = Name;
@@ -148,9 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The resource's description.
+        /// The resource&#39;s description.
         /// </summary>
-        /// <value>The resource's description.</value>
+        /// <value>The resource&#39;s description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
@@ -241,9 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Trunk base settings of trunkType \"EXTERNAL\".  This base must also be set on an edge logical interface for correct routing.
+        /// Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing.
         /// </summary>
-        /// <value>Trunk base settings of trunkType \"EXTERNAL\".  This base must also be set on an edge logical interface for correct routing.</value>
+        /// <value>Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing.</value>
         [DataMember(Name="externalTrunkBases", EmitDefaultValue=false)]
         public List<DomainEntityRef> ExternalTrunkBases { get; set; }
 

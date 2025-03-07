@@ -68,8 +68,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActivityPlan">The activity plan associated with this job (required).</param>
         /// <param name="Status">The status of the job (required).</param>
-        /// <param name="Exceptions">The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn't prevent the job from completing (required).</param>
-        /// <param name="Error">Error details if status == 'Error'. These are errors that caused the job to fail to complete.</param>
+        /// <param name="Exceptions">The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn&#39;t prevent the job from completing (required).</param>
+        /// <param name="Error">Error details if status &#x3D;&#x3D; &#39;Error&#39;. These are errors that caused the job to fail to complete.</param>
         public ActivityPlanRunJobResponse(ActivityPlanReference ActivityPlan = null, StatusEnum? Status = null, List<ActivityPlanJobException> Exceptions = null, ErrorBody Error = null)
         {
             this.ActivityPlan = ActivityPlan;
@@ -102,18 +102,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn't prevent the job from completing
+        /// The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn&#39;t prevent the job from completing
         /// </summary>
-        /// <value>The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn't prevent the job from completing</value>
+        /// <value>The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn&#39;t prevent the job from completing</value>
         [DataMember(Name="exceptions", EmitDefaultValue=false)]
         public List<ActivityPlanJobException> Exceptions { get; set; }
 
 
 
         /// <summary>
-        /// Error details if status == 'Error'. These are errors that caused the job to fail to complete
+        /// Error details if status &#x3D;&#x3D; &#39;Error&#39;. These are errors that caused the job to fail to complete
         /// </summary>
-        /// <value>Error details if status == 'Error'. These are errors that caused the job to fail to complete</value>
+        /// <value>Error details if status &#x3D;&#x3D; &#39;Error&#39;. These are errors that caused the job to fail to complete</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public ErrorBody Error { get; set; }
 

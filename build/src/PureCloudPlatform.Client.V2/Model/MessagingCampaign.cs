@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Division">The division this entity belongs to..</param>
-        /// <param name="CampaignStatus">The current status of the messaging campaign. A messaging campaign may be turned 'on' or 'off'..</param>
+        /// <param name="CampaignStatus">The current status of the messaging campaign. A messaging campaign may be turned &#39;on&#39; or &#39;off&#39;..</param>
         /// <param name="CallableTimeSet">The callable time set for this messaging campaign..</param>
         /// <param name="ContactList">The contact list that this messaging campaign will send messages for. (required).</param>
         /// <param name="DncLists">The dnc lists to check before sending a message for this messaging campaign..</param>

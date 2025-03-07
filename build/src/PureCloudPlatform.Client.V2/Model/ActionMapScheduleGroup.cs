@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMapScheduleGroup" /> class.
         /// </summary>
-        /// <param name="Id">The ID of the action maps's associated schedule group. (required).</param>
+        /// <param name="Id">The ID of the action maps&#39;s associated schedule group. (required).</param>
         public ActionMapScheduleGroup(string Id = null)
         {
             this.Id = Id;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the action maps's associated schedule group.
+        /// The ID of the action maps&#39;s associated schedule group.
         /// </summary>
-        /// <value>The ID of the action maps's associated schedule group.</value>
+        /// <value>The ID of the action maps&#39;s associated schedule group.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

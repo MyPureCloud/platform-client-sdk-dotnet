@@ -49,9 +49,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The 1-based index of the first result returned by this request. Add this to \"itemsPerPage\" when requesting the next page of results.
+        /// The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results.
         /// </summary>
-        /// <value>The 1-based index of the first result returned by this request. Add this to \"itemsPerPage\" when requesting the next page of results.</value>
+        /// <value>The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results.</value>
         [DataMember(Name="startIndex", EmitDefaultValue=false)]
         public long? StartIndex { get; private set; }
 
@@ -67,9 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of requested resources. If \"count\" is 0, then the list will be empty.
+        /// The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty.
         /// </summary>
-        /// <value>The list of requested resources. If \"count\" is 0, then the list will be empty.</value>
+        /// <value>The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty.</value>
         [DataMember(Name="Resources", EmitDefaultValue=false)]
         public List<ScimV2Group> Resources { get; private set; }
 

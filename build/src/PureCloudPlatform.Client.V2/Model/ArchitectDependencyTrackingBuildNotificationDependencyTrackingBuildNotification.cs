@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification" /> class.
         /// </summary>
-        /// <param name="Status">The organization's new dependency tracking build status.</param>
+        /// <param name="Status">The organization&#39;s new dependency tracking build status.</param>
         /// <param name="User">User.</param>
         /// <param name="Client">Client.</param>
         /// <param name="StartTime">The time the last build started, in ISO 8601 format.</param>
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The organization's new dependency tracking build status
+        /// The organization&#39;s new dependency tracking build status
         /// </summary>
-        /// <value>The organization's new dependency tracking build status</value>
+        /// <value>The organization&#39;s new dependency tracking build status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
 

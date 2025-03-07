@@ -3152,8 +3152,6 @@ namespace Example
 
 Get parse job report
 
-GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:importJob:view
@@ -3693,8 +3691,6 @@ namespace Example
 
 
 Get content upload from URL job status
-
-GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -4707,8 +4703,6 @@ namespace Example
 
 
 Send update to the parse operation
-
-PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -7018,8 +7012,6 @@ namespace Example
 
 Import the parsed articles
 
-PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:importJob:edit
@@ -7084,8 +7076,6 @@ void (empty response body)
 
 
 Create parse job
-
-PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -7277,7 +7267,7 @@ namespace Example
 
 ## PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync
 
-> [**SourceSyncResponse**](SourceSyncResponse) PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync (string knowledgeBaseId, string sourceId)
+> [**SourceSyncResponse**](SourceSyncResponse) PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync (string knowledgeBaseId, string sourceId, Object body = null)
 
 
 Start sync on Salesforce Knowledge integration source
@@ -7310,11 +7300,12 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
             var sourceId = sourceId_example;  // string | Source ID
+            var body = ;  // Object |  (optional) 
 
             try
             { 
                 // Start sync on Salesforce Knowledge integration source
-                SourceSyncResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId, sourceId);
+                SourceSyncResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId, sourceId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7333,6 +7324,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **sourceId** | **string**| Source ID |  |
+| **body** | **Object**|  | [optional]  |
 
 ### Return type
 
@@ -7405,7 +7397,7 @@ namespace Example
 
 ## PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync
 
-> [**SourceSyncResponse**](SourceSyncResponse) PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync (string knowledgeBaseId, string sourceId)
+> [**SourceSyncResponse**](SourceSyncResponse) PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync (string knowledgeBaseId, string sourceId, Object body = null)
 
 
 Start synchronization on ServiceNow Knowledge integration source
@@ -7438,11 +7430,12 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
             var sourceId = sourceId_example;  // string | Source ID
+            var body = ;  // Object |  (optional) 
 
             try
             { 
                 // Start synchronization on ServiceNow Knowledge integration source
-                SourceSyncResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId, sourceId);
+                SourceSyncResponse result = apiInstance.PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId, sourceId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7461,6 +7454,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **sourceId** | **string**| Source ID |  |
+| **body** | **Object**|  | [optional]  |
 
 ### Return type
 
@@ -7537,8 +7531,6 @@ namespace Example
 
 
 Create content upload from URL job
-
-PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -7791,4 +7783,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

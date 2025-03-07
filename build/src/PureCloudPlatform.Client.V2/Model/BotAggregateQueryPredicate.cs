@@ -115,6 +115,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Botintent,
             
             /// <summary>
+            /// Enum Botname for "botName"
+            /// </summary>
+            [EnumMember(Value = "botName")]
+            Botname,
+            
+            /// <summary>
             /// Enum Botproduct for "botProduct"
             /// </summary>
             [EnumMember(Value = "botProduct")]
@@ -149,6 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "botSlot")]
             Botslot,
+            
+            /// <summary>
+            /// Enum Botslotmechanism for "botSlotMechanism"
+            /// </summary>
+            [EnumMember(Value = "botSlotMechanism")]
+            Botslotmechanism,
             
             /// <summary>
             /// Enum Botversion for "botVersion"

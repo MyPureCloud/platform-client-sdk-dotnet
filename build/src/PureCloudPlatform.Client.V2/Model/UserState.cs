@@ -117,9 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserState" /> class.
         /// </summary>
-        /// <param name="State">User's current state..</param>
+        /// <param name="State">User&#39;s current state..</param>
         /// <param name="Version">Version of this user..</param>
-        /// <param name="StateChangeReason">Reason for a change in the user's state..</param>
+        /// <param name="StateChangeReason">Reason for a change in the user&#39;s state..</param>
         public UserState(StateEnum? State = null, int? Version = null, StateChangeReasonEnum? StateChangeReason = null)
         {
             this.State = State;

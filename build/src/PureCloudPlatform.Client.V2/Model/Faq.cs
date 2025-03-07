@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A human-readable description of the document, e.g. 'Sample store FAQ'
+        /// A human-readable description of the document, e.g. &#39;Sample store FAQ&#39;
         /// </summary>
-        /// <value>A human-readable description of the document, e.g. 'Sample store FAQ'</value>
+        /// <value>A human-readable description of the document, e.g. &#39;Sample store FAQ&#39;</value>
         [DataMember(Name="documentDisplayName", EmitDefaultValue=false)]
         public string DocumentDisplayName { get; private set; }
 

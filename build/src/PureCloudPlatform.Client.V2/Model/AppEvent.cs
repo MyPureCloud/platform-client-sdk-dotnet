@@ -30,12 +30,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventName">Represents the action the customer performed. A good event name is typically an object followed by the action performed in past tense (e.g. screen_viewed, order_completed, user_registered). (required).</param>
         /// <param name="ScreenName">The name of the screen in the app that the event took place. (required).</param>
         /// <param name="App">Application that the customer is interacting with. (required).</param>
-        /// <param name="Device">Customer's device. (required).</param>
-        /// <param name="IpAddress">Customer's IP address. May be null if the business configures the tracker to not collect IP addresses..</param>
-        /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
-        /// <param name="Geolocation">Customer's geolocation..</param>
+        /// <param name="Device">Customer&#39;s device. (required).</param>
+        /// <param name="IpAddress">Customer&#39;s IP address. May be null if the business configures the tracker to not collect IP addresses..</param>
+        /// <param name="IpOrganization">Customer&#39;s IP-based organization or ISP name..</param>
+        /// <param name="Geolocation">Customer&#39;s geolocation..</param>
         /// <param name="SdkLibrary">SDK library used to generate the event..</param>
-        /// <param name="NetworkConnectivity">Information relating to the device's network connectivity..</param>
+        /// <param name="NetworkConnectivity">Information relating to the device&#39;s network connectivity..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
@@ -88,36 +88,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Customer's device.
+        /// Customer&#39;s device.
         /// </summary>
-        /// <value>Customer's device.</value>
+        /// <value>Customer&#39;s device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public Device Device { get; set; }
 
 
 
         /// <summary>
-        /// Customer's IP address. May be null if the business configures the tracker to not collect IP addresses.
+        /// Customer&#39;s IP address. May be null if the business configures the tracker to not collect IP addresses.
         /// </summary>
-        /// <value>Customer's IP address. May be null if the business configures the tracker to not collect IP addresses.</value>
+        /// <value>Customer&#39;s IP address. May be null if the business configures the tracker to not collect IP addresses.</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 
 
 
         /// <summary>
-        /// Customer's IP-based organization or ISP name.
+        /// Customer&#39;s IP-based organization or ISP name.
         /// </summary>
-        /// <value>Customer's IP-based organization or ISP name.</value>
+        /// <value>Customer&#39;s IP-based organization or ISP name.</value>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
 
 
 
         /// <summary>
-        /// Customer's geolocation.
+        /// Customer&#39;s geolocation.
         /// </summary>
-        /// <value>Customer's geolocation.</value>
+        /// <value>Customer&#39;s geolocation.</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyGeolocation Geolocation { get; set; }
 
@@ -133,9 +133,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Information relating to the device's network connectivity.
+        /// Information relating to the device&#39;s network connectivity.
         /// </summary>
-        /// <value>Information relating to the device's network connectivity.</value>
+        /// <value>Information relating to the device&#39;s network connectivity.</value>
         [DataMember(Name="networkConnectivity", EmitDefaultValue=false)]
         public NetworkConnectivity NetworkConnectivity { get; set; }
 

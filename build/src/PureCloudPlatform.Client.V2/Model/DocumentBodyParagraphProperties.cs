@@ -204,12 +204,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentBodyParagraphProperties" /> class.
         /// </summary>
-        /// <param name="FontSize">The font size for the paragraph. The valid values in 'em'..</param>
+        /// <param name="FontSize">The font size for the paragraph. The valid values in &#39;em&#39;..</param>
         /// <param name="FontType">The font type for the paragraph..</param>
         /// <param name="TextColor">The text color for the paragraph. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="BackgroundColor">The background color for the paragraph. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="Align">The align type for the paragraph..</param>
-        /// <param name="Indentation">The indentation color for the paragraph. The valid values in 'em'..</param>
+        /// <param name="Indentation">The indentation color for the paragraph. The valid values in &#39;em&#39;..</param>
         public DocumentBodyParagraphProperties(FontSizeEnum? FontSize = null, FontTypeEnum? FontType = null, string TextColor = null, string BackgroundColor = null, AlignEnum? Align = null, float? Indentation = null)
         {
             this.FontSize = FontSize;
@@ -248,9 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The indentation color for the paragraph. The valid values in 'em'.
+        /// The indentation color for the paragraph. The valid values in &#39;em&#39;.
         /// </summary>
-        /// <value>The indentation color for the paragraph. The valid values in 'em'.</value>
+        /// <value>The indentation color for the paragraph. The valid values in &#39;em&#39;.</value>
         [DataMember(Name="indentation", EmitDefaultValue=false)]
         public float? Indentation { get; set; }
 

@@ -1121,7 +1121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London (required).</param>
         /// <param name="ExportFormat">The requested format of the exported data (required).</param>
         /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
-        /// <param name="DownloadUrl">The url to download the request if it's status is completed.</param>
+        /// <param name="DownloadUrl">The url to download the request if it&#39;s status is completed.</param>
         /// <param name="ViewType">The type of view export job to be created (required).</param>
         /// <param name="ExportErrorMessagesType">The error message in case the export request failed.</param>
         /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
@@ -1136,7 +1136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
         /// <param name="HasSplitByMedia">Indicates if media type will be split in aggregate detail exports.</param>
         /// <param name="HasSummaryRow">Indicates if summary row needs to be present in exports.</param>
-        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request.</param>
+        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
@@ -1233,9 +1233,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The url to download the request if it's status is completed
+        /// The url to download the request if it&#39;s status is completed
         /// </summary>
-        /// <value>The url to download the request if it's status is completed</value>
+        /// <value>The url to download the request if it&#39;s status is completed</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
 

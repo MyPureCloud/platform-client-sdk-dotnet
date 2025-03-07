@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Whether or not journey event collection is enabled..</param>
         /// <param name="ExcludedQueryParameters">List of parameters to be excluded from the query string..</param>
         /// <param name="ShouldKeepUrlFragment">Whether or not to keep the URL fragment..</param>
-        /// <param name="SearchQueryParameters">List of query parameters used for search (e.g. 'q')..</param>
+        /// <param name="SearchQueryParameters">List of query parameters used for search (e.g. &#39;q&#39;)..</param>
         /// <param name="PageviewConfig">Controls how the pageview events are tracked..</param>
         /// <param name="ClickEvents">Tracks when and where a visitor clicks on a webpage..</param>
         /// <param name="FormsTrackEvents">Controls how the form submitted and form abandoned events are tracked after a visitor interacts with a form element..</param>
@@ -115,9 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of query parameters used for search (e.g. 'q').
+        /// List of query parameters used for search (e.g. &#39;q&#39;).
         /// </summary>
-        /// <value>List of query parameters used for search (e.g. 'q').</value>
+        /// <value>List of query parameters used for search (e.g. &#39;q&#39;).</value>
         [DataMember(Name="searchQueryParameters", EmitDefaultValue=false)]
         public List<string> SearchQueryParameters { get; set; }
 

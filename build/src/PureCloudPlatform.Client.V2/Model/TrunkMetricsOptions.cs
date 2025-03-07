@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ProxyAddress">Server proxy address that this options array element represents..</param>
         /// <param name="OptionState">OptionState.</param>
-        /// <param name="OptionStateTime">ISO 8601 format UTC absolute date & time of the last change of the option state..</param>
+        /// <param name="OptionStateTime">ISO 8601 format UTC absolute date &amp; time of the last change of the option state..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         public TrunkMetricsOptions(string ProxyAddress = null, bool? OptionState = null, DateTime? OptionStateTime = null, TrunkErrorInfo ErrorInfo = null)
         {
@@ -54,9 +54,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// ISO 8601 format UTC absolute date & time of the last change of the option state.
+        /// ISO 8601 format UTC absolute date &amp; time of the last change of the option state.
         /// </summary>
-        /// <value>ISO 8601 format UTC absolute date & time of the last change of the option state.</value>
+        /// <value>ISO 8601 format UTC absolute date &amp; time of the last change of the option state.</value>
         [DataMember(Name="optionStateTime", EmitDefaultValue=false)]
         public DateTime? OptionStateTime { get; set; }
 

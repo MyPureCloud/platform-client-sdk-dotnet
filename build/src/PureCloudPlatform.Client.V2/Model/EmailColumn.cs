@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EmailColumn" /> class.
         /// </summary>
         /// <param name="ColumnName">The name of the email column. (required).</param>
-        /// <param name="Type">Indicates the type of the email column. For example, 'work' or 'personal'. (required).</param>
+        /// <param name="Type">Indicates the type of the email column. For example, &#39;work&#39; or &#39;personal&#39;. (required).</param>
         /// <param name="ContactableTimeColumn">A column that indicates the timezone to use for a given contact when checking contactable times..</param>
         public EmailColumn(string ColumnName = null, string Type = null, string ContactableTimeColumn = null)
         {
@@ -50,9 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates the type of the email column. For example, 'work' or 'personal'.
+        /// Indicates the type of the email column. For example, &#39;work&#39; or &#39;personal&#39;.
         /// </summary>
-        /// <value>Indicates the type of the email column. For example, 'work' or 'personal'.</value>
+        /// <value>Indicates the type of the email column. For example, &#39;work&#39; or &#39;personal&#39;.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 

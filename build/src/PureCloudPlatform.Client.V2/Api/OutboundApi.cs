@@ -951,7 +951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Campaign> GetOutboundCampaignWithHttpInfo (string campaignId);
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list.
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -963,7 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentOwnedMappingPreviewListing GetOutboundCampaignAgentownedmappingpreviewResults (string campaignId);
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list.
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -2297,7 +2297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingCampaignDiagnostics> GetOutboundMessagingcampaignDiagnosticsWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
-        /// Get messaging campaign's progress
+        /// Get messaging campaign&#39;s progress
         /// </summary>
         /// <remarks>
         /// 
@@ -2309,7 +2309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         CampaignProgress GetOutboundMessagingcampaignProgress (string messagingCampaignId);
 
         /// <summary>
-        /// Get messaging campaign's progress
+        /// Get messaging campaign&#39;s progress
         /// </summary>
         /// <remarks>
         /// 
@@ -2890,9 +2890,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns></returns>
         
-        void PatchOutboundSettings (OutboundSettings body);
+        void PatchOutboundSettings (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Update the outbound settings for this organization
@@ -2902,9 +2903,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        ApiResponse<Object> PatchOutboundSettingsWithHttpInfo (OutboundSettings body);
+        ApiResponse<Object> PatchOutboundSettingsWithHttpInfo (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Create attempt limits
@@ -2979,7 +2981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ResponseSet> PostOutboundCallanalysisresponsesetsWithHttpInfo (ResponseSet body);
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -2991,7 +2993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Object PostOutboundCampaignAgentownedmappingpreview (string campaignId);
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -3108,9 +3110,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Campaign</returns>
         
-        Campaign PostOutboundCampaigns (Campaign body);
+        Campaign PostOutboundCampaigns (Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Create a campaign.
@@ -3120,9 +3123,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>ApiResponse of Campaign</returns>
         
-        ApiResponse<Campaign> PostOutboundCampaignsWithHttpInfo (Campaign body);
+        ApiResponse<Campaign> PostOutboundCampaignsWithHttpInfo (Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Get progress for a list of campaigns
@@ -3955,9 +3959,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Campaign</returns>
         
-        Campaign PutOutboundCampaign (string campaignId, Campaign body);
+        Campaign PutOutboundCampaign (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Update a campaign.
@@ -3968,12 +3973,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>ApiResponse of Campaign</returns>
         
-        ApiResponse<Campaign> PutOutboundCampaignWithHttpInfo (string campaignId, Campaign body);
+        ApiResponse<Campaign> PutOutboundCampaignWithHttpInfo (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
-        /// Send notification that an agent's state changed 
+        /// Send notification that an agent&#39;s state changed 
         /// </summary>
         /// <remarks>
         /// New agent state.
@@ -3987,7 +3993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         string PutOutboundCampaignAgent (string campaignId, string userId, Agent body);
 
         /// <summary>
-        /// Send notification that an agent's state changed 
+        /// Send notification that an agent&#39;s state changed 
         /// </summary>
         /// <remarks>
         /// New agent state.
@@ -5381,7 +5387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Campaign>> GetOutboundCampaignAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list.
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -5393,7 +5399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentOwnedMappingPreviewListing> GetOutboundCampaignAgentownedmappingpreviewResultsAsync (string campaignId);
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list.
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -6727,7 +6733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDiagnostics>> GetOutboundMessagingcampaignDiagnosticsAsyncWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
-        /// Get messaging campaign's progress
+        /// Get messaging campaign&#39;s progress
         /// </summary>
         /// <remarks>
         /// 
@@ -6739,7 +6745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<CampaignProgress> GetOutboundMessagingcampaignProgressAsync (string messagingCampaignId);
 
         /// <summary>
-        /// Get messaging campaign's progress
+        /// Get messaging campaign&#39;s progress
         /// </summary>
         /// <remarks>
         /// 
@@ -7320,9 +7326,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of void</returns>
         
-        System.Threading.Tasks.Task PatchOutboundSettingsAsync (OutboundSettings body);
+        System.Threading.Tasks.Task PatchOutboundSettingsAsync (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Update the outbound settings for this organization
@@ -7332,9 +7339,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundSettingsAsyncWithHttpInfo (OutboundSettings body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundSettingsAsyncWithHttpInfo (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Create attempt limits
@@ -7409,7 +7417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostOutboundCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body);
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -7421,7 +7429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Object> PostOutboundCampaignAgentownedmappingpreviewAsync (string campaignId);
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -7538,9 +7546,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of Campaign</returns>
         
-        System.Threading.Tasks.Task<Campaign> PostOutboundCampaignsAsync (Campaign body);
+        System.Threading.Tasks.Task<Campaign> PostOutboundCampaignsAsync (Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Create a campaign.
@@ -7550,9 +7559,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Campaign>> PostOutboundCampaignsAsyncWithHttpInfo (Campaign body);
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> PostOutboundCampaignsAsyncWithHttpInfo (Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Get progress for a list of campaigns
@@ -8385,9 +8395,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of Campaign</returns>
         
-        System.Threading.Tasks.Task<Campaign> PutOutboundCampaignAsync (string campaignId, Campaign body);
+        System.Threading.Tasks.Task<Campaign> PutOutboundCampaignAsync (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
         /// Update a campaign.
@@ -8398,12 +8409,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Campaign>> PutOutboundCampaignAsyncWithHttpInfo (string campaignId, Campaign body);
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> PutOutboundCampaignAsyncWithHttpInfo (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
-        /// Send notification that an agent's state changed 
+        /// Send notification that an agent&#39;s state changed 
         /// </summary>
         /// <remarks>
         /// New agent state.
@@ -8417,7 +8429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<string> PutOutboundCampaignAgentAsync (string campaignId, string userId, Agent body);
 
         /// <summary>
-        /// Send notification that an agent's state changed 
+        /// Send notification that an agent&#39;s state changed 
         /// </summary>
         /// <remarks>
         /// New agent state.
@@ -16921,7 +16933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16935,7 +16947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17026,7 +17038,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17041,7 +17053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// Get a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27213,7 +27225,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get messaging campaign's progress 
+        /// Get messaging campaign&#39;s progress 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27227,7 +27239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get messaging campaign's progress 
+        /// Get messaging campaign&#39;s progress 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27318,7 +27330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get messaging campaign's progress 
+        /// Get messaging campaign&#39;s progress 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27333,7 +27345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get messaging campaign's progress 
+        /// Get messaging campaign&#39;s progress 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -32068,11 +32080,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns></returns>
         
-        public void PatchOutboundSettings (OutboundSettings body)
+        public void PatchOutboundSettings (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null)
         {
-             PatchOutboundSettingsWithHttpInfo(body);
+             PatchOutboundSettingsWithHttpInfo(body, useMaxCallsPerAgentDecimal);
         }
 
         /// <summary>
@@ -32081,9 +32094,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        public ApiResponse<Object> PatchOutboundSettingsWithHttpInfo (OutboundSettings body)
+        public ApiResponse<Object> PatchOutboundSettingsWithHttpInfo (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -32122,6 +32136,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (useMaxCallsPerAgentDecimal != null) localVarQueryParams.Add(new Tuple<string, string>("useMaxCallsPerAgentDecimal", this.Configuration.ApiClient.ParameterToString(useMaxCallsPerAgentDecimal)));
 
             // Header params
 
@@ -32177,11 +32192,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of void</returns>
         
-        public async System.Threading.Tasks.Task PatchOutboundSettingsAsync (OutboundSettings body)
+        public async System.Threading.Tasks.Task PatchOutboundSettingsAsync (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null)
         {
-             await PatchOutboundSettingsAsyncWithHttpInfo(body);
+             await PatchOutboundSettingsAsyncWithHttpInfo(body, useMaxCallsPerAgentDecimal);
 
         }
 
@@ -32191,9 +32207,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundSettingsAsyncWithHttpInfo (OutboundSettings body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundSettingsAsyncWithHttpInfo (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -32233,6 +32250,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (useMaxCallsPerAgentDecimal != null) localVarQueryParams.Add(new Tuple<string, string>("useMaxCallsPerAgentDecimal", this.Configuration.ApiClient.ParameterToString(useMaxCallsPerAgentDecimal)));
 
             // Header params
 
@@ -32953,7 +32971,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -32967,7 +32985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -33058,7 +33076,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -33073,7 +33091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -34052,11 +34070,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Campaign</returns>
         
-        public Campaign PostOutboundCampaigns (Campaign body)
+        public Campaign PostOutboundCampaigns (Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         {
-             ApiResponse<Campaign> localVarResponse = PostOutboundCampaignsWithHttpInfo(body);
+             ApiResponse<Campaign> localVarResponse = PostOutboundCampaignsWithHttpInfo(body, useMaxCallsPerAgentDecimal);
              return localVarResponse.Data;
         }
 
@@ -34066,9 +34085,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>ApiResponse of Campaign</returns>
         
-        public ApiResponse< Campaign > PostOutboundCampaignsWithHttpInfo (Campaign body)
+        public ApiResponse< Campaign > PostOutboundCampaignsWithHttpInfo (Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -34107,6 +34127,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (useMaxCallsPerAgentDecimal != null) localVarQueryParams.Add(new Tuple<string, string>("useMaxCallsPerAgentDecimal", this.Configuration.ApiClient.ParameterToString(useMaxCallsPerAgentDecimal)));
 
             // Header params
 
@@ -34162,11 +34183,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of Campaign</returns>
         
-        public async System.Threading.Tasks.Task<Campaign> PostOutboundCampaignsAsync (Campaign body)
+        public async System.Threading.Tasks.Task<Campaign> PostOutboundCampaignsAsync (Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         {
-             ApiResponse<Campaign> localVarResponse = await PostOutboundCampaignsAsyncWithHttpInfo(body);
+             ApiResponse<Campaign> localVarResponse = await PostOutboundCampaignsAsyncWithHttpInfo(body, useMaxCallsPerAgentDecimal);
              return localVarResponse.Data;
 
         }
@@ -34177,9 +34199,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PostOutboundCampaignsAsyncWithHttpInfo (Campaign body)
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PostOutboundCampaignsAsyncWithHttpInfo (Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -34219,6 +34242,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (useMaxCallsPerAgentDecimal != null) localVarQueryParams.Add(new Tuple<string, string>("useMaxCallsPerAgentDecimal", this.Configuration.ApiClient.ParameterToString(useMaxCallsPerAgentDecimal)));
 
             // Header params
 
@@ -41733,11 +41757,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Campaign</returns>
         
-        public Campaign PutOutboundCampaign (string campaignId, Campaign body)
+        public Campaign PutOutboundCampaign (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         {
-             ApiResponse<Campaign> localVarResponse = PutOutboundCampaignWithHttpInfo(campaignId, body);
+             ApiResponse<Campaign> localVarResponse = PutOutboundCampaignWithHttpInfo(campaignId, body, useMaxCallsPerAgentDecimal);
              return localVarResponse.Data;
         }
 
@@ -41748,9 +41773,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>ApiResponse of Campaign</returns>
         
-        public ApiResponse< Campaign > PutOutboundCampaignWithHttpInfo (string campaignId, Campaign body)
+        public ApiResponse< Campaign > PutOutboundCampaignWithHttpInfo (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         { 
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -41793,6 +41819,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
 
             // Query params
+            if (useMaxCallsPerAgentDecimal != null) localVarQueryParams.Add(new Tuple<string, string>("useMaxCallsPerAgentDecimal", this.Configuration.ApiClient.ParameterToString(useMaxCallsPerAgentDecimal)));
 
             // Header params
 
@@ -41849,11 +41876,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of Campaign</returns>
         
-        public async System.Threading.Tasks.Task<Campaign> PutOutboundCampaignAsync (string campaignId, Campaign body)
+        public async System.Threading.Tasks.Task<Campaign> PutOutboundCampaignAsync (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         {
-             ApiResponse<Campaign> localVarResponse = await PutOutboundCampaignAsyncWithHttpInfo(campaignId, body);
+             ApiResponse<Campaign> localVarResponse = await PutOutboundCampaignAsyncWithHttpInfo(campaignId, body, useMaxCallsPerAgentDecimal);
              return localVarResponse.Data;
 
         }
@@ -41865,9 +41893,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
+        /// <param name="useMaxCallsPerAgentDecimal">Use maxCallsPerAgent with decimal precision (optional)</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutOutboundCampaignAsyncWithHttpInfo (string campaignId, Campaign body)
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutOutboundCampaignAsyncWithHttpInfo (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null)
         { 
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -41912,6 +41941,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
 
             // Query params
+            if (useMaxCallsPerAgentDecimal != null) localVarQueryParams.Add(new Tuple<string, string>("useMaxCallsPerAgentDecimal", this.Configuration.ApiClient.ParameterToString(useMaxCallsPerAgentDecimal)));
 
             // Header params
 
@@ -41963,7 +41993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Send notification that an agent's state changed  
+        /// Send notification that an agent&#39;s state changed  
         /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41979,7 +42009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Send notification that an agent's state changed  
+        /// Send notification that an agent&#39;s state changed  
         /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -42085,7 +42115,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Send notification that an agent's state changed  
+        /// Send notification that an agent&#39;s state changed  
         /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -42102,7 +42132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Send notification that an agent's state changed  
+        /// Send notification that an agent&#39;s state changed  
         /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

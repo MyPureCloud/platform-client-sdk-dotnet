@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Shifts">The shift definitions for this agent schedule.</param>
         /// <param name="FullDayTimeOffMarkers">Any full day time off markers that apply to this agent schedule.</param>
         /// <param name="Metadata">Version metadata for this agent schedule. Required if updating or deleting an existing agent schedule, otherwise should be omitted.</param>
-        /// <param name="Delete">Whether to delete this agent's schedule. Defaults to false if not set.</param>
+        /// <param name="Delete">Whether to delete this agent&#39;s schedule. Defaults to false if not set.</param>
         public BuUpdateAgentScheduleUploadSchema(string UserId = null, ValueWrapperString WorkPlanId = null, ListWrapperString WorkPlanIdsPerWeek = null, List<BuUpdateAgentScheduleShift> Shifts = null, List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers = null, WfmVersionedEntityMetadata Metadata = null, bool? Delete = null)
         {
             this.UserId = UserId;
@@ -103,9 +103,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether to delete this agent's schedule. Defaults to false if not set
+        /// Whether to delete this agent&#39;s schedule. Defaults to false if not set
         /// </summary>
-        /// <value>Whether to delete this agent's schedule. Defaults to false if not set</value>
+        /// <value>Whether to delete this agent&#39;s schedule. Defaults to false if not set</value>
         [DataMember(Name="delete", EmitDefaultValue=false)]
         public bool? Delete { get; set; }
 

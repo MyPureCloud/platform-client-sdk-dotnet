@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Function" /> class.
         /// </summary>
         /// <param name="Description">Description of the function. Limit 255 characters. (required).</param>
-        /// <param name="Handler">Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. 'src/index.handler' (required).</param>
+        /// <param name="Handler">Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. &#39;src/index.handler&#39; (required).</param>
         /// <param name="Runtime">Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /api/v2/integrations/actions/functions/runtimes for current list. (required).</param>
         /// <param name="TimeoutSeconds">Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 15. Default value 15 seconds..</param>
         public Function(string Description = null, string Handler = null, string Runtime = null, int? TimeoutSeconds = null)
@@ -88,9 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. 'src/index.handler'
+        /// Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. &#39;src/index.handler&#39;
         /// </summary>
-        /// <value>Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. 'src/index.handler'</value>
+        /// <value>Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. &#39;src/index.handler&#39;</value>
         [DataMember(Name="handler", EmitDefaultValue=false)]
         public string Handler { get; set; }
 

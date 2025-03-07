@@ -102,12 +102,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactIdentifier" /> class.
         /// </summary>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Type">The type of this identifier (required).</param>
         /// <param name="Value">The string value of the identifier. Will vary in syntax by type. (required).</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ExternalSource">The External Source ID of the identifier.</param>
-        public ContactIdentifier(TypeEnum? Type = null, string Value = null, DateTime? DateCreated = null, ExternalSource ExternalSource = null)
+        public ContactIdentifier(WritableStarrableDivision Division = null, TypeEnum? Type = null, string Value = null, DateTime? DateCreated = null, ExternalSource ExternalSource = null)
         {
+            this.Division = Division;
             this.Type = Type;
             this.Value = Value;
             this.DateCreated = DateCreated;
@@ -123,6 +125,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -173,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ContactIdentifier {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -224,6 +236,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
@@ -263,6 +280,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

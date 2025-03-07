@@ -57,16 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="MaxCallsPerAgent">The maximum number of calls that can be placed per agent on any campaign.</param>
+        /// <param name="MaxCallsPerAgentDecimal">The maximum number of calls that can be placed per agent on any campaign with decimal precision.</param>
         /// <param name="MaxLineUtilization">The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0].</param>
         /// <param name="AbandonSeconds">The number of seconds used to determine if a call is abandoned.</param>
         /// <param name="ComplianceAbandonRateDenominator">The denominator to be used in determining the compliance abandon rate.</param>
         /// <param name="AutomaticTimeZoneMapping">The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns..</param>
         /// <param name="RescheduleTimeZoneSkippedContacts">Whether or not to reschedule time-zone blocked contacts.</param>
-        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, AutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null, bool? RescheduleTimeZoneSkippedContacts = null)
+        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, AutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null, bool? RescheduleTimeZoneSkippedContacts = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.MaxCallsPerAgent = MaxCallsPerAgent;
+            this.MaxCallsPerAgentDecimal = MaxCallsPerAgentDecimal;
             this.MaxLineUtilization = MaxLineUtilization;
             this.AbandonSeconds = AbandonSeconds;
             this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
@@ -127,6 +129,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The maximum number of calls that can be placed per agent on any campaign</value>
         [DataMember(Name="maxCallsPerAgent", EmitDefaultValue=false)]
         public int? MaxCallsPerAgent { get; set; }
+
+
+
+        /// <summary>
+        /// The maximum number of calls that can be placed per agent on any campaign with decimal precision
+        /// </summary>
+        /// <value>The maximum number of calls that can be placed per agent on any campaign with decimal precision</value>
+        [DataMember(Name="maxCallsPerAgentDecimal", EmitDefaultValue=false)]
+        public double? MaxCallsPerAgentDecimal { get; set; }
 
 
 
@@ -200,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
+            sb.Append("  MaxCallsPerAgentDecimal: ").Append(MaxCallsPerAgentDecimal).Append("\n");
             sb.Append("  MaxConfigurableCallsPerAgent: ").Append(MaxConfigurableCallsPerAgent).Append("\n");
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
             sb.Append("  AbandonSeconds: ").Append(AbandonSeconds).Append("\n");
@@ -278,6 +290,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxCallsPerAgent.Equals(other.MaxCallsPerAgent)
                 ) &&
                 (
+                    this.MaxCallsPerAgentDecimal == other.MaxCallsPerAgentDecimal ||
+                    this.MaxCallsPerAgentDecimal != null &&
+                    this.MaxCallsPerAgentDecimal.Equals(other.MaxCallsPerAgentDecimal)
+                ) &&
+                (
                     this.MaxConfigurableCallsPerAgent == other.MaxConfigurableCallsPerAgent ||
                     this.MaxConfigurableCallsPerAgent != null &&
                     this.MaxConfigurableCallsPerAgent.Equals(other.MaxConfigurableCallsPerAgent)
@@ -342,6 +359,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxCallsPerAgent != null)
                     hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();
+
+                if (this.MaxCallsPerAgentDecimal != null)
+                    hash = hash * 59 + this.MaxCallsPerAgentDecimal.GetHashCode();
 
                 if (this.MaxConfigurableCallsPerAgent != null)
                     hash = hash * 59 + this.MaxConfigurableCallsPerAgent.GetHashCode();

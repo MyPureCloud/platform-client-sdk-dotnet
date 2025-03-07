@@ -68,12 +68,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="Description">The resource's description..</param>
+        /// <param name="Description">The resource&#39;s description..</param>
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="Dnis">The phone number(s) to contact the IVR by.  Each phone number must be unique and not in use by another resource.  For example, a user and an iVR cannot have the same phone number..</param>
         /// <param name="OpenHoursFlow">The Architect flow to execute during the hours an organization is open..</param>
         /// <param name="ClosedHoursFlow">The Architect flow to execute during the hours an organization is closed..</param>
-        /// <param name="HolidayHoursFlow">The Architect flow to execute during an organization's holiday hours..</param>
+        /// <param name="HolidayHoursFlow">The Architect flow to execute during an organization&#39;s holiday hours..</param>
         /// <param name="ScheduleGroup">The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well..</param>
         public IVR(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, List<string> Dnis = null, DomainEntityRef OpenHoursFlow = null, DomainEntityRef ClosedHoursFlow = null, DomainEntityRef HolidayHoursFlow = null, DomainEntityRef ScheduleGroup = null)
         {
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The resource's description.
+        /// The resource&#39;s description.
         /// </summary>
-        /// <value>The resource's description.</value>
+        /// <value>The resource&#39;s description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
@@ -220,9 +220,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Architect flow to execute during an organization's holiday hours.
+        /// The Architect flow to execute during an organization&#39;s holiday hours.
         /// </summary>
-        /// <value>The Architect flow to execute during an organization's holiday hours.</value>
+        /// <value>The Architect flow to execute during an organization&#39;s holiday hours.</value>
         [DataMember(Name="holidayHoursFlow", EmitDefaultValue=false)]
         public DomainEntityRef HolidayHoursFlow { get; set; }
 

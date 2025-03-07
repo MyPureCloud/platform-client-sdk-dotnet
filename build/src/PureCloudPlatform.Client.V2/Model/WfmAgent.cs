@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WorkPlan">The work plan associated with this agent, if applicable.</param>
         /// <param name="WorkPlanRotation">The work plan rotation associated with this agent, if applicable.</param>
         /// <param name="AcceptDirectShiftTrades">Whether the agent accepts direct shift trade requests.</param>
-        /// <param name="WorkPlanOverrides">The work plan overrides associated with this agent. Populate with expand=workPlanOverrides.</param>
+        /// <param name="WorkPlanOverrides">The work plan overrides associated with this agent. Populate with expand&#x3D;workPlanOverrides.</param>
         /// <param name="Queues">List of queues to which this agent is capable of handling.</param>
         /// <param name="Languages">The list of languages this agent is capable of handling.</param>
         /// <param name="Skills">The list of skills this agent is capable of handling.</param>
@@ -94,9 +94,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The work plan overrides associated with this agent. Populate with expand=workPlanOverrides
+        /// The work plan overrides associated with this agent. Populate with expand&#x3D;workPlanOverrides
         /// </summary>
-        /// <value>The work plan overrides associated with this agent. Populate with expand=workPlanOverrides</value>
+        /// <value>The work plan overrides associated with this agent. Populate with expand&#x3D;workPlanOverrides</value>
         [DataMember(Name="workPlanOverrides", EmitDefaultValue=false)]
         public List<WorkPlanOverride> WorkPlanOverrides { get; set; }
 

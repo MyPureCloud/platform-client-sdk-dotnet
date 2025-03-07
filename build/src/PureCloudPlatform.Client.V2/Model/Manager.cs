@@ -40,9 +40,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The reference URI of the manager's user record.
+        /// The reference URI of the manager&#39;s user record.
         /// </summary>
-        /// <value>The reference URI of the manager's user record.</value>
+        /// <value>The reference URI of the manager&#39;s user record.</value>
         [DataMember(Name="$ref", EmitDefaultValue=false)]
         public string Ref { get; private set; }
 

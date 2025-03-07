@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CriteriaQuery" /> class.
         /// </summary>
-        /// <param name="Query">A list of CriteriaGroups which will be AND'd together to generate a result set. (required).</param>
+        /// <param name="Query">A list of CriteriaGroups which will be AND&#39;d together to generate a result set. (required).</param>
         public CriteriaQuery(List<CriteriaGroup> Query = null)
         {
             this.Query = Query;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of CriteriaGroups which will be AND'd together to generate a result set.
+        /// A list of CriteriaGroups which will be AND&#39;d together to generate a result set.
         /// </summary>
-        /// <value>A list of CriteriaGroups which will be AND'd together to generate a result set.</value>
+        /// <value>A list of CriteriaGroups which will be AND&#39;d together to generate a result set.</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<CriteriaGroup> Query { get; set; }
 

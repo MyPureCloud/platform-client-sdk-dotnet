@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
-        /// <param name="Data">An ordered map of the contact's columns and corresponding values. (required).</param>
+        /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
         /// <param name="ContactableStatus">A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type..</param>
@@ -73,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An ordered map of the contact's columns and corresponding values.
+        /// An ordered map of the contact&#39;s columns and corresponding values.
         /// </summary>
-        /// <value>An ordered map of the contact's columns and corresponding values.</value>
+        /// <value>An ordered map of the contact&#39;s columns and corresponding values.</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, string> Data { get; set; }
 

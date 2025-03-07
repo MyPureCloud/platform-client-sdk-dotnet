@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseConfig" /> class.
         /// </summary>
-        /// <param name="TranslationMap">Map 'attribute name' and 'JSON path' pairs used to extract data from REST response..</param>
-        /// <param name="TranslationMapDefaults">Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key..</param>
+        /// <param name="TranslationMap">Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response..</param>
+        /// <param name="TranslationMapDefaults">Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key..</param>
         /// <param name="SuccessTemplate">Velocity template to build response to return from Action..</param>
         /// <param name="SuccessTemplateUri">URI to retrieve success template..</param>
         public ResponseConfig(Dictionary<string, string> TranslationMap = null, Dictionary<string, string> TranslationMapDefaults = null, string SuccessTemplate = null, string SuccessTemplateUri = null)
@@ -37,18 +37,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Map 'attribute name' and 'JSON path' pairs used to extract data from REST response.
+        /// Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response.
         /// </summary>
-        /// <value>Map 'attribute name' and 'JSON path' pairs used to extract data from REST response.</value>
+        /// <value>Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response.</value>
         [DataMember(Name="translationMap", EmitDefaultValue=false)]
         public Dictionary<string, string> TranslationMap { get; set; }
 
 
 
         /// <summary>
-        /// Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key.
+        /// Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key.
         /// </summary>
-        /// <value>Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key.</value>
+        /// <value>Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key.</value>
         [DataMember(Name="translationMapDefaults", EmitDefaultValue=false)]
         public Dictionary<string, string> TranslationMapDefaults { get; set; }
 

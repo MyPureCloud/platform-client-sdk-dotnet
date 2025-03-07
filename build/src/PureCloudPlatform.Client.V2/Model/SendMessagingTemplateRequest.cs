@@ -22,10 +22,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SendMessagingTemplateRequest" /> class.
         /// </summary>
         /// <param name="ResponseId">A Response Management response identifier for a messaging template defined response.</param>
-        /// <param name="Parameters">A list of Response Management response substitutions for the response's messaging template. (Deprecated) use bodyParameters instead..</param>
-        /// <param name="HeaderParameters">A list of Response Management header parameter substitutions for the response's messaging template.</param>
-        /// <param name="BodyParameters">A list of Response Management body parameter substitutions for the response's messaging template.</param>
-        /// <param name="ButtonUrlParameters">A list of Response Management button url parameter substitutions for the response's messaging template.</param>
+        /// <param name="Parameters">A list of Response Management response substitutions for the response&#39;s messaging template. (Deprecated) use bodyParameters instead..</param>
+        /// <param name="HeaderParameters">A list of Response Management header parameter substitutions for the response&#39;s messaging template.</param>
+        /// <param name="BodyParameters">A list of Response Management body parameter substitutions for the response&#39;s messaging template.</param>
+        /// <param name="ButtonUrlParameters">A list of Response Management button url parameter substitutions for the response&#39;s messaging template.</param>
         public SendMessagingTemplateRequest(string ResponseId = null, List<TemplateParameter> Parameters = null, List<TemplateParameter> HeaderParameters = null, List<TemplateParameter> BodyParameters = null, List<TemplateParameter> ButtonUrlParameters = null)
         {
             this.ResponseId = ResponseId;
@@ -48,36 +48,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of Response Management response substitutions for the response's messaging template. (Deprecated) use bodyParameters instead.
+        /// A list of Response Management response substitutions for the response&#39;s messaging template. (Deprecated) use bodyParameters instead.
         /// </summary>
-        /// <value>A list of Response Management response substitutions for the response's messaging template. (Deprecated) use bodyParameters instead.</value>
+        /// <value>A list of Response Management response substitutions for the response&#39;s messaging template. (Deprecated) use bodyParameters instead.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<TemplateParameter> Parameters { get; set; }
 
 
 
         /// <summary>
-        /// A list of Response Management header parameter substitutions for the response's messaging template
+        /// A list of Response Management header parameter substitutions for the response&#39;s messaging template
         /// </summary>
-        /// <value>A list of Response Management header parameter substitutions for the response's messaging template</value>
+        /// <value>A list of Response Management header parameter substitutions for the response&#39;s messaging template</value>
         [DataMember(Name="headerParameters", EmitDefaultValue=false)]
         public List<TemplateParameter> HeaderParameters { get; set; }
 
 
 
         /// <summary>
-        /// A list of Response Management body parameter substitutions for the response's messaging template
+        /// A list of Response Management body parameter substitutions for the response&#39;s messaging template
         /// </summary>
-        /// <value>A list of Response Management body parameter substitutions for the response's messaging template</value>
+        /// <value>A list of Response Management body parameter substitutions for the response&#39;s messaging template</value>
         [DataMember(Name="bodyParameters", EmitDefaultValue=false)]
         public List<TemplateParameter> BodyParameters { get; set; }
 
 
 
         /// <summary>
-        /// A list of Response Management button url parameter substitutions for the response's messaging template
+        /// A list of Response Management button url parameter substitutions for the response&#39;s messaging template
         /// </summary>
-        /// <value>A list of Response Management button url parameter substitutions for the response's messaging template</value>
+        /// <value>A list of Response Management button url parameter substitutions for the response&#39;s messaging template</value>
         [DataMember(Name="buttonUrlParameters", EmitDefaultValue=false)]
         public List<TemplateParameter> ButtonUrlParameters { get; set; }
 

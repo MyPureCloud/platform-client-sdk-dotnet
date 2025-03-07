@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<LicenseDefinition>> GetLicenseDefinitionsWithHttpInfo ();
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -75,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LicenseOrgToggle GetLicenseToggle (string featureName);
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -161,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<string>> PostLicenseInferWithHttpInfo (List<string> body = null);
 
         /// <summary>
-        /// Update the organization's license assignments in a batch.
+        /// Update the organization&#39;s license assignments in a batch.
         /// </summary>
         /// <remarks>
         /// 
@@ -173,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         List<LicenseUpdateStatus> PostLicenseOrganization (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
-        /// Update the organization's license assignments in a batch.
+        /// Update the organization&#39;s license assignments in a batch.
         /// </summary>
         /// <remarks>
         /// 
@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<LicenseDefinition>>> GetLicenseDefinitionsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -295,7 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LicenseOrgToggle> GetLicenseToggleAsync (string featureName);
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -381,7 +381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<string>>> PostLicenseInferAsyncWithHttpInfo (List<string> body = null);
 
         /// <summary>
-        /// Update the organization's license assignments in a batch.
+        /// Update the organization&#39;s license assignments in a batch.
         /// </summary>
         /// <remarks>
         /// 
@@ -393,7 +393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<LicenseUpdateStatus>> PostLicenseOrganizationAsync (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
-        /// Update the organization's license assignments in a batch.
+        /// Update the organization&#39;s license assignments in a batch.
         /// </summary>
         /// <remarks>
         /// 
@@ -958,7 +958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -972,7 +972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1063,7 +1063,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1078,7 +1078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
+        /// Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1812,7 +1812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the organization's license assignments in a batch. 
+        /// Update the organization&#39;s license assignments in a batch. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1826,7 +1826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the organization's license assignments in a batch. 
+        /// Update the organization&#39;s license assignments in a batch. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1919,7 +1919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the organization's license assignments in a batch. 
+        /// Update the organization&#39;s license assignments in a batch. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1934,7 +1934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the organization's license assignments in a batch. 
+        /// Update the organization&#39;s license assignments in a batch. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AudioState" /> class.
         /// </summary>
-        /// <param name="CanHear">Indicates that this communication's audio allows its participant to hear others..</param>
-        /// <param name="CanSpeak">Indicates that this communication's audio allows others to hear this participant..</param>
+        /// <param name="CanHear">Indicates that this communication&#39;s audio allows its participant to hear others..</param>
+        /// <param name="CanSpeak">Indicates that this communication&#39;s audio allows others to hear this participant..</param>
         public AudioState(bool? CanHear = null, bool? CanSpeak = null)
         {
             this.CanHear = CanHear;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates that this communication's audio allows its participant to hear others.
+        /// Indicates that this communication&#39;s audio allows its participant to hear others.
         /// </summary>
-        /// <value>Indicates that this communication's audio allows its participant to hear others.</value>
+        /// <value>Indicates that this communication&#39;s audio allows its participant to hear others.</value>
         [DataMember(Name="canHear", EmitDefaultValue=false)]
         public bool? CanHear { get; set; }
 
 
 
         /// <summary>
-        /// Indicates that this communication's audio allows others to hear this participant.
+        /// Indicates that this communication&#39;s audio allows others to hear this participant.
         /// </summary>
-        /// <value>Indicates that this communication's audio allows others to hear this participant.</value>
+        /// <value>Indicates that this communication&#39;s audio allows others to hear this participant.</value>
         [DataMember(Name="canSpeak", EmitDefaultValue=false)]
         public bool? CanSpeak { get; set; }
 

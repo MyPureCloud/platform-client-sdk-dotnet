@@ -150,27 +150,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Profile image of the location entity, retrieved with ?expand=images query parameter
+        /// Profile image of the location entity, retrieved with ?expand&#x3D;images query parameter
         /// </summary>
-        /// <value>Profile image of the location entity, retrieved with ?expand=images query parameter</value>
+        /// <value>Profile image of the location entity, retrieved with ?expand&#x3D;images query parameter</value>
         [DataMember(Name="profileImage", EmitDefaultValue=false)]
         public List<LocationImage> ProfileImage { get; private set; }
 
 
 
         /// <summary>
-        /// Floorplan images of the location entity, retrieved with ?expand=images query parameter
+        /// Floorplan images of the location entity, retrieved with ?expand&#x3D;images query parameter
         /// </summary>
-        /// <value>Floorplan images of the location entity, retrieved with ?expand=images query parameter</value>
+        /// <value>Floorplan images of the location entity, retrieved with ?expand&#x3D;images query parameter</value>
         [DataMember(Name="floorplanImage", EmitDefaultValue=false)]
         public List<LocationImage> FloorplanImage { get; private set; }
 
 
 
         /// <summary>
-        /// Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter
+        /// Address verification information, retrieve dwith the ?expand&#x3D;addressVerificationDetails query parameter
         /// </summary>
-        /// <value>Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter</value>
+        /// <value>Address verification information, retrieve dwith the ?expand&#x3D;addressVerificationDetails query parameter</value>
         [DataMember(Name="addressVerificationDetails", EmitDefaultValue=false)]
         public LocationAddressVerificationDetails AddressVerificationDetails { get; private set; }
 

@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerResponsesetConfigChangeResponseSet" /> class.
         /// </summary>
-        /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}.</param>
+        /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}.</param>
         /// <param name="BeepDetectionEnabled">When beep detection is enabled, answering machine detection will wait for the beep before transferring the call.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}
+        /// Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}
         /// </summary>
-        /// <value>Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}</value>
+        /// <value>Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}</value>
         [DataMember(Name="responses", EmitDefaultValue=false)]
         public Dictionary<string, DialerResponsesetConfigChangeReaction> Responses { get; set; }
 

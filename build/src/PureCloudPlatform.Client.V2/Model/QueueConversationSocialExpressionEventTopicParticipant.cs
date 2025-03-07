@@ -104,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MonitoredParticipantId">If this participant is a monitor, then this will be the id of the participant that is being monitored..</param>
         /// <param name="CoachedParticipantId">If this participant is a coach, then this will be the id of the participant that is being coached..</param>
         /// <param name="BargedParticipantId">If this participant created a barge in conference, then this will be the id of the participant that is barged in..</param>
-        /// <param name="MediaRoles">List of roles this participant's media has had on the conversation, ie monitor, coach, etc..</param>
+        /// <param name="MediaRoles">List of roles this participant&#39;s media has had on the conversation, ie monitor, coach, etc..</param>
         /// <param name="ScreenRecordingState">The current screen recording state for this participant..</param>
         /// <param name="FlaggedReason">If this participant has flagged the conversation, the reason code given..</param>
         /// <param name="Attributes">Additional participant attributes.</param>
@@ -400,9 +400,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of roles this participant's media has had on the conversation, ie monitor, coach, etc.
+        /// List of roles this participant&#39;s media has had on the conversation, ie monitor, coach, etc.
         /// </summary>
-        /// <value>List of roles this participant's media has had on the conversation, ie monitor, coach, etc.</value>
+        /// <value>List of roles this participant&#39;s media has had on the conversation, ie monitor, coach, etc.</value>
         [DataMember(Name="mediaRoles", EmitDefaultValue=false)]
         public List<string> MediaRoles { get; set; }
 

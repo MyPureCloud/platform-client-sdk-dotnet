@@ -25,8 +25,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get content upload from URL job status
 
-GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:uploadSourceUrlJob:view
@@ -216,8 +214,6 @@ namespace Example
 
 
 Create content upload from URL job
-
-PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -588,4 +584,4 @@ namespace Example
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

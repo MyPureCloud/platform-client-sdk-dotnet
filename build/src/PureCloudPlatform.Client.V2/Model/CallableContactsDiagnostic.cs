@@ -29,9 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Attempt limits for the campaign's contact list
+        /// Attempt limits for the campaign&#39;s contact list
         /// </summary>
-        /// <value>Attempt limits for the campaign's contact list</value>
+        /// <value>Attempt limits for the campaign&#39;s contact list</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
         public DomainEntityRef AttemptLimits { get; private set; }
 

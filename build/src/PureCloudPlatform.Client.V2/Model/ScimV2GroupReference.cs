@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2GroupReference" /> class.
         /// </summary>
-        /// <param name="Value">The ID of the group member. Can be \"userId\" or \"groupId\"..</param>
+        /// <param name="Value">The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;..</param>
         public ScimV2GroupReference(string Value = null)
         {
             this.Value = Value;
@@ -84,9 +84,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the group member. Can be \"userId\" or \"groupId\".
+        /// The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;.
         /// </summary>
-        /// <value>The ID of the group member. Can be \"userId\" or \"groupId\".</value>
+        /// <value>The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

@@ -66,13 +66,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisableEmailPii">Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
         /// <param name="IncludeEmailTranscriptions">Whether to include the voicemail transcription in a group notification email.</param>
         /// <param name="LanguagePreference">The language preference for the group.  Used for group voicemail transcription.</param>
+        /// <param name="EmailPolicy">The email policy for the group.</param>
         /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
         /// <param name="OverflowGroupId">A fallback group to contact when all of the members in this group did not answer the call..</param>
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
         /// <param name="InteractiveResponsePromptId">The prompt to use when connecting a user to a Group Ring call.</param>
         /// <param name="InteractiveResponseRequired">Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call.</param>
-        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, bool? IncludeEmailTranscriptions = null, string LanguagePreference = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null, bool? InteractiveResponseRequired = null)
+        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, bool? IncludeEmailTranscriptions = null, string LanguagePreference = null, GroupEmailPolicy EmailPolicy = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null, bool? InteractiveResponseRequired = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
@@ -80,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisableEmailPii = DisableEmailPii;
             this.IncludeEmailTranscriptions = IncludeEmailTranscriptions;
             this.LanguagePreference = LanguagePreference;
+            this.EmailPolicy = EmailPolicy;
             this.RotateCallsSecs = RotateCallsSecs;
             this.StopRingingAfterRotations = StopRingingAfterRotations;
             this.OverflowGroupId = OverflowGroupId;
@@ -154,6 +156,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The email policy for the group
+        /// </summary>
+        /// <value>The email policy for the group</value>
+        [DataMember(Name="emailPolicy", EmitDefaultValue=false)]
+        public GroupEmailPolicy EmailPolicy { get; set; }
+
+
+
+        /// <summary>
         /// How many seconds to ring before rotating to the next member in the group
         /// </summary>
         /// <value>How many seconds to ring before rotating to the next member in the group</value>
@@ -215,6 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisableEmailPii: ").Append(DisableEmailPii).Append("\n");
             sb.Append("  IncludeEmailTranscriptions: ").Append(IncludeEmailTranscriptions).Append("\n");
             sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
+            sb.Append("  EmailPolicy: ").Append(EmailPolicy).Append("\n");
             sb.Append("  RotateCallsSecs: ").Append(RotateCallsSecs).Append("\n");
             sb.Append("  StopRingingAfterRotations: ").Append(StopRingingAfterRotations).Append("\n");
             sb.Append("  OverflowGroupId: ").Append(OverflowGroupId).Append("\n");
@@ -297,6 +309,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguagePreference.Equals(other.LanguagePreference)
                 ) &&
                 (
+                    this.EmailPolicy == other.EmailPolicy ||
+                    this.EmailPolicy != null &&
+                    this.EmailPolicy.Equals(other.EmailPolicy)
+                ) &&
+                (
                     this.RotateCallsSecs == other.RotateCallsSecs ||
                     this.RotateCallsSecs != null &&
                     this.RotateCallsSecs.Equals(other.RotateCallsSecs)
@@ -359,6 +376,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LanguagePreference != null)
                     hash = hash * 59 + this.LanguagePreference.GetHashCode();
+
+                if (this.EmailPolicy != null)
+                    hash = hash * 59 + this.EmailPolicy.GetHashCode();
 
                 if (this.RotateCallsSecs != null)
                     hash = hash * 59 + this.RotateCallsSecs.GetHashCode();

@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Application">The client application details from which search happened..</param>
         /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
         /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold..</param>
-        /// <param name="AnswerGeneration">The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\"..</param>
+        /// <param name="AnswerGeneration">The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;..</param>
         public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null, float? ConfidenceThreshold = null, KnowledgeAnswerGenerationResponse AnswerGeneration = null)
         {
             this.Query = Query;
@@ -182,9 +182,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\".
+        /// The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;.
         /// </summary>
-        /// <value>The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\".</value>
+        /// <value>The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;.</value>
         [DataMember(Name="answerGeneration", EmitDefaultValue=false)]
         public KnowledgeAnswerGenerationResponse AnswerGeneration { get; set; }
 

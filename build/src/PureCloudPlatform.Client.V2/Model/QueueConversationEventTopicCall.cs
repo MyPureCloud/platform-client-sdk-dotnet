@@ -397,7 +397,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InitialState">InitialState.</param>
         /// <param name="Recording">True if this call is being recorded..</param>
         /// <param name="RecordingState">State of recording on this call..</param>
-        /// <param name="Muted">True if this call is muted so that remote participants can't hear any audio from this end..</param>
+        /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end..</param>
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
@@ -484,9 +484,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// True if this call is muted so that remote participants can't hear any audio from this end.
+        /// True if this call is muted so that remote participants can&#39;t hear any audio from this end.
         /// </summary>
-        /// <value>True if this call is muted so that remote participants can't hear any audio from this end.</value>
+        /// <value>True if this call is muted so that remote participants can&#39;t hear any audio from this end.</value>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
 

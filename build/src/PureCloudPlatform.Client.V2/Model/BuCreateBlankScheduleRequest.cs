@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuCreateBlankScheduleRequest" /> class.
         /// </summary>
         /// <param name="Description">The description for the schedule (required).</param>
-        /// <param name="ShortTermForecast">The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule's start week + week count.</param>
+        /// <param name="ShortTermForecast">The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count.</param>
         /// <param name="WeekCount">The number of weeks in the schedule. One extra day is added at the end (required).</param>
         public BuCreateBlankScheduleRequest(string Description = null, BuShortTermForecastReference ShortTermForecast = null, int? WeekCount = null)
         {
@@ -50,9 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule's start week + week count
+        /// The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count
         /// </summary>
-        /// <value>The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule's start week + week count</value>
+        /// <value>The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count</value>
         [DataMember(Name="shortTermForecast", EmitDefaultValue=false)]
         public BuShortTermForecastReference ShortTermForecast { get; set; }
 

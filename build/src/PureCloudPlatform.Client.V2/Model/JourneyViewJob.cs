@@ -128,6 +128,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Timestamp for the estimated time of completion. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp for the estimated time of completion. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCompletionEstimated", EmitDefaultValue=false)]
+        public DateTime? DateCompletionEstimated { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -149,6 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  JourneyView: ").Append(JourneyView).Append("\n");
+            sb.Append("  DateCompletionEstimated: ").Append(DateCompletionEstimated).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -216,6 +226,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyView.Equals(other.JourneyView)
                 ) &&
                 (
+                    this.DateCompletionEstimated == other.DateCompletionEstimated ||
+                    this.DateCompletionEstimated != null &&
+                    this.DateCompletionEstimated.Equals(other.DateCompletionEstimated)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -247,6 +262,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.JourneyView != null)
                     hash = hash * 59 + this.JourneyView.GetHashCode();
+
+                if (this.DateCompletionEstimated != null)
+                    hash = hash * 59 + this.DateCompletionEstimated.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

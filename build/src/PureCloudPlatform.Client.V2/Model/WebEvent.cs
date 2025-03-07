@@ -32,11 +32,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TotalPageviewCount">The total count of pageviews performed by the customer across all sessions. (required).</param>
         /// <param name="Page">The webpage where the user interaction occurred. (required).</param>
         /// <param name="UserAgentString">HTTP User-Agent string (see https://tools.ietf.org/html/rfc1945#section-10.15). (required).</param>
-        /// <param name="Browser">Customer's browser. (required).</param>
-        /// <param name="Device">Customer's device. (required).</param>
-        /// <param name="Geolocation">Customer's geolocation..</param>
-        /// <param name="IpAddress">Customer's IP address. May be null if the business configures the tracker to not collect IP addresses..</param>
-        /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
+        /// <param name="Browser">Customer&#39;s browser. (required).</param>
+        /// <param name="Device">Customer&#39;s device. (required).</param>
+        /// <param name="Geolocation">Customer&#39;s geolocation..</param>
+        /// <param name="IpAddress">Customer&#39;s IP address. May be null if the business configures the tracker to not collect IP addresses..</param>
+        /// <param name="IpOrganization">Customer&#39;s IP-based organization or ISP name..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="Referrer">Identifies the page URL that originally generated the request for the current page being viewed..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
@@ -112,45 +112,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Customer's browser.
+        /// Customer&#39;s browser.
         /// </summary>
-        /// <value>Customer's browser.</value>
+        /// <value>Customer&#39;s browser.</value>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public Browser Browser { get; set; }
 
 
 
         /// <summary>
-        /// Customer's device.
+        /// Customer&#39;s device.
         /// </summary>
-        /// <value>Customer's device.</value>
+        /// <value>Customer&#39;s device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public Device Device { get; set; }
 
 
 
         /// <summary>
-        /// Customer's geolocation.
+        /// Customer&#39;s geolocation.
         /// </summary>
-        /// <value>Customer's geolocation.</value>
+        /// <value>Customer&#39;s geolocation.</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyGeolocation Geolocation { get; set; }
 
 
 
         /// <summary>
-        /// Customer's IP address. May be null if the business configures the tracker to not collect IP addresses.
+        /// Customer&#39;s IP address. May be null if the business configures the tracker to not collect IP addresses.
         /// </summary>
-        /// <value>Customer's IP address. May be null if the business configures the tracker to not collect IP addresses.</value>
+        /// <value>Customer&#39;s IP address. May be null if the business configures the tracker to not collect IP addresses.</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 
 
 
         /// <summary>
-        /// Customer's IP-based organization or ISP name.
+        /// Customer&#39;s IP-based organization or ISP name.
         /// </summary>
-        /// <value>Customer's IP-based organization or ISP name.</value>
+        /// <value>Customer&#39;s IP-based organization or ISP name.</value>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
 

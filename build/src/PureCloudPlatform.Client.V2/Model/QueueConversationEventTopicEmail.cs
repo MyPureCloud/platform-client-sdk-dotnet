@@ -301,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DraftAttachments">A list of uploaded attachments on the email draft..</param>
         /// <param name="Spam">Indicates if the inbound email was marked as spam..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="AfterCallWork">A communication's after-call work data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
         /// <param name="ResumeTime">The time when a parked email should resume..</param>
@@ -491,9 +491,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A communication's after-call work data.
+        /// A communication&#39;s after-call work data.
         /// </summary>
-        /// <value>A communication's after-call work data.</value>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationEventTopicAfterCallWork AfterCallWork { get; set; }
 

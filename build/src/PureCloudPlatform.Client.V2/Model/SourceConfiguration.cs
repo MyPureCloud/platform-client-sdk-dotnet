@@ -28,8 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SourceConfiguration" /> class.
         /// </summary>
         /// <param name="SourceId">Identifies the external platform that is the source of the conversation. (required).</param>
-        /// <param name="InteractionId">The customer's unique external identifier associated with the conversation that comes from the external platform. (required).</param>
-        /// <param name="TagId">The customer's external identifier or tag associated with the conversation. If set, it will be used to tag the conversation..</param>
+        /// <param name="InteractionId">The customer&#39;s unique external identifier associated with the conversation that comes from the external platform. (required).</param>
+        /// <param name="TagId">The customer&#39;s external identifier or tag associated with the conversation. If set, it will be used to tag the conversation..</param>
         public SourceConfiguration(string SourceId = null, string InteractionId = null, string TagId = null)
         {
             this.SourceId = SourceId;
@@ -50,18 +50,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The customer's unique external identifier associated with the conversation that comes from the external platform.
+        /// The customer&#39;s unique external identifier associated with the conversation that comes from the external platform.
         /// </summary>
-        /// <value>The customer's unique external identifier associated with the conversation that comes from the external platform.</value>
+        /// <value>The customer&#39;s unique external identifier associated with the conversation that comes from the external platform.</value>
         [DataMember(Name="interactionId", EmitDefaultValue=false)]
         public string InteractionId { get; set; }
 
 
 
         /// <summary>
-        /// The customer's external identifier or tag associated with the conversation. If set, it will be used to tag the conversation.
+        /// The customer&#39;s external identifier or tag associated with the conversation. If set, it will be used to tag the conversation.
         /// </summary>
-        /// <value>The customer's external identifier or tag associated with the conversation. If set, it will be used to tag the conversation.</value>
+        /// <value>The customer&#39;s external identifier or tag associated with the conversation. If set, it will be used to tag the conversation.</value>
         [DataMember(Name="tagId", EmitDefaultValue=false)]
         public string TagId { get; set; }
 

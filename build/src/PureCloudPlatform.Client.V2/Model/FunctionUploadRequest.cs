@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FunctionUploadRequest" /> class.
         /// </summary>
-        /// <param name="FileName">Name of the file to upload.File name can only contain letters, numbers, and the following special characters: + - _ . ' ( ) (required).</param>
+        /// <param name="FileName">Name of the file to upload.File name can only contain letters, numbers, and the following special characters: + - _ . &#39; ( ) (required).</param>
         /// <param name="SignedUrlTimeoutSeconds">The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 900 seconds.</param>
         public FunctionUploadRequest(string FileName = null, int? SignedUrlTimeoutSeconds = null)
         {
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Name of the file to upload.File name can only contain letters, numbers, and the following special characters: + - _ . ' ( )
+        /// Name of the file to upload.File name can only contain letters, numbers, and the following special characters: + - _ . &#39; ( )
         /// </summary>
-        /// <value>Name of the file to upload.File name can only contain letters, numbers, and the following special characters: + - _ . ' ( )</value>
+        /// <value>Name of the file to upload.File name can only contain letters, numbers, and the following special characters: + - _ . &#39; ( )</value>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
 

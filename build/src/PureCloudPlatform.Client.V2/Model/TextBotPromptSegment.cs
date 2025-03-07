@@ -67,9 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TextBotPromptSegment" /> class.
         /// </summary>
         /// <param name="Text">The text of this prompt segment. (required).</param>
-        /// <param name="Type">The segment type which describes any semantics about the 'text' and also indicates which other field might include additional relevant info. (required).</param>
+        /// <param name="Type">The segment type which describes any semantics about the &#39;text&#39; and also indicates which other field might include additional relevant info. (required).</param>
         /// <param name="Format">Additional details describing the segment’s contents, which the client should honour where possible..</param>
-        /// <param name="Content">Details to display Rich Media content. This is only populated when the segment 'type' is 'Rich Media'..</param>
+        /// <param name="Content">Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;..</param>
         public TextBotPromptSegment(string Text = null, TypeEnum? Type = null, Format Format = null, List<MessageContent> Content = null)
         {
             this.Text = Text;
@@ -102,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Details to display Rich Media content. This is only populated when the segment 'type' is 'Rich Media'.
+        /// Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;.
         /// </summary>
-        /// <value>Details to display Rich Media content. This is only populated when the segment 'type' is 'Rich Media'.</value>
+        /// <value>Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public List<MessageContent> Content { get; set; }
 

@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="Description">The resource's description..</param>
+        /// <param name="Description">The resource&#39;s description..</param>
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
         /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
@@ -115,9 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The resource's description.
+        /// The resource&#39;s description.
         /// </summary>
-        /// <value>The resource's description.</value>
+        /// <value>The resource&#39;s description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

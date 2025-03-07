@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Button" /> class.
         /// </summary>
         /// <param name="Type">Type of button to include in whatsApp template.</param>
-        /// <param name="Content">Content of the button. Use for 'Url' or 'PhoneNumber' button type.</param>
+        /// <param name="Content">Content of the button. Use for &#39;Url&#39; or &#39;PhoneNumber&#39; button type.</param>
         /// <param name="ContentText">The text label that will be displayed on the button.</param>
         public Button(TypeEnum? Type = null, string Content = null, string ContentText = null)
         {
@@ -76,9 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Content of the button. Use for 'Url' or 'PhoneNumber' button type
+        /// Content of the button. Use for &#39;Url&#39; or &#39;PhoneNumber&#39; button type
         /// </summary>
-        /// <value>Content of the button. Use for 'Url' or 'PhoneNumber' button type</value>
+        /// <value>Content of the button. Use for &#39;Url&#39; or &#39;PhoneNumber&#39; button type</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
 

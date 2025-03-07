@@ -866,7 +866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>DashboardUserListing</returns>
         
         DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
@@ -883,7 +883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>ApiResponse of DashboardUserListing</returns>
         
         ApiResponse<DashboardUserListing> GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
@@ -3612,7 +3612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>Task of DashboardUserListing</returns>
         
         System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
@@ -3629,7 +3629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>Task of ApiResponse (DashboardUserListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null);
@@ -12428,7 +12428,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>DashboardUserListing</returns>
         
         public DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
@@ -12447,7 +12447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>ApiResponse of DashboardUserListing</returns>
         
         public ApiResponse< DashboardUserListing > GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
@@ -12545,7 +12545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>Task of DashboardUserListing</returns>
         
         public async System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)
@@ -12565,7 +12565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="state">Only list users of this state (optional)</param>
-        /// <param name="deletedOnly">Only list deleted dashboards that are still recoverable (optional)</param>
+        /// <param name="deletedOnly">Only list users with deleted dashboards (optional)</param>
         /// <returns>Task of ApiResponse (DashboardUserListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null, bool? deletedOnly = null)

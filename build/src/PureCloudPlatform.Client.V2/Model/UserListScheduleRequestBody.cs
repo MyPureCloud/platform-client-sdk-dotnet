@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserIds">The user ids for which to fetch schedules (required).</param>
         /// <param name="StartDate">Beginning of the range of schedules to fetch, in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the range of schedules to fetch, in ISO-8601 format (required).</param>
-        /// <param name="LoadFullWeeks">Whether to load the full week's schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false.</param>
+        /// <param name="LoadFullWeeks">Whether to load the full week&#39;s schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false.</param>
         public UserListScheduleRequestBody(List<string> UserIds = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? LoadFullWeeks = null)
         {
             this.UserIds = UserIds;
@@ -70,9 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether to load the full week's schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false
+        /// Whether to load the full week&#39;s schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false
         /// </summary>
-        /// <value>Whether to load the full week's schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false</value>
+        /// <value>Whether to load the full week&#39;s schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false</value>
         [DataMember(Name="loadFullWeeks", EmitDefaultValue=false)]
         public bool? LoadFullWeeks { get; set; }
 

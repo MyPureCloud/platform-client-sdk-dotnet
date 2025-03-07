@@ -106,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
         /// <param name="Expand">Provides more details about a specified resource.</param>
         /// <param name="Query">Query.</param>
-        /// <param name="IntegrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100..</param>
+        /// <param name="IntegrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100..</param>
         /// <param name="EnforcePermissions">This property only applies to api/v2/user/search; when set to true add additional search criteria to filter users by: directory:user:view.</param>
         public UserSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<UserSearchCriteria> Query = null, IntegrationPresenceSourceEnum? IntegrationPresenceSource = null, bool? EnforcePermissions = null)
         {

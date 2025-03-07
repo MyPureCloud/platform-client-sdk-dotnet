@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority to assign to this call (if calling a queue)..</param>
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
         /// <param name="LanguageId">The language skill ID to use for routing this call (if calling a queue)..</param>
-        /// <param name="RoutingSkillsIds">The skill ID's to use for routing this call (if calling a queue)..</param>
+        /// <param name="RoutingSkillsIds">The skill ID&#39;s to use for routing this call (if calling a queue)..</param>
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
@@ -140,9 +140,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The skill ID's to use for routing this call (if calling a queue).
+        /// The skill ID&#39;s to use for routing this call (if calling a queue).
         /// </summary>
-        /// <value>The skill ID's to use for routing this call (if calling a queue).</value>
+        /// <value>The skill ID&#39;s to use for routing this call (if calling a queue).</value>
         [DataMember(Name="routingSkillsIds", EmitDefaultValue=false)]
         public List<string> RoutingSkillsIds { get; set; }
 

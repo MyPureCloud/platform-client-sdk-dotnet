@@ -346,7 +346,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InitialState">The initial connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
-        /// <param name="Segments">The time line of the participant's message, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant&#39;s message, divided into activity segments..</param>
         /// <param name="Direction">The direction of the message..</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this message..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
@@ -365,7 +365,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">Address and name data for a call endpoint..</param>
         /// <param name="FromAddress">Address and name data for a call endpoint..</param>
         /// <param name="Messages">The messages sent on this communication channel..</param>
-        /// <param name="JourneyContext">A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
+        /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
@@ -432,9 +432,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time line of the participant's message, divided into activity segments.
+        /// The time line of the participant&#39;s message, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant's message, divided into activity segments.</value>
+        /// <value>The time line of the participant&#39;s message, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
 
@@ -581,9 +581,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).
+        /// A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
         /// </summary>
-        /// <value>A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
+        /// <value>A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
         [DataMember(Name="journeyContext", EmitDefaultValue=false)]
         public JourneyContext JourneyContext { get; set; }
 

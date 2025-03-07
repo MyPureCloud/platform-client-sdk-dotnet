@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="CampaignRuleEntities">CampaignRuleEntities.</param>
         /// <param name="CampaignRuleConditions">The list of conditions that will trigger this Campaign Rule.</param>
-        /// <param name="CampaignRuleActions">The list of actions that will be taken when this Campaign Rule's conditions are met.</param>
+        /// <param name="CampaignRuleActions">The list of actions that will be taken when this Campaign Rule&#39;s conditions are met.</param>
         /// <param name="MatchAnyConditions">Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL).</param>
         /// <param name="Enabled">Whether this campaign rule is enabled.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
@@ -68,9 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of actions that will be taken when this Campaign Rule's conditions are met
+        /// The list of actions that will be taken when this Campaign Rule&#39;s conditions are met
         /// </summary>
-        /// <value>The list of actions that will be taken when this Campaign Rule's conditions are met</value>
+        /// <value>The list of actions that will be taken when this Campaign Rule&#39;s conditions are met</value>
         [DataMember(Name="campaignRuleActions", EmitDefaultValue=false)]
         public List<DialerCampaignRuleConfigChangeCampaignRuleAction> CampaignRuleActions { get; set; }
 

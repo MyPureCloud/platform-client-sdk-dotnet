@@ -27,17 +27,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentNotificationTemplate" /> class.
         /// </summary>
-        /// <param name="Id">The identifier of the message template in 'your-namespace@your-template-id/name' format. For External vendor (e.g WhatsApp), 'your-namespace@your-template-name'. For GenesysCloud canned response message template use 'cannedresponse' as your-namespace and use response ID as your-template-id (e.g. response ID=1234 then 'cannedresponse@1234').</param>
+        /// <param name="Id">The identifier of the message template in &#39;your-namespace@your-template-id/name&#39; format. For External vendor (e.g WhatsApp), &#39;your-namespace@your-template-name&#39;. For GenesysCloud canned response message template use &#39;cannedresponse&#39; as your-namespace and use response ID as your-template-id (e.g. response ID&#x3D;1234 then &#39;cannedresponse@1234&#39;).</param>
         /// <param name="Language">Template language..</param>
         /// <param name="Header">The template header..</param>
         /// <param name="Body">The template body. (required).</param>
+        /// <param name="Buttons">Template buttons.</param>
         /// <param name="Footer">The template footer..</param>
-        public ConversationContentNotificationTemplate(string Id = null, string Language = null, ConversationNotificationTemplateHeader Header = null, ConversationNotificationTemplateBody Body = null, ConversationNotificationTemplateFooter Footer = null)
+        public ConversationContentNotificationTemplate(string Id = null, string Language = null, ConversationNotificationTemplateHeader Header = null, ConversationNotificationTemplateBody Body = null, List<ConversationNotificationTemplateButton> Buttons = null, ConversationNotificationTemplateFooter Footer = null)
         {
             this.Id = Id;
             this.Language = Language;
             this.Header = Header;
             this.Body = Body;
+            this.Buttons = Buttons;
             this.Footer = Footer;
             
         }
@@ -45,9 +47,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The identifier of the message template in 'your-namespace@your-template-id/name' format. For External vendor (e.g WhatsApp), 'your-namespace@your-template-name'. For GenesysCloud canned response message template use 'cannedresponse' as your-namespace and use response ID as your-template-id (e.g. response ID=1234 then 'cannedresponse@1234')
+        /// The identifier of the message template in &#39;your-namespace@your-template-id/name&#39; format. For External vendor (e.g WhatsApp), &#39;your-namespace@your-template-name&#39;. For GenesysCloud canned response message template use &#39;cannedresponse&#39; as your-namespace and use response ID as your-template-id (e.g. response ID&#x3D;1234 then &#39;cannedresponse@1234&#39;)
         /// </summary>
-        /// <value>The identifier of the message template in 'your-namespace@your-template-id/name' format. For External vendor (e.g WhatsApp), 'your-namespace@your-template-name'. For GenesysCloud canned response message template use 'cannedresponse' as your-namespace and use response ID as your-template-id (e.g. response ID=1234 then 'cannedresponse@1234')</value>
+        /// <value>The identifier of the message template in &#39;your-namespace@your-template-id/name&#39; format. For External vendor (e.g WhatsApp), &#39;your-namespace@your-template-name&#39;. For GenesysCloud canned response message template use &#39;cannedresponse&#39; as your-namespace and use response ID as your-template-id (e.g. response ID&#x3D;1234 then &#39;cannedresponse@1234&#39;)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -81,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Template buttons
+        /// </summary>
+        /// <value>Template buttons</value>
+        [DataMember(Name="buttons", EmitDefaultValue=false)]
+        public List<ConversationNotificationTemplateButton> Buttons { get; set; }
+
+
+
+        /// <summary>
         /// The template footer.
         /// </summary>
         /// <value>The template footer.</value>
@@ -101,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  Buttons: ").Append(Buttons).Append("\n");
             sb.Append("  Footer: ").Append(Footer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -163,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Body.Equals(other.Body)
                 ) &&
                 (
+                    this.Buttons == other.Buttons ||
+                    this.Buttons != null &&
+                    this.Buttons.SequenceEqual(other.Buttons)
+                ) &&
+                (
                     this.Footer == other.Footer ||
                     this.Footer != null &&
                     this.Footer.Equals(other.Footer)
@@ -191,6 +208,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
+
+                if (this.Buttons != null)
+                    hash = hash * 59 + this.Buttons.GetHashCode();
 
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();

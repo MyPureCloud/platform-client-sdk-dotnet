@@ -90,9 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user's percentage score for this assignment
+        /// The user&#39;s percentage score for this assignment
         /// </summary>
-        /// <value>The user's percentage score for this assignment</value>
+        /// <value>The user&#39;s percentage score for this assignment</value>
         [DataMember(Name="percentageScore", EmitDefaultValue=false)]
         public float? PercentageScore { get; private set; }
 
@@ -108,9 +108,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user's percentage score for this assignment's assessment
+        /// The user&#39;s percentage score for this assignment&#39;s assessment
         /// </summary>
-        /// <value>The user's percentage score for this assignment's assessment</value>
+        /// <value>The user&#39;s percentage score for this assignment&#39;s assessment</value>
         [DataMember(Name="assessmentPercentageScore", EmitDefaultValue=false)]
         public float? AssessmentPercentageScore { get; private set; }
 

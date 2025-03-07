@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MatchTestResult" /> class.
         /// </summary>
         /// <param name="Value">The value of the field being matched.</param>
-        /// <param name="Path">The json path to the json node being matched on. ex: $['things'][1].</param>
+        /// <param name="Path">The json path to the json node being matched on. ex: $[&#39;things&#39;][1].</param>
         public MatchTestResult(Object Value = null, string Path = null)
         {
             this.Value = Value;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The json path to the json node being matched on. ex: $['things'][1]
+        /// The json path to the json node being matched on. ex: $[&#39;things&#39;][1]
         /// </summary>
-        /// <value>The json path to the json node being matched on. ex: $['things'][1]</value>
+        /// <value>The json path to the json node being matched on. ex: $[&#39;things&#39;][1]</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
 

@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeploymentsJourneyContext" /> class.
         /// </summary>
-        /// <param name="JourneyAction">A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context).</param>
+        /// <param name="JourneyAction">A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context).</param>
         /// <param name="Customer">Journey customer information. Used for linking the authenticated customer with the journey. .</param>
-        /// <param name="CustomerSession">Contains the Journey System's customer session details..</param>
+        /// <param name="CustomerSession">Contains the Journey System&#39;s customer session details..</param>
         public WebDeploymentsJourneyContext(JourneyAction JourneyAction = null, JourneyCustomer Customer = null, JourneyCustomerSession CustomerSession = null)
         {
             this.JourneyAction = JourneyAction;
@@ -35,9 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context)
+        /// A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context)
         /// </summary>
-        /// <value>A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context)</value>
+        /// <value>A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context)</value>
         [DataMember(Name="journeyAction", EmitDefaultValue=false)]
         public JourneyAction JourneyAction { get; set; }
 
@@ -53,9 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Contains the Journey System's customer session details.
+        /// Contains the Journey System&#39;s customer session details.
         /// </summary>
-        /// <value>Contains the Journey System's customer session details.</value>
+        /// <value>Contains the Journey System&#39;s customer session details.</value>
         [DataMember(Name="customerSession", EmitDefaultValue=false)]
         public JourneyCustomerSession CustomerSession { get; set; }
 

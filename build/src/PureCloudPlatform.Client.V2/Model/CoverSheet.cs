@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CoverSheet" /> class.
         /// </summary>
         /// <param name="Notes">Text to be added to the coversheet.</param>
-        /// <param name="Locale">Locale, e.g. = en-US.</param>
+        /// <param name="Locale">Locale, e.g. &#x3D; en-US.</param>
         public CoverSheet(string Notes = null, string Locale = null)
         {
             this.Notes = Notes;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Locale, e.g. = en-US
+        /// Locale, e.g. &#x3D; en-US
         /// </summary>
-        /// <value>Locale, e.g. = en-US</value>
+        /// <value>Locale, e.g. &#x3D; en-US</value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
 

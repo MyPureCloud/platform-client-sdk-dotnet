@@ -118,7 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Pattern type (Daily/Weekly) (required).</param>
         /// <param name="Interval">The interval of days between the occurrences for Daily pattern type, and weeks between the occurrences for Weekly (required).</param>
-        /// <param name="DaysOfWeek">The day(s) of week the occurrence should be repeated. Required to set for Weekly pattern type. E.g. [\"Monday\", \"Wednesday\"].</param>
+        /// <param name="DaysOfWeek">The day(s) of week the occurrence should be repeated. Required to set for Weekly pattern type. E.g. [\&quot;Monday\&quot;, \&quot;Wednesday\&quot;].</param>
         public Pattern(TypeEnum? Type = null, int? Interval = null, List<DaysOfWeekEnum> DaysOfWeek = null)
         {
             this.Type = Type;
@@ -141,9 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The day(s) of week the occurrence should be repeated. Required to set for Weekly pattern type. E.g. [\"Monday\", \"Wednesday\"]
+        /// The day(s) of week the occurrence should be repeated. Required to set for Weekly pattern type. E.g. [\&quot;Monday\&quot;, \&quot;Wednesday\&quot;]
         /// </summary>
-        /// <value>The day(s) of week the occurrence should be repeated. Required to set for Weekly pattern type. E.g. [\"Monday\", \"Wednesday\"]</value>
+        /// <value>The day(s) of week the occurrence should be repeated. Required to set for Weekly pattern type. E.g. [\&quot;Monday\&quot;, \&quot;Wednesday\&quot;]</value>
         [DataMember(Name="daysOfWeek", EmitDefaultValue=false)]
         public List<DaysOfWeekEnum> DaysOfWeek { get; set; }
 

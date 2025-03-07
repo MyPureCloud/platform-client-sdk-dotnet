@@ -16,7 +16,7 @@ namespace PureCloudPlatform.Client.V2.Model
     /// IdentityProviderEntityListing
     /// </summary>
     [DataContract]
-    public partial class IdentityProviderEntityListing :  IEquatable<IdentityProviderEntityListing>, IPagedResource<CustomProvider>
+    public partial class IdentityProviderEntityListing :  IEquatable<IdentityProviderEntityListing>, IPagedResource<SAMLProvider>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="IdentityProviderEntityListing" /> class.
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NextUri">NextUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public IdentityProviderEntityListing(List<CustomProvider> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string LastUri = null, string SelfUri = null, string NextUri = null, string PreviousUri = null, int? PageCount = null)
+        public IdentityProviderEntityListing(List<SAMLProvider> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string LastUri = null, string SelfUri = null, string NextUri = null, string PreviousUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<CustomProvider> Entities { get; set; }
+        public List<SAMLProvider> Entities { get; set; }
 
 
 

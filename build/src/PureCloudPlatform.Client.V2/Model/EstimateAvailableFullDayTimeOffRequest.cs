@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EstimateAvailableFullDayTimeOffRequest" /> class.
         /// </summary>
-        /// <param name="Date">Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit's configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        /// <param name="Date">Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit&#39;s configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="RequestedDurationMinutes">A requested length of time off request in minutes. If the value is null, then the system will use activity code length setting.</param>
         public EstimateAvailableFullDayTimeOffRequest(String Date = null, int? RequestedDurationMinutes = null)
         {
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit's configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit&#39;s configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit's configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit&#39;s configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public String Date { get; set; }
 

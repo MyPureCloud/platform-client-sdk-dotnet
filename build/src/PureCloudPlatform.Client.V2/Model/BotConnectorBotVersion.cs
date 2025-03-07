@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BotConnectorBotVersion" /> class.
         /// </summary>
         /// <param name="Version">The name of the version. This can be up to 100 characters long and must be comprised of displayable characters without leading or trailing whitespace (required).</param>
-        /// <param name="SupportedLanguages">The supported languages for this bot. EG 'en-us' or 'es', etc; These language codes are W3C language identification tags (ISO 639-1 for the language name and ISO 3166 for the country code) (required).</param>
+        /// <param name="SupportedLanguages">The supported languages for this bot. EG &#39;en-us&#39; or &#39;es&#39;, etc; These language codes are W3C language identification tags (ISO 639-1 for the language name and ISO 3166 for the country code) (required).</param>
         /// <param name="Intents">A list of potential intents this bot will return, limit of 50 (required).</param>
         public BotConnectorBotVersion(string Version = null, List<string> SupportedLanguages = null, List<BotIntent> Intents = null)
         {
@@ -50,9 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The supported languages for this bot. EG 'en-us' or 'es', etc; These language codes are W3C language identification tags (ISO 639-1 for the language name and ISO 3166 for the country code)
+        /// The supported languages for this bot. EG &#39;en-us&#39; or &#39;es&#39;, etc; These language codes are W3C language identification tags (ISO 639-1 for the language name and ISO 3166 for the country code)
         /// </summary>
-        /// <value>The supported languages for this bot. EG 'en-us' or 'es', etc; These language codes are W3C language identification tags (ISO 639-1 for the language name and ISO 3166 for the country code)</value>
+        /// <value>The supported languages for this bot. EG &#39;en-us&#39; or &#39;es&#39;, etc; These language codes are W3C language identification tags (ISO 639-1 for the language name and ISO 3166 for the country code)</value>
         [DataMember(Name="supportedLanguages", EmitDefaultValue=false)]
         public List<string> SupportedLanguages { get; set; }
 

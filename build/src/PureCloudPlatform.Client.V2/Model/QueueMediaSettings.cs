@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Chat">The queue media settings for chat interactions..</param>
         /// <param name="Email">The queue media settings for email interactions..</param>
         /// <param name="Message">The queue media settings for message interactions..</param>
-        public QueueMediaSettings(MediaSettings Call = null, CallbackMediaSettings Callback = null, MediaSettings Chat = null, EmailMediaSettings Email = null, MediaSettings Message = null)
+        public QueueMediaSettings(MediaSettings Call = null, CallbackMediaSettings Callback = null, MediaSettings Chat = null, EmailMediaSettings Email = null, MessageMediaSettings Message = null)
         {
             this.Call = Call;
             this.Callback = Callback;
@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The queue media settings for message interactions.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
-        public MediaSettings Message { get; set; }
+        public MessageMediaSettings Message { get; set; }
 
 
         /// <summary>

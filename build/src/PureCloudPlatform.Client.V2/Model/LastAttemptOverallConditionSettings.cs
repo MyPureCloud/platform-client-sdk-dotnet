@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="MediaTypes">A list of media types to evaluate. (required).</param>
         /// <param name="Operator">The operator to use when comparing values. (required).</param>
-        /// <param name="Value">The period value to compare against the contact's data. (required).</param>
+        /// <param name="Value">The period value to compare against the contact&#39;s data. (required).</param>
         public LastAttemptOverallConditionSettings(List<MediaTypesEnum> MediaTypes = null, OperatorEnum? Operator = null, string Value = null)
         {
             this.MediaTypes = MediaTypes;
@@ -123,9 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The period value to compare against the contact's data.
+        /// The period value to compare against the contact&#39;s data.
         /// </summary>
-        /// <value>The period value to compare against the contact's data.</value>
+        /// <value>The period value to compare against the contact&#39;s data.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

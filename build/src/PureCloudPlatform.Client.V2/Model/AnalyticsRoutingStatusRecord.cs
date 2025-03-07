@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="StartTime">The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndTime">The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="RoutingStatus">The user's ACD routing status.</param>
+        /// <param name="RoutingStatus">The user&#39;s ACD routing status.</param>
         public AnalyticsRoutingStatusRecord(DateTime? StartTime = null, DateTime? EndTime = null, RoutingStatusEnum? RoutingStatus = null)
         {
             this.StartTime = StartTime;

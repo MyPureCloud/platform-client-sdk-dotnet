@@ -161,13 +161,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Objective" /> class.
         /// </summary>
-        /// <param name="TemplateId">The id of this objective's base template.</param>
+        /// <param name="TemplateId">The id of this objective&#39;s base template.</param>
         /// <param name="Zones">Objective zone specifies min,max points and values for the associated metric.</param>
         /// <param name="Enabled">A flag for whether this objective is enabled for the related metric.</param>
         /// <param name="MediaTypes">A list of media types for the metric.</param>
         /// <param name="Queues">A list of queues for the metric.</param>
         /// <param name="Topics">A list of topic ids for detected topic metrics.</param>
-        /// <param name="TopicIdsFilterType">A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\"..</param>
+        /// <param name="TopicIdsFilterType">A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;..</param>
         /// <param name="EvaluationFormContextIds">The ids of associated evaluation form context, for Quality Evaluation Score metrics.</param>
         /// <param name="InitialDirection">The initial direction to filter on.</param>
         /// <param name="DateStart">start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
@@ -198,9 +198,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of this objective's base template
+        /// The id of this objective&#39;s base template
         /// </summary>
-        /// <value>The id of this objective's base template</value>
+        /// <value>The id of this objective&#39;s base template</value>
         [DataMember(Name="templateId", EmitDefaultValue=false)]
         public string TemplateId { get; set; }
 

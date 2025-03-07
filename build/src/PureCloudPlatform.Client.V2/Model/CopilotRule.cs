@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CopilotRule" /> class.
         /// </summary>
-        /// <param name="Conditions">List of conditions to execute actions, must have at least 1 element and maximum 100 elements. Operator in case of multiple conditions: 'OR'. (required).</param>
+        /// <param name="Conditions">List of conditions to execute actions, must have at least 1 element and maximum 100 elements. Operator in case of multiple conditions: &#39;OR&#39;. (required).</param>
         /// <param name="Actions">List of actions to execute, must have at least 1 element and maximum 100 elements. (required).</param>
         public CopilotRule(List<CopilotCondition> Conditions = null, List<CopilotAction> Actions = null)
         {
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of conditions to execute actions, must have at least 1 element and maximum 100 elements. Operator in case of multiple conditions: 'OR'.
+        /// List of conditions to execute actions, must have at least 1 element and maximum 100 elements. Operator in case of multiple conditions: &#39;OR&#39;.
         /// </summary>
-        /// <value>List of conditions to execute actions, must have at least 1 element and maximum 100 elements. Operator in case of multiple conditions: 'OR'.</value>
+        /// <value>List of conditions to execute actions, must have at least 1 element and maximum 100 elements. Operator in case of multiple conditions: &#39;OR&#39;.</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<CopilotCondition> Conditions { get; set; }
 

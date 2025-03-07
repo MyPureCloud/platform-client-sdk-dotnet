@@ -26,8 +26,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutputPathId">If applicable, the identifier of the OutputPath that was taken..</param>
         /// <param name="ExecutionId">If applicable, the executionId for the executionItem..</param>
         /// <param name="StartDateTime">This is the starting time of the executionItem..</param>
-        /// <param name="Error">Event generated when a Flow's Execution History is received and logged..</param>
-        /// <param name="Warning">Event generated when a Flow's Execution History is received and logged..</param>
+        /// <param name="Error">Event generated when a Flow&#39;s Execution History is received and logged..</param>
+        /// <param name="Warning">Event generated when a Flow&#39;s Execution History is received and logged..</param>
         /// <param name="LanguageTag">If applicable, the language tag associated set by the execution..</param>
         public V2FlowExecutionDataFlowidTopicExecution(string ObjectType = null, string ObjectId = null, string OutputPathId = null, string ExecutionId = null, DateTime? StartDateTime = null, V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo Error = null, V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo Warning = null, string LanguageTag = null)
         {
@@ -90,18 +90,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Event generated when a Flow's Execution History is received and logged.
+        /// Event generated when a Flow&#39;s Execution History is received and logged.
         /// </summary>
-        /// <value>Event generated when a Flow's Execution History is received and logged.</value>
+        /// <value>Event generated when a Flow&#39;s Execution History is received and logged.</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo Error { get; set; }
 
 
 
         /// <summary>
-        /// Event generated when a Flow's Execution History is received and logged.
+        /// Event generated when a Flow&#39;s Execution History is received and logged.
         /// </summary>
-        /// <value>Event generated when a Flow's Execution History is received and logged.</value>
+        /// <value>Event generated when a Flow&#39;s Execution History is received and logged.</value>
         [DataMember(Name="warning", EmitDefaultValue=false)]
         public V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo Warning { get; set; }
 

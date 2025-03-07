@@ -16,6 +16,9 @@ using System.Net;
 
 namespace PureCloudPlatform.Client.V2.Tests
 {
+    ///<Summary>
+    /// Tests for Sdk
+    ///</Summary>
     [Timeout(70 * 1000)]
     public class SdkTests
     {
@@ -36,10 +39,16 @@ namespace PureCloudPlatform.Client.V2.Tests
         string busyPresenceId = "31fe3bac-dea6-44b7-bed7-47f91660a1a0";
         string availablePresenceId = "6a3af858-942f-489d-9700-5f9bcdcdae9b";
 
+        ///<Summary>
+        /// SdkTests default constructor
+        ///</Summary>
         public SdkTests()
         {
         }
 
+        ///<Summary>
+        /// TraceBasicInformation
+        ///</Summary>
         [Test, Order(0)]
         public void TraceBasicInformation()
         {
@@ -58,6 +67,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             Console.WriteLine($"userEmail={userEmail}");
         }
 
+        ///<Summary>
+        /// Authenticate
+        ///</Summary>
         [Test, Order(1)]
         public void Authenticate()
         {
@@ -75,6 +87,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             Assert.IsNotEmpty(PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken);
         }
 
+        ///<Summary>
+        /// CreateUser
+        ///</Summary>
         [Test, Order(2)]
         public void CreateUser()
         {
@@ -96,6 +111,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             Console.WriteLine($"Created user with ID {userId}");
         }
 
+        ///<Summary>
+        /// UpdateUser
+        ///</Summary>
         [Test, Order(3)]
         public void UpdateUser()
         {
@@ -113,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             Assert.AreEqual(user.Department, userDepartment);
         }
 
+        ///<Summary>
+        /// SetProfileSkills
+        ///</Summary>
         [Test, Order(4)]
         public void SetProfileSkills()
         {
@@ -123,6 +144,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             Console.WriteLine($"CorrelationId for PutUserProfileskillsWithHttpInfo {skills.CorrelationId}");
         }
 
+        ///<Summary>
+        /// TestNotifications
+        ///</Summary>
         [Test, Order(5)]
         public void TestNotifications()
         {
@@ -177,7 +201,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             Assert.AreEqual(availableReceived, true);
         } 
 
-
+        ///<Summary>
+        /// GetUser
+        ///</Summary>
         [Test, Retry(2), Order(6)]
         public void GetUser()
         {
@@ -195,6 +221,9 @@ namespace PureCloudPlatform.Client.V2.Tests
                 // Assert.AreEqual(user.Data.ProfileSkills[0], userProfileSkill);
         }
 
+        ///<Summary>
+        /// DeleteUserWithProxy
+        ///</Summary>
         [Test, Order(7)]
         public void DeleteUserWithProxy()
         {
@@ -203,8 +232,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             usersApi.DeleteUser(userId);
         }
 
-
-
+        ///<Summary>
+        /// SetUp
+        ///</Summary>
         [SetUp]
         public void SetUp()
         {
@@ -214,6 +244,9 @@ namespace PureCloudPlatform.Client.V2.Tests
             }
         }
 
+        ///<Summary>
+        /// TearDown
+        ///</Summary>
         [TearDown]
         public void TearDown()
         {
@@ -222,6 +255,10 @@ namespace PureCloudPlatform.Client.V2.Tests
                 stop = true;
             }
         }
+        
+        ///<Summary>
+        /// getRegion
+        ///</Summary>
         public Nullable<PureCloudRegionHosts> getRegion(String str = "http://api.mypurecloud.com"){
             switch(str){
                 case "mypurecloud.com":

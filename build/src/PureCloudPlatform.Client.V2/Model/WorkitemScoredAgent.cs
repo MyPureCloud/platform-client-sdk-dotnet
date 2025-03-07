@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkitemScoredAgent" /> class.
         /// </summary>
         /// <param name="Agent">The agent.</param>
-        /// <param name="Score">Agent's score for the workitem, from 0 - 100, higher being better.</param>
+        /// <param name="Score">Agent&#39;s score for the workitem, from 0 - 100, higher being better.</param>
         public WorkitemScoredAgent(UserReference Agent = null, int? Score = null)
         {
             this.Agent = Agent;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Agent's score for the workitem, from 0 - 100, higher being better
+        /// Agent&#39;s score for the workitem, from 0 - 100, higher being better
         /// </summary>
-        /// <value>Agent's score for the workitem, from 0 - 100, higher being better</value>
+        /// <value>Agent&#39;s score for the workitem, from 0 - 100, higher being better</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
 

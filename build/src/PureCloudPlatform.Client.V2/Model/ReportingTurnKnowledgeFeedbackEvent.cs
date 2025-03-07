@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SearchId">The ID of this knowledge search..</param>
         /// <param name="KnowledgeBaseId">The Knowledge Base ID that the captured knowledge data relates to..</param>
         /// <param name="Documents">The list of search documents that the feedback applies to..</param>
-        /// <param name="FeedbackRating">The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive..</param>
+        /// <param name="FeedbackRating">The feedback rating for the search (1.0 - 5.0). 1 &#x3D; Negative, 5 &#x3D; Positive..</param>
         /// <param name="DocumentVariationId">The variation of the document..</param>
         /// <param name="DocumentVersionId">The version of the document..</param>
         public ReportingTurnKnowledgeFeedbackEvent(string SearchId = null, string KnowledgeBaseId = null, List<ReportingTurnKnowledgeDocument> Documents = null, int? FeedbackRating = null, string DocumentVariationId = null, string DocumentVersionId = null)
@@ -68,9 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive.
+        /// The feedback rating for the search (1.0 - 5.0). 1 &#x3D; Negative, 5 &#x3D; Positive.
         /// </summary>
-        /// <value>The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive.</value>
+        /// <value>The feedback rating for the search (1.0 - 5.0). 1 &#x3D; Negative, 5 &#x3D; Positive.</value>
         [DataMember(Name="feedbackRating", EmitDefaultValue=false)]
         public int? FeedbackRating { get; set; }
 

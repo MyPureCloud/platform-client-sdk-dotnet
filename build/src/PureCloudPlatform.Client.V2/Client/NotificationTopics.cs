@@ -4,8 +4,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Client
 {
+    /// <Summary>
+    /// Notification Topics
+    /// </Summary>
     public static class NotificationTopics
     {
+        /// <Summary>
+        /// Topic Name to Type Dictionary
+        /// </Summary>
         public static Dictionary<string, Type> Topics;
 
         static NotificationTopics()

@@ -199,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
-        /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
+        /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn&#39;t execute successfully.</param>
         public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
@@ -474,9 +474,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Is true when evaluation assistance didn't execute successfully
+        /// Is true when evaluation assistance didn&#39;t execute successfully
         /// </summary>
-        /// <value>Is true when evaluation assistance didn't execute successfully</value>
+        /// <value>Is true when evaluation assistance didn&#39;t execute successfully</value>
         [DataMember(Name="hasAssistanceFailed", EmitDefaultValue=false)]
         public bool? HasAssistanceFailed { get; set; }
 

@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowMilestone" /> class.
         /// </summary>
-        /// <param name="Id">The Milestone's ID. (required).</param>
+        /// <param name="Id">The Milestone&#39;s ID. (required).</param>
         /// <param name="DateReached">The timestamp of when the milestone was reached. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Sequence">The sequence number of the milestone. (required).</param>
         public TextBotFlowMilestone(string Id = null, DateTime? DateReached = null, long? Sequence = null)
@@ -41,9 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Milestone's ID.
+        /// The Milestone&#39;s ID.
         /// </summary>
-        /// <value>The Milestone's ID.</value>
+        /// <value>The Milestone&#39;s ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

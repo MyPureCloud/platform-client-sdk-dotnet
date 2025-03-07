@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">A unique Id (V4 UUID) identifying the queue that the user is messaging on behalf of. Applies to outbound messages only..</param>
         /// <param name="AfterCallWorkRequired">Indicates whether or not this user will be required to complete after call work..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
-        /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
+        /// <param name="SourceConfiguration">Metadata about the source of this communication&#39;s interaction. (required).</param>
         public MessagingUserEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string UserId = null, string QueueId = null, bool? AfterCallWorkRequired = null, MessagingInitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
         {
             this.EventId = EventId;
@@ -125,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Metadata about the source of this communication's interaction.
+        /// Metadata about the source of this communication&#39;s interaction.
         /// </summary>
-        /// <value>Metadata about the source of this communication's interaction.</value>
+        /// <value>Metadata about the source of this communication&#39;s interaction.</value>
         [DataMember(Name="sourceConfiguration", EmitDefaultValue=false)]
         public SourceConfiguration SourceConfiguration { get; set; }
 

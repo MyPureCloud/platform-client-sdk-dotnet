@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="OutcomeId">ID of Outcome. (required).</param>
         /// <param name="ExternalContactId">The external contact ID of the customer who achieved the outcome..</param>
-        /// <param name="AssociatedValue">The total value associated with the customer's outcome. (required).</param>
+        /// <param name="AssociatedValue">The total value associated with the customer&#39;s outcome. (required).</param>
         /// <param name="Touchpoints">List of interactions that led to this outcome being achieved. (required).</param>
         /// <param name="CreatedDate">Date outcome was achieved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         public OutcomeAttributionRequest(string OutcomeId = null, string ExternalContactId = null, double? AssociatedValue = null, List<Touchpoint> Touchpoints = null, DateTime? CreatedDate = null)
@@ -63,9 +63,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The total value associated with the customer's outcome.
+        /// The total value associated with the customer&#39;s outcome.
         /// </summary>
-        /// <value>The total value associated with the customer's outcome.</value>
+        /// <value>The total value associated with the customer&#39;s outcome.</value>
         [DataMember(Name="associatedValue", EmitDefaultValue=false)]
         public double? AssociatedValue { get; set; }
 

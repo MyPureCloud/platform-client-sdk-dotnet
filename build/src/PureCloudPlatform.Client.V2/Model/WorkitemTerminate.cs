@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemTerminate" /> class.
         /// </summary>
-        /// <param name="StatusId">The ID of the status the workitem should be updated to when terminating. The status must be a 'Closed' category status..</param>
+        /// <param name="StatusId">The ID of the status the workitem should be updated to when terminating. The status must be a &#39;Closed&#39; category status..</param>
         public WorkitemTerminate(string StatusId = null)
         {
             this.StatusId = StatusId;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the status the workitem should be updated to when terminating. The status must be a 'Closed' category status.
+        /// The ID of the status the workitem should be updated to when terminating. The status must be a &#39;Closed&#39; category status.
         /// </summary>
-        /// <value>The ID of the status the workitem should be updated to when terminating. The status must be a 'Closed' category status.</value>
+        /// <value>The ID of the status the workitem should be updated to when terminating. The status must be a &#39;Closed&#39; category status.</value>
         [DataMember(Name="statusId", EmitDefaultValue=false)]
         public string StatusId { get; set; }
 

@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateRoomRequest" /> class.
         /// </summary>
-        /// <param name="Description">Room's description.</param>
-        /// <param name="Subject">Room's subject (required).</param>
+        /// <param name="Description">Room&#39;s description.</param>
+        /// <param name="Subject">Room&#39;s subject (required).</param>
         /// <param name="UserIds">Users to add to the room.</param>
         public CreateRoomRequest(string Description = null, string Subject = null, List<string> UserIds = null)
         {
@@ -41,18 +41,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Room's description
+        /// Room&#39;s description
         /// </summary>
-        /// <value>Room's description</value>
+        /// <value>Room&#39;s description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
 
 
         /// <summary>
-        /// Room's subject
+        /// Room&#39;s subject
         /// </summary>
-        /// <value>Room's subject</value>
+        /// <value>Room&#39;s subject</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
 

@@ -139,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedDate">The date the activity plan was created, in ISO-8601 format (required).</param>
         /// <param name="CreatedBy">The user who created this activity plan (required).</param>
         /// <param name="ModifiedDate">The date the activity plan was modified, in ISO-8601 format (required).</param>
-        /// <param name="ModifiedBy">The last user to modify this activity plan (required).</param>
+        /// <param name="ModifiedBy">The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process (required).</param>
         public ActivityPlanListItem(string Name = null, List<ManagementUnitReference> ManagementUnits = null, string Description = null, ActivityCodeReference ActivityCode = null, TypeEnum? Type = null, OptimizationObjectiveEnum? OptimizationObjective = null, RecurrenceSettings RecurrenceSettings = null, StateEnum? State = null, DateTime? LastRunDate = null, UserReference LastRunBy = null, DateTime? CreatedDate = null, UserReference CreatedBy = null, DateTime? ModifiedDate = null, UserReference ModifiedBy = null)
         {
             this.Name = Name;
@@ -267,9 +267,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The last user to modify this activity plan
+        /// The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The last user to modify this activity plan</value>
+        /// <value>The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; set; }
 

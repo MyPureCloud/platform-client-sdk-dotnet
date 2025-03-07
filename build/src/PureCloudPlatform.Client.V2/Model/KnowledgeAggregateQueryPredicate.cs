@@ -85,6 +85,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Apptype,
             
             /// <summary>
+            /// Enum Botflowid for "botFlowId"
+            /// </summary>
+            [EnumMember(Value = "botFlowId")]
+            Botflowid,
+            
+            /// <summary>
             /// Enum Conversationchanneltype for "conversationChannelType"
             /// </summary>
             [EnumMember(Value = "conversationChannelType")]

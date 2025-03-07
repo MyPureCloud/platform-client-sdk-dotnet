@@ -143,8 +143,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ButtonResponse">Button Response selected by user for this message..</param>
         /// <param name="Story">Ephemeral story content..</param>
         /// <param name="Cards">List of cards offered for this message.</param>
+        /// <param name="NotificationTemplate">Template notification content..</param>
         /// <param name="ContentType">Indicates the content type for this message.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, ContentTypeEnum? ContentType = null)
+        /// <param name="Events">List of event elements.</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, ContentTypeEnum? ContentType = null, List<ConversationMessageEvent> Events = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -163,7 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ButtonResponse = ButtonResponse;
             this.Story = Story;
             this.Cards = Cards;
+            this.NotificationTemplate = NotificationTemplate;
             this.ContentType = ContentType;
+            this.Events = Events;
             
         }
         
@@ -322,6 +326,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Template notification content.
+        /// </summary>
+        /// <value>Template notification content.</value>
+        [DataMember(Name="notificationTemplate", EmitDefaultValue=false)]
+        public RecordingNotificationTemplate NotificationTemplate { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// List of event elements
+        /// </summary>
+        /// <value>List of event elements</value>
+        [DataMember(Name="events", EmitDefaultValue=false)]
+        public List<ConversationMessageEvent> Events { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -349,7 +371,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
             sb.Append("  Story: ").Append(Story).Append("\n");
             sb.Append("  Cards: ").Append(Cards).Append("\n");
+            sb.Append("  NotificationTemplate: ").Append(NotificationTemplate).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
+            sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -476,9 +500,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Cards.SequenceEqual(other.Cards)
                 ) &&
                 (
+                    this.NotificationTemplate == other.NotificationTemplate ||
+                    this.NotificationTemplate != null &&
+                    this.NotificationTemplate.Equals(other.NotificationTemplate)
+                ) &&
+                (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
+                ) &&
+                (
+                    this.Events == other.Events ||
+                    this.Events != null &&
+                    this.Events.SequenceEqual(other.Events)
                 );
         }
 
@@ -544,8 +578,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Cards != null)
                     hash = hash * 59 + this.Cards.GetHashCode();
 
+                if (this.NotificationTemplate != null)
+                    hash = hash * 59 + this.NotificationTemplate.GetHashCode();
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
+
+                if (this.Events != null)
+                    hash = hash * 59 + this.Events.GetHashCode();
 
                 return hash;
             }

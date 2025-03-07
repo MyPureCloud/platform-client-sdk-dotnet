@@ -203,7 +203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
         
@@ -224,7 +224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
         
@@ -285,7 +285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -297,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         List<RecordingMetadata> GetConversationRecordingmetadata (string conversationId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -335,7 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RecordingMetadata> GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get all of a Conversation's Recordings.
+        /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
         /// 
@@ -345,12 +345,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         
-        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
+        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
 
         /// <summary>
-        /// Get all of a Conversation's Recordings.
+        /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
         /// 
@@ -360,9 +361,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         
-        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
+        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -615,7 +617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FailedRecordingEntityListing> GetRecordingJobFailedrecordingsWithHttpInfo (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization
+        /// Get the status of all jobs within the user&#39;s organization
         /// </summary>
         /// <remarks>
         /// 
@@ -634,7 +636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         RecordingJobEntityListing GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization
+        /// Get the status of all jobs within the user&#39;s organization
         /// </summary>
         /// <remarks>
         /// 
@@ -889,32 +891,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of RecordingRetentionCursorEntityListing</returns>
         
         ApiResponse<RecordingRetentionCursorEntityListing> GetRecordingsRetentionQueryWithHttpInfo (int? retentionThresholdDays, string cursor = null, int? pageSize = null);
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions
-        /// </summary>
-        /// <remarks>
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ScreenRecordingSessionListing</returns>
-        [Obsolete]
-        ScreenRecordingSessionListing GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions
-        /// </summary>
-        /// <remarks>
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
-        [Obsolete]
-        ApiResponse<ScreenRecordingSessionListing> GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieves an object containing the total number of concurrent active screen recordings
@@ -1759,7 +1735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
         
@@ -1780,7 +1756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
         
@@ -1841,7 +1817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1853,7 +1829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<RecordingMetadata>> GetConversationRecordingmetadataAsync (string conversationId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1891,7 +1867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RecordingMetadata>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get all of a Conversation's Recordings.
+        /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
         /// 
@@ -1901,12 +1877,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         
-        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
+        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
 
         /// <summary>
-        /// Get all of a Conversation's Recordings.
+        /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
         /// 
@@ -1916,9 +1893,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
+        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -2171,7 +2149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FailedRecordingEntityListing>> GetRecordingJobFailedrecordingsAsyncWithHttpInfo (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization
+        /// Get the status of all jobs within the user&#39;s organization
         /// </summary>
         /// <remarks>
         /// 
@@ -2190,7 +2168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RecordingJobEntityListing> GetRecordingJobsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization
+        /// Get the status of all jobs within the user&#39;s organization
         /// </summary>
         /// <remarks>
         /// 
@@ -2445,32 +2423,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (RecordingRetentionCursorEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<RecordingRetentionCursorEntityListing>> GetRecordingsRetentionQueryAsyncWithHttpInfo (int? retentionThresholdDays, string cursor = null, int? pageSize = null);
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions
-        /// </summary>
-        /// <remarks>
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ScreenRecordingSessionListing</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetRecordingsScreensessionsAsync (int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions
-        /// </summary>
-        /// <remarks>
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieves an object containing the total number of concurrent active screen recordings
@@ -4734,7 +4686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
         
@@ -4757,7 +4709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
         
@@ -4869,7 +4821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
         
@@ -4893,7 +4845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageFormatId">The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)</param>
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="locale">The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
         
@@ -5461,7 +5413,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5475,7 +5427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5566,7 +5518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5581,7 +5533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5900,7 +5852,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get all of a Conversation's Recordings. 
+        /// Get all of a Conversation&#39;s Recordings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5908,16 +5860,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         
-        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
+        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats);
+             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats, locale);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get all of a Conversation's Recordings. 
+        /// Get all of a Conversation&#39;s Recordings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5925,9 +5878,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         
-        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
+        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -5969,6 +5923,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (maxWaitMs != null) localVarQueryParams.Add(new Tuple<string, string>("maxWaitMs", this.Configuration.ApiClient.ParameterToString(maxWaitMs)));
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
             if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
 
             // Header params
 
@@ -6014,7 +5969,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get all of a Conversation's Recordings. 
+        /// Get all of a Conversation&#39;s Recordings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6022,17 +5977,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         
-        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
+        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats);
+             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats, locale);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get all of a Conversation's Recordings. 
+        /// Get all of a Conversation&#39;s Recordings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6040,9 +5996,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
+        /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -6085,6 +6042,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (maxWaitMs != null) localVarQueryParams.Add(new Tuple<string, string>("maxWaitMs", this.Configuration.ApiClient.ParameterToString(maxWaitMs)));
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
             if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
 
             // Header params
 
@@ -7995,7 +7953,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization 
+        /// Get the status of all jobs within the user&#39;s organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8016,7 +7974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization 
+        /// Get the status of all jobs within the user&#39;s organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8118,7 +8076,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization 
+        /// Get the status of all jobs within the user&#39;s organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8140,7 +8098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the status of all jobs within the user's organization 
+        /// Get the status of all jobs within the user&#39;s organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10184,218 +10142,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<RecordingRetentionCursorEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (RecordingRetentionCursorEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingRetentionCursorEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions 
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ScreenRecordingSessionListing</returns>
-        [Obsolete]
-        public ScreenRecordingSessionListing GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<ScreenRecordingSessionListing> localVarResponse = GetRecordingsScreensessionsWithHttpInfo(pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions 
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
-        [Obsolete]
-        public ApiResponse< ScreenRecordingSessionListing > GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        { 
-
-            var localVarPath = "/api/v2/recordings/screensessions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .GroupBy(header => header?.Name)
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header?.FirstOrDefault()?.Name,
-                                                            Value = header.Select(x => x?.Value)?.ToList()
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ScreenRecordingSessionListing>(localVarStatusCode,
-                localVarHeaders,
-                (ScreenRecordingSessionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingSessionListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions 
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ScreenRecordingSessionListing</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetRecordingsScreensessionsAsync (int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<ScreenRecordingSessionListing> localVarResponse = await GetRecordingsScreensessionsAsyncWithHttpInfo(pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Retrieves a paged listing of screen recording sessions 
-        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        { 
-
-            var localVarPath = "/api/v2/recordings/screensessions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .GroupBy(header => header?.Name)
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header?.FirstOrDefault()?.Name,
-                                                            Value = header.Select(x => x?.Value)?.ToList()
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ScreenRecordingSessionListing>(localVarStatusCode,
-                localVarHeaders,
-                (ScreenRecordingSessionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingSessionListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

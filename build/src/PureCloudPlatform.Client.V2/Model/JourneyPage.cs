@@ -29,14 +29,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Url">The page URL. (required).</param>
         /// <param name="Title">Title of the page..</param>
-        /// <param name="Domain">Domain of the page's URL. (required).</param>
-        /// <param name="Fragment">Fragment or hash of the page's URL..</param>
-        /// <param name="Hostname">Hostname of the page's URL. (required).</param>
-        /// <param name="Keywords">Keywords from the HTML {@code <meta>} tag of the page..</param>
-        /// <param name="Lang">ISO 639-1 language code for the page as defined in the {@code <html>} tag..</param>
+        /// <param name="Domain">Domain of the page&#39;s URL. (required).</param>
+        /// <param name="Fragment">Fragment or hash of the page&#39;s URL..</param>
+        /// <param name="Hostname">Hostname of the page&#39;s URL. (required).</param>
+        /// <param name="Keywords">Keywords from the HTML {@code &lt;meta&gt;} tag of the page..</param>
+        /// <param name="Lang">ISO 639-1 language code for the page as defined in the {@code &lt;html&gt;} tag..</param>
         /// <param name="Pathname">Path name of the page for the event. (required).</param>
         /// <param name="QueryString">Query string that is passed to the page in the current event..</param>
-        /// <param name="Breadcrumb">Hierarchy of the current page in relation to the website's structure. (required).</param>
+        /// <param name="Breadcrumb">Hierarchy of the current page in relation to the website&#39;s structure. (required).</param>
         public JourneyPage(string Url = null, string Title = null, string Domain = null, string Fragment = null, string Hostname = null, string Keywords = null, string Lang = null, string Pathname = null, string QueryString = null, List<string> Breadcrumb = null)
         {
             this.Url = Url;
@@ -73,45 +73,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Domain of the page's URL.
+        /// Domain of the page&#39;s URL.
         /// </summary>
-        /// <value>Domain of the page's URL.</value>
+        /// <value>Domain of the page&#39;s URL.</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
 
 
 
         /// <summary>
-        /// Fragment or hash of the page's URL.
+        /// Fragment or hash of the page&#39;s URL.
         /// </summary>
-        /// <value>Fragment or hash of the page's URL.</value>
+        /// <value>Fragment or hash of the page&#39;s URL.</value>
         [DataMember(Name="fragment", EmitDefaultValue=false)]
         public string Fragment { get; set; }
 
 
 
         /// <summary>
-        /// Hostname of the page's URL.
+        /// Hostname of the page&#39;s URL.
         /// </summary>
-        /// <value>Hostname of the page's URL.</value>
+        /// <value>Hostname of the page&#39;s URL.</value>
         [DataMember(Name="hostname", EmitDefaultValue=false)]
         public string Hostname { get; set; }
 
 
 
         /// <summary>
-        /// Keywords from the HTML {@code <meta>} tag of the page.
+        /// Keywords from the HTML {@code &lt;meta&gt;} tag of the page.
         /// </summary>
-        /// <value>Keywords from the HTML {@code <meta>} tag of the page.</value>
+        /// <value>Keywords from the HTML {@code &lt;meta&gt;} tag of the page.</value>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public string Keywords { get; set; }
 
 
 
         /// <summary>
-        /// ISO 639-1 language code for the page as defined in the {@code <html>} tag.
+        /// ISO 639-1 language code for the page as defined in the {@code &lt;html&gt;} tag.
         /// </summary>
-        /// <value>ISO 639-1 language code for the page as defined in the {@code <html>} tag.</value>
+        /// <value>ISO 639-1 language code for the page as defined in the {@code &lt;html&gt;} tag.</value>
         [DataMember(Name="lang", EmitDefaultValue=false)]
         public string Lang { get; set; }
 
@@ -136,9 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Hierarchy of the current page in relation to the website's structure.
+        /// Hierarchy of the current page in relation to the website&#39;s structure.
         /// </summary>
-        /// <value>Hierarchy of the current page in relation to the website's structure.</value>
+        /// <value>Hierarchy of the current page in relation to the website&#39;s structure.</value>
         [DataMember(Name="breadcrumb", EmitDefaultValue=false)]
         public List<string> Breadcrumb { get; set; }
 

@@ -1225,7 +1225,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
         /// <param name="AgentBullseyeRing">Bullseye ring of the targeted agent.</param>
         /// <param name="AgentOwned">Flag indicating an agent-owned callback.</param>
-        /// <param name="Ani">Automatic Number Identification (caller's number).</param>
+        /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
         /// <param name="Authenticated">Flag that indicates that the identity of the customer has been asserted as verified by the provider..</param>
         /// <param name="ConversationId">Unique identifier for the conversation.</param>
@@ -1281,7 +1281,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
         /// <param name="PeerId">This identifies pairs of related sessions on a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session, which will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session..</param>
         /// <param name="Provider">The source provider for the communication..</param>
-        /// <param name="Purpose">The participant's purpose.</param>
+        /// <param name="Purpose">The participant&#39;s purpose.</param>
         /// <param name="QueueId">Queue identifier.</param>
         /// <param name="RecognitionFailureReason">The recognition failure reason causing to exit/disconnect.</param>
         /// <param name="Remote">Name, phone number, or email address of the remote party..</param>
@@ -1505,9 +1505,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Automatic Number Identification (caller's number)
+        /// Automatic Number Identification (caller&#39;s number)
         /// </summary>
-        /// <value>Automatic Number Identification (caller's number)</value>
+        /// <value>Automatic Number Identification (caller&#39;s number)</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
 

@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether the user is a member of the campaign's queue
+        /// Whether the user is a member of the campaign&#39;s queue
         /// </summary>
-        /// <value>Whether the user is a member of the campaign's queue</value>
+        /// <value>Whether the user is a member of the campaign&#39;s queue</value>
         [DataMember(Name="isQueueMember", EmitDefaultValue=false)]
         public bool? IsQueueMember { get; private set; }
 

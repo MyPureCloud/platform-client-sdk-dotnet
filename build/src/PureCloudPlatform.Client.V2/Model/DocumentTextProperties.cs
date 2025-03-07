@@ -90,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentTextProperties" /> class.
         /// </summary>
-        /// <param name="FontSize">The font size for the text. The valid values in 'em'..</param>
+        /// <param name="FontSize">The font size for the text. The valid values in &#39;em&#39;..</param>
         /// <param name="TextColor">The text color for the text. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="BackgroundColor">The background color for the text. The valid values in hex color code representation. For example black color - #000000.</param>
         public DocumentTextProperties(FontSizeEnum? FontSize = null, string TextColor = null, string BackgroundColor = null)

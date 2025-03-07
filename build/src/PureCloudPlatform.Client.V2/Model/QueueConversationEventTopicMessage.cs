@@ -382,9 +382,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
-        /// <param name="JourneyContext">A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
+        /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="AfterCallWork">A communication's after-call work data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
         /// <param name="ByoSmsIntegrationId">ByoSmsIntegrationId.</param>
@@ -569,9 +569,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).
+        /// A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
         /// </summary>
-        /// <value>A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
+        /// <value>A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
         [DataMember(Name="journeyContext", EmitDefaultValue=false)]
         public QueueConversationEventTopicJourneyContext JourneyContext { get; set; }
 
@@ -587,9 +587,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A communication's after-call work data.
+        /// A communication&#39;s after-call work data.
         /// </summary>
-        /// <value>A communication's after-call work data.</value>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationEventTopicAfterCallWork AfterCallWork { get; set; }
 

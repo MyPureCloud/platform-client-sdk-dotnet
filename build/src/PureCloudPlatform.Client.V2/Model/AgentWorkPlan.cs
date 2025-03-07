@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="ConstrainWeeklyPaidTime">Whether the weekly paid time constraint is enabled for this work plan (required).</param>
         /// <param name="FlexibleWeeklyPaidTime">Whether the weekly paid time constraint is flexible for this work plan (required).</param>
-        /// <param name="WeeklyExactPaidMinutes">Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false (required).</param>
-        /// <param name="WeeklyMinimumPaidMinutes">Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true (required).</param>
-        /// <param name="WeeklyMaximumPaidMinutes">Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true (required).</param>
+        /// <param name="WeeklyExactPaidMinutes">Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false (required).</param>
+        /// <param name="WeeklyMinimumPaidMinutes">Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true (required).</param>
+        /// <param name="WeeklyMaximumPaidMinutes">Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true (required).</param>
         /// <param name="OptionalDays">Optional days to schedule for this work plan.</param>
         /// <param name="Shifts">Shifts in this work plan (required).</param>
         public AgentWorkPlan(string Name = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, SetWrapperDayOfWeek OptionalDays = null, List<AgentWorkPlanShift> Shifts = null)
@@ -86,27 +86,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false
+        /// Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false
         /// </summary>
-        /// <value>Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false</value>
+        /// <value>Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false</value>
         [DataMember(Name="weeklyExactPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyExactPaidMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
+        /// Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true</value>
+        /// <value>Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true</value>
         [DataMember(Name="weeklyMinimumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMinimumPaidMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
+        /// Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true</value>
+        /// <value>Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true</value>
         [DataMember(Name="weeklyMaximumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMaximumPaidMinutes { get; set; }
 

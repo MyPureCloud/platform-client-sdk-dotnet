@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportScriptRequest" /> class.
         /// </summary>
-        /// <param name="FileName">The final file name (no extension) of the script download: <fileName>.script.</param>
+        /// <param name="FileName">The final file name (no extension) of the script download: &lt;fileName&gt;.script.</param>
         /// <param name="VersionId">The UUID version of the script to be exported.  Defaults to the current editable version..</param>
         public ExportScriptRequest(string FileName = null, string VersionId = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The final file name (no extension) of the script download: <fileName>.script
+        /// The final file name (no extension) of the script download: &lt;fileName&gt;.script
         /// </summary>
-        /// <value>The final file name (no extension) of the script download: <fileName>.script</value>
+        /// <value>The final file name (no extension) of the script download: &lt;fileName&gt;.script</value>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
 

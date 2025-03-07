@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AllowCallbackQueueSelection">Allow Callback Queue Selection.</param>
         /// <param name="CallbacksInheritRoutingFromInboundCall">Inherit callback routing data from inbound calls.</param>
         /// <param name="CompleteAcwWhenAgentTransitionsOffline">Complete ACW When Agent Transitions Offline.</param>
-        /// <param name="TotalActiveCallback">Exclude the 'interacting' duration from the handle calculations of callbacks.</param>
+        /// <param name="TotalActiveCallback">Exclude the &#39;interacting&#39; duration from the handle calculations of callbacks.</param>
         public Settings(bool? CommunicationBasedACW = null, bool? IncludeNonAgentConversationSummary = null, bool? AllowCallbackQueueSelection = null, bool? CallbacksInheritRoutingFromInboundCall = null, bool? CompleteAcwWhenAgentTransitionsOffline = null, bool? TotalActiveCallback = null)
         {
             this.CommunicationBasedACW = CommunicationBasedACW;
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Exclude the 'interacting' duration from the handle calculations of callbacks
+        /// Exclude the &#39;interacting&#39; duration from the handle calculations of callbacks
         /// </summary>
-        /// <value>Exclude the 'interacting' duration from the handle calculations of callbacks</value>
+        /// <value>Exclude the &#39;interacting&#39; duration from the handle calculations of callbacks</value>
         [DataMember(Name="totalActiveCallback", EmitDefaultValue=false)]
         public bool? TotalActiveCallback { get; set; }
 

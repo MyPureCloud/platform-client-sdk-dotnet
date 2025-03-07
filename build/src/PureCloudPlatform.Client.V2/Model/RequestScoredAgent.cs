@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestScoredAgent" /> class.
         /// </summary>
-        /// <param name="Id">Agent's user ID.</param>
-        /// <param name="Score">Agent's score for the current conversation, from 0 - 100, higher being better.</param>
+        /// <param name="Id">Agent&#39;s user ID.</param>
+        /// <param name="Score">Agent&#39;s score for the current conversation, from 0 - 100, higher being better.</param>
         public RequestScoredAgent(string Id = null, int? Score = null)
         {
             this.Id = Id;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Agent's user ID
+        /// Agent&#39;s user ID
         /// </summary>
-        /// <value>Agent's user ID</value>
+        /// <value>Agent&#39;s user ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
 
 
         /// <summary>
-        /// Agent's score for the current conversation, from 0 - 100, higher being better
+        /// Agent&#39;s score for the current conversation, from 0 - 100, higher being better
         /// </summary>
-        /// <value>Agent's score for the current conversation, from 0 - 100, higher being better</value>
+        /// <value>Agent&#39;s score for the current conversation, from 0 - 100, higher being better</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
 

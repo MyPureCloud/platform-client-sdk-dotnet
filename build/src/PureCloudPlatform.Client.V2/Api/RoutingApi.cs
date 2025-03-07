@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingAssessmentWithHttpInfo (string assessmentId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingDirectroutingbackupSettingsMe ();
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -289,7 +289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingQueueWrapupcodeWithHttpInfo (string queueId, string codeId);
 
         /// <summary>
-        /// Delete an organization's routing settings
+        /// Delete an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -300,7 +300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingSettings ();
 
         /// <summary>
-        /// Delete an organization's routing settings
+        /// Delete an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -407,7 +407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -419,7 +419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingUserDirectroutingbackupSettings (string userId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -431,7 +431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingUserDirectroutingbackupSettingsWithHttpInfo (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -443,7 +443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteRoutingUserUtilization (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -733,7 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AvailableMediaTypeEntityListing> GetRoutingAvailablemediatypesWithHttpInfo ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -744,7 +744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings GetRoutingDirectroutingbackupSettingsMe ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -803,6 +803,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of InboundRoute</returns>
         
         ApiResponse<InboundRoute> GetRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId);
+
+        /// <summary>
+        /// Get a route identity resolution setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        IdentityResolutionConfig GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId);
+
+        /// <summary>
+        /// Get a route identity resolution setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        ApiResponse<IdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId);
 
         /// <summary>
         /// Get routes
@@ -1351,6 +1379,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EstimatedWaitTimePredictions> GetRoutingQueueEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null);
 
         /// <summary>
+        /// Get Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>IdentityResolutionQueueConfig</returns>
+        
+        IdentityResolutionQueueConfig GetRoutingQueueIdentityresolution (string queueId);
+
+        /// <summary>
+        /// Get Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>ApiResponse of IdentityResolutionQueueConfig</returns>
+        
+        ApiResponse<IdentityResolutionQueueConfig> GetRoutingQueueIdentityresolutionWithHttpInfo (string queueId);
+
+        /// <summary>
         /// Get Estimated Wait Time
         /// </summary>
         /// <remarks>
@@ -1635,7 +1689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserQueueEntityListing> GetRoutingQueuesMeWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null);
 
         /// <summary>
-        /// Get an organization's routing settings
+        /// Get an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -1646,7 +1700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         RoutingSettings GetRoutingSettings ();
 
         /// <summary>
-        /// Get an organization's routing settings
+        /// Get an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -1953,6 +2007,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SMSAvailablePhoneNumberEntityListing> GetRoutingSmsAvailablephonenumbersWithHttpInfo (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null);
 
         /// <summary>
+        /// Get a SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        IdentityResolutionConfig GetRoutingSmsIdentityresolutionPhonenumber (string addressId);
+
+        /// <summary>
+        /// Get a SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        ApiResponse<IdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId);
+
+        /// <summary>
         /// Get a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
@@ -2023,7 +2103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null, string supportedContentId = null);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -2035,7 +2115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings GetRoutingUserDirectroutingbackupSettings (string userId);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -2047,7 +2127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentDirectRoutingBackupSettings> GetRoutingUserDirectroutingbackupSettingsWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -2059,7 +2139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentMaxUtilizationResponse GetRoutingUserUtilization (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -2837,7 +2917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -2851,7 +2931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -3593,7 +3673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserRoutingSkill> PostUserRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3605,7 +3685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings PutRoutingDirectroutingbackupSettingsMe (AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3643,6 +3723,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of InboundRoute</returns>
         
         ApiResponse<InboundRoute> PutRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId, InboundRoute body);
+
+        /// <summary>
+        /// Update identity resolution settings for a route.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        IdentityResolutionConfig PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update identity resolution settings for a route.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        ApiResponse<IdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body);
 
         /// <summary>
         /// Request an activation status (cname + dkim) update of an outbound domain
@@ -3721,7 +3831,35 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Queue> PutRoutingQueueWithHttpInfo (string queueId, QueueRequest body);
 
         /// <summary>
-        /// Update an organization's routing settings
+        /// Update Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionQueueConfig</returns>
+        
+        IdentityResolutionQueueConfig PutRoutingQueueIdentityresolution (string queueId, IdentityResolutionQueueConfig body);
+
+        /// <summary>
+        /// Update Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionQueueConfig</returns>
+        
+        ApiResponse<IdentityResolutionQueueConfig> PutRoutingQueueIdentityresolutionWithHttpInfo (string queueId, IdentityResolutionQueueConfig body);
+
+        /// <summary>
+        /// Update an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -3733,7 +3871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         RoutingSettings PutRoutingSettings (RoutingSettings body);
 
         /// <summary>
-        /// Update an organization's routing settings
+        /// Update an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -3769,7 +3907,35 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TranscriptionSettings> PutRoutingSettingsTranscriptionWithHttpInfo (TranscriptionSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update an SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        IdentityResolutionConfig PutRoutingSmsIdentityresolutionPhonenumber (string addressId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update an SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        ApiResponse<IdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3782,7 +3948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentDirectRoutingBackupSettings PutRoutingUserDirectroutingbackupSettings (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -3795,7 +3961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentDirectRoutingBackupSettings> PutRoutingUserDirectroutingbackupSettingsWithHttpInfo (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -3808,7 +3974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentMaxUtilizationResponse PutRoutingUserUtilization (string userId, UtilizationRequest body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -3897,7 +4063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WrapupCode> PutRoutingWrapupcodeWithHttpInfo (string codeId, WrapupCodeRequest body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -3911,7 +4077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -3979,7 +4145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingAssessmentAsyncWithHttpInfo (string assessmentId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -3990,7 +4156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingDirectroutingbackupSettingsMeAsync ();
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -4227,7 +4393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId);
 
         /// <summary>
-        /// Delete an organization's routing settings
+        /// Delete an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -4238,7 +4404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingSettingsAsync ();
 
         /// <summary>
-        /// Delete an organization's routing settings
+        /// Delete an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -4345,7 +4511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -4357,7 +4523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingUserDirectroutingbackupSettingsAsync (string userId);
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
         /// </summary>
         /// <remarks>
         /// 
@@ -4369,7 +4535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserDirectroutingbackupSettingsAsyncWithHttpInfo (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -4381,7 +4547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId);
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default.
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
         /// </summary>
         /// <remarks>
         /// 
@@ -4671,7 +4837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AvailableMediaTypeEntityListing>> GetRoutingAvailablemediatypesAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -4682,7 +4848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> GetRoutingDirectroutingbackupSettingsMeAsync ();
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -4741,6 +4907,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId);
+
+        /// <summary>
+        /// Get a route identity resolution setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId);
+
+        /// <summary>
+        /// Get a route identity resolution setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId);
 
         /// <summary>
         /// Get routes
@@ -5289,6 +5483,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null);
 
         /// <summary>
+        /// Get Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of IdentityResolutionQueueConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionQueueConfig> GetRoutingQueueIdentityresolutionAsync (string queueId);
+
+        /// <summary>
+        /// Get Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionQueueConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionQueueConfig>> GetRoutingQueueIdentityresolutionAsyncWithHttpInfo (string queueId);
+
+        /// <summary>
         /// Get Estimated Wait Time
         /// </summary>
         /// <remarks>
@@ -5573,7 +5793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetRoutingQueuesMeAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null);
 
         /// <summary>
-        /// Get an organization's routing settings
+        /// Get an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -5584,7 +5804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RoutingSettings> GetRoutingSettingsAsync ();
 
         /// <summary>
-        /// Get an organization's routing settings
+        /// Get an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -5891,6 +6111,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SMSAvailablePhoneNumberEntityListing>> GetRoutingSmsAvailablephonenumbersAsyncWithHttpInfo (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null);
 
         /// <summary>
+        /// Get a SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberAsync (string addressId);
+
+        /// <summary>
+        /// Get a SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId);
+
+        /// <summary>
         /// Get a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
@@ -5961,7 +6207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null, string supportedContentId = null);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -5973,7 +6219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> GetRoutingUserDirectroutingbackupSettingsAsync (string userId);
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings.
+        /// Get the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -5985,7 +6231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentDirectRoutingBackupSettings>> GetRoutingUserDirectroutingbackupSettingsAsyncWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -5997,7 +6243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentMaxUtilizationResponse> GetRoutingUserUtilizationAsync (string userId);
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -6775,7 +7021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -6789,7 +7035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
-        /// Update an assigned routing language's proficiency
+        /// Update an assigned routing language&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -7531,7 +7777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -7543,7 +7789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> PutRoutingDirectroutingbackupSettingsMeAsync (AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -7581,6 +7827,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body);
+
+        /// <summary>
+        /// Update identity resolution settings for a route.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update identity resolution settings for a route.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body);
 
         /// <summary>
         /// Request an activation status (cname + dkim) update of an outbound domain
@@ -7659,7 +7935,35 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Queue>> PutRoutingQueueAsyncWithHttpInfo (string queueId, QueueRequest body);
 
         /// <summary>
-        /// Update an organization's routing settings
+        /// Update Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionQueueConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionQueueConfig> PutRoutingQueueIdentityresolutionAsync (string queueId, IdentityResolutionQueueConfig body);
+
+        /// <summary>
+        /// Update Queue IdentityResolution Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionQueueConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionQueueConfig>> PutRoutingQueueIdentityresolutionAsyncWithHttpInfo (string queueId, IdentityResolutionQueueConfig body);
+
+        /// <summary>
+        /// Update an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -7671,7 +7975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RoutingSettings> PutRoutingSettingsAsync (RoutingSettings body);
 
         /// <summary>
-        /// Update an organization's routing settings
+        /// Update an organization&#39;s routing settings
         /// </summary>
         /// <remarks>
         /// 
@@ -7707,7 +8011,35 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TranscriptionSettings>> PutRoutingSettingsTranscriptionAsyncWithHttpInfo (TranscriptionSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update an SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberAsync (string addressId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update an SMS identity resolution settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -7720,7 +8052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentDirectRoutingBackupSettings> PutRoutingUserDirectroutingbackupSettingsAsync (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings.
+        /// Update the user&#39;s Direct Routing Backup settings.
         /// </summary>
         /// <remarks>
         /// 
@@ -7733,7 +8065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentDirectRoutingBackupSettings>> PutRoutingUserDirectroutingbackupSettingsAsyncWithHttpInfo (string userId, AgentDirectRoutingBackupSettings body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -7746,7 +8078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentMaxUtilizationResponse> PutRoutingUserUtilizationAsync (string userId, UtilizationRequest body);
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -7835,7 +8167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutRoutingWrapupcodeAsyncWithHttpInfo (string codeId, WrapupCodeRequest body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -7849,7 +8181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency
+        /// Update an assigned routing skill&#39;s proficiency
         /// </summary>
         /// <remarks>
         /// 
@@ -8192,7 +8524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8204,7 +8536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8290,7 +8622,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8303,7 +8635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10347,7 +10679,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an organization's routing settings 
+        /// Delete an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10359,7 +10691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an organization's routing settings 
+        /// Delete an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10445,7 +10777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an organization's routing settings 
+        /// Delete an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10458,7 +10790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an organization's routing settings 
+        /// Delete an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11389,7 +11721,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11402,7 +11734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11493,7 +11825,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11507,7 +11839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default. 
+        /// Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11600,7 +11932,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11613,7 +11945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11704,7 +12036,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11718,7 +12050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the user's max utilization settings and revert to the organization-wide default. 
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14168,7 +14500,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14181,7 +14513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14267,7 +14599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14281,7 +14613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14800,6 +15132,236 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarHeaders,
                 (InboundRoute) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRoute)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a route identity resolution setting. 
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        public IdentityResolutionConfig GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo(domainName, routeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a route identity resolution setting. 
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        public ApiResponse< IdentityResolutionConfig > GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId)
+        { 
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetRoutingEmailDomainRouteIdentityresolution");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetRoutingEmailDomainRouteIdentityresolution");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainName != null) localVarPathParams.Add("domainName", this.Configuration.ApiClient.ParameterToString(domainName));
+            if (routeId != null) localVarPathParams.Add("routeId", this.Configuration.ApiClient.ParameterToString(routeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a route identity resolution setting. 
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo(domainName, routeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a route identity resolution setting. 
+        /// 
+        /// GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId)
+        { 
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetRoutingEmailDomainRouteIdentityresolution");
+            
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetRoutingEmailDomainRouteIdentityresolution");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainName != null) localVarPathParams.Add("domainName", this.Configuration.ApiClient.ParameterToString(domainName));
+            if (routeId != null) localVarPathParams.Add("routeId", this.Configuration.ApiClient.ParameterToString(routeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -19371,6 +19933,223 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get Queue IdentityResolution Settings. 
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>IdentityResolutionQueueConfig</returns>
+        
+        public IdentityResolutionQueueConfig GetRoutingQueueIdentityresolution (string queueId)
+        {
+             ApiResponse<IdentityResolutionQueueConfig> localVarResponse = GetRoutingQueueIdentityresolutionWithHttpInfo(queueId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Queue IdentityResolution Settings. 
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>ApiResponse of IdentityResolutionQueueConfig</returns>
+        
+        public ApiResponse< IdentityResolutionQueueConfig > GetRoutingQueueIdentityresolutionWithHttpInfo (string queueId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueIdentityresolution");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionQueueConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionQueueConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionQueueConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Queue IdentityResolution Settings. 
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of IdentityResolutionQueueConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionQueueConfig> GetRoutingQueueIdentityresolutionAsync (string queueId)
+        {
+             ApiResponse<IdentityResolutionQueueConfig> localVarResponse = await GetRoutingQueueIdentityresolutionAsyncWithHttpInfo(queueId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Queue IdentityResolution Settings. 
+        /// 
+        /// GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionQueueConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionQueueConfig>> GetRoutingQueueIdentityresolutionAsyncWithHttpInfo (string queueId)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingQueueIdentityresolution");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionQueueConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionQueueConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionQueueConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get Estimated Wait Time 
         /// 
         /// </summary>
@@ -21330,7 +22109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an organization's routing settings 
+        /// Get an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21343,7 +22122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an organization's routing settings 
+        /// Get an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21429,7 +22208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an organization's routing settings 
+        /// Get an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21443,7 +22222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an organization's routing settings 
+        /// Get an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -23941,6 +24720,223 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a SMS identity resolution settings. 
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        public IdentityResolutionConfig GetRoutingSmsIdentityresolutionPhonenumber (string addressId)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo(addressId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a SMS identity resolution settings. 
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        public ApiResponse< IdentityResolutionConfig > GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId)
+        { 
+            // verify the required parameter 'addressId' is set
+            if (addressId == null)
+                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->GetRoutingSmsIdentityresolutionPhonenumber");
+
+            var localVarPath = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a SMS identity resolution settings. 
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberAsync (string addressId)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo(addressId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a SMS identity resolution settings. 
+        /// 
+        /// GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId)
+        { 
+            // verify the required parameter 'addressId' is set
+            if (addressId == null)
+                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->GetRoutingSmsIdentityresolutionPhonenumber");
+            
+
+            var localVarPath = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a phone number provisioned for SMS. 
         /// 
         /// </summary>
@@ -24426,7 +25422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24440,7 +25436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24531,7 +25527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24546,7 +25542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's Direct Routing Backup settings. 
+        /// Get the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24639,7 +25635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24653,7 +25649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24744,7 +25740,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24759,7 +25755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31272,7 +32268,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31288,7 +32284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31394,7 +32390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31411,7 +32407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing language's proficiency 
+        /// Update an assigned routing language&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38109,7 +39105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38123,7 +39119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38219,7 +39215,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38234,7 +39230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38574,6 +39570,259 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarHeaders,
                 (InboundRoute) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRoute)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update identity resolution settings for a route. 
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        public IdentityResolutionConfig PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, IdentityResolutionConfig body)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo(domainName, routeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update identity resolution settings for a route. 
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        public ApiResponse< IdentityResolutionConfig > PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body)
+        { 
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutRoutingEmailDomainRouteIdentityresolution");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutRoutingEmailDomainRouteIdentityresolution");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingEmailDomainRouteIdentityresolution");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainName != null) localVarPathParams.Add("domainName", this.Configuration.ApiClient.ParameterToString(domainName));
+            if (routeId != null) localVarPathParams.Add("routeId", this.Configuration.ApiClient.ParameterToString(routeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update identity resolution settings for a route. 
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId, IdentityResolutionConfig body)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo(domainName, routeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update identity resolution settings for a route. 
+        /// 
+        /// PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body)
+        { 
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutRoutingEmailDomainRouteIdentityresolution");
+            
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutRoutingEmailDomainRouteIdentityresolution");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingEmailDomainRouteIdentityresolution");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainName != null) localVarPathParams.Add("domainName", this.Configuration.ApiClient.ParameterToString(domainName));
+            if (routeId != null) localVarPathParams.Add("routeId", this.Configuration.ApiClient.ParameterToString(routeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -39266,7 +40515,247 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an organization's routing settings 
+        /// Update Queue IdentityResolution Settings. 
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionQueueConfig</returns>
+        
+        public IdentityResolutionQueueConfig PutRoutingQueueIdentityresolution (string queueId, IdentityResolutionQueueConfig body)
+        {
+             ApiResponse<IdentityResolutionQueueConfig> localVarResponse = PutRoutingQueueIdentityresolutionWithHttpInfo(queueId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Queue IdentityResolution Settings. 
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionQueueConfig</returns>
+        
+        public ApiResponse< IdentityResolutionQueueConfig > PutRoutingQueueIdentityresolutionWithHttpInfo (string queueId, IdentityResolutionQueueConfig body)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutRoutingQueueIdentityresolution");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingQueueIdentityresolution");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingQueueIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingQueueIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionQueueConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionQueueConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionQueueConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update Queue IdentityResolution Settings. 
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionQueueConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionQueueConfig> PutRoutingQueueIdentityresolutionAsync (string queueId, IdentityResolutionQueueConfig body)
+        {
+             ApiResponse<IdentityResolutionQueueConfig> localVarResponse = await PutRoutingQueueIdentityresolutionAsyncWithHttpInfo(queueId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Queue IdentityResolution Settings. 
+        /// 
+        /// PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionQueueConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionQueueConfig>> PutRoutingQueueIdentityresolutionAsyncWithHttpInfo (string queueId, IdentityResolutionQueueConfig body)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutRoutingQueueIdentityresolution");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingQueueIdentityresolution");
+            
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingQueueIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingQueueIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionQueueConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionQueueConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionQueueConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39280,7 +40769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an organization's routing settings 
+        /// Update an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39376,7 +40865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an organization's routing settings 
+        /// Update an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39391,7 +40880,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an organization's routing settings 
+        /// Update an organization&#39;s routing settings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39712,7 +41201,247 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update an SMS identity resolution settings. 
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        public IdentityResolutionConfig PutRoutingSmsIdentityresolutionPhonenumber (string addressId, IdentityResolutionConfig body)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo(addressId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an SMS identity resolution settings. 
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        public ApiResponse< IdentityResolutionConfig > PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId, IdentityResolutionConfig body)
+        { 
+            // verify the required parameter 'addressId' is set
+            if (addressId == null)
+                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->PutRoutingSmsIdentityresolutionPhonenumber");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingSmsIdentityresolutionPhonenumber");
+
+            var localVarPath = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an SMS identity resolution settings. 
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberAsync (string addressId, IdentityResolutionConfig body)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo(addressId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an SMS identity resolution settings. 
+        /// 
+        /// PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId, IdentityResolutionConfig body)
+        { 
+            // verify the required parameter 'addressId' is set
+            if (addressId == null)
+                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->PutRoutingSmsIdentityresolutionPhonenumber");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingSmsIdentityresolutionPhonenumber");
+            
+
+            var localVarPath = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39727,7 +41456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39828,7 +41557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39844,7 +41573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's Direct Routing Backup settings. 
+        /// Update the user&#39;s Direct Routing Backup settings. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39948,7 +41677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39963,7 +41692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40064,7 +41793,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40080,7 +41809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the user's max utilization settings.  Include only those media types requiring custom configuration. 
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40879,7 +42608,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40895,7 +42624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41001,7 +42730,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41018,7 +42747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an assigned routing skill's proficiency 
+        /// Update an assigned routing skill&#39;s proficiency 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

@@ -114,10 +114,25 @@ namespace PureCloudPlatform.Client.V2.Client
         private RestClient RestClient { get; set; }
 
         private RetryConfiguration retryConfig;
-        public RetryConfiguration RetryConfig { get; set; }
+        ///<Summary>
+        /// Gets or Sets the Retry Configuration
+        ///</Summary>
+        public RetryConfiguration RetryConfig {
+            get
+            {
+                return this.retryConfig;
+            }
+            set
+            {
+                this.retryConfig = value;
+            }
+        }
         private static readonly RetryConfiguration DEFAULT_RETRY_CONFIG = new RetryConfiguration();
 
         private GatewayConfiguration gatewayConfig;
+        ///<Summary>
+        /// Gets or Sets the Gateway Configuration
+        ///</Summary>
         public GatewayConfiguration GatewayConfig {
             get
             {
@@ -134,6 +149,9 @@ namespace PureCloudPlatform.Client.V2.Client
             }
         }
 
+        ///<Summary>
+        /// Gets the Login or the API Uri based on Configuration and Gateway COnfiguration
+        ///</Summary>
         public Uri GetConfUri(String pathType, Uri baseUri) {
             if (pathType.Equals("login")) {
                 if (this.GatewayConfig == null || String.IsNullOrEmpty(this.GatewayConfig.Host)) {
@@ -170,6 +188,9 @@ namespace PureCloudPlatform.Client.V2.Client
             }
         }
 
+        ///<Summary>
+        /// Set Gateway Configuration and credentials
+        ///</Summary>
         public void SetGateway(String host,
             String protocol,
             int port,
@@ -180,6 +201,9 @@ namespace PureCloudPlatform.Client.V2.Client
             this.GatewayConfig = new GatewayConfiguration(host, protocol, port, pathParamsLogin, pathParamsApi, username, password);
         }
 
+        ///<Summary>
+        /// Set Gateway Configuration
+        ///</Summary>
         public void SetGateway(String host,
             String protocol,
             int port,
@@ -190,8 +214,17 @@ namespace PureCloudPlatform.Client.V2.Client
         
 
         // These fields are only applicable to the Code Authorization OAuth flow:
+        ///<Summary>
+        /// Defines if Code Authorization is used
+        ///</Summary>
         public bool UsingCodeAuth { get; set; }
+        ///<Summary>
+        /// OAuth Client Id
+        ///</Summary>
         public string ClientId { get; set; }
+        ///<Summary>
+        /// OUuth Client Secret
+        ///</Summary>
         public string ClientSecret { get; set; }
 
         // Creates and sets up a RestRequest prior to a call.
@@ -294,7 +327,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "227.0.0");
+            request.AddHeader("purecloud-sdk", "228.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
@@ -318,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Client
 
             if (Configuration.Timeout > 0)
             {
-                options.MaxTimeout = Configuration.Timeout;   
+                options.Timeout = TimeSpan.FromMilliseconds(Configuration.Timeout);
             }
 
             if (ClientOptions.Proxy != null)
@@ -418,7 +451,7 @@ namespace PureCloudPlatform.Client.V2.Client
 
             if (Configuration.Timeout > 0)
             {
-                options.MaxTimeout = Configuration.Timeout;   
+                options.Timeout = TimeSpan.FromMilliseconds(Configuration.Timeout);
             }
 
             RestClient = new RestClient(options);
@@ -750,6 +783,9 @@ namespace PureCloudPlatform.Client.V2.Client
             }
         }
 
+        ///<Summary>
+        /// Retry Configuration class
+        ///</Summary>
         public class RetryConfiguration
         {
             private long backoffIntervalMs = 300000L;
@@ -757,6 +793,9 @@ namespace PureCloudPlatform.Client.V2.Client
             private int maxRetryTimeSec = 0;
             private int retryMax = 5;
 
+            ///<Summary>
+            /// BackOff Interval (Ms)
+            ///</Summary>
             public long BackOffIntervalMs
             {
                 get
@@ -774,6 +813,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// RetryAfter Default (Ms)
+            ///</Summary>
             public long RetryAfterDefaultMs
             {
                 get
@@ -790,7 +832,10 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
-            public int MaxRetryTimeSec
+            ///<Summary>
+            /// Max RetryTime (Sec)
+            ///</Summary>
+           public int MaxRetryTimeSec
             {
                 get
                 {
@@ -806,6 +851,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Retry Max
+            ///</Summary>
             public int RetryMax
             {
                 get
@@ -823,6 +871,9 @@ namespace PureCloudPlatform.Client.V2.Client
             }
         }
 
+        ///<Summary>
+        /// Gateway Configuration class
+        ///</Summary>
         public class GatewayConfiguration
         {
 
@@ -847,6 +898,9 @@ namespace PureCloudPlatform.Client.V2.Client
             // Gateway Password (future)
             private String password = null;
 
+            ///<Summary>
+            /// GatewayConfiguration default constructor
+            ///</Summary>
             public GatewayConfiguration()
             {
                 this.protocol = "https";
@@ -855,6 +909,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 this.pathParamsApi = "";
             }
 
+            ///<Summary>
+            /// GatewayConfiguration constructor with configuration and credentials
+            ///</Summary>
             public GatewayConfiguration(String host,
                 String protocol,
                 int port,
@@ -872,6 +929,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 this.Password = password;
             }
 
+            ///<Summary>
+            /// GatewayConfiguration constructor with configuration
+            ///</Summary>
             public GatewayConfiguration(String host,
                 String protocol,
                 int port,
@@ -885,6 +945,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 this.PathParamsApi = pathParamsApi;
             }
 
+            ///<Summary>
+            /// Gateway Host
+            ///</Summary>
             public String Host
             {
                 get
@@ -899,6 +962,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Gateway Protocol
+            ///</Summary>
             public String Protocol
             {
                 get
@@ -915,6 +981,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Gateway Port
+            ///</Summary>
             public int Port
             {
                 get
@@ -931,6 +1000,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Gateway Path Params for Login
+            ///</Summary>
             public String PathParamsLogin
             {
                 get
@@ -950,6 +1022,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Gateway Path Params for Api
+            ///</Summary>
             public String PathParamsApi
             {
                 get
@@ -969,6 +1044,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Username
+            ///</Summary>
             public String Username
             {
                 get
@@ -983,6 +1061,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Password
+            ///</Summary>
             public String Password
             {
                 get
@@ -998,13 +1079,25 @@ namespace PureCloudPlatform.Client.V2.Client
             }
         }
 
+        ///<Summary>
+        /// ClientOptions
+        ///</Summary>
         public ClientRestOptions ClientOptions { get; set; }
+        ///<Summary>
+        /// ClientRestOptions class
+        ///</Summary>
         public class ClientRestOptions
         {
+            ///<Summary>
+            /// Base Url
+            ///</Summary>
             public Uri BaseUrl { get; set; }
             private System.Net.IWebProxy proxy;
             private HttpMessageHandler httpMessageHandler;
 
+            ///<Summary>
+            /// Gets or Sets the HttpMessageHandler
+            ///</Summary>
             public HttpMessageHandler HttpMessageHandler
             {
                 get
@@ -1017,6 +1110,9 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
+            ///<Summary>
+            /// Gets or Sets the Proxy
+            ///</Summary>
             public System.Net.IWebProxy Proxy
             {
                 get

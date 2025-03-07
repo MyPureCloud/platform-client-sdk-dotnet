@@ -167,8 +167,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">The list of all participants in the conversation. (required).</param>
         /// <param name="ConversationIds">A list of conversations to merge into this conversation to create a conference. This field is null except when being used to create a conference..</param>
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
-        /// <param name="RecordingState">On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording..</param>
-        /// <param name="State">The conversation's state.</param>
+        /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording..</param>
+        /// <param name="State">The conversation&#39;s state.</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
         /// <param name="RecentTransfers">The list of the most recent 20 transfer commands applied to this conversation..</param>
         /// <param name="SecurePause">True when the recording of this conversation is in secure pause status..</param>

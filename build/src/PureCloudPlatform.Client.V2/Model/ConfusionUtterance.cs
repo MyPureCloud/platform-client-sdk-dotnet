@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConfusionUtterance" /> class.
         /// </summary>
         /// <param name="Text">Utterance Text..</param>
-        /// <param name="Similarity">Utterance's similarity score, 0 being dissimilar and 1 being very similar..</param>
+        /// <param name="Similarity">Utterance&#39;s similarity score, 0 being dissimilar and 1 being very similar..</param>
         public ConfusionUtterance(string Text = null, float? Similarity = null)
         {
             this.Text = Text;
@@ -51,9 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Utterance's similarity score, 0 being dissimilar and 1 being very similar.
+        /// Utterance&#39;s similarity score, 0 being dissimilar and 1 being very similar.
         /// </summary>
-        /// <value>Utterance's similarity score, 0 being dissimilar and 1 being very similar.</value>
+        /// <value>Utterance&#39;s similarity score, 0 being dissimilar and 1 being very similar.</value>
         [DataMember(Name="similarity", EmitDefaultValue=false)]
         public float? Similarity { get; set; }
 

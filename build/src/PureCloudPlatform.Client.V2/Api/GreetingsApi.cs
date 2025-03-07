@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GreetingMediaInfo> GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null);
 
         /// <summary>
-        /// Gets an Organization's Greetings
+        /// Gets an Organization&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -104,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DomainEntityListing GetGreetings (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Gets an Organization's Greetings
+        /// Gets an Organization&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -117,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DomainEntityListing> GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList
+        /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -128,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DefaultGreetingList GetGreetingsDefaults ();
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList
+        /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -139,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DefaultGreetingList> GetGreetingsDefaultsWithHttpInfo ();
 
         /// <summary>
-        /// Get a list of the Group's Greetings
+        /// Get a list of the Group&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -153,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GreetingListing GetGroupGreetings (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get a list of the Group's Greetings
+        /// Get a list of the Group&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -167,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GreetingListing> GetGroupGreetingsWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -179,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DefaultGreetingList GetGroupGreetingsDefaults (string groupId);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -191,7 +191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DefaultGreetingList> GetGroupGreetingsDefaultsWithHttpInfo (string groupId);
 
         /// <summary>
-        /// Get a list of the User's Greetings
+        /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -205,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DomainEntityListing GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get a list of the User's Greetings
+        /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -219,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DomainEntityListing> GetUserGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID
+        /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -231,7 +231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DefaultGreetingList GetUserGreetingsDefaults (string userId);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID
+        /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -345,7 +345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Greeting> PutGreetingWithHttpInfo (string greetingId, Greeting body);
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList
+        /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -357,7 +357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DefaultGreetingList PutGreetingsDefaults (DefaultGreetingList body);
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList
+        /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -499,7 +499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
 
         /// <summary>
-        /// Gets an Organization's Greetings
+        /// Gets an Organization&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -512,7 +512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DomainEntityListing> GetGreetingsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Gets an Organization's Greetings
+        /// Gets an Organization&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -525,7 +525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList
+        /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -536,7 +536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DefaultGreetingList> GetGreetingsDefaultsAsync ();
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList
+        /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -547,7 +547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGreetingsDefaultsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get a list of the Group's Greetings
+        /// Get a list of the Group&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -561,7 +561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GreetingListing> GetGroupGreetingsAsync (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get a list of the Group's Greetings
+        /// Get a list of the Group&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -575,7 +575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GreetingListing>> GetGroupGreetingsAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -587,7 +587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DefaultGreetingList> GetGroupGreetingsDefaultsAsync (string groupId);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -599,7 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId);
 
         /// <summary>
-        /// Get a list of the User's Greetings
+        /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -613,7 +613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DomainEntityListing> GetUserGreetingsAsync (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get a list of the User's Greetings
+        /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
         /// 
@@ -627,7 +627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID
+        /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -639,7 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DefaultGreetingList> GetUserGreetingsDefaultsAsync (string userId);
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID
+        /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
         /// <remarks>
         /// 
@@ -753,7 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingAsyncWithHttpInfo (string greetingId, Greeting body);
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList
+        /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -765,7 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DefaultGreetingList> PutGreetingsDefaultsAsync (DefaultGreetingList body);
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList
+        /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
         /// 
@@ -1564,7 +1564,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets an Organization's Greetings 
+        /// Gets an Organization&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1579,7 +1579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets an Organization's Greetings 
+        /// Gets an Organization&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1669,7 +1669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets an Organization's Greetings 
+        /// Gets an Organization&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1685,7 +1685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets an Organization's Greetings 
+        /// Gets an Organization&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1776,7 +1776,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList 
+        /// Get an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1789,7 +1789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList 
+        /// Get an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1875,7 +1875,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList 
+        /// Get an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1889,7 +1889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an Organization's DefaultGreetingList 
+        /// Get an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1976,7 +1976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of the Group's Greetings 
+        /// Get a list of the Group&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1992,7 +1992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of the Group's Greetings 
+        /// Get a list of the Group&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2087,7 +2087,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of the Group's Greetings 
+        /// Get a list of the Group&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2104,7 +2104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of the Group's Greetings 
+        /// Get a list of the Group&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2201,7 +2201,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID 
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2215,7 +2215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID 
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2306,7 +2306,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID 
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2321,7 +2321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a Group's ID 
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2414,7 +2414,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of the User's Greetings 
+        /// Get a list of the User&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2430,7 +2430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of the User's Greetings 
+        /// Get a list of the User&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2525,7 +2525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of the User's Greetings 
+        /// Get a list of the User&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2542,7 +2542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of the User's Greetings 
+        /// Get a list of the User&#39;s Greetings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2639,7 +2639,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID 
+        /// Grabs the list of Default Greetings given a User&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2653,7 +2653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID 
+        /// Grabs the list of Default Greetings given a User&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2744,7 +2744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID 
+        /// Grabs the list of Default Greetings given a User&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2759,7 +2759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Grabs the list of Default Greetings given a User's ID 
+        /// Grabs the list of Default Greetings given a User&#39;s ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3783,7 +3783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList 
+        /// Update an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3797,7 +3797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList 
+        /// Update an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3893,7 +3893,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList 
+        /// Update an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3908,7 +3908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an Organization's DefaultGreetingList 
+        /// Update an Organization&#39;s DefaultGreetingList 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

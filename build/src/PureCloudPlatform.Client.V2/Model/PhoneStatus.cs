@@ -150,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventCreationTime">Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
         /// <param name="Provision">Provision information for this phone.</param>
         /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
-        /// <param name="PhoneAssignmentToEdgeType">The phone status's edge assignment type..</param>
+        /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
         /// <param name="SelfUri">The URI for this object. Deprecated. Do not use..</param>
         public PhoneStatus(string Id = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, DomainEntityRef Edge = null, string SelfUri = null)

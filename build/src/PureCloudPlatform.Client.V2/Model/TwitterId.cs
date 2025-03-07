@@ -71,9 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// url of user's twitter profile
+        /// url of user&#39;s twitter profile
         /// </summary>
-        /// <value>url of user's twitter profile</value>
+        /// <value>url of user&#39;s twitter profile</value>
         [DataMember(Name="profileUrl", EmitDefaultValue=false)]
         public string ProfileUrl { get; private set; }
 

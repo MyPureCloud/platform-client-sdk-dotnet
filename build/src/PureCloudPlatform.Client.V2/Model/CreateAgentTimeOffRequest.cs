@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category (required).</param>
         /// <param name="Notes">Notes about the time off request.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone..</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone..</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests..</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes (required).</param>
         /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes.</param>
@@ -67,9 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.
         /// </summary>
-        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.</value>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
 

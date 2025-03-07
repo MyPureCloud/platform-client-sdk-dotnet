@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints.</param>
-        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off..</param>
+        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off..</param>
         /// <param name="CountsTowardShrinkage">Whether or not this activity code counts toward shrinkage calculations.</param>
         /// <param name="PlannedShrinkage">Whether this activity code is considered planned or unplanned shrinkage.</param>
         /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
@@ -194,9 +194,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.
+        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.
         /// </summary>
-        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.</value>
+        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.</value>
         [DataMember(Name="agentTimeOffSelectable", EmitDefaultValue=false)]
         public bool? AgentTimeOffSelectable { get; set; }
 

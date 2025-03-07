@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuTimeOffLimitRange" /> class.
         /// </summary>
-        /// <param name="StartDate">Start date of the range. The end date is determined by the size of 'limitMinutesPerDay'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        /// <param name="LimitMinutesPerDay">The list of time-off limit values in minutes per day. If 'null' is specified, then the day-specific value is cleared. Such a day will have a value of 0 (required).</param>
+        /// <param name="StartDate">Start date of the range. The end date is determined by the size of &#39;limitMinutesPerDay&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        /// <param name="LimitMinutesPerDay">The list of time-off limit values in minutes per day. If &#39;null&#39; is specified, then the day-specific value is cleared. Such a day will have a value of 0 (required).</param>
         public BuTimeOffLimitRange(String StartDate = null, List<int?> LimitMinutesPerDay = null)
         {
             this.StartDate = StartDate;
@@ -39,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Start date of the range. The end date is determined by the size of 'limitMinutesPerDay'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// Start date of the range. The end date is determined by the size of &#39;limitMinutesPerDay&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>Start date of the range. The end date is determined by the size of 'limitMinutesPerDay'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>Start date of the range. The end date is determined by the size of &#39;limitMinutesPerDay&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public String StartDate { get; set; }
 
 
 
         /// <summary>
-        /// The list of time-off limit values in minutes per day. If 'null' is specified, then the day-specific value is cleared. Such a day will have a value of 0
+        /// The list of time-off limit values in minutes per day. If &#39;null&#39; is specified, then the day-specific value is cleared. Such a day will have a value of 0
         /// </summary>
-        /// <value>The list of time-off limit values in minutes per day. If 'null' is specified, then the day-specific value is cleared. Such a day will have a value of 0</value>
+        /// <value>The list of time-off limit values in minutes per day. If &#39;null&#39; is specified, then the day-specific value is cleared. Such a day will have a value of 0</value>
         [DataMember(Name="limitMinutesPerDay", EmitDefaultValue=false)]
         public List<int?> LimitMinutesPerDay { get; set; }
 

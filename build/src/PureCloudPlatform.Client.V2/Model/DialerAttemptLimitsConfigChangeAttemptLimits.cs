@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="MaxAttemptsPerContact">MaxAttemptsPerContact.</param>
         /// <param name="MaxAttemptsPerNumber">MaxAttemptsPerNumber.</param>
-        /// <param name="TimeZoneId">The timezone is necessary to define when \"today\" starts and ends.</param>
+        /// <param name="TimeZoneId">The timezone is necessary to define when \&quot;today\&quot; starts and ends.</param>
         /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0.</param>
         /// <param name="RecallEntries">Configuration for recall attempts.</param>
         /// <param name="BreadthFirstRecalls">Whether recalls are performed before considering other numbers (true) or after (false).</param>
@@ -102,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The timezone is necessary to define when \"today\" starts and ends
+        /// The timezone is necessary to define when \&quot;today\&quot; starts and ends
         /// </summary>
-        /// <value>The timezone is necessary to define when \"today\" starts and ends</value>
+        /// <value>The timezone is necessary to define when \&quot;today\&quot; starts and ends</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
 

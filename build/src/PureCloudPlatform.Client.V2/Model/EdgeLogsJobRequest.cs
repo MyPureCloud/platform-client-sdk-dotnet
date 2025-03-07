@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" /> class.
         /// </summary>
         /// <param name="Path">A relative directory to the root Edge log folder to query from..</param>
-        /// <param name="Query">The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe '|' as a delimiter..</param>
+        /// <param name="Query">The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter..</param>
         /// <param name="Recurse">Boolean whether or not to recurse into directories..</param>
         public EdgeLogsJobRequest(string Path = null, string Query = null, bool? Recurse = null)
         {
@@ -44,9 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe '|' as a delimiter.
+        /// The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter.
         /// </summary>
-        /// <value>The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe '|' as a delimiter.</value>
+        /// <value>The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter.</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
 

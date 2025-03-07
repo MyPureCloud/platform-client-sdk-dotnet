@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyCustomerSession" /> class.
         /// </summary>
-        /// <param name="Id">An ID of a Customer/User's session within the Journey System at a point-in-time (required).</param>
-        /// <param name="Type">The type of the Customer/User's session within the Journey System (e.g. web, app) (required).</param>
+        /// <param name="Id">An ID of a Customer/User&#39;s session within the Journey System at a point-in-time (required).</param>
+        /// <param name="Type">The type of the Customer/User&#39;s session within the Journey System (e.g. web, app) (required).</param>
         public JourneyCustomerSession(string Id = null, string Type = null)
         {
             this.Id = Id;
@@ -39,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An ID of a Customer/User's session within the Journey System at a point-in-time
+        /// An ID of a Customer/User&#39;s session within the Journey System at a point-in-time
         /// </summary>
-        /// <value>An ID of a Customer/User's session within the Journey System at a point-in-time</value>
+        /// <value>An ID of a Customer/User&#39;s session within the Journey System at a point-in-time</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
 
 
         /// <summary>
-        /// The type of the Customer/User's session within the Journey System (e.g. web, app)
+        /// The type of the Customer/User&#39;s session within the Journey System (e.g. web, app)
         /// </summary>
-        /// <value>The type of the Customer/User's session within the Journey System (e.g. web, app)</value>
+        /// <value>The type of the Customer/User&#39;s session within the Journey System (e.g. web, app)</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 

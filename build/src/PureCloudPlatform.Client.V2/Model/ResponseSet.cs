@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the ResponseSet. (required).</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}. (required).</param>
+        /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}. (required).</param>
         /// <param name="BeepDetectionEnabled">Whether to enable answering machine beep detection.</param>
         /// <param name="AmdSpeechDistinguishEnabled">Whether to enable answering machine detection.</param>
         public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null, bool? BeepDetectionEnabled = null, bool? AmdSpeechDistinguishEnabled = null)
@@ -90,9 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}.
+        /// Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}.
         /// </summary>
-        /// <value>Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}.</value>
+        /// <value>Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}.</value>
         [DataMember(Name="responses", EmitDefaultValue=false)]
         public Dictionary<string, Reaction> Responses { get; set; }
 

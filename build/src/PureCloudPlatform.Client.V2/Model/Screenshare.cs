@@ -288,7 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Provider">The source provider for the screen share..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        /// <param name="Segments">The time line of the participant's call, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
@@ -403,9 +403,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time line of the participant's call, divided into activity segments.
+        /// The time line of the participant&#39;s call, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant's call, divided into activity segments.</value>
+        /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
 

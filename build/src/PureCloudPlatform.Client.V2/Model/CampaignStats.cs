@@ -29,9 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Information regarding the campaign's connect rate
+        /// Information regarding the campaign&#39;s connect rate
         /// </summary>
-        /// <value>Information regarding the campaign's connect rate</value>
+        /// <value>Information regarding the campaign&#39;s connect rate</value>
         [DataMember(Name="contactRate", EmitDefaultValue=false)]
         public ConnectRate ContactRate { get; private set; }
 
@@ -92,45 +92,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.
+        /// Number of contacts that don&#39;t match filter. This is currently supported only for Campaigns with dynamic filter on.
         /// </summary>
-        /// <value>Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
+        /// <value>Number of contacts that don&#39;t match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
         [DataMember(Name="filteredOutContactsCount", EmitDefaultValue=false)]
         public int? FilteredOutContactsCount { get; private set; }
 
 
 
         /// <summary>
-        /// Information on the campaign's number of Right Party Contacts
+        /// Information on the campaign&#39;s number of Right Party Contacts
         /// </summary>
-        /// <value>Information on the campaign's number of Right Party Contacts</value>
+        /// <value>Information on the campaign&#39;s number of Right Party Contacts</value>
         [DataMember(Name="rightPartyContactsCount", EmitDefaultValue=false)]
         public int? RightPartyContactsCount { get; private set; }
 
 
 
         /// <summary>
-        /// Information on the campaign's valid attempts
+        /// Information on the campaign&#39;s valid attempts
         /// </summary>
-        /// <value>Information on the campaign's valid attempts</value>
+        /// <value>Information on the campaign&#39;s valid attempts</value>
         [DataMember(Name="validAttempts", EmitDefaultValue=false)]
         public int? ValidAttempts { get; private set; }
 
 
 
         /// <summary>
-        /// Information on the campaign's lines utilization
+        /// Information on the campaign&#39;s lines utilization
         /// </summary>
-        /// <value>Information on the campaign's lines utilization</value>
+        /// <value>Information on the campaign&#39;s lines utilization</value>
         [DataMember(Name="linesUtilization", EmitDefaultValue=false)]
         public CampaignLinesUtilization LinesUtilization { get; private set; }
 
 
 
         /// <summary>
-        /// Information on the campaign's business category metrics
+        /// Information on the campaign&#39;s business category metrics
         /// </summary>
-        /// <value>Information on the campaign's business category metrics</value>
+        /// <value>Information on the campaign&#39;s business category metrics</value>
         [DataMember(Name="businessCategoryMetrics", EmitDefaultValue=false)]
         public CampaignBusinessCategoryMetrics BusinessCategoryMetrics { get; private set; }
 

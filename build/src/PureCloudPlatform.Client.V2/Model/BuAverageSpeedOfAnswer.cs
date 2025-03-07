@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuAverageSpeedOfAnswer" /> class.
         /// </summary>
         /// <param name="Include">Whether to include average speed of answer (ASA) in the associated configuration (required).</param>
-        /// <param name="Seconds">The target average speed of answer (ASA) in seconds. Required if include == true.</param>
+        /// <param name="Seconds">The target average speed of answer (ASA) in seconds. Required if include &#x3D;&#x3D; true.</param>
         public BuAverageSpeedOfAnswer(bool? Include = null, int? Seconds = null)
         {
             this.Include = Include;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The target average speed of answer (ASA) in seconds. Required if include == true
+        /// The target average speed of answer (ASA) in seconds. Required if include &#x3D;&#x3D; true
         /// </summary>
-        /// <value>The target average speed of answer (ASA) in seconds. Required if include == true</value>
+        /// <value>The target average speed of answer (ASA) in seconds. Required if include &#x3D;&#x3D; true</value>
         [DataMember(Name="seconds", EmitDefaultValue=false)]
         public int? Seconds { get; set; }
 

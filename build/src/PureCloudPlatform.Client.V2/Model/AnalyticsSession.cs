@@ -407,7 +407,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
         /// <param name="AgentBullseyeRing">Bullseye ring of the targeted agent.</param>
         /// <param name="AgentOwned">Flag indicating an agent-owned callback.</param>
-        /// <param name="Ani">Automatic Number Identification (caller's number).</param>
+        /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
         /// <param name="Authenticated">Flag that indicates that the identity of the customer has been asserted as verified by the provider..</param>
         /// <param name="BargedParticipantId">The participantId being barged in on (if someone (e.g. an agent) is being barged in on, this would correspond to one of the other participantIds present in the conversation).</param>
@@ -653,9 +653,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Automatic Number Identification (caller's number)
+        /// Automatic Number Identification (caller&#39;s number)
         /// </summary>
-        /// <value>Automatic Number Identification (caller's number)</value>
+        /// <value>Automatic Number Identification (caller&#39;s number)</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
 

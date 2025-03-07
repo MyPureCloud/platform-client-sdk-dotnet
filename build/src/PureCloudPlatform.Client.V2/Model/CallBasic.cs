@@ -402,12 +402,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">The direction of the call.</param>
         /// <param name="Recording">True if this call is being recorded..</param>
         /// <param name="RecordingState">State of recording on this call..</param>
-        /// <param name="Muted">True if this call is muted so that remote participants can't hear any audio from this end..</param>
+        /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end..</param>
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
-        /// <param name="Segments">The time line of the participant's call, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -496,9 +496,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// True if this call is muted so that remote participants can't hear any audio from this end.
+        /// True if this call is muted so that remote participants can&#39;t hear any audio from this end.
         /// </summary>
-        /// <value>True if this call is muted so that remote participants can't hear any audio from this end.</value>
+        /// <value>True if this call is muted so that remote participants can&#39;t hear any audio from this end.</value>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
 
@@ -541,9 +541,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time line of the participant's call, divided into activity segments.
+        /// The time line of the participant&#39;s call, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant's call, divided into activity segments.</value>
+        /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
 

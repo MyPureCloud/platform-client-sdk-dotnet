@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailColumnName">The name of the contact column to evaluate for Email..</param>
         /// <param name="SmsColumnName">The name of the contact column to evaluate for SMS..</param>
         /// <param name="Operator">The operator to use when comparing values. (required).</param>
-        /// <param name="Value">The period value to compare against the contact's data. (required).</param>
+        /// <param name="Value">The period value to compare against the contact&#39;s data. (required).</param>
         public LastAttemptByColumnConditionSettings(string EmailColumnName = null, string SmsColumnName = null, OperatorEnum? Operator = null, string Value = null)
         {
             this.EmailColumnName = EmailColumnName;
@@ -96,9 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The period value to compare against the contact's data.
+        /// The period value to compare against the contact&#39;s data.
         /// </summary>
-        /// <value>The period value to compare against the contact's data.</value>
+        /// <value>The period value to compare against the contact&#39;s data.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

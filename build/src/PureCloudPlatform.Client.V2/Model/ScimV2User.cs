@@ -21,14 +21,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2User" /> class.
         /// </summary>
-        /// <param name="Active">Indicates whether the user's administrative status is active..</param>
-        /// <param name="UserName">The user's Genesys Cloud email address. Must be unique..</param>
+        /// <param name="Active">Indicates whether the user&#39;s administrative status is active..</param>
+        /// <param name="UserName">The user&#39;s Genesys Cloud email address. Must be unique..</param>
         /// <param name="DisplayName">The display name of the user..</param>
         /// <param name="Password">The new password for the Genesys Cloud user. Does not return an existing password. When creating a user, if a password is not supplied, then a password will be randomly generated that is 40 characters in length and contains five characters from each of the password policy groups..</param>
-        /// <param name="Title">The user's title..</param>
-        /// <param name="PhoneNumbers">The list of the user's phone numbers..</param>
-        /// <param name="Emails">The list of the user's email addresses..</param>
-        /// <param name="ExternalId">The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\"..</param>
+        /// <param name="Title">The user&#39;s title..</param>
+        /// <param name="PhoneNumbers">The list of the user&#39;s phone numbers..</param>
+        /// <param name="Emails">The list of the user&#39;s email addresses..</param>
+        /// <param name="ExternalId">The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;..</param>
         /// <param name="Roles">The list of roles assigned to the user..</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">The URI of the schema for the enterprise user..</param>
         /// <param name="Urnietfparamsscimschemasextensiongenesyspurecloud20User">The URI of the schema for the Genesys Cloud user..</param>
@@ -51,9 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\".
+        /// The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;.
         /// </summary>
-        /// <value>The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\".</value>
+        /// <value>The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
 
@@ -69,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates whether the user's administrative status is active.
+        /// Indicates whether the user&#39;s administrative status is active.
         /// </summary>
-        /// <value>Indicates whether the user's administrative status is active.</value>
+        /// <value>Indicates whether the user&#39;s administrative status is active.</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
 
 
 
         /// <summary>
-        /// The user's Genesys Cloud email address. Must be unique.
+        /// The user&#39;s Genesys Cloud email address. Must be unique.
         /// </summary>
-        /// <value>The user's Genesys Cloud email address. Must be unique.</value>
+        /// <value>The user&#39;s Genesys Cloud email address. Must be unique.</value>
         [DataMember(Name="userName", EmitDefaultValue=false)]
         public string UserName { get; set; }
 
@@ -105,36 +105,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user's title.
+        /// The user&#39;s title.
         /// </summary>
-        /// <value>The user's title.</value>
+        /// <value>The user&#39;s title.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
 
 
 
         /// <summary>
-        /// The list of the user's phone numbers.
+        /// The list of the user&#39;s phone numbers.
         /// </summary>
-        /// <value>The list of the user's phone numbers.</value>
+        /// <value>The list of the user&#39;s phone numbers.</value>
         [DataMember(Name="phoneNumbers", EmitDefaultValue=false)]
         public List<ScimPhoneNumber> PhoneNumbers { get; set; }
 
 
 
         /// <summary>
-        /// The list of the user's email addresses.
+        /// The list of the user&#39;s email addresses.
         /// </summary>
-        /// <value>The list of the user's email addresses.</value>
+        /// <value>The list of the user&#39;s email addresses.</value>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<ScimEmail> Emails { get; set; }
 
 
 
         /// <summary>
-        /// The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\".
+        /// The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;.
         /// </summary>
-        /// <value>The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\".</value>
+        /// <value>The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;.</value>
         [DataMember(Name="externalId", EmitDefaultValue=false)]
         public string ExternalId { get; set; }
 

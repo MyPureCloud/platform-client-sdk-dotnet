@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PhoneColumn" /> class.
         /// </summary>
         /// <param name="ColumnName">The name of the phone column. (required).</param>
-        /// <param name="Type">The type of the phone column. For example, 'cell' or 'home'. (required).</param>
+        /// <param name="Type">The type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. (required).</param>
         public PhoneColumn(string ColumnName = null, string Type = null)
         {
             this.ColumnName = ColumnName;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The type of the phone column. For example, 'cell' or 'home'.
+        /// The type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;.
         /// </summary>
-        /// <value>The type of the phone column. For example, 'cell' or 'home'.</value>
+        /// <value>The type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 

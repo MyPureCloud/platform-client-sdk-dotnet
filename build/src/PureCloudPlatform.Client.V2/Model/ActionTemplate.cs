@@ -124,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ActionTemplate" /> class.
         /// </summary>
         /// <param name="Name">Name of the action template. (required).</param>
-        /// <param name="Description">Description of the action template's functionality..</param>
+        /// <param name="Description">Description of the action template&#39;s functionality..</param>
         /// <param name="MediaType">Media type of action described by the action template. (required).</param>
         /// <param name="State">Whether the action template is currently active, inactive or deleted. (required).</param>
         /// <param name="ContentOffer">Properties used to configure an action of type content offer.</param>
@@ -159,9 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Description of the action template's functionality.
+        /// Description of the action template&#39;s functionality.
         /// </summary>
-        /// <value>Description of the action template's functionality.</value>
+        /// <value>Description of the action template&#39;s functionality.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

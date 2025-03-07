@@ -60,14 +60,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Note" /> class.
         /// </summary>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="EntityId">The id of the contact or organization to which this note refers. This only needs to be set for input when using the Bulk APIs..</param>
         /// <param name="EntityType">This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used..</param>
         /// <param name="NoteText">NoteText.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">When creating or updating a note, only User.id is required. User object is fully populated when expanding a note. (required).</param>
-        public Note(string EntityId = null, EntityTypeEnum? EntityType = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null)
+        public Note(WritableStarrableDivision Division = null, string EntityId = null, EntityTypeEnum? EntityType = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null)
         {
+            this.Division = Division;
             this.EntityId = EntityId;
             this.EntityType = EntityType;
             this.NoteText = NoteText;
@@ -85,6 +87,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -161,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Note {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  NoteText: ").Append(NoteText).Append("\n");
@@ -213,6 +225,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.EntityId == other.EntityId ||
@@ -269,6 +286,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();

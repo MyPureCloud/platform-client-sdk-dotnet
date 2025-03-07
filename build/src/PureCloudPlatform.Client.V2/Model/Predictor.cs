@@ -167,9 +167,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Predictor's models
+        /// Predictor&#39;s models
         /// </summary>
-        /// <value>Predictor's models</value>
+        /// <value>Predictor&#39;s models</value>
         [DataMember(Name="models", EmitDefaultValue=false)]
         public List<PredictorModelBrief> Models { get; private set; }
 

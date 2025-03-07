@@ -216,7 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConvertedTo">Session media type that was converted to in case of a media type conversion.</param>
         /// <param name="AddressFrom">The address that initiated an action.</param>
         /// <param name="AddressTo">The address receiving an action.</param>
-        /// <param name="Ani">Automatic Number Identification (caller's number).</param>
+        /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
         /// <param name="TeamId">The team id the user is a member of.</param>
         /// <param name="RequestedRoutings">All routing types for requested/attempted routing methods.</param>
@@ -359,9 +359,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Automatic Number Identification (caller's number)
+        /// Automatic Number Identification (caller&#39;s number)
         /// </summary>
-        /// <value>Automatic Number Identification (caller's number)</value>
+        /// <value>Automatic Number Identification (caller&#39;s number)</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
 

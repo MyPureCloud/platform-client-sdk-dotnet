@@ -88,11 +88,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The flow execution name..</param>
         /// <param name="FlowVersion">The Version of the flow definition of the flow execution. (required).</param>
         /// <param name="DateLaunched">The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="Status">The flow's running status, which indicates whether the flow is running normally or completed, etc. (required).</param>
+        /// <param name="Status">The flow&#39;s running status, which indicates whether the flow is running normally or completed, etc. (required).</param>
         /// <param name="DateCompleted">The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CompletionReason">The completion reason set at the flow completion time, if applicable..</param>
         /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
-        /// <param name="OutputData">List of the flow's output variables, if any. Output variables are only supplied for Completed flows..</param>
+        /// <param name="OutputData">List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows..</param>
         /// <param name="Conversation">The conversation to which this Flow execution is related.</param>
         public FlowRuntimeExecution(string Id = null, string Name = null, FlowVersion FlowVersion = null, DateTime? DateLaunched = null, StatusEnum? Status = null, DateTime? DateCompleted = null, string CompletionReason = null, ErrorBody FlowErrorInfo = null, Dictionary<string, Object> OutputData = null, DomainEntityRef Conversation = null)
         {
@@ -177,9 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of the flow's output variables, if any. Output variables are only supplied for Completed flows.
+        /// List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows.
         /// </summary>
-        /// <value>List of the flow's output variables, if any. Output variables are only supplied for Completed flows.</value>
+        /// <value>List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows.</value>
         [DataMember(Name="outputData", EmitDefaultValue=false)]
         public Dictionary<string, Object> OutputData { get; set; }
 

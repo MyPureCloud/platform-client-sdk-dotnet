@@ -76,6 +76,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Applebusinesschat,
             
             /// <summary>
+            /// Enum Apple for "Apple"
+            /// </summary>
+            [EnumMember(Value = "Apple")]
+            Apple,
+            
+            /// <summary>
             /// Enum Telegram for "Telegram"
             /// </summary>
             [EnumMember(Value = "Telegram")]

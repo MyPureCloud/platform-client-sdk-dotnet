@@ -1365,7 +1365,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -1380,7 +1379,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -1603,7 +1601,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -1617,7 +1614,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -2043,7 +2039,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -2058,7 +2053,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3027,7 +3021,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3042,7 +3035,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3057,7 +3049,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3071,7 +3062,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3141,9 +3131,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>SourceSyncResponse</returns>
         
-        SourceSyncResponse PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync (string knowledgeBaseId, string sourceId);
+        SourceSyncResponse PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Start sync on Salesforce Knowledge integration source
@@ -3154,9 +3145,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SourceSyncResponse</returns>
         
-        ApiResponse<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId);
+        ApiResponse<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Create ServiceNow Knowledge integration source
@@ -3193,9 +3185,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>SourceSyncResponse</returns>
         
-        SourceSyncResponse PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync (string knowledgeBaseId, string sourceId);
+        SourceSyncResponse PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Start synchronization on ServiceNow Knowledge integration source
@@ -3206,9 +3199,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SourceSyncResponse</returns>
         
-        ApiResponse<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId);
+        ApiResponse<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Create synchronization job
@@ -3241,7 +3235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -3255,7 +3248,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -4697,7 +4689,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -4712,7 +4703,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -4935,7 +4925,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -4949,7 +4938,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -5375,7 +5363,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -5390,7 +5377,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -6359,7 +6345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -6374,7 +6359,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -6389,7 +6373,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -6403,7 +6386,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -6473,9 +6455,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of SourceSyncResponse</returns>
         
-        System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsync (string knowledgeBaseId, string sourceId);
+        System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsync (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Start sync on Salesforce Knowledge integration source
@@ -6486,9 +6469,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SourceSyncResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId);
+        System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Create ServiceNow Knowledge integration source
@@ -6525,9 +6509,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of SourceSyncResponse</returns>
         
-        System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsync (string knowledgeBaseId, string sourceId);
+        System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsync (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Start synchronization on ServiceNow Knowledge integration source
@@ -6538,9 +6523,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SourceSyncResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId);
+        System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null);
 
         /// <summary>
         /// Create synchronization job
@@ -6573,7 +6559,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -6587,7 +6572,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -17297,7 +17281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get parse job report 
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -17314,7 +17297,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get parse job report 
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -17413,7 +17395,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get parse job report 
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -17431,7 +17412,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get parse job report 
         /// 
-        /// GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -19186,7 +19166,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get content upload from URL job status 
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -19202,7 +19181,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get content upload from URL job status 
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -19299,7 +19277,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get content upload from URL job status 
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -19316,7 +19293,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get content upload from URL job status 
         /// 
-        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -22927,7 +22903,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send update to the parse operation 
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -22943,7 +22918,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send update to the parse operation 
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -23050,7 +23024,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send update to the parse operation 
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -23067,7 +23040,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send update to the parse operation 
         /// 
-        /// PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31432,7 +31404,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Import the parsed articles 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31448,7 +31419,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Import the parsed articles 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31555,7 +31525,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Import the parsed articles 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31572,7 +31541,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Import the parsed articles 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31683,7 +31651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create parse job 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31699,7 +31666,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create parse job 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31801,7 +31767,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create parse job 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -31818,7 +31783,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create parse job 
         /// 
-        /// PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -32392,11 +32356,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>SourceSyncResponse</returns>
         
-        public SourceSyncResponse PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync (string knowledgeBaseId, string sourceId)
+        public SourceSyncResponse PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync (string knowledgeBaseId, string sourceId, Object body = null)
         {
-             ApiResponse<SourceSyncResponse> localVarResponse = PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithHttpInfo(knowledgeBaseId, sourceId);
+             ApiResponse<SourceSyncResponse> localVarResponse = PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithHttpInfo(knowledgeBaseId, sourceId, body);
              return localVarResponse.Data;
         }
 
@@ -32407,9 +32372,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SourceSyncResponse</returns>
         
-        public ApiResponse< SourceSyncResponse > PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId)
+        public ApiResponse< SourceSyncResponse > PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -32429,6 +32395,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -32458,6 +32425,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -32503,11 +32475,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of SourceSyncResponse</returns>
         
-        public async System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsync (string knowledgeBaseId, string sourceId)
+        public async System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsync (string knowledgeBaseId, string sourceId, Object body = null)
         {
-             ApiResponse<SourceSyncResponse> localVarResponse = await PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsyncWithHttpInfo(knowledgeBaseId, sourceId);
+             ApiResponse<SourceSyncResponse> localVarResponse = await PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsyncWithHttpInfo(knowledgeBaseId, sourceId, body);
              return localVarResponse.Data;
 
         }
@@ -32519,9 +32492,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SourceSyncResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId)
+        public async System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -32543,6 +32517,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -32572,6 +32547,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -32854,11 +32834,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>SourceSyncResponse</returns>
         
-        public SourceSyncResponse PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync (string knowledgeBaseId, string sourceId)
+        public SourceSyncResponse PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync (string knowledgeBaseId, string sourceId, Object body = null)
         {
-             ApiResponse<SourceSyncResponse> localVarResponse = PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithHttpInfo(knowledgeBaseId, sourceId);
+             ApiResponse<SourceSyncResponse> localVarResponse = PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithHttpInfo(knowledgeBaseId, sourceId, body);
              return localVarResponse.Data;
         }
 
@@ -32869,9 +32850,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SourceSyncResponse</returns>
         
-        public ApiResponse< SourceSyncResponse > PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId)
+        public ApiResponse< SourceSyncResponse > PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -32891,6 +32873,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -32920,6 +32903,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -32965,11 +32953,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of SourceSyncResponse</returns>
         
-        public async System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsync (string knowledgeBaseId, string sourceId)
+        public async System.Threading.Tasks.Task<SourceSyncResponse> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsync (string knowledgeBaseId, string sourceId, Object body = null)
         {
-             ApiResponse<SourceSyncResponse> localVarResponse = await PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsyncWithHttpInfo(knowledgeBaseId, sourceId);
+             ApiResponse<SourceSyncResponse> localVarResponse = await PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsyncWithHttpInfo(knowledgeBaseId, sourceId, body);
              return localVarResponse.Data;
 
         }
@@ -32981,9 +32970,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="sourceId">Source ID</param>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SourceSyncResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId)
+        public async System.Threading.Tasks.Task<ApiResponse<SourceSyncResponse>> PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncAsyncWithHttpInfo (string knowledgeBaseId, string sourceId, Object body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -33005,6 +32995,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -33034,6 +33025,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -33312,7 +33308,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create content upload from URL job 
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -33328,7 +33323,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create content upload from URL job 
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -33430,7 +33424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create content upload from URL job 
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
@@ -33447,7 +33440,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create content upload from URL job 
         /// 
-        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>

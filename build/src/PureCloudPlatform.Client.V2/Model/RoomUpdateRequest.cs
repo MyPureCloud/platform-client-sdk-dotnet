@@ -21,10 +21,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RoomUpdateRequest" /> class.
         /// </summary>
-        /// <param name="Description">Room's description.</param>
-        /// <param name="Subject">Room's subject.</param>
-        /// <param name="PinnedMessageIds">Room's pinned messages.</param>
-        /// <param name="OwnerIds">Room's owners.</param>
+        /// <param name="Description">Room&#39;s description.</param>
+        /// <param name="Subject">Room&#39;s subject.</param>
+        /// <param name="PinnedMessageIds">Room&#39;s pinned messages.</param>
+        /// <param name="OwnerIds">Room&#39;s owners.</param>
         public RoomUpdateRequest(string Description = null, string Subject = null, List<string> PinnedMessageIds = null, List<string> OwnerIds = null)
         {
             this.Description = Description;
@@ -37,36 +37,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Room's description
+        /// Room&#39;s description
         /// </summary>
-        /// <value>Room's description</value>
+        /// <value>Room&#39;s description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
 
 
         /// <summary>
-        /// Room's subject
+        /// Room&#39;s subject
         /// </summary>
-        /// <value>Room's subject</value>
+        /// <value>Room&#39;s subject</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
 
 
 
         /// <summary>
-        /// Room's pinned messages
+        /// Room&#39;s pinned messages
         /// </summary>
-        /// <value>Room's pinned messages</value>
+        /// <value>Room&#39;s pinned messages</value>
         [DataMember(Name="pinnedMessageIds", EmitDefaultValue=false)]
         public List<string> PinnedMessageIds { get; set; }
 
 
 
         /// <summary>
-        /// Room's owners
+        /// Room&#39;s owners
         /// </summary>
-        /// <value>Room's owners</value>
+        /// <value>Room&#39;s owners</value>
         [DataMember(Name="ownerIds", EmitDefaultValue=false)]
         public List<string> OwnerIds { get; set; }
 

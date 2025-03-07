@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The ID of the shift.</param>
         /// <param name="Activities">The activities associated with this shift.</param>
         /// <param name="ManuallyEdited">Whether this shift was manually edited. This is only set by clients and is used for rescheduling.</param>
-        /// <param name="Delete">Set to true to delete the shift from the agent's schedule.</param>
+        /// <param name="Delete">Set to true to delete the shift from the agent&#39;s schedule.</param>
         public BuUpdateAgentScheduleShift(string Id = null, List<BuAgentScheduleActivity> Activities = null, bool? ManuallyEdited = null, bool? Delete = null)
         {
             this.Id = Id;
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Set to true to delete the shift from the agent's schedule
+        /// Set to true to delete the shift from the agent&#39;s schedule
         /// </summary>
-        /// <value>Set to true to delete the shift from the agent's schedule</value>
+        /// <value>Set to true to delete the shift from the agent&#39;s schedule</value>
         [DataMember(Name="delete", EmitDefaultValue=false)]
         public bool? Delete { get; set; }
 

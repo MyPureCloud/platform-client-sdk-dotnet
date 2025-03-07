@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Value">The value for the warning configuration..</param>
         /// <param name="RangeType">The range type for the warning configuration..</param>
-        /// <param name="Color">The color for the warning configuration in RGB hexadecimal format (for example \"#FF0000\" represents red)..</param>
+        /// <param name="Color">The color for the warning configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red)..</param>
         public Warning(int? Value = null, RangeTypeEnum? RangeType = null, string Color = null)
         {
             this.Value = Value;
@@ -85,9 +85,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The color for the warning configuration in RGB hexadecimal format (for example \"#FF0000\" represents red).
+        /// The color for the warning configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red).
         /// </summary>
-        /// <value>The color for the warning configuration in RGB hexadecimal format (for example \"#FF0000\" represents red).</value>
+        /// <value>The color for the warning configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red).</value>
         [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
 

@@ -75,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Url">When keyConfigurationType is LocalKeyManager, this should be the url for decryption and must specify the path to where GenesysCloud can requests decryption. When keyConfigurationType is KmsSymmetric, this should be the arn to the key alias for the master key (required).</param>
         /// <param name="ApiId">The api id for Hawk Authentication. Null if keyConfigurationType is KmsSymmetric.</param>
         /// <param name="ApiKey">The api shared symmetric key used for hawk authentication. Null if keyConfigurationType is KmsSymmetric.</param>
-        /// <param name="KeyConfigurationType">Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; 'Native' for disabling configuration. (required).</param>
+        /// <param name="KeyConfigurationType">Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; &#39;Native&#39; for disabling configuration. (required).</param>
         /// <param name="LastError">The error message related to the configuration.</param>
         public RecordingEncryptionConfiguration(string Url = null, string ApiId = null, string ApiKey = null, KeyConfigurationTypeEnum? KeyConfigurationType = null, ErrorBody LastError = null)
         {

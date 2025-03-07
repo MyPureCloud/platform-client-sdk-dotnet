@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The name of the company. | |
+| **Division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
 | **CompanyType** | **string** |  | [optional] |
 | **Industry** | **string** |  | [optional] |
 | **PrimaryContactId** | **string** |  | [optional] |
@@ -31,4 +32,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

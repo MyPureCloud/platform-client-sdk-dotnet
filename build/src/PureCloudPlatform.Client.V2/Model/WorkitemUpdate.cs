@@ -165,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of the Workitem. Maximum length of 512 characters..</param>
         /// <param name="DateClosed">The closed date of the Workitem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AssignmentState">The assignment state of the Workitem..</param>
-        /// <param name="AssignmentOperation">Set this value to AgentAssignmentAlerting and supply an 'assigneeId' to assign the workitem to an agent and alert the agent of the assignment. Set this value to QueueAssignmentAlerting and supply a 'queueId' to route the workitem to an agent who is a member of the queue and alert the agent..</param>
+        /// <param name="AssignmentOperation">Set this value to AgentAssignmentAlerting and supply an &#39;assigneeId&#39; to assign the workitem to an agent and alert the agent of the assignment. Set this value to QueueAssignmentAlerting and supply a &#39;queueId&#39; to route the workitem to an agent who is a member of the queue and alert the agent..</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by the worktype of the workitem. If set to {}, the existing keys and values will be removed..</param>
         /// <param name="QueueId">The ID of the Workitems queue. Must be a valid UUID..</param>
         /// <param name="AssigneeId">The ID of the assignee of the Workitem. If supplied it must be a valid UUID..</param>

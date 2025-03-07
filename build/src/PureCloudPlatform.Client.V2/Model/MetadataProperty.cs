@@ -56,9 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// whether the property's value should be hidden from display
+        /// whether the property&#39;s value should be hidden from display
         /// </summary>
-        /// <value>whether the property's value should be hidden from display</value>
+        /// <value>whether the property&#39;s value should be hidden from display</value>
         [DataMember(Name="sensitive", EmitDefaultValue=false)]
         public string Sensitive { get; private set; }
 

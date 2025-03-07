@@ -23,6 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="EventDefinition">The event that occurred..</param>
         /// <param name="EntityId">The unique identifier for the entity.</param>
+        /// <param name="EntityToken">A token representing the entity.</param>
         /// <param name="EntityName">The name for the entity.</param>
         /// <param name="PreviousValue">The value prior to the event.</param>
         /// <param name="CurrentValue">The changed value following the event.</param>
@@ -31,10 +32,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Conversation">The link to a conversation.</param>
         /// <param name="DateCreated">The date when the event created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EntityVersion">The version of the entity in the providing service.</param>
-        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, string EntityVersion = null)
+        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityToken = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, string EntityVersion = null)
         {
             this.EventDefinition = EventDefinition;
             this.EntityId = EntityId;
+            this.EntityToken = EntityToken;
             this.EntityName = EntityName;
             this.PreviousValue = PreviousValue;
             this.CurrentValue = CurrentValue;
@@ -63,6 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The unique identifier for the entity</value>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
+
+
+
+        /// <summary>
+        /// A token representing the entity
+        /// </summary>
+        /// <value>A token representing the entity</value>
+        [DataMember(Name="entityToken", EmitDefaultValue=false)]
+        public string EntityToken { get; set; }
 
 
 
@@ -148,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  EventDefinition: ").Append(EventDefinition).Append("\n");
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
+            sb.Append("  EntityToken: ").Append(EntityToken).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
             sb.Append("  PreviousValue: ").Append(PreviousValue).Append("\n");
             sb.Append("  CurrentValue: ").Append(CurrentValue).Append("\n");
@@ -207,6 +219,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityId.Equals(other.EntityId)
                 ) &&
                 (
+                    this.EntityToken == other.EntityToken ||
+                    this.EntityToken != null &&
+                    this.EntityToken.Equals(other.EntityToken)
+                ) &&
+                (
                     this.EntityName == other.EntityName ||
                     this.EntityName != null &&
                     this.EntityName.Equals(other.EntityName)
@@ -264,6 +281,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();
+
+                if (this.EntityToken != null)
+                    hash = hash * 59 + this.EntityToken.GetHashCode();
 
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();

@@ -24,8 +24,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Outcome">The outcome that the score was calculated for..</param>
         /// <param name="SessionMaxProbability">Represents the max probability reached in the session..</param>
         /// <param name="Probability">Represents the likelihood of a customer reaching or achieving a given outcome..</param>
-        /// <param name="Percentile">(Deprecated: use the 'quantile' field instead) Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome..</param>
-        /// <param name="SessionMaxPercentile">(Deprecated: use the 'quantile' field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session..</param>
+        /// <param name="Percentile">(Deprecated: use the &#39;quantile&#39; field instead) Represents the predicted probability&#39;s percentile score when compared with all other generated probabilities for a given outcome..</param>
+        /// <param name="SessionMaxPercentile">(Deprecated: use the &#39;quantile&#39; field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session..</param>
         /// <param name="Quantile">Represents the quantity of sessions that have a maximum probability less than the predicted probability..</param>
         /// <param name="SessionMaxQuantile">Represents the quantity of sessions that have a maximum probability less than the predicted session max probability..</param>
         public OutcomeScore(AddressableEntityRef Outcome = null, float? SessionMaxProbability = null, float? Probability = null, int? Percentile = null, int? SessionMaxPercentile = null, float? Quantile = null, float? SessionMaxQuantile = null)
@@ -70,18 +70,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// (Deprecated: use the 'quantile' field instead) Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.
+        /// (Deprecated: use the &#39;quantile&#39; field instead) Represents the predicted probability&#39;s percentile score when compared with all other generated probabilities for a given outcome.
         /// </summary>
-        /// <value>(Deprecated: use the 'quantile' field instead) Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.</value>
+        /// <value>(Deprecated: use the &#39;quantile&#39; field instead) Represents the predicted probability&#39;s percentile score when compared with all other generated probabilities for a given outcome.</value>
         [DataMember(Name="percentile", EmitDefaultValue=false)]
         public int? Percentile { get; set; }
 
 
 
         /// <summary>
-        /// (Deprecated: use the 'quantile' field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session.
+        /// (Deprecated: use the &#39;quantile&#39; field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session.
         /// </summary>
-        /// <value>(Deprecated: use the 'quantile' field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session.</value>
+        /// <value>(Deprecated: use the &#39;quantile&#39; field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session.</value>
         [DataMember(Name="sessionMaxPercentile", EmitDefaultValue=false)]
         public int? SessionMaxPercentile { get; set; }
 

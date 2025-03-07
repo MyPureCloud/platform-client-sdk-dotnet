@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CampaignLinesUtilization" /> class.
         /// </summary>
         /// <param name="AssignedOutboundLines">Number of outbound lines assigned to the campaign.</param>
-        /// <param name="TotalAvailableOutboundLines">Total number of available outbound lines in Campaign's Edge Group or Site.</param>
+        /// <param name="TotalAvailableOutboundLines">Total number of available outbound lines in Campaign&#39;s Edge Group or Site.</param>
         public CampaignLinesUtilization(int? AssignedOutboundLines = null, int? TotalAvailableOutboundLines = null)
         {
             this.AssignedOutboundLines = AssignedOutboundLines;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Total number of available outbound lines in Campaign's Edge Group or Site
+        /// Total number of available outbound lines in Campaign&#39;s Edge Group or Site
         /// </summary>
-        /// <value>Total number of available outbound lines in Campaign's Edge Group or Site</value>
+        /// <value>Total number of available outbound lines in Campaign&#39;s Edge Group or Site</value>
         [DataMember(Name="totalAvailableOutboundLines", EmitDefaultValue=false)]
         public int? TotalAvailableOutboundLines { get; set; }
 

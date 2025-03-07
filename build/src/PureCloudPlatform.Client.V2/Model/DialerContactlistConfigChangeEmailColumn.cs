@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DialerContactlistConfigChangeEmailColumn" /> class.
         /// </summary>
         /// <param name="ColumnName">The name of the email address column.</param>
-        /// <param name="Type">The type of the email address column, for example, 'work' or 'home'.</param>
+        /// <param name="Type">The type of the email address column, for example, &#39;work&#39; or &#39;home&#39;.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         public DialerContactlistConfigChangeEmailColumn(string ColumnName = null, string Type = null, Dictionary<string, Object> AdditionalProperties = null)
         {
@@ -44,9 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The type of the email address column, for example, 'work' or 'home'
+        /// The type of the email address column, for example, &#39;work&#39; or &#39;home&#39;
         /// </summary>
-        /// <value>The type of the email address column, for example, 'work' or 'home'</value>
+        /// <value>The type of the email address column, for example, &#39;work&#39; or &#39;home&#39;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 

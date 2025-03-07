@@ -68,12 +68,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="Description">The resource's description..</param>
+        /// <param name="Description">The resource&#39;s description..</param>
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="Managed">Is this edge group being managed remotely..</param>
         /// <param name="Hybrid">Is this edge group hybrid..</param>
-        /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication. (required).</param>
-        /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication. (required).</param>
+        /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. (required).</param>
+        /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. (required).</param>
         public EdgeGroup(string Name = null, Division Division = null, string Description = null, int? Version = null, bool? Managed = null, bool? Hybrid = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBase> PhoneTrunkBases = null)
         {
             this.Name = Name;
@@ -117,9 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The resource's description.
+        /// The resource&#39;s description.
         /// </summary>
-        /// <value>The resource's description.</value>
+        /// <value>The resource&#39;s description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
@@ -209,18 +209,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication.
+        /// A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication.
         /// </summary>
-        /// <value>A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication.</value>
+        /// <value>A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication.</value>
         [DataMember(Name="edgeTrunkBaseAssignment", EmitDefaultValue=false)]
         public TrunkBaseAssignment EdgeTrunkBaseAssignment { get; set; }
 
 
 
         /// <summary>
-        /// Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication.
+        /// Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication.
         /// </summary>
-        /// <value>Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication.</value>
+        /// <value>Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication.</value>
         [DataMember(Name="phoneTrunkBases", EmitDefaultValue=false)]
         public List<TrunkBase> PhoneTrunkBases { get; set; }
 

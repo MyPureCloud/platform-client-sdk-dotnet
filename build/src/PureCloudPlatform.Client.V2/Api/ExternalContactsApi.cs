@@ -438,9 +438,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ContactListing</returns>
         
-        ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
+        ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Search for external contacts
@@ -454,9 +455,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         
-        ApiResponse<ContactListing> GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
+        ApiResponse<ContactListing> GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Get a schema
@@ -509,7 +511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
-        /// Get all versions of an external contact's schema
+        /// Get all versions of an external contact&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -521,7 +523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external contact's schema
+        /// Get all versions of an external contact&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -988,9 +990,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
         
-        ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
+        ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Search for external organizations
@@ -1006,9 +1009,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
         
-        ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
+        ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Get a schema
@@ -1061,7 +1065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
-        /// Get all versions of an external organization's schema
+        /// Get all versions of an external organization&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -1073,7 +1077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external organization's schema
+        /// Get all versions of an external organization&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -1141,9 +1145,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>ReverseWhitepagesLookupResult</returns>
         
-        ReverseWhitepagesLookupResult GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null);
+        ReverseWhitepagesLookupResult GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null, string divisionId = null);
 
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
@@ -1154,113 +1159,234 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>ApiResponse of ReverseWhitepagesLookupResult</returns>
         
-        ApiResponse<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupWithHttpInfo (string lookupVal, List<string> expand = null);
+        ApiResponse<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupWithHttpInfo (string lookupVal, List<string> expand = null, string divisionId = null);
 
         /// <summary>
         /// Scan for external contacts using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>CursorContactListing</returns>
+        
+        CursorContactListing GetExternalcontactsScanContacts (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external contacts using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>ApiResponse of CursorContactListing</returns>
+        
+        ApiResponse<CursorContactListing> GetExternalcontactsScanContactsWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external contacts using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorContactListing</returns>
         
-        CursorContactListing GetExternalcontactsScanContacts (int? limit = null, string cursor = null);
+        CursorContactListing GetExternalcontactsScanContactsDivisionviewsAll (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for external contacts using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorContactListing</returns>
         
-        ApiResponse<CursorContactListing> GetExternalcontactsScanContactsWithHttpInfo (int? limit = null, string cursor = null);
+        ApiResponse<CursorContactListing> GetExternalcontactsScanContactsDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for notes using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>CursorNoteListing</returns>
+        
+        CursorNoteListing GetExternalcontactsScanNotes (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for notes using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>ApiResponse of CursorNoteListing</returns>
+        
+        ApiResponse<CursorNoteListing> GetExternalcontactsScanNotesWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for notes using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorNoteListing</returns>
         
-        CursorNoteListing GetExternalcontactsScanNotes (int? limit = null, string cursor = null);
+        CursorNoteListing GetExternalcontactsScanNotesDivisionviewsAll (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for notes using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorNoteListing</returns>
         
-        ApiResponse<CursorNoteListing> GetExternalcontactsScanNotesWithHttpInfo (int? limit = null, string cursor = null);
+        ApiResponse<CursorNoteListing> GetExternalcontactsScanNotesDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for external organizations using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>CursorOrganizationListing</returns>
+        
+        CursorOrganizationListing GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external organizations using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>ApiResponse of CursorOrganizationListing</returns>
+        
+        ApiResponse<CursorOrganizationListing> GetExternalcontactsScanOrganizationsWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external organizations using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorOrganizationListing</returns>
         
-        CursorOrganizationListing GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null);
+        CursorOrganizationListing GetExternalcontactsScanOrganizationsDivisionviewsAll (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for external organizations using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorOrganizationListing</returns>
         
-        ApiResponse<CursorOrganizationListing> GetExternalcontactsScanOrganizationsWithHttpInfo (int? limit = null, string cursor = null);
+        ApiResponse<CursorOrganizationListing> GetExternalcontactsScanOrganizationsDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for relationships
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>CursorRelationshipListing</returns>
+        
+        CursorRelationshipListing GetExternalcontactsScanRelationships (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for relationships
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>ApiResponse of CursorRelationshipListing</returns>
+        
+        ApiResponse<CursorRelationshipListing> GetExternalcontactsScanRelationshipsWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for relationships
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorRelationshipListing</returns>
         
-        CursorRelationshipListing GetExternalcontactsScanRelationships (int? limit = null, string cursor = null);
+        CursorRelationshipListing GetExternalcontactsScanRelationshipsDivisionviewsAll (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for relationships
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorRelationshipListing</returns>
         
-        ApiResponse<CursorRelationshipListing> GetExternalcontactsScanRelationshipsWithHttpInfo (int? limit = null, string cursor = null);
+        ApiResponse<CursorRelationshipListing> GetExternalcontactsScanRelationshipsDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Claim or release identifiers for a contact
@@ -1335,6 +1461,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of BulkContactsResponse</returns>
         
         ApiResponse<BulkContactsResponse> PostExternalcontactsBulkContactsAddWithHttpInfo (BulkContactsRequest body);
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>BulkFetchContactsResponse</returns>
+        
+        BulkFetchContactsResponse PostExternalcontactsBulkContactsDivisionviews (BulkIdsRequest body);
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>ApiResponse of BulkFetchContactsResponse</returns>
+        
+        ApiResponse<BulkFetchContactsResponse> PostExternalcontactsBulkContactsDivisionviewsWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
         /// Bulk remove contacts
@@ -1551,6 +1703,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of BulkOrganizationsResponse</returns>
         
         ApiResponse<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsAddWithHttpInfo (BulkOrganizationsRequest body);
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>BulkFetchOrganizationsResponse</returns>
+        
+        BulkFetchOrganizationsResponse PostExternalcontactsBulkOrganizationsDivisionviews (BulkIdsRequest body);
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>ApiResponse of BulkFetchOrganizationsResponse</returns>
+        
+        ApiResponse<BulkFetchOrganizationsResponse> PostExternalcontactsBulkOrganizationsDivisionviewsWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
         /// Bulk remove organizations
@@ -2245,7 +2423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CsvSettings> PutExternalcontactsImportCsvSettingWithHttpInfo (string settingsId, CsvSettings body);
 
         /// <summary>
-        /// Update Job's workflow status
+        /// Update Job&#39;s workflow status
         /// </summary>
         /// <remarks>
         /// 
@@ -2258,7 +2436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ContactImportJobStatusUpdateResponse PutExternalcontactsImportJob (string jobId, ContactImportJobStatusUpdateRequest body);
 
         /// <summary>
-        /// Update Job's workflow status
+        /// Update Job&#39;s workflow status
         /// </summary>
         /// <remarks>
         /// 
@@ -2854,9 +3032,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ContactListing</returns>
         
-        System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Search for external contacts
@@ -2870,9 +3049,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Get a schema
@@ -2925,7 +3105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
-        /// Get all versions of an external contact's schema
+        /// Get all versions of an external contact&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -2937,7 +3117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external contact's schema
+        /// Get all versions of an external contact&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -3404,9 +3584,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
         
-        System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
+        System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Search for external organizations
@@ -3422,9 +3603,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null);
 
         /// <summary>
         /// Get a schema
@@ -3477,7 +3659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
-        /// Get all versions of an external organization's schema
+        /// Get all versions of an external organization&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -3489,7 +3671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external organization's schema
+        /// Get all versions of an external organization&#39;s schema
         /// </summary>
         /// <remarks>
         /// 
@@ -3557,9 +3739,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>Task of ReverseWhitepagesLookupResult</returns>
         
-        System.Threading.Tasks.Task<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupAsync (string lookupVal, List<string> expand = null);
+        System.Threading.Tasks.Task<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupAsync (string lookupVal, List<string> expand = null, string divisionId = null);
 
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
@@ -3570,113 +3753,234 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>Task of ApiResponse (ReverseWhitepagesLookupResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ReverseWhitepagesLookupResult>> GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo (string lookupVal, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<ReverseWhitepagesLookupResult>> GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo (string lookupVal, List<string> expand = null, string divisionId = null);
 
         /// <summary>
         /// Scan for external contacts using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of CursorContactListing</returns>
+        
+        System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsAsync (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external contacts using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of ApiResponse (CursorContactListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external contacts using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorContactListing</returns>
         
-        System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsAsync (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsDivisionviewsAllAsync (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for external contacts using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorContactListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for notes using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of CursorNoteListing</returns>
+        
+        System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesAsync (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for notes using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for notes using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorNoteListing</returns>
         
-        System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesAsync (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesDivisionviewsAllAsync (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for notes using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for external organizations using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of CursorOrganizationListing</returns>
+        
+        System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsAsync (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external organizations using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for external organizations using paging
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorOrganizationListing</returns>
         
-        System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsAsync (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsDivisionviewsAllAsync (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for external organizations using paging
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for relationships
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of CursorRelationshipListing</returns>
+        
+        System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsAsync (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for relationships
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null);
+
+        /// <summary>
+        /// Scan for relationships
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorRelationshipListing</returns>
         
-        System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsAsync (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsDivisionviewsAllAsync (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Scan for relationships
         /// </summary>
         /// <remarks>
         /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo (int? limit = null, string cursor = null);
+        System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
         /// Claim or release identifiers for a contact
@@ -3751,6 +4055,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BulkContactsResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BulkContactsResponse>> PostExternalcontactsBulkContactsAddAsyncWithHttpInfo (BulkContactsRequest body);
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>Task of BulkFetchContactsResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkFetchContactsResponse> PostExternalcontactsBulkContactsDivisionviewsAsync (BulkIdsRequest body);
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>Task of ApiResponse (BulkFetchContactsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkFetchContactsResponse>> PostExternalcontactsBulkContactsDivisionviewsAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
         /// Bulk remove contacts
@@ -3967,6 +4297,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BulkOrganizationsResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BulkOrganizationsResponse>> PostExternalcontactsBulkOrganizationsAddAsyncWithHttpInfo (BulkOrganizationsRequest body);
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>Task of BulkFetchOrganizationsResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkFetchOrganizationsResponse> PostExternalcontactsBulkOrganizationsDivisionviewsAsync (BulkIdsRequest body);
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>Task of ApiResponse (BulkFetchOrganizationsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkFetchOrganizationsResponse>> PostExternalcontactsBulkOrganizationsDivisionviewsAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
         /// Bulk remove organizations
@@ -4661,7 +5017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CsvSettings>> PutExternalcontactsImportCsvSettingAsyncWithHttpInfo (string settingsId, CsvSettings body);
 
         /// <summary>
-        /// Update Job's workflow status
+        /// Update Job&#39;s workflow status
         /// </summary>
         /// <remarks>
         /// 
@@ -4674,7 +5030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ContactImportJobStatusUpdateResponse> PutExternalcontactsImportJobAsync (string jobId, ContactImportJobStatusUpdateRequest body);
 
         /// <summary>
-        /// Update Job's workflow status
+        /// Update Job&#39;s workflow status
         /// </summary>
         /// <remarks>
         /// 
@@ -8445,11 +8801,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ContactListing</returns>
         
-        public ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
+        public ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null)
         {
-             ApiResponse<ContactListing> localVarResponse = GetExternalcontactsContactsWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
+             ApiResponse<ContactListing> localVarResponse = GetExternalcontactsContactsWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand, divisionIds);
              return localVarResponse.Data;
         }
 
@@ -8463,9 +8820,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         
-        public ApiResponse< ContactListing > GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
+        public ApiResponse< ContactListing > GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/contacts";
@@ -8505,6 +8863,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (q != null) localVarQueryParams.Add(new Tuple<string, string>("q", this.Configuration.ApiClient.ParameterToString(q)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -8559,11 +8918,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ContactListing</returns>
         
-        public async System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null)
         {
-             ApiResponse<ContactListing> localVarResponse = await GetExternalcontactsContactsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
+             ApiResponse<ContactListing> localVarResponse = await GetExternalcontactsContactsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand, divisionIds);
              return localVarResponse.Data;
 
         }
@@ -8578,9 +8938,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/contacts";
@@ -8620,6 +8981,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (q != null) localVarQueryParams.Add(new Tuple<string, string>("q", this.Configuration.ApiClient.ParameterToString(q)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -9105,7 +9467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get all versions of an external contact's schema 
+        /// Get all versions of an external contact&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9119,7 +9481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external contact's schema 
+        /// Get all versions of an external contact&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9210,7 +9572,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get all versions of an external contact's schema 
+        /// Get all versions of an external contact&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9225,7 +9587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external contact's schema 
+        /// Get all versions of an external contact&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12883,11 +13245,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
         
-        public ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
+        public ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null)
         {
-             ApiResponse<ExternalOrganizationListing> localVarResponse = GetExternalcontactsOrganizationsWithHttpInfo(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors);
+             ApiResponse<ExternalOrganizationListing> localVarResponse = GetExternalcontactsOrganizationsWithHttpInfo(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors, divisionIds);
              return localVarResponse.Data;
         }
 
@@ -12903,9 +13266,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
         
-        public ApiResponse< ExternalOrganizationListing > GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
+        public ApiResponse< ExternalOrganizationListing > GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/organizations";
@@ -12947,6 +13311,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeTrustors != null) localVarQueryParams.Add(new Tuple<string, string>("includeTrustors", this.Configuration.ApiClient.ParameterToString(includeTrustors)));
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -13003,11 +13368,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
         
-        public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
+        public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null)
         {
-             ApiResponse<ExternalOrganizationListing> localVarResponse = await GetExternalcontactsOrganizationsAsyncWithHttpInfo(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors);
+             ApiResponse<ExternalOrganizationListing> localVarResponse = await GetExternalcontactsOrganizationsAsyncWithHttpInfo(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors, divisionIds);
              return localVarResponse.Data;
 
         }
@@ -13024,9 +13390,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
+        /// <param name="divisionIds">which divisions to search, up to 50 (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/organizations";
@@ -13068,6 +13435,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeTrustors != null) localVarQueryParams.Add(new Tuple<string, string>("includeTrustors", this.Configuration.ApiClient.ParameterToString(includeTrustors)));
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -13553,7 +13921,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get all versions of an external organization's schema 
+        /// Get all versions of an external organization&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13567,7 +13935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external organization's schema 
+        /// Get all versions of an external organization&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13658,7 +14026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get all versions of an external organization's schema 
+        /// Get all versions of an external organization&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13673,7 +14041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external organization's schema 
+        /// Get all versions of an external organization&#39;s schema 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14191,11 +14559,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>ReverseWhitepagesLookupResult</returns>
         
-        public ReverseWhitepagesLookupResult GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null)
+        public ReverseWhitepagesLookupResult GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null, string divisionId = null)
         {
-             ApiResponse<ReverseWhitepagesLookupResult> localVarResponse = GetExternalcontactsReversewhitepageslookupWithHttpInfo(lookupVal, expand);
+             ApiResponse<ReverseWhitepagesLookupResult> localVarResponse = GetExternalcontactsReversewhitepageslookupWithHttpInfo(lookupVal, expand, divisionId);
              return localVarResponse.Data;
         }
 
@@ -14206,9 +14575,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>ApiResponse of ReverseWhitepagesLookupResult</returns>
         
-        public ApiResponse< ReverseWhitepagesLookupResult > GetExternalcontactsReversewhitepageslookupWithHttpInfo (string lookupVal, List<string> expand = null)
+        public ApiResponse< ReverseWhitepagesLookupResult > GetExternalcontactsReversewhitepageslookupWithHttpInfo (string lookupVal, List<string> expand = null, string divisionId = null)
         { 
             // verify the required parameter 'lookupVal' is set
             if (lookupVal == null)
@@ -14248,6 +14618,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (lookupVal != null) localVarQueryParams.Add(new Tuple<string, string>("lookupVal", this.Configuration.ApiClient.ParameterToString(lookupVal)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
 
             // Header params
 
@@ -14299,11 +14670,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>Task of ReverseWhitepagesLookupResult</returns>
         
-        public async System.Threading.Tasks.Task<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupAsync (string lookupVal, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupAsync (string lookupVal, List<string> expand = null, string divisionId = null)
         {
-             ApiResponse<ReverseWhitepagesLookupResult> localVarResponse = await GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo(lookupVal, expand);
+             ApiResponse<ReverseWhitepagesLookupResult> localVarResponse = await GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo(lookupVal, expand, divisionId);
              return localVarResponse.Data;
 
         }
@@ -14315,9 +14687,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
+        /// <param name="divisionId">Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional, default to "*")</param>
         /// <returns>Task of ApiResponse (ReverseWhitepagesLookupResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ReverseWhitepagesLookupResult>> GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo (string lookupVal, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReverseWhitepagesLookupResult>> GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo (string lookupVal, List<string> expand = null, string divisionId = null)
         { 
             // verify the required parameter 'lookupVal' is set
             if (lookupVal == null)
@@ -14358,6 +14731,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (lookupVal != null) localVarQueryParams.Add(new Tuple<string, string>("lookupVal", this.Configuration.ApiClient.ParameterToString(lookupVal)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
 
             // Header params
 
@@ -14406,31 +14780,251 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Scan for external contacts using paging 
         /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>CursorContactListing</returns>
+        
+        public CursorContactListing GetExternalcontactsScanContacts (int? limit = null, string cursor = null, string divisionId = null)
+        {
+             ApiResponse<CursorContactListing> localVarResponse = GetExternalcontactsScanContactsWithHttpInfo(limit, cursor, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Scan for external contacts using paging 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>ApiResponse of CursorContactListing</returns>
+        
+        public ApiResponse< CursorContactListing > GetExternalcontactsScanContactsWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/contacts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorContactListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorContactListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorContactListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Scan for external contacts using paging 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of CursorContactListing</returns>
+        
+        public async System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsAsync (int? limit = null, string cursor = null, string divisionId = null)
+        {
+             ApiResponse<CursorContactListing> localVarResponse = await GetExternalcontactsScanContactsAsyncWithHttpInfo(limit, cursor, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Scan for external contacts using paging 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of ApiResponse (CursorContactListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/contacts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorContactListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorContactListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorContactListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Scan for external contacts using paging 
+        /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorContactListing</returns>
         
-        public CursorContactListing GetExternalcontactsScanContacts (int? limit = null, string cursor = null)
+        public CursorContactListing GetExternalcontactsScanContactsDivisionviewsAll (int? limit = null, string cursor = null)
         {
-             ApiResponse<CursorContactListing> localVarResponse = GetExternalcontactsScanContactsWithHttpInfo(limit, cursor);
+             ApiResponse<CursorContactListing> localVarResponse = GetExternalcontactsScanContactsDivisionviewsAllWithHttpInfo(limit, cursor);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Scan for external contacts using paging 
         /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorContactListing</returns>
         
-        public ApiResponse< CursorContactListing > GetExternalcontactsScanContactsWithHttpInfo (int? limit = null, string cursor = null)
+        public ApiResponse< CursorContactListing > GetExternalcontactsScanContactsDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
-            var localVarPath = "/api/v2/externalcontacts/scan/contacts";
+            var localVarPath = "/api/v2/externalcontacts/scan/contacts/divisionviews/all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14496,9 +15090,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContactsDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContactsDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CursorContactListing>(localVarStatusCode,
                 localVarHeaders,
@@ -14511,15 +15105,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Scan for external contacts using paging 
         /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorContactListing</returns>
         
-        public async System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsAsync (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsDivisionviewsAllAsync (int? limit = null, string cursor = null)
         {
-             ApiResponse<CursorContactListing> localVarResponse = await GetExternalcontactsScanContactsAsyncWithHttpInfo(limit, cursor);
+             ApiResponse<CursorContactListing> localVarResponse = await GetExternalcontactsScanContactsDivisionviewsAllAsyncWithHttpInfo(limit, cursor);
              return localVarResponse.Data;
 
         }
@@ -14527,16 +15122,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Scan for external contacts using paging 
         /// 
+        /// GetExternalcontactsScanContactsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorContactListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
-            var localVarPath = "/api/v2/externalcontacts/scan/contacts";
+            var localVarPath = "/api/v2/externalcontacts/scan/contacts/divisionviews/all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14602,9 +15198,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContactsDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContactsDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CursorContactListing>(localVarStatusCode,
                 localVarHeaders,
@@ -14622,27 +15218,247 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
         /// <returns>CursorNoteListing</returns>
         
-        public CursorNoteListing GetExternalcontactsScanNotes (int? limit = null, string cursor = null)
+        public CursorNoteListing GetExternalcontactsScanNotes (int? limit = null, string cursor = null, string divisionId = null)
         {
-             ApiResponse<CursorNoteListing> localVarResponse = GetExternalcontactsScanNotesWithHttpInfo(limit, cursor);
+             ApiResponse<CursorNoteListing> localVarResponse = GetExternalcontactsScanNotesWithHttpInfo(limit, cursor, divisionId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Scan for notes using paging 
         /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>ApiResponse of CursorNoteListing</returns>
+        
+        public ApiResponse< CursorNoteListing > GetExternalcontactsScanNotesWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/notes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorNoteListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorNoteListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorNoteListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Scan for notes using paging 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of CursorNoteListing</returns>
+        
+        public async System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesAsync (int? limit = null, string cursor = null, string divisionId = null)
+        {
+             ApiResponse<CursorNoteListing> localVarResponse = await GetExternalcontactsScanNotesAsyncWithHttpInfo(limit, cursor, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Scan for notes using paging 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/notes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorNoteListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorNoteListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorNoteListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Scan for notes using paging 
+        /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <returns>CursorNoteListing</returns>
+        
+        public CursorNoteListing GetExternalcontactsScanNotesDivisionviewsAll (int? limit = null, string cursor = null)
+        {
+             ApiResponse<CursorNoteListing> localVarResponse = GetExternalcontactsScanNotesDivisionviewsAllWithHttpInfo(limit, cursor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Scan for notes using paging 
+        /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorNoteListing</returns>
         
-        public ApiResponse< CursorNoteListing > GetExternalcontactsScanNotesWithHttpInfo (int? limit = null, string cursor = null)
+        public ApiResponse< CursorNoteListing > GetExternalcontactsScanNotesDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
-            var localVarPath = "/api/v2/externalcontacts/scan/notes";
+            var localVarPath = "/api/v2/externalcontacts/scan/notes/divisionviews/all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14708,9 +15524,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotesDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotesDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CursorNoteListing>(localVarStatusCode,
                 localVarHeaders,
@@ -14723,15 +15539,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Scan for notes using paging 
         /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorNoteListing</returns>
         
-        public async System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesAsync (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesDivisionviewsAllAsync (int? limit = null, string cursor = null)
         {
-             ApiResponse<CursorNoteListing> localVarResponse = await GetExternalcontactsScanNotesAsyncWithHttpInfo(limit, cursor);
+             ApiResponse<CursorNoteListing> localVarResponse = await GetExternalcontactsScanNotesDivisionviewsAllAsyncWithHttpInfo(limit, cursor);
              return localVarResponse.Data;
 
         }
@@ -14739,16 +15556,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Scan for notes using paging 
         /// 
+        /// GetExternalcontactsScanNotesDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
-            var localVarPath = "/api/v2/externalcontacts/scan/notes";
+            var localVarPath = "/api/v2/externalcontacts/scan/notes/divisionviews/all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14814,9 +15632,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotesDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotesDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CursorNoteListing>(localVarStatusCode,
                 localVarHeaders,
@@ -14834,11 +15652,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
         /// <returns>CursorOrganizationListing</returns>
         
-        public CursorOrganizationListing GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null)
+        public CursorOrganizationListing GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null, string divisionId = null)
         {
-             ApiResponse<CursorOrganizationListing> localVarResponse = GetExternalcontactsScanOrganizationsWithHttpInfo(limit, cursor);
+             ApiResponse<CursorOrganizationListing> localVarResponse = GetExternalcontactsScanOrganizationsWithHttpInfo(limit, cursor, divisionId);
              return localVarResponse.Data;
         }
 
@@ -14849,12 +15668,231 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
         /// <returns>ApiResponse of CursorOrganizationListing</returns>
         
-        public ApiResponse< CursorOrganizationListing > GetExternalcontactsScanOrganizationsWithHttpInfo (int? limit = null, string cursor = null)
+        public ApiResponse< CursorOrganizationListing > GetExternalcontactsScanOrganizationsWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/scan/organizations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorOrganizationListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorOrganizationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorOrganizationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Scan for external organizations using paging 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of CursorOrganizationListing</returns>
+        
+        public async System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsAsync (int? limit = null, string cursor = null, string divisionId = null)
+        {
+             ApiResponse<CursorOrganizationListing> localVarResponse = await GetExternalcontactsScanOrganizationsAsyncWithHttpInfo(limit, cursor, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Scan for external organizations using paging 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
+        /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/organizations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorOrganizationListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorOrganizationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorOrganizationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Scan for external organizations using paging 
+        /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <returns>CursorOrganizationListing</returns>
+        
+        public CursorOrganizationListing GetExternalcontactsScanOrganizationsDivisionviewsAll (int? limit = null, string cursor = null)
+        {
+             ApiResponse<CursorOrganizationListing> localVarResponse = GetExternalcontactsScanOrganizationsDivisionviewsAllWithHttpInfo(limit, cursor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Scan for external organizations using paging 
+        /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <returns>ApiResponse of CursorOrganizationListing</returns>
+        
+        public ApiResponse< CursorOrganizationListing > GetExternalcontactsScanOrganizationsDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/organizations/divisionviews/all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -14920,9 +15958,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizationsDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizationsDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CursorOrganizationListing>(localVarStatusCode,
                 localVarHeaders,
@@ -14935,15 +15973,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Scan for external organizations using paging 
         /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorOrganizationListing</returns>
         
-        public async System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsAsync (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsDivisionviewsAllAsync (int? limit = null, string cursor = null)
         {
-             ApiResponse<CursorOrganizationListing> localVarResponse = await GetExternalcontactsScanOrganizationsAsyncWithHttpInfo(limit, cursor);
+             ApiResponse<CursorOrganizationListing> localVarResponse = await GetExternalcontactsScanOrganizationsDivisionviewsAllAsyncWithHttpInfo(limit, cursor);
              return localVarResponse.Data;
 
         }
@@ -14951,16 +15990,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Scan for external organizations using paging 
         /// 
+        /// GetExternalcontactsScanOrganizationsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
-            var localVarPath = "/api/v2/externalcontacts/scan/organizations";
+            var localVarPath = "/api/v2/externalcontacts/scan/organizations/divisionviews/all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -15026,9 +16066,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizationsDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizationsDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CursorOrganizationListing>(localVarStatusCode,
                 localVarHeaders,
@@ -15046,11 +16086,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
         /// <returns>CursorRelationshipListing</returns>
         
-        public CursorRelationshipListing GetExternalcontactsScanRelationships (int? limit = null, string cursor = null)
+        public CursorRelationshipListing GetExternalcontactsScanRelationships (int? limit = null, string cursor = null, string divisionId = null)
         {
-             ApiResponse<CursorRelationshipListing> localVarResponse = GetExternalcontactsScanRelationshipsWithHttpInfo(limit, cursor);
+             ApiResponse<CursorRelationshipListing> localVarResponse = GetExternalcontactsScanRelationshipsWithHttpInfo(limit, cursor, divisionId);
              return localVarResponse.Data;
         }
 
@@ -15061,9 +16102,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
         /// <returns>ApiResponse of CursorRelationshipListing</returns>
         
-        public ApiResponse< CursorRelationshipListing > GetExternalcontactsScanRelationshipsWithHttpInfo (int? limit = null, string cursor = null)
+        public ApiResponse< CursorRelationshipListing > GetExternalcontactsScanRelationshipsWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/scan/relationships";
@@ -15100,6 +16142,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
 
             // Header params
 
@@ -15151,11 +16194,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
         /// <returns>Task of CursorRelationshipListing</returns>
         
-        public async System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsAsync (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsAsync (int? limit = null, string cursor = null, string divisionId = null)
         {
-             ApiResponse<CursorRelationshipListing> localVarResponse = await GetExternalcontactsScanRelationshipsAsyncWithHttpInfo(limit, cursor);
+             ApiResponse<CursorRelationshipListing> localVarResponse = await GetExternalcontactsScanRelationshipsAsyncWithHttpInfo(limit, cursor, divisionId);
              return localVarResponse.Data;
 
         }
@@ -15167,12 +16211,230 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="divisionId">The division to scan over (optional, default to "*")</param>
         /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo (int? limit = null, string cursor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo (int? limit = null, string cursor = null, string divisionId = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/scan/relationships";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationships: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorRelationshipListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorRelationshipListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorRelationshipListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Scan for relationships 
+        /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <returns>CursorRelationshipListing</returns>
+        
+        public CursorRelationshipListing GetExternalcontactsScanRelationshipsDivisionviewsAll (int? limit = null, string cursor = null)
+        {
+             ApiResponse<CursorRelationshipListing> localVarResponse = GetExternalcontactsScanRelationshipsDivisionviewsAllWithHttpInfo(limit, cursor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Scan for relationships 
+        /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <returns>ApiResponse of CursorRelationshipListing</returns>
+        
+        public ApiResponse< CursorRelationshipListing > GetExternalcontactsScanRelationshipsDivisionviewsAllWithHttpInfo (int? limit = null, string cursor = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/relationships/divisionviews/all";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationshipsDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationshipsDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorRelationshipListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorRelationshipListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorRelationshipListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Scan for relationships 
+        /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <returns>Task of CursorRelationshipListing</returns>
+        
+        public async System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsDivisionviewsAllAsync (int? limit = null, string cursor = null)
+        {
+             ApiResponse<CursorRelationshipListing> localVarResponse = await GetExternalcontactsScanRelationshipsDivisionviewsAllAsyncWithHttpInfo(limit, cursor);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Scan for relationships 
+        /// 
+        /// GetExternalcontactsScanRelationshipsDivisionviewsAll is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsDivisionviewsAllAsyncWithHttpInfo (int? limit = null, string cursor = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/scan/relationships/divisionviews/all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -15238,9 +16500,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationshipsDivisionviewsAll: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationships: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationshipsDivisionviewsAll: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CursorRelationshipListing>(localVarStatusCode,
                 localVarHeaders,
@@ -15927,6 +17189,233 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BulkContactsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BulkContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkContactsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions 
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>BulkFetchContactsResponse</returns>
+        
+        public BulkFetchContactsResponse PostExternalcontactsBulkContactsDivisionviews (BulkIdsRequest body)
+        {
+             ApiResponse<BulkFetchContactsResponse> localVarResponse = PostExternalcontactsBulkContactsDivisionviewsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions 
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>ApiResponse of BulkFetchContactsResponse</returns>
+        
+        public ApiResponse< BulkFetchContactsResponse > PostExternalcontactsBulkContactsDivisionviewsWithHttpInfo (BulkIdsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsDivisionviews");
+
+            var localVarPath = "/api/v2/externalcontacts/bulk/contacts/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkFetchContactsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkFetchContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkFetchContactsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions 
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>Task of BulkFetchContactsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkFetchContactsResponse> PostExternalcontactsBulkContactsDivisionviewsAsync (BulkIdsRequest body)
+        {
+             ApiResponse<BulkFetchContactsResponse> localVarResponse = await PostExternalcontactsBulkContactsDivisionviewsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk fetch contacts across divisions 
+        /// 
+        /// PostExternalcontactsBulkContactsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact ids</param>
+        /// <returns>Task of ApiResponse (BulkFetchContactsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkFetchContactsResponse>> PostExternalcontactsBulkContactsDivisionviewsAsyncWithHttpInfo (BulkIdsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsDivisionviews");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/bulk/contacts/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkFetchContactsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkFetchContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkFetchContactsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -17934,6 +19423,233 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BulkOrganizationsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BulkOrganizationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkOrganizationsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions 
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>BulkFetchOrganizationsResponse</returns>
+        
+        public BulkFetchOrganizationsResponse PostExternalcontactsBulkOrganizationsDivisionviews (BulkIdsRequest body)
+        {
+             ApiResponse<BulkFetchOrganizationsResponse> localVarResponse = PostExternalcontactsBulkOrganizationsDivisionviewsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions 
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>ApiResponse of BulkFetchOrganizationsResponse</returns>
+        
+        public ApiResponse< BulkFetchOrganizationsResponse > PostExternalcontactsBulkOrganizationsDivisionviewsWithHttpInfo (BulkIdsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsDivisionviews");
+
+            var localVarPath = "/api/v2/externalcontacts/bulk/organizations/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkFetchOrganizationsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkFetchOrganizationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkFetchOrganizationsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions 
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>Task of BulkFetchOrganizationsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkFetchOrganizationsResponse> PostExternalcontactsBulkOrganizationsDivisionviewsAsync (BulkIdsRequest body)
+        {
+             ApiResponse<BulkFetchOrganizationsResponse> localVarResponse = await PostExternalcontactsBulkOrganizationsDivisionviewsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk fetch organizations across divisions 
+        /// 
+        /// PostExternalcontactsBulkOrganizationsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organizations ids</param>
+        /// <returns>Task of ApiResponse (BulkFetchOrganizationsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkFetchOrganizationsResponse>> PostExternalcontactsBulkOrganizationsDivisionviewsAsyncWithHttpInfo (BulkIdsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsDivisionviews");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/bulk/organizations/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkFetchOrganizationsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkFetchOrganizationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkFetchOrganizationsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -24296,7 +26012,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update Job's workflow status 
+        /// Update Job&#39;s workflow status 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24311,7 +26027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Job's workflow status 
+        /// Update Job&#39;s workflow status 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24412,7 +26128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update Job's workflow status 
+        /// Update Job&#39;s workflow status 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -24428,7 +26144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Job's workflow status 
+        /// Update Job&#39;s workflow status 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

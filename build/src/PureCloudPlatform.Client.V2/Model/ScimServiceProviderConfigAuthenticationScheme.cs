@@ -98,18 +98,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The HTTP-addressable URL that points to the authentication scheme's specification.
+        /// The HTTP-addressable URL that points to the authentication scheme&#39;s specification.
         /// </summary>
-        /// <value>The HTTP-addressable URL that points to the authentication scheme's specification.</value>
+        /// <value>The HTTP-addressable URL that points to the authentication scheme&#39;s specification.</value>
         [DataMember(Name="specUri", EmitDefaultValue=false)]
         public string SpecUri { get; private set; }
 
 
 
         /// <summary>
-        /// The HTTP-addressable URL that points to the authentication scheme's usage documentation.
+        /// The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation.
         /// </summary>
-        /// <value>The HTTP-addressable URL that points to the authentication scheme's usage documentation.</value>
+        /// <value>The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation.</value>
         [DataMember(Name="documentationUri", EmitDefaultValue=false)]
         public string DocumentationUri { get; private set; }
 

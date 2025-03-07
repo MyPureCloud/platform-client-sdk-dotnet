@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="Start">The start date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="End">The end date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss (required).</param>
-        /// <param name="TimeZone">The time zone for the recurrence. The time zone of the recurrence is determined by prioritizing the recurrence's time zone if specified, then the schedule's time zone if set, and finally defaulting to UTC if neither defines a time zone. See here for a list of valid time zones https://www.iana.org/time-zones.</param>
+        /// <param name="TimeZone">The time zone for the recurrence. The time zone of the recurrence is determined by prioritizing the recurrence&#39;s time zone if specified, then the schedule&#39;s time zone if set, and finally defaulting to UTC if neither defines a time zone. See here for a list of valid time zones https://www.iana.org/time-zones.</param>
         /// <param name="Pattern">The schedule pattern e.g.: Daily/Weekly (required).</param>
         /// <param name="Range">The schedule range e.g.: EndDate/NoEnd/Numbered (required).</param>
         /// <param name="Alterations">Modifications to the original recurrence schedule (Exclusions/Inclusions).</param>
@@ -75,9 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time zone for the recurrence. The time zone of the recurrence is determined by prioritizing the recurrence's time zone if specified, then the schedule's time zone if set, and finally defaulting to UTC if neither defines a time zone. See here for a list of valid time zones https://www.iana.org/time-zones
+        /// The time zone for the recurrence. The time zone of the recurrence is determined by prioritizing the recurrence&#39;s time zone if specified, then the schedule&#39;s time zone if set, and finally defaulting to UTC if neither defines a time zone. See here for a list of valid time zones https://www.iana.org/time-zones
         /// </summary>
-        /// <value>The time zone for the recurrence. The time zone of the recurrence is determined by prioritizing the recurrence's time zone if specified, then the schedule's time zone if set, and finally defaulting to UTC if neither defines a time zone. See here for a list of valid time zones https://www.iana.org/time-zones</value>
+        /// <value>The time zone for the recurrence. The time zone of the recurrence is determined by prioritizing the recurrence&#39;s time zone if specified, then the schedule&#39;s time zone if set, and finally defaulting to UTC if neither defines a time zone. See here for a list of valid time zones https://www.iana.org/time-zones</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
 

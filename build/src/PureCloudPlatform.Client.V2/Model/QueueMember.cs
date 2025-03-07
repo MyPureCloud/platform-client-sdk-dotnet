@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueMember" /> class.
         /// </summary>
-        /// <param name="Id">The queue member's id..</param>
+        /// <param name="Id">The queue member&#39;s id..</param>
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
         /// <param name="RingNumber">RingNumber.</param>
@@ -43,9 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The queue member's id.
+        /// The queue member&#39;s id.
         /// </summary>
-        /// <value>The queue member's id.</value>
+        /// <value>The queue member&#39;s id.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

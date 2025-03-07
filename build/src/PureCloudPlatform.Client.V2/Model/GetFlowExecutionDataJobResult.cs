@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GetFlowExecutionDataJobResult" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Entities">On jobState = Success this field will be populated with the list of results of files for download..</param>
+        /// <param name="Entities">On jobState &#x3D; Success this field will be populated with the list of results of files for download..</param>
         /// <param name="JobState">The state of the backend process to prep the files for download..</param>
         public GetFlowExecutionDataJobResult(string Name = null, List<ExecutionDataEntity> Entities = null, JobStateEnum? JobState = null)
         {
@@ -97,9 +97,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// On jobState = Success this field will be populated with the list of results of files for download.
+        /// On jobState &#x3D; Success this field will be populated with the list of results of files for download.
         /// </summary>
-        /// <value>On jobState = Success this field will be populated with the list of results of files for download.</value>
+        /// <value>On jobState &#x3D; Success this field will be populated with the list of results of files for download.</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<ExecutionDataEntity> Entities { get; set; }
 

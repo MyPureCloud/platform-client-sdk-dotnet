@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The requesting user's rank
+        /// The requesting user&#39;s rank
         /// </summary>
-        /// <value>The requesting user's rank</value>
+        /// <value>The requesting user&#39;s rank</value>
         [DataMember(Name="userRank", EmitDefaultValue=false)]
         public LeaderboardItem UserRank { get; private set; }
 

@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The document id..</param>
         /// <param name="Title">The document title..</param>
         /// <param name="Answer">The answer found inside a variationContent..</param>
-        /// <param name="Variation">The variation with the answer's highlight data..</param>
+        /// <param name="Variation">The variation with the answer&#39;s highlight data..</param>
         public KnowledgeAnswerDocumentResponse(string Id = null, string Title = null, string Answer = null, DocumentVariationAnswer Variation = null)
         {
             this.Id = Id;
@@ -64,9 +64,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The variation with the answer's highlight data.
+        /// The variation with the answer&#39;s highlight data.
         /// </summary>
-        /// <value>The variation with the answer's highlight data.</value>
+        /// <value>The variation with the answer&#39;s highlight data.</value>
         [DataMember(Name="variation", EmitDefaultValue=false)]
         public DocumentVariationAnswer Variation { get; set; }
 

@@ -79,7 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum WebContentUrl for "WEB_CONTENT_URL"
             /// </summary>
             [EnumMember(Value = "WEB_CONTENT_URL")]
-            WebContentUrl
+            WebContentUrl,
+            
+            /// <summary>
+            /// Enum AgentActivity for "AGENT_ACTIVITY"
+            /// </summary>
+            [EnumMember(Value = "AGENT_ACTIVITY")]
+            AgentActivity
         }
         /// <summary>
         /// Gets or Sets Metrics
@@ -1746,6 +1752,146 @@ namespace PureCloudPlatform.Client.V2.Model
             Offline
         }
         /// <summary>
+        /// Gets or Sets SelectedSegmentTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SelectedSegmentTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alert for "alert"
+            /// </summary>
+            [EnumMember(Value = "alert")]
+            Alert,
+            
+            /// <summary>
+            /// Enum Barging for "barging"
+            /// </summary>
+            [EnumMember(Value = "barging")]
+            Barging,
+            
+            /// <summary>
+            /// Enum Callback for "callback"
+            /// </summary>
+            [EnumMember(Value = "callback")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Coaching for "coaching"
+            /// </summary>
+            [EnumMember(Value = "coaching")]
+            Coaching,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Converting for "converting"
+            /// </summary>
+            [EnumMember(Value = "converting")]
+            Converting,
+            
+            /// <summary>
+            /// Enum Delay for "delay"
+            /// </summary>
+            [EnumMember(Value = "delay")]
+            Delay,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Hold for "hold"
+            /// </summary>
+            [EnumMember(Value = "hold")]
+            Hold,
+            
+            /// <summary>
+            /// Enum Interact for "interact"
+            /// </summary>
+            [EnumMember(Value = "interact")]
+            Interact,
+            
+            /// <summary>
+            /// Enum Ivr for "ivr"
+            /// </summary>
+            [EnumMember(Value = "ivr")]
+            Ivr,
+            
+            /// <summary>
+            /// Enum Monitoring for "monitoring"
+            /// </summary>
+            [EnumMember(Value = "monitoring")]
+            Monitoring,
+            
+            /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked,
+            
+            /// <summary>
+            /// Enum Scheduled for "scheduled"
+            /// </summary>
+            [EnumMember(Value = "scheduled")]
+            Scheduled,
+            
+            /// <summary>
+            /// Enum Sharing for "sharing"
+            /// </summary>
+            [EnumMember(Value = "sharing")]
+            Sharing,
+            
+            /// <summary>
+            /// Enum System for "system"
+            /// </summary>
+            [EnumMember(Value = "system")]
+            System,
+            
+            /// <summary>
+            /// Enum Transmitting for "transmitting"
+            /// </summary>
+            [EnumMember(Value = "transmitting")]
+            Transmitting,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Uploading for "uploading"
+            /// </summary>
+            [EnumMember(Value = "uploading")]
+            Uploading,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Wrapup for "wrapup"
+            /// </summary>
+            [EnumMember(Value = "wrapup")]
+            Wrapup
+        }
+        /// <summary>
         /// The sort order of the interactions in the agent status widget.
         /// </summary>
         /// <value>The sort order of the interactions in the agent status widget.</value>
@@ -1811,7 +1957,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of dashboard widget configuration. (required).</param>
         /// <param name="Metrics">The list of metrics for the dashboard widget configuration..</param>
         /// <param name="DisplayText">The display text for the dashboard widget configuration..</param>
-        /// <param name="DisplayTextColor">The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \"#FF0000\" represents red)..</param>
+        /// <param name="DisplayTextColor">The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red)..</param>
         /// <param name="WebContentUrl">The external web URL for the dashboard widget configuration..</param>
         /// <param name="SplitFilters">Indicates each filter to be displayed individually..</param>
         /// <param name="SplitByMediaType">Indicates that data for each media type should be shown individually..</param>
@@ -1832,8 +1978,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShowTimeInStatus">Indicates the show time in status of a widget configuration..</param>
         /// <param name="ShowOfflineAgents">Indicates to show offline agent widget..</param>
         /// <param name="SelectedStatuses">Indicates the selected statuses used to filter the agent widget in the dashboard..</param>
+        /// <param name="SelectedSegmentTypes">Indicates the selected segment types used to filter the agent activity in the dashboard..</param>
         /// <param name="AgentInteractionSortOrder">The sort order of the interactions in the agent status widget..</param>
-        public Widget(int? Row = null, int? Column = null, string Title = null, TypeEnum? Type = null, List<MetricsEnum> Metrics = null, string DisplayText = null, string DisplayTextColor = null, string WebContentUrl = null, bool? SplitFilters = null, bool? SplitByMediaType = null, bool? ShowLongest = null, bool? DisplayAsTable = null, bool? ShowDuration = null, SortOrderEnum? SortOrder = null, SortKeyEnum? SortKey = null, int? EntityLimit = null, bool? DisplayAggregates = null, bool? IsFullWidth = null, bool? ShowPercentageChange = null, bool? ShowProfilePicture = null, ViewFilter Filter = null, List<PeriodsEnum> Periods = null, List<MediaTypesEnum> MediaTypes = null, List<Warning> Warnings = null, bool? ShowTimeInStatus = null, bool? ShowOfflineAgents = null, List<SelectedStatusesEnum> SelectedStatuses = null, AgentInteractionSortOrderEnum? AgentInteractionSortOrder = null)
+        public Widget(int? Row = null, int? Column = null, string Title = null, TypeEnum? Type = null, List<MetricsEnum> Metrics = null, string DisplayText = null, string DisplayTextColor = null, string WebContentUrl = null, bool? SplitFilters = null, bool? SplitByMediaType = null, bool? ShowLongest = null, bool? DisplayAsTable = null, bool? ShowDuration = null, SortOrderEnum? SortOrder = null, SortKeyEnum? SortKey = null, int? EntityLimit = null, bool? DisplayAggregates = null, bool? IsFullWidth = null, bool? ShowPercentageChange = null, bool? ShowProfilePicture = null, ViewFilter Filter = null, List<PeriodsEnum> Periods = null, List<MediaTypesEnum> MediaTypes = null, List<Warning> Warnings = null, bool? ShowTimeInStatus = null, bool? ShowOfflineAgents = null, List<SelectedStatusesEnum> SelectedStatuses = null, List<SelectedSegmentTypesEnum> SelectedSegmentTypes = null, AgentInteractionSortOrderEnum? AgentInteractionSortOrder = null)
         {
             this.Row = Row;
             this.Column = Column;
@@ -1862,6 +2009,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ShowTimeInStatus = ShowTimeInStatus;
             this.ShowOfflineAgents = ShowOfflineAgents;
             this.SelectedStatuses = SelectedStatuses;
+            this.SelectedSegmentTypes = SelectedSegmentTypes;
             this.AgentInteractionSortOrder = AgentInteractionSortOrder;
             
         }
@@ -1916,9 +2064,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \"#FF0000\" represents red).
+        /// The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red).
         /// </summary>
-        /// <value>The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \"#FF0000\" represents red).</value>
+        /// <value>The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red).</value>
         [DataMember(Name="displayTextColor", EmitDefaultValue=false)]
         public string DisplayTextColor { get; set; }
 
@@ -2090,6 +2238,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Indicates the selected segment types used to filter the agent activity in the dashboard.
+        /// </summary>
+        /// <value>Indicates the selected segment types used to filter the agent activity in the dashboard.</value>
+        [DataMember(Name="selectedSegmentTypes", EmitDefaultValue=false)]
+        public List<SelectedSegmentTypesEnum> SelectedSegmentTypes { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -2127,6 +2284,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShowTimeInStatus: ").Append(ShowTimeInStatus).Append("\n");
             sb.Append("  ShowOfflineAgents: ").Append(ShowOfflineAgents).Append("\n");
             sb.Append("  SelectedStatuses: ").Append(SelectedStatuses).Append("\n");
+            sb.Append("  SelectedSegmentTypes: ").Append(SelectedSegmentTypes).Append("\n");
             sb.Append("  AgentInteractionSortOrder: ").Append(AgentInteractionSortOrder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -2304,6 +2462,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelectedStatuses.SequenceEqual(other.SelectedStatuses)
                 ) &&
                 (
+                    this.SelectedSegmentTypes == other.SelectedSegmentTypes ||
+                    this.SelectedSegmentTypes != null &&
+                    this.SelectedSegmentTypes.SequenceEqual(other.SelectedSegmentTypes)
+                ) &&
+                (
                     this.AgentInteractionSortOrder == other.AgentInteractionSortOrder ||
                     this.AgentInteractionSortOrder != null &&
                     this.AgentInteractionSortOrder.Equals(other.AgentInteractionSortOrder)
@@ -2401,6 +2564,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelectedStatuses != null)
                     hash = hash * 59 + this.SelectedStatuses.GetHashCode();
+
+                if (this.SelectedSegmentTypes != null)
+                    hash = hash * 59 + this.SelectedSegmentTypes.GetHashCode();
 
                 if (this.AgentInteractionSortOrder != null)
                     hash = hash * 59 + this.AgentInteractionSortOrder.GetHashCode();

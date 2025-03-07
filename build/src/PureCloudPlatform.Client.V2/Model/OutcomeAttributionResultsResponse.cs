@@ -75,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutcomeId">ID of Outcome..</param>
         /// <param name="Index">The index/position of the OutcomeAttribution in the original POST request..</param>
         /// <param name="ExternalContactId">The external contact ID of the customer who achieved the outcome..</param>
-        /// <param name="AssociatedValue">The total value associated with the customer's outcome..</param>
+        /// <param name="AssociatedValue">The total value associated with the customer&#39;s outcome..</param>
         /// <param name="State">State of the Outcome Attribution entity. (required).</param>
         /// <param name="Message">Additional information on the state of the Outcome Attribution entity. (required).</param>
         /// <param name="Touchpoints">List of interactions that led to this outcome being achieved..</param>
@@ -123,9 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The total value associated with the customer's outcome.
+        /// The total value associated with the customer&#39;s outcome.
         /// </summary>
-        /// <value>The total value associated with the customer's outcome.</value>
+        /// <value>The total value associated with the customer&#39;s outcome.</value>
         [DataMember(Name="associatedValue", EmitDefaultValue=false)]
         public double? AssociatedValue { get; set; }
 

@@ -21,10 +21,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkRelationshipsResponse" /> class.
         /// </summary>
-        /// <param name="Results">Results.</param>
-        /// <param name="ErrorCount">ErrorCount.</param>
-        /// <param name="ErrorIndexes">ErrorIndexes.</param>
-        public BulkRelationshipsResponse(List<BulkResponseResultRelationshipRelationship> Results = null, int? ErrorCount = null, List<int?> ErrorIndexes = null)
+        /// <param name="Results">A list of results for all of the Bulk operations specified in the request. Includes both successes and failures. Ordering is NOT guaranteed - may be in a different order from the request..</param>
+        /// <param name="ErrorCount">The number of failed operations in the results..</param>
+        /// <param name="ErrorIndexes">The indexes of all failed operations in the results field..</param>
+        public BulkRelationshipsResponse(List<BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship> Results = null, int? ErrorCount = null, List<int?> ErrorIndexes = null)
         {
             this.Results = Results;
             this.ErrorCount = ErrorCount;
@@ -35,24 +35,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Results
+        /// A list of results for all of the Bulk operations specified in the request. Includes both successes and failures. Ordering is NOT guaranteed - may be in a different order from the request.
         /// </summary>
+        /// <value>A list of results for all of the Bulk operations specified in the request. Includes both successes and failures. Ordering is NOT guaranteed - may be in a different order from the request.</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<BulkResponseResultRelationshipRelationship> Results { get; set; }
+        public List<BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship> Results { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets ErrorCount
+        /// The number of failed operations in the results.
         /// </summary>
+        /// <value>The number of failed operations in the results.</value>
         [DataMember(Name="errorCount", EmitDefaultValue=false)]
         public int? ErrorCount { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets ErrorIndexes
+        /// The indexes of all failed operations in the results field.
         /// </summary>
+        /// <value>The indexes of all failed operations in the results field.</value>
         [DataMember(Name="errorIndexes", EmitDefaultValue=false)]
         public List<int?> ErrorIndexes { get; set; }
 

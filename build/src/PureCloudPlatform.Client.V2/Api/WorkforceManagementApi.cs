@@ -1667,7 +1667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
         /// <summary>
-        /// Loads agent's schedule history.
+        /// Loads agent&#39;s schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -1682,7 +1682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         BuAgentScheduleHistoryResponse GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
-        /// Loads agent's schedule history.
+        /// Loads agent&#39;s schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -3231,7 +3231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkPlanBidRanks> GetWorkforcemanagementUserWorkplanbidranksWithHttpInfo (string userId);
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference
+        /// Gets an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -3243,7 +3243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentWorkPlanBiddingPreferenceResponse GetWorkforcemanagementWorkplanbidPreferences (string bidId);
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference
+        /// Gets an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -3255,7 +3255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentWorkPlanBiddingPreferenceResponse> GetWorkforcemanagementWorkplanbidPreferencesWithHttpInfo (string bidId);
 
         /// <summary>
-        /// Gets an agent's work plans for a bid
+        /// Gets an agent&#39;s work plans for a bid
         /// </summary>
         /// <remarks>
         /// 
@@ -3267,7 +3267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentWorkPlanListResponse GetWorkforcemanagementWorkplanbidWorkplans (string bidId);
 
         /// <summary>
-        /// Gets an agent's work plans for a bid
+        /// Gets an agent&#39;s work plans for a bid
         /// </summary>
         /// <remarks>
         /// 
@@ -4073,7 +4073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EntityListing> PatchWorkforcemanagementUsersWorkplanbidranksBulkWithHttpInfo (List<WorkPlanBidRanks> body);
 
         /// <summary>
-        /// Update an agent's work plan bidding preference
+        /// Update an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -4086,7 +4086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AgentWorkPlanBiddingPreferenceResponse PatchWorkforcemanagementWorkplanbidPreferences (string bidId, UpdateAgentWorkPlanBiddingPreference body = null);
 
         /// <summary>
-        /// Update an agent's work plan bidding preference
+        /// Update an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -4399,7 +4399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AlternativeShiftAsyncResponse> PostWorkforcemanagementAlternativeshiftsOffersSearchJobsWithHttpInfo (AlternativeShiftSearchOffersRequest body);
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId
+        /// Create my alternative shift trade using an existing offer&#39;s jobId
         /// </summary>
         /// <remarks>
         /// 
@@ -4411,7 +4411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AlternativeShiftTradeResponse PostWorkforcemanagementAlternativeshiftsTrades (CreateAlternativeShiftTradeRequest body);
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId
+        /// Create my alternative shift trade using an existing offer&#39;s jobId
         /// </summary>
         /// <remarks>
         /// 
@@ -8135,7 +8135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
         /// <summary>
-        /// Loads agent's schedule history.
+        /// Loads agent&#39;s schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -8150,7 +8150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsync (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
-        /// Loads agent's schedule history.
+        /// Loads agent&#39;s schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -9699,7 +9699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WorkPlanBidRanks>> GetWorkforcemanagementUserWorkplanbidranksAsyncWithHttpInfo (string userId);
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference
+        /// Gets an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -9711,7 +9711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentWorkPlanBiddingPreferenceResponse> GetWorkforcemanagementWorkplanbidPreferencesAsync (string bidId);
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference
+        /// Gets an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -9723,7 +9723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentWorkPlanBiddingPreferenceResponse>> GetWorkforcemanagementWorkplanbidPreferencesAsyncWithHttpInfo (string bidId);
 
         /// <summary>
-        /// Gets an agent's work plans for a bid
+        /// Gets an agent&#39;s work plans for a bid
         /// </summary>
         /// <remarks>
         /// 
@@ -9735,7 +9735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentWorkPlanListResponse> GetWorkforcemanagementWorkplanbidWorkplansAsync (string bidId);
 
         /// <summary>
-        /// Gets an agent's work plans for a bid
+        /// Gets an agent&#39;s work plans for a bid
         /// </summary>
         /// <remarks>
         /// 
@@ -10541,7 +10541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> PatchWorkforcemanagementUsersWorkplanbidranksBulkAsyncWithHttpInfo (List<WorkPlanBidRanks> body);
 
         /// <summary>
-        /// Update an agent's work plan bidding preference
+        /// Update an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -10554,7 +10554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AgentWorkPlanBiddingPreferenceResponse> PatchWorkforcemanagementWorkplanbidPreferencesAsync (string bidId, UpdateAgentWorkPlanBiddingPreference body = null);
 
         /// <summary>
-        /// Update an agent's work plan bidding preference
+        /// Update an agent&#39;s work plan bidding preference
         /// </summary>
         /// <remarks>
         /// 
@@ -10867,7 +10867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AlternativeShiftAsyncResponse>> PostWorkforcemanagementAlternativeshiftsOffersSearchJobsAsyncWithHttpInfo (AlternativeShiftSearchOffersRequest body);
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId
+        /// Create my alternative shift trade using an existing offer&#39;s jobId
         /// </summary>
         /// <remarks>
         /// 
@@ -10879,7 +10879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AlternativeShiftTradeResponse> PostWorkforcemanagementAlternativeshiftsTradesAsync (CreateAlternativeShiftTradeRequest body);
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId
+        /// Create my alternative shift trade using an existing offer&#39;s jobId
         /// </summary>
         /// <remarks>
         /// 
@@ -27255,7 +27255,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Loads agent's schedule history. 
+        /// Loads agent&#39;s schedule history. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27272,7 +27272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Loads agent's schedule history. 
+        /// Loads agent&#39;s schedule history. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27378,7 +27378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Loads agent's schedule history. 
+        /// Loads agent&#39;s schedule history. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27396,7 +27396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Loads agent's schedule history. 
+        /// Loads agent&#39;s schedule history. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40610,7 +40610,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference 
+        /// Gets an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40624,7 +40624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference 
+        /// Gets an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40715,7 +40715,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference 
+        /// Gets an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40730,7 +40730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets an agent's work plan bidding preference 
+        /// Gets an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40823,7 +40823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets an agent's work plans for a bid 
+        /// Gets an agent&#39;s work plans for a bid 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40837,7 +40837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets an agent's work plans for a bid 
+        /// Gets an agent&#39;s work plans for a bid 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40928,7 +40928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets an agent's work plans for a bid 
+        /// Gets an agent&#39;s work plans for a bid 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -40943,7 +40943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets an agent's work plans for a bid 
+        /// Gets an agent&#39;s work plans for a bid 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -47965,7 +47965,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an agent's work plan bidding preference 
+        /// Update an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -47980,7 +47980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an agent's work plan bidding preference 
+        /// Update an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -48078,7 +48078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an agent's work plan bidding preference 
+        /// Update an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -48094,7 +48094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an agent's work plan bidding preference 
+        /// Update an agent&#39;s work plan bidding preference 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -50885,7 +50885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId 
+        /// Create my alternative shift trade using an existing offer&#39;s jobId 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -50899,7 +50899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId 
+        /// Create my alternative shift trade using an existing offer&#39;s jobId 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -50995,7 +50995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId 
+        /// Create my alternative shift trade using an existing offer&#39;s jobId 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -51010,7 +51010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create my alternative shift trade using an existing offer's jobId 
+        /// Create my alternative shift trade using an existing offer&#39;s jobId 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

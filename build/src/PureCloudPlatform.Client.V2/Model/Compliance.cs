@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Compliance" /> class.
         /// </summary>
-        /// <param name="StopSettings">List of configurations for 'StopSettings' compliance (required).</param>
-        /// <param name="OptInSettings">List of configurations for 'OptInSettings' compliance (required).</param>
-        /// <param name="HelpSettings">List of configurations for 'HelpSettings' compliance (required).</param>
+        /// <param name="StopSettings">List of configurations for &#39;StopSettings&#39; compliance (required).</param>
+        /// <param name="OptInSettings">List of configurations for &#39;OptInSettings&#39; compliance (required).</param>
+        /// <param name="HelpSettings">List of configurations for &#39;HelpSettings&#39; compliance (required).</param>
         public Compliance(List<StopSettings> StopSettings = null, List<OptInSettings> OptInSettings = null, List<HelpSettings> HelpSettings = null)
         {
             this.StopSettings = StopSettings;
@@ -41,27 +41,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of configurations for 'StopSettings' compliance
+        /// List of configurations for &#39;StopSettings&#39; compliance
         /// </summary>
-        /// <value>List of configurations for 'StopSettings' compliance</value>
+        /// <value>List of configurations for &#39;StopSettings&#39; compliance</value>
         [DataMember(Name="stopSettings", EmitDefaultValue=false)]
         public List<StopSettings> StopSettings { get; set; }
 
 
 
         /// <summary>
-        /// List of configurations for 'OptInSettings' compliance
+        /// List of configurations for &#39;OptInSettings&#39; compliance
         /// </summary>
-        /// <value>List of configurations for 'OptInSettings' compliance</value>
+        /// <value>List of configurations for &#39;OptInSettings&#39; compliance</value>
         [DataMember(Name="optInSettings", EmitDefaultValue=false)]
         public List<OptInSettings> OptInSettings { get; set; }
 
 
 
         /// <summary>
-        /// List of configurations for 'HelpSettings' compliance
+        /// List of configurations for &#39;HelpSettings&#39; compliance
         /// </summary>
-        /// <value>List of configurations for 'HelpSettings' compliance</value>
+        /// <value>List of configurations for &#39;HelpSettings&#39; compliance</value>
         [DataMember(Name="helpSettings", EmitDefaultValue=false)]
         public List<HelpSettings> HelpSettings { get; set; }
 

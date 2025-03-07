@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NuanceMixDlgSettings" /> class.
         /// </summary>
-        /// <param name="ChannelId">The Nuance channel ID to use when launching the Nuance bot, which must one of the code names of the bot's registered input channels..</param>
-        /// <param name="InputParameters">Name/value pairs of input variables to be sent to the Nuance bot. The values must be in the appropriate format for the variable's type (see https://docs.mix.nuance.com/dialog-grpc/v1/#simple-variable-types for help).</param>
+        /// <param name="ChannelId">The Nuance channel ID to use when launching the Nuance bot, which must one of the code names of the bot&#39;s registered input channels..</param>
+        /// <param name="InputParameters">Name/value pairs of input variables to be sent to the Nuance bot. The values must be in the appropriate format for the variable&#39;s type (see https://docs.mix.nuance.com/dialog-grpc/v1/#simple-variable-types for help).</param>
         public NuanceMixDlgSettings(string ChannelId = null, Dictionary<string, Object> InputParameters = null)
         {
             this.ChannelId = ChannelId;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Nuance channel ID to use when launching the Nuance bot, which must one of the code names of the bot's registered input channels.
+        /// The Nuance channel ID to use when launching the Nuance bot, which must one of the code names of the bot&#39;s registered input channels.
         /// </summary>
-        /// <value>The Nuance channel ID to use when launching the Nuance bot, which must one of the code names of the bot's registered input channels.</value>
+        /// <value>The Nuance channel ID to use when launching the Nuance bot, which must one of the code names of the bot&#39;s registered input channels.</value>
         [DataMember(Name="channelId", EmitDefaultValue=false)]
         public string ChannelId { get; set; }
 
 
 
         /// <summary>
-        /// Name/value pairs of input variables to be sent to the Nuance bot. The values must be in the appropriate format for the variable's type (see https://docs.mix.nuance.com/dialog-grpc/v1/#simple-variable-types for help)
+        /// Name/value pairs of input variables to be sent to the Nuance bot. The values must be in the appropriate format for the variable&#39;s type (see https://docs.mix.nuance.com/dialog-grpc/v1/#simple-variable-types for help)
         /// </summary>
-        /// <value>Name/value pairs of input variables to be sent to the Nuance bot. The values must be in the appropriate format for the variable's type (see https://docs.mix.nuance.com/dialog-grpc/v1/#simple-variable-types for help)</value>
+        /// <value>Name/value pairs of input variables to be sent to the Nuance bot. The values must be in the appropriate format for the variable&#39;s type (see https://docs.mix.nuance.com/dialog-grpc/v1/#simple-variable-types for help)</value>
         [DataMember(Name="inputParameters", EmitDefaultValue=false)]
         public Dictionary<string, Object> InputParameters { get; set; }
 

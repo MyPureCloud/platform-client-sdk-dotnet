@@ -214,7 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialUserName">The user name for the communication..</param>
         /// <param name="PreviewText">The text preview of the communication contents.</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this chat..</param>
-        /// <param name="Segments">The time line of the participant's chat, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant&#39;s chat, divided into activity segments..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -311,9 +311,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time line of the participant's chat, divided into activity segments.
+        /// The time line of the participant&#39;s chat, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant's chat, divided into activity segments.</value>
+        /// <value>The time line of the participant&#39;s chat, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
 

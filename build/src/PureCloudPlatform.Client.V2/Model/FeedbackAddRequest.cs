@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedbackAddRequest" /> class.
         /// </summary>
-        /// <param name="Summary">Agent's summary for the conversation (required).</param>
+        /// <param name="Summary">Agent&#39;s summary for the conversation (required).</param>
         /// <param name="Rating">Agent’s rating for the system-generated summary..</param>
         public FeedbackAddRequest(string Summary = null, RatingEnum? Rating = null)
         {
@@ -72,9 +72,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Agent's summary for the conversation
+        /// Agent&#39;s summary for the conversation
         /// </summary>
-        /// <value>Agent's summary for the conversation</value>
+        /// <value>Agent&#39;s summary for the conversation</value>
         [DataMember(Name="summary", EmitDefaultValue=false)]
         public string Summary { get; set; }
 

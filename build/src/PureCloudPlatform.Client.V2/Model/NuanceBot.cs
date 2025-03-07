@@ -35,9 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NuanceEnvironment">The environment of the Nuance bot (required).</param>
         /// <param name="Geography">The Geography of the Nuance bot (required).</param>
         /// <param name="Credentials">client ID/Secret objects for the credentials that execute this Nuance bot.</param>
-        /// <param name="Variables">List of available variables in this Nuance bot.  When querying, use the 'expand=variables' query param to populate this value.</param>
-        /// <param name="TransferNodes">List of transferNodes in this Nuance bot.  When querying, use the 'expand=transferNodes' query param to populate this value.</param>
-        /// <param name="Locales">List of locales associated with this Nuance bot.  Generally in the ISO format such as 'en-US'.</param>
+        /// <param name="Variables">List of available variables in this Nuance bot.  When querying, use the &#39;expand&#x3D;variables&#39; query param to populate this value.</param>
+        /// <param name="TransferNodes">List of transferNodes in this Nuance bot.  When querying, use the &#39;expand&#x3D;transferNodes&#39; query param to populate this value.</param>
+        /// <param name="Locales">List of locales associated with this Nuance bot.  Generally in the ISO format such as &#39;en-US&#39;.</param>
         /// <param name="Channels">List of channels associated with this Nuance bot..</param>
         public NuanceBot(string Id = null, string Name = null, string IntegrationId = null, NuanceOrganization NuanceOrganization = null, NuanceApplication Application = null, NuanceEnvironment NuanceEnvironment = null, NuanceGeography Geography = null, List<NuanceBotCredentials> Credentials = null, List<NuanceBotVariable> Variables = null, List<NuanceBotTransferNode> TransferNodes = null, List<string> Locales = null, List<NuanceChannel> Channels = null)
         {
@@ -131,27 +131,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of available variables in this Nuance bot.  When querying, use the 'expand=variables' query param to populate this value
+        /// List of available variables in this Nuance bot.  When querying, use the &#39;expand&#x3D;variables&#39; query param to populate this value
         /// </summary>
-        /// <value>List of available variables in this Nuance bot.  When querying, use the 'expand=variables' query param to populate this value</value>
+        /// <value>List of available variables in this Nuance bot.  When querying, use the &#39;expand&#x3D;variables&#39; query param to populate this value</value>
         [DataMember(Name="variables", EmitDefaultValue=false)]
         public List<NuanceBotVariable> Variables { get; set; }
 
 
 
         /// <summary>
-        /// List of transferNodes in this Nuance bot.  When querying, use the 'expand=transferNodes' query param to populate this value
+        /// List of transferNodes in this Nuance bot.  When querying, use the &#39;expand&#x3D;transferNodes&#39; query param to populate this value
         /// </summary>
-        /// <value>List of transferNodes in this Nuance bot.  When querying, use the 'expand=transferNodes' query param to populate this value</value>
+        /// <value>List of transferNodes in this Nuance bot.  When querying, use the &#39;expand&#x3D;transferNodes&#39; query param to populate this value</value>
         [DataMember(Name="transferNodes", EmitDefaultValue=false)]
         public List<NuanceBotTransferNode> TransferNodes { get; set; }
 
 
 
         /// <summary>
-        /// List of locales associated with this Nuance bot.  Generally in the ISO format such as 'en-US'
+        /// List of locales associated with this Nuance bot.  Generally in the ISO format such as &#39;en-US&#39;
         /// </summary>
-        /// <value>List of locales associated with this Nuance bot.  Generally in the ISO format such as 'en-US'</value>
+        /// <value>List of locales associated with this Nuance bot.  Generally in the ISO format such as &#39;en-US&#39;</value>
         [DataMember(Name="locales", EmitDefaultValue=false)]
         public List<string> Locales { get; set; }
 

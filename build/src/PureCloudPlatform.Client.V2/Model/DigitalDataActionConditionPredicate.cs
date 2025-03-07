@@ -108,11 +108,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitalDataActionConditionPredicate" /> class.
         /// </summary>
-        /// <param name="OutputField">The name of an output field from the data action's output to use for this condition (required).</param>
+        /// <param name="OutputField">The name of an output field from the data action&#39;s output to use for this condition (required).</param>
         /// <param name="OutputOperator">The operation with which to evaluate this condition (required).</param>
         /// <param name="ComparisonValue">The value to compare against for this condition (required).</param>
         /// <param name="Inverted">If true, inverts the result of evaluating this Predicate. Default is false. (required).</param>
-        /// <param name="OutputFieldMissingResolution">The result of this predicate if the requested output field is missing from the data action's result (required).</param>
+        /// <param name="OutputFieldMissingResolution">The result of this predicate if the requested output field is missing from the data action&#39;s result (required).</param>
         public DigitalDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? Inverted = null, bool? OutputFieldMissingResolution = null)
         {
             this.OutputField = OutputField;
@@ -126,9 +126,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of an output field from the data action's output to use for this condition
+        /// The name of an output field from the data action&#39;s output to use for this condition
         /// </summary>
-        /// <value>The name of an output field from the data action's output to use for this condition</value>
+        /// <value>The name of an output field from the data action&#39;s output to use for this condition</value>
         [DataMember(Name="outputField", EmitDefaultValue=false)]
         public string OutputField { get; set; }
 
@@ -155,9 +155,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The result of this predicate if the requested output field is missing from the data action's result
+        /// The result of this predicate if the requested output field is missing from the data action&#39;s result
         /// </summary>
-        /// <value>The result of this predicate if the requested output field is missing from the data action's result</value>
+        /// <value>The result of this predicate if the requested output field is missing from the data action&#39;s result</value>
         [DataMember(Name="outputFieldMissingResolution", EmitDefaultValue=false)]
         public bool? OutputFieldMissingResolution { get; set; }
 

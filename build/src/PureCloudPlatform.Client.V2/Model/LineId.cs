@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LineId" /> class.
         /// </summary>
         /// <param name="Ids">The set of Line userIds that this person has. Each userId is specific to the Line channel that the user interacts with..</param>
-        /// <param name="DisplayName">The displayName of this person's account in Line.</param>
+        /// <param name="DisplayName">The displayName of this person&#39;s account in Line.</param>
         public LineId(List<LineUserId> Ids = null, string DisplayName = null)
         {
             this.Ids = Ids;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The displayName of this person's account in Line
+        /// The displayName of this person&#39;s account in Line
         /// </summary>
-        /// <value>The displayName of this person's account in Line</value>
+        /// <value>The displayName of this person&#39;s account in Line</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 

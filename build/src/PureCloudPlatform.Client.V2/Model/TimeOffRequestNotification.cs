@@ -70,8 +70,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">The user associated with this time off request.</param>
         /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
         /// <param name="Status">The status of this time off request.</param>
-        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true.</param>
+        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest &#x3D;&#x3D; false.</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest &#x3D;&#x3D; true.</param>
         public TimeOffRequestNotification(string TimeOffRequestId = null, UserReference User = null, bool? IsFullDayRequest = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null)
         {
             this.TimeOffRequestId = TimeOffRequestId;
@@ -115,18 +115,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false
+        /// A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest &#x3D;&#x3D; false
         /// </summary>
-        /// <value>A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false</value>
+        /// <value>A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest &#x3D;&#x3D; false</value>
         [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
         public List<DateTime?> PartialDayStartDateTimes { get; set; }
 
 
 
         /// <summary>
-        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest &#x3D;&#x3D; true
         /// </summary>
-        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true</value>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest &#x3D;&#x3D; true</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
 

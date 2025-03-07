@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryResponseData" /> class.
         /// </summary>
-        /// <param name="Interval">Interval with start and end represented as ISO-8601 string. i.e: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'/yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.</param>
+        /// <param name="Interval">Interval with start and end represented as ISO-8601 string. i.e: yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;/yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.</param>
         /// <param name="Metrics">A list of aggregated metrics.</param>
         public QueryResponseData(string Interval = null, List<QueryResponseMetric> Metrics = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Interval with start and end represented as ISO-8601 string. i.e: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'/yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+        /// Interval with start and end represented as ISO-8601 string. i.e: yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;/yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
         /// </summary>
-        /// <value>Interval with start and end represented as ISO-8601 string. i.e: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'/yyyy-MM-dd'T'HH:mm:ss.SSS'Z'</value>
+        /// <value>Interval with start and end represented as ISO-8601 string. i.e: yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;/yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
 

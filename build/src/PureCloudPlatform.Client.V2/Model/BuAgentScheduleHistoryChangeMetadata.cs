@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuAgentScheduleHistoryChangeMetadata" /> class.
         /// </summary>
         /// <param name="DateModified">The timestamp of the schedule change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedBy">The user that made the schedule change.</param>
+        /// <param name="ModifiedBy">The user that made the schedule change. The id may be &#39;System&#39; if it was an automated process.</param>
         public BuAgentScheduleHistoryChangeMetadata(DateTime? DateModified = null, UserReference ModifiedBy = null)
         {
             this.DateModified = DateModified;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user that made the schedule change
+        /// The user that made the schedule change. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The user that made the schedule change</value>
+        /// <value>The user that made the schedule change. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; set; }
 

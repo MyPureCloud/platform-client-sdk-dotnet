@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SetRecordingState" /> class.
         /// </summary>
-        /// <param name="RecordingState">On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings..</param>
+        /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings..</param>
         public SetRecordingState(RecordingStateEnum? RecordingState = null)
         {
             this.RecordingState = RecordingState;

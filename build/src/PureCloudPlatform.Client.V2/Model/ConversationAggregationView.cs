@@ -214,6 +214,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tanswered,
             
             /// <summary>
+            /// Enum Taverageagentresponsetime for "tAverageAgentResponseTime"
+            /// </summary>
+            [EnumMember(Value = "tAverageAgentResponseTime")]
+            Taverageagentresponsetime,
+            
+            /// <summary>
+            /// Enum Taveragecustomerresponsetime for "tAverageCustomerResponseTime"
+            /// </summary>
+            [EnumMember(Value = "tAverageCustomerResponseTime")]
+            Taveragecustomerresponsetime,
+            
+            /// <summary>
             /// Enum Tbarging for "tBarging"
             /// </summary>
             [EnumMember(Value = "tBarging")]
@@ -260,6 +272,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tFirstDial")]
             Tfirstdial,
+            
+            /// <summary>
+            /// Enum Tfirstengagement for "tFirstEngagement"
+            /// </summary>
+            [EnumMember(Value = "tFirstEngagement")]
+            Tfirstengagement,
+            
+            /// <summary>
+            /// Enum Tfirstresponse for "tFirstResponse"
+            /// </summary>
+            [EnumMember(Value = "tFirstResponse")]
+            Tfirstresponse,
             
             /// <summary>
             /// Enum Tflowout for "tFlowOut"

@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Entity">Entity that was impacted..</param>
         /// <param name="EntityType">Type of the entity that was impacted..</param>
         /// <param name="Status">Status of the event being audited.</param>
-        /// <param name="Application">Name of the application used to perform the audit's action.</param>
+        /// <param name="Application">Name of the application used to perform the audit&#39;s action.</param>
         /// <param name="InitiatingAction">Id and action of the audit initiating the transaction.</param>
         /// <param name="TransactionInitiator">Whether the current audit is the initiator of the transaction.</param>
         /// <param name="PropertyChanges">List of properties that were changed and changes made to those properties..</param>
@@ -248,9 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Name of the application used to perform the audit's action
+        /// Name of the application used to perform the audit&#39;s action
         /// </summary>
-        /// <value>Name of the application used to perform the audit's action</value>
+        /// <value>Name of the application used to perform the audit&#39;s action</value>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public string Application { get; set; }
 

@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MatchAnyConditions">MatchAnyConditions.</param>
         /// <param name="Enabled">Whether or not this CampaignRule is currently enabled. Required on updates..</param>
         /// <param name="CampaignRuleProcessing">CampaignRule processing algorithm.</param>
-        /// <param name="ConditionGroups">List of condition groups that are evaluated, used only with campaignRuleProcessing=\"v2\".</param>
+        /// <param name="ConditionGroups">List of condition groups that are evaluated, used only with campaignRuleProcessing&#x3D;\&quot;v2\&quot;.</param>
         /// <param name="ExecutionSettings">CampaignRule execution settings.</param>
         public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, CampaignRuleProcessingEnum? CampaignRuleProcessing = null, List<CampaignRuleConditionGroup> ConditionGroups = null, CampaignRuleExecutionSettings ExecutionSettings = null)
         {
@@ -173,9 +173,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of condition groups that are evaluated, used only with campaignRuleProcessing=\"v2\"
+        /// List of condition groups that are evaluated, used only with campaignRuleProcessing&#x3D;\&quot;v2\&quot;
         /// </summary>
-        /// <value>List of condition groups that are evaluated, used only with campaignRuleProcessing=\"v2\"</value>
+        /// <value>List of condition groups that are evaluated, used only with campaignRuleProcessing&#x3D;\&quot;v2\&quot;</value>
         [DataMember(Name="conditionGroups", EmitDefaultValue=false)]
         public List<CampaignRuleConditionGroup> ConditionGroups { get; set; }
 

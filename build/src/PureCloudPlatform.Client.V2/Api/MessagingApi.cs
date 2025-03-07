@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteMessagingSettingWithHttpInfo (string messageSettingId);
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteMessagingSettingsDefault ();
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -137,7 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingConfigListing> GetMessagingSettingsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration.
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -148,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         MessagingSetting GetMessagingSettingsDefault ();
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration.
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -309,7 +309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SupportedContent> PostMessagingSupportedcontentWithHttpInfo (SupportedContent body);
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created.
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -321,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         MessagingSetting PutMessagingSettingsDefault (MessagingSettingDefaultRequest body);
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created.
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -361,7 +361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessagingSettingAsyncWithHttpInfo (string messageSettingId);
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -372,7 +372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteMessagingSettingsDefaultAsync ();
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -457,7 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessagingConfigListing>> GetMessagingSettingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration.
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -468,7 +468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<MessagingSetting> GetMessagingSettingsDefaultAsync ();
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration.
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -629,7 +629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PostMessagingSupportedcontentAsyncWithHttpInfo (SupportedContent body);
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created.
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -641,7 +641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<MessagingSetting> PutMessagingSettingsDefaultAsync (MessagingSettingDefaultRequest body);
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created.
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created.
         /// </summary>
         /// <remarks>
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
@@ -956,7 +956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings 
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -968,7 +968,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings 
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1054,7 +1054,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings 
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1067,7 +1067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the organization's default setting, a global default will be applied to integrations without settings 
+        /// Delete the organization&#39;s default setting, a global default will be applied to integrations without settings 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1790,7 +1790,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration. 
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1803,7 +1803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration. 
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1889,7 +1889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration. 
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1903,7 +1903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the organization's default settings that will be used as the default when creating an integration. 
+        /// Get the organization&#39;s default settings that will be used as the default when creating an integration. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3333,7 +3333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created. 
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3347,7 +3347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created. 
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3443,7 +3443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created. 
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3458,7 +3458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Set the organization's default settings that may be applied to an integration when it is created. 
+        /// Set the organization&#39;s default settings that may be applied to an integration when it is created. 
         /// When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

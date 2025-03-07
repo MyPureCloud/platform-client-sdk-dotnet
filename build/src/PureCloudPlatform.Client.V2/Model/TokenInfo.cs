@@ -40,9 +40,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The token's home organization
+        /// The token&#39;s home organization
         /// </summary>
-        /// <value>The token's home organization</value>
+        /// <value>The token&#39;s home organization</value>
         [DataMember(Name="homeOrganization", EmitDefaultValue=false)]
         public NamedEntity HomeOrganization { get; private set; }
 

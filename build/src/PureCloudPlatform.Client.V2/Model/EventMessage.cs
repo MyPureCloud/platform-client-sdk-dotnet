@@ -93,6 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignContentTemplateSubstitutionMismatch,
             
             /// <summary>
+            /// Enum CampaignCallsPerAgentLow for "CAMPAIGN_CALLS_PER_AGENT_LOW"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_CALLS_PER_AGENT_LOW")]
+            CampaignCallsPerAgentLow,
+            
+            /// <summary>
             /// Enum CampaignEmailBodyCharacterLimitExceeded for "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED")]
@@ -135,6 +141,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignRuleStartError,
             
             /// <summary>
+            /// Enum CampaignScriptStageMissing for "CAMPAIGN_SCRIPT_STAGE_MISSING"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_SCRIPT_STAGE_MISSING")]
+            CampaignScriptStageMissing,
+            
+            /// <summary>
             /// Enum CampaignSetDialingModeError for "CAMPAIGN_SET_DIALING_MODE_ERROR"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_SET_DIALING_MODE_ERROR")]
@@ -157,6 +169,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_QUEUE_MEMBERS_LIMIT_EXCEEDED")]
             CampaignQueueMembersLimitExceeded,
+            
+            /// <summary>
+            /// Enum CampaignWeightZero for "CAMPAIGN_WEIGHT_ZERO"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_WEIGHT_ZERO")]
+            CampaignWeightZero,
             
             /// <summary>
             /// Enum InvalidCallableTimeZone for "INVALID_CALLABLE_TIME_ZONE"

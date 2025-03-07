@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EstimateAvailableFullDayTimeOffResponse" /> class.
         /// </summary>
-        /// <param name="Date">Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit's configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        /// <param name="Date">Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit&#39;s configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="DurationMinutes">An estimation of time off request length in minutes (required).</param>
         /// <param name="PayableMinutes">An estimation of payable part of time off request in minutes (required).</param>
         /// <param name="Flexible">Whether there is flexibility for a user to choose different hours than the system estimated (required).</param>
@@ -43,9 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit's configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit&#39;s configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit's configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>Date in yyyy-MM-dd format for full day request. Should be interpreted in the business unit&#39;s configured time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public String Date { get; set; }
 

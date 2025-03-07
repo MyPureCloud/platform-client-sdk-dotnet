@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuestionGroups">A list of question groups.</param>
         /// <param name="WeightMode">Mode for evaluation form weight.</param>
         /// <param name="EvaluationSettings">Settings for evaluations associated with this form.</param>
-        /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
+        /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
         public EvaluationFormResponse(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, WeightModeEnum? WeightMode = null, EvaluationSettings EvaluationSettings = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
             this.Name = Name;
@@ -147,9 +147,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).
+        /// A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).
         /// </summary>
-        /// <value>A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).</value>
+        /// <value>A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).</value>
         [DataMember(Name="publishedVersions", EmitDefaultValue=false)]
         public DomainEntityListingEvaluationForm PublishedVersions { get; set; }
 

@@ -27,11 +27,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Relationship" /> class.
         /// </summary>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="User">The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note. (required).</param>
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
         /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
-        public Relationship(User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null)
+        public Relationship(WritableStarrableDivision Division = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null)
         {
+            this.Division = Division;
             this.User = User;
             this.ExternalOrganization = ExternalOrganization;
             this._Relationship = _Relationship;
@@ -46,6 +48,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -103,6 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Relationship {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  _Relationship: ").Append(_Relationship).Append("\n");
@@ -154,6 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
@@ -193,6 +210,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

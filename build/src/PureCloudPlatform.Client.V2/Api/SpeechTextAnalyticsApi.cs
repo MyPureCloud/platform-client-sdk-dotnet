@@ -17,7 +17,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID
+        /// Delete a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsCategory (string categoryId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID
+        /// Delete a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteSpeechandtextanalyticsCategoryWithHttpInfo (string categoryId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -53,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithHttpInfo (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id
+        /// Delete a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DeleteProgramResponse DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id
+        /// Delete a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DeleteProgramResponse> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -102,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsSentimentfeedback ();
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -113,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackWithHttpInfo ();
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -125,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId (string sentimentFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -137,7 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithHttpInfo (string sentimentFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id
+        /// Delete a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -149,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsTopic (string topicId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id
+        /// Delete a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -195,7 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CategoriesEntityListing> GetSpeechandtextanalyticsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID
+        /// Get a Speech &amp; Text Analytics Category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         StaCategory GetSpeechandtextanalyticsCategory (string categoryId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID
+        /// Get a Speech &amp; Text Analytics Category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -347,7 +347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SpeechTextAnalyticsConversationSummaryListing> GetSpeechandtextanalyticsConversationSummariesWithHttpInfo (string conversationId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks
         /// </summary>
         /// <remarks>
         /// 
@@ -361,7 +361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DictionaryFeedbackEntityListing GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks
         /// </summary>
         /// <remarks>
         /// 
@@ -375,7 +375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (string dialect = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -387,7 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DictionaryFeedback GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -399,7 +399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DictionaryFeedback> GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithHttpInfo (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id
+        /// Get a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -411,7 +411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Program GetSpeechandtextanalyticsProgram (string programId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id
+        /// Get a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -423,7 +423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Program> GetSpeechandtextanalyticsProgramWithHttpInfo (string programId);
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -435,7 +435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId);
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -495,7 +495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ProgramTranscriptionEngines> GetSpeechandtextanalyticsProgramTranscriptionenginesWithHttpInfo (string programId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs
+        /// Get the list of Speech &amp; Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -509,7 +509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs
+        /// Get the list of Speech &amp; Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -523,7 +523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id
+        /// Get a Speech &amp; Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -535,7 +535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeneralProgramJob GetSpeechandtextanalyticsProgramsGeneralJob (string jobId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id
+        /// Get a Speech &amp; Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -547,7 +547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GeneralProgramJob> GetSpeechandtextanalyticsProgramsGeneralJobWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -560,7 +560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -573,7 +573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id
+        /// Get a Speech &amp; Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -585,7 +585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramJob GetSpeechandtextanalyticsProgramsPublishjob (string jobId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id
+        /// Get a Speech &amp; Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -647,7 +647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SupportedDialectsEntityListing> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsWithHttpInfo ();
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs
+        /// Get the list of Speech &amp; Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -660,7 +660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UnpublishedProgramsEntityListing GetSpeechandtextanalyticsProgramsUnpublished (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs
+        /// Get the list of Speech &amp; Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -673,7 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -684,7 +684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         EntityListing GetSpeechandtextanalyticsSentimentDialects ();
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -695,7 +695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EntityListing> GetSpeechandtextanalyticsSentimentDialectsWithHttpInfo ();
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -707,7 +707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SentimentFeedbackEntityListing GetSpeechandtextanalyticsSentimentfeedback (string dialect = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -741,7 +741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SpeechTextAnalyticsSettingsResponse> GetSpeechandtextanalyticsSettingsWithHttpInfo ();
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id
+        /// Get a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -753,7 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Topic GetSpeechandtextanalyticsTopic (string topicId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id
+        /// Get a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -765,7 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Topic> GetSpeechandtextanalyticsTopicWithHttpInfo (string topicId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics
+        /// Get the list of Speech &amp; Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -784,7 +784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics
+        /// Get the list of Speech &amp; Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -803,7 +803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TopicsEntityListing> GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects
+        /// Get list of supported Speech &amp; Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -814,7 +814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         EntityListing GetSpeechandtextanalyticsTopicsDialects ();
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects
+        /// Get list of supported Speech &amp; Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -825,7 +825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EntityListing> GetSpeechandtextanalyticsTopicsDialectsWithHttpInfo ();
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -837,7 +837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeneralTopicsEntityListing GetSpeechandtextanalyticsTopicsGeneral (string dialect = null);
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -873,7 +873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UnifiedGeneralTopicEntityListing> GetSpeechandtextanalyticsTopicsGeneralStatusWithHttpInfo (string dialect = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id
+        /// Get a Speech &amp; Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -885,7 +885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         TopicJob GetSpeechandtextanalyticsTopicsPublishjob (string jobId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id
+        /// Get a Speech &amp; Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -977,7 +977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SpeechTextAnalyticsSettingsResponse> PatchSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics category
+        /// Create new Speech &amp; Text Analytics category
         /// </summary>
         /// <remarks>
         /// 
@@ -989,7 +989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         StaCategory PostSpeechandtextanalyticsCategories (CategoryRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics category
+        /// Create new Speech &amp; Text Analytics category
         /// </summary>
         /// <remarks>
         /// 
@@ -1001,7 +1001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<StaCategory> PostSpeechandtextanalyticsCategoriesWithHttpInfo (CategoryRequest body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1013,7 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DictionaryFeedback PostSpeechandtextanalyticsDictionaryfeedback (DictionaryFeedback body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1025,7 +1025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DictionaryFeedback> PostSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (DictionaryFeedback body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics program
+        /// Create new Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1037,7 +1037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Program PostSpeechandtextanalyticsPrograms (ProgramRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics program
+        /// Create new Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1049,7 +1049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Program> PostSpeechandtextanalyticsProgramsWithHttpInfo (ProgramRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job
+        /// Create new Speech &amp; Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -1061,7 +1061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeneralProgramJob PostSpeechandtextanalyticsProgramsGeneralJobs (GeneralProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job
+        /// Create new Speech &amp; Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -1073,7 +1073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GeneralProgramJob> PostSpeechandtextanalyticsProgramsGeneralJobsWithHttpInfo (GeneralProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job
+        /// Create new Speech &amp; Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -1085,7 +1085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramJob PostSpeechandtextanalyticsProgramsPublishjobs (ProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job
+        /// Create new Speech &amp; Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -1097,7 +1097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsWithHttpInfo (ProgramJobRequest body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback
+        /// Create a Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1109,7 +1109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SentimentFeedback PostSpeechandtextanalyticsSentimentfeedback (SentimentFeedback body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback
+        /// Create a Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1121,7 +1121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SentimentFeedback> PostSpeechandtextanalyticsSentimentfeedbackWithHttpInfo (SentimentFeedback body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic
+        /// Create new Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1133,7 +1133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Topic PostSpeechandtextanalyticsTopics (TopicRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic
+        /// Create new Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1145,7 +1145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Topic> PostSpeechandtextanalyticsTopicsWithHttpInfo (TopicRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -1157,7 +1157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         TopicJob PostSpeechandtextanalyticsTopicsPublishjobs (TopicJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -1193,7 +1193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchWithHttpInfo (TranscriptSearchRequest body);
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID
+        /// Update a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1206,7 +1206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         StaCategory PutSpeechandtextanalyticsCategory (string categoryId, CategoryRequest body);
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID
+        /// Update a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1219,7 +1219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<StaCategory> PutSpeechandtextanalyticsCategoryWithHttpInfo (string categoryId, CategoryRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1232,7 +1232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DictionaryFeedback PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId (string dictionaryFeedbackId, DictionaryFeedback body = null);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1245,7 +1245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DictionaryFeedback> PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithHttpInfo (string dictionaryFeedbackId, DictionaryFeedback body = null);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program
+        /// Update existing Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1258,7 +1258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Program PutSpeechandtextanalyticsProgram (string programId, ProgramRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program
+        /// Update existing Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1271,7 +1271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Program> PutSpeechandtextanalyticsProgramWithHttpInfo (string programId, ProgramRequest body);
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1284,7 +1284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body);
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1373,7 +1373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SpeechTextAnalyticsSettingsResponse> PutSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic
+        /// Update existing Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1386,7 +1386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Topic PutSpeechandtextanalyticsTopic (string topicId, TopicRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic
+        /// Update existing Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1403,7 +1403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID
+        /// Delete a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1415,7 +1415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsCategoryAsync (string categoryId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID
+        /// Delete a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1427,7 +1427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsCategoryAsyncWithHttpInfo (string categoryId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -1439,7 +1439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdAsync (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -1451,7 +1451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdAsyncWithHttpInfo (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id
+        /// Delete a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1464,7 +1464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DeleteProgramResponse> DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id
+        /// Delete a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1477,7 +1477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DeleteProgramResponse>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1488,7 +1488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackAsync ();
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1499,7 +1499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -1511,7 +1511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsync (string sentimentFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -1523,7 +1523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsyncWithHttpInfo (string sentimentFeedbackId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id
+        /// Delete a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1535,7 +1535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsTopicAsync (string topicId);
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id
+        /// Delete a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1581,7 +1581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CategoriesEntityListing>> GetSpeechandtextanalyticsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID
+        /// Get a Speech &amp; Text Analytics Category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1593,7 +1593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<StaCategory> GetSpeechandtextanalyticsCategoryAsync (string categoryId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID
+        /// Get a Speech &amp; Text Analytics Category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1733,7 +1733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsConversationSummaryListing>> GetSpeechandtextanalyticsConversationSummariesAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks
         /// </summary>
         /// <remarks>
         /// 
@@ -1747,7 +1747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackAsync (string dialect = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks
         /// </summary>
         /// <remarks>
         /// 
@@ -1761,7 +1761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (string dialect = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1773,7 +1773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DictionaryFeedback> GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdAsync (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1785,7 +1785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DictionaryFeedback>> GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdAsyncWithHttpInfo (string dictionaryFeedbackId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id
+        /// Get a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1797,7 +1797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Program> GetSpeechandtextanalyticsProgramAsync (string programId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id
+        /// Get a Speech &amp; Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1809,7 +1809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Program>> GetSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId);
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1821,7 +1821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId);
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1881,7 +1881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ProgramTranscriptionEngines>> GetSpeechandtextanalyticsProgramTranscriptionenginesAsyncWithHttpInfo (string programId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs
+        /// Get the list of Speech &amp; Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -1895,7 +1895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs
+        /// Get the list of Speech &amp; Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -1909,7 +1909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id
+        /// Get a Speech &amp; Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1921,7 +1921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeneralProgramJob> GetSpeechandtextanalyticsProgramsGeneralJobAsync (string jobId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id
+        /// Get a Speech &amp; Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1933,7 +1933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> GetSpeechandtextanalyticsProgramsGeneralJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1946,7 +1946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1959,7 +1959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id
+        /// Get a Speech &amp; Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1971,7 +1971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramJob> GetSpeechandtextanalyticsProgramsPublishjobAsync (string jobId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id
+        /// Get a Speech &amp; Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -2033,7 +2033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SupportedDialectsEntityListing>> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs
+        /// Get the list of Speech &amp; Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -2046,7 +2046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs
+        /// Get the list of Speech &amp; Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -2059,7 +2059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UnpublishedProgramsEntityListing>> GetSpeechandtextanalyticsProgramsUnpublishedAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -2070,7 +2070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsSentimentDialectsAsync ();
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -2081,7 +2081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsSentimentDialectsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -2093,7 +2093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SentimentFeedbackEntityListing> GetSpeechandtextanalyticsSentimentfeedbackAsync (string dialect = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -2127,7 +2127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> GetSpeechandtextanalyticsSettingsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id
+        /// Get a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -2139,7 +2139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Topic> GetSpeechandtextanalyticsTopicAsync (string topicId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id
+        /// Get a Speech &amp; Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -2151,7 +2151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Topic>> GetSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics
+        /// Get the list of Speech &amp; Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -2170,7 +2170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics
+        /// Get the list of Speech &amp; Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -2189,7 +2189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects
+        /// Get list of supported Speech &amp; Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -2200,7 +2200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsTopicsDialectsAsync ();
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects
+        /// Get list of supported Speech &amp; Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -2211,7 +2211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsTopicsDialectsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -2223,7 +2223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeneralTopicsEntityListing> GetSpeechandtextanalyticsTopicsGeneralAsync (string dialect = null);
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -2259,7 +2259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UnifiedGeneralTopicEntityListing>> GetSpeechandtextanalyticsTopicsGeneralStatusAsyncWithHttpInfo (string dialect = null);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id
+        /// Get a Speech &amp; Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -2271,7 +2271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobAsync (string jobId);
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id
+        /// Get a Speech &amp; Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -2363,7 +2363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PatchSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics category
+        /// Create new Speech &amp; Text Analytics category
         /// </summary>
         /// <remarks>
         /// 
@@ -2375,7 +2375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<StaCategory> PostSpeechandtextanalyticsCategoriesAsync (CategoryRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics category
+        /// Create new Speech &amp; Text Analytics category
         /// </summary>
         /// <remarks>
         /// 
@@ -2387,7 +2387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<StaCategory>> PostSpeechandtextanalyticsCategoriesAsyncWithHttpInfo (CategoryRequest body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -2399,7 +2399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DictionaryFeedback> PostSpeechandtextanalyticsDictionaryfeedbackAsync (DictionaryFeedback body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -2411,7 +2411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DictionaryFeedback>> PostSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (DictionaryFeedback body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics program
+        /// Create new Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -2423,7 +2423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Program> PostSpeechandtextanalyticsProgramsAsync (ProgramRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics program
+        /// Create new Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -2435,7 +2435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Program>> PostSpeechandtextanalyticsProgramsAsyncWithHttpInfo (ProgramRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job
+        /// Create new Speech &amp; Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -2447,7 +2447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeneralProgramJob> PostSpeechandtextanalyticsProgramsGeneralJobsAsync (GeneralProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job
+        /// Create new Speech &amp; Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -2459,7 +2459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> PostSpeechandtextanalyticsProgramsGeneralJobsAsyncWithHttpInfo (GeneralProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job
+        /// Create new Speech &amp; Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -2471,7 +2471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsAsync (ProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job
+        /// Create new Speech &amp; Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -2483,7 +2483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ProgramJob>> PostSpeechandtextanalyticsProgramsPublishjobsAsyncWithHttpInfo (ProgramJobRequest body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback
+        /// Create a Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -2495,7 +2495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SentimentFeedback> PostSpeechandtextanalyticsSentimentfeedbackAsync (SentimentFeedback body);
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback
+        /// Create a Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -2507,7 +2507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SentimentFeedback>> PostSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo (SentimentFeedback body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic
+        /// Create new Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -2519,7 +2519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Topic> PostSpeechandtextanalyticsTopicsAsync (TopicRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic
+        /// Create new Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -2531,7 +2531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Topic>> PostSpeechandtextanalyticsTopicsAsyncWithHttpInfo (TopicRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -2543,7 +2543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsAsync (TopicJobRequest body);
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -2579,7 +2579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<JsonSearchResponse>> PostSpeechandtextanalyticsTranscriptsSearchAsyncWithHttpInfo (TranscriptSearchRequest body);
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID
+        /// Update a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -2592,7 +2592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<StaCategory> PutSpeechandtextanalyticsCategoryAsync (string categoryId, CategoryRequest body);
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID
+        /// Update a Speech &amp; Text Analytics category by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -2605,7 +2605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<StaCategory>> PutSpeechandtextanalyticsCategoryAsyncWithHttpInfo (string categoryId, CategoryRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -2618,7 +2618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DictionaryFeedback> PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdAsync (string dictionaryFeedbackId, DictionaryFeedback body = null);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id
         /// </summary>
         /// <remarks>
         /// 
@@ -2631,7 +2631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DictionaryFeedback>> PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdAsyncWithHttpInfo (string dictionaryFeedbackId, DictionaryFeedback body = null);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program
+        /// Update existing Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -2644,7 +2644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Program> PutSpeechandtextanalyticsProgramAsync (string programId, ProgramRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program
+        /// Update existing Speech &amp; Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -2657,7 +2657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Program>> PutSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, ProgramRequest body);
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -2670,7 +2670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body);
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -2759,7 +2759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PutSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic
+        /// Update existing Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -2772,7 +2772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Topic> PutSpeechandtextanalyticsTopicAsync (string topicId, TopicRequest body);
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic
+        /// Update existing Speech &amp; Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -2877,7 +2877,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID 
+        /// Delete a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2890,7 +2890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID 
+        /// Delete a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2981,7 +2981,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID 
+        /// Delete a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2995,7 +2995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics category by ID 
+        /// Delete a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3088,7 +3088,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3101,7 +3101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3192,7 +3192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3206,7 +3206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics DictionaryFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics DictionaryFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3299,7 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id 
+        /// Delete a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3314,7 +3314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id 
+        /// Delete a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3407,7 +3407,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id 
+        /// Delete a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3423,7 +3423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics program by id 
+        /// Delete a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3518,7 +3518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3530,7 +3530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3616,7 +3616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3629,7 +3629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3716,7 +3716,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3729,7 +3729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3820,7 +3820,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3834,7 +3834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3927,7 +3927,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id 
+        /// Delete a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3940,7 +3940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id 
+        /// Delete a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4031,7 +4031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id 
+        /// Delete a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4045,7 +4045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech & Text Analytics topic by id 
+        /// Delete a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4374,7 +4374,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID 
+        /// Get a Speech &amp; Text Analytics Category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4388,7 +4388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID 
+        /// Get a Speech &amp; Text Analytics Category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4479,7 +4479,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID 
+        /// Get a Speech &amp; Text Analytics Category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4494,7 +4494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics Category by ID 
+        /// Get a Speech &amp; Text Analytics Category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5690,7 +5690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks 
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5706,7 +5706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks 
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5798,7 +5798,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks 
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5815,7 +5815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics dictionary feedbacks 
+        /// Get the list of Speech &amp; Text Analytics dictionary feedbacks 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5908,7 +5908,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id 
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5922,7 +5922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id 
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6013,7 +6013,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id 
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6028,7 +6028,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics dictionary feedback by id 
+        /// Get a Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6121,7 +6121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id 
+        /// Get a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6135,7 +6135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id 
+        /// Get a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6226,7 +6226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id 
+        /// Get a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6241,7 +6241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics program by id 
+        /// Get a Speech &amp; Text Analytics program by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6334,7 +6334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6348,7 +6348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6439,7 +6439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6454,7 +6454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6973,7 +6973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs 
+        /// Get the list of Speech &amp; Text Analytics programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6989,7 +6989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs 
+        /// Get the list of Speech &amp; Text Analytics programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7081,7 +7081,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs 
+        /// Get the list of Speech &amp; Text Analytics programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7098,7 +7098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs 
+        /// Get the list of Speech &amp; Text Analytics programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7191,7 +7191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id 
+        /// Get a Speech &amp; Text Analytics general program job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7205,7 +7205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id 
+        /// Get a Speech &amp; Text Analytics general program job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7296,7 +7296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id 
+        /// Get a Speech &amp; Text Analytics general program job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7311,7 +7311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics general program job by id 
+        /// Get a Speech &amp; Text Analytics general program job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7404,7 +7404,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7419,7 +7419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7509,7 +7509,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7525,7 +7525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7616,7 +7616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id 
+        /// Get a Speech &amp; Text Analytics publish programs job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7630,7 +7630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id 
+        /// Get a Speech &amp; Text Analytics publish programs job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7721,7 +7721,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id 
+        /// Get a Speech &amp; Text Analytics publish programs job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7736,7 +7736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish programs job by id 
+        /// Get a Speech &amp; Text Analytics publish programs job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8247,7 +8247,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs 
+        /// Get the list of Speech &amp; Text Analytics unpublished programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8262,7 +8262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs 
+        /// Get the list of Speech &amp; Text Analytics unpublished programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8352,7 +8352,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs 
+        /// Get the list of Speech &amp; Text Analytics unpublished programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8368,7 +8368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics unpublished programs 
+        /// Get the list of Speech &amp; Text Analytics unpublished programs 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8459,7 +8459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8472,7 +8472,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8558,7 +8558,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8572,7 +8572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8659,7 +8659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8673,7 +8673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8761,7 +8761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8776,7 +8776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9065,7 +9065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id 
+        /// Get a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9079,7 +9079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id 
+        /// Get a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9170,7 +9170,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id 
+        /// Get a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9185,7 +9185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics topic by id 
+        /// Get a Speech &amp; Text Analytics topic by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9278,7 +9278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics 
+        /// Get the list of Speech &amp; Text Analytics topics 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9299,7 +9299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics 
+        /// Get the list of Speech &amp; Text Analytics topics 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9401,7 +9401,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics 
+        /// Get the list of Speech &amp; Text Analytics topics 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9423,7 +9423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech & Text Analytics topics 
+        /// Get the list of Speech &amp; Text Analytics topics 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9526,7 +9526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects 
+        /// Get list of supported Speech &amp; Text Analytics topics dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9539,7 +9539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects 
+        /// Get list of supported Speech &amp; Text Analytics topics dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9625,7 +9625,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects 
+        /// Get list of supported Speech &amp; Text Analytics topics dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9639,7 +9639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get list of supported Speech & Text Analytics topics dialects 
+        /// Get list of supported Speech &amp; Text Analytics topics dialects 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9726,7 +9726,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9740,7 +9740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9828,7 +9828,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9843,7 +9843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10138,7 +10138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id 
+        /// Get a Speech &amp; Text Analytics publish topics job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10152,7 +10152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id 
+        /// Get a Speech &amp; Text Analytics publish topics job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10243,7 +10243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id 
+        /// Get a Speech &amp; Text Analytics publish topics job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10258,7 +10258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech & Text Analytics publish topics job by id 
+        /// Get a Speech &amp; Text Analytics publish topics job by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11020,7 +11020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics category 
+        /// Create new Speech &amp; Text Analytics category 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11034,7 +11034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics category 
+        /// Create new Speech &amp; Text Analytics category 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11130,7 +11130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics category 
+        /// Create new Speech &amp; Text Analytics category 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11145,7 +11145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics category 
+        /// Create new Speech &amp; Text Analytics category 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11243,7 +11243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback 
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11257,7 +11257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback 
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11353,7 +11353,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback 
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11368,7 +11368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Speech & Text Analytics DictionaryFeedback 
+        /// Create a Speech &amp; Text Analytics DictionaryFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11466,7 +11466,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics program 
+        /// Create new Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11480,7 +11480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics program 
+        /// Create new Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11576,7 +11576,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics program 
+        /// Create new Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11591,7 +11591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics program 
+        /// Create new Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11689,7 +11689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job 
+        /// Create new Speech &amp; Text Analytics general program job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11703,7 +11703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job 
+        /// Create new Speech &amp; Text Analytics general program job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11799,7 +11799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job 
+        /// Create new Speech &amp; Text Analytics general program job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11814,7 +11814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics general program job 
+        /// Create new Speech &amp; Text Analytics general program job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11912,7 +11912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job 
+        /// Create new Speech &amp; Text Analytics publish programs job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11926,7 +11926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job 
+        /// Create new Speech &amp; Text Analytics publish programs job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12022,7 +12022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job 
+        /// Create new Speech &amp; Text Analytics publish programs job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12037,7 +12037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish programs job 
+        /// Create new Speech &amp; Text Analytics publish programs job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12135,7 +12135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback 
+        /// Create a Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12149,7 +12149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback 
+        /// Create a Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12245,7 +12245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback 
+        /// Create a Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12260,7 +12260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Speech & Text Analytics SentimentFeedback 
+        /// Create a Speech &amp; Text Analytics SentimentFeedback 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12358,7 +12358,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic 
+        /// Create new Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12372,7 +12372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic 
+        /// Create new Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12468,7 +12468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic 
+        /// Create new Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12483,7 +12483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics topic 
+        /// Create new Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12581,7 +12581,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics publish topics job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12595,7 +12595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics publish topics job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12691,7 +12691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics publish topics job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12706,7 +12706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech & Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics publish topics job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13027,7 +13027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID 
+        /// Update a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13042,7 +13042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID 
+        /// Update a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13143,7 +13143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID 
+        /// Update a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13159,7 +13159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a Speech & Text Analytics category by ID 
+        /// Update a Speech &amp; Text Analytics category by ID 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13263,7 +13263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id 
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13278,7 +13278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id 
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13376,7 +13376,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id 
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13392,7 +13392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech & Text Analytics dictionary feedback by id 
+        /// Update existing Speech &amp; Text Analytics dictionary feedback by id 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13492,7 +13492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program 
+        /// Update existing Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13507,7 +13507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program 
+        /// Update existing Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13608,7 +13608,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program 
+        /// Update existing Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13624,7 +13624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech & Text Analytics program 
+        /// Update existing Speech &amp; Text Analytics program 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13728,7 +13728,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13743,7 +13743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13844,7 +13844,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13860,7 +13860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14659,7 +14659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic 
+        /// Update existing Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14674,7 +14674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic 
+        /// Update existing Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14775,7 +14775,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic 
+        /// Update existing Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14791,7 +14791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech & Text Analytics topic 
+        /// Update existing Speech &amp; Text Analytics topic 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

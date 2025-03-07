@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The id of this line.</param>
         /// <param name="Reachable">Indicates whether the edge can reach the line..</param>
-        /// <param name="AddressOfRecord">The line's address of record..</param>
+        /// <param name="AddressOfRecord">The line&#39;s address of record..</param>
         /// <param name="ContactAddresses">The addresses used to contact the line..</param>
         /// <param name="ReachableStateTime">The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public LineStatus(string Id = null, bool? Reachable = null, string AddressOfRecord = null, List<string> ContactAddresses = null, DateTime? ReachableStateTime = null)
@@ -57,9 +57,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The line's address of record.
+        /// The line&#39;s address of record.
         /// </summary>
-        /// <value>The line's address of record.</value>
+        /// <value>The line&#39;s address of record.</value>
         [DataMember(Name="addressOfRecord", EmitDefaultValue=false)]
         public string AddressOfRecord { get; set; }
 

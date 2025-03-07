@@ -62,8 +62,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QueueId">The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId.</param>
         /// <param name="FlowId">The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId.</param>
-        /// <param name="Provider">The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails. (required).</param>
-        /// <param name="SkillIds">The list of skill ID's to use for routing..</param>
+        /// <param name="Provider">The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails. (required).</param>
+        /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
         /// <param name="LanguageId">The ID of the language to use for routing..</param>
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
@@ -76,7 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HtmlBody">An HTML body content of the email..</param>
         /// <param name="TextBody">A text body content of the email..</param>
         /// <param name="ExternalContactId">The external contact with which the email should be associated. This field is only valid for OUTBOUND email..</param>
-        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null, string ExternalContactId = null)
+        /// <param name="UtilizationLabel">Optional. Controls the number of agent interactions for INBOUND communications.</param>
+        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null, string ExternalContactId = null, string UtilizationLabel = null)
         {
             this.QueueId = QueueId;
             this.FlowId = FlowId;
@@ -94,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HtmlBody = HtmlBody;
             this.TextBody = TextBody;
             this.ExternalContactId = ExternalContactId;
+            this.UtilizationLabel = UtilizationLabel;
             
         }
         
@@ -118,18 +120,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails.
+        /// The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails.
         /// </summary>
-        /// <value>The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails.</value>
+        /// <value>The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
 
 
 
         /// <summary>
-        /// The list of skill ID's to use for routing.
+        /// The list of skill ID&#39;s to use for routing.
         /// </summary>
-        /// <value>The list of skill ID's to use for routing.</value>
+        /// <value>The list of skill ID&#39;s to use for routing.</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
 
@@ -235,6 +237,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExternalContactId { get; set; }
 
 
+
+        /// <summary>
+        /// Optional. Controls the number of agent interactions for INBOUND communications
+        /// </summary>
+        /// <value>Optional. Controls the number of agent interactions for INBOUND communications</value>
+        [DataMember(Name="utilizationLabel", EmitDefaultValue=false)]
+        public string UtilizationLabel { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -260,6 +271,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  UtilizationLabel: ").Append(UtilizationLabel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,6 +391,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
+                    this.UtilizationLabel == other.UtilizationLabel ||
+                    this.UtilizationLabel != null &&
+                    this.UtilizationLabel.Equals(other.UtilizationLabel)
                 );
         }
 
@@ -440,6 +457,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.UtilizationLabel != null)
+                    hash = hash * 59 + this.UtilizationLabel.GetHashCode();
 
                 return hash;
             }

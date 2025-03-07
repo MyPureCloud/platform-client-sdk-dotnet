@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ReportingTurnKnowledgeFeedback" /> class.
         /// </summary>
         /// <param name="SearchId">The ID of the original knowledge search that this feedback relates to..</param>
-        /// <param name="Rating">The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive..</param>
+        /// <param name="Rating">The feedback rating for the search (1.0 - 5.0). 1 &#x3D; Negative, 5 &#x3D; Positive..</param>
         /// <param name="Documents">The list of search documents that the feedback applies to..</param>
         public ReportingTurnKnowledgeFeedback(string SearchId = null, int? Rating = null, List<ReportingTurnKnowledgeDocument> Documents = null)
         {
@@ -44,9 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive.
+        /// The feedback rating for the search (1.0 - 5.0). 1 &#x3D; Negative, 5 &#x3D; Positive.
         /// </summary>
-        /// <value>The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive.</value>
+        /// <value>The feedback rating for the search (1.0 - 5.0). 1 &#x3D; Negative, 5 &#x3D; Positive.</value>
         [DataMember(Name="rating", EmitDefaultValue=false)]
         public int? Rating { get; set; }
 

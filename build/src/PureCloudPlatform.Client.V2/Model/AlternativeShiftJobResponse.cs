@@ -119,11 +119,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Status">The status of the alternative shift job (required).</param>
         /// <param name="Type">The type of job (required).</param>
-        /// <param name="DownloadUrl">The URL where completed results are available, only set if status == 'Complete'.</param>
-        /// <param name="Error">Any error information, only set if the status == 'Error'.</param>
-        /// <param name="ViewOffersResults">Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListOffers' or 'SearchOffers'.</param>
-        /// <param name="ViewTradesResults">Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListUserTrades' or 'SearchTrades'.</param>
-        /// <param name="BulkUpdateTradesResults">Schema template for deserializing data returned from the downloadUrl. Use if type == 'BulkUpdateTrades'.</param>
+        /// <param name="DownloadUrl">The URL where completed results are available, only set if status &#x3D;&#x3D; &#39;Complete&#39;.</param>
+        /// <param name="Error">Any error information, only set if the status &#x3D;&#x3D; &#39;Error&#39;.</param>
+        /// <param name="ViewOffersResults">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListOffers&#39; or &#39;SearchOffers&#39;.</param>
+        /// <param name="ViewTradesResults">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListUserTrades&#39; or &#39;SearchTrades&#39;.</param>
+        /// <param name="BulkUpdateTradesResults">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;BulkUpdateTrades&#39;.</param>
         public AlternativeShiftJobResponse(StatusEnum? Status = null, TypeEnum? Type = null, string DownloadUrl = null, ErrorBody Error = null, AlternativeShiftOffersViewResponseTemplate ViewOffersResults = null, AlternativeShiftTradesViewResponseTemplate ViewTradesResults = null, AlternativeShiftBulkUpdateTradesResponseTemplate BulkUpdateTradesResults = null)
         {
             this.Status = Status;
@@ -152,45 +152,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The URL where completed results are available, only set if status == 'Complete'
+        /// The URL where completed results are available, only set if status &#x3D;&#x3D; &#39;Complete&#39;
         /// </summary>
-        /// <value>The URL where completed results are available, only set if status == 'Complete'</value>
+        /// <value>The URL where completed results are available, only set if status &#x3D;&#x3D; &#39;Complete&#39;</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
 
 
 
         /// <summary>
-        /// Any error information, only set if the status == 'Error'
+        /// Any error information, only set if the status &#x3D;&#x3D; &#39;Error&#39;
         /// </summary>
-        /// <value>Any error information, only set if the status == 'Error'</value>
+        /// <value>Any error information, only set if the status &#x3D;&#x3D; &#39;Error&#39;</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public ErrorBody Error { get; set; }
 
 
 
         /// <summary>
-        /// Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListOffers' or 'SearchOffers'
+        /// Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListOffers&#39; or &#39;SearchOffers&#39;
         /// </summary>
-        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListOffers' or 'SearchOffers'</value>
+        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListOffers&#39; or &#39;SearchOffers&#39;</value>
         [DataMember(Name="viewOffersResults", EmitDefaultValue=false)]
         public AlternativeShiftOffersViewResponseTemplate ViewOffersResults { get; set; }
 
 
 
         /// <summary>
-        /// Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListUserTrades' or 'SearchTrades'
+        /// Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListUserTrades&#39; or &#39;SearchTrades&#39;
         /// </summary>
-        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListUserTrades' or 'SearchTrades'</value>
+        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListUserTrades&#39; or &#39;SearchTrades&#39;</value>
         [DataMember(Name="viewTradesResults", EmitDefaultValue=false)]
         public AlternativeShiftTradesViewResponseTemplate ViewTradesResults { get; set; }
 
 
 
         /// <summary>
-        /// Schema template for deserializing data returned from the downloadUrl. Use if type == 'BulkUpdateTrades'
+        /// Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;BulkUpdateTrades&#39;
         /// </summary>
-        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type == 'BulkUpdateTrades'</value>
+        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;BulkUpdateTrades&#39;</value>
         [DataMember(Name="bulkUpdateTradesResults", EmitDefaultValue=false)]
         public AlternativeShiftBulkUpdateTradesResponseTemplate BulkUpdateTradesResults { get; set; }
 

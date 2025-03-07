@@ -51,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply..</param>
         /// <param name="Payload">Content of the textback payload after clicking a quick reply.</param>
         /// <param name="Url">The location of the image file associated with quick reply.</param>
-        /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text..</param>
+        /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text..</param>
         /// <param name="IsSelected">Indicates if the quick reply option is selected by end customer.</param>
         public QuickReply(string Text = null, string Payload = null, string Url = null, ActionEnum? Action = null, bool? IsSelected = null)
         {

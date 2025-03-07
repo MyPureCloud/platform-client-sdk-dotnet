@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactListId">Contact list identifier (required).</param>
         /// <param name="ContactId">Contact identifier (required).</param>
         /// <param name="PhoneColumn">Name of the phone column containing the number to be called (required).</param>
-        /// <param name="Schedule">The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\", example = \"2016-01-02T16:59:59\" (required).</param>
+        /// <param name="Schedule">The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example &#x3D; \&quot;2016-01-02T16:59:59\&quot; (required).</param>
         public ContactCallbackRequest(string CampaignId = null, string ContactListId = null, string ContactId = null, string PhoneColumn = null, string Schedule = null)
         {
             this.CampaignId = CampaignId;
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\", example = \"2016-01-02T16:59:59\"
+        /// The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example &#x3D; \&quot;2016-01-02T16:59:59\&quot;
         /// </summary>
-        /// <value>The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\", example = \"2016-01-02T16:59:59\"</value>
+        /// <value>The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example &#x3D; \&quot;2016-01-02T16:59:59\&quot;</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public string Schedule { get; set; }
 

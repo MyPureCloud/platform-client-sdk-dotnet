@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="NluDetectionInput" /> class.
         /// </summary>
         /// <param name="Text">The text to perform NLU detection on. (required).</param>
-        /// <param name="Language">Language of the version for multilingual detection, e.g. `en-us`, `de-de`.</param>
+        /// <param name="Language">Language of the version for multilingual detection, e.g. &#x60;en-us&#x60;, &#x60;de-de&#x60;.</param>
         public NluDetectionInput(string Text = null, string Language = null)
         {
             this.Text = Text;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Language of the version for multilingual detection, e.g. `en-us`, `de-de`
+        /// Language of the version for multilingual detection, e.g. &#x60;en-us&#x60;, &#x60;de-de&#x60;
         /// </summary>
-        /// <value>Language of the version for multilingual detection, e.g. `en-us`, `de-de`</value>
+        /// <value>Language of the version for multilingual detection, e.g. &#x60;en-us&#x60;, &#x60;de-de&#x60;</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
 

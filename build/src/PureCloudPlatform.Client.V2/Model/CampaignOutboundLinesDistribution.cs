@@ -22,12 +22,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CampaignOutboundLinesDistribution" /> class.
         /// </summary>
         /// <param name="Campaign">The Campaign for which dialing group distribution information was requested.</param>
-        /// <param name="MaxOutboundLineCount">Maximum outbound calls that can be placed for Campaign's Edge Group or Site.</param>
-        /// <param name="MaxLineUtilization">Maximum ratio of dialer calls to Campaign's Edge Group or Site capacity.</param>
-        /// <param name="AvailableOutboundLines">Number of available outbound lines in Campaign's Edge Group or Site.</param>
-        /// <param name="ReservedLines">Number of reserved outbound lines in Campaign's Edge Group or Site.</param>
-        /// <param name="CampaignsWithReservedLines">Information about campaigns with reserving lines in Campaign's Edge Group or Site.</param>
-        /// <param name="CampaignsWithDynamicallyAllocatedLines">Information about campaigns using dynamic lines allocation in Campaign's Edge Group or Site.</param>
+        /// <param name="MaxOutboundLineCount">Maximum outbound calls that can be placed for Campaign&#39;s Edge Group or Site.</param>
+        /// <param name="MaxLineUtilization">Maximum ratio of dialer calls to Campaign&#39;s Edge Group or Site capacity.</param>
+        /// <param name="AvailableOutboundLines">Number of available outbound lines in Campaign&#39;s Edge Group or Site.</param>
+        /// <param name="ReservedLines">Number of reserved outbound lines in Campaign&#39;s Edge Group or Site.</param>
+        /// <param name="CampaignsWithReservedLines">Information about campaigns with reserving lines in Campaign&#39;s Edge Group or Site.</param>
+        /// <param name="CampaignsWithDynamicallyAllocatedLines">Information about campaigns using dynamic lines allocation in Campaign&#39;s Edge Group or Site.</param>
         public CampaignOutboundLinesDistribution(AddressableEntityRef Campaign = null, int? MaxOutboundLineCount = null, double? MaxLineUtilization = null, int? AvailableOutboundLines = null, int? ReservedLines = null, List<CampaignOutboundLinesReservation> CampaignsWithReservedLines = null, List<CampaignOutboundLinesAllocation> CampaignsWithDynamicallyAllocatedLines = null)
         {
             this.Campaign = Campaign;
@@ -52,54 +52,54 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Maximum outbound calls that can be placed for Campaign's Edge Group or Site
+        /// Maximum outbound calls that can be placed for Campaign&#39;s Edge Group or Site
         /// </summary>
-        /// <value>Maximum outbound calls that can be placed for Campaign's Edge Group or Site</value>
+        /// <value>Maximum outbound calls that can be placed for Campaign&#39;s Edge Group or Site</value>
         [DataMember(Name="maxOutboundLineCount", EmitDefaultValue=false)]
         public int? MaxOutboundLineCount { get; set; }
 
 
 
         /// <summary>
-        /// Maximum ratio of dialer calls to Campaign's Edge Group or Site capacity
+        /// Maximum ratio of dialer calls to Campaign&#39;s Edge Group or Site capacity
         /// </summary>
-        /// <value>Maximum ratio of dialer calls to Campaign's Edge Group or Site capacity</value>
+        /// <value>Maximum ratio of dialer calls to Campaign&#39;s Edge Group or Site capacity</value>
         [DataMember(Name="maxLineUtilization", EmitDefaultValue=false)]
         public double? MaxLineUtilization { get; set; }
 
 
 
         /// <summary>
-        /// Number of available outbound lines in Campaign's Edge Group or Site
+        /// Number of available outbound lines in Campaign&#39;s Edge Group or Site
         /// </summary>
-        /// <value>Number of available outbound lines in Campaign's Edge Group or Site</value>
+        /// <value>Number of available outbound lines in Campaign&#39;s Edge Group or Site</value>
         [DataMember(Name="availableOutboundLines", EmitDefaultValue=false)]
         public int? AvailableOutboundLines { get; set; }
 
 
 
         /// <summary>
-        /// Number of reserved outbound lines in Campaign's Edge Group or Site
+        /// Number of reserved outbound lines in Campaign&#39;s Edge Group or Site
         /// </summary>
-        /// <value>Number of reserved outbound lines in Campaign's Edge Group or Site</value>
+        /// <value>Number of reserved outbound lines in Campaign&#39;s Edge Group or Site</value>
         [DataMember(Name="reservedLines", EmitDefaultValue=false)]
         public int? ReservedLines { get; set; }
 
 
 
         /// <summary>
-        /// Information about campaigns with reserving lines in Campaign's Edge Group or Site
+        /// Information about campaigns with reserving lines in Campaign&#39;s Edge Group or Site
         /// </summary>
-        /// <value>Information about campaigns with reserving lines in Campaign's Edge Group or Site</value>
+        /// <value>Information about campaigns with reserving lines in Campaign&#39;s Edge Group or Site</value>
         [DataMember(Name="campaignsWithReservedLines", EmitDefaultValue=false)]
         public List<CampaignOutboundLinesReservation> CampaignsWithReservedLines { get; set; }
 
 
 
         /// <summary>
-        /// Information about campaigns using dynamic lines allocation in Campaign's Edge Group or Site
+        /// Information about campaigns using dynamic lines allocation in Campaign&#39;s Edge Group or Site
         /// </summary>
-        /// <value>Information about campaigns using dynamic lines allocation in Campaign's Edge Group or Site</value>
+        /// <value>Information about campaigns using dynamic lines allocation in Campaign&#39;s Edge Group or Site</value>
         [DataMember(Name="campaignsWithDynamicallyAllocatedLines", EmitDefaultValue=false)]
         public List<CampaignOutboundLinesAllocation> CampaignsWithDynamicallyAllocatedLines { get; set; }
 

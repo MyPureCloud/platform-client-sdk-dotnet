@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WhatsAppColumn" /> class.
         /// </summary>
         /// <param name="ColumnName">The name of the whatsApp column. (required).</param>
-        /// <param name="Type">Indicates the type of the whatsApp column. For example, 'work' or 'personal'. (required).</param>
+        /// <param name="Type">Indicates the type of the whatsApp column. For example, &#39;work&#39; or &#39;personal&#39;. (required).</param>
         public WhatsAppColumn(string ColumnName = null, string Type = null)
         {
             this.ColumnName = ColumnName;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates the type of the whatsApp column. For example, 'work' or 'personal'.
+        /// Indicates the type of the whatsApp column. For example, &#39;work&#39; or &#39;personal&#39;.
         /// </summary>
-        /// <value>Indicates the type of the whatsApp column. For example, 'work' or 'personal'.</value>
+        /// <value>Indicates the type of the whatsApp column. For example, &#39;work&#39; or &#39;personal&#39;.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 

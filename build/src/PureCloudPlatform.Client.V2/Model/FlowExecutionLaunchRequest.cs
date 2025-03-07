@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="FlowId">ID of the flow to launch. (required).</param>
         /// <param name="FlowVersion">The version of the flow to launch. Omit this value (or supply null/empty) to use the latest published version..</param>
-        /// <param name="InputData">Input values to the flow. Valid values are defined by a flow's input JSON schema..</param>
+        /// <param name="InputData">Input values to the flow. Valid values are defined by a flow&#39;s input JSON schema..</param>
         /// <param name="Name">A displayable name to assign to the new flow execution.</param>
         public FlowExecutionLaunchRequest(string FlowId = null, string FlowVersion = null, Dictionary<string, Object> InputData = null, string Name = null)
         {
@@ -61,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Input values to the flow. Valid values are defined by a flow's input JSON schema.
+        /// Input values to the flow. Valid values are defined by a flow&#39;s input JSON schema.
         /// </summary>
-        /// <value>Input values to the flow. Valid values are defined by a flow's input JSON schema.</value>
+        /// <value>Input values to the flow. Valid values are defined by a flow&#39;s input JSON schema.</value>
         [DataMember(Name="inputData", EmitDefaultValue=false)]
         public Dictionary<string, Object> InputData { get; set; }
 

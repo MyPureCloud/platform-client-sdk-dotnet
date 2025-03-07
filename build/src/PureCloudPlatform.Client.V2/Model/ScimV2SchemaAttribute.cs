@@ -270,9 +270,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of subattributes for an attribute of the type \"complex\". Uses the same schema as \"attributes\".
+        /// The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;.
         /// </summary>
-        /// <value>The list of subattributes for an attribute of the type \"complex\". Uses the same schema as \"attributes\".</value>
+        /// <value>The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;.</value>
         [DataMember(Name="subAttributes", EmitDefaultValue=false)]
         public List<ScimV2SchemaAttribute> SubAttributes { get; private set; }
 
@@ -315,9 +315,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates whether a string attribute is case-sensitive. If set to \"true\", the server preserves case sensitivity. If set to \"false\", the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \"Filtering\" in RFC 7644 for details.
+        /// Indicates whether a string attribute is case-sensitive. If set to \&quot;true\&quot;, the server preserves case sensitivity. If set to \&quot;false\&quot;, the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \&quot;Filtering\&quot; in RFC 7644 for details.
         /// </summary>
-        /// <value>Indicates whether a string attribute is case-sensitive. If set to \"true\", the server preserves case sensitivity. If set to \"false\", the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \"Filtering\" in RFC 7644 for details.</value>
+        /// <value>Indicates whether a string attribute is case-sensitive. If set to \&quot;true\&quot;, the server preserves case sensitivity. If set to \&quot;false\&quot;, the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \&quot;Filtering\&quot; in RFC 7644 for details.</value>
         [DataMember(Name="caseExact", EmitDefaultValue=false)]
         public bool? CaseExact { get; private set; }
 
@@ -330,9 +330,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of SCIM resource types that may be referenced. Only applies when \"type\" is set to \"reference\".
+        /// The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;.
         /// </summary>
-        /// <value>The list of SCIM resource types that may be referenced. Only applies when \"type\" is set to \"reference\".</value>
+        /// <value>The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;.</value>
         [DataMember(Name="referenceTypes", EmitDefaultValue=false)]
         public List<ReferenceTypesEnum> ReferenceTypes { get; private set; }
 

@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="BotId">The Nuance bot ID (required).</param>
         /// <param name="ExecutionHost">The hostname to use when contacting Nuance to execute this bot (required).</param>
-        /// <param name="BotCredentials">The bot's launch credentials (required).</param>
+        /// <param name="BotCredentials">The bot&#39;s launch credentials (required).</param>
         public BotExecutionConfiguration(string BotId = null, string ExecutionHost = null, NuanceBotCredentials BotCredentials = null)
         {
             this.BotId = BotId;
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The bot's launch credentials
+        /// The bot&#39;s launch credentials
         /// </summary>
-        /// <value>The bot's launch credentials</value>
+        /// <value>The bot&#39;s launch credentials</value>
         [DataMember(Name="botCredentials", EmitDefaultValue=false)]
         public NuanceBotCredentials BotCredentials { get; set; }
 

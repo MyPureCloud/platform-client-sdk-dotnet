@@ -17,7 +17,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
-        /// Get a organization's GeolocationSettings
+        /// Get a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeolocationSettings GetGeolocationsSettings ();
 
         /// <summary>
-        /// Get a organization's GeolocationSettings
+        /// Get a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GeolocationSettings> GetGeolocationsSettingsWithHttpInfo ();
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Geolocation GetUserGeolocation (string userId, string clientId);
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Geolocation> GetUserGeolocationWithHttpInfo (string userId, string clientId);
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings
+        /// Patch a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -77,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeolocationSettings PatchGeolocationsSettings (GeolocationSettings body);
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings
+        /// Patch a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GeolocationSettings> PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Geolocation PatchUserGeolocation (string userId, string clientId, Geolocation body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -121,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
-        /// Get a organization's GeolocationSettings
+        /// Get a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -132,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeolocationSettings> GetGeolocationsSettingsAsync ();
 
         /// <summary>
-        /// Get a organization's GeolocationSettings
+        /// Get a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -143,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -156,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Geolocation> GetUserGeolocationAsync (string userId, string clientId);
 
         /// <summary>
-        /// Get a user's Geolocation
+        /// Get a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// 
@@ -169,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationAsyncWithHttpInfo (string userId, string clientId);
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings
+        /// Patch a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -181,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeolocationSettings> PatchGeolocationsSettingsAsync (GeolocationSettings body);
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings
+        /// Patch a organization&#39;s GeolocationSettings
         /// </summary>
         /// <remarks>
         /// 
@@ -193,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationAsync (string userId, string clientId, Geolocation body);
 
         /// <summary>
-        /// Patch a user's Geolocation
+        /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
@@ -313,7 +313,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a organization's GeolocationSettings 
+        /// Get a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -326,7 +326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a organization's GeolocationSettings 
+        /// Get a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -412,7 +412,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a organization's GeolocationSettings 
+        /// Get a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -426,7 +426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a organization's GeolocationSettings 
+        /// Get a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -513,7 +513,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -528,7 +528,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -624,7 +624,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -640,7 +640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Geolocation 
+        /// Get a user&#39;s Geolocation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -739,7 +739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings 
+        /// Patch a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -753,7 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings 
+        /// Patch a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -849,7 +849,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings 
+        /// Patch a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -864,7 +864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a organization's GeolocationSettings 
+        /// Patch a organization&#39;s GeolocationSettings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -962,7 +962,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -978,7 +978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1084,7 +1084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1101,7 +1101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's Geolocation 
+        /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

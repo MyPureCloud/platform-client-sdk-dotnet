@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">The HTTP status code for this message (400, 401, 403, 404, 500, etc..</param>
         /// <param name="Code">A code unique to this error..</param>
         /// <param name="Message">Friendly description of this error..</param>
-        /// <param name="MessageWithParams">This is the same as message except it uses template fields for variable replacement. For instance: 'User {username} was not found'.</param>
-        /// <param name="MessageParams">Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'john.doe'.</param>
-        /// <param name="ContextId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead..</param>
+        /// <param name="MessageWithParams">This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;.</param>
+        /// <param name="MessageParams">Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;john.doe&#39;.</param>
+        /// <param name="ContextId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead..</param>
         /// <param name="Uri">Uri.</param>
         public ConversationMessageEventTopicErrorDetails(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null)
         {
@@ -70,27 +70,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// This is the same as message except it uses template fields for variable replacement. For instance: 'User {username} was not found'
+        /// This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;
         /// </summary>
-        /// <value>This is the same as message except it uses template fields for variable replacement. For instance: 'User {username} was not found'</value>
+        /// <value>This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;</value>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
 
 
 
         /// <summary>
-        /// Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'john.doe'
+        /// Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;john.doe&#39;
         /// </summary>
-        /// <value>Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'john.doe'</value>
+        /// <value>Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;john.doe&#39;</value>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
 
 
 
         /// <summary>
-        /// The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead.
+        /// The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.
         /// </summary>
-        /// <value>The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead.</value>
+        /// <value>The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.</value>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
 

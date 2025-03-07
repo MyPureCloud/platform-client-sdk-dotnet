@@ -190,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecondaryValues">The list of modification secondary values. Only applicable for multi granularity modifications.</param>
         /// <param name="DisplayGranularity">The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
         /// <param name="Granularity">The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
-        /// <param name="SecondaryGranularity">The granularity of the 'secondaryValues' modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
+        /// <param name="SecondaryGranularity">The granularity of the &#39;secondaryValues&#39; modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
         /// <param name="Enabled">Whether the modification is enabled for the forecast (required).</param>
         /// <param name="PlanningGroupIds">The IDs of the planning groups to which this forecast modification applies (required).</param>
         public BuForecastModificationResponse(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmForecastModificationIntervalOffsetValue> Values = null, List<WfmForecastModificationIntervalOffsetValue> SecondaryValues = null, string DisplayGranularity = null, string Granularity = null, string SecondaryGranularity = null, bool? Enabled = null, List<string> PlanningGroupIds = null)
@@ -283,9 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The granularity of the 'secondaryValues' modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
+        /// The granularity of the &#39;secondaryValues&#39; modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
-        /// <value>The granularity of the 'secondaryValues' modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
+        /// <value>The granularity of the &#39;secondaryValues&#39; modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="secondaryGranularity", EmitDefaultValue=false)]
         public string SecondaryGranularity { get; set; }
 

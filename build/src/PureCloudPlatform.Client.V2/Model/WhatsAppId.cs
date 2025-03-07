@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WhatsAppId" /> class.
         /// </summary>
         /// <param name="PhoneNumber">The phone number associated with this WhatsApp account.</param>
-        /// <param name="DisplayName">The displayName of this person's account in WhatsApp.</param>
+        /// <param name="DisplayName">The displayName of this person&#39;s account in WhatsApp.</param>
         public WhatsAppId(PhoneNumber PhoneNumber = null, string DisplayName = null)
         {
             this.PhoneNumber = PhoneNumber;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The displayName of this person's account in WhatsApp
+        /// The displayName of this person&#39;s account in WhatsApp
         /// </summary>
-        /// <value>The displayName of this person's account in WhatsApp</value>
+        /// <value>The displayName of this person&#39;s account in WhatsApp</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 

@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuAbandonRate" /> class.
         /// </summary>
         /// <param name="Include">Whether to include abandon rate in the associated configuration (required).</param>
-        /// <param name="Percent">Abandon rate percent goal. Required if include == true.</param>
+        /// <param name="Percent">Abandon rate percent goal. Required if include &#x3D;&#x3D; true.</param>
         public BuAbandonRate(bool? Include = null, int? Percent = null)
         {
             this.Include = Include;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Abandon rate percent goal. Required if include == true
+        /// Abandon rate percent goal. Required if include &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Abandon rate percent goal. Required if include == true</value>
+        /// <value>Abandon rate percent goal. Required if include &#x3D;&#x3D; true</value>
         [DataMember(Name="percent", EmitDefaultValue=false)]
         public int? Percent { get; set; }
 

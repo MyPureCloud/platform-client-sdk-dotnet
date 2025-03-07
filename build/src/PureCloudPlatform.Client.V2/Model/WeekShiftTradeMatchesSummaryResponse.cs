@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WeekShiftTradeMatchesSummaryResponse" /> class.
         /// </summary>
         /// <param name="WeekDate">The schedule week date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        /// <param name="Count">The number of trades in the 'Matched' state with the initiating shift in the given week.</param>
+        /// <param name="Count">The number of trades in the &#39;Matched&#39; state with the initiating shift in the given week.</param>
         public WeekShiftTradeMatchesSummaryResponse(String WeekDate = null, int? Count = null)
         {
             this.WeekDate = WeekDate;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of trades in the 'Matched' state with the initiating shift in the given week
+        /// The number of trades in the &#39;Matched&#39; state with the initiating shift in the given week
         /// </summary>
-        /// <value>The number of trades in the 'Matched' state with the initiating shift in the given week</value>
+        /// <value>The number of trades in the &#39;Matched&#39; state with the initiating shift in the given week</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
 

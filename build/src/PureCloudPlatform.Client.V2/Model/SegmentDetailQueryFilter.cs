@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SegmentDetailQueryFilter" /> class.
         /// </summary>
         /// <param name="Type">Boolean operation to apply to the provided predicates and clauses (required).</param>
-        /// <param name="Clauses">Boolean 'and/or' logic with up to two-levels of nesting.</param>
+        /// <param name="Clauses">Boolean &#39;and/or&#39; logic with up to two-levels of nesting.</param>
         /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value)..</param>
         public SegmentDetailQueryFilter(TypeEnum? Type = null, List<SegmentDetailQueryClause> Clauses = null, List<SegmentDetailQueryPredicate> Predicates = null)
         {
@@ -76,9 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Boolean 'and/or' logic with up to two-levels of nesting
+        /// Boolean &#39;and/or&#39; logic with up to two-levels of nesting
         /// </summary>
-        /// <value>Boolean 'and/or' logic with up to two-levels of nesting</value>
+        /// <value>Boolean &#39;and/or&#39; logic with up to two-levels of nesting</value>
         [DataMember(Name="clauses", EmitDefaultValue=false)]
         public List<SegmentDetailQueryClause> Clauses { get; set; }
 

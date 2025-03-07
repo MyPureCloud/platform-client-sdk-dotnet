@@ -29,8 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Url">The page URL. (required).</param>
         /// <param name="Title">Title of the page. (required).</param>
-        /// <param name="Keywords">Keywords from the HTML <meta> tag of the page..</param>
-        /// <param name="Lang">ISO 639-1 language code for the page as defined in the <html> tag..</param>
+        /// <param name="Keywords">Keywords from the HTML &lt;meta&gt; tag of the page..</param>
+        /// <param name="Lang">ISO 639-1 language code for the page as defined in the &lt;html&gt; tag..</param>
         public RequestPage(string Url = null, string Title = null, string Keywords = null, string Lang = null)
         {
             this.Url = Url;
@@ -61,18 +61,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Keywords from the HTML <meta> tag of the page.
+        /// Keywords from the HTML &lt;meta&gt; tag of the page.
         /// </summary>
-        /// <value>Keywords from the HTML <meta> tag of the page.</value>
+        /// <value>Keywords from the HTML &lt;meta&gt; tag of the page.</value>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public string Keywords { get; set; }
 
 
 
         /// <summary>
-        /// ISO 639-1 language code for the page as defined in the <html> tag.
+        /// ISO 639-1 language code for the page as defined in the &lt;html&gt; tag.
         /// </summary>
-        /// <value>ISO 639-1 language code for the page as defined in the <html> tag.</value>
+        /// <value>ISO 639-1 language code for the page as defined in the &lt;html&gt; tag.</value>
         [DataMember(Name="lang", EmitDefaultValue=false)]
         public string Lang { get; set; }
 

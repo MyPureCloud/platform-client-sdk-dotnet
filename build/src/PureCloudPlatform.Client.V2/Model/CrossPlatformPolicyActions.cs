@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CrossPlatformPolicyActions" /> class.
         /// </summary>
-        /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default = true.</param>
-        /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false.</param>
-        /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false.</param>
+        /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default &#x3D; true.</param>
+        /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false.</param>
+        /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false.</param>
         /// <param name="AssignEvaluations">AssignEvaluations.</param>
         /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
         /// <param name="AssignMeteredAssignmentByAgent">AssignMeteredAssignmentByAgent.</param>
@@ -49,27 +49,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// true to retain the recording associated with the conversation. Default = true
+        /// true to retain the recording associated with the conversation. Default &#x3D; true
         /// </summary>
-        /// <value>true to retain the recording associated with the conversation. Default = true</value>
+        /// <value>true to retain the recording associated with the conversation. Default &#x3D; true</value>
         [DataMember(Name="retainRecording", EmitDefaultValue=false)]
         public bool? RetainRecording { get; set; }
 
 
 
         /// <summary>
-        /// true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false
+        /// true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false
         /// </summary>
-        /// <value>true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false</value>
+        /// <value>true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false</value>
         [DataMember(Name="deleteRecording", EmitDefaultValue=false)]
         public bool? DeleteRecording { get; set; }
 
 
 
         /// <summary>
-        /// true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false
+        /// true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false
         /// </summary>
-        /// <value>true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false</value>
+        /// <value>true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false</value>
         [DataMember(Name="alwaysDelete", EmitDefaultValue=false)]
         public bool? AlwaysDelete { get; set; }
 

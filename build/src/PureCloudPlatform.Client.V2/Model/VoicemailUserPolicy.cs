@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailUserPolicy" /> class.
         /// </summary>
-        /// <param name="AlertTimeoutSeconds">The number of seconds to ring the user's phone before a call is transfered to voicemail.</param>
-        /// <param name="Pin">The user's PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security.</param>
+        /// <param name="AlertTimeoutSeconds">The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail.</param>
+        /// <param name="Pin">The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent to the user when a new voicemail is received.</param>
         public VoicemailUserPolicy(int? AlertTimeoutSeconds = null, string Pin = null, bool? SendEmailNotifications = null)
         {
@@ -44,18 +44,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of seconds to ring the user's phone before a call is transfered to voicemail
+        /// The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail
         /// </summary>
-        /// <value>The number of seconds to ring the user's phone before a call is transfered to voicemail</value>
+        /// <value>The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail</value>
         [DataMember(Name="alertTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertTimeoutSeconds { get; set; }
 
 
 
         /// <summary>
-        /// The user's PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security
+        /// The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security
         /// </summary>
-        /// <value>The user's PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security</value>
+        /// <value>The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security</value>
         [DataMember(Name="pin", EmitDefaultValue=false)]
         public string Pin { get; set; }
 

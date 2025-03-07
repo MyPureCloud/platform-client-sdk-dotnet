@@ -21,13 +21,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitalAction" /> class.
         /// </summary>
-        /// <param name="UpdateContactColumnActionSettings">The settings for an 'update contact column' action..</param>
-        /// <param name="DoNotSendActionSettings">The settings for a 'do not send' action..</param>
-        /// <param name="AppendToDncActionSettings">The settings for an 'Append to DNC' action..</param>
-        /// <param name="MarkContactUncontactableActionSettings">The settings for a 'mark contact uncontactable' action..</param>
-        /// <param name="MarkContactAddressUncontactableActionSettings">The settings for an 'mark contact address uncontactable' action..</param>
-        /// <param name="SetContentTemplateActionSettings">The settings for a 'Set content template' action..</param>
-        /// <param name="SetSmsPhoneNumberActionSettings">The settings for a 'set sms phone number' action..</param>
+        /// <param name="UpdateContactColumnActionSettings">The settings for an &#39;update contact column&#39; action..</param>
+        /// <param name="DoNotSendActionSettings">The settings for a &#39;do not send&#39; action..</param>
+        /// <param name="AppendToDncActionSettings">The settings for an &#39;Append to DNC&#39; action..</param>
+        /// <param name="MarkContactUncontactableActionSettings">The settings for a &#39;mark contact uncontactable&#39; action..</param>
+        /// <param name="MarkContactAddressUncontactableActionSettings">The settings for an &#39;mark contact address uncontactable&#39; action..</param>
+        /// <param name="SetContentTemplateActionSettings">The settings for a &#39;Set content template&#39; action..</param>
+        /// <param name="SetSmsPhoneNumberActionSettings">The settings for a &#39;set sms phone number&#39; action..</param>
         public DigitalAction(UpdateContactColumnActionSettings UpdateContactColumnActionSettings = null, Object DoNotSendActionSettings = null, AppendToDncActionSettings AppendToDncActionSettings = null, MarkContactUncontactableActionSettings MarkContactUncontactableActionSettings = null, Object MarkContactAddressUncontactableActionSettings = null, SetContentTemplateActionSettings SetContentTemplateActionSettings = null, SetSmsPhoneNumberActionSettings SetSmsPhoneNumberActionSettings = null)
         {
             this.UpdateContactColumnActionSettings = UpdateContactColumnActionSettings;
@@ -43,63 +43,63 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The settings for an 'update contact column' action.
+        /// The settings for an &#39;update contact column&#39; action.
         /// </summary>
-        /// <value>The settings for an 'update contact column' action.</value>
+        /// <value>The settings for an &#39;update contact column&#39; action.</value>
         [DataMember(Name="updateContactColumnActionSettings", EmitDefaultValue=false)]
         public UpdateContactColumnActionSettings UpdateContactColumnActionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'do not send' action.
+        /// The settings for a &#39;do not send&#39; action.
         /// </summary>
-        /// <value>The settings for a 'do not send' action.</value>
+        /// <value>The settings for a &#39;do not send&#39; action.</value>
         [DataMember(Name="doNotSendActionSettings", EmitDefaultValue=false)]
         public Object DoNotSendActionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for an 'Append to DNC' action.
+        /// The settings for an &#39;Append to DNC&#39; action.
         /// </summary>
-        /// <value>The settings for an 'Append to DNC' action.</value>
+        /// <value>The settings for an &#39;Append to DNC&#39; action.</value>
         [DataMember(Name="appendToDncActionSettings", EmitDefaultValue=false)]
         public AppendToDncActionSettings AppendToDncActionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'mark contact uncontactable' action.
+        /// The settings for a &#39;mark contact uncontactable&#39; action.
         /// </summary>
-        /// <value>The settings for a 'mark contact uncontactable' action.</value>
+        /// <value>The settings for a &#39;mark contact uncontactable&#39; action.</value>
         [DataMember(Name="markContactUncontactableActionSettings", EmitDefaultValue=false)]
         public MarkContactUncontactableActionSettings MarkContactUncontactableActionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for an 'mark contact address uncontactable' action.
+        /// The settings for an &#39;mark contact address uncontactable&#39; action.
         /// </summary>
-        /// <value>The settings for an 'mark contact address uncontactable' action.</value>
+        /// <value>The settings for an &#39;mark contact address uncontactable&#39; action.</value>
         [DataMember(Name="markContactAddressUncontactableActionSettings", EmitDefaultValue=false)]
         public Object MarkContactAddressUncontactableActionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'Set content template' action.
+        /// The settings for a &#39;Set content template&#39; action.
         /// </summary>
-        /// <value>The settings for a 'Set content template' action.</value>
+        /// <value>The settings for a &#39;Set content template&#39; action.</value>
         [DataMember(Name="setContentTemplateActionSettings", EmitDefaultValue=false)]
         public SetContentTemplateActionSettings SetContentTemplateActionSettings { get; set; }
 
 
 
         /// <summary>
-        /// The settings for a 'set sms phone number' action.
+        /// The settings for a &#39;set sms phone number&#39; action.
         /// </summary>
-        /// <value>The settings for a 'set sms phone number' action.</value>
+        /// <value>The settings for a &#39;set sms phone number&#39; action.</value>
         [DataMember(Name="setSmsPhoneNumberActionSettings", EmitDefaultValue=false)]
         public SetSmsPhoneNumberActionSettings SetSmsPhoneNumberActionSettings { get; set; }
 

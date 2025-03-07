@@ -1083,8 +1083,6 @@ namespace Example
 
 Get a user's chat settings
 
-GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:usersettings:view
@@ -1147,8 +1145,6 @@ namespace Example
 
 
 Get a user's chat settings
-
-GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires NO permissions: 
 
@@ -1466,8 +1462,6 @@ namespace Example
 
 Update a user's chat settings
 
-PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:usersettings:edit
@@ -1532,8 +1526,6 @@ namespace Example
 
 
 Update a user's chat settings
-
-PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires NO permissions: 
 
@@ -2102,4 +2094,4 @@ namespace Example
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

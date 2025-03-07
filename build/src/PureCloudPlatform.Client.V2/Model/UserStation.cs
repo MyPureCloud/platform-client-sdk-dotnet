@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssociatedUser">AssociatedUser.</param>
         /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DefaultUser">DefaultUser.</param>
-        /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \"edgeGroupId\": \"ffe7b15c-a9cc-4f4c-88f5-781327819a49\" }.</param>
+        /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }.</param>
         public UserStation(string Name = null, string Type = null, User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null, Dictionary<string, string> ProviderInfo = null)
         {
             this.Name = Name;
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Provider-specific info for this station, e.g. { \"edgeGroupId\": \"ffe7b15c-a9cc-4f4c-88f5-781327819a49\" }
+        /// Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }
         /// </summary>
-        /// <value>Provider-specific info for this station, e.g. { \"edgeGroupId\": \"ffe7b15c-a9cc-4f4c-88f5-781327819a49\" }</value>
+        /// <value>Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }</value>
         [DataMember(Name="providerInfo", EmitDefaultValue=false)]
         public Dictionary<string, string> ProviderInfo { get; set; }
 

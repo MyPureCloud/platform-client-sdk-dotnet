@@ -105,12 +105,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the activity code. Default activity codes will be created with an empty name.</param>
         /// <param name="IsActive">Whether this activity code is active or has been deleted.</param>
         /// <param name="IsDefault">Whether this is a default activity code.</param>
-        /// <param name="Category">The activity code's category..</param>
+        /// <param name="Category">The activity code&#39;s category..</param>
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints.</param>
-        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off..</param>
-        /// <param name="Metadata">Version metadata for the associated management unit's list of activity codes (required).</param>
+        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off..</param>
+        /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
         public ActivityCode(string Name = null, bool? IsActive = null, bool? IsDefault = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
@@ -202,18 +202,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.
+        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.
         /// </summary>
-        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.</value>
+        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.</value>
         [DataMember(Name="agentTimeOffSelectable", EmitDefaultValue=false)]
         public bool? AgentTimeOffSelectable { get; set; }
 
 
 
         /// <summary>
-        /// Version metadata for the associated management unit's list of activity codes
+        /// Version metadata for the associated management unit&#39;s list of activity codes
         /// </summary>
-        /// <value>Version metadata for the associated management unit's list of activity codes</value>
+        /// <value>Version metadata for the associated management unit&#39;s list of activity codes</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
 

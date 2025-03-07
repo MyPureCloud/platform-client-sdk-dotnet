@@ -31,10 +31,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventName">Represents the action the customer performed. Event types are created for each unique event name and can be faceted on in segment and outcome conditions. A valid event name must only contain alphanumeric characters and underscores. A good event name is typically an object followed by the action performed in past tense, e.g. page_viewed, order_completed, user_registered. (required).</param>
         /// <param name="Page">The webpage where the user interaction occurred. (required).</param>
         /// <param name="UserAgentString">Override for HTTP User-Agent string from request header (see https://tools.ietf.org/html/rfc1945#section-10.15)..</param>
-        /// <param name="Browser">Customer's browser..</param>
-        /// <param name="Device">Customer's device..</param>
+        /// <param name="Browser">Customer&#39;s browser..</param>
+        /// <param name="Device">Customer&#39;s device..</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
-        /// <param name="IpAddress">Customer's IP address..</param>
+        /// <param name="IpAddress">Customer&#39;s IP address..</param>
         /// <param name="ReferrerUrl">Identifies the referrer URL that originally generated the request for the current page being viewed..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. These attributes provide additional context about the event. For example, items_in_cart or subscription_level..</param>
         /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events, e.g. email, lastName, cellPhone. Traits are used to collect information for identity resolution. For example, the same person might be using an application on different devices which might create two sessions with different customerIds. Additional information can be provided as traits to help link those two sessions and customers to a single external contact through common identifiers that were submitted via a form fill, message, or other input in both sessions..</param>
@@ -95,18 +95,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Customer's browser.
+        /// Customer&#39;s browser.
         /// </summary>
-        /// <value>Customer's browser.</value>
+        /// <value>Customer&#39;s browser.</value>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public WebEventBrowser Browser { get; set; }
 
 
 
         /// <summary>
-        /// Customer's device.
+        /// Customer&#39;s device.
         /// </summary>
-        /// <value>Customer's device.</value>
+        /// <value>Customer&#39;s device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public WebEventDevice Device { get; set; }
 
@@ -122,9 +122,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Customer's IP address.
+        /// Customer&#39;s IP address.
         /// </summary>
-        /// <value>Customer's IP address.</value>
+        /// <value>Customer&#39;s IP address.</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 

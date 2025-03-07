@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CriteriaGroup" /> class.
         /// </summary>
-        /// <param name="And">These criteriaItems will be AND'd together to find a match..</param>
-        /// <param name="Or">These criteriaItems will be OR'd together to find a match..</param>
+        /// <param name="And">These criteriaItems will be AND&#39;d together to find a match..</param>
+        /// <param name="Or">These criteriaItems will be OR&#39;d together to find a match..</param>
         /// <param name="Not">These criteriaItems must all be false to find a match..</param>
         /// <param name="Criteria">A singular critieriaItem to match..</param>
         public CriteriaGroup(List<CriteriaItem> And = null, List<CriteriaItem> Or = null, List<CriteriaItem> Not = null, CriteriaItem Criteria = null)
@@ -37,18 +37,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// These criteriaItems will be AND'd together to find a match.
+        /// These criteriaItems will be AND&#39;d together to find a match.
         /// </summary>
-        /// <value>These criteriaItems will be AND'd together to find a match.</value>
+        /// <value>These criteriaItems will be AND&#39;d together to find a match.</value>
         [DataMember(Name="and", EmitDefaultValue=false)]
         public List<CriteriaItem> And { get; set; }
 
 
 
         /// <summary>
-        /// These criteriaItems will be OR'd together to find a match.
+        /// These criteriaItems will be OR&#39;d together to find a match.
         /// </summary>
-        /// <value>These criteriaItems will be OR'd together to find a match.</value>
+        /// <value>These criteriaItems will be OR&#39;d together to find a match.</value>
         [DataMember(Name="or", EmitDefaultValue=false)]
         public List<CriteriaItem> Or { get; set; }
 

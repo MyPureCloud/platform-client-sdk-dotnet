@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Dnis">The dialed number identification if it is available for this conversation..</param>
         /// <param name="DnisName">The dialed number identification name if it is available for this conversation..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
-        /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
+        /// <param name="SourceConfiguration">Metadata about the source of this communication&#39;s interaction. (required).</param>
         public ExternalEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string Ani = null, string AniName = null, string Dnis = null, string DnisName = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
         {
             this.EventId = EventId;
@@ -136,9 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Metadata about the source of this communication's interaction.
+        /// Metadata about the source of this communication&#39;s interaction.
         /// </summary>
-        /// <value>Metadata about the source of this communication's interaction.</value>
+        /// <value>Metadata about the source of this communication&#39;s interaction.</value>
         [DataMember(Name="sourceConfiguration", EmitDefaultValue=false)]
         public SourceConfiguration SourceConfiguration { get; set; }
 

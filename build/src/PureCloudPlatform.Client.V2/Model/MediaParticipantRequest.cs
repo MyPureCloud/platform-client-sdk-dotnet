@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MediaParticipantRequest" /> class.
         /// </summary>
         /// <param name="Wrapup">Wrap-up to assign to this participant..</param>
-        /// <param name="State">The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'..</param>
+        /// <param name="State">The state to update to set for this participant&#39;s communications.  Possible values are: &#39;connected&#39; and &#39;disconnected&#39;..</param>
         /// <param name="Recording">True to enable recording of this participant, otherwise false to disable recording..</param>
         /// <param name="Muted">True to mute this conversation participant..</param>
         /// <param name="Confined">True to confine this conversation participant.  Should only be used for ad-hoc conferences.</param>

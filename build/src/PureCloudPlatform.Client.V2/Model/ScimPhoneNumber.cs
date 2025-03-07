@@ -102,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimPhoneNumber" /> class.
         /// </summary>
-        /// <param name="Value">The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx..</param>
+        /// <param name="Value">The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext&#x3D;xxxxx..</param>
         /// <param name="Type">The type of phone number..</param>
         /// <param name="Primary">Indicates whether the phone number is the primary phone number..</param>
         public ScimPhoneNumber(string Value = null, TypeEnum? Type = null, bool? Primary = null)
@@ -116,9 +116,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx.
+        /// The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext&#x3D;xxxxx.
         /// </summary>
-        /// <value>The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx.</value>
+        /// <value>The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext&#x3D;xxxxx.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

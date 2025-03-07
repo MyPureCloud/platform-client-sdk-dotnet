@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ContestDataWinnersUsers" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
-        /// <param name="Rank">The Contest user's rank.</param>
+        /// <param name="Rank">The Contest user&#39;s rank.</param>
         public ContestDataWinnersUsers(string Id = null, int? Rank = null)
         {
             this.Id = Id;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Contest user's rank
+        /// The Contest user&#39;s rank
         /// </summary>
-        /// <value>The Contest user's rank</value>
+        /// <value>The Contest user&#39;s rank</value>
         [DataMember(Name="rank", EmitDefaultValue=false)]
         public int? Rank { get; set; }
 

@@ -27,17 +27,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentNotificationTemplate" /> class.
         /// </summary>
-        /// <param name="Id">The messaging provider template ID. For WhatsApp, 'namespace@name'..</param>
+        /// <param name="Id">The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;..</param>
         /// <param name="Language">Template language..</param>
         /// <param name="Header">The template header..</param>
         /// <param name="Body">The template body. (required).</param>
+        /// <param name="Buttons">Template buttons.</param>
         /// <param name="Footer">The template footer..</param>
-        public ContentNotificationTemplate(string Id = null, string Language = null, NotificationTemplateHeader Header = null, NotificationTemplateBody Body = null, NotificationTemplateFooter Footer = null)
+        public ContentNotificationTemplate(string Id = null, string Language = null, NotificationTemplateHeader Header = null, NotificationTemplateBody Body = null, List<NotificationTemplateButton> Buttons = null, NotificationTemplateFooter Footer = null)
         {
             this.Id = Id;
             this.Language = Language;
             this.Header = Header;
             this.Body = Body;
+            this.Buttons = Buttons;
             this.Footer = Footer;
             
         }
@@ -45,9 +47,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The messaging provider template ID. For WhatsApp, 'namespace@name'.
+        /// The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;.
         /// </summary>
-        /// <value>The messaging provider template ID. For WhatsApp, 'namespace@name'.</value>
+        /// <value>The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -81,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Template buttons
+        /// </summary>
+        /// <value>Template buttons</value>
+        [DataMember(Name="buttons", EmitDefaultValue=false)]
+        public List<NotificationTemplateButton> Buttons { get; set; }
+
+
+
+        /// <summary>
         /// The template footer.
         /// </summary>
         /// <value>The template footer.</value>
@@ -101,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  Buttons: ").Append(Buttons).Append("\n");
             sb.Append("  Footer: ").Append(Footer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -163,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Body.Equals(other.Body)
                 ) &&
                 (
+                    this.Buttons == other.Buttons ||
+                    this.Buttons != null &&
+                    this.Buttons.SequenceEqual(other.Buttons)
+                ) &&
+                (
                     this.Footer == other.Footer ||
                     this.Footer != null &&
                     this.Footer.Equals(other.Footer)
@@ -191,6 +208,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
+
+                if (this.Buttons != null)
+                    hash = hash * 59 + this.Buttons.GetHashCode();
 
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();

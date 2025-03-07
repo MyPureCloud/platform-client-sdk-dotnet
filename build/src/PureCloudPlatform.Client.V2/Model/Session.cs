@@ -255,19 +255,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShortId">Shortened numeric identifier of 4-6 digits..</param>
         /// <param name="OutcomeAchievements">List of the outcome achievements by the customer in this session..</param>
         /// <param name="SegmentAssignments">List of the segment assignments to the customer in this session..</param>
-        /// <param name="Attributes">Attributes projected from the session's event stream..</param>
-        /// <param name="AttributeLists">List-type attributes projected from the session's event stream..</param>
-        /// <param name="Browser">Customer's browser..</param>
-        /// <param name="Device">Customer's device..</param>
-        /// <param name="Geolocation">Customer's geolocation..</param>
-        /// <param name="IpAddress">Customer's IP address..</param>
-        /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
-        /// <param name="LastPage">The webpage where the customer's last web interaction occurred..</param>
+        /// <param name="Attributes">Attributes projected from the session&#39;s event stream..</param>
+        /// <param name="AttributeLists">List-type attributes projected from the session&#39;s event stream..</param>
+        /// <param name="Browser">Customer&#39;s browser..</param>
+        /// <param name="Device">Customer&#39;s device..</param>
+        /// <param name="Geolocation">Customer&#39;s geolocation..</param>
+        /// <param name="IpAddress">Customer&#39;s IP address..</param>
+        /// <param name="IpOrganization">Customer&#39;s IP-based organization or ISP name..</param>
+        /// <param name="LastPage">The webpage where the customer&#39;s last web interaction occurred..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="Referrer">Identifies the page URL that originally generated the request for the current page being viewed..</param>
         /// <param name="App">Application that the customer is interacting with (for app sessions)..</param>
         /// <param name="SdkLibrary">SDK library used to generate the events for the session (for app and web sessions)..</param>
-        /// <param name="NetworkConnectivity">Information relating to the device's network connectivity (for app sessions)..</param>
+        /// <param name="NetworkConnectivity">Information relating to the device&#39;s network connectivity (for app sessions)..</param>
         /// <param name="SearchTerms">Search terms associated with the session..</param>
         /// <param name="UserAgentString">String identifying the user agent..</param>
         /// <param name="DurationInSeconds">Indicates how long the session has been active (valid for an individual device)..</param>
@@ -285,7 +285,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastAcdOutcome">Last ACD outcome for the conversation..</param>
         /// <param name="Authenticated">Indicates whether or not the session is authenticated. (required).</param>
         /// <param name="DivisionIds">List of division IDs associated with the session..</param>
-        /// <param name="LastScreen">The app screen name where the customer's last app interaction occurred..</param>
+        /// <param name="LastScreen">The app screen name where the customer&#39;s last app interaction occurred..</param>
         /// <param name="CreatedDate">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="EndedDate">Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AwayDate">Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -423,72 +423,72 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Attributes projected from the session's event stream.
+        /// Attributes projected from the session&#39;s event stream.
         /// </summary>
-        /// <value>Attributes projected from the session's event stream.</value>
+        /// <value>Attributes projected from the session&#39;s event stream.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, CustomEventAttribute> Attributes { get; set; }
 
 
 
         /// <summary>
-        /// List-type attributes projected from the session's event stream.
+        /// List-type attributes projected from the session&#39;s event stream.
         /// </summary>
-        /// <value>List-type attributes projected from the session's event stream.</value>
+        /// <value>List-type attributes projected from the session&#39;s event stream.</value>
         [DataMember(Name="attributeLists", EmitDefaultValue=false)]
         public Dictionary<string, CustomEventAttributeList> AttributeLists { get; set; }
 
 
 
         /// <summary>
-        /// Customer's browser.
+        /// Customer&#39;s browser.
         /// </summary>
-        /// <value>Customer's browser.</value>
+        /// <value>Customer&#39;s browser.</value>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public Browser Browser { get; set; }
 
 
 
         /// <summary>
-        /// Customer's device.
+        /// Customer&#39;s device.
         /// </summary>
-        /// <value>Customer's device.</value>
+        /// <value>Customer&#39;s device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public Device Device { get; set; }
 
 
 
         /// <summary>
-        /// Customer's geolocation.
+        /// Customer&#39;s geolocation.
         /// </summary>
-        /// <value>Customer's geolocation.</value>
+        /// <value>Customer&#39;s geolocation.</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyGeolocation Geolocation { get; set; }
 
 
 
         /// <summary>
-        /// Customer's IP address.
+        /// Customer&#39;s IP address.
         /// </summary>
-        /// <value>Customer's IP address.</value>
+        /// <value>Customer&#39;s IP address.</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 
 
 
         /// <summary>
-        /// Customer's IP-based organization or ISP name.
+        /// Customer&#39;s IP-based organization or ISP name.
         /// </summary>
-        /// <value>Customer's IP-based organization or ISP name.</value>
+        /// <value>Customer&#39;s IP-based organization or ISP name.</value>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
 
 
 
         /// <summary>
-        /// The webpage where the customer's last web interaction occurred.
+        /// The webpage where the customer&#39;s last web interaction occurred.
         /// </summary>
-        /// <value>The webpage where the customer's last web interaction occurred.</value>
+        /// <value>The webpage where the customer&#39;s last web interaction occurred.</value>
         [DataMember(Name="lastPage", EmitDefaultValue=false)]
         public JourneyPage LastPage { get; set; }
 
@@ -531,9 +531,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Information relating to the device's network connectivity (for app sessions).
+        /// Information relating to the device&#39;s network connectivity (for app sessions).
         /// </summary>
-        /// <value>Information relating to the device's network connectivity (for app sessions).</value>
+        /// <value>Information relating to the device&#39;s network connectivity (for app sessions).</value>
         [DataMember(Name="networkConnectivity", EmitDefaultValue=false)]
         public NetworkConnectivity NetworkConnectivity { get; set; }
 
@@ -672,9 +672,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The app screen name where the customer's last app interaction occurred.
+        /// The app screen name where the customer&#39;s last app interaction occurred.
         /// </summary>
-        /// <value>The app screen name where the customer's last app interaction occurred.</value>
+        /// <value>The app screen name where the customer&#39;s last app interaction occurred.</value>
         [DataMember(Name="lastScreen", EmitDefaultValue=false)]
         public string LastScreen { get; set; }
 

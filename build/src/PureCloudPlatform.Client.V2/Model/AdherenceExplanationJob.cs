@@ -107,11 +107,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">The type of the adherence explanation job.</param>
         /// <param name="Status">The status of the adherence explanation job.</param>
-        /// <param name="AdherenceExplanation">The adherence explanation added or modified by the job once complete; may be null if status == 'Error'. Used if type is in [ 'AddExplanation', 'UpdateExplanation' ].</param>
-        /// <param name="DownloadUrl">A URL to fetch results of the job. Only set if status == 'Complete' and type is in [ 'QueryAgentExplanations', 'QueryBuExplanations' ].</param>
-        /// <param name="Error">Error details if status == 'Error'.</param>
-        /// <param name="AgentQueryResponseTemplate">Schema template for deserializing data returned from the downloadUrl. Use if type == 'QueryAgentExplanations'.</param>
-        /// <param name="BuQueryResponseTemplate">Schema template for deserializing data returned from the downloadUrl. Use if type == 'QueryBuExplanations'.</param>
+        /// <param name="AdherenceExplanation">The adherence explanation added or modified by the job once complete; may be null if status &#x3D;&#x3D; &#39;Error&#39;. Used if type is in [ &#39;AddExplanation&#39;, &#39;UpdateExplanation&#39; ].</param>
+        /// <param name="DownloadUrl">A URL to fetch results of the job. Only set if status &#x3D;&#x3D; &#39;Complete&#39; and type is in [ &#39;QueryAgentExplanations&#39;, &#39;QueryBuExplanations&#39; ].</param>
+        /// <param name="Error">Error details if status &#x3D;&#x3D; &#39;Error&#39;.</param>
+        /// <param name="AgentQueryResponseTemplate">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;QueryAgentExplanations&#39;.</param>
+        /// <param name="BuQueryResponseTemplate">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;QueryBuExplanations&#39;.</param>
         public AdherenceExplanationJob(TypeEnum? Type = null, StatusEnum? Status = null, AdherenceExplanationResponse AdherenceExplanation = null, string DownloadUrl = null, ErrorBody Error = null, AdherenceExplanationListingAgentQueryResponse AgentQueryResponseTemplate = null, AdherenceExplanationListingBuQueryResponse BuQueryResponseTemplate = null)
         {
             this.Type = Type;
@@ -140,45 +140,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The adherence explanation added or modified by the job once complete; may be null if status == 'Error'. Used if type is in [ 'AddExplanation', 'UpdateExplanation' ]
+        /// The adherence explanation added or modified by the job once complete; may be null if status &#x3D;&#x3D; &#39;Error&#39;. Used if type is in [ &#39;AddExplanation&#39;, &#39;UpdateExplanation&#39; ]
         /// </summary>
-        /// <value>The adherence explanation added or modified by the job once complete; may be null if status == 'Error'. Used if type is in [ 'AddExplanation', 'UpdateExplanation' ]</value>
+        /// <value>The adherence explanation added or modified by the job once complete; may be null if status &#x3D;&#x3D; &#39;Error&#39;. Used if type is in [ &#39;AddExplanation&#39;, &#39;UpdateExplanation&#39; ]</value>
         [DataMember(Name="adherenceExplanation", EmitDefaultValue=false)]
         public AdherenceExplanationResponse AdherenceExplanation { get; set; }
 
 
 
         /// <summary>
-        /// A URL to fetch results of the job. Only set if status == 'Complete' and type is in [ 'QueryAgentExplanations', 'QueryBuExplanations' ]
+        /// A URL to fetch results of the job. Only set if status &#x3D;&#x3D; &#39;Complete&#39; and type is in [ &#39;QueryAgentExplanations&#39;, &#39;QueryBuExplanations&#39; ]
         /// </summary>
-        /// <value>A URL to fetch results of the job. Only set if status == 'Complete' and type is in [ 'QueryAgentExplanations', 'QueryBuExplanations' ]</value>
+        /// <value>A URL to fetch results of the job. Only set if status &#x3D;&#x3D; &#39;Complete&#39; and type is in [ &#39;QueryAgentExplanations&#39;, &#39;QueryBuExplanations&#39; ]</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
 
 
 
         /// <summary>
-        /// Error details if status == 'Error'
+        /// Error details if status &#x3D;&#x3D; &#39;Error&#39;
         /// </summary>
-        /// <value>Error details if status == 'Error'</value>
+        /// <value>Error details if status &#x3D;&#x3D; &#39;Error&#39;</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public ErrorBody Error { get; set; }
 
 
 
         /// <summary>
-        /// Schema template for deserializing data returned from the downloadUrl. Use if type == 'QueryAgentExplanations'
+        /// Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;QueryAgentExplanations&#39;
         /// </summary>
-        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type == 'QueryAgentExplanations'</value>
+        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;QueryAgentExplanations&#39;</value>
         [DataMember(Name="agentQueryResponseTemplate", EmitDefaultValue=false)]
         public AdherenceExplanationListingAgentQueryResponse AgentQueryResponseTemplate { get; set; }
 
 
 
         /// <summary>
-        /// Schema template for deserializing data returned from the downloadUrl. Use if type == 'QueryBuExplanations'
+        /// Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;QueryBuExplanations&#39;
         /// </summary>
-        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type == 'QueryBuExplanations'</value>
+        /// <value>Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;QueryBuExplanations&#39;</value>
         [DataMember(Name="buQueryResponseTemplate", EmitDefaultValue=false)]
         public AdherenceExplanationListingBuQueryResponse BuQueryResponseTemplate { get; set; }
 

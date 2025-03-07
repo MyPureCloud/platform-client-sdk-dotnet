@@ -38,18 +38,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of user's scheduled activities
+        /// List of user&#39;s scheduled activities
         /// </summary>
-        /// <value>List of user's scheduled activities</value>
+        /// <value>List of user&#39;s scheduled activities</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<ScheduleActivity> Activities { get; private set; }
 
 
 
         /// <summary>
-        /// List of user's days off
+        /// List of user&#39;s days off
         /// </summary>
-        /// <value>List of user's days off</value>
+        /// <value>List of user&#39;s days off</value>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<FullDayTimeOffMarker> FullDayTimeOffMarkers { get; private set; }
 

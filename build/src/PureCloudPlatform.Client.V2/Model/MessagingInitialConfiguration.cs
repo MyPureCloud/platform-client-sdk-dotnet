@@ -105,10 +105,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended. (required).</param>
         /// <param name="FromAddress">Address for the participant on the sending side of the message conversation. If the address is a phone number, E.164 format is recommended. (required).</param>
         /// <param name="MessageType">The type of message platform from which the message originated..</param>
-        /// <param name="Held">Indicates that this communication's initial state is held..</param>
-        /// <param name="Alerting">Indicates that this communication's initial state is alerting. If false, the communication started in a connected state..</param>
-        /// <param name="Inbound">Indicates the direction of this communication with respect to the contact center. `true` means the communication is INBOUND. `false` means the communication is OUTBOUND..</param>
-        /// <param name="InvitedBy">The id of the communication (the \"peer\") that \"invited\" this communication, if this occurred..</param>
+        /// <param name="Held">Indicates that this communication&#39;s initial state is held..</param>
+        /// <param name="Alerting">Indicates that this communication&#39;s initial state is alerting. If false, the communication started in a connected state..</param>
+        /// <param name="Inbound">Indicates the direction of this communication with respect to the contact center. &#x60;true&#x60; means the communication is INBOUND. &#x60;false&#x60; means the communication is OUTBOUND..</param>
+        /// <param name="InvitedBy">The id of the communication (the \&quot;peer\&quot;) that \&quot;invited\&quot; this communication, if this occurred..</param>
         /// <param name="AdditionalInfo">Additional metadata about this session which should be recorded by the platform but which will not be indexed or searchable. Primarily for diagnostic value. Any information that needs to be accessible through other components like Analytics should be moved to dedicated fields..</param>
         public MessagingInitialConfiguration(string ToAddress = null, string FromAddress = null, MessageTypeEnum? MessageType = null, bool? Held = null, bool? Alerting = null, bool? Inbound = null, string InvitedBy = null, Dictionary<string, string> AdditionalInfo = null)
         {
@@ -146,36 +146,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates that this communication's initial state is held.
+        /// Indicates that this communication&#39;s initial state is held.
         /// </summary>
-        /// <value>Indicates that this communication's initial state is held.</value>
+        /// <value>Indicates that this communication&#39;s initial state is held.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
 
 
 
         /// <summary>
-        /// Indicates that this communication's initial state is alerting. If false, the communication started in a connected state.
+        /// Indicates that this communication&#39;s initial state is alerting. If false, the communication started in a connected state.
         /// </summary>
-        /// <value>Indicates that this communication's initial state is alerting. If false, the communication started in a connected state.</value>
+        /// <value>Indicates that this communication&#39;s initial state is alerting. If false, the communication started in a connected state.</value>
         [DataMember(Name="alerting", EmitDefaultValue=false)]
         public bool? Alerting { get; set; }
 
 
 
         /// <summary>
-        /// Indicates the direction of this communication with respect to the contact center. `true` means the communication is INBOUND. `false` means the communication is OUTBOUND.
+        /// Indicates the direction of this communication with respect to the contact center. &#x60;true&#x60; means the communication is INBOUND. &#x60;false&#x60; means the communication is OUTBOUND.
         /// </summary>
-        /// <value>Indicates the direction of this communication with respect to the contact center. `true` means the communication is INBOUND. `false` means the communication is OUTBOUND.</value>
+        /// <value>Indicates the direction of this communication with respect to the contact center. &#x60;true&#x60; means the communication is INBOUND. &#x60;false&#x60; means the communication is OUTBOUND.</value>
         [DataMember(Name="inbound", EmitDefaultValue=false)]
         public bool? Inbound { get; set; }
 
 
 
         /// <summary>
-        /// The id of the communication (the \"peer\") that \"invited\" this communication, if this occurred.
+        /// The id of the communication (the \&quot;peer\&quot;) that \&quot;invited\&quot; this communication, if this occurred.
         /// </summary>
-        /// <value>The id of the communication (the \"peer\") that \"invited\" this communication, if this occurred.</value>
+        /// <value>The id of the communication (the \&quot;peer\&quot;) that \&quot;invited\&quot; this communication, if this occurred.</value>
         [DataMember(Name="invitedBy", EmitDefaultValue=false)]
         public string InvitedBy { get; set; }
 

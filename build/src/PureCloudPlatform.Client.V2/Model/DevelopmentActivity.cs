@@ -226,9 +226,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user's percentage score for this activity
+        /// The user&#39;s percentage score for this activity
         /// </summary>
-        /// <value>The user's percentage score for this activity</value>
+        /// <value>The user&#39;s percentage score for this activity</value>
         [DataMember(Name="percentageScore", EmitDefaultValue=false)]
         public float? PercentageScore { get; private set; }
 

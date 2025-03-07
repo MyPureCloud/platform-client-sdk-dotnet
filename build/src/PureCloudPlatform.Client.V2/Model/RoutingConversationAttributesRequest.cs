@@ -23,8 +23,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Priority">Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0..</param>
         /// <param name="SkillIds">Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. []..</param>
-        /// <param name="LanguageId">Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \"\"..</param>
-        /// <param name="LabelId">Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \"\"..</param>
+        /// <param name="LanguageId">Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;..</param>
+        /// <param name="LabelId">Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \&quot;\&quot;..</param>
         /// <param name="RequestScoredAgents">RequestScoredAgents.</param>
         public RoutingConversationAttributesRequest(int? Priority = null, List<string> SkillIds = null, string LanguageId = null, string LabelId = null, List<RequestScoredAgent> RequestScoredAgents = null)
         {
@@ -57,18 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \"\".
+        /// Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;.
         /// </summary>
-        /// <value>Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \"\".</value>
+        /// <value>Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;.</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
 
 
 
         /// <summary>
-        /// Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \"\".
+        /// Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \&quot;\&quot;.
         /// </summary>
-        /// <value>Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \"\".</value>
+        /// <value>Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \&quot;\&quot;.</value>
         [DataMember(Name="labelId", EmitDefaultValue=false)]
         public string LabelId { get; set; }
 

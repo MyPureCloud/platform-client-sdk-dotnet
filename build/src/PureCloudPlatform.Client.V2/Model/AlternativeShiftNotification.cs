@@ -110,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NewState">The new state of the alternative shift trade, null if there was no change.</param>
         /// <param name="InitiatingUser">The user who initiated the alternative shift trade (required).</param>
         /// <param name="InitiatingShiftDate">The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="ReceivingUser">The user on the receiving this alternative shift trade.</param>
+        /// <param name="ReceivingUser">The user on the receiving side of this alternative shift trade.</param>
         /// <param name="ReceivingShiftDate">The start date and time of the receiving alternative shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public AlternativeShiftNotification(String WeekDate = null, GranularityEnum? Granularity = null, NewStateEnum? NewState = null, UserReference InitiatingUser = null, DateTime? InitiatingShiftDate = null, UserReference ReceivingUser = null, DateTime? ReceivingShiftDate = null)
         {
@@ -167,9 +167,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user on the receiving this alternative shift trade
+        /// The user on the receiving side of this alternative shift trade
         /// </summary>
-        /// <value>The user on the receiving this alternative shift trade</value>
+        /// <value>The user on the receiving side of this alternative shift trade</value>
         [DataMember(Name="receivingUser", EmitDefaultValue=false)]
         public UserReference ReceivingUser { get; set; }
 

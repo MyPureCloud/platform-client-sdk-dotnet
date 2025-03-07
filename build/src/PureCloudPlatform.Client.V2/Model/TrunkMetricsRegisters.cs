@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ProxyAddress">Server proxy address that this registers array element represents..</param>
         /// <param name="RegisterState">True if last REGISTER message had positive response; false if error response or no response..</param>
-        /// <param name="RegisterStateTime">ISO 8601 format UTC absolute date & time of the last change of the register state..</param>
+        /// <param name="RegisterStateTime">ISO 8601 format UTC absolute date &amp; time of the last change of the register state..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         public TrunkMetricsRegisters(string ProxyAddress = null, bool? RegisterState = null, DateTime? RegisterStateTime = null, TrunkErrorInfo ErrorInfo = null)
         {
@@ -55,9 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// ISO 8601 format UTC absolute date & time of the last change of the register state.
+        /// ISO 8601 format UTC absolute date &amp; time of the last change of the register state.
         /// </summary>
-        /// <value>ISO 8601 format UTC absolute date & time of the last change of the register state.</value>
+        /// <value>ISO 8601 format UTC absolute date &amp; time of the last change of the register state.</value>
         [DataMember(Name="registerStateTime", EmitDefaultValue=false)]
         public DateTime? RegisterStateTime { get; set; }
 

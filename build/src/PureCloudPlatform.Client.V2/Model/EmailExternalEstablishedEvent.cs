@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisplayName">A name for the participant if it is available for this conversation..</param>
         /// <param name="IncludeMessage">Indicates that established communication has an initial email. If true, the initial messagesSent value will be initialized to 1..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
-        /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
+        /// <param name="SourceConfiguration">Metadata about the source of this communication&#39;s interaction. (required).</param>
         public EmailExternalEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string DisplayName = null, bool? IncludeMessage = null, EmailInitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
         {
             this.EventId = EventId;
@@ -114,9 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Metadata about the source of this communication's interaction.
+        /// Metadata about the source of this communication&#39;s interaction.
         /// </summary>
-        /// <value>Metadata about the source of this communication's interaction.</value>
+        /// <value>Metadata about the source of this communication&#39;s interaction.</value>
         [DataMember(Name="sourceConfiguration", EmitDefaultValue=false)]
         public SourceConfiguration SourceConfiguration { get; set; }
 

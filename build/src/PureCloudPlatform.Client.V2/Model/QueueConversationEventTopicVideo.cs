@@ -301,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
         /// <param name="Msids">List of media stream ids.</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="AfterCallWork">A communication's after-call work data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
         public QueueConversationEventTopicVideo(StateEnum? State = null, InitialStateEnum? InitialState = null, QueueConversationEventTopicAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, Object PeerCount = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, QueueConversationEventTopicQueueMediaSettings QueueMediaSettings = null)
@@ -464,9 +464,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A communication's after-call work data.
+        /// A communication&#39;s after-call work data.
         /// </summary>
-        /// <value>A communication's after-call work data.</value>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationEventTopicAfterCallWork AfterCallWork { get; set; }
 

@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaskSelectors">Mask patterns that will apply to pages being shared.</param>
         /// <param name="Channels">Cobrowse channels for web messenger.</param>
         /// <param name="ReadonlySelectors">Readonly patterns that will apply to pages being shared.</param>
-        /// <param name="PauseCriteria">Pause criteria that will pause cobrowse if some of them are met in the user's URL.</param>
+        /// <param name="PauseCriteria">Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL.</param>
         public CobrowseSettings(bool? Enabled = null, bool? AllowAgentControl = null, bool? AllowAgentNavigation = null, bool? AllowDraw = null, List<string> MaskSelectors = null, List<ChannelsEnum> Channels = null, List<string> ReadonlySelectors = null, List<PauseCriteria> PauseCriteria = null)
         {
             this.Enabled = Enabled;
@@ -134,9 +134,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Pause criteria that will pause cobrowse if some of them are met in the user's URL
+        /// Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL
         /// </summary>
-        /// <value>Pause criteria that will pause cobrowse if some of them are met in the user's URL</value>
+        /// <value>Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL</value>
         [DataMember(Name="pauseCriteria", EmitDefaultValue=false)]
         public List<PauseCriteria> PauseCriteria { get; set; }
 

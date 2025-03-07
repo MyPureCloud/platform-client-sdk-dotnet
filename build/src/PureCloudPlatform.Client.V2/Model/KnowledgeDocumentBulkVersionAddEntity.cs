@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="RestoreFromVersionId">The globally unique identifier for the document version. If the value is provided, the document is restored to the given version..</param>
-        /// <param name="RestorePrevious">Indicates if the document's previous version will be restored.</param>
+        /// <param name="RestorePrevious">Indicates if the document&#39;s previous version will be restored.</param>
         public KnowledgeDocumentBulkVersionAddEntity(string Id = null, string RestoreFromVersionId = null, bool? RestorePrevious = null)
         {
             this.Id = Id;
@@ -53,9 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates if the document's previous version will be restored
+        /// Indicates if the document&#39;s previous version will be restored
         /// </summary>
-        /// <value>Indicates if the document's previous version will be restored</value>
+        /// <value>Indicates if the document&#39;s previous version will be restored</value>
         [DataMember(Name="restorePrevious", EmitDefaultValue=false)]
         public bool? RestorePrevious { get; set; }
 

@@ -29,13 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Outcome">The outcome achieved. (required).</param>
         /// <param name="UserAgentString">HTTP User-Agent string (see https://tools.ietf.org/html/rfc1945#section-10.15)..</param>
-        /// <param name="Browser">Customer's browser..</param>
-        /// <param name="Device">Customer's device..</param>
-        /// <param name="Geolocation">Customer's geolocation..</param>
-        /// <param name="IpAddress">Visitor's IP address..</param>
-        /// <param name="IpOrganization">Visitor's IP-based organization or ISP name..</param>
+        /// <param name="Browser">Customer&#39;s browser..</param>
+        /// <param name="Device">Customer&#39;s device..</param>
+        /// <param name="Geolocation">Customer&#39;s geolocation..</param>
+        /// <param name="IpAddress">Visitor&#39;s IP address..</param>
+        /// <param name="IpOrganization">Visitor&#39;s IP-based organization or ISP name..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
-        /// <param name="VisitReferrer">Visit's referrer..</param>
+        /// <param name="VisitReferrer">Visit&#39;s referrer..</param>
         /// <param name="VisitCreatedDate">When visit was created (e.g. timestamp of the first event in visit). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public OutcomeAchievedEvent(OutcomeAchievedEventOutcome Outcome = null, string UserAgentString = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyCampaign MktCampaign = null, Referrer VisitReferrer = null, DateTime? VisitCreatedDate = null)
         {
@@ -73,45 +73,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Customer's browser.
+        /// Customer&#39;s browser.
         /// </summary>
-        /// <value>Customer's browser.</value>
+        /// <value>Customer&#39;s browser.</value>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public Browser Browser { get; set; }
 
 
 
         /// <summary>
-        /// Customer's device.
+        /// Customer&#39;s device.
         /// </summary>
-        /// <value>Customer's device.</value>
+        /// <value>Customer&#39;s device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public Device Device { get; set; }
 
 
 
         /// <summary>
-        /// Customer's geolocation.
+        /// Customer&#39;s geolocation.
         /// </summary>
-        /// <value>Customer's geolocation.</value>
+        /// <value>Customer&#39;s geolocation.</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyGeolocation Geolocation { get; set; }
 
 
 
         /// <summary>
-        /// Visitor's IP address.
+        /// Visitor&#39;s IP address.
         /// </summary>
-        /// <value>Visitor's IP address.</value>
+        /// <value>Visitor&#39;s IP address.</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 
 
 
         /// <summary>
-        /// Visitor's IP-based organization or ISP name.
+        /// Visitor&#39;s IP-based organization or ISP name.
         /// </summary>
-        /// <value>Visitor's IP-based organization or ISP name.</value>
+        /// <value>Visitor&#39;s IP-based organization or ISP name.</value>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
 
@@ -127,9 +127,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Visit's referrer.
+        /// Visit&#39;s referrer.
         /// </summary>
-        /// <value>Visit's referrer.</value>
+        /// <value>Visit&#39;s referrer.</value>
         [DataMember(Name="visitReferrer", EmitDefaultValue=false)]
         public Referrer VisitReferrer { get; set; }
 

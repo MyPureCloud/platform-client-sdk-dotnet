@@ -223,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatMessageEntityListing> GetChatsRoomMessageWithHttpInfo (string roomJid, string messageIds);
 
         /// <summary>
-        /// Get a room's message history
+        /// Get a room&#39;s message history
         /// </summary>
         /// <remarks>
         /// 
@@ -238,7 +238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ChatMessageEntityListing GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null);
 
         /// <summary>
-        /// Get a room's message history
+        /// Get a room&#39;s message history
         /// </summary>
         /// <remarks>
         /// 
@@ -437,11 +437,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatMessageResponse> GetChatsUserMessagesWithHttpInfo (string userId, string limit = null, string before = null, string after = null);
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -450,11 +449,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ChatUserSettings GetChatsUserSettings (string userId);
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -463,11 +461,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatUserSettings> GetChatsUserSettingsWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatUserSettings</returns>
@@ -475,11 +472,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ChatUserSettings GetChatsUsersMeSettings ();
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatUserSettings</returns>
@@ -593,11 +589,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatSendMessageResponse> PatchChatsUserMessageWithHttpInfo (string userId, string messageId, SendMessageBody body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -607,11 +602,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ChatUserSettings PatchChatsUserSettings (string userId, ChatUserSettings body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -621,11 +615,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatUserSettings> PatchChatsUserSettingsWithHttpInfo (string userId, ChatUserSettings body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -634,11 +627,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ChatUserSettings PatchChatsUsersMeSettings (ChatUserSettings body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -1063,7 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessageAsyncWithHttpInfo (string roomJid, string messageIds);
 
         /// <summary>
-        /// Get a room's message history
+        /// Get a room&#39;s message history
         /// </summary>
         /// <remarks>
         /// 
@@ -1078,7 +1070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, string limit = null, string before = null, string after = null);
 
         /// <summary>
-        /// Get a room's message history
+        /// Get a room&#39;s message history
         /// </summary>
         /// <remarks>
         /// 
@@ -1277,11 +1269,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, string limit = null, string before = null, string after = null);
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -1290,11 +1281,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ChatUserSettings> GetChatsUserSettingsAsync (string userId);
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -1303,11 +1293,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatUserSettings>> GetChatsUserSettingsAsyncWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatUserSettings</returns>
@@ -1315,11 +1304,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ChatUserSettings> GetChatsUsersMeSettingsAsync ();
 
         /// <summary>
-        /// Get a user's chat settings
+        /// Get a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatUserSettings)</returns>
@@ -1433,11 +1421,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatSendMessageResponse>> PatchChatsUserMessageAsyncWithHttpInfo (string userId, string messageId, SendMessageBody body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -1447,11 +1434,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ChatUserSettings> PatchChatsUserSettingsAsync (string userId, ChatUserSettings body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -1461,11 +1447,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatUserSettings>> PatchChatsUserSettingsAsyncWithHttpInfo (string userId, ChatUserSettings body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -1474,11 +1459,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ChatUserSettings> PatchChatsUsersMeSettingsAsync (ChatUserSettings body);
 
         /// <summary>
-        /// Update a user's chat settings
+        /// Update a user&#39;s chat settings
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -3561,7 +3545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a room's message history 
+        /// Get a room&#39;s message history 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3578,7 +3562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a room's message history 
+        /// Get a room&#39;s message history 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3675,7 +3659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a room's message history 
+        /// Get a room&#39;s message history 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3693,7 +3677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a room's message history 
+        /// Get a room&#39;s message history 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5336,9 +5320,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -5351,9 +5334,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -5443,9 +5425,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -5459,9 +5440,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -5553,9 +5533,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatUserSettings</returns>
@@ -5567,9 +5546,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatUserSettings</returns>
@@ -5654,9 +5632,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatUserSettings</returns>
@@ -5669,9 +5646,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's chat settings 
+        /// Get a user&#39;s chat settings 
         /// 
-        /// GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatUserSettings)</returns>
@@ -6712,9 +6688,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -6728,9 +6703,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -6830,9 +6804,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -6847,9 +6820,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -6952,9 +6924,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -6967,9 +6938,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -7064,9 +7034,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -7080,9 +7049,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a user's chat settings 
+        /// Update a user&#39;s chat settings 
         /// 
-        /// PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>

@@ -78,8 +78,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyViewLinkTimeConstraint" /> class.
         /// </summary>
-        /// <param name="Unit">The unit for the link's time constraint.</param>
-        /// <param name="Value">The value for the link's time constraint.</param>
+        /// <param name="Unit">The unit for the link&#39;s time constraint.</param>
+        /// <param name="Value">The value for the link&#39;s time constraint.</param>
         public JourneyViewLinkTimeConstraint(UnitEnum? Unit = null, int? Value = null)
         {
             this.Unit = Unit;
@@ -92,9 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The value for the link's time constraint
+        /// The value for the link&#39;s time constraint
         /// </summary>
-        /// <value>The value for the link's time constraint</value>
+        /// <value>The value for the link&#39;s time constraint</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public int? Value { get; set; }
 

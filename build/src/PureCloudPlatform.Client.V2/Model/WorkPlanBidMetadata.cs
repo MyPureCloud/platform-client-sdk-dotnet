@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="CreatedBy">The user who created the associated entity (required).</param>
         /// <param name="CreatedDate">The date the entity created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="ModifiedBy">The user who modified the entity.</param>
+        /// <param name="ModifiedBy">The user who modified the entity. The id may be &#39;System&#39; if it was an automated process.</param>
         /// <param name="ModifiedDate">The entity last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public WorkPlanBidMetadata(UserReference CreatedBy = null, DateTime? CreatedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null)
         {
@@ -61,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user who modified the entity
+        /// The user who modified the entity. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The user who modified the entity</value>
+        /// <value>The user who modified the entity. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; set; }
 

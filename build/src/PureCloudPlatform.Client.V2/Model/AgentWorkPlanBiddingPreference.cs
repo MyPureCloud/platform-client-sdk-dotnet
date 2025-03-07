@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentWorkPlanBiddingPreference" /> class.
         /// </summary>
-        /// <param name="WorkPlan">The work plan that belongs to the agent's bid group (required).</param>
-        /// <param name="Priority">The agent's priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan.</param>
+        /// <param name="WorkPlan">The work plan that belongs to the agent&#39;s bid group (required).</param>
+        /// <param name="Priority">The agent&#39;s priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan.</param>
         public AgentWorkPlanBiddingPreference(WorkPlanReference WorkPlan = null, int? Priority = null)
         {
             this.WorkPlan = WorkPlan;
@@ -39,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The work plan that belongs to the agent's bid group
+        /// The work plan that belongs to the agent&#39;s bid group
         /// </summary>
-        /// <value>The work plan that belongs to the agent's bid group</value>
+        /// <value>The work plan that belongs to the agent&#39;s bid group</value>
         [DataMember(Name="workPlan", EmitDefaultValue=false)]
         public WorkPlanReference WorkPlan { get; set; }
 
 
 
         /// <summary>
-        /// The agent's priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan
+        /// The agent&#39;s priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan
         /// </summary>
-        /// <value>The agent's priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan</value>
+        /// <value>The agent&#39;s priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
 

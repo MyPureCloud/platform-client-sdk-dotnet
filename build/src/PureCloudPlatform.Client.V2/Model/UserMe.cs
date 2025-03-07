@@ -440,9 +440,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Geolocation settings for user's organization.
+        /// Geolocation settings for user&#39;s organization.
         /// </summary>
-        /// <value>Geolocation settings for user's organization.</value>
+        /// <value>Geolocation settings for user&#39;s organization.</value>
         [DataMember(Name="geolocationSettings", EmitDefaultValue=false)]
         public GeolocationSettings GeolocationSettings { get; private set; }
 
@@ -458,9 +458,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The first 100 non-divisioned presence definitions for user's organization.
+        /// The first 100 non-divisioned presence definitions for user&#39;s organization.
         /// </summary>
-        /// <value>The first 100 non-divisioned presence definitions for user's organization.</value>
+        /// <value>The first 100 non-divisioned presence definitions for user&#39;s organization.</value>
         [DataMember(Name="presenceDefinitions", EmitDefaultValue=false)]
         public List<OrganizationPresence> PresenceDefinitions { get; private set; }
 
@@ -476,18 +476,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The first 100 site locations for user's organization
+        /// The first 100 site locations for user&#39;s organization
         /// </summary>
-        /// <value>The first 100 site locations for user's organization</value>
+        /// <value>The first 100 site locations for user&#39;s organization</value>
         [DataMember(Name="locationDefinitions", EmitDefaultValue=false)]
         public List<LocationDefinition> LocationDefinitions { get; private set; }
 
 
 
         /// <summary>
-        /// The first 100 organization roles, with applicable permission policies, for user's organization.
+        /// The first 100 organization roles, with applicable permission policies, for user&#39;s organization.
         /// </summary>
-        /// <value>The first 100 organization roles, with applicable permission policies, for user's organization.</value>
+        /// <value>The first 100 organization roles, with applicable permission policies, for user&#39;s organization.</value>
         [DataMember(Name="orgAuthorization", EmitDefaultValue=false)]
         public List<DomainOrganizationRole> OrgAuthorization { get; private set; }
 
@@ -530,18 +530,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The first 50 routing skills for user's organizations
+        /// The first 50 routing skills for user&#39;s organizations
         /// </summary>
-        /// <value>The first 50 routing skills for user's organizations</value>
+        /// <value>The first 50 routing skills for user&#39;s organizations</value>
         [DataMember(Name="routingSkills", EmitDefaultValue=false)]
         public List<RoutingSkill> RoutingSkills { get; private set; }
 
 
 
         /// <summary>
-        /// The field config for all entities types of user's organization
+        /// The field config for all entities types of user&#39;s organization
         /// </summary>
-        /// <value>The field config for all entities types of user's organization</value>
+        /// <value>The field config for all entities types of user&#39;s organization</value>
         [DataMember(Name="fieldConfigs", EmitDefaultValue=false)]
         public FieldConfigs FieldConfigs { get; private set; }
 

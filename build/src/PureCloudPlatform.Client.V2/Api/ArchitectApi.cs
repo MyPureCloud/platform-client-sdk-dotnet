@@ -1009,6 +1009,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<IVR> GetArchitectIvrWithHttpInfo (string ivrId);
 
         /// <summary>
+        /// Get an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        IdentityResolutionConfig GetArchitectIvrIdentityresolution (string ivrId);
+
+        /// <summary>
+        /// Get an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        ApiResponse<IdentityResolutionConfig> GetArchitectIvrIdentityresolutionWithHttpInfo (string ivrId);
+
+        /// <summary>
         /// Get IVR configs.
         /// </summary>
         /// <remarks>
@@ -2259,7 +2285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowDivisionViewEntityListing> GetFlowsDivisionviewsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -2271,7 +2297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         FlowRuntimeExecution GetFlowsExecution (string flowExecutionId);
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -2281,6 +2307,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of FlowRuntimeExecution</returns>
         
         ApiResponse<FlowRuntimeExecution> GetFlowsExecutionWithHttpInfo (string flowExecutionId);
+
+        /// <summary>
+        /// Fetch Architect Export Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ArchitectExportJobStateResponse</returns>
+        
+        ArchitectExportJobStateResponse GetFlowsExportJob (string jobId, List<string> expand = null);
+
+        /// <summary>
+        /// Fetch Architect Export Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ApiResponse of ArchitectExportJobStateResponse</returns>
+        
+        ApiResponse<ArchitectExportJobStateResponse> GetFlowsExportJobWithHttpInfo (string jobId, List<string> expand = null);
 
         /// <summary>
         /// Start a process (job) to prepare a download of a singular flow execution data instance by Id
@@ -3455,7 +3507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataTable> PostFlowsDatatablesWithHttpInfo (DataTable body);
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -3467,7 +3519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         FlowExecutionLaunchResponse PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -3477,6 +3529,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of FlowExecutionLaunchResponse</returns>
         
         ApiResponse<FlowExecutionLaunchResponse> PostFlowsExecutionsWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
+
+        /// <summary>
+        /// Register Architect Export Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>RegisterArchitectExportJobResponse</returns>
+        
+        RegisterArchitectExportJobResponse PostFlowsExportJobs (RegisterArchitectExportJob body);
+
+        /// <summary>
+        /// Register Architect Export Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of RegisterArchitectExportJobResponse</returns>
+        
+        ApiResponse<RegisterArchitectExportJobResponse> PostFlowsExportJobsWithHttpInfo (RegisterArchitectExportJob body);
 
         /// <summary>
         /// Start a process (job) that will prepare a list of execution data IDs for download.
@@ -3653,6 +3729,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of IVR</returns>
         
         ApiResponse<IVR> PutArchitectIvrWithHttpInfo (string ivrId, IVR body);
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        IdentityResolutionConfig PutArchitectIvrIdentityresolution (string ivrId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        ApiResponse<IdentityResolutionConfig> PutArchitectIvrIdentityresolutionWithHttpInfo (string ivrId, IdentityResolutionConfig body);
 
         /// <summary>
         /// Update specified user prompt
@@ -4973,6 +5077,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<IVR>> GetArchitectIvrAsyncWithHttpInfo (string ivrId);
 
         /// <summary>
+        /// Get an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionConfig> GetArchitectIvrIdentityresolutionAsync (string ivrId);
+
+        /// <summary>
+        /// Get an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId);
+
+        /// <summary>
         /// Get IVR configs.
         /// </summary>
         /// <remarks>
@@ -6223,7 +6353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -6235,7 +6365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<FlowRuntimeExecution> GetFlowsExecutionAsync (string flowExecutionId);
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -6245,6 +6375,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (FlowRuntimeExecution)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<FlowRuntimeExecution>> GetFlowsExecutionAsyncWithHttpInfo (string flowExecutionId);
+
+        /// <summary>
+        /// Fetch Architect Export Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ArchitectExportJobStateResponse</returns>
+        
+        System.Threading.Tasks.Task<ArchitectExportJobStateResponse> GetFlowsExportJobAsync (string jobId, List<string> expand = null);
+
+        /// <summary>
+        /// Fetch Architect Export Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ApiResponse (ArchitectExportJobStateResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ArchitectExportJobStateResponse>> GetFlowsExportJobAsyncWithHttpInfo (string jobId, List<string> expand = null);
 
         /// <summary>
         /// Start a process (job) to prepare a download of a singular flow execution data instance by Id
@@ -7419,7 +7575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body);
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -7431,7 +7587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<FlowExecutionLaunchResponse> PostFlowsExecutionsAsync (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -7441,6 +7597,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (FlowExecutionLaunchResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<FlowExecutionLaunchResponse>> PostFlowsExecutionsAsyncWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
+
+        /// <summary>
+        /// Register Architect Export Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of RegisterArchitectExportJobResponse</returns>
+        
+        System.Threading.Tasks.Task<RegisterArchitectExportJobResponse> PostFlowsExportJobsAsync (RegisterArchitectExportJob body);
+
+        /// <summary>
+        /// Register Architect Export Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (RegisterArchitectExportJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<RegisterArchitectExportJobResponse>> PostFlowsExportJobsAsyncWithHttpInfo (RegisterArchitectExportJob body);
 
         /// <summary>
         /// Start a process (job) that will prepare a list of execution data IDs for download.
@@ -7617,6 +7797,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (IVR)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body);
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        System.Threading.Tasks.Task<IdentityResolutionConfig> PutArchitectIvrIdentityresolutionAsync (string ivrId, IdentityResolutionConfig body);
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId, IdentityResolutionConfig body);
 
         /// <summary>
         /// Update specified user prompt
@@ -16067,6 +16275,223 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
                 (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an IVR IdentityResolutionConfig. 
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        public IdentityResolutionConfig GetArchitectIvrIdentityresolution (string ivrId)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = GetArchitectIvrIdentityresolutionWithHttpInfo(ivrId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an IVR IdentityResolutionConfig. 
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        public ApiResponse< IdentityResolutionConfig > GetArchitectIvrIdentityresolutionWithHttpInfo (string ivrId)
+        { 
+            // verify the required parameter 'ivrId' is set
+            if (ivrId == null)
+                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetArchitectIvrIdentityresolution");
+
+            var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an IVR IdentityResolutionConfig. 
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetArchitectIvrIdentityresolutionAsync (string ivrId)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetArchitectIvrIdentityresolutionAsyncWithHttpInfo(ivrId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an IVR IdentityResolutionConfig. 
+        /// 
+        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId)
+        { 
+            // verify the required parameter 'ivrId' is set
+            if (ivrId == null)
+                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetArchitectIvrIdentityresolution");
+            
+
+            var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -25365,7 +25790,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25379,7 +25804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25470,7 +25895,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25485,7 +25910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25571,6 +25996,225 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FlowRuntimeExecution>(localVarStatusCode,
                 localVarHeaders,
                 (FlowRuntimeExecution) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowRuntimeExecution)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Fetch Architect Export Job Status 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ArchitectExportJobStateResponse</returns>
+        
+        public ArchitectExportJobStateResponse GetFlowsExportJob (string jobId, List<string> expand = null)
+        {
+             ApiResponse<ArchitectExportJobStateResponse> localVarResponse = GetFlowsExportJobWithHttpInfo(jobId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch Architect Export Job Status 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ApiResponse of ArchitectExportJobStateResponse</returns>
+        
+        public ApiResponse< ArchitectExportJobStateResponse > GetFlowsExportJobWithHttpInfo (string jobId, List<string> expand = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsExportJob");
+
+            var localVarPath = "/api/v2/flows/export/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExportJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ArchitectExportJobStateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ArchitectExportJobStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ArchitectExportJobStateResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Fetch Architect Export Job Status 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ArchitectExportJobStateResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ArchitectExportJobStateResponse> GetFlowsExportJobAsync (string jobId, List<string> expand = null)
+        {
+             ApiResponse<ArchitectExportJobStateResponse> localVarResponse = await GetFlowsExportJobAsyncWithHttpInfo(jobId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch Architect Export Job Status 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ApiResponse (ArchitectExportJobStateResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ArchitectExportJobStateResponse>> GetFlowsExportJobAsyncWithHttpInfo (string jobId, List<string> expand = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsExportJob");
+            
+
+            var localVarPath = "/api/v2/flows/export/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsExportJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ArchitectExportJobStateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ArchitectExportJobStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ArchitectExportJobStateResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35651,7 +36295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. 
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. 
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -35665,7 +36309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. 
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. 
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -35761,7 +36405,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. 
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. 
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -35776,7 +36420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. 
+        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. 
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -35867,6 +36511,229 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FlowExecutionLaunchResponse>(localVarStatusCode,
                 localVarHeaders,
                 (FlowExecutionLaunchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowExecutionLaunchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Register Architect Export Job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>RegisterArchitectExportJobResponse</returns>
+        
+        public RegisterArchitectExportJobResponse PostFlowsExportJobs (RegisterArchitectExportJob body)
+        {
+             ApiResponse<RegisterArchitectExportJobResponse> localVarResponse = PostFlowsExportJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Register Architect Export Job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of RegisterArchitectExportJobResponse</returns>
+        
+        public ApiResponse< RegisterArchitectExportJobResponse > PostFlowsExportJobsWithHttpInfo (RegisterArchitectExportJob body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsExportJobs");
+
+            var localVarPath = "/api/v2/flows/export/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RegisterArchitectExportJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RegisterArchitectExportJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegisterArchitectExportJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Register Architect Export Job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of RegisterArchitectExportJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<RegisterArchitectExportJobResponse> PostFlowsExportJobsAsync (RegisterArchitectExportJob body)
+        {
+             ApiResponse<RegisterArchitectExportJobResponse> localVarResponse = await PostFlowsExportJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Register Architect Export Job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (RegisterArchitectExportJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<RegisterArchitectExportJobResponse>> PostFlowsExportJobsAsyncWithHttpInfo (RegisterArchitectExportJob body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsExportJobs");
+            
+
+            var localVarPath = "/api/v2/flows/export/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsExportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RegisterArchitectExportJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RegisterArchitectExportJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegisterArchitectExportJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -37435,6 +38302,246 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
                 (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig. 
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>IdentityResolutionConfig</returns>
+        
+        public IdentityResolutionConfig PutArchitectIvrIdentityresolution (string ivrId, IdentityResolutionConfig body)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = PutArchitectIvrIdentityresolutionWithHttpInfo(ivrId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig. 
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        
+        public ApiResponse< IdentityResolutionConfig > PutArchitectIvrIdentityresolutionWithHttpInfo (string ivrId, IdentityResolutionConfig body)
+        { 
+            // verify the required parameter 'ivrId' is set
+            if (ivrId == null)
+                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->PutArchitectIvrIdentityresolution");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvrIdentityresolution");
+
+            var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectIvrIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig. 
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of IdentityResolutionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutArchitectIvrIdentityresolutionAsync (string ivrId, IdentityResolutionConfig body)
+        {
+             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutArchitectIvrIdentityresolutionAsyncWithHttpInfo(ivrId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an IVR IdentityResolutionConfig. 
+        /// 
+        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ivrId">IVR id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId, IdentityResolutionConfig body)
+        { 
+            // verify the required parameter 'ivrId' is set
+            if (ivrId == null)
+                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->PutArchitectIvrIdentityresolution");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvrIdentityresolution");
+            
+
+            var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectIvrIdentityresolution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

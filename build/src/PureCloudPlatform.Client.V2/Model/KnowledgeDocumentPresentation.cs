@@ -141,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown..</param>
         /// <param name="ConversationContext">Conversation context information if the documents were presented in the context of a conversation..</param>
         /// <param name="Application">The client application in which the documents were presented. (required).</param>
-        public KnowledgeDocumentPresentation(List<KnowledgeDocumentVersionVariationReference> Documents = null, string SearchId = null, QueryTypeEnum? QueryType = null, SurfacingMethodEnum? SurfacingMethod = null, KnowledgeConversationContext ConversationContext = null, KnowledgeSearchClientApplication Application = null)
+        public KnowledgeDocumentPresentation(List<PresentedKnowledgeDocument> Documents = null, string SearchId = null, QueryTypeEnum? QueryType = null, SurfacingMethodEnum? SurfacingMethod = null, KnowledgeConversationContext ConversationContext = null, KnowledgeSearchClientApplication Application = null)
         {
             this.Documents = Documents;
             this.SearchId = SearchId;
@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The presented documents</value>
         [DataMember(Name="documents", EmitDefaultValue=false)]
-        public List<KnowledgeDocumentVersionVariationReference> Documents { get; set; }
+        public List<PresentedKnowledgeDocument> Documents { get; set; }
 
 
 

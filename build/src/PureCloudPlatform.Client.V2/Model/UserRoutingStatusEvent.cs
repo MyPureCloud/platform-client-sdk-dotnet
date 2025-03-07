@@ -81,8 +81,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventId">A unique (UUID) eventId for this event (required).</param>
         /// <param name="EventDateTime">A timestamp as epoch representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="AgentId">Unique identifier of the agent. (required).</param>
-        /// <param name="Status">The agent's current routing status. (required).</param>
-        /// <param name="SourceId">The agent's source platform Id. (required).</param>
+        /// <param name="Status">The agent&#39;s current routing status. (required).</param>
+        /// <param name="SourceId">The agent&#39;s source platform Id. (required).</param>
         public UserRoutingStatusEvent(string EventId = null, DateTime? EventDateTime = null, string AgentId = null, StatusEnum? Status = null, string SourceId = null)
         {
             this.EventId = EventId;
@@ -125,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The agent's source platform Id.
+        /// The agent&#39;s source platform Id.
         /// </summary>
-        /// <value>The agent's source platform Id.</value>
+        /// <value>The agent&#39;s source platform Id.</value>
         [DataMember(Name="sourceId", EmitDefaultValue=false)]
         public string SourceId { get; set; }
 

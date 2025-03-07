@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AppendToDncActionSettings" /> class.
         /// </summary>
         /// <param name="Expire">Whether to expire the record appended to the DNC list. (required).</param>
-        /// <param name="ExpirationDuration">If 'expire' is set to true, how long to keep the record..</param>
+        /// <param name="ExpirationDuration">If &#39;expire&#39; is set to true, how long to keep the record..</param>
         /// <param name="ListType">The Dnc List Type to append entries to.</param>
         public AppendToDncActionSettings(bool? Expire = null, string ExpirationDuration = null, ListTypeEnum? ListType = null)
         {
@@ -83,9 +83,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// If 'expire' is set to true, how long to keep the record.
+        /// If &#39;expire&#39; is set to true, how long to keep the record.
         /// </summary>
-        /// <value>If 'expire' is set to true, how long to keep the record.</value>
+        /// <value>If &#39;expire&#39; is set to true, how long to keep the record.</value>
         [DataMember(Name="expirationDuration", EmitDefaultValue=false)]
         public string ExpirationDuration { get; set; }
 

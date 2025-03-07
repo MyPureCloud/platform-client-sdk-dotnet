@@ -417,7 +417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserInsightsTrend> GetGamificationInsightsUserTrendsWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -431,7 +431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Leaderboard GetGamificationLeaderboard (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -503,7 +503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OverallBestPoints> GetGamificationLeaderboardAllBestpointsWithHttpInfo (string filterType, string filterId);
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -514,7 +514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OverallBestPoints GetGamificationLeaderboardBestpoints ();
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -873,7 +873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AllTimePoints> GetGamificationScorecardsPointsAlltimeWithHttpInfo (String endWorkday);
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile
+        /// Average points of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -885,7 +885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SingleWorkdayAveragePoints GetGamificationScorecardsPointsAverage (String workday);
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile
+        /// Average points of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -1291,7 +1291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile
+        /// Average values of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -1304,7 +1304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SingleWorkdayAverageValues GetGamificationScorecardsValuesAverage (String workday, string timeZone = null);
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile
+        /// Average values of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -2203,7 +2203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserInsightsTrend>> GetGamificationInsightsUserTrendsAsyncWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -2217,7 +2217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAsync (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile
+        /// Leaderboard of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -2289,7 +2289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardAllBestpointsAsyncWithHttpInfo (string filterType, string filterId);
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -2300,7 +2300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardBestpointsAsync ();
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division
+        /// Best Points of the requesting user&#39;s current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -2659,7 +2659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsPointsAlltimeAsyncWithHttpInfo (String endWorkday);
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile
+        /// Average points of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -2671,7 +2671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SingleWorkdayAveragePoints> GetGamificationScorecardsPointsAverageAsync (String workday);
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile
+        /// Average points of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -3077,7 +3077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile
+        /// Average values of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -3090,7 +3090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsValuesAverageAsync (String workday, string timeZone = null);
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile
+        /// Average values of the requesting user&#39;s division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -6882,7 +6882,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6898,7 +6898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6996,7 +6996,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7013,7 +7013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard of the requesting user's division or performance profile 
+        /// Leaderboard of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7598,7 +7598,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7611,7 +7611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7697,7 +7697,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7711,7 +7711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points of the requesting user's current performance profile or division 
+        /// Best Points of the requesting user&#39;s current performance profile or division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10802,7 +10802,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile 
+        /// Average points of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10816,7 +10816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile 
+        /// Average points of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10907,7 +10907,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile 
+        /// Average points of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10922,7 +10922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average points of the requesting user's division or performance profile 
+        /// Average points of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14219,7 +14219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile 
+        /// Average values of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14234,7 +14234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile 
+        /// Average values of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14327,7 +14327,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile 
+        /// Average values of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14343,7 +14343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average values of the requesting user's division or performance profile 
+        /// Average values of the requesting user&#39;s division or performance profile 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

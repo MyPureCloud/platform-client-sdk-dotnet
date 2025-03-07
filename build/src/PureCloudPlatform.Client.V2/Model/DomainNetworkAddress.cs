@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DomainNetworkAddress" /> class.
         /// </summary>
         /// <param name="Type">The type of address..</param>
-        /// <param name="Address">An IPv4 or IPv6 IP address. When specifying an address of type \"ip\", use CIDR format for the subnet mask..</param>
+        /// <param name="Address">An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask..</param>
         /// <param name="Persistent">True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false..</param>
         /// <param name="Family">The address family for this address..</param>
         public DomainNetworkAddress(TypeEnum? Type = null, string Address = null, bool? Persistent = null, FamilyEnum? Family = null)
@@ -117,9 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An IPv4 or IPv6 IP address. When specifying an address of type \"ip\", use CIDR format for the subnet mask.
+        /// An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask.
         /// </summary>
-        /// <value>An IPv4 or IPv6 IP address. When specifying an address of type \"ip\", use CIDR format for the subnet mask.</value>
+        /// <value>An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
 

@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The environment ID (required).</param>
         /// <param name="Name">The environment name (required).</param>
         /// <param name="EnvironmentDesignation">The environment type, usually a value like SANDBOX or PRODUCTION (required).</param>
-        /// <param name="ExecutionHost">The host used to execute this bot, similar to 'api.nuance.com:443'.</param>
+        /// <param name="ExecutionHost">The host used to execute this bot, similar to &#39;api.nuance.com:443&#39;.</param>
         public NuanceEnvironment(string Id = null, string Name = null, string EnvironmentDesignation = null, string ExecutionHost = null)
         {
             this.Id = Id;
@@ -70,9 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The host used to execute this bot, similar to 'api.nuance.com:443'
+        /// The host used to execute this bot, similar to &#39;api.nuance.com:443&#39;
         /// </summary>
-        /// <value>The host used to execute this bot, similar to 'api.nuance.com:443'</value>
+        /// <value>The host used to execute this bot, similar to &#39;api.nuance.com:443&#39;</value>
         [DataMember(Name="executionHost", EmitDefaultValue=false)]
         public string ExecutionHost { get; set; }
 

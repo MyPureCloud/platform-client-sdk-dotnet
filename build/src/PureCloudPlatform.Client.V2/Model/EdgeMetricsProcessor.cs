@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EdgeMetricsProcessor" /> class.
         /// </summary>
         /// <param name="ActiveTimePct">Percent time processor was active..</param>
-        /// <param name="CpuId">Machine CPU identifier. 'total' will always be included in the array and is the total of all CPU resources..</param>
+        /// <param name="CpuId">Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources..</param>
         /// <param name="IdleTimePct">Percent time processor was idle..</param>
         /// <param name="PrivilegedTimePct">Percent time processor spent in privileged mode..</param>
         /// <param name="UserTimePct">Percent time processor spent in user mode..</param>
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Machine CPU identifier. 'total' will always be included in the array and is the total of all CPU resources.
+        /// Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources.
         /// </summary>
-        /// <value>Machine CPU identifier. 'total' will always be included in the array and is the total of all CPU resources.</value>
+        /// <value>Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources.</value>
         [DataMember(Name="cpuId", EmitDefaultValue=false)]
         public string CpuId { get; set; }
 

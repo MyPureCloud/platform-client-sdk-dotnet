@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CreateActivityCodeRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the activity code (required).</param>
-        /// <param name="Category">The activity code's category (required).</param>
+        /// <param name="Category">The activity code&#39;s category (required).</param>
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>

@@ -34,13 +34,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ErrorCode">Code of the error returned when the action fails..</param>
         /// <param name="ErrorMessage">Message of the error returned when the action fails..</param>
         /// <param name="UserAgentString">HTTP User-Agent string (see https://tools.ietf.org/html/rfc1945#section-10.15). (required).</param>
-        /// <param name="Browser">Customer's browser. (required).</param>
-        /// <param name="Device">Customer's device. (required).</param>
-        /// <param name="Geolocation">Customer's geolocation..</param>
-        /// <param name="IpAddress">Visitor's IP address..</param>
-        /// <param name="IpOrganization">Visitor's IP-based organization or ISP name..</param>
+        /// <param name="Browser">Customer&#39;s browser. (required).</param>
+        /// <param name="Device">Customer&#39;s device. (required).</param>
+        /// <param name="Geolocation">Customer&#39;s geolocation..</param>
+        /// <param name="IpAddress">Visitor&#39;s IP address..</param>
+        /// <param name="IpOrganization">Visitor&#39;s IP-based organization or ISP name..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
-        /// <param name="VisitReferrer">Visit's referrer..</param>
+        /// <param name="VisitReferrer">Visit&#39;s referrer..</param>
         public WebActionEvent(EventAction Action = null, ActionEventActionMap ActionMap = null, AddressableEntityRef ActionTarget = null, long? TimeToDisposition = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyCampaign MktCampaign = null, Referrer VisitReferrer = null)
         {
             this.Action = Action;
@@ -126,45 +126,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Customer's browser.
+        /// Customer&#39;s browser.
         /// </summary>
-        /// <value>Customer's browser.</value>
+        /// <value>Customer&#39;s browser.</value>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public Browser Browser { get; set; }
 
 
 
         /// <summary>
-        /// Customer's device.
+        /// Customer&#39;s device.
         /// </summary>
-        /// <value>Customer's device.</value>
+        /// <value>Customer&#39;s device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public Device Device { get; set; }
 
 
 
         /// <summary>
-        /// Customer's geolocation.
+        /// Customer&#39;s geolocation.
         /// </summary>
-        /// <value>Customer's geolocation.</value>
+        /// <value>Customer&#39;s geolocation.</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyGeolocation Geolocation { get; set; }
 
 
 
         /// <summary>
-        /// Visitor's IP address.
+        /// Visitor&#39;s IP address.
         /// </summary>
-        /// <value>Visitor's IP address.</value>
+        /// <value>Visitor&#39;s IP address.</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
 
 
 
         /// <summary>
-        /// Visitor's IP-based organization or ISP name.
+        /// Visitor&#39;s IP-based organization or ISP name.
         /// </summary>
-        /// <value>Visitor's IP-based organization or ISP name.</value>
+        /// <value>Visitor&#39;s IP-based organization or ISP name.</value>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
 
@@ -180,9 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Visit's referrer.
+        /// Visit&#39;s referrer.
         /// </summary>
-        /// <value>Visit's referrer.</value>
+        /// <value>Visit&#39;s referrer.</value>
         [DataMember(Name="visitReferrer", EmitDefaultValue=false)]
         public Referrer VisitReferrer { get; set; }
 

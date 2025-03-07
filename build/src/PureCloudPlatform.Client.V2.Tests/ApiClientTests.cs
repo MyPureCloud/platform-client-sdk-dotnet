@@ -20,6 +20,9 @@ using System.Net.Http;
 namespace PureCloudPlatform.Client.V2.Tests
 {
 
+///<Summary>
+/// Tests for ApiClient
+///</Summary>        
 [TestFixture]
 public class ApiClientTests
 {
@@ -38,6 +41,9 @@ public class ApiClientTests
     private static Object postBody = null;
     private static String contentType = null;
 
+    ///<Summary>
+    /// Init
+    ///</Summary>
     [OneTimeSetUp]
     public void Init()
     {
@@ -52,6 +58,9 @@ public class ApiClientTests
         PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
     }
 
+    ///<Summary>
+    /// InvokeTestWith_429
+    ///</Summary>
     [Test]
     public void InvokeTestWith_429()
     {
@@ -82,6 +91,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeTestWith_429_And_No_MaxRetryTime
+    ///</Summary>
     [Test]
     public void InvokeTestWith_429_And_No_MaxRetryTime()
     {
@@ -109,6 +121,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeTestWith_502
+    ///</Summary>
     [Test]
     public void InvokeTestWith_502()
     {
@@ -135,6 +150,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeTestWith_503
+    ///</Summary>
     [Test]
     public void InvokeTestWith_503()
     {
@@ -160,6 +178,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeTestWith_504
+    ///</Summary>
     [Test]
     public void InvokeTestWith_504()
     {
@@ -185,6 +206,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeTestWith_504_No_MaxRetryTime
+    ///</Summary>
     [Test]
     public void InvokeTestWith_504_No_MaxRetryTime()
     {
@@ -209,6 +233,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeAsyncTestWith_429
+    ///</Summary>
     [Test]
     public async Task InvokeAsyncTestWith_429()
     {
@@ -238,6 +265,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeAsyncTestWith_429_And_No_MaxRetryTime
+    ///</Summary>
     [Test]
     public async Task InvokeAsyncTestWith_429_And_No_MaxRetryTime()
     {
@@ -265,6 +295,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeAsyncTestWith_502
+    ///</Summary>
     [Test]
     public async Task InvokeAsyncTestWith_502()
     {
@@ -295,6 +328,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeAsyncTestWith_503
+    ///</Summary>
     [Test]
     public async Task InvokeAsyncTestWith_503()
     {
@@ -324,6 +360,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeAsyncTestWith_504
+    ///</Summary>
     [Test]
     public async Task InvokeAsyncTestWith_504()
     {
@@ -352,6 +391,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
+    ///<Summary>
+    /// InvokeAsyncTestWith_504_And_No_MaxRetryTime
+    ///</Summary>
     [Test]
     public async Task InvokeAsyncTestWith_504_And_No_MaxRetryTime()
     {
@@ -379,8 +421,9 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
-   
-
+    ///<Summary>
+    /// getRegion
+    ///</Summary>
     public Nullable<PureCloudRegionHosts> getRegion(String str = "http://api.mypurecloud.com")
     {
         switch (str)

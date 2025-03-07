@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user who last modified the associated entity
+        /// The user who last modified the associated entity. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The user who last modified the associated entity</value>
+        /// <value>The user who last modified the associated entity. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; private set; }
 
@@ -64,9 +64,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user who created the associated entity, if available
+        /// The user who created the associated entity, if available. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
-        /// <value>The user who created the associated entity, if available</value>
+        /// <value>The user who created the associated entity, if available. The id may be &#39;System&#39; if it was an automated process</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UserReference CreatedBy { get; private set; }
 

@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenMessageContent" /> class.
         /// </summary>
-        /// <param name="ContentType">Type of this content element. If contentType = \"Attachment\" only one item is allowed. (required).</param>
+        /// <param name="ContentType">Type of this content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed. (required).</param>
         /// <param name="Attachment">Attachment content..</param>
         public OpenMessageContent(ContentTypeEnum? ContentType = null, ConversationContentAttachment Attachment = null)
         {

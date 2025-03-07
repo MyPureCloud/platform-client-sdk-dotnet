@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The Celebration Type.</param>
         /// <param name="Title">The Celebration title.</param>
         /// <param name="Note">The Celebration note.</param>
-        /// <param name="SourceEntity">The celebration's source entity.</param>
+        /// <param name="SourceEntity">The celebration&#39;s source entity.</param>
         public Celebration(UserReference Recipient = null, UserReference CreatedBy = null, DateTime? DateCreated = null, TypeEnum? Type = null, string Title = null, string Note = null, SourceEntity SourceEntity = null)
         {
             this.Recipient = Recipient;
@@ -132,9 +132,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The celebration's source entity
+        /// The celebration&#39;s source entity
         /// </summary>
-        /// <value>The celebration's source entity</value>
+        /// <value>The celebration&#39;s source entity</value>
         [DataMember(Name="sourceEntity", EmitDefaultValue=false)]
         public SourceEntity SourceEntity { get; set; }
 

@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="IntegrationExport" /> class.
         /// </summary>
         /// <param name="Integration">The aws-s3-recording-bulk-actions-integration that the policy uses for exports. (required).</param>
-        /// <param name="ShouldExportScreenRecordings">True if the policy should export screen recordings in addition to the other conversation media. Default = true.</param>
+        /// <param name="ShouldExportScreenRecordings">True if the policy should export screen recordings in addition to the other conversation media. Default &#x3D; true.</param>
         public IntegrationExport(DomainEntityRef Integration = null, bool? ShouldExportScreenRecordings = null)
         {
             this.Integration = Integration;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// True if the policy should export screen recordings in addition to the other conversation media. Default = true
+        /// True if the policy should export screen recordings in addition to the other conversation media. Default &#x3D; true
         /// </summary>
-        /// <value>True if the policy should export screen recordings in addition to the other conversation media. Default = true</value>
+        /// <value>True if the policy should export screen recordings in addition to the other conversation media. Default &#x3D; true</value>
         [DataMember(Name="shouldExportScreenRecordings", EmitDefaultValue=false)]
         public bool? ShouldExportScreenRecordings { get; set; }
 

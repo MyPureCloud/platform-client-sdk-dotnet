@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OneOnOne" /> class.
         /// </summary>
-        /// <param name="PinnedMessages">Room's pinned messages.</param>
+        /// <param name="PinnedMessages">Room&#39;s pinned messages.</param>
         public OneOnOne(List<AddressableEntityRef> PinnedMessages = null)
         {
             this.PinnedMessages = PinnedMessages;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Room's pinned messages
+        /// Room&#39;s pinned messages
         /// </summary>
-        /// <value>Room's pinned messages</value>
+        /// <value>Room&#39;s pinned messages</value>
         [DataMember(Name="pinnedMessages", EmitDefaultValue=false)]
         public List<AddressableEntityRef> PinnedMessages { get; set; }
 

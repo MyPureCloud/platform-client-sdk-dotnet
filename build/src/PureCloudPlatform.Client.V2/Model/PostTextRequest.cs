@@ -114,6 +114,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Applebusinesschat,
             
             /// <summary>
+            /// Enum Apple for "Apple"
+            /// </summary>
+            [EnumMember(Value = "Apple")]
+            Apple,
+            
+            /// <summary>
             /// Enum Telegram for "Telegram"
             /// </summary>
             [EnumMember(Value = "Telegram")]
@@ -190,14 +196,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="BotId">ID of the bot to send the text to. (required).</param>
         /// <param name="BotAlias">Alias/Version of the bot.</param>
-        /// <param name="IntegrationId">the integration service id for the bot's credentials (required).</param>
-        /// <param name="BotSessionId">GUID for this bot's session (required).</param>
+        /// <param name="IntegrationId">the integration service id for the bot&#39;s credentials (required).</param>
+        /// <param name="BotSessionId">GUID for this bot&#39;s session (required).</param>
         /// <param name="PostTextMessage">Message to send to the bot (required).</param>
         /// <param name="LanguageCode">The launguage code the bot will run under.</param>
         /// <param name="BotSessionTimeoutMinutes">Override timeout for the bot session. This should be greater than 10 minutes..</param>
         /// <param name="BotChannels">The channels this bot is utilizing.</param>
         /// <param name="BotCorrelationId">Id for tracking the activity - this will be returned in the response.</param>
-        /// <param name="MessagingPlatformType">If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics.</param>
+        /// <param name="MessagingPlatformType">If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics.</param>
         /// <param name="AmazonLexRequest">Provider specific settings, if any.</param>
         /// <param name="GoogleDialogflow">Provider specific settings, if any.</param>
         /// <param name="GenesysBotConnector">Provider specific settings, if any.</param>
@@ -242,18 +248,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// the integration service id for the bot's credentials
+        /// the integration service id for the bot&#39;s credentials
         /// </summary>
-        /// <value>the integration service id for the bot's credentials</value>
+        /// <value>the integration service id for the bot&#39;s credentials</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
 
 
 
         /// <summary>
-        /// GUID for this bot's session
+        /// GUID for this bot&#39;s session
         /// </summary>
-        /// <value>GUID for this bot's session</value>
+        /// <value>GUID for this bot&#39;s session</value>
         [DataMember(Name="botSessionId", EmitDefaultValue=false)]
         public string BotSessionId { get; set; }
 

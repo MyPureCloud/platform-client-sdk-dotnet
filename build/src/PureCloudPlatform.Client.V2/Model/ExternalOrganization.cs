@@ -29,6 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The name of the company. (required).</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="CompanyType">CompanyType.</param>
         /// <param name="Industry">Industry.</param>
         /// <param name="PrimaryContactId">PrimaryContactId.</param>
@@ -47,10 +48,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Trustor">Trustor.</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
+        public ExternalOrganization(string Id = null, string Name = null, WritableStarrableDivision Division = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
             this.Name = Name;
+            this.Division = Division;
             this.CompanyType = CompanyType;
             this.Industry = Industry;
             this.PrimaryContactId = PrimaryContactId;
@@ -89,6 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the company.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -269,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  CompanyType: ").Append(CompanyType).Append("\n");
             sb.Append("  Industry: ").Append(Industry).Append("\n");
             sb.Append("  PrimaryContactId: ").Append(PrimaryContactId).Append("\n");
@@ -338,6 +350,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.CompanyType == other.CompanyType ||
@@ -457,6 +474,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.CompanyType != null)
                     hash = hash * 59 + this.CompanyType.GetHashCode();

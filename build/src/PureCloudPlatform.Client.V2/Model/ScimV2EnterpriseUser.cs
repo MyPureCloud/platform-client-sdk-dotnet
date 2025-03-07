@@ -23,9 +23,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Division">The division that the user belongs to..</param>
         /// <param name="Department">The department that the user belongs to..</param>
-        /// <param name="Manager">The user's manager..</param>
-        /// <param name="EmployeeNumber">The user's employee number..</param>
-        /// <param name="DateHire">The user's hire date. Format in JSON will be YYYY-MM-DD..</param>
+        /// <param name="Manager">The user&#39;s manager..</param>
+        /// <param name="EmployeeNumber">The user&#39;s employee number..</param>
+        /// <param name="DateHire">The user&#39;s hire date. Format in JSON will be YYYY-MM-DD..</param>
         public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null, string EmployeeNumber = null, string DateHire = null)
         {
             this.Division = Division;
@@ -57,27 +57,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user's manager.
+        /// The user&#39;s manager.
         /// </summary>
-        /// <value>The user's manager.</value>
+        /// <value>The user&#39;s manager.</value>
         [DataMember(Name="manager", EmitDefaultValue=false)]
         public Manager Manager { get; set; }
 
 
 
         /// <summary>
-        /// The user's employee number.
+        /// The user&#39;s employee number.
         /// </summary>
-        /// <value>The user's employee number.</value>
+        /// <value>The user&#39;s employee number.</value>
         [DataMember(Name="employeeNumber", EmitDefaultValue=false)]
         public string EmployeeNumber { get; set; }
 
 
 
         /// <summary>
-        /// The user's hire date. Format in JSON will be YYYY-MM-DD.
+        /// The user&#39;s hire date. Format in JSON will be YYYY-MM-DD.
         /// </summary>
-        /// <value>The user's hire date. Format in JSON will be YYYY-MM-DD.</value>
+        /// <value>The user&#39;s hire date. Format in JSON will be YYYY-MM-DD.</value>
         [DataMember(Name="dateHire", EmitDefaultValue=false)]
         public string DateHire { get; set; }
 

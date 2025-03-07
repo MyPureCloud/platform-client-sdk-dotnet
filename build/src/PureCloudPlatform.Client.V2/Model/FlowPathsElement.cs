@@ -136,12 +136,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Transfertosecureflow,
             
             /// <summary>
-            /// Enum Transfertounknown for "TransferToUnknown"
-            /// </summary>
-            [EnumMember(Value = "TransferToUnknown")]
-            Transfertounknown,
-            
-            /// <summary>
             /// Enum Transfertouser for "TransferToUser"
             /// </summary>
             [EnumMember(Value = "TransferToUser")]

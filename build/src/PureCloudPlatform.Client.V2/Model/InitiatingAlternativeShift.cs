@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InitiatingAlternativeShift" /> class.
         /// </summary>
-        /// <param name="Id">The ID of the shift from a user's schedule (required).</param>
-        /// <param name="StartDate">The start date for the shift in the user's schedule in ISO-8601 format. For example: YYYY-MM-DDThh:mm:ss.SSSZ (required).</param>
+        /// <param name="Id">The ID of the shift from a user&#39;s schedule (required).</param>
+        /// <param name="StartDate">The start date for the shift in the user&#39;s schedule in ISO-8601 format. For example: YYYY-MM-DDThh:mm:ss.SSSZ (required).</param>
         public InitiatingAlternativeShift(string Id = null, DateTime? StartDate = null)
         {
             this.Id = Id;
@@ -39,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the shift from a user's schedule
+        /// The ID of the shift from a user&#39;s schedule
         /// </summary>
-        /// <value>The ID of the shift from a user's schedule</value>
+        /// <value>The ID of the shift from a user&#39;s schedule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
 
 
         /// <summary>
-        /// The start date for the shift in the user's schedule in ISO-8601 format. For example: YYYY-MM-DDThh:mm:ss.SSSZ
+        /// The start date for the shift in the user&#39;s schedule in ISO-8601 format. For example: YYYY-MM-DDThh:mm:ss.SSSZ
         /// </summary>
-        /// <value>The start date for the shift in the user's schedule in ISO-8601 format. For example: YYYY-MM-DDThh:mm:ss.SSSZ</value>
+        /// <value>The start date for the shift in the user&#39;s schedule in ISO-8601 format. For example: YYYY-MM-DDThh:mm:ss.SSSZ</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
 

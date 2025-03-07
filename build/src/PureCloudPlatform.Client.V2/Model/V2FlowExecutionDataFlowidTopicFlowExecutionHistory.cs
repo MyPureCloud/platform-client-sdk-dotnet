@@ -108,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowIsDebug">Whether the flow that ran for this flow instance execution data was in debug mode..</param>
         /// <param name="ExecutionItemsTruncated">If true, the execution items in this event have been truncated to be deliverable..</param>
         /// <param name="FlowType">The flow type of the Architect flow that was run..</param>
-        /// <param name="FlowVersion">The version of the flow for this flow instance execution data. Typically this is a numeric value like 1.0 represented as a string but can also be 'debug'.</param>
+        /// <param name="FlowVersion">The version of the flow for this flow instance execution data. Typically this is a numeric value like 1.0 represented as a string but can also be &#39;debug&#39;.</param>
         /// <param name="MessageType">If applicable, the type of message platform from which the message originated..</param>
         /// <param name="InvokingContext">InvokingContext.</param>
         /// <param name="StartDateTime">The start date time for this flow instance execution data..</param>
@@ -246,9 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The version of the flow for this flow instance execution data. Typically this is a numeric value like 1.0 represented as a string but can also be 'debug'
+        /// The version of the flow for this flow instance execution data. Typically this is a numeric value like 1.0 represented as a string but can also be &#39;debug&#39;
         /// </summary>
-        /// <value>The version of the flow for this flow instance execution data. Typically this is a numeric value like 1.0 represented as a string but can also be 'debug'</value>
+        /// <value>The version of the flow for this flow instance execution data. Typically this is a numeric value like 1.0 represented as a string but can also be &#39;debug&#39;</value>
         [DataMember(Name="flowVersion", EmitDefaultValue=false)]
         public string FlowVersion { get; set; }
 

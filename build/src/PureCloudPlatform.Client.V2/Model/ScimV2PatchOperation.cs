@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScimV2PatchOperation" /> class.
         /// </summary>
         /// <param name="Op">The PATCH operation to perform. (required).</param>
-        /// <param name="Path">The attribute path that describes the target of the operation. Required for a \"remove\" operation..</param>
+        /// <param name="Path">The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation..</param>
         /// <param name="Value">The value to set in the path..</param>
         public ScimV2PatchOperation(OpEnum? Op = null, string Path = null, Object Value = null)
         {
@@ -82,9 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The attribute path that describes the target of the operation. Required for a \"remove\" operation.
+        /// The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation.
         /// </summary>
-        /// <value>The attribute path that describes the target of the operation. Required for a \"remove\" operation.</value>
+        /// <value>The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation.</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
 

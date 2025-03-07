@@ -125,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NumberOfTrailingLinesSkipped">Number of trailing lines to be skipped.</param>
         /// <param name="Header">If true indicates that delimited file has a header row, which can provide column names.</param>
         /// <param name="Delimiter">Kind of delimiter.</param>
-        /// <param name="DelimiterValue">Delimiter character, used only when delimiter=\"Custom\".</param>
+        /// <param name="DelimiterValue">Delimiter character, used only when delimiter&#x3D;\&quot;Custom\&quot;.</param>
         /// <param name="ColumnInformation">Columns specification.</param>
         /// <param name="PreprocessingRules">Preprocessing rules.</param>
         public FileSpecificationTemplate(string Name = null, int? Version = null, string Description = null, FormatEnum? Format = null, int? NumberOfHeadingLinesSkipped = null, int? NumberOfTrailingLinesSkipped = null, bool? Header = null, DelimiterEnum? Delimiter = null, string DelimiterValue = null, List<Column> ColumnInformation = null, List<PreprocessingRule> PreprocessingRules = null)
@@ -232,9 +232,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Delimiter character, used only when delimiter=\"Custom\"
+        /// Delimiter character, used only when delimiter&#x3D;\&quot;Custom\&quot;
         /// </summary>
-        /// <value>Delimiter character, used only when delimiter=\"Custom\"</value>
+        /// <value>Delimiter character, used only when delimiter&#x3D;\&quot;Custom\&quot;</value>
         [DataMember(Name="delimiterValue", EmitDefaultValue=false)]
         public string DelimiterValue { get; set; }
 

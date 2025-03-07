@@ -299,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="AfterCallWork">A communication's after-call work data..</param>
+        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
         public QueueConversationSocialExpressionEventTopicChat(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, string AvatarImageUrl = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationSocialExpressionEventTopicJourneyContext JourneyContext = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null)
@@ -441,9 +441,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A communication's after-call work data.
+        /// A communication&#39;s after-call work data.
         /// </summary>
-        /// <value>A communication's after-call work data.</value>
+        /// <value>A communication&#39;s after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork { get; set; }
 

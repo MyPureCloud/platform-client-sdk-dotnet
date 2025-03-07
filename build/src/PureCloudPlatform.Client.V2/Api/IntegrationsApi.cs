@@ -215,10 +215,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null);
+        PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Retrieves a single Action matching id.
@@ -229,10 +230,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
+        ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Retrieve a Draft
@@ -243,10 +245,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null);
+        PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Retrieve a Draft
@@ -257,10 +260,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
+        ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Get draft function settings for Action
@@ -961,7 +965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DialogflowAgent> GetIntegrationsSpeechDialogflowAgentWithHttpInfo (string agentId);
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -975,7 +979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DialogflowAgentSummaryEntityListing GetIntegrationsSpeechDialogflowAgents (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -1013,7 +1017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DialogflowCXAgent> GetIntegrationsSpeechDialogflowcxAgentWithHttpInfo (string agentId);
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -1027,7 +1031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DialogflowCXAgentSummaryEntityListing GetIntegrationsSpeechDialogflowcxAgents (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -1065,7 +1069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LexBotAlias> GetIntegrationsSpeechLexBotAliasWithHttpInfo (string aliasId);
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -1081,7 +1085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LexBotAliasEntityListing GetIntegrationsSpeechLexBotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -1097,7 +1101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LexBotAliasEntityListing> GetIntegrationsSpeechLexBotBotIdAliasesWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts
+        /// Get a list of Lex bots in the customers&#39; AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -1111,7 +1115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LexBotEntityListing GetIntegrationsSpeechLexBots (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts
+        /// Get a list of Lex bots in the customers&#39; AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -2015,7 +2019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TestExecutionResult> PostIntegrationsActionTestWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
         /// </summary>
         /// <remarks>
         /// 
@@ -2027,7 +2031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActions (PostActionInput body);
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
         /// </summary>
         /// <remarks>
         /// 
@@ -2555,10 +2559,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? includeConfig = null);
+        System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Retrieves a single Action matching id.
@@ -2569,10 +2574,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
+        System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Retrieve a Draft
@@ -2583,10 +2589,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? includeConfig = null);
+        System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Retrieve a Draft
@@ -2597,10 +2604,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
+        System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null);
 
         /// <summary>
         /// Get draft function settings for Action
@@ -3301,7 +3309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DialogflowAgent>> GetIntegrationsSpeechDialogflowAgentAsyncWithHttpInfo (string agentId);
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -3315,7 +3323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DialogflowAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowAgentsAsync (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -3353,7 +3361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DialogflowCXAgent>> GetIntegrationsSpeechDialogflowcxAgentAsyncWithHttpInfo (string agentId);
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -3367,7 +3375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DialogflowCXAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowcxAgentsAsync (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -3405,7 +3413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LexBotAlias>> GetIntegrationsSpeechLexBotAliasAsyncWithHttpInfo (string aliasId);
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -3421,7 +3429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LexBotAliasEntityListing> GetIntegrationsSpeechLexBotBotIdAliasesAsync (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -3437,7 +3445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LexBotAliasEntityListing>> GetIntegrationsSpeechLexBotBotIdAliasesAsyncWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts
+        /// Get a list of Lex bots in the customers&#39; AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -3451,7 +3459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LexBotEntityListing> GetIntegrationsSpeechLexBotsAsync (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts
+        /// Get a list of Lex bots in the customers&#39; AWS accounts
         /// </summary>
         /// <remarks>
         /// 
@@ -4355,7 +4363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionTestAsyncWithHttpInfo (string actionId, Object body, bool? flatten = null);
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
         /// </summary>
         /// <remarks>
         /// 
@@ -4367,7 +4375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionsAsync (PostActionInput body);
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
         /// </summary>
         /// <remarks>
         /// 
@@ -6335,12 +6343,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
+        public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         {
-             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = GetIntegrationsActionWithHttpInfo(actionId, expand, includeConfig);
+             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = GetIntegrationsActionWithHttpInfo(actionId, expand, flatten, includeConfig);
              return localVarResponse.Data;
         }
 
@@ -6351,10 +6360,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
+        public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -6394,6 +6404,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
             if (includeConfig != null) localVarQueryParams.Add(new Tuple<string, string>("includeConfig", this.Configuration.ApiClient.ParameterToString(includeConfig)));
 
             // Header params
@@ -6446,12 +6457,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? includeConfig = null)
+        public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         {
-             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = await GetIntegrationsActionAsyncWithHttpInfo(actionId, expand, includeConfig);
+             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = await GetIntegrationsActionAsyncWithHttpInfo(actionId, expand, flatten, includeConfig);
              return localVarResponse.Data;
 
         }
@@ -6463,10 +6475,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -6507,6 +6520,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
             if (includeConfig != null) localVarQueryParams.Add(new Tuple<string, string>("includeConfig", this.Configuration.ApiClient.ParameterToString(includeConfig)));
 
             // Header params
@@ -6560,12 +6574,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
+        public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         {
-             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = GetIntegrationsActionDraftWithHttpInfo(actionId, expand, includeConfig);
+             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = GetIntegrationsActionDraftWithHttpInfo(actionId, expand, flatten, includeConfig);
              return localVarResponse.Data;
         }
 
@@ -6576,10 +6591,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
+        public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -6619,6 +6635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
             if (includeConfig != null) localVarQueryParams.Add(new Tuple<string, string>("includeConfig", this.Configuration.ApiClient.ParameterToString(includeConfig)));
 
             // Header params
@@ -6671,12 +6688,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? includeConfig = null)
+        public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         {
-             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = await GetIntegrationsActionDraftAsyncWithHttpInfo(actionId, expand, includeConfig);
+             ApiResponse<PureCloudPlatform.Client.V2.Model.Action> localVarResponse = await GetIntegrationsActionDraftAsyncWithHttpInfo(actionId, expand, flatten, includeConfig);
              return localVarResponse.Data;
 
         }
@@ -6688,10 +6706,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="flatten">Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional, default to false)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
         { 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
@@ -6732,6 +6751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (flatten != null) localVarQueryParams.Add(new Tuple<string, string>("flatten", this.Configuration.ApiClient.ParameterToString(flatten)));
             if (includeConfig != null) localVarQueryParams.Add(new Tuple<string, string>("includeConfig", this.Configuration.ApiClient.ParameterToString(includeConfig)));
 
             // Header params
@@ -12363,7 +12383,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12379,7 +12399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12471,7 +12491,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12488,7 +12508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// Get a list of Dialogflow agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12794,7 +12814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12810,7 +12830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12902,7 +12922,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12919,7 +12939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// Get a list of Dialogflow CX agents in the customers&#39; Google accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13225,7 +13245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13243,7 +13263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13342,7 +13362,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13361,7 +13381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// Get a list of aliases for a bot in the customer&#39;s AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13462,7 +13482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts 
+        /// Get a list of Lex bots in the customers&#39; AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13478,7 +13498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts 
+        /// Get a list of Lex bots in the customers&#39; AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13570,7 +13590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts 
+        /// Get a list of Lex bots in the customers&#39; AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13587,7 +13607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Lex bots in the customers' AWS accounts 
+        /// Get a list of Lex bots in the customers&#39; AWS accounts 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21008,7 +21028,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21022,7 +21042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21118,7 +21138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -21133,7 +21153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
+        /// Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

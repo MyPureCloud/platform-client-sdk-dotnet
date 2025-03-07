@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ExternalMetricDataProcessedItem" /> class.
         /// </summary>
         /// <param name="UserId">The user ID. Must provide either userId or userEmail, but not both..</param>
-        /// <param name="UserEmail">The user main email used in user's GenesysCloud account. Must provide either userId or userEmail, but not both..</param>
+        /// <param name="UserEmail">The user main email used in user&#39;s GenesysCloud account. Must provide either userId or userEmail, but not both..</param>
         /// <param name="MetricId">The ID of the external metric definition (required).</param>
         /// <param name="DateOccurred">The date of the metric data. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="Value">The value of the metric data. When value is null, the metric data will be deleted. (required).</param>
@@ -95,9 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The user main email used in user's GenesysCloud account. Must provide either userId or userEmail, but not both.
+        /// The user main email used in user&#39;s GenesysCloud account. Must provide either userId or userEmail, but not both.
         /// </summary>
-        /// <value>The user main email used in user's GenesysCloud account. Must provide either userId or userEmail, but not both.</value>
+        /// <value>The user main email used in user&#39;s GenesysCloud account. Must provide either userId or userEmail, but not both.</value>
         [DataMember(Name="userEmail", EmitDefaultValue=false)]
         public string UserEmail { get; set; }
 

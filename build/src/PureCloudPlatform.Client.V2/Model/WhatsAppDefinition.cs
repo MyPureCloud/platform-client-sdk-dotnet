@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The messaging template name. (required).</param>
         /// <param name="Namespace">The messaging template namespace..</param>
-        /// <param name="Language">The messaging template language configured for this template. This is a WhatsApp specific value. For example, 'en_US' (required).</param>
+        /// <param name="Language">The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39; (required).</param>
         /// <param name="Buttons">List of buttons to be included in the WhatsApp messages channel.</param>
         /// <param name="MessageFooter">Footer for the message in the WhatsApp messages channel.</param>
         /// <param name="Header">Header for the message in the WhatsApp messages channel.</param>
@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The messaging template language configured for this template. This is a WhatsApp specific value. For example, 'en_US'
+        /// The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39;
         /// </summary>
-        /// <value>The messaging template language configured for this template. This is a WhatsApp specific value. For example, 'en_US'</value>
+        /// <value>The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39;</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
 

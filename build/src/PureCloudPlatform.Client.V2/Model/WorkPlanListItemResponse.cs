@@ -64,31 +64,31 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Whether the work plan is enabled for scheduling.</param>
         /// <param name="ConstrainWeeklyPaidTime">Whether the weekly paid time constraint is enabled for this work plan.</param>
         /// <param name="FlexibleWeeklyPaidTime">Whether the weekly paid time constraint is flexible for this work plan.</param>
-        /// <param name="WeeklyExactPaidMinutes">Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false.</param>
-        /// <param name="WeeklyMinimumPaidMinutes">Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true.</param>
-        /// <param name="WeeklyMaximumPaidMinutes">Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true.</param>
+        /// <param name="WeeklyExactPaidMinutes">Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false.</param>
+        /// <param name="WeeklyMinimumPaidMinutes">Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true.</param>
+        /// <param name="WeeklyMaximumPaidMinutes">Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true.</param>
         /// <param name="ConstrainPaidTimeGranularity">Whether paid time granularity is constrained for this work plan.</param>
-        /// <param name="PaidTimeGranularityMinutes">Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true.</param>
+        /// <param name="PaidTimeGranularityMinutes">Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity &#x3D;&#x3D; true.</param>
         /// <param name="ConstrainMinimumTimeBetweenShifts">Whether the minimum time between shifts constraint is enabled for this work plan.</param>
-        /// <param name="MinimumTimeBetweenShiftsMinutes">Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true.</param>
+        /// <param name="MinimumTimeBetweenShiftsMinutes">Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts &#x3D;&#x3D; true.</param>
         /// <param name="MaximumDays">Maximum number days in a week allowed to be scheduled for this work plan.</param>
         /// <param name="MinimumConsecutiveNonWorkingMinutesPerWeek">Minimum amount of consecutive non working minutes per week that agents who are assigned this work plan are allowed to have off.</param>
         /// <param name="ConstrainMaximumConsecutiveWorkingWeekends">Whether to constrain the maximum consecutive working weekends.</param>
         /// <param name="MaximumConsecutiveWorkingWeekends">The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work.</param>
         /// <param name="MinimumWorkingDaysPerWeek">The minimum number of days that agents assigned to a work plan must work per week.</param>
         /// <param name="ConstrainMaximumConsecutiveWorkingDays">Whether to constrain the maximum consecutive working days.</param>
-        /// <param name="MaximumConsecutiveWorkingDays">The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true.</param>
+        /// <param name="MaximumConsecutiveWorkingDays">The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays &#x3D;&#x3D; true.</param>
         /// <param name="MinimumShiftStartDistanceMinutes">The time period in minutes for the duration between the start times of two consecutive working days.</param>
         /// <param name="MinimumDaysOffPerPlanningPeriod">Minimum days off in the planning period.</param>
         /// <param name="MaximumDaysOffPerPlanningPeriod">Maximum days off in the planning period.</param>
         /// <param name="MinimumPaidMinutesPerPlanningPeriod">Minimum paid minutes in the planning period.</param>
         /// <param name="MaximumPaidMinutesPerPlanningPeriod">Maximum paid minutes in the planning period.</param>
-        /// <param name="OptionalDays">Optional days to schedule for this work plan. Populate with expand=details.</param>
+        /// <param name="OptionalDays">Optional days to schedule for this work plan. Populate with expand&#x3D;details.</param>
         /// <param name="ShiftStartVarianceType">This constraint ensures that an agent starts each workday within a user-defined time threshold.</param>
-        /// <param name="ShiftStartVariances">Variance in minutes among start times of shifts in this work plan. Populate with expand=details.</param>
-        /// <param name="Shifts">Shifts in this work plan. Populate with expand=details (defaults to empty list).</param>
-        /// <param name="Agents">Agents in this work plan. Populate with expand=details (defaults to empty list).</param>
-        /// <param name="AgentCount">Number of agents in this work plan.  Populate with expand=agentCount.</param>
+        /// <param name="ShiftStartVariances">Variance in minutes among start times of shifts in this work plan. Populate with expand&#x3D;details.</param>
+        /// <param name="Shifts">Shifts in this work plan. Populate with expand&#x3D;details (defaults to empty list).</param>
+        /// <param name="Agents">Agents in this work plan. Populate with expand&#x3D;details (defaults to empty list).</param>
+        /// <param name="AgentCount">Number of agents in this work plan.  Populate with expand&#x3D;agentCount.</param>
         /// <param name="Metadata">Version metadata for this work plan (required).</param>
         public WorkPlanListItemResponse(string Name = null, bool? Enabled = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, bool? ConstrainPaidTimeGranularity = null, int? PaidTimeGranularityMinutes = null, bool? ConstrainMinimumTimeBetweenShifts = null, int? MinimumTimeBetweenShiftsMinutes = null, int? MaximumDays = null, int? MinimumConsecutiveNonWorkingMinutesPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingWeekends = null, int? MaximumConsecutiveWorkingWeekends = null, int? MinimumWorkingDaysPerWeek = null, bool? ConstrainMaximumConsecutiveWorkingDays = null, int? MaximumConsecutiveWorkingDays = null, int? MinimumShiftStartDistanceMinutes = null, int? MinimumDaysOffPerPlanningPeriod = null, int? MaximumDaysOffPerPlanningPeriod = null, int? MinimumPaidMinutesPerPlanningPeriod = null, int? MaximumPaidMinutesPerPlanningPeriod = null, SetWrapperDayOfWeek OptionalDays = null, ShiftStartVarianceTypeEnum? ShiftStartVarianceType = null, ListWrapperShiftStartVariance ShiftStartVariances = null, List<WorkPlanShift> Shifts = null, List<DeletableUserReference> Agents = null, int? AgentCount = null, WfmVersionedEntityMetadata Metadata = null)
         {
@@ -181,27 +181,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false
+        /// Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false
         /// </summary>
-        /// <value>Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false</value>
+        /// <value>Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false</value>
         [DataMember(Name="weeklyExactPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyExactPaidMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
+        /// Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true</value>
+        /// <value>Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true</value>
         [DataMember(Name="weeklyMinimumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMinimumPaidMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
+        /// Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true</value>
+        /// <value>Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true</value>
         [DataMember(Name="weeklyMaximumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMaximumPaidMinutes { get; set; }
 
@@ -217,9 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true
+        /// Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true</value>
+        /// <value>Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity &#x3D;&#x3D; true</value>
         [DataMember(Name="paidTimeGranularityMinutes", EmitDefaultValue=false)]
         public int? PaidTimeGranularityMinutes { get; set; }
 
@@ -235,9 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true
+        /// Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts &#x3D;&#x3D; true
         /// </summary>
-        /// <value>Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true</value>
+        /// <value>Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts &#x3D;&#x3D; true</value>
         [DataMember(Name="minimumTimeBetweenShiftsMinutes", EmitDefaultValue=false)]
         public int? MinimumTimeBetweenShiftsMinutes { get; set; }
 
@@ -298,9 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true
+        /// The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays &#x3D;&#x3D; true
         /// </summary>
-        /// <value>The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true</value>
+        /// <value>The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays &#x3D;&#x3D; true</value>
         [DataMember(Name="maximumConsecutiveWorkingDays", EmitDefaultValue=false)]
         public int? MaximumConsecutiveWorkingDays { get; set; }
 
@@ -352,9 +352,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Optional days to schedule for this work plan. Populate with expand=details
+        /// Optional days to schedule for this work plan. Populate with expand&#x3D;details
         /// </summary>
-        /// <value>Optional days to schedule for this work plan. Populate with expand=details</value>
+        /// <value>Optional days to schedule for this work plan. Populate with expand&#x3D;details</value>
         [DataMember(Name="optionalDays", EmitDefaultValue=false)]
         public SetWrapperDayOfWeek OptionalDays { get; set; }
 
@@ -363,36 +363,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Variance in minutes among start times of shifts in this work plan. Populate with expand=details
+        /// Variance in minutes among start times of shifts in this work plan. Populate with expand&#x3D;details
         /// </summary>
-        /// <value>Variance in minutes among start times of shifts in this work plan. Populate with expand=details</value>
+        /// <value>Variance in minutes among start times of shifts in this work plan. Populate with expand&#x3D;details</value>
         [DataMember(Name="shiftStartVariances", EmitDefaultValue=false)]
         public ListWrapperShiftStartVariance ShiftStartVariances { get; set; }
 
 
 
         /// <summary>
-        /// Shifts in this work plan. Populate with expand=details (defaults to empty list)
+        /// Shifts in this work plan. Populate with expand&#x3D;details (defaults to empty list)
         /// </summary>
-        /// <value>Shifts in this work plan. Populate with expand=details (defaults to empty list)</value>
+        /// <value>Shifts in this work plan. Populate with expand&#x3D;details (defaults to empty list)</value>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
         public List<WorkPlanShift> Shifts { get; set; }
 
 
 
         /// <summary>
-        /// Agents in this work plan. Populate with expand=details (defaults to empty list)
+        /// Agents in this work plan. Populate with expand&#x3D;details (defaults to empty list)
         /// </summary>
-        /// <value>Agents in this work plan. Populate with expand=details (defaults to empty list)</value>
+        /// <value>Agents in this work plan. Populate with expand&#x3D;details (defaults to empty list)</value>
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<DeletableUserReference> Agents { get; set; }
 
 
 
         /// <summary>
-        /// Number of agents in this work plan.  Populate with expand=agentCount
+        /// Number of agents in this work plan.  Populate with expand&#x3D;agentCount
         /// </summary>
-        /// <value>Number of agents in this work plan.  Populate with expand=agentCount</value>
+        /// <value>Number of agents in this work plan.  Populate with expand&#x3D;agentCount</value>
         [DataMember(Name="agentCount", EmitDefaultValue=false)]
         public int? AgentCount { get; set; }
 

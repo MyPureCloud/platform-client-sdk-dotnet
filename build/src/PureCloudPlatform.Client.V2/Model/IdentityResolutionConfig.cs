@@ -27,9 +27,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IdentityResolutionConfig" /> class.
         /// </summary>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ResolveIdentities">Whether the channel should resolve identities (required).</param>
-        public IdentityResolutionConfig(bool? ResolveIdentities = null)
+        public IdentityResolutionConfig(WritableStarrableDivision Division = null, bool? ResolveIdentities = null)
         {
+            this.Division = Division;
             this.ResolveIdentities = ResolveIdentities;
             
         }
@@ -42,6 +44,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class IdentityResolutionConfig {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ResolveIdentities: ").Append(ResolveIdentities).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -120,6 +132,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.ResolveIdentities == other.ResolveIdentities ||
                     this.ResolveIdentities != null &&
                     this.ResolveIdentities.Equals(other.ResolveIdentities)
@@ -144,6 +161,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.ResolveIdentities != null)
                     hash = hash * 59 + this.ResolveIdentities.GetHashCode();

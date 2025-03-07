@@ -139,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SearchId">The search that surfaced the documents that were presented..</param>
         /// <param name="QueryType">The type of the query that surfaced the documents..</param>
         /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown..</param>
-        public KnowledgeGuestDocumentPresentation(List<KnowledgeDocumentVersionVariationReference> Documents = null, string SearchId = null, QueryTypeEnum? QueryType = null, SurfacingMethodEnum? SurfacingMethod = null)
+        public KnowledgeGuestDocumentPresentation(List<PresentedKnowledgeDocument> Documents = null, string SearchId = null, QueryTypeEnum? QueryType = null, SurfacingMethodEnum? SurfacingMethod = null)
         {
             this.Documents = Documents;
             this.SearchId = SearchId;
@@ -155,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The presented documents</value>
         [DataMember(Name="documents", EmitDefaultValue=false)]
-        public List<KnowledgeDocumentVersionVariationReference> Documents { get; set; }
+        public List<PresentedKnowledgeDocument> Documents { get; set; }
 
 
 

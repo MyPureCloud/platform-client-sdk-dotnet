@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **EventDefinition** | [**AddressableEntityRef**](AddressableEntityRef) | The event that occurred. | [optional] |
 | **EntityId** | **string** | The unique identifier for the entity | [optional] |
+| **EntityToken** | **string** | A token representing the entity | [optional] |
 | **EntityName** | **string** | The name for the entity | [optional] |
 | **PreviousValue** | **string** | The value prior to the event | [optional] |
 | **CurrentValue** | **string** | The changed value following the event | [optional] |
@@ -19,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">Specifies which Bot Flow to launch. (required).</param>
         /// <param name="ExternalSessionId">The ID of the external session that is associated with the bot flow. (required).</param>
         /// <param name="ConversationId">A conversation ID to associate with the bot flow, if available..</param>
-        /// <param name="InputData">Input values to the flow. Valid values are defined by the flow's input JSON schema..</param>
+        /// <param name="InputData">Input values to the flow. Valid values are defined by the flow&#39;s input JSON schema..</param>
         /// <param name="Channel">Channel information relevant to the bot flow. (required).</param>
         /// <param name="Language">The language that the bot will use in the session. Validated against list of supported languages and if the value is omitted or is invalid, the default language will be used..</param>
         public TextBotFlowLaunchRequest(TextBotFlow Flow = null, string ExternalSessionId = null, string ConversationId = null, TextBotInputOutputData InputData = null, TextBotChannel Channel = null, string Language = null)
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Input values to the flow. Valid values are defined by the flow's input JSON schema.
+        /// Input values to the flow. Valid values are defined by the flow&#39;s input JSON schema.
         /// </summary>
-        /// <value>Input values to the flow. Valid values are defined by the flow's input JSON schema.</value>
+        /// <value>Input values to the flow. Valid values are defined by the flow&#39;s input JSON schema.</value>
         [DataMember(Name="inputData", EmitDefaultValue=false)]
         public TextBotInputOutputData InputData { get; set; }
 

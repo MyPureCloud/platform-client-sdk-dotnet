@@ -225,7 +225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimV2SchemaListResponse> GetScimSchemasWithHttpInfo (string filter = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -237,7 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ScimServiceProviderConfig GetScimServiceproviderconfig (string ifNoneMatch = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -467,7 +467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimV2SchemaListResponse> GetScimV2SchemasWithHttpInfo (string filter = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -479,7 +479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ScimServiceProviderConfig GetScimV2Serviceproviderconfig (string ifNoneMatch = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -1037,7 +1037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimV2SchemaListResponse>> GetScimSchemasAsyncWithHttpInfo (string filter = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -1049,7 +1049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ScimServiceProviderConfig> GetScimServiceproviderconfigAsync (string ifNoneMatch = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -1279,7 +1279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimV2SchemaListResponse>> GetScimV2SchemasAsyncWithHttpInfo (string filter = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -1291,7 +1291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ScimServiceProviderConfig> GetScimV2ServiceproviderconfigAsync (string ifNoneMatch = null);
 
         /// <summary>
-        /// Get a service provider's configuration
+        /// Get a service provider&#39;s configuration
         /// </summary>
         /// <remarks>
         /// 
@@ -3500,7 +3500,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3514,7 +3514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3604,7 +3604,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3619,7 +3619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5512,7 +5512,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5526,7 +5526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5616,7 +5616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5631,7 +5631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a service provider's configuration 
+        /// Get a service provider&#39;s configuration 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
