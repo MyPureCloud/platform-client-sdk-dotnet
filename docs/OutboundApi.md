@@ -7005,7 +7005,7 @@ void (empty response body)
 
 ## PatchOutboundSettings
 
-> void PatchOutboundSettings (OutboundSettings body)
+> void PatchOutboundSettings (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null)
 
 
 Update the outbound settings for this organization
@@ -7037,11 +7037,12 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var body = new OutboundSettings(); // OutboundSettings | outboundSettings
+            var useMaxCallsPerAgentDecimal = useMaxCallsPerAgentDecimal_example;  // bool? | Use maxCallsPerAgent with decimal precision (optional) 
 
             try
             { 
                 // Update the outbound settings for this organization
-                apiInstance.PatchOutboundSettings(body);
+                apiInstance.PatchOutboundSettings(body, useMaxCallsPerAgentDecimal);
             }
             catch (Exception e)
             {
@@ -7058,6 +7059,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OutboundSettings**](OutboundSettings)| outboundSettings |  |
+| **useMaxCallsPerAgentDecimal** | **bool?**| Use maxCallsPerAgent with decimal precision | [optional] <br />**Values**: true, false |
 
 ### Return type
 
@@ -7568,7 +7570,7 @@ namespace Example
 
 ## PostOutboundCampaigns
 
-> [**Campaign**](Campaign) PostOutboundCampaigns (Campaign body)
+> [**Campaign**](Campaign) PostOutboundCampaigns (Campaign body, bool? useMaxCallsPerAgentDecimal = null)
 
 
 Create a campaign.
@@ -7600,11 +7602,12 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var body = new Campaign(); // Campaign | Campaign
+            var useMaxCallsPerAgentDecimal = useMaxCallsPerAgentDecimal_example;  // bool? | Use maxCallsPerAgent with decimal precision (optional) 
 
             try
             { 
                 // Create a campaign.
-                Campaign result = apiInstance.PostOutboundCampaigns(body);
+                Campaign result = apiInstance.PostOutboundCampaigns(body, useMaxCallsPerAgentDecimal);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7622,6 +7625,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Campaign**](Campaign)| Campaign |  |
+| **useMaxCallsPerAgentDecimal** | **bool?**| Use maxCallsPerAgent with decimal precision | [optional] <br />**Values**: true, false |
 
 ### Return type
 
@@ -9721,7 +9725,7 @@ namespace Example
 
 ## PutOutboundCampaign
 
-> [**Campaign**](Campaign) PutOutboundCampaign (string campaignId, Campaign body)
+> [**Campaign**](Campaign) PutOutboundCampaign (string campaignId, Campaign body, bool? useMaxCallsPerAgentDecimal = null)
 
 
 Update a campaign.
@@ -9754,11 +9758,12 @@ namespace Example
             var apiInstance = new OutboundApi();
             var campaignId = campaignId_example;  // string | Campaign ID
             var body = new Campaign(); // Campaign | Campaign
+            var useMaxCallsPerAgentDecimal = useMaxCallsPerAgentDecimal_example;  // bool? | Use maxCallsPerAgent with decimal precision (optional) 
 
             try
             { 
                 // Update a campaign.
-                Campaign result = apiInstance.PutOutboundCampaign(campaignId, body);
+                Campaign result = apiInstance.PutOutboundCampaign(campaignId, body, useMaxCallsPerAgentDecimal);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9777,6 +9782,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
 | **body** | [**Campaign**](Campaign)| Campaign |  |
+| **useMaxCallsPerAgentDecimal** | **bool?**| Use maxCallsPerAgent with decimal precision | [optional] <br />**Values**: true, false |
 
 ### Return type
 
@@ -10940,4 +10946,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

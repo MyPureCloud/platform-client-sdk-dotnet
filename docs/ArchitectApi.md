@@ -42,6 +42,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectGrammarLanguage**](#GetArchitectGrammarLanguage) | **Get** /api/v2/architect/grammars/{grammarId}/languages/{languageCode} | Get a grammar language. |
 | [**GetArchitectGrammars**](#GetArchitectGrammars) | **Get** /api/v2/architect/grammars | Get a pageable list of grammars, filtered by query parameters |
 | [**GetArchitectIvr**](#GetArchitectIvr) | **Get** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
+| [**GetArchitectIvrIdentityresolution**](#GetArchitectIvrIdentityresolution) | **Get** /api/v2/architect/ivrs/{ivrId}/identityresolution | Get an IVR IdentityResolutionConfig. |
 | [**GetArchitectIvrs**](#GetArchitectIvrs) | **Get** /api/v2/architect/ivrs | Get IVR configs. |
 | [**GetArchitectIvrsDivisionviews**](#GetArchitectIvrsDivisionviews) | **Get** /api/v2/architect/ivrs/divisionviews | Get a pageable list of basic ivr configuration information objects filterable by query parameters. |
 | [**GetArchitectPrompt**](#GetArchitectPrompt) | **Get** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
@@ -82,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsDatatablesDivisionviews**](#GetFlowsDatatablesDivisionviews) | **Get** /api/v2/flows/datatables/divisionviews | Retrieve a list of datatables for the org |
 | [**GetFlowsDivisionviews**](#GetFlowsDivisionviews) | **Get** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**GetFlowsExecution**](#GetFlowsExecution) | **Get** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**GetFlowsExportJob**](#GetFlowsExportJob) | **Get** /api/v2/flows/export/jobs/{jobId} | Fetch Architect Export Job Status |
 | [**GetFlowsInstance**](#GetFlowsInstance) | **Get** /api/v2/flows/instances/{instanceId} | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
 | [**GetFlowsInstancesJob**](#GetFlowsInstancesJob) | **Get** /api/v2/flows/instances/jobs/{jobId} | Get the status and/or results of an asynchronous flow execution data retrieval job |
 | [**GetFlowsInstancesQuerycapabilities**](#GetFlowsInstancesQuerycapabilities) | **Get** /api/v2/flows/instances/querycapabilities | Retrieve a list of capabilities that the org can use to query for execution data |
@@ -128,6 +130,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsDatatableRows**](#PostFlowsDatatableRows) | **Post** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
 | [**PostFlowsDatatables**](#PostFlowsDatatables) | **Post** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
 | [**PostFlowsExecutions**](#PostFlowsExecutions) | **Post** /api/v2/flows/executions | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**PostFlowsExportJobs**](#PostFlowsExportJobs) | **Post** /api/v2/flows/export/jobs | Register Architect Export Job |
 | [**PostFlowsInstancesJobs**](#PostFlowsInstancesJobs) | **Post** /api/v2/flows/instances/jobs | Start a process (job) that will prepare a list of execution data IDs for download. |
 | [**PostFlowsInstancesQuery**](#PostFlowsInstancesQuery) | **Post** /api/v2/flows/instances/query | Query the database of existing flow histories to look for particular flow criteria |
 | [**PostFlowsJobs**](#PostFlowsJobs) | **Post** /api/v2/flows/jobs | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
@@ -135,6 +138,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsOutcomes**](#PostFlowsOutcomes) | **Post** /api/v2/flows/outcomes | Create a flow outcome |
 | [**PutArchitectEmergencygroup**](#PutArchitectEmergencygroup) | **Put** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
 | [**PutArchitectIvr**](#PutArchitectIvr) | **Put** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
+| [**PutArchitectIvrIdentityresolution**](#PutArchitectIvrIdentityresolution) | **Put** /api/v2/architect/ivrs/{ivrId}/identityresolution | Update an IVR IdentityResolutionConfig. |
 | [**PutArchitectPrompt**](#PutArchitectPrompt) | **Put** /api/v2/architect/prompts/{promptId} | Update specified user prompt |
 | [**PutArchitectPromptResource**](#PutArchitectPromptResource) | **Put** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Update specified user prompt resource |
 | [**PutArchitectSchedule**](#PutArchitectSchedule) | **Put** /api/v2/architect/schedules/{scheduleId} | Update schedule by ID |
@@ -2505,6 +2509,71 @@ namespace Example
 ### Return type
 
 [**IVR**](IVR)
+
+
+## GetArchitectIvrIdentityresolution
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetArchitectIvrIdentityresolution (string ivrId)
+
+
+Get an IVR IdentityResolutionConfig.
+
+GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:callRoute:view
+* routing:identityResolution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectIvrIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var ivrId = ivrId_example;  // string | IVR id
+
+            try
+            { 
+                // Get an IVR IdentityResolutionConfig.
+                IdentityResolutionConfig result = apiInstance.GetArchitectIvrIdentityresolution(ivrId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectIvrIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ivrId** | **string**| IVR id |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## GetArchitectIvrs
@@ -5332,6 +5401,70 @@ namespace Example
 ### Return type
 
 [**FlowRuntimeExecution**](FlowRuntimeExecution)
+
+
+## GetFlowsExportJob
+
+> [**ArchitectExportJobStateResponse**](ArchitectExportJobStateResponse) GetFlowsExportJob (string jobId, List<string> expand = null)
+
+
+Fetch Architect Export Job Status
+
+Requires ALL permissions: 
+
+* architect:jobExport:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsExportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var jobId = jobId_example;  // string | Job ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+
+            try
+            { 
+                // Fetch Architect Export Job Status
+                ArchitectExportJobStateResponse result = apiInstance.GetFlowsExportJob(jobId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsExportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| Job ID |  |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: messages |
+
+### Return type
+
+[**ArchitectExportJobStateResponse**](ArchitectExportJobStateResponse)
 
 
 ## GetFlowsInstance
@@ -8327,6 +8460,68 @@ namespace Example
 [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse)
 
 
+## PostFlowsExportJobs
+
+> [**RegisterArchitectExportJobResponse**](RegisterArchitectExportJobResponse) PostFlowsExportJobs (RegisterArchitectExportJob body)
+
+
+Register Architect Export Job
+
+Requires ALL permissions: 
+
+* architect:jobExport:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsExportJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var body = new RegisterArchitectExportJob(); // RegisterArchitectExportJob | 
+
+            try
+            { 
+                // Register Architect Export Job
+                RegisterArchitectExportJobResponse result = apiInstance.PostFlowsExportJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsExportJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RegisterArchitectExportJob**](RegisterArchitectExportJob)|  |  |
+
+### Return type
+
+[**RegisterArchitectExportJobResponse**](RegisterArchitectExportJobResponse)
+
+
 ## PostFlowsInstancesJobs
 
 > [**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult) PostFlowsInstancesJobs (ExecutionDataRequest body, string expand = null)
@@ -8770,6 +8965,73 @@ namespace Example
 ### Return type
 
 [**IVR**](IVR)
+
+
+## PutArchitectIvrIdentityresolution
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutArchitectIvrIdentityresolution (string ivrId, IdentityResolutionConfig body)
+
+
+Update an IVR IdentityResolutionConfig.
+
+PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:callRoute:edit
+* routing:identityResolution:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutArchitectIvrIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var ivrId = ivrId_example;  // string | IVR id
+            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+
+            try
+            { 
+                // Update an IVR IdentityResolutionConfig.
+                IdentityResolutionConfig result = apiInstance.PutArchitectIvrIdentityresolution(ivrId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutArchitectIvrIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ivrId** | **string**| IVR id |  |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## PutArchitectPrompt
@@ -9561,4 +9823,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

@@ -37,7 +37,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingSettings**](#GetRecordingSettings) | **Get** /api/v2/recording/settings | Get the Recording Settings for the Organization |
 | [**GetRecordingUploadsReport**](#GetRecordingUploadsReport) | **Get** /api/v2/recording/uploads/reports/{reportId} | Get the status of a recording upload status report |
 | [**GetRecordingsRetentionQuery**](#GetRecordingsRetentionQuery) | **Get** /api/v2/recordings/retention/query | Query for recording retention data |
-| [**GetRecordingsScreensessions**](#GetRecordingsScreensessions) | **Get** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
 | [**GetRecordingsScreensessionsDetails**](#GetRecordingsScreensessionsDetails) | **Get** /api/v2/recordings/screensessions/details | Retrieves an object containing the total number of concurrent active screen recordings |
 | [**PatchRecordingCrossplatformMediaretentionpolicy**](#PatchRecordingCrossplatformMediaretentionpolicy) | **Patch** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingMediaretentionpolicy**](#PatchRecordingMediaretentionpolicy) | **Patch** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
@@ -545,7 +544,7 @@ namespace Example
             var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional)  (default to ZIP)
             var download = download_example;  // bool? | requesting a download format of the recording. Valid values:true,false (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
-            var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
+            var locale = locale_example;  // string | The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code (optional) 
             var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional) 
 
             try
@@ -576,7 +575,7 @@ namespace Example
 | **messageFormatId** | **string**| The desired media format when downloading a message recording. Valid values:ZIP,NONE | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
 | **download** | **bool?**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false]<br />**Values**: true, false |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
-| **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
+| **locale** | **string**| The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code | [optional]  |
 | **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
 
 ### Return type
@@ -844,7 +843,7 @@ namespace Example
 
 ## GetConversationRecordings
 
-> [**List&lt;Recording&gt;**](Recording) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
+> [**List&lt;Recording&gt;**](Recording) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
 
 
 Get all of a Conversation's Recordings.
@@ -880,11 +879,12 @@ namespace Example
             var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional)  (default to 5000)
             var formatId = formatId_example;  // string | The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)  (default to WEBM)
             var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional) 
+            var locale = locale_example;  // string | The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional) 
 
             try
             { 
                 // Get all of a Conversation's Recordings.
-                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats);
+                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -905,6 +905,7 @@ namespace Example
 | **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
 | **formatId** | **string**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 | **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional]  |
+| **locale** | **string**| The locale used for redacting sensitive information in requested files, as an ISO 639-1 code | [optional]  |
 
 ### Return type
 
@@ -2117,75 +2118,6 @@ namespace Example
 ### Return type
 
 [**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing)
-
-
-## GetRecordingsScreensessions
-
-> [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing) GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Retrieves a paged listing of screen recording sessions
-
-Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-
-Requires ANY permissions: 
-
-* recording:screenRecording:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetRecordingsScreensessionsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RecordingApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            { 
-                // Retrieves a paged listing of screen recording sessions
-                ScreenRecordingSessionListing result = apiInstance.GetRecordingsScreensessions(pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RecordingApi.GetRecordingsScreensessions: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-
-### Return type
-
-[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing)
 
 
 ## GetRecordingsScreensessionsDetails
@@ -3842,4 +3774,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

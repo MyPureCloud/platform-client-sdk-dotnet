@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingDirectroutingbackupSettingsMe**](#GetRoutingDirectroutingbackupSettingsMe) | **Get** /api/v2/routing/directroutingbackup/settings/me | Get the user&#39;s Direct Routing Backup settings. |
 | [**GetRoutingEmailDomain**](#GetRoutingEmailDomain) | **Get** /api/v2/routing/email/domains/{domainId} | Get domain |
 | [**GetRoutingEmailDomainRoute**](#GetRoutingEmailDomainRoute) | **Get** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
+| [**GetRoutingEmailDomainRouteIdentityresolution**](#GetRoutingEmailDomainRouteIdentityresolution) | **Get** /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution | Get a route identity resolution setting. |
 | [**GetRoutingEmailDomainRoutes**](#GetRoutingEmailDomainRoutes) | **Get** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
 | [**GetRoutingEmailDomains**](#GetRoutingEmailDomains) | **Get** /api/v2/routing/email/domains | Get domains |
 | [**GetRoutingEmailOutboundDomain**](#GetRoutingEmailOutboundDomain) | **Get** /api/v2/routing/email/outbound/domains/{domainId} | Get domain |
@@ -59,6 +60,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueueComparisonperiod**](#GetRoutingQueueComparisonperiod) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
 | [**GetRoutingQueueComparisonperiods**](#GetRoutingQueueComparisonperiods) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods | Get list of comparison periods |
 | [**GetRoutingQueueEstimatedwaittime**](#GetRoutingQueueEstimatedwaittime) | **Get** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
+| [**GetRoutingQueueIdentityresolution**](#GetRoutingQueueIdentityresolution) | **Get** /api/v2/routing/queues/{queueId}/identityresolution | Get Queue IdentityResolution Settings. |
 | [**GetRoutingQueueMediatypeEstimatedwaittime**](#GetRoutingQueueMediatypeEstimatedwaittime) | **Get** /api/v2/routing/queues/{queueId}/mediatypes/{mediaType}/estimatedwaittime | Get Estimated Wait Time |
 | [**GetRoutingQueueMembers**](#GetRoutingQueueMembers) | **Get** /api/v2/routing/queues/{queueId}/members | Get the members of this queue. |
 | [**GetRoutingQueueUsers**](#GetRoutingQueueUsers) | **Get** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. |
@@ -79,6 +81,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingSmsAddress**](#GetRoutingSmsAddress) | **Get** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
 | [**GetRoutingSmsAddresses**](#GetRoutingSmsAddresses) | **Get** /api/v2/routing/sms/addresses | Get a list of Addresses for SMS |
 | [**GetRoutingSmsAvailablephonenumbers**](#GetRoutingSmsAvailablephonenumbers) | **Get** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
+| [**GetRoutingSmsIdentityresolutionPhonenumber**](#GetRoutingSmsIdentityresolutionPhonenumber) | **Get** /api/v2/routing/sms/identityresolution/phonenumbers/{addressId} | Get a SMS identity resolution settings. |
 | [**GetRoutingSmsPhonenumber**](#GetRoutingSmsPhonenumber) | **Get** /api/v2/routing/sms/phonenumbers/{phoneNumberId} | Get a phone number provisioned for SMS. |
 | [**GetRoutingSmsPhonenumbers**](#GetRoutingSmsPhonenumbers) | **Get** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
 | [**GetRoutingUserDirectroutingbackupSettings**](#GetRoutingUserDirectroutingbackupSettings) | **Get** /api/v2/routing/users/{userId}/directroutingbackup/settings | Get the user&#39;s Direct Routing Backup settings. |
@@ -143,11 +146,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUserRoutingskills**](#PostUserRoutingskills) | **Post** /api/v2/users/{userId}/routingskills | Assign a routing skill to a user |
 | [**PutRoutingDirectroutingbackupSettingsMe**](#PutRoutingDirectroutingbackupSettingsMe) | **Put** /api/v2/routing/directroutingbackup/settings/me | Update the user&#39;s Direct Routing Backup settings. |
 | [**PutRoutingEmailDomainRoute**](#PutRoutingEmailDomainRoute) | **Put** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
+| [**PutRoutingEmailDomainRouteIdentityresolution**](#PutRoutingEmailDomainRouteIdentityresolution) | **Put** /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution | Update identity resolution settings for a route. |
 | [**PutRoutingEmailOutboundDomainActivation**](#PutRoutingEmailOutboundDomainActivation) | **Put** /api/v2/routing/email/outbound/domains/{domainId}/activation | Request an activation status (cname + dkim) update of an outbound domain |
 | [**PutRoutingMessageRecipient**](#PutRoutingMessageRecipient) | **Put** /api/v2/routing/message/recipients/{recipientId} | Update a recipient |
 | [**PutRoutingQueue**](#PutRoutingQueue) | **Put** /api/v2/routing/queues/{queueId} | Update a queue |
+| [**PutRoutingQueueIdentityresolution**](#PutRoutingQueueIdentityresolution) | **Put** /api/v2/routing/queues/{queueId}/identityresolution | Update Queue IdentityResolution Settings. |
 | [**PutRoutingSettings**](#PutRoutingSettings) | **Put** /api/v2/routing/settings | Update an organization&#39;s routing settings |
 | [**PutRoutingSettingsTranscription**](#PutRoutingSettingsTranscription) | **Put** /api/v2/routing/settings/transcription | Update Transcription Settings |
+| [**PutRoutingSmsIdentityresolutionPhonenumber**](#PutRoutingSmsIdentityresolutionPhonenumber) | **Put** /api/v2/routing/sms/identityresolution/phonenumbers/{addressId} | Update an SMS identity resolution settings. |
 | [**PutRoutingUserDirectroutingbackupSettings**](#PutRoutingUserDirectroutingbackupSettings) | **Put** /api/v2/routing/users/{userId}/directroutingbackup/settings | Update the user&#39;s Direct Routing Backup settings. |
 | [**PutRoutingUserUtilization**](#PutRoutingUserUtilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutRoutingUtilization**](#PutRoutingUtilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
@@ -2130,6 +2136,73 @@ namespace Example
 [**InboundRoute**](InboundRoute)
 
 
+## GetRoutingEmailDomainRouteIdentityresolution
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId)
+
+
+Get a route identity resolution setting.
+
+GetRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:email:manage
+* routing:identityResolution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailDomainRouteIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainName = domainName_example;  // string | email domain
+            var routeId = routeId_example;  // string | route ID
+
+            try
+            { 
+                // Get a route identity resolution setting.
+                IdentityResolutionConfig result = apiInstance.GetRoutingEmailDomainRouteIdentityresolution(domainName, routeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailDomainRouteIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainName** | **string**| email domain |  |
+| **routeId** | **string**| route ID |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## GetRoutingEmailDomainRoutes
 
 > [**InboundRouteEntityListing**](InboundRouteEntityListing) GetRoutingEmailDomainRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
@@ -3470,6 +3543,71 @@ namespace Example
 ### Return type
 
 [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions)
+
+
+## GetRoutingQueueIdentityresolution
+
+> [**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig) GetRoutingQueueIdentityresolution (string queueId)
+
+
+Get Queue IdentityResolution Settings.
+
+GetRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:queue:view
+* routing:identityResolution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueueIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+
+            try
+            { 
+                // Get Queue IdentityResolution Settings.
+                IdentityResolutionQueueConfig result = apiInstance.GetRoutingQueueIdentityresolution(queueId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueueIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+
+### Return type
+
+[**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig)
 
 
 ## GetRoutingQueueMediatypeEstimatedwaittime
@@ -4827,6 +4965,71 @@ namespace Example
 ### Return type
 
 [**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing)
+
+
+## GetRoutingSmsIdentityresolutionPhonenumber
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetRoutingSmsIdentityresolutionPhonenumber (string addressId)
+
+
+Get a SMS identity resolution settings.
+
+GetRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:view
+* routing:identityResolution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSmsIdentityresolutionPhonenumberExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var addressId = addressId_example;  // string | Address ID
+
+            try
+            { 
+                // Get a SMS identity resolution settings.
+                IdentityResolutionConfig result = apiInstance.GetRoutingSmsIdentityresolutionPhonenumber(addressId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSmsIdentityresolutionPhonenumber: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addressId** | **string**| Address ID |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## GetRoutingSmsPhonenumber
@@ -8973,6 +9176,75 @@ namespace Example
 [**InboundRoute**](InboundRoute)
 
 
+## PutRoutingEmailDomainRouteIdentityresolution
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, IdentityResolutionConfig body)
+
+
+Update identity resolution settings for a route.
+
+PutRoutingEmailDomainRouteIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:email:manage
+* routing:identityResolution:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingEmailDomainRouteIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainName = domainName_example;  // string | email domain
+            var routeId = routeId_example;  // string | route ID
+            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+
+            try
+            { 
+                // Update identity resolution settings for a route.
+                IdentityResolutionConfig result = apiInstance.PutRoutingEmailDomainRouteIdentityresolution(domainName, routeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingEmailDomainRouteIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainName** | **string**| email domain |  |
+| **routeId** | **string**| route ID |  |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## PutRoutingEmailOutboundDomainActivation
 
 > [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PutRoutingEmailOutboundDomainActivation (string domainId)
@@ -9163,6 +9435,73 @@ namespace Example
 [**Queue**](Queue)
 
 
+## PutRoutingQueueIdentityresolution
+
+> [**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig) PutRoutingQueueIdentityresolution (string queueId, IdentityResolutionQueueConfig body)
+
+
+Update Queue IdentityResolution Settings.
+
+PutRoutingQueueIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:queue:edit
+* routing:identityResolution:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingQueueIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var body = new IdentityResolutionQueueConfig(); // IdentityResolutionQueueConfig | 
+
+            try
+            { 
+                // Update Queue IdentityResolution Settings.
+                IdentityResolutionQueueConfig result = apiInstance.PutRoutingQueueIdentityresolution(queueId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingQueueIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **body** | [**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig)|  |  |
+
+### Return type
+
+[**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig)
+
+
 ## PutRoutingSettings
 
 > [**RoutingSettings**](RoutingSettings) PutRoutingSettings (RoutingSettings body)
@@ -9285,6 +9624,73 @@ namespace Example
 ### Return type
 
 [**TranscriptionSettings**](TranscriptionSettings)
+
+
+## PutRoutingSmsIdentityresolutionPhonenumber
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutRoutingSmsIdentityresolutionPhonenumber (string addressId, IdentityResolutionConfig body)
+
+
+Update an SMS identity resolution settings.
+
+PutRoutingSmsIdentityresolutionPhonenumber is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:edit
+* routing:identityResolution:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingSmsIdentityresolutionPhonenumberExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var addressId = addressId_example;  // string | Address ID
+            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+
+            try
+            { 
+                // Update an SMS identity resolution settings.
+                IdentityResolutionConfig result = apiInstance.PutRoutingSmsIdentityresolutionPhonenumber(addressId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingSmsIdentityresolutionPhonenumber: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addressId** | **string**| Address ID |  |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## PutRoutingUserDirectroutingbackupSettings
@@ -9735,4 +10141,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

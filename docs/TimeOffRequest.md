@@ -20,9 +20,9 @@
 | **DurationMinutes** | **List&lt;int?&gt;** | Daily durations for each day of this time off request in minutes | [optional] |
 | **PayableMinutes** | **List&lt;int?&gt;** | Payable minutes for each day of this time off request | [optional] |
 | **Notes** | **string** | Notes about the time off request | [optional] |
-| **SubmittedBy** | [**UserReference**](UserReference) | The user who submitted this time off request | [optional] |
+| **SubmittedBy** | [**UserReference**](UserReference) | The user who submitted this time off request. The id may be &#39;System&#39; if it was an automated process | [optional] |
 | **SubmittedDate** | **DateTime?** | The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ReviewedBy** | [**UserReference**](UserReference) | The user who reviewed this time off request | [optional] |
+| **ReviewedBy** | [**UserReference**](UserReference) | The user who reviewed this time off request. The id may be &#39;System&#39; if it was an automated process | [optional] |
 | **ReviewedDate** | **DateTime?** | The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SyncVersion** | **int?** | The sync version of this time off request for which the scheduled activity is associated | [optional] |
 | **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | The version metadata of the time off request | [optional] |
@@ -30,4 +30,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

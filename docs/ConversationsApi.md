@@ -83,6 +83,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagesCachedmediaCachedMediaItemId**](#GetConversationsMessagesCachedmediaCachedMediaItemId) | **Get** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Get a cached media item |
 | [**GetConversationsMessagingFacebookApp**](#GetConversationsMessagingFacebookApp) | **Get** /api/v2/conversations/messaging/facebook/app | Get Genesys Facebook App Id |
 | [**GetConversationsMessagingFacebookPermissions**](#GetConversationsMessagingFacebookPermissions) | **Get** /api/v2/conversations/messaging/facebook/permissions | Get a list of Facebook Permissions |
+| [**GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId**](#GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId) | **Get** /api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId} | Get Facebook messaging integration identity resolution settings |
+| [**GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId**](#GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId) | **Get** /api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId} | Get an open messaging integration Identity Resolution settings |
+| [**GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](#GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | **Get** /api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId} | Get a whatsApp integration Identity Resolution settings |
 | [**GetConversationsMessagingIntegrations**](#GetConversationsMessagingIntegrations) | **Get** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
 | [**GetConversationsMessagingIntegrationsFacebook**](#GetConversationsMessagingIntegrationsFacebook) | **Get** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
 | [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](#GetConversationsMessagingIntegrationsFacebookIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
@@ -238,6 +241,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationsEmailRecordingstate**](#PutConversationsEmailRecordingstate) | **Put** /api/v2/conversations/emails/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsKeyconfiguration**](#PutConversationsKeyconfiguration) | **Put** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Update the encryption key configurations |
 | [**PutConversationsMessageRecordingstate**](#PutConversationsMessageRecordingstate) | **Put** /api/v2/conversations/messages/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId**](#PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId) | **Put** /api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId} | Create an identity resolution settings for a Facebook messaging integration |
+| [**PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId**](#PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId) | **Put** /api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId} | Update an open messaging integration Identity Resolution settings |
+| [**PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](#PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | **Put** /api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId} | Update a whatsApp integration Identity Resolution settings |
 | [**PutConversationsMessagingSettingsDefault**](#PutConversationsMessagingSettingsDefault) | **Put** /api/v2/conversations/messaging/settings/default | Set the organization&#39;s default setting that may be applied to to integrations without settings |
 | [**PutConversationsMessagingSupportedcontentDefault**](#PutConversationsMessagingSupportedcontentDefault) | **Put** /api/v2/conversations/messaging/supportedcontent/default | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**PutConversationsMessagingThreadingtimeline**](#PutConversationsMessagingThreadingtimeline) | **Put** /api/v2/conversations/messaging/threadingtimeline | Update conversation threading window timeline for each messaging type |
@@ -5114,6 +5120,201 @@ This endpoint does require any parameters.
 ### Return type
 
 [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing)
+
+
+## GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId)
+
+
+Get Facebook messaging integration identity resolution settings
+
+GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+* messaging:identityResolutionFacebook:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get Facebook messaging integration identity resolution settings
+                IdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
+## GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
+
+> [**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId (string integrationId)
+
+
+Get an open messaging integration Identity Resolution settings
+
+GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+* messaging:identityResolutionOpen:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get an open messaging integration Identity Resolution settings
+                OpenMessagingIdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+
+### Return type
+
+[**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)
+
+
+## GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId)
+
+
+Get a whatsApp integration Identity Resolution settings
+
+GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+* messaging:identityResolutionWhatsApp:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get a whatsApp integration Identity Resolution settings
+                IdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## GetConversationsMessagingIntegrations
@@ -14925,8 +15126,13 @@ namespace Example
 
 > **string** PutConversationsCobrowsesessionRecordingstate (string conversationId, SetRecordingState body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a conversation by setting its recording state
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 Requires ANY permissions: 
 
@@ -15238,6 +15444,207 @@ namespace Example
 ### Return type
 
 **string**
+
+
+## PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId, IdentityResolutionConfig body)
+
+
+Create an identity resolution settings for a Facebook messaging integration
+
+PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+* messaging:identityResolutionFacebook:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | IdentityResolutionConfig
+
+            try
+            { 
+                // Create an identity resolution settings for a Facebook messaging integration
+                IdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
+## PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
+
+> [**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId (string integrationId, OpenMessagingIdentityResolutionConfig body)
+
+
+Update an open messaging integration Identity Resolution settings
+
+PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+* messaging:identityResolutionOpen:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new OpenMessagingIdentityResolutionConfig(); // OpenMessagingIdentityResolutionConfig | 
+
+            try
+            { 
+                // Update an open messaging integration Identity Resolution settings
+                OpenMessagingIdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)|  |  |
+
+### Return type
+
+[**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)
+
+
+## PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId, IdentityResolutionConfig body)
+
+
+Update a whatsApp integration Identity Resolution settings
+
+PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+* messaging:identityResolutionWhatsApp:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+
+            try
+            { 
+                // Update a whatsApp integration Identity Resolution settings
+                IdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## PutConversationsMessagingSettingsDefault
@@ -15629,4 +16036,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

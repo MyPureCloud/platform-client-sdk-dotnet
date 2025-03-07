@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWebdeploymentsDeployment**](#GetWebdeploymentsDeployment) | **Get** /api/v2/webdeployments/deployments/{deploymentId} | Get a deployment |
 | [**GetWebdeploymentsDeploymentCobrowseSessionId**](#GetWebdeploymentsDeploymentCobrowseSessionId) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Retrieves a cobrowse session |
 | [**GetWebdeploymentsDeploymentConfigurations**](#GetWebdeploymentsDeploymentConfigurations) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/configurations | Get active configuration for a given deployment |
+| [**GetWebdeploymentsDeploymentIdentityresolution**](#GetWebdeploymentsDeploymentIdentityresolution) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/identityresolution | Get a deployment identity resolution setting. |
 | [**GetWebdeploymentsDeployments**](#GetWebdeploymentsDeployments) | **Get** /api/v2/webdeployments/deployments | Get deployments |
 | [**PostWebdeploymentsConfigurationVersionsDraftPublish**](#PostWebdeploymentsConfigurationVersionsDraftPublish) | **Post** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
 | [**PostWebdeploymentsConfigurations**](#PostWebdeploymentsConfigurations) | **Post** /api/v2/webdeployments/configurations | Create a configuration draft |
@@ -25,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWebdeploymentsTokenRefresh**](#PostWebdeploymentsTokenRefresh) | **Post** /api/v2/webdeployments/token/refresh | Refresh a JWT. |
 | [**PutWebdeploymentsConfigurationVersionsDraft**](#PutWebdeploymentsConfigurationVersionsDraft) | **Put** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Update the configuration draft |
 | [**PutWebdeploymentsDeployment**](#PutWebdeploymentsDeployment) | **Put** /api/v2/webdeployments/deployments/{deploymentId} | Update a deployment |
+| [**PutWebdeploymentsDeploymentIdentityresolution**](#PutWebdeploymentsDeploymentIdentityresolution) | **Put** /api/v2/webdeployments/deployments/{deploymentId}/identityresolution | Update identity resolution settings for a deployment. |
 
 
 
@@ -701,6 +703,71 @@ namespace Example
 [**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment)
 
 
+## GetWebdeploymentsDeploymentIdentityresolution
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetWebdeploymentsDeploymentIdentityresolution (string deploymentId)
+
+
+Get a deployment identity resolution setting.
+
+GetWebdeploymentsDeploymentIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* webDeployments:deployment:view
+* webDeployments:identityResolution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWebdeploymentsDeploymentIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WebDeploymentsApi();
+            var deploymentId = deploymentId_example;  // string | The deployment ID
+
+            try
+            { 
+                // Get a deployment identity resolution setting.
+                IdentityResolutionConfig result = apiInstance.GetWebdeploymentsDeploymentIdentityresolution(deploymentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.GetWebdeploymentsDeploymentIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| The deployment ID |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## GetWebdeploymentsDeployments
 
 > [**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing) GetWebdeploymentsDeployments (List<string> expand = null)
@@ -1188,4 +1255,71 @@ namespace Example
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+## PutWebdeploymentsDeploymentIdentityresolution
+
+> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutWebdeploymentsDeploymentIdentityresolution (string deploymentId, IdentityResolutionConfig body)
+
+
+Update identity resolution settings for a deployment.
+
+PutWebdeploymentsDeploymentIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* webDeployments:deployment:edit
+* webDeployments:identityResolution:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutWebdeploymentsDeploymentIdentityresolutionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WebDeploymentsApi();
+            var deploymentId = deploymentId_example;  // string | The deployment ID
+            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+
+            try
+            { 
+                // Update identity resolution settings for a deployment.
+                IdentityResolutionConfig result = apiInstance.PutWebdeploymentsDeploymentIdentityresolution(deploymentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.PutWebdeploymentsDeploymentIdentityresolution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| The deployment ID |  |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
+_PureCloudPlatform.Client.V2 228.0.0_

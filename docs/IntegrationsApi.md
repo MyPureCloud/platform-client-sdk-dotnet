@@ -549,7 +549,7 @@ namespace Example
 
 ## GetIntegrationsAction
 
-> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsAction (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
 
 
 Retrieves a single Action matching id.
@@ -583,12 +583,13 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var expand = expand_example;  // string | Indicates a field in the response which should be expanded. (optional) 
+            var flatten = flatten_example;  // bool? | Indicates the response should be reformatted, based on Architect's flattening format. (optional)  (default to false)
             var includeConfig = includeConfig_example;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
                 // Retrieves a single Action matching id.
-                PureCloudPlatform.Client.V2.Model.Action result = apiInstance.GetIntegrationsAction(actionId, expand, includeConfig);
+                PureCloudPlatform.Client.V2.Model.Action result = apiInstance.GetIntegrationsAction(actionId, expand, flatten, includeConfig);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -607,6 +608,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
+| **flatten** | **bool?**| Indicates the response should be reformatted, based on Architect&#39;s flattening format. | [optional] [default to false]<br />**Values**: true, false |
 | **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
 
 ### Return type
@@ -616,7 +618,7 @@ namespace Example
 
 ## GetIntegrationsActionDraft
 
-> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
+> [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsActionDraft (string actionId, string expand = null, bool? flatten = null, bool? includeConfig = null)
 
 
 Retrieve a Draft
@@ -650,12 +652,13 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var expand = expand_example;  // string | Indicates a field in the response which should be expanded. (optional) 
+            var flatten = flatten_example;  // bool? | Indicates the response should be reformatted, based on Architect's flattening format. (optional)  (default to false)
             var includeConfig = includeConfig_example;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
                 // Retrieve a Draft
-                PureCloudPlatform.Client.V2.Model.Action result = apiInstance.GetIntegrationsActionDraft(actionId, expand, includeConfig);
+                PureCloudPlatform.Client.V2.Model.Action result = apiInstance.GetIntegrationsActionDraft(actionId, expand, flatten, includeConfig);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -674,6 +677,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
+| **flatten** | **bool?**| Indicates the response should be reformatted, based on Architect&#39;s flattening format. | [optional] [default to false]<br />**Values**: true, false |
 | **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
 
 ### Return type
@@ -5664,4 +5668,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

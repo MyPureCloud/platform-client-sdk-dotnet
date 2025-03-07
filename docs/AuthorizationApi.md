@@ -100,7 +100,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var divisionId = divisionId_example;  // string | Division ID
-            var force = true;  // bool? | Force delete this division as well as the grants and objects associated with it (optional)  (default to false)
+            var force = true;  // bool? | DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. (optional)  (default to false)
 
             try
             { 
@@ -122,7 +122,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **force** | **bool?**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
+| **force** | **bool?**| DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. | [optional] [default to false] |
 
 ### Return type
 
@@ -2354,7 +2354,7 @@ void (empty response body)
 
 ## PostAuthorizationDivisionRestore
 
-> [**AuthzDivision**](AuthzDivision) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body = null)
+> [**AuthzDivision**](AuthzDivision) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
 
 
 Recreate a previously deleted division.
@@ -2386,7 +2386,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var divisionId = divisionId_example;  // string | Division ID
-            var body = new AuthzDivision(); // AuthzDivision | Recreated division data (optional) 
+            var body = new AuthzDivision(); // AuthzDivision | Recreated division data
 
             try
             { 
@@ -2409,7 +2409,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **body** | [**AuthzDivision**](AuthzDivision)| Recreated division data | [optional]  |
+| **body** | [**AuthzDivision**](AuthzDivision)| Recreated division data |  |
 
 ### Return type
 
@@ -3781,4 +3781,4 @@ namespace Example
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_

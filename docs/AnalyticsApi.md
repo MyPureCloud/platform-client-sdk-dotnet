@@ -2176,7 +2176,7 @@ namespace Example
             var pageSize = 56;  // int? |  (optional)  (default to 25)
             var id = new List<string>(); // List<string> | A list of user IDs to fetch by bulk (optional) 
             var state = state_example;  // string | Only list users of this state (optional) 
-            var deletedOnly = true;  // bool? | Only list deleted dashboards that are still recoverable (optional) 
+            var deletedOnly = true;  // bool? | Only list users with deleted dashboards (optional) 
 
             try
             { 
@@ -2203,7 +2203,7 @@ namespace Example
 | **pageSize** | **int?**|  | [optional] [default to 25] |
 | **id** | [**List<string>**](string)| A list of user IDs to fetch by bulk | [optional]  |
 | **state** | **string**| Only list users of this state | [optional] <br />**Values**: active, inactive |
-| **deletedOnly** | **bool?**| Only list deleted dashboards that are still recoverable | [optional]  |
+| **deletedOnly** | **bool?**| Only list users with deleted dashboards | [optional]  |
 
 ### Return type
 
@@ -6851,4 +6851,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 227.0.0_
+_PureCloudPlatform.Client.V2 228.0.0_
