@@ -7,6 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
+| **ContextId** | **string** | An identifier for this question group that stays the same across versions of the form. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **DefaultAnswersToHighest** | **bool?** |  | [optional] |
@@ -19,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

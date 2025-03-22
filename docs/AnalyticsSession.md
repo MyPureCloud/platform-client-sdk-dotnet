@@ -28,6 +28,7 @@
 | **CoachedParticipantId** | **string** | The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **CobrowseRole** | **string** | Describes side of the cobrowse (sharer or viewer) | [optional] |
 | **CobrowseRoomId** | **string** | A unique identifier for a Genesys Cloud cobrowse room | [optional] |
+| **DeliveryPushed** | **bool?** | Flag that indicates that the push delivery mechanism was used | [optional] |
 | **DeliveryStatus** | **string** | The email or SMS delivery status | [optional] |
 | **DeliveryStatusChangeDate** | **DateTime?** | Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DestinationAddresses** | **List&lt;string&gt;** | Destination address(es) of transfers or consults | [optional] |
@@ -92,4 +93,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

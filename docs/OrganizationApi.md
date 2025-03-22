@@ -15,9 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrganizationsLimitsDocs**](#GetOrganizationsLimitsDocs) | **Get** /api/v2/organizations/limits/docs | Get limit documentation |
 | [**GetOrganizationsLimitsDocsFreetrial**](#GetOrganizationsLimitsDocsFreetrial) | **Get** /api/v2/organizations/limits/docs/freetrial | Get free trial limit documentation |
 | [**GetOrganizationsLimitsNamespace**](#GetOrganizationsLimitsNamespace) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName} | Get the effective limits in a namespace for an organization |
-| [**GetOrganizationsLimitsNamespaceCounts**](#GetOrganizationsLimitsNamespaceCounts) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName}/counts | Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
 | [**GetOrganizationsLimitsNamespaceDefaults**](#GetOrganizationsLimitsNamespaceDefaults) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName}/defaults | Get the default limits in a namespace for an organization |
-| [**GetOrganizationsLimitsNamespaceLimitCounts**](#GetOrganizationsLimitsNamespaceLimitCounts) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName}/limits/{limitName}/counts | Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
 | [**GetOrganizationsLimitsNamespaces**](#GetOrganizationsLimitsNamespaces) | **Get** /api/v2/organizations/limits/namespaces | Get the available limit namespaces |
 | [**GetOrganizationsMe**](#GetOrganizationsMe) | **Get** /api/v2/organizations/me | Get organization. |
 | [**GetOrganizationsWhitelist**](#GetOrganizationsWhitelist) | **Get** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
@@ -581,79 +579,6 @@ namespace Example
 [**LimitsEntityListing**](LimitsEntityListing)
 
 
-## GetOrganizationsLimitsNamespaceCounts
-
-> [**LimitCountListing**](LimitCountListing) GetOrganizationsLimitsNamespaceCounts (string namespaceName, string cursor = null, string entityId = null, string userId = null)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
-
-See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
-
-Requires ANY permissions: 
-
-* limits:count:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetOrganizationsLimitsNamespaceCountsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new OrganizationApi();
-            var namespaceName = namespaceName_example;  // string | The namespace to get
-            var cursor = cursor_example;  // string | Cursor provided when retrieving the last page (optional) 
-            var entityId = entityId_example;  // string | entity id of the count (optional) 
-            var userId = userId_example;  // string | userid of the count (optional) 
-
-            try
-            { 
-                // Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
-                LimitCountListing result = apiInstance.GetOrganizationsLimitsNamespaceCounts(namespaceName, cursor, entityId, userId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsNamespaceCounts: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **namespaceName** | **string**| The namespace to get |  |
-| **cursor** | **string**| Cursor provided when retrieving the last page | [optional]  |
-| **entityId** | **string**| entity id of the count | [optional]  |
-| **userId** | **string**| userid of the count | [optional]  |
-
-### Return type
-
-[**LimitCountListing**](LimitCountListing)
-
-
 ## GetOrganizationsLimitsNamespaceDefaults
 
 > [**LimitsEntityListing**](LimitsEntityListing) GetOrganizationsLimitsNamespaceDefaults (string namespaceName)
@@ -713,81 +638,6 @@ namespace Example
 ### Return type
 
 [**LimitsEntityListing**](LimitsEntityListing)
-
-
-## GetOrganizationsLimitsNamespaceLimitCounts
-
-> [**LimitCountListing**](LimitCountListing) GetOrganizationsLimitsNamespaceLimitCounts (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
-
-See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
-
-Requires ANY permissions: 
-
-* limits:count:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetOrganizationsLimitsNamespaceLimitCountsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new OrganizationApi();
-            var namespaceName = namespaceName_example;  // string | The namespace to get
-            var limitName = limitName_example;  // string | The limit to get
-            var entityId = entityId_example;  // string | entity id of the count (optional) 
-            var userId = userId_example;  // string | userid of the count (optional) 
-            var cursor = cursor_example;  // string | Cursor provided when retrieving the last page (optional) 
-
-            try
-            { 
-                // Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
-                LimitCountListing result = apiInstance.GetOrganizationsLimitsNamespaceLimitCounts(namespaceName, limitName, entityId, userId, cursor);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsLimitsNamespaceLimitCounts: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **namespaceName** | **string**| The namespace to get |  |
-| **limitName** | **string**| The limit to get |  |
-| **entityId** | **string**| entity id of the count | [optional]  |
-| **userId** | **string**| userid of the count | [optional]  |
-| **cursor** | **string**| Cursor provided when retrieving the last page | [optional]  |
-
-### Return type
-
-[**LimitCountListing**](LimitCountListing)
 
 
 ## GetOrganizationsLimitsNamespaces
@@ -1355,4 +1205,4 @@ namespace Example
 [**OrgWhitelistSettings**](OrgWhitelistSettings)
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

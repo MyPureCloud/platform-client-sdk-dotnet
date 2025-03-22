@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](#DeleteConversationsMessagingIntegrationsFacebookIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
 | [**DeleteConversationsMessagingIntegrationsInstagramIntegrationId**](#DeleteConversationsMessagingIntegrationsInstagramIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Delete Instagram messaging integration |
 | [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](#DeleteConversationsMessagingIntegrationsOpenIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
+| [**DeleteConversationsMessagingIntegrationsTwitterIntegrationId**](#DeleteConversationsMessagingIntegrationsTwitterIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Delete Twitter messaging integration |
 | [**DeleteConversationsMessagingIntegrationsWhatsappIntegrationId**](#DeleteConversationsMessagingIntegrationsWhatsappIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Delete a WhatsApp messaging integration |
 | [**DeleteConversationsMessagingSetting**](#DeleteConversationsMessagingSetting) | **Delete** /api/v2/conversations/messaging/settings/{messageSettingId} | Delete a messaging setting |
 | [**DeleteConversationsMessagingSettingsDefault**](#DeleteConversationsMessagingSettingsDefault) | **Delete** /api/v2/conversations/messaging/settings/default | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
@@ -86,6 +87,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId**](#GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId) | **Get** /api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId} | Get Facebook messaging integration identity resolution settings |
 | [**GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId**](#GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId) | **Get** /api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId} | Get an open messaging integration Identity Resolution settings |
 | [**GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](#GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | **Get** /api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId} | Get a whatsApp integration Identity Resolution settings |
+| [**GetConversationsMessagingIntegrationTwitterOauthSettings**](#GetConversationsMessagingIntegrationTwitterOauthSettings) | **Get** /api/v2/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings | Get twitter oauth settings to patch an integration |
 | [**GetConversationsMessagingIntegrations**](#GetConversationsMessagingIntegrations) | **Get** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
 | [**GetConversationsMessagingIntegrationsFacebook**](#GetConversationsMessagingIntegrationsFacebook) | **Get** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
 | [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](#GetConversationsMessagingIntegrationsFacebookIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
@@ -93,6 +95,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIntegrationsInstagramIntegrationId**](#GetConversationsMessagingIntegrationsInstagramIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Get Instagram messaging integration |
 | [**GetConversationsMessagingIntegrationsOpen**](#GetConversationsMessagingIntegrationsOpen) | **Get** /api/v2/conversations/messaging/integrations/open | Get a list of Open messaging integrations |
 | [**GetConversationsMessagingIntegrationsOpenIntegrationId**](#GetConversationsMessagingIntegrationsOpenIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/open/{integrationId} | Get an Open messaging integration |
+| [**GetConversationsMessagingIntegrationsTwitter**](#GetConversationsMessagingIntegrationsTwitter) | **Get** /api/v2/conversations/messaging/integrations/twitter | Get a list of Twitter Integrations |
+| [**GetConversationsMessagingIntegrationsTwitterIntegrationId**](#GetConversationsMessagingIntegrationsTwitterIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Get Twitter messaging integration |
+| [**GetConversationsMessagingIntegrationsTwitterOauthSettings**](#GetConversationsMessagingIntegrationsTwitterOauthSettings) | **Get** /api/v2/conversations/messaging/integrations/twitter/oauth/settings | Get twitter oauth settings |
 | [**GetConversationsMessagingIntegrationsWhatsapp**](#GetConversationsMessagingIntegrationsWhatsapp) | **Get** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
 | [**GetConversationsMessagingIntegrationsWhatsappIntegrationId**](#GetConversationsMessagingIntegrationsWhatsappIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Get a WhatsApp messaging integration |
 | [**GetConversationsMessagingSetting**](#GetConversationsMessagingSetting) | **Get** /api/v2/conversations/messaging/settings/{messageSettingId} | Get a messaging setting |
@@ -144,6 +149,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](#PatchConversationsMessagingIntegrationsFacebookIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
 | [**PatchConversationsMessagingIntegrationsInstagramIntegrationId**](#PatchConversationsMessagingIntegrationsInstagramIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Update Instagram messaging integration |
 | [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](#PatchConversationsMessagingIntegrationsOpenIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
+| [**PatchConversationsMessagingIntegrationsTwitterIntegrationId**](#PatchConversationsMessagingIntegrationsTwitterIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Update a Twitter messaging integration |
 | [**PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**](#PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId} | Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow |
 | [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](#PatchConversationsMessagingIntegrationsWhatsappIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update a WhatsApp messaging integration |
 | [**PatchConversationsMessagingSetting**](#PatchConversationsMessagingSetting) | **Patch** /api/v2/conversations/messaging/settings/{messageSettingId} | Update a messaging setting |
@@ -220,6 +226,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagingIntegrationsFacebook**](#PostConversationsMessagingIntegrationsFacebook) | **Post** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
 | [**PostConversationsMessagingIntegrationsInstagram**](#PostConversationsMessagingIntegrationsInstagram) | **Post** /api/v2/conversations/messaging/integrations/instagram | Create Instagram Integration |
 | [**PostConversationsMessagingIntegrationsOpen**](#PostConversationsMessagingIntegrationsOpen) | **Post** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
+| [**PostConversationsMessagingIntegrationsTwitter**](#PostConversationsMessagingIntegrationsTwitter) | **Post** /api/v2/conversations/messaging/integrations/twitter | Create Twitter Integration |
 | [**PostConversationsMessagingIntegrationsWhatsapp**](#PostConversationsMessagingIntegrationsWhatsapp) | **Post** /api/v2/conversations/messaging/integrations/whatsapp | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
 | [**PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup**](#PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup) | **Post** /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup | Create a WhatsApp Integration using the WhatsApp embedded signup flow |
 | [**PostConversationsMessagingSettings**](#PostConversationsMessagingSettings) | **Post** /api/v2/conversations/messaging/settings | Create a messaging setting |
@@ -793,6 +800,67 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteConversationsMessagingIntegrationsTwitterIntegrationId
+
+> void DeleteConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId)
+
+
+Delete Twitter messaging integration
+
+Requires ALL permissions: 
+
+* messaging:integration:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingIntegrationsTwitterIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Delete Twitter messaging integration
+                apiInstance.DeleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + e.Message );
             }
         }
     }
@@ -5317,6 +5385,68 @@ namespace Example
 [**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
+## GetConversationsMessagingIntegrationTwitterOauthSettings
+
+> [**TwitterOAuthSettings**](TwitterOAuthSettings) GetConversationsMessagingIntegrationTwitterOauthSettings (string integrationId)
+
+
+Get twitter oauth settings to patch an integration
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationTwitterOauthSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration Id of an existing integration that needs to be patched with new oauth settings
+
+            try
+            { 
+                // Get twitter oauth settings to patch an integration
+                TwitterOAuthSettings result = apiInstance.GetConversationsMessagingIntegrationTwitterOauthSettings(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationTwitterOauthSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration Id of an existing integration that needs to be patched with new oauth settings |  |
+
+### Return type
+
+[**TwitterOAuthSettings**](TwitterOAuthSettings)
+
+
 ## GetConversationsMessagingIntegrations
 
 > [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null)
@@ -5791,6 +5921,197 @@ namespace Example
 ### Return type
 
 [**OpenIntegration**](OpenIntegration)
+
+
+## GetConversationsMessagingIntegrationsTwitter
+
+> [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing) GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+
+
+Get a list of Twitter Integrations
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsTwitterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
+
+            try
+            { 
+                // Get a list of Twitter Integrations
+                TwitterIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsTwitter: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
+
+### Return type
+
+[**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing)
+
+
+## GetConversationsMessagingIntegrationsTwitterIntegrationId
+
+> [**TwitterIntegration**](TwitterIntegration) GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null)
+
+
+Get Twitter messaging integration
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsTwitterIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+
+            try
+            { 
+                // Get Twitter messaging integration
+                TwitterIntegration result = apiInstance.GetConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsTwitterIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration)
+
+
+## GetConversationsMessagingIntegrationsTwitterOauthSettings
+
+> [**TwitterSignupOAuthSettings**](TwitterSignupOAuthSettings) GetConversationsMessagingIntegrationsTwitterOauthSettings ()
+
+
+Get twitter oauth settings
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsTwitterOauthSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            { 
+                // Get twitter oauth settings
+                TwitterSignupOAuthSettings result = apiInstance.GetConversationsMessagingIntegrationsTwitterOauthSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsTwitterOauthSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**TwitterSignupOAuthSettings**](TwitterSignupOAuthSettings)
 
 
 ## GetConversationsMessagingIntegrationsWhatsapp
@@ -9131,6 +9452,70 @@ namespace Example
 ### Return type
 
 [**OpenIntegration**](OpenIntegration)
+
+
+## PatchConversationsMessagingIntegrationsTwitterIntegrationId
+
+> [**TwitterIntegration**](TwitterIntegration) PatchConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, TwitterIntegrationUpdateRequest body)
+
+
+Update a Twitter messaging integration
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessagingIntegrationsTwitterIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new TwitterIntegrationUpdateRequest(); // TwitterIntegrationUpdateRequest | TwitterIntegrationUpdateRequest
+
+            try
+            { 
+                // Update a Twitter messaging integration
+                TwitterIntegration result = apiInstance.PatchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessagingIntegrationsTwitterIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**TwitterIntegrationUpdateRequest**](TwitterIntegrationUpdateRequest)| TwitterIntegrationUpdateRequest |  |
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration)
 
 
 ## PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId
@@ -14081,6 +14466,68 @@ namespace Example
 [**OpenIntegration**](OpenIntegration)
 
 
+## PostConversationsMessagingIntegrationsTwitter
+
+> [**TwitterIntegration**](TwitterIntegration) PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body)
+
+
+Create Twitter Integration
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingIntegrationsTwitterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new TwitterIntegrationRequest(); // TwitterIntegrationRequest | TwitterIntegrationRequest
+
+            try
+            { 
+                // Create Twitter Integration
+                TwitterIntegration result = apiInstance.PostConversationsMessagingIntegrationsTwitter(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingIntegrationsTwitter: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest)| TwitterIntegrationRequest |  |
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration)
+
+
 ## PostConversationsMessagingIntegrationsWhatsapp
 
 > [**WhatsAppIntegration**](WhatsAppIntegration) PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body)
@@ -16036,4 +16483,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

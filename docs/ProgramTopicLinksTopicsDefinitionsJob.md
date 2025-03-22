@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
+| **TestTopicPhraseResults** | [**List&lt;ProgramTopicLinksTestTopicPhraseResults&gt;**](ProgramTopicLinksTestTopicPhraseResults) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

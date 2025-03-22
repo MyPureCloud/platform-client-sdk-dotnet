@@ -6,11 +6,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteSocialmediaEscalationrule**](#DeleteSocialmediaEscalationrule) | **Delete** /api/v2/socialmedia/escalationrules/{escalationRuleId} | Delete an escalation rule. |
 | [**DeleteSocialmediaTopic**](#DeleteSocialmediaTopic) | **Delete** /api/v2/socialmedia/topics/{topicId} | Delete a social topic. |
 | [**DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](#DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | **Delete** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId} | Delete a Facebook data ingestion rule. |
 | [**DeleteSocialmediaTopicDataingestionrulesOpenOpenId**](#DeleteSocialmediaTopicDataingestionrulesOpenOpenId) | **Delete** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId} | Delete a open data ingestion rule. |
 | [**DeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](#DeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | **Delete** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId} | Delete a X (formally Twitter) data ingestion rule. |
+| [**GetSocialmediaAnalyticsAggregatesJob**](#GetSocialmediaAnalyticsAggregatesJob) | **Get** /api/v2/socialmedia/analytics/aggregates/jobs/{jobId} | Get status for async query for social media aggregates |
+| [**GetSocialmediaAnalyticsAggregatesJobResults**](#GetSocialmediaAnalyticsAggregatesJobResults) | **Get** /api/v2/socialmedia/analytics/aggregates/jobs/{jobId}/results | Fetch a page of results for an async social media query |
+| [**GetSocialmediaAnalyticsMessagesJob**](#GetSocialmediaAnalyticsMessagesJob) | **Get** /api/v2/socialmedia/analytics/messages/jobs/{jobId} | Get status for async query for social media messages job |
+| [**GetSocialmediaAnalyticsMessagesJobResults**](#GetSocialmediaAnalyticsMessagesJobResults) | **Get** /api/v2/socialmedia/analytics/messages/jobs/{jobId}/results | Fetch a page of results for an async social media messages query |
+| [**GetSocialmediaEscalationrule**](#GetSocialmediaEscalationrule) | **Get** /api/v2/socialmedia/escalationrules/{escalationRuleId} | Get a single escalation rule. |
+| [**GetSocialmediaEscalationrules**](#GetSocialmediaEscalationrules) | **Get** /api/v2/socialmedia/escalationrules | Retrieve all escalation rules for a division. |
 | [**GetSocialmediaTopic**](#GetSocialmediaTopic) | **Get** /api/v2/socialmedia/topics/{topicId} | Get a single social topic. |
+| [**GetSocialmediaTopicDataingestionrules**](#GetSocialmediaTopicDataingestionrules) | **Get** /api/v2/socialmedia/topics/{topicId}/dataingestionrules | Retrieve all social topic data ingestion rules with pagination. |
 | [**GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](#GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | **Get** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId} | Get a single Facebook data ingestion rule. |
 | [**GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion**](#GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion) | **Get** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions/{dataIngestionRuleVersion} | Get a single Facebook data ingestion rule version. |
 | [**GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions**](#GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions) | **Get** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions | Get the Facebook data ingestion rule versions. |
@@ -25,14 +33,81 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](#PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | **Patch** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId} | Update the status of a Facebook data ingestion rule. |
 | [**PatchSocialmediaTopicDataingestionrulesOpenOpenId**](#PatchSocialmediaTopicDataingestionrulesOpenOpenId) | **Patch** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId} | Update the status of a open data ingestion rule. |
 | [**PatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](#PatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | **Patch** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId} | Update the status of a X (formally Twitter) data ingestion rule. |
+| [**PostSocialmediaAnalyticsAggregatesJobs**](#PostSocialmediaAnalyticsAggregatesJobs) | **Post** /api/v2/socialmedia/analytics/aggregates/jobs | Query for social media aggregates asynchronously |
+| [**PostSocialmediaAnalyticsMessagesJobs**](#PostSocialmediaAnalyticsMessagesJobs) | **Post** /api/v2/socialmedia/analytics/messages/jobs | Query for social media messages asynchronously |
+| [**PostSocialmediaEscalationrules**](#PostSocialmediaEscalationrules) | **Post** /api/v2/socialmedia/escalationrules | Create an escalation rule. |
+| [**PostSocialmediaEscalationsMessages**](#PostSocialmediaEscalationsMessages) | **Post** /api/v2/socialmedia/escalations/messages | Escalate message to a conversation manually |
 | [**PostSocialmediaTopicDataingestionrulesFacebook**](#PostSocialmediaTopicDataingestionrulesFacebook) | **Post** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook | Create an Facebook data ingestion rule. |
 | [**PostSocialmediaTopicDataingestionrulesOpen**](#PostSocialmediaTopicDataingestionrulesOpen) | **Post** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open | Create an open data ingestion rule. |
 | [**PostSocialmediaTopicDataingestionrulesTwitter**](#PostSocialmediaTopicDataingestionrulesTwitter) | **Post** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter | Create an twitter data ingestion rule. |
 | [**PostSocialmediaTopics**](#PostSocialmediaTopics) | **Post** /api/v2/socialmedia/topics | Create a social topic. |
+| [**PostSocialmediaTwitterHistoricalTweets**](#PostSocialmediaTwitterHistoricalTweets) | **Post** /api/v2/socialmedia/twitter/historical/tweets | Retrieves historical tweet count for search terms, optional countries list and the current limit and usage for the organization. |
+| [**PutSocialmediaEscalationrule**](#PutSocialmediaEscalationrule) | **Put** /api/v2/socialmedia/escalationrules/{escalationRuleId} | Update the escalation rule. |
 | [**PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](#PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | **Put** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId} | Update the Facebook data ingestion rule. |
 | [**PutSocialmediaTopicDataingestionrulesOpenOpenId**](#PutSocialmediaTopicDataingestionrulesOpenOpenId) | **Put** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId} | Update the open data ingestion rule. |
 | [**PutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](#PutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | **Put** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId} | Update the X (formally Twitter) data ingestion rule. |
 
+
+
+## DeleteSocialmediaEscalationrule
+
+> void DeleteSocialmediaEscalationrule (string escalationRuleId)
+
+
+Delete an escalation rule.
+
+Requires ANY permissions: 
+
+* socialmedia:escalationRules:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteSocialmediaEscalationruleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var escalationRuleId = escalationRuleId_example;  // string | escalationRuleId
+
+            try
+            { 
+                // Delete an escalation rule.
+                apiInstance.DeleteSocialmediaEscalationrule(escalationRuleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.DeleteSocialmediaEscalationrule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **escalationRuleId** | **string**| escalationRuleId |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## DeleteSocialmediaTopic
@@ -301,6 +376,386 @@ namespace Example
 void (empty response body)
 
 
+## GetSocialmediaAnalyticsAggregatesJob
+
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetSocialmediaAnalyticsAggregatesJob (string jobId)
+
+
+Get status for async query for social media aggregates
+
+Requires ANY permissions: 
+
+* socialmedia:postAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSocialmediaAnalyticsAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for social media aggregates
+                AsyncQueryStatus result = apiInstance.GetSocialmediaAnalyticsAggregatesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.GetSocialmediaAnalyticsAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## GetSocialmediaAnalyticsAggregatesJobResults
+
+> [**SocialMediaAsyncAggregateQueryResponse**](SocialMediaAsyncAggregateQueryResponse) GetSocialmediaAnalyticsAggregatesJobResults (string jobId, string cursor = null)
+
+
+Fetch a page of results for an async social media query
+
+Requires ANY permissions: 
+
+* socialmedia:postAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSocialmediaAnalyticsAggregatesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Cursor token to retrieve next page (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async social media query
+                SocialMediaAsyncAggregateQueryResponse result = apiInstance.GetSocialmediaAnalyticsAggregatesJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.GetSocialmediaAnalyticsAggregatesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
+
+### Return type
+
+[**SocialMediaAsyncAggregateQueryResponse**](SocialMediaAsyncAggregateQueryResponse)
+
+
+## GetSocialmediaAnalyticsMessagesJob
+
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetSocialmediaAnalyticsMessagesJob (string jobId)
+
+
+Get status for async query for social media messages job
+
+Requires ANY permissions: 
+
+* socialmedia:postDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSocialmediaAnalyticsMessagesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for social media messages job
+                AsyncQueryStatus result = apiInstance.GetSocialmediaAnalyticsMessagesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.GetSocialmediaAnalyticsMessagesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## GetSocialmediaAnalyticsMessagesJobResults
+
+> [**SocialMediaAsyncDetailQueryResponse**](SocialMediaAsyncDetailQueryResponse) GetSocialmediaAnalyticsMessagesJobResults (string jobId, string cursor = null)
+
+
+Fetch a page of results for an async social media messages query
+
+Requires ANY permissions: 
+
+* socialmedia:postDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSocialmediaAnalyticsMessagesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Cursor token to retrieve next page (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async social media messages query
+                SocialMediaAsyncDetailQueryResponse result = apiInstance.GetSocialmediaAnalyticsMessagesJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.GetSocialmediaAnalyticsMessagesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
+
+### Return type
+
+[**SocialMediaAsyncDetailQueryResponse**](SocialMediaAsyncDetailQueryResponse)
+
+
+## GetSocialmediaEscalationrule
+
+> [**EscalationRuleResponse**](EscalationRuleResponse) GetSocialmediaEscalationrule (string escalationRuleId)
+
+
+Get a single escalation rule.
+
+Requires ALL permissions: 
+
+* socialmedia:escalationRules:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSocialmediaEscalationruleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var escalationRuleId = escalationRuleId_example;  // string | escalationRuleId
+
+            try
+            { 
+                // Get a single escalation rule.
+                EscalationRuleResponse result = apiInstance.GetSocialmediaEscalationrule(escalationRuleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.GetSocialmediaEscalationrule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **escalationRuleId** | **string**| escalationRuleId |  |
+
+### Return type
+
+[**EscalationRuleResponse**](EscalationRuleResponse)
+
+
+## GetSocialmediaEscalationrules
+
+> [**SocialEscalationResponseEntityListing**](SocialEscalationResponseEntityListing) GetSocialmediaEscalationrules (string divisionId, int? pageNumber = null, int? pageSize = null)
+
+
+Retrieve all escalation rules for a division.
+
+Requires ANY permissions: 
+
+* socialmedia:escalationRules:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSocialmediaEscalationrulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var divisionId = divisionId_example;  // string | One division ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Retrieve all escalation rules for a division.
+                SocialEscalationResponseEntityListing result = apiInstance.GetSocialmediaEscalationrules(divisionId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.GetSocialmediaEscalationrules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| One division ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**SocialEscalationResponseEntityListing**](SocialEscalationResponseEntityListing)
+
+
 ## GetSocialmediaTopic
 
 > [**SocialTopicResponse**](SocialTopicResponse) GetSocialmediaTopic (string topicId, bool? includeDeleted = null)
@@ -365,6 +820,74 @@ namespace Example
 ### Return type
 
 [**SocialTopicResponse**](SocialTopicResponse)
+
+
+## GetSocialmediaTopicDataingestionrules
+
+> [**DataIngestionRuleResponseEntityListing**](DataIngestionRuleResponseEntityListing) GetSocialmediaTopicDataingestionrules (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+
+
+Retrieve all social topic data ingestion rules with pagination.
+
+Requires ANY permissions: 
+
+* socialmedia:topic:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSocialmediaTopicDataingestionrulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var topicId = topicId_example;  // string | topicId
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var includeDeleted = true;  // bool? | Determines whether to include soft-deleted items in the result. (optional) 
+
+            try
+            { 
+                // Retrieve all social topic data ingestion rules with pagination.
+                DataIngestionRuleResponseEntityListing result = apiInstance.GetSocialmediaTopicDataingestionrules(topicId, pageNumber, pageSize, includeDeleted);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.GetSocialmediaTopicDataingestionrules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **topicId** | **string**| topicId |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **includeDeleted** | **bool?**| Determines whether to include soft-deleted items in the result. | [optional]  |
+
+### Return type
+
+[**DataIngestionRuleResponseEntityListing**](DataIngestionRuleResponseEntityListing)
 
 
 ## GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId
@@ -1337,6 +1860,256 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
+## PostSocialmediaAnalyticsAggregatesJobs
+
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostSocialmediaAnalyticsAggregatesJobs (SocialMediaAsyncAggregationQuery body)
+
+
+Query for social media aggregates asynchronously
+
+Requires ANY permissions: 
+
+* socialmedia:postAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSocialmediaAnalyticsAggregatesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var body = new SocialMediaAsyncAggregationQuery(); // SocialMediaAsyncAggregationQuery | query
+
+            try
+            { 
+                // Query for social media aggregates asynchronously
+                AsyncQueryResponse result = apiInstance.PostSocialmediaAnalyticsAggregatesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.PostSocialmediaAnalyticsAggregatesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SocialMediaAsyncAggregationQuery**](SocialMediaAsyncAggregationQuery)| query |  |
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
+## PostSocialmediaAnalyticsMessagesJobs
+
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostSocialmediaAnalyticsMessagesJobs (SocialMediaAsyncDetailQuery body)
+
+
+Query for social media messages asynchronously
+
+Requires ANY permissions: 
+
+* socialmedia:postDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSocialmediaAnalyticsMessagesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var body = new SocialMediaAsyncDetailQuery(); // SocialMediaAsyncDetailQuery | query
+
+            try
+            { 
+                // Query for social media messages asynchronously
+                AsyncQueryResponse result = apiInstance.PostSocialmediaAnalyticsMessagesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.PostSocialmediaAnalyticsMessagesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SocialMediaAsyncDetailQuery**](SocialMediaAsyncDetailQuery)| query |  |
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
+## PostSocialmediaEscalationrules
+
+> [**EscalationRuleResponse**](EscalationRuleResponse) PostSocialmediaEscalationrules (EscalationRuleRequest body = null)
+
+
+Create an escalation rule.
+
+Requires ANY permissions: 
+
+* socialmedia:escalationRules:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSocialmediaEscalationrulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var body = new EscalationRuleRequest(); // EscalationRuleRequest |  (optional) 
+
+            try
+            { 
+                // Create an escalation rule.
+                EscalationRuleResponse result = apiInstance.PostSocialmediaEscalationrules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.PostSocialmediaEscalationrules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EscalationRuleRequest**](EscalationRuleRequest)|  | [optional]  |
+
+### Return type
+
+[**EscalationRuleResponse**](EscalationRuleResponse)
+
+
+## PostSocialmediaEscalationsMessages
+
+> [**ManualEscalationResponse**](ManualEscalationResponse) PostSocialmediaEscalationsMessages (string divisionId, ManualEscalationRequest body = null)
+
+
+Escalate message to a conversation manually
+
+Requires ANY permissions: 
+
+* socialmedia:message:escalate
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSocialmediaEscalationsMessagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var divisionId = divisionId_example;  // string | One division ID
+            var body = new ManualEscalationRequest(); // ManualEscalationRequest |  (optional) 
+
+            try
+            { 
+                // Escalate message to a conversation manually
+                ManualEscalationResponse result = apiInstance.PostSocialmediaEscalationsMessages(divisionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.PostSocialmediaEscalationsMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| One division ID |  |
+| **body** | [**ManualEscalationRequest**](ManualEscalationRequest)|  | [optional]  |
+
+### Return type
+
+[**ManualEscalationResponse**](ManualEscalationResponse)
+
+
 ## PostSocialmediaTopicDataingestionrulesFacebook
 
 > [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse) PostSocialmediaTopicDataingestionrulesFacebook (string topicId, FacebookDataIngestionRuleRequest body = null)
@@ -1599,6 +2372,132 @@ namespace Example
 [**SocialTopicResponse**](SocialTopicResponse)
 
 
+## PostSocialmediaTwitterHistoricalTweets
+
+> [**TwitterDataHistoricalTweetResponse**](TwitterDataHistoricalTweetResponse) PostSocialmediaTwitterHistoricalTweets (TwitterDataHistoricalTweetRequest body)
+
+
+Retrieves historical tweet count for search terms, optional countries list and the current limit and usage for the organization.
+
+Requires ALL permissions: 
+
+* socialmedia:twitterDataIngestionRule:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSocialmediaTwitterHistoricalTweetsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var body = new TwitterDataHistoricalTweetRequest(); // TwitterDataHistoricalTweetRequest | TwitterDataHistoricalTweetRequest
+
+            try
+            { 
+                // Retrieves historical tweet count for search terms, optional countries list and the current limit and usage for the organization.
+                TwitterDataHistoricalTweetResponse result = apiInstance.PostSocialmediaTwitterHistoricalTweets(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.PostSocialmediaTwitterHistoricalTweets: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TwitterDataHistoricalTweetRequest**](TwitterDataHistoricalTweetRequest)| TwitterDataHistoricalTweetRequest |  |
+
+### Return type
+
+[**TwitterDataHistoricalTweetResponse**](TwitterDataHistoricalTweetResponse)
+
+
+## PutSocialmediaEscalationrule
+
+> [**EscalationRuleResponse**](EscalationRuleResponse) PutSocialmediaEscalationrule (string escalationRuleId, EscalationRuleRequest body = null)
+
+
+Update the escalation rule.
+
+Requires ALL permissions: 
+
+* socialmedia:escalationRules:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutSocialmediaEscalationruleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var escalationRuleId = escalationRuleId_example;  // string | escalationRuleId
+            var body = new EscalationRuleRequest(); // EscalationRuleRequest |  (optional) 
+
+            try
+            { 
+                // Update the escalation rule.
+                EscalationRuleResponse result = apiInstance.PutSocialmediaEscalationrule(escalationRuleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.PutSocialmediaEscalationrule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **escalationRuleId** | **string**| escalationRuleId |  |
+| **body** | [**EscalationRuleRequest**](EscalationRuleRequest)|  | [optional]  |
+
+### Return type
+
+[**EscalationRuleResponse**](EscalationRuleResponse)
+
+
 ## PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId
 
 > [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse) PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId (string topicId, string facebookIngestionRuleId, FacebookDataIngestionRuleRequest body = null)
@@ -1803,4 +2702,4 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

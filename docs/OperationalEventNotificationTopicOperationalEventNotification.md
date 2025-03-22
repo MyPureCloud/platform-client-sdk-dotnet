@@ -16,8 +16,9 @@
 | **ParentEntity** | **Guid?** |  | [optional] |
 | **EntityType** | **string** |  | [optional] |
 | **ConversationId** | **Guid?** |  | [optional] |
+| **EntityToken** | **string** |  | [optional] |
 | **Timestamp** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

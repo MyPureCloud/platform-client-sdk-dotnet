@@ -7,6 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Width** | **float?** | The width of the table converted to em unit. | [optional] |
+| **WidthWithUnit** | [**DocumentElementLength**](DocumentElementLength) | The width of the table in the specified unit. | [optional] |
 | **Height** | **float?** | The height for the table. | [optional] |
 | **CellSpacing** | **float?** | The cell spacing for the table. The valid values in &#39;em&#39;. | [optional] |
 | **CellPadding** | **float?** | The cell padding for the table. The valid values in &#39;em&#39;. | [optional] |
@@ -19,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

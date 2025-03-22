@@ -2920,7 +2920,7 @@ namespace Example
 
 ## GetTelephonyProvidersEdgesExtensionpools
 
-> [**ExtensionPoolEntityListing**](ExtensionPoolEntityListing) GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
+> [**ExtensionPoolEntityListing**](ExtensionPoolEntityListing) GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null)
 
 
 Get a listing of extension pools
@@ -2955,11 +2955,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var number = number_example;  // string | Deprecated, filtering by number not supported (optional) 
+            var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
 
             try
             { 
                 // Get a listing of extension pools
-                ExtensionPoolEntityListing result = apiInstance.GetTelephonyProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number);
+                ExtensionPoolEntityListing result = apiInstance.GetTelephonyProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2980,6 +2981,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **number** | **string**| Deprecated, filtering by number not supported | [optional]  |
+| **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
 
 ### Return type
 
@@ -8183,4 +8185,4 @@ namespace Example
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

@@ -843,7 +843,7 @@ namespace Example
 
 ## GetConversationRecordings
 
-> [**List&lt;Recording&gt;**](Recording) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
+> [**List&lt;Recording&gt;**](Recording) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null)
 
 
 Get all of a Conversation's Recordings.
@@ -880,11 +880,12 @@ namespace Example
             var formatId = formatId_example;  // string | The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)  (default to WEBM)
             var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional) 
             var locale = locale_example;  // string | The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional) 
+            var includePauseAnnotationsForScreenRecordings = true;  // bool? | Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional)  (default to false)
 
             try
             { 
                 // Get all of a Conversation's Recordings.
-                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale);
+                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale, includePauseAnnotationsForScreenRecordings);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -906,6 +907,7 @@ namespace Example
 | **formatId** | **string**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 | **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional]  |
 | **locale** | **string**| The locale used for redacting sensitive information in requested files, as an ISO 639-1 code | [optional]  |
+| **includePauseAnnotationsForScreenRecordings** | **bool?**| Include applicable Secure Pause annotations from all audio recordings to all screen recordings | [optional] [default to false] |
 
 ### Return type
 
@@ -3774,4 +3776,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_
