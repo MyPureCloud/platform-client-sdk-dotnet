@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeOff">Time off request settings for this management unit.</param>
         /// <param name="Scheduling">Scheduling settings for this management unit.</param>
         /// <param name="ShiftTrading">Shift trade settings for this management unit.</param>
-        public CreateManagementUnitSettingsRequest(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettingsRequest Scheduling = null, ShiftTradeSettings ShiftTrading = null)
+        public CreateManagementUnitSettingsRequest(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffSettingsRequest TimeOff = null, SchedulingSettingsRequest Scheduling = null, ShiftTradeSettings ShiftTrading = null)
         {
             this.Adherence = Adherence;
             this.ShortTermForecasting = ShortTermForecasting;
@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Time off request settings for this management unit</value>
         [DataMember(Name="timeOff", EmitDefaultValue=false)]
-        public TimeOffRequestSettings TimeOff { get; set; }
+        public TimeOffSettingsRequest TimeOff { get; set; }
 
 
 

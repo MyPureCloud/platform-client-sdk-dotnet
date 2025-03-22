@@ -230,7 +230,9 @@
 | **TimelineCategories** | **List&lt;string&gt;** | A list of timeline categories | [optional] |
 | **Acw** | **bool?** | Filter to indicate for acw state | [optional] |
 | **SegmentTypes** | **List&lt;string&gt;** | A list of filtered segment types | [optional] |
+| **ProgramIds** | **List&lt;string&gt;** | A list of program ids for filtering | [optional] |
+| **CategoryIds** | **List&lt;string&gt;** | A list of category ids for filtering | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

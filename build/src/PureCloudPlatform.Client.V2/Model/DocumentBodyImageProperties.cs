@@ -69,11 +69,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BackgroundColor">The background color property for the image. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="Align">The align property for the image..</param>
         /// <param name="Indentation">The indentation property for the image. The valid values in &#39;em&#39;..</param>
-        public DocumentBodyImageProperties(string BackgroundColor = null, AlignEnum? Align = null, float? Indentation = null)
+        /// <param name="Width">The width of the image converted to em unit..</param>
+        /// <param name="WidthWithUnit">The width of the image in the specified unit..</param>
+        /// <param name="AltText">Alternate text for the image for accessibility and when the image can&#39;t be loaded..</param>
+        public DocumentBodyImageProperties(string BackgroundColor = null, AlignEnum? Align = null, float? Indentation = null, float? Width = null, DocumentElementLength WidthWithUnit = null, string AltText = null)
         {
             this.BackgroundColor = BackgroundColor;
             this.Align = Align;
             this.Indentation = Indentation;
+            this.Width = Width;
+            this.WidthWithUnit = WidthWithUnit;
+            this.AltText = AltText;
             
         }
         
@@ -98,6 +104,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public float? Indentation { get; set; }
 
 
+
+        /// <summary>
+        /// The width of the image converted to em unit.
+        /// </summary>
+        /// <value>The width of the image converted to em unit.</value>
+        [DataMember(Name="width", EmitDefaultValue=false)]
+        public float? Width { get; set; }
+
+
+
+        /// <summary>
+        /// The width of the image in the specified unit.
+        /// </summary>
+        /// <value>The width of the image in the specified unit.</value>
+        [DataMember(Name="widthWithUnit", EmitDefaultValue=false)]
+        public DocumentElementLength WidthWithUnit { get; set; }
+
+
+
+        /// <summary>
+        /// Alternate text for the image for accessibility and when the image can&#39;t be loaded.
+        /// </summary>
+        /// <value>Alternate text for the image for accessibility and when the image can&#39;t be loaded.</value>
+        [DataMember(Name="altText", EmitDefaultValue=false)]
+        public string AltText { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,6 +143,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
             sb.Append("  Align: ").Append(Align).Append("\n");
             sb.Append("  Indentation: ").Append(Indentation).Append("\n");
+            sb.Append("  Width: ").Append(Width).Append("\n");
+            sb.Append("  WidthWithUnit: ").Append(WidthWithUnit).Append("\n");
+            sb.Append("  AltText: ").Append(AltText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Indentation == other.Indentation ||
                     this.Indentation != null &&
                     this.Indentation.Equals(other.Indentation)
+                ) &&
+                (
+                    this.Width == other.Width ||
+                    this.Width != null &&
+                    this.Width.Equals(other.Width)
+                ) &&
+                (
+                    this.WidthWithUnit == other.WidthWithUnit ||
+                    this.WidthWithUnit != null &&
+                    this.WidthWithUnit.Equals(other.WidthWithUnit)
+                ) &&
+                (
+                    this.AltText == other.AltText ||
+                    this.AltText != null &&
+                    this.AltText.Equals(other.AltText)
                 );
         }
 
@@ -186,6 +237,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Indentation != null)
                     hash = hash * 59 + this.Indentation.GetHashCode();
+
+                if (this.Width != null)
+                    hash = hash * 59 + this.Width.GetHashCode();
+
+                if (this.WidthWithUnit != null)
+                    hash = hash * 59 + this.WidthWithUnit.GetHashCode();
+
+                if (this.AltText != null)
+                    hash = hash * 59 + this.AltText.GetHashCode();
 
                 return hash;
             }

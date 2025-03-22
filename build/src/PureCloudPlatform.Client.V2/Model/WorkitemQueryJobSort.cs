@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Datedue,
             
             /// <summary>
+            /// Enum Datecreated for "dateCreated"
+            /// </summary>
+            [EnumMember(Value = "dateCreated")]
+            Datecreated,
+            
+            /// <summary>
             /// Enum Priority for "priority"
             /// </summary>
             [EnumMember(Value = "priority")]

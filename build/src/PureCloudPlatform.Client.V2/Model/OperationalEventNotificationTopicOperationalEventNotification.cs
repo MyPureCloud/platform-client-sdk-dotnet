@@ -31,8 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ParentEntity">ParentEntity.</param>
         /// <param name="EntityType">EntityType.</param>
         /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="EntityToken">EntityToken.</param>
         /// <param name="Timestamp">Timestamp.</param>
-        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, int? Timestamp = null)
+        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, int? Timestamp = null)
         {
             this.EventEntity = EventEntity;
             this.EntityId = EntityId;
@@ -44,6 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ParentEntity = ParentEntity;
             this.EntityType = EntityType;
             this.ConversationId = ConversationId;
+            this.EntityToken = EntityToken;
             this.Timestamp = Timestamp;
             
         }
@@ -131,6 +133,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets EntityToken
+        /// </summary>
+        [DataMember(Name="entityToken", EmitDefaultValue=false)]
+        public string EntityToken { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
@@ -156,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ParentEntity: ").Append(ParentEntity).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  EntityToken: ").Append(EntityToken).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -248,6 +259,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationId.Equals(other.ConversationId)
                 ) &&
                 (
+                    this.EntityToken == other.EntityToken ||
+                    this.EntityToken != null &&
+                    this.EntityToken.Equals(other.EntityToken)
+                ) &&
+                (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
@@ -294,6 +310,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
+
+                if (this.EntityToken != null)
+                    hash = hash * 59 + this.EntityToken.GetHashCode();
 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();

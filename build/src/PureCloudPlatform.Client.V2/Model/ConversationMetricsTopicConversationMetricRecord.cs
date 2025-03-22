@@ -196,6 +196,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tanswered,
             
             /// <summary>
+            /// Enum Taverageagentresponsetime for "tAverageAgentResponseTime"
+            /// </summary>
+            [EnumMember(Value = "tAverageAgentResponseTime")]
+            Taverageagentresponsetime,
+            
+            /// <summary>
+            /// Enum Taveragecustomerresponsetime for "tAverageCustomerResponseTime"
+            /// </summary>
+            [EnumMember(Value = "tAverageCustomerResponseTime")]
+            Taveragecustomerresponsetime,
+            
+            /// <summary>
             /// Enum Tbarging for "tBarging"
             /// </summary>
             [EnumMember(Value = "tBarging")]
@@ -242,6 +254,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tFirstDial")]
             Tfirstdial,
+            
+            /// <summary>
+            /// Enum Tfirstengagement for "tFirstEngagement"
+            /// </summary>
+            [EnumMember(Value = "tFirstEngagement")]
+            Tfirstengagement,
+            
+            /// <summary>
+            /// Enum Tfirstresponse for "tFirstResponse"
+            /// </summary>
+            [EnumMember(Value = "tFirstResponse")]
+            Tfirstresponse,
             
             /// <summary>
             /// Enum Tflowout for "tFlowOut"
@@ -805,6 +829,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Email,
             
             /// <summary>
+            /// Enum Internalmessage for "internalmessage"
+            /// </summary>
+            [EnumMember(Value = "internalmessage")]
+            Internalmessage,
+            
+            /// <summary>
             /// Enum Message for "message"
             /// </summary>
             [EnumMember(Value = "message")]
@@ -1278,7 +1308,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
         /// <param name="FlowInType">Type of flow in that occurred when entering ACD..</param>
         /// <param name="FlowOutType">Type of flow out that occurred when emitting tFlowOut..</param>
-        /// <param name="GroupId">Unique identifier for a PureCloud group.</param>
+        /// <param name="GroupId">Unique identifier for a Genesys Cloud group.</param>
         /// <param name="InteractionType">The interaction type (enterprise or contactCenter).</param>
         /// <param name="JourneyActionId">Identifier of the journey action..</param>
         /// <param name="JourneyActionMapId">Identifier of the journey action map that triggered the action..</param>
@@ -1701,9 +1731,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Unique identifier for a PureCloud group
+        /// Unique identifier for a Genesys Cloud group
         /// </summary>
-        /// <value>Unique identifier for a PureCloud group</value>
+        /// <value>Unique identifier for a Genesys Cloud group</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
 

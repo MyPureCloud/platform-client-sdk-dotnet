@@ -150,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.conversations.messages", typeof(ConversationMessageEventTopicMessageConversation)},
               {"v2.users.{id}.conversations.screenshares", typeof(ConversationScreenShareEventTopicScreenShareConversation)},
               {"v2.users.{id}.conversations.socialexpressions", typeof(ConversationSocialExpressionEventTopicSocialConversation)},
+              {"v2.users.{id}.conversations.summaries", typeof(ConversationSummaryTopicConversationSummaryEvent)},
               {"v2.users.{id}.conversations.videos", typeof(ConversationVideoEventTopicVideoConversation)},
               {"v2.users.{id}.conversations.{id}.recordings", typeof(RecordingEventRecording)},
               {"v2.users.{id}.conversations.{id}.recordings.{id}", typeof(RecordingTranscodeCompleteTopicRecording)},

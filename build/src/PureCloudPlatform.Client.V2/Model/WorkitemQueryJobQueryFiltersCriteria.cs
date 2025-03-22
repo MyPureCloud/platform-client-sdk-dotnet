@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkitemQueryJobQueryFiltersCriteria" /> class.
         /// </summary>
         /// <param name="Operator">Query filter logical operator to join predicates..</param>
-        /// <param name="Predicates">Query filter predicate. (required).</param>
+        /// <param name="Predicates">Query filter predicates. Number of predicates within the query filter should be between 1 and 5. (required).</param>
         public WorkitemQueryJobQueryFiltersCriteria(OperatorEnum? Operator = null, List<WorkitemQueryJobQueryFiltersPredicate> Predicates = null)
         {
             this.Operator = Operator;
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Query filter predicate.
+        /// Query filter predicates. Number of predicates within the query filter should be between 1 and 5.
         /// </summary>
-        /// <value>Query filter predicate.</value>
+        /// <value>Query filter predicates. Number of predicates within the query filter should be between 1 and 5.</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<WorkitemQueryJobQueryFiltersPredicate> Predicates { get; set; }
 

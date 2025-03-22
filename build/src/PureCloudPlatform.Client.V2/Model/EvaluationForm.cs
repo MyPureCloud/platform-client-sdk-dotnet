@@ -119,6 +119,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// AI scoring settings for the evaluation form.
+        /// </summary>
+        /// <value>AI scoring settings for the evaluation form.</value>
+        [DataMember(Name="aiScoring", EmitDefaultValue=false)]
+        public AiScoringSettings AiScoring { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -143,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
             sb.Append("  EvaluationSettings: ").Append(EvaluationSettings).Append("\n");
+            sb.Append("  AiScoring: ").Append(AiScoring).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -225,6 +235,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EvaluationSettings.Equals(other.EvaluationSettings)
                 ) &&
                 (
+                    this.AiScoring == other.AiScoring ||
+                    this.AiScoring != null &&
+                    this.AiScoring.Equals(other.AiScoring)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -265,6 +280,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EvaluationSettings != null)
                     hash = hash * 59 + this.EvaluationSettings.GetHashCode();
+
+                if (this.AiScoring != null)
+                    hash = hash * 59 + this.AiScoring.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

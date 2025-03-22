@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LogCaptureUserConfiguration :  IEquatable<LogCaptureUserConfiguration>
     {
+        /// <summary>
+        /// Indicates the method by which the logs were captured.
+        /// </summary>
+        /// <value>Indicates the method by which the logs were captured.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CaptureMethodEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ondemand for "OnDemand"
+            /// </summary>
+            [EnumMember(Value = "OnDemand")]
+            Ondemand,
+            
+            /// <summary>
+            /// Enum Scheduled for "Scheduled"
+            /// </summary>
+            [EnumMember(Value = "Scheduled")]
+            Scheduled
+        }
+        /// <summary>
+        /// Indicates the method by which the logs were captured.
+        /// </summary>
+        /// <value>Indicates the method by which the logs were captured.</value>
+        [DataMember(Name="captureMethod", EmitDefaultValue=false)]
+        public CaptureMethodEnum? CaptureMethod { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="LogCaptureUserConfiguration" /> class.
@@ -63,6 +96,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -83,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
             sb.Append("  DateExpired: ").Append(DateExpired).Append("\n");
+            sb.Append("  CaptureMethod: ").Append(CaptureMethod).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -140,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateExpired.Equals(other.DateExpired)
                 ) &&
                 (
+                    this.CaptureMethod == other.CaptureMethod ||
+                    this.CaptureMethod != null &&
+                    this.CaptureMethod.Equals(other.CaptureMethod)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -165,6 +206,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateExpired != null)
                     hash = hash * 59 + this.DateExpired.GetHashCode();
+
+                if (this.CaptureMethod != null)
+                    hash = hash * 59 + this.CaptureMethod.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

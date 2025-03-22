@@ -643,6 +643,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Inboundemail,
             
             /// <summary>
+            /// Enum Inboundmessage for "inboundmessage"
+            /// </summary>
+            [EnumMember(Value = "inboundmessage")]
+            Inboundmessage,
+            
+            /// <summary>
             /// Enum Inboundshortmessage for "inboundshortmessage"
             /// </summary>
             [EnumMember(Value = "inboundshortmessage")]
@@ -671,6 +677,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "outboundcall")]
             Outboundcall,
+            
+            /// <summary>
+            /// Enum Outboundemail for "outboundemail"
+            /// </summary>
+            [EnumMember(Value = "outboundemail")]
+            Outboundemail,
+            
+            /// <summary>
+            /// Enum Outboundmessage for "outboundmessage"
+            /// </summary>
+            [EnumMember(Value = "outboundmessage")]
+            Outboundmessage,
             
             /// <summary>
             /// Enum Securecall for "securecall"
@@ -758,6 +776,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "email")]
             Email,
+            
+            /// <summary>
+            /// Enum Internalmessage for "internalmessage"
+            /// </summary>
+            [EnumMember(Value = "internalmessage")]
+            Internalmessage,
             
             /// <summary>
             /// Enum Message for "message"
@@ -1261,7 +1285,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowSubType">Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities..</param>
         /// <param name="FlowType">The type of this flow.</param>
         /// <param name="FlowVersion">The version of this flow.</param>
-        /// <param name="GroupId">Unique identifier for a PureCloud group.</param>
+        /// <param name="GroupId">Unique identifier for a Genesys Cloud group.</param>
         /// <param name="InteractionType">The interaction type (enterprise or contactCenter).</param>
         /// <param name="JourneyActionId">Identifier of the journey action..</param>
         /// <param name="JourneyActionMapId">Identifier of the journey action map that triggered the action..</param>
@@ -1773,9 +1797,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Unique identifier for a PureCloud group
+        /// Unique identifier for a Genesys Cloud group
         /// </summary>
-        /// <value>Unique identifier for a PureCloud group</value>
+        /// <value>Unique identifier for a Genesys Cloud group</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
 

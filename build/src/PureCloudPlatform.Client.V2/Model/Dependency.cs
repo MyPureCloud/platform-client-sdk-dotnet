@@ -141,6 +141,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dialogflowcxagent,
             
             /// <summary>
+            /// Enum Digitalbotconnector for "DIGITALBOTCONNECTOR"
+            /// </summary>
+            [EnumMember(Value = "DIGITALBOTCONNECTOR")]
+            Digitalbotconnector,
+            
+            /// <summary>
             /// Enum Digitalbotflow for "DIGITALBOTFLOW"
             /// </summary>
             [EnumMember(Value = "DIGITALBOTFLOW")]

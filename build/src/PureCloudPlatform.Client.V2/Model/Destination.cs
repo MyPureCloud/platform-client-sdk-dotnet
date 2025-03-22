@@ -18,19 +18,13 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Destination :  IEquatable<Destination>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Destination" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Destination() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Destination" /> class.
-        /// </summary>
-        /// <param name="Address">Address or phone number. (required).</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="QueueId">QueueId.</param>
+        /// <param name="Address">Address or phone number..</param>
+        /// <param name="Name">The name of the internal user..</param>
+        /// <param name="UserId">The user ID..</param>
+        /// <param name="QueueId">The queue ID..</param>
         public Destination(string Address = null, string Name = null, string UserId = null, string QueueId = null)
         {
             this.Address = Address;
@@ -52,24 +46,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the internal user.
         /// </summary>
+        /// <value>The name of the internal user.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// The user ID.
         /// </summary>
+        /// <value>The user ID.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets QueueId
+        /// The queue ID.
         /// </summary>
+        /// <value>The queue ID.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
 

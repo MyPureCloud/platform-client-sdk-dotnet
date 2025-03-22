@@ -65,13 +65,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="V2MobiusRulesTopicCondition" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="Conditions">Conditions.</param>
+        /// <param name="Clauses">Clauses.</param>
         /// <param name="Predicates">Predicates.</param>
         /// <param name="Type">Type.</param>
-        public V2MobiusRulesTopicCondition(Guid? Id = null, List<V2MobiusRulesTopicCondition> Conditions = null, List<V2MobiusRulesTopicConditionRulePredicate> Predicates = null, TypeEnum? Type = null)
+        public V2MobiusRulesTopicCondition(Guid? Id = null, List<V2MobiusRulesTopicCondition> Clauses = null, List<V2MobiusRulesTopicConditionRulePredicate> Predicates = null, TypeEnum? Type = null)
         {
             this.Id = Id;
-            this.Conditions = Conditions;
+            this.Clauses = Clauses;
             this.Predicates = Predicates;
             this.Type = Type;
             
@@ -88,10 +88,10 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Conditions
+        /// Gets or Sets Clauses
         /// </summary>
-        [DataMember(Name="conditions", EmitDefaultValue=false)]
-        public List<V2MobiusRulesTopicCondition> Conditions { get; set; }
+        [DataMember(Name="clauses", EmitDefaultValue=false)]
+        public List<V2MobiusRulesTopicCondition> Clauses { get; set; }
 
 
 
@@ -114,7 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class V2MobiusRulesTopicCondition {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
+            sb.Append("  Clauses: ").Append(Clauses).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -163,9 +163,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Conditions == other.Conditions ||
-                    this.Conditions != null &&
-                    this.Conditions.SequenceEqual(other.Conditions)
+                    this.Clauses == other.Clauses ||
+                    this.Clauses != null &&
+                    this.Clauses.SequenceEqual(other.Clauses)
                 ) &&
                 (
                     this.Predicates == other.Predicates ||
@@ -193,8 +193,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Conditions != null)
-                    hash = hash * 59 + this.Conditions.GetHashCode();
+                if (this.Clauses != null)
+                    hash = hash * 59 + this.Clauses.GetHashCode();
 
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();

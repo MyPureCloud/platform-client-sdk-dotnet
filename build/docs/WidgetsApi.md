@@ -18,8 +18,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 > void DeleteWidgetsDeployment (string deploymentId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete a Widget deployment
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -80,8 +85,13 @@ void (empty response body)
 
 > [**WidgetDeployment**](WidgetDeployment) GetWidgetsDeployment (string deploymentId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a Widget deployment
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -143,8 +153,13 @@ namespace Example
 
 > [**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing) GetWidgetsDeployments ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 List Widget deployments
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -201,8 +216,13 @@ This endpoint does require any parameters.
 
 > [**WidgetDeployment**](WidgetDeployment) PostWidgetsDeployments (WidgetDeployment body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create Widget deployment
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -264,8 +284,13 @@ namespace Example
 
 > [**WidgetDeployment**](WidgetDeployment) PutWidgetsDeployment (string deploymentId, WidgetDeployment body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a Widget deployment
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -325,4 +350,4 @@ namespace Example
 [**WidgetDeployment**](WidgetDeployment)
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

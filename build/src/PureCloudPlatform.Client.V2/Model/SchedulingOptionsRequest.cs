@@ -19,12 +19,55 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class SchedulingOptionsRequest :  IEquatable<SchedulingOptionsRequest>
     {
         /// <summary>
+        /// Overrides the default BU level activity smoothing type for this schedule generation
+        /// </summary>
+        /// <value>Overrides the default BU level activity smoothing type for this schedule generation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActivitySmoothingTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Reduceconcurrentactivitiesacrossbu for "ReduceConcurrentActivitiesAcrossBu"
+            /// </summary>
+            [EnumMember(Value = "ReduceConcurrentActivitiesAcrossBu")]
+            Reduceconcurrentactivitiesacrossbu,
+            
+            /// <summary>
+            /// Enum Reduceconcurrentactivitiesacrossmu for "ReduceConcurrentActivitiesAcrossMu"
+            /// </summary>
+            [EnumMember(Value = "ReduceConcurrentActivitiesAcrossMu")]
+            Reduceconcurrentactivitiesacrossmu,
+            
+            /// <summary>
+            /// Enum Consistentservicelevel for "ConsistentServiceLevel"
+            /// </summary>
+            [EnumMember(Value = "ConsistentServiceLevel")]
+            Consistentservicelevel
+        }
+        /// <summary>
+        /// Overrides the default BU level activity smoothing type for this schedule generation
+        /// </summary>
+        /// <value>Overrides the default BU level activity smoothing type for this schedule generation</value>
+        [DataMember(Name="activitySmoothingType", EmitDefaultValue=false)]
+        public ActivitySmoothingTypeEnum? ActivitySmoothingType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingOptionsRequest" /> class.
         /// </summary>
         /// <param name="NoForecastOptions">Schedule generation options to apply if no forecast is supplied.</param>
-        public SchedulingOptionsRequest(SchedulingNoForecastOptionsRequest NoForecastOptions = null)
+        /// <param name="ActivitySmoothingType">Overrides the default BU level activity smoothing type for this schedule generation.</param>
+        /// <param name="InduceScheduleVariability">Overrides the default BU level induce schedule variability setting for this schedule generation.</param>
+        public SchedulingOptionsRequest(SchedulingNoForecastOptionsRequest NoForecastOptions = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null)
         {
             this.NoForecastOptions = NoForecastOptions;
+            this.ActivitySmoothingType = ActivitySmoothingType;
+            this.InduceScheduleVariability = InduceScheduleVariability;
             
         }
         
@@ -38,6 +81,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public SchedulingNoForecastOptionsRequest NoForecastOptions { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Overrides the default BU level induce schedule variability setting for this schedule generation
+        /// </summary>
+        /// <value>Overrides the default BU level induce schedule variability setting for this schedule generation</value>
+        [DataMember(Name="induceScheduleVariability", EmitDefaultValue=false)]
+        public bool? InduceScheduleVariability { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +102,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SchedulingOptionsRequest {\n");
 
             sb.Append("  NoForecastOptions: ").Append(NoForecastOptions).Append("\n");
+            sb.Append("  ActivitySmoothingType: ").Append(ActivitySmoothingType).Append("\n");
+            sb.Append("  InduceScheduleVariability: ").Append(InduceScheduleVariability).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +148,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NoForecastOptions == other.NoForecastOptions ||
                     this.NoForecastOptions != null &&
                     this.NoForecastOptions.Equals(other.NoForecastOptions)
+                ) &&
+                (
+                    this.ActivitySmoothingType == other.ActivitySmoothingType ||
+                    this.ActivitySmoothingType != null &&
+                    this.ActivitySmoothingType.Equals(other.ActivitySmoothingType)
+                ) &&
+                (
+                    this.InduceScheduleVariability == other.InduceScheduleVariability ||
+                    this.InduceScheduleVariability != null &&
+                    this.InduceScheduleVariability.Equals(other.InduceScheduleVariability)
                 );
         }
 
@@ -108,6 +174,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.NoForecastOptions != null)
                     hash = hash * 59 + this.NoForecastOptions.GetHashCode();
+
+                if (this.ActivitySmoothingType != null)
+                    hash = hash * 59 + this.ActivitySmoothingType.GetHashCode();
+
+                if (this.InduceScheduleVariability != null)
+                    hash = hash * 59 + this.InduceScheduleVariability.GetHashCode();
 
                 return hash;
             }

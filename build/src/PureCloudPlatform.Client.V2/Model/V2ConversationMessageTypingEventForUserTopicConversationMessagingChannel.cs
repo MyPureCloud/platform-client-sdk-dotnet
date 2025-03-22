@@ -78,7 +78,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "Sms"
             /// </summary>
             [EnumMember(Value = "Sms")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Apple for "Apple"
+            /// </summary>
+            [EnumMember(Value = "Apple")]
+            Apple
         }
         /// <summary>
         /// Gets or Sets Platform

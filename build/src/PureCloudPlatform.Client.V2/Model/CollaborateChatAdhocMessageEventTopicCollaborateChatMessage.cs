@@ -66,7 +66,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="To">To.</param>
         /// <param name="Mentions">Mentions.</param>
         /// <param name="NotifyAll">NotifyAll.</param>
-        public CollaborateChatAdhocMessageEventTopicCollaborateChatMessage(string MessageId = null, string Created = null, ActionTypeEnum? ActionType = null, string Body = null, CollaborateChatAdhocMessageEventTopicCollaborateChatEntity From = null, CollaborateChatAdhocMessageEventTopicCollaborateChatEntity To = null, List<CollaborateChatAdhocMessageEventTopicCollaborateChatEntity> Mentions = null, bool? NotifyAll = null)
+        /// <param name="Reactions">Reactions.</param>
+        public CollaborateChatAdhocMessageEventTopicCollaborateChatMessage(string MessageId = null, string Created = null, ActionTypeEnum? ActionType = null, string Body = null, CollaborateChatAdhocMessageEventTopicCollaborateChatEntity From = null, CollaborateChatAdhocMessageEventTopicCollaborateChatEntity To = null, List<CollaborateChatAdhocMessageEventTopicCollaborateChatEntity> Mentions = null, bool? NotifyAll = null, Dictionary<string, List<string>> Reactions = null)
         {
             this.MessageId = MessageId;
             this.Created = Created;
@@ -76,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.To = To;
             this.Mentions = Mentions;
             this.NotifyAll = NotifyAll;
+            this.Reactions = Reactions;
             
         }
         
@@ -138,6 +140,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? NotifyAll { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Reactions
+        /// </summary>
+        [DataMember(Name="reactions", EmitDefaultValue=false)]
+        public Dictionary<string, List<string>> Reactions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -155,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Mentions: ").Append(Mentions).Append("\n");
             sb.Append("  NotifyAll: ").Append(NotifyAll).Append("\n");
+            sb.Append("  Reactions: ").Append(Reactions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -234,6 +245,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NotifyAll == other.NotifyAll ||
                     this.NotifyAll != null &&
                     this.NotifyAll.Equals(other.NotifyAll)
+                ) &&
+                (
+                    this.Reactions == other.Reactions ||
+                    this.Reactions != null &&
+                    this.Reactions.SequenceEqual(other.Reactions)
                 );
         }
 
@@ -271,6 +287,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.NotifyAll != null)
                     hash = hash * 59 + this.NotifyAll.GetHashCode();
+
+                if (this.Reactions != null)
+                    hash = hash * 59 + this.Reactions.GetHashCode();
 
                 return hash;
             }

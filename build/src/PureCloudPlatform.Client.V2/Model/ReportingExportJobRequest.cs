@@ -778,7 +778,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentAssignedEvaluationMeView for "AGENT_ASSIGNED_EVALUATION_ME_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_ASSIGNED_EVALUATION_ME_VIEW")]
-            AgentAssignedEvaluationMeView
+            AgentAssignedEvaluationMeView,
+            
+            /// <summary>
+            /// Enum VirtualAgentPerformanceView for "VIRTUAL_AGENT_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "VIRTUAL_AGENT_PERFORMANCE_VIEW")]
+            VirtualAgentPerformanceView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request

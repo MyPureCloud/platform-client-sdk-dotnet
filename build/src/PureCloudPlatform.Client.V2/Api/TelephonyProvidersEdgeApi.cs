@@ -1159,9 +1159,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ExtensionPoolEntityListing</returns>
         
-        ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
+        ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a listing of extension pools
@@ -1174,9 +1175,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ExtensionPoolEntityListing</returns>
         
-        ApiResponse<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
+        ApiResponse<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters.
@@ -4471,9 +4473,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ExtensionPoolEntityListing</returns>
         
-        System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
+        System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a listing of extension pools
@@ -4486,9 +4489,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionPoolEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
+        System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters.
@@ -16290,11 +16294,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ExtensionPoolEntityListing</returns>
         
-        public ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
+        public ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null)
         {
-             ApiResponse<ExtensionPoolEntityListing> localVarResponse = GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo(pageSize, pageNumber, sortBy, number);
+             ApiResponse<ExtensionPoolEntityListing> localVarResponse = GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo(pageSize, pageNumber, sortBy, number, divisionId);
              return localVarResponse.Data;
         }
 
@@ -16307,9 +16312,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ExtensionPoolEntityListing</returns>
         
-        public ApiResponse< ExtensionPoolEntityListing > GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
+        public ApiResponse< ExtensionPoolEntityListing > GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
@@ -16348,6 +16354,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (number != null) localVarQueryParams.Add(new Tuple<string, string>("number", this.Configuration.ApiClient.ParameterToString(number)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16401,11 +16408,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ExtensionPoolEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
+        public async System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null)
         {
-             ApiResponse<ExtensionPoolEntityListing> localVarResponse = await GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, number);
+             ApiResponse<ExtensionPoolEntityListing> localVarResponse = await GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, number, divisionId);
              return localVarResponse.Data;
 
         }
@@ -16419,9 +16427,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionPoolEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
@@ -16460,6 +16469,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (number != null) localVarQueryParams.Add(new Tuple<string, string>("number", this.Configuration.ApiClient.ParameterToString(number)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

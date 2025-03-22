@@ -12,7 +12,8 @@
 | **DefaultDestinationStatusId** | **string** | Default destination status to which this Status will transition to if auto status transition enabled. | [optional] |
 | **StatusTransitionDelaySeconds** | **int?** | Delay in seconds for auto status transition. Required if defaultDestinationStatusId is provided. | [optional] |
 | **StatusTransitionTime** | **string** | Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS | [optional] |
+| **AutoTerminateWorkitem** | **bool?** | Terminate workitem on selection of status. Applicable only for statuses in the Closed category. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

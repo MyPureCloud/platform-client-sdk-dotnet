@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **SpeakTo** | **string** | Determines to whom the initiating participant is speaking. Defaults to DESTINATION | |
+| **SpeakTo** | **string** | Determines to whom the initiating participant is requesting to speak. Defaults to DESTINATION | |
 | **ConsultingUserId** | **string** | The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID | [optional] |
-| **Destination** | [**Destination**](Destination) | Destination phone number and name. | |
+| **Destination** | [**Destination**](Destination) | Destination. Specify one and only one parameter from the list below. | |
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

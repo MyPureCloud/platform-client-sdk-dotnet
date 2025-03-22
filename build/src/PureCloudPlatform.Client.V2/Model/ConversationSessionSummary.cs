@@ -146,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Resolution">The resolution of the conversation summary..</param>
         /// <param name="DateCreated">The created date of the summary. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Participants">The list of participants..</param>
-        public ConversationSessionSummary(string Text = null, StatusEnum? Status = null, MediaTypeEnum? MediaType = null, string Language = null, List<ConversationSummaryWrapupCode> PredictedWrapupCodes = null, ConversationEditedSummary EditedSummary = null, ConversationSummaryReason Reason = null, ConversationSummaryFollowup Followup = null, ConversationSummaryResolution Resolution = null, DateTime? DateCreated = null, List<AddressableEntityRef> Participants = null)
+        public ConversationSessionSummary(string Text = null, StatusEnum? Status = null, MediaTypeEnum? MediaType = null, string Language = null, List<ConversationSummaryWrapupCode> PredictedWrapupCodes = null, ConversationEditedInput EditedSummary = null, ConversationSummaryReason Reason = null, ConversationSummaryFollowup Followup = null, ConversationSummaryResolution Resolution = null, DateTime? DateCreated = null, List<AddressableEntityRef> Participants = null)
         {
             this.Text = Text;
             this.Status = Status;
@@ -200,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The edited summary of the conversation.</value>
         [DataMember(Name="editedSummary", EmitDefaultValue=false)]
-        public ConversationEditedSummary EditedSummary { get; set; }
+        public ConversationEditedInput EditedSummary { get; set; }
 
 
 

@@ -243,6 +243,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
+        /// Delete Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns></returns>
+        
+        void DeleteConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId);
+
+        /// <summary>
+        /// Delete Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId);
+
+        /// <summary>
         /// Delete a WhatsApp messaging integration
         /// </summary>
         /// <remarks>
@@ -2067,6 +2091,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
+        /// Get twitter oauth settings to patch an integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>TwitterOAuthSettings</returns>
+        
+        TwitterOAuthSettings GetConversationsMessagingIntegrationTwitterOauthSettings (string integrationId);
+
+        /// <summary>
+        /// Get twitter oauth settings to patch an integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>ApiResponse of TwitterOAuthSettings</returns>
+        
+        ApiResponse<TwitterOAuthSettings> GetConversationsMessagingIntegrationTwitterOauthSettingsWithHttpInfo (string integrationId);
+
+        /// <summary>
         /// Get a list of Integrations
         /// </summary>
         /// <remarks>
@@ -2271,6 +2319,86 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OpenIntegration</returns>
         
         ApiResponse<OpenIntegration> GetConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get a list of Twitter Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>TwitterIntegrationEntityListing</returns>
+        
+        TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get a list of Twitter Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>ApiResponse of TwitterIntegrationEntityListing</returns>
+        
+        ApiResponse<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>TwitterIntegration</returns>
+        
+        TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>ApiResponse of TwitterIntegration</returns>
+        
+        ApiResponse<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get twitter oauth settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TwitterSignupOAuthSettings</returns>
+        
+        TwitterSignupOAuthSettings GetConversationsMessagingIntegrationsTwitterOauthSettings ();
+
+        /// <summary>
+        /// Get twitter oauth settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TwitterSignupOAuthSettings</returns>
+        
+        ApiResponse<TwitterSignupOAuthSettings> GetConversationsMessagingIntegrationsTwitterOauthSettingsWithHttpInfo ();
 
         /// <summary>
         /// Get a list of WhatsApp Integrations
@@ -3657,6 +3785,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OpenIntegration</returns>
         
         ApiResponse<OpenIntegration> PatchConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId, OpenIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update a Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>TwitterIntegration</returns>
+        
+        TwitterIntegration PatchConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, TwitterIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update a Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>ApiResponse of TwitterIntegration</returns>
+        
+        ApiResponse<TwitterIntegration> PatchConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, TwitterIntegrationUpdateRequest body);
 
         /// <summary>
         /// Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow
@@ -5665,6 +5819,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OpenIntegration> PostConversationsMessagingIntegrationsOpenWithHttpInfo (OpenIntegrationRequest body);
 
         /// <summary>
+        /// Create Twitter Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>TwitterIntegration</returns>
+        
+        TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body);
+
+        /// <summary>
+        /// Create Twitter Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>ApiResponse of TwitterIntegration</returns>
+        
+        ApiResponse<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body);
+
+        /// <summary>
         /// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
         /// </summary>
         /// <remarks>
@@ -6679,6 +6857,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId);
+
+        /// <summary>
+        /// Delete Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId);
+
+        /// <summary>
+        /// Delete Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Delete a WhatsApp messaging integration
@@ -8505,6 +8707,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
+        /// Get twitter oauth settings to patch an integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>Task of TwitterOAuthSettings</returns>
+        
+        System.Threading.Tasks.Task<TwitterOAuthSettings> GetConversationsMessagingIntegrationTwitterOauthSettingsAsync (string integrationId);
+
+        /// <summary>
+        /// Get twitter oauth settings to patch an integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>Task of ApiResponse (TwitterOAuthSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TwitterOAuthSettings>> GetConversationsMessagingIntegrationTwitterOauthSettingsAsyncWithHttpInfo (string integrationId);
+
+        /// <summary>
         /// Get a list of Integrations
         /// </summary>
         /// <remarks>
@@ -8709,6 +8935,86 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OpenIntegration)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> GetConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get a list of Twitter Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of TwitterIntegrationEntityListing</returns>
+        
+        System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get a list of Twitter Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of ApiResponse (TwitterIntegrationEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of TwitterIntegration</returns>
+        
+        System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get twitter oauth settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TwitterSignupOAuthSettings</returns>
+        
+        System.Threading.Tasks.Task<TwitterSignupOAuthSettings> GetConversationsMessagingIntegrationsTwitterOauthSettingsAsync ();
+
+        /// <summary>
+        /// Get twitter oauth settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TwitterSignupOAuthSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TwitterSignupOAuthSettings>> GetConversationsMessagingIntegrationsTwitterOauthSettingsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get a list of WhatsApp Integrations
@@ -10095,6 +10401,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OpenIntegration)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> PatchConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId, OpenIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update a Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>Task of TwitterIntegration</returns>
+        
+        System.Threading.Tasks.Task<TwitterIntegration> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, TwitterIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update a Twitter messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, TwitterIntegrationUpdateRequest body);
 
         /// <summary>
         /// Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow
@@ -12101,6 +12433,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OpenIntegration)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> PostConversationsMessagingIntegrationsOpenAsyncWithHttpInfo (OpenIntegrationRequest body);
+
+        /// <summary>
+        /// Create Twitter Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>Task of TwitterIntegration</returns>
+        
+        System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body);
+
+        /// <summary>
+        /// Create Twitter Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body);
 
         /// <summary>
         /// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
@@ -14934,6 +15290,217 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns></returns>
+        
+        public void DeleteConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId)
+        {
+             DeleteConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId);
+        }
+
+        /// <summary>
+        /// Delete Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsTwitterIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId)
+        {
+             await DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId);
+
+        }
+
+        /// <summary>
+        /// Delete Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsTwitterIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -30545,6 +31112,219 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get twitter oauth settings to patch an integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>TwitterOAuthSettings</returns>
+        
+        public TwitterOAuthSettings GetConversationsMessagingIntegrationTwitterOauthSettings (string integrationId)
+        {
+             ApiResponse<TwitterOAuthSettings> localVarResponse = GetConversationsMessagingIntegrationTwitterOauthSettingsWithHttpInfo(integrationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get twitter oauth settings to patch an integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>ApiResponse of TwitterOAuthSettings</returns>
+        
+        public ApiResponse< TwitterOAuthSettings > GetConversationsMessagingIntegrationTwitterOauthSettingsWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationTwitterOauthSettings");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationTwitterOauthSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationTwitterOauthSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterOAuthSettings>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterOAuthSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterOAuthSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get twitter oauth settings to patch an integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>Task of TwitterOAuthSettings</returns>
+        
+        public async System.Threading.Tasks.Task<TwitterOAuthSettings> GetConversationsMessagingIntegrationTwitterOauthSettingsAsync (string integrationId)
+        {
+             ApiResponse<TwitterOAuthSettings> localVarResponse = await GetConversationsMessagingIntegrationTwitterOauthSettingsAsyncWithHttpInfo(integrationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get twitter oauth settings to patch an integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration Id of an existing integration that needs to be patched with new oauth settings</param>
+        /// <returns>Task of ApiResponse (TwitterOAuthSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterOAuthSettings>> GetConversationsMessagingIntegrationTwitterOauthSettingsAsyncWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationTwitterOauthSettings");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationTwitterOauthSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationTwitterOauthSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterOAuthSettings>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterOAuthSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterOAuthSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a list of Integrations 
         /// 
         /// </summary>
@@ -32115,6 +32895,655 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OpenIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of Twitter Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>TwitterIntegrationEntityListing</returns>
+        
+        public TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        {
+             ApiResponse<TwitterIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsTwitterWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Twitter Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>ApiResponse of TwitterIntegrationEntityListing</returns>
+        
+        public ApiResponse< TwitterIntegrationEntityListing > GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
+            if (messagingSettingId != null) localVarQueryParams.Add(new Tuple<string, string>("messagingSetting.id", this.Configuration.ApiClient.ParameterToString(messagingSettingId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegrationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegrationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegrationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of Twitter Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of TwitterIntegrationEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        {
+             ApiResponse<TwitterIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Twitter Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of ApiResponse (TwitterIntegrationEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
+            if (messagingSettingId != null) localVarQueryParams.Add(new Tuple<string, string>("messagingSetting.id", this.Configuration.ApiClient.ParameterToString(messagingSettingId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegrationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegrationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegrationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>TwitterIntegration</returns>
+        
+        public TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null)
+        {
+             ApiResponse<TwitterIntegration> localVarResponse = GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>ApiResponse of TwitterIntegration</returns>
+        
+        public ApiResponse< TwitterIntegration > GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, string expand = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsTwitterIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of TwitterIntegration</returns>
+        
+        public async System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, string expand = null)
+        {
+             ApiResponse<TwitterIntegration> localVarResponse = await GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsTwitterIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get twitter oauth settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TwitterSignupOAuthSettings</returns>
+        
+        public TwitterSignupOAuthSettings GetConversationsMessagingIntegrationsTwitterOauthSettings ()
+        {
+             ApiResponse<TwitterSignupOAuthSettings> localVarResponse = GetConversationsMessagingIntegrationsTwitterOauthSettingsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get twitter oauth settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TwitterSignupOAuthSettings</returns>
+        
+        public ApiResponse< TwitterSignupOAuthSettings > GetConversationsMessagingIntegrationsTwitterOauthSettingsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/oauth/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterOauthSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterOauthSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterSignupOAuthSettings>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterSignupOAuthSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterSignupOAuthSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get twitter oauth settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TwitterSignupOAuthSettings</returns>
+        
+        public async System.Threading.Tasks.Task<TwitterSignupOAuthSettings> GetConversationsMessagingIntegrationsTwitterOauthSettingsAsync ()
+        {
+             ApiResponse<TwitterSignupOAuthSettings> localVarResponse = await GetConversationsMessagingIntegrationsTwitterOauthSettingsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get twitter oauth settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TwitterSignupOAuthSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterSignupOAuthSettings>> GetConversationsMessagingIntegrationsTwitterOauthSettingsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/oauth/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterOauthSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterOauthSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterSignupOAuthSettings>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterSignupOAuthSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterSignupOAuthSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -44215,6 +45644,242 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OpenIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>TwitterIntegration</returns>
+        
+        public TwitterIntegration PatchConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, TwitterIntegrationUpdateRequest body)
+        {
+             ApiResponse<TwitterIntegration> localVarResponse = PatchConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>ApiResponse of TwitterIntegration</returns>
+        
+        public ApiResponse< TwitterIntegration > PatchConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, TwitterIntegrationUpdateRequest body)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->PatchConversationsMessagingIntegrationsTwitterIntegrationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsTwitterIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>Task of TwitterIntegration</returns>
+        
+        public async System.Threading.Tasks.Task<TwitterIntegration> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, TwitterIntegrationUpdateRequest body)
+        {
+             ApiResponse<TwitterIntegration> localVarResponse = await PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a Twitter messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">TwitterIntegrationUpdateRequest</param>
+        /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, TwitterIntegrationUpdateRequest body)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->PatchConversationsMessagingIntegrationsTwitterIntegrationId");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsTwitterIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -62053,6 +63718,229 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OpenIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (OpenIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create Twitter Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>TwitterIntegration</returns>
+        
+        public TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body)
+        {
+             ApiResponse<TwitterIntegration> localVarResponse = PostConversationsMessagingIntegrationsTwitterWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Twitter Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>ApiResponse of TwitterIntegration</returns>
+        
+        public ApiResponse< TwitterIntegration > PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsTwitter");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsTwitter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create Twitter Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>Task of TwitterIntegration</returns>
+        
+        public async System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body)
+        {
+             ApiResponse<TwitterIntegration> localVarResponse = await PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create Twitter Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">TwitterIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsTwitter");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsTwitter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TwitterIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (TwitterIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

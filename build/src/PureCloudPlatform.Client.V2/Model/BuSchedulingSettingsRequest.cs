@@ -19,18 +19,61 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class BuSchedulingSettingsRequest :  IEquatable<BuSchedulingSettingsRequest>
     {
         /// <summary>
+        /// The activity smoothing type for schedule generation in this business unit
+        /// </summary>
+        /// <value>The activity smoothing type for schedule generation in this business unit</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActivitySmoothingTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Reduceconcurrentactivitiesacrossbu for "ReduceConcurrentActivitiesAcrossBu"
+            /// </summary>
+            [EnumMember(Value = "ReduceConcurrentActivitiesAcrossBu")]
+            Reduceconcurrentactivitiesacrossbu,
+            
+            /// <summary>
+            /// Enum Reduceconcurrentactivitiesacrossmu for "ReduceConcurrentActivitiesAcrossMu"
+            /// </summary>
+            [EnumMember(Value = "ReduceConcurrentActivitiesAcrossMu")]
+            Reduceconcurrentactivitiesacrossmu,
+            
+            /// <summary>
+            /// Enum Consistentservicelevel for "ConsistentServiceLevel"
+            /// </summary>
+            [EnumMember(Value = "ConsistentServiceLevel")]
+            Consistentservicelevel
+        }
+        /// <summary>
+        /// The activity smoothing type for schedule generation in this business unit
+        /// </summary>
+        /// <value>The activity smoothing type for schedule generation in this business unit</value>
+        [DataMember(Name="activitySmoothingType", EmitDefaultValue=false)]
+        public ActivitySmoothingTypeEnum? ActivitySmoothingType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="BuSchedulingSettingsRequest" /> class.
         /// </summary>
         /// <param name="MessageSeverities">Schedule generation message severity configuration.</param>
         /// <param name="SyncTimeOffProperties">Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published..</param>
         /// <param name="ServiceGoalImpact">Configures the max percent increase and decrease of service goals for this business unit.</param>
         /// <param name="AllowWorkPlanPerMinuteGranularity">Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false..</param>
-        public BuSchedulingSettingsRequest(List<SchedulerMessageTypeSeverity> MessageSeverities = null, SetWrapperSyncTimeOffProperty SyncTimeOffProperties = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null, bool? AllowWorkPlanPerMinuteGranularity = null)
+        /// <param name="ActivitySmoothingType">The activity smoothing type for schedule generation in this business unit.</param>
+        /// <param name="InduceScheduleVariability">Indicates whether to provide variability in schedule generation.</param>
+        public BuSchedulingSettingsRequest(List<SchedulerMessageTypeSeverity> MessageSeverities = null, SetWrapperSyncTimeOffProperty SyncTimeOffProperties = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null, bool? AllowWorkPlanPerMinuteGranularity = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null)
         {
             this.MessageSeverities = MessageSeverities;
             this.SyncTimeOffProperties = SyncTimeOffProperties;
             this.ServiceGoalImpact = ServiceGoalImpact;
             this.AllowWorkPlanPerMinuteGranularity = AllowWorkPlanPerMinuteGranularity;
+            this.ActivitySmoothingType = ActivitySmoothingType;
+            this.InduceScheduleVariability = InduceScheduleVariability;
             
         }
         
@@ -71,6 +114,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AllowWorkPlanPerMinuteGranularity { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Indicates whether to provide variability in schedule generation
+        /// </summary>
+        /// <value>Indicates whether to provide variability in schedule generation</value>
+        [DataMember(Name="induceScheduleVariability", EmitDefaultValue=false)]
+        public bool? InduceScheduleVariability { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +138,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SyncTimeOffProperties: ").Append(SyncTimeOffProperties).Append("\n");
             sb.Append("  ServiceGoalImpact: ").Append(ServiceGoalImpact).Append("\n");
             sb.Append("  AllowWorkPlanPerMinuteGranularity: ").Append(AllowWorkPlanPerMinuteGranularity).Append("\n");
+            sb.Append("  ActivitySmoothingType: ").Append(ActivitySmoothingType).Append("\n");
+            sb.Append("  InduceScheduleVariability: ").Append(InduceScheduleVariability).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +199,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowWorkPlanPerMinuteGranularity == other.AllowWorkPlanPerMinuteGranularity ||
                     this.AllowWorkPlanPerMinuteGranularity != null &&
                     this.AllowWorkPlanPerMinuteGranularity.Equals(other.AllowWorkPlanPerMinuteGranularity)
+                ) &&
+                (
+                    this.ActivitySmoothingType == other.ActivitySmoothingType ||
+                    this.ActivitySmoothingType != null &&
+                    this.ActivitySmoothingType.Equals(other.ActivitySmoothingType)
+                ) &&
+                (
+                    this.InduceScheduleVariability == other.InduceScheduleVariability ||
+                    this.InduceScheduleVariability != null &&
+                    this.InduceScheduleVariability.Equals(other.InduceScheduleVariability)
                 );
         }
 
@@ -168,6 +234,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowWorkPlanPerMinuteGranularity != null)
                     hash = hash * 59 + this.AllowWorkPlanPerMinuteGranularity.GetHashCode();
+
+                if (this.ActivitySmoothingType != null)
+                    hash = hash * 59 + this.ActivitySmoothingType.GetHashCode();
+
+                if (this.InduceScheduleVariability != null)
+                    hash = hash * 59 + this.InduceScheduleVariability.GetHashCode();
 
                 return hash;
             }

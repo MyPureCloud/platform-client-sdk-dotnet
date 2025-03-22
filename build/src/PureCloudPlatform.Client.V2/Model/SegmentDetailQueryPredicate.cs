@@ -145,6 +145,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conference,
             
             /// <summary>
+            /// Enum Deliverypushed for "deliveryPushed"
+            /// </summary>
+            [EnumMember(Value = "deliveryPushed")]
+            Deliverypushed,
+            
+            /// <summary>
             /// Enum Deliverystatus for "deliveryStatus"
             /// </summary>
             [EnumMember(Value = "deliveryStatus")]

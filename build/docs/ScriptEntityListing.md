@@ -10,6 +10,7 @@
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
+| **TruncatedDivisions** | **bool?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
@@ -19,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

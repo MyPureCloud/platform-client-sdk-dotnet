@@ -111,6 +111,18 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignEmailSubjectCharacterLimitExceeded,
             
             /// <summary>
+            /// Enum CampaignWhatsappHeaderValueLimitExceeded for "CAMPAIGN_WHATSAPP_HEADER_VALUE_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_WHATSAPP_HEADER_VALUE_LIMIT_EXCEEDED")]
+            CampaignWhatsappHeaderValueLimitExceeded,
+            
+            /// <summary>
+            /// Enum CampaignWhatsappButtonUrlValueLimitExceeded for "CAMPAIGN_WHATSAPP_BUTTON_URL_VALUE_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_WHATSAPP_BUTTON_URL_VALUE_LIMIT_EXCEEDED")]
+            CampaignWhatsappButtonUrlValueLimitExceeded,
+            
+            /// <summary>
             /// Enum CampaignInvalidated for "CAMPAIGN_INVALIDATED"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_INVALIDATED")]

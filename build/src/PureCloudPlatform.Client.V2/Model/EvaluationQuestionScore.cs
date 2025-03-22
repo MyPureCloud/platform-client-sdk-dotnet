@@ -113,6 +113,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Comments { get; set; }
 
 
+
+        /// <summary>
+        /// Suggested AI answer
+        /// </summary>
+        /// <value>Suggested AI answer</value>
+        [DataMember(Name="aiAnswer", EmitDefaultValue=false)]
+        public AiAnswer AiAnswer { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -130,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssistedAnswerId: ").Append(AssistedAnswerId).Append("\n");
             sb.Append("  FailedKillQuestion: ").Append(FailedKillQuestion).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
+            sb.Append("  AiAnswer: ").Append(AiAnswer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -209,6 +219,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Comments == other.Comments ||
                     this.Comments != null &&
                     this.Comments.Equals(other.Comments)
+                ) &&
+                (
+                    this.AiAnswer == other.AiAnswer ||
+                    this.AiAnswer != null &&
+                    this.AiAnswer.Equals(other.AiAnswer)
                 );
         }
 
@@ -246,6 +261,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
+
+                if (this.AiAnswer != null)
+                    hash = hash * 59 + this.AiAnswer.GetHashCode();
 
                 return hash;
             }

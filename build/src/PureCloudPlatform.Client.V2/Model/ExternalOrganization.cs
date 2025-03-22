@@ -32,7 +32,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="CompanyType">CompanyType.</param>
         /// <param name="Industry">Industry.</param>
-        /// <param name="PrimaryContactId">PrimaryContactId.</param>
         /// <param name="Address">Address.</param>
         /// <param name="PhoneNumber">PhoneNumber.</param>
         /// <param name="FaxNumber">FaxNumber.</param>
@@ -48,14 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Trustor">Trustor.</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        public ExternalOrganization(string Id = null, string Name = null, WritableStarrableDivision Division = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
+        public ExternalOrganization(string Id = null, string Name = null, WritableStarrableDivision Division = null, string CompanyType = null, string Industry = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Division = Division;
             this.CompanyType = CompanyType;
             this.Industry = Industry;
-            this.PrimaryContactId = PrimaryContactId;
             this.Address = Address;
             this.PhoneNumber = PhoneNumber;
             this.FaxNumber = FaxNumber;
@@ -116,14 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="industry", EmitDefaultValue=false)]
         public string Industry { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets PrimaryContactId
-        /// </summary>
-        [DataMember(Name="primaryContactId", EmitDefaultValue=false)]
-        public string PrimaryContactId { get; set; }
 
 
 
@@ -283,7 +273,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  CompanyType: ").Append(CompanyType).Append("\n");
             sb.Append("  Industry: ").Append(Industry).Append("\n");
-            sb.Append("  PrimaryContactId: ").Append(PrimaryContactId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  FaxNumber: ").Append(FaxNumber).Append("\n");
@@ -365,11 +354,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Industry == other.Industry ||
                     this.Industry != null &&
                     this.Industry.Equals(other.Industry)
-                ) &&
-                (
-                    this.PrimaryContactId == other.PrimaryContactId ||
-                    this.PrimaryContactId != null &&
-                    this.PrimaryContactId.Equals(other.PrimaryContactId)
                 ) &&
                 (
                     this.Address == other.Address ||
@@ -483,9 +467,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Industry != null)
                     hash = hash * 59 + this.Industry.GetHashCode();
-
-                if (this.PrimaryContactId != null)
-                    hash = hash * 59 + this.PrimaryContactId.GetHashCode();
 
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();

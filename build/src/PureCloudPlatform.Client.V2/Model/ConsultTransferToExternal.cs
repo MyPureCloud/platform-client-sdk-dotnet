@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ConsultTransferToExternal :  IEquatable<ConsultTransferToExternal>
     {
         /// <summary>
-        /// Determines to whom the initiating participant is speaking. Defaults to DESTINATION
+        /// Determines to whom the initiating participant is requesting to speak. Defaults to DESTINATION
         /// </summary>
-        /// <value>Determines to whom the initiating participant is speaking. Defaults to DESTINATION</value>
+        /// <value>Determines to whom the initiating participant is requesting to speak. Defaults to DESTINATION</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SpeakToEnum
         {
@@ -58,9 +58,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Conference
         }
         /// <summary>
-        /// Determines to whom the initiating participant is speaking. Defaults to DESTINATION
+        /// Determines to whom the initiating participant is requesting to speak. Defaults to DESTINATION
         /// </summary>
-        /// <value>Determines to whom the initiating participant is speaking. Defaults to DESTINATION</value>
+        /// <value>Determines to whom the initiating participant is requesting to speak. Defaults to DESTINATION</value>
         [DataMember(Name="speakTo", EmitDefaultValue=false)]
         public SpeakToEnum? SpeakTo { get; set; }
 
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferToExternal" /> class.
         /// </summary>
-        /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. Defaults to DESTINATION (required).</param>
+        /// <param name="SpeakTo">Determines to whom the initiating participant is requesting to speak. Defaults to DESTINATION (required).</param>
         /// <param name="ConsultingUserId">The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID.</param>
         /// <param name="Address">The address (like phone number) of the external contact..</param>
         public ConsultTransferToExternal(SpeakToEnum? SpeakTo = null, string ConsultingUserId = null, string Address = null)

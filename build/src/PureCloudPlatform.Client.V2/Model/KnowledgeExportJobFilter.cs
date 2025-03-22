@@ -46,6 +46,38 @@ namespace PureCloudPlatform.Client.V2.Model
             Latest
         }
         /// <summary>
+        /// Gets or Sets Exclude
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ExcludeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Categories for "Categories"
+            /// </summary>
+            [EnumMember(Value = "Categories")]
+            Categories,
+            
+            /// <summary>
+            /// Enum Labels for "Labels"
+            /// </summary>
+            [EnumMember(Value = "Labels")]
+            Labels,
+            
+            /// <summary>
+            /// Enum Variations for "Variations"
+            /// </summary>
+            [EnumMember(Value = "Variations")]
+            Variations
+        }
+        /// <summary>
         /// Specifies what version should be exported.
         /// </summary>
         /// <value>Specifies what version should be exported.</value>
@@ -62,10 +94,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="DocumentsFilter">Filters for narrowing down which documents to export..</param>
         /// <param name="VersionFilter">Specifies what version should be exported. (required).</param>
-        public KnowledgeExportJobFilter(KnowledgeExportJobDocumentsFilter DocumentsFilter = null, VersionFilterEnum? VersionFilter = null)
+        /// <param name="Exclude">Reduce the size of the export file by excluding certain items..</param>
+        public KnowledgeExportJobFilter(KnowledgeExportJobDocumentsFilter DocumentsFilter = null, VersionFilterEnum? VersionFilter = null, List<ExcludeEnum> Exclude = null)
         {
             this.DocumentsFilter = DocumentsFilter;
             this.VersionFilter = VersionFilter;
+            this.Exclude = Exclude;
             
         }
         
@@ -81,6 +115,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Reduce the size of the export file by excluding certain items.
+        /// </summary>
+        /// <value>Reduce the size of the export file by excluding certain items.</value>
+        [DataMember(Name="exclude", EmitDefaultValue=false)]
+        public List<ExcludeEnum> Exclude { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  DocumentsFilter: ").Append(DocumentsFilter).Append("\n");
             sb.Append("  VersionFilter: ").Append(VersionFilter).Append("\n");
+            sb.Append("  Exclude: ").Append(Exclude).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VersionFilter == other.VersionFilter ||
                     this.VersionFilter != null &&
                     this.VersionFilter.Equals(other.VersionFilter)
+                ) &&
+                (
+                    this.Exclude == other.Exclude ||
+                    this.Exclude != null &&
+                    this.Exclude.SequenceEqual(other.Exclude)
                 );
         }
 
@@ -160,6 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.VersionFilter != null)
                     hash = hash * 59 + this.VersionFilter.GetHashCode();
+
+                if (this.Exclude != null)
+                    hash = hash * 59 + this.Exclude.GetHashCode();
 
                 return hash;
             }

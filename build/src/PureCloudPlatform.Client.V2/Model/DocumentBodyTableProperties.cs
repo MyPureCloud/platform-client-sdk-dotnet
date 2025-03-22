@@ -142,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentBodyTableProperties" /> class.
         /// </summary>
         /// <param name="Width">The width of the table converted to em unit..</param>
+        /// <param name="WidthWithUnit">The width of the table in the specified unit..</param>
         /// <param name="Height">The height for the table..</param>
         /// <param name="CellSpacing">The cell spacing for the table. The valid values in &#39;em&#39;..</param>
         /// <param name="CellPadding">The cell padding for the table. The valid values in &#39;em&#39;..</param>
@@ -151,9 +152,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BorderColor">The border color for the table. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="BackgroundColor">The background color for the table. The valid values in hex color code representation. For example black color - #000000.</param>
         /// <param name="Caption">The caption for the table. The valid values in hex color code representation. For example black color - #000000.</param>
-        public DocumentBodyTableProperties(float? Width = null, float? Height = null, float? CellSpacing = null, float? CellPadding = null, float? BorderWidth = null, AlignmentEnum? Alignment = null, BorderStyleEnum? BorderStyle = null, string BorderColor = null, string BackgroundColor = null, DocumentBodyTableCaptionBlock Caption = null)
+        public DocumentBodyTableProperties(float? Width = null, DocumentElementLength WidthWithUnit = null, float? Height = null, float? CellSpacing = null, float? CellPadding = null, float? BorderWidth = null, AlignmentEnum? Alignment = null, BorderStyleEnum? BorderStyle = null, string BorderColor = null, string BackgroundColor = null, DocumentBodyTableCaptionBlock Caption = null)
         {
             this.Width = Width;
+            this.WidthWithUnit = WidthWithUnit;
             this.Height = Height;
             this.CellSpacing = CellSpacing;
             this.CellPadding = CellPadding;
@@ -174,6 +176,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The width of the table converted to em unit.</value>
         [DataMember(Name="width", EmitDefaultValue=false)]
         public float? Width { get; set; }
+
+
+
+        /// <summary>
+        /// The width of the table in the specified unit.
+        /// </summary>
+        /// <value>The width of the table in the specified unit.</value>
+        [DataMember(Name="widthWithUnit", EmitDefaultValue=false)]
+        public DocumentElementLength WidthWithUnit { get; set; }
 
 
 
@@ -253,6 +264,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DocumentBodyTableProperties {\n");
 
             sb.Append("  Width: ").Append(Width).Append("\n");
+            sb.Append("  WidthWithUnit: ").Append(WidthWithUnit).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
             sb.Append("  CellSpacing: ").Append(CellSpacing).Append("\n");
             sb.Append("  CellPadding: ").Append(CellPadding).Append("\n");
@@ -306,6 +318,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Width == other.Width ||
                     this.Width != null &&
                     this.Width.Equals(other.Width)
+                ) &&
+                (
+                    this.WidthWithUnit == other.WidthWithUnit ||
+                    this.WidthWithUnit != null &&
+                    this.WidthWithUnit.Equals(other.WidthWithUnit)
                 ) &&
                 (
                     this.Height == other.Height ||
@@ -367,6 +384,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Width != null)
                     hash = hash * 59 + this.Width.GetHashCode();
+
+                if (this.WidthWithUnit != null)
+                    hash = hash * 59 + this.WidthWithUnit.GetHashCode();
 
                 if (this.Height != null)
                     hash = hash * 59 + this.Height.GetHashCode();

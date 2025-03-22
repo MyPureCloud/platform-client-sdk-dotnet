@@ -39,6 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Completed,
             
             /// <summary>
+            /// Enum Running for "Running"
+            /// </summary>
+            [EnumMember(Value = "Running")]
+            Running,
+            
+            /// <summary>
             /// Enum Failed for "Failed"
             /// </summary>
             [EnumMember(Value = "Failed")]
@@ -54,10 +60,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="State">State.</param>
-        public ProgramTopicLinksTopicsDefinitionsJob(string Id = null, StateEnum? State = null)
+        /// <param name="TestTopicPhraseResults">TestTopicPhraseResults.</param>
+        public ProgramTopicLinksTopicsDefinitionsJob(string Id = null, StateEnum? State = null, List<ProgramTopicLinksTestTopicPhraseResults> TestTopicPhraseResults = null)
         {
             this.Id = Id;
             this.State = State;
+            this.TestTopicPhraseResults = TestTopicPhraseResults;
             
         }
         
@@ -72,6 +80,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets TestTopicPhraseResults
+        /// </summary>
+        [DataMember(Name="testTopicPhraseResults", EmitDefaultValue=false)]
+        public List<ProgramTopicLinksTestTopicPhraseResults> TestTopicPhraseResults { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  TestTopicPhraseResults: ").Append(TestTopicPhraseResults).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +149,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.TestTopicPhraseResults == other.TestTopicPhraseResults ||
+                    this.TestTopicPhraseResults != null &&
+                    this.TestTopicPhraseResults.SequenceEqual(other.TestTopicPhraseResults)
                 );
         }
 
@@ -151,6 +173,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.TestTopicPhraseResults != null)
+                    hash = hash * 59 + this.TestTopicPhraseResults.GetHashCode();
 
                 return hash;
             }

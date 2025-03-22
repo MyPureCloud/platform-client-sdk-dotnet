@@ -346,9 +346,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         
-        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
+        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null);
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -362,9 +363,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         
-        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
+        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -1878,9 +1880,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         
-        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
+        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null);
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -1894,9 +1897,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -5861,11 +5865,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         
-        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
+        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats, locale);
+             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats, locale, includePauseAnnotationsForScreenRecordings);
              return localVarResponse.Data;
         }
 
@@ -5879,9 +5884,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         
-        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
+        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -5924,6 +5930,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
             if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
+            if (includePauseAnnotationsForScreenRecordings != null) localVarQueryParams.Add(new Tuple<string, string>("includePauseAnnotationsForScreenRecordings", this.Configuration.ApiClient.ParameterToString(includePauseAnnotationsForScreenRecordings)));
 
             // Header params
 
@@ -5978,11 +5985,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         
-        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats, locale);
+             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats, locale, includePauseAnnotationsForScreenRecordings);
              return localVarResponse.Data;
 
         }
@@ -5997,9 +6005,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <param name="locale">The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)</param>
+        /// <param name="includePauseAnnotationsForScreenRecordings">Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional, default to false)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null, string locale = null, bool? includePauseAnnotationsForScreenRecordings = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -6043,6 +6052,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
             if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
+            if (includePauseAnnotationsForScreenRecordings != null) localVarQueryParams.Add(new Tuple<string, string>("includePauseAnnotationsForScreenRecordings", this.Configuration.ApiClient.ParameterToString(includePauseAnnotationsForScreenRecordings)));
 
             // Header params
 

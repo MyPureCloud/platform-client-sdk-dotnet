@@ -67,8 +67,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Timestamp indicating when the social topic was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DivisionId">The ID of the division to which the social topic belongs to..</param>
         /// <param name="Status">The status of the social topic..</param>
-        /// <param name="DataIngestionRules">The data ingestion rules that apply to the social topic..</param>
-        public SocialTopicResponse(string Id = null, string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string DivisionId = null, StatusEnum? Status = null, DataIngestionRules DataIngestionRules = null)
+        /// <param name="DataIngestionRulesMetadata">The data ingestion rule metadata..</param>
+        public SocialTopicResponse(string Id = null, string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string DivisionId = null, StatusEnum? Status = null, List<DataIngestionRulesMetadata> DataIngestionRulesMetadata = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -77,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.DivisionId = DivisionId;
             this.Status = Status;
-            this.DataIngestionRules = DataIngestionRules;
+            this.DataIngestionRulesMetadata = DataIngestionRulesMetadata;
             
         }
         
@@ -140,11 +140,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The data ingestion rules that apply to the social topic.
+        /// The data ingestion rule metadata.
         /// </summary>
-        /// <value>The data ingestion rules that apply to the social topic.</value>
-        [DataMember(Name="dataIngestionRules", EmitDefaultValue=false)]
-        public DataIngestionRules DataIngestionRules { get; set; }
+        /// <value>The data ingestion rule metadata.</value>
+        [DataMember(Name="dataIngestionRulesMetadata", EmitDefaultValue=false)]
+        public List<DataIngestionRulesMetadata> DataIngestionRulesMetadata { get; set; }
 
 
 
@@ -172,7 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  DataIngestionRules: ").Append(DataIngestionRules).Append("\n");
+            sb.Append("  DataIngestionRulesMetadata: ").Append(DataIngestionRulesMetadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -250,9 +250,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
-                    this.DataIngestionRules == other.DataIngestionRules ||
-                    this.DataIngestionRules != null &&
-                    this.DataIngestionRules.Equals(other.DataIngestionRules)
+                    this.DataIngestionRulesMetadata == other.DataIngestionRulesMetadata ||
+                    this.DataIngestionRulesMetadata != null &&
+                    this.DataIngestionRulesMetadata.SequenceEqual(other.DataIngestionRulesMetadata)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -293,8 +293,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
 
-                if (this.DataIngestionRules != null)
-                    hash = hash * 59 + this.DataIngestionRules.GetHashCode();
+                if (this.DataIngestionRulesMetadata != null)
+                    hash = hash * 59 + this.DataIngestionRulesMetadata.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

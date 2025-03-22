@@ -9355,6 +9355,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 ```{"language":"csharp"}
@@ -10946,4 +10947,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 228.0.0_
+_PureCloudPlatform.Client.V2 229.0.0_

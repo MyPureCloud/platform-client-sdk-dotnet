@@ -18,6 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseSet :  IEquatable<ResponseSet>
     {
+        /// <summary>
+        /// Setting level of live speaker detection based on ringbacks
+        /// </summary>
+        /// <value>Setting level of live speaker detection based on ringbacks</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum LiveSpeakerDetectionModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Disabled for "Disabled"
+            /// </summary>
+            [EnumMember(Value = "Disabled")]
+            Disabled,
+            
+            /// <summary>
+            /// Enum Low for "Low"
+            /// </summary>
+            [EnumMember(Value = "Low")]
+            Low,
+            
+            /// <summary>
+            /// Enum Medium for "Medium"
+            /// </summary>
+            [EnumMember(Value = "Medium")]
+            Medium,
+            
+            /// <summary>
+            /// Enum High for "High"
+            /// </summary>
+            [EnumMember(Value = "High")]
+            High
+        }
+        /// <summary>
+        /// Setting level of live speaker detection based on ringbacks
+        /// </summary>
+        /// <value>Setting level of live speaker detection based on ringbacks</value>
+        [DataMember(Name="liveSpeakerDetectionMode", EmitDefaultValue=false)]
+        public LiveSpeakerDetectionModeEnum? LiveSpeakerDetectionMode { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSet" /> class.
@@ -32,13 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}. (required).</param>
         /// <param name="BeepDetectionEnabled">Whether to enable answering machine beep detection.</param>
         /// <param name="AmdSpeechDistinguishEnabled">Whether to enable answering machine detection.</param>
-        public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null, bool? BeepDetectionEnabled = null, bool? AmdSpeechDistinguishEnabled = null)
+        /// <param name="LiveSpeakerDetectionMode">Setting level of live speaker detection based on ringbacks.</param>
+        public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null, bool? BeepDetectionEnabled = null, bool? AmdSpeechDistinguishEnabled = null, LiveSpeakerDetectionModeEnum? LiveSpeakerDetectionMode = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Responses = Responses;
             this.BeepDetectionEnabled = BeepDetectionEnabled;
             this.AmdSpeechDistinguishEnabled = AmdSpeechDistinguishEnabled;
+            this.LiveSpeakerDetectionMode = LiveSpeakerDetectionMode;
             
         }
         
@@ -116,6 +163,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -141,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("  BeepDetectionEnabled: ").Append(BeepDetectionEnabled).Append("\n");
             sb.Append("  AmdSpeechDistinguishEnabled: ").Append(AmdSpeechDistinguishEnabled).Append("\n");
+            sb.Append("  LiveSpeakerDetectionMode: ").Append(LiveSpeakerDetectionMode).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -223,6 +273,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AmdSpeechDistinguishEnabled.Equals(other.AmdSpeechDistinguishEnabled)
                 ) &&
                 (
+                    this.LiveSpeakerDetectionMode == other.LiveSpeakerDetectionMode ||
+                    this.LiveSpeakerDetectionMode != null &&
+                    this.LiveSpeakerDetectionMode.Equals(other.LiveSpeakerDetectionMode)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -263,6 +318,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AmdSpeechDistinguishEnabled != null)
                     hash = hash * 59 + this.AmdSpeechDistinguishEnabled.GetHashCode();
+
+                if (this.LiveSpeakerDetectionMode != null)
+                    hash = hash * 59 + this.LiveSpeakerDetectionMode.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

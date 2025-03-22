@@ -20,120 +20,120 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteWidgetsDeployment (string deploymentId);
 
         /// <summary>
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteWidgetsDeploymentWithHttpInfo (string deploymentId);
 
         /// <summary>
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>WidgetDeployment</returns>
-        
+        [Obsolete]
         WidgetDeployment GetWidgetsDeployment (string deploymentId);
 
         /// <summary>
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
-        
+        [Obsolete]
         ApiResponse<WidgetDeployment> GetWidgetsDeploymentWithHttpInfo (string deploymentId);
 
         /// <summary>
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WidgetDeploymentEntityListing</returns>
-        
+        [Obsolete]
         WidgetDeploymentEntityListing GetWidgetsDeployments ();
 
         /// <summary>
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WidgetDeploymentEntityListing</returns>
-        
+        [Obsolete]
         ApiResponse<WidgetDeploymentEntityListing> GetWidgetsDeploymentsWithHttpInfo ();
 
         /// <summary>
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
-        
+        [Obsolete]
         WidgetDeployment PostWidgetsDeployments (WidgetDeployment body);
 
         /// <summary>
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
-        
+        [Obsolete]
         ApiResponse<WidgetDeployment> PostWidgetsDeploymentsWithHttpInfo (WidgetDeployment body);
 
         /// <summary>
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
-        
+        [Obsolete]
         WidgetDeployment PutWidgetsDeployment (string deploymentId, WidgetDeployment body);
 
         /// <summary>
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
-        
+        [Obsolete]
         ApiResponse<WidgetDeployment> PutWidgetsDeploymentWithHttpInfo (string deploymentId, WidgetDeployment body);
 
         #endregion Synchronous Operations
@@ -144,120 +144,120 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteWidgetsDeploymentAsync (string deploymentId);
 
         /// <summary>
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWidgetsDeploymentAsyncWithHttpInfo (string deploymentId);
 
         /// <summary>
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of WidgetDeployment</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WidgetDeployment> GetWidgetsDeploymentAsync (string deploymentId);
 
         /// <summary>
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> GetWidgetsDeploymentAsyncWithHttpInfo (string deploymentId);
 
         /// <summary>
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WidgetDeploymentEntityListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WidgetDeploymentEntityListing> GetWidgetsDeploymentsAsync ();
 
         /// <summary>
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WidgetDeploymentEntityListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WidgetDeploymentEntityListing>> GetWidgetsDeploymentsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WidgetDeployment> PostWidgetsDeploymentsAsync (WidgetDeployment body);
 
         /// <summary>
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PostWidgetsDeploymentsAsyncWithHttpInfo (WidgetDeployment body);
 
         /// <summary>
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WidgetDeployment> PutWidgetsDeploymentAsync (string deploymentId, WidgetDeployment body);
 
         /// <summary>
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PutWidgetsDeploymentAsyncWithHttpInfo (string deploymentId, WidgetDeployment body);
 
         #endregion Asynchronous Operations
@@ -354,12 +354,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteWidgetsDeployment (string deploymentId)
         {
              DeleteWidgetsDeploymentWithHttpInfo(deploymentId);
@@ -367,12 +367,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteWidgetsDeploymentWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -458,12 +458,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteWidgetsDeploymentAsync (string deploymentId)
         {
              await DeleteWidgetsDeploymentAsyncWithHttpInfo(deploymentId);
@@ -472,12 +472,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWidgetsDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -565,12 +565,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>WidgetDeployment</returns>
-        
+        [Obsolete]
         public WidgetDeployment GetWidgetsDeployment (string deploymentId)
         {
              ApiResponse<WidgetDeployment> localVarResponse = GetWidgetsDeploymentWithHttpInfo(deploymentId);
@@ -579,12 +579,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
-        
+        [Obsolete]
         public ApiResponse< WidgetDeployment > GetWidgetsDeploymentWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -670,12 +670,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of WidgetDeployment</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WidgetDeployment> GetWidgetsDeploymentAsync (string deploymentId)
         {
              ApiResponse<WidgetDeployment> localVarResponse = await GetWidgetsDeploymentAsyncWithHttpInfo(deploymentId);
@@ -685,12 +685,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> GetWidgetsDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -778,11 +778,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WidgetDeploymentEntityListing</returns>
-        
+        [Obsolete]
         public WidgetDeploymentEntityListing GetWidgetsDeployments ()
         {
              ApiResponse<WidgetDeploymentEntityListing> localVarResponse = GetWidgetsDeploymentsWithHttpInfo();
@@ -791,11 +791,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WidgetDeploymentEntityListing</returns>
-        
+        [Obsolete]
         public ApiResponse< WidgetDeploymentEntityListing > GetWidgetsDeploymentsWithHttpInfo ()
         { 
 
@@ -877,11 +877,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WidgetDeploymentEntityListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WidgetDeploymentEntityListing> GetWidgetsDeploymentsAsync ()
         {
              ApiResponse<WidgetDeploymentEntityListing> localVarResponse = await GetWidgetsDeploymentsAsyncWithHttpInfo();
@@ -891,11 +891,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WidgetDeploymentEntityListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeploymentEntityListing>> GetWidgetsDeploymentsAsyncWithHttpInfo ()
         { 
 
@@ -978,12 +978,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
-        
+        [Obsolete]
         public WidgetDeployment PostWidgetsDeployments (WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = PostWidgetsDeploymentsWithHttpInfo(body);
@@ -992,12 +992,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
-        
+        [Obsolete]
         public ApiResponse< WidgetDeployment > PostWidgetsDeploymentsWithHttpInfo (WidgetDeployment body)
         { 
             // verify the required parameter 'body' is set
@@ -1088,12 +1088,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WidgetDeployment> PostWidgetsDeploymentsAsync (WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = await PostWidgetsDeploymentsAsyncWithHttpInfo(body);
@@ -1103,12 +1103,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PostWidgetsDeploymentsAsyncWithHttpInfo (WidgetDeployment body)
         { 
             // verify the required parameter 'body' is set
@@ -1201,13 +1201,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
-        
+        [Obsolete]
         public WidgetDeployment PutWidgetsDeployment (string deploymentId, WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = PutWidgetsDeploymentWithHttpInfo(deploymentId, body);
@@ -1216,13 +1216,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
-        
+        [Obsolete]
         public ApiResponse< WidgetDeployment > PutWidgetsDeploymentWithHttpInfo (string deploymentId, WidgetDeployment body)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -1317,13 +1317,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WidgetDeployment> PutWidgetsDeploymentAsync (string deploymentId, WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = await PutWidgetsDeploymentAsyncWithHttpInfo(deploymentId, body);
@@ -1333,13 +1333,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PutWidgetsDeploymentAsyncWithHttpInfo (string deploymentId, WidgetDeployment body)
         { 
             // verify the required parameter 'deploymentId' is set
