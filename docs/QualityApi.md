@@ -4002,8 +4002,6 @@ namespace Example
 
 Update the AI Scoring settings of an evaluation form.
 
-PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:aiScoringEdit
@@ -4182,4 +4180,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

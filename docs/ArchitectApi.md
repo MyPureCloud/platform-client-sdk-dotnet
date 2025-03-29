@@ -109,11 +109,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostArchitectGrammars**](#PostArchitectGrammars) | **Post** /api/v2/architect/grammars | Create a new grammar |
 | [**PostArchitectIvrs**](#PostArchitectIvrs) | **Post** /api/v2/architect/ivrs | Create IVR config. |
 | [**PostArchitectPromptHistory**](#PostArchitectPromptHistory) | **Post** /api/v2/architect/prompts/{promptId}/history | Generate prompt history |
+| [**PostArchitectPromptResourceUploads**](#PostArchitectPromptResourceUploads) | **Post** /api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads | Creates a presigned URL for uploading a user prompt file |
 | [**PostArchitectPromptResources**](#PostArchitectPromptResources) | **Post** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
 | [**PostArchitectPrompts**](#PostArchitectPrompts) | **Post** /api/v2/architect/prompts | Create a new user prompt |
 | [**PostArchitectSchedulegroups**](#PostArchitectSchedulegroups) | **Post** /api/v2/architect/schedulegroups | Creates a new schedule group |
 | [**PostArchitectSchedules**](#PostArchitectSchedules) | **Post** /api/v2/architect/schedules | Create a new schedule. |
 | [**PostArchitectSystempromptHistory**](#PostArchitectSystempromptHistory) | **Post** /api/v2/architect/systemprompts/{promptId}/history | Generate system prompt history |
+| [**PostArchitectSystempromptResourceUploads**](#PostArchitectSystempromptResourceUploads) | **Post** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads | Creates a presigned URL for uploading a system prompt file |
 | [**PostArchitectSystempromptResources**](#PostArchitectSystempromptResources) | **Post** /api/v2/architect/systemprompts/{promptId}/resources | Create system prompt resource override. |
 | [**PostFlowHistory**](#PostFlowHistory) | **Post** /api/v2/flows/{flowId}/history | Generate flow history |
 | [**PostFlowInstancesSettingsLoglevels**](#PostFlowInstancesSettingsLoglevels) | **Post** /api/v2/flows/{flowId}/instances/settings/loglevels | Set the logLevel for a particular flow id |
@@ -7113,6 +7115,70 @@ namespace Example
 [**Operation**](Operation)
 
 
+## PostArchitectPromptResourceUploads
+
+> [**PromptAssetUpload**](PromptAssetUpload) PostArchitectPromptResourceUploads (string promptId, string languageCode)
+
+
+Creates a presigned URL for uploading a user prompt file
+
+Requires ALL permissions: 
+
+* architect:userPrompt:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectPromptResourceUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var promptId = promptId_example;  // string | Prompt ID
+            var languageCode = languageCode_example;  // string | Language
+
+            try
+            { 
+                // Creates a presigned URL for uploading a user prompt file
+                PromptAssetUpload result = apiInstance.PostArchitectPromptResourceUploads(promptId, languageCode);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectPromptResourceUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **promptId** | **string**| Prompt ID |  |
+| **languageCode** | **string**| Language |  |
+
+### Return type
+
+[**PromptAssetUpload**](PromptAssetUpload)
+
+
 ## PostArchitectPromptResources
 
 > [**PromptAsset**](PromptAsset) PostArchitectPromptResources (string promptId, PromptAssetCreate body)
@@ -7425,6 +7491,70 @@ namespace Example
 ### Return type
 
 [**Operation**](Operation)
+
+
+## PostArchitectSystempromptResourceUploads
+
+> [**PromptAssetUpload**](PromptAssetUpload) PostArchitectSystempromptResourceUploads (string promptId, string languageCode)
+
+
+Creates a presigned URL for uploading a system prompt file
+
+Requires ALL permissions: 
+
+* architect:systemPrompt:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectSystempromptResourceUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var promptId = promptId_example;  // string | Prompt ID
+            var languageCode = languageCode_example;  // string | Language
+
+            try
+            { 
+                // Creates a presigned URL for uploading a system prompt file
+                PromptAssetUpload result = apiInstance.PostArchitectSystempromptResourceUploads(promptId, languageCode);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectSystempromptResourceUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **promptId** | **string**| Prompt ID |  |
+| **languageCode** | **string**| Language |  |
+
+### Return type
+
+[**PromptAssetUpload**](PromptAssetUpload)
 
 
 ## PostArchitectSystempromptResources
@@ -9823,4 +9953,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

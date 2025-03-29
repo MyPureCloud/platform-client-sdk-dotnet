@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Counts** | [**List&lt;AgentStateSegmentTypeCount&gt;**](AgentStateSegmentTypeCount) | List of count by segment types | [optional] |
+| **SegmentCounts** | [**List&lt;AgentStateSegmentTypeCount&gt;**](AgentStateSegmentTypeCount) | List of count by segment types | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_
