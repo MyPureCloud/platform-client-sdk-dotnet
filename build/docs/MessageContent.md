@@ -22,7 +22,8 @@
 | **Text** | [**ContentText**](ContentText) | Text content. | [optional] |
 | **QuickReplyV2** | [**ContentQuickReplyV2**](ContentQuickReplyV2) | Quick reply V2 content. | [optional] |
 | **DatePicker** | [**ContentDatePicker**](ContentDatePicker) | DatePicker content. | [optional] |
+| **Location** | [**ContentLocation**](ContentLocation) | Location content. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

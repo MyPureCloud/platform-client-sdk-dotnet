@@ -6,11 +6,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeletePresenceDefinition0**](#DeletePresenceDefinition0) | **Delete** /api/v2/presence/definitions/{definitionId} | Delete a Presence Definition |
+| [**DeleteDivisionBasedPresenceDefinition**](#DeleteDivisionBasedPresenceDefinition) | **Delete** /api/v2/presence/definitions/{definitionId} | Delete a Presence Definition |
 | [**DeletePresenceSource**](#DeletePresenceSource) | **Delete** /api/v2/presence/sources/{sourceId} | Delete a Presence Source |
 | [**DeletePresencedefinition**](#DeletePresencedefinition) | **Delete** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead |
-| [**GetPresenceDefinition0**](#GetPresenceDefinition0) | **Get** /api/v2/presence/definitions/{definitionId} | Get a Presence Definition |
-| [**GetPresenceDefinitions0**](#GetPresenceDefinitions0) | **Get** /api/v2/presence/definitions | Get a list of Presence Definitions |
+| [**GetDivisionBasedPresenceDefinition**](#GetDivisionBasedPresenceDefinition) | **Get** /api/v2/presence/definitions/{definitionId} | Get a Presence Definition |
+| [**GetDivisionBasedPresenceDefinitions**](#GetDivisionBasedPresenceDefinitions) | **Get** /api/v2/presence/definitions | Get a list of Presence Definitions |
 | [**GetPresenceSettings**](#GetPresenceSettings) | **Get** /api/v2/presence/settings | Get the presence settings |
 | [**GetPresenceSource**](#GetPresenceSource) | **Get** /api/v2/presence/sources/{sourceId} | Get a Presence Source |
 | [**GetPresenceSources**](#GetPresenceSources) | **Get** /api/v2/presence/sources | Get a list of Presence Sources |
@@ -24,10 +24,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUsersPresencesPurecloudBulk**](#GetUsersPresencesPurecloudBulk) | **Get** /api/v2/users/presences/purecloud/bulk | Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source |
 | [**PatchUserPresence**](#PatchUserPresence) | **Patch** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PatchUserPresencesPurecloud**](#PatchUserPresencesPurecloud) | **Patch** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
-| [**PostPresenceDefinitions0**](#PostPresenceDefinitions0) | **Post** /api/v2/presence/definitions | Create a Presence Definition |
+| [**PostDivisionBasedPresenceDefinitions**](#PostDivisionBasedPresenceDefinitions) | **Post** /api/v2/presence/definitions | Create a Presence Definition |
 | [**PostPresenceSources**](#PostPresenceSources) | **Post** /api/v2/presence/sources | Create a Presence Source |
 | [**PostPresencedefinitions**](#PostPresencedefinitions) | **Post** /api/v2/presencedefinitions | Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead |
-| [**PutPresenceDefinition0**](#PutPresenceDefinition0) | **Put** /api/v2/presence/definitions/{definitionId} | Update a Presence Definition |
+| [**PutDivisionBasedPresenceDefinition**](#PutDivisionBasedPresenceDefinition) | **Put** /api/v2/presence/definitions/{definitionId} | Update a Presence Definition |
 | [**PutPresenceSettings**](#PutPresenceSettings) | **Put** /api/v2/presence/settings | Update the presence settings |
 | [**PutPresenceSource**](#PutPresenceSource) | **Put** /api/v2/presence/sources/{sourceId} | Update a Presence Source |
 | [**PutPresenceUserPrimarysource**](#PutPresenceUserPrimarysource) | **Put** /api/v2/presence/users/{userId}/primarysource | Update a user&#39;s Primary Presence Source |
@@ -36,9 +36,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-## DeletePresenceDefinition0
+## DeleteDivisionBasedPresenceDefinition
 
-> void DeletePresenceDefinition0 (string definitionId)
+> void DeleteDivisionBasedPresenceDefinition (string definitionId)
 
 
 Delete a Presence Definition
@@ -58,7 +58,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class DeletePresenceDefinition0Example
+    public class DeleteDivisionBasedPresenceDefinitionExample
     {
         public void main()
         { 
@@ -75,11 +75,11 @@ namespace Example
             try
             { 
                 // Delete a Presence Definition
-                apiInstance.DeletePresenceDefinition0(definitionId);
+                apiInstance.DeleteDivisionBasedPresenceDefinition(definitionId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.DeletePresenceDefinition0: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.DeleteDivisionBasedPresenceDefinition: " + e.Message );
             }
         }
     }
@@ -224,9 +224,9 @@ namespace Example
 void (empty response body)
 
 
-## GetPresenceDefinition0
+## GetDivisionBasedPresenceDefinition
 
-> [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) GetPresenceDefinition0 (string definitionId, string localeCode = null)
+> [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) GetDivisionBasedPresenceDefinition (string definitionId, string localeCode = null)
 
 
 Get a Presence Definition
@@ -245,7 +245,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class GetPresenceDefinition0Example
+    public class GetDivisionBasedPresenceDefinitionExample
     {
         public void main()
         { 
@@ -263,12 +263,12 @@ namespace Example
             try
             { 
                 // Get a Presence Definition
-                OrganizationPresenceDefinition result = apiInstance.GetPresenceDefinition0(definitionId, localeCode);
+                OrganizationPresenceDefinition result = apiInstance.GetDivisionBasedPresenceDefinition(definitionId, localeCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.GetPresenceDefinition0: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.GetDivisionBasedPresenceDefinition: " + e.Message );
             }
         }
     }
@@ -288,9 +288,9 @@ namespace Example
 [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition)
 
 
-## GetPresenceDefinitions0
+## GetDivisionBasedPresenceDefinitions
 
-> [**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing) GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null)
+> [**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing) GetDivisionBasedPresenceDefinitions (string deactivated = null, List<string> divisionId = null, string localeCode = null)
 
 
 Get a list of Presence Definitions
@@ -309,7 +309,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class GetPresenceDefinitions0Example
+    public class GetDivisionBasedPresenceDefinitionsExample
     {
         public void main()
         { 
@@ -328,12 +328,12 @@ namespace Example
             try
             { 
                 // Get a list of Presence Definitions
-                OrganizationPresenceDefinitionEntityListing result = apiInstance.GetPresenceDefinitions0(deactivated, divisionId, localeCode);
+                OrganizationPresenceDefinitionEntityListing result = apiInstance.GetDivisionBasedPresenceDefinitions(deactivated, divisionId, localeCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.GetPresenceDefinitions0: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.GetDivisionBasedPresenceDefinitions: " + e.Message );
             }
         }
     }
@@ -1174,9 +1174,9 @@ namespace Example
 [**UserPresence**](UserPresence)
 
 
-## PostPresenceDefinitions0
+## PostDivisionBasedPresenceDefinitions
 
-> [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) PostPresenceDefinitions0 (OrganizationPresenceDefinition body)
+> [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) PostDivisionBasedPresenceDefinitions (OrganizationPresenceDefinition body)
 
 
 Create a Presence Definition
@@ -1195,7 +1195,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class PostPresenceDefinitions0Example
+    public class PostDivisionBasedPresenceDefinitionsExample
     {
         public void main()
         { 
@@ -1212,12 +1212,12 @@ namespace Example
             try
             { 
                 // Create a Presence Definition
-                OrganizationPresenceDefinition result = apiInstance.PostPresenceDefinitions0(body);
+                OrganizationPresenceDefinition result = apiInstance.PostDivisionBasedPresenceDefinitions(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.PostPresenceDefinitions0: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.PostDivisionBasedPresenceDefinitions: " + e.Message );
             }
         }
     }
@@ -1363,9 +1363,9 @@ namespace Example
 [**OrganizationPresence**](OrganizationPresence)
 
 
-## PutPresenceDefinition0
+## PutDivisionBasedPresenceDefinition
 
-> [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) PutPresenceDefinition0 (string definitionId, OrganizationPresenceDefinition body)
+> [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) PutDivisionBasedPresenceDefinition (string definitionId, OrganizationPresenceDefinition body)
 
 
 Update a Presence Definition
@@ -1384,7 +1384,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class PutPresenceDefinition0Example
+    public class PutDivisionBasedPresenceDefinitionExample
     {
         public void main()
         { 
@@ -1402,12 +1402,12 @@ namespace Example
             try
             { 
                 // Update a Presence Definition
-                OrganizationPresenceDefinition result = apiInstance.PutPresenceDefinition0(definitionId, body);
+                OrganizationPresenceDefinition result = apiInstance.PutDivisionBasedPresenceDefinition(definitionId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.PutPresenceDefinition0: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.PutDivisionBasedPresenceDefinition: " + e.Message );
             }
         }
     }
@@ -1746,4 +1746,4 @@ namespace Example
 [**List<UserPresence>**](UserPresence)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

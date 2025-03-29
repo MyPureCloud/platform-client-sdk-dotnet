@@ -21,10 +21,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsAgentStateCountsResponse" /> class.
         /// </summary>
-        /// <param name="Counts">List of count by segment types.</param>
-        public AnalyticsAgentStateCountsResponse(List<AgentStateSegmentTypeCount> Counts = null)
+        /// <param name="SegmentCounts">List of count by segment types.</param>
+        public AnalyticsAgentStateCountsResponse(List<AgentStateSegmentTypeCount> SegmentCounts = null)
         {
-            this.Counts = Counts;
+            this.SegmentCounts = SegmentCounts;
             
         }
         
@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// List of count by segment types
         /// </summary>
         /// <value>List of count by segment types</value>
-        [DataMember(Name="counts", EmitDefaultValue=false)]
-        public List<AgentStateSegmentTypeCount> Counts { get; set; }
+        [DataMember(Name="segmentCounts", EmitDefaultValue=false)]
+        public List<AgentStateSegmentTypeCount> SegmentCounts { get; set; }
 
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsAgentStateCountsResponse {\n");
 
-            sb.Append("  Counts: ").Append(Counts).Append("\n");
+            sb.Append("  SegmentCounts: ").Append(SegmentCounts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,9 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Counts == other.Counts ||
-                    this.Counts != null &&
-                    this.Counts.SequenceEqual(other.Counts)
+                    this.SegmentCounts == other.SegmentCounts ||
+                    this.SegmentCounts != null &&
+                    this.SegmentCounts.SequenceEqual(other.SegmentCounts)
                 );
         }
 
@@ -106,8 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Counts != null)
-                    hash = hash * 59 + this.Counts.GetHashCode();
+                if (this.SegmentCounts != null)
+                    hash = hash * 59 + this.SegmentCounts.GetHashCode();
 
                 return hash;
             }

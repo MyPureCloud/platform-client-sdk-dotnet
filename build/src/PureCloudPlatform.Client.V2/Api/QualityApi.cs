@@ -1675,7 +1675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
@@ -1689,7 +1688,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
@@ -3413,7 +3411,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
@@ -3427,7 +3424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
@@ -17049,7 +17045,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
@@ -17065,7 +17060,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
@@ -17167,7 +17161,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
@@ -17184,7 +17177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>

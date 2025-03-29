@@ -125,7 +125,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -139,7 +138,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -359,7 +357,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -372,7 +369,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -771,7 +767,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -785,7 +780,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -957,7 +951,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -971,7 +964,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1191,7 +1183,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1204,7 +1195,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1603,7 +1593,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1617,7 +1606,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2667,7 +2655,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a 1on1 
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2682,7 +2669,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a 1on1 
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2779,7 +2765,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a 1on1 
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2795,7 +2780,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a 1on1 
         /// 
-        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -4648,7 +4632,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get information for a 1on1 
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -4663,7 +4646,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get information for a 1on1 
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -4755,7 +4737,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get information for a 1on1 
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -4771,7 +4752,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get information for a 1on1 
         /// 
-        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -8302,7 +8282,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -8317,7 +8296,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -8419,7 +8397,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -8435,7 +8412,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>

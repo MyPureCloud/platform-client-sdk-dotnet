@@ -376,8 +376,6 @@ namespace Example
 
 Get an agent and their active sessions by user ID
 
-GetAnalyticsAgentStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:agentState:view
@@ -3825,8 +3823,6 @@ namespace Example
 
 Count agents by segment type
 
-PostAnalyticsAgentsStatusCounts is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:agentState:view
@@ -3888,8 +3884,6 @@ namespace Example
 
 
 Retrieve the top 50 agents matching the query filters
-
-PostAnalyticsAgentsStatusQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6851,4 +6845,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

@@ -304,8 +304,6 @@ void (empty response body)
 
 Remove a pinned message from a 1on1
 
-DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -883,8 +881,6 @@ namespace Example
 
 
 Get information for a 1on1
-
-GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1909,8 +1905,6 @@ namespace Example
 
 Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
 
-PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -2094,4 +2088,4 @@ namespace Example
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

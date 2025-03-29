@@ -285,7 +285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -297,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         List<RecordingMetadata> GetConversationRecordingmetadata (string conversationId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1819,7 +1819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1831,7 +1831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<RecordingMetadata>> GetConversationRecordingmetadataAsync (string conversationId);
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -5417,7 +5417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5431,7 +5431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5522,7 +5522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5537,7 +5537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. 
+        /// Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

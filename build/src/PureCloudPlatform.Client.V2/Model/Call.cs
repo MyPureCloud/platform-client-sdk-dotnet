@@ -402,6 +402,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">The direction of the call.</param>
         /// <param name="Recording">True if this call is being recorded..</param>
         /// <param name="RecordingState">State of recording on this call..</param>
+        /// <param name="RecordersState">Contains the states of different recorders..</param>
         /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end..</param>
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
@@ -429,7 +430,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
         /// <param name="QueueMediaSettings">Represents the queue settings for this media type..</param>
         /// <param name="Disposition">Call resolution data for Dialer bulk make calls commands..</param>
-        public Call(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, ConversationQueueMediaSettings QueueMediaSettings = null, Disposition Disposition = null)
+        public Call(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, ConversationQueueMediaSettings QueueMediaSettings = null, Disposition Disposition = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -437,6 +438,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Direction = Direction;
             this.Recording = Recording;
             this.RecordingState = RecordingState;
+            this.RecordersState = RecordersState;
             this.Muted = Muted;
             this.Confined = Confined;
             this.Held = Held;
@@ -492,6 +494,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Recording { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Contains the states of different recorders.
+        /// </summary>
+        /// <value>Contains the states of different recorders.</value>
+        [DataMember(Name="recordersState", EmitDefaultValue=false)]
+        public RecordersState RecordersState { get; set; }
 
 
 
@@ -744,6 +755,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            sb.Append("  RecordersState: ").Append(RecordersState).Append("\n");
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
@@ -840,6 +852,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
+                ) &&
+                (
+                    this.RecordersState == other.RecordersState ||
+                    this.RecordersState != null &&
+                    this.RecordersState.Equals(other.RecordersState)
                 ) &&
                 (
                     this.Muted == other.Muted ||
@@ -1006,6 +1023,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+
+                if (this.RecordersState != null)
+                    hash = hash * 59 + this.RecordersState.GetHashCode();
 
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();

@@ -109,7 +109,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum View for "View"
             /// </summary>
             [EnumMember(Value = "View")]
-            View
+            View,
+            
+            /// <summary>
+            /// Enum Rating for "Rating"
+            /// </summary>
+            [EnumMember(Value = "Rating")]
+            Rating
         }
         /// <summary>
         /// Type of reaction.

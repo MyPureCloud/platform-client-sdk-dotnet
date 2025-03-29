@@ -16,7 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationRecording**](#GetConversationRecording) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
 | [**GetConversationRecordingAnnotation**](#GetConversationRecordingAnnotation) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
 | [**GetConversationRecordingAnnotations**](#GetConversationRecordingAnnotations) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
-| [**GetConversationRecordingmetadata**](#GetConversationRecordingmetadata) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. |
+| [**GetConversationRecordingmetadata**](#GetConversationRecordingmetadata) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. |
 | [**GetConversationRecordingmetadataRecordingId**](#GetConversationRecordingmetadataRecordingId) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} | Get metadata for a specific recording. Does not return playable media. |
 | [**GetConversationRecordings**](#GetConversationRecordings) | **Get** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
 | [**GetOrphanrecording**](#GetOrphanrecording) | **Get** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
@@ -718,7 +718,7 @@ namespace Example
 > [**List&lt;RecordingMetadata&gt;**](RecordingMetadata) GetConversationRecordingmetadata (string conversationId)
 
 
-Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
 
 Requires ANY permissions: 
 
@@ -751,7 +751,7 @@ namespace Example
 
             try
             { 
-                // Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+                // Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
                 List<RecordingMetadata> result = apiInstance.GetConversationRecordingmetadata(conversationId);
                 Debug.WriteLine(result);
             }
@@ -3776,4 +3776,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

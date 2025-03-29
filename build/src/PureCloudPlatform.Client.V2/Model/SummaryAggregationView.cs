@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nconversationsummaries,
             
             /// <summary>
+            /// Enum Nconversationsummaryengagements for "nConversationSummaryEngagements"
+            /// </summary>
+            [EnumMember(Value = "nConversationSummaryEngagements")]
+            Nconversationsummaryengagements,
+            
+            /// <summary>
             /// Enum Tconversationsummary for "tConversationSummary"
             /// </summary>
             [EnumMember(Value = "tConversationSummary")]

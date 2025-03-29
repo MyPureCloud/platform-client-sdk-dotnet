@@ -882,6 +882,7 @@ docs/ContentFileResponse.md
 docs/ContentFilterItem.md
 docs/ContentGeneric.md
 docs/ContentList.md
+docs/ContentLocation.md
 docs/ContentManagementApi.json
 docs/ContentManagementApi.md
 docs/ContentManagementSingleDocumentTopicDocumentDataV2.md
@@ -1408,7 +1409,6 @@ docs/DataExtensionsApi.md
 docs/DataIngestionRuleResponse.md
 docs/DataIngestionRuleResponseEntityListing.md
 docs/DataIngestionRuleStatusPatchRequest.md
-docs/DataIngestionRules.md
 docs/DataIngestionRulesMetadata.md
 docs/DataPrivacyApi.json
 docs/DataPrivacyApi.md
@@ -1486,6 +1486,9 @@ docs/DeleteConversationsMessagingSettingsDefault-example.txt
 docs/DeleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/DeleteDataprivacyMaskingrule-example.txt
 docs/DeleteDiagnosticsLogcaptureBrowserUser-example.txt
+docs/DeleteDivisionBasedPresenceDefinition-example.txt
+docs/DeleteEmailsSettingsThreading-example.txt
+docs/DeleteEmailsSettingsThreading-example.txt
 docs/DeleteEmployeeengagementCelebration-example.txt
 docs/DeleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/DeleteExternalcontactsContact-example.txt
@@ -1604,7 +1607,6 @@ docs/DeleteOutboundSchedulesEmailcampaign-example.txt
 docs/DeleteOutboundSchedulesMessagingcampaign-example.txt
 docs/DeleteOutboundSchedulesSequence-example.txt
 docs/DeleteOutboundSequence-example.txt
-docs/DeletePresenceDefinition0-example.txt
 docs/DeletePresenceSource-example.txt
 docs/DeletePresencedefinition-example.txt
 docs/DeleteProcessautomationTrigger-example.txt
@@ -1651,6 +1653,7 @@ docs/DeleteRoutingWrapupcode-example.txt
 docs/DeleteScimUser-example.txt
 docs/DeleteScimV2User-example.txt
 docs/DeleteSocialmediaEscalationrule-example.txt
+docs/DeleteSocialmediaMessage-example.txt
 docs/DeleteSocialmediaTopic-example.txt
 docs/DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
 docs/DeleteSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
@@ -2077,6 +2080,7 @@ docs/EmailRoutingEstablishedEvent.md
 docs/EmailRoutingTransferEvent.md
 docs/EmailSettings.md
 docs/EmailSetup.md
+docs/EmailThreadingSettings.md
 docs/EmailUserEstablishedEvent.md
 docs/EmailUserTransferEvent.md
 docs/EmailsApi.json
@@ -2092,6 +2096,7 @@ docs/EmergencyLocation.md
 docs/EmpathyScore.md
 docs/EmployeeEngagementApi.json
 docs/EmployeeEngagementApi.md
+docs/EmployeePerformanceExternalMetricsDefinitionExternalMetricsDefinition.md
 docs/EmployerInfo.md
 docs/Empty.md
 docs/EncryptionKey.md
@@ -2329,6 +2334,7 @@ docs/FaxTopicWorkspaceData.md
 docs/FeatureState.md
 docs/Feedback.md
 docs/FeedbackAddRequest.md
+docs/FeedbackUpdateRequest.md
 docs/FieldConfig.md
 docs/FieldConfigs.md
 docs/FieldList.md
@@ -2782,11 +2788,15 @@ docs/GetDate-example.txt
 docs/GetDiagnosticsLogcaptureBrowserEntriesDownloadJob-example.txt
 docs/GetDiagnosticsLogcaptureBrowserUser-example.txt
 docs/GetDiagnosticsLogcaptureBrowserUsers-example.txt
+docs/GetDivisionBasedPresenceDefinition-example.txt
+docs/GetDivisionBasedPresenceDefinitions-example.txt
 docs/GetDocumentationGknSearch-example.txt
 docs/GetDocumentationSearch-example.txt
 docs/GetDownload-example.txt
 docs/GetEmailsSettings-example.txt
 docs/GetEmailsSettings-example.txt
+docs/GetEmailsSettingsThreading-example.txt
+docs/GetEmailsSettingsThreading-example.txt
 docs/GetEmployeeengagementCelebrations-example.txt
 docs/GetEmployeeengagementRecognition-example.txt
 docs/GetEmployeeperformanceExternalmetricsDefinition-example.txt
@@ -3272,8 +3282,6 @@ docs/GetOutboundSequence-example.txt
 docs/GetOutboundSequences-example.txt
 docs/GetOutboundSettings-example.txt
 docs/GetOutboundWrapupcodemappings-example.txt
-docs/GetPresenceDefinition0-example.txt
-docs/GetPresenceDefinitions0-example.txt
 docs/GetPresenceSettings-example.txt
 docs/GetPresenceSource-example.txt
 docs/GetPresenceSources-example.txt
@@ -3815,7 +3823,6 @@ docs/GetWorkforcemanagementUserWorkplanbidranks-example.txt
 docs/GetWorkforcemanagementWorkplanbidPreferences-example.txt
 docs/GetWorkforcemanagementWorkplanbidWorkplans-example.txt
 docs/GetWorkforcemanagementWorkplanbids-example.txt
-docs/GoogleBusinessProfileDataIngestionRuleResponse.md
 docs/GoogleDialogflowConfig.md
 docs/GoogleDialogflowCustomSettings.md
 docs/Grammar.md
@@ -3959,7 +3966,6 @@ docs/InsightsTrend.md
 docs/InsightsTrendMetricItem.md
 docs/InsightsTrendTotalItem.md
 docs/InsightsTrends.md
-docs/InstagramDataIngestionRuleResponse.md
 docs/InstagramId.md
 docs/InstagramIntegration.md
 docs/InstagramIntegrationEntityListing.md
@@ -4818,6 +4824,22 @@ docs/OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig.md
 docs/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.md
 docs/OutboundMessagingMessagingCampaignProgressEventObject.md
 docs/OutboundMessagingMessagingCampaignProgressEventUriReference.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeContactSort.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeEmailConfig.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeErrorDetail.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeFromEmailAddress.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeIntegrationRef.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeMessagingCampaign.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeObject.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeReplyToEmailAddress.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeResponseRef.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeSmsConfig.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeSmsPhoneNumberRef.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeUriReference.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeWhatsAppConfig.md
+docs/OutboundMessagingWhatsappCampaignProgressEventCampaignProgress.md
+docs/OutboundMessagingWhatsappCampaignProgressEventObject.md
+docs/OutboundMessagingWhatsappCampaignProgressEventUriReference.md
 docs/OutboundOnlySetting.md
 docs/OutboundRoute.md
 docs/OutboundRouteBase.md
@@ -4911,6 +4933,7 @@ docs/PatchContextPattern.md
 docs/PatchConversationParticipant-example.txt
 docs/PatchConversationParticipantAttributes-example.txt
 docs/PatchConversationSecureattributes-example.txt
+docs/PatchConversationSummaryFeedback-example.txt
 docs/PatchConversationUtilizationlabel-example.txt
 docs/PatchConversationsAftercallworkConversationIdParticipantCommunication-example.txt
 docs/PatchConversationsCall-example.txt
@@ -4955,6 +4978,8 @@ docs/PatchCtaButtonStyleProperties.md
 docs/PatchDataprivacyMaskingrule-example.txt
 docs/PatchEmailsSettings-example.txt
 docs/PatchEmailsSettings-example.txt
+docs/PatchEmailsSettingsThreading-example.txt
+docs/PatchEmailsSettingsThreading-example.txt
 docs/PatchEmployeeengagementCelebration-example.txt
 docs/PatchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/PatchEntityTypeCriteria.md
@@ -5264,11 +5289,13 @@ docs/PostArchitectGrammarLanguages-example.txt
 docs/PostArchitectGrammars-example.txt
 docs/PostArchitectIvrs-example.txt
 docs/PostArchitectPromptHistory-example.txt
+docs/PostArchitectPromptResourceUploads-example.txt
 docs/PostArchitectPromptResources-example.txt
 docs/PostArchitectPrompts-example.txt
 docs/PostArchitectSchedulegroups-example.txt
 docs/PostArchitectSchedules-example.txt
 docs/PostArchitectSystempromptHistory-example.txt
+docs/PostArchitectSystempromptResourceUploads-example.txt
 docs/PostArchitectSystempromptResources-example.txt
 docs/PostAssistants-example.txt
 docs/PostAuditsQuery-example.txt
@@ -5391,6 +5418,7 @@ docs/PostConversationsParticipantsAttributesSearch-example.txt
 docs/PostConversationsParticipantsAttributesSearch-example.txt
 docs/PostConversationsScreenshareParticipantCommunicationWrapup-example.txt
 docs/PostConversationsSocialParticipantCommunicationWrapup-example.txt
+docs/PostConversationsVideoAgentconferenceCommunication-example.txt
 docs/PostConversationsVideoParticipantCommunicationWrapup-example.txt
 docs/PostConversationsVideosMeetings-example.txt
 docs/PostDataprivacyMaskingrules-example.txt
@@ -5398,6 +5426,7 @@ docs/PostDataprivacyMaskingrulesValidate-example.txt
 docs/PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
 docs/PostDiagnosticsLogcaptureBrowserEntriesQuery-example.txt
 docs/PostDiagnosticsLogcaptureBrowserUser-example.txt
+docs/PostDivisionBasedPresenceDefinitions-example.txt
 docs/PostDocumentationAllSearch-example.txt
 docs/PostDocumentationGknSearch-example.txt
 docs/PostDocumentationSearch-example.txt
@@ -5498,6 +5527,7 @@ docs/PostIntegrationsCredentials-example.txt
 docs/PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs-example.txt
 docs/PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs-example.txt
 docs/PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate-example.txt
+docs/PostIntegrationsWebhookEvents-example.txt
 docs/PostJourneyActionmaps-example.txt
 docs/PostJourneyActionmapsEstimatesJobs-example.txt
 docs/PostJourneyActiontemplates-example.txt
@@ -5648,7 +5678,6 @@ docs/PostOutboundMessagingcampaignsProgress-example.txt
 docs/PostOutboundRulesets-example.txt
 docs/PostOutboundSequences-example.txt
 docs/PostOutputContract.md
-docs/PostPresenceDefinitions0-example.txt
 docs/PostPresenceSources-example.txt
 docs/PostPresencedefinitions-example.txt
 docs/PostProcessautomationTriggerTest-example.txt
@@ -5964,6 +5993,7 @@ docs/Prompt.md
 docs/PromptAsset.md
 docs/PromptAssetCreate.md
 docs/PromptAssetEntityListing.md
+docs/PromptAssetUpload.md
 docs/PromptEntityListing.md
 docs/PropertyChange.md
 docs/PropertyIndexRequest.md
@@ -6034,6 +6064,7 @@ docs/PutConversationsMessagingThreadingtimeline-example.txt
 docs/PutConversationsScreenshareRecordingstate-example.txt
 docs/PutConversationsSocialRecordingstate-example.txt
 docs/PutConversationsVideoRecordingstate-example.txt
+docs/PutDivisionBasedPresenceDefinition-example.txt
 docs/PutExternalcontactsContact-example.txt
 docs/PutExternalcontactsContactNote-example.txt
 docs/PutExternalcontactsContactsSchema-example.txt
@@ -6130,7 +6161,6 @@ docs/PutOutboundSchedulesMessagingcampaign-example.txt
 docs/PutOutboundSchedulesSequence-example.txt
 docs/PutOutboundSequence-example.txt
 docs/PutOutboundWrapupcodemappings-example.txt
-docs/PutPresenceDefinition0-example.txt
 docs/PutPresenceSettings-example.txt
 docs/PutPresenceSource-example.txt
 docs/PutPresenceUserPrimarysource-example.txt
@@ -6576,6 +6606,7 @@ docs/RateLimitAggregationQuery.md
 docs/RateLimitAggregationView.md
 docs/Reaction.md
 docs/RealTimeAdherenceExplanation.md
+docs/Reason.md
 docs/RecallEntry.md
 docs/Recipient.md
 docs/RecipientAdditionalIdentifier.md
@@ -6585,6 +6616,7 @@ docs/RecipientRequest.md
 docs/Recognition.md
 docs/RecognitionBase.md
 docs/Record.md
+docs/RecordersState.md
 docs/Recording.md
 docs/RecordingAnnotationFlow.md
 docs/RecordingAnnotationQueue.md
@@ -7738,6 +7770,7 @@ docs/WebMessagingOfferFields.md
 docs/WebMessagingOfferProperties.md
 docs/WebMessagingQuickReply.md
 docs/WebMessagingRecipient.md
+docs/WebhookInvocationResponse.md
 docs/WeekSchedule.md
 docs/WeekScheduleGenerationResult.md
 docs/WeekScheduleListItemResponse.md
@@ -7857,6 +7890,9 @@ docs/WfmHistoricalAdherenceQueryForTeams.md
 docs/WfmHistoricalAdherenceQueryForUsers.md
 docs/WfmHistoricalAdherenceResponse.md
 docs/WfmHistoricalAdherenceResultWrapper.md
+docs/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDeleteEntity.md
+docs/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDisallowedDeleteEntity.md
+docs/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataPurgeRequestComplete.md
 docs/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.md
 docs/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.md
 docs/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.md
@@ -9073,6 +9109,7 @@ src/PureCloudPlatform.Client.V2/Model/ContentFileResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContentFilterItem.cs
 src/PureCloudPlatform.Client.V2/Model/ContentGeneric.cs
 src/PureCloudPlatform.Client.V2/Model/ContentList.cs
+src/PureCloudPlatform.Client.V2/Model/ContentLocation.cs
 src/PureCloudPlatform.Client.V2/Model/ContentManagementSingleDocumentTopicDocumentDataV2.cs
 src/PureCloudPlatform.Client.V2/Model/ContentManagementSingleDocumentTopicLockData.cs
 src/PureCloudPlatform.Client.V2/Model/ContentManagementSingleDocumentTopicUserData.cs
@@ -9593,7 +9630,6 @@ src/PureCloudPlatform.Client.V2/Model/DataAvailabilityResponse.cs
 src/PureCloudPlatform.Client.V2/Model/DataIngestionRuleResponse.cs
 src/PureCloudPlatform.Client.V2/Model/DataIngestionRuleResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DataIngestionRuleStatusPatchRequest.cs
-src/PureCloudPlatform.Client.V2/Model/DataIngestionRules.cs
 src/PureCloudPlatform.Client.V2/Model/DataIngestionRulesMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/DataRange.cs
 src/PureCloudPlatform.Client.V2/Model/DataSchema.cs
@@ -9959,6 +9995,7 @@ src/PureCloudPlatform.Client.V2/Model/EmailRoutingEstablishedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailRoutingTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailSettings.cs
 src/PureCloudPlatform.Client.V2/Model/EmailSetup.cs
+src/PureCloudPlatform.Client.V2/Model/EmailThreadingSettings.cs
 src/PureCloudPlatform.Client.V2/Model/EmailUserEstablishedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailUserTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailsSettings.cs
@@ -9970,6 +10007,7 @@ src/PureCloudPlatform.Client.V2/Model/EmergencyGroupDivisionViewEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EmergencyGroupListing.cs
 src/PureCloudPlatform.Client.V2/Model/EmergencyLocation.cs
 src/PureCloudPlatform.Client.V2/Model/EmpathyScore.cs
+src/PureCloudPlatform.Client.V2/Model/EmployeePerformanceExternalMetricsDefinitionExternalMetricsDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/EmployerInfo.cs
 src/PureCloudPlatform.Client.V2/Model/Empty.cs
 src/PureCloudPlatform.Client.V2/Model/EncryptionKey.cs
@@ -10201,6 +10239,7 @@ src/PureCloudPlatform.Client.V2/Model/FaxTopicWorkspaceData.cs
 src/PureCloudPlatform.Client.V2/Model/FeatureState.cs
 src/PureCloudPlatform.Client.V2/Model/Feedback.cs
 src/PureCloudPlatform.Client.V2/Model/FeedbackAddRequest.cs
+src/PureCloudPlatform.Client.V2/Model/FeedbackUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/FieldConfig.cs
 src/PureCloudPlatform.Client.V2/Model/FieldConfigs.cs
 src/PureCloudPlatform.Client.V2/Model/FieldList.cs
@@ -10357,7 +10396,6 @@ src/PureCloudPlatform.Client.V2/Model/GetProfilesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GetRulesQuery.cs
 src/PureCloudPlatform.Client.V2/Model/GetTemplatesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GetUploadSourceUrlJobStatusResponse.cs
-src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileDataIngestionRuleResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GoogleDialogflowConfig.cs
 src/PureCloudPlatform.Client.V2/Model/GoogleDialogflowCustomSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Grammar.cs
@@ -10491,7 +10529,6 @@ src/PureCloudPlatform.Client.V2/Model/InsightsTrend.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsTrendMetricItem.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsTrendTotalItem.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsTrends.cs
-src/PureCloudPlatform.Client.V2/Model/InstagramDataIngestionRuleResponse.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramId.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramIntegrationEntityListing.cs
@@ -11314,6 +11351,22 @@ src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignConfigCh
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignProgressEventObject.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingMessagingCampaignProgressEventUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeContactSort.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeEmailConfig.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeErrorDetail.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeFromEmailAddress.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeIntegrationRef.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeMessagingCampaign.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeObject.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeReplyToEmailAddress.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeResponseRef.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeSmsConfig.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeSmsPhoneNumberRef.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignConfigChangeWhatsAppConfig.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignProgressEventCampaignProgress.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignProgressEventObject.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundMessagingWhatsappCampaignProgressEventUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundOnlySetting.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundRoute.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundRouteBase.cs
@@ -11518,6 +11571,7 @@ src/PureCloudPlatform.Client.V2/Model/Prompt.cs
 src/PureCloudPlatform.Client.V2/Model/PromptAsset.cs
 src/PureCloudPlatform.Client.V2/Model/PromptAssetCreate.cs
 src/PureCloudPlatform.Client.V2/Model/PromptAssetEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/PromptAssetUpload.cs
 src/PureCloudPlatform.Client.V2/Model/PromptEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/PropertyChange.cs
 src/PureCloudPlatform.Client.V2/Model/PropertyIndexRequest.cs
@@ -11877,6 +11931,7 @@ src/PureCloudPlatform.Client.V2/Model/RateLimitAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/RateLimitAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/Reaction.cs
 src/PureCloudPlatform.Client.V2/Model/RealTimeAdherenceExplanation.cs
+src/PureCloudPlatform.Client.V2/Model/Reason.cs
 src/PureCloudPlatform.Client.V2/Model/RecallEntry.cs
 src/PureCloudPlatform.Client.V2/Model/Recipient.cs
 src/PureCloudPlatform.Client.V2/Model/RecipientAdditionalIdentifier.cs
@@ -11886,6 +11941,7 @@ src/PureCloudPlatform.Client.V2/Model/RecipientRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Recognition.cs
 src/PureCloudPlatform.Client.V2/Model/RecognitionBase.cs
 src/PureCloudPlatform.Client.V2/Model/Record.cs
+src/PureCloudPlatform.Client.V2/Model/RecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/Recording.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingAnnotationFlow.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingAnnotationQueue.cs
@@ -12985,6 +13041,7 @@ src/PureCloudPlatform.Client.V2/Model/WebMessagingOfferFields.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingOfferProperties.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingQuickReply.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingRecipient.cs
+src/PureCloudPlatform.Client.V2/Model/WebhookInvocationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WeekSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/WeekScheduleGenerationResult.cs
 src/PureCloudPlatform.Client.V2/Model/WeekScheduleListItemResponse.cs
@@ -13104,6 +13161,9 @@ src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceQueryForTeams.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceQueryForUsers.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceResultWrapper.cs
+src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDeleteEntity.cs
+src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDisallowedDeleteEntity.cs
+src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataPurgeRequestComplete.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.cs

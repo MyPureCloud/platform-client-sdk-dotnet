@@ -3009,6 +3009,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Operation> PostArchitectPromptHistoryWithHttpInfo (string promptId);
 
         /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>PromptAssetUpload</returns>
+        
+        PromptAssetUpload PostArchitectPromptResourceUploads (string promptId, string languageCode);
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>ApiResponse of PromptAssetUpload</returns>
+        
+        ApiResponse<PromptAssetUpload> PostArchitectPromptResourceUploadsWithHttpInfo (string promptId, string languageCode);
+
+        /// <summary>
         /// Create a new user prompt resource
         /// </summary>
         /// <remarks>
@@ -3129,6 +3155,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Operation</returns>
         
         ApiResponse<Operation> PostArchitectSystempromptHistoryWithHttpInfo (string promptId);
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>PromptAssetUpload</returns>
+        
+        PromptAssetUpload PostArchitectSystempromptResourceUploads (string promptId, string languageCode);
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>ApiResponse of PromptAssetUpload</returns>
+        
+        ApiResponse<PromptAssetUpload> PostArchitectSystempromptResourceUploadsWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
         /// Create system prompt resource override.
@@ -7077,6 +7129,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectPromptHistoryAsyncWithHttpInfo (string promptId);
 
         /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of PromptAssetUpload</returns>
+        
+        System.Threading.Tasks.Task<PromptAssetUpload> PostArchitectPromptResourceUploadsAsync (string promptId, string languageCode);
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of ApiResponse (PromptAssetUpload)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PromptAssetUpload>> PostArchitectPromptResourceUploadsAsyncWithHttpInfo (string promptId, string languageCode);
+
+        /// <summary>
         /// Create a new user prompt resource
         /// </summary>
         /// <remarks>
@@ -7197,6 +7275,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Operation)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectSystempromptHistoryAsyncWithHttpInfo (string promptId);
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of PromptAssetUpload</returns>
+        
+        System.Threading.Tasks.Task<PromptAssetUpload> PostArchitectSystempromptResourceUploadsAsync (string promptId, string languageCode);
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of ApiResponse (PromptAssetUpload)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PromptAssetUpload>> PostArchitectSystempromptResourceUploadsAsyncWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
         /// Create system prompt resource override.
@@ -31829,6 +31933,232 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>PromptAssetUpload</returns>
+        
+        public PromptAssetUpload PostArchitectPromptResourceUploads (string promptId, string languageCode)
+        {
+             ApiResponse<PromptAssetUpload> localVarResponse = PostArchitectPromptResourceUploadsWithHttpInfo(promptId, languageCode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>ApiResponse of PromptAssetUpload</returns>
+        
+        public ApiResponse< PromptAssetUpload > PostArchitectPromptResourceUploadsWithHttpInfo (string promptId, string languageCode)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptResourceUploads");
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectPromptResourceUploads");
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptResourceUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptResourceUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PromptAssetUpload>(localVarStatusCode,
+                localVarHeaders,
+                (PromptAssetUpload) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetUpload)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of PromptAssetUpload</returns>
+        
+        public async System.Threading.Tasks.Task<PromptAssetUpload> PostArchitectPromptResourceUploadsAsync (string promptId, string languageCode)
+        {
+             ApiResponse<PromptAssetUpload> localVarResponse = await PostArchitectPromptResourceUploadsAsyncWithHttpInfo(promptId, languageCode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a user prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of ApiResponse (PromptAssetUpload)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAssetUpload>> PostArchitectPromptResourceUploadsAsyncWithHttpInfo (string promptId, string languageCode)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptResourceUploads");
+            
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectPromptResourceUploads");
+            
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptResourceUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptResourceUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PromptAssetUpload>(localVarStatusCode,
+                localVarHeaders,
+                (PromptAssetUpload) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetUpload)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a new user prompt resource 
         /// 
         /// </summary>
@@ -32940,6 +33270,232 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
                 (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>PromptAssetUpload</returns>
+        
+        public PromptAssetUpload PostArchitectSystempromptResourceUploads (string promptId, string languageCode)
+        {
+             ApiResponse<PromptAssetUpload> localVarResponse = PostArchitectSystempromptResourceUploadsWithHttpInfo(promptId, languageCode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>ApiResponse of PromptAssetUpload</returns>
+        
+        public ApiResponse< PromptAssetUpload > PostArchitectSystempromptResourceUploadsWithHttpInfo (string promptId, string languageCode)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptResourceUploads");
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectSystempromptResourceUploads");
+
+            var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptResourceUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptResourceUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PromptAssetUpload>(localVarStatusCode,
+                localVarHeaders,
+                (PromptAssetUpload) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetUpload)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of PromptAssetUpload</returns>
+        
+        public async System.Threading.Tasks.Task<PromptAssetUpload> PostArchitectSystempromptResourceUploadsAsync (string promptId, string languageCode)
+        {
+             ApiResponse<PromptAssetUpload> localVarResponse = await PostArchitectSystempromptResourceUploadsAsyncWithHttpInfo(promptId, languageCode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a presigned URL for uploading a system prompt file 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of ApiResponse (PromptAssetUpload)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAssetUpload>> PostArchitectSystempromptResourceUploadsAsyncWithHttpInfo (string promptId, string languageCode)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptResourceUploads");
+            
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectSystempromptResourceUploads");
+            
+
+            var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptResourceUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptResourceUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PromptAssetUpload>(localVarStatusCode,
+                localVarHeaders,
+                (PromptAssetUpload) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetUpload)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

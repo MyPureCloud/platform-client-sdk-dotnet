@@ -116,6 +116,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationParticipant**](#PatchConversationParticipant) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](#PatchConversationParticipantAttributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationSecureattributes**](#PatchConversationSecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
+| [**PatchConversationSummaryFeedback**](#PatchConversationSummaryFeedback) | **Patch** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Update the feedback for the summary. |
 | [**PatchConversationUtilizationlabel**](#PatchConversationUtilizationlabel) | **Patch** /api/v2/conversations/{conversationId}/utilizationlabel | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
 | [**PatchConversationsAftercallworkConversationIdParticipantCommunication**](#PatchConversationsAftercallworkConversationIdParticipantCommunication) | **Patch** /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId} | Update after-call work for this conversation communication. |
 | [**PatchConversationsCall**](#PatchConversationsCall) | **Patch** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
@@ -234,6 +235,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsParticipantsAttributesSearch**](#PostConversationsParticipantsAttributesSearch) | **Post** /api/v2/conversations/participants/attributes/search | Search conversations |
 | [**PostConversationsScreenshareParticipantCommunicationWrapup**](#PostConversationsScreenshareParticipantCommunicationWrapup) | **Post** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsSocialParticipantCommunicationWrapup**](#PostConversationsSocialParticipantCommunicationWrapup) | **Post** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsVideoAgentconferenceCommunication**](#PostConversationsVideoAgentconferenceCommunication) | **Post** /api/v2/conversations/videos/{conversationId}/agentconference/communications/{communicationId} | Create an Agent-Type video conference and assign an agent to it |
 | [**PostConversationsVideoParticipantCommunicationWrapup**](#PostConversationsVideoParticipantCommunicationWrapup) | **Post** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsVideosMeetings**](#PostConversationsVideosMeetings) | **Post** /api/v2/conversations/videos/meetings | Generate a meetingId for a given conferenceId |
 | [**PutConversationParticipantFlaggedreason**](#PutConversationParticipantFlaggedreason) | **Put** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
@@ -7261,6 +7263,73 @@ namespace Example
 ### Return type
 
 **string**
+
+
+## PatchConversationSummaryFeedback
+
+> void PatchConversationSummaryFeedback (string conversationId, string summaryId, FeedbackUpdateRequest body = null)
+
+
+Update the feedback for the summary.
+
+PatchConversationSummaryFeedback is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* conversation:summaryFeedback:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationSummaryFeedbackExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var summaryId = summaryId_example;  // string | Summary ID
+            var body = new FeedbackUpdateRequest(); // FeedbackUpdateRequest |  (optional) 
+
+            try
+            { 
+                // Update the feedback for the summary.
+                apiInstance.PatchConversationSummaryFeedback(conversationId, summaryId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationSummaryFeedback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **summaryId** | **string**| Summary ID |  |
+| **body** | [**FeedbackUpdateRequest**](FeedbackUpdateRequest)|  | [optional]  |
+
+### Return type
+
+void (empty response body)
 
 
 ## PatchConversationUtilizationlabel
@@ -14984,6 +15053,72 @@ namespace Example
 void (empty response body)
 
 
+## PostConversationsVideoAgentconferenceCommunication
+
+> [**VideoConferenceDetails**](VideoConferenceDetails) PostConversationsVideoAgentconferenceCommunication (string conversationId, string communicationId)
+
+
+Create an Agent-Type video conference and assign an agent to it
+
+PostConversationsVideoAgentconferenceCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:video:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsVideoAgentconferenceCommunicationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var communicationId = communicationId_example;  // string | communicationId
+
+            try
+            { 
+                // Create an Agent-Type video conference and assign an agent to it
+                VideoConferenceDetails result = apiInstance.PostConversationsVideoAgentconferenceCommunication(conversationId, communicationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsVideoAgentconferenceCommunication: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+
+### Return type
+
+[**VideoConferenceDetails**](VideoConferenceDetails)
+
+
 ## PostConversationsVideoParticipantCommunicationWrapup
 
 > void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
@@ -16483,4 +16618,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

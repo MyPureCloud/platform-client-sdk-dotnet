@@ -58,6 +58,57 @@ namespace PureCloudPlatform.Client.V2.Model
             Event
         }
         /// <summary>
+        /// Message receipt status, only used with type Receipt.
+        /// </summary>
+        /// <value>Message receipt status, only used with type Receipt.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sent for "Sent"
+            /// </summary>
+            [EnumMember(Value = "Sent")]
+            Sent,
+            
+            /// <summary>
+            /// Enum Delivered for "Delivered"
+            /// </summary>
+            [EnumMember(Value = "Delivered")]
+            Delivered,
+            
+            /// <summary>
+            /// Enum Read for "Read"
+            /// </summary>
+            [EnumMember(Value = "Read")]
+            Read,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Published for "Published"
+            /// </summary>
+            [EnumMember(Value = "Published")]
+            Published,
+            
+            /// <summary>
+            /// Enum Removed for "Removed"
+            /// </summary>
+            [EnumMember(Value = "Removed")]
+            Removed
+        }
+        /// <summary>
         /// The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest.
         /// </summary>
         /// <value>The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest.</value>
@@ -117,6 +168,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Message type.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// Message receipt status, only used with type Receipt.
+        /// </summary>
+        /// <value>Message receipt status, only used with type Receipt.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest.
         /// </summary>
@@ -195,6 +252,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.
+        /// </summary>
+        /// <value>List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.</value>
+        [DataMember(Name="reasons", EmitDefaultValue=false)]
+        public List<Reason> Reasons { get; private set; }
+
+
+
         /// <summary>
         /// List of event elements.
         /// </summary>
@@ -230,6 +298,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Reasons: ").Append(Reasons).Append("\n");
             sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  OriginatingEntity: ").Append(OriginatingEntity).Append("\n");
@@ -300,6 +370,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Content.SequenceEqual(other.Content)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.Reasons == other.Reasons ||
+                    this.Reasons != null &&
+                    this.Reasons.SequenceEqual(other.Reasons)
+                ) &&
+                (
                     this.Events == other.Events ||
                     this.Events != null &&
                     this.Events.SequenceEqual(other.Events)
@@ -346,6 +426,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.Reasons != null)
+                    hash = hash * 59 + this.Reasons.GetHashCode();
 
                 if (this.Events != null)
                     hash = hash * 59 + this.Events.GetHashCode();

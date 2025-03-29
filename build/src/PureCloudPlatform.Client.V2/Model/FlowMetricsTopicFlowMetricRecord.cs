@@ -643,12 +643,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Inboundemail,
             
             /// <summary>
-            /// Enum Inboundmessage for "inboundmessage"
-            /// </summary>
-            [EnumMember(Value = "inboundmessage")]
-            Inboundmessage,
-            
-            /// <summary>
             /// Enum Inboundshortmessage for "inboundshortmessage"
             /// </summary>
             [EnumMember(Value = "inboundshortmessage")]
@@ -677,18 +671,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "outboundcall")]
             Outboundcall,
-            
-            /// <summary>
-            /// Enum Outboundemail for "outboundemail"
-            /// </summary>
-            [EnumMember(Value = "outboundemail")]
-            Outboundemail,
-            
-            /// <summary>
-            /// Enum Outboundmessage for "outboundmessage"
-            /// </summary>
-            [EnumMember(Value = "outboundmessage")]
-            Outboundmessage,
             
             /// <summary>
             /// Enum Securecall for "securecall"

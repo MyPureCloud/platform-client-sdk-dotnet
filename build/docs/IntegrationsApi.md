@@ -84,6 +84,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs | Get a Nuance bot in the specified Integration asynchronously |
 | [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs | Get a list of Nuance bots in the specified Integration asynchronously |
 | [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate | Try out a single credential for a Nuance bot to know if the secret is correct |
+| [**PostIntegrationsWebhookEvents**](#PostIntegrationsWebhookEvents) | **Post** /api/v2/integrations/webhooks/{tokenId}/events | Invoke Webhook |
 | [**PutIntegrationConfigCurrent**](#PutIntegrationConfigCurrent) | **Put** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
 | [**PutIntegrationsActionDraftFunction**](#PutIntegrationsActionDraftFunction) | **Put** /api/v2/integrations/actions/{actionId}/draft/function | Update draft function settings. |
 | [**PutIntegrationsBotconnectorIntegrationIdBots**](#PutIntegrationsBotconnectorIntegrationIdBots) | **Put** /api/v2/integrations/botconnector/{integrationId}/bots | Set a list of botConnector bots plus versions for this integration |
@@ -5222,6 +5223,63 @@ namespace Example
 void (empty response body)
 
 
+## PostIntegrationsWebhookEvents
+
+> [**WebhookInvocationResponse**](WebhookInvocationResponse) PostIntegrationsWebhookEvents (string tokenId, Object body)
+
+
+Invoke Webhook
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsWebhookEventsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new IntegrationsApi();
+            var tokenId = tokenId_example;  // string | The token of the webhook to be invoked
+            var body = new Object(); // Object | Webhook Invocation Payload
+
+            try
+            { 
+                // Invoke Webhook
+                WebhookInvocationResponse result = apiInstance.PostIntegrationsWebhookEvents(tokenId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsWebhookEvents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tokenId** | **string**| The token of the webhook to be invoked |  |
+| **body** | [**Object**](Object)| Webhook Invocation Payload |  |
+
+### Return type
+
+[**WebhookInvocationResponse**](WebhookInvocationResponse)
+
+
 ## PutIntegrationConfigCurrent
 
 > [**IntegrationConfiguration**](IntegrationConfiguration) PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
@@ -5668,4 +5726,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

@@ -1001,6 +1001,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Reverse,
             
             /// <summary>
+            /// Enum Send for "Send"
+            /// </summary>
+            [EnumMember(Value = "Send")]
+            Send,
+            
+            /// <summary>
             /// Enum Harddelete for "HardDelete"
             /// </summary>
             [EnumMember(Value = "HardDelete")]
@@ -2251,6 +2257,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Organizationsuspension,
             
             /// <summary>
+            /// Enum Operationalevent for "OperationalEvent"
+            /// </summary>
+            [EnumMember(Value = "OperationalEvent")]
+            Operationalevent,
+            
+            /// <summary>
             /// Enum Participant for "Participant"
             /// </summary>
             [EnumMember(Value = "Participant")]
@@ -2351,18 +2363,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OrganizationLimits")]
             Organizationlimits,
-            
-            /// <summary>
-            /// Enum Userskill for "UserSkill"
-            /// </summary>
-            [EnumMember(Value = "UserSkill")]
-            Userskill,
-            
-            /// <summary>
-            /// Enum Userlanguage for "UserLanguage"
-            /// </summary>
-            [EnumMember(Value = "UserLanguage")]
-            Userlanguage,
             
             /// <summary>
             /// Enum Composerpage for "ComposerPage"

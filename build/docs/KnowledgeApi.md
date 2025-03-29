@@ -2642,8 +2642,6 @@ This resource has been deprecated
 
 Get document content upload status
 
-GetKnowledgeKnowledgebaseLanguageDocumentUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:document:edit
@@ -5947,8 +5945,6 @@ namespace Example
 
 Bulk remove documents.
 
-PostKnowledgeKnowledgebaseDocumentsBulkRemove is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * knowledge:document:delete
@@ -6012,8 +6008,6 @@ namespace Example
 
 
 Bulk update documents.
-
-PostKnowledgeKnowledgebaseDocumentsBulkUpdate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -6337,8 +6331,6 @@ namespace Example
 
 
 Bulk add document versions.
-
-PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -6667,8 +6659,6 @@ This resource has been deprecated
 :::
 
 Upload Article Content
-
-PostKnowledgeKnowledgebaseLanguageDocumentUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -7783,4 +7773,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

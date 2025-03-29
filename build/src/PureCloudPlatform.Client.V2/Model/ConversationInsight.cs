@@ -63,11 +63,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of insight.</param>
         /// <param name="Title">The reason for contact, resolution for the interaction, or follow-up action item.</param>
         /// <param name="Description">Reasoning for the given insight.</param>
-        public ConversationInsight(TypeEnum? Type = null, string Title = null, string Description = null)
+        /// <param name="Outcome">The outcome of a given resolution insight.</param>
+        public ConversationInsight(TypeEnum? Type = null, string Title = null, string Description = null, string Outcome = null)
         {
             this.Type = Type;
             this.Title = Title;
             this.Description = Description;
+            this.Outcome = Outcome;
             
         }
         
@@ -92,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Description { get; set; }
 
 
+
+        /// <summary>
+        /// The outcome of a given resolution insight
+        /// </summary>
+        /// <value>The outcome of a given resolution insight</value>
+        [DataMember(Name="outcome", EmitDefaultValue=false)]
+        public string Outcome { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.Outcome == other.Outcome ||
+                    this.Outcome != null &&
+                    this.Outcome.Equals(other.Outcome)
                 );
         }
 
@@ -180,6 +197,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Outcome != null)
+                    hash = hash * 59 + this.Outcome.GetHashCode();
 
                 return hash;
             }

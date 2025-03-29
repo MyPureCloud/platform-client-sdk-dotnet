@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteSocialmediaEscalationrule**](#DeleteSocialmediaEscalationrule) | **Delete** /api/v2/socialmedia/escalationrules/{escalationRuleId} | Delete an escalation rule. |
+| [**DeleteSocialmediaMessage**](#DeleteSocialmediaMessage) | **Delete** /api/v2/socialmedia/messages/{messageId} | Delete a social media message. |
 | [**DeleteSocialmediaTopic**](#DeleteSocialmediaTopic) | **Delete** /api/v2/socialmedia/topics/{topicId} | Delete a social topic. |
 | [**DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](#DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | **Delete** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId} | Delete a Facebook data ingestion rule. |
 | [**DeleteSocialmediaTopicDataingestionrulesOpenOpenId**](#DeleteSocialmediaTopicDataingestionrulesOpenOpenId) | **Delete** /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId} | Delete a open data ingestion rule. |
@@ -110,14 +111,75 @@ namespace Example
 void (empty response body)
 
 
+## DeleteSocialmediaMessage
+
+> void DeleteSocialmediaMessage (string messageId)
+
+
+Delete a social media message.
+
+DeleteSocialmediaMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* socialmedia:message:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteSocialmediaMessageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SocialMediaApi();
+            var messageId = messageId_example;  // string | messageId
+
+            try
+            { 
+                // Delete a social media message.
+                apiInstance.DeleteSocialmediaMessage(messageId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SocialMediaApi.DeleteSocialmediaMessage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageId** | **string**| messageId |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## DeleteSocialmediaTopic
 
 > void DeleteSocialmediaTopic (string topicId, bool? hardDelete = null)
 
 
 Delete a social topic.
-
-DeleteSocialmediaTopic is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -181,8 +243,6 @@ void (empty response body)
 
 
 Delete a Facebook data ingestion rule.
-
-DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -315,8 +375,6 @@ void (empty response body)
 
 
 Delete a X (formally Twitter) data ingestion rule.
-
-DeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -763,8 +821,6 @@ namespace Example
 
 Get a single social topic.
 
-GetSocialmediaTopic is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * socialmedia:topic:view
@@ -897,8 +953,6 @@ namespace Example
 
 Get a single Facebook data ingestion rule.
 
-GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * socialmedia:facebookDataIngestionRule:view
@@ -964,8 +1018,6 @@ namespace Example
 
 
 Get a single Facebook data ingestion rule version.
-
-GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1034,8 +1086,6 @@ namespace Example
 
 
 Get the Facebook data ingestion rule versions.
-
-GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1317,8 +1367,6 @@ namespace Example
 
 Get a single X (formally Twitter) data ingestion rule.
 
-GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * socialmedia:twitterDataIngestionRule:view
@@ -1384,8 +1432,6 @@ namespace Example
 
 
 Get a single X (formally Twitter) data ingestion rule version.
-
-GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1454,8 +1500,6 @@ namespace Example
 
 
 Get the Open data ingestion rule versions.
-
-GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1527,8 +1571,6 @@ namespace Example
 
 Retrieve all social topics.
 
-GetSocialmediaTopics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * socialmedia:topic:view
@@ -1597,8 +1639,6 @@ namespace Example
 
 Update a social topic.
 
-PatchSocialmediaTopic is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * socialmedia:topic:edit
@@ -1662,8 +1702,6 @@ namespace Example
 
 
 Update the status of a Facebook data ingestion rule.
-
-PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1798,8 +1836,6 @@ namespace Example
 
 
 Update the status of a X (formally Twitter) data ingestion rule.
-
-PatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2117,8 +2153,6 @@ namespace Example
 
 Create an Facebook data ingestion rule.
 
-PostSocialmediaTopicDataingestionrulesFacebook is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * socialmedia:facebookDataIngestionRule:add
@@ -2249,8 +2283,6 @@ namespace Example
 
 Create an twitter data ingestion rule.
 
-PostSocialmediaTopicDataingestionrulesTwitter is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * socialmedia:twitterDataIngestionRule:add
@@ -2314,8 +2346,6 @@ namespace Example
 
 
 Create a social topic.
-
-PostSocialmediaTopics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2505,8 +2535,6 @@ namespace Example
 
 Update the Facebook data ingestion rule.
 
-PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * socialmedia:facebookDataIngestionRule:edit
@@ -2641,8 +2669,6 @@ namespace Example
 
 Update the X (formally Twitter) data ingestion rule.
 
-PutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * socialmedia:twitterDataIngestionRule:edit
@@ -2702,4 +2728,4 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatform.Client.V2 229.0.0_
+_PureCloudPlatform.Client.V2 230.0.0_

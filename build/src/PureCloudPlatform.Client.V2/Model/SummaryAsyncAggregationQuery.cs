@@ -39,6 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
+            /// Enum Copied for "copied"
+            /// </summary>
+            [EnumMember(Value = "copied")]
+            Copied,
+            
+            /// <summary>
+            /// Enum Editedfield for "editedField"
+            /// </summary>
+            [EnumMember(Value = "editedField")]
+            Editedfield,
+            
+            /// <summary>
             /// Enum Errortype for "errorType"
             /// </summary>
             [EnumMember(Value = "errorType")]
@@ -63,6 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Messagetype,
             
             /// <summary>
+            /// Enum Presented for "presented"
+            /// </summary>
+            [EnumMember(Value = "presented")]
+            Presented,
+            
+            /// <summary>
             /// Enum Queueid for "queueId"
             /// </summary>
             [EnumMember(Value = "queueId")]
@@ -81,10 +99,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Summaryid,
             
             /// <summary>
+            /// Enum Summaryrating for "summaryRating"
+            /// </summary>
+            [EnumMember(Value = "summaryRating")]
+            Summaryrating,
+            
+            /// <summary>
             /// Enum Triggersourceid for "triggerSourceId"
             /// </summary>
             [EnumMember(Value = "triggerSourceId")]
             Triggersourceid,
+            
+            /// <summary>
+            /// Enum Triggersourceoutcome for "triggerSourceOutcome"
+            /// </summary>
+            [EnumMember(Value = "triggerSourceOutcome")]
+            Triggersourceoutcome,
             
             /// <summary>
             /// Enum Triggersourcetype for "triggerSourceType"
@@ -97,6 +127,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "userId")]
             Userid,
+            
+            /// <summary>
+            /// Enum Wrapupcoderating for "wrapUpCodeRating"
+            /// </summary>
+            [EnumMember(Value = "wrapUpCodeRating")]
+            Wrapupcoderating,
+            
+            /// <summary>
+            /// Enum Wrapupcodesuggestionselected for "wrapUpCodeSuggestionSelected"
+            /// </summary>
+            [EnumMember(Value = "wrapUpCodeSuggestionSelected")]
+            Wrapupcodesuggestionselected,
             
             /// <summary>
             /// Enum Wrapupcodesgenerated for "wrapupCodesGenerated"
@@ -123,6 +165,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nConversationSummaries")]
             Nconversationsummaries,
+            
+            /// <summary>
+            /// Enum Nconversationsummaryengagements for "nConversationSummaryEngagements"
+            /// </summary>
+            [EnumMember(Value = "nConversationSummaryEngagements")]
+            Nconversationsummaryengagements,
             
             /// <summary>
             /// Enum Tconversationsummary for "tConversationSummary"

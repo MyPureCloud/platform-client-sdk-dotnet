@@ -317,6 +317,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlertingTimeoutMs">Specifies how long the agent has to answer an interaction before being marked as not responding..</param>
         /// <param name="Provider">The source provider for the communication..</param>
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
+        /// <param name="ExternalContactInitialDivisionId">If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned..</param>
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
         /// <param name="Wrapup">Wrapup for this participant, if it has been applied..</param>
         /// <param name="Peer">The peer communication corresponding to a matching leg for this communication..</param>
@@ -332,7 +333,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Controlling">ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages)..</param>
         /// <param name="ViewerUrl">The URL that can be used to open co-browse session in web browser..</param>
         /// <param name="ProviderEventTime">The time when the provider event which triggered this conversation update happened in the corrected provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
+        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -360,6 +361,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.Provider = Provider;
             this.ExternalContact = ExternalContact;
+            this.ExternalContactInitialDivisionId = ExternalContactInitialDivisionId;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
             this.Peer = Peer;
@@ -594,6 +596,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned.
+        /// </summary>
+        /// <value>If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned.</value>
+        [DataMember(Name="externalContactInitialDivisionId", EmitDefaultValue=false)]
+        public string ExternalContactInitialDivisionId { get; set; }
+
+
+
+        /// <summary>
         /// If this participant represents an external org, then this will be the reference for the external org.
         /// </summary>
         /// <value>If this participant represents an external org, then this will be the reference for the external org.</value>
@@ -755,6 +766,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalContactInitialDivisionId: ").Append(ExternalContactInitialDivisionId).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  Peer: ").Append(Peer).Append("\n");
@@ -941,6 +953,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContact.Equals(other.ExternalContact)
                 ) &&
                 (
+                    this.ExternalContactInitialDivisionId == other.ExternalContactInitialDivisionId ||
+                    this.ExternalContactInitialDivisionId != null &&
+                    this.ExternalContactInitialDivisionId.Equals(other.ExternalContactInitialDivisionId)
+                ) &&
+                (
                     this.ExternalOrganization == other.ExternalOrganization ||
                     this.ExternalOrganization != null &&
                     this.ExternalOrganization.Equals(other.ExternalOrganization)
@@ -1105,6 +1122,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
+
+                if (this.ExternalContactInitialDivisionId != null)
+                    hash = hash * 59 + this.ExternalContactInitialDivisionId.GetHashCode();
 
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();

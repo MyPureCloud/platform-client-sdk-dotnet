@@ -66,15 +66,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedbackAddRequest" /> class.
         /// </summary>
-        /// <param name="Summary">Agent&#39;s summary for the conversation (required).</param>
         /// <param name="Rating">Agent’s rating for the system-generated summary..</param>
-        public FeedbackAddRequest(string Summary = null, RatingEnum? Rating = null)
+        /// <param name="Summary">Agent&#39;s summary for the conversation (required).</param>
+        public FeedbackAddRequest(RatingEnum? Rating = null, string Summary = null)
         {
-            this.Summary = Summary;
             this.Rating = Rating;
+            this.Summary = Summary;
             
         }
         
+
+
 
 
         /// <summary>
@@ -83,8 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Agent&#39;s summary for the conversation</value>
         [DataMember(Name="summary", EmitDefaultValue=false)]
         public string Summary { get; set; }
-
-
 
 
         /// <summary>
@@ -96,8 +96,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class FeedbackAddRequest {\n");
 
-            sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  Rating: ").Append(Rating).Append("\n");
+            sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,14 +139,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Summary == other.Summary ||
-                    this.Summary != null &&
-                    this.Summary.Equals(other.Summary)
-                ) &&
-                (
                     this.Rating == other.Rating ||
                     this.Rating != null &&
                     this.Rating.Equals(other.Rating)
+                ) &&
+                (
+                    this.Summary == other.Summary ||
+                    this.Summary != null &&
+                    this.Summary.Equals(other.Summary)
                 );
         }
 
@@ -161,11 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Summary != null)
-                    hash = hash * 59 + this.Summary.GetHashCode();
-
                 if (this.Rating != null)
                     hash = hash * 59 + this.Rating.GetHashCode();
+
+                if (this.Summary != null)
+                    hash = hash * 59 + this.Summary.GetHashCode();
 
                 return hash;
             }

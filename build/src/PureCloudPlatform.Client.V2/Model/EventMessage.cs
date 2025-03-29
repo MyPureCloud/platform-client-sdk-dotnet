@@ -87,6 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignBlacklisted,
             
             /// <summary>
+            /// Enum CampaignBuildContactQueueError for "CAMPAIGN_BUILD_CONTACT_QUEUE_ERROR"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_BUILD_CONTACT_QUEUE_ERROR")]
+            CampaignBuildContactQueueError,
+            
+            /// <summary>
             /// Enum CampaignContentTemplateSubstitutionMismatch for "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH")]
