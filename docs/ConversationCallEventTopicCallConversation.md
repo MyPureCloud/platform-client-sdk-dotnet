@@ -15,8 +15,8 @@
 | **Divisions** | [**List&lt;ConversationCallEventTopicConversationDivisionMembership&gt;**](ConversationCallEventTopicConversationDivisionMembership) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
-| **MaxParticipants** | **int?** |  | [optional] |
+| **MaxParticipants** | **long?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

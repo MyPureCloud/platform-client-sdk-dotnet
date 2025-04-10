@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetKnowledgeKnowledgebaseUploadsUrlsJob**](#GetKnowledgeKnowledgebaseUploadsUrlsJob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId} | Get content upload from URL job status |
+| [**PostGamificationContestsUploadsPrizeimages**](#PostGamificationContestsUploadsPrizeimages) | **Post** /api/v2/gamification/contests/uploads/prizeimages | Generates pre-signed URL to upload a prize image for gamification contests |
 | [**PostIntegrationsActionDraftFunctionUpload**](#PostIntegrationsActionDraftFunctionUpload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
 | [**PostKnowledgeDocumentuploads**](#PostKnowledgeDocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](#PostKnowledgeKnowledgebaseUploadsUrlsJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
@@ -80,6 +81,68 @@ namespace Example
 ### Return type
 
 [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse)
+
+
+## PostGamificationContestsUploadsPrizeimages
+
+> [**UploadUrlResponse**](UploadUrlResponse) PostGamificationContestsUploadsPrizeimages (GamificationContestPrizeImageUploadUrlRequest body)
+
+
+Generates pre-signed URL to upload a prize image for gamification contests
+
+Requires ALL permissions: 
+
+* gamification:contestPrizeImage:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationContestsUploadsPrizeimagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UploadsApi();
+            var body = new GamificationContestPrizeImageUploadUrlRequest(); // GamificationContestPrizeImageUploadUrlRequest | query
+
+            try
+            { 
+                // Generates pre-signed URL to upload a prize image for gamification contests
+                UploadUrlResponse result = apiInstance.PostGamificationContestsUploadsPrizeimages(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UploadsApi.PostGamificationContestsUploadsPrizeimages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**GamificationContestPrizeImageUploadUrlRequest**](GamificationContestPrizeImageUploadUrlRequest)| query |  |
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
 
 
 ## PostIntegrationsActionDraftFunctionUpload
@@ -584,4 +647,4 @@ namespace Example
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

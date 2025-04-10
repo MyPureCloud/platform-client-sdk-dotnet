@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EventTime** | **int?** |  | [optional] |
+| **EventTime** | **long?** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **ParticipantId** | **string** |  | [optional] |
 | **SessionId** | **string** |  | [optional] |
@@ -19,7 +19,7 @@
 | **AddressFrom** | **string** |  | [optional] |
 | **CallbackUserName** | **string** |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
-| **CallbackScheduledTime** | **int?** |  | [optional] |
+| **CallbackScheduledTime** | **long?** |  | [optional] |
 | **Subject** | **string** |  | [optional] |
 | **MessageType** | **string** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
@@ -27,9 +27,9 @@
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **UtilizationLabel** | **string** |  | [optional] |
-| **RoutingPriority** | **int?** |  | [optional] |
+| **RoutingPriority** | **long?** |  | [optional] |
 | **RequestedRoutingSkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -10,12 +10,12 @@
 | **ConversationId** | **Guid?** |  | [optional] |
 | **ConversationDate** | **string** |  | [optional] |
 | **FormName** | **string** |  | [optional] |
-| **Points** | **int?** |  | [optional] |
-| **MaxPoints** | **int?** |  | [optional] |
-| **EvaluationScore** | **int?** |  | [optional] |
+| **Points** | **long?** |  | [optional] |
+| **MaxPoints** | **long?** |  | [optional] |
+| **EvaluationScore** | **long?** |  | [optional] |
 | **EvaluationScoreDouble** | **double?** |  | [optional] |
 | **MediaTypes** | **List&lt;string&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

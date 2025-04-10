@@ -7,11 +7,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Confidence** | **double?** |  | [optional] |
-| **StartTimeMs** | **int?** |  | [optional] |
-| **OffsetMs** | **int?** |  | [optional] |
-| **DurationMs** | **int?** |  | [optional] |
+| **StartTimeMs** | **long?** |  | [optional] |
+| **OffsetMs** | **long?** |  | [optional] |
+| **DurationMs** | **long?** |  | [optional] |
 | **Word** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

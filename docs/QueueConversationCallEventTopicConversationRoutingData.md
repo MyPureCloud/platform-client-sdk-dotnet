@@ -8,10 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **Queue** | [**QueueConversationCallEventTopicUriReference**](QueueConversationCallEventTopicUriReference) | A UriReference for a resource | [optional] |
 | **Language** | [**QueueConversationCallEventTopicUriReference**](QueueConversationCallEventTopicUriReference) | A UriReference for a resource | [optional] |
-| **Priority** | **int?** | The priority of the conversation to use for routing decisions | [optional] |
+| **Priority** | **long?** | The priority of the conversation to use for routing decisions | [optional] |
 | **Skills** | [**List&lt;QueueConversationCallEventTopicUriReference&gt;**](QueueConversationCallEventTopicUriReference) | The skills to use for routing decisions | [optional] |
 | **ScoredAgents** | [**List&lt;QueueConversationCallEventTopicScoredAgent&gt;**](QueueConversationCallEventTopicScoredAgent) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

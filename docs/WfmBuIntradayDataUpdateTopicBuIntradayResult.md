@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
-| **IntervalLengthMinutes** | **int?** |  | [optional] |
+| **IntervalLengthMinutes** | **long?** |  | [optional] |
 | **IntradayDataGroupings** | [**List&lt;WfmBuIntradayDataUpdateTopicBuIntradayDataGroup&gt;**](WfmBuIntradayDataUpdateTopicBuIntradayDataGroup) |  | [optional] |
 | **Categories** | **List&lt;string&gt;** |  | [optional] |
 | **NoDataReason** | **string** |  | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

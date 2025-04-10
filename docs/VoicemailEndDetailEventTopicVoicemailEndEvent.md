@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EventTime** | **int?** |  | [optional] |
+| **EventTime** | **long?** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **ParticipantId** | **string** |  | [optional] |
 | **SessionId** | **string** |  | [optional] |
@@ -19,10 +19,10 @@
 | **UserId** | **string** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
-| **VoicemailDurationMs** | **int?** |  | [optional] |
+| **VoicemailDurationMs** | **long?** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

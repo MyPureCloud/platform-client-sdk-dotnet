@@ -7,8 +7,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteEmployeeperformanceExternalmetricsDefinition**](#DeleteEmployeeperformanceExternalmetricsDefinition) | **Delete** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Delete an External Metric Definition |
+| [**DeleteGamificationContest**](#DeleteGamificationContest) | **Delete** /api/v2/gamification/contests/{contestId} | Delete a Contest by Id |
 | [**GetEmployeeperformanceExternalmetricsDefinition**](#GetEmployeeperformanceExternalmetricsDefinition) | **Get** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Get an External Metric Definition |
 | [**GetEmployeeperformanceExternalmetricsDefinitions**](#GetEmployeeperformanceExternalmetricsDefinitions) | **Get** /api/v2/employeeperformance/externalmetrics/definitions | Get a list of External Metric Definitions of an organization, sorted by name in ascending order |
+| [**GetGamificationContest**](#GetGamificationContest) | **Get** /api/v2/gamification/contests/{contestId} | Get a Contest by Id |
+| [**GetGamificationContestAgentsScores**](#GetGamificationContestAgentsScores) | **Get** /api/v2/gamification/contests/{contestId}/agents/scores | Get Contest Scores (Admin) |
+| [**GetGamificationContestAgentsScoresMe**](#GetGamificationContestAgentsScoresMe) | **Get** /api/v2/gamification/contests/{contestId}/agents/scores/me | Get Contest Scores for the requesting Agent/Supervisor |
+| [**GetGamificationContestAgentsScoresTrends**](#GetGamificationContestAgentsScoresTrends) | **Get** /api/v2/gamification/contests/{contestId}/agents/scores/trends | Get a Contest Score Trend (Average Trend) |
+| [**GetGamificationContestAgentsScoresTrendsMe**](#GetGamificationContestAgentsScoresTrendsMe) | **Get** /api/v2/gamification/contests/{contestId}/agents/scores/trends/me | Get a Contest Score Trend for the requesting Agent |
+| [**GetGamificationContestPrizeimage**](#GetGamificationContestPrizeimage) | **Get** /api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId} | Get a Contest Prize Image by Id |
+| [**GetGamificationContests**](#GetGamificationContests) | **Get** /api/v2/gamification/contests | Get a List of Contests (Admin) |
+| [**GetGamificationContestsMe**](#GetGamificationContestsMe) | **Get** /api/v2/gamification/contests/me | Get a List of Contests (Agent/Supervisor) |
 | [**GetGamificationInsights**](#GetGamificationInsights) | **Get** /api/v2/gamification/insights | Get insights summary |
 | [**GetGamificationInsightsDetails**](#GetGamificationInsightsDetails) | **Get** /api/v2/gamification/insights/details | Get insights details for the current user |
 | [**GetGamificationInsightsGroupsTrends**](#GetGamificationInsightsGroupsTrends) | **Get** /api/v2/gamification/insights/groups/trends | Get insights overall trend for the current user |
@@ -56,8 +65,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationTemplate**](#GetGamificationTemplate) | **Get** /api/v2/gamification/templates/{templateId} | Objective template by id |
 | [**GetGamificationTemplates**](#GetGamificationTemplates) | **Get** /api/v2/gamification/templates | All objective templates |
 | [**PatchEmployeeperformanceExternalmetricsDefinition**](#PatchEmployeeperformanceExternalmetricsDefinition) | **Patch** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Update External Metric Definition |
+| [**PatchGamificationContest**](#PatchGamificationContest) | **Patch** /api/v2/gamification/contests/{contestId} | Finalize a Contest by Id |
 | [**PostEmployeeperformanceExternalmetricsData**](#PostEmployeeperformanceExternalmetricsData) | **Post** /api/v2/employeeperformance/externalmetrics/data | Write External Metric Data |
 | [**PostEmployeeperformanceExternalmetricsDefinitions**](#PostEmployeeperformanceExternalmetricsDefinitions) | **Post** /api/v2/employeeperformance/externalmetrics/definitions | Create External Metric Definition |
+| [**PostGamificationContests**](#PostGamificationContests) | **Post** /api/v2/gamification/contests | Creates a Contest |
+| [**PostGamificationContestsUploadsPrizeimages**](#PostGamificationContestsUploadsPrizeimages) | **Post** /api/v2/gamification/contests/uploads/prizeimages | Generates pre-signed URL to upload a prize image for gamification contests |
 | [**PostGamificationProfileActivate**](#PostGamificationProfileActivate) | **Post** /api/v2/gamification/profiles/{profileId}/activate | Activate a performance profile |
 | [**PostGamificationProfileDeactivate**](#PostGamificationProfileDeactivate) | **Post** /api/v2/gamification/profiles/{profileId}/deactivate | Deactivate a performance profile |
 | [**PostGamificationProfileMembers**](#PostGamificationProfileMembers) | **Post** /api/v2/gamification/profiles/{profileId}/members | Assign members to a given performance profile |
@@ -67,6 +79,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGamificationProfiles**](#PostGamificationProfiles) | **Post** /api/v2/gamification/profiles | Create a new custom performance profile |
 | [**PostGamificationProfilesUserQuery**](#PostGamificationProfilesUserQuery) | **Post** /api/v2/gamification/profiles/users/{userId}/query | Query performance profiles in date range for a user |
 | [**PostGamificationProfilesUsersMeQuery**](#PostGamificationProfilesUsersMeQuery) | **Post** /api/v2/gamification/profiles/users/me/query | Query performance profiles in date range for the current user |
+| [**PutGamificationContest**](#PutGamificationContest) | **Put** /api/v2/gamification/contests/{contestId} | Update a Contest by Id |
 | [**PutGamificationProfile**](#PutGamificationProfile) | **Put** /api/v2/gamification/profiles/{profileId} | Updates a performance profile |
 | [**PutGamificationProfileMetric**](#PutGamificationProfileMetric) | **Put** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Updates a metric in performance profile |
 | [**PutGamificationStatus**](#PutGamificationStatus) | **Put** /api/v2/gamification/status | Update gamification activation status |
@@ -128,6 +141,68 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **metricId** | **string**| Specifies the External Metric Definition ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteGamificationContest
+
+> void DeleteGamificationContest (string contestId)
+
+
+Delete a Contest by Id
+
+Requires ANY permissions: 
+
+* gamification:contest:delete
+* gamification:contest:deleteAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteGamificationContestExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+
+            try
+            { 
+                // Delete a Contest by Id
+                apiInstance.DeleteGamificationContest(contestId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.DeleteGamificationContest: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
 
 ### Return type
 
@@ -258,6 +333,547 @@ namespace Example
 ### Return type
 
 [**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing)
+
+
+## GetGamificationContest
+
+> [**ContestsResponse**](ContestsResponse) GetGamificationContest (string contestId)
+
+
+Get a Contest by Id
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+
+            try
+            { 
+                // Get a Contest by Id
+                ContestsResponse result = apiInstance.GetGamificationContest(contestId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContest: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
+## GetGamificationContestAgentsScores
+
+> [**ContestScoresAgentsPagedList**](ContestScoresAgentsPagedList) GetGamificationContestAgentsScores (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+
+
+Get Contest Scores (Admin)
+
+Requires ANY permissions: 
+
+* gamification:contest:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestAgentsScoresExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 25)
+            var workday = 2013-10-20;  // String | Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var returnsView = returnsView_example;  // string | Desired response results (optional)  (default to All)
+
+            try
+            { 
+                // Get Contest Scores (Admin)
+                ContestScoresAgentsPagedList result = apiInstance.GetGamificationContestAgentsScores(contestId, pageNumber, pageSize, workday, returnsView);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContestAgentsScores: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 25] |
+| **workday** | **String**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **returnsView** | **string**| Desired response results | [optional] [default to All]<br />**Values**: All, TopAndBottom |
+
+### Return type
+
+[**ContestScoresAgentsPagedList**](ContestScoresAgentsPagedList)
+
+
+## GetGamificationContestAgentsScoresMe
+
+> [**ContestScoresAgentsPagedList**](ContestScoresAgentsPagedList) GetGamificationContestAgentsScoresMe (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+
+
+Get Contest Scores for the requesting Agent/Supervisor
+
+Requires ALL permissions: 
+
+* gamification:contest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestAgentsScoresMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 25)
+            var workday = 2013-10-20;  // String | Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var returnsView = returnsView_example;  // string | Desired response results (Supervisor Only) (optional)  (default to All)
+
+            try
+            { 
+                // Get Contest Scores for the requesting Agent/Supervisor
+                ContestScoresAgentsPagedList result = apiInstance.GetGamificationContestAgentsScoresMe(contestId, pageNumber, pageSize, workday, returnsView);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContestAgentsScoresMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 25] |
+| **workday** | **String**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **returnsView** | **string**| Desired response results (Supervisor Only) | [optional] [default to All]<br />**Values**: All, TopAndBottom |
+
+### Return type
+
+[**ContestScoresAgentsPagedList**](ContestScoresAgentsPagedList)
+
+
+## GetGamificationContestAgentsScoresTrends
+
+> [**ContestScoresGroupTrendList**](ContestScoresGroupTrendList) GetGamificationContestAgentsScoresTrends (string contestId)
+
+
+Get a Contest Score Trend (Average Trend)
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestAgentsScoresTrendsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+
+            try
+            { 
+                // Get a Contest Score Trend (Average Trend)
+                ContestScoresGroupTrendList result = apiInstance.GetGamificationContestAgentsScoresTrends(contestId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContestAgentsScoresTrends: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+
+### Return type
+
+[**ContestScoresGroupTrendList**](ContestScoresGroupTrendList)
+
+
+## GetGamificationContestAgentsScoresTrendsMe
+
+> [**ContestScoresAgentTrendList**](ContestScoresAgentTrendList) GetGamificationContestAgentsScoresTrendsMe (string contestId)
+
+
+Get a Contest Score Trend for the requesting Agent
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestAgentsScoresTrendsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+
+            try
+            { 
+                // Get a Contest Score Trend for the requesting Agent
+                ContestScoresAgentTrendList result = apiInstance.GetGamificationContestAgentsScoresTrendsMe(contestId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContestAgentsScoresTrendsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+
+### Return type
+
+[**ContestScoresAgentTrendList**](ContestScoresAgentTrendList)
+
+
+## GetGamificationContestPrizeimage
+
+> [**PrizeImages**](PrizeImages) GetGamificationContestPrizeimage (string contestId, string prizeImageId)
+
+
+Get a Contest Prize Image by Id
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+* gamification:contest:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestPrizeimageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+            var prizeImageId = prizeImageId_example;  // string | The ID of the prize image
+
+            try
+            { 
+                // Get a Contest Prize Image by Id
+                PrizeImages result = apiInstance.GetGamificationContestPrizeimage(contestId, prizeImageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContestPrizeimage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+| **prizeImageId** | **string**| The ID of the prize image |  |
+
+### Return type
+
+[**PrizeImages**](PrizeImages)
+
+
+## GetGamificationContests
+
+> [**GetContestsEssentialsListing**](GetContestsEssentialsListing) GetGamificationContests (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null)
+
+
+Get a List of Contests (Admin)
+
+Requires ANY permissions: 
+
+* gamification:contest:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 25)
+            var dateStart = 2013-10-20;  // String | Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var dateEnd = 2013-10-20;  // String | End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var status = new List<string>(); // List<string> |  (optional) 
+            var sortBy = sortBy_example;  // string |  (optional)  (default to dateStart)
+            var sortOrder = sortOrder_example;  // string |  (optional)  (default to desc)
+
+            try
+            { 
+                // Get a List of Contests (Admin)
+                GetContestsEssentialsListing result = apiInstance.GetGamificationContests(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContests: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 25] |
+| **dateStart** | **String**| Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **dateEnd** | **String**| End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **status** | [**List<string>**](string)|  | [optional] <br />**Values**: Upcoming, Ongoing, Pending, RecentlyCompleted, Completed, Cancelled |
+| **sortBy** | **string**|  | [optional] [default to dateStart]<br />**Values**: title, dateStart, dateEnd, dateFinalized, status, profile, participantCount |
+| **sortOrder** | **string**|  | [optional] [default to desc]<br />**Values**: asc, desc |
+
+### Return type
+
+[**GetContestsEssentialsListing**](GetContestsEssentialsListing)
+
+
+## GetGamificationContestsMe
+
+> [**GetContestsEssentialsListing**](GetContestsEssentialsListing) GetGamificationContestsMe (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null)
+
+
+Get a List of Contests (Agent/Supervisor)
+
+Requires ALL permissions: 
+
+* gamification:contest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationContestsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 25)
+            var dateStart = 2013-10-20;  // String | Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var dateEnd = 2013-10-20;  // String | End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var status = new List<string>(); // List<string> |  (optional) 
+            var sortBy = sortBy_example;  // string |  (optional)  (default to dateStart)
+            var sortOrder = sortOrder_example;  // string |  (optional)  (default to desc)
+            var view = view_example;  // string |  (optional)  (default to participant)
+
+            try
+            { 
+                // Get a List of Contests (Agent/Supervisor)
+                GetContestsEssentialsListing result = apiInstance.GetGamificationContestsMe(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder, view);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationContestsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 25] |
+| **dateStart** | **String**| Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **dateEnd** | **String**| End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **status** | [**List<string>**](string)|  | [optional] <br />**Values**: Upcoming, Ongoing, Pending, RecentlyCompleted, Completed, Cancelled |
+| **sortBy** | **string**|  | [optional] [default to dateStart]<br />**Values**: title, dateStart, dateEnd, dateFinalized, status, profile, participantCount |
+| **sortOrder** | **string**|  | [optional] [default to desc]<br />**Values**: asc, desc |
+| **view** | **string**|  | [optional] [default to participant]<br />**Values**: participant, creator |
+
+### Return type
+
+[**GetContestsEssentialsListing**](GetContestsEssentialsListing)
 
 
 ## GetGamificationInsights
@@ -3395,6 +4011,71 @@ namespace Example
 [**ExternalMetricDefinition**](ExternalMetricDefinition)
 
 
+## PatchGamificationContest
+
+> [**ContestsResponse**](ContestsResponse) PatchGamificationContest (string contestId, ContestsFinalizeRequest body)
+
+
+Finalize a Contest by Id
+
+Requires ANY permissions: 
+
+* gamification:contestStatus:edit
+* gamification:contestStatus:editAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchGamificationContestExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+            var body = new ContestsFinalizeRequest(); // ContestsFinalizeRequest | Finalize Contest
+
+            try
+            { 
+                // Finalize a Contest by Id
+                ContestsResponse result = apiInstance.PatchGamificationContest(contestId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PatchGamificationContest: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+| **body** | [**ContestsFinalizeRequest**](ContestsFinalizeRequest)| Finalize Contest |  |
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
 ## PostEmployeeperformanceExternalmetricsData
 
 > [**ExternalMetricDataWriteResponse**](ExternalMetricDataWriteResponse) PostEmployeeperformanceExternalmetricsData (ExternalMetricDataWriteRequest body = null)
@@ -3517,6 +4198,130 @@ namespace Example
 ### Return type
 
 [**ExternalMetricDefinition**](ExternalMetricDefinition)
+
+
+## PostGamificationContests
+
+> [**ContestsResponse**](ContestsResponse) PostGamificationContests (ContestsCreateRequest body)
+
+
+Creates a Contest
+
+Requires ANY permissions: 
+
+* gamification:contest:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationContestsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var body = new ContestsCreateRequest(); // ContestsCreateRequest | Create Contest
+
+            try
+            { 
+                // Creates a Contest
+                ContestsResponse result = apiInstance.PostGamificationContests(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationContests: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContestsCreateRequest**](ContestsCreateRequest)| Create Contest |  |
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
+## PostGamificationContestsUploadsPrizeimages
+
+> [**UploadUrlResponse**](UploadUrlResponse) PostGamificationContestsUploadsPrizeimages (GamificationContestPrizeImageUploadUrlRequest body)
+
+
+Generates pre-signed URL to upload a prize image for gamification contests
+
+Requires ALL permissions: 
+
+* gamification:contestPrizeImage:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationContestsUploadsPrizeimagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var body = new GamificationContestPrizeImageUploadUrlRequest(); // GamificationContestPrizeImageUploadUrlRequest | query
+
+            try
+            { 
+                // Generates pre-signed URL to upload a prize image for gamification contests
+                UploadUrlResponse result = apiInstance.PostGamificationContestsUploadsPrizeimages(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationContestsUploadsPrizeimages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**GamificationContestPrizeImageUploadUrlRequest**](GamificationContestPrizeImageUploadUrlRequest)| query |  |
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
 
 
 ## PostGamificationProfileActivate
@@ -4090,6 +4895,71 @@ namespace Example
 [**UserProfilesInDateRange**](UserProfilesInDateRange)
 
 
+## PutGamificationContest
+
+> [**ContestsResponse**](ContestsResponse) PutGamificationContest (string contestId, ContestsCreateRequest body)
+
+
+Update a Contest by Id
+
+Requires ANY permissions: 
+
+* gamification:contest:edit
+* gamification:contest:editAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutGamificationContestExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var contestId = contestId_example;  // string | The ID of the contest
+            var body = new ContestsCreateRequest(); // ContestsCreateRequest | Contest
+
+            try
+            { 
+                // Update a Contest by Id
+                ContestsResponse result = apiInstance.PutGamificationContest(contestId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PutGamificationContest: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contestId** | **string**| The ID of the contest |  |
+| **body** | [**ContestsCreateRequest**](ContestsCreateRequest)| Contest |  |
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
 ## PutGamificationProfile
 
 > [**PerformanceProfile**](PerformanceProfile) PutGamificationProfile (string profileId, PerformanceProfile body = null)
@@ -4282,4 +5152,4 @@ namespace Example
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

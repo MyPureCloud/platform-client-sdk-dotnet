@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Disconnect reason protocol type. | [optional] |
-| **Code** | **int?** | Protocol specific reason code. See the Q.850 and SIP specs. | [optional] |
+| **Code** | **long?** | Protocol specific reason code. See the Q.850 and SIP specs. | [optional] |
 | **Phrase** | **string** | Human readable English description of the disconnect reason. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -15,11 +15,11 @@
 | **SourceDays** | [**List&lt;WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer&gt;**](WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer) |  | [optional] |
 | **Modifications** | [**List&lt;WfmBuShortTermForecastCopyCompleteTopicBuForecastModification&gt;**](WfmBuShortTermForecastCopyCompleteTopicBuForecastModification) |  | [optional] |
 | **TimeZone** | **string** |  | [optional] |
-| **PlanningGroupsVersion** | **int?** |  | [optional] |
-| **WeekCount** | **int?** |  | [optional] |
+| **PlanningGroupsVersion** | **long?** |  | [optional] |
+| **WeekCount** | **long?** |  | [optional] |
 | **Metadata** | [**WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata**](WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata) |  | [optional] |
 | **CanUseForScheduling** | **bool?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

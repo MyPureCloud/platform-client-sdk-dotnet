@@ -25,8 +25,9 @@
 | **DynamicContactQueueingSettings** | [**DynamicContactQueueingSettings**](DynamicContactQueueingSettings) | Indicates (when true) that the campaign supports dynamic queueing of the contact list at the time of a request for contacts. | [optional] |
 | **EmailConfig** | [**EmailConfig**](EmailConfig) | Configuration for this messaging campaign to send Email messages. | [optional] |
 | **SmsConfig** | [**SmsConfig**](SmsConfig) | Configuration for this messaging campaign to send SMS messages. | [optional] |
+| **WhatsAppConfig** | [**WhatsAppConfig**](WhatsAppConfig) | Configuration for this messaging campaign to send WhatsApp messages. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

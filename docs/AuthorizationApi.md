@@ -13,8 +13,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationDivision**](#GetAuthorizationDivision) | **Get** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
 | [**GetAuthorizationDivisionGrants**](#GetAuthorizationDivisionGrants) | **Get** /api/v2/authorization/divisions/{divisionId}/grants | Gets all grants for a given division. |
 | [**GetAuthorizationDivisions**](#GetAuthorizationDivisions) | **Get** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
+| [**GetAuthorizationDivisionsDeleted**](#GetAuthorizationDivisionsDeleted) | **Get** /api/v2/authorization/divisions/deleted | Get a list of soft deleted divisions for the org |
 | [**GetAuthorizationDivisionsHome**](#GetAuthorizationDivisionsHome) | **Get** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
 | [**GetAuthorizationDivisionsLimit**](#GetAuthorizationDivisionsLimit) | **Get** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
+| [**GetAuthorizationDivisionsQuery**](#GetAuthorizationDivisionsQuery) | **Get** /api/v2/authorization/divisions/query | Retrieve a list of all divisions defined for the organization with cursor |
 | [**GetAuthorizationDivisionspermittedMe**](#GetAuthorizationDivisionspermittedMe) | **Get** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
 | [**GetAuthorizationDivisionspermittedPagedMe**](#GetAuthorizationDivisionspermittedPagedMe) | **Get** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
 | [**GetAuthorizationDivisionspermittedPagedSubjectId**](#GetAuthorizationDivisionspermittedPagedSubjectId) | **Get** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
@@ -530,6 +532,70 @@ namespace Example
 [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing)
 
 
+## GetAuthorizationDivisionsDeleted
+
+> [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing) GetAuthorizationDivisionsDeleted (int? pageNumber = null, int? pageSize = null)
+
+
+Get a list of soft deleted divisions for the org
+
+Requires ANY permissions: 
+
+* authorization:divisionDeleted:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionsDeletedExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get a list of soft deleted divisions for the org
+                AuthzDivisionEntityListing result = apiInstance.GetAuthorizationDivisionsDeleted(pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionsDeleted: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing)
+
+
 ## GetAuthorizationDivisionsHome
 
 > [**AuthzDivision**](AuthzDivision) GetAuthorizationDivisionsHome ()
@@ -642,6 +708,77 @@ This endpoint does require any parameters.
 ### Return type
 
 **int?**
+
+
+## GetAuthorizationDivisionsQuery
+
+> [**AuthzDivisionCursorListing**](AuthzDivisionCursorListing) GetAuthorizationDivisionsQuery (string before = null, string after = null, string pageSize = null, List<string> id = null, string name = null)
+
+
+Retrieve a list of all divisions defined for the organization with cursor
+
+Use \"after\" and \"before\" param to fetch next/previous page}
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var id = new List<string>(); // List<string> | Optionally request specific divisions by their IDs (optional) 
+            var name = name_example;  // string | Optionally request specific divisions by division name (optional) 
+
+            try
+            { 
+                // Retrieve a list of all divisions defined for the organization with cursor
+                AuthzDivisionCursorListing result = apiInstance.GetAuthorizationDivisionsQuery(before, after, pageSize, id, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **id** | [**List<string>**](string)| Optionally request specific divisions by their IDs | [optional]  |
+| **name** | **string**| Optionally request specific divisions by division name | [optional]  |
+
+### Return type
+
+[**AuthzDivisionCursorListing**](AuthzDivisionCursorListing)
 
 
 ## GetAuthorizationDivisionspermittedMe
@@ -3781,4 +3918,4 @@ namespace Example
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

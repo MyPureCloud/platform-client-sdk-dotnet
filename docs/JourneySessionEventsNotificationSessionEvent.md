@@ -28,10 +28,10 @@
 | **Referrer** | [**JourneySessionEventsNotificationReferrer**](JourneySessionEventsNotificationReferrer) |  | [optional] |
 | **SearchTerms** | **List&lt;string&gt;** |  | [optional] |
 | **UserAgentString** | **string** |  | [optional] |
-| **DurationInSeconds** | **int?** |  | [optional] |
-| **EventCount** | **int?** |  | [optional] |
-| **PageviewCount** | **int?** |  | [optional] |
-| **ScreenviewCount** | **int?** |  | [optional] |
+| **DurationInSeconds** | **long?** |  | [optional] |
+| **EventCount** | **long?** |  | [optional] |
+| **PageviewCount** | **long?** |  | [optional] |
+| **ScreenviewCount** | **long?** |  | [optional] |
 | **LastEvent** | [**JourneySessionEventsNotificationSessionLastEvent**](JourneySessionEventsNotificationSessionLastEvent) |  | [optional] |
 | **Conversation** | [**JourneySessionEventsNotificationConversation**](JourneySessionEventsNotificationConversation) |  | [optional] |
 | **OriginatingDirection** | **string** |  | [optional] |
@@ -51,4 +51,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

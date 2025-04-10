@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **Message** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
 | **MessageTime** | **DateTime?** |  | [optional] |
-| **MessageSegmentCount** | **int?** |  | [optional] |
+| **MessageSegmentCount** | **long?** |  | [optional] |
 | **MessageStatus** | **string** |  | [optional] |
 | **Media** | [**List&lt;ConversationMessageEventTopicMessageMedia&gt;**](ConversationMessageEventTopicMessageMedia) |  | [optional] |
 | **Stickers** | [**List&lt;ConversationMessageEventTopicMessageSticker&gt;**](ConversationMessageEventTopicMessageSticker) |  | [optional] |
@@ -18,4 +18,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

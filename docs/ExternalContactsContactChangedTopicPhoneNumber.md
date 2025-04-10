@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Display** | **string** |  | [optional] |
-| **Extension** | **int?** |  | [optional] |
+| **Extension** | **long?** |  | [optional] |
 | **AcceptsSMS** | **bool?** |  | [optional] |
 | **UserInput** | **string** |  | [optional] |
 | **E164** | **string** |  | [optional] |
@@ -16,4 +16,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

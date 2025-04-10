@@ -2307,7 +2307,7 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)
-            var filter = filter_example;  // string | Optional search filter (optional) 
+            var filter = filter_example;  // string | Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional) 
 
             try
             { 
@@ -2332,7 +2332,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **excludeStatus** | **bool?**| Exclude MX record data | [optional] [default to false] |
-| **filter** | **string**| Optional search filter | [optional]  |
+| **filter** | **string**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional]  |
 
 ### Return type
 
@@ -2527,7 +2527,7 @@ namespace Example
 
 ## GetRoutingEmailOutboundDomains
 
-> [**OutboundDomainEntityListing**](OutboundDomainEntityListing) GetRoutingEmailOutboundDomains (string filter = null)
+> [**OutboundDomainEntityListing**](OutboundDomainEntityListing) GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null)
 
 
 Get outbound domains
@@ -2558,12 +2558,14 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var filter = filter_example;  // string | Optional search filter (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var filter = filter_example;  // string | Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional) 
 
             try
             { 
                 // Get outbound domains
-                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains(filter);
+                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains(pageSize, pageNumber, filter);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2580,7 +2582,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **string**| Optional search filter | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **filter** | **string**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional]  |
 
 ### Return type
 
@@ -3750,7 +3754,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
 | **name** | **string**| Filter by queue member name (contains-style search) | [optional]  |
 | **profileSkills** | [**List<string>**](string)| Filter by profile skill (contains-style search) | [optional]  |
 | **skills** | [**List<string>**](string)| Filter by skill (contains-style search) | [optional]  |
@@ -3839,7 +3843,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string)| Filter by profile skill | [optional]  |
@@ -10141,4 +10145,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

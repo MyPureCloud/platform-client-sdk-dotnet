@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
 | **IsMobile** | **bool?** |  | [optional] |
-| **ScreenHeight** | **int?** |  | [optional] |
-| **ScreenWidth** | **int?** |  | [optional] |
-| **ScreenDensity** | **int?** |  | [optional] |
+| **ScreenHeight** | **long?** |  | [optional] |
+| **ScreenWidth** | **long?** |  | [optional] |
+| **ScreenDensity** | **long?** |  | [optional] |
 | **Fingerprint** | **string** |  | [optional] |
 | **OsFamily** | **string** |  | [optional] |
 | **OsVersion** | **string** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

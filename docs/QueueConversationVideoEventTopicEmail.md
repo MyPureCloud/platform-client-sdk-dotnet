@@ -15,7 +15,7 @@
 | **Provider** | **string** | The source provider of the email. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
-| **MessagesSent** | **int?** | The number of email messages sent by this participant. | [optional] |
+| **MessagesSent** | **long?** | The number of email messages sent by this participant. | [optional] |
 | **ErrorInfo** | [**QueueConversationVideoEventTopicErrorDetails**](QueueConversationVideoEventTopicErrorDetails) | Detailed information about an error response. | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the email was placed on hold in the cloud clock if the email is currently on hold. | [optional] |
@@ -34,4 +34,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

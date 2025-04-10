@@ -20,17 +20,17 @@
 | **CallAnalysisResponseSet** | [**DialerCampaignConfigChangeUriReference**](DialerCampaignConfigChangeUriReference) | A UriReference for a resource | [optional] |
 | **CallerName** | **string** | caller id name to be displayed on the outbound call | [optional] |
 | **CallerAddress** | **string** | caller id phone number to be displayed on the outbound call | [optional] |
-| **OutboundLineCount** | **int?** | for agentless campaigns, the number of outbound lines to be concurrently dialed | [optional] |
+| **OutboundLineCount** | **long?** | for agentless campaigns, the number of outbound lines to be concurrently dialed | [optional] |
 | **Errors** | [**List&lt;DialerCampaignConfigChangeRestErrorDetail&gt;**](DialerCampaignConfigChangeRestErrorDetail) | a list of current error conditions associated with the campaign | [optional] |
 | **RuleSets** | [**List&lt;DialerCampaignConfigChangeUriReference&gt;**](DialerCampaignConfigChangeUriReference) | identifiers of the rule sets | [optional] |
 | **SkipPreviewDisabled** | **bool?** | for preview campaigns, indicator of whether the agent can skip a preview without placing a call | [optional] |
-| **PreviewTimeOutSeconds** | **int?** | for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls | [optional] |
+| **PreviewTimeOutSeconds** | **long?** | for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls | [optional] |
 | **SingleNumberPreview** | **bool?** | for preview campaigns with multiple phone columns, indicator if one (true) or multiple (false) phone numbers will be available to call for each preview | [optional] |
 | **ContactSort** | [**DialerCampaignConfigChangeContactSort**](DialerCampaignConfigChangeContactSort) |  | [optional] |
 | **ContactSorts** | [**List&lt;DialerCampaignConfigChangeContactSort&gt;**](DialerCampaignConfigChangeContactSort) | List of contact sort objects. | [optional] |
-| **NoAnswerTimeout** | **int?** | for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds | [optional] |
+| **NoAnswerTimeout** | **long?** | for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds | [optional] |
 | **CallAnalysisLanguage** | **string** | The language the edge will use to analyze the call | [optional] |
-| **Priority** | **int?** | The priority of this campaign relative to other campaigns | [optional] |
+| **Priority** | **long?** | The priority of this campaign relative to other campaigns | [optional] |
 | **ContactListFilters** | [**List&lt;DialerCampaignConfigChangeUriReference&gt;**](DialerCampaignConfigChangeUriReference) | List of contact filters | [optional] |
 | **Division** | [**DialerCampaignConfigChangeUriReference**](DialerCampaignConfigChangeUriReference) | A UriReference for a resource | [optional] |
 | **AgentOwnedColumn** | **string** | For Preview Campaigns. Name of the contact column in the contact list containing the userIds of agents to assign specific contact records to. | [optional] |
@@ -39,8 +39,8 @@
 | **Name** | **string** | The UI-visible name of the object | [optional] |
 | **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |
 | **DateModified** | **DateTime?** | Last modified time of the entity | [optional] |
-| **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
+| **Version** | **long?** | Required for updates, must match the version number of the most recent update | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

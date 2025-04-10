@@ -24,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundDnclistCustomexclusioncolumns**](#DeleteOutboundDnclistCustomexclusioncolumns) | **Delete** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Deletes all or expired custom exclusion column entries from a DNC list. |
 | [**DeleteOutboundDnclistEmailaddresses**](#DeleteOutboundDnclistEmailaddresses) | **Delete** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Deletes all or expired email addresses from a DNC list. |
 | [**DeleteOutboundDnclistPhonenumbers**](#DeleteOutboundDnclistPhonenumbers) | **Delete** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Deletes all or expired phone numbers from a DNC list. |
+| [**DeleteOutboundDnclistWhatsappnumbers**](#DeleteOutboundDnclistWhatsappnumbers) | **Delete** /api/v2/outbound/dnclists/{dncListId}/whatsappnumbers | Deletes all or expired whatsApp numbers from a DNC list. |
 | [**DeleteOutboundFilespecificationtemplate**](#DeleteOutboundFilespecificationtemplate) | **Delete** /api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId} | Delete File Specification Template |
 | [**DeleteOutboundFilespecificationtemplatesBulk**](#DeleteOutboundFilespecificationtemplatesBulk) | **Delete** /api/v2/outbound/filespecificationtemplates/bulk | Delete multiple file specification templates. |
 | [**DeleteOutboundImporttemplate**](#DeleteOutboundImporttemplate) | **Delete** /api/v2/outbound/importtemplates/{importTemplateId} | Delete Import Template |
@@ -110,6 +111,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchOutboundDnclistCustomexclusioncolumns**](#PatchOutboundDnclistCustomexclusioncolumns) | **Patch** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Add entries to or delete entries from a DNC list. |
 | [**PatchOutboundDnclistEmailaddresses**](#PatchOutboundDnclistEmailaddresses) | **Patch** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add emails to or Delete emails from a DNC list. |
 | [**PatchOutboundDnclistPhonenumbers**](#PatchOutboundDnclistPhonenumbers) | **Patch** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add numbers to or delete numbers from a DNC list. |
+| [**PatchOutboundDnclistWhatsappnumbers**](#PatchOutboundDnclistWhatsappnumbers) | **Patch** /api/v2/outbound/dnclists/{dncListId}/whatsappnumbers | Add entries to or delete entries from a DNC list. |
 | [**PatchOutboundSettings**](#PatchOutboundSettings) | **Patch** /api/v2/outbound/settings | Update the outbound settings for this organization |
 | [**PostOutboundAttemptlimits**](#PostOutboundAttemptlimits) | **Post** /api/v2/outbound/attemptlimits | Create attempt limits |
 | [**PostOutboundCallabletimesets**](#PostOutboundCallabletimesets) | **Post** /api/v2/outbound/callabletimesets | Create callable time set |
@@ -1285,6 +1287,71 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **expiredOnly** | **bool?**| Set to true to only remove DNC entries that are expired | [optional] [default to false] |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteOutboundDnclistWhatsappnumbers
+
+> void DeleteOutboundDnclistWhatsappnumbers (string dncListId, bool? expiredOnly = null)
+
+
+Deletes all or expired whatsApp numbers from a DNC list.
+
+This operation is only for Internal DNC lists of whatsApp numbers
+
+Requires ANY permissions: 
+
+* outbound:dnc:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundDnclistWhatsappnumbersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var expiredOnly = true;  // bool? | Set to true to only remove DNC whatsApp numbers that are expired (optional)  (default to false)
+
+            try
+            { 
+                // Deletes all or expired whatsApp numbers from a DNC list.
+                apiInstance.DeleteOutboundDnclistWhatsappnumbers(dncListId, expiredOnly);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundDnclistWhatsappnumbers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **expiredOnly** | **bool?**| Set to true to only remove DNC whatsApp numbers that are expired | [optional] [default to false] |
 
 ### Return type
 
@@ -7003,6 +7070,71 @@ namespace Example
 void (empty response body)
 
 
+## PatchOutboundDnclistWhatsappnumbers
+
+> void PatchOutboundDnclistWhatsappnumbers (string dncListId, DncPatchWhatsAppNumbersRequest body)
+
+
+Add entries to or delete entries from a DNC list.
+
+Only Internal DNC lists may be deleted from
+
+Requires ANY permissions: 
+
+* outbound:dnc:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchOutboundDnclistWhatsappnumbersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var body = new DncPatchWhatsAppNumbersRequest(); // DncPatchWhatsAppNumbersRequest | DNC whatsApp numbers
+
+            try
+            { 
+                // Add entries to or delete entries from a DNC list.
+                apiInstance.PatchOutboundDnclistWhatsappnumbers(dncListId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PatchOutboundDnclistWhatsappnumbers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **body** | [**DncPatchWhatsAppNumbersRequest**](DncPatchWhatsAppNumbersRequest)| DNC whatsApp numbers |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PatchOutboundSettings
 
 > void PatchOutboundSettings (OutboundSettings body, bool? useMaxCallsPerAgentDecimal = null)
@@ -10947,4 +11079,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -17,8 +17,8 @@
 | **Action** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **SendExitingAlarmNotification** | **bool?** |  | [optional] |
-| **WaitBetweenNotificationMs** | **int?** |  | [optional] |
+| **WaitBetweenNotificationMs** | **long?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_
