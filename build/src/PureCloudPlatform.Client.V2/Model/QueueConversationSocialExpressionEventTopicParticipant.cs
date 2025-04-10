@@ -119,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="Workflow">Workflow.</param>
-        public QueueConversationSocialExpressionEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, List<string> MediaRoles = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationSocialExpressionEventTopicCall> Calls = null, List<QueueConversationSocialExpressionEventTopicCallback> Callbacks = null, List<QueueConversationSocialExpressionEventTopicChat> Chats = null, List<QueueConversationSocialExpressionEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationSocialExpressionEventTopicEmail> Emails = null, List<QueueConversationSocialExpressionEventTopicMessage> Messages = null, List<QueueConversationSocialExpressionEventTopicInternalMessage> InternalMessages = null, List<QueueConversationSocialExpressionEventTopicScreenshare> Screenshares = null, List<QueueConversationSocialExpressionEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationSocialExpressionEventTopicVideo> Videos = null, QueueConversationSocialExpressionEventTopicWorkflow Workflow = null)
+        public QueueConversationSocialExpressionEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, long? WrapupTimeoutMs = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, long? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, List<string> MediaRoles = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationSocialExpressionEventTopicCall> Calls = null, List<QueueConversationSocialExpressionEventTopicCallback> Callbacks = null, List<QueueConversationSocialExpressionEventTopicChat> Chats = null, List<QueueConversationSocialExpressionEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationSocialExpressionEventTopicEmail> Emails = null, List<QueueConversationSocialExpressionEventTopicMessage> Messages = null, List<QueueConversationSocialExpressionEventTopicInternalMessage> InternalMessages = null, List<QueueConversationSocialExpressionEventTopicScreenshare> Screenshares = null, List<QueueConversationSocialExpressionEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationSocialExpressionEventTopicVideo> Videos = null, QueueConversationSocialExpressionEventTopicWorkflow Workflow = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -325,7 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Specifies how long a timed ACW session will last.</value>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -368,7 +368,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 

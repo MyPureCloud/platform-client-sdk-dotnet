@@ -10,13 +10,13 @@
 | **Name** | **string** |  | [optional] |
 | **Unit** | **string** |  | [optional] |
 | **UnitDefinition** | **string** |  | [optional] |
-| **Precision** | **int?** |  | [optional] |
+| **Precision** | **long?** |  | [optional] |
 | **DefaultObjectiveType** | **string** |  | [optional] |
-| **RetentionMonths** | **int?** |  | [optional] |
+| **RetentionMonths** | **long?** |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
 | **InUse** | **bool?** |  | [optional] |
 | **DateLastRefreshed** | **DateTime?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Details">Details.</param>
         /// <param name="Errors">Errors.</param>
         /// <param name="Limit">Limit.</param>
-        public ConversationVideoEventTopicErrorBody(string Message = null, string Code = null, int? Status = null, string EntityId = null, string EntityName = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<ConversationVideoEventTopicDetail> Details = null, List<ConversationVideoEventTopicErrorBody> Errors = null, ConversationVideoEventTopicLimit Limit = null)
+        public ConversationVideoEventTopicErrorBody(string Message = null, string Code = null, long? Status = null, string EntityId = null, string EntityName = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<ConversationVideoEventTopicDetail> Details = null, List<ConversationVideoEventTopicErrorBody> Errors = null, ConversationVideoEventTopicLimit Limit = null)
         {
             this.Message = Message;
             this.Code = Code;
@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public int? Status { get; set; }
+        public long? Status { get; set; }
 
 
 

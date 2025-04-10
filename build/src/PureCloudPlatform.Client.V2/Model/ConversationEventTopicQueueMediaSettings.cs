@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoAnswerAlertToneSeconds">Specifies the duration of the alerting sound to be played for auto answered interactions..</param>
         /// <param name="ManualAnswerAlertToneSeconds">Specifies the duration of the alerting sound to be played for manually answered interactions.</param>
         /// <param name="EnableAutoAnswer">Flag to indicate if auto answer is enabled for the given media type or media subtype..</param>
-        public ConversationEventTopicQueueMediaSettings(int? AlertingTimeoutSeconds = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, bool? EnableAutoAnswer = null)
+        public ConversationEventTopicQueueMediaSettings(long? AlertingTimeoutSeconds = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, bool? EnableAutoAnswer = null)
         {
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
             this.AutoAnswerAlertToneSeconds = AutoAnswerAlertToneSeconds;
@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
         [DataMember(Name="alertingTimeoutSeconds", EmitDefaultValue=false)]
-        public int? AlertingTimeoutSeconds { get; set; }
+        public long? AlertingTimeoutSeconds { get; set; }
 
 
 

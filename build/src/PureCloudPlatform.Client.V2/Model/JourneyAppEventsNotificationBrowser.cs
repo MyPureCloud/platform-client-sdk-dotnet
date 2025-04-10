@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FeaturesJava">FeaturesJava.</param>
         /// <param name="FeaturesPdf">FeaturesPdf.</param>
         /// <param name="FeaturesWebrtc">FeaturesWebrtc.</param>
-        public JourneyAppEventsNotificationBrowser(string Family = null, string Version = null, string Lang = null, string Fingerprint = null, int? ViewHeight = null, int? ViewWidth = null, bool? FeaturesFlash = null, bool? FeaturesJava = null, bool? FeaturesPdf = null, bool? FeaturesWebrtc = null)
+        public JourneyAppEventsNotificationBrowser(string Family = null, string Version = null, string Lang = null, string Fingerprint = null, long? ViewHeight = null, long? ViewWidth = null, bool? FeaturesFlash = null, bool? FeaturesJava = null, bool? FeaturesPdf = null, bool? FeaturesWebrtc = null)
         {
             this.Family = Family;
             this.Version = Version;
@@ -84,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ViewHeight
         /// </summary>
         [DataMember(Name="viewHeight", EmitDefaultValue=false)]
-        public int? ViewHeight { get; set; }
+        public long? ViewHeight { get; set; }
 
 
 
@@ -92,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ViewWidth
         /// </summary>
         [DataMember(Name="viewWidth", EmitDefaultValue=false)]
-        public int? ViewWidth { get; set; }
+        public long? ViewWidth { get; set; }
 
 
 

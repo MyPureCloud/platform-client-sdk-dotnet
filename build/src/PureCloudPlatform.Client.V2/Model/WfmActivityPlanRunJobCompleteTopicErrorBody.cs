@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Code">Code.</param>
         /// <param name="Message">Message.</param>
         /// <param name="MessageParams">MessageParams.</param>
-        public WfmActivityPlanRunJobCompleteTopicErrorBody(int? Status = null, string Code = null, string Message = null, Dictionary<string, string> MessageParams = null)
+        public WfmActivityPlanRunJobCompleteTopicErrorBody(long? Status = null, string Code = null, string Message = null, Dictionary<string, string> MessageParams = null)
         {
             this.Status = Status;
             this.Code = Code;
@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public int? Status { get; set; }
+        public long? Status { get; set; }
 
 
 

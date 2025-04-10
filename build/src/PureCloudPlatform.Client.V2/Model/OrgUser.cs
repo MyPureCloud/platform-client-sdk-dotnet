@@ -424,6 +424,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The date &amp; time the user was sent their welcome email. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date &amp; time the user was sent their welcome email. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateWelcomeSent", EmitDefaultValue=false)]
+        public DateTime? DateWelcomeSent { get; private set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Organization
         /// </summary>
         [DataMember(Name="organization", EmitDefaultValue=false)]
@@ -476,6 +485,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("  LastTokenIssued: ").Append(LastTokenIssued).Append("\n");
             sb.Append("  DateLastLogin: ").Append(DateLastLogin).Append("\n");
+            sb.Append("  DateWelcomeSent: ").Append(DateWelcomeSent).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -703,6 +713,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateLastLogin.Equals(other.DateLastLogin)
                 ) &&
                 (
+                    this.DateWelcomeSent == other.DateWelcomeSent ||
+                    this.DateWelcomeSent != null &&
+                    this.DateWelcomeSent.Equals(other.DateWelcomeSent)
+                ) &&
+                (
                     this.Organization == other.Organization ||
                     this.Organization != null &&
                     this.Organization.Equals(other.Organization)
@@ -830,6 +845,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateLastLogin != null)
                     hash = hash * 59 + this.DateLastLogin.GetHashCode();
+
+                if (this.DateWelcomeSent != null)
+                    hash = hash * 59 + this.DateWelcomeSent.GetHashCode();
 
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();

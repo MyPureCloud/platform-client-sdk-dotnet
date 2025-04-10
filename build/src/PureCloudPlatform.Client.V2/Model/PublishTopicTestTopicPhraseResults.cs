@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProcessedTranscriptsCount">ProcessedTranscriptsCount.</param>
         /// <param name="MatchedTranscriptsCount">MatchedTranscriptsCount.</param>
         /// <param name="MatchedTranscripts">MatchedTranscripts.</param>
-        public PublishTopicTestTopicPhraseResults(int? ProcessedTranscriptsCount = null, int? MatchedTranscriptsCount = null, List<PublishTopicTestPhraseMatchedTranscript> MatchedTranscripts = null)
+        public PublishTopicTestTopicPhraseResults(long? ProcessedTranscriptsCount = null, long? MatchedTranscriptsCount = null, List<PublishTopicTestPhraseMatchedTranscript> MatchedTranscripts = null)
         {
             this.ProcessedTranscriptsCount = ProcessedTranscriptsCount;
             this.MatchedTranscriptsCount = MatchedTranscriptsCount;
@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ProcessedTranscriptsCount
         /// </summary>
         [DataMember(Name="processedTranscriptsCount", EmitDefaultValue=false)]
-        public int? ProcessedTranscriptsCount { get; set; }
+        public long? ProcessedTranscriptsCount { get; set; }
 
 
 
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MatchedTranscriptsCount
         /// </summary>
         [DataMember(Name="matchedTranscriptsCount", EmitDefaultValue=false)]
-        public int? MatchedTranscriptsCount { get; set; }
+        public long? MatchedTranscriptsCount { get; set; }
 
 
 

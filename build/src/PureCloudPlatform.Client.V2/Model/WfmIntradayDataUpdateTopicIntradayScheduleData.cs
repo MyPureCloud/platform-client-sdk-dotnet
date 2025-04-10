@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="OnQueueTimeSeconds">OnQueueTimeSeconds.</param>
         /// <param name="ScheduledTimeSeconds">ScheduledTimeSeconds.</param>
-        public WfmIntradayDataUpdateTopicIntradayScheduleData(int? OnQueueTimeSeconds = null, int? ScheduledTimeSeconds = null)
+        public WfmIntradayDataUpdateTopicIntradayScheduleData(long? OnQueueTimeSeconds = null, long? ScheduledTimeSeconds = null)
         {
             this.OnQueueTimeSeconds = OnQueueTimeSeconds;
             this.ScheduledTimeSeconds = ScheduledTimeSeconds;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets OnQueueTimeSeconds
         /// </summary>
         [DataMember(Name="onQueueTimeSeconds", EmitDefaultValue=false)]
-        public int? OnQueueTimeSeconds { get; set; }
+        public long? OnQueueTimeSeconds { get; set; }
 
 
 
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ScheduledTimeSeconds
         /// </summary>
         [DataMember(Name="scheduledTimeSeconds", EmitDefaultValue=false)]
-        public int? ScheduledTimeSeconds { get; set; }
+        public long? ScheduledTimeSeconds { get; set; }
 
 
         /// <summary>

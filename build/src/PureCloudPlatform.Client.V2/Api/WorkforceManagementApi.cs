@@ -2263,25 +2263,25 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<HistoricalImportOverallDeleteStatusResponse> GetWorkforcemanagementHistoricaldataBulkRemoveJobsWithHttpInfo ();
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization
+        /// Retrieves delete job status for historical data imports of the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         HistoricalImportDeleteJobResponse GetWorkforcemanagementHistoricaldataDeletejob ();
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization
+        /// Retrieves delete job status for historical data imports of the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         ApiResponse<HistoricalImportDeleteJobResponse> GetWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ();
 
         /// <summary>
@@ -5397,25 +5397,25 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<HistoricalImportDeleteFilesJobResponse> PostWorkforcemanagementHistoricaldataBulkRemoveJobsWithHttpInfo (HistoricalImportDeleteFilesJobRequest body = null);
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization
+        /// Delete the entries of the historical data imports in the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         HistoricalImportDeleteJobResponse PostWorkforcemanagementHistoricaldataDeletejob ();
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization
+        /// Delete the entries of the historical data imports in the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         ApiResponse<HistoricalImportDeleteJobResponse> PostWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ();
 
         /// <summary>
@@ -8731,25 +8731,25 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportOverallDeleteStatusResponse>> GetWorkforcemanagementHistoricaldataBulkRemoveJobsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization
+        /// Retrieves delete job status for historical data imports of the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> GetWorkforcemanagementHistoricaldataDeletejobAsync ();
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization
+        /// Retrieves delete job status for historical data imports of the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> GetWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ();
 
         /// <summary>
@@ -11865,25 +11865,25 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteFilesJobResponse>> PostWorkforcemanagementHistoricaldataBulkRemoveJobsAsyncWithHttpInfo (HistoricalImportDeleteFilesJobRequest body = null);
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization
+        /// Delete the entries of the historical data imports in the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> PostWorkforcemanagementHistoricaldataDeletejobAsync ();
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization
+        /// Delete the entries of the historical data imports in the organization.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> PostWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ();
 
         /// <summary>
@@ -32299,12 +32299,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization 
-        /// 
+        /// Retrieves delete job status for historical data imports of the organization. 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         public HistoricalImportDeleteJobResponse GetWorkforcemanagementHistoricaldataDeletejob ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = GetWorkforcemanagementHistoricaldataDeletejobWithHttpInfo();
@@ -32312,12 +32312,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization 
-        /// 
+        /// Retrieves delete job status for historical data imports of the organization. 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< HistoricalImportDeleteJobResponse > GetWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ()
         { 
 
@@ -32398,12 +32398,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization 
-        /// 
+        /// Retrieves delete job status for historical data imports of the organization. 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> GetWorkforcemanagementHistoricaldataDeletejobAsync ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = await GetWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo();
@@ -32412,12 +32412,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieves delete job status for historical data imports of the organization 
-        /// 
+        /// Retrieves delete job status for historical data imports of the organization. 
+        /// Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> GetWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ()
         { 
 
@@ -59568,12 +59568,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization 
-        /// 
+        /// Delete the entries of the historical data imports in the organization. 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         public HistoricalImportDeleteJobResponse PostWorkforcemanagementHistoricaldataDeletejob ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = PostWorkforcemanagementHistoricaldataDeletejobWithHttpInfo();
@@ -59581,12 +59581,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization 
-        /// 
+        /// Delete the entries of the historical data imports in the organization. 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< HistoricalImportDeleteJobResponse > PostWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ()
         { 
 
@@ -59667,12 +59667,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization 
-        /// 
+        /// Delete the entries of the historical data imports in the organization. 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> PostWorkforcemanagementHistoricaldataDeletejobAsync ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = await PostWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo();
@@ -59681,12 +59681,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete the entries of the historical data imports in the organization 
-        /// 
+        /// Delete the entries of the historical data imports in the organization. 
+        /// Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> PostWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ()
         { 
 

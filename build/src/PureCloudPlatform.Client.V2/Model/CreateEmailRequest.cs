@@ -76,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HtmlBody">An HTML body content of the email..</param>
         /// <param name="TextBody">A text body content of the email..</param>
         /// <param name="ExternalContactId">The external contact with which the email should be associated. This field is only valid for OUTBOUND email..</param>
-        /// <param name="UtilizationLabel">Optional. Controls the number of agent interactions for INBOUND communications.</param>
+        /// <param name="UtilizationLabel">Optional. The ID of the label to controls the number of agent interactions for INBOUND communications.</param>
         public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null, string ExternalContactId = null, string UtilizationLabel = null)
         {
             this.QueueId = QueueId;
@@ -239,9 +239,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Optional. Controls the number of agent interactions for INBOUND communications
+        /// Optional. The ID of the label to controls the number of agent interactions for INBOUND communications
         /// </summary>
-        /// <value>Optional. Controls the number of agent interactions for INBOUND communications</value>
+        /// <value>Optional. The ID of the label to controls the number of agent interactions for INBOUND communications</value>
         [DataMember(Name="utilizationLabel", EmitDefaultValue=false)]
         public string UtilizationLabel { get; set; }
 

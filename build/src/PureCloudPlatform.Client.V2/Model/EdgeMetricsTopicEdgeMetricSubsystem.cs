@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProcessName">ProcessName.</param>
         /// <param name="DelayMs">DelayMs.</param>
         /// <param name="MediaSubsystem">MediaSubsystem.</param>
-        public EdgeMetricsTopicEdgeMetricSubsystem(string ProcessName = null, int? DelayMs = null, EdgeMetricsTopicEdgeMetricSubsystemMedia MediaSubsystem = null)
+        public EdgeMetricsTopicEdgeMetricSubsystem(string ProcessName = null, long? DelayMs = null, EdgeMetricsTopicEdgeMetricSubsystemMedia MediaSubsystem = null)
         {
             this.ProcessName = ProcessName;
             this.DelayMs = DelayMs;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DelayMs
         /// </summary>
         [DataMember(Name="delayMs", EmitDefaultValue=false)]
-        public int? DelayMs { get; set; }
+        public long? DelayMs { get; set; }
 
 
 

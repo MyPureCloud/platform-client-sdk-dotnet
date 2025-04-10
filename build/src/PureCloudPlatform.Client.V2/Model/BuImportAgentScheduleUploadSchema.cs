@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WorkPlanIdsPerWeek">The IDs of the work plans per week for this user.  Mutually exclusive with workPlanId.</param>
         /// <param name="Shifts">The shift definitions for this agent schedule.</param>
         /// <param name="FullDayTimeOffMarkers">Any full day time off markers that apply to this agent schedule.</param>
-        public BuImportAgentScheduleUploadSchema(string UserId = null, ValueWrapperString WorkPlanId = null, ListWrapperString WorkPlanIdsPerWeek = null, List<BuAgentScheduleShift> Shifts = null, List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers = null)
+        public BuImportAgentScheduleUploadSchema(string UserId = null, ValueWrapperString WorkPlanId = null, ListWrapperString WorkPlanIdsPerWeek = null, List<BuAgentScheduleShiftRequest> Shifts = null, List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers = null)
         {
             this.UserId = UserId;
             this.WorkPlanId = WorkPlanId;
@@ -76,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The shift definitions for this agent schedule</value>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
-        public List<BuAgentScheduleShift> Shifts { get; set; }
+        public List<BuAgentScheduleShiftRequest> Shifts { get; set; }
 
 
 

@@ -156,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentCommentHasUpdated">AgentCommentHasUpdated.</param>
         /// <param name="PreviousRescoreCount">PreviousRescoreCount.</param>
         /// <param name="PreviousEvaluatorUserId">PreviousEvaluatorUserId.</param>
-        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null, EvaluationQualityV2TopicEvaluationSource EvaluationSource = null, string AssigneeUserId = null, string PreviousAssigneeUserId = null, bool? AssigneeApplicable = null, string EvaluationContextId = null, int? DisputeCount = null, int? Version = null, PreviousStatusEnum? PreviousStatus = null, bool? DeclinedReview = null, EvaluationQualityV2TopicEvaluationReference RetractedEvaluation = null, int? RescoreCount = null, bool? EvaluatorCommentHasUpdated = null, bool? AgentCommentHasUpdated = null, int? PreviousRescoreCount = null, string PreviousEvaluatorUserId = null)
+        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null, EvaluationQualityV2TopicEvaluationSource EvaluationSource = null, string AssigneeUserId = null, string PreviousAssigneeUserId = null, bool? AssigneeApplicable = null, string EvaluationContextId = null, long? DisputeCount = null, long? Version = null, PreviousStatusEnum? PreviousStatus = null, bool? DeclinedReview = null, EvaluationQualityV2TopicEvaluationReference RetractedEvaluation = null, long? RescoreCount = null, bool? EvaluatorCommentHasUpdated = null, bool? AgentCommentHasUpdated = null, long? PreviousRescoreCount = null, string PreviousEvaluatorUserId = null)
         {
             this.Id = Id;
             this.ConversationId = ConversationId;
@@ -414,7 +414,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DisputeCount
         /// </summary>
         [DataMember(Name="disputeCount", EmitDefaultValue=false)]
-        public int? DisputeCount { get; set; }
+        public long? DisputeCount { get; set; }
 
 
 
@@ -422,7 +422,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
 
@@ -448,7 +448,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RescoreCount
         /// </summary>
         [DataMember(Name="rescoreCount", EmitDefaultValue=false)]
-        public int? RescoreCount { get; set; }
+        public long? RescoreCount { get; set; }
 
 
 
@@ -472,7 +472,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PreviousRescoreCount
         /// </summary>
         [DataMember(Name="previousRescoreCount", EmitDefaultValue=false)]
-        public int? PreviousRescoreCount { get; set; }
+        public long? PreviousRescoreCount { get; set; }
 
 
 

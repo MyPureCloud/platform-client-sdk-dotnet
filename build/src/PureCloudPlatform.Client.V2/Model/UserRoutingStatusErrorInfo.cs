@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserMessage">A customer friendly message. This should be a complete sentence, use proper grammar and only include information useful to a customer. This is not a dev message and should not include things like Org Id.</param>
         /// <param name="UserParamsMessage">This is the same as userMessage except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;.</param>
         /// <param name="UserParams">Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;chuck.pulfer&#39;.</param>
-        public UserRoutingStatusErrorInfo(string ErrorCode = null, int? Status = null, string CorrelationId = null, string UserMessage = null, string UserParamsMessage = null, List<UserRoutingStatusUserParam> UserParams = null)
+        public UserRoutingStatusErrorInfo(string ErrorCode = null, long? Status = null, string CorrelationId = null, string UserMessage = null, string UserParamsMessage = null, List<UserRoutingStatusUserParam> UserParams = null)
         {
             this.ErrorCode = ErrorCode;
             this.Status = Status;
@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The HTTP status code for this message. If left blank the status code from the HTTP response is used.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public int? Status { get; set; }
+        public long? Status { get; set; }
 
 
 

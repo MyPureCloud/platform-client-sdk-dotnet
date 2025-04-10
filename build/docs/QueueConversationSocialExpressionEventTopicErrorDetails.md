@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Status** | **int?** | The HTTP status code for this message (400, 401, 403, 404, 500, etc. | [optional] |
+| **Status** | **long?** | The HTTP status code for this message (400, 401, 403, 404, 500, etc. | [optional] |
 | **Code** | **string** | A code unique to this error. | [optional] |
 | **Message** | **string** | Friendly description of this error. | [optional] |
 | **MessageWithParams** | **string** | This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39; | [optional] |
@@ -16,4 +16,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="InboundCallCount">InboundCallCount.</param>
         /// <param name="OutboundCallCount">OutboundCallCount.</param>
-        public TrunkMetricsTopicTrunkMetricsCalls(int? InboundCallCount = null, int? OutboundCallCount = null)
+        public TrunkMetricsTopicTrunkMetricsCalls(long? InboundCallCount = null, long? OutboundCallCount = null)
         {
             this.InboundCallCount = InboundCallCount;
             this.OutboundCallCount = OutboundCallCount;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets InboundCallCount
         /// </summary>
         [DataMember(Name="inboundCallCount", EmitDefaultValue=false)]
-        public int? InboundCallCount { get; set; }
+        public long? InboundCallCount { get; set; }
 
 
 
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets OutboundCallCount
         /// </summary>
         [DataMember(Name="outboundCallCount", EmitDefaultValue=false)]
-        public int? OutboundCallCount { get; set; }
+        public long? OutboundCallCount { get; set; }
 
 
         /// <summary>

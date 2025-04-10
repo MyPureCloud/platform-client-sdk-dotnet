@@ -204,7 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastEditedBy">LastEditedBy.</param>
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public ConversationSummaryTopicConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicConversationSummary Summary = null, ConversationSummaryTopicConversationHeadline Headline = null, ConversationSummaryTopicConversationReason Reason = null, ConversationSummaryTopicConversationResolution Resolution = null, List<ConversationSummaryTopicConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicTriggerSource TriggerSource = null, ConversationSummaryTopicConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, int? DurationMs = null)
+        public ConversationSummaryTopicConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicConversationSummary Summary = null, ConversationSummaryTopicConversationHeadline Headline = null, ConversationSummaryTopicConversationReason Reason = null, ConversationSummaryTopicConversationResolution Resolution = null, List<ConversationSummaryTopicConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicTriggerSource TriggerSource = null, ConversationSummaryTopicConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationMs
         /// </summary>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
-        public int? DurationMs { get; set; }
+        public long? DurationMs { get; set; }
 
 
         /// <summary>

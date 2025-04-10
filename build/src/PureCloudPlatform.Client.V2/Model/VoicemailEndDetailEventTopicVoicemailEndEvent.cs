@@ -286,7 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="VoicemailDurationMs">VoicemailDurationMs.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public VoicemailEndDetailEventTopicVoicemailEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string UserId = null, string QueueId = null, string DivisionId = null, int? VoicemailDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        public VoicemailEndDetailEventTopicVoicemailEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string UserId = null, string QueueId = null, string DivisionId = null, long? VoicemailDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -313,7 +313,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 
@@ -399,7 +399,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets VoicemailDurationMs
         /// </summary>
         [DataMember(Name="voicemailDurationMs", EmitDefaultValue=false)]
-        public int? VoicemailDurationMs { get; set; }
+        public long? VoicemailDurationMs { get; set; }
 
 
 

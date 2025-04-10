@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Active">Active.</param>
         /// <param name="Acw">Acw.</param>
-        public UserConversationsEventMediaSummaryDetail(int? Active = null, int? Acw = null)
+        public UserConversationsEventMediaSummaryDetail(long? Active = null, long? Acw = null)
         {
             this.Active = Active;
             this.Acw = Acw;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
-        public int? Active { get; set; }
+        public long? Active { get; set; }
 
 
 
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Acw
         /// </summary>
         [DataMember(Name="acw", EmitDefaultValue=false)]
-        public int? Acw { get; set; }
+        public long? Acw { get; set; }
 
 
         /// <summary>

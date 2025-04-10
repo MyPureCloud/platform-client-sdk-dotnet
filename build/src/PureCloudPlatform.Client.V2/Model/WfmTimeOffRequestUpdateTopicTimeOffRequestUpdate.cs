@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubmittedBy">SubmittedBy.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
+        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, long? DailyDurationMinutes = null, List<long?> DurationMinutes = null, List<long?> PayableMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
         {
             this.Id = Id;
             this.User = User;
@@ -250,7 +250,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DailyDurationMinutes
         /// </summary>
         [DataMember(Name="dailyDurationMinutes", EmitDefaultValue=false)]
-        public int? DailyDurationMinutes { get; set; }
+        public long? DailyDurationMinutes { get; set; }
 
 
 
@@ -258,7 +258,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationMinutes
         /// </summary>
         [DataMember(Name="durationMinutes", EmitDefaultValue=false)]
-        public List<int?> DurationMinutes { get; set; }
+        public List<long?> DurationMinutes { get; set; }
 
 
 
@@ -266,7 +266,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PayableMinutes
         /// </summary>
         [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
-        public List<int?> PayableMinutes { get; set; }
+        public List<long?> PayableMinutes { get; set; }
 
 
 

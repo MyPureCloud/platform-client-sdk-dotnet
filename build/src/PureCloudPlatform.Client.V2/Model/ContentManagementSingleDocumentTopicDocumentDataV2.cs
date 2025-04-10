@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UploadedBy">UploadedBy.</param>
         /// <param name="LockInfo">LockInfo.</param>
         /// <param name="SelfUri">SelfUri.</param>
-        public ContentManagementSingleDocumentTopicDocumentDataV2(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, ContentManagementSingleDocumentTopicWorkspaceData Workspace = null, ContentManagementSingleDocumentTopicUserData CreatedBy = null, string ContentType = null, int? ContentLength = null, string Filename = null, int? ChangeNumber = null, DateTime? DateUploaded = null, ContentManagementSingleDocumentTopicUserData UploadedBy = null, ContentManagementSingleDocumentTopicLockData LockInfo = null, string SelfUri = null)
+        public ContentManagementSingleDocumentTopicDocumentDataV2(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, ContentManagementSingleDocumentTopicWorkspaceData Workspace = null, ContentManagementSingleDocumentTopicUserData CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, long? ChangeNumber = null, DateTime? DateUploaded = null, ContentManagementSingleDocumentTopicUserData UploadedBy = null, ContentManagementSingleDocumentTopicLockData LockInfo = null, string SelfUri = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -116,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
-        public int? ContentLength { get; set; }
+        public long? ContentLength { get; set; }
 
 
 
@@ -132,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
-        public int? ChangeNumber { get; set; }
+        public long? ChangeNumber { get; set; }
 
 
 

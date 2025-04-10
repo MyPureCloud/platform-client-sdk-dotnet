@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">StartDate.</param>
         /// <param name="LengthMinutes">LengthMinutes.</param>
         /// <param name="Status">Status.</param>
-        public WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation(string Id = null, DateTime? StartDate = null, int? LengthMinutes = null, StatusEnum? Status = null)
+        public WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation(string Id = null, DateTime? StartDate = null, long? LengthMinutes = null, StatusEnum? Status = null)
         {
             this.Id = Id;
             this.StartDate = StartDate;
@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LengthMinutes
         /// </summary>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
-        public int? LengthMinutes { get; set; }
+        public long? LengthMinutes { get; set; }
 
 
 

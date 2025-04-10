@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Function">Function.</param>
         /// <param name="FileID">FileID.</param>
         /// <param name="Line">Line.</param>
-        public PersistentConnectionChangeTopicErrorLocation(string Function = null, string FileID = null, int? Line = null)
+        public PersistentConnectionChangeTopicErrorLocation(string Function = null, string FileID = null, long? Line = null)
         {
             this.Function = Function;
             this.FileID = FileID;
@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Line
         /// </summary>
         [DataMember(Name="line", EmitDefaultValue=false)]
-        public int? Line { get; set; }
+        public long? Line { get; set; }
 
 
         /// <summary>

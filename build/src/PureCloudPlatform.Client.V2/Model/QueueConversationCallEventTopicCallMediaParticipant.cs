@@ -490,7 +490,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BargedTime">BargedTime.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
+        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -700,7 +700,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -716,7 +716,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 

@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmBuIntradayDataUpdateTopicBuIntradayScheduleData" /> class.
         /// </summary>
         /// <param name="OnQueueTimeSeconds">OnQueueTimeSeconds.</param>
-        public WfmBuIntradayDataUpdateTopicBuIntradayScheduleData(int? OnQueueTimeSeconds = null)
+        public WfmBuIntradayDataUpdateTopicBuIntradayScheduleData(long? OnQueueTimeSeconds = null)
         {
             this.OnQueueTimeSeconds = OnQueueTimeSeconds;
             
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets OnQueueTimeSeconds
         /// </summary>
         [DataMember(Name="onQueueTimeSeconds", EmitDefaultValue=false)]
-        public int? OnQueueTimeSeconds { get; set; }
+        public long? OnQueueTimeSeconds { get; set; }
 
 
         /// <summary>

@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SessionExpiry">SessionExpiry.</param>
         /// <param name="Messages">Messages.</param>
         /// <param name="EventTimeMs">EventTimeMs.</param>
-        public V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody(string ConversationId = null, string DeploymentId = null, string ParticipantId = null, string ExternalContactId = null, string CommunicationId = null, int? SessionExpiry = null, List<V2WebMessagingUndeliveredMessageTopicMessage> Messages = null, int? EventTimeMs = null)
+        public V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody(string ConversationId = null, string DeploymentId = null, string ParticipantId = null, string ExternalContactId = null, string CommunicationId = null, long? SessionExpiry = null, List<V2WebMessagingUndeliveredMessageTopicMessage> Messages = null, long? EventTimeMs = null)
         {
             this.ConversationId = ConversationId;
             this.DeploymentId = DeploymentId;
@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SessionExpiry
         /// </summary>
         [DataMember(Name="sessionExpiry", EmitDefaultValue=false)]
-        public int? SessionExpiry { get; set; }
+        public long? SessionExpiry { get; set; }
 
 
 
@@ -104,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTimeMs
         /// </summary>
         [DataMember(Name="eventTimeMs", EmitDefaultValue=false)]
-        public int? EventTimeMs { get; set; }
+        public long? EventTimeMs { get; set; }
 
 
         /// <summary>

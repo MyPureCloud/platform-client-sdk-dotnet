@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActiveTimePct">ActiveTimePct.</param>
         /// <param name="PrivilegedTimePct">PrivilegedTimePct.</param>
         /// <param name="UserTimePct">UserTimePct.</param>
-        public EdgeMetricsTopicEdgeMetricProcessor(string CpuId = null, int? IdleTimePct = null, int? ActiveTimePct = null, int? PrivilegedTimePct = null, int? UserTimePct = null)
+        public EdgeMetricsTopicEdgeMetricProcessor(string CpuId = null, long? IdleTimePct = null, long? ActiveTimePct = null, long? PrivilegedTimePct = null, long? UserTimePct = null)
         {
             this.CpuId = CpuId;
             this.IdleTimePct = IdleTimePct;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets IdleTimePct
         /// </summary>
         [DataMember(Name="idleTimePct", EmitDefaultValue=false)]
-        public int? IdleTimePct { get; set; }
+        public long? IdleTimePct { get; set; }
 
 
 
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ActiveTimePct
         /// </summary>
         [DataMember(Name="activeTimePct", EmitDefaultValue=false)]
-        public int? ActiveTimePct { get; set; }
+        public long? ActiveTimePct { get; set; }
 
 
 
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PrivilegedTimePct
         /// </summary>
         [DataMember(Name="privilegedTimePct", EmitDefaultValue=false)]
-        public int? PrivilegedTimePct { get; set; }
+        public long? PrivilegedTimePct { get; set; }
 
 
 
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UserTimePct
         /// </summary>
         [DataMember(Name="userTimePct", EmitDefaultValue=false)]
-        public int? UserTimePct { get; set; }
+        public long? UserTimePct { get; set; }
 
 
         /// <summary>

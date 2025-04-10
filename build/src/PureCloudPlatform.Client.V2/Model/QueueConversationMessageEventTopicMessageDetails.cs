@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="MessageMetadata">MessageMetadata.</param>
         /// <param name="SocialVisibility">SocialVisibility.</param>
-        public QueueConversationMessageEventTopicMessageDetails(QueueConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<QueueConversationMessageEventTopicMessageMedia> Media = null, List<QueueConversationMessageEventTopicMessageSticker> Stickers = null, QueueConversationMessageEventTopicErrorDetails ErrorInfo = null, QueueConversationMessageEventTopicMessageMetadata MessageMetadata = null, SocialVisibilityEnum? SocialVisibility = null)
+        public QueueConversationMessageEventTopicMessageDetails(QueueConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, long? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<QueueConversationMessageEventTopicMessageMedia> Media = null, List<QueueConversationMessageEventTopicMessageSticker> Stickers = null, QueueConversationMessageEventTopicErrorDetails ErrorInfo = null, QueueConversationMessageEventTopicMessageMetadata MessageMetadata = null, SocialVisibilityEnum? SocialVisibility = null)
         {
             this.Message = Message;
             this.MessageTime = MessageTime;
@@ -170,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MessageSegmentCount
         /// </summary>
         [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
-        public int? MessageSegmentCount { get; set; }
+        public long? MessageSegmentCount { get; set; }
 
 
 

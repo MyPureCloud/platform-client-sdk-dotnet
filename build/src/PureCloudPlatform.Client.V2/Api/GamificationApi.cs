@@ -41,6 +41,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId);
 
         /// <summary>
+        /// Delete a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns></returns>
+        
+        void DeleteGamificationContest (string contestId);
+
+        /// <summary>
+        /// Delete a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteGamificationContestWithHttpInfo (string contestId);
+
+        /// <summary>
         /// Get an External Metric Definition
         /// </summary>
         /// <remarks>
@@ -89,6 +113,242 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ExternalMetricDefinitionListing</returns>
         
         ApiResponse<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        ContestsResponse GetGamificationContest (string contestId);
+
+        /// <summary>
+        /// Get a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        ApiResponse<ContestsResponse> GetGamificationContestWithHttpInfo (string contestId);
+
+        /// <summary>
+        /// Get Contest Scores (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>ContestScoresAgentsPagedList</returns>
+        
+        ContestScoresAgentsPagedList GetGamificationContestAgentsScores (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get Contest Scores (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>ApiResponse of ContestScoresAgentsPagedList</returns>
+        
+        ApiResponse<ContestScoresAgentsPagedList> GetGamificationContestAgentsScoresWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>ContestScoresAgentsPagedList</returns>
+        
+        ContestScoresAgentsPagedList GetGamificationContestAgentsScoresMe (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>ApiResponse of ContestScoresAgentsPagedList</returns>
+        
+        ApiResponse<ContestScoresAgentsPagedList> GetGamificationContestAgentsScoresMeWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ContestScoresGroupTrendList</returns>
+        
+        ContestScoresGroupTrendList GetGamificationContestAgentsScoresTrends (string contestId);
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of ContestScoresGroupTrendList</returns>
+        
+        ApiResponse<ContestScoresGroupTrendList> GetGamificationContestAgentsScoresTrendsWithHttpInfo (string contestId);
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ContestScoresAgentTrendList</returns>
+        
+        ContestScoresAgentTrendList GetGamificationContestAgentsScoresTrendsMe (string contestId);
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of ContestScoresAgentTrendList</returns>
+        
+        ApiResponse<ContestScoresAgentTrendList> GetGamificationContestAgentsScoresTrendsMeWithHttpInfo (string contestId);
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>PrizeImages</returns>
+        
+        PrizeImages GetGamificationContestPrizeimage (string contestId, string prizeImageId);
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>ApiResponse of PrizeImages</returns>
+        
+        ApiResponse<PrizeImages> GetGamificationContestPrizeimageWithHttpInfo (string contestId, string prizeImageId);
+
+        /// <summary>
+        /// Get a List of Contests (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>GetContestsEssentialsListing</returns>
+        
+        GetContestsEssentialsListing GetGamificationContests (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a List of Contests (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>ApiResponse of GetContestsEssentialsListing</returns>
+        
+        ApiResponse<GetContestsEssentialsListing> GetGamificationContestsWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>GetContestsEssentialsListing</returns>
+        
+        GetContestsEssentialsListing GetGamificationContestsMe (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null);
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>ApiResponse of GetContestsEssentialsListing</returns>
+        
+        ApiResponse<GetContestsEssentialsListing> GetGamificationContestsMeWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null);
 
         /// <summary>
         /// Get insights summary
@@ -1443,6 +1703,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalMetricDefinition> PatchEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body);
 
         /// <summary>
+        /// Finalize a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        ContestsResponse PatchGamificationContest (string contestId, ContestsFinalizeRequest body);
+
+        /// <summary>
+        /// Finalize a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        ApiResponse<ContestsResponse> PatchGamificationContestWithHttpInfo (string contestId, ContestsFinalizeRequest body);
+
+        /// <summary>
         /// Write External Metric Data
         /// </summary>
         /// <remarks>
@@ -1489,6 +1775,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ExternalMetricDefinition</returns>
         
         ApiResponse<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null);
+
+        /// <summary>
+        /// Creates a Contest
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        ContestsResponse PostGamificationContests (ContestsCreateRequest body);
+
+        /// <summary>
+        /// Creates a Contest
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        ApiResponse<ContestsResponse> PostGamificationContestsWithHttpInfo (ContestsCreateRequest body);
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>UploadUrlResponse</returns>
+        
+        UploadUrlResponse PostGamificationContestsUploadsPrizeimages (GamificationContestPrizeImageUploadUrlRequest body);
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of UploadUrlResponse</returns>
+        
+        ApiResponse<UploadUrlResponse> PostGamificationContestsUploadsPrizeimagesWithHttpInfo (GamificationContestPrizeImageUploadUrlRequest body);
 
         /// <summary>
         /// Activate a performance profile
@@ -1721,6 +2055,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserProfilesInDateRange> PostGamificationProfilesUsersMeQueryWithHttpInfo (UserProfilesInDateRangeRequest body);
 
         /// <summary>
+        /// Update a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        ContestsResponse PutGamificationContest (string contestId, ContestsCreateRequest body);
+
+        /// <summary>
+        /// Update a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        ApiResponse<ContestsResponse> PutGamificationContestWithHttpInfo (string contestId, ContestsCreateRequest body);
+
+        /// <summary>
         /// Updates a performance profile
         /// </summary>
         /// <remarks>
@@ -1827,6 +2187,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId);
 
         /// <summary>
+        /// Delete a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteGamificationContestAsync (string contestId);
+
+        /// <summary>
+        /// Delete a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGamificationContestAsyncWithHttpInfo (string contestId);
+
+        /// <summary>
         /// Get an External Metric Definition
         /// </summary>
         /// <remarks>
@@ -1875,6 +2259,242 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ExternalMetricDefinitionListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinitionListing>> GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        System.Threading.Tasks.Task<ContestsResponse> GetGamificationContestAsync (string contestId);
+
+        /// <summary>
+        /// Get a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> GetGamificationContestAsyncWithHttpInfo (string contestId);
+
+        /// <summary>
+        /// Get Contest Scores (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>Task of ContestScoresAgentsPagedList</returns>
+        
+        System.Threading.Tasks.Task<ContestScoresAgentsPagedList> GetGamificationContestAgentsScoresAsync (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get Contest Scores (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>Task of ApiResponse (ContestScoresAgentsPagedList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestScoresAgentsPagedList>> GetGamificationContestAgentsScoresAsyncWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>Task of ContestScoresAgentsPagedList</returns>
+        
+        System.Threading.Tasks.Task<ContestScoresAgentsPagedList> GetGamificationContestAgentsScoresMeAsync (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>Task of ApiResponse (ContestScoresAgentsPagedList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestScoresAgentsPagedList>> GetGamificationContestAgentsScoresMeAsyncWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null);
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ContestScoresGroupTrendList</returns>
+        
+        System.Threading.Tasks.Task<ContestScoresGroupTrendList> GetGamificationContestAgentsScoresTrendsAsync (string contestId);
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse (ContestScoresGroupTrendList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestScoresGroupTrendList>> GetGamificationContestAgentsScoresTrendsAsyncWithHttpInfo (string contestId);
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ContestScoresAgentTrendList</returns>
+        
+        System.Threading.Tasks.Task<ContestScoresAgentTrendList> GetGamificationContestAgentsScoresTrendsMeAsync (string contestId);
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse (ContestScoresAgentTrendList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestScoresAgentTrendList>> GetGamificationContestAgentsScoresTrendsMeAsyncWithHttpInfo (string contestId);
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>Task of PrizeImages</returns>
+        
+        System.Threading.Tasks.Task<PrizeImages> GetGamificationContestPrizeimageAsync (string contestId, string prizeImageId);
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>Task of ApiResponse (PrizeImages)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PrizeImages>> GetGamificationContestPrizeimageAsyncWithHttpInfo (string contestId, string prizeImageId);
+
+        /// <summary>
+        /// Get a List of Contests (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>Task of GetContestsEssentialsListing</returns>
+        
+        System.Threading.Tasks.Task<GetContestsEssentialsListing> GetGamificationContestsAsync (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a List of Contests (Admin)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>Task of ApiResponse (GetContestsEssentialsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GetContestsEssentialsListing>> GetGamificationContestsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>Task of GetContestsEssentialsListing</returns>
+        
+        System.Threading.Tasks.Task<GetContestsEssentialsListing> GetGamificationContestsMeAsync (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null);
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>Task of ApiResponse (GetContestsEssentialsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GetContestsEssentialsListing>> GetGamificationContestsMeAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null);
 
         /// <summary>
         /// Get insights summary
@@ -3229,6 +3849,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PatchEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body);
 
         /// <summary>
+        /// Finalize a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        System.Threading.Tasks.Task<ContestsResponse> PatchGamificationContestAsync (string contestId, ContestsFinalizeRequest body);
+
+        /// <summary>
+        /// Finalize a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> PatchGamificationContestAsyncWithHttpInfo (string contestId, ContestsFinalizeRequest body);
+
+        /// <summary>
         /// Write External Metric Data
         /// </summary>
         /// <remarks>
@@ -3275,6 +3921,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null);
+
+        /// <summary>
+        /// Creates a Contest
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        System.Threading.Tasks.Task<ContestsResponse> PostGamificationContestsAsync (ContestsCreateRequest body);
+
+        /// <summary>
+        /// Creates a Contest
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> PostGamificationContestsAsyncWithHttpInfo (ContestsCreateRequest body);
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of UploadUrlResponse</returns>
+        
+        System.Threading.Tasks.Task<UploadUrlResponse> PostGamificationContestsUploadsPrizeimagesAsync (GamificationContestPrizeImageUploadUrlRequest body);
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostGamificationContestsUploadsPrizeimagesAsyncWithHttpInfo (GamificationContestPrizeImageUploadUrlRequest body);
 
         /// <summary>
         /// Activate a performance profile
@@ -3505,6 +4199,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UserProfilesInDateRange)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UserProfilesInDateRange>> PostGamificationProfilesUsersMeQueryAsyncWithHttpInfo (UserProfilesInDateRangeRequest body);
+
+        /// <summary>
+        /// Update a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        System.Threading.Tasks.Task<ContestsResponse> PutGamificationContestAsync (string contestId, ContestsCreateRequest body);
+
+        /// <summary>
+        /// Update a Contest by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> PutGamificationContestAsyncWithHttpInfo (string contestId, ContestsCreateRequest body);
 
         /// <summary>
         /// Updates a performance profile
@@ -3877,6 +4597,217 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns></returns>
+        
+        public void DeleteGamificationContest (string contestId)
+        {
+             DeleteGamificationContestWithHttpInfo(contestId);
+        }
+
+        /// <summary>
+        /// Delete a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteGamificationContestWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->DeleteGamificationContest");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteGamificationContestAsync (string contestId)
+        {
+             await DeleteGamificationContestAsyncWithHttpInfo(contestId);
+
+        }
+
+        /// <summary>
+        /// Delete a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGamificationContestAsyncWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->DeleteGamificationContest");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -4306,6 +5237,1835 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExternalMetricDefinitionListing>(localVarStatusCode,
                 localVarHeaders,
                 (ExternalMetricDefinitionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinitionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        public ContestsResponse GetGamificationContest (string contestId)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = GetGamificationContestWithHttpInfo(contestId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        public ApiResponse< ContestsResponse > GetGamificationContestWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContest");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContestsResponse> GetGamificationContestAsync (string contestId)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = await GetGamificationContestAsyncWithHttpInfo(contestId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> GetGamificationContestAsyncWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContest");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Contest Scores (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>ContestScoresAgentsPagedList</returns>
+        
+        public ContestScoresAgentsPagedList GetGamificationContestAgentsScores (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        {
+             ApiResponse<ContestScoresAgentsPagedList> localVarResponse = GetGamificationContestAgentsScoresWithHttpInfo(contestId, pageNumber, pageSize, workday, returnsView);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Contest Scores (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>ApiResponse of ContestScoresAgentsPagedList</returns>
+        
+        public ApiResponse< ContestScoresAgentsPagedList > GetGamificationContestAgentsScoresWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScores");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+            if (returnsView != null) localVarQueryParams.Add(new Tuple<string, string>("returnsView", this.Configuration.ApiClient.ParameterToString(returnsView)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScores: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresAgentsPagedList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresAgentsPagedList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresAgentsPagedList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Contest Scores (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>Task of ContestScoresAgentsPagedList</returns>
+        
+        public async System.Threading.Tasks.Task<ContestScoresAgentsPagedList> GetGamificationContestAgentsScoresAsync (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        {
+             ApiResponse<ContestScoresAgentsPagedList> localVarResponse = await GetGamificationContestAgentsScoresAsyncWithHttpInfo(contestId, pageNumber, pageSize, workday, returnsView);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Contest Scores (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (optional, default to All)</param>
+        /// <returns>Task of ApiResponse (ContestScoresAgentsPagedList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestScoresAgentsPagedList>> GetGamificationContestAgentsScoresAsyncWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScores");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+            if (returnsView != null) localVarQueryParams.Add(new Tuple<string, string>("returnsView", this.Configuration.ApiClient.ParameterToString(returnsView)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScores: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresAgentsPagedList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresAgentsPagedList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresAgentsPagedList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>ContestScoresAgentsPagedList</returns>
+        
+        public ContestScoresAgentsPagedList GetGamificationContestAgentsScoresMe (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        {
+             ApiResponse<ContestScoresAgentsPagedList> localVarResponse = GetGamificationContestAgentsScoresMeWithHttpInfo(contestId, pageNumber, pageSize, workday, returnsView);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>ApiResponse of ContestScoresAgentsPagedList</returns>
+        
+        public ApiResponse< ContestScoresAgentsPagedList > GetGamificationContestAgentsScoresMeWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresMe");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+            if (returnsView != null) localVarQueryParams.Add(new Tuple<string, string>("returnsView", this.Configuration.ApiClient.ParameterToString(returnsView)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresAgentsPagedList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresAgentsPagedList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresAgentsPagedList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>Task of ContestScoresAgentsPagedList</returns>
+        
+        public async System.Threading.Tasks.Task<ContestScoresAgentsPagedList> GetGamificationContestAgentsScoresMeAsync (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        {
+             ApiResponse<ContestScoresAgentsPagedList> localVarResponse = await GetGamificationContestAgentsScoresMeAsyncWithHttpInfo(contestId, pageNumber, pageSize, workday, returnsView);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Contest Scores for the requesting Agent/Supervisor 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="returnsView">Desired response results (Supervisor Only) (optional, default to All)</param>
+        /// <returns>Task of ApiResponse (ContestScoresAgentsPagedList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestScoresAgentsPagedList>> GetGamificationContestAgentsScoresMeAsyncWithHttpInfo (string contestId, int? pageNumber = null, int? pageSize = null, String workday = null, string returnsView = null)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresMe");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (workday != null) localVarQueryParams.Add(new Tuple<string, string>("workday", this.Configuration.ApiClient.ParameterToString(workday)));
+            if (returnsView != null) localVarQueryParams.Add(new Tuple<string, string>("returnsView", this.Configuration.ApiClient.ParameterToString(returnsView)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresAgentsPagedList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresAgentsPagedList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresAgentsPagedList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ContestScoresGroupTrendList</returns>
+        
+        public ContestScoresGroupTrendList GetGamificationContestAgentsScoresTrends (string contestId)
+        {
+             ApiResponse<ContestScoresGroupTrendList> localVarResponse = GetGamificationContestAgentsScoresTrendsWithHttpInfo(contestId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of ContestScoresGroupTrendList</returns>
+        
+        public ApiResponse< ContestScoresGroupTrendList > GetGamificationContestAgentsScoresTrendsWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrends");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresGroupTrendList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresGroupTrendList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresGroupTrendList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ContestScoresGroupTrendList</returns>
+        
+        public async System.Threading.Tasks.Task<ContestScoresGroupTrendList> GetGamificationContestAgentsScoresTrendsAsync (string contestId)
+        {
+             ApiResponse<ContestScoresGroupTrendList> localVarResponse = await GetGamificationContestAgentsScoresTrendsAsyncWithHttpInfo(contestId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Contest Score Trend (Average Trend) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse (ContestScoresGroupTrendList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestScoresGroupTrendList>> GetGamificationContestAgentsScoresTrendsAsyncWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrends");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresGroupTrendList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresGroupTrendList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresGroupTrendList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ContestScoresAgentTrendList</returns>
+        
+        public ContestScoresAgentTrendList GetGamificationContestAgentsScoresTrendsMe (string contestId)
+        {
+             ApiResponse<ContestScoresAgentTrendList> localVarResponse = GetGamificationContestAgentsScoresTrendsMeWithHttpInfo(contestId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>ApiResponse of ContestScoresAgentTrendList</returns>
+        
+        public ApiResponse< ContestScoresAgentTrendList > GetGamificationContestAgentsScoresTrendsMeWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrendsMe");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrendsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrendsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresAgentTrendList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresAgentTrendList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresAgentTrendList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ContestScoresAgentTrendList</returns>
+        
+        public async System.Threading.Tasks.Task<ContestScoresAgentTrendList> GetGamificationContestAgentsScoresTrendsMeAsync (string contestId)
+        {
+             ApiResponse<ContestScoresAgentTrendList> localVarResponse = await GetGamificationContestAgentsScoresTrendsMeAsyncWithHttpInfo(contestId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Contest Score Trend for the requesting Agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <returns>Task of ApiResponse (ContestScoresAgentTrendList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestScoresAgentTrendList>> GetGamificationContestAgentsScoresTrendsMeAsyncWithHttpInfo (string contestId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrendsMe");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrendsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestAgentsScoresTrendsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestScoresAgentTrendList>(localVarStatusCode,
+                localVarHeaders,
+                (ContestScoresAgentTrendList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestScoresAgentTrendList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>PrizeImages</returns>
+        
+        public PrizeImages GetGamificationContestPrizeimage (string contestId, string prizeImageId)
+        {
+             ApiResponse<PrizeImages> localVarResponse = GetGamificationContestPrizeimageWithHttpInfo(contestId, prizeImageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>ApiResponse of PrizeImages</returns>
+        
+        public ApiResponse< PrizeImages > GetGamificationContestPrizeimageWithHttpInfo (string contestId, string prizeImageId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestPrizeimage");
+            // verify the required parameter 'prizeImageId' is set
+            if (prizeImageId == null)
+                throw new ApiException(400, "Missing required parameter 'prizeImageId' when calling GamificationApi->GetGamificationContestPrizeimage");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+            if (prizeImageId != null) localVarPathParams.Add("prizeImageId", this.Configuration.ApiClient.ParameterToString(prizeImageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestPrizeimage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestPrizeimage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PrizeImages>(localVarStatusCode,
+                localVarHeaders,
+                (PrizeImages) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PrizeImages)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>Task of PrizeImages</returns>
+        
+        public async System.Threading.Tasks.Task<PrizeImages> GetGamificationContestPrizeimageAsync (string contestId, string prizeImageId)
+        {
+             ApiResponse<PrizeImages> localVarResponse = await GetGamificationContestPrizeimageAsyncWithHttpInfo(contestId, prizeImageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Contest Prize Image by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="prizeImageId">The ID of the prize image</param>
+        /// <returns>Task of ApiResponse (PrizeImages)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PrizeImages>> GetGamificationContestPrizeimageAsyncWithHttpInfo (string contestId, string prizeImageId)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestPrizeimage");
+            
+            // verify the required parameter 'prizeImageId' is set
+            if (prizeImageId == null)
+                throw new ApiException(400, "Missing required parameter 'prizeImageId' when calling GamificationApi->GetGamificationContestPrizeimage");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+            if (prizeImageId != null) localVarPathParams.Add("prizeImageId", this.Configuration.ApiClient.ParameterToString(prizeImageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestPrizeimage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestPrizeimage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PrizeImages>(localVarStatusCode,
+                localVarHeaders,
+                (PrizeImages) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PrizeImages)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a List of Contests (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>GetContestsEssentialsListing</returns>
+        
+        public GetContestsEssentialsListing GetGamificationContests (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<GetContestsEssentialsListing> localVarResponse = GetGamificationContestsWithHttpInfo(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a List of Contests (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>ApiResponse of GetContestsEssentialsListing</returns>
+        
+        public ApiResponse< GetContestsEssentialsListing > GetGamificationContestsWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/gamification/contests";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
+            if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetContestsEssentialsListing>(localVarStatusCode,
+                localVarHeaders,
+                (GetContestsEssentialsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContestsEssentialsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a List of Contests (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>Task of GetContestsEssentialsListing</returns>
+        
+        public async System.Threading.Tasks.Task<GetContestsEssentialsListing> GetGamificationContestsAsync (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<GetContestsEssentialsListing> localVarResponse = await GetGamificationContestsAsyncWithHttpInfo(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a List of Contests (Admin) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <returns>Task of ApiResponse (GetContestsEssentialsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GetContestsEssentialsListing>> GetGamificationContestsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/gamification/contests";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
+            if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetContestsEssentialsListing>(localVarStatusCode,
+                localVarHeaders,
+                (GetContestsEssentialsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContestsEssentialsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>GetContestsEssentialsListing</returns>
+        
+        public GetContestsEssentialsListing GetGamificationContestsMe (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null)
+        {
+             ApiResponse<GetContestsEssentialsListing> localVarResponse = GetGamificationContestsMeWithHttpInfo(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder, view);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>ApiResponse of GetContestsEssentialsListing</returns>
+        
+        public ApiResponse< GetContestsEssentialsListing > GetGamificationContestsMeWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null)
+        { 
+
+            var localVarPath = "/api/v2/gamification/contests/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
+            if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (view != null) localVarQueryParams.Add(new Tuple<string, string>("view", this.Configuration.ApiClient.ParameterToString(view)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetContestsEssentialsListing>(localVarStatusCode,
+                localVarHeaders,
+                (GetContestsEssentialsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContestsEssentialsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>Task of GetContestsEssentialsListing</returns>
+        
+        public async System.Threading.Tasks.Task<GetContestsEssentialsListing> GetGamificationContestsMeAsync (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null)
+        {
+             ApiResponse<GetContestsEssentialsListing> localVarResponse = await GetGamificationContestsMeAsyncWithHttpInfo(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder, view);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a List of Contests (Agent/Supervisor) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="status"> (optional)</param>
+        /// <param name="sortBy"> (optional, default to dateStart)</param>
+        /// <param name="sortOrder"> (optional, default to desc)</param>
+        /// <param name="view"> (optional, default to participant)</param>
+        /// <returns>Task of ApiResponse (GetContestsEssentialsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GetContestsEssentialsListing>> GetGamificationContestsMeAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null)
+        { 
+
+            var localVarPath = "/api/v2/gamification/contests/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
+            if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (view != null) localVarQueryParams.Add(new Tuple<string, string>("view", this.Configuration.ApiClient.ParameterToString(view)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationContestsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetContestsEssentialsListing>(localVarStatusCode,
+                localVarHeaders,
+                (GetContestsEssentialsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContestsEssentialsListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15531,6 +18291,242 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Finalize a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        public ContestsResponse PatchGamificationContest (string contestId, ContestsFinalizeRequest body)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = PatchGamificationContestWithHttpInfo(contestId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Finalize a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        public ApiResponse< ContestsResponse > PatchGamificationContestWithHttpInfo (string contestId, ContestsFinalizeRequest body)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->PatchGamificationContest");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchGamificationContest");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Finalize a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContestsResponse> PatchGamificationContestAsync (string contestId, ContestsFinalizeRequest body)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = await PatchGamificationContestAsyncWithHttpInfo(contestId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Finalize a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Finalize Contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> PatchGamificationContestAsyncWithHttpInfo (string contestId, ContestsFinalizeRequest body)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->PatchGamificationContest");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchGamificationContest");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Write External Metric Data 
         /// 
         /// </summary>
@@ -15956,6 +18952,452 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExternalMetricDefinition>(localVarStatusCode,
                 localVarHeaders,
                 (ExternalMetricDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Creates a Contest 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        public ContestsResponse PostGamificationContests (ContestsCreateRequest body)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = PostGamificationContestsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a Contest 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        public ApiResponse< ContestsResponse > PostGamificationContestsWithHttpInfo (ContestsCreateRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContests");
+
+            var localVarPath = "/api/v2/gamification/contests";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates a Contest 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContestsResponse> PostGamificationContestsAsync (ContestsCreateRequest body)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = await PostGamificationContestsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a Contest 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create Contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> PostGamificationContestsAsyncWithHttpInfo (ContestsCreateRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContests");
+            
+
+            var localVarPath = "/api/v2/gamification/contests";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>UploadUrlResponse</returns>
+        
+        public UploadUrlResponse PostGamificationContestsUploadsPrizeimages (GamificationContestPrizeImageUploadUrlRequest body)
+        {
+             ApiResponse<UploadUrlResponse> localVarResponse = PostGamificationContestsUploadsPrizeimagesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of UploadUrlResponse</returns>
+        
+        public ApiResponse< UploadUrlResponse > PostGamificationContestsUploadsPrizeimagesWithHttpInfo (GamificationContestPrizeImageUploadUrlRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContestsUploadsPrizeimages");
+
+            var localVarPath = "/api/v2/gamification/contests/uploads/prizeimages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContestsUploadsPrizeimages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContestsUploadsPrizeimages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UploadUrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UploadUrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UploadUrlResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of UploadUrlResponse</returns>
+        
+        public async System.Threading.Tasks.Task<UploadUrlResponse> PostGamificationContestsUploadsPrizeimagesAsync (GamificationContestPrizeImageUploadUrlRequest body)
+        {
+             ApiResponse<UploadUrlResponse> localVarResponse = await PostGamificationContestsUploadsPrizeimagesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Generates pre-signed URL to upload a prize image for gamification contests 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostGamificationContestsUploadsPrizeimagesAsyncWithHttpInfo (GamificationContestPrizeImageUploadUrlRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContestsUploadsPrizeimages");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/uploads/prizeimages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContestsUploadsPrizeimages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGamificationContestsUploadsPrizeimages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UploadUrlResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UploadUrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UploadUrlResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18027,6 +21469,242 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UserProfilesInDateRange>(localVarStatusCode,
                 localVarHeaders,
                 (UserProfilesInDateRange) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfilesInDateRange)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>ContestsResponse</returns>
+        
+        public ContestsResponse PutGamificationContest (string contestId, ContestsCreateRequest body)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = PutGamificationContestWithHttpInfo(contestId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>ApiResponse of ContestsResponse</returns>
+        
+        public ApiResponse< ContestsResponse > PutGamificationContestWithHttpInfo (string contestId, ContestsCreateRequest body)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->PutGamificationContest");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationContest");
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>Task of ContestsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContestsResponse> PutGamificationContestAsync (string contestId, ContestsCreateRequest body)
+        {
+             ApiResponse<ContestsResponse> localVarResponse = await PutGamificationContestAsyncWithHttpInfo(contestId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a Contest by Id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contestId">The ID of the contest</param>
+        /// <param name="body">Contest</param>
+        /// <returns>Task of ApiResponse (ContestsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContestsResponse>> PutGamificationContestAsyncWithHttpInfo (string contestId, ContestsCreateRequest body)
+        { 
+            // verify the required parameter 'contestId' is set
+            if (contestId == null)
+                throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->PutGamificationContest");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationContest");
+            
+
+            var localVarPath = "/api/v2/gamification/contests/{contestId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contestId != null) localVarPathParams.Add("contestId", this.Configuration.ApiClient.ParameterToString(contestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationContest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGamificationContest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContestsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContestsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContestsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

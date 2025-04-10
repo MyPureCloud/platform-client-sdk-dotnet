@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Referrer">Referrer.</param>
         /// <param name="Attributes">Attributes.</param>
         /// <param name="Traits">Traits.</param>
-        public JourneyWebEventsNotificationWebMessage(string EventName = null, int? TotalEventCount = null, int? TotalPageviewCount = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, string SearchQuery = null, bool? Authenticated = null, JourneyWebEventsNotificationBrowser Browser = null, JourneyWebEventsNotificationDevice Device = null, JourneyWebEventsNotificationGeoLocation Geolocation = null, JourneyWebEventsNotificationMktCampaign MktCampaign = null, JourneyWebEventsNotificationPage Page = null, JourneyWebEventsNotificationReferrer Referrer = null, Dictionary<string, JourneyWebEventsNotificationCustomEventAttribute> Attributes = null, Dictionary<string, JourneyWebEventsNotificationCustomEventAttribute> Traits = null)
+        public JourneyWebEventsNotificationWebMessage(string EventName = null, long? TotalEventCount = null, long? TotalPageviewCount = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, string SearchQuery = null, bool? Authenticated = null, JourneyWebEventsNotificationBrowser Browser = null, JourneyWebEventsNotificationDevice Device = null, JourneyWebEventsNotificationGeoLocation Geolocation = null, JourneyWebEventsNotificationMktCampaign MktCampaign = null, JourneyWebEventsNotificationPage Page = null, JourneyWebEventsNotificationReferrer Referrer = null, Dictionary<string, JourneyWebEventsNotificationCustomEventAttribute> Attributes = null, Dictionary<string, JourneyWebEventsNotificationCustomEventAttribute> Traits = null)
         {
             this.EventName = EventName;
             this.TotalEventCount = TotalEventCount;
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TotalEventCount
         /// </summary>
         [DataMember(Name="totalEventCount", EmitDefaultValue=false)]
-        public int? TotalEventCount { get; set; }
+        public long? TotalEventCount { get; set; }
 
 
 
@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TotalPageviewCount
         /// </summary>
         [DataMember(Name="totalPageviewCount", EmitDefaultValue=false)]
-        public int? TotalPageviewCount { get; set; }
+        public long? TotalPageviewCount { get; set; }
 
 
 

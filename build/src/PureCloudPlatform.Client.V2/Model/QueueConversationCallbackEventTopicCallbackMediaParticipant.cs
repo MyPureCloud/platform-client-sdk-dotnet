@@ -447,7 +447,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        public QueueConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallbackEventTopicUriReference User = null, QueueConversationCallbackEventTopicUriReference Queue = null, QueueConversationCallbackEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallbackEventTopicErrorBody ErrorInfo = null, QueueConversationCallbackEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallbackEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallbackEventTopicUriReference ExternalOrganization = null, QueueConversationCallbackEventTopicWrapup Wrapup = null, QueueConversationCallbackEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallbackEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallbackEventTopicQueueMediaSettings QueueMediaSettings = null, QueueConversationCallbackEventTopicDialerPreview OutboundPreview = null, QueueConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, bool? ExternalCampaign = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
+        public QueueConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallbackEventTopicUriReference User = null, QueueConversationCallbackEventTopicUriReference Queue = null, QueueConversationCallbackEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallbackEventTopicErrorBody ErrorInfo = null, QueueConversationCallbackEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallbackEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallbackEventTopicUriReference ExternalOrganization = null, QueueConversationCallbackEventTopicWrapup Wrapup = null, QueueConversationCallbackEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallbackEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallbackEventTopicQueueMediaSettings QueueMediaSettings = null, QueueConversationCallbackEventTopicDialerPreview OutboundPreview = null, QueueConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, bool? ExternalCampaign = null, long? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -651,7 +651,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -667,7 +667,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 
@@ -845,7 +845,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TimeoutSeconds
         /// </summary>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
-        public int? TimeoutSeconds { get; set; }
+        public long? TimeoutSeconds { get; set; }
 
 
 

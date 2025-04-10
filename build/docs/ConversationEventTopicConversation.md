@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **MaxParticipants** | **int?** |  | [optional] |
+| **MaxParticipants** | **long?** |  | [optional] |
 | **Participants** | [**List&lt;ConversationEventTopicParticipant&gt;**](ConversationEventTopicParticipant) |  | [optional] |
 | **RecentTransfers** | [**List&lt;ConversationEventTopicTransferResponse&gt;**](ConversationEventTopicTransferResponse) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

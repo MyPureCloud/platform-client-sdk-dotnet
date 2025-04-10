@@ -872,7 +872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>InboundDomainEntityListing</returns>
         
         InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
@@ -887,7 +887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
         
         ApiResponse<InboundDomainEntityListing> GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
@@ -971,10 +971,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>OutboundDomainEntityListing</returns>
         
-        OutboundDomainEntityListing GetRoutingEmailOutboundDomains (string filter = null);
+        OutboundDomainEntityListing GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null);
 
         /// <summary>
         /// Get outbound domains
@@ -983,10 +985,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>ApiResponse of OutboundDomainEntityListing</returns>
         
-        ApiResponse<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsWithHttpInfo (string filter = null);
+        ApiResponse<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null);
 
         /// <summary>
         /// Get email setup
@@ -4976,7 +4980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
         
         System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
@@ -4991,7 +4995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
@@ -5075,10 +5079,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of OutboundDomainEntityListing</returns>
         
-        System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (string filter = null);
+        System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (int? pageSize = null, int? pageNumber = null, string filter = null);
 
         /// <summary>
         /// Get outbound domains
@@ -5087,10 +5093,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomainEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (string filter = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null);
 
         /// <summary>
         /// Get email setup
@@ -15607,7 +15615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>InboundDomainEntityListing</returns>
         
         public InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
@@ -15624,7 +15632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
         
         public ApiResponse< InboundDomainEntityListing > GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
@@ -15718,7 +15726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
         
         public async System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
@@ -15736,7 +15744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
@@ -16467,12 +16475,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>OutboundDomainEntityListing</returns>
         
-        public OutboundDomainEntityListing GetRoutingEmailOutboundDomains (string filter = null)
+        public OutboundDomainEntityListing GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null)
         {
-             ApiResponse<OutboundDomainEntityListing> localVarResponse = GetRoutingEmailOutboundDomainsWithHttpInfo(filter);
+             ApiResponse<OutboundDomainEntityListing> localVarResponse = GetRoutingEmailOutboundDomainsWithHttpInfo(pageSize, pageNumber, filter);
              return localVarResponse.Data;
         }
 
@@ -16481,10 +16491,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>ApiResponse of OutboundDomainEntityListing</returns>
         
-        public ApiResponse< OutboundDomainEntityListing > GetRoutingEmailOutboundDomainsWithHttpInfo (string filter = null)
+        public ApiResponse< OutboundDomainEntityListing > GetRoutingEmailOutboundDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/outbound/domains";
@@ -16519,6 +16531,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
 
             // Header params
@@ -16569,12 +16583,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of OutboundDomainEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (string filter = null)
+        public async System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (int? pageSize = null, int? pageNumber = null, string filter = null)
         {
-             ApiResponse<OutboundDomainEntityListing> localVarResponse = await GetRoutingEmailOutboundDomainsAsyncWithHttpInfo(filter);
+             ApiResponse<OutboundDomainEntityListing> localVarResponse = await GetRoutingEmailOutboundDomainsAsyncWithHttpInfo(pageSize, pageNumber, filter);
              return localVarResponse.Data;
 
         }
@@ -16584,10 +16600,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Optional search filter (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomainEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (string filter = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/outbound/domains";
@@ -16622,6 +16640,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
 
             // Header params

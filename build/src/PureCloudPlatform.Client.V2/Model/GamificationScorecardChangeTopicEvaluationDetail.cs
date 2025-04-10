@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationScore">EvaluationScore.</param>
         /// <param name="EvaluationScoreDouble">EvaluationScoreDouble.</param>
         /// <param name="MediaTypes">MediaTypes.</param>
-        public GamificationScorecardChangeTopicEvaluationDetail(Guid? EvaluationId = null, Guid? ConversationId = null, string ConversationDate = null, string FormName = null, int? Points = null, int? MaxPoints = null, int? EvaluationScore = null, double? EvaluationScoreDouble = null, List<string> MediaTypes = null)
+        public GamificationScorecardChangeTopicEvaluationDetail(Guid? EvaluationId = null, Guid? ConversationId = null, string ConversationDate = null, string FormName = null, long? Points = null, long? MaxPoints = null, long? EvaluationScore = null, double? EvaluationScoreDouble = null, List<string> MediaTypes = null)
         {
             this.EvaluationId = EvaluationId;
             this.ConversationId = ConversationId;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Points
         /// </summary>
         [DataMember(Name="points", EmitDefaultValue=false)]
-        public int? Points { get; set; }
+        public long? Points { get; set; }
 
 
 
@@ -90,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MaxPoints
         /// </summary>
         [DataMember(Name="maxPoints", EmitDefaultValue=false)]
-        public int? MaxPoints { get; set; }
+        public long? MaxPoints { get; set; }
 
 
 
@@ -98,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EvaluationScore
         /// </summary>
         [DataMember(Name="evaluationScore", EmitDefaultValue=false)]
-        public int? EvaluationScore { get; set; }
+        public long? EvaluationScore { get; set; }
 
 
 

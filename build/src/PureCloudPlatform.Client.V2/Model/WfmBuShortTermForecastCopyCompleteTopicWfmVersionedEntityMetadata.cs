@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Version.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DateModified">DateModified.</param>
-        public WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata(int? Version = null, WfmBuShortTermForecastCopyCompleteTopicUserReference ModifiedBy = null, DateTime? DateModified = null)
+        public WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata(long? Version = null, WfmBuShortTermForecastCopyCompleteTopicUserReference ModifiedBy = null, DateTime? DateModified = null)
         {
             this.Version = Version;
             this.ModifiedBy = ModifiedBy;
@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
 

@@ -88,6 +88,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Planningperiodmaximumpaidtimeminutes,
             
             /// <summary>
+            /// Enum Planningperiodmaximumworkingweekends for "PlanningPeriodMaximumWorkingWeekends"
+            /// </summary>
+            [EnumMember(Value = "PlanningPeriodMaximumWorkingWeekends")]
+            Planningperiodmaximumworkingweekends,
+            
+            /// <summary>
             /// Enum Planningperiodminimumdaysoff for "PlanningPeriodMinimumDaysOff"
             /// </summary>
             [EnumMember(Value = "PlanningPeriodMinimumDaysOff")]
@@ -136,6 +142,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Shiftmaximumcontiguoustimeminutes,
             
             /// <summary>
+            /// Enum Shiftmaximumcountperplanningperiod for "ShiftMaximumCountPerPlanningPeriod"
+            /// </summary>
+            [EnumMember(Value = "ShiftMaximumCountPerPlanningPeriod")]
+            Shiftmaximumcountperplanningperiod,
+            
+            /// <summary>
             /// Enum Shiftmaximumpaidtimeminutes for "ShiftMaximumPaidTimeMinutes"
             /// </summary>
             [EnumMember(Value = "ShiftMaximumPaidTimeMinutes")]
@@ -146,6 +158,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ShiftMinimumContiguousTimeMinutes")]
             Shiftminimumcontiguoustimeminutes,
+            
+            /// <summary>
+            /// Enum Shiftminimumcountperplanningperiod for "ShiftMinimumCountPerPlanningPeriod"
+            /// </summary>
+            [EnumMember(Value = "ShiftMinimumCountPerPlanningPeriod")]
+            Shiftminimumcountperplanningperiod,
             
             /// <summary>
             /// Enum Shiftminimumpaidtimeminutes for "ShiftMinimumPaidTimeMinutes"

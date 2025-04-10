@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Version">Version.</param>
-        public ExternalContactsUnresolvedContactChangedTopicDataSchema(string Id = null, int? Version = null)
+        public ExternalContactsUnresolvedContactChangedTopicDataSchema(string Id = null, long? Version = null)
         {
             this.Id = Id;
             this.Version = Version;
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

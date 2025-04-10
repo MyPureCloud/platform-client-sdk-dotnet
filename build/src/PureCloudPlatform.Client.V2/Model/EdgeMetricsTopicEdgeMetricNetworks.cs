@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReceivedBytesPerSec">ReceivedBytesPerSec.</param>
         /// <param name="BandwidthBitsPerSec">BandwidthBitsPerSec.</param>
         /// <param name="UtilizationPct">UtilizationPct.</param>
-        public EdgeMetricsTopicEdgeMetricNetworks(string Ifname = null, int? SentBytesPerSec = null, int? ReceivedBytesPerSec = null, int? BandwidthBitsPerSec = null, double? UtilizationPct = null)
+        public EdgeMetricsTopicEdgeMetricNetworks(string Ifname = null, long? SentBytesPerSec = null, long? ReceivedBytesPerSec = null, long? BandwidthBitsPerSec = null, double? UtilizationPct = null)
         {
             this.Ifname = Ifname;
             this.SentBytesPerSec = SentBytesPerSec;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SentBytesPerSec
         /// </summary>
         [DataMember(Name="sentBytesPerSec", EmitDefaultValue=false)]
-        public int? SentBytesPerSec { get; set; }
+        public long? SentBytesPerSec { get; set; }
 
 
 
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ReceivedBytesPerSec
         /// </summary>
         [DataMember(Name="receivedBytesPerSec", EmitDefaultValue=false)]
-        public int? ReceivedBytesPerSec { get; set; }
+        public long? ReceivedBytesPerSec { get; set; }
 
 
 
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets BandwidthBitsPerSec
         /// </summary>
         [DataMember(Name="bandwidthBitsPerSec", EmitDefaultValue=false)]
-        public int? BandwidthBitsPerSec { get; set; }
+        public long? BandwidthBitsPerSec { get; set; }
 
 
 

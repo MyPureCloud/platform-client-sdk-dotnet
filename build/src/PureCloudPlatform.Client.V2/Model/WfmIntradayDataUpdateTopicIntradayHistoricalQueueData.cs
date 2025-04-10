@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AverageAfterCallWorkSeconds">AverageAfterCallWorkSeconds.</param>
         /// <param name="ServiceLevelPercent">ServiceLevelPercent.</param>
         /// <param name="AverageSpeedOfAnswerSeconds">AverageSpeedOfAnswerSeconds.</param>
-        public WfmIntradayDataUpdateTopicIntradayHistoricalQueueData(int? Offered = null, int? Completed = null, int? Answered = null, int? Abandoned = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null, double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null)
+        public WfmIntradayDataUpdateTopicIntradayHistoricalQueueData(long? Offered = null, long? Completed = null, long? Answered = null, long? Abandoned = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null, double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null)
         {
             this.Offered = Offered;
             this.Completed = Completed;
@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Offered
         /// </summary>
         [DataMember(Name="offered", EmitDefaultValue=false)]
-        public int? Offered { get; set; }
+        public long? Offered { get; set; }
 
 
 
@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Completed
         /// </summary>
         [DataMember(Name="completed", EmitDefaultValue=false)]
-        public int? Completed { get; set; }
+        public long? Completed { get; set; }
 
 
 
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Answered
         /// </summary>
         [DataMember(Name="answered", EmitDefaultValue=false)]
-        public int? Answered { get; set; }
+        public long? Answered { get; set; }
 
 
 
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Abandoned
         /// </summary>
         [DataMember(Name="abandoned", EmitDefaultValue=false)]
-        public int? Abandoned { get; set; }
+        public long? Abandoned { get; set; }
 
 
 

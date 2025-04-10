@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="IntervalIndex">IntervalIndex.</param>
         /// <param name="Value">Value.</param>
-        public WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue(int? IntervalIndex = null, double? Value = null)
+        public WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue(long? IntervalIndex = null, double? Value = null)
         {
             this.IntervalIndex = IntervalIndex;
             this.Value = Value;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets IntervalIndex
         /// </summary>
         [DataMember(Name="intervalIndex", EmitDefaultValue=false)]
-        public int? IntervalIndex { get; set; }
+        public long? IntervalIndex { get; set; }
 
 
 

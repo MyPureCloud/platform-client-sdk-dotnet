@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Entity">Entity.</param>
         /// <param name="UnreadCount">UnreadCount.</param>
         /// <param name="LastUnreadNotificationDate">LastUnreadNotificationDate.</param>
-        public ChatBadgeTopicChatBadge(ChatBadgeTopicBadgeEntity Entity = null, int? UnreadCount = null, DateTime? LastUnreadNotificationDate = null)
+        public ChatBadgeTopicChatBadge(ChatBadgeTopicBadgeEntity Entity = null, long? UnreadCount = null, DateTime? LastUnreadNotificationDate = null)
         {
             this.Entity = Entity;
             this.UnreadCount = UnreadCount;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UnreadCount
         /// </summary>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
-        public int? UnreadCount { get; set; }
+        public long? UnreadCount { get; set; }
 
 
 

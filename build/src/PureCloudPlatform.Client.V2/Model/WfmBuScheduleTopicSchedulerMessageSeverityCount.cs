@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Severity">Severity.</param>
         /// <param name="Count">Count.</param>
-        public WfmBuScheduleTopicSchedulerMessageSeverityCount(SeverityEnum? Severity = null, int? Count = null)
+        public WfmBuScheduleTopicSchedulerMessageSeverityCount(SeverityEnum? Severity = null, long? Count = null)
         {
             this.Severity = Severity;
             this.Count = Count;
@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
-        public int? Count { get; set; }
+        public long? Count { get; set; }
 
 
         /// <summary>

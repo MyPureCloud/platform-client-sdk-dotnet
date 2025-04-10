@@ -144,4 +144,4 @@ namespace Example
 [**TrusteeBillingOverview**](TrusteeBillingOverview)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

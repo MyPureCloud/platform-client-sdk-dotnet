@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageParams">Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key &#x3D; &#39;username&#39;, UserParam.value &#x3D; &#39;john.doe&#39;.</param>
         /// <param name="ContextId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead..</param>
         /// <param name="Uri">Uri.</param>
-        public ConversationEventTopicErrorDetails(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null)
+        public ConversationEventTopicErrorDetails(long? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null)
         {
             this.Status = Status;
             this.Code = Code;
@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The HTTP status code for this message (400, 401, 403, 404, 500, etc.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public int? Status { get; set; }
+        public long? Status { get; set; }
 
 
 

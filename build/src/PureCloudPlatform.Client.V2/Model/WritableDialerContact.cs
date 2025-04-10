@@ -30,14 +30,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
         /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
+        /// <param name="LatestWhatsAppEvaluations">A map of whatsapp records for the contact whatsapp columns..</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
         /// <param name="ContactableStatus">A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type..</param>
-        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, string> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactableStatus> ContactableStatus = null)
+        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, string> Data = null, Dictionary<string, MessageEvaluation> LatestWhatsAppEvaluations = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactableStatus> ContactableStatus = null)
         {
             this.Id = Id;
             this.ContactListId = ContactListId;
             this.Data = Data;
+            this.LatestWhatsAppEvaluations = LatestWhatsAppEvaluations;
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;
             this.ContactableStatus = ContactableStatus;
@@ -92,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A map of whatsapp records for the contact whatsapp columns.
+        /// </summary>
+        /// <value>A map of whatsapp records for the contact whatsapp columns.</value>
+        [DataMember(Name="latestWhatsAppEvaluations", EmitDefaultValue=false)]
+        public Dictionary<string, MessageEvaluation> LatestWhatsAppEvaluations { get; set; }
+
+
+
+        /// <summary>
         /// Indicates whether or not the contact can be called.
         /// </summary>
         /// <value>Indicates whether or not the contact can be called.</value>
@@ -140,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  LatestSmsEvaluations: ").Append(LatestSmsEvaluations).Append("\n");
             sb.Append("  LatestEmailEvaluations: ").Append(LatestEmailEvaluations).Append("\n");
+            sb.Append("  LatestWhatsAppEvaluations: ").Append(LatestWhatsAppEvaluations).Append("\n");
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
             sb.Append("  ContactableStatus: ").Append(ContactableStatus).Append("\n");
@@ -210,6 +222,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LatestEmailEvaluations.SequenceEqual(other.LatestEmailEvaluations)
                 ) &&
                 (
+                    this.LatestWhatsAppEvaluations == other.LatestWhatsAppEvaluations ||
+                    this.LatestWhatsAppEvaluations != null &&
+                    this.LatestWhatsAppEvaluations.SequenceEqual(other.LatestWhatsAppEvaluations)
+                ) &&
+                (
                     this.Callable == other.Callable ||
                     this.Callable != null &&
                     this.Callable.Equals(other.Callable)
@@ -256,6 +273,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LatestEmailEvaluations != null)
                     hash = hash * 59 + this.LatestEmailEvaluations.GetHashCode();
+
+                if (this.LatestWhatsAppEvaluations != null)
+                    hash = hash * 59 + this.LatestWhatsAppEvaluations.GetHashCode();
 
                 if (this.Callable != null)
                     hash = hash * 59 + this.Callable.GetHashCode();

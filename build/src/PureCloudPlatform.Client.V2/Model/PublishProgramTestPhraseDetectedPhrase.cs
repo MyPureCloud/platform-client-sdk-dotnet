@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FoundPhrase">FoundPhrase.</param>
         /// <param name="Snippet">Snippet.</param>
         /// <param name="Confidence">Confidence.</param>
-        public PublishProgramTestPhraseDetectedPhrase(string FoundPhrase = null, string Snippet = null, int? Confidence = null)
+        public PublishProgramTestPhraseDetectedPhrase(string FoundPhrase = null, string Snippet = null, long? Confidence = null)
         {
             this.FoundPhrase = FoundPhrase;
             this.Snippet = Snippet;
@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Confidence
         /// </summary>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
-        public int? Confidence { get; set; }
+        public long? Confidence { get; set; }
 
 
         /// <summary>

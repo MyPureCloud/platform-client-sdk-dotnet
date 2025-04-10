@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="Divisions">Divisions.</param>
-        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicTransferResponse> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null, List<QueueConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions = null)
+        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, long? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicTransferResponse> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null, List<QueueConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MaxParticipants
         /// </summary>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
-        public int? MaxParticipants { get; set; }
+        public long? MaxParticipants { get; set; }
 
 
 

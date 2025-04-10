@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActiveParticipantCount">ActiveParticipantCount.</param>
         /// <param name="Version">Version.</param>
-        public VideoConferenceUpdateTopicParticipantInfo(int? ActiveParticipantCount = null, int? Version = null)
+        public VideoConferenceUpdateTopicParticipantInfo(long? ActiveParticipantCount = null, long? Version = null)
         {
             this.ActiveParticipantCount = ActiveParticipantCount;
             this.Version = Version;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ActiveParticipantCount
         /// </summary>
         [DataMember(Name="activeParticipantCount", EmitDefaultValue=false)]
-        public int? ActiveParticipantCount { get; set; }
+        public long? ActiveParticipantCount { get; set; }
 
 
 
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

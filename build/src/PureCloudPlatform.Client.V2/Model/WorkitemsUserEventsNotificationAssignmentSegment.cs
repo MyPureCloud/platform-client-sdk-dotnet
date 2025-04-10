@@ -218,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartState">StartState.</param>
         /// <param name="EndState">EndState.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public WorkitemsUserEventsNotificationAssignmentSegment(StartStateEnum? StartState = null, EndStateEnum? EndState = null, int? DurationMs = null)
+        public WorkitemsUserEventsNotificationAssignmentSegment(StartStateEnum? StartState = null, EndStateEnum? EndState = null, long? DurationMs = null)
         {
             this.StartState = StartState;
             this.EndState = EndState;
@@ -236,7 +236,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationMs
         /// </summary>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
-        public int? DurationMs { get; set; }
+        public long? DurationMs { get; set; }
 
 
         /// <summary>

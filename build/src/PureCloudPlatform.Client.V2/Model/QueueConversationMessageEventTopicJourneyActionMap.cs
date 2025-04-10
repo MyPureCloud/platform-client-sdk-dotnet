@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The ID of the actionMap in the Journey System which triggered this action.</param>
         /// <param name="Version">The version number of the actionMap in the Journey System at the time this action was triggered.</param>
-        public QueueConversationMessageEventTopicJourneyActionMap(string Id = null, int? Version = null)
+        public QueueConversationMessageEventTopicJourneyActionMap(string Id = null, long? Version = null)
         {
             this.Id = Id;
             this.Version = Version;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The version number of the actionMap in the Journey System at the time this action was triggered</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

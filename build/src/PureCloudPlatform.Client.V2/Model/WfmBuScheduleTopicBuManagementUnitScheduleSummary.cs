@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndDate">EndDate.</param>
         /// <param name="Agents">Agents.</param>
         /// <param name="AgentCount">AgentCount.</param>
-        public WfmBuScheduleTopicBuManagementUnitScheduleSummary(WfmBuScheduleTopicManagementUnit ManagementUnit = null, DateTime? StartDate = null, DateTime? EndDate = null, List<WfmBuScheduleTopicUserReference> Agents = null, int? AgentCount = null)
+        public WfmBuScheduleTopicBuManagementUnitScheduleSummary(WfmBuScheduleTopicManagementUnit ManagementUnit = null, DateTime? StartDate = null, DateTime? EndDate = null, List<WfmBuScheduleTopicUserReference> Agents = null, long? AgentCount = null)
         {
             this.ManagementUnit = ManagementUnit;
             this.StartDate = StartDate;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AgentCount
         /// </summary>
         [DataMember(Name="agentCount", EmitDefaultValue=false)]
-        public int? AgentCount { get; set; }
+        public long? AgentCount { get; set; }
 
 
         /// <summary>

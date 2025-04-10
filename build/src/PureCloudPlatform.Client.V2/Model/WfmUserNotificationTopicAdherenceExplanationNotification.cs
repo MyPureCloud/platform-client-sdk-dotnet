@@ -92,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="Type">Type.</param>
         /// <param name="Notes">Notes.</param>
-        public WfmUserNotificationTopicAdherenceExplanationNotification(string Id = null, WfmUserNotificationTopicUserReference Agent = null, WfmUserNotificationTopicManagementUnit ManagementUnit = null, WfmUserNotificationTopicBusinessUnit BusinessUnit = null, DateTime? StartDate = null, int? LengthMinutes = null, StatusEnum? Status = null, TypeEnum? Type = null, string Notes = null)
+        public WfmUserNotificationTopicAdherenceExplanationNotification(string Id = null, WfmUserNotificationTopicUserReference Agent = null, WfmUserNotificationTopicManagementUnit ManagementUnit = null, WfmUserNotificationTopicBusinessUnit BusinessUnit = null, DateTime? StartDate = null, long? LengthMinutes = null, StatusEnum? Status = null, TypeEnum? Type = null, string Notes = null)
         {
             this.Id = Id;
             this.Agent = Agent;
@@ -152,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LengthMinutes
         /// </summary>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
-        public int? LengthMinutes { get; set; }
+        public long? LengthMinutes { get; set; }
 
 
 

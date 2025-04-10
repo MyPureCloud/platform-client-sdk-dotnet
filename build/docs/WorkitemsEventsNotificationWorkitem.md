@@ -11,14 +11,14 @@
 | **TypeId** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **LanguageId** | **string** |  | [optional] |
-| **Priority** | **int?** |  | [optional] |
+| **Priority** | **long?** |  | [optional] |
 | **DateCreated** | **string** |  | [optional] |
 | **DateModified** | **string** |  | [optional] |
 | **DateDue** | **string** |  | [optional] |
 | **DateExpires** | **string** |  | [optional] |
 | **DateAssignmentStateChanged** | **string** |  | [optional] |
-| **DurationSeconds** | **int?** |  | [optional] |
-| **Ttl** | **int?** |  | [optional] |
+| **DurationSeconds** | **long?** |  | [optional] |
+| **Ttl** | **long?** |  | [optional] |
 | **StatusId** | **string** |  | [optional] |
 | **StatusCategory** | **string** |  | [optional] |
 | **DateClosed** | **string** |  | [optional] |
@@ -33,7 +33,7 @@
 | **Changes** | [**List&lt;WorkitemsEventsNotificationDelta&gt;**](WorkitemsEventsNotificationDelta) |  | [optional] |
 | **AssignmentState** | **string** |  | [optional] |
 | **AssignmentId** | **string** |  | [optional] |
-| **AlertTimeoutSeconds** | **int?** |  | [optional] |
+| **AlertTimeoutSeconds** | **long?** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
 | **CustomFields** | [**Dictionary&lt;string, WorkitemsEventsNotificationCustomAttribute&gt;**](WorkitemsEventsNotificationCustomAttribute) |  | [optional] |
 | **Wrapup** | [**WorkitemsEventsNotificationWrapup**](WorkitemsEventsNotificationWrapup) |  | [optional] |
@@ -43,4 +43,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -428,7 +428,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Namespace">Namespace.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Documented">Documented.</param>
-        public ConversationMessageEventTopicLimit(string Key = null, NamespaceEnum? Namespace = null, int? Value = null, bool? Documented = null)
+        public ConversationMessageEventTopicLimit(string Key = null, NamespaceEnum? Namespace = null, long? Value = null, bool? Documented = null)
         {
             this.Key = Key;
             this.Namespace = Namespace;
@@ -453,7 +453,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public int? Value { get; set; }
+        public long? Value { get; set; }
 
 
 

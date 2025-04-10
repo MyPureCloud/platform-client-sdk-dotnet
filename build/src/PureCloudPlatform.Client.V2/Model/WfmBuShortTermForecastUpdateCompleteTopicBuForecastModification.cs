@@ -181,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecondaryGranularity">SecondaryGranularity.</param>
         /// <param name="DisplayGranularity">DisplayGranularity.</param>
         /// <param name="PlanningGroupIds">PlanningGroupIds.</param>
-        public WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> Values = null, List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> SecondaryValues = null, bool? Enabled = null, string Granularity = null, string SecondaryGranularity = null, string DisplayGranularity = null, List<string> PlanningGroupIds = null)
+        public WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification(TypeEnum? Type = null, long? StartIntervalIndex = null, long? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> Values = null, List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> SecondaryValues = null, bool? Enabled = null, string Granularity = null, string SecondaryGranularity = null, string DisplayGranularity = null, List<string> PlanningGroupIds = null)
         {
             this.Type = Type;
             this.StartIntervalIndex = StartIntervalIndex;
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets StartIntervalIndex
         /// </summary>
         [DataMember(Name="startIntervalIndex", EmitDefaultValue=false)]
-        public int? StartIntervalIndex { get; set; }
+        public long? StartIntervalIndex { get; set; }
 
 
 
@@ -215,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EndIntervalIndex
         /// </summary>
         [DataMember(Name="endIntervalIndex", EmitDefaultValue=false)]
-        public int? EndIntervalIndex { get; set; }
+        public long? EndIntervalIndex { get; set; }
 
 
 

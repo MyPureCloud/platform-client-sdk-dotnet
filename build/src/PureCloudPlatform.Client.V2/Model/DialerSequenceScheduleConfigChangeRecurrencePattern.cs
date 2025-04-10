@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interval">the amount of time in between occurrences.</param>
         /// <param name="DaysOfWeek">the day(s) of the week the occurrence happens.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerSequenceScheduleConfigChangeRecurrencePattern(TypeEnum? Type = null, int? Interval = null, List<string> DaysOfWeek = null, Dictionary<string, Object> AdditionalProperties = null)
+        public DialerSequenceScheduleConfigChangeRecurrencePattern(TypeEnum? Type = null, long? Interval = null, List<string> DaysOfWeek = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Type = Type;
             this.Interval = Interval;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>the amount of time in between occurrences</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
-        public int? Interval { get; set; }
+        public long? Interval { get; set; }
 
 
 

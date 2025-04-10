@@ -128,14 +128,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of the mechanism. (required).</param>
         /// <param name="SubType">Subtype of detection mechanism.</param>
         /// <param name="MaxLength">The maximum length of the entity resolved value.</param>
+        /// <param name="MinLength">The minimum length of the entity resolved value.</param>
         /// <param name="Examples">Examples for entity detection.</param>
-        public NamedEntityTypeMechanism(List<NamedEntityTypeItem> Items = null, bool? Restricted = null, TypeEnum? Type = null, SubTypeEnum? SubType = null, int? MaxLength = null, List<NamedEntityTypeMechanismExample> Examples = null)
+        public NamedEntityTypeMechanism(List<NamedEntityTypeItem> Items = null, bool? Restricted = null, TypeEnum? Type = null, SubTypeEnum? SubType = null, int? MaxLength = null, int? MinLength = null, List<NamedEntityTypeMechanismExample> Examples = null)
         {
             this.Items = Items;
             this.Restricted = Restricted;
             this.Type = Type;
             this.SubType = SubType;
             this.MaxLength = MaxLength;
+            this.MinLength = MinLength;
             this.Examples = Examples;
             
         }
@@ -174,6 +176,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The minimum length of the entity resolved value
+        /// </summary>
+        /// <value>The minimum length of the entity resolved value</value>
+        [DataMember(Name="minLength", EmitDefaultValue=false)]
+        public int? MinLength { get; set; }
+
+
+
+        /// <summary>
         /// Examples for entity detection
         /// </summary>
         /// <value>Examples for entity detection</value>
@@ -195,6 +206,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  SubType: ").Append(SubType).Append("\n");
             sb.Append("  MaxLength: ").Append(MaxLength).Append("\n");
+            sb.Append("  MinLength: ").Append(MinLength).Append("\n");
             sb.Append("  Examples: ").Append(Examples).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -262,6 +274,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxLength.Equals(other.MaxLength)
                 ) &&
                 (
+                    this.MinLength == other.MinLength ||
+                    this.MinLength != null &&
+                    this.MinLength.Equals(other.MinLength)
+                ) &&
+                (
                     this.Examples == other.Examples ||
                     this.Examples != null &&
                     this.Examples.SequenceEqual(other.Examples)
@@ -293,6 +310,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxLength != null)
                     hash = hash * 59 + this.MaxLength.GetHashCode();
+
+                if (this.MinLength != null)
+                    hash = hash * 59 + this.MinLength.GetHashCode();
 
                 if (this.Examples != null)
                     hash = hash * 59 + this.Examples.GetHashCode();

@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerDnclistConfigChangeDncList(DialerDnclistConfigChangeImportStatus ImportStatus = null, int? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, ContactMethodEnum? ContactMethod = null, DialerDnclistConfigChangeUriReference Division = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerDnclistConfigChangeDncList(DialerDnclistConfigChangeImportStatus ImportStatus = null, long? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, ContactMethodEnum? ContactMethod = null, DialerDnclistConfigChangeUriReference Division = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null)
         {
             this.ImportStatus = ImportStatus;
             this.Size = Size;
@@ -139,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>the number of phone numbers in the do not call list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public int? Size { get; set; }
+        public long? Size { get; set; }
 
 
 
@@ -231,7 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

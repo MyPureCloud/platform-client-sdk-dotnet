@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundContactListId">OutboundContactListId.</param>
         /// <param name="OutboundContactId">OutboundContactId.</param>
         /// <param name="IsCampaignAlwaysRunning">IsCampaignAlwaysRunning.</param>
-        public OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent(int? EventTime = null, Guid? ConversationId = null, OutboundCampaignTypeEnum? OutboundCampaignType = null, OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes SmsAttributes = null, WrapupCodeEnum? WrapupCode = null, Guid? OutboundCampaignId = null, Guid? DivisionId = null, Guid? ContentTemplateId = null, Guid? OutboundContactListId = null, string OutboundContactId = null, bool? IsCampaignAlwaysRunning = null)
+        public OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent(long? EventTime = null, Guid? ConversationId = null, OutboundCampaignTypeEnum? OutboundCampaignType = null, OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes SmsAttributes = null, WrapupCodeEnum? WrapupCode = null, Guid? OutboundCampaignId = null, Guid? DivisionId = null, Guid? ContentTemplateId = null, Guid? OutboundContactListId = null, string OutboundContactId = null, bool? IsCampaignAlwaysRunning = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 

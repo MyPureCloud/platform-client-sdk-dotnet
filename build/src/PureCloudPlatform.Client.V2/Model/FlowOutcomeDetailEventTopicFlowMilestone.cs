@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="MilestoneId">MilestoneId.</param>
         /// <param name="MilestoneTime">MilestoneTime.</param>
-        public FlowOutcomeDetailEventTopicFlowMilestone(Guid? MilestoneId = null, int? MilestoneTime = null)
+        public FlowOutcomeDetailEventTopicFlowMilestone(Guid? MilestoneId = null, long? MilestoneTime = null)
         {
             this.MilestoneId = MilestoneId;
             this.MilestoneTime = MilestoneTime;
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MilestoneTime
         /// </summary>
         [DataMember(Name="milestoneTime", EmitDefaultValue=false)]
-        public int? MilestoneTime { get; set; }
+        public long? MilestoneTime { get; set; }
 
 
         /// <summary>

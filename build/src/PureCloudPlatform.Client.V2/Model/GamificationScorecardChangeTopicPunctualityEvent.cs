@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateScheduleStart">DateScheduleStart.</param>
         /// <param name="ActivityCode">ActivityCode.</param>
         /// <param name="Points">Points.</param>
-        public GamificationScorecardChangeTopicPunctualityEvent(string DateStart = null, string DateScheduleStart = null, string ActivityCode = null, int? Points = null)
+        public GamificationScorecardChangeTopicPunctualityEvent(string DateStart = null, string DateScheduleStart = null, string ActivityCode = null, long? Points = null)
         {
             this.DateStart = DateStart;
             this.DateScheduleStart = DateScheduleStart;
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Points
         /// </summary>
         [DataMember(Name="points", EmitDefaultValue=false)]
-        public int? Points { get; set; }
+        public long? Points { get; set; }
 
 
         /// <summary>

@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">Value.</param>
         /// <param name="PunctualityEvents">PunctualityEvents.</param>
         /// <param name="EvaluationDetails">EvaluationDetails.</param>
-        public GamificationScorecardChangeTopicPerformanceMetric(GamificationScorecardChangeTopicMetric Metric = null, int? Points = null, double? Value = null, List<GamificationScorecardChangeTopicPunctualityEvent> PunctualityEvents = null, List<GamificationScorecardChangeTopicEvaluationDetail> EvaluationDetails = null)
+        public GamificationScorecardChangeTopicPerformanceMetric(GamificationScorecardChangeTopicMetric Metric = null, long? Points = null, double? Value = null, List<GamificationScorecardChangeTopicPunctualityEvent> PunctualityEvents = null, List<GamificationScorecardChangeTopicEvaluationDetail> EvaluationDetails = null)
         {
             this.Metric = Metric;
             this.Points = Points;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Points
         /// </summary>
         [DataMember(Name="points", EmitDefaultValue=false)]
-        public int? Points { get; set; }
+        public long? Points { get; set; }
 
 
 

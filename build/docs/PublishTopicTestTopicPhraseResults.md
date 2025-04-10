@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ProcessedTranscriptsCount** | **int?** |  | [optional] |
-| **MatchedTranscriptsCount** | **int?** |  | [optional] |
+| **ProcessedTranscriptsCount** | **long?** |  | [optional] |
+| **MatchedTranscriptsCount** | **long?** |  | [optional] |
 | **MatchedTranscripts** | [**List&lt;PublishTopicTestPhraseMatchedTranscript&gt;**](PublishTopicTestPhraseMatchedTranscript) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

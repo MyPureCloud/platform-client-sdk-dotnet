@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EventTime** | **int?** |  | [optional] |
+| **EventTime** | **long?** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **ParticipantId** | **string** |  | [optional] |
 | **SessionId** | **string** |  | [optional] |
@@ -24,8 +24,8 @@
 | **DivisionId** | **string** |  | [optional] |
 | **FlowVersion** | **string** |  | [optional] |
 | **FlowOutcomeId** | **Guid?** |  | [optional] |
-| **FlowOutcomeStartTime** | **int?** |  | [optional] |
-| **FlowOutcomeEndTime** | **int?** |  | [optional] |
+| **FlowOutcomeStartTime** | **long?** |  | [optional] |
+| **FlowOutcomeEndTime** | **long?** |  | [optional] |
 | **FlowOutcomeValue** | **string** |  | [optional] |
 | **FlowMilestones** | [**List&lt;FlowOutcomeDetailEventTopicFlowMilestone&gt;**](FlowOutcomeDetailEventTopicFlowMilestone) |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
@@ -33,4 +33,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

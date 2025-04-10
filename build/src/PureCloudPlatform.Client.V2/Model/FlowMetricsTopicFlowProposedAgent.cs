@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="AgentRank">Proposed agent rank for this conversation from predictive routing (lower is better).</param>
         /// <param name="ProposedAgentId">Unique identifier for the agent that was proposed by predictive routing.</param>
-        public FlowMetricsTopicFlowProposedAgent(int? AgentRank = null, string ProposedAgentId = null)
+        public FlowMetricsTopicFlowProposedAgent(long? AgentRank = null, string ProposedAgentId = null)
         {
             this.AgentRank = AgentRank;
             this.ProposedAgentId = ProposedAgentId;
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Proposed agent rank for this conversation from predictive routing (lower is better)</value>
         [DataMember(Name="agentRank", EmitDefaultValue=false)]
-        public int? AgentRank { get; set; }
+        public long? AgentRank { get; set; }
 
 
 

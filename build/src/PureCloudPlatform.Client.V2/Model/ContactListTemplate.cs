@@ -32,6 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
         /// <param name="PhoneColumns">Indicates which columns are phone numbers..</param>
         /// <param name="EmailColumns">Indicates which columns are email addresses.</param>
+        /// <param name="WhatsAppColumns">Indicates which columns are whatsApp contacts.</param>
         /// <param name="PreviewModeColumnName">A column to check if a contact should always be dialed in preview mode..</param>
         /// <param name="PreviewModeAcceptedValues">The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode..</param>
         /// <param name="AttemptLimits">AttemptLimits for this ContactListTemplate..</param>
@@ -39,13 +40,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ZipCodeColumnName">The name of ContactListTemplate column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
         /// <param name="ColumnDataTypeSpecifications">The settings of the columns selected for dynamic queueing.</param>
         /// <param name="TrimWhitespace">Whether to trim white space when importing a ContactListTemplate csv file, default value &#x3D; true.</param>
-        public ContactListTemplate(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null, bool? TrimWhitespace = null)
+        public ContactListTemplate(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, List<WhatsAppColumn> WhatsAppColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null, bool? TrimWhitespace = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
             this.EmailColumns = EmailColumns;
+            this.WhatsAppColumns = WhatsAppColumns;
             this.PreviewModeColumnName = PreviewModeColumnName;
             this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
             this.AttemptLimits = AttemptLimits;
@@ -126,6 +128,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates which columns are email addresses</value>
         [DataMember(Name="emailColumns", EmitDefaultValue=false)]
         public List<EmailColumn> EmailColumns { get; set; }
+
+
+
+        /// <summary>
+        /// Indicates which columns are whatsApp contacts
+        /// </summary>
+        /// <value>Indicates which columns are whatsApp contacts</value>
+        [DataMember(Name="whatsAppColumns", EmitDefaultValue=false)]
+        public List<WhatsAppColumn> WhatsAppColumns { get; set; }
 
 
 
@@ -217,6 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
             sb.Append("  EmailColumns: ").Append(EmailColumns).Append("\n");
+            sb.Append("  WhatsAppColumns: ").Append(WhatsAppColumns).Append("\n");
             sb.Append("  PreviewModeColumnName: ").Append(PreviewModeColumnName).Append("\n");
             sb.Append("  PreviewModeAcceptedValues: ").Append(PreviewModeAcceptedValues).Append("\n");
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
@@ -306,6 +318,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailColumns.SequenceEqual(other.EmailColumns)
                 ) &&
                 (
+                    this.WhatsAppColumns == other.WhatsAppColumns ||
+                    this.WhatsAppColumns != null &&
+                    this.WhatsAppColumns.SequenceEqual(other.WhatsAppColumns)
+                ) &&
+                (
                     this.PreviewModeColumnName == other.PreviewModeColumnName ||
                     this.PreviewModeColumnName != null &&
                     this.PreviewModeColumnName.Equals(other.PreviewModeColumnName)
@@ -381,6 +398,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmailColumns != null)
                     hash = hash * 59 + this.EmailColumns.GetHashCode();
+
+                if (this.WhatsAppColumns != null)
+                    hash = hash * 59 + this.WhatsAppColumns.GetHashCode();
 
                 if (this.PreviewModeColumnName != null)
                     hash = hash * 59 + this.PreviewModeColumnName.GetHashCode();

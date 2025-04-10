@@ -441,7 +441,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Context">Context.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Sharing">Sharing.</param>
-        public QueueConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationScreenShareEventTopicUriReference User = null, QueueConversationScreenShareEventTopicUriReference Queue = null, QueueConversationScreenShareEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationScreenShareEventTopicErrorBody ErrorInfo = null, QueueConversationScreenShareEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationScreenShareEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationScreenShareEventTopicUriReference ExternalOrganization = null, QueueConversationScreenShareEventTopicWrapup Wrapup = null, QueueConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationScreenShareEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationScreenShareEventTopicQueueMediaSettings QueueMediaSettings = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public QueueConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationScreenShareEventTopicUriReference User = null, QueueConversationScreenShareEventTopicUriReference Queue = null, QueueConversationScreenShareEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationScreenShareEventTopicErrorBody ErrorInfo = null, QueueConversationScreenShareEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationScreenShareEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationScreenShareEventTopicUriReference ExternalOrganization = null, QueueConversationScreenShareEventTopicWrapup Wrapup = null, QueueConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationScreenShareEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationScreenShareEventTopicQueueMediaSettings QueueMediaSettings = null, string Context = null, long? PeerCount = null, bool? Sharing = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -639,7 +639,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -655,7 +655,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 
@@ -793,7 +793,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PeerCount
         /// </summary>
         [DataMember(Name="peerCount", EmitDefaultValue=false)]
-        public int? PeerCount { get; set; }
+        public long? PeerCount { get; set; }
 
 
 

@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EventTime** | **int?** |  | [optional] |
+| **EventTime** | **long?** |  | [optional] |
 | **ConversationId** | **string** |  | [optional] |
 | **ParticipantId** | **string** |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
@@ -16,4 +16,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

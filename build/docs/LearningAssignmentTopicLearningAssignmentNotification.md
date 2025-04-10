@@ -9,7 +9,7 @@
 | **Id** | **string** |  | [optional] |
 | **User** | [**LearningAssignmentTopicUserReference**](LearningAssignmentTopicUserReference) |  | [optional] |
 | **Module** | [**LearningAssignmentTopicLearningModuleReference**](LearningAssignmentTopicLearningModuleReference) |  | [optional] |
-| **Version** | **int?** |  | [optional] |
+| **Version** | **long?** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **DateRecommendedForCompletion** | **DateTime?** |  | [optional] |
 | **CreatedBy** | [**LearningAssignmentTopicUserReference**](LearningAssignmentTopicUserReference) |  | [optional] |
@@ -17,11 +17,11 @@
 | **ModifiedBy** | [**LearningAssignmentTopicUserReference**](LearningAssignmentTopicUserReference) |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
 | **IsOverdue** | **bool?** |  | [optional] |
-| **LengthInMinutes** | **int?** |  | [optional] |
+| **LengthInMinutes** | **long?** |  | [optional] |
 | **PercentageScore** | **double?** |  | [optional] |
 | **IsPassed** | **bool?** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

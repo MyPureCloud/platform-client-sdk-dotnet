@@ -123,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Enabled.</param>
         /// <param name="InUse">InUse.</param>
         /// <param name="DateLastRefreshed">DateLastRefreshed.</param>
-        public EmployeePerformanceExternalMetricsDefinitionExternalMetricsDefinition(string Id = null, string Name = null, UnitEnum? Unit = null, string UnitDefinition = null, int? Precision = null, DefaultObjectiveTypeEnum? DefaultObjectiveType = null, int? RetentionMonths = null, bool? Enabled = null, bool? InUse = null, DateTime? DateLastRefreshed = null)
+        public EmployeePerformanceExternalMetricsDefinitionExternalMetricsDefinition(string Id = null, string Name = null, UnitEnum? Unit = null, string UnitDefinition = null, long? Precision = null, DefaultObjectiveTypeEnum? DefaultObjectiveType = null, long? RetentionMonths = null, bool? Enabled = null, bool? InUse = null, DateTime? DateLastRefreshed = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -170,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Precision
         /// </summary>
         [DataMember(Name="precision", EmitDefaultValue=false)]
-        public int? Precision { get; set; }
+        public long? Precision { get; set; }
 
 
 
@@ -180,7 +180,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RetentionMonths
         /// </summary>
         [DataMember(Name="retentionMonths", EmitDefaultValue=false)]
-        public int? RetentionMonths { get; set; }
+        public long? RetentionMonths { get; set; }
 
 
 

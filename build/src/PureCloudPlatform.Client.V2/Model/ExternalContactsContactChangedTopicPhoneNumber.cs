@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="E164">E164.</param>
         /// <param name="CountryCode">CountryCode.</param>
         /// <param name="NormalizationCountryCode">NormalizationCountryCode.</param>
-        public ExternalContactsContactChangedTopicPhoneNumber(string Display = null, int? Extension = null, bool? AcceptsSMS = null, string UserInput = null, string E164 = null, string CountryCode = null, string NormalizationCountryCode = null)
+        public ExternalContactsContactChangedTopicPhoneNumber(string Display = null, long? Extension = null, bool? AcceptsSMS = null, string UserInput = null, string E164 = null, string CountryCode = null, string NormalizationCountryCode = null)
         {
             this.Display = Display;
             this.Extension = Extension;
@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Extension
         /// </summary>
         [DataMember(Name="extension", EmitDefaultValue=false)]
-        public int? Extension { get; set; }
+        public long? Extension { get; set; }
 
 
 

@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Order">The ranked order of the rule; rules are processed from lowest number to highest.</param>
         /// <param name="Category">The category of the rule.</param>
         /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
-        public DialerRulesetConfigChangeRule(List<DialerRulesetConfigChangeCondition> Conditions = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null)
+        public DialerRulesetConfigChangeRule(List<DialerRulesetConfigChangeCondition> Conditions = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, long? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null)
         {
             this.Conditions = Conditions;
             this.AdditionalProperties = AdditionalProperties;
@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ranked order of the rule; rules are processed from lowest number to highest</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
-        public int? Order { get; set; }
+        public long? Order { get; set; }
 
 
 

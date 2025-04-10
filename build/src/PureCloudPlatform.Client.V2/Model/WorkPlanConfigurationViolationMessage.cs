@@ -226,6 +226,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Paidtimenotmetbyshiftstartstop,
             
             /// <summary>
+            /// Enum Planningperiodmaxworkingweekendscannotbemet for "PlanningPeriodMaxWorkingWeekendsCannotBeMet"
+            /// </summary>
+            [EnumMember(Value = "PlanningPeriodMaxWorkingWeekendsCannotBeMet")]
+            Planningperiodmaxworkingweekendscannotbemet,
+            
+            /// <summary>
             /// Enum Shiftdaysselectmorethanminworkingdays for "ShiftDaysSelectMoreThanMinWorkingDays"
             /// </summary>
             [EnumMember(Value = "ShiftDaysSelectMoreThanMinWorkingDays")]
@@ -236,6 +242,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ShiftStopEarlierThanStart")]
             Shiftstopearlierthanstart,
+            
+            /// <summary>
+            /// Enum Shiftmaxcountperplanningperiodcannotbemet for "ShiftMaxCountPerPlanningPeriodCannotBeMet"
+            /// </summary>
+            [EnumMember(Value = "ShiftMaxCountPerPlanningPeriodCannotBeMet")]
+            Shiftmaxcountperplanningperiodcannotbemet,
+            
+            /// <summary>
+            /// Enum Shiftmincountperplanningperiodcannotbemet for "ShiftMinCountPerPlanningPeriodCannotBeMet"
+            /// </summary>
+            [EnumMember(Value = "ShiftMinCountPerPlanningPeriodCannotBeMet")]
+            Shiftmincountperplanningperiodcannotbemet,
             
             /// <summary>
             /// Enum Shiftvariancecannotbemet for "ShiftVarianceCannotBeMet"

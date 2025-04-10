@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CopiedTo">CopiedTo.</param>
         /// <param name="CopiedFrom">CopiedFrom.</param>
         /// <param name="ModifiedDateString">ModifiedDateString.</param>
-        public VoicemailMessagesTopicVoicemailMessage(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CreatedDateString = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null, List<VoicemailMessagesTopicVoicemailCopyRecord> CopiedTo = null, VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom = null, string ModifiedDateString = null)
+        public VoicemailMessagesTopicVoicemailMessage(string Id = null, bool? Read = null, long? AudioRecordingDurationSeconds = null, long? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CreatedDateString = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null, List<VoicemailMessagesTopicVoicemailCopyRecord> CopiedTo = null, VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom = null, string ModifiedDateString = null)
         {
             this.Id = Id;
             this.Read = Read;
@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AudioRecordingDurationSeconds
         /// </summary>
         [DataMember(Name="audioRecordingDurationSeconds", EmitDefaultValue=false)]
-        public int? AudioRecordingDurationSeconds { get; set; }
+        public long? AudioRecordingDurationSeconds { get; set; }
 
 
 
@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AudioRecordingSizeBytes
         /// </summary>
         [DataMember(Name="audioRecordingSizeBytes", EmitDefaultValue=false)]
-        public int? AudioRecordingSizeBytes { get; set; }
+        public long? AudioRecordingSizeBytes { get; set; }
 
 
 

@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StopTime">The stop time of this time slot.</param>
         /// <param name="Day">The day this time slot applies.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCallabletimesetConfigChangeTimeSlot(string StartTime = null, string StopTime = null, int? Day = null, Dictionary<string, Object> AdditionalProperties = null)
+        public DialerCallabletimesetConfigChangeTimeSlot(string StartTime = null, string StopTime = null, long? Day = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.StartTime = StartTime;
             this.StopTime = StopTime;
@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The day this time slot applies</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
-        public int? Day { get; set; }
+        public long? Day { get; set; }
 
 
 

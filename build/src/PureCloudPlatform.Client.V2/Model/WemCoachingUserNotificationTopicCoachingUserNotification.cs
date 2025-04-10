@@ -153,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateStart">DateStart.</param>
         /// <param name="LengthInMinutes">LengthInMinutes.</param>
         /// <param name="Status">Status.</param>
-        public WemCoachingUserNotificationTopicCoachingUserNotification(string Id = null, string Name = null, bool? MarkedAsRead = null, ActionTypeEnum? ActionType = null, RelationshipEnum? Relationship = null, WemCoachingUserNotificationTopicCoachingAppointmentReference Appointment = null, DateTime? DateStart = null, int? LengthInMinutes = null, StatusEnum? Status = null)
+        public WemCoachingUserNotificationTopicCoachingUserNotification(string Id = null, string Name = null, bool? MarkedAsRead = null, ActionTypeEnum? ActionType = null, RelationshipEnum? Relationship = null, WemCoachingUserNotificationTopicCoachingAppointmentReference Appointment = null, DateTime? DateStart = null, long? LengthInMinutes = null, StatusEnum? Status = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -217,7 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LengthInMinutes
         /// </summary>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
-        public int? LengthInMinutes { get; set; }
+        public long? LengthInMinutes { get; set; }
 
 
 

@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ManagementUnits">ManagementUnits.</param>
         /// <param name="GenerationResults">GenerationResults.</param>
         /// <param name="Metadata">Metadata.</param>
-        public WfmBuScheduleTopicBuScheduleMetadata(string Id = null, DateTime? WeekDate = null, int? WeekCount = null, string Description = null, bool? Published = null, WfmBuScheduleTopicBuShortTermForecastReference ShortTermForecast = null, List<WfmBuScheduleTopicBuManagementUnitScheduleSummary> ManagementUnits = null, WfmBuScheduleTopicBuScheduleGenerationResultSummary GenerationResults = null, WfmBuScheduleTopicWfmVersionedEntityMetadata Metadata = null)
+        public WfmBuScheduleTopicBuScheduleMetadata(string Id = null, DateTime? WeekDate = null, long? WeekCount = null, string Description = null, bool? Published = null, WfmBuScheduleTopicBuShortTermForecastReference ShortTermForecast = null, List<WfmBuScheduleTopicBuManagementUnitScheduleSummary> ManagementUnits = null, WfmBuScheduleTopicBuScheduleGenerationResultSummary GenerationResults = null, WfmBuScheduleTopicWfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
             this.WeekDate = WeekDate;
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WeekCount
         /// </summary>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
-        public int? WeekCount { get; set; }
+        public long? WeekCount { get; set; }
 
 
 

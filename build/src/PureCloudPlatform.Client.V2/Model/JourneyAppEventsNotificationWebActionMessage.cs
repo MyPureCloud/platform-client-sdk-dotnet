@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MktCampaign">MktCampaign.</param>
         /// <param name="VisitReferrer">VisitReferrer.</param>
         /// <param name="TimeToDisposition">TimeToDisposition.</param>
-        public JourneyAppEventsNotificationWebActionMessage(JourneyAppEventsNotificationEventAction Action = null, JourneyAppEventsNotificationActionTarget ActionTarget = null, JourneyAppEventsNotificationActionMap ActionMap = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, JourneyAppEventsNotificationBrowser Browser = null, JourneyAppEventsNotificationDevice Device = null, JourneyAppEventsNotificationGeoLocation Geolocation = null, JourneyAppEventsNotificationMktCampaign MktCampaign = null, JourneyAppEventsNotificationReferrer VisitReferrer = null, int? TimeToDisposition = null)
+        public JourneyAppEventsNotificationWebActionMessage(JourneyAppEventsNotificationEventAction Action = null, JourneyAppEventsNotificationActionTarget ActionTarget = null, JourneyAppEventsNotificationActionMap ActionMap = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, JourneyAppEventsNotificationBrowser Browser = null, JourneyAppEventsNotificationDevice Device = null, JourneyAppEventsNotificationGeoLocation Geolocation = null, JourneyAppEventsNotificationMktCampaign MktCampaign = null, JourneyAppEventsNotificationReferrer VisitReferrer = null, long? TimeToDisposition = null)
         {
             this.Action = Action;
             this.ActionTarget = ActionTarget;
@@ -164,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TimeToDisposition
         /// </summary>
         [DataMember(Name="timeToDisposition", EmitDefaultValue=false)]
-        public int? TimeToDisposition { get; set; }
+        public long? TimeToDisposition { get; set; }
 
 
         /// <summary>

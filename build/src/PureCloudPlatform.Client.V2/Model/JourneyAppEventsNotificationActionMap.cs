@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="DisplayName">DisplayName.</param>
         /// <param name="Version">Version.</param>
-        public JourneyAppEventsNotificationActionMap(string Id = null, string SelfUri = null, string DisplayName = null, int? Version = null)
+        public JourneyAppEventsNotificationActionMap(string Id = null, string SelfUri = null, string DisplayName = null, long? Version = null)
         {
             this.Id = Id;
             this.SelfUri = SelfUri;
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

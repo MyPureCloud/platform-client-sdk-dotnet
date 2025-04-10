@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ImportState** | **string** | current status of the import | [optional] |
-| **TotalRecords** | **int?** | total number of records to be imported | [optional] |
-| **CompletedRecords** | **int?** | number of records finished importing | [optional] |
-| **PercentageComplete** | **int?** | percentage of records finished importing | [optional] |
+| **TotalRecords** | **long?** | total number of records to be imported | [optional] |
+| **CompletedRecords** | **long?** | number of records finished importing | [optional] |
+| **PercentageComplete** | **long?** | percentage of records finished importing | [optional] |
 | **FailureReason** | **string** | if the import has failed, the reason for the failure | [optional] |
 | **TargetContactListIds** | **List&lt;string&gt;** | The ids for target contact lists | [optional] |
 | **ListNamePrefix** | **string** | The prefix used for target contact list names | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

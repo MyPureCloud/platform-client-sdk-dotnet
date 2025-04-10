@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DivisionId">DivisionId.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public VoicemailStartDetailEventTopicVoicemailStartEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string UserId = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        public VoicemailStartDetailEventTopicVoicemailStartEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string UserId = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -176,7 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 

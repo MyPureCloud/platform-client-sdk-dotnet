@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="End">the range end date.</param>
         /// <param name="NumberOfOccurrences">the number of occurrences to happen before ending.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignScheduleConfigChangeRecurrenceRange(TypeEnum? Type = null, string End = null, int? NumberOfOccurrences = null, Dictionary<string, Object> AdditionalProperties = null)
+        public DialerCampaignScheduleConfigChangeRecurrenceRange(TypeEnum? Type = null, string End = null, long? NumberOfOccurrences = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Type = Type;
             this.End = End;
@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>the number of occurrences to happen before ending</value>
         [DataMember(Name="numberOfOccurrences", EmitDefaultValue=false)]
-        public int? NumberOfOccurrences { get; set; }
+        public long? NumberOfOccurrences { get; set; }
 
 
 

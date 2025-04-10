@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OffsetMs">OffsetMs.</param>
         /// <param name="DurationMs">DurationMs.</param>
         /// <param name="Word">Word.</param>
-        public TranscriptionTopicTranscriptWord(double? Confidence = null, int? StartTimeMs = null, int? OffsetMs = null, int? DurationMs = null, string Word = null)
+        public TranscriptionTopicTranscriptWord(double? Confidence = null, long? StartTimeMs = null, long? OffsetMs = null, long? DurationMs = null, string Word = null)
         {
             this.Confidence = Confidence;
             this.StartTimeMs = StartTimeMs;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets StartTimeMs
         /// </summary>
         [DataMember(Name="startTimeMs", EmitDefaultValue=false)]
-        public int? StartTimeMs { get; set; }
+        public long? StartTimeMs { get; set; }
 
 
 
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets OffsetMs
         /// </summary>
         [DataMember(Name="offsetMs", EmitDefaultValue=false)]
-        public int? OffsetMs { get; set; }
+        public long? OffsetMs { get; set; }
 
 
 
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationMs
         /// </summary>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
-        public int? DurationMs { get; set; }
+        public long? DurationMs { get; set; }
 
 
 

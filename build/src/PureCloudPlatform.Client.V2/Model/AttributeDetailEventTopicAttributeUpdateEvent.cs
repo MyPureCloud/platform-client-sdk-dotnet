@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
         /// <param name="Communications">Communications.</param>
-        public AttributeDetailEventTopicAttributeUpdateEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, Dictionary<string, string> Attributes = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, List<AttributeDetailEventTopicCommunication> Communications = null)
+        public AttributeDetailEventTopicAttributeUpdateEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, Dictionary<string, string> Attributes = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, List<AttributeDetailEventTopicCommunication> Communications = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 

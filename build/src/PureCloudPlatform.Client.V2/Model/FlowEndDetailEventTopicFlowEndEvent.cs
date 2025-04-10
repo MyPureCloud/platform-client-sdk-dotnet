@@ -675,7 +675,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
         /// <param name="ExitReason">ExitReason.</param>
         /// <param name="TransferType">TransferType.</param>
-        public FlowEndDetailEventTopicFlowEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, ExitReasonEnum? ExitReason = null, TransferTypeEnum? TransferType = null)
+        public FlowEndDetailEventTopicFlowEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, long? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, ExitReasonEnum? ExitReason = null, TransferTypeEnum? TransferType = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -709,7 +709,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 
@@ -823,7 +823,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ConnectedDurationMs
         /// </summary>
         [DataMember(Name="connectedDurationMs", EmitDefaultValue=false)]
-        public int? ConnectedDurationMs { get; set; }
+        public long? ConnectedDurationMs { get; set; }
 
 
 

@@ -54,7 +54,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Queue for "QUEUE"
             /// </summary>
             [EnumMember(Value = "QUEUE")]
-            Queue
+            Queue,
+            
+            /// <summary>
+            /// Enum Team for "TEAM"
+            /// </summary>
+            [EnumMember(Value = "TEAM")]
+            Team
         }
         /// <summary>
         /// Gets or Sets Type

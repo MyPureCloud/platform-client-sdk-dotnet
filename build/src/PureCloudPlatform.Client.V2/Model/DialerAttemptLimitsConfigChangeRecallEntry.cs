@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NbrAttempts">The number of recall attempts to make.</param>
         /// <param name="MinutesBetweenAttempts">How long to wait between recall attempts.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerAttemptLimitsConfigChangeRecallEntry(int? NbrAttempts = null, int? MinutesBetweenAttempts = null, Dictionary<string, Object> AdditionalProperties = null)
+        public DialerAttemptLimitsConfigChangeRecallEntry(long? NbrAttempts = null, long? MinutesBetweenAttempts = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.NbrAttempts = NbrAttempts;
             this.MinutesBetweenAttempts = MinutesBetweenAttempts;
@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The number of recall attempts to make</value>
         [DataMember(Name="nbrAttempts", EmitDefaultValue=false)]
-        public int? NbrAttempts { get; set; }
+        public long? NbrAttempts { get; set; }
 
 
 
@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>How long to wait between recall attempts</value>
         [DataMember(Name="minutesBetweenAttempts", EmitDefaultValue=false)]
-        public int? MinutesBetweenAttempts { get; set; }
+        public long? MinutesBetweenAttempts { get; set; }
 
 
 

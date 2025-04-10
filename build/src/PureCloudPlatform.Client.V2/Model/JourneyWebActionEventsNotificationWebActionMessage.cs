@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MktCampaign">MktCampaign.</param>
         /// <param name="VisitReferrer">VisitReferrer.</param>
         /// <param name="TimeToDisposition">TimeToDisposition.</param>
-        public JourneyWebActionEventsNotificationWebActionMessage(JourneyWebActionEventsNotificationEventAction Action = null, JourneyWebActionEventsNotificationActionTarget ActionTarget = null, JourneyWebActionEventsNotificationActionMap ActionMap = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, JourneyWebActionEventsNotificationBrowser Browser = null, JourneyWebActionEventsNotificationDevice Device = null, JourneyWebActionEventsNotificationGeoLocation Geolocation = null, JourneyWebActionEventsNotificationMktCampaign MktCampaign = null, JourneyWebActionEventsNotificationReferrer VisitReferrer = null, int? TimeToDisposition = null)
+        public JourneyWebActionEventsNotificationWebActionMessage(JourneyWebActionEventsNotificationEventAction Action = null, JourneyWebActionEventsNotificationActionTarget ActionTarget = null, JourneyWebActionEventsNotificationActionMap ActionMap = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, JourneyWebActionEventsNotificationBrowser Browser = null, JourneyWebActionEventsNotificationDevice Device = null, JourneyWebActionEventsNotificationGeoLocation Geolocation = null, JourneyWebActionEventsNotificationMktCampaign MktCampaign = null, JourneyWebActionEventsNotificationReferrer VisitReferrer = null, long? TimeToDisposition = null)
         {
             this.Action = Action;
             this.ActionTarget = ActionTarget;
@@ -164,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TimeToDisposition
         /// </summary>
         [DataMember(Name="timeToDisposition", EmitDefaultValue=false)]
-        public int? TimeToDisposition { get; set; }
+        public long? TimeToDisposition { get; set; }
 
 
         /// <summary>

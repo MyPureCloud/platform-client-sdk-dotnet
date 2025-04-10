@@ -178,6 +178,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Unabletoscheduleplanningperiodmaxpaidtimefromtimeoff,
             
             /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxworkingweekendsfromagenthistory for "UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory")]
+            Unabletoscheduleplanningperiodmaxworkingweekendsfromagenthistory,
+            
+            /// <summary>
             /// Enum Unabletoscheduleplanningperiodmindaysofffromagenthistory for "UnableToSchedulePlanningPeriodMinDaysOffFromAgentHistory"
             /// </summary>
             [EnumMember(Value = "UnableToSchedulePlanningPeriodMinDaysOffFromAgentHistory")]
@@ -194,6 +200,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "UnableToSchedulePlanningPeriodMinPaidTimeFromTimeOff")]
             Unabletoscheduleplanningperiodminpaidtimefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodshiftmaxcountfromagenthistory for "UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory")]
+            Unabletoscheduleplanningperiodshiftmaxcountfromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodshiftmincountfromagenthistory for "UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory")]
+            Unabletoscheduleplanningperiodshiftmincountfromagenthistory,
             
             /// <summary>
             /// Enum Unabletoscheduleworkdayfromtimeoff for "UnableToScheduleWorkDayFromTimeOff"

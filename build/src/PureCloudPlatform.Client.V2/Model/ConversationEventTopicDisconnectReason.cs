@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Disconnect reason protocol type..</param>
         /// <param name="Code">Protocol specific reason code. See the Q.850 and SIP specs..</param>
         /// <param name="Phrase">Human readable English description of the disconnect reason..</param>
-        public ConversationEventTopicDisconnectReason(TypeEnum? Type = null, int? Code = null, string Phrase = null)
+        public ConversationEventTopicDisconnectReason(TypeEnum? Type = null, long? Code = null, string Phrase = null)
         {
             this.Type = Type;
             this.Code = Code;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Protocol specific reason code. See the Q.850 and SIP specs.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
-        public int? Code { get; set; }
+        public long? Code { get; set; }
 
 
 

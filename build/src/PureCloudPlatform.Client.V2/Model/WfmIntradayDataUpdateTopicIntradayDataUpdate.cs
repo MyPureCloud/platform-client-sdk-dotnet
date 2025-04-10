@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metrics">Metrics.</param>
         /// <param name="QueueIds">QueueIds.</param>
         /// <param name="IntradayDataGroupings">IntradayDataGroupings.</param>
-        public WfmIntradayDataUpdateTopicIntradayDataUpdate(DateTime? StartDate = null, DateTime? EndDate = null, int? IntervalLengthMinutes = null, int? NumberOfIntervals = null, List<WfmIntradayDataUpdateTopicIntradayMetric> Metrics = null, List<string> QueueIds = null, List<WfmIntradayDataUpdateTopicIntradayDataGroup> IntradayDataGroupings = null)
+        public WfmIntradayDataUpdateTopicIntradayDataUpdate(DateTime? StartDate = null, DateTime? EndDate = null, long? IntervalLengthMinutes = null, long? NumberOfIntervals = null, List<WfmIntradayDataUpdateTopicIntradayMetric> Metrics = null, List<string> QueueIds = null, List<WfmIntradayDataUpdateTopicIntradayDataGroup> IntradayDataGroupings = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets IntervalLengthMinutes
         /// </summary>
         [DataMember(Name="intervalLengthMinutes", EmitDefaultValue=false)]
-        public int? IntervalLengthMinutes { get; set; }
+        public long? IntervalLengthMinutes { get; set; }
 
 
 
@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets NumberOfIntervals
         /// </summary>
         [DataMember(Name="numberOfIntervals", EmitDefaultValue=false)]
-        public int? NumberOfIntervals { get; set; }
+        public long? NumberOfIntervals { get; set; }
 
 
 

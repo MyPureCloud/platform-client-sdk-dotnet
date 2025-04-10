@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WeekNumber">WeekNumber.</param>
         /// <param name="DownloadUrl">DownloadUrl.</param>
         /// <param name="DownloadUrlExpirationDate">DownloadUrlExpirationDate.</param>
-        public WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults(int? WeekNumber = null, string DownloadUrl = null, DateTime? DownloadUrlExpirationDate = null)
+        public WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults(long? WeekNumber = null, string DownloadUrl = null, DateTime? DownloadUrlExpirationDate = null)
         {
             this.WeekNumber = WeekNumber;
             this.DownloadUrl = DownloadUrl;
@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WeekNumber
         /// </summary>
         [DataMember(Name="weekNumber", EmitDefaultValue=false)]
-        public int? WeekNumber { get; set; }
+        public long? WeekNumber { get; set; }
 
 
 

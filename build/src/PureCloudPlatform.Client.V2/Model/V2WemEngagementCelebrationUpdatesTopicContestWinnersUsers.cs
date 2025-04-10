@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Rank">Rank.</param>
-        public V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers(Guid? Id = null, int? Rank = null)
+        public V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers(Guid? Id = null, long? Rank = null)
         {
             this.Id = Id;
             this.Rank = Rank;
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Rank
         /// </summary>
         [DataMember(Name="rank", EmitDefaultValue=false)]
-        public int? Rank { get; set; }
+        public long? Rank { get; set; }
 
 
         /// <summary>

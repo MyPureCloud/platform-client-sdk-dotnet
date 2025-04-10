@@ -118,7 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DownloadUrl">DownloadUrl.</param>
         /// <param name="PercentComplete">PercentComplete.</param>
         /// <param name="EventType">EventType.</param>
-        public WfmScheduleTopicWfmScheduleNotification(StatusEnum? Status = null, string OperationId = null, string DownloadUrl = null, int? PercentComplete = null, EventTypeEnum? EventType = null)
+        public WfmScheduleTopicWfmScheduleNotification(StatusEnum? Status = null, string OperationId = null, string DownloadUrl = null, long? PercentComplete = null, EventTypeEnum? EventType = null)
         {
             this.Status = Status;
             this.OperationId = OperationId;
@@ -152,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PercentComplete
         /// </summary>
         [DataMember(Name="percentComplete", EmitDefaultValue=false)]
-        public int? PercentComplete { get; set; }
+        public long? PercentComplete { get; set; }
 
 
 

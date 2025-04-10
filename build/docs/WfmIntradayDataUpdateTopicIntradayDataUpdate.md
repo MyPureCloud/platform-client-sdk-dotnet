@@ -8,12 +8,12 @@
 |------------ | ------------- | ------------- | -------------|
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
-| **IntervalLengthMinutes** | **int?** |  | [optional] |
-| **NumberOfIntervals** | **int?** |  | [optional] |
+| **IntervalLengthMinutes** | **long?** |  | [optional] |
+| **NumberOfIntervals** | **long?** |  | [optional] |
 | **Metrics** | [**List&lt;WfmIntradayDataUpdateTopicIntradayMetric&gt;**](WfmIntradayDataUpdateTopicIntradayMetric) |  | [optional] |
 | **QueueIds** | **List&lt;string&gt;** |  | [optional] |
 | **IntradayDataGroupings** | [**List&lt;WfmIntradayDataUpdateTopicIntradayDataGroup&gt;**](WfmIntradayDataUpdateTopicIntradayDataGroup) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

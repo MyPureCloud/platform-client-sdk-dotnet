@@ -165,6 +165,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Directory,
             
             /// <summary>
+            /// Enum Dsar for "dsar"
+            /// </summary>
+            [EnumMember(Value = "dsar")]
+            Dsar,
+            
+            /// <summary>
             /// Enum Email for "email"
             /// </summary>
             [EnumMember(Value = "email")]

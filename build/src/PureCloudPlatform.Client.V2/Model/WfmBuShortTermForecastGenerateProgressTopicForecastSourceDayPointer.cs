@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Date">Date.</param>
         /// <param name="FileName">FileName.</param>
         /// <param name="DataKey">DataKey.</param>
-        public WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer(DayOfWeekEnum? DayOfWeek = null, int? Weight = null, string Date = null, string FileName = null, string DataKey = null)
+        public WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer(DayOfWeekEnum? DayOfWeek = null, long? Weight = null, string Date = null, string FileName = null, string DataKey = null)
         {
             this.DayOfWeek = DayOfWeek;
             this.Weight = Weight;
@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Weight
         /// </summary>
         [DataMember(Name="weight", EmitDefaultValue=false)]
-        public int? Weight { get; set; }
+        public long? Weight { get; set; }
 
 
 

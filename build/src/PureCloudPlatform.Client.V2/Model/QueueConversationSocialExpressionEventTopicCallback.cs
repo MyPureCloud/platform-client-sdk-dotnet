@@ -368,7 +368,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallerId">The phone number displayed to recipients of the phone call. The value should conform to the E164 format..</param>
         /// <param name="CallerIdName">The name displayed to recipients of the phone call..</param>
         /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
-        public QueueConversationSocialExpressionEventTopicCallback(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationSocialExpressionEventTopicDialerPreview DialerPreview = null, QueueConversationSocialExpressionEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null)
+        public QueueConversationSocialExpressionEventTopicCallback(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationSocialExpressionEventTopicDialerPreview DialerPreview = null, QueueConversationSocialExpressionEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, long? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -521,7 +521,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled.</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
-        public int? TimeoutSeconds { get; set; }
+        public long? TimeoutSeconds { get; set; }
 
 
 

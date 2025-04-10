@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationMillieconds">DurationMillieconds.</param>
         /// <param name="Conversation">Conversation.</param>
         /// <param name="Read">Read.</param>
-        public AdhocRecordingTopicRecordingDataV2(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, AdhocRecordingTopicWorkspaceData Workspace = null, AdhocRecordingTopicUserData CreatedBy = null, string ContentType = null, int? ContentLength = null, string Filename = null, int? ChangeNumber = null, DateTime? DateUploaded = null, AdhocRecordingTopicUserData UploadedBy = null, AdhocRecordingTopicLockData LockInfo = null, string SelfUri = null, int? DurationMillieconds = null, AdhocRecordingTopicConversationData Conversation = null, bool? Read = null)
+        public AdhocRecordingTopicRecordingDataV2(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, AdhocRecordingTopicWorkspaceData Workspace = null, AdhocRecordingTopicUserData CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, long? ChangeNumber = null, DateTime? DateUploaded = null, AdhocRecordingTopicUserData UploadedBy = null, AdhocRecordingTopicLockData LockInfo = null, string SelfUri = null, long? DurationMillieconds = null, AdhocRecordingTopicConversationData Conversation = null, bool? Read = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -122,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
-        public int? ContentLength { get; set; }
+        public long? ContentLength { get; set; }
 
 
 
@@ -138,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
-        public int? ChangeNumber { get; set; }
+        public long? ChangeNumber { get; set; }
 
 
 
@@ -178,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationMillieconds
         /// </summary>
         [DataMember(Name="durationMillieconds", EmitDefaultValue=false)]
-        public int? DurationMillieconds { get; set; }
+        public long? DurationMillieconds { get; set; }
 
 
 

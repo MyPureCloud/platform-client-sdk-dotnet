@@ -119,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="Workflow">Workflow.</param>
-        public QueueConversationVideoEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationVideoEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, List<string> MediaRoles = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationVideoEventTopicCall> Calls = null, List<QueueConversationVideoEventTopicCallback> Callbacks = null, List<QueueConversationVideoEventTopicChat> Chats = null, List<QueueConversationVideoEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationVideoEventTopicEmail> Emails = null, List<QueueConversationVideoEventTopicMessage> Messages = null, List<QueueConversationVideoEventTopicInternalMessage> InternalMessages = null, List<QueueConversationVideoEventTopicScreenshare> Screenshares = null, List<QueueConversationVideoEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationVideoEventTopicVideo> Videos = null, QueueConversationVideoEventTopicWorkflow Workflow = null)
+        public QueueConversationVideoEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, long? WrapupTimeoutMs = null, QueueConversationVideoEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, long? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, List<string> MediaRoles = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationVideoEventTopicCall> Calls = null, List<QueueConversationVideoEventTopicCallback> Callbacks = null, List<QueueConversationVideoEventTopicChat> Chats = null, List<QueueConversationVideoEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationVideoEventTopicEmail> Emails = null, List<QueueConversationVideoEventTopicMessage> Messages = null, List<QueueConversationVideoEventTopicInternalMessage> InternalMessages = null, List<QueueConversationVideoEventTopicScreenshare> Screenshares = null, List<QueueConversationVideoEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationVideoEventTopicVideo> Videos = null, QueueConversationVideoEventTopicWorkflow Workflow = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -325,7 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Specifies how long a timed ACW session will last.</value>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -368,7 +368,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 

@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerContactlistConfigChangeContactList(List<string> ColumnNames = null, List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns = null, List<DialerContactlistConfigChangeEmailColumn> EmailColumns = null, DialerContactlistConfigChangeImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DialerContactlistConfigChangeUriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, DialerContactlistConfigChangeUriReference Division = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerContactlistConfigChangeContactList(List<string> ColumnNames = null, List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns = null, List<DialerContactlistConfigChangeEmailColumn> EmailColumns = null, DialerContactlistConfigChangeImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null, DialerContactlistConfigChangeUriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, DialerContactlistConfigChangeUriReference Division = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null)
         {
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
@@ -120,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>the number of contacts in the contact list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public int? Size { get; set; }
+        public long? Size { get; set; }
 
 
 
@@ -208,7 +208,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

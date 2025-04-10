@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DataRate">DataRate.</param>
         /// <param name="PageErrors">PageErrors.</param>
         /// <param name="LineErrors">LineErrors.</param>
-        public QueueConversationCallEventTopicFaxStatus(string Direction = null, int? ExpectedPages = null, int? ActivePage = null, int? LinesTransmitted = null, int? BytesTransmitted = null, int? DataRate = null, int? PageErrors = null, int? LineErrors = null)
+        public QueueConversationCallEventTopicFaxStatus(string Direction = null, long? ExpectedPages = null, long? ActivePage = null, long? LinesTransmitted = null, long? BytesTransmitted = null, long? DataRate = null, long? PageErrors = null, long? LineErrors = null)
         {
             this.Direction = Direction;
             this.ExpectedPages = ExpectedPages;
@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ExpectedPages
         /// </summary>
         [DataMember(Name="expectedPages", EmitDefaultValue=false)]
-        public int? ExpectedPages { get; set; }
+        public long? ExpectedPages { get; set; }
 
 
 
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ActivePage
         /// </summary>
         [DataMember(Name="activePage", EmitDefaultValue=false)]
-        public int? ActivePage { get; set; }
+        public long? ActivePage { get; set; }
 
 
 
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LinesTransmitted
         /// </summary>
         [DataMember(Name="linesTransmitted", EmitDefaultValue=false)]
-        public int? LinesTransmitted { get; set; }
+        public long? LinesTransmitted { get; set; }
 
 
 
@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets BytesTransmitted
         /// </summary>
         [DataMember(Name="bytesTransmitted", EmitDefaultValue=false)]
-        public int? BytesTransmitted { get; set; }
+        public long? BytesTransmitted { get; set; }
 
 
 
@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DataRate
         /// </summary>
         [DataMember(Name="dataRate", EmitDefaultValue=false)]
-        public int? DataRate { get; set; }
+        public long? DataRate { get; set; }
 
 
 
@@ -96,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PageErrors
         /// </summary>
         [DataMember(Name="pageErrors", EmitDefaultValue=false)]
-        public int? PageErrors { get; set; }
+        public long? PageErrors { get; set; }
 
 
 
@@ -104,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LineErrors
         /// </summary>
         [DataMember(Name="lineErrors", EmitDefaultValue=false)]
-        public int? LineErrors { get; set; }
+        public long? LineErrors { get; set; }
 
 
         /// <summary>

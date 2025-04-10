@@ -238,7 +238,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupDurationMs">WrapupDurationMs.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public WrapupDetailEventTopicWrapupEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string WrapupCode = null, string WrapupNotes = null, int? WrapupDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        public WrapupDetailEventTopicWrapupEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string WrapupCode = null, string WrapupNotes = null, long? WrapupDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -271,7 +271,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 
@@ -363,7 +363,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CallbackScheduledTime
         /// </summary>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
-        public int? CallbackScheduledTime { get; set; }
+        public long? CallbackScheduledTime { get; set; }
 
 
 
@@ -405,7 +405,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupDurationMs
         /// </summary>
         [DataMember(Name="wrapupDurationMs", EmitDefaultValue=false)]
-        public int? WrapupDurationMs { get; set; }
+        public long? WrapupDurationMs { get; set; }
 
 
 

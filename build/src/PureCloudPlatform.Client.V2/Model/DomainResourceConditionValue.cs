@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             User,
             
             /// <summary>
+            /// Enum Team for "TEAM"
+            /// </summary>
+            [EnumMember(Value = "TEAM")]
+            Team,
+            
+            /// <summary>
             /// Enum Queue for "QUEUE"
             /// </summary>
             [EnumMember(Value = "QUEUE")]
@@ -66,12 +72,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="User">User.</param>
         /// <param name="Queue">Queue.</param>
+        /// <param name="Team">Team.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Type">Type.</param>
-        public DomainResourceConditionValue(User User = null, Queue Queue = null, string Value = null, TypeEnum? Type = null)
+        public DomainResourceConditionValue(User User = null, Queue Queue = null, Team Team = null, string Value = null, TypeEnum? Type = null)
         {
             this.User = User;
             this.Queue = Queue;
+            this.Team = Team;
             this.Value = Value;
             this.Type = Type;
             
@@ -96,6 +104,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Team
+        /// </summary>
+        [DataMember(Name="team", EmitDefaultValue=false)]
+        public Team Team { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
@@ -115,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -168,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Queue.Equals(other.Queue)
                 ) &&
                 (
+                    this.Team == other.Team ||
+                    this.Team != null &&
+                    this.Team.Equals(other.Team)
+                ) &&
+                (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
@@ -195,6 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+
+                if (this.Team != null)
+                    hash = hash * 59 + this.Team.GetHashCode();
 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();

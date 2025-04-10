@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="DefaultSet">DefaultSet.</param>
         /// <param name="Mapping">Mapping.</param>
-        public DialerWrapupcodemappingConfigChangeWrapUpCodeMapping(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DefaultSetEnum> DefaultSet = null, Dictionary<string, List<string>> Mapping = null)
+        public DialerWrapupcodemappingConfigChangeWrapUpCodeMapping(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null, List<DefaultSetEnum> DefaultSet = null, Dictionary<string, List<string>> Mapping = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
 

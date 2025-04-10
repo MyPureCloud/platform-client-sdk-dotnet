@@ -79,7 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Dataactioncondition for "dataActionCondition"
             /// </summary>
             [EnumMember(Value = "dataActionCondition")]
-            Dataactioncondition
+            Dataactioncondition,
+            
+            /// <summary>
+            /// Enum Timeanddatecondition for "timeAndDateCondition"
+            /// </summary>
+            [EnumMember(Value = "timeAndDateCondition")]
+            Timeanddatecondition
         }
         /// <summary>
         /// The type of the value associated with this Condition. Not used for a DataActionCondition.
@@ -199,7 +205,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum In for "IN"
             /// </summary>
             [EnumMember(Value = "IN")]
-            In
+            In,
+            
+            /// <summary>
+            /// Enum Between for "BETWEEN"
+            /// </summary>
+            [EnumMember(Value = "BETWEEN")]
+            Between
         }
         /// <summary>
         /// The type of the property associated with this Condition. Required for a contactPropertyCondition.

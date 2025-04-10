@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerCampaignRuleConfigChangeCampaignRule(DialerCampaignRuleConfigChangeCampaignRuleEntities CampaignRuleEntities = null, List<DialerCampaignRuleConfigChangeCampaignRuleCondition> CampaignRuleConditions = null, List<DialerCampaignRuleConfigChangeCampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerCampaignRuleConfigChangeCampaignRule(DialerCampaignRuleConfigChangeCampaignRuleEntities CampaignRuleEntities = null, List<DialerCampaignRuleConfigChangeCampaignRuleCondition> CampaignRuleConditions = null, List<DialerCampaignRuleConfigChangeCampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null)
         {
             this.CampaignRuleEntities = CampaignRuleEntities;
             this.CampaignRuleConditions = CampaignRuleConditions;
@@ -143,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

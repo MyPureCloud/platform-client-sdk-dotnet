@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="AgentScore">Assigned agent score for this conversation (0 - 100, higher being better).</param>
         /// <param name="ScoredAgentId">Unique identifier for the agent that was scored for this conversation.</param>
-        public FlowMetricsTopicFlowScoredAgent(int? AgentScore = null, string ScoredAgentId = null)
+        public FlowMetricsTopicFlowScoredAgent(long? AgentScore = null, string ScoredAgentId = null)
         {
             this.AgentScore = AgentScore;
             this.ScoredAgentId = ScoredAgentId;
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Assigned agent score for this conversation (0 - 100, higher being better)</value>
         [DataMember(Name="agentScore", EmitDefaultValue=false)]
-        public int? AgentScore { get; set; }
+        public long? AgentScore { get; set; }
 
 
 

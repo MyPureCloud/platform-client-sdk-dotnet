@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TranscriptionStartTimeMs">TranscriptionStartTimeMs.</param>
         /// <param name="Transcripts">Transcripts.</param>
         /// <param name="Status">Status.</param>
-        public TranscriptionTopicTranscriptionMessage(DateTime? EventTime = null, string OrganizationId = null, string ConversationId = null, string CommunicationId = null, int? SessionStartTimeMs = null, int? TranscriptionStartTimeMs = null, List<TranscriptionTopicTranscriptResult> Transcripts = null, TranscriptionTopicTranscriptionRequestStatus Status = null)
+        public TranscriptionTopicTranscriptionMessage(DateTime? EventTime = null, string OrganizationId = null, string ConversationId = null, string CommunicationId = null, long? SessionStartTimeMs = null, long? TranscriptionStartTimeMs = null, List<TranscriptionTopicTranscriptResult> Transcripts = null, TranscriptionTopicTranscriptionRequestStatus Status = null)
         {
             this.EventTime = EventTime;
             this.OrganizationId = OrganizationId;
@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SessionStartTimeMs
         /// </summary>
         [DataMember(Name="sessionStartTimeMs", EmitDefaultValue=false)]
-        public int? SessionStartTimeMs { get; set; }
+        public long? SessionStartTimeMs { get; set; }
 
 
 
@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TranscriptionStartTimeMs
         /// </summary>
         [DataMember(Name="transcriptionStartTimeMs", EmitDefaultValue=false)]
-        public int? TranscriptionStartTimeMs { get; set; }
+        public long? TranscriptionStartTimeMs { get; set; }
 
 
 

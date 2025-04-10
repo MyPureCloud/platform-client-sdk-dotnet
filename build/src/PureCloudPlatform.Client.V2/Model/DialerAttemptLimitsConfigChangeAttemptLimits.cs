@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerAttemptLimitsConfigChangeAttemptLimits(int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, DialerAttemptLimitsConfigChangeRecallEntry> RecallEntries = null, bool? BreadthFirstRecalls = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerAttemptLimitsConfigChangeAttemptLimits(long? MaxAttemptsPerContact = null, long? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, DialerAttemptLimitsConfigChangeRecallEntry> RecallEntries = null, bool? BreadthFirstRecalls = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null)
         {
             this.MaxAttemptsPerContact = MaxAttemptsPerContact;
             this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MaxAttemptsPerContact
         /// </summary>
         [DataMember(Name="maxAttemptsPerContact", EmitDefaultValue=false)]
-        public int? MaxAttemptsPerContact { get; set; }
+        public long? MaxAttemptsPerContact { get; set; }
 
 
 
@@ -97,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MaxAttemptsPerNumber
         /// </summary>
         [DataMember(Name="maxAttemptsPerNumber", EmitDefaultValue=false)]
-        public int? MaxAttemptsPerNumber { get; set; }
+        public long? MaxAttemptsPerNumber { get; set; }
 
 
 
@@ -179,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

@@ -204,7 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastEditedBy">LastEditedBy.</param>
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, int? DurationMs = null)
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationMs
         /// </summary>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
-        public int? DurationMs { get; set; }
+        public long? DurationMs { get; set; }
 
 
         /// <summary>

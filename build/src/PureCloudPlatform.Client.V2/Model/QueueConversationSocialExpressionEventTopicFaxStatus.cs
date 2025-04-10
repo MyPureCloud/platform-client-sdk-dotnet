@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BaudRate">Current signaling rate of transmission, baud rate..</param>
         /// <param name="PageErrors">Number of page errors..</param>
         /// <param name="LineErrors">Number of line errors..</param>
-        public QueueConversationSocialExpressionEventTopicFaxStatus(string Direction = null, int? ExpectedPages = null, int? ActivePage = null, int? LinesTransmitted = null, int? BytesTransmitted = null, int? BaudRate = null, int? PageErrors = null, int? LineErrors = null)
+        public QueueConversationSocialExpressionEventTopicFaxStatus(string Direction = null, long? ExpectedPages = null, long? ActivePage = null, long? LinesTransmitted = null, long? BytesTransmitted = null, long? BaudRate = null, long? PageErrors = null, long? LineErrors = null)
         {
             this.Direction = Direction;
             this.ExpectedPages = ExpectedPages;
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Total number of expected pages, if known.</value>
         [DataMember(Name="expectedPages", EmitDefaultValue=false)]
-        public int? ExpectedPages { get; set; }
+        public long? ExpectedPages { get; set; }
 
 
 
@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Active page of the transmission.</value>
         [DataMember(Name="activePage", EmitDefaultValue=false)]
-        public int? ActivePage { get; set; }
+        public long? ActivePage { get; set; }
 
 
 
@@ -76,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Number of lines that have completed transmission.</value>
         [DataMember(Name="linesTransmitted", EmitDefaultValue=false)]
-        public int? LinesTransmitted { get; set; }
+        public long? LinesTransmitted { get; set; }
 
 
 
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Number of bytes that have competed transmission.</value>
         [DataMember(Name="bytesTransmitted", EmitDefaultValue=false)]
-        public int? BytesTransmitted { get; set; }
+        public long? BytesTransmitted { get; set; }
 
 
 
@@ -94,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Current signaling rate of transmission, baud rate.</value>
         [DataMember(Name="baudRate", EmitDefaultValue=false)]
-        public int? BaudRate { get; set; }
+        public long? BaudRate { get; set; }
 
 
 
@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Number of page errors.</value>
         [DataMember(Name="pageErrors", EmitDefaultValue=false)]
-        public int? PageErrors { get; set; }
+        public long? PageErrors { get; set; }
 
 
 
@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Number of line errors.</value>
         [DataMember(Name="lineErrors", EmitDefaultValue=false)]
-        public int? LineErrors { get; set; }
+        public long? LineErrors { get; set; }
 
 
         /// <summary>

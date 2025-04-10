@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **OnQueueTimeSeconds** | **int?** |  | [optional] |
-| **ScheduledTimeSeconds** | **int?** |  | [optional] |
+| **OnQueueTimeSeconds** | **long?** |  | [optional] |
+| **ScheduledTimeSeconds** | **long?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

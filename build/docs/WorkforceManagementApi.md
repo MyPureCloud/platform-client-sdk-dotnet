@@ -92,7 +92,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementCalendarUrlIcs**](#GetWorkforcemanagementCalendarUrlIcs) | **Get** /api/v2/workforcemanagement/calendar/url/ics | Get existing calendar link for the current user |
 | [**GetWorkforcemanagementHistoricaldataBulkRemoveJob**](#GetWorkforcemanagementHistoricaldataBulkRemoveJob) | **Get** /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId} | Retrieves delete job status for historical data imports associated with the job id |
 | [**GetWorkforcemanagementHistoricaldataBulkRemoveJobs**](#GetWorkforcemanagementHistoricaldataBulkRemoveJobs) | **Get** /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs | Retrieves all delete job status for historical data |
-| [**GetWorkforcemanagementHistoricaldataDeletejob**](#GetWorkforcemanagementHistoricaldataDeletejob) | **Get** /api/v2/workforcemanagement/historicaldata/deletejob | Retrieves delete job status for historical data imports of the organization |
+| [**GetWorkforcemanagementHistoricaldataDeletejob**](#GetWorkforcemanagementHistoricaldataDeletejob) | **Get** /api/v2/workforcemanagement/historicaldata/deletejob | Retrieves delete job status for historical data imports of the organization. |
 | [**GetWorkforcemanagementHistoricaldataImportstatus**](#GetWorkforcemanagementHistoricaldataImportstatus) | **Get** /api/v2/workforcemanagement/historicaldata/importstatus | Retrieves status of the historical data imports of the organization |
 | [**GetWorkforcemanagementHistoricaldataImportstatusJobId**](#GetWorkforcemanagementHistoricaldataImportstatusJobId) | **Get** /api/v2/workforcemanagement/historicaldata/importstatus/{jobId} | Retrieves status of the historical data imports associated with job id |
 | [**GetWorkforcemanagementIntegrationsHris**](#GetWorkforcemanagementIntegrationsHris) | **Get** /api/v2/workforcemanagement/integrations/hris | Get integrations |
@@ -210,7 +210,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunits**](#PostWorkforcemanagementBusinessunits) | **Post** /api/v2/workforcemanagement/businessunits | Add a new business unit |
 | [**PostWorkforcemanagementCalendarUrlIcs**](#PostWorkforcemanagementCalendarUrlIcs) | **Post** /api/v2/workforcemanagement/calendar/url/ics | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
 | [**PostWorkforcemanagementHistoricaldataBulkRemoveJobs**](#PostWorkforcemanagementHistoricaldataBulkRemoveJobs) | **Post** /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs | Delete the list of the historical data import entries |
-| [**PostWorkforcemanagementHistoricaldataDeletejob**](#PostWorkforcemanagementHistoricaldataDeletejob) | **Post** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization |
+| [**PostWorkforcemanagementHistoricaldataDeletejob**](#PostWorkforcemanagementHistoricaldataDeletejob) | **Post** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization. |
 | [**PostWorkforcemanagementHistoricaldataValidate**](#PostWorkforcemanagementHistoricaldataValidate) | **Post** /api/v2/workforcemanagement/historicaldata/validate | Trigger validation process for historical import |
 | [**PostWorkforcemanagementIntegrationsHriTimeofftypesJobs**](#PostWorkforcemanagementIntegrationsHriTimeofftypesJobs) | **Post** /api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs | Get list of time off types configured in integration |
 | [**PostWorkforcemanagementManagementunitAgentsWorkplansQuery**](#PostWorkforcemanagementManagementunitAgentsWorkplansQuery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query | Get agents work plans configuration |
@@ -5974,8 +5974,13 @@ This endpoint does require any parameters.
 
 > [**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse) GetWorkforcemanagementHistoricaldataDeletejob ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieves delete job status for historical data imports of the organization
+Retrieves delete job status for historical data imports of the organization.
+
+Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
 
 Requires ALL permissions: 
 
@@ -6006,7 +6011,7 @@ namespace Example
 
             try
             { 
-                // Retrieves delete job status for historical data imports of the organization
+                // Retrieves delete job status for historical data imports of the organization.
                 HistoricalImportDeleteJobResponse result = apiInstance.GetWorkforcemanagementHistoricaldataDeletejob();
                 Debug.WriteLine(result);
             }
@@ -13738,8 +13743,13 @@ namespace Example
 
 > [**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse) PostWorkforcemanagementHistoricaldataDeletejob ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Delete the entries of the historical data imports in the organization
+Delete the entries of the historical data imports in the organization.
+
+Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
 
 Requires ALL permissions: 
 
@@ -13770,7 +13780,7 @@ namespace Example
 
             try
             { 
-                // Delete the entries of the historical data imports in the organization
+                // Delete the entries of the historical data imports in the organization.
                 HistoricalImportDeleteJobResponse result = apiInstance.PostWorkforcemanagementHistoricaldataDeletejob();
                 Debug.WriteLine(result);
             }
@@ -16404,4 +16414,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -106,7 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DynamicContactQueueingSettings">Indicates (when true) that the campaign supports dynamic queueing of the contact list at the time of a request for contacts..</param>
         /// <param name="EmailConfig">Configuration for this messaging campaign to send Email messages..</param>
         /// <param name="SmsConfig">Configuration for this messaging campaign to send SMS messages..</param>
-        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> RuleSets = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, EmailConfig EmailConfig = null, SmsConfig SmsConfig = null)
+        /// <param name="WhatsAppConfig">Configuration for this messaging campaign to send WhatsApp messages..</param>
+        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> RuleSets = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, EmailConfig EmailConfig = null, SmsConfig SmsConfig = null, WhatsAppConfig WhatsAppConfig = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -124,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DynamicContactQueueingSettings = DynamicContactQueueingSettings;
             this.EmailConfig = EmailConfig;
             this.SmsConfig = SmsConfig;
+            this.WhatsAppConfig = WhatsAppConfig;
             
         }
         
@@ -293,6 +295,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Configuration for this messaging campaign to send WhatsApp messages.
+        /// </summary>
+        /// <value>Configuration for this messaging campaign to send WhatsApp messages.</value>
+        [DataMember(Name="whatsAppConfig", EmitDefaultValue=false)]
+        public WhatsAppConfig WhatsAppConfig { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -328,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DynamicContactQueueingSettings: ").Append(DynamicContactQueueingSettings).Append("\n");
             sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
+            sb.Append("  WhatsAppConfig: ").Append(WhatsAppConfig).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -465,6 +477,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SmsConfig.Equals(other.SmsConfig)
                 ) &&
                 (
+                    this.WhatsAppConfig == other.WhatsAppConfig ||
+                    this.WhatsAppConfig != null &&
+                    this.WhatsAppConfig.Equals(other.WhatsAppConfig)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -538,6 +555,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SmsConfig != null)
                     hash = hash * 59 + this.SmsConfig.GetHashCode();
+
+                if (this.WhatsAppConfig != null)
+                    hash = hash * 59 + this.WhatsAppConfig.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

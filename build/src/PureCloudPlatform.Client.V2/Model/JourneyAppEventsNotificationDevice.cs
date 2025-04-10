@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OsVersion">OsVersion.</param>
         /// <param name="Category">Category.</param>
         /// <param name="Manufacturer">Manufacturer.</param>
-        public JourneyAppEventsNotificationDevice(string Type = null, bool? IsMobile = null, int? ScreenHeight = null, int? ScreenWidth = null, int? ScreenDensity = null, string Fingerprint = null, string OsFamily = null, string OsVersion = null, CategoryEnum? Category = null, string Manufacturer = null)
+        public JourneyAppEventsNotificationDevice(string Type = null, bool? IsMobile = null, long? ScreenHeight = null, long? ScreenWidth = null, long? ScreenDensity = null, string Fingerprint = null, string OsFamily = null, string OsVersion = null, CategoryEnum? Category = null, string Manufacturer = null)
         {
             this.Type = Type;
             this.IsMobile = IsMobile;
@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ScreenHeight
         /// </summary>
         [DataMember(Name="screenHeight", EmitDefaultValue=false)]
-        public int? ScreenHeight { get; set; }
+        public long? ScreenHeight { get; set; }
 
 
 
@@ -119,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ScreenWidth
         /// </summary>
         [DataMember(Name="screenWidth", EmitDefaultValue=false)]
-        public int? ScreenWidth { get; set; }
+        public long? ScreenWidth { get; set; }
 
 
 
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ScreenDensity
         /// </summary>
         [DataMember(Name="screenDensity", EmitDefaultValue=false)]
-        public int? ScreenDensity { get; set; }
+        public long? ScreenDensity { get; set; }
 
 
 

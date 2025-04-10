@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of the conversation to use for routing decisions.</param>
         /// <param name="Skills">The skills to use for routing decisions.</param>
         /// <param name="ScoredAgents">A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents.</param>
-        public ConversationCallEventTopicConversationRoutingData(ConversationCallEventTopicUriReference Queue = null, ConversationCallEventTopicUriReference Language = null, int? Priority = null, List<ConversationCallEventTopicUriReference> Skills = null, List<ConversationCallEventTopicScoredAgent> ScoredAgents = null)
+        public ConversationCallEventTopicConversationRoutingData(ConversationCallEventTopicUriReference Queue = null, ConversationCallEventTopicUriReference Language = null, long? Priority = null, List<ConversationCallEventTopicUriReference> Skills = null, List<ConversationCallEventTopicScoredAgent> ScoredAgents = null)
         {
             this.Queue = Queue;
             this.Language = Language;
@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The priority of the conversation to use for routing decisions</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
-        public int? Priority { get; set; }
+        public long? Priority { get; set; }
 
 
 

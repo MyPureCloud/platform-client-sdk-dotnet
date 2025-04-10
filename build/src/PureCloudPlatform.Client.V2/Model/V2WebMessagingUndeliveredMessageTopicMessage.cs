@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="EventTimeMs">EventTimeMs.</param>
-        public V2WebMessagingUndeliveredMessageTopicMessage(string Id = null, int? EventTimeMs = null)
+        public V2WebMessagingUndeliveredMessageTopicMessage(string Id = null, long? EventTimeMs = null)
         {
             this.Id = Id;
             this.EventTimeMs = EventTimeMs;
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTimeMs
         /// </summary>
         [DataMember(Name="eventTimeMs", EmitDefaultValue=false)]
-        public int? EventTimeMs { get; set; }
+        public long? EventTimeMs { get; set; }
 
 
         /// <summary>

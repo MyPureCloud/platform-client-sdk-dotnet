@@ -442,7 +442,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
         /// <param name="SocialUserName">SocialUserName.</param>
         /// <param name="PreviewText">PreviewText.</param>
-        public ConversationSocialExpressionEventTopicSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationSocialExpressionEventTopicUriReference User = null, ConversationSocialExpressionEventTopicUriReference Queue = null, ConversationSocialExpressionEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationSocialExpressionEventTopicErrorBody ErrorInfo = null, ConversationSocialExpressionEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationSocialExpressionEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationSocialExpressionEventTopicUriReference ExternalOrganization = null, ConversationSocialExpressionEventTopicWrapup Wrapup = null, ConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationSocialExpressionEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
+        public ConversationSocialExpressionEventTopicSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationSocialExpressionEventTopicUriReference User = null, ConversationSocialExpressionEventTopicUriReference Queue = null, ConversationSocialExpressionEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationSocialExpressionEventTopicErrorBody ErrorInfo = null, ConversationSocialExpressionEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, ConversationSocialExpressionEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationSocialExpressionEventTopicUriReference ExternalOrganization = null, ConversationSocialExpressionEventTopicWrapup Wrapup = null, ConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationSocialExpressionEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -641,7 +641,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -657,7 +657,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 

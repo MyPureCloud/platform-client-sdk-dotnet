@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
-| **AvailableBytes** | **int?** |  | [optional] |
-| **TotalBytes** | **int?** |  | [optional] |
+| **AvailableBytes** | **long?** |  | [optional] |
+| **TotalBytes** | **long?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

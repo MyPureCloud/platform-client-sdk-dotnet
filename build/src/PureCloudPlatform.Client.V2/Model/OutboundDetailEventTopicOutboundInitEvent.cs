@@ -235,7 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundContactId">OutboundContactId.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public OutboundDetailEventTopicOutboundInitEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, string OutboundCampaignId = null, string DivisionId = null, string OutboundContactListId = null, string OutboundContactId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        public OutboundDetailEventTopicOutboundInitEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, string OutboundCampaignId = null, string DivisionId = null, string OutboundContactListId = null, string OutboundContactId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -265,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 

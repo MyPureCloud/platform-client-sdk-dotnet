@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns></returns>
         
-        void DeleteDivisionBasedPresenceDefinition (string definitionId);
+        void DeletePresenceDefinition0 (string definitionId);
 
         /// <summary>
         /// Delete a Presence Definition
@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        ApiResponse<Object> DeleteDivisionBasedPresenceDefinitionWithHttpInfo (string definitionId);
+        ApiResponse<Object> DeletePresenceDefinition0WithHttpInfo (string definitionId);
 
         /// <summary>
         /// Delete a Presence Source
@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        OrganizationPresenceDefinition GetDivisionBasedPresenceDefinition (string definitionId, string localeCode = null);
+        OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a Presence Definition
@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        ApiResponse<OrganizationPresenceDefinition> GetDivisionBasedPresenceDefinitionWithHttpInfo (string definitionId, string localeCode = null);
+        ApiResponse<OrganizationPresenceDefinition> GetPresenceDefinition0WithHttpInfo (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -126,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinitionEntityListing</returns>
         
-        OrganizationPresenceDefinitionEntityListing GetDivisionBasedPresenceDefinitions (string deactivated = null, List<string> divisionId = null, string localeCode = null);
+        OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -140,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinitionEntityListing</returns>
         
-        ApiResponse<OrganizationPresenceDefinitionEntityListing> GetDivisionBasedPresenceDefinitionsWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null);
+        ApiResponse<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get the presence settings
@@ -478,7 +478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        OrganizationPresenceDefinition PostDivisionBasedPresenceDefinitions (OrganizationPresenceDefinition body);
+        OrganizationPresenceDefinition PostPresenceDefinitions0 (OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Create a Presence Definition
@@ -490,7 +490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        ApiResponse<OrganizationPresenceDefinition> PostDivisionBasedPresenceDefinitionsWithHttpInfo (OrganizationPresenceDefinition body);
+        ApiResponse<OrganizationPresenceDefinition> PostPresenceDefinitions0WithHttpInfo (OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Create a Presence Source
@@ -551,7 +551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        OrganizationPresenceDefinition PutDivisionBasedPresenceDefinition (string definitionId, OrganizationPresenceDefinition body);
+        OrganizationPresenceDefinition PutPresenceDefinition0 (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Update a Presence Definition
@@ -564,7 +564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        ApiResponse<OrganizationPresenceDefinition> PutDivisionBasedPresenceDefinitionWithHttpInfo (string definitionId, OrganizationPresenceDefinition body);
+        ApiResponse<OrganizationPresenceDefinition> PutPresenceDefinition0WithHttpInfo (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Update the presence settings
@@ -706,7 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of void</returns>
         
-        System.Threading.Tasks.Task DeleteDivisionBasedPresenceDefinitionAsync (string definitionId);
+        System.Threading.Tasks.Task DeletePresenceDefinition0Async (string definitionId);
 
         /// <summary>
         /// Delete a Presence Definition
@@ -718,7 +718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDivisionBasedPresenceDefinitionAsyncWithHttpInfo (string definitionId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceDefinition0AsyncWithHttpInfo (string definitionId);
 
         /// <summary>
         /// Delete a Presence Source
@@ -779,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetDivisionBasedPresenceDefinitionAsync (string definitionId, string localeCode = null);
+        System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a Presence Definition
@@ -792,7 +792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetDivisionBasedPresenceDefinitionAsyncWithHttpInfo (string definitionId, string localeCode = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -806,7 +806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinitionEntityListing</returns>
         
-        System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetDivisionBasedPresenceDefinitionsAsync (string deactivated = null, List<string> divisionId = null, string localeCode = null);
+        System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -820,7 +820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinitionEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetDivisionBasedPresenceDefinitionsAsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get the presence settings
@@ -1158,7 +1158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        System.Threading.Tasks.Task<OrganizationPresenceDefinition> PostDivisionBasedPresenceDefinitionsAsync (OrganizationPresenceDefinition body);
+        System.Threading.Tasks.Task<OrganizationPresenceDefinition> PostPresenceDefinitions0Async (OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Create a Presence Definition
@@ -1170,7 +1170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PostDivisionBasedPresenceDefinitionsAsyncWithHttpInfo (OrganizationPresenceDefinition body);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PostPresenceDefinitions0AsyncWithHttpInfo (OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Create a Presence Source
@@ -1231,7 +1231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        System.Threading.Tasks.Task<OrganizationPresenceDefinition> PutDivisionBasedPresenceDefinitionAsync (string definitionId, OrganizationPresenceDefinition body);
+        System.Threading.Tasks.Task<OrganizationPresenceDefinition> PutPresenceDefinition0Async (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Update a Presence Definition
@@ -1244,7 +1244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PutDivisionBasedPresenceDefinitionAsyncWithHttpInfo (string definitionId, OrganizationPresenceDefinition body);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PutPresenceDefinition0AsyncWithHttpInfo (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
         /// Update the presence settings
@@ -1472,9 +1472,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns></returns>
         
-        public void DeleteDivisionBasedPresenceDefinition (string definitionId)
+        public void DeletePresenceDefinition0 (string definitionId)
         {
-             DeleteDivisionBasedPresenceDefinitionWithHttpInfo(definitionId);
+             DeletePresenceDefinition0WithHttpInfo(definitionId);
         }
 
         /// <summary>
@@ -1485,11 +1485,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        public ApiResponse<Object> DeleteDivisionBasedPresenceDefinitionWithHttpInfo (string definitionId)
+        public ApiResponse<Object> DeletePresenceDefinition0WithHttpInfo (string definitionId)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
-                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->DeleteDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->DeletePresenceDefinition0");
 
             var localVarPath = "/api/v2/presence/definitions/{definitionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1556,9 +1556,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteDivisionBasedPresenceDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceDefinition0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteDivisionBasedPresenceDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceDefinition0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -1576,9 +1576,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of void</returns>
         
-        public async System.Threading.Tasks.Task DeleteDivisionBasedPresenceDefinitionAsync (string definitionId)
+        public async System.Threading.Tasks.Task DeletePresenceDefinition0Async (string definitionId)
         {
-             await DeleteDivisionBasedPresenceDefinitionAsyncWithHttpInfo(definitionId);
+             await DeletePresenceDefinition0AsyncWithHttpInfo(definitionId);
 
         }
 
@@ -1590,11 +1590,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDivisionBasedPresenceDefinitionAsyncWithHttpInfo (string definitionId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceDefinition0AsyncWithHttpInfo (string definitionId)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
-                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->DeleteDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->DeletePresenceDefinition0");
             
 
             var localVarPath = "/api/v2/presence/definitions/{definitionId}";
@@ -1662,9 +1662,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteDivisionBasedPresenceDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceDefinition0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteDivisionBasedPresenceDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceDefinition0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -2106,9 +2106,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        public OrganizationPresenceDefinition GetDivisionBasedPresenceDefinition (string definitionId, string localeCode = null)
+        public OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = GetDivisionBasedPresenceDefinitionWithHttpInfo(definitionId, localeCode);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = GetPresenceDefinition0WithHttpInfo(definitionId, localeCode);
              return localVarResponse.Data;
         }
 
@@ -2121,11 +2121,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        public ApiResponse< OrganizationPresenceDefinition > GetDivisionBasedPresenceDefinitionWithHttpInfo (string definitionId, string localeCode = null)
+        public ApiResponse< OrganizationPresenceDefinition > GetPresenceDefinition0WithHttpInfo (string definitionId, string localeCode = null)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
-                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->GetDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->GetPresenceDefinition0");
 
             var localVarPath = "/api/v2/presence/definitions/{definitionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2193,9 +2193,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinition0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinition0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinition>(localVarStatusCode,
                 localVarHeaders,
@@ -2214,9 +2214,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetDivisionBasedPresenceDefinitionAsync (string definitionId, string localeCode = null)
+        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await GetDivisionBasedPresenceDefinitionAsyncWithHttpInfo(definitionId, localeCode);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await GetPresenceDefinition0AsyncWithHttpInfo(definitionId, localeCode);
              return localVarResponse.Data;
 
         }
@@ -2230,11 +2230,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetDivisionBasedPresenceDefinitionAsyncWithHttpInfo (string definitionId, string localeCode = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId, string localeCode = null)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
-                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->GetDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->GetPresenceDefinition0");
             
 
             var localVarPath = "/api/v2/presence/definitions/{definitionId}";
@@ -2303,9 +2303,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinition0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinition0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinition>(localVarStatusCode,
                 localVarHeaders,
@@ -2326,9 +2326,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinitionEntityListing</returns>
         
-        public OrganizationPresenceDefinitionEntityListing GetDivisionBasedPresenceDefinitions (string deactivated = null, List<string> divisionId = null, string localeCode = null)
+        public OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = GetDivisionBasedPresenceDefinitionsWithHttpInfo(deactivated, divisionId, localeCode);
+             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = GetPresenceDefinitions0WithHttpInfo(deactivated, divisionId, localeCode);
              return localVarResponse.Data;
         }
 
@@ -2342,7 +2342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinitionEntityListing</returns>
         
-        public ApiResponse< OrganizationPresenceDefinitionEntityListing > GetDivisionBasedPresenceDefinitionsWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null)
+        public ApiResponse< OrganizationPresenceDefinitionEntityListing > GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         { 
 
             var localVarPath = "/api/v2/presence/definitions";
@@ -2412,9 +2412,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinitions0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinitions0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinitionEntityListing>(localVarStatusCode,
                 localVarHeaders,
@@ -2434,9 +2434,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinitionEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetDivisionBasedPresenceDefinitionsAsync (string deactivated = null, List<string> divisionId = null, string localeCode = null)
+        public async System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = await GetDivisionBasedPresenceDefinitionsAsyncWithHttpInfo(deactivated, divisionId, localeCode);
+             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = await GetPresenceDefinitions0AsyncWithHttpInfo(deactivated, divisionId, localeCode);
              return localVarResponse.Data;
 
         }
@@ -2451,7 +2451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinitionEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetDivisionBasedPresenceDefinitionsAsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         { 
 
             var localVarPath = "/api/v2/presence/definitions";
@@ -2521,9 +2521,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinitions0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetDivisionBasedPresenceDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresenceDefinitions0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinitionEntityListing>(localVarStatusCode,
                 localVarHeaders,
@@ -5366,9 +5366,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        public OrganizationPresenceDefinition PostDivisionBasedPresenceDefinitions (OrganizationPresenceDefinition body)
+        public OrganizationPresenceDefinition PostPresenceDefinitions0 (OrganizationPresenceDefinition body)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = PostDivisionBasedPresenceDefinitionsWithHttpInfo(body);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = PostPresenceDefinitions0WithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -5380,11 +5380,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        public ApiResponse< OrganizationPresenceDefinition > PostDivisionBasedPresenceDefinitionsWithHttpInfo (OrganizationPresenceDefinition body)
+        public ApiResponse< OrganizationPresenceDefinition > PostPresenceDefinitions0WithHttpInfo (OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostDivisionBasedPresenceDefinitions");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresenceDefinitions0");
 
             var localVarPath = "/api/v2/presence/definitions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5456,9 +5456,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostDivisionBasedPresenceDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostPresenceDefinitions0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostDivisionBasedPresenceDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostPresenceDefinitions0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinition>(localVarStatusCode,
                 localVarHeaders,
@@ -5476,9 +5476,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> PostDivisionBasedPresenceDefinitionsAsync (OrganizationPresenceDefinition body)
+        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> PostPresenceDefinitions0Async (OrganizationPresenceDefinition body)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await PostDivisionBasedPresenceDefinitionsAsyncWithHttpInfo(body);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await PostPresenceDefinitions0AsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -5491,11 +5491,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PostDivisionBasedPresenceDefinitionsAsyncWithHttpInfo (OrganizationPresenceDefinition body)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PostPresenceDefinitions0AsyncWithHttpInfo (OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostDivisionBasedPresenceDefinitions");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresenceDefinitions0");
             
 
             var localVarPath = "/api/v2/presence/definitions";
@@ -5568,9 +5568,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostDivisionBasedPresenceDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostPresenceDefinitions0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostDivisionBasedPresenceDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostPresenceDefinitions0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinition>(localVarStatusCode,
                 localVarHeaders,
@@ -6036,9 +6036,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        public OrganizationPresenceDefinition PutDivisionBasedPresenceDefinition (string definitionId, OrganizationPresenceDefinition body)
+        public OrganizationPresenceDefinition PutPresenceDefinition0 (string definitionId, OrganizationPresenceDefinition body)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = PutDivisionBasedPresenceDefinitionWithHttpInfo(definitionId, body);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = PutPresenceDefinition0WithHttpInfo(definitionId, body);
              return localVarResponse.Data;
         }
 
@@ -6051,14 +6051,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        public ApiResponse< OrganizationPresenceDefinition > PutDivisionBasedPresenceDefinitionWithHttpInfo (string definitionId, OrganizationPresenceDefinition body)
+        public ApiResponse< OrganizationPresenceDefinition > PutPresenceDefinition0WithHttpInfo (string definitionId, OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
-                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->PutDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->PutPresenceDefinition0");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceDefinition0");
 
             var localVarPath = "/api/v2/presence/definitions/{definitionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6131,9 +6131,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutDivisionBasedPresenceDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresenceDefinition0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutDivisionBasedPresenceDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresenceDefinition0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinition>(localVarStatusCode,
                 localVarHeaders,
@@ -6152,9 +6152,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> PutDivisionBasedPresenceDefinitionAsync (string definitionId, OrganizationPresenceDefinition body)
+        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> PutPresenceDefinition0Async (string definitionId, OrganizationPresenceDefinition body)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await PutDivisionBasedPresenceDefinitionAsyncWithHttpInfo(definitionId, body);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await PutPresenceDefinition0AsyncWithHttpInfo(definitionId, body);
              return localVarResponse.Data;
 
         }
@@ -6168,15 +6168,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PutDivisionBasedPresenceDefinitionAsyncWithHttpInfo (string definitionId, OrganizationPresenceDefinition body)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PutPresenceDefinition0AsyncWithHttpInfo (string definitionId, OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
-                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->PutDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->PutPresenceDefinition0");
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutDivisionBasedPresenceDefinition");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceDefinition0");
             
 
             var localVarPath = "/api/v2/presence/definitions/{definitionId}";
@@ -6250,9 +6250,9 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutDivisionBasedPresenceDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresenceDefinition0: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutDivisionBasedPresenceDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresenceDefinition0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceDefinition>(localVarStatusCode,
                 localVarHeaders,

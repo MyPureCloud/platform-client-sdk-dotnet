@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerOutboundSettingsConfigChangeOutboundSettings(int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerOutboundSettingsConfigChangeOutboundSettings(long? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null)
         {
             this.MaxCallsPerAgent = MaxCallsPerAgent;
             this.MaxLineUtilization = MaxLineUtilization;
@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The maximum number of calls that can be placed per agent on any campaign</value>
         [DataMember(Name="maxCallsPerAgent", EmitDefaultValue=false)]
-        public int? MaxCallsPerAgent { get; set; }
+        public long? MaxCallsPerAgent { get; set; }
 
 
 
@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
         /// <summary>

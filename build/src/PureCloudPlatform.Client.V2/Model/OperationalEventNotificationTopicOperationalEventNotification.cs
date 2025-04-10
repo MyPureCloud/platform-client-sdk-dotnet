@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="EntityToken">EntityToken.</param>
         /// <param name="Timestamp">Timestamp.</param>
-        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, int? Timestamp = null)
+        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, long? Timestamp = null)
         {
             this.EventEntity = EventEntity;
             this.EntityId = EntityId;
@@ -144,7 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
-        public int? Timestamp { get; set; }
+        public long? Timestamp { get; set; }
 
 
         /// <summary>

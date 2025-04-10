@@ -7,10 +7,10 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** |  | [optional] |
-| **Interval** | **int?** | the amount of time in between occurrences | [optional] |
+| **Interval** | **long?** | the amount of time in between occurrences | [optional] |
 | **DaysOfWeek** | **List&lt;string&gt;** | the day(s) of the week the occurrence happens | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

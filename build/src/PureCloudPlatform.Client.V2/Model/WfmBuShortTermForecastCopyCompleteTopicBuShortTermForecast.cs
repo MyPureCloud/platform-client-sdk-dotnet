@@ -77,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WeekCount">WeekCount.</param>
         /// <param name="Metadata">Metadata.</param>
         /// <param name="CanUseForScheduling">CanUseForScheduling.</param>
-        public WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast(string Id = null, string WeekDate = null, CreationMethodEnum? CreationMethod = null, string Description = null, bool? Legacy = null, DateTime? ReferenceStartDate = null, List<WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer> SourceDays = null, List<WfmBuShortTermForecastCopyCompleteTopicBuForecastModification> Modifications = null, string TimeZone = null, int? PlanningGroupsVersion = null, int? WeekCount = null, WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null)
+        public WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast(string Id = null, string WeekDate = null, CreationMethodEnum? CreationMethod = null, string Description = null, bool? Legacy = null, DateTime? ReferenceStartDate = null, List<WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer> SourceDays = null, List<WfmBuShortTermForecastCopyCompleteTopicBuForecastModification> Modifications = null, string TimeZone = null, long? PlanningGroupsVersion = null, long? WeekCount = null, WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null)
         {
             this.Id = Id;
             this.WeekDate = WeekDate;
@@ -167,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PlanningGroupsVersion
         /// </summary>
         [DataMember(Name="planningGroupsVersion", EmitDefaultValue=false)]
-        public int? PlanningGroupsVersion { get; set; }
+        public long? PlanningGroupsVersion { get; set; }
 
 
 
@@ -175,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WeekCount
         /// </summary>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
-        public int? WeekCount { get; set; }
+        public long? WeekCount { get; set; }
 
 
 

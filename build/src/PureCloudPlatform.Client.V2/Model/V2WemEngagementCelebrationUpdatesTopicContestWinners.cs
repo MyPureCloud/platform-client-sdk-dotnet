@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WinnersCount">WinnersCount.</param>
         /// <param name="ContestScore">ContestScore.</param>
         /// <param name="Users">Users.</param>
-        public V2WemEngagementCelebrationUpdatesTopicContestWinners(int? Tier = null, int? WinnersCount = null, V2WemEngagementCelebrationUpdatesTopicContestWinnersScore ContestScore = null, List<V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers> Users = null)
+        public V2WemEngagementCelebrationUpdatesTopicContestWinners(long? Tier = null, long? WinnersCount = null, V2WemEngagementCelebrationUpdatesTopicContestWinnersScore ContestScore = null, List<V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers> Users = null)
         {
             this.Tier = Tier;
             this.WinnersCount = WinnersCount;
@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Tier
         /// </summary>
         [DataMember(Name="tier", EmitDefaultValue=false)]
-        public int? Tier { get; set; }
+        public long? Tier { get; set; }
 
 
 
@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WinnersCount
         /// </summary>
         [DataMember(Name="winnersCount", EmitDefaultValue=false)]
-        public int? WinnersCount { get; set; }
+        public long? WinnersCount { get; set; }
 
 
 

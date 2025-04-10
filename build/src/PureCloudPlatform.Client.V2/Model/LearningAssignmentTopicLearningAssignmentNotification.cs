@@ -128,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PercentageScore">PercentageScore.</param>
         /// <param name="IsPassed">IsPassed.</param>
         /// <param name="Type">Type.</param>
-        public LearningAssignmentTopicLearningAssignmentNotification(string Id = null, LearningAssignmentTopicUserReference User = null, LearningAssignmentTopicLearningModuleReference Module = null, int? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, LearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, LearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, bool? IsOverdue = null, int? LengthInMinutes = null, double? PercentageScore = null, bool? IsPassed = null, TypeEnum? Type = null)
+        public LearningAssignmentTopicLearningAssignmentNotification(string Id = null, LearningAssignmentTopicUserReference User = null, LearningAssignmentTopicLearningModuleReference Module = null, long? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, LearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, LearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, bool? IsOverdue = null, long? LengthInMinutes = null, double? PercentageScore = null, bool? IsPassed = null, TypeEnum? Type = null)
         {
             this.Id = Id;
             this.User = User;
@@ -178,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
 
@@ -236,7 +236,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LengthInMinutes
         /// </summary>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
-        public int? LengthInMinutes { get; set; }
+        public long? LengthInMinutes { get; set; }
 
 
 

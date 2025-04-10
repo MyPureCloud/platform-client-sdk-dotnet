@@ -130,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="FileName">FileName.</param>
         /// <param name="FileSize">FileSize.</param>
-        public WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate(string RequestId = null, DateTime? DateImportStarted = null, DateTime? DateImportEnded = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, string Error = null, bool? Active = null, TypeEnum? Type = null, string FileName = null, int? FileSize = null)
+        public WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate(string RequestId = null, DateTime? DateImportStarted = null, DateTime? DateImportEnded = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, string Error = null, bool? Active = null, TypeEnum? Type = null, string FileName = null, long? FileSize = null)
         {
             this.RequestId = RequestId;
             this.DateImportStarted = DateImportStarted;
@@ -220,7 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets FileSize
         /// </summary>
         [DataMember(Name="fileSize", EmitDefaultValue=false)]
-        public int? FileSize { get; set; }
+        public long? FileSize { get; set; }
 
 
         /// <summary>

@@ -440,7 +440,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
         /// <param name="RoomId">RoomId.</param>
         /// <param name="AvatarImageUrl">AvatarImageUrl.</param>
-        public QueueConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationChatEventTopicUriReference User = null, QueueConversationChatEventTopicUriReference Queue = null, QueueConversationChatEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationChatEventTopicErrorBody ErrorInfo = null, QueueConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationChatEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationChatEventTopicUriReference ExternalOrganization = null, QueueConversationChatEventTopicWrapup Wrapup = null, QueueConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationChatEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationChatEventTopicQueueMediaSettings QueueMediaSettings = null, string RoomId = null, string AvatarImageUrl = null)
+        public QueueConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationChatEventTopicUriReference User = null, QueueConversationChatEventTopicUriReference Queue = null, QueueConversationChatEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationChatEventTopicErrorBody ErrorInfo = null, QueueConversationChatEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationChatEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationChatEventTopicUriReference ExternalOrganization = null, QueueConversationChatEventTopicWrapup Wrapup = null, QueueConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationChatEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationChatEventTopicQueueMediaSettings QueueMediaSettings = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -637,7 +637,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -653,7 +653,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 

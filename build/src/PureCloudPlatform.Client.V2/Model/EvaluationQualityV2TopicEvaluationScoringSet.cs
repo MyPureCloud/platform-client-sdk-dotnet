@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="TotalScore">TotalScore.</param>
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
-        public EvaluationQualityV2TopicEvaluationScoringSet(int? TotalScore = null, int? TotalCriticalScore = null)
+        public EvaluationQualityV2TopicEvaluationScoringSet(long? TotalScore = null, long? TotalCriticalScore = null)
         {
             this.TotalScore = TotalScore;
             this.TotalCriticalScore = TotalCriticalScore;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TotalScore
         /// </summary>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
-        public int? TotalScore { get; set; }
+        public long? TotalScore { get; set; }
 
 
 
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TotalCriticalScore
         /// </summary>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
-        public int? TotalCriticalScore { get; set; }
+        public long? TotalCriticalScore { get; set; }
 
 
         /// <summary>

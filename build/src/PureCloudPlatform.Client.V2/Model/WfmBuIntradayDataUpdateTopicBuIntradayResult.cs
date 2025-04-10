@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NoDataReason">NoDataReason.</param>
         /// <param name="Schedule">Schedule.</param>
         /// <param name="ShortTermForecast">ShortTermForecast.</param>
-        public WfmBuIntradayDataUpdateTopicBuIntradayResult(DateTime? StartDate = null, DateTime? EndDate = null, int? IntervalLengthMinutes = null, List<WfmBuIntradayDataUpdateTopicBuIntradayDataGroup> IntradayDataGroupings = null, List<CategoriesEnum> Categories = null, string NoDataReason = null, WfmBuIntradayDataUpdateTopicBuScheduleReference Schedule = null, WfmBuIntradayDataUpdateTopicBuShortTermForecastReference ShortTermForecast = null)
+        public WfmBuIntradayDataUpdateTopicBuIntradayResult(DateTime? StartDate = null, DateTime? EndDate = null, long? IntervalLengthMinutes = null, List<WfmBuIntradayDataUpdateTopicBuIntradayDataGroup> IntradayDataGroupings = null, List<CategoriesEnum> Categories = null, string NoDataReason = null, WfmBuIntradayDataUpdateTopicBuScheduleReference Schedule = null, WfmBuIntradayDataUpdateTopicBuShortTermForecastReference ShortTermForecast = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
@@ -96,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets IntervalLengthMinutes
         /// </summary>
         [DataMember(Name="intervalLengthMinutes", EmitDefaultValue=false)]
-        public int? IntervalLengthMinutes { get; set; }
+        public long? IntervalLengthMinutes { get; set; }
 
 
 

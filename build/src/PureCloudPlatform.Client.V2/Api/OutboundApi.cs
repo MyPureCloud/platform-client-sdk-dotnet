@@ -459,6 +459,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns></returns>
+        
+        void DeleteOutboundDnclistWhatsappnumbers (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteOutboundDnclistWhatsappnumbersWithHttpInfo (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
         /// Delete File Specification Template
         /// </summary>
         /// <remarks>
@@ -2883,6 +2909,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PatchOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, DncPatchPhoneNumbersRequest body);
 
         /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns></returns>
+        
+        void PatchOutboundDnclistWhatsappnumbers (string dncListId, DncPatchWhatsAppNumbersRequest body);
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PatchOutboundDnclistWhatsappnumbersWithHttpInfo (string dncListId, DncPatchWhatsAppNumbersRequest body);
+
+        /// <summary>
         /// Update the outbound settings for this organization
         /// </summary>
         /// <remarks>
@@ -4893,6 +4945,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteOutboundDnclistWhatsappnumbersAsync (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistWhatsappnumbersAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
         /// Delete File Specification Template
@@ -7317,6 +7395,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, DncPatchPhoneNumbersRequest body);
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PatchOutboundDnclistWhatsappnumbersAsync (string dncListId, DncPatchWhatsAppNumbersRequest body);
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistWhatsappnumbersAsyncWithHttpInfo (string dncListId, DncPatchWhatsAppNumbersRequest body);
 
         /// <summary>
         /// Update the outbound settings for this organization
@@ -12810,6 +12914,223 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistPhonenumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistPhonenumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list. 
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns></returns>
+        
+        public void DeleteOutboundDnclistWhatsappnumbers (string dncListId, bool? expiredOnly = null)
+        {
+             DeleteOutboundDnclistWhatsappnumbersWithHttpInfo(dncListId, expiredOnly);
+        }
+
+        /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list. 
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteOutboundDnclistWhatsappnumbersWithHttpInfo (string dncListId, bool? expiredOnly = null)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistWhatsappnumbers");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+            if (expiredOnly != null) localVarQueryParams.Add(new Tuple<string, string>("expiredOnly", this.Configuration.ApiClient.ParameterToString(expiredOnly)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistWhatsappnumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistWhatsappnumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list. 
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteOutboundDnclistWhatsappnumbersAsync (string dncListId, bool? expiredOnly = null)
+        {
+             await DeleteOutboundDnclistWhatsappnumbersAsyncWithHttpInfo(dncListId, expiredOnly);
+
+        }
+
+        /// <summary>
+        /// Deletes all or expired whatsApp numbers from a DNC list. 
+        /// This operation is only for Internal DNC lists of whatsApp numbers
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC whatsApp numbers that are expired (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistWhatsappnumbersAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistWhatsappnumbers");
+            
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+            if (expiredOnly != null) localVarQueryParams.Add(new Tuple<string, string>("expiredOnly", this.Configuration.ApiClient.ParameterToString(expiredOnly)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistWhatsappnumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistWhatsappnumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -32064,6 +32385,240 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistPhonenumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistPhonenumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns></returns>
+        
+        public void PatchOutboundDnclistWhatsappnumbers (string dncListId, DncPatchWhatsAppNumbersRequest body)
+        {
+             PatchOutboundDnclistWhatsappnumbersWithHttpInfo(dncListId, body);
+        }
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PatchOutboundDnclistWhatsappnumbersWithHttpInfo (string dncListId, DncPatchWhatsAppNumbersRequest body)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PatchOutboundDnclistWhatsappnumbers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistWhatsappnumbers");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistWhatsappnumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistWhatsappnumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PatchOutboundDnclistWhatsappnumbersAsync (string dncListId, DncPatchWhatsAppNumbersRequest body)
+        {
+             await PatchOutboundDnclistWhatsappnumbersAsyncWithHttpInfo(dncListId, body);
+
+        }
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC whatsApp numbers</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistWhatsappnumbersAsyncWithHttpInfo (string dncListId, DncPatchWhatsAppNumbersRequest body)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PatchOutboundDnclistWhatsappnumbers");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistWhatsappnumbers");
+            
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header?.Name)
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header?.FirstOrDefault()?.Name,
+                                                            Value = header.Select(x => x?.Value)?.ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistWhatsappnumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistWhatsappnumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,

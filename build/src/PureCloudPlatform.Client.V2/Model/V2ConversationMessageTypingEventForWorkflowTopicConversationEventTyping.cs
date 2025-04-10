@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Type.</param>
         /// <param name="Duration">Duration.</param>
-        public V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping(TypeEnum? Type = null, int? Duration = null)
+        public V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping(TypeEnum? Type = null, long? Duration = null)
         {
             this.Type = Type;
             this.Duration = Duration;
@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Duration
         /// </summary>
         [DataMember(Name="duration", EmitDefaultValue=false)]
-        public int? Duration { get; set; }
+        public long? Duration { get; set; }
 
 
         /// <summary>

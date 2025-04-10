@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="AvailableBytes">AvailableBytes.</param>
         /// <param name="TotalBytes">TotalBytes.</param>
-        public EdgeMetricsTopicEdgeMetricMemory(string Type = null, int? AvailableBytes = null, int? TotalBytes = null)
+        public EdgeMetricsTopicEdgeMetricMemory(string Type = null, long? AvailableBytes = null, long? TotalBytes = null)
         {
             this.Type = Type;
             this.AvailableBytes = AvailableBytes;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AvailableBytes
         /// </summary>
         [DataMember(Name="availableBytes", EmitDefaultValue=false)]
-        public int? AvailableBytes { get; set; }
+        public long? AvailableBytes { get; set; }
 
 
 
@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets TotalBytes
         /// </summary>
         [DataMember(Name="totalBytes", EmitDefaultValue=false)]
-        public int? TotalBytes { get; set; }
+        public long? TotalBytes { get; set; }
 
 
         /// <summary>

@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Tier">Tier.</param>
         /// <param name="Name">Name.</param>
         /// <param name="ImageId">ImageId.</param>
-        public V2WemEngagementCelebrationUpdatesTopicContestPrizes(int? Tier = null, string Name = null, string ImageId = null)
+        public V2WemEngagementCelebrationUpdatesTopicContestPrizes(long? Tier = null, string Name = null, string ImageId = null)
         {
             this.Tier = Tier;
             this.Name = Name;
@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Tier
         /// </summary>
         [DataMember(Name="tier", EmitDefaultValue=false)]
-        public int? Tier { get; set; }
+        public long? Tier { get; set; }
 
 
 

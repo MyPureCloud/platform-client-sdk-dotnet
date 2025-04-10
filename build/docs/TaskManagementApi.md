@@ -37,6 +37,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTaskmanagementWorkitemsSchemaVersion**](#GetTaskmanagementWorkitemsSchemaVersion) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetTaskmanagementWorkitemsSchemaVersions**](#GetTaskmanagementWorkitemsSchemaVersions) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions | Get all versions of a schema |
 | [**GetTaskmanagementWorkitemsSchemas**](#GetTaskmanagementWorkitemsSchemas) | **Get** /api/v2/taskmanagement/workitems/schemas | Get a list of schemas. |
+| [**GetTaskmanagementWorkitemsSchemasCoretype**](#GetTaskmanagementWorkitemsSchemasCoretype) | **Get** /api/v2/taskmanagement/workitems/schemas/coretypes/{coreTypeName} | Get the core types from which all schemas are built. |
+| [**GetTaskmanagementWorkitemsSchemasCoretypes**](#GetTaskmanagementWorkitemsSchemasCoretypes) | **Get** /api/v2/taskmanagement/workitems/schemas/coretypes | Get the core types from which all schemas are built. |
+| [**GetTaskmanagementWorkitemsSchemasLimits**](#GetTaskmanagementWorkitemsSchemasLimits) | **Get** /api/v2/taskmanagement/workitems/schemas/limits | Get quantitative limits on schemas |
 | [**GetTaskmanagementWorktype**](#GetTaskmanagementWorktype) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId} | Get a worktype |
 | [**GetTaskmanagementWorktypeFlowsDatebasedRule**](#GetTaskmanagementWorktypeFlowsDatebasedRule) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId} | Get a date based rule |
 | [**GetTaskmanagementWorktypeFlowsDatebasedRules**](#GetTaskmanagementWorktypeFlowsDatebasedRules) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules | Get all date based rules for a worktype |
@@ -2063,6 +2066,182 @@ This endpoint does require any parameters.
 ### Return type
 
 [**DataSchemaListing**](DataSchemaListing)
+
+
+## GetTaskmanagementWorkitemsSchemasCoretype
+
+> [**Coretype**](Coretype) GetTaskmanagementWorkitemsSchemasCoretype (string coreTypeName)
+
+
+Get the core types from which all schemas are built.
+
+Requires ANY permissions: 
+
+* workitems:workitemSchema:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsSchemasCoretypeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var coreTypeName = coreTypeName_example;  // string | Name of the core type
+
+            try
+            { 
+                // Get the core types from which all schemas are built.
+                Coretype result = apiInstance.GetTaskmanagementWorkitemsSchemasCoretype(coreTypeName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsSchemasCoretype: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **coreTypeName** | **string**| Name of the core type |  |
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## GetTaskmanagementWorkitemsSchemasCoretypes
+
+> [**Coretype**](Coretype) GetTaskmanagementWorkitemsSchemasCoretypes ()
+
+
+Get the core types from which all schemas are built.
+
+Requires ANY permissions: 
+
+* workitems:workitemSchema:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsSchemasCoretypesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+
+            try
+            { 
+                // Get the core types from which all schemas are built.
+                Coretype result = apiInstance.GetTaskmanagementWorkitemsSchemasCoretypes();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsSchemasCoretypes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## GetTaskmanagementWorkitemsSchemasLimits
+
+> [**SchemaQuantityLimits**](SchemaQuantityLimits) GetTaskmanagementWorkitemsSchemasLimits ()
+
+
+Get quantitative limits on schemas
+
+Requires ANY permissions: 
+
+* workitems:workitemSchema:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsSchemasLimitsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+
+            try
+            { 
+                // Get quantitative limits on schemas
+                SchemaQuantityLimits result = apiInstance.GetTaskmanagementWorkitemsSchemasLimits();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsSchemasLimits: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
 
 
 ## GetTaskmanagementWorktype
@@ -4764,4 +4943,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

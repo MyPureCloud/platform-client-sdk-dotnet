@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RunId">RunId.</param>
         /// <param name="MessageCount">MessageCount.</param>
         /// <param name="MessageSeverityCounts">MessageSeverityCounts.</param>
-        public WfmBuScheduleTopicBuScheduleGenerationResultSummary(bool? Failed = null, string RunId = null, int? MessageCount = null, List<WfmBuScheduleTopicSchedulerMessageSeverityCount> MessageSeverityCounts = null)
+        public WfmBuScheduleTopicBuScheduleGenerationResultSummary(bool? Failed = null, string RunId = null, long? MessageCount = null, List<WfmBuScheduleTopicSchedulerMessageSeverityCount> MessageSeverityCounts = null)
         {
             this.Failed = Failed;
             this.RunId = RunId;
@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MessageCount
         /// </summary>
         [DataMember(Name="messageCount", EmitDefaultValue=false)]
-        public int? MessageCount { get; set; }
+        public long? MessageCount { get; set; }
 
 
 

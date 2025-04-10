@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **InboundCallCount** | **int?** |  | [optional] |
-| **OutboundCallCount** | **int?** |  | [optional] |
+| **InboundCallCount** | **long?** |  | [optional] |
+| **OutboundCallCount** | **long?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

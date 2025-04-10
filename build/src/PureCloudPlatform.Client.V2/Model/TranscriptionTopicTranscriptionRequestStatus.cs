@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="OffsetMs">OffsetMs.</param>
         /// <param name="Status">Status.</param>
-        public TranscriptionTopicTranscriptionRequestStatus(int? OffsetMs = null, StatusEnum? Status = null)
+        public TranscriptionTopicTranscriptionRequestStatus(long? OffsetMs = null, StatusEnum? Status = null)
         {
             this.OffsetMs = OffsetMs;
             this.Status = Status;
@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets OffsetMs
         /// </summary>
         [DataMember(Name="offsetMs", EmitDefaultValue=false)]
-        public int? OffsetMs { get; set; }
+        public long? OffsetMs { get; set; }
 
 
 

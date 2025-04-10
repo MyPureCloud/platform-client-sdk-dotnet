@@ -228,6 +228,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Required headers when uploading a file through PUT request to the URL in the &#39;uploadURI&#39; field
+        /// </summary>
+        /// <value>Required headers when uploading a file through PUT request to the URL in the &#39;uploadURI&#39; field</value>
+        [DataMember(Name="uploadHeaders", EmitDefaultValue=false)]
+        public Dictionary<string, string> UploadHeaders { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -256,6 +265,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountRecordsUpdated: ").Append(CountRecordsUpdated).Append("\n");
             sb.Append("  CountRecordsDeleted: ").Append(CountRecordsDeleted).Append("\n");
             sb.Append("  CountRecordsFailed: ").Append(CountRecordsFailed).Append("\n");
+            sb.Append("  UploadHeaders: ").Append(UploadHeaders).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -358,6 +368,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountRecordsFailed.Equals(other.CountRecordsFailed)
                 ) &&
                 (
+                    this.UploadHeaders == other.UploadHeaders ||
+                    this.UploadHeaders != null &&
+                    this.UploadHeaders.SequenceEqual(other.UploadHeaders)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -410,6 +425,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CountRecordsFailed != null)
                     hash = hash * 59 + this.CountRecordsFailed.GetHashCode();
+
+                if (this.UploadHeaders != null)
+                    hash = hash * 59 + this.UploadHeaders.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

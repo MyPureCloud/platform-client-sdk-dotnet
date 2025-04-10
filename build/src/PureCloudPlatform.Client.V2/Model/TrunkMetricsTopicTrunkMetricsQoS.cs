@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TrunkMetricsTopicTrunkMetricsQoS" /> class.
         /// </summary>
         /// <param name="MismatchCount">MismatchCount.</param>
-        public TrunkMetricsTopicTrunkMetricsQoS(int? MismatchCount = null)
+        public TrunkMetricsTopicTrunkMetricsQoS(long? MismatchCount = null)
         {
             this.MismatchCount = MismatchCount;
             
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MismatchCount
         /// </summary>
         [DataMember(Name="mismatchCount", EmitDefaultValue=false)]
-        public int? MismatchCount { get; set; }
+        public long? MismatchCount { get; set; }
 
 
         /// <summary>

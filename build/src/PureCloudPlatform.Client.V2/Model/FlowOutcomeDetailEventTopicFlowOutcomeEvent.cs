@@ -410,7 +410,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowMilestones">FlowMilestones.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public FlowOutcomeDetailEventTopicFlowOutcomeEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, Guid? FlowOutcomeId = null, int? FlowOutcomeStartTime = null, int? FlowOutcomeEndTime = null, FlowOutcomeValueEnum? FlowOutcomeValue = null, List<FlowOutcomeDetailEventTopicFlowMilestone> FlowMilestones = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        public FlowOutcomeDetailEventTopicFlowOutcomeEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, Guid? FlowOutcomeId = null, long? FlowOutcomeStartTime = null, long? FlowOutcomeEndTime = null, FlowOutcomeValueEnum? FlowOutcomeValue = null, List<FlowOutcomeDetailEventTopicFlowMilestone> FlowMilestones = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -445,7 +445,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 
@@ -565,7 +565,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets FlowOutcomeStartTime
         /// </summary>
         [DataMember(Name="flowOutcomeStartTime", EmitDefaultValue=false)]
-        public int? FlowOutcomeStartTime { get; set; }
+        public long? FlowOutcomeStartTime { get; set; }
 
 
 
@@ -573,7 +573,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets FlowOutcomeEndTime
         /// </summary>
         [DataMember(Name="flowOutcomeEndTime", EmitDefaultValue=false)]
-        public int? FlowOutcomeEndTime { get; set; }
+        public long? FlowOutcomeEndTime { get; set; }
 
 
 

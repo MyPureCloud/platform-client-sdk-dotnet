@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **EventTime** | **int?** |  | [optional] |
+| **EventTime** | **long?** |  | [optional] |
 | **ConversationId** | **Guid?** |  | [optional] |
 | **OutboundCampaignType** | **string** |  | [optional] |
 | **SmsAttributes** | [**OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes**](OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes) |  | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

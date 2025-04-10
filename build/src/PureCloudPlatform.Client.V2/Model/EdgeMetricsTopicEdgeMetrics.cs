@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Disks">Disks.</param>
         /// <param name="Subsystems">Subsystems.</param>
         /// <param name="Networks">Networks.</param>
-        public EdgeMetricsTopicEdgeMetrics(EdgeMetricsTopicUriReference Edge = null, DateTime? EventTime = null, int? UpTimeMsec = null, List<EdgeMetricsTopicEdgeMetricProcessor> Processors = null, List<EdgeMetricsTopicEdgeMetricMemory> Memory = null, List<EdgeMetricsTopicEdgeMetricDisk> Disks = null, List<EdgeMetricsTopicEdgeMetricSubsystem> Subsystems = null, List<EdgeMetricsTopicEdgeMetricNetworks> Networks = null)
+        public EdgeMetricsTopicEdgeMetrics(EdgeMetricsTopicUriReference Edge = null, DateTime? EventTime = null, long? UpTimeMsec = null, List<EdgeMetricsTopicEdgeMetricProcessor> Processors = null, List<EdgeMetricsTopicEdgeMetricMemory> Memory = null, List<EdgeMetricsTopicEdgeMetricDisk> Disks = null, List<EdgeMetricsTopicEdgeMetricSubsystem> Subsystems = null, List<EdgeMetricsTopicEdgeMetricNetworks> Networks = null)
         {
             this.Edge = Edge;
             this.EventTime = EventTime;
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UpTimeMsec
         /// </summary>
         [DataMember(Name="upTimeMsec", EmitDefaultValue=false)]
-        public int? UpTimeMsec { get; set; }
+        public long? UpTimeMsec { get; set; }
 
 
 

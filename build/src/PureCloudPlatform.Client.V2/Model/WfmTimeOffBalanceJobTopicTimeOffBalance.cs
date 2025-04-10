@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HrisTimeOffTypeSecondaryId">HrisTimeOffTypeSecondaryId.</param>
         /// <param name="StartDate">StartDate.</param>
         /// <param name="BalanceMinutesPerDay">BalanceMinutesPerDay.</param>
-        public WfmTimeOffBalanceJobTopicTimeOffBalance(string ActivityCodeId = null, string HrisTimeOffTypeId = null, string HrisTimeOffTypeSecondaryId = null, DateTime? StartDate = null, List<int?> BalanceMinutesPerDay = null)
+        public WfmTimeOffBalanceJobTopicTimeOffBalance(string ActivityCodeId = null, string HrisTimeOffTypeId = null, string HrisTimeOffTypeSecondaryId = null, DateTime? StartDate = null, List<long?> BalanceMinutesPerDay = null)
         {
             this.ActivityCodeId = ActivityCodeId;
             this.HrisTimeOffTypeId = HrisTimeOffTypeId;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets BalanceMinutesPerDay
         /// </summary>
         [DataMember(Name="balanceMinutesPerDay", EmitDefaultValue=false)]
-        public List<int?> BalanceMinutesPerDay { get; set; }
+        public List<long?> BalanceMinutesPerDay { get; set; }
 
 
         /// <summary>

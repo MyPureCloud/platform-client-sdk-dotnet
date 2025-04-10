@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IntervalLengthMinutes">IntervalLengthMinutes.</param>
         /// <param name="ReferenceStartDate">ReferenceStartDate.</param>
         /// <param name="Results">Results.</param>
-        public WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsNotification(string BusinessUnitId = null, StateEnum? State = null, WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference Forecast = null, int? WeekCount = null, int? IntervalLengthMinutes = null, DateTime? ReferenceStartDate = null, List<WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults> Results = null)
+        public WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsNotification(string BusinessUnitId = null, StateEnum? State = null, WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference Forecast = null, long? WeekCount = null, long? IntervalLengthMinutes = null, DateTime? ReferenceStartDate = null, List<WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults> Results = null)
         {
             this.BusinessUnitId = BusinessUnitId;
             this.State = State;
@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WeekCount
         /// </summary>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
-        public int? WeekCount { get; set; }
+        public long? WeekCount { get; set; }
 
 
 
@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets IntervalLengthMinutes
         /// </summary>
         [DataMember(Name="intervalLengthMinutes", EmitDefaultValue=false)]
-        public int? IntervalLengthMinutes { get; set; }
+        public long? IntervalLengthMinutes { get; set; }
 
 
 

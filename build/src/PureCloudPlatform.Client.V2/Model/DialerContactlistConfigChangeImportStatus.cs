@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TargetContactListIds">The ids for target contact lists.</param>
         /// <param name="ListNamePrefix">The prefix used for target contact list names.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistConfigChangeImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null, List<string> TargetContactListIds = null, string ListNamePrefix = null, Dictionary<string, Object> AdditionalProperties = null)
+        public DialerContactlistConfigChangeImportStatus(ImportStateEnum? ImportState = null, long? TotalRecords = null, long? CompletedRecords = null, long? PercentageComplete = null, string FailureReason = null, List<string> TargetContactListIds = null, string ListNamePrefix = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.ImportState = ImportState;
             this.TotalRecords = TotalRecords;
@@ -84,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>total number of records to be imported</value>
         [DataMember(Name="totalRecords", EmitDefaultValue=false)]
-        public int? TotalRecords { get; set; }
+        public long? TotalRecords { get; set; }
 
 
 
@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>number of records finished importing</value>
         [DataMember(Name="completedRecords", EmitDefaultValue=false)]
-        public int? CompletedRecords { get; set; }
+        public long? CompletedRecords { get; set; }
 
 
 
@@ -102,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>percentage of records finished importing</value>
         [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
-        public int? PercentageComplete { get; set; }
+        public long? PercentageComplete { get; set; }
 
 
 

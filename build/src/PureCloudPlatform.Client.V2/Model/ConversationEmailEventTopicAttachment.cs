@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContentUri">The content uri of the attachment. If set, this is commonly a public api download location..</param>
         /// <param name="ContentType">The type of file the attachment is..</param>
         /// <param name="ContentLength">The length of the attachment file..</param>
-        public ConversationEmailEventTopicAttachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null)
+        public ConversationEmailEventTopicAttachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, long? ContentLength = null)
         {
             this.AttachmentId = AttachmentId;
             this.Name = Name;
@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The length of the attachment file.</value>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
-        public int? ContentLength { get; set; }
+        public long? ContentLength { get; set; }
 
 
         /// <summary>

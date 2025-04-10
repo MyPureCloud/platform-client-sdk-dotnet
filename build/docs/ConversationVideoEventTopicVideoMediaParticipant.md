@@ -27,9 +27,9 @@
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**ConversationVideoEventTopicErrorBody**](ConversationVideoEventTopicErrorBody) |  | [optional] |
 | **Script** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
-| **WrapupTimeoutMs** | **int?** |  | [optional] |
+| **WrapupTimeoutMs** | **long?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
-| **AlertingTimeoutMs** | **int?** |  | [optional] |
+| **AlertingTimeoutMs** | **long?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
 | **ExternalContact** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference) |  | [optional] |
 | **ExternalContactInitialDivisionId** | **string** |  | [optional] |
@@ -49,10 +49,10 @@
 | **AudioMuted** | **bool?** |  | [optional] |
 | **VideoMuted** | **bool?** |  | [optional] |
 | **SharingScreen** | **bool?** |  | [optional] |
-| **PeerCount** | **int?** |  | [optional] |
+| **PeerCount** | **long?** |  | [optional] |
 | **Context** | **string** |  | [optional] |
 | **Msids** | **List&lt;string&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

@@ -276,7 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NetworkConnectivity">NetworkConnectivity.</param>
         /// <param name="DivisionIds">DivisionIds.</param>
         /// <param name="LastScreen">LastScreen.</param>
-        public JourneySessionEventsNotificationSessionEvent(Guid? Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, JourneySessionEventsNotificationApp App = null, JourneySessionEventsNotificationSdkLibrary SdkLibrary = null, JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity = null, List<string> DivisionIds = null, string LastScreen = null)
+        public JourneySessionEventsNotificationSessionEvent(Guid? Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, long? DurationInSeconds = null, long? EventCount = null, long? PageviewCount = null, long? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, JourneySessionEventsNotificationApp App = null, JourneySessionEventsNotificationSdkLibrary SdkLibrary = null, JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity = null, List<string> DivisionIds = null, string LastScreen = null)
         {
             this.Id = Id;
             this.SelfUri = SelfUri;
@@ -505,7 +505,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationInSeconds
         /// </summary>
         [DataMember(Name="durationInSeconds", EmitDefaultValue=false)]
-        public int? DurationInSeconds { get; set; }
+        public long? DurationInSeconds { get; set; }
 
 
 
@@ -513,7 +513,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventCount
         /// </summary>
         [DataMember(Name="eventCount", EmitDefaultValue=false)]
-        public int? EventCount { get; set; }
+        public long? EventCount { get; set; }
 
 
 
@@ -521,7 +521,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PageviewCount
         /// </summary>
         [DataMember(Name="pageviewCount", EmitDefaultValue=false)]
-        public int? PageviewCount { get; set; }
+        public long? PageviewCount { get; set; }
 
 
 
@@ -529,7 +529,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ScreenviewCount
         /// </summary>
         [DataMember(Name="screenviewCount", EmitDefaultValue=false)]
-        public int? ScreenviewCount { get; set; }
+        public long? ScreenviewCount { get; set; }
 
 
 

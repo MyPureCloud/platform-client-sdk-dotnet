@@ -10,10 +10,10 @@
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Id** | **string** | The identifier of the rule | [optional] |
 | **Name** | **string** | The name of the rule | [optional] |
-| **Order** | **int?** | The ranked order of the rule; rules are processed from lowest number to highest | [optional] |
+| **Order** | **long?** | The ranked order of the rule; rules are processed from lowest number to highest | [optional] |
 | **Category** | **string** | The category of the rule | [optional] |
 | **Actions** | [**List&lt;DialerRulesetConfigChangeAction&gt;**](DialerRulesetConfigChangeAction) | The list of rule actions to be taken if the conditions are true | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

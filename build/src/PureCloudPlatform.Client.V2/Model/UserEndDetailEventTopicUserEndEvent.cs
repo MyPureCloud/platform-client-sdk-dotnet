@@ -377,7 +377,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackDurationMs">CallbackDurationMs.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public UserEndDetailEventTopicUserEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string UserId = null, string DivisionId = null, string QueueId = null, int? InteractingDurationMs = null, int? HeldDurationMs = null, int? AlertingDurationMs = null, int? ContactingDurationMs = null, int? DialingDurationMs = null, int? CallbackDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        public UserEndDetailEventTopicUserEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string UserId = null, string DivisionId = null, string QueueId = null, long? InteractingDurationMs = null, long? HeldDurationMs = null, long? AlertingDurationMs = null, long? ContactingDurationMs = null, long? DialingDurationMs = null, long? CallbackDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -416,7 +416,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public int? EventTime { get; set; }
+        public long? EventTime { get; set; }
 
 
 
@@ -510,7 +510,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CallbackScheduledTime
         /// </summary>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
-        public int? CallbackScheduledTime { get; set; }
+        public long? CallbackScheduledTime { get; set; }
 
 
 
@@ -552,7 +552,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets InteractingDurationMs
         /// </summary>
         [DataMember(Name="interactingDurationMs", EmitDefaultValue=false)]
-        public int? InteractingDurationMs { get; set; }
+        public long? InteractingDurationMs { get; set; }
 
 
 
@@ -560,7 +560,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets HeldDurationMs
         /// </summary>
         [DataMember(Name="heldDurationMs", EmitDefaultValue=false)]
-        public int? HeldDurationMs { get; set; }
+        public long? HeldDurationMs { get; set; }
 
 
 
@@ -568,7 +568,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingDurationMs
         /// </summary>
         [DataMember(Name="alertingDurationMs", EmitDefaultValue=false)]
-        public int? AlertingDurationMs { get; set; }
+        public long? AlertingDurationMs { get; set; }
 
 
 
@@ -576,7 +576,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ContactingDurationMs
         /// </summary>
         [DataMember(Name="contactingDurationMs", EmitDefaultValue=false)]
-        public int? ContactingDurationMs { get; set; }
+        public long? ContactingDurationMs { get; set; }
 
 
 
@@ -584,7 +584,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DialingDurationMs
         /// </summary>
         [DataMember(Name="dialingDurationMs", EmitDefaultValue=false)]
-        public int? DialingDurationMs { get; set; }
+        public long? DialingDurationMs { get; set; }
 
 
 
@@ -592,7 +592,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CallbackDurationMs
         /// </summary>
         [DataMember(Name="callbackDurationMs", EmitDefaultValue=false)]
-        public int? CallbackDurationMs { get; set; }
+        public long? CallbackDurationMs { get; set; }
 
 
 

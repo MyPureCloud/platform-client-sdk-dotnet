@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
         /// <param name="SizeBytes">SizeBytes.</param>
-        public UserGreetingEventGreetingAudioFile(int? DurationMilliseconds = null, int? SizeBytes = null)
+        public UserGreetingEventGreetingAudioFile(long? DurationMilliseconds = null, long? SizeBytes = null)
         {
             this.DurationMilliseconds = DurationMilliseconds;
             this.SizeBytes = SizeBytes;
@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DurationMilliseconds
         /// </summary>
         [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
-        public int? DurationMilliseconds { get; set; }
+        public long? DurationMilliseconds { get; set; }
 
 
 
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SizeBytes
         /// </summary>
         [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
-        public int? SizeBytes { get; set; }
+        public long? SizeBytes { get; set; }
 
 
         /// <summary>

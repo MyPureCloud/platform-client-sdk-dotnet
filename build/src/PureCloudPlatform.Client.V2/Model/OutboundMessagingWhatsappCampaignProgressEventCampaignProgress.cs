@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Percentage">numberOfContactsContacted/totalNumberOfContacts*100.</param>
         /// <param name="NumberOfContactsSkipped">A map of skipped reasons and the number of contacts associated with each..</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public OutboundMessagingWhatsappCampaignProgressEventCampaignProgress(OutboundMessagingWhatsappCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? NumberOfContactsMessaged = null, double? TotalNumberOfContacts = null, int? Percentage = null, Dictionary<string, int?> NumberOfContactsSkipped = null, Dictionary<string, Object> AdditionalProperties = null)
+        public OutboundMessagingWhatsappCampaignProgressEventCampaignProgress(OutboundMessagingWhatsappCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? NumberOfContactsMessaged = null, double? TotalNumberOfContacts = null, long? Percentage = null, Dictionary<string, long?> NumberOfContactsSkipped = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Campaign = Campaign;
             this.NumberOfContactsCalled = NumberOfContactsCalled;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>numberOfContactsContacted/totalNumberOfContacts*100</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
-        public int? Percentage { get; set; }
+        public long? Percentage { get; set; }
 
 
 
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A map of skipped reasons and the number of contacts associated with each.</value>
         [DataMember(Name="numberOfContactsSkipped", EmitDefaultValue=false)]
-        public Dictionary<string, int?> NumberOfContactsSkipped { get; set; }
+        public Dictionary<string, long?> NumberOfContactsSkipped { get; set; }
 
 
 

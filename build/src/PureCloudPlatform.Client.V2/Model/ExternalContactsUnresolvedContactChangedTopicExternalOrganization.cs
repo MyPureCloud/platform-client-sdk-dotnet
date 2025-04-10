@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomFields">CustomFields.</param>
         /// <param name="CreateDate">CreateDate.</param>
         /// <param name="ModifyDate">ModifyDate.</param>
-        public ExternalContactsUnresolvedContactChangedTopicExternalOrganization(string Id = null, ExternalContactsUnresolvedContactChangedTopicDivision Division = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber PhoneNumber = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber FaxNumber = null, int? EmployeeCount = null, int? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<ExternalContactsUnresolvedContactChangedTopicTicker> Tickers = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, string ExternalSystemUrl = null, Dictionary<string, Object> CustomFields = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
+        public ExternalContactsUnresolvedContactChangedTopicExternalOrganization(string Id = null, ExternalContactsUnresolvedContactChangedTopicDivision Division = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber PhoneNumber = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<ExternalContactsUnresolvedContactChangedTopicTicker> Tickers = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, string ExternalSystemUrl = null, Dictionary<string, Object> CustomFields = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
         {
             this.Id = Id;
             this.Division = Division;
@@ -142,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EmployeeCount
         /// </summary>
         [DataMember(Name="employeeCount", EmitDefaultValue=false)]
-        public int? EmployeeCount { get; set; }
+        public long? EmployeeCount { get; set; }
 
 
 
@@ -150,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Revenue
         /// </summary>
         [DataMember(Name="revenue", EmitDefaultValue=false)]
-        public int? Revenue { get; set; }
+        public long? Revenue { get; set; }
 
 
 

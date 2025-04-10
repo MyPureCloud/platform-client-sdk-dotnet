@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="Total">Total.</param>
-        public LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification(List<LearningAssignmentRuleRunTopicLearningAssignmentsCreated> Entities = null, int? Total = null)
+        public LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification(List<LearningAssignmentRuleRunTopicLearningAssignmentsCreated> Entities = null, long? Total = null)
         {
             this.Entities = Entities;
             this.Total = Total;
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
-        public int? Total { get; set; }
+        public long? Total { get; set; }
 
 
         /// <summary>

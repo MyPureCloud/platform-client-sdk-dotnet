@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ResolveIdentities">Whether the channel should resolve identities (required).</param>
-        public OpenMessagingIdentityResolutionConfig(WritableStarrableDivision Division = null, bool? ResolveIdentities = null)
+        /// <param name="ExternalSource">The external source used for stitching this channel - used only for Open Messaging..</param>
+        public OpenMessagingIdentityResolutionConfig(WritableStarrableDivision Division = null, bool? ResolveIdentities = null, AddressableEntityRef ExternalSource = null)
         {
             this.Division = Division;
             this.ResolveIdentities = ResolveIdentities;
+            this.ExternalSource = ExternalSource;
             
         }
         
@@ -66,6 +68,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The external source used for stitching this channel - used only for Open Messaging.
+        /// </summary>
+        /// <value>The external source used for stitching this channel - used only for Open Messaging.</value>
+        [DataMember(Name="externalSource", EmitDefaultValue=false)]
+        public AddressableEntityRef ExternalSource { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -85,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ResolveIdentities: ").Append(ResolveIdentities).Append("\n");
+            sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,6 +154,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ResolveIdentities.Equals(other.ResolveIdentities)
                 ) &&
                 (
+                    this.ExternalSource == other.ExternalSource ||
+                    this.ExternalSource != null &&
+                    this.ExternalSource.Equals(other.ExternalSource)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -167,6 +184,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ResolveIdentities != null)
                     hash = hash * 59 + this.ResolveIdentities.GetHashCode();
+
+                if (this.ExternalSource != null)
+                    hash = hash * 59 + this.ExternalSource.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -547,7 +547,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecipientType">RecipientType.</param>
         /// <param name="ByoSmsIntegrationId">ByoSmsIntegrationId.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
-        public ConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationMessageEventTopicUriReference User = null, ConversationMessageEventTopicUriReference Queue = null, ConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationMessageEventTopicErrorBody ErrorInfo = null, ConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationMessageEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationMessageEventTopicUriReference ExternalOrganization = null, ConversationMessageEventTopicWrapup Wrapup = null, ConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationMessageEventTopicQueueMediaSettings QueueMediaSettings = null, List<ConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ByoSmsIntegrationId = null, string MonitoredParticipantId = null)
+        public ConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationMessageEventTopicUriReference User = null, ConversationMessageEventTopicUriReference Queue = null, ConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationMessageEventTopicErrorBody ErrorInfo = null, ConversationMessageEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, ConversationMessageEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationMessageEventTopicUriReference ExternalOrganization = null, ConversationMessageEventTopicWrapup Wrapup = null, ConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationMessageEventTopicQueueMediaSettings QueueMediaSettings = null, List<ConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ByoSmsIntegrationId = null, string MonitoredParticipantId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -748,7 +748,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -764,7 +764,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 

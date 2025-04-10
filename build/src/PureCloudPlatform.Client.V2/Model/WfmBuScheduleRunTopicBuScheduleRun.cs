@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SchedulingCompletedTime">SchedulingCompletedTime.</param>
         /// <param name="MessageCount">MessageCount.</param>
         /// <param name="MessageSeverityCounts">MessageSeverityCounts.</param>
-        public WfmBuScheduleRunTopicBuScheduleRun(string Id = null, double? PercentComplete = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, WfmBuScheduleRunTopicBuScheduleReference Schedule = null, WfmBuScheduleRunTopicUserReference SchedulingCanceledBy = null, string SchedulingCompletedTime = null, int? MessageCount = null, List<WfmBuScheduleRunTopicSchedulerMessageSeverityCount> MessageSeverityCounts = null)
+        public WfmBuScheduleRunTopicBuScheduleRun(string Id = null, double? PercentComplete = null, bool? IntradayRescheduling = null, StateEnum? State = null, long? WeekCount = null, WfmBuScheduleRunTopicBuScheduleReference Schedule = null, WfmBuScheduleRunTopicUserReference SchedulingCanceledBy = null, string SchedulingCompletedTime = null, long? MessageCount = null, List<WfmBuScheduleRunTopicSchedulerMessageSeverityCount> MessageSeverityCounts = null)
         {
             this.Id = Id;
             this.PercentComplete = PercentComplete;
@@ -133,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WeekCount
         /// </summary>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
-        public int? WeekCount { get; set; }
+        public long? WeekCount { get; set; }
 
 
 
@@ -165,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets MessageCount
         /// </summary>
         [DataMember(Name="messageCount", EmitDefaultValue=false)]
-        public int? MessageCount { get; set; }
+        public long? MessageCount { get; set; }
 
 
 

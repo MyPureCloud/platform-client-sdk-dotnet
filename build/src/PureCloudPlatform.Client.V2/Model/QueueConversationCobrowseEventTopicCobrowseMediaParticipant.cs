@@ -443,7 +443,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ViewerUrl">ViewerUrl.</param>
         /// <param name="ProviderEventTime">ProviderEventTime.</param>
         /// <param name="Controlling">Controlling.</param>
-        public QueueConversationCobrowseEventTopicCobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCobrowseEventTopicUriReference User = null, QueueConversationCobrowseEventTopicUriReference Queue = null, QueueConversationCobrowseEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCobrowseEventTopicErrorBody ErrorInfo = null, QueueConversationCobrowseEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCobrowseEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCobrowseEventTopicUriReference ExternalOrganization = null, QueueConversationCobrowseEventTopicWrapup Wrapup = null, QueueConversationCobrowseEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCobrowseEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCobrowseEventTopicQueueMediaSettings QueueMediaSettings = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
+        public QueueConversationCobrowseEventTopicCobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCobrowseEventTopicUriReference User = null, QueueConversationCobrowseEventTopicUriReference Queue = null, QueueConversationCobrowseEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCobrowseEventTopicErrorBody ErrorInfo = null, QueueConversationCobrowseEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationCobrowseEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCobrowseEventTopicUriReference ExternalOrganization = null, QueueConversationCobrowseEventTopicWrapup Wrapup = null, QueueConversationCobrowseEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCobrowseEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCobrowseEventTopicQueueMediaSettings QueueMediaSettings = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -643,7 +643,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
-        public int? WrapupTimeoutMs { get; set; }
+        public long? WrapupTimeoutMs { get; set; }
 
 
 
@@ -659,7 +659,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
-        public int? AlertingTimeoutMs { get; set; }
+        public long? AlertingTimeoutMs { get; set; }
 
 
 

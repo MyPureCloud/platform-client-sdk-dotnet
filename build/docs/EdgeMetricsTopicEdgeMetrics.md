@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **Edge** | [**EdgeMetricsTopicUriReference**](EdgeMetricsTopicUriReference) |  | [optional] |
 | **EventTime** | **DateTime?** |  | [optional] |
-| **UpTimeMsec** | **int?** |  | [optional] |
+| **UpTimeMsec** | **long?** |  | [optional] |
 | **Processors** | [**List&lt;EdgeMetricsTopicEdgeMetricProcessor&gt;**](EdgeMetricsTopicEdgeMetricProcessor) |  | [optional] |
 | **Memory** | [**List&lt;EdgeMetricsTopicEdgeMetricMemory&gt;**](EdgeMetricsTopicEdgeMetricMemory) |  | [optional] |
 | **Disks** | [**List&lt;EdgeMetricsTopicEdgeMetricDisk&gt;**](EdgeMetricsTopicEdgeMetricDisk) |  | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

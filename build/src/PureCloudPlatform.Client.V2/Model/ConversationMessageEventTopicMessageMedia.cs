@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContentLengthBytes">The optional content length of the the media object, in bytes..</param>
         /// <param name="Name">The optional name of the the media object..</param>
         /// <param name="Id">The optional id of the the media object..</param>
-        public ConversationMessageEventTopicMessageMedia(string Url = null, string MediaType = null, int? ContentLengthBytes = null, string Name = null, string Id = null)
+        public ConversationMessageEventTopicMessageMedia(string Url = null, string MediaType = null, long? ContentLengthBytes = null, string Name = null, string Id = null)
         {
             this.Url = Url;
             this.MediaType = MediaType;
@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The optional content length of the the media object, in bytes.</value>
         [DataMember(Name="contentLengthBytes", EmitDefaultValue=false)]
-        public int? ContentLengthBytes { get; set; }
+        public long? ContentLengthBytes { get; set; }
 
 
 

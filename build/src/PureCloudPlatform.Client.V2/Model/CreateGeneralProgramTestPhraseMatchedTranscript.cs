@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="MediaType">MediaType.</param>
         /// <param name="DetectedPhrases">DetectedPhrases.</param>
-        public CreateGeneralProgramTestPhraseMatchedTranscript(int? Timestamp = null, string TranscriptId = null, string CommunicationId = null, string ConversationId = null, MediaTypeEnum? MediaType = null, List<CreateGeneralProgramTestPhraseDetectedPhrase> DetectedPhrases = null)
+        public CreateGeneralProgramTestPhraseMatchedTranscript(long? Timestamp = null, string TranscriptId = null, string CommunicationId = null, string ConversationId = null, MediaTypeEnum? MediaType = null, List<CreateGeneralProgramTestPhraseDetectedPhrase> DetectedPhrases = null)
         {
             this.Timestamp = Timestamp;
             this.TranscriptId = TranscriptId;
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
-        public int? Timestamp { get; set; }
+        public long? Timestamp { get; set; }
 
 
 

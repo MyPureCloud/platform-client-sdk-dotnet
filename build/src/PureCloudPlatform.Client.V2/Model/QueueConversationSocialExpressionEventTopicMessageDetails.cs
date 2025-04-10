@@ -138,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Stickers">A list of stickers included in the message.</param>
         /// <param name="MessageMetadata">MessageMetadata.</param>
         /// <param name="SocialVisibility">For social media messages, the visibility of the message in the originating social platform.</param>
-        public QueueConversationSocialExpressionEventTopicMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, List<QueueConversationSocialExpressionEventTopicMessageMedia> Media = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, List<QueueConversationSocialExpressionEventTopicMessageSticker> Stickers = null, QueueConversationSocialExpressionEventTopicMessageMetadata MessageMetadata = null, SocialVisibilityEnum? SocialVisibility = null)
+        public QueueConversationSocialExpressionEventTopicMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, long? MessageSegmentCount = null, List<QueueConversationSocialExpressionEventTopicMessageMedia> Media = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, List<QueueConversationSocialExpressionEventTopicMessageSticker> Stickers = null, QueueConversationSocialExpressionEventTopicMessageMetadata MessageMetadata = null, SocialVisibilityEnum? SocialVisibility = null)
         {
             this.MessageId = MessageId;
             this.MessageTime = MessageTime;
@@ -179,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.</value>
         [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
-        public int? MessageSegmentCount { get; set; }
+        public long? MessageSegmentCount { get; set; }
 
 
 

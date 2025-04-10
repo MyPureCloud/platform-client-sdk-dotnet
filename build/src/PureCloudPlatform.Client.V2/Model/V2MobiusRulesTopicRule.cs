@@ -125,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="SendExitingAlarmNotification">SendExitingAlarmNotification.</param>
         /// <param name="WaitBetweenNotificationMs">WaitBetweenNotificationMs.</param>
-        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null, DateTime? DateCreated = null, bool? SendExitingAlarmNotification = null, int? WaitBetweenNotificationMs = null)
+        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null, DateTime? DateCreated = null, bool? SendExitingAlarmNotification = null, long? WaitBetweenNotificationMs = null)
         {
             this.Id = Id;
             this.UserId = UserId;
@@ -224,7 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets WaitBetweenNotificationMs
         /// </summary>
         [DataMember(Name="waitBetweenNotificationMs", EmitDefaultValue=false)]
-        public int? WaitBetweenNotificationMs { get; set; }
+        public long? WaitBetweenNotificationMs { get; set; }
 
 
         /// <summary>

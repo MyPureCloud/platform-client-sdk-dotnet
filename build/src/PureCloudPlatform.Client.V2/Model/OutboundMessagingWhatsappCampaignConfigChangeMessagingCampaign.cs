@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Division">A UriReference for a resource.</param>
-        public OutboundMessagingWhatsappCampaignConfigChangeMessagingCampaign(CampaignStatusEnum? CampaignStatus = null, OutboundMessagingWhatsappCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingWhatsappCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingWhatsappCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingWhatsappCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingWhatsappCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<OutboundMessagingWhatsappCampaignConfigChangeUriReference> RuleSets = null, OutboundMessagingWhatsappCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingWhatsappCampaignConfigChangeEmailConfig EmailConfig = null, OutboundMessagingWhatsappCampaignConfigChangeWhatsAppConfig WhatsAppConfig = null, List<OutboundMessagingWhatsappCampaignConfigChangeErrorDetail> Errors = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, OutboundMessagingWhatsappCampaignConfigChangeUriReference Division = null)
+        public OutboundMessagingWhatsappCampaignConfigChangeMessagingCampaign(CampaignStatusEnum? CampaignStatus = null, OutboundMessagingWhatsappCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingWhatsappCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingWhatsappCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingWhatsappCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingWhatsappCampaignConfigChangeContactSort> ContactSorts = null, long? MessagesPerMinute = null, List<OutboundMessagingWhatsappCampaignConfigChangeUriReference> RuleSets = null, OutboundMessagingWhatsappCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingWhatsappCampaignConfigChangeEmailConfig EmailConfig = null, OutboundMessagingWhatsappCampaignConfigChangeWhatsAppConfig WhatsAppConfig = null, List<OutboundMessagingWhatsappCampaignConfigChangeErrorDetail> Errors = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null, OutboundMessagingWhatsappCampaignConfigChangeUriReference Division = null)
         {
             this.CampaignStatus = CampaignStatus;
             this.CallableTimeSet = CallableTimeSet;
@@ -175,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>How many messages this messaging campaign will send per minute.</value>
         [DataMember(Name="messagesPerMinute", EmitDefaultValue=false)]
-        public int? MessagesPerMinute { get; set; }
+        public long? MessagesPerMinute { get; set; }
 
 
 
@@ -261,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public long? Version { get; set; }
 
 
 

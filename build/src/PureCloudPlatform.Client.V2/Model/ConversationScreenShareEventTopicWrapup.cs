@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Tags">List of tags selected by the agent to describe the call or disposition..</param>
         /// <param name="DurationSeconds">The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally.</param>
         /// <param name="EndTime">The timestamp when the wrapup was finished..</param>
-        public ConversationScreenShareEventTopicWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null)
+        public ConversationScreenShareEventTopicWrapup(string Code = null, string Notes = null, List<string> Tags = null, long? DurationSeconds = null, DateTime? EndTime = null)
         {
             this.Code = Code;
             this.Notes = Notes;
@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally</value>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
-        public int? DurationSeconds { get; set; }
+        public long? DurationSeconds { get; set; }
 
 
 

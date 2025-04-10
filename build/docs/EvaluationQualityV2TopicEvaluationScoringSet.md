@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **TotalScore** | **int?** |  | [optional] |
-| **TotalCriticalScore** | **int?** |  | [optional] |
+| **TotalScore** | **long?** |  | [optional] |
+| **TotalCriticalScore** | **long?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 230.0.0_
+_PureCloudPlatform.Client.V2 231.0.0_

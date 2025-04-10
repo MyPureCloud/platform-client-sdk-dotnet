@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Result">Result.</param>
         /// <param name="OperationId">OperationId.</param>
         /// <param name="Progress">Progress.</param>
-        public WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification(StatusEnum? Status = null, WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast Result = null, string OperationId = null, int? Progress = null)
+        public WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification(StatusEnum? Status = null, WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast Result = null, string OperationId = null, long? Progress = null)
         {
             this.Status = Status;
             this.Result = Result;
@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Progress
         /// </summary>
         [DataMember(Name="progress", EmitDefaultValue=false)]
-        public int? Progress { get; set; }
+        public long? Progress { get; set; }
 
 
         /// <summary>

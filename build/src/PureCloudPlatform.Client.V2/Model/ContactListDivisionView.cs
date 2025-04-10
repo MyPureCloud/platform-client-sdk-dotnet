@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
         /// <param name="PhoneColumns">Indicates which columns are phone numbers..</param>
         /// <param name="EmailColumns">Indicates which columns are email addresses..</param>
-        public ContactListDivisionView(string Name = null, Division Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null)
+        /// <param name="WhatsAppColumns">Indicates which columns are whatsApp contacts..</param>
+        public ContactListDivisionView(string Name = null, Division Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, List<WhatsAppColumn> WhatsAppColumns = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
             this.EmailColumns = EmailColumns;
+            this.WhatsAppColumns = WhatsAppColumns;
             
         }
         
@@ -98,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates which columns are whatsApp contacts.
+        /// </summary>
+        /// <value>Indicates which columns are whatsApp contacts.</value>
+        [DataMember(Name="whatsAppColumns", EmitDefaultValue=false)]
+        public List<WhatsAppColumn> WhatsAppColumns { get; set; }
+
+
+
+        /// <summary>
         /// The status of the import process.
         /// </summary>
         /// <value>The status of the import process.</value>
@@ -138,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
             sb.Append("  EmailColumns: ").Append(EmailColumns).Append("\n");
+            sb.Append("  WhatsAppColumns: ").Append(WhatsAppColumns).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -212,6 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailColumns.SequenceEqual(other.EmailColumns)
                 ) &&
                 (
+                    this.WhatsAppColumns == other.WhatsAppColumns ||
+                    this.WhatsAppColumns != null &&
+                    this.WhatsAppColumns.SequenceEqual(other.WhatsAppColumns)
+                ) &&
+                (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
@@ -256,6 +273,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmailColumns != null)
                     hash = hash * 59 + this.EmailColumns.GetHashCode();
+
+                if (this.WhatsAppColumns != null)
+                    hash = hash * 59 + this.WhatsAppColumns.GetHashCode();
 
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();

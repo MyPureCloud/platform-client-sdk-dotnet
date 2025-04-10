@@ -94,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Notes">Notes.</param>
         /// <param name="ReviewedBy">ReviewedBy.</param>
         /// <param name="ReviewedDate">ReviewedDate.</param>
-        public WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification(string Id = null, WfmAdherenceExplanationJobCompleteTopicUserReference Agent = null, WfmAdherenceExplanationJobCompleteTopicManagementUnit ManagementUnit = null, WfmAdherenceExplanationJobCompleteTopicBusinessUnit BusinessUnit = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? StartDate = null, int? LengthMinutes = null, string Notes = null, WfmAdherenceExplanationJobCompleteTopicUserReference ReviewedBy = null, DateTime? ReviewedDate = null)
+        public WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification(string Id = null, WfmAdherenceExplanationJobCompleteTopicUserReference Agent = null, WfmAdherenceExplanationJobCompleteTopicManagementUnit ManagementUnit = null, WfmAdherenceExplanationJobCompleteTopicBusinessUnit BusinessUnit = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? StartDate = null, long? LengthMinutes = null, string Notes = null, WfmAdherenceExplanationJobCompleteTopicUserReference ReviewedBy = null, DateTime? ReviewedDate = null)
         {
             this.Id = Id;
             this.Agent = Agent;
@@ -160,7 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LengthMinutes
         /// </summary>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
-        public int? LengthMinutes { get; set; }
+        public long? LengthMinutes { get; set; }
 
 
 
