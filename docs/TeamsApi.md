@@ -665,4 +665,4 @@ namespace Example
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 231.0.0_
+_PureCloudPlatform.Client.V2 231.1.0_
