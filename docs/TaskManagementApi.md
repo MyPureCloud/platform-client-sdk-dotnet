@@ -772,8 +772,6 @@ namespace Example
 
 Get a listing of a workbin's attribute change history
 
-GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workbin:view
@@ -842,8 +840,6 @@ namespace Example
 
 Get a version of a workbin
 
-GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workbin:view
@@ -907,8 +903,6 @@ namespace Example
 
 
 Get all versions of a workbin
-
-GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1041,8 +1035,6 @@ namespace Example
 
 
 Get a listing of a workitem's attribute change history
-
-GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1184,8 +1176,6 @@ namespace Example
 
 Get a version of a workitem
 
-GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitem:view
@@ -1249,8 +1239,6 @@ namespace Example
 
 
 Get all versions of a workitem
-
-GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2705,8 +2693,6 @@ namespace Example
 
 Get a listing of a worktype's attribute change history
 
-GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:worktype:view
@@ -2903,8 +2889,6 @@ namespace Example
 
 Get a version of a worktype
 
-GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:worktype:view
@@ -2968,8 +2952,6 @@ namespace Example
 
 
 Get all versions of a worktype
-
-GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4943,4 +4925,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

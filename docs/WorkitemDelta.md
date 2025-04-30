@@ -34,7 +34,10 @@
 | **ModifiedBy** | [**WorkitemsAttributeChangeString**](WorkitemsAttributeChangeString) |  | [optional] |
 | **StatusCategory** | [**WorkitemsAttributeChangeWorkitemStatusCategory**](WorkitemsAttributeChangeWorkitemStatusCategory) |  | [optional] |
 | **ScriptId** | [**WorkitemsAttributeChangeString**](WorkitemsAttributeChangeString) |  | [optional] |
+| **DateAssignmentStateChanged** | [**WorkitemsAttributeChangeInstant**](WorkitemsAttributeChangeInstant) |  | [optional] |
+| **AlertTimeoutSeconds** | [**WorkitemsAttributeChangeInteger**](WorkitemsAttributeChangeInteger) |  | [optional] |
+| **ScoredAgents** | [**WorkitemsAttributeChangeListWorkitemScoredAgentDelta**](WorkitemsAttributeChangeListWorkitemScoredAgentDelta) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

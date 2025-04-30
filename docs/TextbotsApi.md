@@ -50,8 +50,8 @@ namespace Example
             var apiInstance = new TextbotsApi();
             var botType = new List<string>(); // List<string> | Bot types (optional) 
             var botName = botName_example;  // string | Bot name (optional) 
-            var botId = new List<string>(); // List<string> | Bot IDs (optional) 
-            var pageSize = 56;  // int? | The maximum results to return (optional)  (default to 25)
+            var botId = new List<string>(); // List<string> | Bot IDs. Maximum of 50 (optional) 
+            var pageSize = 56;  // int? | The maximum results to return. Maximum of 100 (optional)  (default to 25)
 
             try
             { 
@@ -73,10 +73,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **botType** | [**List<string>**](string)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow, GenesysDigitalBotFlow, GenesysVoiceSurveyFlow |
+| **botType** | [**List<string>**](string)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow, GenesysDigitalBotFlow, GenesysVoiceSurveyFlow, GenesysDigitalBotConnector |
 | **botName** | **string**| Bot name | [optional]  |
-| **botId** | [**List<string>**](string)| Bot IDs | [optional]  |
-| **pageSize** | **int?**| The maximum results to return | [optional] [default to 25] |
+| **botId** | [**List<string>**](string)| Bot IDs. Maximum of 50 | [optional]  |
+| **pageSize** | **int?**| The maximum results to return. Maximum of 100 | [optional] [default to 25] |
 
 ### Return type
 
@@ -277,4 +277,4 @@ namespace Example
 [**PostTextResponse**](PostTextResponse)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

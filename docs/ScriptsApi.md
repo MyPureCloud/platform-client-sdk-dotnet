@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetScripts**](#GetScripts) | **Get** /api/v2/scripts | Get the list of scripts |
 | [**GetScriptsDivisionviews**](#GetScriptsDivisionviews) | **Get** /api/v2/scripts/divisionviews | Get the metadata for a list of scripts |
 | [**GetScriptsPublished**](#GetScriptsPublished) | **Get** /api/v2/scripts/published | Get the published scripts. |
+| [**GetScriptsPublishedDivisionviewVariables**](#GetScriptsPublishedDivisionviewVariables) | **Get** /api/v2/scripts/published/divisionviews/{scriptId}/variables | Get the published variables |
 | [**GetScriptsPublishedDivisionviews**](#GetScriptsPublishedDivisionviews) | **Get** /api/v2/scripts/published/divisionviews | Get the published scripts metadata. |
 | [**GetScriptsPublishedScriptId**](#GetScriptsPublishedScriptId) | **Get** /api/v2/scripts/published/{scriptId} | Get the published script. |
 | [**GetScriptsPublishedScriptIdPage**](#GetScriptsPublishedScriptIdPage) | **Get** /api/v2/scripts/published/{scriptId}/pages/{pageId} | Get the published page. |
@@ -449,6 +450,76 @@ namespace Example
 ### Return type
 
 [**ScriptEntityListing**](ScriptEntityListing)
+
+
+## GetScriptsPublishedDivisionviewVariables
+
+> **Object** GetScriptsPublishedDivisionviewVariables (string scriptId, string input = null, string output = null, string type = null, string scriptDataVersion = null)
+
+
+Get the published variables
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScriptsPublishedDivisionviewVariablesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ScriptsApi();
+            var scriptId = scriptId_example;  // string | Script ID
+            var input = input_example;  // string | input (optional) 
+            var output = output_example;  // string | output (optional) 
+            var type = type_example;  // string | type (optional) 
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+
+            try
+            { 
+                // Get the published variables
+                Object result = apiInstance.GetScriptsPublishedDivisionviewVariables(scriptId, input, output, type, scriptDataVersion);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ScriptsApi.GetScriptsPublishedDivisionviewVariables: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scriptId** | **string**| Script ID |  |
+| **input** | **string**| input | [optional] <br />**Values**: true, false |
+| **output** | **string**| output | [optional] <br />**Values**: true, false |
+| **type** | **string**| type | [optional] <br />**Values**: string, number, boolean |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
+
+### Return type
+
+**Object**
 
 
 ## GetScriptsPublishedDivisionviews
@@ -983,4 +1054,4 @@ namespace Example
 [**Script**](Script)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

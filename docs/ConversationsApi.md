@@ -213,6 +213,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsKeyconfigurationsValidate**](#PostConversationsKeyconfigurationsValidate) | **Post** /api/v2/conversations/keyconfigurations/validate | Validate encryption key configurations without saving it |
 | [**PostConversationsMessageCommunicationMessages**](#PostConversationsMessageCommunicationMessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
 | [**PostConversationsMessageCommunicationMessagesMedia**](#PostConversationsMessageCommunicationMessagesMedia) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
+| [**PostConversationsMessageCommunicationMessagesMediaUploads**](#PostConversationsMessageCommunicationMessagesMediaUploads) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads | Create a URL to upload a message media file |
 | [**PostConversationsMessageCommunicationTyping**](#PostConversationsMessageCommunicationTyping) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
 | [**PostConversationsMessageInboundOpenEvent**](#PostConversationsMessageInboundOpenEvent) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/event | Send an inbound Open Event Message |
 | [**PostConversationsMessageInboundOpenMessage**](#PostConversationsMessageInboundOpenMessage) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/message | Send inbound Open Message |
@@ -13554,6 +13555,9 @@ namespace Example
 
 > [**MessageMediaData**](MessageMediaData) PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create media
 
@@ -13616,6 +13620,76 @@ namespace Example
 ### Return type
 
 [**MessageMediaData**](MessageMediaData)
+
+
+## PostConversationsMessageCommunicationMessagesMediaUploads
+
+> [**MessageMediaUploadData**](MessageMediaUploadData) PostConversationsMessageCommunicationMessagesMediaUploads (string conversationId, string communicationId, UploadMediaRequest body)
+
+
+Create a URL to upload a message media file
+
+See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
+
+Requires ANY permissions: 
+
+* conversation:message:create
+* conversation:webmessaging:create
+* conversation:socialmedia:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageCommunicationMessagesMediaUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new UploadMediaRequest(); // UploadMediaRequest | request
+
+            try
+            { 
+                // Create a URL to upload a message media file
+                MessageMediaUploadData result = apiInstance.PostConversationsMessageCommunicationMessagesMediaUploads(conversationId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageCommunicationMessagesMediaUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**UploadMediaRequest**](UploadMediaRequest)| request |  |
+
+### Return type
+
+[**MessageMediaUploadData**](MessageMediaUploadData)
 
 
 ## PostConversationsMessageCommunicationTyping
@@ -16618,4 +16692,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

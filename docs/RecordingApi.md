@@ -1437,7 +1437,7 @@ namespace Example
             var jobId = jobId_example;  // string | jobId
             var pageSize = 56;  // int? | Page size. Maximum is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var includeTotal = true;  // bool? | If false, cursor will be used to locate the page instead of pageNumber. (optional) 
+            var includeTotal = true;  // bool? | If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. (optional) 
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
 
             try
@@ -1463,7 +1463,7 @@ namespace Example
 | **jobId** | **string**| jobId |  |
 | **pageSize** | **int?**| Page size. Maximum is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
+| **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 
 ### Return type
@@ -1510,7 +1510,7 @@ namespace Example
             var state = state_example;  // string | Filter by state (optional) 
             var showOnlyMyJobs = true;  // bool? | Show only my jobs (optional) 
             var jobType = jobType_example;  // string | Job Type (Can be left empty for both) (optional) 
-            var includeTotal = true;  // bool? | If false, cursor will be used to locate the page instead of pageNumber. (optional) 
+            var includeTotal = true;  // bool? | If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. (optional) 
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
 
             try
@@ -1539,7 +1539,7 @@ namespace Example
 | **state** | **string**| Filter by state | [optional] <br />**Values**: FULFILLED, PENDING, READY, PROCESSING, CANCELLED, FAILED |
 | **showOnlyMyJobs** | **bool?**| Show only my jobs | [optional]  |
 | **jobType** | **string**| Job Type (Can be left empty for both) | [optional] <br />**Values**: ARCHIVE, DELETE, EXPORT |
-| **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
+| **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 
 ### Return type
@@ -3776,4 +3776,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

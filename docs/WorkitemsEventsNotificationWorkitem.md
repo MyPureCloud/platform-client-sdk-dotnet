@@ -40,7 +40,13 @@
 | **Sessions** | [**List&lt;WorkitemsEventsNotificationSession&gt;**](WorkitemsEventsNotificationSession) |  | [optional] |
 | **SkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
 | **ScriptId** | **string** |  | [optional] |
+| **WorkbinName** | **string** |  | [optional] |
+| **TypeName** | **string** |  | [optional] |
+| **PreferredAgentIds** | **List&lt;Guid?&gt;** |  | [optional] |
+| **DivisionId** | **string** |  | [optional] |
+| **ScoredAgents** | [**List&lt;WorkitemsEventsNotificationScoredAgent&gt;**](WorkitemsEventsNotificationScoredAgent) |  | [optional] |
+| **UtilizationLabelId** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_
