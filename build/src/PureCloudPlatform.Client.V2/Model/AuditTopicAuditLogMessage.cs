@@ -336,7 +336,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Socialescalationrules for "SocialEscalationRules"
             /// </summary>
             [EnumMember(Value = "SocialEscalationRules")]
-            Socialescalationrules
+            Socialescalationrules,
+            
+            /// <summary>
+            /// Enum Alerting for "Alerting"
+            /// </summary>
+            [EnumMember(Value = "Alerting")]
+            Alerting
         }
         /// <summary>
         /// Gets or Sets Action
@@ -1669,6 +1675,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Staffinggroup,
             
             /// <summary>
+            /// Enum Capacityplan for "CapacityPlan"
+            /// </summary>
+            [EnumMember(Value = "CapacityPlan")]
+            Capacityplan,
+            
+            /// <summary>
             /// Enum Trigger for "Trigger"
             /// </summary>
             [EnumMember(Value = "Trigger")]
@@ -2452,7 +2464,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Escalationrule for "EscalationRule"
             /// </summary>
             [EnumMember(Value = "EscalationRule")]
-            Escalationrule
+            Escalationrule,
+            
+            /// <summary>
+            /// Enum Rules for "Rules"
+            /// </summary>
+            [EnumMember(Value = "Rules")]
+            Rules
         }
         /// <summary>
         /// Gets or Sets ServiceName

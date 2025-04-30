@@ -41,7 +41,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">DateModified.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DefaultScriptId">DefaultScriptId.</param>
-        public WorktypeDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeList Statuses = null, WorkitemsAttributeChangeString DefaultWorkbinId = null, WorkitemsAttributeChangeInteger DefaultDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultExpirationSeconds = null, WorkitemsAttributeChangeInteger DefaultDueDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultPriority = null, WorkitemsAttributeChangeList DefaultSkillIds = null, WorkitemsAttributeChangeString DefaultStatusId = null, WorkitemsAttributeChangeString DefaultLanguageId = null, WorkitemsAttributeChangeInteger DefaultTtlSeconds = null, WorkitemsAttributeChangeBoolean AssignmentEnabled = null, WorkitemsAttributeChangeString DefaultQueueId = null, WorkitemsAttributeChangeString SchemaId = null, WorkitemsAttributeChangeString SchemaVersion = null, WorkitemsAttributeChangeInteger ServiceLevelTarget = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeString DefaultScriptId = null)
+        /// <param name="FlowId">FlowId.</param>
+        /// <param name="RuleSettings">RuleSettings.</param>
+        /// <param name="UnassignedDivisionContactsEnabled">UnassignedDivisionContactsEnabled.</param>
+        public WorktypeDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeList Statuses = null, WorkitemsAttributeChangeString DefaultWorkbinId = null, WorkitemsAttributeChangeInteger DefaultDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultExpirationSeconds = null, WorkitemsAttributeChangeInteger DefaultDueDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultPriority = null, WorkitemsAttributeChangeList DefaultSkillIds = null, WorkitemsAttributeChangeString DefaultStatusId = null, WorkitemsAttributeChangeString DefaultLanguageId = null, WorkitemsAttributeChangeInteger DefaultTtlSeconds = null, WorkitemsAttributeChangeBoolean AssignmentEnabled = null, WorkitemsAttributeChangeString DefaultQueueId = null, WorkitemsAttributeChangeString SchemaId = null, WorkitemsAttributeChangeString SchemaVersion = null, WorkitemsAttributeChangeInteger ServiceLevelTarget = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeString DefaultScriptId = null, WorkitemsAttributeChangeString FlowId = null, WorkitemsAttributeChangeWorkitemRuleSettings RuleSettings = null, WorkitemsAttributeChangeBoolean UnassignedDivisionContactsEnabled = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -63,6 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.ModifiedBy = ModifiedBy;
             this.DefaultScriptId = DefaultScriptId;
+            this.FlowId = FlowId;
+            this.RuleSettings = RuleSettings;
+            this.UnassignedDivisionContactsEnabled = UnassignedDivisionContactsEnabled;
             
         }
         
@@ -227,6 +233,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public WorkitemsAttributeChangeString DefaultScriptId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets FlowId
+        /// </summary>
+        [DataMember(Name="flowId", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeString FlowId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets RuleSettings
+        /// </summary>
+        [DataMember(Name="ruleSettings", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeWorkitemRuleSettings RuleSettings { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets UnassignedDivisionContactsEnabled
+        /// </summary>
+        [DataMember(Name="unassignedDivisionContactsEnabled", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeBoolean UnassignedDivisionContactsEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -256,6 +286,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DefaultScriptId: ").Append(DefaultScriptId).Append("\n");
+            sb.Append("  FlowId: ").Append(FlowId).Append("\n");
+            sb.Append("  RuleSettings: ").Append(RuleSettings).Append("\n");
+            sb.Append("  UnassignedDivisionContactsEnabled: ").Append(UnassignedDivisionContactsEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -395,6 +428,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultScriptId == other.DefaultScriptId ||
                     this.DefaultScriptId != null &&
                     this.DefaultScriptId.Equals(other.DefaultScriptId)
+                ) &&
+                (
+                    this.FlowId == other.FlowId ||
+                    this.FlowId != null &&
+                    this.FlowId.Equals(other.FlowId)
+                ) &&
+                (
+                    this.RuleSettings == other.RuleSettings ||
+                    this.RuleSettings != null &&
+                    this.RuleSettings.Equals(other.RuleSettings)
+                ) &&
+                (
+                    this.UnassignedDivisionContactsEnabled == other.UnassignedDivisionContactsEnabled ||
+                    this.UnassignedDivisionContactsEnabled != null &&
+                    this.UnassignedDivisionContactsEnabled.Equals(other.UnassignedDivisionContactsEnabled)
                 );
         }
 
@@ -468,6 +516,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DefaultScriptId != null)
                     hash = hash * 59 + this.DefaultScriptId.GetHashCode();
+
+                if (this.FlowId != null)
+                    hash = hash * 59 + this.FlowId.GetHashCode();
+
+                if (this.RuleSettings != null)
+                    hash = hash * 59 + this.RuleSettings.GetHashCode();
+
+                if (this.UnassignedDivisionContactsEnabled != null)
+                    hash = hash * 59 + this.UnassignedDivisionContactsEnabled.GetHashCode();
 
                 return hash;
             }

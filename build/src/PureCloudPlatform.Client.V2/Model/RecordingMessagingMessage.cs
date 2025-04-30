@@ -115,7 +115,40 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Datepicker for "DatePicker"
             /// </summary>
             [EnumMember(Value = "DatePicker")]
-            Datepicker
+            Datepicker,
+            
+            /// <summary>
+            /// Enum Interactiveapplication for "InteractiveApplication"
+            /// </summary>
+            [EnumMember(Value = "InteractiveApplication")]
+            Interactiveapplication
+        }
+        /// <summary>
+        /// For social media messages, the visibility of the message in the originating social platform
+        /// </summary>
+        /// <value>For social media messages, the visibility of the message in the originating social platform</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SocialVisibilityEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Public for "Public"
+            /// </summary>
+            [EnumMember(Value = "Public")]
+            Public,
+            
+            /// <summary>
+            /// Enum Private for "Private"
+            /// </summary>
+            [EnumMember(Value = "Private")]
+            Private
         }
         /// <summary>
         /// Indicates the content type for this message
@@ -123,6 +156,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates the content type for this message</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
+        /// <summary>
+        /// For social media messages, the visibility of the message in the originating social platform
+        /// </summary>
+        /// <value>For social media messages, the visibility of the message in the originating social platform</value>
+        [DataMember(Name="socialVisibility", EmitDefaultValue=false)]
+        public SocialVisibilityEnum? SocialVisibility { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
         /// </summary>
@@ -145,8 +184,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Cards">List of cards offered for this message.</param>
         /// <param name="NotificationTemplate">Template notification content..</param>
         /// <param name="ContentType">Indicates the content type for this message.</param>
+        /// <param name="SocialVisibility">For social media messages, the visibility of the message in the originating social platform.</param>
         /// <param name="Events">List of event elements.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, ContentTypeEnum? ContentType = null, List<ConversationMessageEvent> Events = null)
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -167,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Cards = Cards;
             this.NotificationTemplate = NotificationTemplate;
             this.ContentType = ContentType;
+            this.SocialVisibility = SocialVisibility;
             this.Events = Events;
             
         }
@@ -337,6 +378,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// List of event elements
         /// </summary>
@@ -373,6 +416,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Cards: ").Append(Cards).Append("\n");
             sb.Append("  NotificationTemplate: ").Append(NotificationTemplate).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
+            sb.Append("  SocialVisibility: ").Append(SocialVisibility).Append("\n");
             sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -510,6 +554,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentType.Equals(other.ContentType)
                 ) &&
                 (
+                    this.SocialVisibility == other.SocialVisibility ||
+                    this.SocialVisibility != null &&
+                    this.SocialVisibility.Equals(other.SocialVisibility)
+                ) &&
+                (
                     this.Events == other.Events ||
                     this.Events != null &&
                     this.Events.SequenceEqual(other.Events)
@@ -583,6 +632,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
+
+                if (this.SocialVisibility != null)
+                    hash = hash * 59 + this.SocialVisibility.GetHashCode();
 
                 if (this.Events != null)
                     hash = hash * 59 + this.Events.GetHashCode();

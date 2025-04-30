@@ -1137,7 +1137,7 @@ namespace Example
 
 ## GetChatsUsersMeSettings
 
-> [**ChatUserSettings**](ChatUserSettings) GetChatsUsersMeSettings ()
+> [**UserSettingsForChat**](UserSettingsForChat) GetChatsUsersMeSettings ()
 
 
 Get a user's chat settings
@@ -1171,7 +1171,7 @@ namespace Example
             try
             { 
                 // Get a user's chat settings
-                ChatUserSettings result = apiInstance.GetChatsUsersMeSettings();
+                UserSettingsForChat result = apiInstance.GetChatsUsersMeSettings();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1188,7 +1188,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**ChatUserSettings**](ChatUserSettings)
+[**UserSettingsForChat**](UserSettingsForChat)
 
 
 ## PatchChatsRoom
@@ -1518,7 +1518,7 @@ namespace Example
 
 ## PatchChatsUsersMeSettings
 
-> [**ChatUserSettings**](ChatUserSettings) PatchChatsUsersMeSettings (ChatUserSettings body)
+> [**UserSettingsForChat**](UserSettingsForChat) PatchChatsUsersMeSettings (UserSettingsForChat body)
 
 
 Update a user's chat settings
@@ -1548,12 +1548,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ChatApi();
-            var body = new ChatUserSettings(); // ChatUserSettings | 
+            var body = new UserSettingsForChat(); // UserSettingsForChat | 
 
             try
             { 
                 // Update a user's chat settings
-                ChatUserSettings result = apiInstance.PatchChatsUsersMeSettings(body);
+                UserSettingsForChat result = apiInstance.PatchChatsUsersMeSettings(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1570,11 +1570,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ChatUserSettings**](ChatUserSettings)|  |  |
+| **body** | [**UserSettingsForChat**](UserSettingsForChat)|  |  |
 
 ### Return type
 
-[**ChatUserSettings**](ChatUserSettings)
+[**UserSettingsForChat**](UserSettingsForChat)
 
 
 ## PostChatsRoomMessages
@@ -2088,4 +2088,4 @@ namespace Example
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

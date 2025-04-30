@@ -88,11 +88,140 @@ namespace PureCloudPlatform.Client.V2.Model
             Voice
         }
         /// <summary>
+        /// The message type of the conversation.
+        /// </summary>
+        /// <value>The message type of the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessageTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Sms for "SMS"
+            /// </summary>
+            [EnumMember(Value = "SMS")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Genesyschatwidget for "GenesysChatWidget"
+            /// </summary>
+            [EnumMember(Value = "GenesysChatWidget")]
+            Genesyschatwidget,
+            
+            /// <summary>
+            /// Enum Facebookmessenger for "FacebookMessenger"
+            /// </summary>
+            [EnumMember(Value = "FacebookMessenger")]
+            Facebookmessenger,
+            
+            /// <summary>
+            /// Enum Wechat for "WeChat"
+            /// </summary>
+            [EnumMember(Value = "WeChat")]
+            Wechat,
+            
+            /// <summary>
+            /// Enum Whatsapp for "Whatsapp"
+            /// </summary>
+            [EnumMember(Value = "Whatsapp")]
+            Whatsapp,
+            
+            /// <summary>
+            /// Enum Applebusinesschat for "AppleBusinessChat"
+            /// </summary>
+            [EnumMember(Value = "AppleBusinessChat")]
+            Applebusinesschat,
+            
+            /// <summary>
+            /// Enum Telegram for "Telegram"
+            /// </summary>
+            [EnumMember(Value = "Telegram")]
+            Telegram,
+            
+            /// <summary>
+            /// Enum Slack for "Slack"
+            /// </summary>
+            [EnumMember(Value = "Slack")]
+            Slack,
+            
+            /// <summary>
+            /// Enum Signal for "Signal"
+            /// </summary>
+            [EnumMember(Value = "Signal")]
+            Signal,
+            
+            /// <summary>
+            /// Enum Line for "Line"
+            /// </summary>
+            [EnumMember(Value = "Line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Discord for "Discord"
+            /// </summary>
+            [EnumMember(Value = "Discord")]
+            Discord,
+            
+            /// <summary>
+            /// Enum Twitterdirectmessage for "TwitterDirectMessage"
+            /// </summary>
+            [EnumMember(Value = "TwitterDirectMessage")]
+            Twitterdirectmessage,
+            
+            /// <summary>
+            /// Enum Other for "Other"
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other,
+            
+            /// <summary>
+            /// Enum Open for "Open"
+            /// </summary>
+            [EnumMember(Value = "Open")]
+            Open,
+            
+            /// <summary>
+            /// Enum Instagram for "Instagram"
+            /// </summary>
+            [EnumMember(Value = "Instagram")]
+            Instagram,
+            
+            /// <summary>
+            /// Enum Apple for "Apple"
+            /// </summary>
+            [EnumMember(Value = "Apple")]
+            Apple
+        }
+        /// <summary>
         /// The media type of the conversation.
         /// </summary>
         /// <value>The media type of the conversation.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
+        /// <summary>
+        /// The message type of the conversation.
+        /// </summary>
+        /// <value>The message type of the conversation.</value>
+        [DataMember(Name="messageType", EmitDefaultValue=false)]
+        public MessageTypeEnum? MessageType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeConversationContext" /> class.
@@ -104,12 +233,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ConversationId">The unique identifier of the conversation. (required).</param>
         /// <param name="MediaType">The media type of the conversation..</param>
+        /// <param name="MessageType">The message type of the conversation..</param>
         /// <param name="QueueId">The unique identifier of the queue used to assign the interaction to the user..</param>
         /// <param name="ExternalContactId">The external contact identifier of the end-user participant..</param>
-        public KnowledgeConversationContext(string ConversationId = null, MediaTypeEnum? MediaType = null, string QueueId = null, string ExternalContactId = null)
+        public KnowledgeConversationContext(string ConversationId = null, MediaTypeEnum? MediaType = null, MessageTypeEnum? MessageType = null, string QueueId = null, string ExternalContactId = null)
         {
             this.ConversationId = ConversationId;
             this.MediaType = MediaType;
+            this.MessageType = MessageType;
             this.QueueId = QueueId;
             this.ExternalContactId = ExternalContactId;
             
@@ -123,6 +254,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The unique identifier of the conversation.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
+
+
 
 
 
@@ -156,6 +289,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  MessageType: ").Append(MessageType).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("}\n");
@@ -209,6 +343,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.Equals(other.MediaType)
                 ) &&
                 (
+                    this.MessageType == other.MessageType ||
+                    this.MessageType != null &&
+                    this.MessageType.Equals(other.MessageType)
+                ) &&
+                (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
@@ -236,6 +375,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.MessageType != null)
+                    hash = hash * 59 + this.MessageType.GetHashCode();
 
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();

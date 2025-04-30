@@ -757,7 +757,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum VirtualAgentPerformanceView for "VIRTUAL_AGENT_PERFORMANCE_VIEW"
             /// </summary>
             [EnumMember(Value = "VIRTUAL_AGENT_PERFORMANCE_VIEW")]
-            VirtualAgentPerformanceView
+            VirtualAgentPerformanceView,
+            
+            /// <summary>
+            /// Enum ContentExplorationView for "CONTENT_EXPLORATION_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CONTENT_EXPLORATION_VIEW")]
+            ContentExplorationView
         }
         /// <summary>
         /// The view type of the export metadata

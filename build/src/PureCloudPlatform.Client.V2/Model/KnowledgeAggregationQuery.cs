@@ -171,6 +171,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Mediatype,
             
             /// <summary>
+            /// Enum Messagetype for "messageType"
+            /// </summary>
+            [EnumMember(Value = "messageType")]
+            Messagetype,
+            
+            /// <summary>
             /// Enum Presenteddocumentscount for "presentedDocumentsCount"
             /// </summary>
             [EnumMember(Value = "presentedDocumentsCount")]

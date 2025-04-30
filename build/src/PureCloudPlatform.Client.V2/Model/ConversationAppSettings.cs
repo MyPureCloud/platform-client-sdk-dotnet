@@ -30,7 +30,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationClear">The conversation clear settings for the messenger app.</param>
         /// <param name="Humanize">The humanize conversations settings for the messenger app.</param>
         /// <param name="Notifications">The notification settings for messenger apps.</param>
-        public ConversationAppSettings(bool? Enabled = null, bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null, ConversationClearSettings ConversationClear = null, Humanize Humanize = null, NotificationsSettings Notifications = null)
+        /// <param name="SessionDurationSeconds">The guest session duration settings for messenger conversations.</param>
+        public ConversationAppSettings(bool? Enabled = null, bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null, ConversationClearSettings ConversationClear = null, Humanize Humanize = null, NotificationsSettings Notifications = null, int? SessionDurationSeconds = null)
         {
             this.Enabled = Enabled;
             this.ShowAgentTypingIndicator = ShowAgentTypingIndicator;
@@ -41,6 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationClear = ConversationClear;
             this.Humanize = Humanize;
             this.Notifications = Notifications;
+            this.SessionDurationSeconds = SessionDurationSeconds;
             
         }
         
@@ -126,6 +128,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public NotificationsSettings Notifications { get; set; }
 
 
+
+        /// <summary>
+        /// The guest session duration settings for messenger conversations
+        /// </summary>
+        /// <value>The guest session duration settings for messenger conversations</value>
+        [DataMember(Name="sessionDurationSeconds", EmitDefaultValue=false)]
+        public int? SessionDurationSeconds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -144,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationClear: ").Append(ConversationClear).Append("\n");
             sb.Append("  Humanize: ").Append(Humanize).Append("\n");
             sb.Append("  Notifications: ").Append(Notifications).Append("\n");
+            sb.Append("  SessionDurationSeconds: ").Append(SessionDurationSeconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -228,6 +240,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Notifications == other.Notifications ||
                     this.Notifications != null &&
                     this.Notifications.Equals(other.Notifications)
+                ) &&
+                (
+                    this.SessionDurationSeconds == other.SessionDurationSeconds ||
+                    this.SessionDurationSeconds != null &&
+                    this.SessionDurationSeconds.Equals(other.SessionDurationSeconds)
                 );
         }
 
@@ -268,6 +285,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Notifications != null)
                     hash = hash * 59 + this.Notifications.GetHashCode();
+
+                if (this.SessionDurationSeconds != null)
+                    hash = hash * 59 + this.SessionDurationSeconds.GetHashCode();
 
                 return hash;
             }

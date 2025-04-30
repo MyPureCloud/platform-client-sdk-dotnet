@@ -49,7 +49,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="StatusCategory">StatusCategory.</param>
         /// <param name="ScriptId">ScriptId.</param>
-        public WorkitemDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeString LanguageId = null, WorkitemsAttributeChangeString UtilizationLabelId = null, WorkitemsAttributeChangeInteger Priority = null, WorkitemsAttributeChangeList SkillIds = null, WorkitemsAttributeChangeList PreferredAgentIds = null, WorkitemsAttributeChangeInstant DateDue = null, WorkitemsAttributeChangeInstant DateExpires = null, WorkitemsAttributeChangeInteger DurationSeconds = null, WorkitemsAttributeChangeString StatusId = null, WorkitemsAttributeChangeString ReporterId = null, WorkitemsAttributeChangeString ExternalContactId = null, WorkitemsAttributeChangeString AssigneeId = null, WorkitemsAttributeChangeString WorkbinId = null, WorkitemsAttributeChangeString QueueId = null, WorkitemsAttributeChangeString ExternalTag = null, WorkitemsAttributeChangeString WrapupId = null, WorkitemsAttributeChangeWrapupDelta Wrapup = null, WorkitemsAttributeChangeInteger Ttl = null, WorkitemsAttributeChangeInstant DateClosed = null, WorkitemsAttributeChangeString AssignmentState = null, WorkitemsAttributeChangeBoolean AutoStatusTransition = null, WorkitemsAttributeChangeMap CustomFields = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeWorkitemStatusCategory StatusCategory = null, WorkitemsAttributeChangeString ScriptId = null)
+        /// <param name="DateAssignmentStateChanged">DateAssignmentStateChanged.</param>
+        /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
+        /// <param name="ScoredAgents">ScoredAgents.</param>
+        public WorkitemDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeString LanguageId = null, WorkitemsAttributeChangeString UtilizationLabelId = null, WorkitemsAttributeChangeInteger Priority = null, WorkitemsAttributeChangeList SkillIds = null, WorkitemsAttributeChangeList PreferredAgentIds = null, WorkitemsAttributeChangeInstant DateDue = null, WorkitemsAttributeChangeInstant DateExpires = null, WorkitemsAttributeChangeInteger DurationSeconds = null, WorkitemsAttributeChangeString StatusId = null, WorkitemsAttributeChangeString ReporterId = null, WorkitemsAttributeChangeString ExternalContactId = null, WorkitemsAttributeChangeString AssigneeId = null, WorkitemsAttributeChangeString WorkbinId = null, WorkitemsAttributeChangeString QueueId = null, WorkitemsAttributeChangeString ExternalTag = null, WorkitemsAttributeChangeString WrapupId = null, WorkitemsAttributeChangeWrapupDelta Wrapup = null, WorkitemsAttributeChangeInteger Ttl = null, WorkitemsAttributeChangeInstant DateClosed = null, WorkitemsAttributeChangeString AssignmentState = null, WorkitemsAttributeChangeBoolean AutoStatusTransition = null, WorkitemsAttributeChangeMap CustomFields = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null, WorkitemsAttributeChangeWorkitemStatusCategory StatusCategory = null, WorkitemsAttributeChangeString ScriptId = null, WorkitemsAttributeChangeInstant DateAssignmentStateChanged = null, WorkitemsAttributeChangeInteger AlertTimeoutSeconds = null, WorkitemsAttributeChangeListWorkitemScoredAgentDelta ScoredAgents = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -79,6 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedBy = ModifiedBy;
             this.StatusCategory = StatusCategory;
             this.ScriptId = ScriptId;
+            this.DateAssignmentStateChanged = DateAssignmentStateChanged;
+            this.AlertTimeoutSeconds = AlertTimeoutSeconds;
+            this.ScoredAgents = ScoredAgents;
             
         }
         
@@ -307,6 +313,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public WorkitemsAttributeChangeString ScriptId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets DateAssignmentStateChanged
+        /// </summary>
+        [DataMember(Name="dateAssignmentStateChanged", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeInstant DateAssignmentStateChanged { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AlertTimeoutSeconds
+        /// </summary>
+        [DataMember(Name="alertTimeoutSeconds", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeInteger AlertTimeoutSeconds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ScoredAgents
+        /// </summary>
+        [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeListWorkitemScoredAgentDelta ScoredAgents { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -344,6 +374,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  StatusCategory: ").Append(StatusCategory).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  DateAssignmentStateChanged: ").Append(DateAssignmentStateChanged).Append("\n");
+            sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
+            sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -523,6 +556,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
+                    this.DateAssignmentStateChanged == other.DateAssignmentStateChanged ||
+                    this.DateAssignmentStateChanged != null &&
+                    this.DateAssignmentStateChanged.Equals(other.DateAssignmentStateChanged)
+                ) &&
+                (
+                    this.AlertTimeoutSeconds == other.AlertTimeoutSeconds ||
+                    this.AlertTimeoutSeconds != null &&
+                    this.AlertTimeoutSeconds.Equals(other.AlertTimeoutSeconds)
+                ) &&
+                (
+                    this.ScoredAgents == other.ScoredAgents ||
+                    this.ScoredAgents != null &&
+                    this.ScoredAgents.Equals(other.ScoredAgents)
                 );
         }
 
@@ -620,6 +668,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+
+                if (this.DateAssignmentStateChanged != null)
+                    hash = hash * 59 + this.DateAssignmentStateChanged.GetHashCode();
+
+                if (this.AlertTimeoutSeconds != null)
+                    hash = hash * 59 + this.AlertTimeoutSeconds.GetHashCode();
+
+                if (this.ScoredAgents != null)
+                    hash = hash * 59 + this.ScoredAgents.GetHashCode();
 
                 return hash;
             }

@@ -19,12 +19,47 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class NotificationsSettings :  IEquatable<NotificationsSettings>
     {
         /// <summary>
+        /// The notification content type settings for messenger
+        /// </summary>
+        /// <value>The notification content type settings for messenger</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum NotificationContentTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Includemessagescontent for "IncludeMessagesContent"
+            /// </summary>
+            [EnumMember(Value = "IncludeMessagesContent")]
+            Includemessagescontent,
+            
+            /// <summary>
+            /// Enum Excludemessagescontent for "ExcludeMessagesContent"
+            /// </summary>
+            [EnumMember(Value = "ExcludeMessagesContent")]
+            Excludemessagescontent
+        }
+        /// <summary>
+        /// The notification content type settings for messenger
+        /// </summary>
+        /// <value>The notification content type settings for messenger</value>
+        [DataMember(Name="notificationContentType", EmitDefaultValue=false)]
+        public NotificationContentTypeEnum? NotificationContentType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="NotificationsSettings" /> class.
         /// </summary>
         /// <param name="Enabled">The toggle to enable or disable notifications.</param>
-        public NotificationsSettings(bool? Enabled = null)
+        /// <param name="NotificationContentType">The notification content type settings for messenger.</param>
+        public NotificationsSettings(bool? Enabled = null, NotificationContentTypeEnum? NotificationContentType = null)
         {
             this.Enabled = Enabled;
+            this.NotificationContentType = NotificationContentType;
             
         }
         
@@ -38,6 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Enabled { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class NotificationsSettings {\n");
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  NotificationContentType: ").Append(NotificationContentType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +130,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.NotificationContentType == other.NotificationContentType ||
+                    this.NotificationContentType != null &&
+                    this.NotificationContentType.Equals(other.NotificationContentType)
                 );
         }
 
@@ -108,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.NotificationContentType != null)
+                    hash = hash * 59 + this.NotificationContentType.GetHashCode();
 
                 return hash;
             }

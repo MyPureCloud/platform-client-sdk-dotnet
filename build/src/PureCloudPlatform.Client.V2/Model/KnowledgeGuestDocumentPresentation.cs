@@ -73,12 +73,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Suggestion for "Suggestion"
             /// </summary>
             [EnumMember(Value = "Suggestion")]
-            Suggestion
+            Suggestion,
+            
+            /// <summary>
+            /// Enum Expandedarticle for "ExpandedArticle"
+            /// </summary>
+            [EnumMember(Value = "ExpandedArticle")]
+            Expandedarticle
         }
         /// <summary>
-        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.
         /// </summary>
-        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SurfacingMethodEnum
         {
@@ -112,7 +118,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Highlight for "Highlight"
             /// </summary>
             [EnumMember(Value = "Highlight")]
-            Highlight
+            Highlight,
+            
+            /// <summary>
+            /// Enum Generative for "Generative"
+            /// </summary>
+            [EnumMember(Value = "Generative")]
+            Generative
         }
         /// <summary>
         /// The type of the query that surfaced the documents.
@@ -121,9 +133,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="queryType", EmitDefaultValue=false)]
         public QueryTypeEnum? QueryType { get; set; }
         /// <summary>
-        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.
         /// </summary>
-        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.</value>
         [DataMember(Name="surfacingMethod", EmitDefaultValue=false)]
         public SurfacingMethodEnum? SurfacingMethod { get; set; }
 
@@ -138,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Documents">The presented documents (required).</param>
         /// <param name="SearchId">The search that surfaced the documents that were presented..</param>
         /// <param name="QueryType">The type of the query that surfaced the documents..</param>
-        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown..</param>
+        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown..</param>
         public KnowledgeGuestDocumentPresentation(List<PresentedKnowledgeDocument> Documents = null, string SearchId = null, QueryTypeEnum? QueryType = null, SurfacingMethodEnum? SurfacingMethod = null)
         {
             this.Documents = Documents;

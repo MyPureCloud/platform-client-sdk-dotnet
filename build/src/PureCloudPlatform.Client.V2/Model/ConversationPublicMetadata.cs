@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RootId">The id of the root public message..</param>
         /// <param name="ReplyToId">The id of the message this public message is replying to..</param>
-        public ConversationPublicMetadata(string RootId = null, string ReplyToId = null)
+        /// <param name="Url">The URL of the social post on the native platform..</param>
+        public ConversationPublicMetadata(string RootId = null, string ReplyToId = null, string Url = null)
         {
             this.RootId = RootId;
             this.ReplyToId = ReplyToId;
+            this.Url = Url;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ReplyToId { get; set; }
 
 
+
+        /// <summary>
+        /// The URL of the social post on the native platform.
+        /// </summary>
+        /// <value>The URL of the social post on the native platform.</value>
+        [DataMember(Name="url", EmitDefaultValue=false)]
+        public string Url { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  RootId: ").Append(RootId).Append("\n");
             sb.Append("  ReplyToId: ").Append(ReplyToId).Append("\n");
+            sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReplyToId == other.ReplyToId ||
                     this.ReplyToId != null &&
                     this.ReplyToId.Equals(other.ReplyToId)
+                ) &&
+                (
+                    this.Url == other.Url ||
+                    this.Url != null &&
+                    this.Url.Equals(other.Url)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ReplyToId != null)
                     hash = hash * 59 + this.ReplyToId.GetHashCode();
+
+                if (this.Url != null)
+                    hash = hash * 59 + this.Url.GetHashCode();
 
                 return hash;
             }

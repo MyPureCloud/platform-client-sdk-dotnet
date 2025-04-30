@@ -26,14 +26,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ImageUrl">URL of an image.</param>
         /// <param name="DateMinimum">The minimum Date Enabled in the datepicker calendar, format: ISO 8601..</param>
         /// <param name="DateMaximum">The maximum Date Enabled in the datepicker calendar, format: ISO 8601..</param>
+        /// <param name="Location">Location of the event..</param>
         /// <param name="AvailableTimes">An array of available times objects..</param>
-        public ConversationContentDatePicker(string Title = null, string Subtitle = null, string ImageUrl = null, DateTime? DateMinimum = null, DateTime? DateMaximum = null, List<ConversationContentDatePickerAvailableTime> AvailableTimes = null)
+        public ConversationContentDatePicker(string Title = null, string Subtitle = null, string ImageUrl = null, DateTime? DateMinimum = null, DateTime? DateMaximum = null, ConversationContentLocation Location = null, List<ConversationContentDatePickerAvailableTime> AvailableTimes = null)
         {
             this.Title = Title;
             this.Subtitle = Subtitle;
             this.ImageUrl = ImageUrl;
             this.DateMinimum = DateMinimum;
             this.DateMaximum = DateMaximum;
+            this.Location = Location;
             this.AvailableTimes = AvailableTimes;
             
         }
@@ -86,6 +88,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Location of the event.
+        /// </summary>
+        /// <value>Location of the event.</value>
+        [DataMember(Name="location", EmitDefaultValue=false)]
+        public ConversationContentLocation Location { get; set; }
+
+
+
+        /// <summary>
         /// An array of available times objects.
         /// </summary>
         /// <value>An array of available times objects.</value>
@@ -107,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  DateMinimum: ").Append(DateMinimum).Append("\n");
             sb.Append("  DateMaximum: ").Append(DateMaximum).Append("\n");
+            sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  AvailableTimes: ").Append(AvailableTimes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -174,6 +186,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateMaximum.Equals(other.DateMaximum)
                 ) &&
                 (
+                    this.Location == other.Location ||
+                    this.Location != null &&
+                    this.Location.Equals(other.Location)
+                ) &&
+                (
                     this.AvailableTimes == other.AvailableTimes ||
                     this.AvailableTimes != null &&
                     this.AvailableTimes.SequenceEqual(other.AvailableTimes)
@@ -205,6 +222,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateMaximum != null)
                     hash = hash * 59 + this.DateMaximum.GetHashCode();
+
+                if (this.Location != null)
+                    hash = hash * 59 + this.Location.GetHashCode();
 
                 if (this.AvailableTimes != null)
                     hash = hash * 59 + this.AvailableTimes.GetHashCode();

@@ -127,12 +127,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Suggestion for "Suggestion"
             /// </summary>
             [EnumMember(Value = "Suggestion")]
-            Suggestion
+            Suggestion,
+            
+            /// <summary>
+            /// Enum Expandedarticle for "ExpandedArticle"
+            /// </summary>
+            [EnumMember(Value = "ExpandedArticle")]
+            Expandedarticle
         }
         /// <summary>
-        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.
         /// </summary>
-        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SurfacingMethodEnum
         {
@@ -166,7 +172,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Highlight for "Highlight"
             /// </summary>
             [EnumMember(Value = "Highlight")]
-            Highlight
+            Highlight,
+            
+            /// <summary>
+            /// Enum Generative for "Generative"
+            /// </summary>
+            [EnumMember(Value = "Generative")]
+            Generative
         }
         /// <summary>
         /// The state of the feedback.
@@ -214,9 +226,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="queryType", EmitDefaultValue=false)]
         public QueryTypeEnum? QueryType { get; set; }
         /// <summary>
-        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.
         /// </summary>
-        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.</value>
         [DataMember(Name="surfacingMethod", EmitDefaultValue=false)]
         public SurfacingMethodEnum? SurfacingMethod { get; set; }
         /// <summary>
@@ -240,7 +252,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Comment">Free-text comment of the feedback. Maximum length: 2000 characters..</param>
         /// <param name="Search">The search that surfaced the document on which feedback was given..</param>
         /// <param name="QueryType">The type of the query that surfaced the document on which the feedback was given..</param>
-        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown..</param>
+        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown..</param>
         /// <param name="State">The state of the feedback..</param>
         /// <param name="Document">The document on which feedback was given..</param>
         /// <param name="Application">The client application from which feedback was given..</param>

@@ -409,7 +409,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Suggestion for "Suggestion"
             /// </summary>
             [EnumMember(Value = "Suggestion")]
-            Suggestion
+            Suggestion,
+            
+            /// <summary>
+            /// Enum Expandedarticle for "ExpandedArticle"
+            /// </summary>
+            [EnumMember(Value = "ExpandedArticle")]
+            Expandedarticle
         }
         /// <summary>
         /// Gets or Sets AnswerMode

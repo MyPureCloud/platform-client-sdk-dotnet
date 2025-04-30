@@ -113,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InvokingContext">InvokingContext.</param>
         /// <param name="StartDateTime">The start date time for this flow instance execution data..</param>
         /// <param name="Warnings">If the flow encountered a warning during execution, this is an array of the warnings..</param>
-        public V2FlowExecutionDataFlowidTopicFlowExecutionHistory(string ExecutionId = null, string ConversationId = null, string DivisionId = null, DateTime? EndDateTime = null, string Endpoint = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Errors = null, List<V2FlowExecutionDataFlowidTopicExecution> Execution = null, string FlowExitReason = null, string FlowId = null, bool? FlowIsDebug = null, bool? ExecutionItemsTruncated = null, string FlowType = null, string FlowVersion = null, MessageTypeEnum? MessageType = null, V2FlowExecutionDataFlowidTopicInvokingContext InvokingContext = null, DateTime? StartDateTime = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Warnings = null)
+        public V2FlowExecutionDataFlowidTopicFlowExecutionHistory(string ExecutionId = null, string ConversationId = null, string DivisionId = null, DateTime? EndDateTime = null, string Endpoint = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Errors = null, List<V2FlowExecutionDataFlowidTopicFlowExecutionItem> Execution = null, string FlowExitReason = null, string FlowId = null, bool? FlowIsDebug = null, bool? ExecutionItemsTruncated = null, string FlowType = null, string FlowVersion = null, MessageTypeEnum? MessageType = null, V2FlowExecutionDataFlowidTopicInvokingContextInfo InvokingContext = null, DateTime? StartDateTime = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Warnings = null)
         {
             this.ExecutionId = ExecutionId;
             this.ConversationId = ConversationId;
@@ -196,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>An array of execution items that describe what happened when an Architect flow action container ran such as a flow, task, state or bot.</value>
         [DataMember(Name="execution", EmitDefaultValue=false)]
-        public List<V2FlowExecutionDataFlowidTopicExecution> Execution { get; set; }
+        public List<V2FlowExecutionDataFlowidTopicFlowExecutionItem> Execution { get; set; }
 
 
 
@@ -260,7 +260,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets InvokingContext
         /// </summary>
         [DataMember(Name="invokingContext", EmitDefaultValue=false)]
-        public V2FlowExecutionDataFlowidTopicInvokingContext InvokingContext { get; set; }
+        public V2FlowExecutionDataFlowidTopicInvokingContextInfo InvokingContext { get; set; }
 
 
 

@@ -519,4 +519,4 @@ namespace Example
 [**LocationsSearchResponse**](LocationsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

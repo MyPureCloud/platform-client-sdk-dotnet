@@ -17,7 +17,8 @@
 | **Carousel** | [**ConversationContentCarousel**](ConversationContentCarousel) | Carousel content | [optional] |
 | **Text** | [**ConversationContentText**](ConversationContentText) | Text content. | [optional] |
 | **QuickReplyV2** | [**ConversationContentQuickReplyV2**](ConversationContentQuickReplyV2) | Quick reply V2 content. | [optional] |
+| **Reactions** | [**List&lt;ConversationContentReaction&gt;**](ConversationContentReaction) | A set of reactions to a message. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

@@ -340,7 +340,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Sessions">Sessions.</param>
         /// <param name="SkillIds">SkillIds.</param>
         /// <param name="ScriptId">ScriptId.</param>
-        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, long? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, long? DurationSeconds = null, long? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, long? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null, WorkitemsEventsNotificationWrapup Wrapup = null, List<WorkitemsEventsNotificationSession> Sessions = null, List<Guid?> SkillIds = null, string ScriptId = null)
+        /// <param name="WorkbinName">WorkbinName.</param>
+        /// <param name="TypeName">TypeName.</param>
+        /// <param name="PreferredAgentIds">PreferredAgentIds.</param>
+        /// <param name="DivisionId">DivisionId.</param>
+        /// <param name="ScoredAgents">ScoredAgents.</param>
+        /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
+        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, long? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, long? DurationSeconds = null, long? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, long? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null, WorkitemsEventsNotificationWrapup Wrapup = null, List<WorkitemsEventsNotificationSession> Sessions = null, List<Guid?> SkillIds = null, string ScriptId = null, string WorkbinName = null, string TypeName = null, List<Guid?> PreferredAgentIds = null, string DivisionId = null, List<WorkitemsEventsNotificationScoredAgent> ScoredAgents = null, string UtilizationLabelId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -376,6 +382,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Sessions = Sessions;
             this.SkillIds = SkillIds;
             this.ScriptId = ScriptId;
+            this.WorkbinName = WorkbinName;
+            this.TypeName = TypeName;
+            this.PreferredAgentIds = PreferredAgentIds;
+            this.DivisionId = DivisionId;
+            this.ScoredAgents = ScoredAgents;
+            this.UtilizationLabelId = UtilizationLabelId;
             
         }
         
@@ -634,6 +646,54 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ScriptId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets WorkbinName
+        /// </summary>
+        [DataMember(Name="workbinName", EmitDefaultValue=false)]
+        public string WorkbinName { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets TypeName
+        /// </summary>
+        [DataMember(Name="typeName", EmitDefaultValue=false)]
+        public string TypeName { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PreferredAgentIds
+        /// </summary>
+        [DataMember(Name="preferredAgentIds", EmitDefaultValue=false)]
+        public List<Guid?> PreferredAgentIds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DivisionId
+        /// </summary>
+        [DataMember(Name="divisionId", EmitDefaultValue=false)]
+        public string DivisionId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ScoredAgents
+        /// </summary>
+        [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
+        public List<WorkitemsEventsNotificationScoredAgent> ScoredAgents { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets UtilizationLabelId
+        /// </summary>
+        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
+        public string UtilizationLabelId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -677,6 +737,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  WorkbinName: ").Append(WorkbinName).Append("\n");
+            sb.Append("  TypeName: ").Append(TypeName).Append("\n");
+            sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
+            sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
+            sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
+            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -886,6 +952,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
+                    this.WorkbinName == other.WorkbinName ||
+                    this.WorkbinName != null &&
+                    this.WorkbinName.Equals(other.WorkbinName)
+                ) &&
+                (
+                    this.TypeName == other.TypeName ||
+                    this.TypeName != null &&
+                    this.TypeName.Equals(other.TypeName)
+                ) &&
+                (
+                    this.PreferredAgentIds == other.PreferredAgentIds ||
+                    this.PreferredAgentIds != null &&
+                    this.PreferredAgentIds.SequenceEqual(other.PreferredAgentIds)
+                ) &&
+                (
+                    this.DivisionId == other.DivisionId ||
+                    this.DivisionId != null &&
+                    this.DivisionId.Equals(other.DivisionId)
+                ) &&
+                (
+                    this.ScoredAgents == other.ScoredAgents ||
+                    this.ScoredAgents != null &&
+                    this.ScoredAgents.SequenceEqual(other.ScoredAgents)
+                ) &&
+                (
+                    this.UtilizationLabelId == other.UtilizationLabelId ||
+                    this.UtilizationLabelId != null &&
+                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 );
         }
 
@@ -1001,6 +1097,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+
+                if (this.WorkbinName != null)
+                    hash = hash * 59 + this.WorkbinName.GetHashCode();
+
+                if (this.TypeName != null)
+                    hash = hash * 59 + this.TypeName.GetHashCode();
+
+                if (this.PreferredAgentIds != null)
+                    hash = hash * 59 + this.PreferredAgentIds.GetHashCode();
+
+                if (this.DivisionId != null)
+                    hash = hash * 59 + this.DivisionId.GetHashCode();
+
+                if (this.ScoredAgents != null)
+                    hash = hash * 59 + this.ScoredAgents.GetHashCode();
+
+                if (this.UtilizationLabelId != null)
+                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 return hash;
             }

@@ -479,6 +479,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Confined">Confined.</param>
         /// <param name="Recording">Recording.</param>
         /// <param name="RecordingState">RecordingState.</param>
+        /// <param name="RecordersState">RecordersState.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="Group">Group.</param>
         /// <param name="Ani">Ani.</param>
@@ -490,7 +491,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BargedTime">BargedTime.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public ConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallEventTopicUriReference User = null, ConversationCallEventTopicUriReference Queue = null, ConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationCallEventTopicErrorBody ErrorInfo = null, ConversationCallEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, ConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationCallEventTopicUriReference ExternalOrganization = null, ConversationCallEventTopicWrapup Wrapup = null, ConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, ConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, ConversationCallEventTopicFaxStatus FaxStatus = null)
+        public ConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallEventTopicUriReference User = null, ConversationCallEventTopicUriReference Queue = null, ConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationCallEventTopicErrorBody ErrorInfo = null, ConversationCallEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, ConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationCallEventTopicUriReference ExternalOrganization = null, ConversationCallEventTopicWrapup Wrapup = null, ConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, ConversationCallEventTopicRecordersState RecordersState = null, bool? SecurePause = null, ConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, ConversationCallEventTopicFaxStatus FaxStatus = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -536,6 +537,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Confined = Confined;
             this.Recording = Recording;
             this.RecordingState = RecordingState;
+            this.RecordersState = RecordersState;
             this.SecurePause = SecurePause;
             this.Group = Group;
             this.Ani = Ani;
@@ -869,6 +871,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets RecordersState
+        /// </summary>
+        [DataMember(Name="recordersState", EmitDefaultValue=false)]
+        public ConversationCallEventTopicRecordersState RecordersState { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets SecurePause
         /// </summary>
         [DataMember(Name="securePause", EmitDefaultValue=false)]
@@ -1008,6 +1018,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            sb.Append("  RecordersState: ").Append(RecordersState).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
@@ -1280,6 +1291,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingState.Equals(other.RecordingState)
                 ) &&
                 (
+                    this.RecordersState == other.RecordersState ||
+                    this.RecordersState != null &&
+                    this.RecordersState.Equals(other.RecordersState)
+                ) &&
+                (
                     this.SecurePause == other.SecurePause ||
                     this.SecurePause != null &&
                     this.SecurePause.Equals(other.SecurePause)
@@ -1478,6 +1494,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+
+                if (this.RecordersState != null)
+                    hash = hash * 59 + this.RecordersState.GetHashCode();
 
                 if (this.SecurePause != null)
                     hash = hash * 59 + this.SecurePause.GetHashCode();

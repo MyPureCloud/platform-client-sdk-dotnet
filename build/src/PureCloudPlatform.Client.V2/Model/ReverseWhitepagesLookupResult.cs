@@ -22,11 +22,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ReverseWhitepagesLookupResult" /> class.
         /// </summary>
         /// <param name="Contacts">Contacts.</param>
-        /// <param name="ExternalOrganizations">ExternalOrganizations.</param>
-        public ReverseWhitepagesLookupResult(List<ExternalContact> Contacts = null, List<ExternalOrganization> ExternalOrganizations = null)
+        public ReverseWhitepagesLookupResult(List<ExternalContact> Contacts = null)
         {
             this.Contacts = Contacts;
-            this.ExternalOrganizations = ExternalOrganizations;
             
         }
         
@@ -39,14 +37,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ExternalContact> Contacts { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets ExternalOrganizations
-        /// </summary>
-        [DataMember(Name="externalOrganizations", EmitDefaultValue=false)]
-        public List<ExternalOrganization> ExternalOrganizations { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -57,7 +47,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ReverseWhitepagesLookupResult {\n");
 
             sb.Append("  Contacts: ").Append(Contacts).Append("\n");
-            sb.Append("  ExternalOrganizations: ").Append(ExternalOrganizations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,11 +91,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Contacts == other.Contacts ||
                     this.Contacts != null &&
                     this.Contacts.SequenceEqual(other.Contacts)
-                ) &&
-                (
-                    this.ExternalOrganizations == other.ExternalOrganizations ||
-                    this.ExternalOrganizations != null &&
-                    this.ExternalOrganizations.SequenceEqual(other.ExternalOrganizations)
                 );
         }
 
@@ -123,9 +107,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Contacts != null)
                     hash = hash * 59 + this.Contacts.GetHashCode();
-
-                if (this.ExternalOrganizations != null)
-                    hash = hash * 59 + this.ExternalOrganizations.GetHashCode();
 
                 return hash;
             }

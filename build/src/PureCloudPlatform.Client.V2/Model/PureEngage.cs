@@ -134,8 +134,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SignAuthnRequests">SignAuthnRequests.</param>
         /// <param name="ProviderName">ProviderName.</param>
         /// <param name="DisplayOnLogin">DisplayOnLogin.</param>
+        /// <param name="MetadataURL">MetadataURL.</param>
         /// <param name="AutoProvisionUsers">AutoProvisionUsers.</param>
-        public PureEngage(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, SsoBindingEnum? SsoBinding = null, bool? SignAuthnRequests = null, string ProviderName = null, bool? DisplayOnLogin = null, bool? AutoProvisionUsers = null)
+        public PureEngage(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, SsoBindingEnum? SsoBinding = null, bool? SignAuthnRequests = null, string ProviderName = null, bool? DisplayOnLogin = null, string MetadataURL = null, bool? AutoProvisionUsers = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
@@ -152,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SignAuthnRequests = SignAuthnRequests;
             this.ProviderName = ProviderName;
             this.DisplayOnLogin = DisplayOnLogin;
+            this.MetadataURL = MetadataURL;
             this.AutoProvisionUsers = AutoProvisionUsers;
             
         }
@@ -276,6 +278,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets MetadataURL
+        /// </summary>
+        [DataMember(Name="metadataURL", EmitDefaultValue=false)]
+        public string MetadataURL { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets AutoProvisionUsers
         /// </summary>
         [DataMember(Name="autoProvisionUsers", EmitDefaultValue=false)]
@@ -316,6 +326,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SignAuthnRequests: ").Append(SignAuthnRequests).Append("\n");
             sb.Append("  ProviderName: ").Append(ProviderName).Append("\n");
             sb.Append("  DisplayOnLogin: ").Append(DisplayOnLogin).Append("\n");
+            sb.Append("  MetadataURL: ").Append(MetadataURL).Append("\n");
             sb.Append("  AutoProvisionUsers: ").Append(AutoProvisionUsers).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -439,6 +450,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayOnLogin.Equals(other.DisplayOnLogin)
                 ) &&
                 (
+                    this.MetadataURL == other.MetadataURL ||
+                    this.MetadataURL != null &&
+                    this.MetadataURL.Equals(other.MetadataURL)
+                ) &&
+                (
                     this.AutoProvisionUsers == other.AutoProvisionUsers ||
                     this.AutoProvisionUsers != null &&
                     this.AutoProvisionUsers.Equals(other.AutoProvisionUsers)
@@ -508,6 +524,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisplayOnLogin != null)
                     hash = hash * 59 + this.DisplayOnLogin.GetHashCode();
+
+                if (this.MetadataURL != null)
+                    hash = hash * 59 + this.MetadataURL.GetHashCode();
 
                 if (this.AutoProvisionUsers != null)
                     hash = hash * 59 + this.AutoProvisionUsers.GetHashCode();

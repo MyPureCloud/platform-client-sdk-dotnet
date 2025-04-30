@@ -212,16 +212,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Content">List of content elements..</param>
         /// <param name="Events">List of event elements..</param>
         /// <param name="OriginatingEntity">Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies..</param>
+        /// <param name="RelatedMessages">A list of messages related to this one..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
+        /// <param name="Enrichment">Metadata enrichments provided by the platform..</param>
         /// <param name="ByoSmsIntegrationId">The internal id representing the customer supplied sms integration message..</param>
-        public ConversationNormalizedMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, List<ConversationMessageEvent> Events = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null, string ByoSmsIntegrationId = null)
+        public ConversationNormalizedMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, List<ConversationMessageEvent> Events = null, OriginatingEntityEnum? OriginatingEntity = null, List<ConversationNormalizedMessage> RelatedMessages = null, Dictionary<string, string> Metadata = null, ConversationEnrichment Enrichment = null, string ByoSmsIntegrationId = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Content = Content;
             this.Events = Events;
             this.OriginatingEntity = OriginatingEntity;
+            this.RelatedMessages = RelatedMessages;
             this.Metadata = Metadata;
+            this.Enrichment = Enrichment;
             this.ByoSmsIntegrationId = ByoSmsIntegrationId;
             
         }
@@ -300,11 +304,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A list of messages related to this one.
+        /// </summary>
+        /// <value>A list of messages related to this one.</value>
+        [DataMember(Name="relatedMessages", EmitDefaultValue=false)]
+        public List<ConversationNormalizedMessage> RelatedMessages { get; set; }
+
+
+
+        /// <summary>
         /// Additional metadata about this message.
         /// </summary>
         /// <value>Additional metadata about this message.</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
+
+
+
+        /// <summary>
+        /// Metadata enrichments provided by the platform.
+        /// </summary>
+        /// <value>Metadata enrichments provided by the platform.</value>
+        [DataMember(Name="enrichment", EmitDefaultValue=false)]
+        public ConversationEnrichment Enrichment { get; set; }
 
 
 
@@ -336,7 +358,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OriginatingEntity: ").Append(OriginatingEntity).Append("\n");
             sb.Append("  IsFinalReceipt: ").Append(IsFinalReceipt).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            sb.Append("  RelatedMessages: ").Append(RelatedMessages).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  Enrichment: ").Append(Enrichment).Append("\n");
             sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -434,9 +458,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Direction.Equals(other.Direction)
                 ) &&
                 (
+                    this.RelatedMessages == other.RelatedMessages ||
+                    this.RelatedMessages != null &&
+                    this.RelatedMessages.SequenceEqual(other.RelatedMessages)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.SequenceEqual(other.Metadata)
+                ) &&
+                (
+                    this.Enrichment == other.Enrichment ||
+                    this.Enrichment != null &&
+                    this.Enrichment.Equals(other.Enrichment)
                 ) &&
                 (
                     this.ByoSmsIntegrationId == other.ByoSmsIntegrationId ||
@@ -489,8 +523,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
 
+                if (this.RelatedMessages != null)
+                    hash = hash * 59 + this.RelatedMessages.GetHashCode();
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+
+                if (this.Enrichment != null)
+                    hash = hash * 59 + this.Enrichment.GetHashCode();
 
                 if (this.ByoSmsIntegrationId != null)
                     hash = hash * 59 + this.ByoSmsIntegrationId.GetHashCode();

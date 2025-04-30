@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
         /// <param name="RuleSettings">Settings for the worktypes rules..</param>
         /// <param name="Description">The description of the Worktype. Maximum length of 512 characters..</param>
-        /// <param name="DefaultStatusId">The ID of the default status for Workitems created from the Worktype..</param>
+        /// <param name="DefaultStatusId">The ID of the default status for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="SchemaVersion">The version of the Worktypes custom attribute schema. The latest schema version will be used if this property is not set..</param>
         /// <param name="DefaultLanguageId">The ID of the default language for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="DefaultSkillIds">The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs.</param>
@@ -173,9 +173,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the default status for Workitems created from the Worktype.
+        /// The ID of the default status for Workitems created from the Worktype. Must be a valid UUID.
         /// </summary>
-        /// <value>The ID of the default status for Workitems created from the Worktype.</value>
+        /// <value>The ID of the default status for Workitems created from the Worktype. Must be a valid UUID.</value>
         [DataMember(Name="defaultStatusId", EmitDefaultValue=false)]
         public string DefaultStatusId { get; set; }
 

@@ -17,9 +17,11 @@
 | **OriginatingEntity** | **string** | Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies. | [optional] |
 | **IsFinalReceipt** | **bool?** | Indicates if this is the last message receipt for this message, or if another message receipt can be expected. | [optional] |
 | **Direction** | **string** | The direction of the message. | [optional] |
+| **RelatedMessages** | [**List&lt;ConversationNormalizedMessage&gt;**](ConversationNormalizedMessage) | A list of messages related to this one. | [optional] |
 | **Metadata** | **Dictionary&lt;string, string&gt;** | Additional metadata about this message. | [optional] |
+| **Enrichment** | [**ConversationEnrichment**](ConversationEnrichment) | Metadata enrichments provided by the platform. | [optional] |
 | **ByoSmsIntegrationId** | **string** | The internal id representing the customer supplied sms integration message. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Tests
                 Password = Guid.NewGuid() + "!@#$1234asdfASDF"
             };
 
-            var user = usersApi.PostUsersWithHttpInfo(newUser);
+            ApiResponse<User> user = usersApi.PostUsersWithHttpInfo(newUser);
 
             userId = user.Data.Id;
             Assert.AreEqual(user.Data.Name, userName);

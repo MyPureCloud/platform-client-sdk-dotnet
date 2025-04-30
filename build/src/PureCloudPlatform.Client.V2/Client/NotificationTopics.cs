@@ -119,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.speechandtextanalytics.programs.publishjobs.{id}", typeof(PublishProgramTopicsDefinitionsJob)},
               {"v2.speechandtextanalytics.programs.topiclinks.jobs.{id}", typeof(ProgramTopicLinksTopicsDefinitionsJob)},
               {"v2.speechandtextanalytics.topics.publishjobs.{id}", typeof(PublishTopicTopicsDefinitionsJob)},
+              {"v2.subscription.updated", typeof(UpdatedTopicSystemMessage)},
               {"v2.system.no_longer_subscribed.{id}", typeof(SystemMessageSystemMessage)},
               {"v2.system.socket_closing", typeof(SystemMessageSystemMessage)},
               {"v2.system.token_revoked.{id}", typeof(SystemMessageSystemMessage)},

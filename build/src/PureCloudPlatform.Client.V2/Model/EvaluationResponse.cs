@@ -176,7 +176,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationForm">Evaluation form used for evaluation..</param>
         /// <param name="Evaluator">Evaluator.</param>
         /// <param name="Agent">Agent.</param>
-        /// <param name="Calibration">Calibration.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Answers">Answers.</param>
         /// <param name="AgentHasRead">AgentHasRead.</param>
@@ -200,14 +199,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn&#39;t execute successfully.</param>
-        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
             this.EvaluationForm = EvaluationForm;
             this.Evaluator = Evaluator;
             this.Agent = Agent;
-            this.Calibration = Calibration;
             this.Status = Status;
             this.Answers = Answers;
             this.AgentHasRead = AgentHasRead;
@@ -283,14 +281,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public User Agent { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Calibration
-        /// </summary>
-        [DataMember(Name="calibration", EmitDefaultValue=false)]
-        public Calibration Calibration { get; set; }
 
 
 
@@ -508,6 +498,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SelfUri { get; private set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Calibration
+        /// </summary>
+        [DataMember(Name="calibration", EmitDefaultValue=false)]
+        public AddressableEntityRef Calibration { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -523,7 +521,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
             sb.Append("  Agent: ").Append(Agent).Append("\n");
-            sb.Append("  Calibration: ").Append(Calibration).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
             sb.Append("  AgentHasRead: ").Append(AgentHasRead).Append("\n");
@@ -550,6 +547,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationSource: ").Append(EvaluationSource).Append("\n");
             sb.Append("  AiScoring: ").Append(AiScoring).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Calibration: ").Append(Calibration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -619,11 +617,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Agent == other.Agent ||
                     this.Agent != null &&
                     this.Agent.Equals(other.Agent)
-                ) &&
-                (
-                    this.Calibration == other.Calibration ||
-                    this.Calibration != null &&
-                    this.Calibration.Equals(other.Calibration)
                 ) &&
                 (
                     this.Status == other.Status ||
@@ -754,6 +747,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.Calibration == other.Calibration ||
+                    this.Calibration != null &&
+                    this.Calibration.Equals(other.Calibration)
                 );
         }
 
@@ -785,9 +783,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-
-                if (this.Calibration != null)
-                    hash = hash * 59 + this.Calibration.GetHashCode();
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
@@ -866,6 +861,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.Calibration != null)
+                    hash = hash * 59 + this.Calibration.GetHashCode();
 
                 return hash;
             }

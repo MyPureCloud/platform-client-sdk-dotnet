@@ -3390,7 +3390,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var name = name_example;  // string | Name of the Schedule to filter by. (optional) 
             var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
 
@@ -3417,7 +3417,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to "name"] |
-| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **name** | **string**| Name of the Schedule to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
 
@@ -9953,4 +9953,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

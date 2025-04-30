@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Datepicker for "DatePicker"
             /// </summary>
             [EnumMember(Value = "DatePicker")]
-            Datepicker
+            Datepicker,
+            
+            /// <summary>
+            /// Enum Listpicker for "ListPicker"
+            /// </summary>
+            [EnumMember(Value = "ListPicker")]
+            Listpicker
         }
         /// <summary>
         /// Describes the button that resulted in the Button Response.

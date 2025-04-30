@@ -85,6 +85,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Autoapproved,
             
             /// <summary>
+            /// Enum Blockeddate for "BlockedDate"
+            /// </summary>
+            [EnumMember(Value = "BlockedDate")]
+            Blockeddate,
+            
+            /// <summary>
             /// Enum Insufficientbalance for "InsufficientBalance"
             /// </summary>
             [EnumMember(Value = "InsufficientBalance")]
@@ -97,10 +103,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Invaliddailyduration,
             
             /// <summary>
+            /// Enum Manualapproval for "ManualApproval"
+            /// </summary>
+            [EnumMember(Value = "ManualApproval")]
+            Manualapproval,
+            
+            /// <summary>
             /// Enum Outsideshift for "OutsideShift"
             /// </summary>
             [EnumMember(Value = "OutsideShift")]
             Outsideshift,
+            
+            /// <summary>
+            /// Enum Overlapsrestrictedactivitycode for "OverlapsRestrictedActivityCode"
+            /// </summary>
+            [EnumMember(Value = "OverlapsRestrictedActivityCode")]
+            Overlapsrestrictedactivitycode,
             
             /// <summary>
             /// Enum Removedfromwaitlist for "RemovedFromWaitlist"
@@ -109,16 +127,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Removedfromwaitlist,
             
             /// <summary>
+            /// Enum Reviewdate for "ReviewDate"
+            /// </summary>
+            [EnumMember(Value = "ReviewDate")]
+            Reviewdate,
+            
+            /// <summary>
             /// Enum Waitlisted for "Waitlisted"
             /// </summary>
             [EnumMember(Value = "Waitlisted")]
-            Waitlisted,
-            
-            /// <summary>
-            /// Enum Overlapsrestrictedactivitycode for "OverlapsRestrictedActivityCode"
-            /// </summary>
-            [EnumMember(Value = "OverlapsRestrictedActivityCode")]
-            Overlapsrestrictedactivitycode
+            Waitlisted
         }
         /// <summary>
         /// The status of this time off request

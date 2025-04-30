@@ -63,19 +63,58 @@ namespace PureCloudPlatform.Client.V2.Model
             Copilot
         }
         /// <summary>
+        /// Gets or Sets SourceOutcome
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SourceOutcomeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Contained for "CONTAINED"
+            /// </summary>
+            [EnumMember(Value = "CONTAINED")]
+            Contained,
+            
+            /// <summary>
+            /// Enum Transfer for "TRANSFER"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER")]
+            Transfer
+        }
+        /// <summary>
         /// Gets or Sets SourceType
         /// </summary>
         [DataMember(Name="sourceType", EmitDefaultValue=false)]
         public SourceTypeEnum? SourceType { get; set; }
         /// <summary>
+        /// Gets or Sets SourceOutcome
+        /// </summary>
+        [DataMember(Name="sourceOutcome", EmitDefaultValue=false)]
+        public SourceOutcomeEnum? SourceOutcome { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ConversationSummaryTopicTriggerSource" /> class.
         /// </summary>
         /// <param name="SourceType">SourceType.</param>
         /// <param name="SourceId">SourceId.</param>
-        public ConversationSummaryTopicTriggerSource(SourceTypeEnum? SourceType = null, string SourceId = null)
+        /// <param name="SourceOutcome">SourceOutcome.</param>
+        public ConversationSummaryTopicTriggerSource(SourceTypeEnum? SourceType = null, string SourceId = null, SourceOutcomeEnum? SourceOutcome = null)
         {
             this.SourceType = SourceType;
             this.SourceId = SourceId;
+            this.SourceOutcome = SourceOutcome;
             
         }
         
@@ -90,6 +129,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SourceId { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  SourceType: ").Append(SourceType).Append("\n");
             sb.Append("  SourceId: ").Append(SourceId).Append("\n");
+            sb.Append("  SourceOutcome: ").Append(SourceOutcome).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +192,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SourceId == other.SourceId ||
                     this.SourceId != null &&
                     this.SourceId.Equals(other.SourceId)
+                ) &&
+                (
+                    this.SourceOutcome == other.SourceOutcome ||
+                    this.SourceOutcome != null &&
+                    this.SourceOutcome.Equals(other.SourceOutcome)
                 );
         }
 
@@ -169,6 +216,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SourceId != null)
                     hash = hash * 59 + this.SourceId.GetHashCode();
+
+                if (this.SourceOutcome != null)
+                    hash = hash * 59 + this.SourceOutcome.GetHashCode();
 
                 return hash;
             }

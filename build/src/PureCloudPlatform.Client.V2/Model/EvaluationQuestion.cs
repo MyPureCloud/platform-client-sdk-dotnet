@@ -39,6 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Multiplechoicequestion,
             
             /// <summary>
+            /// Enum Multipleselectquestion for "multipleSelectQuestion"
+            /// </summary>
+            [EnumMember(Value = "multipleSelectQuestion")]
+            Multipleselectquestion,
+            
+            /// <summary>
             /// Enum Freetextquestion for "freeTextQuestion"
             /// </summary>
             [EnumMember(Value = "freeTextQuestion")]

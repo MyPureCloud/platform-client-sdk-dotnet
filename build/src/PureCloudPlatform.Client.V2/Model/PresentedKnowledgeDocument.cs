@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class PresentedKnowledgeDocument :  IEquatable<PresentedKnowledgeDocument>
     {
         /// <summary>
-        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.
         /// </summary>
-        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SurfacingMethodEnum
         {
@@ -55,12 +55,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Highlight for "Highlight"
             /// </summary>
             [EnumMember(Value = "Highlight")]
-            Highlight
+            Highlight,
+            
+            /// <summary>
+            /// Enum Generative for "Generative"
+            /// </summary>
+            [EnumMember(Value = "Generative")]
+            Generative
         }
         /// <summary>
-        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.
         /// </summary>
-        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown.</value>
         [DataMember(Name="surfacingMethod", EmitDefaultValue=false)]
         public SurfacingMethodEnum? SurfacingMethod { get; set; }
 
@@ -75,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DocumentId">The ID of the document. (required).</param>
         /// <param name="DocumentVariationId">The variation of the document. (required).</param>
         /// <param name="DocumentVersionId">The version of the document. (required).</param>
-        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown..</param>
+        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.Generative: A generated answer in a snippet was shown..</param>
         public PresentedKnowledgeDocument(string DocumentId = null, string DocumentVariationId = null, string DocumentVersionId = null, SurfacingMethodEnum? SurfacingMethod = null)
         {
             this.DocumentId = DocumentId;

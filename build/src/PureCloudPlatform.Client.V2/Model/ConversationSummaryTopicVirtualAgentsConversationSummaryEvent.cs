@@ -199,12 +199,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Headline">Headline.</param>
         /// <param name="Reason">Reason.</param>
         /// <param name="Resolution">Resolution.</param>
+        /// <param name="FollowupActions">FollowupActions.</param>
         /// <param name="WrapUpCodes">WrapUpCodes.</param>
         /// <param name="TriggerSource">TriggerSource.</param>
         /// <param name="LastEditedBy">LastEditedBy.</param>
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
@@ -219,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Headline = Headline;
             this.Reason = Reason;
             this.Resolution = Resolution;
+            this.FollowupActions = FollowupActions;
             this.WrapUpCodes = WrapUpCodes;
             this.TriggerSource = TriggerSource;
             this.LastEditedBy = LastEditedBy;
@@ -322,6 +324,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets FollowupActions
+        /// </summary>
+        [DataMember(Name="followupActions", EmitDefaultValue=false)]
+        public List<ConversationSummaryTopicVirtualAgentsConversationFollowupAction> FollowupActions { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets WrapUpCodes
         /// </summary>
         [DataMember(Name="wrapUpCodes", EmitDefaultValue=false)]
@@ -376,6 +386,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Headline: ").Append(Headline).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
+            sb.Append("  FollowupActions: ").Append(FollowupActions).Append("\n");
             sb.Append("  WrapUpCodes: ").Append(WrapUpCodes).Append("\n");
             sb.Append("  TriggerSource: ").Append(TriggerSource).Append("\n");
             sb.Append("  LastEditedBy: ").Append(LastEditedBy).Append("\n");
@@ -487,6 +498,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Resolution.Equals(other.Resolution)
                 ) &&
                 (
+                    this.FollowupActions == other.FollowupActions ||
+                    this.FollowupActions != null &&
+                    this.FollowupActions.SequenceEqual(other.FollowupActions)
+                ) &&
+                (
                     this.WrapUpCodes == other.WrapUpCodes ||
                     this.WrapUpCodes != null &&
                     this.WrapUpCodes.SequenceEqual(other.WrapUpCodes)
@@ -562,6 +578,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Resolution != null)
                     hash = hash * 59 + this.Resolution.GetHashCode();
+
+                if (this.FollowupActions != null)
+                    hash = hash * 59 + this.FollowupActions.GetHashCode();
 
                 if (this.WrapUpCodes != null)
                     hash = hash * 59 + this.WrapUpCodes.GetHashCode();

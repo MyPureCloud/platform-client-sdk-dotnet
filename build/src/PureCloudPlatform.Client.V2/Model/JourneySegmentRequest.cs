@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneySegmentRequest :  IEquatable<JourneySegmentRequest>
     {
-        /// <summary>
-        /// The target entity that a segment applies to.
-        /// </summary>
-        /// <value>The target entity that a segment applies to.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ScopeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Session for "Session"
-            /// </summary>
-            [EnumMember(Value = "Session")]
-            Session,
-            
-            /// <summary>
-            /// Enum Customer for "Customer"
-            /// </summary>
-            [EnumMember(Value = "Customer")]
-            Customer
-        }
-        /// <summary>
-        /// The target entity that a segment applies to.
-        /// </summary>
-        /// <value>The target entity that a segment applies to.</value>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
-        public ScopeEnum? Scope { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneySegmentRequest" /> class.
@@ -65,20 +32,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The version of the segment..</param>
         /// <param name="Description">A description of the segment..</param>
         /// <param name="Color">The hexadecimal color value of the segment. (required).</param>
-        /// <param name="Scope">The target entity that a segment applies to..</param>
         /// <param name="ShouldDisplayToAgent">Whether or not the segment should be displayed to agent/supervisor users..</param>
         /// <param name="Context">The context of the segment. (required).</param>
         /// <param name="Journey">The pattern of rules defining the segment. (required).</param>
         /// <param name="ExternalSegment">Details of an entity corresponding to this segment in an external system..</param>
         /// <param name="AssignmentExpirationDays">Time, in days, from when the segment is assigned until it is automatically unassigned..</param>
-        public JourneySegmentRequest(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, ScopeEnum? Scope = null, bool? ShouldDisplayToAgent = null, RequestContext Context = null, RequestJourney Journey = null, RequestExternalSegment ExternalSegment = null, int? AssignmentExpirationDays = null)
+        public JourneySegmentRequest(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, bool? ShouldDisplayToAgent = null, RequestContext Context = null, RequestJourney Journey = null, RequestExternalSegment ExternalSegment = null, int? AssignmentExpirationDays = null)
         {
             this.IsActive = IsActive;
             this.DisplayName = DisplayName;
             this.Version = Version;
             this.Description = Description;
             this.Color = Color;
-            this.Scope = Scope;
             this.ShouldDisplayToAgent = ShouldDisplayToAgent;
             this.Context = Context;
             this.Journey = Journey;
@@ -131,8 +96,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The hexadecimal color value of the segment.</value>
         [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
-
-
 
 
 
@@ -194,7 +157,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Color: ").Append(Color).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
             sb.Append("  ShouldDisplayToAgent: ").Append(ShouldDisplayToAgent).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Journey: ").Append(Journey).Append("\n");
@@ -266,11 +228,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Color.Equals(other.Color)
                 ) &&
                 (
-                    this.Scope == other.Scope ||
-                    this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
-                ) &&
-                (
                     this.ShouldDisplayToAgent == other.ShouldDisplayToAgent ||
                     this.ShouldDisplayToAgent != null &&
                     this.ShouldDisplayToAgent.Equals(other.ShouldDisplayToAgent)
@@ -322,9 +279,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Color != null)
                     hash = hash * 59 + this.Color.GetHashCode();
-
-                if (this.Scope != null)
-                    hash = hash * 59 + this.Scope.GetHashCode();
 
                 if (this.ShouldDisplayToAgent != null)
                     hash = hash * 59 + this.ShouldDisplayToAgent.GetHashCode();

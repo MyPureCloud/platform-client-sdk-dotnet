@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sessionexpired for "SessionExpired"
             /// </summary>
             [EnumMember(Value = "SessionExpired")]
-            Sessionexpired
+            Sessionexpired,
+            
+            /// <summary>
+            /// Enum Authenticate for "Authenticate"
+            /// </summary>
+            [EnumMember(Value = "Authenticate")]
+            Authenticate
         }
         /// <summary>
         /// Describes the type of Presence event.
@@ -79,13 +85,35 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationEventPresence" /> class.
         /// </summary>
         /// <param name="Type">Describes the type of Presence event. (required).</param>
-        public ConversationEventPresence(TypeEnum? Type = null)
+        /// <param name="ReceivedMessage">The message displayed in the received message bubble..</param>
+        /// <param name="ReplyMessage">The message displayed in the reply message bubble..</param>
+        public ConversationEventPresence(TypeEnum? Type = null, ConversationContentReceivedReplyMessage ReceivedMessage = null, ConversationContentReceivedReplyMessage ReplyMessage = null)
         {
             this.Type = Type;
+            this.ReceivedMessage = ReceivedMessage;
+            this.ReplyMessage = ReplyMessage;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// The message displayed in the received message bubble.
+        /// </summary>
+        /// <value>The message displayed in the received message bubble.</value>
+        [DataMember(Name="receivedMessage", EmitDefaultValue=false)]
+        public ConversationContentReceivedReplyMessage ReceivedMessage { get; set; }
+
+
+
+        /// <summary>
+        /// The message displayed in the reply message bubble.
+        /// </summary>
+        /// <value>The message displayed in the reply message bubble.</value>
+        [DataMember(Name="replyMessage", EmitDefaultValue=false)]
+        public ConversationContentReceivedReplyMessage ReplyMessage { get; set; }
 
 
         /// <summary>
@@ -98,6 +126,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationEventPresence {\n");
 
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ReceivedMessage: ").Append(ReceivedMessage).Append("\n");
+            sb.Append("  ReplyMessage: ").Append(ReplyMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -142,6 +172,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.ReceivedMessage == other.ReceivedMessage ||
+                    this.ReceivedMessage != null &&
+                    this.ReceivedMessage.Equals(other.ReceivedMessage)
+                ) &&
+                (
+                    this.ReplyMessage == other.ReplyMessage ||
+                    this.ReplyMessage != null &&
+                    this.ReplyMessage.Equals(other.ReplyMessage)
                 );
         }
 
@@ -158,6 +198,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.ReceivedMessage != null)
+                    hash = hash * 59 + this.ReceivedMessage.GetHashCode();
+
+                if (this.ReplyMessage != null)
+                    hash = hash * 59 + this.ReplyMessage.GetHashCode();
 
                 return hash;
             }

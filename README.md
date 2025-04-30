@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 231.1.0
+Documentation version PureCloudPlatform.Client.V2 232.0.0
 
 ## Install Using nuget
 
@@ -465,6 +465,15 @@ When the `useDefaultApiClient` optional parameter is not specified or is set to 
         User resultUser = apiInstance.GetUser(userId, null, null, null);
 ```
 
+#### Managing updates in Platform API Enumerations
+
+The Platform API Client SDKs (Java, Javascript/NodeJs, Python, Go, .Net, iOS/Swift) are automatically generated using the Platform API OpenAPI v2 definition.
+The Platform API definition file is downloaded at the time of the SDK build and is used to generate operations (i.e. API methods) and definitions (i.e. classes for the different models, enumerations, ...) in the different SDK languages.
+
+The .Net Platform API Client SDK implements the following strategy to manage the introduction of new enumeration values in the Platform API (i.e. in a version of the SDK which doesn't include these changes):
+* Each enumeration, generated from the Platform API OpenAPI v2 definition, always contains the following enumeration value: `[EnumMember(Value = "OUTDATED_SDK_VERSION")] OutdatedSdkVersion`
+* If an unknown enumeration value is received (i.e. a new enumeration value, introduced in Platform API, after the SDK version you are using was built), the SDK will map it to the `[EnumMember(Value = "OUTDATED_SDK_VERSION")] OutdatedSdkVersion` enumeration value. This is to prevent errors during deserialization when an unknown enumeration value is received from Genesys Cloud.
+
 ## NotificationHandler Helper Class
 
 The .NET SDK includes a helper class `NotificationHandler` to assist in managing GenesysCloud notifications. The class will create a single notification channel, or use an existing one, and provides methods to add and remove subscriptions and raises an event with a deserialized notification object whenever one is received.
@@ -569,7 +578,40 @@ _Note that the deserializer does not use this mapping; it uses the type provided
 
 ### REST Requests
 
-The SDK library uses [RestSharp](http://restsharp.org/) to make the REST requests. The majority of this work is done in [ApiClient.cs](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/build/src/PureCloudPlatform.Client.V2/Client/ApiClient.cs)
+The SDK library uses [RestSharp](http://restsharp.org/) by default to make the REST requests. The majority of this work is done in [DefaultHttpClient.cs](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/build/src/PureCloudPlatform.Client.V2/Client/ApiClient.cs)
+
+### Inject a custom Http Client
+
+By default the SDK will use RestSharp's RestClient as the default http client.
+If you want to inject a new third party/custom implementation of client , you set the httpclient instance
+
+The CustomHttpClient should be an instance of AbstractHttpClient defined in the SDK. Which will implement the 'Execute' and 'ExecuteAsync' methods.
+Please find an example here.
+
+```csharp
+
+public class CustomHttpClient : AbstractHttpClient
+{
+    private HttpClient httpClient;
+
+    public DefaultHttpClient() : base()
+    {
+        httpClient = new HttpClient();
+    }
+
+    public override IHttpRequest Execute(IHttpRequest request)
+    {
+        return httpClient.SendAsync(request).GetAwaiter().GetResult();
+    }
+
+    public override async Task<IHttpRequest> ExecuteAync(IHttpRequest request, CancellationToken cancellationToken = default(CancellationToken))
+    {
+        return await httpClient.SendAsync(request, cancellationToken);
+    }
+}
+
+Configuration.Default.ApiClient.HttpClient = new CustomHttpClient
+```
 
 ### Building from Source
 
@@ -594,4 +636,4 @@ The SDK's version is incremented according to the [Semantic Versioning Specifica
 
 This package is intended to be forwards compatible with v2 of Genesys Cloud's Platform API. While the general policy for the API is not to introduce breaking changes, there are certain additions and changes to the API that cause breaking changes for the SDK, often due to the way the API is expressed in its swagger definition. Because of this, the SDK can have a major version bump while the API remains at major version 2. While the SDK is intended to be forward compatible, patches will only be released to the latest version. For these reasons, it is strongly recommended that all applications using this SDK are kept up to date and use the latest version of the SDK.
 
-For any issues, questions, or suggestions for the SDK, visit the [Genesys Cloud Developer Forum](https://developer.genesys.cloud/forum/).
+For any issues, questions, or suggestions for the SDK, visit the [Genesys Cloud Developer Community](https://community.genesys.com/communities/community-home1/digestviewer?CommunityKey=a39cc4d6-857e-43cb-be7b-019581ab9f38).

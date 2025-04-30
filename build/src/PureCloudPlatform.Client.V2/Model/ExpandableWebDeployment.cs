@@ -85,8 +85,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SupportedContent">The supported content profile for a deployment.</param>
         /// <param name="Flow">A reference to the inboundshortmessage flow used by this deployment.</param>
         /// <param name="Status">The current status of the deployment.</param>
+        /// <param name="PushIntegrations">The push integration objects associated with the deployment.</param>
         /// <param name="Configuration">The config version this deployment uses (required).</param>
-        public ExpandableWebDeployment(string Name = null, string Description = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, SupportedContentReference SupportedContent = null, WebDeploymentFlowEntityRef Flow = null, StatusEnum? Status = null, WebDeploymentConfigurationVersionResponse Configuration = null)
+        public ExpandableWebDeployment(string Name = null, string Description = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, SupportedContentReference SupportedContent = null, WebDeploymentFlowEntityRef Flow = null, StatusEnum? Status = null, List<PushIntegration> PushIntegrations = null, WebDeploymentConfigurationVersionResponse Configuration = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -95,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SupportedContent = SupportedContent;
             this.Flow = Flow;
             this.Status = Status;
+            this.PushIntegrations = PushIntegrations;
             this.Configuration = Configuration;
             
         }
@@ -203,6 +205,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The push integration objects associated with the deployment
+        /// </summary>
+        /// <value>The push integration objects associated with the deployment</value>
+        [DataMember(Name="pushIntegrations", EmitDefaultValue=false)]
+        public List<PushIntegration> PushIntegrations { get; set; }
+
+
+
+        /// <summary>
         /// The config version this deployment uses
         /// </summary>
         /// <value>The config version this deployment uses</value>
@@ -240,6 +251,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastModifiedUser: ").Append(LastModifiedUser).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  PushIntegrations: ").Append(PushIntegrations).Append("\n");
             sb.Append("  Configuration: ").Append(Configuration).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -343,6 +355,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.PushIntegrations == other.PushIntegrations ||
+                    this.PushIntegrations != null &&
+                    this.PushIntegrations.SequenceEqual(other.PushIntegrations)
+                ) &&
+                (
                     this.Configuration == other.Configuration ||
                     this.Configuration != null &&
                     this.Configuration.Equals(other.Configuration)
@@ -400,6 +417,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.PushIntegrations != null)
+                    hash = hash * 59 + this.PushIntegrations.GetHashCode();
 
                 if (this.Configuration != null)
                     hash = hash * 59 + this.Configuration.GetHashCode();

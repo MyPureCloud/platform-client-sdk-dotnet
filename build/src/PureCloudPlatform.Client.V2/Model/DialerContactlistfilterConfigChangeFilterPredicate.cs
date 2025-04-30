@@ -154,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Range">Range.</param>
         /// <param name="Inverted">Whether or not to invert to result of evaluating the predicate.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? Operator = null, string Value = null, DialerContactlistfilterConfigChangeRange Range = null, bool? Inverted = null, Dictionary<string, Object> AdditionalProperties = null)
+        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? Operator = null, string Value = null, DialerContactlistfilterConfigChangeFilterRange Range = null, bool? Inverted = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Column = Column;
             this.ColumnType = ColumnType;
@@ -194,7 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Range
         /// </summary>
         [DataMember(Name="range", EmitDefaultValue=false)]
-        public DialerContactlistfilterConfigChangeRange Range { get; set; }
+        public DialerContactlistfilterConfigChangeFilterRange Range { get; set; }
 
 
 

@@ -57,7 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsOrganizationsSchemasCoretypes**](#GetExternalcontactsOrganizationsSchemasCoretypes) | **Get** /api/v2/externalcontacts/organizations/schemas/coretypes | Get the core types from which all schemas are built. |
 | [**GetExternalcontactsOrganizationsSchemasLimits**](#GetExternalcontactsOrganizationsSchemasLimits) | **Get** /api/v2/externalcontacts/organizations/schemas/limits | Get quantitative limits on schemas |
 | [**GetExternalcontactsRelationship**](#GetExternalcontactsRelationship) | **Get** /api/v2/externalcontacts/relationships/{relationshipId} | Fetch a relationship |
-| [**GetExternalcontactsReversewhitepageslookup**](#GetExternalcontactsReversewhitepageslookup) | **Get** /api/v2/externalcontacts/reversewhitepageslookup | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. |
+| [**GetExternalcontactsReversewhitepageslookup**](#GetExternalcontactsReversewhitepageslookup) | **Get** /api/v2/externalcontacts/reversewhitepageslookup | Look up contacts based on an attribute. Maximum of 25 values returned. |
 | [**GetExternalcontactsScanContacts**](#GetExternalcontactsScanContacts) | **Get** /api/v2/externalcontacts/scan/contacts | Scan for external contacts using paging |
 | [**GetExternalcontactsScanContactsDivisionviewsAll**](#GetExternalcontactsScanContactsDivisionviewsAll) | **Get** /api/v2/externalcontacts/scan/contacts/divisionviews/all | Scan for external contacts using paging |
 | [**GetExternalcontactsScanNotes**](#GetExternalcontactsScanNotes) | **Get** /api/v2/externalcontacts/scan/notes | Scan for notes using paging |
@@ -3404,7 +3404,7 @@ namespace Example
 > [**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult) GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null, string divisionId = null)
 
 
-Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
+Look up contacts based on an attribute. Maximum of 25 values returned.
 
 Requires ANY permissions: 
 
@@ -3432,13 +3432,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ExternalContactsApi();
-            var lookupVal = lookupVal_example;  // string | User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)
+            var lookupVal = lookupVal_example;  // string | User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names)
             var expand = new List<string>(); // List<string> | which field, if any, to expand (optional) 
-            var divisionId = divisionId_example;  // string | Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional)  (default to "*")
+            var divisionId = divisionId_example;  // string | Specifies which division to lookup contacts in, for the given lookup value (optional)  (default to "*")
 
             try
             { 
-                // Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
+                // Look up contacts based on an attribute. Maximum of 25 values returned.
                 ReverseWhitepagesLookupResult result = apiInstance.GetExternalcontactsReversewhitepageslookup(lookupVal, expand, divisionId);
                 Debug.WriteLine(result);
             }
@@ -3456,9 +3456,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **lookupVal** | **string**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) |  |
+| **lookupVal** | **string**| User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names) |  |
 | **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: contacts.externalOrganization, externalDataSources, division |
-| **divisionId** | **string**| Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value | [optional] [default to "*"] |
+| **divisionId** | **string**| Specifies which division to lookup contacts in, for the given lookup value | [optional] [default to "*"] |
 
 ### Return type
 
@@ -7711,4 +7711,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

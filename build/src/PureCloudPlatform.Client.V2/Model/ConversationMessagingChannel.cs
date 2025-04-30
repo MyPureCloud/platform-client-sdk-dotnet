@@ -88,16 +88,53 @@ namespace PureCloudPlatform.Client.V2.Model
             Sms
         }
         /// <summary>
+        /// Specifies if this message is part of a private or public conversation.
+        /// </summary>
+        /// <value>Specifies if this message is part of a private or public conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Public for "Public"
+            /// </summary>
+            [EnumMember(Value = "Public")]
+            Public,
+            
+            /// <summary>
+            /// Enum Private for "Private"
+            /// </summary>
+            [EnumMember(Value = "Private")]
+            Private
+        }
+        /// <summary>
         /// The provider type.
         /// </summary>
         /// <value>The provider type.</value>
         [DataMember(Name="platform", EmitDefaultValue=false)]
         public PlatformEnum? Platform { get; private set; }
         /// <summary>
+        /// Specifies if this message is part of a private or public conversation.
+        /// </summary>
+        /// <value>Specifies if this message is part of a private or public conversation.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessagingChannel" /> class.
         /// </summary>
-        public ConversationMessagingChannel()
+        /// <param name="Type">Specifies if this message is part of a private or public conversation..</param>
+        /// <param name="PublicMetadata">Information about a public message..</param>
+        public ConversationMessagingChannel(TypeEnum? Type = null, ConversationPublicMetadata PublicMetadata = null)
         {
+            this.Type = Type;
+            this.PublicMetadata = PublicMetadata;
             
         }
         
@@ -109,6 +146,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The integration ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+
 
 
 
@@ -167,6 +206,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DateDeleted { get; private set; }
 
 
+
+        /// <summary>
+        /// Information about a public message.
+        /// </summary>
+        /// <value>Information about a public message.</value>
+        [DataMember(Name="publicMetadata", EmitDefaultValue=false)]
+        public ConversationPublicMetadata PublicMetadata { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,12 +226,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DateDeleted: ").Append(DateDeleted).Append("\n");
+            sb.Append("  PublicMetadata: ").Append(PublicMetadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -235,6 +285,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Platform.Equals(other.Platform)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
                     this.MessageId == other.MessageId ||
                     this.MessageId != null &&
                     this.MessageId.Equals(other.MessageId)
@@ -263,6 +318,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateDeleted == other.DateDeleted ||
                     this.DateDeleted != null &&
                     this.DateDeleted.Equals(other.DateDeleted)
+                ) &&
+                (
+                    this.PublicMetadata == other.PublicMetadata ||
+                    this.PublicMetadata != null &&
+                    this.PublicMetadata.Equals(other.PublicMetadata)
                 );
         }
 
@@ -283,6 +343,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
 
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+
                 if (this.MessageId != null)
                     hash = hash * 59 + this.MessageId.GetHashCode();
 
@@ -300,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateDeleted != null)
                     hash = hash * 59 + this.DateDeleted.GetHashCode();
+
+                if (this.PublicMetadata != null)
+                    hash = hash * 59 + this.PublicMetadata.GetHashCode();
 
                 return hash;
             }

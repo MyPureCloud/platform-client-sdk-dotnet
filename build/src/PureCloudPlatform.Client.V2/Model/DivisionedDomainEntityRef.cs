@@ -57,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SelfUri { get; set; }
 
 
+
+        /// <summary>
+        /// The division this entity belongs to.
+        /// </summary>
+        /// <value>The division this entity belongs to.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public DivisionReference Division { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +133,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 );
         }
 
@@ -145,6 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 return hash;
             }

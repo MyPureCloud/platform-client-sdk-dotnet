@@ -170,6 +170,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The user who last modified this entity.  Deprecated, use field from settings.metadata instead
+        /// </summary>
+        /// <value>The user who last modified this entity.  Deprecated, use field from settings.metadata instead</value>
+        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
+        public UserReference ModifiedBy { get; private set; }
+
+
+
+        /// <summary>
         /// The version of the underlying entity.  Deprecated, use field from settings.metadata instead
         /// </summary>
         /// <value>The version of the underlying entity.  Deprecated, use field from settings.metadata instead</value>
@@ -184,15 +193,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-
-
-
-        /// <summary>
-        /// The user who last modified this entity.  Deprecated, use field from settings.metadata instead
-        /// </summary>
-        /// <value>The user who last modified this entity.  Deprecated, use field from settings.metadata instead</value>
-        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; private set; }
 
 
 
@@ -221,9 +221,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -306,6 +306,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
+                    this.ModifiedBy == other.ModifiedBy ||
+                    this.ModifiedBy != null &&
+                    this.ModifiedBy.Equals(other.ModifiedBy)
+                ) &&
+                (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
@@ -314,11 +319,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.ModifiedBy == other.ModifiedBy ||
-                    this.ModifiedBy != null &&
-                    this.ModifiedBy.Equals(other.ModifiedBy)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -362,14 +362,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
 
+                if (this.ModifiedBy != null)
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-
-                if (this.ModifiedBy != null)
-                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

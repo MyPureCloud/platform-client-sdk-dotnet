@@ -22,8 +22,9 @@
 | **SignAuthnRequests** | **bool?** |  | [optional] |
 | **ProviderName** | **string** |  | [optional] |
 | **DisplayOnLogin** | **bool?** |  | [optional] |
+| **MetadataURL** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 231.1.0_
+_PureCloudPlatform.Client.V2 232.0.0_

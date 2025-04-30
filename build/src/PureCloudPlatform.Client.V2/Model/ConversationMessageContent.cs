@@ -118,6 +118,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Interactiveapplication,
             
             /// <summary>
+            /// Enum Listpicker for "ListPicker"
+            /// </summary>
+            [EnumMember(Value = "ListPicker")]
+            Listpicker,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
@@ -149,7 +155,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Carousel">Carousel content.</param>
         /// <param name="Text">Text content..</param>
         /// <param name="QuickReplyV2">Quick reply V2 content..</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null)
+        /// <param name="Reactions">A set of reactions to a message..</param>
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null, List<ConversationContentReaction> Reactions = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -162,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Carousel = Carousel;
             this.Text = Text;
             this.QuickReplyV2 = QuickReplyV2;
+            this.Reactions = Reactions;
             
         }
         
@@ -258,6 +266,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationContentQuickReplyV2 QuickReplyV2 { get; set; }
 
 
+
+        /// <summary>
+        /// A set of reactions to a message.
+        /// </summary>
+        /// <value>A set of reactions to a message.</value>
+        [DataMember(Name="reactions", EmitDefaultValue=false)]
+        public List<ConversationContentReaction> Reactions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -278,6 +295,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  QuickReplyV2: ").Append(QuickReplyV2).Append("\n");
+            sb.Append("  Reactions: ").Append(Reactions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -372,6 +390,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QuickReplyV2 == other.QuickReplyV2 ||
                     this.QuickReplyV2 != null &&
                     this.QuickReplyV2.Equals(other.QuickReplyV2)
+                ) &&
+                (
+                    this.Reactions == other.Reactions ||
+                    this.Reactions != null &&
+                    this.Reactions.SequenceEqual(other.Reactions)
                 );
         }
 
@@ -418,6 +441,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QuickReplyV2 != null)
                     hash = hash * 59 + this.QuickReplyV2.GetHashCode();
+
+                if (this.Reactions != null)
+                    hash = hash * 59 + this.Reactions.GetHashCode();
 
                 return hash;
             }
