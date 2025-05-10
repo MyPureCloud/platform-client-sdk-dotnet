@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationContentListPicker" /> class.
         /// </summary>
         /// <param name="Sections">An array of sections in the List Picker..</param>
-        /// <param name="ReplyMessage">The message displayed in the received message bubble..</param>
-        /// <param name="ReceivedMessage">The message displayed in the reply message bubble..</param>
+        /// <param name="ReplyMessage">The reply message after the user has selected the options from the List Picker..</param>
+        /// <param name="ReceivedMessage">The message prompt to select options in the List Picker sections..</param>
         public ConversationContentListPicker(List<ConversationContentListPickerSection> Sections = null, ConversationContentReceivedReplyMessage ReplyMessage = null, ConversationContentReceivedReplyMessage ReceivedMessage = null)
         {
             this.Sections = Sections;
@@ -44,18 +44,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The message displayed in the received message bubble.
+        /// The reply message after the user has selected the options from the List Picker.
         /// </summary>
-        /// <value>The message displayed in the received message bubble.</value>
+        /// <value>The reply message after the user has selected the options from the List Picker.</value>
         [DataMember(Name="replyMessage", EmitDefaultValue=false)]
         public ConversationContentReceivedReplyMessage ReplyMessage { get; set; }
 
 
 
         /// <summary>
-        /// The message displayed in the reply message bubble.
+        /// The message prompt to select options in the List Picker sections.
         /// </summary>
-        /// <value>The message displayed in the reply message bubble.</value>
+        /// <value>The message prompt to select options in the List Picker sections.</value>
         [DataMember(Name="receivedMessage", EmitDefaultValue=false)]
         public ConversationContentReceivedReplyMessage ReceivedMessage { get; set; }
 

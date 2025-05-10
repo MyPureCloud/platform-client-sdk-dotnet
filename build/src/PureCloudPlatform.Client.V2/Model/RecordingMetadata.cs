@@ -136,6 +136,135 @@ namespace PureCloudPlatform.Client.V2.Model
             Cloudarchive
         }
         /// <summary>
+        /// The region the source recording is stored in
+        /// </summary>
+        /// <value>The region the source recording is stored in</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RegionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Afsouth1 for "af-south-1"
+            /// </summary>
+            [EnumMember(Value = "af-south-1")]
+            Afsouth1,
+            
+            /// <summary>
+            /// Enum Apeast1 for "ap-east-1"
+            /// </summary>
+            [EnumMember(Value = "ap-east-1")]
+            Apeast1,
+            
+            /// <summary>
+            /// Enum Apnortheast1 for "ap-northeast-1"
+            /// </summary>
+            [EnumMember(Value = "ap-northeast-1")]
+            Apnortheast1,
+            
+            /// <summary>
+            /// Enum Apnortheast2 for "ap-northeast-2"
+            /// </summary>
+            [EnumMember(Value = "ap-northeast-2")]
+            Apnortheast2,
+            
+            /// <summary>
+            /// Enum Apnortheast3 for "ap-northeast-3"
+            /// </summary>
+            [EnumMember(Value = "ap-northeast-3")]
+            Apnortheast3,
+            
+            /// <summary>
+            /// Enum Apsouth1 for "ap-south-1"
+            /// </summary>
+            [EnumMember(Value = "ap-south-1")]
+            Apsouth1,
+            
+            /// <summary>
+            /// Enum Apsoutheast1 for "ap-southeast-1"
+            /// </summary>
+            [EnumMember(Value = "ap-southeast-1")]
+            Apsoutheast1,
+            
+            /// <summary>
+            /// Enum Apsoutheast2 for "ap-southeast-2"
+            /// </summary>
+            [EnumMember(Value = "ap-southeast-2")]
+            Apsoutheast2,
+            
+            /// <summary>
+            /// Enum Apsoutheast3 for "ap-southeast-3"
+            /// </summary>
+            [EnumMember(Value = "ap-southeast-3")]
+            Apsoutheast3,
+            
+            /// <summary>
+            /// Enum Cacentral1 for "ca-central-1"
+            /// </summary>
+            [EnumMember(Value = "ca-central-1")]
+            Cacentral1,
+            
+            /// <summary>
+            /// Enum Eucentral1 for "eu-central-1"
+            /// </summary>
+            [EnumMember(Value = "eu-central-1")]
+            Eucentral1,
+            
+            /// <summary>
+            /// Enum Eucentral2 for "eu-central-2"
+            /// </summary>
+            [EnumMember(Value = "eu-central-2")]
+            Eucentral2,
+            
+            /// <summary>
+            /// Enum Euwest1 for "eu-west-1"
+            /// </summary>
+            [EnumMember(Value = "eu-west-1")]
+            Euwest1,
+            
+            /// <summary>
+            /// Enum Euwest2 for "eu-west-2"
+            /// </summary>
+            [EnumMember(Value = "eu-west-2")]
+            Euwest2,
+            
+            /// <summary>
+            /// Enum Euwest3 for "eu-west-3"
+            /// </summary>
+            [EnumMember(Value = "eu-west-3")]
+            Euwest3,
+            
+            /// <summary>
+            /// Enum Mecentral1 for "me-central-1"
+            /// </summary>
+            [EnumMember(Value = "me-central-1")]
+            Mecentral1,
+            
+            /// <summary>
+            /// Enum Saeast1 for "sa-east-1"
+            /// </summary>
+            [EnumMember(Value = "sa-east-1")]
+            Saeast1,
+            
+            /// <summary>
+            /// Enum Useast1 for "us-east-1"
+            /// </summary>
+            [EnumMember(Value = "us-east-1")]
+            Useast1,
+            
+            /// <summary>
+            /// Enum Uswest2 for "us-west-2"
+            /// </summary>
+            [EnumMember(Value = "us-west-2")]
+            Uswest2
+        }
+        /// <summary>
         /// The recording media subtype.
         /// </summary>
         /// <value>The recording media subtype.</value>
@@ -153,6 +282,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of archive medium used. Example: CloudArchive</value>
         [DataMember(Name="archiveMedium", EmitDefaultValue=false)]
         public ArchiveMediumEnum? ArchiveMedium { get; set; }
+        /// <summary>
+        /// The region the source recording is stored in
+        /// </summary>
+        /// <value>The region the source recording is stored in</value>
+        [DataMember(Name="region", EmitDefaultValue=false)]
+        public RegionEnum? Region { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMetadata" /> class.
         /// </summary>
@@ -175,7 +310,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxAllowedRestorationsForOrg">How many archive restorations the organization is allowed to have..</param>
         /// <param name="RemainingRestorationsAllowedForOrg">The remaining archive restorations the organization has..</param>
         /// <param name="SessionId">The session id represents an external resource id, such as email, call, chat, etc.</param>
-        public RecordingMetadata(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, MediaSubtypeEnum? MediaSubtype = null, string MediaSubject = null, List<Annotation> Annotations = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null)
+        /// <param name="Region">The region the source recording is stored in.</param>
+        public RecordingMetadata(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, MediaSubtypeEnum? MediaSubtype = null, string MediaSubject = null, List<Annotation> Annotations = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, RegionEnum? Region = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -196,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaxAllowedRestorationsForOrg = MaxAllowedRestorationsForOrg;
             this.RemainingRestorationsAllowedForOrg = RemainingRestorationsAllowedForOrg;
             this.SessionId = SessionId;
+            this.Region = Region;
             
         }
         
@@ -356,6 +493,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -393,6 +532,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxAllowedRestorationsForOrg: ").Append(MaxAllowedRestorationsForOrg).Append("\n");
             sb.Append("  RemainingRestorationsAllowedForOrg: ").Append(RemainingRestorationsAllowedForOrg).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  Region: ").Append(Region).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -535,6 +675,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionId.Equals(other.SessionId)
                 ) &&
                 (
+                    this.Region == other.Region ||
+                    this.Region != null &&
+                    this.Region.Equals(other.Region)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -611,6 +756,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
+
+                if (this.Region != null)
+                    hash = hash * 59 + this.Region.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

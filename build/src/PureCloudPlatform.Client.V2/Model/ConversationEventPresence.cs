@@ -67,7 +67,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Authenticate for "Authenticate"
             /// </summary>
             [EnumMember(Value = "Authenticate")]
-            Authenticate
+            Authenticate,
+            
+            /// <summary>
+            /// Enum Authenticatefailure for "AuthenticateFailure"
+            /// </summary>
+            [EnumMember(Value = "AuthenticateFailure")]
+            Authenticatefailure,
+            
+            /// <summary>
+            /// Enum Authenticatecancel for "AuthenticateCancel"
+            /// </summary>
+            [EnumMember(Value = "AuthenticateCancel")]
+            Authenticatecancel
         }
         /// <summary>
         /// Describes the type of Presence event.
@@ -85,8 +97,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationEventPresence" /> class.
         /// </summary>
         /// <param name="Type">Describes the type of Presence event. (required).</param>
-        /// <param name="ReceivedMessage">The message displayed in the received message bubble..</param>
-        /// <param name="ReplyMessage">The message displayed in the reply message bubble..</param>
+        /// <param name="ReceivedMessage">A sign in prompt message for when the authenticate event is received..</param>
+        /// <param name="ReplyMessage">A reply message on authentication success..</param>
         public ConversationEventPresence(TypeEnum? Type = null, ConversationContentReceivedReplyMessage ReceivedMessage = null, ConversationContentReceivedReplyMessage ReplyMessage = null)
         {
             this.Type = Type;
@@ -100,18 +112,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The message displayed in the received message bubble.
+        /// A sign in prompt message for when the authenticate event is received.
         /// </summary>
-        /// <value>The message displayed in the received message bubble.</value>
+        /// <value>A sign in prompt message for when the authenticate event is received.</value>
         [DataMember(Name="receivedMessage", EmitDefaultValue=false)]
         public ConversationContentReceivedReplyMessage ReceivedMessage { get; set; }
 
 
 
         /// <summary>
-        /// The message displayed in the reply message bubble.
+        /// A reply message on authentication success.
         /// </summary>
-        /// <value>The message displayed in the reply message bubble.</value>
+        /// <value>A reply message on authentication success.</value>
         [DataMember(Name="replyMessage", EmitDefaultValue=false)]
         public ConversationContentReceivedReplyMessage ReplyMessage { get; set; }
 

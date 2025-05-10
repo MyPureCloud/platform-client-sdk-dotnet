@@ -201,12 +201,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaStatsMinConversationMos">The lowest estimated average MOS among all the audio streams belonging to this conversation.</param>
         /// <param name="MediaStatsMinConversationRFactor">The lowest R-factor value among all of the audio streams belonging to this conversation.</param>
         /// <param name="OriginatingDirection">The original direction of the conversation.</param>
+        /// <param name="OriginatingSocialMediaPublic">Indicates that the conversation originated from a public message on social media.</param>
         /// <param name="SelfServed">Indicates whether all flow sessions were self serviced.</param>
         /// <param name="Evaluations">Evaluations associated with this conversation.</param>
         /// <param name="Surveys">Surveys associated with this conversation.</param>
         /// <param name="Resolutions">Resolutions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversationWithoutAttributes(DateTime? ConferenceStart = null, DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, bool? CustomerParticipation = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
+        public AnalyticsConversationWithoutAttributes(DateTime? ConferenceStart = null, DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, bool? CustomerParticipation = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? OriginatingSocialMediaPublic = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
         {
             this.ConferenceStart = ConferenceStart;
             this.ConversationEnd = ConversationEnd;
@@ -220,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaStatsMinConversationMos = MediaStatsMinConversationMos;
             this.MediaStatsMinConversationRFactor = MediaStatsMinConversationRFactor;
             this.OriginatingDirection = OriginatingDirection;
+            this.OriginatingSocialMediaPublic = OriginatingSocialMediaPublic;
             this.SelfServed = SelfServed;
             this.Evaluations = Evaluations;
             this.Surveys = Surveys;
@@ -325,6 +327,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates that the conversation originated from a public message on social media
+        /// </summary>
+        /// <value>Indicates that the conversation originated from a public message on social media</value>
+        [DataMember(Name="originatingSocialMediaPublic", EmitDefaultValue=false)]
+        public bool? OriginatingSocialMediaPublic { get; set; }
+
+
+
+        /// <summary>
         /// Indicates whether all flow sessions were self serviced
         /// </summary>
         /// <value>Indicates whether all flow sessions were self serviced</value>
@@ -389,6 +400,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaStatsMinConversationMos: ").Append(MediaStatsMinConversationMos).Append("\n");
             sb.Append("  MediaStatsMinConversationRFactor: ").Append(MediaStatsMinConversationRFactor).Append("\n");
             sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
+            sb.Append("  OriginatingSocialMediaPublic: ").Append(OriginatingSocialMediaPublic).Append("\n");
             sb.Append("  SelfServed: ").Append(SelfServed).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("  Surveys: ").Append(Surveys).Append("\n");
@@ -495,6 +507,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OriginatingDirection.Equals(other.OriginatingDirection)
                 ) &&
                 (
+                    this.OriginatingSocialMediaPublic == other.OriginatingSocialMediaPublic ||
+                    this.OriginatingSocialMediaPublic != null &&
+                    this.OriginatingSocialMediaPublic.Equals(other.OriginatingSocialMediaPublic)
+                ) &&
+                (
                     this.SelfServed == other.SelfServed ||
                     this.SelfServed != null &&
                     this.SelfServed.Equals(other.SelfServed)
@@ -567,6 +584,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OriginatingDirection != null)
                     hash = hash * 59 + this.OriginatingDirection.GetHashCode();
+
+                if (this.OriginatingSocialMediaPublic != null)
+                    hash = hash * 59 + this.OriginatingSocialMediaPublic.GetHashCode();
 
                 if (this.SelfServed != null)
                     hash = hash * 59 + this.SelfServed.GetHashCode();

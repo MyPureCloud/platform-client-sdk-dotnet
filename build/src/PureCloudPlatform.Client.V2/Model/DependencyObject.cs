@@ -153,6 +153,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Digitalbotflow,
             
             /// <summary>
+            /// Enum Division for "DIVISION"
+            /// </summary>
+            [EnumMember(Value = "DIVISION")]
+            Division,
+            
+            /// <summary>
             /// Enum Emailroute for "EMAILROUTE"
             /// </summary>
             [EnumMember(Value = "EMAILROUTE")]

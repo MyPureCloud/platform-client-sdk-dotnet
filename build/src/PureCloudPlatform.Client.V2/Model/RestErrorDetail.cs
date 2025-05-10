@@ -21,8 +21,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
         /// </summary>
-        public RestErrorDetail()
+        /// <param name="UserParams">parameters to be inserted into details..</param>
+        public RestErrorDetail(List<UserParam> UserParams = null)
         {
+            this.UserParams = UserParams;
             
         }
         
@@ -45,6 +47,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Details { get; private set; }
 
 
+
+        /// <summary>
+        /// parameters to be inserted into details.
+        /// </summary>
+        /// <value>parameters to be inserted into details.</value>
+        [DataMember(Name="userParams", EmitDefaultValue=false)]
+        public List<UserParam> UserParams { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
+            sb.Append("  UserParams: ").Append(UserParams).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,6 +117,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Details == other.Details ||
                     this.Details != null &&
                     this.Details.Equals(other.Details)
+                ) &&
+                (
+                    this.UserParams == other.UserParams ||
+                    this.UserParams != null &&
+                    this.UserParams.SequenceEqual(other.UserParams)
                 );
         }
 
@@ -124,6 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
+
+                if (this.UserParams != null)
+                    hash = hash * 59 + this.UserParams.GetHashCode();
 
                 return hash;
             }

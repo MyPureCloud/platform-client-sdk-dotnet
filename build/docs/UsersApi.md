@@ -5127,7 +5127,7 @@ Requires ANY permissions:
 
 * admin
 * directory:organization:admin
-* directory:userPassword:edit
+* directory:user:setPassword
 
 ### Example
 ```{"language":"csharp"}
@@ -6709,4 +6709,4 @@ namespace Example
 [**Verifier**](Verifier)
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

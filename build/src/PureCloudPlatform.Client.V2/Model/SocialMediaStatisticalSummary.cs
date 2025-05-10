@@ -29,6 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountNeutral">CountNeutral.</param>
         /// <param name="CountUnknown">CountUnknown.</param>
         /// <param name="Sum">Sum.</param>
+        /// <param name="Average">Average.</param>
         /// <param name="Current">Current.</param>
         /// <param name="Ratio">Ratio.</param>
         /// <param name="Numerator">Numerator.</param>
@@ -36,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Target">Target.</param>
         /// <param name="P95">P95.</param>
         /// <param name="P99">P99.</param>
-        public SocialMediaStatisticalSummary(double? Max = null, double? Min = null, long? Count = null, long? CountNegative = null, long? CountPositive = null, long? CountNeutral = null, long? CountUnknown = null, double? Sum = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null, long? P95 = null, long? P99 = null)
+        public SocialMediaStatisticalSummary(double? Max = null, double? Min = null, long? Count = null, long? CountNegative = null, long? CountPositive = null, long? CountNeutral = null, long? CountUnknown = null, double? Sum = null, double? Average = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null, long? P95 = null, long? P99 = null)
         {
             this.Max = Max;
             this.Min = Min;
@@ -46,6 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CountNeutral = CountNeutral;
             this.CountUnknown = CountUnknown;
             this.Sum = Sum;
+            this.Average = Average;
             this.Current = Current;
             this.Ratio = Ratio;
             this.Numerator = Numerator;
@@ -123,6 +125,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Average
+        /// </summary>
+        [DataMember(Name="average", EmitDefaultValue=false)]
+        public double? Average { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
@@ -194,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountNeutral: ").Append(CountNeutral).Append("\n");
             sb.Append("  CountUnknown: ").Append(CountUnknown).Append("\n");
             sb.Append("  Sum: ").Append(Sum).Append("\n");
+            sb.Append("  Average: ").Append(Average).Append("\n");
             sb.Append("  Current: ").Append(Current).Append("\n");
             sb.Append("  Ratio: ").Append(Ratio).Append("\n");
             sb.Append("  Numerator: ").Append(Numerator).Append("\n");
@@ -282,6 +293,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sum.Equals(other.Sum)
                 ) &&
                 (
+                    this.Average == other.Average ||
+                    this.Average != null &&
+                    this.Average.Equals(other.Average)
+                ) &&
+                (
                     this.Current == other.Current ||
                     this.Current != null &&
                     this.Current.Equals(other.Current)
@@ -352,6 +368,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Sum != null)
                     hash = hash * 59 + this.Sum.GetHashCode();
+
+                if (this.Average != null)
+                    hash = hash * 59 + this.Average.GetHashCode();
 
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();

@@ -47,7 +47,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Trustor">Trustor.</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        public ExternalOrganization(string Id = null, string Name = null, WritableStarrableDivision Division = null, string CompanyType = null, string Industry = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
+        /// <param name="Identifiers">Identifiers claimed by this external org.</param>
+        /// <param name="ExternalIds">A list of external identifiers that identify this External Organization in an external system.</param>
+        public ExternalOrganization(string Id = null, string Name = null, WritableStarrableDivision Division = null, string CompanyType = null, string Industry = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<ExternalOrganizationIdentifier> Identifiers = null, List<ExternalId> ExternalIds = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -69,6 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Trustor = Trustor;
             this.Schema = Schema;
             this.CustomFields = CustomFields;
+            this.Identifiers = Identifiers;
+            this.ExternalIds = ExternalIds;
             
         }
         
@@ -243,6 +247,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Identifiers claimed by this external org
+        /// </summary>
+        /// <value>Identifiers claimed by this external org</value>
+        [DataMember(Name="identifiers", EmitDefaultValue=false)]
+        public List<ExternalOrganizationIdentifier> Identifiers { get; set; }
+
+
+
+        /// <summary>
+        /// A list of external identifiers that identify this External Organization in an external system
+        /// </summary>
+        /// <value>A list of external identifiers that identify this External Organization in an external system</value>
+        [DataMember(Name="externalIds", EmitDefaultValue=false)]
+        public List<ExternalId> ExternalIds { get; set; }
+
+
+
+        /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
@@ -288,6 +310,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Trustor: ").Append(Trustor).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
+            sb.Append("  Identifiers: ").Append(Identifiers).Append("\n");
+            sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -431,6 +455,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomFields.SequenceEqual(other.CustomFields)
                 ) &&
                 (
+                    this.Identifiers == other.Identifiers ||
+                    this.Identifiers != null &&
+                    this.Identifiers.SequenceEqual(other.Identifiers)
+                ) &&
+                (
+                    this.ExternalIds == other.ExternalIds ||
+                    this.ExternalIds != null &&
+                    this.ExternalIds.SequenceEqual(other.ExternalIds)
+                ) &&
+                (
                     this.ExternalDataSources == other.ExternalDataSources ||
                     this.ExternalDataSources != null &&
                     this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
@@ -512,6 +546,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();
+
+                if (this.Identifiers != null)
+                    hash = hash * 59 + this.Identifiers.GetHashCode();
+
+                if (this.ExternalIds != null)
+                    hash = hash * 59 + this.ExternalIds.GetHashCode();
 
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();

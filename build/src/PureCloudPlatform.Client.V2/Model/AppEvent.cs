@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
-        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, name, phone. (required).</param>
+        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, givenName, cellPhone. (required).</param>
         public AppEvent(string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpAddress = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null)
         {
             this.EventName = EventName;
@@ -169,9 +169,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, name, phone.
+        /// Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, givenName, cellPhone.
         /// </summary>
-        /// <value>Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, name, phone.</value>
+        /// <value>Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, givenName, cellPhone.</value>
         [DataMember(Name="traits", EmitDefaultValue=false)]
         public Dictionary<string, CustomEventAttribute> Traits { get; set; }
 

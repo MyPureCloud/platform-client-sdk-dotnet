@@ -120,14 +120,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExecutionStep">Detailed description for the Job execution state.</param>
         /// <param name="Metadata">Metadata for the job.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Division">Division for the job.</param>
         /// <param name="Settings">Settings (required).</param>
-        public ContactImportJobResponse(StatusEnum? Status = null, string StatusDetails = null, ExecutionStepEnum? ExecutionStep = null, ContactImportJobMetadata Metadata = null, DateTime? DateCreated = null, AddressableEntityRef Settings = null)
+        public ContactImportJobResponse(StatusEnum? Status = null, string StatusDetails = null, ExecutionStepEnum? ExecutionStep = null, ContactImportJobMetadata Metadata = null, DateTime? DateCreated = null, StarrableDivision Division = null, AddressableEntityRef Settings = null)
         {
             this.Status = Status;
             this.StatusDetails = StatusDetails;
             this.ExecutionStep = ExecutionStep;
             this.Metadata = Metadata;
             this.DateCreated = DateCreated;
+            this.Division = Division;
             this.Settings = Settings;
             
         }
@@ -175,6 +177,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Division for the job
+        /// </summary>
+        /// <value>Division for the job</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public StarrableDivision Division { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -206,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExecutionStep: ").Append(ExecutionStep).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("}\n");
@@ -279,6 +291,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -318,6 +335,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

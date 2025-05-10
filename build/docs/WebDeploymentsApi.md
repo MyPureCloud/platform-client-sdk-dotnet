@@ -710,8 +710,6 @@ namespace Example
 
 Get a deployment identity resolution setting.
 
-GetWebdeploymentsDeploymentIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * webDeployments:deployment:view
@@ -823,7 +821,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: Configuration, SupportedContent |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: Configuration, SupportedContent, identityresolution |
 
 ### Return type
 
@@ -1262,8 +1260,6 @@ namespace Example
 
 Update identity resolution settings for a deployment.
 
-PutWebdeploymentsDeploymentIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * webDeployments:deployment:edit
@@ -1322,4 +1318,4 @@ namespace Example
 [**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

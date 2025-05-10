@@ -226,6 +226,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Groups,
             
             /// <summary>
+            /// Enum Guides for "guides"
+            /// </summary>
+            [EnumMember(Value = "guides")]
+            Guides,
+            
+            /// <summary>
             /// Enum Historicaladherence for "historical.adherence"
             /// </summary>
             [EnumMember(Value = "historical.adherence")]

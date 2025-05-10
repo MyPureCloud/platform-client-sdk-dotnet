@@ -1157,8 +1157,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IncludeDurationFormatInHeader">Indicates whether to include selected duration format to the column headers.</param>
         /// <param name="DurationFormat">Indicates the duration format for the exports.</param>
         /// <param name="ExportAllowedToRerun">Indicates whether the export run is allowed to rerun.</param>
+        /// <param name="ChartColumns">The list of columns for which chart is going to be displayed in export.</param>
         /// <param name="Enabled">Enabled.</param>
-        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, bool? IncludeDurationFormatInHeader = null, DurationFormatEnum? DurationFormat = null, bool? ExportAllowedToRerun = null, bool? Enabled = null)
+        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, bool? IncludeDurationFormatInHeader = null, DurationFormatEnum? DurationFormat = null, bool? ExportAllowedToRerun = null, List<ChartColumn> ChartColumns = null, bool? Enabled = null)
         {
             this.Name = Name;
             this.RunId = RunId;
@@ -1190,6 +1191,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IncludeDurationFormatInHeader = IncludeDurationFormatInHeader;
             this.DurationFormat = DurationFormat;
             this.ExportAllowedToRerun = ExportAllowedToRerun;
+            this.ChartColumns = ChartColumns;
             this.Enabled = Enabled;
             
         }
@@ -1433,6 +1435,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The list of columns for which chart is going to be displayed in export
+        /// </summary>
+        /// <value>The list of columns for which chart is going to be displayed in export</value>
+        [DataMember(Name="chartColumns", EmitDefaultValue=false)]
+        public List<ChartColumn> ChartColumns { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
@@ -1488,6 +1499,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IncludeDurationFormatInHeader: ").Append(IncludeDurationFormatInHeader).Append("\n");
             sb.Append("  DurationFormat: ").Append(DurationFormat).Append("\n");
             sb.Append("  ExportAllowedToRerun: ").Append(ExportAllowedToRerun).Append("\n");
+            sb.Append("  ChartColumns: ").Append(ChartColumns).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -1686,6 +1698,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExportAllowedToRerun.Equals(other.ExportAllowedToRerun)
                 ) &&
                 (
+                    this.ChartColumns == other.ChartColumns ||
+                    this.ChartColumns != null &&
+                    this.ChartColumns.SequenceEqual(other.ChartColumns)
+                ) &&
+                (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
@@ -1800,6 +1817,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExportAllowedToRerun != null)
                     hash = hash * 59 + this.ExportAllowedToRerun.GetHashCode();
+
+                if (this.ChartColumns != null)
+                    hash = hash * 59 + this.ChartColumns.GetHashCode();
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();

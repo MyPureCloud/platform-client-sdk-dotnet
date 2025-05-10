@@ -122,7 +122,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Osocialengagement for "oSocialEngagement"
             /// </summary>
             [EnumMember(Value = "oSocialEngagement")]
-            Osocialengagement
+            Osocialengagement,
+            
+            /// <summary>
+            /// Enum Nsocialreviewrating for "nSocialReviewRating"
+            /// </summary>
+            [EnumMember(Value = "nSocialReviewRating")]
+            Nsocialreviewrating
         }
 
         /// <summary>

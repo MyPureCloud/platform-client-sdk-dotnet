@@ -233,7 +233,8 @@
 | **ProgramIds** | **List&lt;string&gt;** | A list of program ids for filtering | [optional] |
 | **CategoryIds** | **List&lt;string&gt;** | A list of category ids for filtering | [optional] |
 | **DeliveryPushed** | **bool?** | Filter to indicate if push notification is sent | [optional] |
+| **SocialRatings** | **List&lt;float?&gt;** | A set of ratings for Google Business Profile | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

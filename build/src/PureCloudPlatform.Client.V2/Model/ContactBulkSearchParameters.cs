@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ContactListFilterId">Contact List Filter ID. Either this property or criteria is required..</param>
         /// <param name="Criteria">Criteria to filter the contacts by. Either this property or contactListFilterId is required..</param>
-        public ContactBulkSearchParameters(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null)
+        /// <param name="GenerateDownloadURI">Whether to do backup export as part of Bulk Operation or not. Default: true..</param>
+        public ContactBulkSearchParameters(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null, bool? GenerateDownloadURI = null)
         {
             this.ContactListFilterId = ContactListFilterId;
             this.Criteria = Criteria;
+            this.GenerateDownloadURI = GenerateDownloadURI;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ContactBulkSearchCriteria Criteria { get; set; }
 
 
+
+        /// <summary>
+        /// Whether to do backup export as part of Bulk Operation or not. Default: true.
+        /// </summary>
+        /// <value>Whether to do backup export as part of Bulk Operation or not. Default: true.</value>
+        [DataMember(Name="generateDownloadURI", EmitDefaultValue=false)]
+        public bool? GenerateDownloadURI { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ContactListFilterId: ").Append(ContactListFilterId).Append("\n");
             sb.Append("  Criteria: ").Append(Criteria).Append("\n");
+            sb.Append("  GenerateDownloadURI: ").Append(GenerateDownloadURI).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Criteria == other.Criteria ||
                     this.Criteria != null &&
                     this.Criteria.Equals(other.Criteria)
+                ) &&
+                (
+                    this.GenerateDownloadURI == other.GenerateDownloadURI ||
+                    this.GenerateDownloadURI != null &&
+                    this.GenerateDownloadURI.Equals(other.GenerateDownloadURI)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Criteria != null)
                     hash = hash * 59 + this.Criteria.GetHashCode();
+
+                if (this.GenerateDownloadURI != null)
+                    hash = hash * 59 + this.GenerateDownloadURI.GetHashCode();
 
                 return hash;
             }

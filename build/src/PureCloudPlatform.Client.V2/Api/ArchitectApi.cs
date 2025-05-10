@@ -1012,7 +1012,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -1025,7 +1024,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -1047,9 +1045,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>IVREntityListing</returns>
         
-        IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
+        IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get IVR configs.
@@ -1065,9 +1064,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
         
-        ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
+        ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a pageable list of basic ivr configuration information objects filterable by query parameters.
@@ -3786,7 +3786,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -3800,7 +3799,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -5132,7 +5130,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -5145,7 +5142,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -5167,9 +5163,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
         
-        System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
+        System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get IVR configs.
@@ -5185,9 +5182,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
+        System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a pageable list of basic ivr configuration information objects filterable by query parameters.
@@ -7906,7 +7904,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -7920,7 +7917,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -15955,7 +15951,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an IVR IdentityResolutionConfig. 
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -15970,7 +15965,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an IVR IdentityResolutionConfig. 
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -16056,7 +16050,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an IVR IdentityResolutionConfig. 
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -16072,7 +16065,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an IVR IdentityResolutionConfig. 
         /// 
-        /// GetArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -16169,11 +16161,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>IVREntityListing</returns>
         
-        public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
+        public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null)
         {
-             ApiResponse<IVREntityListing> localVarResponse = GetArchitectIvrsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup);
+             ApiResponse<IVREntityListing> localVarResponse = GetArchitectIvrsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup, expand);
              return localVarResponse.Data;
         }
 
@@ -16189,9 +16182,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
         
-        public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
+        public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/architect/ivrs";
@@ -16234,6 +16228,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (dnis != null) localVarQueryParams.Add(new Tuple<string, string>("dnis", this.Configuration.ApiClient.ParameterToString(dnis)));
             if (scheduleGroup != null) localVarQueryParams.Add(new Tuple<string, string>("scheduleGroup", this.Configuration.ApiClient.ParameterToString(scheduleGroup)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16283,11 +16278,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
         
-        public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
+        public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null)
         {
-             ApiResponse<IVREntityListing> localVarResponse = await GetArchitectIvrsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup);
+             ApiResponse<IVREntityListing> localVarResponse = await GetArchitectIvrsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup, expand);
              return localVarResponse.Data;
 
         }
@@ -16304,9 +16300,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/architect/ivrs";
@@ -16349,6 +16346,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (dnis != null) localVarQueryParams.Add(new Tuple<string, string>("dnis", this.Configuration.ApiClient.ParameterToString(dnis)));
             if (scheduleGroup != null) localVarQueryParams.Add(new Tuple<string, string>("scheduleGroup", this.Configuration.ApiClient.ParameterToString(scheduleGroup)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -37258,7 +37256,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an IVR IdentityResolutionConfig. 
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -37274,7 +37271,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an IVR IdentityResolutionConfig. 
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -37370,7 +37366,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an IVR IdentityResolutionConfig. 
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
@@ -37387,7 +37382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an IVR IdentityResolutionConfig. 
         /// 
-        /// PutArchitectIvrIdentityresolution is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>

@@ -7,15 +7,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteEmailsSettingsThreading**](#DeleteEmailsSettingsThreading) | **Delete** /api/v2/emails/settings/threading | Reset email threading settings to default |
+| [**DeleteExternalcontactsSettings**](#DeleteExternalcontactsSettings) | **Delete** /api/v2/externalcontacts/settings | Delete settings |
 | [**DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](#DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Delete** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Delete agent auto answer settings |
 | [**GetEmailsSettings**](#GetEmailsSettings) | **Get** /api/v2/emails/settings | Get email Contact Center settings |
 | [**GetEmailsSettingsThreading**](#GetEmailsSettingsThreading) | **Get** /api/v2/emails/settings/threading | Get email threading settings |
+| [**GetExternalcontactsSettings**](#GetExternalcontactsSettings) | **Get** /api/v2/externalcontacts/settings | Get settings |
 | [**GetSettingsExecutiondata**](#GetSettingsExecutiondata) | **Get** /api/v2/settings/executiondata | Get the execution history enabled setting. |
 | [**GetUsersAgentuiAgentsAutoanswerAgentIdSettings**](#GetUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Get** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Get agent auto answer settings |
 | [**PatchEmailsSettings**](#PatchEmailsSettings) | **Patch** /api/v2/emails/settings | Patch email Contact Center settings |
 | [**PatchEmailsSettingsThreading**](#PatchEmailsSettingsThreading) | **Patch** /api/v2/emails/settings/threading | Patch email threading settings |
 | [**PatchSettingsExecutiondata**](#PatchSettingsExecutiondata) | **Patch** /api/v2/settings/executiondata | Edit the execution history on off setting. |
 | [**PatchUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PatchUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Patch** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Update agent auto answer settings |
+| [**PutExternalcontactsSettings**](#PutExternalcontactsSettings) | **Put** /api/v2/externalcontacts/settings | Set settings |
 | [**PutUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PutUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Put** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Set agent auto answer settings |
 
 
@@ -74,6 +77,63 @@ This endpoint does require any parameters.
 ### Return type
 
 void (empty response body)
+
+
+## DeleteExternalcontactsSettings
+
+> [**UpdatedSettingsResponse**](UpdatedSettingsResponse) DeleteExternalcontactsSettings ()
+
+
+Delete settings
+
+Requires ANY permissions: 
+
+* externalContacts:settings:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteExternalcontactsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SettingsApi();
+
+            try
+            { 
+                // Delete settings
+                UpdatedSettingsResponse result = apiInstance.DeleteExternalcontactsSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SettingsApi.DeleteExternalcontactsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**UpdatedSettingsResponse**](UpdatedSettingsResponse)
 
 
 ## DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings
@@ -249,6 +309,63 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EmailThreadingSettings**](EmailThreadingSettings)
+
+
+## GetExternalcontactsSettings
+
+> [**ExternalContactsSettings**](ExternalContactsSettings) GetExternalcontactsSettings ()
+
+
+Get settings
+
+Requires ANY permissions: 
+
+* externalContacts:settings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SettingsApi();
+
+            try
+            { 
+                // Get settings
+                ExternalContactsSettings result = apiInstance.GetExternalcontactsSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SettingsApi.GetExternalcontactsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**ExternalContactsSettings**](ExternalContactsSettings)
 
 
 ## GetSettingsExecutiondata
@@ -624,6 +741,68 @@ namespace Example
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
+## PutExternalcontactsSettings
+
+> [**UpdatedSettingsResponse**](UpdatedSettingsResponse) PutExternalcontactsSettings (ExternalContactsSettings body = null)
+
+
+Set settings
+
+Requires ANY permissions: 
+
+* externalContacts:settings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SettingsApi();
+            var body = new ExternalContactsSettings(); // ExternalContactsSettings |  (optional) 
+
+            try
+            { 
+                // Set settings
+                UpdatedSettingsResponse result = apiInstance.PutExternalcontactsSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SettingsApi.PutExternalcontactsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ExternalContactsSettings**](ExternalContactsSettings)|  | [optional]  |
+
+### Return type
+
+[**UpdatedSettingsResponse**](UpdatedSettingsResponse)
+
+
 ## PutUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > [**AutoAnswerSettings**](AutoAnswerSettings) PutUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
@@ -688,4 +867,4 @@ namespace Example
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Session">The app session the event belongs to. (required).</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
-        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, name, phone). (required).</param>
+        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, givenName, cellPhone). (required).</param>
         /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         public AppEventResponse(string Id = null, string CustomerId = null, string CustomerIdType = null, string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, AppEventResponseSession Session = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, DateTime? CreatedDate = null)
         {
@@ -204,9 +204,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, name, phone).
+        /// Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, givenName, cellPhone).
         /// </summary>
-        /// <value>Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, name, phone).</value>
+        /// <value>Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, givenName, cellPhone).</value>
         [DataMember(Name="traits", EmitDefaultValue=false)]
         public Dictionary<string, CustomEventAttribute> Traits { get; set; }
 

@@ -283,9 +283,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>RoomParticipantsResponse</returns>
         
-        RoomParticipantsResponse GetChatsRoomParticipants (string roomJid);
+        RoomParticipantsResponse GetChatsRoomParticipants (string roomJid, bool? notify = null);
 
         /// <summary>
         /// Get room participants in a room
@@ -295,9 +296,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>ApiResponse of RoomParticipantsResponse</returns>
         
-        ApiResponse<RoomParticipantsResponse> GetChatsRoomParticipantsWithHttpInfo (string roomJid);
+        ApiResponse<RoomParticipantsResponse> GetChatsRoomParticipantsWithHttpInfo (string roomJid, bool? notify = null);
 
         /// <summary>
         /// Get Chat Settings.
@@ -1109,9 +1111,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>Task of RoomParticipantsResponse</returns>
         
-        System.Threading.Tasks.Task<RoomParticipantsResponse> GetChatsRoomParticipantsAsync (string roomJid);
+        System.Threading.Tasks.Task<RoomParticipantsResponse> GetChatsRoomParticipantsAsync (string roomJid, bool? notify = null);
 
         /// <summary>
         /// Get room participants in a room
@@ -1121,9 +1124,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>Task of ApiResponse (RoomParticipantsResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<RoomParticipantsResponse>> GetChatsRoomParticipantsAsyncWithHttpInfo (string roomJid);
+        System.Threading.Tasks.Task<ApiResponse<RoomParticipantsResponse>> GetChatsRoomParticipantsAsyncWithHttpInfo (string roomJid, bool? notify = null);
 
         /// <summary>
         /// Get Chat Settings.
@@ -3870,11 +3874,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>RoomParticipantsResponse</returns>
         
-        public RoomParticipantsResponse GetChatsRoomParticipants (string roomJid)
+        public RoomParticipantsResponse GetChatsRoomParticipants (string roomJid, bool? notify = null)
         {
-             ApiResponse<RoomParticipantsResponse> localVarResponse = GetChatsRoomParticipantsWithHttpInfo(roomJid);
+             ApiResponse<RoomParticipantsResponse> localVarResponse = GetChatsRoomParticipantsWithHttpInfo(roomJid, notify);
              return localVarResponse.Data;
         }
 
@@ -3884,9 +3889,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>ApiResponse of RoomParticipantsResponse</returns>
         
-        public ApiResponse< RoomParticipantsResponse > GetChatsRoomParticipantsWithHttpInfo (string roomJid)
+        public ApiResponse< RoomParticipantsResponse > GetChatsRoomParticipantsWithHttpInfo (string roomJid, bool? notify = null)
         { 
             // verify the required parameter 'roomJid' is set
             if (roomJid == null)
@@ -3926,6 +3932,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
 
             // Query params
+            if (notify != null) localVarQueryParams.Add(new Tuple<string, string>("notify", this.Configuration.ApiClient.ParameterToString(notify)));
 
             // Header params
 
@@ -3969,11 +3976,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>Task of RoomParticipantsResponse</returns>
         
-        public async System.Threading.Tasks.Task<RoomParticipantsResponse> GetChatsRoomParticipantsAsync (string roomJid)
+        public async System.Threading.Tasks.Task<RoomParticipantsResponse> GetChatsRoomParticipantsAsync (string roomJid, bool? notify = null)
         {
-             ApiResponse<RoomParticipantsResponse> localVarResponse = await GetChatsRoomParticipantsAsyncWithHttpInfo(roomJid);
+             ApiResponse<RoomParticipantsResponse> localVarResponse = await GetChatsRoomParticipantsAsyncWithHttpInfo(roomJid, notify);
              return localVarResponse.Data;
 
         }
@@ -3984,9 +3992,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
+        /// <param name="notify">Whether to get users to notify (optional)</param>
         /// <returns>Task of ApiResponse (RoomParticipantsResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<RoomParticipantsResponse>> GetChatsRoomParticipantsAsyncWithHttpInfo (string roomJid)
+        public async System.Threading.Tasks.Task<ApiResponse<RoomParticipantsResponse>> GetChatsRoomParticipantsAsyncWithHttpInfo (string roomJid, bool? notify = null)
         { 
             // verify the required parameter 'roomJid' is set
             if (roomJid == null)
@@ -4027,6 +4036,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
 
             // Query params
+            if (notify != null) localVarQueryParams.Add(new Tuple<string, string>("notify", this.Configuration.ApiClient.ParameterToString(notify)));
 
             // Header params
 

@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Carousel for "Carousel"
             /// </summary>
             [EnumMember(Value = "Carousel")]
-            Carousel
+            Carousel,
+            
+            /// <summary>
+            /// Enum Datepicker for "DatePicker"
+            /// </summary>
+            [EnumMember(Value = "DatePicker")]
+            Datepicker
         }
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
@@ -83,13 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Generic">Generic content (Deprecated)..</param>
         /// <param name="Card">Card content.</param>
         /// <param name="Carousel">Carousel content.</param>
-        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null)
+        /// <param name="DatePicker">DatePicker content.</param>
+        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null, ContentDatePicker DatePicker = null)
         {
             this.QuickReply = QuickReply;
             this.ButtonResponse = ButtonResponse;
             this.Generic = Generic;
             this.Card = Card;
             this.Carousel = Carousel;
+            this.DatePicker = DatePicker;
             
         }
         
@@ -150,6 +158,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ContentCarousel Carousel { get; set; }
 
 
+
+        /// <summary>
+        /// DatePicker content
+        /// </summary>
+        /// <value>DatePicker content</value>
+        [DataMember(Name="datePicker", EmitDefaultValue=false)]
+        public ContentDatePicker DatePicker { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Generic: ").Append(Generic).Append("\n");
             sb.Append("  Card: ").Append(Card).Append("\n");
             sb.Append("  Carousel: ").Append(Carousel).Append("\n");
+            sb.Append("  DatePicker: ").Append(DatePicker).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -240,6 +258,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Carousel == other.Carousel ||
                     this.Carousel != null &&
                     this.Carousel.Equals(other.Carousel)
+                ) &&
+                (
+                    this.DatePicker == other.DatePicker ||
+                    this.DatePicker != null &&
+                    this.DatePicker.Equals(other.DatePicker)
                 );
         }
 
@@ -274,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Carousel != null)
                     hash = hash * 59 + this.Carousel.GetHashCode();
+
+                if (this.DatePicker != null)
+                    hash = hash * 59 + this.DatePicker.GetHashCode();
 
                 return hash;
             }

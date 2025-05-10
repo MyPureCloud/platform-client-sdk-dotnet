@@ -21,9 +21,9 @@
 | **Session** | [**AppEventResponseSession**](AppEventResponseSession) | The app session the event belongs to. | |
 | **SearchQuery** | **string** | Represents the keywords in a customer search query. | [optional] |
 | **Attributes** | [**Dictionary&lt;string, CustomEventAttribute&gt;**](CustomEventAttribute) | User-defined attributes associated with a particular event. | |
-| **Traits** | [**Dictionary&lt;string, CustomEventAttribute&gt;**](CustomEventAttribute) | Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, name, phone). | |
+| **Traits** | [**Dictionary&lt;string, CustomEventAttribute&gt;**](CustomEventAttribute) | Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, givenName, cellPhone). | |
 | **CreatedDate** | **DateTime?** | UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

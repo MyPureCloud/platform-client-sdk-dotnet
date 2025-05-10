@@ -81,6 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Calltaskaction,
             
             /// <summary>
+            /// Enum Callguideaction for "CallGuideAction"
+            /// </summary>
+            [EnumMember(Value = "CallGuideAction")]
+            Callguideaction,
+            
+            /// <summary>
             /// Enum Clearslotaction for "ClearSlotAction"
             /// </summary>
             [EnumMember(Value = "ClearSlotAction")]
@@ -357,6 +363,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Evaluateschedulegroupaction,
             
             /// <summary>
+            /// Enum Promoteexternalcontactaction for "PromoteExternalContactAction"
+            /// </summary>
+            [EnumMember(Value = "PromoteExternalContactAction")]
+            Promoteexternalcontactaction,
+            
+            /// <summary>
             /// Enum Showknowledgearticleaction for "ShowKnowledgeArticleAction"
             /// </summary>
             [EnumMember(Value = "ShowKnowledgeArticleAction")]
@@ -397,6 +409,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "TransferPureMatchAction")]
             Transferpurematchaction,
+            
+            /// <summary>
+            /// Enum Transferuseraction for "TransferUserAction"
+            /// </summary>
+            [EnumMember(Value = "TransferUserAction")]
+            Transferuseraction,
+            
+            /// <summary>
+            /// Enum Transfergroupaction for "TransferGroupAction"
+            /// </summary>
+            [EnumMember(Value = "TransferGroupAction")]
+            Transfergroupaction,
+            
+            /// <summary>
+            /// Enum Transferexternalaction for "TransferExternalAction"
+            /// </summary>
+            [EnumMember(Value = "TransferExternalAction")]
+            Transferexternalaction,
             
             /// <summary>
             /// Enum Getattributesaction for "GetAttributesAction"

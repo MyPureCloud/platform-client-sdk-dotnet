@@ -97,7 +97,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Transfertoacd for "TransferToACD"
             /// </summary>
             [EnumMember(Value = "TransferToACD")]
-            Transfertoacd
+            Transfertoacd,
+            
+            /// <summary>
+            /// Enum Transfertouser for "TransferToUser"
+            /// </summary>
+            [EnumMember(Value = "TransferToUser")]
+            Transfertouser,
+            
+            /// <summary>
+            /// Enum Transfertogroup for "TransferToGroup"
+            /// </summary>
+            [EnumMember(Value = "TransferToGroup")]
+            Transfertogroup,
+            
+            /// <summary>
+            /// Enum Transfertonumber for "TransferToNumber"
+            /// </summary>
+            [EnumMember(Value = "TransferToNumber")]
+            Transfertonumber,
+            
+            /// <summary>
+            /// Enum Transfertouservoicemail for "TransferToUserVoicemail"
+            /// </summary>
+            [EnumMember(Value = "TransferToUserVoicemail")]
+            Transfertouservoicemail,
+            
+            /// <summary>
+            /// Enum Transfertogroupvoicemail for "TransferToGroupVoicemail"
+            /// </summary>
+            [EnumMember(Value = "TransferToGroupVoicemail")]
+            Transfertogroupvoicemail,
+            
+            /// <summary>
+            /// Enum Transfertoacdvoicemail for "TransferToACDVoicemail"
+            /// </summary>
+            [EnumMember(Value = "TransferToACDVoicemail")]
+            Transfertoacdvoicemail
         }
         /// <summary>
         /// The category of result for the session.

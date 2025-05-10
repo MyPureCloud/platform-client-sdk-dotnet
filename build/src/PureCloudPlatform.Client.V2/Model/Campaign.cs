@@ -182,7 +182,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxCallsPerAgentDecimal">The maximum number of calls that can be placed per agent on this campaign with decimal precision.</param>
         /// <param name="CallbackAutoAnswer">The option manages the auto-answer callback calls.</param>
         /// <param name="DynamicLineBalancingSettings">Dynamic line balancing settings.</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null)
+        /// <param name="DiagnosticsSettings">Campaign diagnostics settings.</param>
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null, DiagnosticsSettings DiagnosticsSettings = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -219,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaxCallsPerAgentDecimal = MaxCallsPerAgentDecimal;
             this.CallbackAutoAnswer = CallbackAutoAnswer;
             this.DynamicLineBalancingSettings = DynamicLineBalancingSettings;
+            this.DiagnosticsSettings = DiagnosticsSettings;
             
         }
         
@@ -562,6 +564,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Campaign diagnostics settings
+        /// </summary>
+        /// <value>Campaign diagnostics settings</value>
+        [DataMember(Name="diagnosticsSettings", EmitDefaultValue=false)]
+        public DiagnosticsSettings DiagnosticsSettings { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -617,6 +628,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxCallsPerAgentDecimal: ").Append(MaxCallsPerAgentDecimal).Append("\n");
             sb.Append("  CallbackAutoAnswer: ").Append(CallbackAutoAnswer).Append("\n");
             sb.Append("  DynamicLineBalancingSettings: ").Append(DynamicLineBalancingSettings).Append("\n");
+            sb.Append("  DiagnosticsSettings: ").Append(DiagnosticsSettings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -854,6 +866,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DynamicLineBalancingSettings.Equals(other.DynamicLineBalancingSettings)
                 ) &&
                 (
+                    this.DiagnosticsSettings == other.DiagnosticsSettings ||
+                    this.DiagnosticsSettings != null &&
+                    this.DiagnosticsSettings.Equals(other.DiagnosticsSettings)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -987,6 +1004,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DynamicLineBalancingSettings != null)
                     hash = hash * 59 + this.DynamicLineBalancingSettings.GetHashCode();
+
+                if (this.DiagnosticsSettings != null)
+                    hash = hash * 59 + this.DiagnosticsSettings.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

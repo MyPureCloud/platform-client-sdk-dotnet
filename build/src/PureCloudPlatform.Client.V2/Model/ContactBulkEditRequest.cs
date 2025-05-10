@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Criteria">Criteria to filter the contacts by..</param>
         /// <param name="ContactIds">Contact IDs to be bulk edited..</param>
         /// <param name="Contact">Contact object with details of fields used for patching..</param>
-        public ContactBulkEditRequest(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null, List<string> ContactIds = null, DialerContact Contact = null)
+        /// <param name="GenerateDownloadURI">Whether to do backup export as part of Bulk Operation or not. Default: true..</param>
+        public ContactBulkEditRequest(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null, List<string> ContactIds = null, DialerContact Contact = null, bool? GenerateDownloadURI = null)
         {
             this.ContactListFilterId = ContactListFilterId;
             this.Criteria = Criteria;
             this.ContactIds = ContactIds;
             this.Contact = Contact;
+            this.GenerateDownloadURI = GenerateDownloadURI;
             
         }
         
@@ -71,6 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DialerContact Contact { get; set; }
 
 
+
+        /// <summary>
+        /// Whether to do backup export as part of Bulk Operation or not. Default: true.
+        /// </summary>
+        /// <value>Whether to do backup export as part of Bulk Operation or not. Default: true.</value>
+        [DataMember(Name="generateDownloadURI", EmitDefaultValue=false)]
+        public bool? GenerateDownloadURI { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Criteria: ").Append(Criteria).Append("\n");
             sb.Append("  ContactIds: ").Append(ContactIds).Append("\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");
+            sb.Append("  GenerateDownloadURI: ").Append(GenerateDownloadURI).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Contact == other.Contact ||
                     this.Contact != null &&
                     this.Contact.Equals(other.Contact)
+                ) &&
+                (
+                    this.GenerateDownloadURI == other.GenerateDownloadURI ||
+                    this.GenerateDownloadURI != null &&
+                    this.GenerateDownloadURI.Equals(other.GenerateDownloadURI)
                 );
         }
 
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Contact != null)
                     hash = hash * 59 + this.Contact.GetHashCode();
+
+                if (this.GenerateDownloadURI != null)
+                    hash = hash * 59 + this.GenerateDownloadURI.GetHashCode();
 
                 return hash;
             }

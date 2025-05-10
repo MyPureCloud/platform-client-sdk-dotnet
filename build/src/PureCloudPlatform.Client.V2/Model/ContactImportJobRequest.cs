@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ContactImportJobRequest" /> class.
         /// </summary>
         /// <param name="SettingsId">Settings id (required).</param>
-        public ContactImportJobRequest(string SettingsId = null)
+        /// <param name="Division">The division to import into.</param>
+        public ContactImportJobRequest(string SettingsId = null, WritableStarrableDivision Division = null)
         {
             this.SettingsId = SettingsId;
+            this.Division = Division;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SettingsId { get; set; }
 
 
+
+        /// <summary>
+        /// The division to import into
+        /// </summary>
+        /// <value>The division to import into</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ContactImportJobRequest {\n");
 
             sb.Append("  SettingsId: ").Append(SettingsId).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SettingsId == other.SettingsId ||
                     this.SettingsId != null &&
                     this.SettingsId.Equals(other.SettingsId)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.SettingsId != null)
                     hash = hash * 59 + this.SettingsId.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 return hash;
             }
