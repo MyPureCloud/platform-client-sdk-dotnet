@@ -687,7 +687,7 @@ namespace Example
 
 ## GetChatsRoomParticipants
 
-> [**RoomParticipantsResponse**](RoomParticipantsResponse) GetChatsRoomParticipants (string roomJid)
+> [**RoomParticipantsResponse**](RoomParticipantsResponse) GetChatsRoomParticipants (string roomJid, bool? notify = null)
 
 
 Get room participants in a room
@@ -720,11 +720,12 @@ namespace Example
 
             var apiInstance = new ChatApi();
             var roomJid = roomJid_example;  // string | roomJid
+            var notify = true;  // bool? | Whether to get users to notify (optional) 
 
             try
             { 
                 // Get room participants in a room
-                RoomParticipantsResponse result = apiInstance.GetChatsRoomParticipants(roomJid);
+                RoomParticipantsResponse result = apiInstance.GetChatsRoomParticipants(roomJid, notify);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -742,6 +743,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
+| **notify** | **bool?**| Whether to get users to notify | [optional]  |
 
 ### Return type
 
@@ -2088,4 +2090,4 @@ namespace Example
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

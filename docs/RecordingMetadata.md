@@ -26,8 +26,9 @@
 | **MaxAllowedRestorationsForOrg** | **int?** | How many archive restorations the organization is allowed to have. | [optional] |
 | **RemainingRestorationsAllowedForOrg** | **int?** | The remaining archive restorations the organization has. | [optional] |
 | **SessionId** | **string** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
+| **Region** | **string** | The region the source recording is stored in | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

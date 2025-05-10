@@ -14,6 +14,7 @@
 | **CountNeutral** | **long?** |  | [optional] |
 | **CountUnknown** | **long?** |  | [optional] |
 | **Sum** | **double?** |  | [optional] |
+| **Average** | **double?** |  | [optional] |
 | **Current** | **double?** |  | [optional] |
 | **Ratio** | **double?** |  | [optional] |
 | **Numerator** | **double?** |  | [optional] |
@@ -24,4 +25,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

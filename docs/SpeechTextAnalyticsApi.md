@@ -2268,8 +2268,6 @@ namespace Example
 
 Translate a single interaction recording (or an email conversation)
 
-GetSpeechandtextanalyticsTranslationsLanguageConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:translation:view
@@ -2337,8 +2335,6 @@ namespace Example
 
 
 Get supported translation languages
-
-GetSpeechandtextanalyticsTranslationsLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3525,4 +3521,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

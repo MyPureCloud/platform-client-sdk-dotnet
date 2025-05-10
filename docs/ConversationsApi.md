@@ -116,6 +116,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationParticipant**](#PatchConversationParticipant) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](#PatchConversationParticipantAttributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationSecureattributes**](#PatchConversationSecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
+| [**PatchConversationSummaryEngagements**](#PatchConversationSummaryEngagements) | **Patch** /api/v2/conversations/{conversationId}/summaries/{summaryId}/engagements | Update agent&#39;s engagement for the summary. |
 | [**PatchConversationSummaryFeedback**](#PatchConversationSummaryFeedback) | **Patch** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Update the feedback for the summary. |
 | [**PatchConversationUtilizationlabel**](#PatchConversationUtilizationlabel) | **Patch** /api/v2/conversations/{conversationId}/utilizationlabel | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
 | [**PatchConversationsAftercallworkConversationIdParticipantCommunication**](#PatchConversationsAftercallworkConversationIdParticipantCommunication) | **Patch** /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId} | Update after-call work for this conversation communication. |
@@ -5200,8 +5201,6 @@ This endpoint does require any parameters.
 
 Get Facebook messaging integration identity resolution settings
 
-GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -5265,8 +5264,6 @@ namespace Example
 
 Get an open messaging integration Identity Resolution settings
 
-GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -5329,8 +5326,6 @@ namespace Example
 
 
 Get a whatsApp integration Identity Resolution settings
-
-GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -5511,7 +5506,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | [**List<string>**](string)| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | [**List<string>**](string)| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 
@@ -5581,7 +5576,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 
@@ -5647,7 +5642,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 
 ### Return type
 
@@ -5715,7 +5710,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 
@@ -5781,7 +5776,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 
 ### Return type
 
@@ -5851,7 +5846,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 
@@ -5919,7 +5914,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 
 ### Return type
 
@@ -5987,7 +5982,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 
@@ -6053,7 +6048,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 
 ### Return type
 
@@ -6178,7 +6173,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 
@@ -6244,7 +6239,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
 
 ### Return type
 
@@ -7083,6 +7078,7 @@ Update conversation participant.
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 ```{"language":"csharp"}
@@ -7266,14 +7262,77 @@ namespace Example
 **string**
 
 
+## PatchConversationSummaryEngagements
+
+> void PatchConversationSummaryEngagements (string conversationId, string summaryId, EngagementRequest body = null)
+
+
+Update agent's engagement for the summary.
+
+Requires ALL permissions: 
+
+* conversation:summaryEngagement:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationSummaryEngagementsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var summaryId = summaryId_example;  // string | Summary ID
+            var body = new EngagementRequest(); // EngagementRequest |  (optional) 
+
+            try
+            { 
+                // Update agent's engagement for the summary.
+                apiInstance.PatchConversationSummaryEngagements(conversationId, summaryId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationSummaryEngagements: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **summaryId** | **string**| Summary ID |  |
+| **body** | [**EngagementRequest**](EngagementRequest)|  | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PatchConversationSummaryFeedback
 
 > void PatchConversationSummaryFeedback (string conversationId, string summaryId, FeedbackUpdateRequest body = null)
 
 
 Update the feedback for the summary.
-
-PatchConversationSummaryFeedback is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -16109,8 +16168,6 @@ namespace Example
 
 Create an identity resolution settings for a Facebook messaging integration
 
-PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * messaging:integration:edit
@@ -16176,8 +16233,6 @@ namespace Example
 
 Update an open messaging integration Identity Resolution settings
 
-PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * messaging:integration:edit
@@ -16242,8 +16297,6 @@ namespace Example
 
 
 Update a whatsApp integration Identity Resolution settings
-
-PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -16692,4 +16745,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_

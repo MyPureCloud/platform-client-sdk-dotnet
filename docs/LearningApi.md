@@ -2369,4 +2369,4 @@ namespace Example
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatform.Client.V2 232.0.0_
+_PureCloudPlatform.Client.V2 233.0.0_
