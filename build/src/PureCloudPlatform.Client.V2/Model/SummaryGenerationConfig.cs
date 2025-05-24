@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SummaryGenerationConfig" /> class.
         /// </summary>
         /// <param name="Enabled">Copilot generated summary is enabled. (required).</param>
-        public SummaryGenerationConfig(bool? Enabled = null)
+        /// <param name="SummarySetting">Configured summary setting object..</param>
+        public SummaryGenerationConfig(bool? Enabled = null, SummarySettingEntity SummarySetting = null)
         {
             this.Enabled = Enabled;
+            this.SummarySetting = SummarySetting;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Enabled { get; set; }
 
 
+
+        /// <summary>
+        /// Configured summary setting object.
+        /// </summary>
+        /// <value>Configured summary setting object.</value>
+        [DataMember(Name="summarySetting", EmitDefaultValue=false)]
+        public SummarySettingEntity SummarySetting { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SummaryGenerationConfig {\n");
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  SummarySetting: ").Append(SummarySetting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.SummarySetting == other.SummarySetting ||
+                    this.SummarySetting != null &&
+                    this.SummarySetting.Equals(other.SummarySetting)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.SummarySetting != null)
+                    hash = hash * 59 + this.SummarySetting.GetHashCode();
 
                 return hash;
             }

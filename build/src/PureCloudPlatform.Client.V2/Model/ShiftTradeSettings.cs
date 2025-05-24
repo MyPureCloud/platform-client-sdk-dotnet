@@ -151,6 +151,105 @@ namespace PureCloudPlatform.Client.V2.Model
             Adminreview
         }
         /// <summary>
+        /// How to handle shift trades which result in violations of planning period minimum paid time constraint
+        /// </summary>
+        /// <value>How to handle shift trades which result in violations of planning period minimum paid time constraint</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum PlanningPeriodMinPaidViolationsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Allow for "Allow"
+            /// </summary>
+            [EnumMember(Value = "Allow")]
+            Allow,
+            
+            /// <summary>
+            /// Enum Disallow for "Disallow"
+            /// </summary>
+            [EnumMember(Value = "Disallow")]
+            Disallow,
+            
+            /// <summary>
+            /// Enum Adminreview for "AdminReview"
+            /// </summary>
+            [EnumMember(Value = "AdminReview")]
+            Adminreview
+        }
+        /// <summary>
+        /// How to handle shift trades which result in violations of planning period maximum paid time constraint
+        /// </summary>
+        /// <value>How to handle shift trades which result in violations of planning period maximum paid time constraint</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum PlanningPeriodMaxPaidViolationsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Allow for "Allow"
+            /// </summary>
+            [EnumMember(Value = "Allow")]
+            Allow,
+            
+            /// <summary>
+            /// Enum Disallow for "Disallow"
+            /// </summary>
+            [EnumMember(Value = "Disallow")]
+            Disallow,
+            
+            /// <summary>
+            /// Enum Adminreview for "AdminReview"
+            /// </summary>
+            [EnumMember(Value = "AdminReview")]
+            Adminreview
+        }
+        /// <summary>
+        /// How to handle shift trades which result in violations of minimum number of minutes between shifts constraint
+        /// </summary>
+        /// <value>How to handle shift trades which result in violations of minimum number of minutes between shifts constraint</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MinMinutesBetweenShiftsViolationsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Allow for "Allow"
+            /// </summary>
+            [EnumMember(Value = "Allow")]
+            Allow,
+            
+            /// <summary>
+            /// Enum Disallow for "Disallow"
+            /// </summary>
+            [EnumMember(Value = "Disallow")]
+            Disallow,
+            
+            /// <summary>
+            /// Enum Adminreview for "AdminReview"
+            /// </summary>
+            [EnumMember(Value = "AdminReview")]
+            Adminreview
+        }
+        /// <summary>
         /// How to handle shift trades which involve unequal paid times
         /// </summary>
         /// <value>How to handle shift trades which involve unequal paid times</value>
@@ -175,6 +274,24 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="weeklyMaxPaidViolations", EmitDefaultValue=false)]
         public WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations { get; set; }
         /// <summary>
+        /// How to handle shift trades which result in violations of planning period minimum paid time constraint
+        /// </summary>
+        /// <value>How to handle shift trades which result in violations of planning period minimum paid time constraint</value>
+        [DataMember(Name="planningPeriodMinPaidViolations", EmitDefaultValue=false)]
+        public PlanningPeriodMinPaidViolationsEnum? PlanningPeriodMinPaidViolations { get; set; }
+        /// <summary>
+        /// How to handle shift trades which result in violations of planning period maximum paid time constraint
+        /// </summary>
+        /// <value>How to handle shift trades which result in violations of planning period maximum paid time constraint</value>
+        [DataMember(Name="planningPeriodMaxPaidViolations", EmitDefaultValue=false)]
+        public PlanningPeriodMaxPaidViolationsEnum? PlanningPeriodMaxPaidViolations { get; set; }
+        /// <summary>
+        /// How to handle shift trades which result in violations of minimum number of minutes between shifts constraint
+        /// </summary>
+        /// <value>How to handle shift trades which result in violations of minimum number of minutes between shifts constraint</value>
+        [DataMember(Name="minMinutesBetweenShiftsViolations", EmitDefaultValue=false)]
+        public MinMinutesBetweenShiftsViolationsEnum? MinMinutesBetweenShiftsViolations { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeSettings" /> class.
         /// </summary>
         /// <param name="Enabled">Whether shift trading is enabled for this management unit.</param>
@@ -190,7 +307,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresMatchingSkills">Whether to constrain shift trades to agents with matching skills.</param>
         /// <param name="RequiresMatchingPlanningGroups">Whether to constrain shift trades to agents with matching planning groups.</param>
         /// <param name="ActivityCategoryRules">Rules that specify what to do with activity categories that are part of a shift defined in a trade.</param>
-        public ShiftTradeSettings(bool? Enabled = null, bool? AutoReview = null, bool? AllowDirectTrades = null, int? MinHoursInFuture = null, UnequalPaidEnum? UnequalPaid = null, OneSidedEnum? OneSided = null, WeeklyMinPaidViolationsEnum? WeeklyMinPaidViolations = null, WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations = null, bool? RequiresMatchingQueues = null, bool? RequiresMatchingLanguages = null, bool? RequiresMatchingSkills = null, bool? RequiresMatchingPlanningGroups = null, List<ShiftTradeActivityRule> ActivityCategoryRules = null)
+        /// <param name="MaxTradeSpanWeeks">The maximum number of weeks a shift trade can span.</param>
+        /// <param name="MaxTradesPerAgentPerWeek">The maximum number of shift trades an agent can submit per week.</param>
+        /// <param name="MinMinutesBetweenShifts">The minimum number of minutes between shifts.</param>
+        /// <param name="PlanningPeriodMinPaidViolations">How to handle shift trades which result in violations of planning period minimum paid time constraint.</param>
+        /// <param name="PlanningPeriodMaxPaidViolations">How to handle shift trades which result in violations of planning period maximum paid time constraint.</param>
+        /// <param name="MinMinutesBetweenShiftsViolations">How to handle shift trades which result in violations of minimum number of minutes between shifts constraint.</param>
+        public ShiftTradeSettings(bool? Enabled = null, bool? AutoReview = null, bool? AllowDirectTrades = null, int? MinHoursInFuture = null, UnequalPaidEnum? UnequalPaid = null, OneSidedEnum? OneSided = null, WeeklyMinPaidViolationsEnum? WeeklyMinPaidViolations = null, WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations = null, bool? RequiresMatchingQueues = null, bool? RequiresMatchingLanguages = null, bool? RequiresMatchingSkills = null, bool? RequiresMatchingPlanningGroups = null, List<ShiftTradeActivityRule> ActivityCategoryRules = null, int? MaxTradeSpanWeeks = null, int? MaxTradesPerAgentPerWeek = null, int? MinMinutesBetweenShifts = null, PlanningPeriodMinPaidViolationsEnum? PlanningPeriodMinPaidViolations = null, PlanningPeriodMaxPaidViolationsEnum? PlanningPeriodMaxPaidViolations = null, MinMinutesBetweenShiftsViolationsEnum? MinMinutesBetweenShiftsViolations = null)
         {
             this.Enabled = Enabled;
             this.AutoReview = AutoReview;
@@ -205,6 +328,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RequiresMatchingSkills = RequiresMatchingSkills;
             this.RequiresMatchingPlanningGroups = RequiresMatchingPlanningGroups;
             this.ActivityCategoryRules = ActivityCategoryRules;
+            this.MaxTradeSpanWeeks = MaxTradeSpanWeeks;
+            this.MaxTradesPerAgentPerWeek = MaxTradesPerAgentPerWeek;
+            this.MinMinutesBetweenShifts = MinMinutesBetweenShifts;
+            this.PlanningPeriodMinPaidViolations = PlanningPeriodMinPaidViolations;
+            this.PlanningPeriodMaxPaidViolations = PlanningPeriodMaxPaidViolations;
+            this.MinMinutesBetweenShiftsViolations = MinMinutesBetweenShiftsViolations;
             
         }
         
@@ -298,6 +427,39 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ShiftTradeActivityRule> ActivityCategoryRules { get; set; }
 
 
+
+        /// <summary>
+        /// The maximum number of weeks a shift trade can span
+        /// </summary>
+        /// <value>The maximum number of weeks a shift trade can span</value>
+        [DataMember(Name="maxTradeSpanWeeks", EmitDefaultValue=false)]
+        public int? MaxTradeSpanWeeks { get; set; }
+
+
+
+        /// <summary>
+        /// The maximum number of shift trades an agent can submit per week
+        /// </summary>
+        /// <value>The maximum number of shift trades an agent can submit per week</value>
+        [DataMember(Name="maxTradesPerAgentPerWeek", EmitDefaultValue=false)]
+        public int? MaxTradesPerAgentPerWeek { get; set; }
+
+
+
+        /// <summary>
+        /// The minimum number of minutes between shifts
+        /// </summary>
+        /// <value>The minimum number of minutes between shifts</value>
+        [DataMember(Name="minMinutesBetweenShifts", EmitDefaultValue=false)]
+        public int? MinMinutesBetweenShifts { get; set; }
+
+
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -320,6 +482,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequiresMatchingSkills: ").Append(RequiresMatchingSkills).Append("\n");
             sb.Append("  RequiresMatchingPlanningGroups: ").Append(RequiresMatchingPlanningGroups).Append("\n");
             sb.Append("  ActivityCategoryRules: ").Append(ActivityCategoryRules).Append("\n");
+            sb.Append("  MaxTradeSpanWeeks: ").Append(MaxTradeSpanWeeks).Append("\n");
+            sb.Append("  MaxTradesPerAgentPerWeek: ").Append(MaxTradesPerAgentPerWeek).Append("\n");
+            sb.Append("  MinMinutesBetweenShifts: ").Append(MinMinutesBetweenShifts).Append("\n");
+            sb.Append("  PlanningPeriodMinPaidViolations: ").Append(PlanningPeriodMinPaidViolations).Append("\n");
+            sb.Append("  PlanningPeriodMaxPaidViolations: ").Append(PlanningPeriodMaxPaidViolations).Append("\n");
+            sb.Append("  MinMinutesBetweenShiftsViolations: ").Append(MinMinutesBetweenShiftsViolations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -424,6 +592,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActivityCategoryRules == other.ActivityCategoryRules ||
                     this.ActivityCategoryRules != null &&
                     this.ActivityCategoryRules.SequenceEqual(other.ActivityCategoryRules)
+                ) &&
+                (
+                    this.MaxTradeSpanWeeks == other.MaxTradeSpanWeeks ||
+                    this.MaxTradeSpanWeeks != null &&
+                    this.MaxTradeSpanWeeks.Equals(other.MaxTradeSpanWeeks)
+                ) &&
+                (
+                    this.MaxTradesPerAgentPerWeek == other.MaxTradesPerAgentPerWeek ||
+                    this.MaxTradesPerAgentPerWeek != null &&
+                    this.MaxTradesPerAgentPerWeek.Equals(other.MaxTradesPerAgentPerWeek)
+                ) &&
+                (
+                    this.MinMinutesBetweenShifts == other.MinMinutesBetweenShifts ||
+                    this.MinMinutesBetweenShifts != null &&
+                    this.MinMinutesBetweenShifts.Equals(other.MinMinutesBetweenShifts)
+                ) &&
+                (
+                    this.PlanningPeriodMinPaidViolations == other.PlanningPeriodMinPaidViolations ||
+                    this.PlanningPeriodMinPaidViolations != null &&
+                    this.PlanningPeriodMinPaidViolations.Equals(other.PlanningPeriodMinPaidViolations)
+                ) &&
+                (
+                    this.PlanningPeriodMaxPaidViolations == other.PlanningPeriodMaxPaidViolations ||
+                    this.PlanningPeriodMaxPaidViolations != null &&
+                    this.PlanningPeriodMaxPaidViolations.Equals(other.PlanningPeriodMaxPaidViolations)
+                ) &&
+                (
+                    this.MinMinutesBetweenShiftsViolations == other.MinMinutesBetweenShiftsViolations ||
+                    this.MinMinutesBetweenShiftsViolations != null &&
+                    this.MinMinutesBetweenShiftsViolations.Equals(other.MinMinutesBetweenShiftsViolations)
                 );
         }
 
@@ -476,6 +674,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActivityCategoryRules != null)
                     hash = hash * 59 + this.ActivityCategoryRules.GetHashCode();
+
+                if (this.MaxTradeSpanWeeks != null)
+                    hash = hash * 59 + this.MaxTradeSpanWeeks.GetHashCode();
+
+                if (this.MaxTradesPerAgentPerWeek != null)
+                    hash = hash * 59 + this.MaxTradesPerAgentPerWeek.GetHashCode();
+
+                if (this.MinMinutesBetweenShifts != null)
+                    hash = hash * 59 + this.MinMinutesBetweenShifts.GetHashCode();
+
+                if (this.PlanningPeriodMinPaidViolations != null)
+                    hash = hash * 59 + this.PlanningPeriodMinPaidViolations.GetHashCode();
+
+                if (this.PlanningPeriodMaxPaidViolations != null)
+                    hash = hash * 59 + this.PlanningPeriodMaxPaidViolations.GetHashCode();
+
+                if (this.MinMinutesBetweenShiftsViolations != null)
+                    hash = hash * 59 + this.MinMinutesBetweenShiftsViolations.GetHashCode();
 
                 return hash;
             }

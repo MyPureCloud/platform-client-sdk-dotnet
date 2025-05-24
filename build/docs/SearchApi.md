@@ -1217,6 +1217,7 @@ Requires ANY permissions:
 
 * analytics:conversationDetail:view
 * recording:recording:view
+* recording:recordingSegment:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1708,4 +1709,4 @@ namespace Example
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

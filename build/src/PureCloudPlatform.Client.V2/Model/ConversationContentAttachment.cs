@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentAttachment" /> class.
         /// </summary>
-        /// <param name="Id">Provider specific ID for attachment. For example, a LINE sticker ID..</param>
+        /// <param name="Id">Provider specific ID for attachment..</param>
         /// <param name="MediaType">The type of attachment this instance represents. (required).</param>
         /// <param name="Url">URL of the attachment..</param>
         /// <param name="Mime">Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml)..</param>
@@ -102,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Provider specific ID for attachment. For example, a LINE sticker ID.
+        /// Provider specific ID for attachment.
         /// </summary>
-        /// <value>Provider specific ID for attachment. For example, a LINE sticker ID.</value>
+        /// <value>Provider specific ID for attachment.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

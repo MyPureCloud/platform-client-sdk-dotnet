@@ -10,8 +10,9 @@
 | **Name** | **string** | The name of the bot | |
 | **BotType** | **string** | The provider of the bot | |
 | **Description** | **string** | The description of the bot | [optional] |
+| **VirtualAgentEnabled** | **bool?** | Whether the bot is a virtual agent or not | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

@@ -20,6 +20,7 @@
 | **Reason** | [**ConversationSummaryTopicVirtualAgentsConversationReason**](ConversationSummaryTopicVirtualAgentsConversationReason) |  | [optional] |
 | **Resolution** | [**ConversationSummaryTopicVirtualAgentsConversationResolution**](ConversationSummaryTopicVirtualAgentsConversationResolution) |  | [optional] |
 | **FollowupActions** | [**List&lt;ConversationSummaryTopicVirtualAgentsConversationFollowupAction&gt;**](ConversationSummaryTopicVirtualAgentsConversationFollowupAction) |  | [optional] |
+| **ExtractedEntities** | [**List&lt;ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity&gt;**](ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity) |  | [optional] |
 | **WrapUpCodes** | [**List&lt;ConversationSummaryTopicVirtualAgentsConversationWrapUpCode&gt;**](ConversationSummaryTopicVirtualAgentsConversationWrapUpCode) |  | [optional] |
 | **TriggerSource** | [**ConversationSummaryTopicVirtualAgentsTriggerSource**](ConversationSummaryTopicVirtualAgentsTriggerSource) |  | [optional] |
 | **LastEditedBy** | [**ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant**](ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant) |  | [optional] |
@@ -28,4 +29,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

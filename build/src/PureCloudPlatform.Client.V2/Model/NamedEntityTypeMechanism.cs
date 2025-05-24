@@ -129,8 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubType">Subtype of detection mechanism.</param>
         /// <param name="MaxLength">The maximum length of the entity resolved value.</param>
         /// <param name="MinLength">The minimum length of the entity resolved value.</param>
+        /// <param name="AllowSpecialChars">Flag whether to allow for special characters during AI slot capture.</param>
         /// <param name="Examples">Examples for entity detection.</param>
-        public NamedEntityTypeMechanism(List<NamedEntityTypeItem> Items = null, bool? Restricted = null, TypeEnum? Type = null, SubTypeEnum? SubType = null, int? MaxLength = null, int? MinLength = null, List<NamedEntityTypeMechanismExample> Examples = null)
+        public NamedEntityTypeMechanism(List<NamedEntityTypeItem> Items = null, bool? Restricted = null, TypeEnum? Type = null, SubTypeEnum? SubType = null, int? MaxLength = null, int? MinLength = null, bool? AllowSpecialChars = null, List<NamedEntityTypeMechanismExample> Examples = null)
         {
             this.Items = Items;
             this.Restricted = Restricted;
@@ -138,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SubType = SubType;
             this.MaxLength = MaxLength;
             this.MinLength = MinLength;
+            this.AllowSpecialChars = AllowSpecialChars;
             this.Examples = Examples;
             
         }
@@ -185,6 +187,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag whether to allow for special characters during AI slot capture
+        /// </summary>
+        /// <value>Flag whether to allow for special characters during AI slot capture</value>
+        [DataMember(Name="allowSpecialChars", EmitDefaultValue=false)]
+        public bool? AllowSpecialChars { get; set; }
+
+
+
+        /// <summary>
         /// Examples for entity detection
         /// </summary>
         /// <value>Examples for entity detection</value>
@@ -207,6 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SubType: ").Append(SubType).Append("\n");
             sb.Append("  MaxLength: ").Append(MaxLength).Append("\n");
             sb.Append("  MinLength: ").Append(MinLength).Append("\n");
+            sb.Append("  AllowSpecialChars: ").Append(AllowSpecialChars).Append("\n");
             sb.Append("  Examples: ").Append(Examples).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -279,6 +291,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MinLength.Equals(other.MinLength)
                 ) &&
                 (
+                    this.AllowSpecialChars == other.AllowSpecialChars ||
+                    this.AllowSpecialChars != null &&
+                    this.AllowSpecialChars.Equals(other.AllowSpecialChars)
+                ) &&
+                (
                     this.Examples == other.Examples ||
                     this.Examples != null &&
                     this.Examples.SequenceEqual(other.Examples)
@@ -313,6 +330,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MinLength != null)
                     hash = hash * 59 + this.MinLength.GetHashCode();
+
+                if (this.AllowSpecialChars != null)
+                    hash = hash * 59 + this.AllowSpecialChars.GetHashCode();
 
                 if (this.Examples != null)
                     hash = hash * 59 + this.Examples.GetHashCode();

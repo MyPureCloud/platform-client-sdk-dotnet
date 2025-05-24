@@ -57,13 +57,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of the external activity associated with this activity, if applicable</value>
         [DataMember(Name="externalActivityType", EmitDefaultValue=false)]
         public ExternalActivityTypeEnum? ExternalActivityType { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleActivity" /> class.
         /// </summary>
-        /// <param name="StartDate">The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="LengthMinutes">The length of this activity in minutes.</param>
-        /// <param name="Description">The description of this activity.</param>
-        /// <param name="ActivityCodeId">The ID of the activity code associated with this activity.</param>
+        [JsonConstructorAttribute]
+        protected BuAgentScheduleActivity() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuAgentScheduleActivity" /> class.
+        /// </summary>
+        /// <param name="StartDate">The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        /// <param name="LengthMinutes">The length of this activity in minutes (required).</param>
+        /// <param name="Description">The description of this activity (required).</param>
+        /// <param name="ActivityCodeId">The ID of the activity code associated with this activity (required).</param>
         /// <param name="Paid">Whether this activity is paid.</param>
         /// <param name="PayableMinutes">Payable minutes for this activity.</param>
         /// <param name="TimeOffRequestId">The ID of the time off request associated with this activity, if applicable.</param>

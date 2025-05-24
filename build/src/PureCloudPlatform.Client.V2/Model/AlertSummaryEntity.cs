@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Teammembers for "TeamMembers"
             /// </summary>
             [EnumMember(Value = "TeamMembers")]
-            Teammembers
+            Teammembers,
+            
+            /// <summary>
+            /// Enum Organization for "Organization"
+            /// </summary>
+            [EnumMember(Value = "Organization")]
+            Organization
         }
         /// <summary>
         /// Specifies the type of entity being evaluated

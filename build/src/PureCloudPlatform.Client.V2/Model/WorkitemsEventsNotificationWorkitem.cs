@@ -331,6 +331,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="Operation">Operation.</param>
         /// <param name="Changes">Changes.</param>
+        /// <param name="PropertyChanges">PropertyChanges.</param>
         /// <param name="AssignmentState">AssignmentState.</param>
         /// <param name="AssignmentId">AssignmentId.</param>
         /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
@@ -346,7 +347,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DivisionId">DivisionId.</param>
         /// <param name="ScoredAgents">ScoredAgents.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
-        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, long? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, long? DurationSeconds = null, long? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, long? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null, WorkitemsEventsNotificationWrapup Wrapup = null, List<WorkitemsEventsNotificationSession> Sessions = null, List<Guid?> SkillIds = null, string ScriptId = null, string WorkbinName = null, string TypeName = null, List<Guid?> PreferredAgentIds = null, string DivisionId = null, List<WorkitemsEventsNotificationScoredAgent> ScoredAgents = null, string UtilizationLabelId = null)
+        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, long? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, long? DurationSeconds = null, long? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, List<WorkitemsEventsNotificationPropertyChange> PropertyChanges = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, long? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null, WorkitemsEventsNotificationWrapup Wrapup = null, List<WorkitemsEventsNotificationSession> Sessions = null, List<Guid?> SkillIds = null, string ScriptId = null, string WorkbinName = null, string TypeName = null, List<Guid?> PreferredAgentIds = null, string DivisionId = null, List<WorkitemsEventsNotificationScoredAgent> ScoredAgents = null, string UtilizationLabelId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -373,6 +374,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedBy = ModifiedBy;
             this.Operation = Operation;
             this.Changes = Changes;
+            this.PropertyChanges = PropertyChanges;
             this.AssignmentState = AssignmentState;
             this.AssignmentId = AssignmentId;
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
@@ -581,6 +583,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets PropertyChanges
+        /// </summary>
+        [DataMember(Name="propertyChanges", EmitDefaultValue=false)]
+        public List<WorkitemsEventsNotificationPropertyChange> PropertyChanges { get; set; }
+
+
+
 
 
         /// <summary>
@@ -728,6 +738,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Operation: ").Append(Operation).Append("\n");
             sb.Append("  Changes: ").Append(Changes).Append("\n");
+            sb.Append("  PropertyChanges: ").Append(PropertyChanges).Append("\n");
             sb.Append("  AssignmentState: ").Append(AssignmentState).Append("\n");
             sb.Append("  AssignmentId: ").Append(AssignmentId).Append("\n");
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
@@ -909,6 +920,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Changes.SequenceEqual(other.Changes)
                 ) &&
                 (
+                    this.PropertyChanges == other.PropertyChanges ||
+                    this.PropertyChanges != null &&
+                    this.PropertyChanges.SequenceEqual(other.PropertyChanges)
+                ) &&
+                (
                     this.AssignmentState == other.AssignmentState ||
                     this.AssignmentState != null &&
                     this.AssignmentState.Equals(other.AssignmentState)
@@ -1070,6 +1086,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
+
+                if (this.PropertyChanges != null)
+                    hash = hash * 59 + this.PropertyChanges.GetHashCode();
 
                 if (this.AssignmentState != null)
                     hash = hash * 59 + this.AssignmentState.GetHashCode();

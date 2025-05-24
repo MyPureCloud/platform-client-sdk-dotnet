@@ -25,10 +25,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>BotSearchResponseEntityListing</returns>
         
-        BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
+        BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null);
 
         /// <summary>
         /// Find bots using the currently configured friendly name or ID.
@@ -40,10 +41,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>ApiResponse of BotSearchResponseEntityListing</returns>
         
-        ApiResponse<BotSearchResponseEntityListing> GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
+        ApiResponse<BotSearchResponseEntityListing> GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null);
 
         /// <summary>
         /// Issue a bot flow turn event
@@ -133,10 +135,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>Task of BotSearchResponseEntityListing</returns>
         
-        System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
+        System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null);
 
         /// <summary>
         /// Find bots using the currently configured friendly name or ID.
@@ -148,10 +151,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotSearchResponseEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null);
 
         /// <summary>
         /// Issue a bot flow turn event
@@ -327,12 +331,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>BotSearchResponseEntityListing</returns>
         
-        public BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        public BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null)
         {
-             ApiResponse<BotSearchResponseEntityListing> localVarResponse = GetTextbotsBotsSearchWithHttpInfo(botType, botName, botId, pageSize);
+             ApiResponse<BotSearchResponseEntityListing> localVarResponse = GetTextbotsBotsSearchWithHttpInfo(botType, botName, botId, virtualAgentEnabled, pageSize);
              return localVarResponse.Data;
         }
 
@@ -344,10 +349,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>ApiResponse of BotSearchResponseEntityListing</returns>
         
-        public ApiResponse< BotSearchResponseEntityListing > GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        public ApiResponse< BotSearchResponseEntityListing > GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/textbots/bots/search";
@@ -386,6 +392,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (botType != null) botType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botType", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (botName != null) localVarQueryParams.Add(new Tuple<string, string>("botName", this.Configuration.ApiClient.ParameterToString(botName)));
             if (botId != null) botId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (virtualAgentEnabled != null) localVarQueryParams.Add(new Tuple<string, string>("virtualAgentEnabled", this.Configuration.ApiClient.ParameterToString(virtualAgentEnabled)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
@@ -432,12 +439,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>Task of BotSearchResponseEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null)
         {
-             ApiResponse<BotSearchResponseEntityListing> localVarResponse = await GetTextbotsBotsSearchAsyncWithHttpInfo(botType, botName, botId, pageSize);
+             ApiResponse<BotSearchResponseEntityListing> localVarResponse = await GetTextbotsBotsSearchAsyncWithHttpInfo(botType, botName, botId, virtualAgentEnabled, pageSize);
              return localVarResponse.Data;
 
         }
@@ -450,10 +458,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botType">Bot types (optional)</param>
         /// <param name="botName">Bot name (optional)</param>
         /// <param name="botId">Bot IDs. Maximum of 50 (optional)</param>
+        /// <param name="virtualAgentEnabled">Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)</param>
         /// <param name="pageSize">The maximum results to return. Maximum of 100 (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotSearchResponseEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/textbots/bots/search";
@@ -492,6 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (botType != null) botType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botType", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (botName != null) localVarQueryParams.Add(new Tuple<string, string>("botName", this.Configuration.ApiClient.ParameterToString(botName)));
             if (botId != null) botId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("botId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (virtualAgentEnabled != null) localVarQueryParams.Add(new Tuple<string, string>("virtualAgentEnabled", this.Configuration.ApiClient.ParameterToString(virtualAgentEnabled)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params

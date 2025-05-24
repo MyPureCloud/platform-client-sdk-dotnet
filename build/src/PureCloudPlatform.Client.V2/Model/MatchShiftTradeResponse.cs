@@ -19,16 +19,50 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class MatchShiftTradeResponse :  IEquatable<MatchShiftTradeResponse>
     {
         /// <summary>
+        /// Gets or Sets UnevaluatedRules
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum UnevaluatedRulesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Planningperiodminpaidtime for "PlanningPeriodMinPaidTime"
+            /// </summary>
+            [EnumMember(Value = "PlanningPeriodMinPaidTime")]
+            Planningperiodminpaidtime,
+            
+            /// <summary>
+            /// Enum Planningperiodmaxpaidtime for "PlanningPeriodMaxPaidTime"
+            /// </summary>
+            [EnumMember(Value = "PlanningPeriodMaxPaidTime")]
+            Planningperiodmaxpaidtime,
+            
+            /// <summary>
+            /// Enum Minimumtimebetweenshifts for "MinimumTimeBetweenShifts"
+            /// </summary>
+            [EnumMember(Value = "MinimumTimeBetweenShifts")]
+            Minimumtimebetweenshifts
+        }
+        /// <summary>
         /// Initializes a new instance of the <see cref="MatchShiftTradeResponse" /> class.
         /// </summary>
         /// <param name="Trade">The associated shift trade.</param>
         /// <param name="Violations">Constraint violations which disallow this shift trade.</param>
         /// <param name="AdminReviewViolations">Constraint violations for this shift trade which require shift trade administrator review.</param>
-        public MatchShiftTradeResponse(ShiftTradeResponse Trade = null, List<ShiftTradeMatchViolation> Violations = null, List<ShiftTradeMatchViolation> AdminReviewViolations = null)
+        /// <param name="UnevaluatedRules">Unevaluated rules for this shift trade which require shift trade administrator review.</param>
+        public MatchShiftTradeResponse(ShiftTradeResponse Trade = null, List<ShiftTradeMatchViolation> Violations = null, List<ShiftTradeMatchViolation> AdminReviewViolations = null, List<UnevaluatedRulesEnum> UnevaluatedRules = null)
         {
             this.Trade = Trade;
             this.Violations = Violations;
             this.AdminReviewViolations = AdminReviewViolations;
+            this.UnevaluatedRules = UnevaluatedRules;
             
         }
         
@@ -60,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ShiftTradeMatchViolation> AdminReviewViolations { get; set; }
 
 
+
+        /// <summary>
+        /// Unevaluated rules for this shift trade which require shift trade administrator review
+        /// </summary>
+        /// <value>Unevaluated rules for this shift trade which require shift trade administrator review</value>
+        [DataMember(Name="unevaluatedRules", EmitDefaultValue=false)]
+        public List<UnevaluatedRulesEnum> UnevaluatedRules { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Trade: ").Append(Trade).Append("\n");
             sb.Append("  Violations: ").Append(Violations).Append("\n");
             sb.Append("  AdminReviewViolations: ").Append(AdminReviewViolations).Append("\n");
+            sb.Append("  UnevaluatedRules: ").Append(UnevaluatedRules).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdminReviewViolations == other.AdminReviewViolations ||
                     this.AdminReviewViolations != null &&
                     this.AdminReviewViolations.SequenceEqual(other.AdminReviewViolations)
+                ) &&
+                (
+                    this.UnevaluatedRules == other.UnevaluatedRules ||
+                    this.UnevaluatedRules != null &&
+                    this.UnevaluatedRules.SequenceEqual(other.UnevaluatedRules)
                 );
         }
 
@@ -148,6 +197,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AdminReviewViolations != null)
                     hash = hash * 59 + this.AdminReviewViolations.GetHashCode();
+
+                if (this.UnevaluatedRules != null)
+                    hash = hash * 59 + this.UnevaluatedRules.GetHashCode();
 
                 return hash;
             }

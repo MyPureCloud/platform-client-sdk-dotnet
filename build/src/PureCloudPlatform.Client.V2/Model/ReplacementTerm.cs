@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ReplacementTerm :  IEquatable<ReplacementTerm>
     {
         /// <summary>
-        /// Social Handle Type
+        /// Subject search type
         /// </summary>
-        /// <value>Social Handle Type</value>
+        /// <value>Subject search type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -64,27 +64,27 @@ namespace PureCloudPlatform.Client.V2.Model
             Twitter,
             
             /// <summary>
-            /// Enum Facebook for "FACEBOOK"
-            /// </summary>
-            [EnumMember(Value = "FACEBOOK")]
-            Facebook,
-            
-            /// <summary>
             /// Enum Instagram for "INSTAGRAM"
             /// </summary>
             [EnumMember(Value = "INSTAGRAM")]
-            Instagram
+            Instagram,
+            
+            /// <summary>
+            /// Enum Facebook for "FACEBOOK"
+            /// </summary>
+            [EnumMember(Value = "FACEBOOK")]
+            Facebook
         }
         /// <summary>
-        /// Social Handle Type
+        /// Subject search type
         /// </summary>
-        /// <value>Social Handle Type</value>
+        /// <value>Subject search type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacementTerm" /> class.
         /// </summary>
-        /// <param name="Type">Social Handle Type.</param>
+        /// <param name="Type">Subject search type.</param>
         /// <param name="ExistingValue">ExistingValue.</param>
         /// <param name="UpdatedValue">UpdatedValue.</param>
         public ReplacementTerm(TypeEnum? Type = null, string ExistingValue = null, string UpdatedValue = null)

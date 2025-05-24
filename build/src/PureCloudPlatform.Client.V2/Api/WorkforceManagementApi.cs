@@ -2835,10 +2835,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
         
-        WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
+        WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets all the shift trades for a given week
@@ -2850,10 +2851,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
         
-        ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
+        ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get a work plan
@@ -9303,10 +9305,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
         
-        System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets all the shift trades for a given week
@@ -9318,10 +9321,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
+        System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get a work plan
@@ -35866,12 +35870,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
         
-        public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
+        public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null)
         {
-             ApiResponse<WeekShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, evaluateMatches, forceDownloadService);
+             ApiResponse<WeekShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, evaluateMatches, includeCrossWeekShifts, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -35883,10 +35888,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
         
-        public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
+        public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -35931,6 +35937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (evaluateMatches != null) localVarQueryParams.Add(new Tuple<string, string>("evaluateMatches", this.Configuration.ApiClient.ParameterToString(evaluateMatches)));
+            if (includeCrossWeekShifts != null) localVarQueryParams.Add(new Tuple<string, string>("includeCrossWeekShifts", this.Configuration.ApiClient.ParameterToString(includeCrossWeekShifts)));
             if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
@@ -35977,12 +35984,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
         
-        public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null)
         {
-             ApiResponse<WeekShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, evaluateMatches, forceDownloadService);
+             ApiResponse<WeekShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, evaluateMatches, includeCrossWeekShifts, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -35995,10 +36003,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="includeCrossWeekShifts">Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional, default to false)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -36045,6 +36054,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (evaluateMatches != null) localVarQueryParams.Add(new Tuple<string, string>("evaluateMatches", this.Configuration.ApiClient.ParameterToString(evaluateMatches)));
+            if (includeCrossWeekShifts != null) localVarQueryParams.Add(new Tuple<string, string>("includeCrossWeekShifts", this.Configuration.ApiClient.ParameterToString(includeCrossWeekShifts)));
             if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params

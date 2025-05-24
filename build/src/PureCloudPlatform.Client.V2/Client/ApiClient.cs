@@ -13,6 +13,7 @@ using System.Text;
 using Newtonsoft.Json;
 using PureCloudPlatform.Client.V2.Extensions;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PureCloudPlatform.Client.V2.Client
 {
@@ -152,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 if (httpClient != null) {
                     return this.httpClient;
                 } else {
-                    httpClient = new DefaultHttpClient(Configuration, ClientOptions);
+                    httpClient = new DefaultHttpClient(ClientOptions, Configuration);
                     return this.httpClient;
                 }
             }
@@ -163,6 +164,21 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
                 httpClient = value;
             }
+        }
+
+        ///<Summary>
+        /// Sets the ApiClients X509 certificate
+        ///</Summary>
+        public void SetMTLSCertificates(string certPath, string certPass)
+        {
+            var cert = new X509Certificate2(
+                certPath,
+                certPass,
+                X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.PersistKeySet | X509KeyStorageFlags.Exportable
+            );
+
+            ClientOptions.LocalClientCertificates = new X509CertificateCollection();
+            ClientOptions.LocalClientCertificates.Add(cert);
         }
 
         ///<Summary>
@@ -305,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Client
             );
 
             // Set SDK version
-            requestOptions.AddHeaderParam("purecloud-sdk", "233.0.0");
+            requestOptions.AddHeaderParam("purecloud-sdk", "234.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             

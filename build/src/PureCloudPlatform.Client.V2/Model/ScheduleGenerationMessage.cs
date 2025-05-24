@@ -319,7 +319,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unabletoscheduleworkday for "UnableToScheduleWorkDay"
             /// </summary>
             [EnumMember(Value = "UnableToScheduleWorkDay")]
-            Unabletoscheduleworkday
+            Unabletoscheduleworkday,
+            
+            /// <summary>
+            /// Enum Agentwithoutcapabilitytohandleactivityonqueuework for "AgentWithoutCapabilityToHandleActivityOnQueueWork"
+            /// </summary>
+            [EnumMember(Value = "AgentWithoutCapabilityToHandleActivityOnQueueWork")]
+            Agentwithoutcapabilitytohandleactivityonqueuework
         }
         /// <summary>
         /// The type of the message

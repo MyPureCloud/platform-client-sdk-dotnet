@@ -79,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LineId">LineId.</param>
         /// <param name="WhatsAppId">WhatsAppId.</param>
         /// <param name="FacebookId">FacebookId.</param>
+        /// <param name="InstagramId">User information for an Instagram account.</param>
         /// <param name="ExternalIds">A list of external identifiers that identify this contact in an external system.</param>
         /// <param name="Identifiers">Identifiers claimed by this contact.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -88,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        public ExternalContact(string Id = null, WritableStarrableDivision Division = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, List<ExternalId> ExternalIds = null, List<ContactIdentifier> Identifiers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
+        public ExternalContact(string Id = null, WritableStarrableDivision Division = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, InstagramId InstagramId = null, List<ExternalId> ExternalIds = null, List<ContactIdentifier> Identifiers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
             this.Division = Division;
@@ -109,6 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LineId = LineId;
             this.WhatsAppId = WhatsAppId;
             this.FacebookId = FacebookId;
+            this.InstagramId = InstagramId;
             this.ExternalIds = ExternalIds;
             this.Identifiers = Identifiers;
             this.ModifyDate = ModifyDate;
@@ -280,6 +282,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// User information for an Instagram account
+        /// </summary>
+        /// <value>User information for an Instagram account</value>
+        [DataMember(Name="instagramId", EmitDefaultValue=false)]
+        public InstagramId InstagramId { get; set; }
+
+
+
+        /// <summary>
         /// A list of external identifiers that identify this contact in an external system
         /// </summary>
         /// <value>A list of external identifiers that identify this contact in an external system</value>
@@ -388,6 +399,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The input contacts from the merge operation.
+        /// </summary>
+        /// <value>The input contacts from the merge operation.</value>
+        [DataMember(Name="mergedFrom", EmitDefaultValue=false)]
+        public List<ContactAddressableEntityRef> MergedFrom { get; private set; }
+
+
+
+        /// <summary>
+        /// The output contact from the merge operation.
+        /// </summary>
+        /// <value>The output contact from the merge operation.</value>
+        [DataMember(Name="mergedTo", EmitDefaultValue=false)]
+        public ContactAddressableEntityRef MergedTo { get; private set; }
+
+
+
+        /// <summary>
         /// Information about the merge history of this contact. If null, this contact is not a part of any merge.
         /// </summary>
         /// <value>Information about the merge history of this contact. If null, this contact is not a part of any merge.</value>
@@ -432,6 +461,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LineId: ").Append(LineId).Append("\n");
             sb.Append("  WhatsAppId: ").Append(WhatsAppId).Append("\n");
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
+            sb.Append("  InstagramId: ").Append(InstagramId).Append("\n");
             sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
             sb.Append("  Identifiers: ").Append(Identifiers).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
@@ -445,6 +475,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CanonicalContact: ").Append(CanonicalContact).Append("\n");
             sb.Append("  MergeSet: ").Append(MergeSet).Append("\n");
+            sb.Append("  MergedFrom: ").Append(MergedFrom).Append("\n");
+            sb.Append("  MergedTo: ").Append(MergedTo).Append("\n");
             sb.Append("  MergeOperation: ").Append(MergeOperation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -583,6 +615,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FacebookId.Equals(other.FacebookId)
                 ) &&
                 (
+                    this.InstagramId == other.InstagramId ||
+                    this.InstagramId != null &&
+                    this.InstagramId.Equals(other.InstagramId)
+                ) &&
+                (
                     this.ExternalIds == other.ExternalIds ||
                     this.ExternalIds != null &&
                     this.ExternalIds.SequenceEqual(other.ExternalIds)
@@ -646,6 +683,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MergeSet == other.MergeSet ||
                     this.MergeSet != null &&
                     this.MergeSet.SequenceEqual(other.MergeSet)
+                ) &&
+                (
+                    this.MergedFrom == other.MergedFrom ||
+                    this.MergedFrom != null &&
+                    this.MergedFrom.SequenceEqual(other.MergedFrom)
+                ) &&
+                (
+                    this.MergedTo == other.MergedTo ||
+                    this.MergedTo != null &&
+                    this.MergedTo.Equals(other.MergedTo)
                 ) &&
                 (
                     this.MergeOperation == other.MergeOperation ||
@@ -727,6 +774,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.FacebookId != null)
                     hash = hash * 59 + this.FacebookId.GetHashCode();
 
+                if (this.InstagramId != null)
+                    hash = hash * 59 + this.InstagramId.GetHashCode();
+
                 if (this.ExternalIds != null)
                     hash = hash * 59 + this.ExternalIds.GetHashCode();
 
@@ -765,6 +815,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MergeSet != null)
                     hash = hash * 59 + this.MergeSet.GetHashCode();
+
+                if (this.MergedFrom != null)
+                    hash = hash * 59 + this.MergedFrom.GetHashCode();
+
+                if (this.MergedTo != null)
+                    hash = hash * 59 + this.MergedTo.GetHashCode();
 
                 if (this.MergeOperation != null)
                     hash = hash * 59 + this.MergeOperation.GetHashCode();

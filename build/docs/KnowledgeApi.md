@@ -2143,7 +2143,7 @@ namespace Example
 | **includeSubcategories** | **bool?**| Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional]  |
 | **includeDrafts** | **bool?**| If includeDrafts is true, Documents in the draft state are also returned in the response. | [optional]  |
 | **labelIds** | [**List<string>**](string)| If specified, retrieves documents associated with label ids, comma separated values expected. | [optional]  |
-| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels, variations |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels |
 | **externalIds** | [**List<string>**](string)| If specified, retrieves documents associated with external ids, comma separated values expected. | [optional]  |
 
 ### Return type
@@ -7773,4 +7773,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

@@ -847,7 +847,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ContentExplorationView for "CONTENT_EXPLORATION_VIEW"
             /// </summary>
             [EnumMember(Value = "CONTENT_EXPLORATION_VIEW")]
-            ContentExplorationView
+            ContentExplorationView,
+            
+            /// <summary>
+            /// Enum EvaluationPerformanceSummaryView for "EVALUATION_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EVALUATION_PERFORMANCE_SUMMARY_VIEW")]
+            EvaluationPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum EvaluationPerformanceDetailView for "EVALUATION_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EVALUATION_PERFORMANCE_DETAIL_VIEW")]
+            EvaluationPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum EvaluationPerformanceQuestionGroupDetailView for "EVALUATION_PERFORMANCE_QUESTION_GROUP_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EVALUATION_PERFORMANCE_QUESTION_GROUP_DETAIL_VIEW")]
+            EvaluationPerformanceQuestionGroupDetailView,
+            
+            /// <summary>
+            /// Enum EvaluationPerformanceQuestionDetailView for "EVALUATION_PERFORMANCE_QUESTION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EVALUATION_PERFORMANCE_QUESTION_DETAIL_VIEW")]
+            EvaluationPerformanceQuestionDetailView
         }
         /// <summary>
         /// The error message in case the export request failed

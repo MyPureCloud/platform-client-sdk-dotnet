@@ -13,34 +13,31 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// BuPlanningGroupHeadcountForecast
+    /// BuPlanningGroupHeadcountForecastUploadSchema
     /// </summary>
     [DataContract]
-    public partial class BuPlanningGroupHeadcountForecast :  IEquatable<BuPlanningGroupHeadcountForecast>
+    public partial class BuPlanningGroupHeadcountForecastUploadSchema :  IEquatable<BuPlanningGroupHeadcountForecastUploadSchema>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuPlanningGroupHeadcountForecast" /> class.
+        /// Initializes a new instance of the <see cref="BuPlanningGroupHeadcountForecastUploadSchema" /> class.
         /// </summary>
-        /// <param name="PlanningGroup">The planning group to which this portion of the headcount forecast applies.</param>
+        [JsonConstructorAttribute]
+        protected BuPlanningGroupHeadcountForecastUploadSchema() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuPlanningGroupHeadcountForecastUploadSchema" /> class.
+        /// </summary>
         /// <param name="RequiredPerInterval">Required headcount per interval, referenced against the reference start date.</param>
         /// <param name="RequiredWithoutShrinkagePerInterval">Required headcount per interval without accounting for shrinkage, referenced against the reference start date.</param>
-        public BuPlanningGroupHeadcountForecast(PlanningGroupReference PlanningGroup = null, List<double?> RequiredPerInterval = null, List<double?> RequiredWithoutShrinkagePerInterval = null)
+        /// <param name="PlanningGroupId">The ID of the planning group to which this portion of the headcount forecast applies (required).</param>
+        public BuPlanningGroupHeadcountForecastUploadSchema(List<double?> RequiredPerInterval = null, List<double?> RequiredWithoutShrinkagePerInterval = null, string PlanningGroupId = null)
         {
-            this.PlanningGroup = PlanningGroup;
             this.RequiredPerInterval = RequiredPerInterval;
             this.RequiredWithoutShrinkagePerInterval = RequiredWithoutShrinkagePerInterval;
+            this.PlanningGroupId = PlanningGroupId;
             
         }
         
-
-
-        /// <summary>
-        /// The planning group to which this portion of the headcount forecast applies
-        /// </summary>
-        /// <value>The planning group to which this portion of the headcount forecast applies</value>
-        [DataMember(Name="planningGroup", EmitDefaultValue=false)]
-        public PlanningGroupReference PlanningGroup { get; set; }
-
 
 
         /// <summary>
@@ -60,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<double?> RequiredWithoutShrinkagePerInterval { get; set; }
 
 
+
+        /// <summary>
+        /// The ID of the planning group to which this portion of the headcount forecast applies
+        /// </summary>
+        /// <value>The ID of the planning group to which this portion of the headcount forecast applies</value>
+        [DataMember(Name="planningGroupId", EmitDefaultValue=false)]
+        public string PlanningGroupId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,11 +73,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BuPlanningGroupHeadcountForecast {\n");
+            sb.Append("class BuPlanningGroupHeadcountForecastUploadSchema {\n");
 
-            sb.Append("  PlanningGroup: ").Append(PlanningGroup).Append("\n");
             sb.Append("  RequiredPerInterval: ").Append(RequiredPerInterval).Append("\n");
             sb.Append("  RequiredWithoutShrinkagePerInterval: ").Append(RequiredWithoutShrinkagePerInterval).Append("\n");
+            sb.Append("  PlanningGroupId: ").Append(PlanningGroupId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,26 +103,21 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BuPlanningGroupHeadcountForecast);
+            return this.Equals(obj as BuPlanningGroupHeadcountForecastUploadSchema);
         }
 
         /// <summary>
-        /// Returns true if BuPlanningGroupHeadcountForecast instances are equal
+        /// Returns true if BuPlanningGroupHeadcountForecastUploadSchema instances are equal
         /// </summary>
-        /// <param name="other">Instance of BuPlanningGroupHeadcountForecast to be compared</param>
+        /// <param name="other">Instance of BuPlanningGroupHeadcountForecastUploadSchema to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BuPlanningGroupHeadcountForecast other)
+        public bool Equals(BuPlanningGroupHeadcountForecastUploadSchema other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return true &&
-                (
-                    this.PlanningGroup == other.PlanningGroup ||
-                    this.PlanningGroup != null &&
-                    this.PlanningGroup.Equals(other.PlanningGroup)
-                ) &&
                 (
                     this.RequiredPerInterval == other.RequiredPerInterval ||
                     this.RequiredPerInterval != null &&
@@ -126,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequiredWithoutShrinkagePerInterval == other.RequiredWithoutShrinkagePerInterval ||
                     this.RequiredWithoutShrinkagePerInterval != null &&
                     this.RequiredWithoutShrinkagePerInterval.SequenceEqual(other.RequiredWithoutShrinkagePerInterval)
+                ) &&
+                (
+                    this.PlanningGroupId == other.PlanningGroupId ||
+                    this.PlanningGroupId != null &&
+                    this.PlanningGroupId.Equals(other.PlanningGroupId)
                 );
         }
 
@@ -140,14 +146,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.PlanningGroup != null)
-                    hash = hash * 59 + this.PlanningGroup.GetHashCode();
-
                 if (this.RequiredPerInterval != null)
                     hash = hash * 59 + this.RequiredPerInterval.GetHashCode();
 
                 if (this.RequiredWithoutShrinkagePerInterval != null)
                     hash = hash * 59 + this.RequiredWithoutShrinkagePerInterval.GetHashCode();
+
+                if (this.PlanningGroupId != null)
+                    hash = hash * 59 + this.PlanningGroupId.GetHashCode();
 
                 return hash;
             }

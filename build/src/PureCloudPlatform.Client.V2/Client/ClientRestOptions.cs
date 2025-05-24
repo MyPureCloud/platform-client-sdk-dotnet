@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PureCloudPlatform.Client.V2.Client
 {
@@ -17,6 +18,10 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Prefix of path url, default is "api"
         /// </summary>
         public string Prefix { get; set; } = "api";
+        /// <summary>
+        /// Collection of X509 Certificates used in HTTP requests
+        /// </summary>
+        public X509CertificateCollection LocalClientCertificates { get; set; }
         private System.Net.IWebProxy proxy;
         private HttpMessageHandler httpMessageHandler;
 

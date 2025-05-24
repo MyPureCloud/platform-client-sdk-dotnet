@@ -262,6 +262,7 @@ docs/AppEventRequest.md
 docs/AppEventResponse.md
 docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
+docs/AppleOpaqueId.md
 docs/ApprovalNamespace.md
 docs/ArchitectApi.json
 docs/ArchitectApi.md
@@ -500,7 +501,8 @@ docs/BuForecastTimeSeriesResult.md
 docs/BuFullDayTimeOffMarker.md
 docs/BuGenerateScheduleRequest.md
 docs/BuGetCurrentAgentScheduleRequest.md
-docs/BuHeadcountForecast.md
+docs/BuHeadcountForecastBuPlanningGroupHeadcountForecastResult.md
+docs/BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema.md
 docs/BuHeadcountForecastResponse.md
 docs/BuImportAgentScheduleUploadSchema.md
 docs/BuImportShortTermForecastSchema.md
@@ -512,7 +514,8 @@ docs/BuListAlternativeShiftTradesResponse.md
 docs/BuManagementUnitScheduleSummary.md
 docs/BuNotificationSettingsRequest.md
 docs/BuNotificationSettingsResponse.md
-docs/BuPlanningGroupHeadcountForecast.md
+docs/BuPlanningGroupHeadcountForecastResult.md
+docs/BuPlanningGroupHeadcountForecastUploadSchema.md
 docs/BuQueryAdherenceExplanationsRequest.md
 docs/BuQueryAdherenceExplanationsResponse.md
 docs/BuQueryAgentSchedulesRequest.md
@@ -1089,15 +1092,20 @@ docs/ConversationContentCarousel.md
 docs/ConversationContentDatePicker.md
 docs/ConversationContentDatePickerAvailableTime.md
 docs/ConversationContentInteractiveApplication.md
+docs/ConversationContentLineItem.md
 docs/ConversationContentListPicker.md
 docs/ConversationContentListPickerItem.md
 docs/ConversationContentListPickerSection.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
+docs/ConversationContentPaymentRequest.md
+docs/ConversationContentPaymentResponse.md
+docs/ConversationContentPush.md
 docs/ConversationContentQuickReply.md
 docs/ConversationContentQuickReplyV2.md
 docs/ConversationContentReaction.md
 docs/ConversationContentReceivedReplyMessage.md
+docs/ConversationContentRequiredContactField.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
 docs/ConversationDeletionProtectionQuery.md
@@ -1233,6 +1241,9 @@ docs/ConversationParticipantSearchRequest.md
 docs/ConversationProfile.md
 docs/ConversationProperties.md
 docs/ConversationPublicMetadata.md
+docs/ConversationPushFailedMessageReferences.md
+docs/ConversationPushNotificationMessageLabel.md
+docs/ConversationPushProviderIntegration.md
 docs/ConversationQuery.md
 docs/ConversationQueueMediaSettings.md
 docs/ConversationReason.md
@@ -1290,6 +1301,7 @@ docs/ConversationSummaryTopicConversationSummary.md
 docs/ConversationSummaryTopicConversationSummaryEvent.md
 docs/ConversationSummaryTopicConversationSummaryParticipant.md
 docs/ConversationSummaryTopicConversationWrapUpCode.md
+docs/ConversationSummaryTopicSummaryExtractedCustomEntity.md
 docs/ConversationSummaryTopicTriggerSource.md
 docs/ConversationSummaryTopicVirtualAgentsConversationFollowupAction.md
 docs/ConversationSummaryTopicVirtualAgentsConversationHeadline.md
@@ -1299,6 +1311,7 @@ docs/ConversationSummaryTopicVirtualAgentsConversationSummary.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.md
 docs/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.md
+docs/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.md
 docs/ConversationSummaryTopicVirtualAgentsTriggerSource.md
 docs/ConversationSummaryWrapupCode.md
 docs/ConversationTagsUpdate.md
@@ -2317,6 +2330,7 @@ docs/ExternalContact.md
 docs/ExternalContactReference.md
 docs/ExternalContactsApi.json
 docs/ExternalContactsApi.md
+docs/ExternalContactsContactChangedTopicAppleOpaqueId.md
 docs/ExternalContactsContactChangedTopicContact.md
 docs/ExternalContactsContactChangedTopicContactAddress.md
 docs/ExternalContactsContactChangedTopicDataSchema.md
@@ -2360,6 +2374,7 @@ docs/ExternalContactsRelationshipChangedTopicTicker.md
 docs/ExternalContactsRelationshipChangedTopicTwitterId.md
 docs/ExternalContactsRelationshipChangedTopicUser.md
 docs/ExternalContactsSettings.md
+docs/ExternalContactsUnresolvedContactChangedTopicAppleOpaqueId.md
 docs/ExternalContactsUnresolvedContactChangedTopicContact.md
 docs/ExternalContactsUnresolvedContactChangedTopicContactAddress.md
 docs/ExternalContactsUnresolvedContactChangedTopicDataSchema.md
@@ -2877,7 +2892,9 @@ docs/GetConversationsMessagesCachedmedia-example.txt
 docs/GetConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/GetConversationsMessagingFacebookApp-example.txt
 docs/GetConversationsMessagingFacebookPermissions-example.txt
+docs/GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId-example.txt
 docs/GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
+docs/GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
 docs/GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationTwitterOauthSettings-example.txt
@@ -4629,6 +4646,9 @@ docs/LogicalInterfaceEntityListing.md
 docs/LongTermForecastPlanningGroupData.md
 docs/LongTermForecastResult.md
 docs/LongTermForecastResultResponse.md
+docs/MaestroWebhooksInvocationTopicObject.md
+docs/MaestroWebhooksInvocationTopicPublicWebhooksEvent.md
+docs/MaestroWebhooksInvocationTopicWebhooksInvocation.md
 docs/MailFromResult.md
 docs/ManagementUnit.md
 docs/ManagementUnitListing.md
@@ -6243,7 +6263,9 @@ docs/PutConversationsEmailMessagesDraft-example.txt
 docs/PutConversationsEmailRecordingstate-example.txt
 docs/PutConversationsKeyconfiguration-example.txt
 docs/PutConversationsMessageRecordingstate-example.txt
+docs/PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId-example.txt
 docs/PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
+docs/PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
 docs/PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/PutConversationsMessagingSettingsDefault-example.txt
@@ -7300,6 +7322,7 @@ docs/SummaryAggregationView.md
 docs/SummaryAsyncAggregateQueryResponse.md
 docs/SummaryAsyncAggregationQuery.md
 docs/SummaryGenerationConfig.md
+docs/SummarySettingEntity.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
 docs/SupportCenterCustomMessage.md
@@ -7854,6 +7877,12 @@ docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.md
 docs/V2WebMessagingUndeliveredMessageTopicMessage.md
 docs/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.md
 docs/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.md
@@ -8327,6 +8356,7 @@ docs/WorkitemsChangeWorktypeDelta.md
 docs/WorkitemsEventsNotificationAssignmentSegment.md
 docs/WorkitemsEventsNotificationCustomAttribute.md
 docs/WorkitemsEventsNotificationDelta.md
+docs/WorkitemsEventsNotificationPropertyChange.md
 docs/WorkitemsEventsNotificationScoredAgent.md
 docs/WorkitemsEventsNotificationSession.md
 docs/WorkitemsEventsNotificationWorkitem.md
@@ -8334,6 +8364,7 @@ docs/WorkitemsEventsNotificationWrapup.md
 docs/WorkitemsQueueEventsNotificationAssignmentSegment.md
 docs/WorkitemsQueueEventsNotificationCustomAttribute.md
 docs/WorkitemsQueueEventsNotificationDelta.md
+docs/WorkitemsQueueEventsNotificationPropertyChange.md
 docs/WorkitemsQueueEventsNotificationScoredAgent.md
 docs/WorkitemsQueueEventsNotificationSession.md
 docs/WorkitemsQueueEventsNotificationWorkitem.md
@@ -8341,6 +8372,7 @@ docs/WorkitemsQueueEventsNotificationWrapup.md
 docs/WorkitemsUserEventsNotificationAssignmentSegment.md
 docs/WorkitemsUserEventsNotificationCustomAttribute.md
 docs/WorkitemsUserEventsNotificationDelta.md
+docs/WorkitemsUserEventsNotificationPropertyChange.md
 docs/WorkitemsUserEventsNotificationScoredAgent.md
 docs/WorkitemsUserEventsNotificationSession.md
 docs/WorkitemsUserEventsNotificationWorkitem.md
@@ -8719,6 +8751,7 @@ src/PureCloudPlatform.Client.V2/Model/AppEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AppEventResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AppEventResponseSession.cs
 src/PureCloudPlatform.Client.V2/Model/AppendToDncActionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/AppleOpaqueId.cs
 src/PureCloudPlatform.Client.V2/Model/ApprovalNamespace.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationClient.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.cs
@@ -8949,7 +8982,8 @@ src/PureCloudPlatform.Client.V2/Model/BuForecastTimeSeriesResult.cs
 src/PureCloudPlatform.Client.V2/Model/BuFullDayTimeOffMarker.cs
 src/PureCloudPlatform.Client.V2/Model/BuGenerateScheduleRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BuGetCurrentAgentScheduleRequest.cs
-src/PureCloudPlatform.Client.V2/Model/BuHeadcountForecast.cs
+src/PureCloudPlatform.Client.V2/Model/BuHeadcountForecastBuPlanningGroupHeadcountForecastResult.cs
+src/PureCloudPlatform.Client.V2/Model/BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/BuHeadcountForecastResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuImportAgentScheduleUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/BuImportShortTermForecastSchema.cs
@@ -8961,7 +8995,8 @@ src/PureCloudPlatform.Client.V2/Model/BuListAlternativeShiftTradesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuManagementUnitScheduleSummary.cs
 src/PureCloudPlatform.Client.V2/Model/BuNotificationSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BuNotificationSettingsResponse.cs
-src/PureCloudPlatform.Client.V2/Model/BuPlanningGroupHeadcountForecast.cs
+src/PureCloudPlatform.Client.V2/Model/BuPlanningGroupHeadcountForecastResult.cs
+src/PureCloudPlatform.Client.V2/Model/BuPlanningGroupHeadcountForecastUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/BuQueryAdherenceExplanationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BuQueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuQueryAgentSchedulesRequest.cs
@@ -9528,15 +9563,20 @@ src/PureCloudPlatform.Client.V2/Model/ConversationContentCarousel.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentDatePicker.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentDatePickerAvailableTime.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentInteractiveApplication.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentLineItem.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentListPicker.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentListPickerItem.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentListPickerSection.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentLocation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentNotificationTemplate.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentPaymentRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentPaymentResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentPush.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentQuickReply.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentQuickReplyV2.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentReaction.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentReceivedReplyMessage.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentRequiredContactField.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentStory.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentText.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationDeletionProtectionQuery.cs
@@ -9672,6 +9712,9 @@ src/PureCloudPlatform.Client.V2/Model/ConversationParticipantSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationProfile.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationProperties.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationPublicMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationPushFailedMessageReferences.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationPushNotificationMessageLabel.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationPushProviderIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationReason.cs
@@ -9729,6 +9772,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicConversationSummar
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicConversationSummaryEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicConversationSummaryParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicConversationWrapUpCode.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicSummaryExtractedCustomEntity.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicTriggerSource.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationFollowupAction.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationHeadline.cs
@@ -9738,6 +9782,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConve
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicVirtualAgentsTriggerSource.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryWrapupCode.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationTagsUpdate.cs
@@ -10431,6 +10476,7 @@ src/PureCloudPlatform.Client.V2/Model/ExtensionPoolDivisionViewEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExtensionPoolEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContact.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactReference.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicAppleOpaqueId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicContact.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicContactAddress.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicDataSchema.cs
@@ -10474,6 +10520,7 @@ src/PureCloudPlatform.Client.V2/Model/ExternalContactsRelationshipChangedTopicTi
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsRelationshipChangedTopicTwitterId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsRelationshipChangedTopicUser.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsSettings.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicAppleOpaqueId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicContact.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicContactAddress.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicDataSchema.cs
@@ -11340,6 +11387,9 @@ src/PureCloudPlatform.Client.V2/Model/LogicalInterfaceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LongTermForecastPlanningGroupData.cs
 src/PureCloudPlatform.Client.V2/Model/LongTermForecastResult.cs
 src/PureCloudPlatform.Client.V2/Model/LongTermForecastResultResponse.cs
+src/PureCloudPlatform.Client.V2/Model/MaestroWebhooksInvocationTopicObject.cs
+src/PureCloudPlatform.Client.V2/Model/MaestroWebhooksInvocationTopicPublicWebhooksEvent.cs
+src/PureCloudPlatform.Client.V2/Model/MaestroWebhooksInvocationTopicWebhooksInvocation.cs
 src/PureCloudPlatform.Client.V2/Model/MailFromResult.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnit.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnitListing.cs
@@ -12736,6 +12786,7 @@ src/PureCloudPlatform.Client.V2/Model/SummaryAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAsyncAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryGenerationConfig.cs
+src/PureCloudPlatform.Client.V2/Model/SummarySettingEntity.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCategory.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCompactCategoryModuleTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCustomMessage.cs
@@ -13268,6 +13319,12 @@ src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicCondition.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicConditionRulePredicate.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicEntityProperties.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicRule.cs
+src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.cs
+src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.cs
+src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage.cs
+src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.cs
+src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.cs
+src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.cs
 src/PureCloudPlatform.Client.V2/Model/V2WebMessagingUndeliveredMessageTopicMessage.cs
 src/PureCloudPlatform.Client.V2/Model/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.cs
 src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.cs
@@ -13729,6 +13786,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemsChangeWorktypeDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationAssignmentSegment.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationPropertyChange.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationWorkitem.cs
@@ -13736,6 +13794,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationAssignmentSegment.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationPropertyChange.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationWorkitem.cs
@@ -13743,6 +13802,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationAssignmentSegment.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationPropertyChange.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationWorkitem.cs

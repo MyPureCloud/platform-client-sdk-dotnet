@@ -13,39 +13,38 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// BuHeadcountForecast
+    /// V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage
     /// </summary>
     [DataContract]
-    public partial class BuHeadcountForecast :  IEquatable<BuHeadcountForecast>
+    public partial class V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage :  IEquatable<V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuHeadcountForecast" /> class.
+        /// Initializes a new instance of the <see cref="V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage" /> class.
         /// </summary>
-        /// <param name="Entities">Entities.</param>
-        /// <param name="ReferenceStartDate">Reference start date for the interval values in each forecast entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public BuHeadcountForecast(List<BuPlanningGroupHeadcountForecast> Entities = null, DateTime? ReferenceStartDate = null)
+        /// <param name="Text">Text.</param>
+        /// <param name="Score">Score.</param>
+        public V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage(string Text = null, double? Score = null)
         {
-            this.Entities = Entities;
-            this.ReferenceStartDate = ReferenceStartDate;
+            this.Text = Text;
+            this.Score = Score;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Entities
+        /// Gets or Sets Text
         /// </summary>
-        [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<BuPlanningGroupHeadcountForecast> Entities { get; set; }
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
 
 
 
         /// <summary>
-        /// Reference start date for the interval values in each forecast entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Gets or Sets Score
         /// </summary>
-        /// <value>Reference start date for the interval values in each forecast entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="referenceStartDate", EmitDefaultValue=false)]
-        public DateTime? ReferenceStartDate { get; set; }
+        [DataMember(Name="score", EmitDefaultValue=false)]
+        public double? Score { get; set; }
 
 
         /// <summary>
@@ -55,10 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BuHeadcountForecast {\n");
+            sb.Append("class V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage {\n");
 
-            sb.Append("  Entities: ").Append(Entities).Append("\n");
-            sb.Append("  ReferenceStartDate: ").Append(ReferenceStartDate).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,15 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BuHeadcountForecast);
+            return this.Equals(obj as V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage);
         }
 
         /// <summary>
-        /// Returns true if BuHeadcountForecast instances are equal
+        /// Returns true if V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage instances are equal
         /// </summary>
-        /// <param name="other">Instance of BuHeadcountForecast to be compared</param>
+        /// <param name="other">Instance of V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BuHeadcountForecast other)
+        public bool Equals(V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -100,14 +99,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Entities == other.Entities ||
-                    this.Entities != null &&
-                    this.Entities.SequenceEqual(other.Entities)
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
                 ) &&
                 (
-                    this.ReferenceStartDate == other.ReferenceStartDate ||
-                    this.ReferenceStartDate != null &&
-                    this.ReferenceStartDate.Equals(other.ReferenceStartDate)
+                    this.Score == other.Score ||
+                    this.Score != null &&
+                    this.Score.Equals(other.Score)
                 );
         }
 
@@ -122,11 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Entities != null)
-                    hash = hash * 59 + this.Entities.GetHashCode();
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
 
-                if (this.ReferenceStartDate != null)
-                    hash = hash * 59 + this.ReferenceStartDate.GetHashCode();
+                if (this.Score != null)
+                    hash = hash * 59 + this.Score.GetHashCode();
 
                 return hash;
             }

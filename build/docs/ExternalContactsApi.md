@@ -29,7 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactsSchemaVersion**](#GetExternalcontactsContactsSchemaVersion) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetExternalcontactsContactsSchemaVersions**](#GetExternalcontactsContactsSchemaVersions) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions | Get all versions of an external contact&#39;s schema |
 | [**GetExternalcontactsContactsSchemas**](#GetExternalcontactsContactsSchemas) | **Get** /api/v2/externalcontacts/contacts/schemas | Get a list of schemas. |
-| [**GetExternalcontactsContactsSchemasCoretype**](#GetExternalcontactsContactsSchemasCoretype) | **Get** /api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName} | Get the core types from which all schemas are built. |
+| [**GetExternalcontactsContactsSchemasCoretype**](#GetExternalcontactsContactsSchemasCoretype) | **Get** /api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName} | Get a specific named core type. |
 | [**GetExternalcontactsContactsSchemasCoretypes**](#GetExternalcontactsContactsSchemasCoretypes) | **Get** /api/v2/externalcontacts/contacts/schemas/coretypes | Get the core types from which all schemas are built. |
 | [**GetExternalcontactsContactsSchemasLimits**](#GetExternalcontactsContactsSchemasLimits) | **Get** /api/v2/externalcontacts/contacts/schemas/limits | Get quantitative limits on schemas |
 | [**GetExternalcontactsExternalsource**](#GetExternalcontactsExternalsource) | **Get** /api/v2/externalcontacts/externalsources/{externalSourceId} | Fetch an External Source |
@@ -53,7 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsOrganizationsSchemaVersion**](#GetExternalcontactsOrganizationsSchemaVersion) | **Get** /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetExternalcontactsOrganizationsSchemaVersions**](#GetExternalcontactsOrganizationsSchemaVersions) | **Get** /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions | Get all versions of an external organization&#39;s schema |
 | [**GetExternalcontactsOrganizationsSchemas**](#GetExternalcontactsOrganizationsSchemas) | **Get** /api/v2/externalcontacts/organizations/schemas | Get a list of schemas. |
-| [**GetExternalcontactsOrganizationsSchemasCoretype**](#GetExternalcontactsOrganizationsSchemasCoretype) | **Get** /api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName} | Get the core types from which all schemas are built. |
+| [**GetExternalcontactsOrganizationsSchemasCoretype**](#GetExternalcontactsOrganizationsSchemasCoretype) | **Get** /api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName} | Get a specific named core type. |
 | [**GetExternalcontactsOrganizationsSchemasCoretypes**](#GetExternalcontactsOrganizationsSchemasCoretypes) | **Get** /api/v2/externalcontacts/organizations/schemas/coretypes | Get the core types from which all schemas are built. |
 | [**GetExternalcontactsOrganizationsSchemasLimits**](#GetExternalcontactsOrganizationsSchemasLimits) | **Get** /api/v2/externalcontacts/organizations/schemas/limits | Get quantitative limits on schemas |
 | [**GetExternalcontactsRelationship**](#GetExternalcontactsRelationship) | **Get** /api/v2/externalcontacts/relationships/{relationshipId} | Fetch a relationship |
@@ -1602,7 +1602,7 @@ This endpoint does require any parameters.
 > [**Coretype**](Coretype) GetExternalcontactsContactsSchemasCoretype (string coreTypeName)
 
 
-Get the core types from which all schemas are built.
+Get a specific named core type.
 
 Requires ANY permissions: 
 
@@ -1634,7 +1634,7 @@ namespace Example
 
             try
             { 
-                // Get the core types from which all schemas are built.
+                // Get a specific named core type.
                 Coretype result = apiInstance.GetExternalcontactsContactsSchemasCoretype(coreTypeName);
                 Debug.WriteLine(result);
             }
@@ -1661,7 +1661,7 @@ namespace Example
 
 ## GetExternalcontactsContactsSchemasCoretypes
 
-> [**Coretype**](Coretype) GetExternalcontactsContactsSchemasCoretypes ()
+> [**CoretypeListing**](CoretypeListing) GetExternalcontactsContactsSchemasCoretypes ()
 
 
 Get the core types from which all schemas are built.
@@ -1696,7 +1696,7 @@ namespace Example
             try
             { 
                 // Get the core types from which all schemas are built.
-                Coretype result = apiInstance.GetExternalcontactsContactsSchemasCoretypes();
+                CoretypeListing result = apiInstance.GetExternalcontactsContactsSchemasCoretypes();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1713,7 +1713,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Coretype**](Coretype)
+[**CoretypeListing**](CoretypeListing)
 
 
 ## GetExternalcontactsContactsSchemasLimits
@@ -3161,7 +3161,7 @@ This endpoint does require any parameters.
 > [**Coretype**](Coretype) GetExternalcontactsOrganizationsSchemasCoretype (string coreTypeName)
 
 
-Get the core types from which all schemas are built.
+Get a specific named core type.
 
 Requires ANY permissions: 
 
@@ -3193,7 +3193,7 @@ namespace Example
 
             try
             { 
-                // Get the core types from which all schemas are built.
+                // Get a specific named core type.
                 Coretype result = apiInstance.GetExternalcontactsOrganizationsSchemasCoretype(coreTypeName);
                 Debug.WriteLine(result);
             }
@@ -3220,7 +3220,7 @@ namespace Example
 
 ## GetExternalcontactsOrganizationsSchemasCoretypes
 
-> [**Coretype**](Coretype) GetExternalcontactsOrganizationsSchemasCoretypes ()
+> [**CoretypeListing**](CoretypeListing) GetExternalcontactsOrganizationsSchemasCoretypes ()
 
 
 Get the core types from which all schemas are built.
@@ -3255,7 +3255,7 @@ namespace Example
             try
             { 
                 // Get the core types from which all schemas are built.
-                Coretype result = apiInstance.GetExternalcontactsOrganizationsSchemasCoretypes();
+                CoretypeListing result = apiInstance.GetExternalcontactsOrganizationsSchemasCoretypes();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3272,7 +3272,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Coretype**](Coretype)
+[**CoretypeListing**](CoretypeListing)
 
 
 ## GetExternalcontactsOrganizationsSchemasLimits
@@ -7681,4 +7681,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

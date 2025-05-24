@@ -124,6 +124,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Listpicker,
             
             /// <summary>
+            /// Enum Paymentrequest for "PaymentRequest"
+            /// </summary>
+            [EnumMember(Value = "PaymentRequest")]
+            Paymentrequest,
+            
+            /// <summary>
+            /// Enum Paymentresponse for "PaymentResponse"
+            /// </summary>
+            [EnumMember(Value = "PaymentResponse")]
+            Paymentresponse,
+            
+            /// <summary>
+            /// Enum Push for "Push"
+            /// </summary>
+            [EnumMember(Value = "Push")]
+            Push,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

@@ -822,7 +822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchemaListing> GetTaskmanagementWorkitemsSchemasWithHttpInfo ();
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -834,7 +834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Coretype GetTaskmanagementWorkitemsSchemasCoretype (string coreTypeName);
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -852,9 +852,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Coretype</returns>
+        /// <returns>CoretypeListing</returns>
         
-        Coretype GetTaskmanagementWorkitemsSchemasCoretypes ();
+        CoretypeListing GetTaskmanagementWorkitemsSchemasCoretypes ();
 
         /// <summary>
         /// Get the core types from which all schemas are built.
@@ -863,9 +863,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Coretype</returns>
+        /// <returns>ApiResponse of CoretypeListing</returns>
         
-        ApiResponse<Coretype> GetTaskmanagementWorkitemsSchemasCoretypesWithHttpInfo ();
+        ApiResponse<CoretypeListing> GetTaskmanagementWorkitemsSchemasCoretypesWithHttpInfo ();
 
         /// <summary>
         /// Get quantitative limits on schemas
@@ -2794,7 +2794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetTaskmanagementWorkitemsSchemasAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -2806,7 +2806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Coretype> GetTaskmanagementWorkitemsSchemasCoretypeAsync (string coreTypeName);
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -2824,9 +2824,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Coretype</returns>
+        /// <returns>Task of CoretypeListing</returns>
         
-        System.Threading.Tasks.Task<Coretype> GetTaskmanagementWorkitemsSchemasCoretypesAsync ();
+        System.Threading.Tasks.Task<CoretypeListing> GetTaskmanagementWorkitemsSchemasCoretypesAsync ();
 
         /// <summary>
         /// Get the core types from which all schemas are built.
@@ -2835,9 +2835,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Coretype)</returns>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Coretype>> GetTaskmanagementWorkitemsSchemasCoretypesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetTaskmanagementWorkitemsSchemasCoretypesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get quantitative limits on schemas
@@ -10487,7 +10487,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10501,7 +10501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10586,7 +10586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10601,7 +10601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10692,11 +10692,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Coretype</returns>
+        /// <returns>CoretypeListing</returns>
         
-        public Coretype GetTaskmanagementWorkitemsSchemasCoretypes ()
+        public CoretypeListing GetTaskmanagementWorkitemsSchemasCoretypes ()
         {
-             ApiResponse<Coretype> localVarResponse = GetTaskmanagementWorkitemsSchemasCoretypesWithHttpInfo();
+             ApiResponse<CoretypeListing> localVarResponse = GetTaskmanagementWorkitemsSchemasCoretypesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -10705,9 +10705,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Coretype</returns>
+        /// <returns>ApiResponse of CoretypeListing</returns>
         
-        public ApiResponse< Coretype > GetTaskmanagementWorkitemsSchemasCoretypesWithHttpInfo ()
+        public ApiResponse< CoretypeListing > GetTaskmanagementWorkitemsSchemasCoretypesWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/taskmanagement/workitems/schemas/coretypes";
@@ -10772,9 +10772,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Coretype>(localVarStatusCode,
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
                 localVarHeaders,
-                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10785,11 +10785,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Coretype</returns>
+        /// <returns>Task of CoretypeListing</returns>
         
-        public async System.Threading.Tasks.Task<Coretype> GetTaskmanagementWorkitemsSchemasCoretypesAsync ()
+        public async System.Threading.Tasks.Task<CoretypeListing> GetTaskmanagementWorkitemsSchemasCoretypesAsync ()
         {
-             ApiResponse<Coretype> localVarResponse = await GetTaskmanagementWorkitemsSchemasCoretypesAsyncWithHttpInfo();
+             ApiResponse<CoretypeListing> localVarResponse = await GetTaskmanagementWorkitemsSchemasCoretypesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -10799,9 +10799,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Coretype)</returns>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Coretype>> GetTaskmanagementWorkitemsSchemasCoretypesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetTaskmanagementWorkitemsSchemasCoretypesAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/taskmanagement/workitems/schemas/coretypes";
@@ -10866,9 +10866,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Coretype>(localVarStatusCode,
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
                 localVarHeaders,
-                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

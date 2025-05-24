@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Cancelled for "Cancelled"
             /// </summary>
             [EnumMember(Value = "Cancelled")]
-            Cancelled
+            Cancelled,
+            
+            /// <summary>
+            /// Enum Scheduled for "Scheduled"
+            /// </summary>
+            [EnumMember(Value = "Scheduled")]
+            Scheduled
         }
         /// <summary>
         /// The status of the job

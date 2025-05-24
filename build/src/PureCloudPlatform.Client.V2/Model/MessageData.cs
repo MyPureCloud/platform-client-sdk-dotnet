@@ -214,10 +214,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">The body of the text message. (Deprecated - Instead use normalizedMessage.text) (required).</param>
         /// <param name="Status">The status of the message. (required).</param>
         /// <param name="Media">The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment).</param>
-        /// <param name="Stickers">The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment.</param>
         /// <param name="CreatedBy">User who sent this message..</param>
         /// <param name="ConversationId">The id of the conversation of this message..</param>
-        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, User CreatedBy = null, string ConversationId = null)
+        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, User CreatedBy = null, string ConversationId = null)
         {
             this.Name = Name;
             this.ProviderMessageId = ProviderMessageId;
@@ -229,7 +228,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TextBody = TextBody;
             this.Status = Status;
             this.Media = Media;
-            this.Stickers = Stickers;
             this.CreatedBy = CreatedBy;
             this.ConversationId = ConversationId;
             
@@ -315,15 +313,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment
-        /// </summary>
-        /// <value>The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment</value>
-        [DataMember(Name="stickers", EmitDefaultValue=false)]
-        public List<MessageSticker> Stickers { get; set; }
-
-
-
-        /// <summary>
         /// The message into normalized format
         /// </summary>
         /// <value>The message into normalized format</value>
@@ -387,7 +376,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
-            sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             sb.Append("  NormalizedMessage: ").Append(NormalizedMessage).Append("\n");
             sb.Append("  NormalizedReceipts: ").Append(NormalizedReceipts).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -489,11 +477,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Media.SequenceEqual(other.Media)
                 ) &&
                 (
-                    this.Stickers == other.Stickers ||
-                    this.Stickers != null &&
-                    this.Stickers.SequenceEqual(other.Stickers)
-                ) &&
-                (
                     this.NormalizedMessage == other.NormalizedMessage ||
                     this.NormalizedMessage != null &&
                     this.NormalizedMessage.Equals(other.NormalizedMessage)
@@ -563,9 +546,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-
-                if (this.Stickers != null)
-                    hash = hash * 59 + this.Stickers.GetHashCode();
 
                 if (this.NormalizedMessage != null)
                     hash = hash * 59 + this.NormalizedMessage.GetHashCode();

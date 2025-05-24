@@ -608,7 +608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchemaListing> GetExternalcontactsContactsSchemasWithHttpInfo ();
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -620,7 +620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Coretype GetExternalcontactsContactsSchemasCoretype (string coreTypeName);
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -638,9 +638,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Coretype</returns>
+        /// <returns>CoretypeListing</returns>
         
-        Coretype GetExternalcontactsContactsSchemasCoretypes ();
+        CoretypeListing GetExternalcontactsContactsSchemasCoretypes ();
 
         /// <summary>
         /// Get the core types from which all schemas are built.
@@ -649,9 +649,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Coretype</returns>
+        /// <returns>ApiResponse of CoretypeListing</returns>
         
-        ApiResponse<Coretype> GetExternalcontactsContactsSchemasCoretypesWithHttpInfo ();
+        ApiResponse<CoretypeListing> GetExternalcontactsContactsSchemasCoretypesWithHttpInfo ();
 
         /// <summary>
         /// Get quantitative limits on schemas
@@ -1254,7 +1254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchemaListing> GetExternalcontactsOrganizationsSchemasWithHttpInfo ();
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -1266,7 +1266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Coretype GetExternalcontactsOrganizationsSchemasCoretype (string coreTypeName);
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -1284,9 +1284,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Coretype</returns>
+        /// <returns>CoretypeListing</returns>
         
-        Coretype GetExternalcontactsOrganizationsSchemasCoretypes ();
+        CoretypeListing GetExternalcontactsOrganizationsSchemasCoretypes ();
 
         /// <summary>
         /// Get the core types from which all schemas are built.
@@ -1295,9 +1295,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Coretype</returns>
+        /// <returns>ApiResponse of CoretypeListing</returns>
         
-        ApiResponse<Coretype> GetExternalcontactsOrganizationsSchemasCoretypesWithHttpInfo ();
+        ApiResponse<CoretypeListing> GetExternalcontactsOrganizationsSchemasCoretypesWithHttpInfo ();
 
         /// <summary>
         /// Get quantitative limits on schemas
@@ -3632,7 +3632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -3644,7 +3644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Coretype> GetExternalcontactsContactsSchemasCoretypeAsync (string coreTypeName);
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -3662,9 +3662,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Coretype</returns>
+        /// <returns>Task of CoretypeListing</returns>
         
-        System.Threading.Tasks.Task<Coretype> GetExternalcontactsContactsSchemasCoretypesAsync ();
+        System.Threading.Tasks.Task<CoretypeListing> GetExternalcontactsContactsSchemasCoretypesAsync ();
 
         /// <summary>
         /// Get the core types from which all schemas are built.
@@ -3673,9 +3673,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Coretype)</returns>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Coretype>> GetExternalcontactsContactsSchemasCoretypesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetExternalcontactsContactsSchemasCoretypesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get quantitative limits on schemas
@@ -4278,7 +4278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -4290,7 +4290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Coretype> GetExternalcontactsOrganizationsSchemasCoretypeAsync (string coreTypeName);
 
         /// <summary>
-        /// Get the core types from which all schemas are built.
+        /// Get a specific named core type.
         /// </summary>
         /// <remarks>
         /// 
@@ -4308,9 +4308,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Coretype</returns>
+        /// <returns>Task of CoretypeListing</returns>
         
-        System.Threading.Tasks.Task<Coretype> GetExternalcontactsOrganizationsSchemasCoretypesAsync ();
+        System.Threading.Tasks.Task<CoretypeListing> GetExternalcontactsOrganizationsSchemasCoretypesAsync ();
 
         /// <summary>
         /// Get the core types from which all schemas are built.
@@ -4319,9 +4319,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Coretype)</returns>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Coretype>> GetExternalcontactsOrganizationsSchemasCoretypesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetExternalcontactsOrganizationsSchemasCoretypesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get quantitative limits on schemas
@@ -10894,7 +10894,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10908,7 +10908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10993,7 +10993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11008,7 +11008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11099,11 +11099,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Coretype</returns>
+        /// <returns>CoretypeListing</returns>
         
-        public Coretype GetExternalcontactsContactsSchemasCoretypes ()
+        public CoretypeListing GetExternalcontactsContactsSchemasCoretypes ()
         {
-             ApiResponse<Coretype> localVarResponse = GetExternalcontactsContactsSchemasCoretypesWithHttpInfo();
+             ApiResponse<CoretypeListing> localVarResponse = GetExternalcontactsContactsSchemasCoretypesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -11112,9 +11112,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Coretype</returns>
+        /// <returns>ApiResponse of CoretypeListing</returns>
         
-        public ApiResponse< Coretype > GetExternalcontactsContactsSchemasCoretypesWithHttpInfo ()
+        public ApiResponse< CoretypeListing > GetExternalcontactsContactsSchemasCoretypesWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/externalcontacts/contacts/schemas/coretypes";
@@ -11179,9 +11179,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Coretype>(localVarStatusCode,
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
                 localVarHeaders,
-                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -11192,11 +11192,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Coretype</returns>
+        /// <returns>Task of CoretypeListing</returns>
         
-        public async System.Threading.Tasks.Task<Coretype> GetExternalcontactsContactsSchemasCoretypesAsync ()
+        public async System.Threading.Tasks.Task<CoretypeListing> GetExternalcontactsContactsSchemasCoretypesAsync ()
         {
-             ApiResponse<Coretype> localVarResponse = await GetExternalcontactsContactsSchemasCoretypesAsyncWithHttpInfo();
+             ApiResponse<CoretypeListing> localVarResponse = await GetExternalcontactsContactsSchemasCoretypesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -11206,9 +11206,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Coretype)</returns>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Coretype>> GetExternalcontactsContactsSchemasCoretypesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetExternalcontactsContactsSchemasCoretypesAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/externalcontacts/contacts/schemas/coretypes";
@@ -11273,9 +11273,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Coretype>(localVarStatusCode,
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
                 localVarHeaders,
-                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15886,7 +15886,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15900,7 +15900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15985,7 +15985,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16000,7 +16000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the core types from which all schemas are built. 
+        /// Get a specific named core type. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16091,11 +16091,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Coretype</returns>
+        /// <returns>CoretypeListing</returns>
         
-        public Coretype GetExternalcontactsOrganizationsSchemasCoretypes ()
+        public CoretypeListing GetExternalcontactsOrganizationsSchemasCoretypes ()
         {
-             ApiResponse<Coretype> localVarResponse = GetExternalcontactsOrganizationsSchemasCoretypesWithHttpInfo();
+             ApiResponse<CoretypeListing> localVarResponse = GetExternalcontactsOrganizationsSchemasCoretypesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -16104,9 +16104,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Coretype</returns>
+        /// <returns>ApiResponse of CoretypeListing</returns>
         
-        public ApiResponse< Coretype > GetExternalcontactsOrganizationsSchemasCoretypesWithHttpInfo ()
+        public ApiResponse< CoretypeListing > GetExternalcontactsOrganizationsSchemasCoretypesWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/externalcontacts/organizations/schemas/coretypes";
@@ -16171,9 +16171,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Coretype>(localVarStatusCode,
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
                 localVarHeaders,
-                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16184,11 +16184,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Coretype</returns>
+        /// <returns>Task of CoretypeListing</returns>
         
-        public async System.Threading.Tasks.Task<Coretype> GetExternalcontactsOrganizationsSchemasCoretypesAsync ()
+        public async System.Threading.Tasks.Task<CoretypeListing> GetExternalcontactsOrganizationsSchemasCoretypesAsync ()
         {
-             ApiResponse<Coretype> localVarResponse = await GetExternalcontactsOrganizationsSchemasCoretypesAsyncWithHttpInfo();
+             ApiResponse<CoretypeListing> localVarResponse = await GetExternalcontactsOrganizationsSchemasCoretypesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -16198,9 +16198,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Coretype)</returns>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Coretype>> GetExternalcontactsOrganizationsSchemasCoretypesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetExternalcontactsOrganizationsSchemasCoretypesAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/externalcontacts/organizations/schemas/coretypes";
@@ -16265,9 +16265,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Coretype>(localVarStatusCode,
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
                 localVarHeaders,
-                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

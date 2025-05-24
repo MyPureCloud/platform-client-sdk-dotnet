@@ -2883,7 +2883,7 @@ namespace Example
             var pageNumber = 56;  // int? | The number of the page to return (optional)  (default to 1)
             var pageSize = 56;  // int? | Max number of entities to return (optional)  (default to 25)
             var interval = 2023-07-17T00:00:00Z/2023-07-18T00:00:00Z;  // string | An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. (optional) 
-            var statuses = statuses&#x3D;Accepted,Executing,Complete,Failed;  // string | Job statuses to filter for (optional) 
+            var statuses = statuses&#x3D;Accepted,Executing,Complete,Failed,Scheduled;  // string | Job statuses to filter for (optional) 
 
             try
             { 
@@ -4613,4 +4613,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

@@ -106,7 +106,7 @@ public class ApiClientTests
         var mockHttp = new MockHttpMessageHandler();
         var response = new HttpResponseMessage((System.Net.HttpStatusCode)429);
         response.Headers.Add("Retry-After", "3");
-        mockHttp.When("*").Respond(response);
+        mockHttp.When("*").Respond(req => response);
         
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
@@ -258,7 +258,6 @@ public class ApiClientTests
 
         stopwatch = Stopwatch.StartNew();
         HttpResponse user = (HttpResponse)await apiClient.CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
-        
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 5000 && stopwatch.ElapsedMilliseconds < 5100, "It will wait for every 1 Sec provided by Retry-After header Sec and retry for 5 Sec");
         Assert.AreEqual(429, (int)user.StatusCode);
         stopwatch.Stop();
@@ -280,7 +279,7 @@ public class ApiClientTests
         var response = new HttpResponseMessage((System.Net.HttpStatusCode)429);
         response.Headers.Add("Retry-After", "1");
 
-        mockHttp.When("*").Respond(response);
+        mockHttp.When("*").Respond(req => response);
 
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;

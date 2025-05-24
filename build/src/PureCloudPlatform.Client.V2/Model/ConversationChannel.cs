@@ -190,7 +190,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Instagram for "Instagram"
             /// </summary>
             [EnumMember(Value = "Instagram")]
-            Instagram
+            Instagram,
+            
+            /// <summary>
+            /// Enum Apple for "Apple"
+            /// </summary>
+            [EnumMember(Value = "Apple")]
+            Apple
         }
         /// <summary>
         /// The type or category of this channel.

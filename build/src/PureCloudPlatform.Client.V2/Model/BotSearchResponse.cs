@@ -112,12 +112,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the bot (required).</param>
         /// <param name="BotType">The provider of the bot (required).</param>
         /// <param name="Description">The description of the bot.</param>
-        public BotSearchResponse(string Id = null, string Name = null, BotTypeEnum? BotType = null, string Description = null)
+        /// <param name="VirtualAgentEnabled">Whether the bot is a virtual agent or not.</param>
+        public BotSearchResponse(string Id = null, string Name = null, BotTypeEnum? BotType = null, string Description = null, bool? VirtualAgentEnabled = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.BotType = BotType;
             this.Description = Description;
+            this.VirtualAgentEnabled = VirtualAgentEnabled;
             
         }
         
@@ -153,6 +155,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether the bot is a virtual agent or not
+        /// </summary>
+        /// <value>Whether the bot is a virtual agent or not</value>
+        [DataMember(Name="virtualAgentEnabled", EmitDefaultValue=false)]
+        public bool? VirtualAgentEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -173,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  BotType: ").Append(BotType).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  VirtualAgentEnabled: ").Append(VirtualAgentEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -235,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.VirtualAgentEnabled == other.VirtualAgentEnabled ||
+                    this.VirtualAgentEnabled != null &&
+                    this.VirtualAgentEnabled.Equals(other.VirtualAgentEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -263,6 +280,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.VirtualAgentEnabled != null)
+                    hash = hash * 59 + this.VirtualAgentEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="WeekDate">The schedule week date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="Count">The number of trades in the &#39;Matched&#39; state with the initiating shift in the given week.</param>
-        public WeekShiftTradeMatchesSummaryResponse(String WeekDate = null, int? Count = null)
+        /// <param name="CrossWeekReceivingCount">The number of cross-week trades in the &#39;Matched&#39; state with the receiving shift for the given week.</param>
+        public WeekShiftTradeMatchesSummaryResponse(String WeekDate = null, int? Count = null, int? CrossWeekReceivingCount = null)
         {
             this.WeekDate = WeekDate;
             this.Count = Count;
+            this.CrossWeekReceivingCount = CrossWeekReceivingCount;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Count { get; set; }
 
 
+
+        /// <summary>
+        /// The number of cross-week trades in the &#39;Matched&#39; state with the receiving shift for the given week
+        /// </summary>
+        /// <value>The number of cross-week trades in the &#39;Matched&#39; state with the receiving shift for the given week</value>
+        [DataMember(Name="crossWeekReceivingCount", EmitDefaultValue=false)]
+        public int? CrossWeekReceivingCount { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  CrossWeekReceivingCount: ").Append(CrossWeekReceivingCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
+                ) &&
+                (
+                    this.CrossWeekReceivingCount == other.CrossWeekReceivingCount ||
+                    this.CrossWeekReceivingCount != null &&
+                    this.CrossWeekReceivingCount.Equals(other.CrossWeekReceivingCount)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+
+                if (this.CrossWeekReceivingCount != null)
+                    hash = hash * 59 + this.CrossWeekReceivingCount.GetHashCode();
 
                 return hash;
             }

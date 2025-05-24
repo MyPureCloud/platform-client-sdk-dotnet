@@ -18,7 +18,8 @@
 | **Text** | [**ConversationContentText**](ConversationContentText) | Text content. | [optional] |
 | **QuickReplyV2** | [**ConversationContentQuickReplyV2**](ConversationContentQuickReplyV2) | Quick reply V2 content. | [optional] |
 | **Reactions** | [**List&lt;ConversationContentReaction&gt;**](ConversationContentReaction) | A set of reactions to a message. | [optional] |
+| **Push** | [**ConversationContentPush**](ConversationContentPush) | Push content. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

@@ -133,4 +133,4 @@ namespace Example
 [**EmergencyLocation**](EmergencyLocation)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

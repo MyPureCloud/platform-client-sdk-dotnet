@@ -124,6 +124,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Listpicker,
             
             /// <summary>
+            /// Enum Paymentrequest for "PaymentRequest"
+            /// </summary>
+            [EnumMember(Value = "PaymentRequest")]
+            Paymentrequest,
+            
+            /// <summary>
+            /// Enum Paymentresponse for "PaymentResponse"
+            /// </summary>
+            [EnumMember(Value = "PaymentResponse")]
+            Paymentresponse,
+            
+            /// <summary>
+            /// Enum Push for "Push"
+            /// </summary>
+            [EnumMember(Value = "Push")]
+            Push,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
@@ -156,7 +174,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Text content..</param>
         /// <param name="QuickReplyV2">Quick reply V2 content..</param>
         /// <param name="Reactions">A set of reactions to a message..</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null, List<ConversationContentReaction> Reactions = null)
+        /// <param name="Push">Push content..</param>
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null, List<ConversationContentReaction> Reactions = null, ConversationContentPush Push = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -170,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Text = Text;
             this.QuickReplyV2 = QuickReplyV2;
             this.Reactions = Reactions;
+            this.Push = Push;
             
         }
         
@@ -275,6 +295,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConversationContentReaction> Reactions { get; set; }
 
 
+
+        /// <summary>
+        /// Push content.
+        /// </summary>
+        /// <value>Push content.</value>
+        [DataMember(Name="push", EmitDefaultValue=false)]
+        public ConversationContentPush Push { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -296,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  QuickReplyV2: ").Append(QuickReplyV2).Append("\n");
             sb.Append("  Reactions: ").Append(Reactions).Append("\n");
+            sb.Append("  Push: ").Append(Push).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -395,6 +425,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Reactions == other.Reactions ||
                     this.Reactions != null &&
                     this.Reactions.SequenceEqual(other.Reactions)
+                ) &&
+                (
+                    this.Push == other.Push ||
+                    this.Push != null &&
+                    this.Push.Equals(other.Push)
                 );
         }
 
@@ -444,6 +479,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Reactions != null)
                     hash = hash * 59 + this.Reactions.GetHashCode();
+
+                if (this.Push != null)
+                    hash = hash * 59 + this.Push.GetHashCode();
 
                 return hash;
             }

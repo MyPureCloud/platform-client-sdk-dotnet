@@ -23,10 +23,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="GenerationResults">The generation results.  Note the result will always be delivered via the generationResultsDownloadUrl; however the schema is included for documentation.</param>
         /// <param name="GenerationResultsDownloadUrl">The download URL from which to fetch the generation results for the rescheduling run.</param>
-        /// <param name="HeadcountForecast">The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation.</param>
+        /// <param name="HeadcountForecast">The headcount forecast. Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation.</param>
         /// <param name="HeadcountForecastDownloadUrl">The download URL from which to fetch the headcount forecast for the rescheduling run.</param>
         /// <param name="AgentSchedules">List of download links for agent schedules produced by the rescheduling run.</param>
-        public BuRescheduleResult(ScheduleGenerationResult GenerationResults = null, string GenerationResultsDownloadUrl = null, BuHeadcountForecast HeadcountForecast = null, string HeadcountForecastDownloadUrl = null, List<BuRescheduleAgentScheduleResult> AgentSchedules = null)
+        public BuRescheduleResult(ScheduleGenerationResult GenerationResults = null, string GenerationResultsDownloadUrl = null, BuHeadcountForecastBuPlanningGroupHeadcountForecastResult HeadcountForecast = null, string HeadcountForecastDownloadUrl = null, List<BuRescheduleAgentScheduleResult> AgentSchedules = null)
         {
             this.GenerationResults = GenerationResults;
             this.GenerationResultsDownloadUrl = GenerationResultsDownloadUrl;
@@ -57,11 +57,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation
+        /// The headcount forecast. Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation
         /// </summary>
-        /// <value>The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation</value>
+        /// <value>The headcount forecast. Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation</value>
         [DataMember(Name="headcountForecast", EmitDefaultValue=false)]
-        public BuHeadcountForecast HeadcountForecast { get; set; }
+        public BuHeadcountForecastBuPlanningGroupHeadcountForecastResult HeadcountForecast { get; set; }
 
 
 

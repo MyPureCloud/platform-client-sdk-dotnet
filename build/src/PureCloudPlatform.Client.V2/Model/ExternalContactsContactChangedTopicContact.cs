@@ -83,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FacebookId">FacebookId.</param>
         /// <param name="InstagramId">InstagramId.</param>
         /// <param name="ExternalIds">ExternalIds.</param>
+        /// <param name="AppleOpaqueIds">AppleOpaqueIds.</param>
         /// <param name="CanonicalContactId">CanonicalContactId.</param>
         /// <param name="Schema">Schema.</param>
         /// <param name="CustomFields">CustomFields.</param>
@@ -92,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MergeOperation">MergeOperation.</param>
         /// <param name="CreateDate">CreateDate.</param>
         /// <param name="ModifyDate">ModifyDate.</param>
-        public ExternalContactsContactChangedTopicContact(string Id = null, ExternalContactsContactChangedTopicDivision Division = null, ExternalContactsContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsContactChangedTopicTwitterId TwitterId = null, ExternalContactsContactChangedTopicLineId LineId = null, ExternalContactsContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsContactChangedTopicFacebookId FacebookId = null, ExternalContactsContactChangedTopicInstagramId InstagramId = null, List<ExternalContactsContactChangedTopicExternalId> ExternalIds = null, string CanonicalContactId = null, ExternalContactsContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<string> MergeSet = null, List<string> MergedFrom = null, string MergedTo = null, ExternalContactsContactChangedTopicMergeOperation MergeOperation = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
+        public ExternalContactsContactChangedTopicContact(string Id = null, ExternalContactsContactChangedTopicDivision Division = null, ExternalContactsContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsContactChangedTopicTwitterId TwitterId = null, ExternalContactsContactChangedTopicLineId LineId = null, ExternalContactsContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsContactChangedTopicFacebookId FacebookId = null, ExternalContactsContactChangedTopicInstagramId InstagramId = null, List<ExternalContactsContactChangedTopicExternalId> ExternalIds = null, List<ExternalContactsContactChangedTopicAppleOpaqueId> AppleOpaqueIds = null, string CanonicalContactId = null, ExternalContactsContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<string> MergeSet = null, List<string> MergedFrom = null, string MergedTo = null, ExternalContactsContactChangedTopicMergeOperation MergeOperation = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
         {
             this.Id = Id;
             this.Division = Division;
@@ -119,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FacebookId = FacebookId;
             this.InstagramId = InstagramId;
             this.ExternalIds = ExternalIds;
+            this.AppleOpaqueIds = AppleOpaqueIds;
             this.CanonicalContactId = CanonicalContactId;
             this.Schema = Schema;
             this.CustomFields = CustomFields;
@@ -328,6 +330,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AppleOpaqueIds
+        /// </summary>
+        [DataMember(Name="appleOpaqueIds", EmitDefaultValue=false)]
+        public List<ExternalContactsContactChangedTopicAppleOpaqueId> AppleOpaqueIds { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets CanonicalContactId
         /// </summary>
         [DataMember(Name="canonicalContactId", EmitDefaultValue=false)]
@@ -432,6 +442,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
             sb.Append("  InstagramId: ").Append(InstagramId).Append("\n");
             sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
+            sb.Append("  AppleOpaqueIds: ").Append(AppleOpaqueIds).Append("\n");
             sb.Append("  CanonicalContactId: ").Append(CanonicalContactId).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
@@ -607,6 +618,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalIds.SequenceEqual(other.ExternalIds)
                 ) &&
                 (
+                    this.AppleOpaqueIds == other.AppleOpaqueIds ||
+                    this.AppleOpaqueIds != null &&
+                    this.AppleOpaqueIds.SequenceEqual(other.AppleOpaqueIds)
+                ) &&
+                (
                     this.CanonicalContactId == other.CanonicalContactId ||
                     this.CanonicalContactId != null &&
                     this.CanonicalContactId.Equals(other.CanonicalContactId)
@@ -738,6 +754,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalIds != null)
                     hash = hash * 59 + this.ExternalIds.GetHashCode();
+
+                if (this.AppleOpaqueIds != null)
+                    hash = hash * 59 + this.AppleOpaqueIds.GetHashCode();
 
                 if (this.CanonicalContactId != null)
                     hash = hash * 59 + this.CanonicalContactId.GetHashCode();

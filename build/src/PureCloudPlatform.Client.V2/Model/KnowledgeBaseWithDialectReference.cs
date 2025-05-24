@@ -196,6 +196,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Hiin,
             
             /// <summary>
+            /// Enum Trtr for "tr-TR"
+            /// </summary>
+            [EnumMember(Value = "tr-TR")]
+            Trtr,
+            
+            /// <summary>
             /// Enum Esar for "es-AR"
             /// </summary>
             [EnumMember(Value = "es-AR")]

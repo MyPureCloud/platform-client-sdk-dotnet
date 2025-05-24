@@ -2011,6 +2011,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Emailcampaignschedule,
             
             /// <summary>
+            /// Enum Whatsappcampaignschedule for "WhatsAppCampaignSchedule"
+            /// </summary>
+            [EnumMember(Value = "WhatsAppCampaignSchedule")]
+            Whatsappcampaignschedule,
+            
+            /// <summary>
             /// Enum Predictor for "Predictor"
             /// </summary>
             [EnumMember(Value = "Predictor")]

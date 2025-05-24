@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Result">The headcount forecast, null when downloadUrl is provided.</param>
         /// <param name="DownloadUrl">Download URL.  Null unless the response is too large to pass directly through the api.</param>
-        public BuHeadcountForecastResponse(BuHeadcountForecast Result = null, string DownloadUrl = null)
+        public BuHeadcountForecastResponse(BuHeadcountForecastBuPlanningGroupHeadcountForecastResult Result = null, string DownloadUrl = null)
         {
             this.Result = Result;
             this.DownloadUrl = DownloadUrl;
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The headcount forecast, null when downloadUrl is provided</value>
         [DataMember(Name="result", EmitDefaultValue=false)]
-        public BuHeadcountForecast Result { get; set; }
+        public BuHeadcountForecastBuPlanningGroupHeadcountForecastResult Result { get; set; }
 
 
 

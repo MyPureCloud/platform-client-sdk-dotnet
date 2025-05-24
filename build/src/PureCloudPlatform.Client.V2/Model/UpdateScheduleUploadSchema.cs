@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HeadcountForecast">The headcount forecast to associate with the schedule.</param>
         /// <param name="AgentSchedules">Individual agent schedules.</param>
         /// <param name="Metadata">Version metadata for this schedule (required).</param>
-        public UpdateScheduleUploadSchema(string Description = null, bool? Published = null, BuShortTermForecastReference ShortTermForecast = null, BuHeadcountForecast HeadcountForecast = null, List<BuUpdateAgentScheduleUploadSchema> AgentSchedules = null, WfmVersionedEntityMetadata Metadata = null)
+        public UpdateScheduleUploadSchema(string Description = null, bool? Published = null, BuShortTermForecastReference ShortTermForecast = null, BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema HeadcountForecast = null, List<BuUpdateAgentScheduleUploadSchema> AgentSchedules = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Description = Description;
             this.Published = Published;
@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The headcount forecast to associate with the schedule</value>
         [DataMember(Name="headcountForecast", EmitDefaultValue=false)]
-        public BuHeadcountForecast HeadcountForecast { get; set; }
+        public BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema HeadcountForecast { get; set; }
 
 
 
