@@ -11,8 +11,8 @@
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** | The number of users matching search term | [optional] |
 | **UnfilteredTotal** | **int?** | The total number of users | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

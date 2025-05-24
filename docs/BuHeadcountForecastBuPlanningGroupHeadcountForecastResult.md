@@ -1,14 +1,14 @@
-# BuHeadcountForecast
+# BuHeadcountForecastBuPlanningGroupHeadcountForecastResult
 
-## ININ.PureCloudApi.Model.BuHeadcountForecast
+## ININ.PureCloudApi.Model.BuHeadcountForecastBuPlanningGroupHeadcountForecastResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;BuPlanningGroupHeadcountForecast&gt;**](BuPlanningGroupHeadcountForecast) |  | [optional] |
+| **Entities** | [**List&lt;BuPlanningGroupHeadcountForecastResult&gt;**](BuPlanningGroupHeadcountForecastResult) |  | [optional] |
 | **ReferenceStartDate** | **DateTime?** | Reference start date for the interval values in each forecast entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 233.0.0
+Documentation version PureCloudPlatform.Client.V2 234.0.0
 
 ## Install Using nuget
 
@@ -594,7 +594,7 @@ public class CustomHttpClient : AbstractHttpClient
 {
     private HttpClient httpClient;
 
-    public DefaultHttpClient() : base()
+    public CustomHttpClient() : base()
     {
         httpClient = new HttpClient();
     }
@@ -610,7 +610,60 @@ public class CustomHttpClient : AbstractHttpClient
     }
 }
 
-Configuration.Default.ApiClient.HttpClient = new CustomHttpClient
+Configuration.Default.ApiClient.HttpClient = new CustomHttpClient();
+```
+
+### Using MTLS authentication via a Gateway
+
+If there is MTLS authentication that needs to be set for a gateway server (i.e. if the Genesys Cloud requests must be sent through an intermediate API gateway or equivalent, with MTLS enabled), you can use SetMTLSCertificates to set the clients certificate.
+
+An example using `SetMTLSCertificates` to setup MTLS for gateway is shown below
+
+```csharp
+ApiClient.GatewayConfiguration gatewayConfiguration = new ApiClient.GatewayConfiguration();
+gatewayConfiguration.Host = "mygateway.mydomain.myextension";
+gatewayConfiguration.Protocol = "https";
+gatewayConfiguration.Port = 1443;
+gatewayConfiguration.PathParamsLogin = "myadditionalpathforlogin";
+gatewayConfiguration.PathParamsApi = "myadditionalpathforapi";
+Configuration.Default.ApiClient.GatewayConfig = gatewayConfiguration;
+
+var certPath = "path/to/cert.pfx";
+var certPass = "x509Password";
+Configuration.Default.ApiClient.SetMTLSCertificates(certPath, certPass);
+```
+
+### Using Pre Commit and Post Commit Hooks
+
+For any custom requirements like pre validations or post cleanups (for ex: OCSP and CRL validation), we can inject the prehook and posthook functions.
+The SDK's default client will make sure the injected hook functions are executed.
+
+The Pre/Post Hook functions must have the following method signature shown below
+
+```csharp
+IHttpRequest preHook(IHttpRequest request)
+IHttpResponse postHook(IHttpRepsonse response)
+```
+
+Here is an example of using a Pre Hook function:
+
+```csharp
+private IHttpRequest preHook(IHttpRequest request)
+{
+    try {
+        Console.WriteLine("Running PreHook: Certificate Validation Checks");
+
+        // custom validation here
+
+        Console.WriteLine("Certificate Validation Complete");
+    } catch (Exception ex) {
+        Console.WriteLine($"Error in prehook validation: {ex.Message}");
+        throw ex; // Reject request if validation fails
+    }
+}
+
+Configuration.Default.ApiClient.HttpClient.SetPreRequestHook(preHook);
+
 ```
 
 ### Building from Source

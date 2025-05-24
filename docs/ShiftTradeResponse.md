@@ -14,6 +14,7 @@
 | **InitiatingShiftId** | **string** | The ID of the shift offered for trade by the initiating user | [optional] |
 | **InitiatingShiftStart** | **DateTime?** | The start date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **InitiatingShiftEnd** | **DateTime?** | The end date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **ReceivingWeekDate** | **String** | The start week date of the receiving shift in yyyy-MM-dd format for a cross-week shift trade or null otherwise. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **ReceivingUser** | [**UserReference**](UserReference) | The user matching the trade, or if the state is not &#39;Matched&#39;, the user to whom the trade request was sent | [optional] |
 | **ReceivingShiftId** | **string** | The ID of the shift being exchanged for the initiating shift, null if the receiving user is picking up a shift | [optional] |
 | **ReceivingShiftStart** | **DateTime?** | The start date/time of the receiving shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -27,4 +28,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

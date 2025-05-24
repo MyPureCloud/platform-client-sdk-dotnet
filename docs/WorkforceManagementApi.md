@@ -7499,7 +7499,7 @@ namespace Example
 
 ## GetWorkforcemanagementManagementunitWeekShifttrades
 
-> [**WeekShiftTradeListResponse**](WeekShiftTradeListResponse) GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
+> [**WeekShiftTradeListResponse**](WeekShiftTradeListResponse) GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null)
 
 
 Gets all the shift trades for a given week
@@ -7534,12 +7534,13 @@ namespace Example
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var evaluateMatches = true;  // bool? | Whether to evaluate the matches for violations (optional)  (default to true)
+            var includeCrossWeekShifts = true;  // bool? | Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional)  (default to false)
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
 
             try
             { 
                 // Gets all the shift trades for a given week
-                WeekShiftTradeListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, forceDownloadService);
+                WeekShiftTradeListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, includeCrossWeekShifts, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7559,6 +7560,7 @@ namespace Example
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **evaluateMatches** | **bool?**| Whether to evaluate the matches for violations | [optional] [default to true] |
+| **includeCrossWeekShifts** | **bool?**| Whether to include all shift trades with either the initiating shift or the receiving shift in the week | [optional] [default to false] |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
 
 ### Return type
@@ -16414,4 +16416,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

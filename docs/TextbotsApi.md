@@ -15,7 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## GetTextbotsBotsSearch
 
-> [**BotSearchResponseEntityListing**](BotSearchResponseEntityListing) GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
+> [**BotSearchResponseEntityListing**](BotSearchResponseEntityListing) GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null)
 
 
 Find bots using the currently configured friendly name or ID.
@@ -51,12 +51,13 @@ namespace Example
             var botType = new List<string>(); // List<string> | Bot types (optional) 
             var botName = botName_example;  // string | Bot name (optional) 
             var botId = new List<string>(); // List<string> | Bot IDs. Maximum of 50 (optional) 
+            var virtualAgentEnabled = true;  // bool? | Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional) 
             var pageSize = 56;  // int? | The maximum results to return. Maximum of 100 (optional)  (default to 25)
 
             try
             { 
                 // Find bots using the currently configured friendly name or ID.
-                BotSearchResponseEntityListing result = apiInstance.GetTextbotsBotsSearch(botType, botName, botId, pageSize);
+                BotSearchResponseEntityListing result = apiInstance.GetTextbotsBotsSearch(botType, botName, botId, virtualAgentEnabled, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -76,6 +77,7 @@ namespace Example
 | **botType** | [**List<string>**](string)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow, GenesysDigitalBotFlow, GenesysVoiceSurveyFlow, GenesysDigitalBotConnector |
 | **botName** | **string**| Bot name | [optional]  |
 | **botId** | [**List<string>**](string)| Bot IDs. Maximum of 50 | [optional]  |
+| **virtualAgentEnabled** | **bool?**| Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows | [optional]  |
 | **pageSize** | **int?**| The maximum results to return. Maximum of 100 | [optional] [default to 25] |
 
 ### Return type
@@ -277,4 +279,4 @@ namespace Example
 [**PostTextResponse**](PostTextResponse)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

@@ -37,7 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTaskmanagementWorkitemsSchemaVersion**](#GetTaskmanagementWorkitemsSchemaVersion) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetTaskmanagementWorkitemsSchemaVersions**](#GetTaskmanagementWorkitemsSchemaVersions) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions | Get all versions of a schema |
 | [**GetTaskmanagementWorkitemsSchemas**](#GetTaskmanagementWorkitemsSchemas) | **Get** /api/v2/taskmanagement/workitems/schemas | Get a list of schemas. |
-| [**GetTaskmanagementWorkitemsSchemasCoretype**](#GetTaskmanagementWorkitemsSchemasCoretype) | **Get** /api/v2/taskmanagement/workitems/schemas/coretypes/{coreTypeName} | Get the core types from which all schemas are built. |
+| [**GetTaskmanagementWorkitemsSchemasCoretype**](#GetTaskmanagementWorkitemsSchemasCoretype) | **Get** /api/v2/taskmanagement/workitems/schemas/coretypes/{coreTypeName} | Get a specific named core type. |
 | [**GetTaskmanagementWorkitemsSchemasCoretypes**](#GetTaskmanagementWorkitemsSchemasCoretypes) | **Get** /api/v2/taskmanagement/workitems/schemas/coretypes | Get the core types from which all schemas are built. |
 | [**GetTaskmanagementWorkitemsSchemasLimits**](#GetTaskmanagementWorkitemsSchemasLimits) | **Get** /api/v2/taskmanagement/workitems/schemas/limits | Get quantitative limits on schemas |
 | [**GetTaskmanagementWorktype**](#GetTaskmanagementWorktype) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId} | Get a worktype |
@@ -2061,7 +2061,7 @@ This endpoint does require any parameters.
 > [**Coretype**](Coretype) GetTaskmanagementWorkitemsSchemasCoretype (string coreTypeName)
 
 
-Get the core types from which all schemas are built.
+Get a specific named core type.
 
 Requires ANY permissions: 
 
@@ -2093,7 +2093,7 @@ namespace Example
 
             try
             { 
-                // Get the core types from which all schemas are built.
+                // Get a specific named core type.
                 Coretype result = apiInstance.GetTaskmanagementWorkitemsSchemasCoretype(coreTypeName);
                 Debug.WriteLine(result);
             }
@@ -2120,7 +2120,7 @@ namespace Example
 
 ## GetTaskmanagementWorkitemsSchemasCoretypes
 
-> [**Coretype**](Coretype) GetTaskmanagementWorkitemsSchemasCoretypes ()
+> [**CoretypeListing**](CoretypeListing) GetTaskmanagementWorkitemsSchemasCoretypes ()
 
 
 Get the core types from which all schemas are built.
@@ -2155,7 +2155,7 @@ namespace Example
             try
             { 
                 // Get the core types from which all schemas are built.
-                Coretype result = apiInstance.GetTaskmanagementWorkitemsSchemasCoretypes();
+                CoretypeListing result = apiInstance.GetTaskmanagementWorkitemsSchemasCoretypes();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2172,7 +2172,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Coretype**](Coretype)
+[**CoretypeListing**](CoretypeListing)
 
 
 ## GetTaskmanagementWorkitemsSchemasLimits
@@ -4925,4 +4925,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

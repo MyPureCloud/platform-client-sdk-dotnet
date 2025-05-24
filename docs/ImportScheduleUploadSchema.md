@@ -10,9 +10,9 @@
 | **WeekCount** | **int?** | The number of weeks the imported schedule will cover | |
 | **Published** | **bool?** | Whether the imported schedule should be immediately published | [optional] |
 | **ShortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | The short term forecast to associate with the imported schedule | [optional] |
-| **HeadcountForecast** | [**BuHeadcountForecast**](BuHeadcountForecast) | The headcount forecast to associate with the imported schedule | [optional] |
+| **HeadcountForecast** | [**BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema**](BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema) | The headcount forecast to associate with the imported schedule | [optional] |
 | **AgentSchedules** | [**List&lt;BuImportAgentScheduleUploadSchema&gt;**](BuImportAgentScheduleUploadSchema) | Individual agent schedules | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

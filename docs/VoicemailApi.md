@@ -1083,8 +1083,10 @@ namespace Example
 
 Get a user's voicemail policy
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:plugin:all
+* voicemail:userPolicy:viewOther
 
 ### Example
 ```{"language":"csharp"}
@@ -1335,8 +1337,10 @@ namespace Example
 
 Update a user's voicemail policy
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:plugin:all
+* voicemail:userPolicy:viewOther
 
 ### Example
 ```{"language":"csharp"}
@@ -1647,9 +1651,10 @@ namespace Example
 
 Update a user's voicemail policy
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * telephony:plugin:all
+* voicemail:userPolicy:viewOther
 
 ### Example
 ```{"language":"csharp"}
@@ -1704,4 +1709,4 @@ namespace Example
 [**VoicemailUserPolicy**](VoicemailUserPolicy)
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_

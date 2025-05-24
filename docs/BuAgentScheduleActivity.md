@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **StartDate** | **DateTime?** | The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **LengthMinutes** | **int?** | The length of this activity in minutes | [optional] |
-| **Description** | **string** | The description of this activity | [optional] |
-| **ActivityCodeId** | **string** | The ID of the activity code associated with this activity | [optional] |
+| **StartDate** | **DateTime?** | The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **LengthMinutes** | **int?** | The length of this activity in minutes | |
+| **Description** | **string** | The description of this activity | |
+| **ActivityCodeId** | **string** | The ID of the activity code associated with this activity | |
 | **Paid** | **bool?** | Whether this activity is paid | [optional] |
 | **PayableMinutes** | **int?** | Payable minutes for this activity | [optional] |
 | **TimeOffRequestId** | **string** | The ID of the time off request associated with this activity, if applicable | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 233.0.0_
+_PureCloudPlatform.Client.V2 234.0.0_
