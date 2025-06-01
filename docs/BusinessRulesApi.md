@@ -603,7 +603,7 @@ namespace Example
             var apiInstance = new BusinessRulesApi();
             var tableId = tableId_example;  // string | Table ID
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
             var divisionIds = new List<string>(); // List<string> | One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional) 
 
             try
@@ -628,7 +628,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **tableId** | **string**| Table ID |  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
 | **divisionIds** | [**List<string>**](string)| One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. | [optional]  |
 
 ### Return type
@@ -672,7 +672,7 @@ namespace Example
 
             var apiInstance = new BusinessRulesApi();
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
             var divisionIds = new List<string>(); // List<string> | One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional) 
 
             try
@@ -696,7 +696,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
 | **divisionIds** | [**List<string>**](string)| One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. | [optional]  |
 
 ### Return type
@@ -706,7 +706,7 @@ namespace Example
 
 ## GetBusinessrulesDecisiontablesSearch
 
-> [**DecisionTableListing**](DecisionTableListing) GetBusinessrulesDecisiontablesSearch (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null)
+> [**DecisionTableListing**](DecisionTableListing) GetBusinessrulesDecisiontablesSearch (string after = null, string pageSize = null, string schemaId = null, string name = null)
 
 
 Search for decision tables.
@@ -739,16 +739,15 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new BusinessRulesApi();
-            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
             var schemaId = schemaId_example;  // string | Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional) 
             var name = name_example;  // string | Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional) 
 
             try
             { 
                 // Search for decision tables.
-                DecisionTableListing result = apiInstance.GetBusinessrulesDecisiontablesSearch(before, after, pageSize, schemaId, name);
+                DecisionTableListing result = apiInstance.GetBusinessrulesDecisiontablesSearch(after, pageSize, schemaId, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -765,9 +764,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
 | **schemaId** | **string**| Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. | [optional]  |
 | **name** | **string**| Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. | [optional]  |
 
@@ -1960,4 +1958,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_

@@ -141,7 +141,7 @@ namespace Example
 
 ## GetDiagnosticsLogcaptureBrowserUser
 
-> [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration) GetDiagnosticsLogcaptureBrowserUser (string userId)
+> [**LogCaptureUserConfigurationResponse**](LogCaptureUserConfigurationResponse) GetDiagnosticsLogcaptureBrowserUser (string userId)
 
 
 Get log capture configuration for the user
@@ -177,7 +177,7 @@ namespace Example
             try
             { 
                 // Get log capture configuration for the user
-                LogCaptureUserConfiguration result = apiInstance.GetDiagnosticsLogcaptureBrowserUser(userId);
+                LogCaptureUserConfigurationResponse result = apiInstance.GetDiagnosticsLogcaptureBrowserUser(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,12 +198,12 @@ namespace Example
 
 ### Return type
 
-[**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)
+[**LogCaptureUserConfigurationResponse**](LogCaptureUserConfigurationResponse)
 
 
 ## GetDiagnosticsLogcaptureBrowserUsers
 
-> [**PagelessEntityListing**](PagelessEntityListing) GetDiagnosticsLogcaptureBrowserUsers (bool? includeExpired = null)
+> [**LogCaptureUserConfigurationListing**](LogCaptureUserConfigurationListing) GetDiagnosticsLogcaptureBrowserUsers (bool? includeExpired = null)
 
 
 Get all log capture enabled users for an org
@@ -239,7 +239,7 @@ namespace Example
             try
             { 
                 // Get all log capture enabled users for an org
-                PagelessEntityListing result = apiInstance.GetDiagnosticsLogcaptureBrowserUsers(includeExpired);
+                LogCaptureUserConfigurationListing result = apiInstance.GetDiagnosticsLogcaptureBrowserUsers(includeExpired);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -260,7 +260,7 @@ namespace Example
 
 ### Return type
 
-[**PagelessEntityListing**](PagelessEntityListing)
+[**LogCaptureUserConfigurationListing**](LogCaptureUserConfigurationListing)
 
 
 ## PostDiagnosticsLogcaptureBrowserEntriesDownloadJobs
@@ -327,7 +327,7 @@ namespace Example
 
 ## PostDiagnosticsLogcaptureBrowserEntriesQuery
 
-> [**LogCaptureQueryResponse**](LogCaptureQueryResponse) PostDiagnosticsLogcaptureBrowserEntriesQuery (string before = null, string after = null, string pageSize = null, LogCaptureQueryRequest body = null)
+> [**LogCaptureQueryResponse**](LogCaptureQueryResponse) PostDiagnosticsLogcaptureBrowserEntriesQuery (string after = null, string pageSize = null, LogCaptureQueryRequest body = null)
 
 
 Query collected log entries. It returns a limited amount of records, to get all records use download endpoint.
@@ -358,7 +358,6 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LogCaptureApi();
-            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var body = new LogCaptureQueryRequest(); // LogCaptureQueryRequest |  (optional) 
@@ -366,7 +365,7 @@ namespace Example
             try
             { 
                 // Query collected log entries. It returns a limited amount of records, to get all records use download endpoint.
-                LogCaptureQueryResponse result = apiInstance.PostDiagnosticsLogcaptureBrowserEntriesQuery(before, after, pageSize, body);
+                LogCaptureQueryResponse result = apiInstance.PostDiagnosticsLogcaptureBrowserEntriesQuery(after, pageSize, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -383,7 +382,6 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **body** | [**LogCaptureQueryRequest**](LogCaptureQueryRequest)|  | [optional]  |
@@ -457,4 +455,4 @@ namespace Example
 [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_

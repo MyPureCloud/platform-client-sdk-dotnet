@@ -1805,6 +1805,7 @@ Delete a dialer campaign schedule.
 Requires ANY permissions: 
 
 * outbound:schedule:delete
+* outbound:campaign:deleteSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -1866,6 +1867,7 @@ Delete an email campaign schedule.
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:delete
+* outbound:emailCampaign:deleteSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -1927,6 +1929,7 @@ Delete a messaging campaign schedule.
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:delete
+* outbound:messagingCampaign:deleteSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -6096,6 +6099,7 @@ Get a dialer campaign schedule.
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaign:viewSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -6158,6 +6162,7 @@ Query for a list of dialer campaign schedules.
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaign:viewSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -6215,6 +6220,7 @@ Get an email campaign schedule.
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:view
+* outbound:emailCampaign:viewSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -6277,6 +6283,7 @@ Query for a list of email campaign schedules.
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:view
+* outbound:emailCampaign:viewSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -6334,6 +6341,7 @@ Get a messaging campaign schedule.
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:view
+* outbound:messagingCampaign:viewSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -6396,6 +6404,7 @@ Query for a list of messaging campaign schedules.
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:view
+* outbound:messagingCampaign:viewSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -10707,6 +10716,7 @@ Update a new campaign schedule.
 Requires ANY permissions: 
 
 * outbound:schedule:edit
+* outbound:campaign:editSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -10771,6 +10781,7 @@ Update an email campaign schedule.
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:edit
+* outbound:emailCampaign:editSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -10835,6 +10846,7 @@ Update a new messaging campaign schedule.
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:edit
+* outbound:messagingCampaign:editSchedule
 
 ### Example
 ```{"language":"csharp"}
@@ -11079,4 +11091,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_

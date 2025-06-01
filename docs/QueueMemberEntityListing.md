@@ -9,11 +9,11 @@
 | **Entities** | [**List&lt;QueueMember&gt;**](QueueMember) |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_

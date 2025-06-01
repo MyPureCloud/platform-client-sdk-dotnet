@@ -28,6 +28,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsActionsCertificatesTruststore**](#GetIntegrationsActionsCertificatesTruststore) | **Get** /api/v2/integrations/actions/certificates/truststore | Retrieves basic info about trusted root CA certificates |
 | [**GetIntegrationsActionsDrafts**](#GetIntegrationsActionsDrafts) | **Get** /api/v2/integrations/actions/drafts | Retrieves all action drafts associated with the filters passed in via query param. |
 | [**GetIntegrationsActionsFunctionsRuntimes**](#GetIntegrationsActionsFunctionsRuntimes) | **Get** /api/v2/integrations/actions/functions/runtimes | Get action function settings for Action |
+| [**GetIntegrationsBotconnectorBot**](#GetIntegrationsBotconnectorBot) | **Get** /api/v2/integrations/botconnectors/{integrationId}/bots/{botId} | Get a specific Bot details |
+| [**GetIntegrationsBotconnectorBots**](#GetIntegrationsBotconnectorBots) | **Get** /api/v2/integrations/botconnectors/{integrationId}/bots | Get the list of bots for this integration. |
+| [**GetIntegrationsBotconnectorBotsSummaries**](#GetIntegrationsBotconnectorBotsSummaries) | **Get** /api/v2/integrations/botconnectors/{integrationId}/bots/summaries | Get the summary list of bots for this integration. |
 | [**GetIntegrationsBotconnectorIntegrationIdBot**](#GetIntegrationsBotconnectorIntegrationIdBot) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId} | Get a specific botConnector bot, plus versions, for this integration |
 | [**GetIntegrationsBotconnectorIntegrationIdBotVersions**](#GetIntegrationsBotconnectorIntegrationIdBotVersions) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions | Get a list of bot versions for a bot |
 | [**GetIntegrationsBotconnectorIntegrationIdBots**](#GetIntegrationsBotconnectorIntegrationIdBots) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots | Get a list of botConnector bots for this integration |
@@ -80,6 +83,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntegrationsActionTest**](#PostIntegrationsActionTest) | **Post** /api/v2/integrations/actions/{actionId}/test | Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. |
 | [**PostIntegrationsActions**](#PostIntegrationsActions) | **Post** /api/v2/integrations/actions | Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. |
 | [**PostIntegrationsActionsDrafts**](#PostIntegrationsActionsDrafts) | **Post** /api/v2/integrations/actions/drafts | Create a new Draft |
+| [**PostIntegrationsBotconnectorsIncomingMessages**](#PostIntegrationsBotconnectorsIncomingMessages) | **Post** /api/v2/integrations/botconnectors/incoming/messages | Send an incoming message to the bot. |
+| [**PostIntegrationsBotconnectorsOutgoingMessages**](#PostIntegrationsBotconnectorsOutgoingMessages) | **Post** /api/v2/integrations/botconnectors/outgoing/messages | Send an outgoing message to the end user. |
 | [**PostIntegrationsCredentials**](#PostIntegrationsCredentials) | **Post** /api/v2/integrations/credentials | Create a set of credentials |
 | [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs | Get a Nuance bot in the specified Integration asynchronously |
 | [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](#PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs | Get a list of Nuance bots in the specified Integration asynchronously |
@@ -1553,6 +1558,210 @@ This endpoint does require any parameters.
 ### Return type
 
 [**List<FunctionRuntime>**](FunctionRuntime)
+
+
+## GetIntegrationsBotconnectorBot
+
+> [**Bot**](Bot) GetIntegrationsBotconnectorBot (string integrationId, string botId, string version = null)
+
+
+Get a specific Bot details
+
+GetIntegrationsBotconnectorBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integration:botconnector:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsBotconnectorBotExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var integrationId = integrationId_example;  // string | The integration ID for this group of bots
+            var botId = botId_example;  // string | The bot ID for this bot
+            var version = version_example;  // string | Specific Version (optional) 
+
+            try
+            { 
+                // Get a specific Bot details
+                Bot result = apiInstance.GetIntegrationsBotconnectorBot(integrationId, botId, version);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsBotconnectorBot: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| The integration ID for this group of bots |  |
+| **botId** | **string**| The bot ID for this bot |  |
+| **version** | **string**| Specific Version | [optional]  |
+
+### Return type
+
+[**Bot**](Bot)
+
+
+## GetIntegrationsBotconnectorBots
+
+> [**BotListing**](BotListing) GetIntegrationsBotconnectorBots (string integrationId, int? pageNumber = null, int? pageSize = null)
+
+
+Get the list of bots for this integration.
+
+GetIntegrationsBotconnectorBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integration:botconnector:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsBotconnectorBotsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var integrationId = integrationId_example;  // string | The integration ID for this group of bots.
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get the list of bots for this integration.
+                BotListing result = apiInstance.GetIntegrationsBotconnectorBots(integrationId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsBotconnectorBots: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| The integration ID for this group of bots. |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**BotListing**](BotListing)
+
+
+## GetIntegrationsBotconnectorBotsSummaries
+
+> [**BotSummaryEntityListing**](BotSummaryEntityListing) GetIntegrationsBotconnectorBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null)
+
+
+Get the summary list of bots for this integration.
+
+GetIntegrationsBotconnectorBotsSummaries is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integration:botconnector:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsBotconnectorBotsSummariesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var integrationId = integrationId_example;  // string | The integration ID for this group of bots.
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get the summary list of bots for this integration.
+                BotSummaryEntityListing result = apiInstance.GetIntegrationsBotconnectorBotsSummaries(integrationId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsBotconnectorBotsSummaries: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| The integration ID for this group of bots. |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**BotSummaryEntityListing**](BotSummaryEntityListing)
 
 
 ## GetIntegrationsBotconnectorIntegrationIdBot
@@ -4962,6 +5171,134 @@ namespace Example
 [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action)
 
 
+## PostIntegrationsBotconnectorsIncomingMessages
+
+> [**IncomingMessageResponse**](IncomingMessageResponse) PostIntegrationsBotconnectorsIncomingMessages (IncomingMessageRequest body)
+
+
+Send an incoming message to the bot.
+
+PostIntegrationsBotconnectorsIncomingMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integration:botconnector:send
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsBotconnectorsIncomingMessagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var body = new IncomingMessageRequest(); // IncomingMessageRequest | Incoming Message Request
+
+            try
+            { 
+                // Send an incoming message to the bot.
+                IncomingMessageResponse result = apiInstance.PostIntegrationsBotconnectorsIncomingMessages(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsBotconnectorsIncomingMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**IncomingMessageRequest**](IncomingMessageRequest)| Incoming Message Request |  |
+
+### Return type
+
+[**IncomingMessageResponse**](IncomingMessageResponse)
+
+
+## PostIntegrationsBotconnectorsOutgoingMessages
+
+> [**OutgoingMessageResponse**](OutgoingMessageResponse) PostIntegrationsBotconnectorsOutgoingMessages (OutgoingMessageRequest body)
+
+
+Send an outgoing message to the end user.
+
+PostIntegrationsBotconnectorsOutgoingMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integration:botconnector:send
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsBotconnectorsOutgoingMessagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var body = new OutgoingMessageRequest(); // OutgoingMessageRequest | Outgoing Message Request
+
+            try
+            { 
+                // Send an outgoing message to the end user.
+                OutgoingMessageResponse result = apiInstance.PostIntegrationsBotconnectorsOutgoingMessages(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsBotconnectorsOutgoingMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OutgoingMessageRequest**](OutgoingMessageRequest)| Outgoing Message Request |  |
+
+### Return type
+
+[**OutgoingMessageResponse**](OutgoingMessageResponse)
+
+
 ## PostIntegrationsCredentials
 
 > [**CredentialInfo**](CredentialInfo) PostIntegrationsCredentials (Credential body = null)
@@ -5726,4 +6063,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_

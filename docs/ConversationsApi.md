@@ -217,6 +217,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessageCommunicationMessages**](#PostConversationsMessageCommunicationMessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
 | [**PostConversationsMessageCommunicationMessagesMedia**](#PostConversationsMessageCommunicationMessagesMedia) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
 | [**PostConversationsMessageCommunicationMessagesMediaUploads**](#PostConversationsMessageCommunicationMessagesMediaUploads) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads | Create a URL to upload a message media file |
+| [**PostConversationsMessageCommunicationSocialmediaMessages**](#PostConversationsMessageCommunicationSocialmediaMessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/socialmedia/messages | Send a social media message |
 | [**PostConversationsMessageCommunicationTyping**](#PostConversationsMessageCommunicationTyping) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
 | [**PostConversationsMessageInboundOpenEvent**](#PostConversationsMessageInboundOpenEvent) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/event | Send an inbound Open Event Message |
 | [**PostConversationsMessageInboundOpenMessage**](#PostConversationsMessageInboundOpenMessage) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/message | Send inbound Open Message |
@@ -7730,6 +7731,7 @@ Update conversation participant
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 ```{"language":"csharp"}
@@ -8389,6 +8391,7 @@ This endpoint is deprecated. Please see the article https://help.mypurecloud.com
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 ```{"language":"csharp"}
@@ -8670,6 +8673,7 @@ This endpoint is deprecated. Please see the article https://help.mypurecloud.com
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 ```{"language":"csharp"}
@@ -9008,6 +9012,7 @@ Update conversation participant
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 ```{"language":"csharp"}
@@ -9334,6 +9339,7 @@ Update conversation participant
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 ```{"language":"csharp"}
@@ -13884,6 +13890,74 @@ namespace Example
 [**MessageMediaUploadData**](MessageMediaUploadData)
 
 
+## PostConversationsMessageCommunicationSocialmediaMessages
+
+> [**SocialMediaMessageData**](SocialMediaMessageData) PostConversationsMessageCommunicationSocialmediaMessages (string conversationId, string communicationId, AdditionalSocialMediaMessage body)
+
+
+Send a social media message
+
+Send a social media message on existing conversation/communication.
+
+Requires ANY permissions: 
+
+* conversation:socialmedia:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageCommunicationSocialmediaMessagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new AdditionalSocialMediaMessage(); // AdditionalSocialMediaMessage | Message
+
+            try
+            { 
+                // Send a social media message
+                SocialMediaMessageData result = apiInstance.PostConversationsMessageCommunicationSocialmediaMessages(conversationId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageCommunicationSocialmediaMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**AdditionalSocialMediaMessage**](AdditionalSocialMediaMessage)| Message |  |
+
+### Return type
+
+[**SocialMediaMessageData**](SocialMediaMessageData)
+
+
 ## PostConversationsMessageCommunicationTyping
 
 > void PostConversationsMessageCommunicationTyping (string conversationId, string communicationId, MessageTypingEventRequest body)
@@ -17010,4 +17084,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_
