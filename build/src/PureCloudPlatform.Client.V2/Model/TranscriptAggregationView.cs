@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Nspeechtextanalyzedconversations for "nSpeechTextAnalyzedConversations"
+            /// </summary>
+            [EnumMember(Value = "nSpeechTextAnalyzedConversations")]
+            Nspeechtextanalyzedconversations,
+            
+            /// <summary>
             /// Enum Ntopiccommunications for "nTopicCommunications"
             /// </summary>
             [EnumMember(Value = "nTopicCommunications")]

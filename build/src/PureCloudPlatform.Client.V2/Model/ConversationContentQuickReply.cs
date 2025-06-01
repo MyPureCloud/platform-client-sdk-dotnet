@@ -58,12 +58,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Payload">Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response. (required).</param>
         /// <param name="Image">URL of an image associated with the quick reply..</param>
         /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply..</param>
-        public ConversationContentQuickReply(string Text = null, string Payload = null, string Image = null, ActionEnum? Action = null)
+        /// <param name="SummaryText">Summary of what the quick reply relates to..</param>
+        public ConversationContentQuickReply(string Text = null, string Payload = null, string Image = null, ActionEnum? Action = null, string SummaryText = null)
         {
             this.Text = Text;
             this.Payload = Payload;
             this.Image = Image;
             this.Action = Action;
+            this.SummaryText = SummaryText;
             
         }
         
@@ -97,6 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Summary of what the quick reply relates to.
+        /// </summary>
+        /// <value>Summary of what the quick reply relates to.</value>
+        [DataMember(Name="summaryText", EmitDefaultValue=false)]
+        public string SummaryText { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  SummaryText: ").Append(SummaryText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +181,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
+                ) &&
+                (
+                    this.SummaryText == other.SummaryText ||
+                    this.SummaryText != null &&
+                    this.SummaryText.Equals(other.SummaryText)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
+
+                if (this.SummaryText != null)
+                    hash = hash * 59 + this.SummaryText.GetHashCode();
 
                 return hash;
             }

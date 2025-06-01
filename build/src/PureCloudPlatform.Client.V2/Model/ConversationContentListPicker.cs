@@ -21,17 +21,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentListPicker" /> class.
         /// </summary>
+        /// <param name="Id">Optional unique identifier to help map component replies to form messages where multiple ListPickers can be present..</param>
         /// <param name="Sections">An array of sections in the List Picker..</param>
         /// <param name="ReplyMessage">The reply message after the user has selected the options from the List Picker..</param>
         /// <param name="ReceivedMessage">The message prompt to select options in the List Picker sections..</param>
-        public ConversationContentListPicker(List<ConversationContentListPickerSection> Sections = null, ConversationContentReceivedReplyMessage ReplyMessage = null, ConversationContentReceivedReplyMessage ReceivedMessage = null)
+        public ConversationContentListPicker(string Id = null, List<ConversationContentListPickerSection> Sections = null, ConversationContentReceivedReplyMessage ReplyMessage = null, ConversationContentReceivedReplyMessage ReceivedMessage = null)
         {
+            this.Id = Id;
             this.Sections = Sections;
             this.ReplyMessage = ReplyMessage;
             this.ReceivedMessage = ReceivedMessage;
             
         }
         
+
+
+        /// <summary>
+        /// Optional unique identifier to help map component replies to form messages where multiple ListPickers can be present.
+        /// </summary>
+        /// <value>Optional unique identifier to help map component replies to form messages where multiple ListPickers can be present.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
 
 
         /// <summary>
@@ -69,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationContentListPicker {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Sections: ").Append(Sections).Append("\n");
             sb.Append("  ReplyMessage: ").Append(ReplyMessage).Append("\n");
             sb.Append("  ReceivedMessage: ").Append(ReceivedMessage).Append("\n");
@@ -113,6 +125,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Sections == other.Sections ||
                     this.Sections != null &&
                     this.Sections.SequenceEqual(other.Sections)
@@ -140,6 +157,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Sections != null)
                     hash = hash * 59 + this.Sections.GetHashCode();
 

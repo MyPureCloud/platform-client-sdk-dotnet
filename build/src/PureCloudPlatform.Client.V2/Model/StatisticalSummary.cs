@@ -34,7 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Target">Target.</param>
         /// <param name="P95">P95.</param>
         /// <param name="P99">P99.</param>
-        public StatisticalSummary(double? Max = null, double? Min = null, long? Count = null, long? CountNegative = null, long? CountPositive = null, double? Sum = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null, long? P95 = null, long? P99 = null)
+        /// <param name="CalculatedMetricValue">CalculatedMetricValue.</param>
+        public StatisticalSummary(double? Max = null, double? Min = null, long? Count = null, long? CountNegative = null, long? CountPositive = null, double? Sum = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null, long? P95 = null, long? P99 = null, long? CalculatedMetricValue = null)
         {
             this.Max = Max;
             this.Min = Min;
@@ -49,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Target = Target;
             this.P95 = P95;
             this.P99 = P99;
+            this.CalculatedMetricValue = CalculatedMetricValue;
             
         }
         
@@ -157,6 +159,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public long? P99 { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets CalculatedMetricValue
+        /// </summary>
+        [DataMember(Name="calculatedMetricValue", EmitDefaultValue=false)]
+        public long? CalculatedMetricValue { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -179,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Target: ").Append(Target).Append("\n");
             sb.Append("  P95: ").Append(P95).Append("\n");
             sb.Append("  P99: ").Append(P99).Append("\n");
+            sb.Append("  CalculatedMetricValue: ").Append(CalculatedMetricValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -283,6 +294,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.P99 == other.P99 ||
                     this.P99 != null &&
                     this.P99.Equals(other.P99)
+                ) &&
+                (
+                    this.CalculatedMetricValue == other.CalculatedMetricValue ||
+                    this.CalculatedMetricValue != null &&
+                    this.CalculatedMetricValue.Equals(other.CalculatedMetricValue)
                 );
         }
 
@@ -335,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.P99 != null)
                     hash = hash * 59 + this.P99.GetHashCode();
+
+                if (this.CalculatedMetricValue != null)
+                    hash = hash * 59 + this.CalculatedMetricValue.GetHashCode();
 
                 return hash;
             }

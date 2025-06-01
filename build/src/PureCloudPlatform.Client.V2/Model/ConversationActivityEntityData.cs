@@ -46,6 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Ointeracting,
             
             /// <summary>
+            /// Enum Olongestinteracting for "oLongestInteracting"
+            /// </summary>
+            [EnumMember(Value = "oLongestInteracting")]
+            Olongestinteracting,
+            
+            /// <summary>
+            /// Enum Olongestwaiting for "oLongestWaiting"
+            /// </summary>
+            [EnumMember(Value = "oLongestWaiting")]
+            Olongestwaiting,
+            
+            /// <summary>
             /// Enum Owaiting for "oWaiting"
             /// </summary>
             [EnumMember(Value = "oWaiting")]

@@ -74,7 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
         /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold..</param>
         /// <param name="AnswerGeneration">The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;..</param>
-        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null, float? ConfidenceThreshold = null, KnowledgeAnswerGenerationResponse AnswerGeneration = null)
+        /// <param name="PreprocessQuery">Indicates whether the search query should be preprocessed..</param>
+        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null, float? ConfidenceThreshold = null, KnowledgeAnswerGenerationResponse AnswerGeneration = null, bool? PreprocessQuery = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -84,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationContext = ConversationContext;
             this.ConfidenceThreshold = ConfidenceThreshold;
             this.AnswerGeneration = AnswerGeneration;
+            this.PreprocessQuery = PreprocessQuery;
             
         }
         
@@ -189,6 +191,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public KnowledgeAnswerGenerationResponse AnswerGeneration { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates whether the search query should be preprocessed.
+        /// </summary>
+        /// <value>Indicates whether the search query should be preprocessed.</value>
+        [DataMember(Name="preprocessQuery", EmitDefaultValue=false)]
+        public bool? PreprocessQuery { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -210,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
             sb.Append("  ConfidenceThreshold: ").Append(ConfidenceThreshold).Append("\n");
             sb.Append("  AnswerGeneration: ").Append(AnswerGeneration).Append("\n");
+            sb.Append("  PreprocessQuery: ").Append(PreprocessQuery).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -309,6 +321,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AnswerGeneration == other.AnswerGeneration ||
                     this.AnswerGeneration != null &&
                     this.AnswerGeneration.Equals(other.AnswerGeneration)
+                ) &&
+                (
+                    this.PreprocessQuery == other.PreprocessQuery ||
+                    this.PreprocessQuery != null &&
+                    this.PreprocessQuery.Equals(other.PreprocessQuery)
                 );
         }
 
@@ -358,6 +375,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AnswerGeneration != null)
                     hash = hash * 59 + this.AnswerGeneration.GetHashCode();
+
+                if (this.PreprocessQuery != null)
+                    hash = hash * 59 + this.PreprocessQuery.GetHashCode();
 
                 return hash;
             }

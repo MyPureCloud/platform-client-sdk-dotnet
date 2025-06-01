@@ -190,7 +190,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. The value should be between 0 to 1..</param>
         /// <param name="AnswerHighlightTopResults">The number of articles to be sent for answer-highlighting. Can range from 1-5..</param>
         /// <param name="AnswerMode">Allows extracted answers from an article (AnswerHighlight) and/or AI-generated answers (AnswerGeneration). Default mode: AnswerHighlight. Use this property with answerHighlightTopResults..</param>
-        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null, float? ConfidenceThreshold = null, int? AnswerHighlightTopResults = null, List<AnswerModeEnum> AnswerMode = null)
+        /// <param name="PreprocessQuery">Indicates whether the search query should be preprocessed..</param>
+        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null, float? ConfidenceThreshold = null, int? AnswerHighlightTopResults = null, List<AnswerModeEnum> AnswerMode = null, bool? PreprocessQuery = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -206,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConfidenceThreshold = ConfidenceThreshold;
             this.AnswerHighlightTopResults = AnswerHighlightTopResults;
             this.AnswerMode = AnswerMode;
+            this.PreprocessQuery = PreprocessQuery;
             
         }
         
@@ -342,6 +344,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AnswerModeEnum> AnswerMode { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates whether the search query should be preprocessed.
+        /// </summary>
+        /// <value>Indicates whether the search query should be preprocessed.</value>
+        [DataMember(Name="preprocessQuery", EmitDefaultValue=false)]
+        public bool? PreprocessQuery { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -368,6 +379,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConfidenceThreshold: ").Append(ConfidenceThreshold).Append("\n");
             sb.Append("  AnswerHighlightTopResults: ").Append(AnswerHighlightTopResults).Append("\n");
             sb.Append("  AnswerMode: ").Append(AnswerMode).Append("\n");
+            sb.Append("  PreprocessQuery: ").Append(PreprocessQuery).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -492,6 +504,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AnswerMode == other.AnswerMode ||
                     this.AnswerMode != null &&
                     this.AnswerMode.SequenceEqual(other.AnswerMode)
+                ) &&
+                (
+                    this.PreprocessQuery == other.PreprocessQuery ||
+                    this.PreprocessQuery != null &&
+                    this.PreprocessQuery.Equals(other.PreprocessQuery)
                 );
         }
 
@@ -556,6 +573,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AnswerMode != null)
                     hash = hash * 59 + this.AnswerMode.GetHashCode();
+
+                if (this.PreprocessQuery != null)
+                    hash = hash * 59 + this.PreprocessQuery.GetHashCode();
 
                 return hash;
             }

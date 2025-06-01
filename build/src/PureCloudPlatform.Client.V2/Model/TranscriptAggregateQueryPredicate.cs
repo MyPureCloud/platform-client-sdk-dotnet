@@ -85,6 +85,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ani,
             
             /// <summary>
+            /// Enum Categoryid for "categoryId"
+            /// </summary>
+            [EnumMember(Value = "categoryId")]
+            Categoryid,
+            
+            /// <summary>
             /// Enum Channel for "channel"
             /// </summary>
             [EnumMember(Value = "channel")]

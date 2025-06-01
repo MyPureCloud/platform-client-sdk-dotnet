@@ -46,6 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Ointeracting,
             
             /// <summary>
+            /// Enum Olongestinteracting for "oLongestInteracting"
+            /// </summary>
+            [EnumMember(Value = "oLongestInteracting")]
+            Olongestinteracting,
+            
+            /// <summary>
+            /// Enum Olongestwaiting for "oLongestWaiting"
+            /// </summary>
+            [EnumMember(Value = "oLongestWaiting")]
+            Olongestwaiting,
+            
+            /// <summary>
             /// Enum Owaiting for "oWaiting"
             /// </summary>
             [EnumMember(Value = "oWaiting")]
@@ -64,12 +76,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Qualifier">Metric qualifier.</param>
         /// <param name="EntityIds">Entity ids for matching entities if details were requested.</param>
         /// <param name="Count">Metric count.</param>
-        public ConversationActivityMetricValue(MetricEnum? Metric = null, string Qualifier = null, List<string> EntityIds = null, int? Count = null)
+        /// <param name="CalculatedMetricValue">Calculated metric value.</param>
+        public ConversationActivityMetricValue(MetricEnum? Metric = null, string Qualifier = null, List<string> EntityIds = null, int? Count = null, long? CalculatedMetricValue = null)
         {
             this.Metric = Metric;
             this.Qualifier = Qualifier;
             this.EntityIds = EntityIds;
             this.Count = Count;
+            this.CalculatedMetricValue = CalculatedMetricValue;
             
         }
         
@@ -103,6 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Count { get; set; }
 
 
+
+        /// <summary>
+        /// Calculated metric value
+        /// </summary>
+        /// <value>Calculated metric value</value>
+        [DataMember(Name="calculatedMetricValue", EmitDefaultValue=false)]
+        public long? CalculatedMetricValue { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
             sb.Append("  EntityIds: ").Append(EntityIds).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  CalculatedMetricValue: ").Append(CalculatedMetricValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,6 +199,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
+                ) &&
+                (
+                    this.CalculatedMetricValue == other.CalculatedMetricValue ||
+                    this.CalculatedMetricValue != null &&
+                    this.CalculatedMetricValue.Equals(other.CalculatedMetricValue)
                 );
         }
 
@@ -200,6 +229,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+
+                if (this.CalculatedMetricValue != null)
+                    hash = hash * 59 + this.CalculatedMetricValue.GetHashCode();
 
                 return hash;
             }

@@ -49,7 +49,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Datepicker for "DatePicker"
             /// </summary>
             [EnumMember(Value = "DatePicker")]
-            Datepicker
+            Datepicker,
+            
+            /// <summary>
+            /// Enum Listpicker for "ListPicker"
+            /// </summary>
+            [EnumMember(Value = "ListPicker")]
+            Listpicker,
+            
+            /// <summary>
+            /// Enum Form for "Form"
+            /// </summary>
+            [EnumMember(Value = "Form")]
+            Form
         }
         /// <summary>
         /// Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection

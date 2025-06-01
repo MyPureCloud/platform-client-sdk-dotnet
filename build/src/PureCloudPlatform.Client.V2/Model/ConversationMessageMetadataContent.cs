@@ -142,6 +142,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Push,
             
             /// <summary>
+            /// Enum Form for "Form"
+            /// </summary>
+            [EnumMember(Value = "Form")]
+            Form,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

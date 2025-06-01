@@ -253,7 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>DecisionTableVersionListing</returns>
         
@@ -269,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersionListing</returns>
         
@@ -284,7 +284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>DecisionTableListing</returns>
         
@@ -299,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of DecisionTableListing</returns>
         
@@ -313,14 +313,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>DecisionTableListing</returns>
         
-        DecisionTableListing GetBusinessrulesDecisiontablesSearch (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null);
+        DecisionTableListing GetBusinessrulesDecisiontablesSearch (string after = null, string pageSize = null, string schemaId = null, string name = null);
 
         /// <summary>
         /// Search for decision tables.
@@ -330,14 +329,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>ApiResponse of DecisionTableListing</returns>
         
-        ApiResponse<DecisionTableListing> GetBusinessrulesDecisiontablesSearchWithHttpInfo (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null);
+        ApiResponse<DecisionTableListing> GetBusinessrulesDecisiontablesSearchWithHttpInfo (string after = null, string pageSize = null, string schemaId = null, string name = null);
 
         /// <summary>
         /// Get a schema
@@ -1085,7 +1083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of DecisionTableVersionListing</returns>
         
@@ -1101,7 +1099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersionListing)</returns>
         
@@ -1116,7 +1114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of DecisionTableListing</returns>
         
@@ -1131,7 +1129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableListing)</returns>
         
@@ -1145,14 +1143,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>Task of DecisionTableListing</returns>
         
-        System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesSearchAsync (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null);
+        System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesSearchAsync (string after = null, string pageSize = null, string schemaId = null, string name = null);
 
         /// <summary>
         /// Search for decision tables.
@@ -1162,14 +1159,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesSearchAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesSearchAsyncWithHttpInfo (string after = null, string pageSize = null, string schemaId = null, string name = null);
 
         /// <summary>
         /// Get a schema
@@ -3516,7 +3512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>DecisionTableVersionListing</returns>
         
@@ -3534,7 +3530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersionListing</returns>
         
@@ -3626,7 +3622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of DecisionTableVersionListing</returns>
         
@@ -3645,7 +3641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersionListing)</returns>
         
@@ -3738,7 +3734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>DecisionTableListing</returns>
         
@@ -3755,7 +3751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of DecisionTableListing</returns>
         
@@ -3842,7 +3838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of DecisionTableListing</returns>
         
@@ -3860,7 +3856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableListing)</returns>
         
@@ -3947,16 +3943,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>DecisionTableListing</returns>
         
-        public DecisionTableListing GetBusinessrulesDecisiontablesSearch (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null)
+        public DecisionTableListing GetBusinessrulesDecisiontablesSearch (string after = null, string pageSize = null, string schemaId = null, string name = null)
         {
-             ApiResponse<DecisionTableListing> localVarResponse = GetBusinessrulesDecisiontablesSearchWithHttpInfo(before, after, pageSize, schemaId, name);
+             ApiResponse<DecisionTableListing> localVarResponse = GetBusinessrulesDecisiontablesSearchWithHttpInfo(after, pageSize, schemaId, name);
              return localVarResponse.Data;
         }
 
@@ -3966,14 +3961,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>ApiResponse of DecisionTableListing</returns>
         
-        public ApiResponse< DecisionTableListing > GetBusinessrulesDecisiontablesSearchWithHttpInfo (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null)
+        public ApiResponse< DecisionTableListing > GetBusinessrulesDecisiontablesSearchWithHttpInfo (string after = null, string pageSize = null, string schemaId = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/businessrules/decisiontables/search";
@@ -4009,7 +4003,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (schemaId != null) localVarQueryParams.Add(new Tuple<string, string>("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId)));
@@ -4057,16 +4050,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>Task of DecisionTableListing</returns>
         
-        public async System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesSearchAsync (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null)
+        public async System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesSearchAsync (string after = null, string pageSize = null, string schemaId = null, string name = null)
         {
-             ApiResponse<DecisionTableListing> localVarResponse = await GetBusinessrulesDecisiontablesSearchAsyncWithHttpInfo(before, after, pageSize, schemaId, name);
+             ApiResponse<DecisionTableListing> localVarResponse = await GetBusinessrulesDecisiontablesSearchAsyncWithHttpInfo(after, pageSize, schemaId, name);
              return localVarResponse.Data;
 
         }
@@ -4077,14 +4069,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="schemaId">Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used. (optional)</param>
         /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesSearchAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string schemaId = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesSearchAsyncWithHttpInfo (string after = null, string pageSize = null, string schemaId = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/businessrules/decisiontables/search";
@@ -4120,7 +4111,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (schemaId != null) localVarQueryParams.Add(new Tuple<string, string>("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId)));

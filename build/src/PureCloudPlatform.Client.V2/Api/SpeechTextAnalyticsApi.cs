@@ -896,6 +896,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobWithHttpInfo (string jobId);
 
         /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>TestTopicPhraseJob</returns>
+        
+        TestTopicPhraseJob GetSpeechandtextanalyticsTopicsTestphraseJob (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>ApiResponse of TestTopicPhraseJob</returns>
+        
+        ApiResponse<TestTopicPhraseJob> GetSpeechandtextanalyticsTopicsTestphraseJobWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Translate a single interaction recording (or an email conversation)
         /// </summary>
         /// <remarks>
@@ -1162,6 +1186,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of TopicJob</returns>
         
         ApiResponse<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsWithHttpInfo (TopicJobRequest body);
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>TestTopicPhraseJobs</returns>
+        
+        TestTopicPhraseJobs PostSpeechandtextanalyticsTopicsTestphraseJobs (TestTopicPhraseJobRequest body);
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>ApiResponse of TestTopicPhraseJobs</returns>
+        
+        ApiResponse<TestTopicPhraseJobs> PostSpeechandtextanalyticsTopicsTestphraseJobsWithHttpInfo (TestTopicPhraseJobRequest body);
 
         /// <summary>
         /// Search resources.
@@ -2278,6 +2326,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> GetSpeechandtextanalyticsTopicsPublishjobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>Task of TestTopicPhraseJob</returns>
+        
+        System.Threading.Tasks.Task<TestTopicPhraseJob> GetSpeechandtextanalyticsTopicsTestphraseJobAsync (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>Task of ApiResponse (TestTopicPhraseJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TestTopicPhraseJob>> GetSpeechandtextanalyticsTopicsTestphraseJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Translate a single interaction recording (or an email conversation)
         /// </summary>
         /// <remarks>
@@ -2544,6 +2616,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TopicJob)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> PostSpeechandtextanalyticsTopicsPublishjobsAsyncWithHttpInfo (TopicJobRequest body);
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>Task of TestTopicPhraseJobs</returns>
+        
+        System.Threading.Tasks.Task<TestTopicPhraseJobs> PostSpeechandtextanalyticsTopicsTestphraseJobsAsync (TestTopicPhraseJobRequest body);
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>Task of ApiResponse (TestTopicPhraseJobs)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TestTopicPhraseJobs>> PostSpeechandtextanalyticsTopicsTestphraseJobsAsyncWithHttpInfo (TestTopicPhraseJobRequest body);
 
         /// <summary>
         /// Search resources.
@@ -9922,6 +10018,207 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>TestTopicPhraseJob</returns>
+        
+        public TestTopicPhraseJob GetSpeechandtextanalyticsTopicsTestphraseJob (string jobId)
+        {
+             ApiResponse<TestTopicPhraseJob> localVarResponse = GetSpeechandtextanalyticsTopicsTestphraseJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>ApiResponse of TestTopicPhraseJob</returns>
+        
+        public ApiResponse< TestTopicPhraseJob > GetSpeechandtextanalyticsTopicsTestphraseJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsTestphraseJob");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsTestphraseJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsTestphraseJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TestTopicPhraseJob>(localVarStatusCode,
+                localVarHeaders,
+                (TestTopicPhraseJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestTopicPhraseJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>Task of TestTopicPhraseJob</returns>
+        
+        public async System.Threading.Tasks.Task<TestTopicPhraseJob> GetSpeechandtextanalyticsTopicsTestphraseJobAsync (string jobId)
+        {
+             ApiResponse<TestTopicPhraseJob> localVarResponse = await GetSpeechandtextanalyticsTopicsTestphraseJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics test topics phrase job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the test topic phrase job</param>
+        /// <returns>Task of ApiResponse (TestTopicPhraseJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TestTopicPhraseJob>> GetSpeechandtextanalyticsTopicsTestphraseJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsTestphraseJob");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsTestphraseJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsTestphraseJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TestTopicPhraseJob>(localVarStatusCode,
+                localVarHeaders,
+                (TestTopicPhraseJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestTopicPhraseJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Translate a single interaction recording (or an email conversation) 
         /// 
         /// </summary>
@@ -12228,6 +12525,217 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TopicJob>(localVarStatusCode,
                 localVarHeaders,
                 (TopicJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>TestTopicPhraseJobs</returns>
+        
+        public TestTopicPhraseJobs PostSpeechandtextanalyticsTopicsTestphraseJobs (TestTopicPhraseJobRequest body)
+        {
+             ApiResponse<TestTopicPhraseJobs> localVarResponse = PostSpeechandtextanalyticsTopicsTestphraseJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>ApiResponse of TestTopicPhraseJobs</returns>
+        
+        public ApiResponse< TestTopicPhraseJobs > PostSpeechandtextanalyticsTopicsTestphraseJobsWithHttpInfo (TestTopicPhraseJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsTestphraseJobs");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsTestphraseJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsTestphraseJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TestTopicPhraseJobs>(localVarStatusCode,
+                localVarHeaders,
+                (TestTopicPhraseJobs) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestTopicPhraseJobs)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>Task of TestTopicPhraseJobs</returns>
+        
+        public async System.Threading.Tasks.Task<TestTopicPhraseJobs> PostSpeechandtextanalyticsTopicsTestphraseJobsAsync (TestTopicPhraseJobRequest body)
+        {
+             ApiResponse<TestTopicPhraseJobs> localVarResponse = await PostSpeechandtextanalyticsTopicsTestphraseJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The publish test topic phrase job to create</param>
+        /// <returns>Task of ApiResponse (TestTopicPhraseJobs)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TestTopicPhraseJobs>> PostSpeechandtextanalyticsTopicsTestphraseJobsAsyncWithHttpInfo (TestTopicPhraseJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsTestphraseJobs");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsTestphraseJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsTestphraseJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TestTopicPhraseJobs>(localVarStatusCode,
+                localVarHeaders,
+                (TestTopicPhraseJobs) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestTopicPhraseJobs)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

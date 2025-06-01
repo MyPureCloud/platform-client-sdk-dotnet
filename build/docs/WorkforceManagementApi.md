@@ -8763,7 +8763,7 @@ namespace Example
 
 ## PatchWorkforcemanagementAlternativeshiftsTrade
 
-> [**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse) PatchWorkforcemanagementAlternativeshiftsTrade (string tradeId, AgentUpdateAlternativeShiftTradeRequest body = null)
+> [**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse) PatchWorkforcemanagementAlternativeshiftsTrade (string tradeId, AgentUpdateAlternativeShiftTradeRequest body)
 
 
 Update my alternative shifts trade by trade ID
@@ -8795,7 +8795,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var tradeId = tradeId_example;  // string | The ID of the alternative shift trade
-            var body = new AgentUpdateAlternativeShiftTradeRequest(); // AgentUpdateAlternativeShiftTradeRequest | body (optional) 
+            var body = new AgentUpdateAlternativeShiftTradeRequest(); // AgentUpdateAlternativeShiftTradeRequest | body
 
             try
             { 
@@ -8818,7 +8818,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tradeId** | **string**| The ID of the alternative shift trade |  |
-| **body** | [**AgentUpdateAlternativeShiftTradeRequest**](AgentUpdateAlternativeShiftTradeRequest)| body | [optional]  |
+| **body** | [**AgentUpdateAlternativeShiftTradeRequest**](AgentUpdateAlternativeShiftTradeRequest)| body |  |
 
 ### Return type
 
@@ -8889,7 +8889,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunit
 
-> [**BusinessUnitResponse**](BusinessUnitResponse) PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null)
+> [**BusinessUnitResponse**](BusinessUnitResponse) PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body)
 
 
 Update business unit
@@ -8921,7 +8921,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-            var body = new UpdateBusinessUnitRequest(); // UpdateBusinessUnitRequest | body (optional) 
+            var body = new UpdateBusinessUnitRequest(); // UpdateBusinessUnitRequest | body
 
             try
             { 
@@ -8944,7 +8944,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest)| body | [optional]  |
+| **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest)| body |  |
 
 ### Return type
 
@@ -8953,7 +8953,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitActivitycode
 
-> [**BusinessUnitActivityCode**](BusinessUnitActivityCode) PatchWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
+> [**BusinessUnitActivityCode**](BusinessUnitActivityCode) PatchWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body)
 
 
 Update an activity code
@@ -8986,7 +8986,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
             var activityCodeId = activityCodeId_example;  // string | The ID of the activity code to update
-            var body = new UpdateActivityCodeRequest(); // UpdateActivityCodeRequest | body (optional) 
+            var body = new UpdateActivityCodeRequest(); // UpdateActivityCodeRequest | body
 
             try
             { 
@@ -9010,7 +9010,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
 | **activityCodeId** | **string**| The ID of the activity code to update |  |
-| **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest)| body | [optional]  |
+| **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest)| body |  |
 
 ### Return type
 
@@ -9087,7 +9087,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings
 
-> [**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse) PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings (string businessUnitId, UpdateAlternativeShiftBuSettingsRequest body = null)
+> [**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse) PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings (string businessUnitId, UpdateAlternativeShiftBuSettingsRequest body)
 
 
 Update alternative shifts settings for a business unit
@@ -9119,7 +9119,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new UpdateAlternativeShiftBuSettingsRequest(); // UpdateAlternativeShiftBuSettingsRequest | body (optional) 
+            var body = new UpdateAlternativeShiftBuSettingsRequest(); // UpdateAlternativeShiftBuSettingsRequest | body
 
             try
             { 
@@ -9142,7 +9142,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**UpdateAlternativeShiftBuSettingsRequest**](UpdateAlternativeShiftBuSettingsRequest)| body | [optional]  |
+| **body** | [**UpdateAlternativeShiftBuSettingsRequest**](UpdateAlternativeShiftBuSettingsRequest)| body |  |
 
 ### Return type
 
@@ -9151,7 +9151,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitPlanninggroup
 
-> [**PlanningGroup**](PlanningGroup) PatchWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null)
+> [**PlanningGroup**](PlanningGroup) PatchWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body)
 
 
 Updates the planning group
@@ -9184,7 +9184,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit.
             var planningGroupId = planningGroupId_example;  // string | The ID of a planning group to update
-            var body = new UpdatePlanningGroupRequest(); // UpdatePlanningGroupRequest | body (optional) 
+            var body = new UpdatePlanningGroupRequest(); // UpdatePlanningGroupRequest | body
 
             try
             { 
@@ -9208,7 +9208,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
 | **planningGroupId** | **string**| The ID of a planning group to update |  |
-| **body** | [**UpdatePlanningGroupRequest**](UpdatePlanningGroupRequest)| body | [optional]  |
+| **body** | [**UpdatePlanningGroupRequest**](UpdatePlanningGroupRequest)| body |  |
 
 ### Return type
 
@@ -9217,7 +9217,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitSchedulingRun
 
-> void PatchWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null)
+> void PatchWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId, PatchBuScheduleRunRequest body)
 
 
 Mark a schedule run as applied
@@ -9250,7 +9250,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var runId = runId_example;  // string | The ID of the schedule run
-            var body = new PatchBuScheduleRunRequest(); // PatchBuScheduleRunRequest | body (optional) 
+            var body = new PatchBuScheduleRunRequest(); // PatchBuScheduleRunRequest | body
 
             try
             { 
@@ -9273,7 +9273,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **runId** | **string**| The ID of the schedule run |  |
-| **body** | [**PatchBuScheduleRunRequest**](PatchBuScheduleRunRequest)| body | [optional]  |
+| **body** | [**PatchBuScheduleRunRequest**](PatchBuScheduleRunRequest)| body |  |
 
 ### Return type
 
@@ -9282,7 +9282,7 @@ void (empty response body)
 
 ## PatchWorkforcemanagementBusinessunitServicegoaltemplate
 
-> [**ServiceGoalTemplate**](ServiceGoalTemplate) PatchWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null)
+> [**ServiceGoalTemplate**](ServiceGoalTemplate) PatchWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body)
 
 
 Updates a service goal template
@@ -9315,7 +9315,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit.
             var serviceGoalTemplateId = serviceGoalTemplateId_example;  // string | The ID of a service goal template to update
-            var body = new UpdateServiceGoalTemplate(); // UpdateServiceGoalTemplate | body (optional) 
+            var body = new UpdateServiceGoalTemplate(); // UpdateServiceGoalTemplate | body
 
             try
             { 
@@ -9339,7 +9339,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
 | **serviceGoalTemplateId** | **string**| The ID of a service goal template to update |  |
-| **body** | [**UpdateServiceGoalTemplate**](UpdateServiceGoalTemplate)| body | [optional]  |
+| **body** | [**UpdateServiceGoalTemplate**](UpdateServiceGoalTemplate)| body |  |
 
 ### Return type
 
@@ -9348,7 +9348,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitStaffinggroup
 
-> [**StaffingGroupResponse**](StaffingGroupResponse) PatchWorkforcemanagementBusinessunitStaffinggroup (string businessUnitId, string staffingGroupId, UpdateStaffingGroupRequest body = null)
+> [**StaffingGroupResponse**](StaffingGroupResponse) PatchWorkforcemanagementBusinessunitStaffinggroup (string businessUnitId, string staffingGroupId, UpdateStaffingGroupRequest body)
 
 
 Updates a staffing group
@@ -9381,7 +9381,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var staffingGroupId = staffingGroupId_example;  // string | The ID of the staffing group to update
-            var body = new UpdateStaffingGroupRequest(); // UpdateStaffingGroupRequest | body (optional) 
+            var body = new UpdateStaffingGroupRequest(); // UpdateStaffingGroupRequest | body
 
             try
             { 
@@ -9405,7 +9405,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **staffingGroupId** | **string**| The ID of the staffing group to update |  |
-| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest)| body | [optional]  |
+| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest)| body |  |
 
 ### Return type
 
@@ -9414,7 +9414,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitTimeoffplan
 
-> [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse) PatchWorkforcemanagementBusinessunitTimeoffplan (string businessUnitId, string timeOffPlanId, BuUpdateTimeOffPlanRequest body = null)
+> [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse) PatchWorkforcemanagementBusinessunitTimeoffplan (string businessUnitId, string timeOffPlanId, BuUpdateTimeOffPlanRequest body)
 
 
 Updates a time-off plan
@@ -9447,7 +9447,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time-off plan to update
-            var body = new BuUpdateTimeOffPlanRequest(); // BuUpdateTimeOffPlanRequest | body (optional) 
+            var body = new BuUpdateTimeOffPlanRequest(); // BuUpdateTimeOffPlanRequest | body
 
             try
             { 
@@ -9471,7 +9471,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **timeOffPlanId** | **string**| The ID of the time-off plan to update |  |
-| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest)| body | [optional]  |
+| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest)| body |  |
 
 ### Return type
 
@@ -9546,7 +9546,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitWorkplanbidGroup
 
-> [**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse) PatchWorkforcemanagementBusinessunitWorkplanbidGroup (string businessUnitId, string bidId, string bidGroupId, WorkPlanBidGroupUpdate body = null)
+> [**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse) PatchWorkforcemanagementBusinessunitWorkplanbidGroup (string businessUnitId, string bidId, string bidGroupId, WorkPlanBidGroupUpdate body)
 
 
 Update a bid group by bid group Id
@@ -9580,7 +9580,7 @@ namespace Example
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var bidId = bidId_example;  // string | The work plan bid id of the bid groups
             var bidGroupId = bidGroupId_example;  // string | Work Plan Bid Group id
-            var body = new WorkPlanBidGroupUpdate(); // WorkPlanBidGroupUpdate | body (optional) 
+            var body = new WorkPlanBidGroupUpdate(); // WorkPlanBidGroupUpdate | body
 
             try
             { 
@@ -9605,7 +9605,7 @@ namespace Example
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **bidId** | **string**| The work plan bid id of the bid groups |  |
 | **bidGroupId** | **string**| Work Plan Bid Group id |  |
-| **body** | [**WorkPlanBidGroupUpdate**](WorkPlanBidGroupUpdate)| body | [optional]  |
+| **body** | [**WorkPlanBidGroupUpdate**](WorkPlanBidGroupUpdate)| body |  |
 
 ### Return type
 
@@ -9614,7 +9614,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences
 
-> [**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse) PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences (string businessUnitId, string bidId, string bidGroupId, AgentsBidAssignedWorkPlanOverrideRequest body = null)
+> [**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse) PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences (string businessUnitId, string bidId, string bidGroupId, AgentsBidAssignedWorkPlanOverrideRequest body)
 
 
 Overrides the assigned work plan for the specified agents
@@ -9648,7 +9648,7 @@ namespace Example
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var bidId = bidId_example;  // string | The work plan bid id of the bid groups
             var bidGroupId = bidGroupId_example;  // string | The ID of the work plan bid group
-            var body = new AgentsBidAssignedWorkPlanOverrideRequest(); // AgentsBidAssignedWorkPlanOverrideRequest | body (optional) 
+            var body = new AgentsBidAssignedWorkPlanOverrideRequest(); // AgentsBidAssignedWorkPlanOverrideRequest | body
 
             try
             { 
@@ -9673,7 +9673,7 @@ namespace Example
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **bidId** | **string**| The work plan bid id of the bid groups |  |
 | **bidGroupId** | **string**| The ID of the work plan bid group |  |
-| **body** | [**AgentsBidAssignedWorkPlanOverrideRequest**](AgentsBidAssignedWorkPlanOverrideRequest)| body | [optional]  |
+| **body** | [**AgentsBidAssignedWorkPlanOverrideRequest**](AgentsBidAssignedWorkPlanOverrideRequest)| body |  |
 
 ### Return type
 
@@ -9682,7 +9682,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunit
 
-> [**ManagementUnit**](ManagementUnit) PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body = null)
+> [**ManagementUnit**](ManagementUnit) PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body)
 
 
 Update the requested management unit
@@ -9714,7 +9714,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new UpdateManagementUnitRequest(); // UpdateManagementUnitRequest | body (optional) 
+            var body = new UpdateManagementUnitRequest(); // UpdateManagementUnitRequest | body
 
             try
             { 
@@ -9737,7 +9737,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest)| body | [optional]  |
+| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest)| body |  |
 
 ### Return type
 
@@ -9746,7 +9746,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunitAgents
 
-> void PatchWorkforcemanagementManagementunitAgents (string managementUnitId, UpdateMuAgentsRequest body = null)
+> void PatchWorkforcemanagementManagementunitAgents (string managementUnitId, UpdateMuAgentsRequest body)
 
 
 Update agent configurations
@@ -9778,7 +9778,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new UpdateMuAgentsRequest(); // UpdateMuAgentsRequest | body (optional) 
+            var body = new UpdateMuAgentsRequest(); // UpdateMuAgentsRequest | body
 
             try
             { 
@@ -9800,7 +9800,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**UpdateMuAgentsRequest**](UpdateMuAgentsRequest)| body | [optional]  |
+| **body** | [**UpdateMuAgentsRequest**](UpdateMuAgentsRequest)| body |  |
 
 ### Return type
 
@@ -9809,7 +9809,7 @@ void (empty response body)
 
 ## PatchWorkforcemanagementManagementunitAgentsWorkplansBulk
 
-> [**UpdateMuAgentWorkPlansBatchResponse**](UpdateMuAgentWorkPlansBatchResponse) PatchWorkforcemanagementManagementunitAgentsWorkplansBulk (string managementUnitId, UpdateMuAgentWorkPlansBatchRequest body = null)
+> [**UpdateMuAgentWorkPlansBatchResponse**](UpdateMuAgentWorkPlansBatchResponse) PatchWorkforcemanagementManagementunitAgentsWorkplansBulk (string managementUnitId, UpdateMuAgentWorkPlansBatchRequest body)
 
 
 Updates agent work plan configuration
@@ -9841,7 +9841,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new UpdateMuAgentWorkPlansBatchRequest(); // UpdateMuAgentWorkPlansBatchRequest | body (optional) 
+            var body = new UpdateMuAgentWorkPlansBatchRequest(); // UpdateMuAgentWorkPlansBatchRequest | body
 
             try
             { 
@@ -9864,7 +9864,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**UpdateMuAgentWorkPlansBatchRequest**](UpdateMuAgentWorkPlansBatchRequest)| body | [optional]  |
+| **body** | [**UpdateMuAgentWorkPlansBatchRequest**](UpdateMuAgentWorkPlansBatchRequest)| body |  |
 
 ### Return type
 
@@ -9873,7 +9873,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunitTimeofflimit
 
-> [**TimeOffLimit**](TimeOffLimit) PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
+> [**TimeOffLimit**](TimeOffLimit) PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body)
 
 
 Updates a time off limit object.
@@ -9908,7 +9908,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var timeOffLimitId = timeOffLimitId_example;  // string | The id of time off limit object to update
-            var body = new UpdateTimeOffLimitRequest(); // UpdateTimeOffLimitRequest | body (optional) 
+            var body = new UpdateTimeOffLimitRequest(); // UpdateTimeOffLimitRequest | body
 
             try
             { 
@@ -9932,7 +9932,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit. |  |
 | **timeOffLimitId** | **string**| The id of time off limit object to update |  |
-| **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest)| body | [optional]  |
+| **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest)| body |  |
 
 ### Return type
 
@@ -9941,7 +9941,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunitTimeoffplan
 
-> [**TimeOffPlan**](TimeOffPlan) PatchWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
+> [**TimeOffPlan**](TimeOffPlan) PatchWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body)
 
 
 Updates a time off plan
@@ -9974,7 +9974,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time off plan to update
-            var body = new UpdateTimeOffPlanRequest(); // UpdateTimeOffPlanRequest | body (optional) 
+            var body = new UpdateTimeOffPlanRequest(); // UpdateTimeOffPlanRequest | body
 
             try
             { 
@@ -9998,7 +9998,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit |  |
 | **timeOffPlanId** | **string**| The ID of the time off plan to update |  |
-| **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest)| body | [optional]  |
+| **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest)| body |  |
 
 ### Return type
 
@@ -10007,7 +10007,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus
 
-> [**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse) PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus (string managementUnitId, string timeOffRequestId, string userId, SetTimeOffIntegrationStatusRequest body = null)
+> [**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse) PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus (string managementUnitId, string timeOffRequestId, string userId, SetTimeOffIntegrationStatusRequest body)
 
 
 Set integration status for a time off request.
@@ -10041,7 +10041,7 @@ namespace Example
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var timeOffRequestId = timeOffRequestId_example;  // string | The ID of the time off request.
             var userId = userId_example;  // string | The ID of user to whom the time off request belongs.
-            var body = new SetTimeOffIntegrationStatusRequest(); // SetTimeOffIntegrationStatusRequest | body (optional) 
+            var body = new SetTimeOffIntegrationStatusRequest(); // SetTimeOffIntegrationStatusRequest | body
 
             try
             { 
@@ -10066,7 +10066,7 @@ namespace Example
 | **managementUnitId** | **string**| The ID of the management unit. |  |
 | **timeOffRequestId** | **string**| The ID of the time off request. |  |
 | **userId** | **string**| The ID of user to whom the time off request belongs. |  |
-| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest)| body | [optional]  |
+| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest)| body |  |
 
 ### Return type
 
@@ -10075,7 +10075,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunitUserTimeoffrequest
 
-> [**TimeOffRequestResponse**](TimeOffRequestResponse) PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
+> [**TimeOffRequestResponse**](TimeOffRequestResponse) PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body)
 
 
 Update a time off request
@@ -10109,7 +10109,7 @@ namespace Example
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var userId = userId_example;  // string | The id of the user the requested time off request belongs to
             var timeOffRequestId = timeOffRequestId_example;  // string | The id of the time off request to update
-            var body = new AdminTimeOffRequestPatch(); // AdminTimeOffRequestPatch | body (optional) 
+            var body = new AdminTimeOffRequestPatch(); // AdminTimeOffRequestPatch | body
 
             try
             { 
@@ -10134,7 +10134,7 @@ namespace Example
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The id of the user the requested time off request belongs to |  |
 | **timeOffRequestId** | **string**| The id of the time off request to update |  |
-| **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch)| body | [optional]  |
+| **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch)| body |  |
 
 ### Return type
 
@@ -10211,7 +10211,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunitWorkplan
 
-> [**WorkPlan**](WorkPlan) PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
+> [**WorkPlan**](WorkPlan) PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body, string validationMode = null)
 
 
 Update a work plan
@@ -10244,13 +10244,13 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to update
+            var body = new WorkPlan(); // WorkPlan | body
             var validationMode = validationMode_example;  // string | Allows to update work plan even if validation result is invalid (optional) 
-            var body = new WorkPlan(); // WorkPlan | body (optional) 
 
             try
             { 
                 // Update a work plan
-                WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, validationMode, body);
+                WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body, validationMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10269,8 +10269,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanId** | **string**| The ID of the work plan to update |  |
+| **body** | [**WorkPlan**](WorkPlan)| body |  |
 | **validationMode** | **string**| Allows to update work plan even if validation result is invalid | [optional] <br />**Values**: Ignore |
-| **body** | [**WorkPlan**](WorkPlan)| body | [optional]  |
 
 ### Return type
 
@@ -10279,7 +10279,7 @@ namespace Example
 
 ## PatchWorkforcemanagementManagementunitWorkplanrotation
 
-> [**WorkPlanRotationResponse**](WorkPlanRotationResponse) PatchWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
+> [**WorkPlanRotationResponse**](WorkPlanRotationResponse) PatchWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body)
 
 
 Update a work plan rotation
@@ -10312,7 +10312,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanRotationId = workPlanRotationId_example;  // string | The ID of the work plan rotation to update
-            var body = new UpdateWorkPlanRotationRequest(); // UpdateWorkPlanRotationRequest | body (optional) 
+            var body = new UpdateWorkPlanRotationRequest(); // UpdateWorkPlanRotationRequest | body
 
             try
             { 
@@ -10336,7 +10336,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanRotationId** | **string**| The ID of the work plan rotation to update |  |
-| **body** | [**UpdateWorkPlanRotationRequest**](UpdateWorkPlanRotationRequest)| body | [optional]  |
+| **body** | [**UpdateWorkPlanRotationRequest**](UpdateWorkPlanRotationRequest)| body |  |
 
 ### Return type
 
@@ -10345,7 +10345,7 @@ namespace Example
 
 ## PatchWorkforcemanagementTimeoffrequest
 
-> [**TimeOffRequestResponse**](TimeOffRequestResponse) PatchWorkforcemanagementTimeoffrequest (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
+> [**TimeOffRequestResponse**](TimeOffRequestResponse) PatchWorkforcemanagementTimeoffrequest (string timeOffRequestId, AgentTimeOffRequestPatch body)
 
 
 Update a time off request for the current user
@@ -10377,7 +10377,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var timeOffRequestId = timeOffRequestId_example;  // string | The ID of the time off request
-            var body = new AgentTimeOffRequestPatch(); // AgentTimeOffRequestPatch | body (optional) 
+            var body = new AgentTimeOffRequestPatch(); // AgentTimeOffRequestPatch | body
 
             try
             { 
@@ -10400,7 +10400,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **timeOffRequestId** | **string**| The ID of the time off request |  |
-| **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch)| body | [optional]  |
+| **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch)| body |  |
 
 ### Return type
 
@@ -10409,7 +10409,7 @@ namespace Example
 
 ## PatchWorkforcemanagementUserWorkplanbidranks
 
-> [**WorkPlanBidRanks**](WorkPlanBidRanks) PatchWorkforcemanagementUserWorkplanbidranks (string userId, WorkPlanBidRanks body = null)
+> [**WorkPlanBidRanks**](WorkPlanBidRanks) PatchWorkforcemanagementUserWorkplanbidranks (string userId, WorkPlanBidRanks body)
 
 
 Update work plan bid ranks for a user
@@ -10441,7 +10441,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var userId = userId_example;  // string | The userId to whom the work plan bid ranks apply.
-            var body = new WorkPlanBidRanks(); // WorkPlanBidRanks | body (optional) 
+            var body = new WorkPlanBidRanks(); // WorkPlanBidRanks | body
 
             try
             { 
@@ -10464,7 +10464,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The userId to whom the work plan bid ranks apply. |  |
-| **body** | [**WorkPlanBidRanks**](WorkPlanBidRanks)| body | [optional]  |
+| **body** | [**WorkPlanBidRanks**](WorkPlanBidRanks)| body |  |
 
 ### Return type
 
@@ -10535,7 +10535,7 @@ namespace Example
 
 ## PatchWorkforcemanagementWorkplanbidPreferences
 
-> [**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse) PatchWorkforcemanagementWorkplanbidPreferences (string bidId, UpdateAgentWorkPlanBiddingPreference body = null)
+> [**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse) PatchWorkforcemanagementWorkplanbidPreferences (string bidId, UpdateAgentWorkPlanBiddingPreference body)
 
 
 Update an agent's work plan bidding preference
@@ -10567,7 +10567,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var bidId = bidId_example;  // string | The ID of the work plan bid
-            var body = new UpdateAgentWorkPlanBiddingPreference(); // UpdateAgentWorkPlanBiddingPreference | body (optional) 
+            var body = new UpdateAgentWorkPlanBiddingPreference(); // UpdateAgentWorkPlanBiddingPreference | body
 
             try
             { 
@@ -10590,7 +10590,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **bidId** | **string**| The ID of the work plan bid |  |
-| **body** | [**UpdateAgentWorkPlanBiddingPreference**](UpdateAgentWorkPlanBiddingPreference)| body | [optional]  |
+| **body** | [**UpdateAgentWorkPlanBiddingPreference**](UpdateAgentWorkPlanBiddingPreference)| body |  |
 
 ### Return type
 
@@ -10792,7 +10792,7 @@ namespace Example
 
 ## PostWorkforcemanagementAdherenceHistoricalBulk
 
-> [**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse) PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body = null)
+> [**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse) PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body)
 
 
 Request a historical adherence report in bulk
@@ -10823,7 +10823,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new WfmHistoricalAdherenceBulkQuery(); // WfmHistoricalAdherenceBulkQuery | body (optional) 
+            var body = new WfmHistoricalAdherenceBulkQuery(); // WfmHistoricalAdherenceBulkQuery | body
 
             try
             { 
@@ -10845,7 +10845,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery)| body | [optional]  |
+| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery)| body |  |
 
 ### Return type
 
@@ -10986,7 +10986,7 @@ namespace Example
 
 ## PostWorkforcemanagementAgents
 
-> [**MoveAgentsResponse**](MoveAgentsResponse) PostWorkforcemanagementAgents (MoveAgentsRequest body = null)
+> [**MoveAgentsResponse**](MoveAgentsResponse) PostWorkforcemanagementAgents (MoveAgentsRequest body)
 
 
 Move agents in and out of management unit
@@ -11017,7 +11017,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new MoveAgentsRequest(); // MoveAgentsRequest | body (optional) 
+            var body = new MoveAgentsRequest(); // MoveAgentsRequest | body
 
             try
             { 
@@ -11039,7 +11039,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**MoveAgentsRequest**](MoveAgentsRequest)| body | [optional]  |
+| **body** | [**MoveAgentsRequest**](MoveAgentsRequest)| body |  |
 
 ### Return type
 
@@ -11048,7 +11048,7 @@ namespace Example
 
 ## PostWorkforcemanagementAgentsIntegrationsHrisQuery
 
-> [**AgentsIntegrationsListing**](AgentsIntegrationsListing) PostWorkforcemanagementAgentsIntegrationsHrisQuery (QueryAgentsIntegrationsRequest body = null)
+> [**AgentsIntegrationsListing**](AgentsIntegrationsListing) PostWorkforcemanagementAgentsIntegrationsHrisQuery (QueryAgentsIntegrationsRequest body)
 
 
 Query integrations for agents
@@ -11079,7 +11079,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new QueryAgentsIntegrationsRequest(); // QueryAgentsIntegrationsRequest | body (optional) 
+            var body = new QueryAgentsIntegrationsRequest(); // QueryAgentsIntegrationsRequest | body
 
             try
             { 
@@ -11101,7 +11101,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest)| body | [optional]  |
+| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest)| body |  |
 
 ### Return type
 
@@ -11172,7 +11172,7 @@ namespace Example
 
 ## PostWorkforcemanagementAgentschedulesMine
 
-> [**BuCurrentAgentScheduleSearchResponse**](BuCurrentAgentScheduleSearchResponse) PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body = null)
+> [**BuCurrentAgentScheduleSearchResponse**](BuCurrentAgentScheduleSearchResponse) PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body)
 
 
 Get published schedule for the current user
@@ -11203,7 +11203,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new BuGetCurrentAgentScheduleRequest(); // BuGetCurrentAgentScheduleRequest | body (optional) 
+            var body = new BuGetCurrentAgentScheduleRequest(); // BuGetCurrentAgentScheduleRequest | body
 
             try
             { 
@@ -11225,7 +11225,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**BuGetCurrentAgentScheduleRequest**](BuGetCurrentAgentScheduleRequest)| body | [optional]  |
+| **body** | [**BuGetCurrentAgentScheduleRequest**](BuGetCurrentAgentScheduleRequest)| body |  |
 
 ### Return type
 
@@ -11420,7 +11420,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitActivitycodes
 
-> [**BusinessUnitActivityCode**](BusinessUnitActivityCode) PostWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, CreateActivityCodeRequest body = null)
+> [**BusinessUnitActivityCode**](BusinessUnitActivityCode) PostWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, CreateActivityCodeRequest body)
 
 
 Create a new activity code
@@ -11452,7 +11452,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-            var body = new CreateActivityCodeRequest(); // CreateActivityCodeRequest | body (optional) 
+            var body = new CreateActivityCodeRequest(); // CreateActivityCodeRequest | body
 
             try
             { 
@@ -11475,7 +11475,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest)| body | [optional]  |
+| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest)| body |  |
 
 ### Return type
 
@@ -11682,7 +11682,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitAgentschedulesSearch
 
-> [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse) PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
+> [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse) PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, BuSearchAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
 
 
 Search published schedules
@@ -11715,14 +11715,14 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional) 
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
-            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
 
             try
             { 
                 // Search published schedules
-                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, forceAsync, forceDownloadService, body);
+                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, body, forceAsync, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -11740,9 +11740,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional]  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | [optional]  |
 
 ### Return type
 
@@ -11817,7 +11817,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitIntraday
 
-> [**AsyncIntradayResponse**](AsyncIntradayResponse) PostWorkforcemanagementBusinessunitIntraday (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null)
+> [**AsyncIntradayResponse**](AsyncIntradayResponse) PostWorkforcemanagementBusinessunitIntraday (string businessUnitId, IntradayPlanningGroupRequest body, bool? forceAsync = null)
 
 
 Get intraday data for the given date for the requested planningGroupIds
@@ -11849,13 +11849,13 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new IntradayPlanningGroupRequest(); // IntradayPlanningGroupRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            var body = new IntradayPlanningGroupRequest(); // IntradayPlanningGroupRequest | body (optional) 
 
             try
             { 
                 // Get intraday data for the given date for the requested planningGroupIds
-                AsyncIntradayResponse result = apiInstance.PostWorkforcemanagementBusinessunitIntraday(businessUnitId, forceAsync, body);
+                AsyncIntradayResponse result = apiInstance.PostWorkforcemanagementBusinessunitIntraday(businessUnitId, body, forceAsync);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -11873,8 +11873,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
-| **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest)| body | [optional]  |
 
 ### Return type
 
@@ -11883,7 +11883,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitPlanninggroups
 
-> [**PlanningGroup**](PlanningGroup) PostWorkforcemanagementBusinessunitPlanninggroups (string businessUnitId, CreatePlanningGroupRequest body = null)
+> [**PlanningGroup**](PlanningGroup) PostWorkforcemanagementBusinessunitPlanninggroups (string businessUnitId, CreatePlanningGroupRequest body)
 
 
 Adds a new planning group
@@ -11915,7 +11915,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit.
-            var body = new CreatePlanningGroupRequest(); // CreatePlanningGroupRequest | body (optional) 
+            var body = new CreatePlanningGroupRequest(); // CreatePlanningGroupRequest | body
 
             try
             { 
@@ -11938,7 +11938,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
-| **body** | [**CreatePlanningGroupRequest**](CreatePlanningGroupRequest)| body | [optional]  |
+| **body** | [**CreatePlanningGroupRequest**](CreatePlanningGroupRequest)| body |  |
 
 ### Return type
 
@@ -11947,7 +11947,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitServicegoaltemplates
 
-> [**ServiceGoalTemplate**](ServiceGoalTemplate) PostWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId, CreateServiceGoalTemplate body = null)
+> [**ServiceGoalTemplate**](ServiceGoalTemplate) PostWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId, CreateServiceGoalTemplate body)
 
 
 Adds a new service goal template
@@ -11979,7 +11979,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit.
-            var body = new CreateServiceGoalTemplate(); // CreateServiceGoalTemplate | body (optional) 
+            var body = new CreateServiceGoalTemplate(); // CreateServiceGoalTemplate | body
 
             try
             { 
@@ -12002,7 +12002,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
-| **body** | [**CreateServiceGoalTemplate**](CreateServiceGoalTemplate)| body | [optional]  |
+| **body** | [**CreateServiceGoalTemplate**](CreateServiceGoalTemplate)| body |  |
 
 ### Return type
 
@@ -12011,7 +12011,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitStaffinggroups
 
-> [**StaffingGroupResponse**](StaffingGroupResponse) PostWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, CreateStaffingGroupRequest body = null)
+> [**StaffingGroupResponse**](StaffingGroupResponse) PostWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, CreateStaffingGroupRequest body)
 
 
 Creates a new staffing group
@@ -12043,7 +12043,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new CreateStaffingGroupRequest(); // CreateStaffingGroupRequest | body (optional) 
+            var body = new CreateStaffingGroupRequest(); // CreateStaffingGroupRequest | body
 
             try
             { 
@@ -12066,7 +12066,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest)| body | [optional]  |
+| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest)| body |  |
 
 ### Return type
 
@@ -12075,7 +12075,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitStaffinggroupsQuery
 
-> [**UserStaffingGroupListing**](UserStaffingGroupListing) PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body = null)
+> [**UserStaffingGroupListing**](UserStaffingGroupListing) PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body)
 
 
 Gets staffing group associations for a list of user IDs
@@ -12107,7 +12107,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new QueryUserStaffingGroupListRequest(); // QueryUserStaffingGroupListRequest | body (optional) 
+            var body = new QueryUserStaffingGroupListRequest(); // QueryUserStaffingGroupListRequest | body
 
             try
             { 
@@ -12130,7 +12130,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest)| body | [optional]  |
+| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest)| body |  |
 
 ### Return type
 
@@ -12139,7 +12139,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitTimeofflimits
 
-> [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse) PostWorkforcemanagementBusinessunitTimeofflimits (string businessUnitId, BuCreateTimeOffLimitRequest body = null)
+> [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse) PostWorkforcemanagementBusinessunitTimeofflimits (string businessUnitId, BuCreateTimeOffLimitRequest body)
 
 
 Creates a new time-off limit object
@@ -12171,7 +12171,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new BuCreateTimeOffLimitRequest(); // BuCreateTimeOffLimitRequest | body (optional) 
+            var body = new BuCreateTimeOffLimitRequest(); // BuCreateTimeOffLimitRequest | body
 
             try
             { 
@@ -12194,7 +12194,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest)| body | [optional]  |
+| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest)| body |  |
 
 ### Return type
 
@@ -12203,7 +12203,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery
 
-> [**BuTimeOffLimitValuesResponse**](BuTimeOffLimitValuesResponse) PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery (string businessUnitId, QueryTimeOffLimitValuesRequest body = null)
+> [**BuTimeOffLimitValuesResponse**](BuTimeOffLimitValuesResponse) PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery (string businessUnitId, QueryTimeOffLimitValuesRequest body)
 
 
 Retrieves time-off limit related values based on a given set of filters.
@@ -12235,7 +12235,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new QueryTimeOffLimitValuesRequest(); // QueryTimeOffLimitValuesRequest | body (optional) 
+            var body = new QueryTimeOffLimitValuesRequest(); // QueryTimeOffLimitValuesRequest | body
 
             try
             { 
@@ -12258,7 +12258,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | [optional]  |
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body |  |
 
 ### Return type
 
@@ -12267,7 +12267,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitTimeoffplans
 
-> [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse) PostWorkforcemanagementBusinessunitTimeoffplans (string businessUnitId, BuCreateTimeOffPlanRequest body = null)
+> [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse) PostWorkforcemanagementBusinessunitTimeoffplans (string businessUnitId, BuCreateTimeOffPlanRequest body)
 
 
 Creates a new time-off plan
@@ -12299,7 +12299,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new BuCreateTimeOffPlanRequest(); // BuCreateTimeOffPlanRequest | body (optional) 
+            var body = new BuCreateTimeOffPlanRequest(); // BuCreateTimeOffPlanRequest | body
 
             try
             { 
@@ -12322,7 +12322,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest)| body | [optional]  |
+| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest)| body |  |
 
 ### Return type
 
@@ -12472,7 +12472,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations
 
-> [**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse) PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null)
+> [**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse) PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body)
 
 
 Request a daily recalculation of the performance prediction for the associated schedule
@@ -12506,7 +12506,7 @@ namespace Example
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the performance prediction belongs
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format
             var scheduleId = scheduleId_example;  // string | The ID of the schedule the performance prediction belongs to
-            var body = new WfmProcessUploadRequest(); // WfmProcessUploadRequest | body (optional) 
+            var body = new WfmProcessUploadRequest(); // WfmProcessUploadRequest | body
 
             try
             { 
@@ -12531,7 +12531,7 @@ namespace Example
 | **businessUnitId** | **string**| The ID of the business unit to which the performance prediction belongs |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format |  |
 | **scheduleId** | **string**| The ID of the schedule the performance prediction belongs to |  |
-| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest)| body | [optional]  |
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest)| body |  |
 
 ### Return type
 
@@ -12540,7 +12540,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl
 
-> [**PerformancePredictionRecalculationUploadResponse**](PerformancePredictionRecalculationUploadResponse) PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null)
+> [**PerformancePredictionRecalculationUploadResponse**](PerformancePredictionRecalculationUploadResponse) PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body)
 
 
 Upload daily activity changes to be able to request a performance prediction recalculation
@@ -12574,7 +12574,7 @@ namespace Example
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the performance prediction belongs
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format
             var scheduleId = scheduleId_example;  // string | The ID of the schedule the performance prediction belongs to
-            var body = new UploadUrlRequestBody(); // UploadUrlRequestBody | body (optional) 
+            var body = new UploadUrlRequestBody(); // UploadUrlRequestBody | body
 
             try
             { 
@@ -12599,7 +12599,7 @@ namespace Example
 | **businessUnitId** | **string**| The ID of the business unit to which the performance prediction belongs |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format |  |
 | **scheduleId** | **string**| The ID of the schedule the performance prediction belongs to |  |
-| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | [optional]  |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body |  |
 
 ### Return type
 
@@ -13424,7 +13424,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitWorkplanbidGroups
 
-> [**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse) PostWorkforcemanagementBusinessunitWorkplanbidGroups (string businessUnitId, string bidId, WorkPlanBidGroupCreate body = null)
+> [**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse) PostWorkforcemanagementBusinessunitWorkplanbidGroups (string businessUnitId, string bidId, WorkPlanBidGroupCreate body)
 
 
 Add a bid group in a given work plan bid
@@ -13457,7 +13457,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var bidId = bidId_example;  // string | The work plan bid id of the bid groups
-            var body = new WorkPlanBidGroupCreate(); // WorkPlanBidGroupCreate | body (optional) 
+            var body = new WorkPlanBidGroupCreate(); // WorkPlanBidGroupCreate | body
 
             try
             { 
@@ -13481,7 +13481,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **bidId** | **string**| The work plan bid id of the bid groups |  |
-| **body** | [**WorkPlanBidGroupCreate**](WorkPlanBidGroupCreate)| body | [optional]  |
+| **body** | [**WorkPlanBidGroupCreate**](WorkPlanBidGroupCreate)| body |  |
 
 ### Return type
 
@@ -13490,7 +13490,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitWorkplanbids
 
-> [**WorkPlanBid**](WorkPlanBid) PostWorkforcemanagementBusinessunitWorkplanbids (string businessUnitId, CreateWorkPlanBid body = null)
+> [**WorkPlanBid**](WorkPlanBid) PostWorkforcemanagementBusinessunitWorkplanbids (string businessUnitId, CreateWorkPlanBid body)
 
 
 Create a new work plan bid
@@ -13522,7 +13522,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new CreateWorkPlanBid(); // CreateWorkPlanBid | The work plan bid to be created (optional) 
+            var body = new CreateWorkPlanBid(); // CreateWorkPlanBid | The work plan bid to be created
 
             try
             { 
@@ -13545,7 +13545,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**CreateWorkPlanBid**](CreateWorkPlanBid)| The work plan bid to be created | [optional]  |
+| **body** | [**CreateWorkPlanBid**](CreateWorkPlanBid)| The work plan bid to be created |  |
 
 ### Return type
 
@@ -13554,7 +13554,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunits
 
-> [**BusinessUnitResponse**](BusinessUnitResponse) PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null)
+> [**BusinessUnitResponse**](BusinessUnitResponse) PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body)
 
 
 Add a new business unit
@@ -13587,7 +13587,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new CreateBusinessUnitRequest(); // CreateBusinessUnitRequest | body (optional) 
+            var body = new CreateBusinessUnitRequest(); // CreateBusinessUnitRequest | body
 
             try
             { 
@@ -13609,7 +13609,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest)| body | [optional]  |
+| **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest)| body |  |
 
 ### Return type
 
@@ -13681,7 +13681,7 @@ namespace Example
 
 ## PostWorkforcemanagementHistoricaldataBulkRemoveJobs
 
-> [**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse) PostWorkforcemanagementHistoricaldataBulkRemoveJobs (HistoricalImportDeleteFilesJobRequest body = null)
+> [**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse) PostWorkforcemanagementHistoricaldataBulkRemoveJobs (HistoricalImportDeleteFilesJobRequest body)
 
 
 Delete the list of the historical data import entries
@@ -13712,7 +13712,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new HistoricalImportDeleteFilesJobRequest(); // HistoricalImportDeleteFilesJobRequest | body (optional) 
+            var body = new HistoricalImportDeleteFilesJobRequest(); // HistoricalImportDeleteFilesJobRequest | body
 
             try
             { 
@@ -13734,7 +13734,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**HistoricalImportDeleteFilesJobRequest**](HistoricalImportDeleteFilesJobRequest)| body | [optional]  |
+| **body** | [**HistoricalImportDeleteFilesJobRequest**](HistoricalImportDeleteFilesJobRequest)| body |  |
 
 ### Return type
 
@@ -13805,7 +13805,7 @@ This endpoint does require any parameters.
 
 ## PostWorkforcemanagementHistoricaldataValidate
 
-> [**ValidationServiceAsyncResponse**](ValidationServiceAsyncResponse) PostWorkforcemanagementHistoricaldataValidate (ValidationServiceRequest body = null)
+> [**ValidationServiceAsyncResponse**](ValidationServiceAsyncResponse) PostWorkforcemanagementHistoricaldataValidate (ValidationServiceRequest body)
 
 
 Trigger validation process for historical import
@@ -13836,7 +13836,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new ValidationServiceRequest(); // ValidationServiceRequest | body (optional) 
+            var body = new ValidationServiceRequest(); // ValidationServiceRequest | body
 
             try
             { 
@@ -13858,7 +13858,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ValidationServiceRequest**](ValidationServiceRequest)| body | [optional]  |
+| **body** | [**ValidationServiceRequest**](ValidationServiceRequest)| body |  |
 
 ### Return type
 
@@ -13929,7 +13929,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitAgentsWorkplansQuery
 
-> [**AgentsWorkPlansResponse**](AgentsWorkPlansResponse) PostWorkforcemanagementManagementunitAgentsWorkplansQuery (string managementUnitId, bool? forceDownloadService = null, GetAgentsWorkPlansRequest body = null)
+> [**AgentsWorkPlansResponse**](AgentsWorkPlansResponse) PostWorkforcemanagementManagementunitAgentsWorkplansQuery (string managementUnitId, GetAgentsWorkPlansRequest body, bool? forceDownloadService = null)
 
 
 Get agents work plans configuration
@@ -13961,13 +13961,13 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new GetAgentsWorkPlansRequest(); // GetAgentsWorkPlansRequest | body
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
-            var body = new GetAgentsWorkPlansRequest(); // GetAgentsWorkPlansRequest | body (optional) 
 
             try
             { 
                 // Get agents work plans configuration
-                AgentsWorkPlansResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId, forceDownloadService, body);
+                AgentsWorkPlansResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId, body, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -13985,8 +13985,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**GetAgentsWorkPlansRequest**](GetAgentsWorkPlansRequest)| body |  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
-| **body** | [**GetAgentsWorkPlansRequest**](GetAgentsWorkPlansRequest)| body | [optional]  |
 
 ### Return type
 
@@ -13995,7 +13995,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitAgentschedulesSearch
 
-> [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse) PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
+> [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse) PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, BuSearchAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
 
 
 Query published schedules for given given time range for set of users
@@ -14028,14 +14028,14 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional) 
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
-            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
 
             try
             { 
                 // Query published schedules for given given time range for set of users
-                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, forceAsync, forceDownloadService, body);
+                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, body, forceAsync, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -14053,9 +14053,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional]  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | [optional]  |
 
 ### Return type
 
@@ -14064,7 +14064,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitHistoricaladherencequery
 
-> [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse) PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
+> [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse) PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body)
 
 
 Request a historical adherence report
@@ -14098,7 +14098,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
-            var body = new WfmHistoricalAdherenceQuery(); // WfmHistoricalAdherenceQuery | body (optional) 
+            var body = new WfmHistoricalAdherenceQuery(); // WfmHistoricalAdherenceQuery | body
 
             try
             { 
@@ -14121,7 +14121,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit |  |
-| **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery)| body | [optional]  |
+| **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery)| body |  |
 
 ### Return type
 
@@ -14130,7 +14130,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitMove
 
-> [**MoveManagementUnitResponse**](MoveManagementUnitResponse) PostWorkforcemanagementManagementunitMove (string managementUnitId, MoveManagementUnitRequest body = null)
+> [**MoveManagementUnitResponse**](MoveManagementUnitResponse) PostWorkforcemanagementManagementunitMove (string managementUnitId, MoveManagementUnitRequest body)
 
 
 Move the requested management unit to a new business unit
@@ -14164,7 +14164,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new MoveManagementUnitRequest(); // MoveManagementUnitRequest | body (optional) 
+            var body = new MoveManagementUnitRequest(); // MoveManagementUnitRequest | body
 
             try
             { 
@@ -14187,7 +14187,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest)| body | [optional]  |
+| **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest)| body |  |
 
 ### Return type
 
@@ -14196,7 +14196,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitSchedulesSearch
 
-> [**UserScheduleContainer**](UserScheduleContainer) PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body = null)
+> [**UserScheduleContainer**](UserScheduleContainer) PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body)
 
 :::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
 This resource has been deprecated
@@ -14232,7 +14232,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body (optional) 
+            var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body
 
             try
             { 
@@ -14255,7 +14255,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody)| body | [optional]  |
+| **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody)| body |  |
 
 ### Return type
 
@@ -14264,7 +14264,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitShrinkageJobs
 
-> [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse) PostWorkforcemanagementManagementunitShrinkageJobs (string managementUnitId, WfmHistoricalShrinkageRequest body = null)
+> [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse) PostWorkforcemanagementManagementunitShrinkageJobs (string managementUnitId, WfmHistoricalShrinkageRequest body)
 
 
 Request a historical shrinkage report
@@ -14298,7 +14298,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
-            var body = new WfmHistoricalShrinkageRequest(); // WfmHistoricalShrinkageRequest | body (optional) 
+            var body = new WfmHistoricalShrinkageRequest(); // WfmHistoricalShrinkageRequest | body
 
             try
             { 
@@ -14321,7 +14321,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit |  |
-| **body** | [**WfmHistoricalShrinkageRequest**](WfmHistoricalShrinkageRequest)| body | [optional]  |
+| **body** | [**WfmHistoricalShrinkageRequest**](WfmHistoricalShrinkageRequest)| body |  |
 
 ### Return type
 
@@ -14330,7 +14330,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitTimeofflimits
 
-> [**TimeOffLimit**](TimeOffLimit) PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body = null)
+> [**TimeOffLimit**](TimeOffLimit) PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body)
 
 
 Creates a new time off limit object under management unit.
@@ -14364,7 +14364,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            var body = new CreateTimeOffLimitRequest(); // CreateTimeOffLimitRequest | body (optional) 
+            var body = new CreateTimeOffLimitRequest(); // CreateTimeOffLimitRequest | body
 
             try
             { 
@@ -14387,7 +14387,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit. |  |
-| **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest)| body | [optional]  |
+| **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest)| body |  |
 
 ### Return type
 
@@ -14396,7 +14396,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery
 
-> [**QueryTimeOffLimitValuesResponse**](QueryTimeOffLimitValuesResponse) PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
+> [**QueryTimeOffLimitValuesResponse**](QueryTimeOffLimitValuesResponse) PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body)
 
 
 Retrieves time off limit related values based on a given set of filters.
@@ -14428,7 +14428,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            var body = new QueryTimeOffLimitValuesRequest(); // QueryTimeOffLimitValuesRequest | body (optional) 
+            var body = new QueryTimeOffLimitValuesRequest(); // QueryTimeOffLimitValuesRequest | body
 
             try
             { 
@@ -14451,7 +14451,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit. |  |
-| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | [optional]  |
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body |  |
 
 ### Return type
 
@@ -14460,7 +14460,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitTimeoffplans
 
-> [**TimeOffPlan**](TimeOffPlan) PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body = null)
+> [**TimeOffPlan**](TimeOffPlan) PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body)
 
 
 Creates a new time off plan
@@ -14492,7 +14492,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
-            var body = new CreateTimeOffPlanRequest(); // CreateTimeOffPlanRequest | body (optional) 
+            var body = new CreateTimeOffPlanRequest(); // CreateTimeOffPlanRequest | body
 
             try
             { 
@@ -14515,7 +14515,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit |  |
-| **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest)| body | [optional]  |
+| **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest)| body |  |
 
 ### Return type
 
@@ -14524,7 +14524,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitTimeoffrequests
 
-> [**TimeOffRequestList**](TimeOffRequestList) PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body = null)
+> [**TimeOffRequestList**](TimeOffRequestList) PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body)
 
 
 Create a new time off request
@@ -14556,7 +14556,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new CreateAdminTimeOffRequest(); // CreateAdminTimeOffRequest | body (optional) 
+            var body = new CreateAdminTimeOffRequest(); // CreateAdminTimeOffRequest | body
 
             try
             { 
@@ -14579,7 +14579,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest)| body | [optional]  |
+| **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest)| body |  |
 
 ### Return type
 
@@ -14588,7 +14588,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery
 
-> [**UserTimeOffIntegrationStatusResponseListing**](UserTimeOffIntegrationStatusResponseListing) PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery (string managementUnitId, QueryTimeOffIntegrationStatusRequest body = null)
+> [**UserTimeOffIntegrationStatusResponseListing**](UserTimeOffIntegrationStatusResponseListing) PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery (string managementUnitId, QueryTimeOffIntegrationStatusRequest body)
 
 
 Retrieves integration statuses for a list of time off requests
@@ -14620,7 +14620,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            var body = new QueryTimeOffIntegrationStatusRequest(); // QueryTimeOffIntegrationStatusRequest | body (optional) 
+            var body = new QueryTimeOffIntegrationStatusRequest(); // QueryTimeOffIntegrationStatusRequest | body
 
             try
             { 
@@ -14643,7 +14643,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit. |  |
-| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest)| body | [optional]  |
+| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest)| body |  |
 
 ### Return type
 
@@ -14652,7 +14652,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitTimeoffrequestsQuery
 
-> [**TimeOffRequestListing**](TimeOffRequestListing) PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null)
+> [**TimeOffRequestListing**](TimeOffRequestListing) PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body, bool? forceDownloadService = null)
 
 
 Fetches time off requests matching the conditions specified in the request body
@@ -14686,13 +14686,13 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new TimeOffRequestQueryBody(); // TimeOffRequestQueryBody | body
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
-            var body = new TimeOffRequestQueryBody(); // TimeOffRequestQueryBody | body (optional) 
 
             try
             { 
                 // Fetches time off requests matching the conditions specified in the request body
-                TimeOffRequestListing result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, forceDownloadService, body);
+                TimeOffRequestListing result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, body, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -14710,8 +14710,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody)| body |  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
-| **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody)| body | [optional]  |
 
 ### Return type
 
@@ -14720,7 +14720,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery
 
-> [**WaitlistPositionListing**](WaitlistPositionListing) PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body = null)
+> [**WaitlistPositionListing**](WaitlistPositionListing) PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body)
 
 
 Retrieves daily waitlist position for a list of time off requests
@@ -14752,7 +14752,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            var body = new QueryWaitlistPositionsRequest(); // QueryWaitlistPositionsRequest | body (optional) 
+            var body = new QueryWaitlistPositionsRequest(); // QueryWaitlistPositionsRequest | body
 
             try
             { 
@@ -14775,7 +14775,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit. |  |
-| **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest)| body | [optional]  |
+| **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest)| body |  |
 
 ### Return type
 
@@ -14916,7 +14916,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate
 
-> [**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse) PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate (string managementUnitId, string userId, EstimateAvailableTimeOffRequest body = null)
+> [**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse) PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate (string managementUnitId, string userId, EstimateAvailableTimeOffRequest body)
 
 
 Estimates available time off for an agent
@@ -14949,7 +14949,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var userId = userId_example;  // string | The id of the user for whom the time off request estimate is requested
-            var body = new EstimateAvailableTimeOffRequest(); // EstimateAvailableTimeOffRequest | body (optional) 
+            var body = new EstimateAvailableTimeOffRequest(); // EstimateAvailableTimeOffRequest | body
 
             try
             { 
@@ -14973,7 +14973,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit |  |
 | **userId** | **string**| The id of the user for whom the time off request estimate is requested |  |
-| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | [optional]  |
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body |  |
 
 ### Return type
 
@@ -15255,7 +15255,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitWorkplanCopy
 
-> [**WorkPlan**](WorkPlan) PostWorkforcemanagementManagementunitWorkplanCopy (string managementUnitId, string workPlanId, CopyWorkPlan body = null)
+> [**WorkPlan**](WorkPlan) PostWorkforcemanagementManagementunitWorkplanCopy (string managementUnitId, string workPlanId, CopyWorkPlan body)
 
 
 Create a copy of work plan
@@ -15288,7 +15288,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to create a copy
-            var body = new CopyWorkPlan(); // CopyWorkPlan | body (optional) 
+            var body = new CopyWorkPlan(); // CopyWorkPlan | body
 
             try
             { 
@@ -15312,7 +15312,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanId** | **string**| The ID of the work plan to create a copy |  |
-| **body** | [**CopyWorkPlan**](CopyWorkPlan)| body | [optional]  |
+| **body** | [**CopyWorkPlan**](CopyWorkPlan)| body |  |
 
 ### Return type
 
@@ -15321,7 +15321,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitWorkplanValidate
 
-> [**ValidateWorkPlanResponse**](ValidateWorkPlanResponse) PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
+> [**ValidateWorkPlanResponse**](ValidateWorkPlanResponse) PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, WorkPlanValidationRequest body, List<string> expand = null)
 
 
 Validate Work Plan
@@ -15355,13 +15355,13 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
+            var body = new WorkPlanValidationRequest(); // WorkPlanValidationRequest | body
             var expand = new List<string>(); // List<string> |  (optional) 
-            var body = new WorkPlanValidationRequest(); // WorkPlanValidationRequest | body (optional) 
 
             try
             { 
                 // Validate Work Plan
-                ValidateWorkPlanResponse result = apiInstance.PostWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, expand, body);
+                ValidateWorkPlanResponse result = apiInstance.PostWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -15380,8 +15380,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanId** | **string**| The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. |  |
+| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest)| body |  |
 | **expand** | [**List<string>**](string)|  | [optional] <br />**Values**: messages |
-| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest)| body | [optional]  |
 
 ### Return type
 
@@ -15390,7 +15390,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitWorkplanrotationCopy
 
-> [**WorkPlanRotationResponse**](WorkPlanRotationResponse) PostWorkforcemanagementManagementunitWorkplanrotationCopy (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
+> [**WorkPlanRotationResponse**](WorkPlanRotationResponse) PostWorkforcemanagementManagementunitWorkplanrotationCopy (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body)
 
 
 Create a copy of work plan rotation
@@ -15423,7 +15423,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanRotationId = workPlanRotationId_example;  // string | The ID of the work plan rotation to create a copy
-            var body = new CopyWorkPlanRotationRequest(); // CopyWorkPlanRotationRequest | body (optional) 
+            var body = new CopyWorkPlanRotationRequest(); // CopyWorkPlanRotationRequest | body
 
             try
             { 
@@ -15447,7 +15447,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanRotationId** | **string**| The ID of the work plan rotation to create a copy |  |
-| **body** | [**CopyWorkPlanRotationRequest**](CopyWorkPlanRotationRequest)| body | [optional]  |
+| **body** | [**CopyWorkPlanRotationRequest**](CopyWorkPlanRotationRequest)| body |  |
 
 ### Return type
 
@@ -15456,7 +15456,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitWorkplanrotations
 
-> [**WorkPlanRotationResponse**](WorkPlanRotationResponse) PostWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, AddWorkPlanRotationRequest body = null)
+> [**WorkPlanRotationResponse**](WorkPlanRotationResponse) PostWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, AddWorkPlanRotationRequest body)
 
 
 Create a new work plan rotation
@@ -15488,7 +15488,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new AddWorkPlanRotationRequest(); // AddWorkPlanRotationRequest | body (optional) 
+            var body = new AddWorkPlanRotationRequest(); // AddWorkPlanRotationRequest | body
 
             try
             { 
@@ -15511,7 +15511,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**AddWorkPlanRotationRequest**](AddWorkPlanRotationRequest)| body | [optional]  |
+| **body** | [**AddWorkPlanRotationRequest**](AddWorkPlanRotationRequest)| body |  |
 
 ### Return type
 
@@ -15520,7 +15520,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunitWorkplans
 
-> [**WorkPlan**](WorkPlan) PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
+> [**WorkPlan**](WorkPlan) PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body, string validationMode = null)
 
 
 Create a new work plan
@@ -15552,13 +15552,13 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new CreateWorkPlan(); // CreateWorkPlan | body
             var validationMode = validationMode_example;  // string | Allows to create work plan even if the validation result is invalid (optional) 
-            var body = new CreateWorkPlan(); // CreateWorkPlan | body (optional) 
 
             try
             { 
                 // Create a new work plan
-                WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplans(managementUnitId, validationMode, body);
+                WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplans(managementUnitId, body, validationMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -15576,8 +15576,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**CreateWorkPlan**](CreateWorkPlan)| body |  |
 | **validationMode** | **string**| Allows to create work plan even if the validation result is invalid | [optional] <br />**Values**: Ignore |
-| **body** | [**CreateWorkPlan**](CreateWorkPlan)| body | [optional]  |
 
 ### Return type
 
@@ -15586,7 +15586,7 @@ namespace Example
 
 ## PostWorkforcemanagementManagementunits
 
-> [**ManagementUnit**](ManagementUnit) PostWorkforcemanagementManagementunits (CreateManagementUnitApiRequest body = null)
+> [**ManagementUnit**](ManagementUnit) PostWorkforcemanagementManagementunits (CreateManagementUnitApiRequest body)
 
 
 Add a management unit
@@ -15619,7 +15619,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new CreateManagementUnitApiRequest(); // CreateManagementUnitApiRequest | body (optional) 
+            var body = new CreateManagementUnitApiRequest(); // CreateManagementUnitApiRequest | body
 
             try
             { 
@@ -15641,7 +15641,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateManagementUnitApiRequest**](CreateManagementUnitApiRequest)| body | [optional]  |
+| **body** | [**CreateManagementUnitApiRequest**](CreateManagementUnitApiRequest)| body |  |
 
 ### Return type
 
@@ -15650,7 +15650,7 @@ namespace Example
 
 ## PostWorkforcemanagementNotificationsUpdate
 
-> [**UpdateNotificationsResponse**](UpdateNotificationsResponse) PostWorkforcemanagementNotificationsUpdate (UpdateNotificationsRequest body = null)
+> [**UpdateNotificationsResponse**](UpdateNotificationsResponse) PostWorkforcemanagementNotificationsUpdate (UpdateNotificationsRequest body)
 
 
 Mark a list of notifications as read or unread
@@ -15680,7 +15680,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new UpdateNotificationsRequest(); // UpdateNotificationsRequest | body (optional) 
+            var body = new UpdateNotificationsRequest(); // UpdateNotificationsRequest | body
 
             try
             { 
@@ -15702,7 +15702,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**UpdateNotificationsRequest**](UpdateNotificationsRequest)| body | [optional]  |
+| **body** | [**UpdateNotificationsRequest**](UpdateNotificationsRequest)| body |  |
 
 ### Return type
 
@@ -15776,7 +15776,7 @@ namespace Example
 
 ## PostWorkforcemanagementTeamAdherenceHistorical
 
-> [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse) PostWorkforcemanagementTeamAdherenceHistorical (string teamId, WfmHistoricalAdherenceQueryForTeams body = null)
+> [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse) PostWorkforcemanagementTeamAdherenceHistorical (string teamId, WfmHistoricalAdherenceQueryForTeams body)
 
 
 Request a teams historical adherence report
@@ -15810,7 +15810,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var teamId = teamId_example;  // string | The ID of the team
-            var body = new WfmHistoricalAdherenceQueryForTeams(); // WfmHistoricalAdherenceQueryForTeams | body (optional) 
+            var body = new WfmHistoricalAdherenceQueryForTeams(); // WfmHistoricalAdherenceQueryForTeams | body
 
             try
             { 
@@ -15833,7 +15833,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| The ID of the team |  |
-| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams)| body | [optional]  |
+| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams)| body |  |
 
 ### Return type
 
@@ -15842,7 +15842,7 @@ namespace Example
 
 ## PostWorkforcemanagementTeamShrinkageJobs
 
-> [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse) PostWorkforcemanagementTeamShrinkageJobs (string teamId, WfmHistoricalShrinkageTeamsRequest body = null)
+> [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse) PostWorkforcemanagementTeamShrinkageJobs (string teamId, WfmHistoricalShrinkageTeamsRequest body)
 
 
 Request a historical shrinkage report
@@ -15876,7 +15876,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var teamId = teamId_example;  // string | The ID of the team
-            var body = new WfmHistoricalShrinkageTeamsRequest(); // WfmHistoricalShrinkageTeamsRequest | body (optional) 
+            var body = new WfmHistoricalShrinkageTeamsRequest(); // WfmHistoricalShrinkageTeamsRequest | body
 
             try
             { 
@@ -15899,7 +15899,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| The ID of the team |  |
-| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest)| body | [optional]  |
+| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest)| body |  |
 
 ### Return type
 
@@ -15970,7 +15970,7 @@ namespace Example
 
 ## PostWorkforcemanagementTimeofflimitsAvailableQuery
 
-> [**AvailableTimeOffResponse**](AvailableTimeOffResponse) PostWorkforcemanagementTimeofflimitsAvailableQuery (AvailableTimeOffRequest body = null)
+> [**AvailableTimeOffResponse**](AvailableTimeOffResponse) PostWorkforcemanagementTimeofflimitsAvailableQuery (AvailableTimeOffRequest body)
 
 
 Queries available time off for the current user
@@ -16001,7 +16001,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new AvailableTimeOffRequest(); // AvailableTimeOffRequest | body (optional) 
+            var body = new AvailableTimeOffRequest(); // AvailableTimeOffRequest | body
 
             try
             { 
@@ -16023,7 +16023,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AvailableTimeOffRequest**](AvailableTimeOffRequest)| body | [optional]  |
+| **body** | [**AvailableTimeOffRequest**](AvailableTimeOffRequest)| body |  |
 
 ### Return type
 
@@ -16032,7 +16032,7 @@ namespace Example
 
 ## PostWorkforcemanagementTimeoffrequests
 
-> [**TimeOffRequestResponse**](TimeOffRequestResponse) PostWorkforcemanagementTimeoffrequests (CreateAgentTimeOffRequest body = null)
+> [**TimeOffRequestResponse**](TimeOffRequestResponse) PostWorkforcemanagementTimeoffrequests (CreateAgentTimeOffRequest body)
 
 
 Create a time off request for the current user
@@ -16063,7 +16063,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new CreateAgentTimeOffRequest(); // CreateAgentTimeOffRequest | body (optional) 
+            var body = new CreateAgentTimeOffRequest(); // CreateAgentTimeOffRequest | body
 
             try
             { 
@@ -16085,7 +16085,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateAgentTimeOffRequest**](CreateAgentTimeOffRequest)| body | [optional]  |
+| **body** | [**CreateAgentTimeOffRequest**](CreateAgentTimeOffRequest)| body |  |
 
 ### Return type
 
@@ -16094,7 +16094,7 @@ namespace Example
 
 ## PostWorkforcemanagementTimeoffrequestsEstimate
 
-> [**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse) PostWorkforcemanagementTimeoffrequestsEstimate (EstimateAvailableTimeOffRequest body = null)
+> [**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse) PostWorkforcemanagementTimeoffrequestsEstimate (EstimateAvailableTimeOffRequest body)
 
 
 Estimates available time off for current user
@@ -16125,7 +16125,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new EstimateAvailableTimeOffRequest(); // EstimateAvailableTimeOffRequest | body (optional) 
+            var body = new EstimateAvailableTimeOffRequest(); // EstimateAvailableTimeOffRequest | body
 
             try
             { 
@@ -16147,7 +16147,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | [optional]  |
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body |  |
 
 ### Return type
 
@@ -16156,7 +16156,7 @@ namespace Example
 
 ## PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery
 
-> [**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing) PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery (CurrentUserTimeOffIntegrationStatusRequest body = null)
+> [**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing) PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery (CurrentUserTimeOffIntegrationStatusRequest body)
 
 
 Retrieves integration statuses for a list of current user time off requests
@@ -16187,7 +16187,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var body = new CurrentUserTimeOffIntegrationStatusRequest(); // CurrentUserTimeOffIntegrationStatusRequest | body (optional) 
+            var body = new CurrentUserTimeOffIntegrationStatusRequest(); // CurrentUserTimeOffIntegrationStatusRequest | body
 
             try
             { 
@@ -16209,7 +16209,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest)| body | [optional]  |
+| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest)| body |  |
 
 ### Return type
 
@@ -16282,7 +16282,7 @@ namespace Example
 
 ## PutWorkforcemanagementBusinessunitTimeofflimitValues
 
-> [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse) PutWorkforcemanagementBusinessunitTimeofflimitValues (string businessUnitId, string timeOffLimitId, BuSetTimeOffLimitValuesRequest body = null)
+> [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse) PutWorkforcemanagementBusinessunitTimeofflimitValues (string businessUnitId, string timeOffLimitId, BuSetTimeOffLimitValuesRequest body)
 
 
 Sets daily values for a date range of time-off limit object
@@ -16317,7 +16317,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit object to set values for
-            var body = new BuSetTimeOffLimitValuesRequest(); // BuSetTimeOffLimitValuesRequest | body (optional) 
+            var body = new BuSetTimeOffLimitValuesRequest(); // BuSetTimeOffLimitValuesRequest | body
 
             try
             { 
@@ -16341,7 +16341,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **timeOffLimitId** | **string**| The ID of the time-off limit object to set values for |  |
-| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest)| body | [optional]  |
+| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest)| body |  |
 
 ### Return type
 
@@ -16350,7 +16350,7 @@ namespace Example
 
 ## PutWorkforcemanagementManagementunitTimeofflimitValues
 
-> [**TimeOffLimit**](TimeOffLimit) PutWorkforcemanagementManagementunitTimeofflimitValues (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
+> [**TimeOffLimit**](TimeOffLimit) PutWorkforcemanagementManagementunitTimeofflimitValues (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body)
 
 
 Sets daily values for a date range of time off limit object
@@ -16385,7 +16385,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time off limit object to set values for
-            var body = new SetTimeOffLimitValuesRequest(); // SetTimeOffLimitValuesRequest | body (optional) 
+            var body = new SetTimeOffLimitValuesRequest(); // SetTimeOffLimitValuesRequest | body
 
             try
             { 
@@ -16409,11 +16409,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit. |  |
 | **timeOffLimitId** | **string**| The ID of the time off limit object to set values for |  |
-| **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest)| body | [optional]  |
+| **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest)| body |  |
 
 ### Return type
 
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_

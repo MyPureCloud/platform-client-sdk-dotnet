@@ -13,18 +13,18 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// PagelessEntityListing
+    /// List of log capture user configurations including total count and entities
     /// </summary>
     [DataContract]
-    public partial class PagelessEntityListing :  IEquatable<PagelessEntityListing>
+    public partial class LogCaptureUserConfigurationListing :  IEquatable<LogCaptureUserConfigurationListing>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PagelessEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="LogCaptureUserConfigurationListing" /> class.
         /// </summary>
         /// <param name="Total">Total.</param>
         /// <param name="Entities">Entities.</param>
         /// <param name="SelfUri">SelfUri.</param>
-        public PagelessEntityListing(long? Total = null, List<AddressableEntity> Entities = null, string SelfUri = null)
+        public LogCaptureUserConfigurationListing(long? Total = null, List<LogCaptureUserConfiguration> Entities = null, string SelfUri = null)
         {
             this.Total = Total;
             this.Entities = Entities;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<AddressableEntity> Entities { get; set; }
+        public List<LogCaptureUserConfiguration> Entities { get; set; }
 
 
 
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PagelessEntityListing {\n");
+            sb.Append("class LogCaptureUserConfigurationListing {\n");
 
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
@@ -94,15 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PagelessEntityListing);
+            return this.Equals(obj as LogCaptureUserConfigurationListing);
         }
 
         /// <summary>
-        /// Returns true if PagelessEntityListing instances are equal
+        /// Returns true if LogCaptureUserConfigurationListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of PagelessEntityListing to be compared</param>
+        /// <param name="other">Instance of LogCaptureUserConfigurationListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PagelessEntityListing other)
+        public bool Equals(LogCaptureUserConfigurationListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

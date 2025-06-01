@@ -9,8 +9,7 @@
 | **Entities** | [**List&lt;LogEntry&gt;**](LogEntry) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_

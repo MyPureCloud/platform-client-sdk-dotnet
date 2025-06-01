@@ -124,7 +124,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -139,7 +138,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -480,7 +478,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -495,7 +492,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -510,7 +506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -526,7 +521,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -542,7 +536,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -559,7 +552,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -750,7 +742,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -765,7 +756,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -932,7 +922,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -946,7 +935,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -954,6 +942,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OpenDataIngestionRuleResponse</returns>
         
         ApiResponse<OpenDataIngestionRuleResponse> PostSocialmediaTopicDataingestionrulesOpenWithHttpInfo (string topicId, OpenDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>OpenSocialNormalizedMessageEntityListing</returns>
+        
+        OpenSocialNormalizedMessageEntityListing PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body);
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>ApiResponse of OpenSocialNormalizedMessageEntityListing</returns>
+        
+        ApiResponse<OpenSocialNormalizedMessageEntityListing> PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkWithHttpInfo (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body);
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>OpenSocialReactionsNormalizedEventEntityListing</returns>
+        
+        OpenSocialReactionsNormalizedEventEntityListing PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk (string topicId, string ruleId, OpenSocialMediaReactionsRequest body);
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>ApiResponse of OpenSocialReactionsNormalizedEventEntityListing</returns>
+        
+        ApiResponse<OpenSocialReactionsNormalizedEventEntityListing> PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkWithHttpInfo (string topicId, string ruleId, OpenSocialMediaReactionsRequest body);
 
         /// <summary>
         /// Create an twitter data ingestion rule.
@@ -1088,7 +1132,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1103,7 +1146,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1254,7 +1296,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1269,7 +1310,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1610,7 +1650,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1625,7 +1664,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1640,7 +1678,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1656,7 +1693,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1672,7 +1708,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1689,7 +1724,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1880,7 +1914,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -1895,7 +1928,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -2062,7 +2094,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -2076,7 +2107,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -2084,6 +2114,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OpenDataIngestionRuleResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OpenDataIngestionRuleResponse>> PostSocialmediaTopicDataingestionrulesOpenAsyncWithHttpInfo (string topicId, OpenDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of OpenSocialNormalizedMessageEntityListing</returns>
+        
+        System.Threading.Tasks.Task<OpenSocialNormalizedMessageEntityListing> PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkAsync (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body);
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of ApiResponse (OpenSocialNormalizedMessageEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OpenSocialNormalizedMessageEntityListing>> PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkAsyncWithHttpInfo (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body);
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>Task of OpenSocialReactionsNormalizedEventEntityListing</returns>
+        
+        System.Threading.Tasks.Task<OpenSocialReactionsNormalizedEventEntityListing> PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkAsync (string topicId, string ruleId, OpenSocialMediaReactionsRequest body);
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions
+        /// </summary>
+        /// <remarks>
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>Task of ApiResponse (OpenSocialReactionsNormalizedEventEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OpenSocialReactionsNormalizedEventEntityListing>> PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkAsyncWithHttpInfo (string topicId, string ruleId, OpenSocialMediaReactionsRequest body);
 
         /// <summary>
         /// Create an twitter data ingestion rule.
@@ -2218,7 +2304,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -2233,7 +2318,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -3191,7 +3275,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a open data ingestion rule. 
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -3207,7 +3290,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a open data ingestion rule. 
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -3300,7 +3382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a open data ingestion rule. 
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -3317,7 +3398,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a open data ingestion rule. 
         /// 
-        /// DeleteSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -5972,7 +6052,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single open data ingestion rule. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -5989,7 +6068,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single open data ingestion rule. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6082,7 +6160,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single open data ingestion rule. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6100,7 +6177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single open data ingestion rule. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6196,7 +6272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single Open data ingestion rule version. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6214,7 +6289,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single Open data ingestion rule version. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6312,7 +6386,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single Open data ingestion rule version. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6331,7 +6404,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a single Open data ingestion rule version. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6433,7 +6505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the Open data ingestion rule versions. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6452,7 +6523,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the Open data ingestion rule versions. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6549,7 +6619,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the Open data ingestion rule versions. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -6569,7 +6638,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the Open data ingestion rule versions. 
         /// 
-        /// GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -8013,7 +8081,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the status of a open data ingestion rule. 
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -8030,7 +8097,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the status of a open data ingestion rule. 
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -8128,7 +8194,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the status of a open data ingestion rule. 
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -8146,7 +8211,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the status of a open data ingestion rule. 
         /// 
-        /// PatchSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -9537,7 +9601,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an open data ingestion rule. 
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -9553,7 +9616,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an open data ingestion rule. 
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -9646,7 +9708,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an open data ingestion rule. 
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -9663,7 +9724,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an open data ingestion rule. 
         /// 
-        /// PostSocialmediaTopicDataingestionrulesOpen is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -9749,6 +9809,480 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OpenDataIngestionRuleResponse>(localVarStatusCode,
                 localVarHeaders,
                 (OpenDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages 
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>OpenSocialNormalizedMessageEntityListing</returns>
+        
+        public OpenSocialNormalizedMessageEntityListing PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body)
+        {
+             ApiResponse<OpenSocialNormalizedMessageEntityListing> localVarResponse = PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkWithHttpInfo(topicId, ruleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages 
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>ApiResponse of OpenSocialNormalizedMessageEntityListing</returns>
+        
+        public ApiResponse< OpenSocialNormalizedMessageEntityListing > PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkWithHttpInfo (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenSocialNormalizedMessageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OpenSocialNormalizedMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenSocialNormalizedMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages 
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of OpenSocialNormalizedMessageEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<OpenSocialNormalizedMessageEntityListing> PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkAsync (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body)
+        {
+             ApiResponse<OpenSocialNormalizedMessageEntityListing> localVarResponse = await PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkAsyncWithHttpInfo(topicId, ruleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ingest a list of Open Social Messages 
+        /// Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedMessage</param>
+        /// <returns>Task of ApiResponse (OpenSocialNormalizedMessageEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OpenSocialNormalizedMessageEntityListing>> PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkAsyncWithHttpInfo (string topicId, string ruleId, List<OpenSocialMediaNormalizedMessage> body)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenSocialNormalizedMessageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OpenSocialNormalizedMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenSocialNormalizedMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions 
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>OpenSocialReactionsNormalizedEventEntityListing</returns>
+        
+        public OpenSocialReactionsNormalizedEventEntityListing PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk (string topicId, string ruleId, OpenSocialMediaReactionsRequest body)
+        {
+             ApiResponse<OpenSocialReactionsNormalizedEventEntityListing> localVarResponse = PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkWithHttpInfo(topicId, ruleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions 
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>ApiResponse of OpenSocialReactionsNormalizedEventEntityListing</returns>
+        
+        public ApiResponse< OpenSocialReactionsNormalizedEventEntityListing > PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkWithHttpInfo (string topicId, string ruleId, OpenSocialMediaReactionsRequest body)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenSocialReactionsNormalizedEventEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OpenSocialReactionsNormalizedEventEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenSocialReactionsNormalizedEventEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions 
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>Task of OpenSocialReactionsNormalizedEventEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<OpenSocialReactionsNormalizedEventEntityListing> PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkAsync (string topicId, string ruleId, OpenSocialMediaReactionsRequest body)
+        {
+             ApiResponse<OpenSocialReactionsNormalizedEventEntityListing> localVarResponse = await PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkAsyncWithHttpInfo(topicId, ruleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ingest a list of Open Social Reactions 
+        /// Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">Topic ID</param>
+        /// <param name="ruleId">Data Ingestion Rule ID</param>
+        /// <param name="body">NormalizedEvent</param>
+        /// <returns>Task of ApiResponse (OpenSocialReactionsNormalizedEventEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OpenSocialReactionsNormalizedEventEntityListing>> PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkAsyncWithHttpInfo (string topicId, string ruleId, OpenSocialMediaReactionsRequest body)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OpenSocialReactionsNormalizedEventEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OpenSocialReactionsNormalizedEventEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpenSocialReactionsNormalizedEventEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10837,7 +11371,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the open data ingestion rule. 
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -10854,7 +11387,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the open data ingestion rule. 
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -10952,7 +11484,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the open data ingestion rule. 
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
@@ -10970,7 +11501,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the open data ingestion rule. 
         /// 
-        /// PutSocialmediaTopicDataingestionrulesOpenOpenId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>

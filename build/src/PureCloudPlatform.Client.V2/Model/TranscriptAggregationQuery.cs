@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ani,
             
             /// <summary>
+            /// Enum Categoryid for "categoryId"
+            /// </summary>
+            [EnumMember(Value = "categoryId")]
+            Categoryid,
+            
+            /// <summary>
             /// Enum Channel for "channel"
             /// </summary>
             [EnumMember(Value = "channel")]
@@ -147,6 +153,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Nspeechtextanalyzedconversations for "nSpeechTextAnalyzedConversations"
+            /// </summary>
+            [EnumMember(Value = "nSpeechTextAnalyzedConversations")]
+            Nspeechtextanalyzedconversations,
             
             /// <summary>
             /// Enum Ntopiccommunications for "nTopicCommunications"

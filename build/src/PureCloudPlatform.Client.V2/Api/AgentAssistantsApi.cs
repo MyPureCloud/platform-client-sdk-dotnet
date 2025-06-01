@@ -189,9 +189,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AssistantListing</returns>
         
-        AssistantListing GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
+        AssistantListing GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null);
 
         /// <summary>
         /// Get all assistants.
@@ -205,9 +206,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AssistantListing</returns>
         
-        ApiResponse<AssistantListing> GetAssistantsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
+        ApiResponse<AssistantListing> GetAssistantsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null);
 
         /// <summary>
         /// Get all queues assigned to any assistant.
@@ -523,9 +525,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AssistantListing</returns>
         
-        System.Threading.Tasks.Task<AssistantListing> GetAssistantsAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
+        System.Threading.Tasks.Task<AssistantListing> GetAssistantsAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null);
 
         /// <summary>
         /// Get all assistants.
@@ -539,9 +542,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AssistantListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AssistantListing>> GetAssistantsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<AssistantListing>> GetAssistantsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null);
 
         /// <summary>
         /// Get all queues assigned to any assistant.
@@ -2049,11 +2053,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AssistantListing</returns>
         
-        public AssistantListing GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
+        public AssistantListing GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null)
         {
-             ApiResponse<AssistantListing> localVarResponse = GetAssistantsWithHttpInfo(before, after, limit, pageSize, name);
+             ApiResponse<AssistantListing> localVarResponse = GetAssistantsWithHttpInfo(before, after, limit, pageSize, name, expand);
              return localVarResponse.Data;
         }
 
@@ -2067,9 +2072,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AssistantListing</returns>
         
-        public ApiResponse< AssistantListing > GetAssistantsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
+        public ApiResponse< AssistantListing > GetAssistantsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/assistants";
@@ -2110,6 +2116,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -2157,11 +2164,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AssistantListing</returns>
         
-        public async System.Threading.Tasks.Task<AssistantListing> GetAssistantsAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
+        public async System.Threading.Tasks.Task<AssistantListing> GetAssistantsAsync (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null)
         {
-             ApiResponse<AssistantListing> localVarResponse = await GetAssistantsAsyncWithHttpInfo(before, after, limit, pageSize, name);
+             ApiResponse<AssistantListing> localVarResponse = await GetAssistantsAsyncWithHttpInfo(before, after, limit, pageSize, name, expand);
              return localVarResponse.Data;
 
         }
@@ -2176,9 +2184,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Return the assistant by the given name. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AssistantListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AssistantListing>> GetAssistantsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AssistantListing>> GetAssistantsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/assistants";
@@ -2219,6 +2228,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 

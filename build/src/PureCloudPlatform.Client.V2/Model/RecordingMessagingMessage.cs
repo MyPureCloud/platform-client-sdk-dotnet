@@ -118,6 +118,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Datepicker,
             
             /// <summary>
+            /// Enum Listpicker for "ListPicker"
+            /// </summary>
+            [EnumMember(Value = "ListPicker")]
+            Listpicker,
+            
+            /// <summary>
             /// Enum Interactiveapplication for "InteractiveApplication"
             /// </summary>
             [EnumMember(Value = "InteractiveApplication")]

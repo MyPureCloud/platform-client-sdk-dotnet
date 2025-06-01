@@ -410,7 +410,7 @@ namespace Example
 
 ## GetAssistants
 
-> [**AssistantListing**](AssistantListing) GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
+> [**AssistantListing**](AssistantListing) GetAssistants (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null)
 
 
 Get all assistants.
@@ -446,11 +446,12 @@ namespace Example
             var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var name = name_example;  // string | Return the assistant by the given name. (optional) 
+            var expand = expand_example;  // string | Which fields, if any, to expand (optional) 
 
             try
             { 
                 // Get all assistants.
-                AssistantListing result = apiInstance.GetAssistants(before, after, limit, pageSize, name);
+                AssistantListing result = apiInstance.GetAssistants(before, after, limit, pageSize, name, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -472,6 +473,7 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Return the assistant by the given name. | [optional]  |
+| **expand** | **string**| Which fields, if any, to expand | [optional] <br />**Values**: copilot |
 
 ### Return type
 
@@ -804,4 +806,4 @@ namespace Example
 [**AssistantQueue**](AssistantQueue)
 
 
-_PureCloudPlatform.Client.V2 234.0.0_
+_PureCloudPlatform.Client.V2 235.0.0_
