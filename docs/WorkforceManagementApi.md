@@ -3474,7 +3474,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, AgentWorkPlanBid, AlternativeShift, Coaching, Learning, ActivityCodes, ActivityPlans, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentTimeOffRequest, AgentWorkPlanBid, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, ActivityCodes, ActivityPlans, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans |
 | **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -4008,7 +4008,7 @@ namespace Example
 
 ## GetWorkforcemanagementBusinessunitStaffinggroups
 
-> [**StaffingGroupListing**](StaffingGroupListing) GetWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, string managementUnitId = null)
+> [**StaffingGroupListing**](StaffingGroupListing) GetWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null)
 
 
 Gets a list of staffing groups
@@ -4041,11 +4041,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit to get management unit specific staffing groups (optional) 
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
 
             try
             { 
                 // Gets a list of staffing groups
-                StaffingGroupListing result = apiInstance.GetWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, managementUnitId);
+                StaffingGroupListing result = apiInstance.GetWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, managementUnitId, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4064,6 +4065,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **managementUnitId** | **string**| The ID of the management unit to get management unit specific staffing groups | [optional]  |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
 
 ### Return type
 
@@ -5668,7 +5670,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **feature** | **string**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, AgentWorkPlanBid, AlternativeShift, Coaching, Learning, ActivityCodes, ActivityPlans, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans |
+| **feature** | **string**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentTimeOffRequest, AgentWorkPlanBid, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, ActivityCodes, ActivityPlans, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans |
 | **divisionId** | **string**| If specified, the list of business units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -7898,7 +7900,7 @@ namespace Example
 | **pageSize** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **pageNumber** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **expand** | **string**| Deprecated, expand settings on the single MU route | [optional] <br />**Values**: details |
-| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, AgentWorkPlanBid, AlternativeShift, Coaching, Learning, ActivityCodes, ActivityPlans, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentTimeOffRequest, AgentWorkPlanBid, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, ActivityCodes, ActivityPlans, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans |
 | **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -12075,7 +12077,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitStaffinggroupsQuery
 
-> [**UserStaffingGroupListing**](UserStaffingGroupListing) PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body)
+> [**UserStaffingGroupListing**](UserStaffingGroupListing) PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null)
 
 
 Gets staffing group associations for a list of user IDs
@@ -12108,11 +12110,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var body = new QueryUserStaffingGroupListRequest(); // QueryUserStaffingGroupListRequest | body
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service (optional) 
 
             try
             { 
                 // Gets staffing group associations for a list of user IDs
-                UserStaffingGroupListing result = apiInstance.PostWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId, body);
+                UserStaffingGroupListing result = apiInstance.PostWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId, body, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -12131,6 +12134,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest)| body |  |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service | [optional]  |
 
 ### Return type
 
@@ -13358,7 +13362,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunitWorkplanbidCopy
 
-> [**WorkPlanBid**](WorkPlanBid) PostWorkforcemanagementBusinessunitWorkplanbidCopy (string businessUnitId, string bidId, CopyWorkPlanBid body = null)
+> [**WorkPlanBid**](WorkPlanBid) PostWorkforcemanagementBusinessunitWorkplanbidCopy (string businessUnitId, string bidId, CopyWorkPlanBid body)
 
 
 Copy a work plan bid
@@ -13391,7 +13395,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var bidId = bidId_example;  // string | The ID of the work plan bid to copy
-            var body = new CopyWorkPlanBid(); // CopyWorkPlanBid | body (optional) 
+            var body = new CopyWorkPlanBid(); // CopyWorkPlanBid | body
 
             try
             { 
@@ -13415,7 +13419,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **bidId** | **string**| The ID of the work plan bid to copy |  |
-| **body** | [**CopyWorkPlanBid**](CopyWorkPlanBid)| body | [optional]  |
+| **body** | [**CopyWorkPlanBid**](CopyWorkPlanBid)| body |  |
 
 ### Return type
 
@@ -16416,4 +16420,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

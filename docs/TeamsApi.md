@@ -314,7 +314,7 @@ namespace Example
             var name = name_example;  // string | Return only teams whose names start with this value (case-insensitive matching) (optional) 
             var after = after_example;  // string | The cursor that points to the next item in the complete list of teams (optional) 
             var before = before_example;  // string | The cursor that points to the previous item in the complete list of teams (optional) 
-            var expand = expand_example;  // string | Expand the name on each user (optional) 
+            var expand = expand_example;  // string | Expand the division on each team (optional) 
 
             try
             { 
@@ -340,7 +340,7 @@ namespace Example
 | **name** | **string**| Return only teams whose names start with this value (case-insensitive matching) | [optional]  |
 | **after** | **string**| The cursor that points to the next item in the complete list of teams | [optional]  |
 | **before** | **string**| The cursor that points to the previous item in the complete list of teams | [optional]  |
-| **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities.division |
+| **expand** | **string**| Expand the division on each team | [optional] <br />**Values**: entities.division |
 
 ### Return type
 
@@ -665,4 +665,4 @@ namespace Example
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

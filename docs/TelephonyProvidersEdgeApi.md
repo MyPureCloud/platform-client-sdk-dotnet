@@ -108,6 +108,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesDidpools**](#PostTelephonyProvidersEdgesDidpools) | **Post** /api/v2/telephony/providers/edges/didpools | Create a new DID pool |
 | [**PostTelephonyProvidersEdgesEdgegroups**](#PostTelephonyProvidersEdgesEdgegroups) | **Post** /api/v2/telephony/providers/edges/edgegroups | Create an edge group. |
 | [**PostTelephonyProvidersEdgesExtensionpools**](#PostTelephonyProvidersEdgesExtensionpools) | **Post** /api/v2/telephony/providers/edges/extensionpools | Create a new extension pool |
+| [**PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource**](#PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource) | **Post** /api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}/mediaresources/{mediaResourceId} | Post media endpoint statistics event. |
 | [**PostTelephonyProvidersEdgesPhoneReboot**](#PostTelephonyProvidersEdgesPhoneReboot) | **Post** /api/v2/telephony/providers/edges/phones/{phoneId}/reboot | Reboot a Phone |
 | [**PostTelephonyProvidersEdgesPhonebasesettings**](#PostTelephonyProvidersEdgesPhonebasesettings) | **Post** /api/v2/telephony/providers/edges/phonebasesettings | Create a new Phone Base Settings object |
 | [**PostTelephonyProvidersEdgesPhones**](#PostTelephonyProvidersEdgesPhones) | **Post** /api/v2/telephony/providers/edges/phones | Create a new Phone |
@@ -2995,7 +2996,7 @@ namespace Example
 
 Get a pageable list of basic extension pool objects filterable by query parameters.
 
-This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
 
 Requires ALL permissions: 
 
@@ -6725,6 +6726,76 @@ namespace Example
 [**ExtensionPool**](ExtensionPool)
 
 
+## PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource
+
+> [**MediaStatistics**](MediaStatistics) PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body)
+
+
+Post media endpoint statistics event.
+
+PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* telephony:mediaStatistics:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var conversationId = conversationId_example;  // string | Identifier of the conversation
+            var communicationId = communicationId_example;  // string | Identifier of the media session
+            var mediaResourceId = mediaResourceId_example;  // string | Identifier of the media resource of the endpoint
+            var body = new MediaStatisticsPostRequest(); // MediaStatisticsPostRequest | MediaStatisticsPostRequest
+
+            try
+            { 
+                // Post media endpoint statistics event.
+                MediaStatistics result = apiInstance.PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource(conversationId, communicationId, mediaResourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Identifier of the conversation |  |
+| **communicationId** | **string**| Identifier of the media session |  |
+| **mediaResourceId** | **string**| Identifier of the media resource of the endpoint |  |
+| **body** | [**MediaStatisticsPostRequest**](MediaStatisticsPostRequest)| MediaStatisticsPostRequest |  |
+
+### Return type
+
+[**MediaStatistics**](MediaStatistics)
+
+
 ## PostTelephonyProvidersEdgesPhoneReboot
 
 > void PostTelephonyProvidersEdgesPhoneReboot (string phoneId)
@@ -8185,4 +8256,4 @@ namespace Example
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

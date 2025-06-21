@@ -2172,7 +2172,7 @@ namespace Example
 
 Get a pageable list of basic emergency group objects filterable by query parameters.
 
-This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
 
 Requires ALL permissions: 
 
@@ -7124,6 +7124,8 @@ namespace Example
 
 Creates a presigned URL for uploading a user prompt file
 
+PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
 Requires ALL permissions: 
 
 * architect:userPrompt:edit
@@ -7501,6 +7503,8 @@ namespace Example
 
 
 Creates a presigned URL for uploading a system prompt file
+
+PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -9953,4 +9957,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_
