@@ -169,6 +169,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Rescored,
             
             /// <summary>
+            /// Enum Systemsubmitted for "systemSubmitted"
+            /// </summary>
+            [EnumMember(Value = "systemSubmitted")]
+            Systemsubmitted,
+            
+            /// <summary>
             /// Enum Teamid for "teamId"
             /// </summary>
             [EnumMember(Value = "teamId")]

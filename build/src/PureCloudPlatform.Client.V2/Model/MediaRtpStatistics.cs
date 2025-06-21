@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RtpEventsReceived">Number of RFC#2833 packets received.</param>
         /// <param name="RtpEventsSent">Number of RFC#2833 packets sent.</param>
         /// <param name="EstimatedAverageMos">The estimated average MOS score.</param>
-        public MediaRtpStatistics(int? PacketsReceived = null, int? PacketsSent = null, int? RtpEventsReceived = null, int? RtpEventsSent = null, double? EstimatedAverageMos = null)
+        /// <param name="AverageJitter">The average jitter.</param>
+        public MediaRtpStatistics(int? PacketsReceived = null, int? PacketsSent = null, int? RtpEventsReceived = null, int? RtpEventsSent = null, double? EstimatedAverageMos = null, double? AverageJitter = null)
         {
             this.PacketsReceived = PacketsReceived;
             this.PacketsSent = PacketsSent;
             this.RtpEventsReceived = RtpEventsReceived;
             this.RtpEventsSent = RtpEventsSent;
             this.EstimatedAverageMos = EstimatedAverageMos;
+            this.AverageJitter = AverageJitter;
             
         }
         
@@ -82,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? EstimatedAverageMos { get; set; }
 
 
+
+        /// <summary>
+        /// The average jitter
+        /// </summary>
+        /// <value>The average jitter</value>
+        [DataMember(Name="averageJitter", EmitDefaultValue=false)]
+        public double? AverageJitter { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RtpEventsReceived: ").Append(RtpEventsReceived).Append("\n");
             sb.Append("  RtpEventsSent: ").Append(RtpEventsSent).Append("\n");
             sb.Append("  EstimatedAverageMos: ").Append(EstimatedAverageMos).Append("\n");
+            sb.Append("  AverageJitter: ").Append(AverageJitter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EstimatedAverageMos == other.EstimatedAverageMos ||
                     this.EstimatedAverageMos != null &&
                     this.EstimatedAverageMos.Equals(other.EstimatedAverageMos)
+                ) &&
+                (
+                    this.AverageJitter == other.AverageJitter ||
+                    this.AverageJitter != null &&
+                    this.AverageJitter.Equals(other.AverageJitter)
                 );
         }
 
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EstimatedAverageMos != null)
                     hash = hash * 59 + this.EstimatedAverageMos.GetHashCode();
+
+                if (this.AverageJitter != null)
+                    hash = hash * 59 + this.AverageJitter.GetHashCode();
 
                 return hash;
             }

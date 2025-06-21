@@ -63,7 +63,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsActionsAggregatesQuery**](#PostAnalyticsActionsAggregatesQuery) | **Post** /api/v2/analytics/actions/aggregates/query | Query for action aggregates |
 | [**PostAnalyticsAgentcopilotsAggregatesJobs**](#PostAnalyticsAgentcopilotsAggregatesJobs) | **Post** /api/v2/analytics/agentcopilots/aggregates/jobs | Query for agent copilot aggregates asynchronously |
 | [**PostAnalyticsAgentcopilotsAggregatesQuery**](#PostAnalyticsAgentcopilotsAggregatesQuery) | **Post** /api/v2/analytics/agentcopilots/aggregates/query | Query for agent copilot aggregates |
-| [**PostAnalyticsAgentsStatusCounts**](#PostAnalyticsAgentsStatusCounts) | **Post** /api/v2/analytics/agents/status/counts | Count agents by segment type |
+| [**PostAnalyticsAgentsStatusCounts**](#PostAnalyticsAgentsStatusCounts) | **Post** /api/v2/analytics/agents/status/counts | Count agents by different groupings |
 | [**PostAnalyticsAgentsStatusQuery**](#PostAnalyticsAgentsStatusQuery) | **Post** /api/v2/analytics/agents/status/query | Retrieve the top 50 agents matching the query filters |
 | [**PostAnalyticsBotsAggregatesJobs**](#PostAnalyticsBotsAggregatesJobs) | **Post** /api/v2/analytics/bots/aggregates/jobs | Query for bot aggregates asynchronously |
 | [**PostAnalyticsBotsAggregatesQuery**](#PostAnalyticsBotsAggregatesQuery) | **Post** /api/v2/analytics/bots/aggregates/query | Query for bot aggregates |
@@ -3821,7 +3821,7 @@ namespace Example
 > [**AnalyticsAgentStateCountsResponse**](AnalyticsAgentStateCountsResponse) PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body)
 
 
-Count agents by segment type
+Count agents by different groupings
 
 Requires ANY permissions: 
 
@@ -3853,7 +3853,7 @@ namespace Example
 
             try
             { 
-                // Count agents by segment type
+                // Count agents by different groupings
                 AnalyticsAgentStateCountsResponse result = apiInstance.PostAnalyticsAgentsStatusCounts(body);
                 Debug.WriteLine(result);
             }
@@ -6845,4 +6845,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

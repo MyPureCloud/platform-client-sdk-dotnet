@@ -49,7 +49,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sessionstart for "sessionStart"
             /// </summary>
             [EnumMember(Value = "sessionStart")]
-            Sessionstart
+            Sessionstart,
+            
+            /// <summary>
+            /// Enum Presencedate for "presenceDate"
+            /// </summary>
+            [EnumMember(Value = "presenceDate")]
+            Presencedate,
+            
+            /// <summary>
+            /// Enum Routingstatusdate for "routingStatusDate"
+            /// </summary>
+            [EnumMember(Value = "routingStatusDate")]
+            Routingstatusdate,
+            
+            /// <summary>
+            /// Enum Systempresence for "systemPresence"
+            /// </summary>
+            [EnumMember(Value = "systemPresence")]
+            Systempresence,
+            
+            /// <summary>
+            /// Enum Routingstatus for "routingStatus"
+            /// </summary>
+            [EnumMember(Value = "routingStatus")]
+            Routingstatus,
+            
+            /// <summary>
+            /// Enum Organizationpresenceid for "organizationPresenceId"
+            /// </summary>
+            [EnumMember(Value = "organizationPresenceId")]
+            Organizationpresenceid
         }
         /// <summary>
         /// Search user order direction; default to asc

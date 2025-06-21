@@ -77,13 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. (required).</param>
         /// <param name="IntegrationId">The id of the Genesys Cloud integration this phone number belongs to. (required).</param>
         /// <param name="Compliance">Compliance configuration for short codes, including help, stop and opt in..</param>
-        public SmsPhoneNumberImport(string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null, string IntegrationId = null, Compliance Compliance = null)
+        /// <param name="SupportedContent">Defines the media SupportedContent profile configured for an MMS capable phone number..</param>
+        public SmsPhoneNumberImport(string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null, string IntegrationId = null, Compliance Compliance = null, SupportedContentReference SupportedContent = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.PhoneNumberType = PhoneNumberType;
             this.CountryCode = CountryCode;
             this.IntegrationId = IntegrationId;
             this.Compliance = Compliance;
+            this.SupportedContent = SupportedContent;
             
         }
         
@@ -137,6 +139,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Defines the media SupportedContent profile configured for an MMS capable phone number.
+        /// </summary>
+        /// <value>Defines the media SupportedContent profile configured for an MMS capable phone number.</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -159,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  Compliance: ").Append(Compliance).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -231,6 +243,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Compliance.Equals(other.Compliance)
                 ) &&
                 (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -265,6 +282,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Compliance != null)
                     hash = hash * 59 + this.Compliance.GetHashCode();
+
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

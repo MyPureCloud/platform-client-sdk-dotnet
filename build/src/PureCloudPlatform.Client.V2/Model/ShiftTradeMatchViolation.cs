@@ -64,6 +64,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Initiatingagentscheduledoesnotexist,
             
             /// <summary>
+            /// Enum Initiatingexternalactivitycannotinterruptreceivingshift for "InitiatingExternalActivityCannotInterruptReceivingShift"
+            /// </summary>
+            [EnumMember(Value = "InitiatingExternalActivityCannotInterruptReceivingShift")]
+            Initiatingexternalactivitycannotinterruptreceivingshift,
+            
+            /// <summary>
+            /// Enum Initiatingexternalactivityoutsidereceivingshift for "InitiatingExternalActivityOutsideReceivingShift"
+            /// </summary>
+            [EnumMember(Value = "InitiatingExternalActivityOutsideReceivingShift")]
+            Initiatingexternalactivityoutsidereceivingshift,
+            
+            /// <summary>
             /// Enum Initiatingplanningperiodmaxpaidtime for "InitiatingPlanningPeriodMaxPaidTime"
             /// </summary>
             [EnumMember(Value = "InitiatingPlanningPeriodMaxPaidTime")]
@@ -146,6 +158,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ReceivingAgentScheduleDoesNotExist")]
             Receivingagentscheduledoesnotexist,
+            
+            /// <summary>
+            /// Enum Receivingexternalactivitycannotinterruptinitiatingshift for "ReceivingExternalActivityCannotInterruptInitiatingShift"
+            /// </summary>
+            [EnumMember(Value = "ReceivingExternalActivityCannotInterruptInitiatingShift")]
+            Receivingexternalactivitycannotinterruptinitiatingshift,
+            
+            /// <summary>
+            /// Enum Receivingexternalactivityoutsideinitiatingshift for "ReceivingExternalActivityOutsideInitiatingShift"
+            /// </summary>
+            [EnumMember(Value = "ReceivingExternalActivityOutsideInitiatingShift")]
+            Receivingexternalactivityoutsideinitiatingshift,
             
             /// <summary>
             /// Enum Receivingplanningperiodmaxpaidtime for "ReceivingPlanningPeriodMaxPaidTime"

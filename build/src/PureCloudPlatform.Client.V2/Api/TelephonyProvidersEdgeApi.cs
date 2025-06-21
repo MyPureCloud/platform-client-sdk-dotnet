@@ -1183,7 +1183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic extension pool objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1201,7 +1201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic extension pool objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -2736,6 +2736,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ExtensionPool</returns>
         
         ApiResponse<ExtensionPool> PostTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body);
+
+        /// <summary>
+        /// Post media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>MediaStatistics</returns>
+        
+        MediaStatistics PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body);
+
+        /// <summary>
+        /// Post media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>ApiResponse of MediaStatistics</returns>
+        
+        ApiResponse<MediaStatistics> PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceWithHttpInfo (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body);
 
         /// <summary>
         /// Reboot a Phone
@@ -4497,7 +4529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic extension pool objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4515,7 +4547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic extension pool objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -6050,6 +6082,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PostTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body);
+
+        /// <summary>
+        /// Post media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>Task of MediaStatistics</returns>
+        
+        System.Threading.Tasks.Task<MediaStatistics> PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceAsync (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body);
+
+        /// <summary>
+        /// Post media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>Task of ApiResponse (MediaStatistics)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<MediaStatistics>> PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceAsyncWithHttpInfo (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body);
 
         /// <summary>
         /// Reboot a Phone
@@ -15976,7 +16040,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -15996,7 +16060,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -16090,7 +16154,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -16111,7 +16175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
-        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch extension pools that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -28152,6 +28216,260 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExtensionPool>(localVarStatusCode,
                 localVarHeaders,
                 (ExtensionPool) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionPool)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Post media endpoint statistics event. 
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>MediaStatistics</returns>
+        
+        public MediaStatistics PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body)
+        {
+             ApiResponse<MediaStatistics> localVarResponse = PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceWithHttpInfo(conversationId, communicationId, mediaResourceId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Post media endpoint statistics event. 
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>ApiResponse of MediaStatistics</returns>
+        
+        public ApiResponse< MediaStatistics > PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceWithHttpInfo (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+            // verify the required parameter 'mediaResourceId' is set
+            if (mediaResourceId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaResourceId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}/mediaresources/{mediaResourceId}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+            if (mediaResourceId != null) localVarPathParams.Add("mediaResourceId", this.Configuration.ApiClient.ParameterToString(mediaResourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MediaStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (MediaStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaStatistics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Post media endpoint statistics event. 
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>Task of MediaStatistics</returns>
+        
+        public async System.Threading.Tasks.Task<MediaStatistics> PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceAsync (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body)
+        {
+             ApiResponse<MediaStatistics> localVarResponse = await PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceAsyncWithHttpInfo(conversationId, communicationId, mediaResourceId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Post media endpoint statistics event. 
+        /// 
+        /// PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <param name="mediaResourceId">Identifier of the media resource of the endpoint</param>
+        /// <param name="body">MediaStatisticsPostRequest</param>
+        /// <returns>Task of ApiResponse (MediaStatistics)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<MediaStatistics>> PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresourceAsyncWithHttpInfo (string conversationId, string communicationId, string mediaResourceId, MediaStatisticsPostRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+            
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+            
+            // verify the required parameter 'mediaResourceId' is set
+            if (mediaResourceId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaResourceId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}/mediaresources/{mediaResourceId}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+            if (mediaResourceId != null) localVarPathParams.Add("mediaResourceId", this.Configuration.ApiClient.ParameterToString(mediaResourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MediaStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (MediaStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaStatistics)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

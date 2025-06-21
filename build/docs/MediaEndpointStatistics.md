@@ -11,8 +11,10 @@
 | **User** | [**NamedEntity**](NamedEntity) | User information associated media endpoint | [optional] |
 | **Ice** | [**MediaIceStatistics**](MediaIceStatistics) | The ICE protocol statistics and details. Reference: https://www.rfc-editor.org/rfc/rfc5245 | [optional] |
 | **Rtp** | [**MediaRtpStatistics**](MediaRtpStatistics) | Statistics of sent and received RTP. Reference: https://www.rfc-editor.org/rfc/rfc3550 | [optional] |
-| **ReconnectAttemptCount** | **int?** | Media reconnect attempt count | [optional] |
+| **ReconnectAttempts** | **int?** | Media reconnect attempt count | [optional] |
+| **SourceType** | **string** | Source type of media endpoint | [optional] |
+| **ClientInfo** | [**MediaStatisticsClientInfo**](MediaStatisticsClientInfo) | Client information associated with media endpoint | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

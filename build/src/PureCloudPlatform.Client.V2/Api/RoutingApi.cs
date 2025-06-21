@@ -2868,6 +2868,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SkillGroup> PatchRoutingSkillgroupWithHttpInfo (string skillGroupId, SkillGroup body);
 
         /// <summary>
+        /// Update a phone number provisioned for SMS.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>SmsPhoneNumber</returns>
+        
+        SmsPhoneNumber PatchRoutingSmsPhonenumber (string phoneNumberId, SmsPhoneNumberPatchRequest body);
+
+        /// <summary>
+        /// Update a phone number provisioned for SMS.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
+        ApiResponse<SmsPhoneNumber> PatchRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId, SmsPhoneNumberPatchRequest body);
+
+        /// <summary>
         /// Join or unjoin a queue for a user
         /// </summary>
         /// <remarks>
@@ -6972,6 +6998,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (SkillGroup)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SkillGroup>> PatchRoutingSkillgroupAsyncWithHttpInfo (string skillGroupId, SkillGroup body);
+
+        /// <summary>
+        /// Update a phone number provisioned for SMS.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>Task of SmsPhoneNumber</returns>
+        
+        System.Threading.Tasks.Task<SmsPhoneNumber> PatchRoutingSmsPhonenumberAsync (string phoneNumberId, SmsPhoneNumberPatchRequest body);
+
+        /// <summary>
+        /// Update a phone number provisioned for SMS.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PatchRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId, SmsPhoneNumberPatchRequest body);
 
         /// <summary>
         /// Join or unjoin a queue for a user
@@ -30531,6 +30583,230 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SkillGroup>(localVarStatusCode,
                 localVarHeaders,
                 (SkillGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillGroup)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a phone number provisioned for SMS. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>SmsPhoneNumber</returns>
+        
+        public SmsPhoneNumber PatchRoutingSmsPhonenumber (string phoneNumberId, SmsPhoneNumberPatchRequest body)
+        {
+             ApiResponse<SmsPhoneNumber> localVarResponse = PatchRoutingSmsPhonenumberWithHttpInfo(phoneNumberId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a phone number provisioned for SMS. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
+        public ApiResponse< SmsPhoneNumber > PatchRoutingSmsPhonenumberWithHttpInfo (string phoneNumberId, SmsPhoneNumberPatchRequest body)
+        { 
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->PatchRoutingSmsPhonenumber");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingSmsPhonenumber");
+
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSmsPhonenumber: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSmsPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+                localVarHeaders,
+                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a phone number provisioned for SMS. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>Task of SmsPhoneNumber</returns>
+        
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> PatchRoutingSmsPhonenumberAsync (string phoneNumberId, SmsPhoneNumberPatchRequest body)
+        {
+             ApiResponse<SmsPhoneNumber> localVarResponse = await PatchRoutingSmsPhonenumberAsyncWithHttpInfo(phoneNumberId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a phone number provisioned for SMS. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="phoneNumberId">phone number</param>
+        /// <param name="body">SmsPhoneNumberPatchRequest</param>
+        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PatchRoutingSmsPhonenumberAsyncWithHttpInfo (string phoneNumberId, SmsPhoneNumberPatchRequest body)
+        { 
+            // verify the required parameter 'phoneNumberId' is set
+            if (phoneNumberId == null)
+                throw new ApiException(400, "Missing required parameter 'phoneNumberId' when calling RoutingApi->PatchRoutingSmsPhonenumber");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingSmsPhonenumber");
+            
+
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/{phoneNumberId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (phoneNumberId != null) localVarPathParams.Add("phoneNumberId", this.Configuration.ApiClient.ParameterToString(phoneNumberId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSmsPhonenumber: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSmsPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+                localVarHeaders,
+                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

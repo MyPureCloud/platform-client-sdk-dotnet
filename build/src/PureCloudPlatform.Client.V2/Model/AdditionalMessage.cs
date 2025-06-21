@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="TextBody">The body of the text message.  Maximum character counts are: SMS - 765 characters, other channels - 2000 characters. (required).</param>
         /// <param name="MediaIds">The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage..</param>
-        /// <param name="MessagingTemplate">The messaging template use to send a predefined canned response with the message.</param>
+        /// <param name="MessagingTemplate">Pre-defined message templates for structured communications. Supports various template types including WhatsApp business messaging templates, forms and canned responses with variable substitution..</param>
         public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, SendMessagingTemplateRequest MessagingTemplate = null)
         {
             this.TextBody = TextBody;
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The messaging template use to send a predefined canned response with the message
+        /// Pre-defined message templates for structured communications. Supports various template types including WhatsApp business messaging templates, forms and canned responses with variable substitution.
         /// </summary>
-        /// <value>The messaging template use to send a predefined canned response with the message</value>
+        /// <value>Pre-defined message templates for structured communications. Supports various template types including WhatsApp business messaging templates, forms and canned responses with variable substitution.</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
         public SendMessagingTemplateRequest MessagingTemplate { get; set; }
 

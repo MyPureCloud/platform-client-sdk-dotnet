@@ -88,138 +88,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Unabletoproduceagentschedule,
             
             /// <summary>
-            /// Enum Unabletoschedulemaxconsecutiveworkingdaysfromagenthistory for "UnableToScheduleMaxConsecutiveWorkingDaysFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMaxConsecutiveWorkingDaysFromAgentHistory")]
-            Unabletoschedulemaxconsecutiveworkingdaysfromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoschedulemaxconsecutiveworkingweekendsfromagenthistory for "UnableToScheduleMaxConsecutiveWorkingWeekendsFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMaxConsecutiveWorkingWeekendsFromAgentHistory")]
-            Unabletoschedulemaxconsecutiveworkingweekendsfromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoschedulemaxweeklypaidtimefromtimeoff for "UnableToScheduleMaxWeeklyPaidTimeFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMaxWeeklyPaidTimeFromTimeOff")]
-            Unabletoschedulemaxweeklypaidtimefromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoschedulemaxworkdaypaidtimefromtimeoff for "UnableToScheduleMaxWorkDayPaidTimeFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMaxWorkDayPaidTimeFromTimeOff")]
-            Unabletoschedulemaxworkdaypaidtimefromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleminintershifttimefromagenthistory for "UnableToScheduleMinIntershiftTimeFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMinIntershiftTimeFromAgentHistory")]
-            Unabletoscheduleminintershifttimefromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleminintershifttimefromdst for "UnableToScheduleMinIntershiftTimeFromDst"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMinIntershiftTimeFromDst")]
-            Unabletoscheduleminintershifttimefromdst,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleminshiftstartdistancefromagenthistory for "UnableToScheduleMinShiftStartDistanceFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMinShiftStartDistanceFromAgentHistory")]
-            Unabletoscheduleminshiftstartdistancefromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleminshiftstartdistancefromdst for "UnableToScheduleMinShiftStartDistanceFromDst"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMinShiftStartDistanceFromDst")]
-            Unabletoscheduleminshiftstartdistancefromdst,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleminweeklypaidtimefromtimeoff for "UnableToScheduleMinWeeklyPaidTimeFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMinWeeklyPaidTimeFromTimeOff")]
-            Unabletoscheduleminweeklypaidtimefromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleminweeklyworkdaysfromtimeoff for "UnableToScheduleMinWeeklyWorkDaysFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMinWeeklyWorkDaysFromTimeOff")]
-            Unabletoscheduleminweeklyworkdaysfromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleminworkdaypaidtimefromtimeoff for "UnableToScheduleMinWorkDayPaidTimeFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleMinWorkDayPaidTimeFromTimeOff")]
-            Unabletoscheduleminworkdaypaidtimefromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodmaxdaysofffromagenthistory for "UnableToSchedulePlanningPeriodMaxDaysOffFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxDaysOffFromAgentHistory")]
-            Unabletoscheduleplanningperiodmaxdaysofffromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodmaxdaysofffromtimeoff for "UnableToSchedulePlanningPeriodMaxDaysOffFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxDaysOffFromTimeOff")]
-            Unabletoscheduleplanningperiodmaxdaysofffromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodmaxpaidtimefromagenthistory for "UnableToSchedulePlanningPeriodMaxPaidTimeFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxPaidTimeFromAgentHistory")]
-            Unabletoscheduleplanningperiodmaxpaidtimefromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodmaxpaidtimefromtimeoff for "UnableToSchedulePlanningPeriodMaxPaidTimeFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxPaidTimeFromTimeOff")]
-            Unabletoscheduleplanningperiodmaxpaidtimefromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodmaxworkingweekendsfromagenthistory for "UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory")]
-            Unabletoscheduleplanningperiodmaxworkingweekendsfromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodmindaysofffromagenthistory for "UnableToSchedulePlanningPeriodMinDaysOffFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMinDaysOffFromAgentHistory")]
-            Unabletoscheduleplanningperiodmindaysofffromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodminpaidtimefromagenthistory for "UnableToSchedulePlanningPeriodMinPaidTimeFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMinPaidTimeFromAgentHistory")]
-            Unabletoscheduleplanningperiodminpaidtimefromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodminpaidtimefromtimeoff for "UnableToSchedulePlanningPeriodMinPaidTimeFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodMinPaidTimeFromTimeOff")]
-            Unabletoscheduleplanningperiodminpaidtimefromtimeoff,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodshiftmaxcountfromagenthistory for "UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory")]
-            Unabletoscheduleplanningperiodshiftmaxcountfromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleplanningperiodshiftmincountfromagenthistory for "UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory"
-            /// </summary>
-            [EnumMember(Value = "UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory")]
-            Unabletoscheduleplanningperiodshiftmincountfromagenthistory,
-            
-            /// <summary>
-            /// Enum Unabletoscheduleworkdayfromtimeoff for "UnableToScheduleWorkDayFromTimeOff"
-            /// </summary>
-            [EnumMember(Value = "UnableToScheduleWorkDayFromTimeOff")]
-            Unabletoscheduleworkdayfromtimeoff,
-            
-            /// <summary>
             /// Enum Unabletoschedulemaxconsecutiveworkingdays for "UnableToScheduleMaxConsecutiveWorkingDays"
             /// </summary>
             [EnumMember(Value = "UnableToScheduleMaxConsecutiveWorkingDays")]
@@ -322,10 +190,154 @@ namespace PureCloudPlatform.Client.V2.Model
             Unabletoscheduleworkday,
             
             /// <summary>
+            /// Enum Unabletoschedulemaxconsecutiveworkingdaysfromagenthistory for "UnableToScheduleMaxConsecutiveWorkingDaysFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxConsecutiveWorkingDaysFromAgentHistory")]
+            Unabletoschedulemaxconsecutiveworkingdaysfromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoschedulemaxconsecutiveworkingweekendsfromagenthistory for "UnableToScheduleMaxConsecutiveWorkingWeekendsFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxConsecutiveWorkingWeekendsFromAgentHistory")]
+            Unabletoschedulemaxconsecutiveworkingweekendsfromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoschedulemaxweeklypaidtimefromtimeoff for "UnableToScheduleMaxWeeklyPaidTimeFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxWeeklyPaidTimeFromTimeOff")]
+            Unabletoschedulemaxweeklypaidtimefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoschedulemaxworkdaypaidtimefromtimeoff for "UnableToScheduleMaxWorkDayPaidTimeFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxWorkDayPaidTimeFromTimeOff")]
+            Unabletoschedulemaxworkdaypaidtimefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminintershifttimefromagenthistory for "UnableToScheduleMinIntershiftTimeFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinIntershiftTimeFromAgentHistory")]
+            Unabletoscheduleminintershifttimefromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminintershifttimefromdst for "UnableToScheduleMinIntershiftTimeFromDst"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinIntershiftTimeFromDst")]
+            Unabletoscheduleminintershifttimefromdst,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminshiftstartdistancefromagenthistory for "UnableToScheduleMinShiftStartDistanceFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinShiftStartDistanceFromAgentHistory")]
+            Unabletoscheduleminshiftstartdistancefromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminshiftstartdistancefromdst for "UnableToScheduleMinShiftStartDistanceFromDst"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinShiftStartDistanceFromDst")]
+            Unabletoscheduleminshiftstartdistancefromdst,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminweeklypaidtimefromtimeoff for "UnableToScheduleMinWeeklyPaidTimeFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinWeeklyPaidTimeFromTimeOff")]
+            Unabletoscheduleminweeklypaidtimefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminweeklyworkdaysfromtimeoff for "UnableToScheduleMinWeeklyWorkDaysFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinWeeklyWorkDaysFromTimeOff")]
+            Unabletoscheduleminweeklyworkdaysfromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminworkdaypaidtimefromtimeoff for "UnableToScheduleMinWorkDayPaidTimeFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinWorkDayPaidTimeFromTimeOff")]
+            Unabletoscheduleminworkdaypaidtimefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxdaysofffromagenthistory for "UnableToSchedulePlanningPeriodMaxDaysOffFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxDaysOffFromAgentHistory")]
+            Unabletoscheduleplanningperiodmaxdaysofffromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxdaysofffromtimeoff for "UnableToSchedulePlanningPeriodMaxDaysOffFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxDaysOffFromTimeOff")]
+            Unabletoscheduleplanningperiodmaxdaysofffromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxpaidtimefromagenthistory for "UnableToSchedulePlanningPeriodMaxPaidTimeFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxPaidTimeFromAgentHistory")]
+            Unabletoscheduleplanningperiodmaxpaidtimefromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxpaidtimefromtimeoff for "UnableToSchedulePlanningPeriodMaxPaidTimeFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxPaidTimeFromTimeOff")]
+            Unabletoscheduleplanningperiodmaxpaidtimefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmindaysofffromagenthistory for "UnableToSchedulePlanningPeriodMinDaysOffFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMinDaysOffFromAgentHistory")]
+            Unabletoscheduleplanningperiodmindaysofffromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodminpaidtimefromagenthistory for "UnableToSchedulePlanningPeriodMinPaidTimeFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMinPaidTimeFromAgentHistory")]
+            Unabletoscheduleplanningperiodminpaidtimefromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodminpaidtimefromtimeoff for "UnableToSchedulePlanningPeriodMinPaidTimeFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMinPaidTimeFromTimeOff")]
+            Unabletoscheduleplanningperiodminpaidtimefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleworkdayfromtimeoff for "UnableToScheduleWorkDayFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleWorkDayFromTimeOff")]
+            Unabletoscheduleworkdayfromtimeoff,
+            
+            /// <summary>
             /// Enum Agentwithoutcapabilitytohandleactivityonqueuework for "AgentWithoutCapabilityToHandleActivityOnQueueWork"
             /// </summary>
             [EnumMember(Value = "AgentWithoutCapabilityToHandleActivityOnQueueWork")]
-            Agentwithoutcapabilitytohandleactivityonqueuework
+            Agentwithoutcapabilitytohandleactivityonqueuework,
+            
+            /// <summary>
+            /// Enum Unabletoproduceagentscheduleduetounavailabletimes for "UnableToProduceAgentScheduleDueToUnavailableTimes"
+            /// </summary>
+            [EnumMember(Value = "UnableToProduceAgentScheduleDueToUnavailableTimes")]
+            Unabletoproduceagentscheduleduetounavailabletimes,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromagenthistory for "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory")]
+            Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxworkingweekendsfromagenthistory for "UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory")]
+            Unabletoscheduleplanningperiodmaxworkingweekendsfromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodshiftmaxcountfromagenthistory for "UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory")]
+            Unabletoscheduleplanningperiodshiftmaxcountfromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodshiftmincountfromagenthistory for "UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory")]
+            Unabletoscheduleplanningperiodshiftmincountfromagenthistory
         }
         /// <summary>
         /// The type of the message

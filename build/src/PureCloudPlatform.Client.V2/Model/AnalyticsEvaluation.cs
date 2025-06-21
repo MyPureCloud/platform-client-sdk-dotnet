@@ -86,10 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">The ID of the associated queue.</param>
         /// <param name="Released">Whether the evaluation has been released.</param>
         /// <param name="Rescored">Whether the evaluation has been rescored at least once.</param>
+        /// <param name="SystemSubmitted">Whether the evaluation was auto submitted by the system.</param>
         /// <param name="UserId">ID of the agent the evaluation was performed against.</param>
         /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
         /// <param name="OTotalScore">OTotalScore.</param>
-        public AnalyticsEvaluation(bool? AssigneeApplicable = null, string AssigneeId = null, string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, EvaluationStatusEnum? EvaluationStatus = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Released = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
+        public AnalyticsEvaluation(bool? AssigneeApplicable = null, string AssigneeId = null, string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, EvaluationStatusEnum? EvaluationStatus = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Released = null, bool? Rescored = null, bool? SystemSubmitted = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
         {
             this.AssigneeApplicable = AssigneeApplicable;
             this.AssigneeId = AssigneeId;
@@ -105,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueueId = QueueId;
             this.Released = Released;
             this.Rescored = Rescored;
+            this.SystemSubmitted = SystemSubmitted;
             this.UserId = UserId;
             this.OTotalCriticalScore = OTotalCriticalScore;
             this.OTotalScore = OTotalScore;
@@ -233,6 +235,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether the evaluation was auto submitted by the system
+        /// </summary>
+        /// <value>Whether the evaluation was auto submitted by the system</value>
+        [DataMember(Name="systemSubmitted", EmitDefaultValue=false)]
+        public bool? SystemSubmitted { get; set; }
+
+
+
+        /// <summary>
         /// ID of the agent the evaluation was performed against
         /// </summary>
         /// <value>ID of the agent the evaluation was performed against</value>
@@ -279,6 +290,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Released: ").Append(Released).Append("\n");
             sb.Append("  Rescored: ").Append(Rescored).Append("\n");
+            sb.Append("  SystemSubmitted: ").Append(SystemSubmitted).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  OTotalCriticalScore: ").Append(OTotalCriticalScore).Append("\n");
             sb.Append("  OTotalScore: ").Append(OTotalScore).Append("\n");
@@ -393,6 +405,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Rescored.Equals(other.Rescored)
                 ) &&
                 (
+                    this.SystemSubmitted == other.SystemSubmitted ||
+                    this.SystemSubmitted != null &&
+                    this.SystemSubmitted.Equals(other.SystemSubmitted)
+                ) &&
+                (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
@@ -461,6 +478,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Rescored != null)
                     hash = hash * 59 + this.Rescored.GetHashCode();
+
+                if (this.SystemSubmitted != null)
+                    hash = hash * 59 + this.SystemSubmitted.GetHashCode();
 
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();

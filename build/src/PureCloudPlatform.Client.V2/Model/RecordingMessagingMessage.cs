@@ -127,7 +127,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Interactiveapplication for "InteractiveApplication"
             /// </summary>
             [EnumMember(Value = "InteractiveApplication")]
-            Interactiveapplication
+            Interactiveapplication,
+            
+            /// <summary>
+            /// Enum Paymentrequest for "PaymentRequest"
+            /// </summary>
+            [EnumMember(Value = "PaymentRequest")]
+            Paymentrequest,
+            
+            /// <summary>
+            /// Enum Paymentresponse for "PaymentResponse"
+            /// </summary>
+            [EnumMember(Value = "PaymentResponse")]
+            Paymentresponse
         }
         /// <summary>
         /// For social media messages, the visibility of the message in the originating social platform

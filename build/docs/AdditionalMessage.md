@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **TextBody** | **string** | The body of the text message.  Maximum character counts are: SMS - 765 characters, other channels - 2000 characters. | |
 | **MediaIds** | **List&lt;string&gt;** | The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage. | [optional] |
-| **MessagingTemplate** | [**SendMessagingTemplateRequest**](SendMessagingTemplateRequest) | The messaging template use to send a predefined canned response with the message | [optional] |
+| **MessagingTemplate** | [**SendMessagingTemplateRequest**](SendMessagingTemplateRequest) | Pre-defined message templates for structured communications. Supports various template types including WhatsApp business messaging templates, forms and canned responses with variable substitution. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

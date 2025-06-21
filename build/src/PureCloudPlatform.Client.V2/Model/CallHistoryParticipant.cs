@@ -154,7 +154,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Spam for "spam"
             /// </summary>
             [EnumMember(Value = "spam")]
-            Spam
+            Spam,
+            
+            /// <summary>
+            /// Enum Inactivity for "inactivity"
+            /// </summary>
+            [EnumMember(Value = "inactivity")]
+            Inactivity
         }
         /// <summary>
         /// The reason specifying why participant flagged the conversation.

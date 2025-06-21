@@ -39,6 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsClientappsUnifiedcommunications**](#GetIntegrationsClientappsUnifiedcommunications) | **Get** /api/v2/integrations/clientapps/unifiedcommunications | UC integration client application configuration. |
 | [**GetIntegrationsCredential**](#GetIntegrationsCredential) | **Get** /api/v2/integrations/credentials/{credentialId} | Get a single credential with sensitive fields redacted |
 | [**GetIntegrationsCredentials**](#GetIntegrationsCredentials) | **Get** /api/v2/integrations/credentials | List multiple sets of credentials |
+| [**GetIntegrationsCredentialsListing**](#GetIntegrationsCredentialsListing) | **Get** /api/v2/integrations/credentials/listing | List multiple sets of credentials using cursor-based paging |
 | [**GetIntegrationsCredentialsTypes**](#GetIntegrationsCredentialsTypes) | **Get** /api/v2/integrations/credentials/types | List all credential types |
 | [**GetIntegrationsSpeechAudioconnector**](#GetIntegrationsSpeechAudioconnector) | **Get** /api/v2/integrations/speech/audioconnector | Get a list of Audio Connector integrations |
 | [**GetIntegrationsSpeechAudioconnectorIntegrationId**](#GetIntegrationsSpeechAudioconnectorIntegrationId) | **Get** /api/v2/integrations/speech/audioconnector/{integrationId} | Get an Audio Connector integration |
@@ -2298,6 +2299,72 @@ namespace Example
 ### Return type
 
 [**CredentialInfoListing**](CredentialInfoListing)
+
+
+## GetIntegrationsCredentialsListing
+
+> [**CredentialInfoCursorListing**](CredentialInfoCursorListing) GetIntegrationsCredentialsListing (string before = null, string after = null, string pageSize = null)
+
+
+List multiple sets of credentials using cursor-based paging
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsCredentialsListingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+
+            try
+            { 
+                // List multiple sets of credentials using cursor-based paging
+                CredentialInfoCursorListing result = apiInstance.GetIntegrationsCredentialsListing(before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsCredentialsListing: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+
+### Return type
+
+[**CredentialInfoCursorListing**](CredentialInfoCursorListing)
 
 
 ## GetIntegrationsCredentialsTypes
@@ -6063,4 +6130,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

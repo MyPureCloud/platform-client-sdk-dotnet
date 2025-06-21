@@ -161,6 +161,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.
+        /// </summary>
+        /// <value>The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.</value>
+        [DataMember(Name="countries", EmitDefaultValue=false)]
+        public List<string> Countries { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -185,6 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
+            sb.Append("  Countries: ").Append(Countries).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -267,6 +277,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Platform.Equals(other.Platform)
                 ) &&
                 (
+                    this.Countries == other.Countries ||
+                    this.Countries != null &&
+                    this.Countries.SequenceEqual(other.Countries)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -307,6 +322,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
+
+                if (this.Countries != null)
+                    hash = hash * 59 + this.Countries.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

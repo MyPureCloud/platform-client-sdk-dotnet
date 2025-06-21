@@ -21,6 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuScheduleMetadata" /> class.
         /// </summary>
+        /// <param name="Id">The ID of the schedule.</param>
         /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="WeekCount">The number of weeks spanned by this schedule.</param>
         /// <param name="Description">The description of this schedule.</param>
@@ -29,8 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="GenerationResults">Generation result summary for this schedule, if applicable.</param>
         /// <param name="Metadata">Version metadata for this schedule.</param>
         /// <param name="ManagementUnits">High level per-management unit schedule metadata.</param>
-        public BuScheduleMetadata(String WeekDate = null, int? WeekCount = null, string Description = null, bool? Published = null, BuShortTermForecastReference ShortTermForecast = null, ScheduleGenerationResultSummary GenerationResults = null, WfmVersionedEntityMetadata Metadata = null, List<BuManagementUnitScheduleSummary> ManagementUnits = null)
+        public BuScheduleMetadata(string Id = null, String WeekDate = null, int? WeekCount = null, string Description = null, bool? Published = null, BuShortTermForecastReference ShortTermForecast = null, ScheduleGenerationResultSummary GenerationResults = null, WfmVersionedEntityMetadata Metadata = null, List<BuManagementUnitScheduleSummary> ManagementUnits = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
             this.Description = Description;
@@ -45,11 +47,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the schedule
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the schedule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

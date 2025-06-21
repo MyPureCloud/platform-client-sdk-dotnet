@@ -10,6 +10,7 @@
 | **Name** | **string** | The display friendly name of the participant. | [optional] |
 | **Address** | **string** | The participant address. | [optional] |
 | **StartTime** | **DateTime?** | The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **StartAlertingTime** | **DateTime?** | The timestamp when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ConnectedTime** | **DateTime?** | The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EndTime** | **DateTime?** | The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **StartHoldTime** | **DateTime?** | The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -47,6 +48,7 @@
 | **Confined** | **bool?** | Value is true when the call is confined. | [optional] |
 | **Recording** | **bool?** | Value is true when the call is being recorded. | [optional] |
 | **RecordingState** | **string** | The state of the call recording. | [optional] |
+| **RecordersState** | [**RecordersState**](RecordersState) | Contains the states of different recorders. | [optional] |
 | **Group** | [**DomainEntityRef**](DomainEntityRef) | The group involved in the group ring call. | [optional] |
 | **Ani** | **string** | The call ANI. | [optional] |
 | **Dnis** | **string** | The call DNIS. | [optional] |
@@ -63,4 +65,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

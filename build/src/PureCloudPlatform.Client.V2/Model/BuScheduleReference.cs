@@ -21,9 +21,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuScheduleReference" /> class.
         /// </summary>
+        /// <param name="Id">The ID of the schedule.</param>
         /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public BuScheduleReference(String WeekDate = null)
+        public BuScheduleReference(string Id = null, String WeekDate = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             
         }
@@ -31,11 +33,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the schedule
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the schedule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

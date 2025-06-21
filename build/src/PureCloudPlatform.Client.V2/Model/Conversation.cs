@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
             None
         }
         /// <summary>
-        /// The conversation's state
+        /// On update, 'disconnected' will disconnect the conversation. No other values are valid. When reading conversations, this field will never have a value present.
         /// </summary>
-        /// <value>The conversation's state</value>
+        /// <value>On update, 'disconnected' will disconnect the conversation. No other values are valid. When reading conversations, this field will never have a value present.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -145,9 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
         /// <summary>
-        /// The conversation's state
+        /// On update, 'disconnected' will disconnect the conversation. No other values are valid. When reading conversations, this field will never have a value present.
         /// </summary>
-        /// <value>The conversation's state</value>
+        /// <value>On update, 'disconnected' will disconnect the conversation. No other values are valid. When reading conversations, this field will never have a value present.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
 
@@ -168,12 +168,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationIds">A list of conversations to merge into this conversation to create a conference. This field is null except when being used to create a conference..</param>
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
         /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording..</param>
-        /// <param name="State">The conversation&#39;s state.</param>
+        /// <param name="State">On update, &#39;disconnected&#39; will disconnect the conversation. No other values are valid. When reading conversations, this field will never have a value present..</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
         /// <param name="RecentTransfers">The list of the most recent 20 transfer commands applied to this conversation..</param>
         /// <param name="SecurePause">True when the recording of this conversation is in secure pause status..</param>
         /// <param name="UtilizationLabelId">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
-        public Conversation(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null, List<ConversationDivisionMembership> Divisions = null, List<TransferResponse> RecentTransfers = null, bool? SecurePause = null, string UtilizationLabelId = null)
+        /// <param name="InactivityTimeout">The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public Conversation(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null, List<ConversationDivisionMembership> Divisions = null, List<TransferResponse> RecentTransfers = null, bool? SecurePause = null, string UtilizationLabelId = null, DateTime? InactivityTimeout = null)
         {
             this.Name = Name;
             this.ExternalTag = ExternalTag;
@@ -189,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecentTransfers = RecentTransfers;
             this.SecurePause = SecurePause;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.InactivityTimeout = InactivityTimeout;
             
         }
         
@@ -315,6 +317,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="inactivityTimeout", EmitDefaultValue=false)]
+        public DateTime? InactivityTimeout { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -346,6 +357,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecentTransfers: ").Append(RecentTransfers).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  InactivityTimeout: ").Append(InactivityTimeout).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -463,6 +475,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 ) &&
                 (
+                    this.InactivityTimeout == other.InactivityTimeout ||
+                    this.InactivityTimeout != null &&
+                    this.InactivityTimeout.Equals(other.InactivityTimeout)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -524,6 +541,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.InactivityTimeout != null)
+                    hash = hash * 59 + this.InactivityTimeout.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

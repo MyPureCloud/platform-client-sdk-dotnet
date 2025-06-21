@@ -77,13 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="AddressId">The id of an address added on your account. Due to regulatory requirements in some countries, an address may be required when provisioning a sms number. In those cases you should provide the provisioned sms address id here.</param>
-        public SmsPhoneNumberProvision(string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null, string Name = null, string AddressId = null)
+        /// <param name="SupportedContent">Defines the media SupportedContent profile configured for an MMS capable phone number..</param>
+        public SmsPhoneNumberProvision(string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null, string Name = null, string AddressId = null, SupportedContentReference SupportedContent = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.PhoneNumberType = PhoneNumberType;
             this.CountryCode = CountryCode;
             this.Name = Name;
             this.AddressId = AddressId;
+            this.SupportedContent = SupportedContent;
             
         }
         
@@ -136,6 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Defines the media SupportedContent profile configured for an MMS capable phone number.
+        /// </summary>
+        /// <value>Defines the media SupportedContent profile configured for an MMS capable phone number.</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -158,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AddressId: ").Append(AddressId).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -230,6 +242,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AddressId.Equals(other.AddressId)
                 ) &&
                 (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -264,6 +281,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AddressId != null)
                     hash = hash * 59 + this.AddressId.GetHashCode();
+
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

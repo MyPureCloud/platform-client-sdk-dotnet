@@ -643,6 +643,8 @@ namespace Example
 
 Get media playback URI for this voicemail message
 
+API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
+
 Requires NO permissions: 
 
 
@@ -1709,4 +1711,4 @@ namespace Example
 [**VoicemailUserPolicy**](VoicemailUserPolicy)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

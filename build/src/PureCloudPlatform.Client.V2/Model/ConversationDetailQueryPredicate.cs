@@ -256,6 +256,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Ntransferred,
             
             /// <summary>
+            /// Enum Oaudiomessagecount for "oAudioMessageCount"
+            /// </summary>
+            [EnumMember(Value = "oAudioMessageCount")]
+            Oaudiomessagecount,
+            
+            /// <summary>
+            /// Enum Oexternalaudiomessagecount for "oExternalAudioMessageCount"
+            /// </summary>
+            [EnumMember(Value = "oExternalAudioMessageCount")]
+            Oexternalaudiomessagecount,
+            
+            /// <summary>
             /// Enum Oexternalmediacount for "oExternalMediaCount"
             /// </summary>
             [EnumMember(Value = "oExternalMediaCount")]

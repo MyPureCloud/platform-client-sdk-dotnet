@@ -77,12 +77,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaUri">MediaUri.</param>
         /// <param name="TtsString">TtsString.</param>
         /// <param name="Text">Text.</param>
-        /// <param name="UploadUri">UploadUri.</param>
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="HasDefault">HasDefault.</param>
         /// <param name="LanguageDefault">LanguageDefault.</param>
         /// <param name="Tags">Tags.</param>
-        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string Text = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null)
+        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string Text = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -91,7 +90,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaUri = MediaUri;
             this.TtsString = TtsString;
             this.Text = Text;
-            this.UploadUri = UploadUri;
             this.UploadStatus = UploadStatus;
             this.HasDefault = HasDefault;
             this.LanguageDefault = LanguageDefault;
@@ -168,10 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets UploadUri
+        /// Deprecated. This was use for uploading the resource audio.
         /// </summary>
+        /// <value>Deprecated. This was use for uploading the resource audio.</value>
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
-        public string UploadUri { get; set; }
+        public string UploadUri { get; private set; }
 
 
 

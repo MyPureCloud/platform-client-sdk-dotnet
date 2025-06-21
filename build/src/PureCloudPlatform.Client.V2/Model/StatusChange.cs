@@ -646,6 +646,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Usersrules,
             
             /// <summary>
+            /// Enum Voicetranscription for "voice.transcription"
+            /// </summary>
+            [EnumMember(Value = "voice.transcription")]
+            Voicetranscription,
+            
+            /// <summary>
             /// Enum Webdeployments for "web.deployments"
             /// </summary>
             [EnumMember(Value = "web.deployments")]

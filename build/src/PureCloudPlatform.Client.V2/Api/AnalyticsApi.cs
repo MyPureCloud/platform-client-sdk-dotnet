@@ -1552,7 +1552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentCopilotAggregateQueryResponse> PostAnalyticsAgentcopilotsAggregatesQueryWithHttpInfo (AgentCopilotAggregationQuery body);
 
         /// <summary>
-        /// Count agents by segment type
+        /// Count agents by different groupings
         /// </summary>
         /// <remarks>
         /// 
@@ -1564,7 +1564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AnalyticsAgentStateCountsResponse PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body);
 
         /// <summary>
-        /// Count agents by segment type
+        /// Count agents by different groupings
         /// </summary>
         /// <remarks>
         /// 
@@ -4292,7 +4292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentCopilotAggregateQueryResponse>> PostAnalyticsAgentcopilotsAggregatesQueryAsyncWithHttpInfo (AgentCopilotAggregationQuery body);
 
         /// <summary>
-        /// Count agents by segment type
+        /// Count agents by different groupings
         /// </summary>
         /// <remarks>
         /// 
@@ -4304,7 +4304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AnalyticsAgentStateCountsResponse> PostAnalyticsAgentsStatusCountsAsync (AgentStateCountsRequest body);
 
         /// <summary>
-        /// Count agents by segment type
+        /// Count agents by different groupings
         /// </summary>
         /// <remarks>
         /// 
@@ -17478,7 +17478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Count agents by segment type 
+        /// Count agents by different groupings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17492,7 +17492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Count agents by segment type 
+        /// Count agents by different groupings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17582,7 +17582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Count agents by segment type 
+        /// Count agents by different groupings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17597,7 +17597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Count agents by segment type 
+        /// Count agents by different groupings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

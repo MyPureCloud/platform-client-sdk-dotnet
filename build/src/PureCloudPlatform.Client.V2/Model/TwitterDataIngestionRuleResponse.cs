@@ -83,17 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">A description of the data ingestion rule..</param>
         /// <param name="Status">The status of the data ingestion rule..</param>
         /// <param name="Version">The version number of the data ingestion rule..</param>
-        /// <param name="SearchTerms">Search terms for X (formally Twitter)..</param>
         /// <param name="Countries">ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide..</param>
-        public TwitterDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, string SearchTerms = null, List<string> Countries = null)
+        /// <param name="SearchTerms">Search terms for X (formally Twitter)..</param>
+        public TwitterDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, List<string> Countries = null, string SearchTerms = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Description = Description;
             this.Status = Status;
             this.Version = Version;
-            this.SearchTerms = SearchTerms;
             this.Countries = Countries;
+            this.SearchTerms = SearchTerms;
             
         }
         
@@ -165,20 +165,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Search terms for X (formally Twitter).
-        /// </summary>
-        /// <value>Search terms for X (formally Twitter).</value>
-        [DataMember(Name="searchTerms", EmitDefaultValue=false)]
-        public string SearchTerms { get; set; }
-
-
-
-        /// <summary>
         /// ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.
         /// </summary>
         /// <value>ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.</value>
         [DataMember(Name="countries", EmitDefaultValue=false)]
         public List<string> Countries { get; set; }
+
+
+
+        /// <summary>
+        /// Search terms for X (formally Twitter).
+        /// </summary>
+        /// <value>Search terms for X (formally Twitter).</value>
+        [DataMember(Name="searchTerms", EmitDefaultValue=false)]
+        public string SearchTerms { get; set; }
 
 
 
@@ -207,8 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
-            sb.Append("  SearchTerms: ").Append(SearchTerms).Append("\n");
             sb.Append("  Countries: ").Append(Countries).Append("\n");
+            sb.Append("  SearchTerms: ").Append(SearchTerms).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -291,14 +291,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Platform.Equals(other.Platform)
                 ) &&
                 (
-                    this.SearchTerms == other.SearchTerms ||
-                    this.SearchTerms != null &&
-                    this.SearchTerms.Equals(other.SearchTerms)
-                ) &&
-                (
                     this.Countries == other.Countries ||
                     this.Countries != null &&
                     this.Countries.SequenceEqual(other.Countries)
+                ) &&
+                (
+                    this.SearchTerms == other.SearchTerms ||
+                    this.SearchTerms != null &&
+                    this.SearchTerms.Equals(other.SearchTerms)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -342,11 +342,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
 
-                if (this.SearchTerms != null)
-                    hash = hash * 59 + this.SearchTerms.GetHashCode();
-
                 if (this.Countries != null)
                     hash = hash * 59 + this.Countries.GetHashCode();
+
+                if (this.SearchTerms != null)
+                    hash = hash * 59 + this.SearchTerms.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

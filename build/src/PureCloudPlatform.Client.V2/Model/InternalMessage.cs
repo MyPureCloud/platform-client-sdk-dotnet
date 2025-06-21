@@ -149,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Segments">The time line of the participant&#39;s internal message, divided into activity segments..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        /// <param name="StartAlertingTime">The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Provider">The source provider for the message..</param>
@@ -158,13 +159,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">Address for the participant on receiving side of the internal message communication..</param>
         /// <param name="FromAddress">Address for the participant on the sending side of the internal message communication..</param>
         /// <param name="Messages">The messages sent on this communication channel..</param>
-        public InternalMessage(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, List<Segment> Segments = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, string TargetUserId = null, string SourceUserId = null, Address ToAddress = null, Address FromAddress = null, List<InternalMessageDetails> Messages = null)
+        public InternalMessage(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, List<Segment> Segments = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, string TargetUserId = null, string SourceUserId = null, Address ToAddress = null, Address FromAddress = null, List<InternalMessageDetails> Messages = null)
         {
             this.State = State;
             this.InitialState = InitialState;
             this.Id = Id;
             this.Segments = Segments;
             this.DisconnectType = DisconnectType;
+            this.StartAlertingTime = StartAlertingTime;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.Provider = Provider;
@@ -200,6 +202,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<Segment> Segments { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
+        public DateTime? StartAlertingTime { get; set; }
 
 
 
@@ -297,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            sb.Append("  StartAlertingTime: ").Append(StartAlertingTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
@@ -372,6 +384,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisconnectType.Equals(other.DisconnectType)
                 ) &&
                 (
+                    this.StartAlertingTime == other.StartAlertingTime ||
+                    this.StartAlertingTime != null &&
+                    this.StartAlertingTime.Equals(other.StartAlertingTime)
+                ) &&
+                (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
@@ -443,6 +460,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
+
+                if (this.StartAlertingTime != null)
+                    hash = hash * 59 + this.StartAlertingTime.GetHashCode();
 
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();

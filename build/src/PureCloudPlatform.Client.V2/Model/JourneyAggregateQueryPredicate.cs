@@ -193,12 +193,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Journeysegmentid,
             
             /// <summary>
-            /// Enum Journeysegmentscope for "journeySegmentScope"
-            /// </summary>
-            [EnumMember(Value = "journeySegmentScope")]
-            Journeysegmentscope,
-            
-            /// <summary>
             /// Enum Journeysessionid for "journeySessionId"
             /// </summary>
             [EnumMember(Value = "journeySessionId")]

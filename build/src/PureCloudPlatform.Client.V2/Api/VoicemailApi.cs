@@ -259,7 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -272,7 +272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -933,7 +933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -946,7 +946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -3424,7 +3424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -3439,7 +3439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -3526,7 +3526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -3542,7 +3542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
-        /// 
+        /// API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>

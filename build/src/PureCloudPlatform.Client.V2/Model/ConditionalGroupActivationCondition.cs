@@ -55,7 +55,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Lessthanorequalto for "LessThanOrEqualTo"
             /// </summary>
             [EnumMember(Value = "LessThanOrEqualTo")]
-            Lessthanorequalto
+            Lessthanorequalto,
+            
+            /// <summary>
+            /// Enum Equalto for "EqualTo"
+            /// </summary>
+            [EnumMember(Value = "EqualTo")]
+            Equalto,
+            
+            /// <summary>
+            /// Enum Notequalto for "NotEqualTo"
+            /// </summary>
+            [EnumMember(Value = "NotEqualTo")]
+            Notequalto
         }
         /// <summary>
         /// The operator used to compare the actual value against the threshold value

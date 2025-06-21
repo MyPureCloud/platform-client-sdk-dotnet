@@ -8,7 +8,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteGreeting**](#DeleteGreeting) | **Delete** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
 | [**GetGreeting**](#GetGreeting) | **Get** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
+| [**GetGreetingDownloads**](#GetGreetingDownloads) | **Get** /api/v2/greetings/{greetingId}/downloads | Download a organization greeting recording |
+| [**GetGreetingGroupsDownloads**](#GetGreetingGroupsDownloads) | **Get** /api/v2/greetings/{greetingId}/groups/downloads | Download a group greeting recording |
 | [**GetGreetingMedia**](#GetGreetingMedia) | **Get** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
+| [**GetGreetingUsersDownloads**](#GetGreetingUsersDownloads) | **Get** /api/v2/greetings/{greetingId}/users/downloads | Download a user greeting recording |
 | [**GetGreetings**](#GetGreetings) | **Get** /api/v2/greetings | Gets an Organization&#39;s Greetings |
 | [**GetGreetingsDefaults**](#GetGreetingsDefaults) | **Get** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
 | [**GetGroupGreetings**](#GetGroupGreetings) | **Get** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
@@ -146,12 +149,142 @@ namespace Example
 [**Greeting**](Greeting)
 
 
+## GetGreetingDownloads
+
+> [**GreetingMediaInfo**](GreetingMediaInfo) GetGreetingDownloads (string greetingId, string formatId = null)
+
+
+Download a organization greeting recording
+
+Requires ANY permissions: 
+
+* greetings:greeting:download
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGreetingDownloadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GreetingsApi();
+            var greetingId = greetingId_example;  // string | Greeting ID
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WAV)
+
+            try
+            { 
+                // Download a organization greeting recording
+                GreetingMediaInfo result = apiInstance.GetGreetingDownloads(greetingId, formatId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.GetGreetingDownloads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **greetingId** | **string**| Greeting ID |  |
+| **formatId** | **string**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+
+### Return type
+
+[**GreetingMediaInfo**](GreetingMediaInfo)
+
+
+## GetGreetingGroupsDownloads
+
+> [**GreetingMediaInfo**](GreetingMediaInfo) GetGreetingGroupsDownloads (string greetingId, string formatId = null)
+
+
+Download a group greeting recording
+
+Requires ANY permissions: 
+
+* greetings:groupGreeting:download
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGreetingGroupsDownloadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GreetingsApi();
+            var greetingId = greetingId_example;  // string | Greeting ID
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WAV)
+
+            try
+            { 
+                // Download a group greeting recording
+                GreetingMediaInfo result = apiInstance.GetGreetingGroupsDownloads(greetingId, formatId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.GetGreetingGroupsDownloads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **greetingId** | **string**| Greeting ID |  |
+| **formatId** | **string**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+
+### Return type
+
+[**GreetingMediaInfo**](GreetingMediaInfo)
+
+
 ## GetGreetingMedia
 
 > [**GreetingMediaInfo**](GreetingMediaInfo) GetGreetingMedia (string greetingId, string formatId = null)
 
 
 Get media playback URI for this greeting
+
+API should migrate to use GET api/v2/greetings/{greetingId}/downloads
 
 Requires NO permissions: 
 
@@ -190,6 +323,70 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling GreetingsApi.GetGreetingMedia: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **greetingId** | **string**| Greeting ID |  |
+| **formatId** | **string**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+
+### Return type
+
+[**GreetingMediaInfo**](GreetingMediaInfo)
+
+
+## GetGreetingUsersDownloads
+
+> [**GreetingMediaInfo**](GreetingMediaInfo) GetGreetingUsersDownloads (string greetingId, string formatId = null)
+
+
+Download a user greeting recording
+
+Requires ANY permissions: 
+
+* greetings:greeting:download
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGreetingUsersDownloadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GreetingsApi();
+            var greetingId = greetingId_example;  // string | Greeting ID
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WAV)
+
+            try
+            { 
+                // Download a user greeting recording
+                GreetingMediaInfo result = apiInstance.GetGreetingUsersDownloads(greetingId, formatId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.GetGreetingUsersDownloads: " + e.Message );
             }
         }
     }
@@ -1017,4 +1214,4 @@ namespace Example
 [**DefaultGreetingList**](DefaultGreetingList)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

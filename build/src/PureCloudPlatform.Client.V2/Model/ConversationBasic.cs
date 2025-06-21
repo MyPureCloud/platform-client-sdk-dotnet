@@ -34,7 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
         /// <param name="SecurePause">True when the recording of this conversation is in secure pause status..</param>
         /// <param name="UtilizationLabelId">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
-        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, bool? SecurePause = null, string UtilizationLabelId = null)
+        /// <param name="InactivityTimeout">The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, bool? SecurePause = null, string UtilizationLabelId = null, DateTime? InactivityTimeout = null)
         {
             this.Name = Name;
             this.ExternalTag = ExternalTag;
@@ -43,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Divisions = Divisions;
             this.SecurePause = SecurePause;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.InactivityTimeout = InactivityTimeout;
             
         }
         
@@ -120,6 +122,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="inactivityTimeout", EmitDefaultValue=false)]
+        public DateTime? InactivityTimeout { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -152,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  InactivityTimeout: ").Append(InactivityTimeout).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
@@ -235,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 ) &&
                 (
+                    this.InactivityTimeout == other.InactivityTimeout ||
+                    this.InactivityTimeout != null &&
+                    this.InactivityTimeout.Equals(other.InactivityTimeout)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -280,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.InactivityTimeout != null)
+                    hash = hash * 59 + this.InactivityTimeout.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

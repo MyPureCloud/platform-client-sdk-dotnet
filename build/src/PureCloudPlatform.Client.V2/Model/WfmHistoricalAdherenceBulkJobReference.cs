@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class WfmHistoricalAdherenceBulkJobReference :  IEquatable<WfmHistoricalAdherenceBulkJobReference>
     {
         /// <summary>
-        /// The status of the historical adherence bulk job
+        /// The status of the historical adherence job
         /// </summary>
-        /// <value>The status of the historical adherence bulk job</value>
+        /// <value>The status of the historical adherence job</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -52,16 +52,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Error
         }
         /// <summary>
-        /// The status of the historical adherence bulk job
+        /// The status of the historical adherence job
         /// </summary>
-        /// <value>The status of the historical adherence bulk job</value>
+        /// <value>The status of the historical adherence job</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceBulkJobReference" /> class.
         /// </summary>
-        /// <param name="Id">The ID of the historical adherence bulk job to listen for via notification or query using the jobs route.</param>
-        /// <param name="Status">The status of the historical adherence bulk job.</param>
+        /// <param name="Id">The ID of the historical adherence job to listen for via notification or query using the jobs route.</param>
+        /// <param name="Status">The status of the historical adherence job.</param>
         public WfmHistoricalAdherenceBulkJobReference(string Id = null, StatusEnum? Status = null)
         {
             this.Id = Id;
@@ -72,9 +72,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the historical adherence bulk job to listen for via notification or query using the jobs route
+        /// The ID of the historical adherence job to listen for via notification or query using the jobs route
         /// </summary>
-        /// <value>The ID of the historical adherence bulk job to listen for via notification or query using the jobs route</value>
+        /// <value>The ID of the historical adherence job to listen for via notification or query using the jobs route</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

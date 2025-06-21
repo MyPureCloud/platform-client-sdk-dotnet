@@ -29,12 +29,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="AgentId">ID of the agent (required).</param>
         /// <param name="StartOffsetMinutes">List of offsets in minutes from calculationStartDate (required).</param>
-        /// <param name="OnQueueLengthMinutesPerInterval">List of on queue time lengths in minutes per interval of elements in startOffsetMinutes (required).</param>
-        public AgentQueueTimeRequest(string AgentId = null, List<int?> StartOffsetMinutes = null, List<int?> OnQueueLengthMinutesPerInterval = null)
+        /// <param name="OnQueueLengthMinutesPerInterval">List of on-queue time lengths in minutes per interval of elements in startOffsetMinutes (required).</param>
+        /// <param name="OnQueueActivityCodeIds">List of on-queue activity code ids.</param>
+        public AgentQueueTimeRequest(string AgentId = null, List<int?> StartOffsetMinutes = null, List<int?> OnQueueLengthMinutesPerInterval = null, List<string> OnQueueActivityCodeIds = null)
         {
             this.AgentId = AgentId;
             this.StartOffsetMinutes = StartOffsetMinutes;
             this.OnQueueLengthMinutesPerInterval = OnQueueLengthMinutesPerInterval;
+            this.OnQueueActivityCodeIds = OnQueueActivityCodeIds;
             
         }
         
@@ -59,11 +61,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of on queue time lengths in minutes per interval of elements in startOffsetMinutes
+        /// List of on-queue time lengths in minutes per interval of elements in startOffsetMinutes
         /// </summary>
-        /// <value>List of on queue time lengths in minutes per interval of elements in startOffsetMinutes</value>
+        /// <value>List of on-queue time lengths in minutes per interval of elements in startOffsetMinutes</value>
         [DataMember(Name="onQueueLengthMinutesPerInterval", EmitDefaultValue=false)]
         public List<int?> OnQueueLengthMinutesPerInterval { get; set; }
+
+
+
+        /// <summary>
+        /// List of on-queue activity code ids
+        /// </summary>
+        /// <value>List of on-queue activity code ids</value>
+        [DataMember(Name="onQueueActivityCodeIds", EmitDefaultValue=false)]
+        public List<string> OnQueueActivityCodeIds { get; set; }
 
 
         /// <summary>
@@ -78,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentId: ").Append(AgentId).Append("\n");
             sb.Append("  StartOffsetMinutes: ").Append(StartOffsetMinutes).Append("\n");
             sb.Append("  OnQueueLengthMinutesPerInterval: ").Append(OnQueueLengthMinutesPerInterval).Append("\n");
+            sb.Append("  OnQueueActivityCodeIds: ").Append(OnQueueActivityCodeIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +144,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OnQueueLengthMinutesPerInterval == other.OnQueueLengthMinutesPerInterval ||
                     this.OnQueueLengthMinutesPerInterval != null &&
                     this.OnQueueLengthMinutesPerInterval.SequenceEqual(other.OnQueueLengthMinutesPerInterval)
+                ) &&
+                (
+                    this.OnQueueActivityCodeIds == other.OnQueueActivityCodeIds ||
+                    this.OnQueueActivityCodeIds != null &&
+                    this.OnQueueActivityCodeIds.SequenceEqual(other.OnQueueActivityCodeIds)
                 );
         }
 
@@ -154,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OnQueueLengthMinutesPerInterval != null)
                     hash = hash * 59 + this.OnQueueLengthMinutesPerInterval.GetHashCode();
+
+                if (this.OnQueueActivityCodeIds != null)
+                    hash = hash * 59 + this.OnQueueActivityCodeIds.GetHashCode();
 
                 return hash;
             }

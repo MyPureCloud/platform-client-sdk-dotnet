@@ -143,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActivityCategory">The activity category to which to apply this rule (required).</param>
         /// <param name="Action">The action this rule invokes (required).</param>
-        /// <param name="ActivityCodeIdReplacement">The activity code ID with which to replace activities belonging to the original category if applicable (required if action &#x3D;&#x3D; Replace, must be a default activity code ID).</param>
+        /// <param name="ActivityCodeIdReplacement">The ID of the activity code with which to replace activities belonging to the original category if applicable (required if action &#x3D;&#x3D; Replace, must be a default activity code ID).</param>
         public ShiftTradeActivityRule(ActivityCategoryEnum? ActivityCategory = null, ActionEnum? Action = null, string ActivityCodeIdReplacement = null)
         {
             this.ActivityCategory = ActivityCategory;
@@ -159,9 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The activity code ID with which to replace activities belonging to the original category if applicable (required if action &#x3D;&#x3D; Replace, must be a default activity code ID)
+        /// The ID of the activity code with which to replace activities belonging to the original category if applicable (required if action &#x3D;&#x3D; Replace, must be a default activity code ID)
         /// </summary>
-        /// <value>The activity code ID with which to replace activities belonging to the original category if applicable (required if action &#x3D;&#x3D; Replace, must be a default activity code ID)</value>
+        /// <value>The ID of the activity code with which to replace activities belonging to the original category if applicable (required if action &#x3D;&#x3D; Replace, must be a default activity code ID)</value>
         [DataMember(Name="activityCodeIdReplacement", EmitDefaultValue=false)]
         public string ActivityCodeIdReplacement { get; set; }
 

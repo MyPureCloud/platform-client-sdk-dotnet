@@ -21,10 +21,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentSchedulePublishedScheduleReference" /> class.
         /// </summary>
+        /// <param name="Id">The ID of the schedule.</param>
         /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="WeekCount">The number of weeks encompassed by the schedule.</param>
-        public BuAgentSchedulePublishedScheduleReference(String WeekDate = null, int? WeekCount = null)
+        public BuAgentSchedulePublishedScheduleReference(string Id = null, String WeekDate = null, int? WeekCount = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
             
@@ -33,11 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the schedule
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the schedule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

@@ -859,7 +859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic emergency group objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -877,7 +877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic emergency group objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3014,6 +3014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -3027,6 +3028,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -3162,6 +3164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -3175,6 +3178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -4979,7 +4983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic emergency group objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4997,7 +5001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic emergency group objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -7134,6 +7138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -7147,6 +7152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -7282,6 +7288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -7295,6 +7302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -14860,7 +14868,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic emergency group objects filterable by query parameters. 
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -14880,7 +14888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic emergency group objects filterable by query parameters. 
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -14974,7 +14982,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic emergency group objects filterable by query parameters. 
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -14995,7 +15003,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a pageable list of basic emergency group objects filterable by query parameters. 
-        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -30706,6 +30714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a user prompt file 
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -30721,6 +30730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a user prompt file 
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -30811,6 +30821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a user prompt file 
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -30827,6 +30838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a user prompt file 
         /// 
+        /// PostArchitectPromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -31978,6 +31990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a system prompt file 
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -31993,6 +32006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a system prompt file 
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -32083,6 +32097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a system prompt file 
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
@@ -32099,6 +32114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Creates a presigned URL for uploading a system prompt file 
         /// 
+        /// PostArchitectSystempromptResourceUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>

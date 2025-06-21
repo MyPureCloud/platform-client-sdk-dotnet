@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>TeamEntityListing</returns>
         
         TeamEntityListing GetTeams (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
@@ -150,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>ApiResponse of TeamEntityListing</returns>
         
         ApiResponse<TeamEntityListing> GetTeamsWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
@@ -406,7 +406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>Task of TeamEntityListing</returns>
         
         System.Threading.Tasks.Task<TeamEntityListing> GetTeamsAsync (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
@@ -422,7 +422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>Task of ApiResponse (TeamEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TeamEntityListing>> GetTeamsAsyncWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
@@ -1499,7 +1499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>TeamEntityListing</returns>
         
         public TeamEntityListing GetTeams (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
@@ -1517,7 +1517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>ApiResponse of TeamEntityListing</returns>
         
         public ApiResponse< TeamEntityListing > GetTeamsWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
@@ -1607,7 +1607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>Task of TeamEntityListing</returns>
         
         public async System.Threading.Tasks.Task<TeamEntityListing> GetTeamsAsync (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
@@ -1626,7 +1626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Return only teams whose names start with this value (case-insensitive matching) (optional)</param>
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
-        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <param name="expand">Expand the division on each team (optional)</param>
         /// <returns>Task of ApiResponse (TeamEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<TeamEntityListing>> GetTeamsAsyncWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)

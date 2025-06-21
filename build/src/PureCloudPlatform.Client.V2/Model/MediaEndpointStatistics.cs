@@ -19,6 +19,33 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class MediaEndpointStatistics :  IEquatable<MediaEndpointStatistics>
     {
         /// <summary>
+        /// Source type of media endpoint
+        /// </summary>
+        /// <value>Source type of media endpoint</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SourceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Client for "Client"
+            /// </summary>
+            [EnumMember(Value = "Client")]
+            Client
+        }
+        /// <summary>
+        /// Source type of media endpoint
+        /// </summary>
+        /// <value>Source type of media endpoint</value>
+        [DataMember(Name="sourceType", EmitDefaultValue=false)]
+        public SourceTypeEnum? SourceType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="MediaEndpointStatistics" /> class.
         /// </summary>
         /// <param name="Trunk">Trunk information utilized when creating the media endpoint.</param>
@@ -26,15 +53,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">User information associated media endpoint.</param>
         /// <param name="Ice">The ICE protocol statistics and details. Reference: https://www.rfc-editor.org/rfc/rfc5245.</param>
         /// <param name="Rtp">Statistics of sent and received RTP. Reference: https://www.rfc-editor.org/rfc/rfc3550.</param>
-        /// <param name="ReconnectAttemptCount">Media reconnect attempt count.</param>
-        public MediaEndpointStatistics(MediaStatisticsTrunkInfo Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null, int? ReconnectAttemptCount = null)
+        /// <param name="ReconnectAttempts">Media reconnect attempt count.</param>
+        /// <param name="SourceType">Source type of media endpoint.</param>
+        /// <param name="ClientInfo">Client information associated with media endpoint.</param>
+        public MediaEndpointStatistics(MediaStatisticsTrunkInfo Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null, int? ReconnectAttempts = null, SourceTypeEnum? SourceType = null, MediaStatisticsClientInfo ClientInfo = null)
         {
             this.Trunk = Trunk;
             this.Station = Station;
             this.User = User;
             this.Ice = Ice;
             this.Rtp = Rtp;
-            this.ReconnectAttemptCount = ReconnectAttemptCount;
+            this.ReconnectAttempts = ReconnectAttempts;
+            this.SourceType = SourceType;
+            this.ClientInfo = ClientInfo;
             
         }
         
@@ -89,8 +120,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Media reconnect attempt count
         /// </summary>
         /// <value>Media reconnect attempt count</value>
-        [DataMember(Name="reconnectAttemptCount", EmitDefaultValue=false)]
-        public int? ReconnectAttemptCount { get; set; }
+        [DataMember(Name="reconnectAttempts", EmitDefaultValue=false)]
+        public int? ReconnectAttempts { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// Client information associated with media endpoint
+        /// </summary>
+        /// <value>Client information associated with media endpoint</value>
+        [DataMember(Name="clientInfo", EmitDefaultValue=false)]
+        public MediaStatisticsClientInfo ClientInfo { get; set; }
 
 
         /// <summary>
@@ -107,7 +149,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Ice: ").Append(Ice).Append("\n");
             sb.Append("  Rtp: ").Append(Rtp).Append("\n");
-            sb.Append("  ReconnectAttemptCount: ").Append(ReconnectAttemptCount).Append("\n");
+            sb.Append("  ReconnectAttempts: ").Append(ReconnectAttempts).Append("\n");
+            sb.Append("  SourceType: ").Append(SourceType).Append("\n");
+            sb.Append("  ClientInfo: ").Append(ClientInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,9 +218,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Rtp.Equals(other.Rtp)
                 ) &&
                 (
-                    this.ReconnectAttemptCount == other.ReconnectAttemptCount ||
-                    this.ReconnectAttemptCount != null &&
-                    this.ReconnectAttemptCount.Equals(other.ReconnectAttemptCount)
+                    this.ReconnectAttempts == other.ReconnectAttempts ||
+                    this.ReconnectAttempts != null &&
+                    this.ReconnectAttempts.Equals(other.ReconnectAttempts)
+                ) &&
+                (
+                    this.SourceType == other.SourceType ||
+                    this.SourceType != null &&
+                    this.SourceType.Equals(other.SourceType)
+                ) &&
+                (
+                    this.ClientInfo == other.ClientInfo ||
+                    this.ClientInfo != null &&
+                    this.ClientInfo.Equals(other.ClientInfo)
                 );
         }
 
@@ -206,8 +260,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Rtp != null)
                     hash = hash * 59 + this.Rtp.GetHashCode();
 
-                if (this.ReconnectAttemptCount != null)
-                    hash = hash * 59 + this.ReconnectAttemptCount.GetHashCode();
+                if (this.ReconnectAttempts != null)
+                    hash = hash * 59 + this.ReconnectAttempts.GetHashCode();
+
+                if (this.SourceType != null)
+                    hash = hash * 59 + this.SourceType.GetHashCode();
+
+                if (this.ClientInfo != null)
+                    hash = hash * 59 + this.ClientInfo.GetHashCode();
 
                 return hash;
             }

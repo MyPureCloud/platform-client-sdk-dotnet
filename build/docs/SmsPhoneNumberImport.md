@@ -12,8 +12,9 @@
 | **CountryCode** | **string** | The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. | |
 | **IntegrationId** | **string** | The id of the Genesys Cloud integration this phone number belongs to. | |
 | **Compliance** | [**Compliance**](Compliance) | Compliance configuration for short codes, including help, stop and opt in. | [optional] |
+| **SupportedContent** | [**SupportedContentReference**](SupportedContentReference) | Defines the media SupportedContent profile configured for an MMS capable phone number. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

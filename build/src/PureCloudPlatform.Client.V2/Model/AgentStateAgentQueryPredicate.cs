@@ -67,7 +67,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Managerid for "managerId"
             /// </summary>
             [EnumMember(Value = "managerId")]
-            Managerid
+            Managerid,
+            
+            /// <summary>
+            /// Enum Systempresence for "systemPresence"
+            /// </summary>
+            [EnumMember(Value = "systemPresence")]
+            Systempresence,
+            
+            /// <summary>
+            /// Enum Organizationpresenceid for "organizationPresenceId"
+            /// </summary>
+            [EnumMember(Value = "organizationPresenceId")]
+            Organizationpresenceid,
+            
+            /// <summary>
+            /// Enum Routingstatus for "routingStatus"
+            /// </summary>
+            [EnumMember(Value = "routingStatus")]
+            Routingstatus,
+            
+            /// <summary>
+            /// Enum Isoutofoffice for "isOutOfOffice"
+            /// </summary>
+            [EnumMember(Value = "isOutOfOffice")]
+            Isoutofoffice,
+            
+            /// <summary>
+            /// Enum Online for "online"
+            /// </summary>
+            [EnumMember(Value = "online")]
+            Online
         }
         /// <summary>
         /// Left hand side for dimension predicates

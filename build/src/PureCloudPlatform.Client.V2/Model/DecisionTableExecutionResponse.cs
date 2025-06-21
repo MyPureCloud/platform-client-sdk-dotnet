@@ -18,20 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DecisionTableExecutionResponse :  IEquatable<DecisionTableExecutionResponse>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="DecisionTableExecutionResponse" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected DecisionTableExecutionResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DecisionTableExecutionResponse" /> class.
-        /// </summary>
-        /// <param name="Table">The decision table version entity that was executed. (required).</param>
-        /// <param name="RowExecutionOutputs">The output data for each executed row for which output is collected.  (required).</param>
-        public DecisionTableExecutionResponse(DecisionTableVersionEntity Table = null, List<DecisionTableRowExecutionOutput> RowExecutionOutputs = null)
+        /// <param name="Table">The decision table version entity that was executed..</param>
+        /// <param name="TotalMatchRowCount">Total number of rows that matched execution input and would return results.</param>
+        /// <param name="TopMatchRows">Top 5 rows matching execution input, excluding the one produced the result..</param>
+        /// <param name="RowExecutionOutputs">The output data for each executed row for which output is collected..</param>
+        public DecisionTableExecutionResponse(DecisionTableVersionEntity Table = null, int? TotalMatchRowCount = null, List<DecisionTableRowEntityRef> TopMatchRows = null, List<DecisionTableRowExecutionOutput> RowExecutionOutputs = null)
         {
             this.Table = Table;
+            this.TotalMatchRowCount = TotalMatchRowCount;
+            this.TopMatchRows = TopMatchRows;
             this.RowExecutionOutputs = RowExecutionOutputs;
             
         }
@@ -48,9 +46,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The output data for each executed row for which output is collected. 
+        /// Total number of rows that matched execution input and would return results
         /// </summary>
-        /// <value>The output data for each executed row for which output is collected. </value>
+        /// <value>Total number of rows that matched execution input and would return results</value>
+        [DataMember(Name="totalMatchRowCount", EmitDefaultValue=false)]
+        public int? TotalMatchRowCount { get; set; }
+
+
+
+        /// <summary>
+        /// Top 5 rows matching execution input, excluding the one produced the result.
+        /// </summary>
+        /// <value>Top 5 rows matching execution input, excluding the one produced the result.</value>
+        [DataMember(Name="topMatchRows", EmitDefaultValue=false)]
+        public List<DecisionTableRowEntityRef> TopMatchRows { get; set; }
+
+
+
+        /// <summary>
+        /// The output data for each executed row for which output is collected.
+        /// </summary>
+        /// <value>The output data for each executed row for which output is collected.</value>
         [DataMember(Name="rowExecutionOutputs", EmitDefaultValue=false)]
         public List<DecisionTableRowExecutionOutput> RowExecutionOutputs { get; set; }
 
@@ -65,6 +81,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DecisionTableExecutionResponse {\n");
 
             sb.Append("  Table: ").Append(Table).Append("\n");
+            sb.Append("  TotalMatchRowCount: ").Append(TotalMatchRowCount).Append("\n");
+            sb.Append("  TopMatchRows: ").Append(TopMatchRows).Append("\n");
             sb.Append("  RowExecutionOutputs: ").Append(RowExecutionOutputs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,6 +130,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Table.Equals(other.Table)
                 ) &&
                 (
+                    this.TotalMatchRowCount == other.TotalMatchRowCount ||
+                    this.TotalMatchRowCount != null &&
+                    this.TotalMatchRowCount.Equals(other.TotalMatchRowCount)
+                ) &&
+                (
+                    this.TopMatchRows == other.TopMatchRows ||
+                    this.TopMatchRows != null &&
+                    this.TopMatchRows.SequenceEqual(other.TopMatchRows)
+                ) &&
+                (
                     this.RowExecutionOutputs == other.RowExecutionOutputs ||
                     this.RowExecutionOutputs != null &&
                     this.RowExecutionOutputs.SequenceEqual(other.RowExecutionOutputs)
@@ -131,6 +159,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
+
+                if (this.TotalMatchRowCount != null)
+                    hash = hash * 59 + this.TotalMatchRowCount.GetHashCode();
+
+                if (this.TopMatchRows != null)
+                    hash = hash * 59 + this.TopMatchRows.GetHashCode();
 
                 if (this.RowExecutionOutputs != null)
                     hash = hash * 59 + this.RowExecutionOutputs.GetHashCode();

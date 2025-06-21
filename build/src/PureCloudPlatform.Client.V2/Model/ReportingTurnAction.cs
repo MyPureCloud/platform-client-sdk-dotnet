@@ -231,6 +231,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Findutilizationlabelaction,
             
             /// <summary>
+            /// Enum Formaction for "FormAction"
+            /// </summary>
+            [EnumMember(Value = "FormAction")]
+            Formaction,
+            
+            /// <summary>
             /// Enum Switchaction for "SwitchAction"
             /// </summary>
             [EnumMember(Value = "SwitchAction")]
@@ -439,6 +445,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SetAttributesAction")]
             Setattributesaction,
+            
+            /// <summary>
+            /// Enum Sendinteractiveapplicationaction for "SendInteractiveApplicationAction"
+            /// </summary>
+            [EnumMember(Value = "SendInteractiveApplicationAction")]
+            Sendinteractiveapplicationaction,
             
             /// <summary>
             /// Enum Unknown for "Unknown"

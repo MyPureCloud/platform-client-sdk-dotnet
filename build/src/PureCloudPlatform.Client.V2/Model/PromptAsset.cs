@@ -148,9 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Upload URI for the resource audio
+        /// Deprecated. This was use for uploading the resource audio.
         /// </summary>
-        /// <value>Upload URI for the resource audio</value>
+        /// <value>Deprecated. This was use for uploading the resource audio.</value>
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
         public string UploadUri { get; private set; }
 

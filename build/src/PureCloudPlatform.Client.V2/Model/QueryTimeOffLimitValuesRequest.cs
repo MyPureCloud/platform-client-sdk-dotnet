@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueryTimeOffLimitValuesRequest" /> class.
         /// </summary>
         /// <param name="TimeOffLimitId">The time off limit object id to retrieve values for. Required if activityCodeId is not specified.</param>
-        /// <param name="ActivityCodeId">The activity code id to filter the affected limit objects by. Required if timeOffLimitId is not specified.</param>
+        /// <param name="ActivityCodeId">The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified.</param>
         /// <param name="DateRanges">The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366. (required).</param>
         public QueryTimeOffLimitValuesRequest(string TimeOffLimitId = null, string ActivityCodeId = null, List<LocalDateRange> DateRanges = null)
         {
@@ -50,9 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The activity code id to filter the affected limit objects by. Required if timeOffLimitId is not specified
+        /// The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified
         /// </summary>
-        /// <value>The activity code id to filter the affected limit objects by. Required if timeOffLimitId is not specified</value>
+        /// <value>The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
 

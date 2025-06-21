@@ -295,7 +295,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentWrapupField">The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition..</param>
         /// <param name="ContactColumnToDataActionFieldMappings">A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition..</param>
         /// <param name="Predicates">A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition..</param>
-        public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? Operator = null, List<string> Codes = null, string Property = null, PropertyTypeEnum? PropertyType = null, DomainEntityRef DataAction = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<ContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DataActionConditionPredicate> Predicates = null)
+        /// <param name="SubConditions">A list of sub-conditions to evaluate. Required for a timeAndDateCondition..</param>
+        /// <param name="MatchAnyConditions">If true, only one sub-condition must match for the condition to be true. If false, all sub-conditions must match. Default is false. Required for a timeAndDateCondition..</param>
+        /// <param name="TimeZoneId">The time zone to use for this condition. Required for a timeAndDateCondition..</param>
+        public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? Operator = null, List<string> Codes = null, string Property = null, PropertyTypeEnum? PropertyType = null, DomainEntityRef DataAction = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<ContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DataActionConditionPredicate> Predicates = null, List<TimeAndDateSubCondition> SubConditions = null, bool? MatchAnyConditions = null, string TimeZoneId = null)
         {
             this.Type = Type;
             this.Inverted = Inverted;
@@ -313,6 +316,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentWrapupField = AgentWrapupField;
             this.ContactColumnToDataActionFieldMappings = ContactColumnToDataActionFieldMappings;
             this.Predicates = Predicates;
+            this.SubConditions = SubConditions;
+            this.MatchAnyConditions = MatchAnyConditions;
+            this.TimeZoneId = TimeZoneId;
             
         }
         
@@ -433,6 +439,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DataActionConditionPredicate> Predicates { get; set; }
 
 
+
+        /// <summary>
+        /// A list of sub-conditions to evaluate. Required for a timeAndDateCondition.
+        /// </summary>
+        /// <value>A list of sub-conditions to evaluate. Required for a timeAndDateCondition.</value>
+        [DataMember(Name="subConditions", EmitDefaultValue=false)]
+        public List<TimeAndDateSubCondition> SubConditions { get; set; }
+
+
+
+        /// <summary>
+        /// If true, only one sub-condition must match for the condition to be true. If false, all sub-conditions must match. Default is false. Required for a timeAndDateCondition.
+        /// </summary>
+        /// <value>If true, only one sub-condition must match for the condition to be true. If false, all sub-conditions must match. Default is false. Required for a timeAndDateCondition.</value>
+        [DataMember(Name="matchAnyConditions", EmitDefaultValue=false)]
+        public bool? MatchAnyConditions { get; set; }
+
+
+
+        /// <summary>
+        /// The time zone to use for this condition. Required for a timeAndDateCondition.
+        /// </summary>
+        /// <value>The time zone to use for this condition. Required for a timeAndDateCondition.</value>
+        [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
+        public string TimeZoneId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -458,6 +491,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentWrapupField: ").Append(AgentWrapupField).Append("\n");
             sb.Append("  ContactColumnToDataActionFieldMappings: ").Append(ContactColumnToDataActionFieldMappings).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            sb.Append("  SubConditions: ").Append(SubConditions).Append("\n");
+            sb.Append("  MatchAnyConditions: ").Append(MatchAnyConditions).Append("\n");
+            sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -577,6 +613,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Predicates == other.Predicates ||
                     this.Predicates != null &&
                     this.Predicates.SequenceEqual(other.Predicates)
+                ) &&
+                (
+                    this.SubConditions == other.SubConditions ||
+                    this.SubConditions != null &&
+                    this.SubConditions.SequenceEqual(other.SubConditions)
+                ) &&
+                (
+                    this.MatchAnyConditions == other.MatchAnyConditions ||
+                    this.MatchAnyConditions != null &&
+                    this.MatchAnyConditions.Equals(other.MatchAnyConditions)
+                ) &&
+                (
+                    this.TimeZoneId == other.TimeZoneId ||
+                    this.TimeZoneId != null &&
+                    this.TimeZoneId.Equals(other.TimeZoneId)
                 );
         }
 
@@ -638,6 +689,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+
+                if (this.SubConditions != null)
+                    hash = hash * 59 + this.SubConditions.GetHashCode();
+
+                if (this.MatchAnyConditions != null)
+                    hash = hash * 59 + this.MatchAnyConditions.GetHashCode();
+
+                if (this.TimeZoneId != null)
+                    hash = hash * 59 + this.TimeZoneId.GetHashCode();
 
                 return hash;
             }

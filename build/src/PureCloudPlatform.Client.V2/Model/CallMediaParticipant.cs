@@ -241,7 +241,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Spam for "spam"
             /// </summary>
             [EnumMember(Value = "spam")]
-            Spam
+            Spam,
+            
+            /// <summary>
+            /// Enum Inactivity for "inactivity"
+            /// </summary>
+            [EnumMember(Value = "inactivity")]
+            Inactivity
         }
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
@@ -334,6 +340,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The display friendly name of the participant..</param>
         /// <param name="Address">The participant address..</param>
         /// <param name="StartTime">The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="StartAlertingTime">The timestamp when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConnectedTime">The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndTime">The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="StartHoldTime">The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -371,6 +378,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Confined">Value is true when the call is confined..</param>
         /// <param name="Recording">Value is true when the call is being recorded..</param>
         /// <param name="RecordingState">The state of the call recording..</param>
+        /// <param name="RecordersState">Contains the states of different recorders..</param>
         /// <param name="Group">The group involved in the group ring call..</param>
         /// <param name="Ani">The call ANI..</param>
         /// <param name="Dnis">The call DNIS..</param>
@@ -384,12 +392,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BargedTime">The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
         /// <param name="Disposition">Call resolution data for Dialer bulk make calls commands..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null)
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Address = Address;
             this.StartTime = StartTime;
+            this.StartAlertingTime = StartAlertingTime;
             this.ConnectedTime = ConnectedTime;
             this.EndTime = EndTime;
             this.StartHoldTime = StartHoldTime;
@@ -427,6 +436,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Confined = Confined;
             this.Recording = Recording;
             this.RecordingState = RecordingState;
+            this.RecordersState = RecordersState;
             this.Group = Group;
             this.Ani = Ani;
             this.Dnis = Dnis;
@@ -478,6 +488,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
+
+
+
+        /// <summary>
+        /// The timestamp when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The timestamp when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
+        public DateTime? StartAlertingTime { get; set; }
 
 
 
@@ -780,6 +799,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Contains the states of different recorders.
+        /// </summary>
+        /// <value>Contains the states of different recorders.</value>
+        [DataMember(Name="recordersState", EmitDefaultValue=false)]
+        public RecordersState RecordersState { get; set; }
+
+
+
+        /// <summary>
         /// The group involved in the group ring call.
         /// </summary>
         /// <value>The group involved in the group ring call.</value>
@@ -908,6 +936,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            sb.Append("  StartAlertingTime: ").Append(StartAlertingTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
@@ -945,6 +974,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            sb.Append("  RecordersState: ").Append(RecordersState).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
@@ -1017,6 +1047,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
+                ) &&
+                (
+                    this.StartAlertingTime == other.StartAlertingTime ||
+                    this.StartAlertingTime != null &&
+                    this.StartAlertingTime.Equals(other.StartAlertingTime)
                 ) &&
                 (
                     this.ConnectedTime == other.ConnectedTime ||
@@ -1204,6 +1239,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingState.Equals(other.RecordingState)
                 ) &&
                 (
+                    this.RecordersState == other.RecordersState ||
+                    this.RecordersState != null &&
+                    this.RecordersState.Equals(other.RecordersState)
+                ) &&
+                (
                     this.Group == other.Group ||
                     this.Group != null &&
                     this.Group.Equals(other.Group)
@@ -1292,6 +1332,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+
+                if (this.StartAlertingTime != null)
+                    hash = hash * 59 + this.StartAlertingTime.GetHashCode();
 
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
@@ -1403,6 +1446,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+
+                if (this.RecordersState != null)
+                    hash = hash * 59 + this.RecordersState.GetHashCode();
 
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();

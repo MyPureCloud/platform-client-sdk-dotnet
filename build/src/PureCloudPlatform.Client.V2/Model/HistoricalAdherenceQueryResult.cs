@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">Beginning of the date range that was queried, in ISO-8601 format.</param>
         /// <param name="EndDate">End of the date range that was queried, in ISO-8601 format. If it was not set, end date will be set to the queried time.</param>
         /// <param name="AdherencePercentage">Adherence percentage for this user, in the scale of 0 - 100.</param>
-        /// <param name="ConformancePercentage">Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period..</param>
+        /// <param name="ConformancePercentage">Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on-queue time is greater than the scheduled on-queue time for the same period..</param>
         /// <param name="Impact">The impact of the current adherence state for this user.</param>
         /// <param name="ExceptionInfo">List of adherence exceptions for this user.</param>
         /// <param name="DayMetrics">Adherence and conformance metrics for days in query range.</param>
@@ -141,9 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period.
+        /// Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on-queue time is greater than the scheduled on-queue time for the same period.
         /// </summary>
-        /// <value>Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period.</value>
+        /// <value>Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on-queue time is greater than the scheduled on-queue time for the same period.</value>
         [DataMember(Name="conformancePercentage", EmitDefaultValue=false)]
         public double? ConformancePercentage { get; set; }
 

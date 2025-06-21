@@ -1454,9 +1454,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>StaffingGroupListing</returns>
         
-        StaffingGroupListing GetWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, string managementUnitId = null);
+        StaffingGroupListing GetWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets a list of staffing groups
@@ -1467,9 +1468,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of StaffingGroupListing</returns>
         
-        ApiResponse<StaffingGroupListing> GetWorkforcemanagementBusinessunitStaffinggroupsWithHttpInfo (string businessUnitId, string managementUnitId = null);
+        ApiResponse<StaffingGroupListing> GetWorkforcemanagementBusinessunitStaffinggroupsWithHttpInfo (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets a time-off limit object
@@ -4704,9 +4706,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>UserStaffingGroupListing</returns>
         
-        UserStaffingGroupListing PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body);
+        UserStaffingGroupListing PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets staffing group associations for a list of user IDs
@@ -4717,9 +4720,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>ApiResponse of UserStaffingGroupListing</returns>
         
-        ApiResponse<UserStaffingGroupListing> PostWorkforcemanagementBusinessunitStaffinggroupsQueryWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body);
+        ApiResponse<UserStaffingGroupListing> PostWorkforcemanagementBusinessunitStaffinggroupsQueryWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Creates a new time-off limit object
@@ -5252,10 +5256,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>WorkPlanBid</returns>
         
-        WorkPlanBid PostWorkforcemanagementBusinessunitWorkplanbidCopy (string businessUnitId, string bidId, CopyWorkPlanBid body = null);
+        WorkPlanBid PostWorkforcemanagementBusinessunitWorkplanbidCopy (string businessUnitId, string bidId, CopyWorkPlanBid body);
 
         /// <summary>
         /// Copy a work plan bid
@@ -5266,10 +5270,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>ApiResponse of WorkPlanBid</returns>
         
-        ApiResponse<WorkPlanBid> PostWorkforcemanagementBusinessunitWorkplanbidCopyWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body = null);
+        ApiResponse<WorkPlanBid> PostWorkforcemanagementBusinessunitWorkplanbidCopyWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body);
 
         /// <summary>
         /// Add a bid group in a given work plan bid
@@ -7924,9 +7928,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of StaffingGroupListing</returns>
         
-        System.Threading.Tasks.Task<StaffingGroupListing> GetWorkforcemanagementBusinessunitStaffinggroupsAsync (string businessUnitId, string managementUnitId = null);
+        System.Threading.Tasks.Task<StaffingGroupListing> GetWorkforcemanagementBusinessunitStaffinggroupsAsync (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets a list of staffing groups
@@ -7937,9 +7942,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (StaffingGroupListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<StaffingGroupListing>> GetWorkforcemanagementBusinessunitStaffinggroupsAsyncWithHttpInfo (string businessUnitId, string managementUnitId = null);
+        System.Threading.Tasks.Task<ApiResponse<StaffingGroupListing>> GetWorkforcemanagementBusinessunitStaffinggroupsAsyncWithHttpInfo (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets a time-off limit object
@@ -11174,9 +11180,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>Task of UserStaffingGroupListing</returns>
         
-        System.Threading.Tasks.Task<UserStaffingGroupListing> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsync (string businessUnitId, QueryUserStaffingGroupListRequest body);
+        System.Threading.Tasks.Task<UserStaffingGroupListing> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsync (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets staffing group associations for a list of user IDs
@@ -11187,9 +11194,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>Task of ApiResponse (UserStaffingGroupListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UserStaffingGroupListing>> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsyncWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body);
+        System.Threading.Tasks.Task<ApiResponse<UserStaffingGroupListing>> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsyncWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Creates a new time-off limit object
@@ -11722,10 +11730,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>Task of WorkPlanBid</returns>
         
-        System.Threading.Tasks.Task<WorkPlanBid> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsync (string businessUnitId, string bidId, CopyWorkPlanBid body = null);
+        System.Threading.Tasks.Task<WorkPlanBid> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsync (string businessUnitId, string bidId, CopyWorkPlanBid body);
 
         /// <summary>
         /// Copy a work plan bid
@@ -11736,10 +11744,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (WorkPlanBid)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkPlanBid>> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsyncWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanBid>> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsyncWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body);
 
         /// <summary>
         /// Add a bid group in a given work plan bid
@@ -24748,11 +24756,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>StaffingGroupListing</returns>
         
-        public StaffingGroupListing GetWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, string managementUnitId = null)
+        public StaffingGroupListing GetWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null)
         {
-             ApiResponse<StaffingGroupListing> localVarResponse = GetWorkforcemanagementBusinessunitStaffinggroupsWithHttpInfo(businessUnitId, managementUnitId);
+             ApiResponse<StaffingGroupListing> localVarResponse = GetWorkforcemanagementBusinessunitStaffinggroupsWithHttpInfo(businessUnitId, managementUnitId, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -24763,9 +24772,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of StaffingGroupListing</returns>
         
-        public ApiResponse< StaffingGroupListing > GetWorkforcemanagementBusinessunitStaffinggroupsWithHttpInfo (string businessUnitId, string managementUnitId = null)
+        public ApiResponse< StaffingGroupListing > GetWorkforcemanagementBusinessunitStaffinggroupsWithHttpInfo (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -24806,6 +24816,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (managementUnitId != null) localVarQueryParams.Add(new Tuple<string, string>("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId)));
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -24850,11 +24861,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of StaffingGroupListing</returns>
         
-        public async System.Threading.Tasks.Task<StaffingGroupListing> GetWorkforcemanagementBusinessunitStaffinggroupsAsync (string businessUnitId, string managementUnitId = null)
+        public async System.Threading.Tasks.Task<StaffingGroupListing> GetWorkforcemanagementBusinessunitStaffinggroupsAsync (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null)
         {
-             ApiResponse<StaffingGroupListing> localVarResponse = await GetWorkforcemanagementBusinessunitStaffinggroupsAsyncWithHttpInfo(businessUnitId, managementUnitId);
+             ApiResponse<StaffingGroupListing> localVarResponse = await GetWorkforcemanagementBusinessunitStaffinggroupsAsyncWithHttpInfo(businessUnitId, managementUnitId, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -24866,9 +24878,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="managementUnitId">The ID of the management unit to get management unit specific staffing groups (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (StaffingGroupListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<StaffingGroupListing>> GetWorkforcemanagementBusinessunitStaffinggroupsAsyncWithHttpInfo (string businessUnitId, string managementUnitId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StaffingGroupListing>> GetWorkforcemanagementBusinessunitStaffinggroupsAsyncWithHttpInfo (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -24910,6 +24923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (managementUnitId != null) localVarQueryParams.Add(new Tuple<string, string>("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId)));
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -51550,11 +51564,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>UserStaffingGroupListing</returns>
         
-        public UserStaffingGroupListing PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body)
+        public UserStaffingGroupListing PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null)
         {
-             ApiResponse<UserStaffingGroupListing> localVarResponse = PostWorkforcemanagementBusinessunitStaffinggroupsQueryWithHttpInfo(businessUnitId, body);
+             ApiResponse<UserStaffingGroupListing> localVarResponse = PostWorkforcemanagementBusinessunitStaffinggroupsQueryWithHttpInfo(businessUnitId, body, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -51565,9 +51580,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>ApiResponse of UserStaffingGroupListing</returns>
         
-        public ApiResponse< UserStaffingGroupListing > PostWorkforcemanagementBusinessunitStaffinggroupsQueryWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body)
+        public ApiResponse< UserStaffingGroupListing > PostWorkforcemanagementBusinessunitStaffinggroupsQueryWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -51611,6 +51627,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -51660,11 +51677,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>Task of UserStaffingGroupListing</returns>
         
-        public async System.Threading.Tasks.Task<UserStaffingGroupListing> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsync (string businessUnitId, QueryUserStaffingGroupListRequest body)
+        public async System.Threading.Tasks.Task<UserStaffingGroupListing> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsync (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null)
         {
-             ApiResponse<UserStaffingGroupListing> localVarResponse = await PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsyncWithHttpInfo(businessUnitId, body);
+             ApiResponse<UserStaffingGroupListing> localVarResponse = await PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsyncWithHttpInfo(businessUnitId, body, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -51676,9 +51694,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service (optional)</param>
         /// <returns>Task of ApiResponse (UserStaffingGroupListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UserStaffingGroupListing>> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsyncWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserStaffingGroupListing>> PostWorkforcemanagementBusinessunitStaffinggroupsQueryAsyncWithHttpInfo (string businessUnitId, QueryUserStaffingGroupListRequest body, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -51724,6 +51743,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -56129,10 +56149,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>WorkPlanBid</returns>
         
-        public WorkPlanBid PostWorkforcemanagementBusinessunitWorkplanbidCopy (string businessUnitId, string bidId, CopyWorkPlanBid body = null)
+        public WorkPlanBid PostWorkforcemanagementBusinessunitWorkplanbidCopy (string businessUnitId, string bidId, CopyWorkPlanBid body)
         {
              ApiResponse<WorkPlanBid> localVarResponse = PostWorkforcemanagementBusinessunitWorkplanbidCopyWithHttpInfo(businessUnitId, bidId, body);
              return localVarResponse.Data;
@@ -56145,10 +56165,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>ApiResponse of WorkPlanBid</returns>
         
-        public ApiResponse< WorkPlanBid > PostWorkforcemanagementBusinessunitWorkplanbidCopyWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body = null)
+        public ApiResponse< WorkPlanBid > PostWorkforcemanagementBusinessunitWorkplanbidCopyWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -56156,6 +56176,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'bidId' is set
             if (bidId == null)
                 throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidCopy");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidCopy");
 
             var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy";
             var localVarHttpMethod = "Post";
@@ -56242,10 +56265,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>Task of WorkPlanBid</returns>
         
-        public async System.Threading.Tasks.Task<WorkPlanBid> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsync (string businessUnitId, string bidId, CopyWorkPlanBid body = null)
+        public async System.Threading.Tasks.Task<WorkPlanBid> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsync (string businessUnitId, string bidId, CopyWorkPlanBid body)
         {
              ApiResponse<WorkPlanBid> localVarResponse = await PostWorkforcemanagementBusinessunitWorkplanbidCopyAsyncWithHttpInfo(businessUnitId, bidId, body);
              return localVarResponse.Data;
@@ -56259,10 +56282,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="bidId">The ID of the work plan bid to copy</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (WorkPlanBid)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanBid>> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsyncWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanBid>> PostWorkforcemanagementBusinessunitWorkplanbidCopyAsyncWithHttpInfo (string businessUnitId, string bidId, CopyWorkPlanBid body)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -56271,6 +56294,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'bidId' is set
             if (bidId == null)
                 throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidCopy");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidCopy");
             
 
             var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy";

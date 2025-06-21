@@ -28,10 +28,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DecisionTableRowExecutionOutput" /> class.
         /// </summary>
         /// <param name="RowId">Unique rule identifier. (required).</param>
+        /// <param name="RowIndex">Unique rule identifier. (required).</param>
         /// <param name="Outputs">The JSON output produced by this rule. Valid according to the execution output contract. (required).</param>
-        public DecisionTableRowExecutionOutput(string RowId = null, Dictionary<string, Object> Outputs = null)
+        public DecisionTableRowExecutionOutput(string RowId = null, int? RowIndex = null, Dictionary<string, Object> Outputs = null)
         {
             this.RowId = RowId;
+            this.RowIndex = RowIndex;
             this.Outputs = Outputs;
             
         }
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique rule identifier.</value>
         [DataMember(Name="rowId", EmitDefaultValue=false)]
         public string RowId { get; set; }
+
+
+
+        /// <summary>
+        /// Unique rule identifier.
+        /// </summary>
+        /// <value>Unique rule identifier.</value>
+        [DataMember(Name="rowIndex", EmitDefaultValue=false)]
+        public int? RowIndex { get; set; }
 
 
 
@@ -65,6 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DecisionTableRowExecutionOutput {\n");
 
             sb.Append("  RowId: ").Append(RowId).Append("\n");
+            sb.Append("  RowIndex: ").Append(RowIndex).Append("\n");
             sb.Append("  Outputs: ").Append(Outputs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,6 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RowId.Equals(other.RowId)
                 ) &&
                 (
+                    this.RowIndex == other.RowIndex ||
+                    this.RowIndex != null &&
+                    this.RowIndex.Equals(other.RowIndex)
+                ) &&
+                (
                     this.Outputs == other.Outputs ||
                     this.Outputs != null &&
                     this.Outputs.SequenceEqual(other.Outputs)
@@ -131,6 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.RowId != null)
                     hash = hash * 59 + this.RowId.GetHashCode();
+
+                if (this.RowIndex != null)
+                    hash = hash * 59 + this.RowIndex.GetHashCode();
 
                 if (this.Outputs != null)
                     hash = hash * 59 + this.Outputs.GetHashCode();

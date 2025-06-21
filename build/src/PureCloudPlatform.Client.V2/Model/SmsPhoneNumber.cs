@@ -250,7 +250,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SupportsVoice">Set to true if this phone number has the capability to support voice.</param>
         /// <param name="Integration">The Genesys Cloud integration this phone number belongs to..</param>
         /// <param name="Compliance">Compliance configuration for short codes, including help, stop and opt in..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null, string Country = null, bool? SupportsSms = null, bool? SupportsMms = null, bool? SupportsVoice = null, DomainEntityRef Integration = null, Compliance Compliance = null)
+        /// <param name="SupportedContent">Defines the media SupportedContent profile configured for an MMS capable phone number..</param>
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null, string Country = null, bool? SupportsSms = null, bool? SupportsMms = null, bool? SupportsVoice = null, DomainEntityRef Integration = null, Compliance Compliance = null, SupportedContentReference SupportedContent = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
@@ -275,6 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SupportsVoice = SupportsVoice;
             this.Integration = Integration;
             this.Compliance = Compliance;
+            this.SupportedContent = SupportedContent;
             
         }
         
@@ -486,6 +488,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Defines the media SupportedContent profile configured for an MMS capable phone number.
+        /// </summary>
+        /// <value>Defines the media SupportedContent profile configured for an MMS capable phone number.</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -528,6 +539,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SupportsVoice: ").Append(SupportsVoice).Append("\n");
             sb.Append("  Integration: ").Append(Integration).Append("\n");
             sb.Append("  Compliance: ").Append(Compliance).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -700,6 +712,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Compliance.Equals(other.Compliance)
                 ) &&
                 (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -794,6 +811,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Compliance != null)
                     hash = hash * 59 + this.Compliance.GetHashCode();
+
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -137,4 +137,4 @@ namespace Example
 [**Copilot**](Copilot)
 
 
-_PureCloudPlatform.Client.V2 235.0.0_
+_PureCloudPlatform.Client.V2 236.0.0_

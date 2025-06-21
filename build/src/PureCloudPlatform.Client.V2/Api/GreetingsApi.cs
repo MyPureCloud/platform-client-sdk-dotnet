@@ -64,10 +64,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Greeting> GetGreetingWithHttpInfo (string greetingId);
 
         /// <summary>
-        /// Get media playback URI for this greeting
+        /// Download a organization greeting recording
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>GreetingMediaInfo</returns>
+        
+        GreetingMediaInfo GetGreetingDownloads (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a organization greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
+        ApiResponse<GreetingMediaInfo> GetGreetingDownloadsWithHttpInfo (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a group greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>GreetingMediaInfo</returns>
+        
+        GreetingMediaInfo GetGreetingGroupsDownloads (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a group greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
+        ApiResponse<GreetingMediaInfo> GetGreetingGroupsDownloadsWithHttpInfo (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Get media playback URI for this greeting
+        /// </summary>
+        /// <remarks>
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -80,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media playback URI for this greeting
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -88,6 +140,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
         
         ApiResponse<GreetingMediaInfo> GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a user greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>GreetingMediaInfo</returns>
+        
+        GreetingMediaInfo GetGreetingUsersDownloads (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a user greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
+        ApiResponse<GreetingMediaInfo> GetGreetingUsersDownloadsWithHttpInfo (string greetingId, string formatId = null);
 
         /// <summary>
         /// Gets an Organization&#39;s Greetings
@@ -472,10 +550,62 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId);
 
         /// <summary>
-        /// Get media playback URI for this greeting
+        /// Download a organization greeting recording
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of GreetingMediaInfo</returns>
+        
+        System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingDownloadsAsync (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a organization greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingDownloadsAsyncWithHttpInfo (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a group greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of GreetingMediaInfo</returns>
+        
+        System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingGroupsDownloadsAsync (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a group greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingGroupsDownloadsAsyncWithHttpInfo (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Get media playback URI for this greeting
+        /// </summary>
+        /// <remarks>
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -488,7 +618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get media playback URI for this greeting
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -496,6 +626,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a user greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of GreetingMediaInfo</returns>
+        
+        System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingUsersDownloadsAsync (string greetingId, string formatId = null);
+
+        /// <summary>
+        /// Download a user greeting recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingUsersDownloadsAsyncWithHttpInfo (string greetingId, string formatId = null);
 
         /// <summary>
         /// Gets an Organization&#39;s Greetings
@@ -1320,8 +1476,422 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get media playback URI for this greeting 
+        /// Download a organization greeting recording 
         /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>GreetingMediaInfo</returns>
+        
+        public GreetingMediaInfo GetGreetingDownloads (string greetingId, string formatId = null)
+        {
+             ApiResponse<GreetingMediaInfo> localVarResponse = GetGreetingDownloadsWithHttpInfo(greetingId, formatId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download a organization greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
+        public ApiResponse< GreetingMediaInfo > GetGreetingDownloadsWithHttpInfo (string greetingId, string formatId = null)
+        { 
+            // verify the required parameter 'greetingId' is set
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingDownloads");
+
+            var localVarPath = "/api/v2/greetings/{greetingId}/downloads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (greetingId != null) localVarPathParams.Add("greetingId", this.Configuration.ApiClient.ParameterToString(greetingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingDownloads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingDownloads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Download a organization greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of GreetingMediaInfo</returns>
+        
+        public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingDownloadsAsync (string greetingId, string formatId = null)
+        {
+             ApiResponse<GreetingMediaInfo> localVarResponse = await GetGreetingDownloadsAsyncWithHttpInfo(greetingId, formatId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download a organization greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingDownloadsAsyncWithHttpInfo (string greetingId, string formatId = null)
+        { 
+            // verify the required parameter 'greetingId' is set
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingDownloads");
+            
+
+            var localVarPath = "/api/v2/greetings/{greetingId}/downloads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (greetingId != null) localVarPathParams.Add("greetingId", this.Configuration.ApiClient.ParameterToString(greetingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingDownloads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingDownloads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Download a group greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>GreetingMediaInfo</returns>
+        
+        public GreetingMediaInfo GetGreetingGroupsDownloads (string greetingId, string formatId = null)
+        {
+             ApiResponse<GreetingMediaInfo> localVarResponse = GetGreetingGroupsDownloadsWithHttpInfo(greetingId, formatId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download a group greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
+        public ApiResponse< GreetingMediaInfo > GetGreetingGroupsDownloadsWithHttpInfo (string greetingId, string formatId = null)
+        { 
+            // verify the required parameter 'greetingId' is set
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingGroupsDownloads");
+
+            var localVarPath = "/api/v2/greetings/{greetingId}/groups/downloads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (greetingId != null) localVarPathParams.Add("greetingId", this.Configuration.ApiClient.ParameterToString(greetingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingGroupsDownloads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingGroupsDownloads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Download a group greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of GreetingMediaInfo</returns>
+        
+        public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingGroupsDownloadsAsync (string greetingId, string formatId = null)
+        {
+             ApiResponse<GreetingMediaInfo> localVarResponse = await GetGreetingGroupsDownloadsAsyncWithHttpInfo(greetingId, formatId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download a group greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingGroupsDownloadsAsyncWithHttpInfo (string greetingId, string formatId = null)
+        { 
+            // verify the required parameter 'greetingId' is set
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingGroupsDownloads");
+            
+
+            var localVarPath = "/api/v2/greetings/{greetingId}/groups/downloads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (greetingId != null) localVarPathParams.Add("greetingId", this.Configuration.ApiClient.ParameterToString(greetingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingGroupsDownloads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingGroupsDownloads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get media playback URI for this greeting 
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -1336,7 +1906,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this greeting 
-        /// 
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -1423,7 +1993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this greeting 
-        /// 
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -1439,7 +2009,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this greeting 
-        /// 
+        /// API should migrate to use GET api/v2/greetings/{greetingId}/downloads
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
@@ -1516,6 +2086,213 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetGreetingMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetGreetingMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Download a user greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>GreetingMediaInfo</returns>
+        
+        public GreetingMediaInfo GetGreetingUsersDownloads (string greetingId, string formatId = null)
+        {
+             ApiResponse<GreetingMediaInfo> localVarResponse = GetGreetingUsersDownloadsWithHttpInfo(greetingId, formatId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download a user greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
+        public ApiResponse< GreetingMediaInfo > GetGreetingUsersDownloadsWithHttpInfo (string greetingId, string formatId = null)
+        { 
+            // verify the required parameter 'greetingId' is set
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingUsersDownloads");
+
+            var localVarPath = "/api/v2/greetings/{greetingId}/users/downloads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (greetingId != null) localVarPathParams.Add("greetingId", this.Configuration.ApiClient.ParameterToString(greetingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingUsersDownloads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingUsersDownloads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Download a user greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of GreetingMediaInfo</returns>
+        
+        public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingUsersDownloadsAsync (string greetingId, string formatId = null)
+        {
+             ApiResponse<GreetingMediaInfo> localVarResponse = await GetGreetingUsersDownloadsAsyncWithHttpInfo(greetingId, formatId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download a user greeting recording 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
+        /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingUsersDownloadsAsyncWithHttpInfo (string greetingId, string formatId = null)
+        { 
+            // verify the required parameter 'greetingId' is set
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingUsersDownloads");
+            
+
+            var localVarPath = "/api/v2/greetings/{greetingId}/users/downloads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (greetingId != null) localVarPathParams.Add("greetingId", this.Configuration.ApiClient.ParameterToString(greetingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingUsersDownloads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingUsersDownloads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
                 localVarHeaders,
